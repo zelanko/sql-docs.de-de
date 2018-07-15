@@ -1,5 +1,5 @@
 ---
-title: Beispiel XSD-Schema mit Anmerkungen, für die XPath-Beispiele (SQLXML 4.0) | Microsoft Docs
+title: Beispiel XSD-Schema mit Anmerkungen für XPath-Beispiele (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4d8c06249a89f46317babc55b52eb45d8f6f8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9a78bacbc6c407946d20fc8e21a3ae91a30b04ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303600"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Beispiel-XSD-Schema mit Anmerkungen für XPath-Beispiele (SQLXML 4.0)
-  Die Beispiel-XPath-Abfragen in diesem Abschnitt beziehen sich auf ein Zuordnungsschema. Das Zuordnungsschema ist eine XML-Schemadatei (XSD) mit Anmerkungen. Weitere Informationen zu Zuordnungsschemas finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  Die Beispiel-XPath-Abfragen in diesem Abschnitt beziehen sich auf ein Zuordnungsschema. Das Zuordnungsschema ist eine XML-Schemadatei (XSD) mit Anmerkungen. Weitere Informationen zum Zuordnen von Schemas finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Die folgenden Bedingungen müssen erfüllt sein, um XPath-Abfragen eines XSD-Schemas mit Anmerkungen auszuführen:  
   
 -   Erstellen Sie eine Vorlage mit einer XPath-Abfrage. Geben Sie in der Vorlage das Zuordnungsschema an, anhand dessen die XPath-Abfrage ausgeführt werden soll. In diesem Fall muss das Zuordnungsschema im Verzeichnis gespeichert werden (oder in einem der Unterverzeichnisse, wobei dann ein relativer Pfad als Wert des `mapping-schema`-Attributs in der Vorlage angegeben wird), das der Vorlagendatei zugeordnet ist.  
   
--   Erstellen Sie eine Testanwendung, die SQLXML-Erweiterungen für ADO verwendet, um Abfragen auszuführen. Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Erstellen Sie eine Testanwendung, die SQLXML-Erweiterungen für ADO verwendet, um Abfragen auszuführen. Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  In allen Beispielen in diesem Abschnitt werden zur Veranschaulichung die XPath-Abfragen in einer Vorlage angegeben, die mithilfe von ADO ausgeführt wird. Daher müssen Sie die folgende Zuordnungsschemadatei verwenden: SampleSchema1.xml. Speichern Sie diese Datei in dem Verzeichnis, in dem die Vorlagen gespeichert sind.  
   

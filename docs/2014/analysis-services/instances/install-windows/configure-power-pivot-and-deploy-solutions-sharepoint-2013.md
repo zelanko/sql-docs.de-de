@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013) | Microsoft Docs
+title: Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f06b47e8f30c60152912c49901341a2d8fdef359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312670"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013)
   In diesem Thema wird beschrieben, die Bereitstellung und Konfiguration von Erweiterungen der mittleren Ebene für die PowerPivot-Funktionen in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] z. B. PowerPivot-Katalog, planmäßige datenaktualisierung, Management-Dashboard und Datenanbieter. Führen Sie das **PowerPivot für SharePoint 2013-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
@@ -28,19 +28,19 @@ ms.locfileid: "36147599"
   
 -   Erstellen einer PowerPivot-Dienstanwendung  
   
--   Konfigurieren einer Excel Services-Anwendung für die Verwendung eines [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus Informationen zu Back-End-Diensten und zum Installieren einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server im SharePoint-Modus finden Sie unter [PowerPivot für SharePoint 2013-Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   Konfigurieren einer Excel Services-Anwendung für die Verwendung eines [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus Informationen zu Back-End-Diensten und zum Installieren einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server im SharePoint-Modus finden Sie unter [PowerPivot für SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Informationen zum Installieren von PowerPivot für SharePoint 2013-Konfigurationstool finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
+ Weitere Informationen zum Installieren von PowerPivot für SharePoint 2013-Konfigurationstool, finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Ausführen von PowerPivot für SharePoint 2013-Konfiguration](#bkmk_run_configuration_tool)  
+ [Führen Sie PowerPivot für SharePoint 2013-Konfigurationstool](#bkmk_run_configuration_tool)  
   
  [Überprüfen der PowerPivot-Konfiguration](#bkmk_verify_powerpivot)  
   
  [Problembehandlung](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a> Ausführen von PowerPivot für SharePoint 2013-Konfiguration  
+##  <a name="bkmk_run_configuration_tool"></a> Führen Sie PowerPivot für SharePoint 2013-Konfigurationstool  
  **Hinweis:** Vom Setup-Assistenten für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] werden zwei unterschiedliche Konfigurationstools für [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]installiert. Jedes Tool unterstützt eine andere SharePoint-Version.  
   
 |Name|Description|  
@@ -73,7 +73,7 @@ ms.locfileid: "36147599"
   
     5.  Klicken Sie im linken Fenster auf **Websitesammlung erstellen** . Notieren Sie sich die **Website-URL** , damit Sie sie später zur Hand haben. Wenn der SharePoint-Server noch nicht konfiguriert ist, verwendet der Konfigurations-Assistent für die URL der Webanwendung und Websitesammlung standardmäßig den Stamm von `http://[ServerName]`. Um die Standardeinstellungen zu ändern, überprüfen Sie die folgenden Seiten im linken Fenster: **Standardwebanwendung erstellen** und **Webanwendungslösung bereitstellen**  
   
-5.  Überprüfen Sie optional die verbleibenden Eingabewerte, die zum Abschließen der jeweiligen Aktion verwendet werden. Klicken Sie im linken Fenster auf die einzelnen Aktionen, um die Details zur Aktion anzuzeigen und zu überprüfen. Weitere Informationen über die einzelnen Aktionen finden Sie im Abschnitt "Eingabewerte für die Serverkonfiguration in [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot Configuration Tools&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) In dieses Thema.  
+5.  Überprüfen Sie optional die verbleibenden Eingabewerte, die zum Abschließen der jeweiligen Aktion verwendet werden. Klicken Sie im linken Fenster auf die einzelnen Aktionen, um die Details zur Aktion anzuzeigen und zu überprüfen. Weitere Informationen über die einzelnen Aktionen finden Sie im Abschnitt "Eingabewerte für die Serverkonfiguration im [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot Configuration Tools&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) In This Thema.  
   
 6.  Entfernen Sie optional alle Aktionen, die Sie zu dieser Zeit nicht verarbeiten wollen. Wenn Sie z. B. Secure Store Service später konfigurieren möchten, klicken Sie auf **Secure Store Service konfigurieren**, und deaktivieren Sie dann das Kontrollkästchen **Diese Aktion in Taskliste einschließen**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36147599"
   
 1.  Navigieren Sie zu der vom Konfigurationstool erstellten Website-URL.  
   
-     Klicken Sie auf **Einstellungen**![SharePoint Einstellungen](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen"), und klicken Sie dann auf **Standorteinstellungen**.  
+     Klicken Sie auf **Einstellungen**![SharePoint Settings](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), und klicken Sie dann auf **Standorteinstellungen**.  
   
      Klicken Sie auf **Websitesammlungs-Features**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36147599"
   
      Klicken Sie auf den Namen der Dienstanwendung, um das PowerPivot-Management-Dashboard für die Dienstanwendung zu öffnen. Bei seiner ersten Verwendung dauert das Laden des Dashboards einige Minuten.  
   
- Weitere Informationen finden Sie unter [Verify a PowerPivot für SharePoint-Installation](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
+ Weitere Informationen finden Sie unter [Überprüfen der PowerPivot für SharePoint-Installation](../../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ##  <a name="bkmk_troubleshoot_issues"></a> Problembehandlung  
  Um Unterstützung bei der Problembehandlung zu erhalten, empfiehlt es sich, die Diagnoseprotokollierung zu aktivieren.  
@@ -139,7 +139,7 @@ ms.locfileid: "36147599"
   
 5.  Klicken Sie auf **OK**.  
   
- Weitere Informationen zu datenaktualisierung, finden Sie unter [Problembehandlung bei PowerPivot-Datenaktualisierung](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Weitere Informationen zu datenaktualisierung, finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Weitere Informationen zum Konfigurationstool finden Sie unter [PowerPivot-Konfigurationstools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

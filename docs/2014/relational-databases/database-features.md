@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc9aa961911f8686ba3921fcf773ed47ecfb43a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292690"
 ---
 # <a name="database-features"></a>Datenbankfunktionen
   Dieser Abschnitt enthält die Datenbanken zugeordneten Funktionen und Tasks, Datenbankobjekte, Datentypen und die Mechanismen zum Arbeiten mit oder Verwalten von Daten.  
@@ -40,6 +40,6 @@ ms.locfileid: "36148635"
 |[Suche &#40;SQLServer&#41;](../database-engine/search-sql-server.md)|[Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Benutzerdefinierte Funktionen](user-defined-functions/user-defined-functions.md)|[Datenebenenanwendungen](data-tier-applications/data-tier-applications.md)||  
 |[Statistik](statistics/statistics.md)|[Das Transaktionsprotokoll &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[Planhinweislisten](performance/plan-guides.md)|[Datenbank-Prüfpunkte &#40;SQLServer&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Planhinweislisten](performance/plan-guides.md)|[Datenbankprüfpunkte &#40;SQLServer&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

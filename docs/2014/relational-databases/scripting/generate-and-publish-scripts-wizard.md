@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
 - sql9.swb.generatescriptswizard.scriptwizarddescription.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 06b4bbbca6699c274701ae479cf24daaabdcf18b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307610"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
   Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbank-Engine-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus generieren. Die generierten Skripts können auf einer anderen Datenbank-Engine-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
@@ -195,7 +195,7 @@ ms.locfileid: "36147677"
   
 -   **Skripterstellung für Berechtigungen auf Objektebene** – Schließt Skripts ein, um die Berechtigung für Objekte in der Datenbank festzulegen. Der Standardwert ist **False**.  
   
--   **Skripterstellung für Statistiken** -bei Festlegung auf **Skripterstellung für Statistiken**, schließt diese Option die `CREATE STATISTICS` -Anweisung zum erneuten Erstellen der Statistiken für das Objekt. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Skripterstellung für Statistiken** : bei Festlegung auf **Skripterstellung für Statistiken**, schließt diese Option die `CREATE STATISTICS` -Anweisung zum erneuten Erstellen von Statistiken für das Objekt. Mit der Option **Skripterstellung für Statistiken und Histogramme** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Keine Skripterstellung für Statistiken**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
 -   **Skripterstellung für USE DATABASE** -fügt die `USE DATABASE` Anweisung, um das Skript. Um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden, enthalten die `USE DATABASE` Anweisung. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **"false"** zum Auslassen der `USE DATABASE` Anweisung. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "36147677"
   
 -   **Skript für Änderungsnachverfolgung erstellen** – Die Änderungsnachverfolgung für Skripts wird in der Ursprungsdatenbank oder in den Tabellen in der Ursprungsdatenbank aktiviert. Der Standardwert ist **False**. Weitere Informationen finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Skript für Check-Einschränkungen** – fügt `CHECK` Einschränkungen an das Skript. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle, um eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Skripterstellung für Check-Einschränkungen** – Adds `CHECK` Einschränkungen an das Skript. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle in eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Skripterstellung für Datenkomprimierungsoptionen** – Schließt Datenkomprimierungsoptionen ein, wenn sie in der Ursprungsdatenbank oder den Tabellen in der Ursprungsdatenbank konfiguriert werden. Weitere Informationen finden Sie unter [Data Compression](../data-compression/data-compression.md). Der Standardwert ist **False**.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "36147677"
   
 7.  **Berechtigungen auf Objektebene veröffentlichen** – Schließt die Berechtigungen für die ausgewählten Objekte in der Datenbank ein. Der Standardwert ist **False**.  
   
-8.  **Statistiken veröffentlichen** -bei Festlegung auf **Statistiken veröffentlichen**, enthält die `CREATE STATISTICS` -Anweisung zum erneuten Erstellen der Statistiken für das Objekt. Mithilfe der Option **Statistiken und Histogramme veröffentlichen** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Statistiken nicht veröffentlichen**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+8.  **Statistiken veröffentlichen** : bei Festlegung auf **Statistiken veröffentlichen**, enthält die `CREATE STATISTICS` -Anweisung zum erneuten Erstellen von Statistiken für das Objekt. Mithilfe der Option **Statistiken und Histogramme veröffentlichen** können auch Histogramminformationen erstellt werden. Der Standardwert ist **Statistiken nicht veröffentlichen**. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
 9. **Vardecimal-Optionen veröffentlichen** -ermöglicht die `vardecimal` -Tabellenformat in der Zieldatenbanktabelle, wenn sie in der ursprungsdatenbanktabelle aktiviert ist. Der Standardwert ist **True**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "36147677"
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Tabellen oder Sichten.  
   
-1.  **Check-Einschränkungen veröffentlichen** -schließt die Erstellung von `CHECK` Einschränkungen in den Veröffentlichungsprozess ein. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle, um eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Check-Einschränkungen veröffentlichen** -schließt die Erstellung von `CHECK` Einschränkungen in den Veröffentlichungsprozess. Der Standardwert ist **True**. `CHECK` Einschränkungen erfordern Daten, die in einer Tabelle in eine angegebene Bedingung erfüllen eingegeben werden. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Fremdschlüssel veröffentlichen** – Schließt die Erstellung von Fremdschlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist **True**. Mit Fremdschlüsseln können Beziehungen zwischen Tabellen angezeigt und erzwungen werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

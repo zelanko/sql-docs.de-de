@@ -1,5 +1,5 @@
 ---
-title: Target-Element (XMLA) | Microsoft Docs
+title: Target-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287866"
 ---
 # <a name="target-element-xmla"></a>Target-Element (XMLA)
   Stellt die Zielpartition dar, die während der zusammengeführt werden eine [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) Befehl.  
@@ -67,7 +67,7 @@ ms.locfileid: "36149499"
 |Untergeordnete Elemente|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Target` Element ist ein Objektverweis auf eine einzelne Partition, in dem die Inhalte der Quellpartitionen, gemäß, der [Quellen](sources-element-xmla.md) Element des übergeordneten Elements `MergePartitions` Element zusammengeführt werden sollen.  
+ Die `Target` Element ist ein Objektverweis auf eine einzelne Partition, in dem die Inhalte der Quellpartitionen, gemäß, der [Quellen](sources-element-xmla.md) -Element des übergeordneten `MergePartitions` Element zusammengeführt werden sollen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden alle vier Partitionen der Internet Sales-Measuregruppe mit der `Internet_Sales_2004` -Zielpartition kombiniert. Das Beispiel verweist auf den [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]-Cube der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]-Beispiel-[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank.  

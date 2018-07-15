@@ -1,5 +1,5 @@
 ---
-title: Zugriff auf tabellarische Modelldaten | Microsoft Docs
+title: Zugriff auf tabellarische Modelldaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316980"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36147994"
  Excel ist auch die empfohlene Anwendung zum Durchsuchen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Das Tool beinhaltet eine Option **In Excel analysieren** , die eine neue Instanz von Excel startet, eine Excel-Arbeitsmappe erstellt und in der Arbeitsmappe eine Datenverbindung mit der Arbeitsbereichsdatenbank des Modells öffnet. Beim Durchsuchen von tabellarischen Modelldaten in Excel ist zu beachten, dass Excel Abfragen für das Modell mit dem Excel PivotTable-Client ausgibt. Entsprechend führen Vorgänge innerhalb der Excel-Arbeitsmappe zu MDX-Abfragen, die an die Arbeitsbereichsdatenbank gesendet werden. DAX-Abfragen werden nicht erstellt. Wenn Sie Abfragen mit SQL-Profiler oder einem anderen Überwachungstool überwachen, wird in der Profiler-Ablaufverfolgung voraussichtlich MDX angezeigt und nicht DAX. Weitere Informationen zur Funktion „In Excel analysieren“ finden Sie unter [In Excel analysieren &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Reporting Services-Clientanwendung zur Berichtserstellung, die in einer SharePoint 2010-Umgebung ausgeführt wird. Sie kombiniert das Durchsuchen von Daten, den Abfrageentwurf und das Präsentationslayout in einer integrierten Ad-hoc-Berichtsumgebung. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] kann tabellarische Modelle als Datenquellen verwenden, und zwar unabhängig davon, ob das Modell auf einer im tabellarischen Modus ausgeführten Analysis Services-Instanz gehostet wird oder Daten im DirectQuery-Modus aus einem relationalen Datenspeicher abgerufen werden. Um in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]eine Verbindung mit einem tabellarischen Modell herzustellen, müssen Sie eine Verbindungsdatei erstellen, die den Serverspeicherort und den Datenbanknamen enthält. Sie können eine freigegebene Reporting Services-Datenquelle oder eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen. Weitere Informationen zu BI-semantikmodellverbindungen, finden Sie unter [PowerPivot BI Semantic Model Connection &#40;bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Reporting Services-Clientanwendung zur Berichtserstellung, die in einer SharePoint 2010-Umgebung ausgeführt wird. Sie kombiniert das Durchsuchen von Daten, den Abfrageentwurf und das Präsentationslayout in einer integrierten Ad-hoc-Berichtsumgebung. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] kann tabellarische Modelle als Datenquellen verwenden, und zwar unabhängig davon, ob das Modell auf einer im tabellarischen Modus ausgeführten Analysis Services-Instanz gehostet wird oder Daten im DirectQuery-Modus aus einem relationalen Datenspeicher abgerufen werden. Um in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]eine Verbindung mit einem tabellarischen Modell herzustellen, müssen Sie eine Verbindungsdatei erstellen, die den Serverspeicherort und den Datenbanknamen enthält. Sie können eine freigegebene Reporting Services-Datenquelle oder eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen. Weitere Informationen zu BI-semantikmodellverbindungen finden Sie unter [PowerPivot BI-Semantikmodellverbindung &#40;bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  Der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client bestimmt die Struktur des angegebenen Modells, indem er eine Anforderung an die angegebene Datenquelle sendet, die ein Schema zurückgibt, das vom Client verwendet werden kann, um Abfragen für das Modell als Datenquelle zu erstellen und Vorgänge auf Grundlage der Daten auszuführen. Nachfolgende Vorgänge in der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Benutzeroberfläche, um Daten zu filtern, Berechnungen oder Aggregationen auszuführen und zugeordnete Daten anzuzeigen, werden vom Client gesteuert und können nicht programmgesteuert bearbeitet werden.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36147994"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION-Rowset](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     Neues Schemarowset zum Überwachen von erweiterten SQL Server-Ereignissen Weitere Informationen finden Sie unter [verwendet SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+     Neues Schemarowset zum Überwachen von erweiterten SQL Server-Ereignissen Weitere Informationen finden Sie unter [verwenden SQL Server Extended Events &#40;XEvents&#41; zum Überwachen von Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
 -   [DISCOVER_TRACES-Rowset](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36147994"
   
 -   [MDSCHEMA_HIERARCHIES-Rowset](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Neue `STRUCTURE_TYPE` Enumeration unterstützt die Identifikation von benutzerdefinierten Hierarchien in tabellarischen Modellen erstellt. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md).  
+     Neue `STRUCTURE_TYPE` Enumeration unterstützt die Identifikation benutzerdefinierter Hierarchien in tabellarischen Modellen erstellt. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md).  
   
  Es gibt keine Updates zum OLE DB für Data Mining-Schemarowsets in dieser Version.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36147994"
 >  Sie können MDX oder DMX-Abfragen nicht in einer Datenbank verwenden, die im DirectQuery-Modus bereitgestellt wurde. Wenn Sie in einem DirectQuery-Modell mithilfe des Schemarowsets eine Abfrage ausführen müssen, sollten Sie XMLA und nicht die zugeordnete DMV verwenden. Für DMVs, die Ergebnisse für den Server als Ganzes zurückgeben, z. B. SELECT * von $system.DBSCHEMA_CATALOGS oder DISCOVER_TRACES, können Sie die Abfrage im Inhalt einer Datenbank ausführen, die in einem Modus mit Zwischenspeicherung bereitgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [Verbinden mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot-Datenzugriff](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [Verbindung mit Analysis Services herstellen](../instances/connect-to-analysis-services.md)  
   

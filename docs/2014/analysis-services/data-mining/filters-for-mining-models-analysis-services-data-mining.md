@@ -1,5 +1,5 @@
 ---
-title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs
+title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312710"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
   Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
@@ -54,7 +54,7 @@ ms.locfileid: "36057994"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Erstellen von Modellfiltern unter Verwendung des Data Mining-Designers  
  Sie filtern ein Modell im Data Mining-Designer, indem Sie die `Filter`-Eigenschaft des Miningmodells ändern. Sie können einen Filterausdruck entweder direkt im Bereich **Eigenschaften** eingeben, oder Sie öffnen ein Filterdialogfeld, um Bedingungen zu erstellen.  
   
- Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Sie können mehrere Bedingungen verknüpfen, mit `AND` / `OR` Operatoren. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Z. B. mit fortlaufenden Werten können Sie `greater than` und `less than` Operatoren. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
+ Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Sie können mehrere Bedingungen verknüpfen, indem Sie mithilfe von `AND` / `OR` Operatoren. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Z. B. mit fortlaufenden Werten können Sie `greater than` und `less than` Operatoren. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
   
 > [!NOTE]  
 >  Die `LIKE` Schlüsselwort wird nicht unterstützt. Wenn Sie mehrere diskrete Attribute einfügen möchten, müssen Sie einzelne Bedingungen erstellen und diese mithilfe des Operators `OR` verknüpfen.  
@@ -66,7 +66,7 @@ ms.locfileid: "36057994"
   
  Wenn sich beispielsweise Ihre Falltabelle auf Kunden bezieht und die geschachtelte Tabelle die Produkte zeigt, die der Kunde gekauft hat, können Sie einen Filter für Kunden erstellen, die bestimmte Artikel gekauft haben, indem Sie im Filter der geschachtelten Tabelle die folgende Syntax verwenden: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
   
- Sie können auch auf das Vorhandensein eines bestimmten Werts in der geschachtelten Tabelle filtern, mit der `EXISTS` oder `NOT EXISTS` -Schlüsselwörter und eine Unterabfrage. Auf diese Weise können Sie Bedingungen wie `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`erstellen. Die `EXISTS SELECT(<subquery>)` gibt `true` zurück, wenn die geschachtelte Tabelle mindestens eine Zeile enthält, die den Wert `Water Bottle` enthält.  
+ Sie können auch auf das Vorhandensein eines bestimmten Werts in der geschachtelten Tabelle filtern, mit der `EXISTS` oder `NOT EXISTS` Schlüsselwörter und eine Unterabfrage. Auf diese Weise können Sie Bedingungen wie `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`erstellen. Die `EXISTS SELECT(<subquery>)` gibt `true` zurück, wenn die geschachtelte Tabelle mindestens eine Zeile enthält, die den Wert `Water Bottle` enthält.  
   
  Sie können Bedingungen für die Falltabelle mit Bedingungen für die geschachtelte Tabelle kombinieren. Beispielsweise fügt die folgende Syntax eine Bedingung für die Falltabelle ein (`Age > 30` ), eine Unterabfrage für die geschachtelte Tabelle (`EXISTS (SELECT * FROM Products)`) und mehrere Bedingungen für die geschachtelte Tabelle (`WHERE ProductName=’Milk’  AND Quantity>2`) ).  
   

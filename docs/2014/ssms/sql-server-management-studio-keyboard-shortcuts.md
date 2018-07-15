@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 caps.latest.revision: 82
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2e3cf3a6f71cc38ee6c1705c00bea8e84227eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a50cf7d5cf3ef1a99e8d10fa22263f0590f08250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317590"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  

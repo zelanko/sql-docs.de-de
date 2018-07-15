@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, aktualisieren und Löschen von Daten (Master Data Services) | Microsoft Docs
+title: Hinzufügen, aktualisieren und Löschen von Daten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311990"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Hinzufügen, Aktualisieren und Löschen von Daten (Master Data Services)
   Sie können einem Modell in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]in einem Massenvorgang Daten hinzufügen und Datenänderungen vornehmen.  
@@ -62,7 +62,7 @@ ms.locfileid: "36057862"
   
     -   Führen Sie die gespeicherte Stagingprozedur aus, die der Stagingtabelle entspricht, in die Sie Daten verschieben möchten.  
   
-         Einen Überblick über gespeicherten stagingprozeduren und Stagingtabellen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Weitere Informationen zu Parametern für gespeicherte Stagingprozeduren und ein Codebeispiel finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         Einen Überblick über gespeicherte stagingprozeduren und Stagingtabellen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Weitere Informationen zu Parametern für gespeicherte Stagingprozeduren und ein Codebeispiel finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Verwenden Sie den Funktionsbereich **Integrationsmanagement** der Masterdatenverwaltung.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36057862"
      Wenn Sie Daten aus den Stagingtabellen laden, werden die Daten nicht automatisch im Hinblick auf Geschäftsregeln überprüft. Weitere Informationen dazu, was eine Überprüfung ist und wann sie stattfindet, finden Sie unter [Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [Importieren von Daten &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 57edecff9fbebb062381e9d236d24ee329facd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313160"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Berichts-Viewer-Webpart-Programmierbarkeit in SharePoint-Integration
   Der Berichts-Viewer-Webpart ist ein `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`-Serversteuerelement, das einen Satz von öffentlichen Anwendungsprogrammierschnittstellen (API) enthält, der Entwicklern ermöglicht, benutzerdefinierte SharePoint-Anwendungen zu erstellen. Sie können benutzerdefinierte Webparts erstellen, die Berichtspfad und Parameter mit Webpartverbindungen zu Berichts-Viewer-Webparts angeben. Sie können auch das Webpart in eine benutzerdefinierte SharePoint-Webpartseite einbetten und es mit der öffentlichen API anpassen.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Herstellen einer Verbindung mit Berichts-Viewer-Webpart mit benutzerdefinierten Webparts  
- Der Berichts-Viewer-Webpart ist ein Verbindungsconsumer zu SharePoint-Webparts, die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> oder `T:Microsoft.SharePoint.WebPartPages.IFilterValues` implementieren. Ein <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>-Webpart wie das **Dokumente**-Webpart kann einen Berichtspfad zu einem Berichts-Viewer-Webpart angeben, wenn es auf der gleichen Webpartseite wie das Berichts-Viewer-Webpart platziert wird. Ebenso ein `T:Microsoft.SharePoint.WebPartPages.IFilterValues` -Webpart, z. B. die **Textfilter** oder die **Auswahlfilter**, geben Sie einen Berichtsparameter mit einem Berichts-Viewer-Webpart auf derselben Seite wie den Berichts-Viewer-Webpart platziert können Teil.  
+ Der Berichts-Viewer-Webpart ist ein Verbindungsconsumer zu SharePoint-Webparts, die <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> oder `T:Microsoft.SharePoint.WebPartPages.IFilterValues` implementieren. Ein <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>-Webpart wie das **Dokumente**-Webpart kann einen Berichtspfad zu einem Berichts-Viewer-Webpart angeben, wenn es auf der gleichen Webpartseite wie das Berichts-Viewer-Webpart platziert wird. Ebenso ein `T:Microsoft.SharePoint.WebPartPages.IFilterValues` -Webpart, wie z. B. die **Textfilter** oder **Auswahlfilter**, können einen Berichtsparameter mit einem Berichts-Viewer-Webpart, das Sie bei Platzierung in der gleichen Webpartseite wie der Berichts-Viewer-angeben Teil.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implementieren eines Berichtspfadanbieters mit IWebPartRow  
  Um durch Webpartverbindungen einen Berichtspfad zum Berichts-Viewer-Webpart anzugeben, gehen Sie wie folgt vor:  

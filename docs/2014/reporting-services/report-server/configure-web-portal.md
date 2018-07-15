@@ -1,5 +1,5 @@
 ---
-title: Berichts-Manager (einheitlicher Modus) konfigurieren | Microsoft Docs
+title: Konfigurieren des Berichts-Manager (einheitlicher Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299760"
 ---
 # <a name="configure-report-manager-native-mode"></a>Konfigurieren des Berichts-Managers (einheitlicher Modus)
   Der Berichts-Manager ist eine Front-End-Webanwendung, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können. Der Berichts-Manager wird mit dem Berichtsserver-Webdienst in derselben Berichtsserverinstanz installiert und kann konfiguriert werden, wenn Sie in Setup die Option **Standardkonfiguration im einheitlichen Modus installieren** auswählen. Sie können den Berichts-Manager auch nach der Installation konfigurieren. Dieses Thema enthält Informationen zu den folgenden Berichts-Manager-Konfigurationsszenarios:  
@@ -117,7 +117,7 @@ ms.locfileid: "36058018"
   
 4.  Ändern Sie auf dem Berichts-Manager-Computer die Konfigurationseinstellungen in der Datei RSReportServer.config, um auf die Remote-Berichtsserverinstanz zu verweisen. Beim Start liest der Berichts-Manager die Konfigurationsdatei, um die URL zum Berichtsserver abzurufen:  
   
-    1.  Öffnen Sie RSReportServer.config in einem Text-Editor. Standardmäßig befindet sich im Ordner \Programme\Microsoft SQL Server\MSRS11. \< *Instancename*> \reporting.  
+    1.  Öffnen Sie RSReportServer.config in einem Text-Editor. Standardmäßig befindet er sich im Ordner \Programme\Microsoft SQL Server\MSRS11. \< *Instancename*> \reporting.  
   
     2.  Suchen `ReportServerURL`.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36058018"
   
 #### <a name="to-turn-off-report-manager"></a>So deaktivieren Sie den Berichts-Manager  
   
-1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Standardmäßig befindet sich im Ordner \Programme\Microsoft SQL Server\MSRS11. \< *Instancename*> \reporting.  
+1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Standardmäßig befindet er sich im Ordner \Programme\Microsoft SQL Server\MSRS11. \< *Instancename*> \reporting.  
   
 2.  Suchen Sie **IsReportManagerEnabled**.  
   
@@ -175,13 +175,13 @@ ms.locfileid: "36058018"
  Weitere Informationen zum Ändern der Konfigurationsdatei finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Weitere Informationen zum Deaktivieren von Funktionen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Aktivieren und Deaktivieren der Reporting Services-Funktionen](turn-reporting-services-features-on-or-off.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Überprüfen einer Installation von Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
  [Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Aktivieren von Reporting Services-Funktionen ein- oder ausschalten](turn-reporting-services-features-on-or-off.md)   
- [Verwalten eines Berichtsservers der Reporting Services im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md)   
+ [Aktivieren Sie und Deaktivieren der Reporting Services-Funktionen](turn-reporting-services-features-on-or-off.md)   
+ [Verwalten eines Reporting Services im einheitlichen Modus-Berichtsservers](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
  [Konfigurieren Sie einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   

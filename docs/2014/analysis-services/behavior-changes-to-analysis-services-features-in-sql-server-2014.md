@@ -1,5 +1,5 @@
 ---
-title: Verhaltensänderungen von Analysis Services-Funktionen in SQLServer 2014 | Microsoft Docs
+title: Verhaltensänderungen von Analysis Services-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51e0c23301c21cfb86ace1cf99e8aacef4b77fce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87ec5b84d5d74bae3be3c05dfcafd3a609780f82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289876"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Verändertes Verhalten von Analysis Services-Funktionen in SQL Server 2014
-  In diesem Thema werden verhaltensänderungen beschrieben [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für mehrdimensionale, tabellarische, Datamining- und [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] Bereitstellungen. Verhaltensänderungen beeinflussen die Funktion und Interaktion von Funktionen in der aktuellen Version im Vergleich zu früheren Versionen von SQL Server.  
+  In diesem Thema wird beschrieben, Änderungen im Verhalten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für mehrdimensionale, tabellarische, Datamining- und [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] Bereitstellungen. Verhaltensänderungen beeinflussen die Funktion und Interaktion von Funktionen in der aktuellen Version im Vergleich zu früheren Versionen von SQL Server.  
   
 > [!NOTE]  
->  Im Gegensatz dazu eine unterbrechende Änderung ist, die verhindert, ein Datenmodell dass oder die Anwendung integriert [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ausgeführt wird. Weitere Informationen finden Sie unter [wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  Im Gegensatz dazu eine unterbrechende Änderung ist eine, die verhindert, ein Datenmodell dass oder die Anwendung integriert [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ausgeführt wird. Weitere Informationen finden Sie unter [wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  In diesem Thema:  
   
@@ -36,23 +36,23 @@ ms.locfileid: "36148025"
 -   [Verändertes Programmverhalten in SQLServer 2012](#bkmk_sql2012)  
   
 ##  <a name="bkmk_sql2014"></a> Verändertes Programmverhalten in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
- Es gibt keine neuen verhaltensänderungen für tabellarische, mehrdimensionale, Datamining-angekündigt oder [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] Funktionen in dieser Version.  Allerdings da [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] sehr ähnelt der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Versionen werden verhaltensänderungen aus den beiden vorherigen Versionen finden Sie hier zur Vereinfachung für den Fall, dass beim Aktualisieren von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
+ Es gibt keine neuen verhaltensänderungen für tabellarische, mehrdimensionale Datamining-angekündigt oder [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] Funktionen in dieser Version.  Aber da [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] sehr ähnelt der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Versionen verhaltensänderungen aus den beiden vorherigen Versionen finden Sie hier zur Vereinfachung für den Fall, dass Sie ein Upgrade [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ##  <a name="bkmk_sql2012sp1"></a> Verändertes Programmverhalten in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
- In diesem Abschnitt werden die verhaltensänderungen für gemeldet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Diese Änderungen gelten auch für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ In diesem Abschnitt sind die Änderungen am Programmverhalten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Diese Änderungen gelten auch für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Problem|Description|  
 |-----------|-----------------|  
-|Modelle in SQL Server 2008 R2 PowerPivot-Arbeitsmappen werden bei Verwendung in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 nicht automatisch aktualisiert. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.|Die 2008 R2-Arbeitsmappen werden geöffnet, [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], aber keine planmäßige Aktualisierungen. Wenn Sie den Aktualisierungsverlauf überprüfen, wird eine mit der folgenden vergleichbare Fehlermeldung angezeigt:<br /> "Die Arbeitsmappe enthält ein nicht unterstütztes PowerPivot-Modell. Das PowerPivot-Modell in der Arbeitsmappe weist das Format von SQL Server 2008 R2 PowerPivot für Excel 2010 auf. Die folgenden PowerPivot-Modelle werden unterstützt: <br />SQL Server 2012 PowerPivot für Excel 2010<br />SQL Server 2012 PowerPivot für Excel 2013"<br /><br /> **So aktualisieren Sie eine Arbeitsmappe:** Die planmäßigen Aktualisierungen funktionieren erst, nachdem die Arbeitsmappe auf eine Arbeitsmappe der Version 2012 aktualisiert wurde. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:<br /><br /> Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in einer Microsoft Excel 2010-Version, für die das SQL Server 2012 PowerPivot-Add-In für Excel installiert wurde. Speichern Sie dann die Arbeitsmappe, und veröffentlichen Sie sie auf dem SharePoint-Server erneut.<br /><br /> Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in Microsoft Excel 2013. Speichern Sie dann die Arbeitsmappe, und veröffentlichen Sie sie auf dem SharePoint-Server erneut.<br /><br /> <br /><br /> Weitere Informationen zu arbeitsmappenupgrades finden Sie unter [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
-|Verändertes Programmverhalten in DAX [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Vor [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], wenn Sie eine [Date]-Spalte in markieren als Date-Tabelle, für die Verwendung in der Zeitintelligenz angeben und die [Date]-Spalte als Argument an die ALL-Funktion übergeben wird wiederum, übergeben Sie einen Filter für die eine CALCULATE-Funktion, die alle Filter für alle Spalten in der Tabelle werden unabhängig von etwaigen Slicern in der Datumsspalte ignoriert werden.<br /><br /> Beispiel:<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Vor [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], alle Filter für alle DateTable-Spalten ignoriert werden, unabhängig von der [Date]-Spalte als Argument an ALL übergeben.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] und das Verhalten ignoriert in PowerPivot in Excel 2013 werden Filter nur für die angegebene Spalte als Argument an ALL übergeben.<br /><br /> Zur Umgehung des neuen Verhaltens, d. h, um alle Spalten als Filter für die gesamte Tabelle zu ignorieren, können Sie die [Date]-Spalte beispielsweise aus dem Argument ausschließen.<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Dadurch wird das gleiche Verhalten erzielt wie vor [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
+|Modelle in SQL Server 2008 R2 PowerPivot-Arbeitsmappen werden bei Verwendung in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 nicht automatisch aktualisiert. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.|Die 2008 R2-Arbeitsmappen werden geöffnet, [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)], jedoch auch geplante Aktualisierungen nicht funktionieren. Wenn Sie den Aktualisierungsverlauf überprüfen, wird eine mit der folgenden vergleichbare Fehlermeldung angezeigt:<br /> "Die Arbeitsmappe enthält ein nicht unterstütztes PowerPivot-Modell. Das PowerPivot-Modell in der Arbeitsmappe weist das Format von SQL Server 2008 R2 PowerPivot für Excel 2010 auf. Die folgenden PowerPivot-Modelle werden unterstützt: <br />SQL Server 2012 PowerPivot für Excel 2010<br />SQL Server 2012 PowerPivot für Excel 2013"<br /><br /> **So aktualisieren Sie eine Arbeitsmappe:** Die planmäßigen Aktualisierungen funktionieren erst, nachdem die Arbeitsmappe auf eine Arbeitsmappe der Version 2012 aktualisiert wurde. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:<br /><br /> Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in einer Microsoft Excel 2010-Version, für die das SQL Server 2012 PowerPivot-Add-In für Excel installiert wurde. Speichern Sie dann die Arbeitsmappe, und veröffentlichen Sie sie auf dem SharePoint-Server erneut.<br /><br /> Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in Microsoft Excel 2013. Speichern Sie dann die Arbeitsmappe, und veröffentlichen Sie sie auf dem SharePoint-Server erneut.<br /><br /> <br /><br /> Weitere Informationen zu arbeitsmappenupgrades finden Sie unter [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).|  
+|Verändertes Programmverhalten in DAX [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).|Vor dem [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], wenn Sie eine [Date]-Spalte in markieren als Datumstabelle für die Verwendung in zeitintelligenzfunktionen angeben, und dass [Date]-Spalte als Argument an die ALL-Funktion übergeben wird wiederum, übergeben Sie einen Filter für die eine CALCULATE-Funktion, die alle Filter für alle Spalten in der Tabelle sind, unabhängig von etwaigen Slicern in der Datumsspalte ignoriert wird.<br /><br /> Beispiel:<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> Vor dem [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)], alle Filter für alle DateTable-Spalten ignoriert werden, unabhängig von der [Date]-Spalte als Argument übergebenen für alle.<br /><br /> In [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] und in PowerPivot in Excel 2013 werden das Verhalten nur für die angegebene Spalte als Argument übergeben wird, um alle Filter ignoriert.<br /><br /> Zur Umgehung des neuen Verhaltens, d. h, um alle Spalten als Filter für die gesamte Tabelle zu ignorieren, können Sie die [Date]-Spalte beispielsweise aus dem Argument ausschließen.<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> Dadurch wird das gleiche Verhalten erzielt wie vor [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)].|  
   
 ##  <a name="bkmk_sql2012"></a> Verändertes Programmverhalten in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- In diesem Abschnitt dokumentiert die verhaltensänderungen für ausgegebene [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Diese Änderungen gelten auch für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ In diesem Abschnitt sind die Änderungen am Verhalten für gemeldet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Diese Änderungen gelten auch für [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, Mehrdimensionaler Modus  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>Die Festlegung der NullProcessing-Option auf „Preserve“ wird für Distinct Count Measures nicht mehr unterstützt.  
- Vor [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], war es möglich, legen Sie [NullProcessing-Element &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) auf `Preserve` für distinct Count Measures.  Leider führte diese Vorgehensweise häufig zu ungültigen Ergebnissen und manchmal sogar zum Absturz des Verarbeitungsauftrags. Diese Konfiguration ist daher nicht mehr gültig in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Ihrer Verwendung führt dazu, dass der folgende Validierungsfehler auftritt: „Fehler im Metadaten-Manager. Preserve ' ist kein gültiger NullProcessing-Wert für die \<Measurename > distinct Count-Measure. "  
+ Vor dem [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], war es möglich, legen Sie [NullProcessing-Element &#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md) zu `Preserve` für distinct Count Measures.  Leider führte diese Vorgehensweise häufig zu ungültigen Ergebnissen und manchmal sogar zum Absturz des Verarbeitungsauftrags. Diese Konfiguration ist daher nicht mehr gültig in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Ihrer Verwendung führt dazu, dass der folgende Validierungsfehler auftritt: „Fehler im Metadaten-Manager. Preserve ' ist kein gültiger NullProcessing-Wert für die \<Measurename > distinct Count Measures. "  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Cube-Browser in Management Studio und Cube-Designer wurde entfernt  
  Das Cube-Browser-Steuerelement, mit dem Sie Felder in eine PivotTable-Struktur in Management Studio oder im Cube-Designer ziehen und ablegen konnten, wurde aus dem Produkt entfernt. Das Steuerelement war eine OWC-Komponente (Office Web Control). OWC wurde in Office als veraltet eingestuft und ist nicht mehr verfügbar.  
@@ -76,7 +76,7 @@ ms.locfileid: "36148025"
   
  Sie müssen Websitebesitzer sein, um Berechtigungen zu ändern.  
   
- **Zum Erhöhen von Berechtigungen zum Lesen von Berechtigungsstufe für einzelne Arbeitsmappen**  
+ **So erhöhen Sie die Berechtigungen zum Lesen der Berechtigungsstufe für einzelne Arbeitsmappen**  
   
 1.  Klicken Sie auf den Pfeil nach unten, um das Menü für ein einzelnes Dokument zu öffnen.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36148025"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>Die neue Standardeinstellung für Lastenausgleichanforderungen wurde von Roundrobin zu Zustandsbasiert geändert.  
  Eine PowerPivot-Dienstanwendung besitzt Standardeinstellungen, die festlegen, wie Anforderungen von PowerPivot-Daten auf mehreren PowerPivot für SharePoint-Servern in einer Farm verteilt werden. In der vorherigen Version lautete die Standardeinstellung **Roundrobin**. Dabei wurden Anforderungen sequenziell auf die verfügbaren Server verteilt. In dieser Version lautet der Standard **Zustandsbasiert.** Die PowerPivot-Dienstanwendung verwendet Serverzustandsstatistiken, z. B. verfügbarer Speicher oder CPU, um zu ermitteln, welche Serverinstanz die xt-Anforderung abruft.  
   
- Wurde der Server von der vorherigen Version aktualisiert, behält die PowerPivot-Dienstanwendung die vorherige Standardeinstellung (**Roundrobin**) bei. Zur Verwendung der Einstellung für die Zuordnungsmethode **Zustandsbasiert** müssen Sie die Konfigurationseinstellungen ändern. Weitere Informationen finden Sie unter [erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+ Wurde der Server von der vorherigen Version aktualisiert, behält die PowerPivot-Dienstanwendung die vorherige Standardeinstellung (**Roundrobin**) bei. Zur Verwendung der Einstellung für die Zuordnungsmethode **Zustandsbasiert** müssen Sie die Konfigurationseinstellungen ändern. Weitere Informationen finden Sie unter [erstellen und konfigurieren Sie eine PowerPivot-Dienstanwendung in der Zentraladministration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abwärtskompatibilität](../../2014/getting-started/backward-compatibility.md)   

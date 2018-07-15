@@ -1,5 +1,5 @@
 ---
-title: Time Series-Modell Abfragebeispiele | Microsoft Docs
+title: Beispiele für die Zeitreihe zu modellieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319301"
 ---
 # <a name="time-series-model-query-examples"></a>Abfragebeispiel Zeitreihenmodell
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Eine Inhaltsabfrage für ein Zeitreihenmodell bietet möglicherweise zusätzliche Angaben zu den erkannten periodischen Strukturen, wohingegen eine Vorhersageabfrage Vorhersagen für die nächsten 5 bis 10 Zeitscheiben bietet. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},...|  
+|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10 "," PERIODICITY_HINT ={1,3},...|  
   
  Der Standardperiodizitätshinweis ist {1} und wird in allen Modellen angezeigt. Dieses Beispielmodell wurde mit einem zusätzlichen Hinweis erstellt, der möglicherweise nicht im endgültigen Modell vorhanden ist.  
   
@@ -134,7 +134,7 @@ AND NODE_TYPE = 15
   
 -   Verknüpfen Sie mit `PREDICTION JOIN` Daten in einer externen Quelle mit den Trainingsdaten.  
   
--   Bereitstellen von Daten in einzelnen Slices mit einer SINGLETON-Vorhersageabfrage Informationen zur Vorgehensweise beim Erstellen einer Singleton-Vorhersageabfrage finden Sie unter [Data Mining-Abfrageschnittstellen](data-mining-query-tools.md).  
+-   Bereitstellen von Daten in einzelnen Slices mit einer SINGLETON-Vorhersageabfrage Informationen zum Erstellen einer Singleton-Vorhersageabfrage finden Sie unter [Data Mining-Abfrageschnittstellen](data-mining-query-tools.md).  
   
 ###  <a name="bkmk_ReplaceExtend"></a> Grundlegendes zum Verhalten von Vorgängen zum Ersetzen und Erweitern  
  Wenn Sie einem Zeitreihenmodell neue Daten hinzufügen, können Sie angeben, ob die Trainingsdaten erweitert oder ersetzt werden sollen:  
@@ -143,7 +143,7 @@ AND NODE_TYPE = 15
   
      Das Erweitern der Modellfälle ist sinnvoll für das kontinuierliche Aktualisieren des Modells mit neuen Daten. Wenn z. B. der Trainingssatz im Zeitverlauf zunehmen soll, können Sie einfach das Modell erweitern.  
   
-     Zum Erweitern der Daten, die Sie erstellen eine `PREDICTION JOIN` für ein Zeitreihenmodell, geben Sie die Quelle der neuen Daten an und verwenden die `EXTEND_MODEL_CASES` Argument.  
+     Zum Erweitern der Daten, die Sie erstellen eine `PREDICTION JOIN` für ein Zeitreihenmodell, geben Sie die Quelle für die neuen Daten an und Verwenden der `EXTEND_MODEL_CASES` Argument.  
   
 -   **Ersetzen:** Wenn Sie die Daten in der Datenreihe ersetzen, behält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das trainierte Modell bei, verwendet jedoch die neuen Datenwerte zum Ersetzen einiger oder aller vorhandener Trainingsfälle. Die Größe der Trainingsdaten wird daher nicht geändert, die Fälle selbst werden jedoch kontinuierlich durch neuere Daten ersetzt. Wenn Sie genug neue Daten angeben, können Sie die Trainingsdaten durch eine vollkommen neue Reihe ersetzen.  
   
@@ -182,7 +182,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> Treffen von Vorhersagen mit REPLACE_MODEL_CASES  
  Wenn Sie die Fälle in einem Modell ersetzen, bleibt die Größe des Modells gleich, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ersetzt jedoch die einzelnen Fälle im Modell. Dies ist für Kreuzvorhersagen und Szenarien hilfreich, in denen das Beibehalten einer einheitlichen Größe für das Trainingsdataset wichtig ist.  
   
- Ein Beispielfall ist, dass eines Ihrer Geschäfte nicht über ausreichende Umsatzdaten verfügt. Sie könnten ein allgemeines Modell erstellen, indem Sie die durchschnittlichen Umsätze für alle Geschäfte in einer bestimmten Region ermitteln und dann ein Modell trainieren. Klicken Sie dann, um für das Geschäft ausreichenden Umsatzdaten vorhersagen möchten, erstellen Sie eine `PREDICTION JOIN` auf den neuen Umsatzdaten nur für dieses Geschäft. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] behält dabei die vom regionalen Model abgeleiteten Muster bei, ersetzt jedoch die vorhandenen Trainingsfälle durch die Daten des einzelnen Geschäfts. Die Vorhersagewerte sind so näher an den Trendlinien für das einzelne Geschäft.  
+ Ein Beispielfall ist, dass eines Ihrer Geschäfte nicht über ausreichende Umsatzdaten verfügt. Sie könnten ein allgemeines Modell erstellen, indem Sie die durchschnittlichen Umsätze für alle Geschäfte in einer bestimmten Region ermitteln und dann ein Modell trainieren. Um für den Speicher ohne ausreichende Umsatzdaten vorhersagen möchten, erstellen Sie dann eine `PREDICTION JOIN` auf den neuen Umsatzdaten nur für dieses Geschäft. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] behält dabei die vom regionalen Model abgeleiteten Muster bei, ersetzt jedoch die vorhandenen Trainingsfälle durch die Daten des einzelnen Geschäfts. Die Vorhersagewerte sind so näher an den Trendlinien für das einzelne Geschäft.  
   
  Wenn Sie das `REPLACE_MODEL_CASES`-Argument verwenden, fügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kontinuierlich neue Fälle am Ende des Fallsatzes ein und löscht die entsprechende Anzahl am Anfang des Fallsatzes. Wenn Sie mehr neue Daten hinzufügen, als im ursprünglichen Trainingssatz vorhanden waren, verwirft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die ältesten Daten. Wenn Sie genügende neue Werte angeben, können die Vorhersagen auf vollkommen neuen Daten basieren.  
   
@@ -205,7 +205,7 @@ AND NODE_TYPE = 15
  Beispiele für Abfragen und Weitere Informationen zur Syntax für die Verwendung von `REPLACE_MODEL_CASES` und `EXTEND_MODEL_CASES`, finden Sie unter [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_MissingValues"></a> Ersetzen von fehlenden Werten in Zeitreihenmodellen  
- Wenn Sie einem Zeitreihenmodell mit einer `PREDICTION JOIN`-Anweisung neue Daten hinzufügen, darf das neue Dataset keine fehlenden Werte aufweisen. Wenn eine Reihe unvollständig ist, muss das Modell die fehlenden Werte einfügen. Dabei wird NULL, ein numerisches Mittel, ein bestimmtes numerisches Mittel oder ein Vorhersagewert verwendet. Wenn Sie `EXTEND_MODEL_CASES` angeben, ersetzt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die fehlenden Werte durch Vorhersagen auf Grundlage des ursprünglichen Modells. Bei Verwendung von `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ersetzt die fehlenden Werte mit dem Wert an die von Ihnen in der *MISSING_VALUE_SUBSTITUTION* Parameter.  
+ Wenn Sie einem Zeitreihenmodell mit einer `PREDICTION JOIN`-Anweisung neue Daten hinzufügen, darf das neue Dataset keine fehlenden Werte aufweisen. Wenn eine Reihe unvollständig ist, muss das Modell die fehlenden Werte einfügen. Dabei wird NULL, ein numerisches Mittel, ein bestimmtes numerisches Mittel oder ein Vorhersagewert verwendet. Wenn Sie `EXTEND_MODEL_CASES` angeben, ersetzt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die fehlenden Werte durch Vorhersagen auf Grundlage des ursprünglichen Modells. Bei Verwendung von `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ersetzt die fehlenden Werte mit dem Wert, den Sie, in angeben der *MISSING_VALUE_SUBSTITUTION* Parameter.  
   
 ## <a name="list-of-prediction-functions"></a>Liste der Vorhersagefunktionen  
  Alle Algorithmen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] unterstützen einen gemeinsamen Funktionssatz. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus unterstützt jedoch die zusätzlichen Funktionen, die in der folgenden Tabelle aufgeführt sind.  
@@ -225,6 +225,6 @@ AND NODE_TYPE = 15
  [Datamining-Abfragen](data-mining-queries.md)   
  [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md)   
  [Technische Referenz für Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)   
- [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

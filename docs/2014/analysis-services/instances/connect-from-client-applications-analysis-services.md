@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs
+title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314910"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
   Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
@@ -109,7 +109,7 @@ ms.locfileid: "36061051"
   
 1.  Starten Sie erst **SQL Server Profiler** für die Analysis Services-Instanz und dann eine neue Ablaufverfolgung.  
   
-2.  Vergewissern Sie sich, die in der Ereignisauswahl, `Audit Login` und `Audit Logout` im Abschnitt Sicherheitsüberwachung aktiviert sind.  
+2.  Überprüfen Sie in der Ereignisauswahl, ob `Audit Login` und `Audit Logout` im Abschnitt Sicherheitsüberwachung aktiviert sind.  
   
 3.  Stellen Sie von einem Remoteclientcomputer über einen Anwendungsdienst (z. B. SharePoint oder Reporting Services) eine Verbindung mit Analysis Services her. Das Audit Login-Ereignis zeigt die Identität des Benutzers an, der eine Verbindung mit Analysis Services herstellt.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36061051"
  [Lösen allgemeiner Verbindungsprobleme in SQL Server 2005 Analysis Services – Verbindungsszenarien](http://technet.microsoft.com/library/cc917670.aspx). Obwohl dieses Dokument bereits einige Jahre älter ist, sind die enthaltenen Informationen und Methoden weiterhin gültig.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit Analysis Services](connect-to-analysis-services.md)   
+ [Verbinden von Analysis Services](connect-to-analysis-services.md)   
  [Von Analysis Services Unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)   
  [Identitätswechsel &#40;SSAS – tabellarisch&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  

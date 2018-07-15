@@ -1,5 +1,5 @@
 ---
-title: Währungsumrechnungen (Analysis Services) | Microsoft Docs
+title: Währungsumrechnungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289826"
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
@@ -58,7 +58,7 @@ ms.locfileid: "36061277"
  Währungsdimension  
  Eine Datenbankdimension, die durch die folgenden Einstellungen definiert ist:  
   
--   Die `Type` -Eigenschaft der Dimension wird auf Currency festgelegt.  
+-   Die `Type` Eigenschaft der Dimension wird auf Currency festgelegt.  
   
 -   Die `Type`-Eigenschaft von einem Attribut der Dimension wird auf CurrencyName festgelegt.  
   
@@ -72,18 +72,18 @@ ms.locfileid: "36061277"
   
 -   Zwischen einer Zeitdimension und der Wechselkurs-Measuregruppe besteht eine reguläre Dimensionsbeziehung.  
   
--   Wahlweise wird die `Type`-Eigenschaft auf ExchangeRate festgelegt. Während der Business Intelligence-Assistent die Beziehungen mit den währungs- und Zeitdimensionen zum Identifizieren der wahrscheinlichen Wechselkurs-Measuregruppen verwendet, Festlegen der `Type` -Eigenschaft auf ExchangeRate ermöglicht Clientanwendungen Umzurechnende leichter zu identifizieren Gruppen.  
+-   Wahlweise wird die `Type`-Eigenschaft auf ExchangeRate festgelegt. Während der Business Intelligence-Assistent die Beziehungen mit den währungs- und Zeitdimensionen zum Identifizieren der wahrscheinlichen Wechselkurs-Measuregruppen verwendet, Festlegen der `Type` -Eigenschaft auf ExchangeRate kann Clientanwendungen Umzurechnende Measure leichter zu identifizieren Gruppen.  
   
 -   Mindestens ein Measure, der die Wechselkurse darstellt, die in der Wechselkurs-Measuregruppe enthalten sind.  
   
  Berichtswährungsdimension  
  Die Dimension, die vom Business Intelligence-Assistenten nach dem Definieren einer Währungsumrechnung definiert wird, und die die Berichtswährungen für diese Währungsumrechnung enthält. Die Berichtswährungsdimension basiert auf einer benannten Abfrage aus der Dimensionshaupttabelle der Währungsdimension. Diese Abfrage ist in der Datenquellensicht definiert, auf der die zur Wechselkurs-Measuregruppe zugeordnete Währungsdimension basiert. Die Dimension wird durch die folgenden Einstellungen definiert:  
   
--   Die `Type` -Eigenschaft der Dimension wird auf Currency festgelegt.  
+-   Die `Type` Eigenschaft der Dimension wird auf Currency festgelegt.  
   
 -   Die `Type` Eigenschaft des Schlüsselattributs der Dimension wird auf CurrencyName festgelegt.  
   
--   Die `Type` -Eigenschaft von einem Attribut innerhalb der Dimension wird auf CurrencyDestination festgelegt, und die Spalte, die an das Attribut gebunden enthält den Währungsbezeichner, der die berichtswährung für die währungsumrechnung darstellt.  
+-   Die `Type` Eigenschaft von einem Attribut innerhalb der Dimension wird auf CurrencyDestination festgelegt, und die Spalte gebunden wird, auf das Attribut enthält den Währungsbezeichner, der die berichtswährung für die währungsumrechnung darstellt.  
   
 ## <a name="defining-currency-conversions"></a>Definieren von Währungsumrechnungen  
  Sie können mit dem Business Intelligence-Assistenten die Funktionen der Währungsumrechnung für einen Cube definieren, oder Sie können Währungsumrechnungen mithilfe von MDX-Skripts manuell definieren.  
@@ -189,6 +189,6 @@ ms.locfileid: "36061277"
  Sie können die Skriptbefehle in einer Währungsumrechnung nach Bedarf ändern. Wenn Sie die Währungsumwandlung jedoch überschreiben, gehen Ihre Änderungen jedoch verloren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globalisierungsszenarien für Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

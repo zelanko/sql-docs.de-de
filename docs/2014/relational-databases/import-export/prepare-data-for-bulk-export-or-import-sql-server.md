@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], planning
 - bulk importing [SQL Server], from a CSV file
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e8c73ee58adca043b3630501137285012bf3e31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 474f771b73e5e3ce6f7a5d567d491edb740f94f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302460"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Vorbereiten von Daten für den Massenexport oder -import (SQL Server)
   In diesem Abschnitt werden Überlegungen, die beim Planen für Massenexportvorgänge relevant sind, sowie die Anforderungen für Massenimportvorgänge erläutert.  
@@ -56,7 +55,7 @@ ms.locfileid: "36060937"
   
 -   Zum Importieren von Daten mithilfe des Befehls **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
   
--   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Angenommen, ein `int` Feld kann nicht geladen werden, in eine `datetime` Spalte. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Z. B. eine `int` Feld kann nicht geladen werden, in einem `datetime` Spalte. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
     >  Sie können den Befehl **bcp** mit dem Schalter **-F** *first_row* und/oder dem Schalter **-L** *last_row* verwenden, um anstelle der gesamten Datei eine Teilmenge von Zeilen anzugeben, die aus einer Datendatei importiert werden sollen. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  

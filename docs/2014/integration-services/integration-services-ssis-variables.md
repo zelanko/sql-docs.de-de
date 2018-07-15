@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283616"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -90,7 +90,7 @@ ms.locfileid: "36058101"
  Gibt die Beschreibung der Variablen an.  
   
  EvaluateAsExpression  
- Wenn die Eigenschaft auf festgelegt ist `True`, der Ausdruck wird verwendet, um den Wert der Variablen festgelegt.  
+ Wenn die Eigenschaft auf festgelegt ist `True`, wird der bereitgestellte Ausdruck zum Festlegen des Variablenwerts verwendet.  
   
  expression  
  Gibt den der Variablen zugeordneten Ausdruck an.  
@@ -118,17 +118,17 @@ ms.locfileid: "36058101"
  IncludeInDebugDump  
  Geben Sie an, ob der Variablenwert in den Debugdumpdateien enthalten ist.  
   
- Für benutzerdefinierte Variablen und Systemvariablen, der Standardwert für die **InclueInDebugDump** Option ist `true`.  
+ Für benutzerdefinierte Variablen und Systemvariablen, der Standardwert für die **InclueInDebugDump** Option `true`.  
   
- Für benutzerdefinierte Variablen setzt das System jedoch den **IncludeInDebugDump** option `false` Wenn die folgenden Bedingungen erfüllt sind:  
+ Für benutzerdefinierte Variablen setzt das System jedoch die **IncludeInDebugDump** option `false` Wenn folgenden Bedingungen erfüllt sind:  
   
--   Wenn die **EvaluateAsExpression** Variable als Eigenschaft festgelegt ist, um `true`, setzt das System die **IncludeInDebugDump** option `false`.  
+-   Wenn die **EvaluateAsExpression** Variable als Eigenschaft auf festgelegt ist `true`, setzt das System die **IncludeInDebugDump** option `false`.  
   
-     Um den Text des Ausdrucks als Variablenwert in den debugdumpdateien aufzunehmen, legen Sie die **IncludeInDebugDump** option `true`.  
+     Um den Text des Ausdrucks als Variablenwert in die debugdumpdatei einzuschließen, setzen die **IncludeInDebugDump** option `true`.  
   
 -   Wenn der Datentyp der Variablen in eine Zeichenfolge geändert wird, setzt das System die **IncludeInDebugDump** option `false`.  
   
- Wenn das System setzt die **IncludeInDebugDump** option `false`, dies möglicherweise vom Benutzer ausgewählten Wert außer Kraft gesetzt.  
+ Wenn setzt das System die **IncludeInDebugDump** option `false`, den vom Benutzer ausgewählten Wert möglicherweise überschrieben.  
   
  value  
  Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck sein. Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datentyps des Werts. Die beiden Eigenschaften müssen kompatibel sein. Beispielsweise ist das Verwenden eines string-Werts zusammen mit einem integer-Datentyp ungültig.  

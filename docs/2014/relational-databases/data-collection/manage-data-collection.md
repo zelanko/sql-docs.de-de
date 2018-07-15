@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296520"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
-  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren und Funktionen, um unterschiedliche Aspekte der Datensammlung zu verwalten, beispielsweise das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Datawarehouse .  
+  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren und Funktionen, um unterschiedliche Aspekte der Datensammlung zu verwalten, wie z. B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Datawarehouse .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Verwalten der Datensammlung mit SQL Server Management Studio  
- Sie können die folgenden datensammlerbezogenen Tasks ausführen, indem Sie mithilfe des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ Sie können die folgenden Daten datensammlerbezogenen Tasks ausführen, indem Sie mithilfe des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Konfigurieren des Verwaltungs-Data Warehouses &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36147589"
 > [!IMPORTANT]  
 >  Im Gegensatz zu regulären gespeicherten Prozeduren verwenden die gespeicherten Prozeduren des Datensammlers genau eingegebene Parameter und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
- Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen und die bereitgestellten Codebeispiele ausführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Führen Sie die Abfrage aus der Windows-Eingabeaufforderung unter Verwendung der `sqlcmd` Hilfsprogramm. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms „sqlcmd“](../scripting/sqlcmd-use-the-utility.md).  
+ Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen und führen Sie die bereitgestellten Codebeispiele. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Sie können die Abfrage ausführen, von der Windows-Eingabeaufforderung unter Verwendung der `sqlcmd` Hilfsprogramm. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms „sqlcmd“](../scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Gespeicherte Prozeduren und Sichten  
  **Arbeiten mit dem Datensammler**  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233870"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der zweite Task darin, sicherzustellen, dass die Änderungsdaten für das ausgewählte Intervall bereit sind. Dieser Schritt ist notwendig, da der asynchrone Aufzeichnungsprozess möglicherweise noch nicht alle Änderungen bis zum ausgewählten Endpunkt verarbeitet hat.  
@@ -279,7 +279,7 @@ ms.locfileid: "36061445"
   
 6.  Klicken Sie im **Skripttask-Editor**auf der Seite **Skript** auf **Skript bearbeiten** , um die Skriptentwicklungsumgebung zu öffnen.  
   
-7.  Geben Sie in der Main-Prozedur Code zum Protokollieren der Fehler durch Aufrufen der `Dts.Log` -Methode, oder um ein Ereignis auszulösen, durch den Aufruf einer der Methoden von der `Dts.Events` Schnittstelle. Informieren Sie das Paket über den Fehler, indem Sie `Dts.TaskResult = Dts.Results.Failure`zurückgeben.  
+7.  Geben Sie in der Main-Prozedur Code zum Protokollieren eines Fehlers durch Aufrufen der `Dts.Log` -Methode, oder um ein Ereignis auszulösen, durch Aufrufen einer der Methoden von der `Dts.Events` Schnittstelle. Informieren Sie das Paket über den Fehler, indem Sie `Dts.TaskResult = Dts.Results.Failure`zurückgeben.  
   
      Im folgenden Beispiel wird gezeigt, wie eine Meldung ins Protokoll geschrieben wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)und [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

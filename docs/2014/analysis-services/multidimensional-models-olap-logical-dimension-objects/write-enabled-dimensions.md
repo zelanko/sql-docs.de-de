@@ -1,5 +1,5 @@
 ---
-title: Mit aktiviertem Schreibzugriff Dimensionen | Microsoft Docs
+title: Mit aktiviertem Schreibzugriff Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f140fc79d1b93c419e64d564efec68d29821f2d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293531"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensionen mit aktiviertem Schreibzugriff
     
@@ -47,7 +47,7 @@ ms.locfileid: "36059251"
   
  Jedes vorhandene Element einer Rückschreibedimension kann geändert oder gelöscht werden. Wenn ein Element gelöscht wird, wird die Löschung an alle untergeordneten Elemente weitergegeben. So würden beispielsweise in einer Customer-Dimension mit den Attributen CountryRegion, Province, City und Customer durch das Löschen eines CountryRegion-Attributs alle Provinzen, Städte und Kunden gelöscht, die zum gelöschten Land bzw. zur gelöschten Region gehören. Wenn ein Land bzw. eine Region nur über eine Provinz verfügt, würden beim Löschen dieser Provinz auch das Land bzw. die Region gelöscht.  
   
- Elemente einer Rückschreibedimension können nur innerhalb derselben Ebene verschoben werden. So könnte beispielsweise eine Stadt auf die City-Ebene in einem anderen Land bzw. einer anderen Region oder Provinz verschoben werden, nicht aber auf die Province- oder CountryRegion-Ebene. In einer über-/ unterordnungshierarchie sind alle Elemente Blattelemente und daher ein Element verschoben werden kann auf jeder Ebene anders als die `(All)` Ebene.  
+ Elemente einer Rückschreibedimension können nur innerhalb derselben Ebene verschoben werden. So könnte beispielsweise eine Stadt auf die City-Ebene in einem anderen Land bzw. einer anderen Region oder Provinz verschoben werden, nicht aber auf die Province- oder CountryRegion-Ebene. In einer über-/ unterordnungshierarchie, sind alle Elemente Blattelemente, und weshalb ein Element verschoben werden kann auf jeder Ebene anders als die `(All)` Ebene.  
   
  Wird ein Element in einer Über-/Unterordnungshierarchie gelöscht, werden die untergeordneten Elemente zum übergeordneten Element verschoben. Für das gelöschte Element sind Updateberechtigungen in der relationalen Tabelle erforderlich, nicht aber für die verschobenen Elemente. Wenn eine Anwendung ein Element in einer Über-/Unterordnungshierarchie verschiebt, kann die Anwendung im UPDATE-Vorgang angeben, ob nachfolgende Werte des Elements zusammen mit dem Element verschoben werden sollen oder zum übergeordneten Element des Elements verschoben werden sollen. Zum rekursiven Löschen eines Elements in einer Über-/Unterordnungshierarchie muss ein Benutzer über Updateberechtigungen in der relationalen Tabelle für das Element und alle nachfolgenden Werte des Elements verfügen.  
   

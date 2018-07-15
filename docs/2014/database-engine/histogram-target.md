@@ -1,5 +1,5 @@
 ---
-title: Histogrammziel | Microsoft Docs
+title: Histogram-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dcee8251ba073d87f94fc4be18bc6e77c6113361
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293120"
 ---
 # <a name="histogram-target"></a>Histogrammziel
   Das Histogrammziel fasst Ereignisse eines bestimmten Ereignistyps auf Grundlage von Ereignisdaten zusammen. Die Gruppierungen von Ereignissen werden anhand einer bestimmten Ereignisspalte oder Aktion gezählt. Mit dem Histogrammziel können Sie Leistungsprobleme diagnostizieren. Durch Identifizieren der am häufigsten eintretenden Ereignisse können Sie relevante Bereiche ausmachen, die auf mögliche Ursachen eines Leistungsproblems hindeuten.  
@@ -33,9 +33,9 @@ ms.locfileid: "36147594"
 |Option|Zulässige Werte|Description|  
 |------------|--------------------|-----------------|  
 |slots|Ein ganzzahliger Wert. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, der die maximale Anzahl von Gruppierungen angibt, die beizubehalten sind. Wenn dieser Wert erreicht wird, werden neue Ereignisse, die nicht zu vorhandenen Gruppen gehören, ignoriert.<br /><br /> Beachten Sie, dass die Slotnummer zur Leistungsverbesserung auf die nächste Potenz von 2 aufgerundet wird.|  
-|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> SELECT p.name, se.event_name<br />VON dm_xe_session_events se<br />Verknüpfen von dm_xe_packages p<br />ON Se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
+|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> SELECT p.name, se.event_name<br />VON dm_xe_session_events se<br />Verknüpfen von dm_xe_packages p<br />AUF Se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
 |source_type|Der Typ des Objekts, auf dem der Bucket basiert. Dieser Wert ist optional. Wenn er nicht angegeben wird, wird 1 als Standardwert verwendet.|Kann einen der folgenden Werte aufweisen:<br /><br /> 0 für ein Ereignis<br /><br /> 1 für eine Aktion|  
-|Quelle|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> SELECT Name FROM dm_xe_object_columns<br />WHERE Object_name = "\<Ereignisname >'<br />UND Column_type! = "Readonly"<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
+|Quelle|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> SELECT Name FROM dm_xe_object_columns<br />WHERE Object_name = '\<Ereignisname >'<br />UND Column_type! = "Readonly"<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
   
  Im folgenden Beispiel wird das Erfassen von Daten mit dem Histogrammziel auf abstrakter Ebene veranschaulicht. In diesem Beispiel soll das Histogrammziel zum Zählen der Anzahl der eingetretenen Wartevorgänge je Wartevorgangstyp verwendet werden. Geben Sie dazu beim Definieren des Histogrammziels die folgenden Optionen an:  
   

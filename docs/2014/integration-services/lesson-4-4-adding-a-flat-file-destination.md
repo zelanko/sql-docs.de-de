@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285475"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Schritt 4: Hinzufügen eines Flatfileziels
   Die Fehlerausgabe der "Lookup Currency Key"-Transformation leitet alle Datenzeilen, für die im Suchvorgang keine Übereinstimmung gefunden wurde, zur Skripttransformation um. Um die zu den Fehlern angezeigten Informationen zu verbessern, führt die Skripttransformation ein Skript aus, mit dem die Fehlerbeschreibung abgerufen wird.  
@@ -40,7 +40,7 @@ ms.locfileid: "36061643"
   
 6.  Überprüfen Sie im Dialogfeld **Flatfileformat** , ob **Mit Trennzeichen** ausgewählt ist, und klicken Sie anschließend auf **OK**.  
   
-7.  In der **Dateiverbindungs-Manager-Editor für Flatfiles**in der **Name des Verbindungs-Manager** geben `Error Data`.  
+7.  In der **Dateiverbindungs-Manager-Editor für Flatfiles**in die **Name des Verbindungs-Managers** geben `Error Data`.  
   
 8.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Durchsuchen**, und suchen Sie den Ordner, in dem die Datei gespeichert werden soll.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280426"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
@@ -41,7 +41,7 @@ ms.locfileid: "36060991"
   
 -   Foreach-Dateienumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchsuchen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung *.LOG im Windows-Ordner und deren Unterordner lesen.  
   
--   Foreach-Enumerator für Daten aus Variable zum Aufzählen des aufzählbaren Objekts, das eine angegebene Variable enthält. Das aufzählbare Objekt kann ein Array, ein ADO.NET `DataTable`, einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Enumerator und So weiter. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
+-   Foreach-Enumerator für Daten aus Variable zum Aufzählen des aufzählbaren Objekts, das eine angegebene Variable enthält. Das aufzählbare Objekt kann ein Array, ein ADO.NET sein `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Enumerator und So weiter. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
   
 -   Foreach Item-Enumerator zum Aufzählen von Elementen, bei denen es sich um Auflistungen handelt. Beispielsweise können Sie die Namen der ausführbaren Dateien und Arbeitsverzeichnisse aufzählen, die ein Task Prozess ausführen verwendet.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36060991"
   
 -   Foreach-Azure-Blob-Enumerator zum Aufzählen von Blobs in einem BLOB-Container in einem Azure-Speicher.  
   
--   Foreach-ADLS File-Enumerator zum Aufzählen von Dateien in einem ADLS-Verzeichnis.
+-   Foreach-ADLS-Datei-Enumerator zum Aufzählen von Dateien in einem ADLS-Verzeichnis.
   
  Das folgende Diagramm zeigt einen Foreach-Schleifencontainer mit einem Task Dateisystem. Die Foreach-Schleife verwendet den Foreach-Dateienumerator, und der Task Dateisystem ist so konfiguriert, dass eine Datei kopiert wird. Falls der vom Enumerator angegebene Ordner vier Dateien enthält, wird die Schleife viermal wiederholt, und die vier Dateien werden kopiert.  
   
  ![Ein Foreach-Schleifencontainer der einen Ordner aufzählt](../media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
   
- Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um für die Paketobjekteigenschaft den Enumeratorauflistungswert zu aktualisieren. Zunächst ordnen Sie den Auflistungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungswert des foreach-Dateienumerator zugeordnet, einer Variable namens `MyFile` und die Variable wird dann im Eigenschaftsausdruck für die Eigenschaft Subject des einen Task "Mail senden" verwendet. Beim Ausführen des Pakets wird die „Subject“-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
+ Sie können eine Kombination aus Variablen und Eigenschaftsausdrücken verwenden, um für die Paketobjekteigenschaft den Enumeratorauflistungswert zu aktualisieren. Zunächst ordnen Sie den Auflistungswert einer benutzerdefinierten Variablen zu. Anschließend implementieren Sie einen Eigenschaftsausdruck für die Eigenschaft, die die Variable verwendet. Beispielsweise wird der Auflistungswert des Foreach-Dateienumerator zugeordnet, in einer Variablen namens `MyFile` und die Variable wird dann im Eigenschaftsausdruck für die Eigenschaft Subject des Tasks Mail senden verwendet. Beim Ausführen des Pakets wird die „Subject“-Eigenschaft bei jeder Wiederholung der Schleife mit dem Namen einer Datei aktualisiert. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../expressions/use-property-expressions-in-packages.md).  
   
  Variablen, die dem Enumeratorauflistungswert zugeordnet sind, können ebenfalls in Ausdrücken und Skripts verwendet werden.  
   
@@ -79,8 +79,8 @@ ms.locfileid: "36060991"
 |Foreach Item-Enumerator|Definieren Sie die Elemente in der Foreach Item-Auflistung, einschließlich der Spalten und Spaltendatentypen.|  
 |Foreach-NodeList-Enumerator|Geben Sie die Quelle des XML-Dokuments an, und konfigurieren Sie den XPath-Vorgang.|  
 |Foreach-SMO-Enumerator|Geben Sie die Verbindung mit einer Datenbank und die aufzuzählenden SMO-Objekte an.|  
-|Foreach-Azure-Blob-Enumerator|Geben Sie den Azure-Blob-Container, der BLOBs aufzuzählenden enthält.|  
-|Foreach-ADLS-Datei|Geben Sie den ADLS-Verzeichnis mit den Dateien aufgelistet werden sollen, sowie einige Filter sind.|
+|Foreach-Azure-Blob-Enumerator|Geben Sie den Azure-Blob-Container, der Aufzählen von Blobs enthält.|  
+|Foreach-ADLS-Datei|Geben Sie das ADLS-Verzeichnis, das Dateien aufgelistet werden sollen, sowie einige Filter enthält.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Eigenschaftsausdrücke in Foreach-Schleifencontainern  
  Pakete können so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden. Diese Konfiguration sollte mit Vorsicht verwendet werden, wenn das Paket einen Foreach-Schleifencontainer enthält, der Eigenschaftsausdrücke implementiert.  

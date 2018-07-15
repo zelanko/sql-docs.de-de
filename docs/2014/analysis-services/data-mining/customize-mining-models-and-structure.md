@@ -1,5 +1,5 @@
 ---
-title: Anpassen von Miningmodellen und-Strukturen | Microsoft Docs
+title: Anpassen von Miningmodellen und-Strukturen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286356"
 ---
 # <a name="customize-mining-models-and-structure"></a>Anpassen von Miningmodellen und -strukturen
   Nachdem Sie einen Algorithmus ausgewählt haben, der Ihren Geschäftsanforderungen entspricht, können Sie das Miningmodell mit den folgenden Verfahren anpassen, um die Ergebnisse potenziell zu verbessern.  
@@ -65,9 +65,9 @@ ms.locfileid: "36148733"
 ### <a name="creating-aliases-for-model-columns"></a>Erstellen von Aliasen für Modellspalten  
  Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Miningmodell erstellt, werden die gleichen Spaltennamen verwendet, die sich in der Miningstruktur befinden. Sie können jeder Spalte im Miningmodell ein Alias hinzufügen. Auf diese Weise sind die Spalteninhalte oder deren Verwendung möglicherweise leichter zu erkennen, und der Name ist bei der Erstellung von Abfragen kürzer und damit einfacher zu handhaben. Aliase sind außerdem hilfreich, als Sie eine Kopie einer Spalte erstellen und dieser einen aussagekräftigen Namen zuweisen möchten.  
   
- Erstellen Sie einen Alias, indem Sie bearbeiten die `Name` -Eigenschaft der Miningmodellspalte. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] weiterhin den ursprünglichen Namen als die ID der Spalte und der neue Wert, den Sie für die eingeben `Name` ist der Spaltenalias, und werden im Raster neben der Spaltenverwendung in Klammern angezeigt.  
+ Sie erstellen einen Alias, indem Sie bearbeiten die `Name` -Eigenschaft der Miningmodellspalte. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] weiterhin den ursprünglichen Namen als die ID der Spalte, und der neue Wert, den Sie für eingeben `Name` ist der Spaltenalias, und im Raster neben der Spaltenverwendung in Klammern angezeigt wird.  
   
- ![Aliase für Mining model-Spalten](../media/modelcolumnalias-income.gif "Aliasnamen für Mining model-Spalten")  
+ ![Aliasnamen für Mining model-Spalten](../media/modelcolumnalias-income.gif "Aliasnamen für Mining model-Spalten")  
   
  In der Abbildung werden verwandte Modelle dargestellt, die mehrere Kopien einer Miningstrukturspalte enthalten, die sich alle auf das Einkommen beziehen. Jede Kopie der Strukturspalte wurde auf eine andere Weise diskretisiert. Die Modelle im Diagramm verwenden alle eine andere Spalte aus der Miningstruktur, um die Spalten im Modell jedoch einfacher vergleichen zu können, wurden die Spalten in allen Modellen zu [**Einkommen**] umbenannt.  
   

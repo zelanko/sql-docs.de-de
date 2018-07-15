@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279396"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
   Speicheroptimierte Tabellen werden im Rahmen regelmäßiger Datenbanksicherungen gesichert. Wie bei datenträgerbasierten Tabellen wird die CHECKSUM von Daten-/Änderungsdateipaaren als Teil der Datenbanksicherung überprüft, um Speicherbeschädigungen zu erkennen.  
@@ -43,7 +43,7 @@ ms.locfileid: "36058062"
 |IN TRANSITION TO TOMBSTONE|Nur Dateimetadaten|  
 |TOMBSTONE|Nur Dateimetadaten|  
   
- Die Größe von Datenbanksicherungen mit einer oder mehreren speicheroptimierten Tabellen liegt in der Regel über deren Größe im Arbeitsspeicher jedoch unter dem auf dem Datenträger belegten Speicherplatz. Die zusätzliche Größe richtet sich nach der Anzahl gelöschter Zeilen und der Anzahl von Prüfpunktdateipaaren mit dem Status Merge sourceund REQUIRED FOR BACKUP/HA, die indirekt von der Arbeitsauslastung abhängt. Beschreibungen der Statusphasen für prüfpunktdateipaare finden Sie [dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Die Größe von Datenbanksicherungen mit einer oder mehreren speicheroptimierten Tabellen liegt in der Regel über deren Größe im Arbeitsspeicher jedoch unter dem auf dem Datenträger belegten Speicherplatz. Die zusätzliche Größe richtet sich nach der Anzahl gelöschter Zeilen und der Anzahl von Prüfpunktdateipaaren mit dem Status Merge sourceund REQUIRED FOR BACKUP/HA, die indirekt von der Arbeitsauslastung abhängt. Beschreibungen der Statusphasen für prüfpunktdateipaare finden Sie [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
   

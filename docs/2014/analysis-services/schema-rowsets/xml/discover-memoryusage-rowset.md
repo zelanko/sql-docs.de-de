@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_MEMORYUSAGE-Rowset | Microsoft Docs
+title: DISCOVER_MEMORYUSAGE-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304580"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE-Rowset
   Gibt die DISCOVER_MEMORYUSAGE-Statistiken für verschiedene vom Server zugeordnete Objekte zurück.  
@@ -49,7 +49,7 @@ ms.locfileid: "36058177"
 |`ElementCount`|`DBTYPE_UI4`||Für ein Containerobjekt ist dies die Anzahl der in diesem Objekt enthaltenen Objekte.|  
 |`Shrinkable`|`DBTYPE_BOOL`|ja|Ein boolescher Wert, der angibt, wenn der Arbeitsspeicher verkleinerbar ist (kann aufgrund von ungenügend Arbeitsspeicher wegfallen). true, wenn der Arbeitsspeicher verkleinerbar ist; false, wenn der Arbeitsspeicher nicht verkleinerbar ist.|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||Eine Zeichenfolge, die den vollständigen Pfad dieses Objekts identifiziert.|  
-|`ObjectID`|`DBTYPE_WSTR`||Die Zeichenfolge, die das Objekt identifiziert. Der vollständige Pfad dieses Objekts wird von der Zeichenfolge dargestellt: (ObjectParentPath + '.' + ObjectId).|  
+|`ObjectID`|`DBTYPE_WSTR`||Die Zeichenfolge, die das Objekt identifiziert. Der vollständige Pfad dieses Objekts wird durch die Zeichenfolge dargestellt: (ObjectParentPath + '.' + ObjectId).|  
   
  Dieses Schemarowset ist nicht sortiert.  
   

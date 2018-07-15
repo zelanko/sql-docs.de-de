@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284836"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
   Um zu verhindern, dass ein Volltextindex unnötig aufgebläht wird, verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über einen Mechanismus, der häufig vorkommende, für die Suche nutzlose Zeichenfolgen ignoriert. Diese verworfenen Zeichenfolgen werden als *Stoppwörter*bezeichnet. Während der Indexerstellung lässt die Volltext-Engine Stoppwörter vom Volltextindex weg. Dies bedeutet, dass Volltextabfragen nicht nach Stoppwörtern suchen.  
@@ -94,7 +93,7 @@ ms.locfileid: "36147866"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **So löschen Sie eine stopliste**  
+ **Zum Löschen einer Stoppliste**  
   
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
@@ -102,21 +101,21 @@ ms.locfileid: "36147866"
 ##  <a name="queries"></a> Verwenden einer Stopliste in Volltextabfragen  
  Wenn Sie eine Stopliste in Abfragen nutzen möchten, müssen Sie diese einem Volltextindex zuordnen. Sie können einem Volltextindex eine Stoppliste zuordnen, wenn Sie den Index erstellen, oder Sie können den Index später ändern, um eine Stoppliste hinzuzufügen.  
   
- **Erstellen einen Volltextindex und ordnen diesem eine Stoppliste zu**  
+ **Erstellen einen Volltextindex und ordnen Sie ihm eine Stoppliste zu**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **So ordnen oder heben einen vorhandenen Volltextindex eine Stoppliste**  
+ **Bzw. deren Zuordnung einer Stoppliste mit einem vorhandenen Volltextindex**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **Um eine Fehlermeldung zu unterdrücken, sofern Stoppwörter bewirken, eine boolesche Operation für eine Volltextabfrage dass fehlschlägt**  
+ **Zum Unterdrücken einer Fehlermeldung, wenn aufgrund von Stoppwörtern eine boolesche Operation für eine Volltextabfrage fehlschlägt**  
   
 -   [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
 ##  <a name="viewing"></a> Anzeigen von Stoplisten und Stoplisten-Metadaten  
- **So zeigen Sie alle Stoppwörter einer stopliste an**  
+ **Alle Stoppwörter einer stopliste an**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
@@ -126,13 +125,13 @@ ms.locfileid: "36147866"
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **So zeigen Sie das tokenisierungsergebnis einer Kombination aus wörtertrennung, Thesaurus und stoplisten an**  
+ **Anzeigen des tokenisierungsergebnis einer Kombination aus wörtertrennung, Thesaurus und Stoppliste**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> Ändern der Stoppwörter in einer Stopliste  
- **Zum Hinzufügen oder Löschen von Stoppwörtern aus einer stopliste**  
+##  <a name="change"></a> Ändern der Stoppwörter in einer Stoppliste  
+ **Hinzufügen oder Löschen von Stoppwörtern auf einer Stoppliste**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   

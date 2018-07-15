@@ -1,5 +1,5 @@
 ---
-title: Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension | Microsoft Docs
+title: Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], custom member formulas
 - member formulas [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7354a79069de0dd3b35c9860e05f5bb69980fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 584fa3b944671aa80e01c8f5ae0080e0c1860366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295850"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension
   Fügen Sie einem Cube oder einer Dimension eine Erweiterung für benutzerdefinierte Elementformeln hinzu, um die Standardaggregation, die einem Dimensionselement zugeordnet ist, durch die Ergebnisse eines MDX-Ausdrucks (Multidimensional Expressions) zu ersetzen. (Durch diese Erweiterung wird die `CustomRollupColumn`-Eigenschaft für ein angegebenes Attribut in einer Dimension festgelegt.)  

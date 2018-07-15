@@ -1,5 +1,5 @@
 ---
-title: XTP-Transaktionen | Microsoft Docs
+title: XTP-Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b890ec229755db9c6ee9b292bf632d110e9c189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cee09bfffe7ae4b52166ae34b83a0d1d62006a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292620"
 ---
 # <a name="xtp-transactions"></a>XTP-Transaktionen
-  Das Leistungsobjekt "XTP-Transaktionen" enthält Leistungsindikatoren für XTP-Engine-Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Das Leistungsobjekt "XTP-Transaktionen" enthält Leistungsindikatoren für XTP-modultransaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Diese Tabelle beschreibt die **XTP-Transaktionen** Leistungsindikatoren.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "36058476"
 |**Erstellte Transaktionen/s**|Die durchschnittliche Anzahl der pro Sekunde im System erstellten Transaktionen.<br /><br /> XTP-Transaktionen werden anders als datenträgerbasierte Transaktionen gezählt (wie aus Datenbanken:Transaktionen/Sekunde ersichtlich). Beispielsweise zählt Erstellte Transaktionen/s schreibgeschützte Transaktionen, Datenbanken:Transaktionen/Sekunde hingegen nicht.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XTP &#40;In-Memory OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
   
   

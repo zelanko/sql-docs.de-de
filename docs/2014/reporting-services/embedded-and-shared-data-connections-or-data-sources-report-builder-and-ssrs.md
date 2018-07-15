@@ -1,5 +1,5 @@
 ---
-title: Eingebettete und freigegebene Datenverbindungen oder Datenquellen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Eingebettete und freigegebene Datenverbindungen oder Datenquellen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282636"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Eingebettete und freigegebene Datenverbindungen oder Datenquellen (Berichts-Generator und SSRS)
   Berichte rufen Daten für einen Bericht mithilfe von Datenverbindungen ab, wenn eine Abfrage ausgeführt oder der Bericht verarbeitet wird. Sie können aus einer Liste integrierter Datenverbindungstypen auswählen, um eine Verbindung mit einer relationalen Datenbank, einer mehrdimensionalen Datenbank, einem Webdienst oder einer anderen Datenquelle herzustellen. Beim Beschreiben von Datenverbindungen werden die folgenden Begriffe verwendet.  
@@ -69,11 +69,11 @@ ms.locfileid: "36058027"
 |Ist für Komponenten erforderlich.||![Verfügbar](media/greencheck.gif "Available")|  
   
 ## <a name="data-source-credentials"></a>Anmeldeinformationen für die Datenquelle  
- Anmeldeinformationen werden beim Erstellen einer eingebetteten Datenquelle, beim Ausführen einer Abfrage oder beim Abrufen von Daten während der Berichtsverarbeitung verwendet. Der Besitzer der Datenquelle legt den für den Zugriff auf die Daten erforderlichen Anmeldeinformationstyp fest. Anmeldeinformationen werden unabhängig von der Datenverbindung auf einem Berichtsserver, einer SharePoint-Website oder auf einem lokalen Computer in einer Berichterstellungsumgebung verwaltet. Abhängig vom Datenquellentyp können Anmeldeinformationen gespeichert werden, um Aufforderungen zu vermeiden, oder so konfiguriert werden, dass jeder Benutzer zur Eingabe aufgefordert wird. Die erforderlichen Anmeldeinformationen können sich unterscheiden, je nachdem, ob Sie die Verbindung mit der Datenquelle von Ihrem Computer oder vom Berichtsserver herstellen. Weitere Informationen finden Sie unter [Geben Sie Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Anmeldeinformationen werden beim Erstellen einer eingebetteten Datenquelle, beim Ausführen einer Abfrage oder beim Abrufen von Daten während der Berichtsverarbeitung verwendet. Der Besitzer der Datenquelle legt den für den Zugriff auf die Daten erforderlichen Anmeldeinformationstyp fest. Anmeldeinformationen werden unabhängig von der Datenverbindung auf einem Berichtsserver, einer SharePoint-Website oder auf einem lokalen Computer in einer Berichterstellungsumgebung verwaltet. Abhängig vom Datenquellentyp können Anmeldeinformationen gespeichert werden, um Aufforderungen zu vermeiden, oder so konfiguriert werden, dass jeder Benutzer zur Eingabe aufgefordert wird. Die erforderlichen Anmeldeinformationen können sich unterscheiden, je nachdem, ob Sie die Verbindung mit der Datenquelle von Ihrem Computer oder vom Berichtsserver herstellen. Weitere Informationen finden Sie unter [angeben von Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Konzepte zum Erstellen von Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  

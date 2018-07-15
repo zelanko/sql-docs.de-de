@@ -1,5 +1,5 @@
 ---
-title: Melden Sie sich Eigenschaften | Microsoft Docs
+title: Protokolleigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295510"
 ---
 # <a name="log-properties"></a>Protokolleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Protokollservereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "36149140"
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
 ## <a name="error-log"></a>Fehlerprotokoll  
- Sie können diese Eigenschaften auf Serverinstanzebene festlegen, um die Standardwerte für die Fehlerkonfiguration zu ändern, die in anderen Tools und in Designern verfügbar sind. Finden Sie unter [Fehlerkonfiguration für Cubes, Partitionen und Dimensionsverarbeitung &#40;SSAS – mehrdimensional&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) und <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> für Weitere Informationen.  
+ Sie können diese Eigenschaften auf Serverinstanzebene festlegen, um die Standardwerte für die Fehlerkonfiguration zu ändern, die in anderen Tools und in Designern verfügbar sind. Finden Sie unter [Fehlerkonfiguration für die Cubes, Partitionen und Dimensionsverarbeitung &#40;SSAS – mehrdimensional&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) und <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> für Weitere Informationen.  
   
  **ErrorLog\ErrorLogFileName**  
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  
@@ -93,7 +93,7 @@ ms.locfileid: "36149140"
   
 -   `ConvertToUnknown` weist den Server an, dem unbekannten Element den Fehlerschlüsselwert zuzuordnen.  
   
--   `DiscardRecord` weist den Server an, den Datensatz auszuschließen.  
+-   `DiscardRecord` weist den Server aus, um den Datensatz auszuschließen.  
   
  **ErrorLog\KeyErrorLogFile**  
  Dies ist ein benutzerdefinierter Dateiname, der über die Dateierweiterung .log verfügen und in einem Ordner gespeichert sein muss, für den das Dienstkonto Lese-/Schreibberechtigungen besitzt. Die Protokolldatei enthält nur Fehler, die während der Verarbeitung generiert wurden. Verwenden Sie Flight Recorder, wenn Sie ausführlichere Informationen benötigen.  
@@ -111,20 +111,20 @@ ms.locfileid: "36149140"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Gibt an, welche Aktion der Server bei einem `KeyNotFound` Fehler auftritt. Gültige Serverreaktionen auf diesen Fehler sind:  
   
--   `IgnoreError` weist den Server zu fortfahren verarbeiten, ohne den Fehler zu protokollieren oder auf den Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz entweder verworfen oder dem unbekannten Element aggregiert werden, gemäß der `KeyErrorAction` Eigenschaft.  
+-   `IgnoreError` weist den Server aus, um den Vorgang fortzusetzen Verarbeitung ohne Protokollieren des Fehlers oder der Grenzwert für Schlüsselfehler anzurechnen. Wenn Sie den Fehler ignorieren, lassen Sie einfach die weitere Verarbeitung zu, ohne dass die Fehleranzahl erhöht oder der Fehler auf dem Bildschirm angezeigt oder in der Protokolldatei erfasst wird. Der betreffende Datensatz weist ein Datenintegritätsproblem auf und kann der Datenbank nicht hinzugefügt werden. Der Datensatz entweder verworfen oder dem unbekannten Element aggregiert werden, gemäß der `KeyErrorAction` Eigenschaft.  
   
 -   `ReportAndContinue` weist den Server an, den Fehler zu protokollieren, auf den Grenzwert für Schlüsselfehler anzurechnen und die Verarbeitung fortzusetzen. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
 -   `ReportAndStop` weist den Server an, den Fehler zu protokollieren und die Verarbeitung unabhängig vom Grenzwert für Schlüsselfehler sofort zu beenden. Der für den Fehler verantwortliche Datensatz wird verworfen oder in das unbekannte Element konvertiert.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein doppelter Schlüssel gefunden wird. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` , protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` , protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein doppelter Schlüssel gefunden wird. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein NULL-Schlüssel in ein unbekanntes Element konvertiert wurde. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` , protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` , protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt die Aktion an, die vom Server ausgeführt wird, wenn ein NULL-Schlüssel in ein unbekanntes Element konvertiert wurde. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Gibt an, welche Aktion der Server beim `NullProcessing` festgelegt ist, um `Error` für ein Dimensionsattribut. Wenn für ein bestimmtes Attribut kein NULL-Wert zulässig ist, wird ein Fehler generiert. Durch diese Fehlerkonfigurationseigenschaft wird der nächste Schritt initiiert, der darin besteht, den Fehler zu melden und die Verarbeitung fortzusetzen, bis die Fehlergrenze erreicht ist. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als wäre der Fehler nicht aufgetreten; `ReportAndContinue` , protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` , protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
+ Gibt an, welche Aktion vom Server beim `NullProcessing` nastaven NA hodnotu `Error` für ein Dimensionsattribut. Wenn für ein bestimmtes Attribut kein NULL-Wert zulässig ist, wird ein Fehler generiert. Durch diese Fehlerkonfigurationseigenschaft wird der nächste Schritt initiiert, der darin besteht, den Fehler zu melden und die Verarbeitung fortzusetzen, bis die Fehlergrenze erreicht ist. Gültige Werte sind `IgnoreError` die Verarbeitung ansonsten fortgesetzt, als ob der Fehler nicht aufgetreten; `ReportAndContinue` der Fehler wird protokolliert und die Verarbeitung fortgesetzt; und `ReportAndStop` der Fehler wird protokolliert und die Verarbeitung sofort beendet, selbst wenn die Fehleranzahl unterhalb der Fehlergrenze liegt.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Diese Eigenschaft wird standardmäßig während des vom Server ausgeführten Verarbeitungsvorgangs verwendet.  

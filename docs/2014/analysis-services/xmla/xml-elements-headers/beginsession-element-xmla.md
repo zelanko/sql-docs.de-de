@@ -1,5 +1,5 @@
 ---
-title: BeginSession-Element (XMLA) | Microsoft Docs
+title: BeginSession-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285826"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession-Element (XMLA)
-  Verwendet einen SOAP-Header in einer SOAP-Anforderungsnachricht So starten Sie eine neue Sitzung auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Verwendet einen SOAP-Header in einer SOAP-Anforderungsnachricht, um eine neue Sitzung starten, auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36058773"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `BeginSession`-Headerelement ist Teil einer SOAP-Anforderung, die an eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz gesendet wurde, und startet explizit eine neue Sitzung auf einer Instanz. Die von der SOAP-Antwort zurückgegebene SOAP-Header enthält ein [Sitzung](session-element-xmla.md) Element, das die neue Sitzung identifiziert. Dieser neue Sitzungsbezeichner gespeichert und in nachfolgende SOAP-Anforderungen mit gesendet werden die `Session` Header-Element.  
+ Das `BeginSession`-Headerelement ist Teil einer SOAP-Anforderung, die an eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz gesendet wurde, und startet explizit eine neue Sitzung auf einer Instanz. Von der SOAP-Antwort zurückgegebene SOAP-Header enthält ein [Sitzung](session-element-xmla.md) -Element, das die neue Sitzung identifiziert. Dieser neue Sitzungsbezeichner gespeichert und in nachfolgende SOAP-Anforderungen mit gesendet werden die `Session` Header-Element.  
   
- Wenn die `BeginSession` -Headerelement nicht gesendet wird, eine Sitzung keine explizit gestartet. Wenn eine Sitzung nicht explizit gestartet wird, können Transaktionen auf dieser Sitzung nicht verwaltet werden. Sie können nicht in anderen Worten: die folgenden XML-Code verwenden, für den Analysis (XMLA): [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), und [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md). Alle XMLA-Methoden und -Befehle, die auf einer implizit gestarteten Sitzung ausgeführt werden, werden als unteilbare Transaktionen angesehen.  
+ Wenn die `BeginSession` -Headerelement nicht gesendet, die eine Sitzung keine explizit gestartet. Wenn eine Sitzung nicht explizit gestartet wird, können Transaktionen auf dieser Sitzung nicht verwaltet werden. Das heißt, können keine der folgenden XML-Code für Befehle Analysis (XMLA): [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), und [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md). Alle XMLA-Methoden und -Befehle, die auf einer implizit gestarteten Sitzung ausgeführt werden, werden als unteilbare Transaktionen angesehen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [EndSession-Element &#40;XMLA&#41;](endsession-element-xmla.md)   

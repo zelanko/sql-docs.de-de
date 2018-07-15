@@ -1,12 +1,11 @@
 ---
-title: Reguläre im Vergleich zu Kontextverbindungen | Microsoft Docs
+title: Reguläre im Vergleich zu Kontextverbindungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -16,14 +15,14 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8758f1e7c680af9d546ba2b9894304388a01e46d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 938ae2b6a740f793a87a1ed634d2d02b061a6123
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696920"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356322"
 ---
-# <a name="context-connections-vs-regular-connections"></a>Kontext-Verbindungen im Vergleich zu Reguläre Verbindungen
+# <a name="context-connections-vs-regular-connections"></a>Kontextverbindungen Vs. Reguläre Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Wenn Sie eine Verbindung mit einem Remoteserver herstellen, verwenden Sie stets reguläre Verbindungen anstelle von Kontextverbindungen. Wenn Sie eine Verbindung mit dem Server herstellen müssen, auf dem die gespeicherte Prozedur oder Funktion ausgeführt wird, verwenden Sie in den meisten Fällen Kontextverbindungen. Dies hat Vorteile, etwa das Ausführen im gleichen Transaktionsbereich, ohne dass eine erneute Authentifizierung erforderlich ist.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "35696920"
   
  Die Kontextverbindung folgt einem kürzeren Codepfad und schließt weniger Komponenten ein, sodass Sie mit schnelleren Anforderungen und Ergebnissen an den Server und vom Server rechnen können als bei einer regulären Verbindung. Die Abfrageausführungszeit auf dem Server ist bei Kontext- und reguläre Verbindungen die gleiche.  
   
- In einigen Fällen müssen Sie möglicherweise eine separate reguläre Verbindung mit dem gleichen Server herstellen. Es gibt z. B. bestimmte Einschränkungen bei der Verwendung der kontextverbindung, die in beschriebenen [Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
+ In einigen Fällen müssen Sie möglicherweise eine separate reguläre Verbindung mit dem gleichen Server herstellen. Beispielsweise stehen bestimmte Einschränkungen für die mithilfe der kontextverbindung, die in beschriebenen [Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kontextverbindung](../../../relational-databases/clr-integration/data-access/context-connection.md)  

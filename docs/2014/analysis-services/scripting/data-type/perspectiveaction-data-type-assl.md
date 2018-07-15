@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAction-Datentyp (ASSL) | Microsoft Docs
+title: PerspectiveAction-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e3e3df8f864c862dd101b97eeeabb63066e051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8886962d5b2014d3cdaa466861d4693319d21d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316910"
 ---
 # <a name="perspectiveaction-data-type-assl"></a>PerspectiveAction-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen über eine Aktion in einem [Perspektive](../objects/perspective-element-assl.md) Element.  
+  Definiert einen Grunddatentyp, der die Informationen über eine Aktion in einem [Perspektive](../objects/perspective-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36058181"
 |Abgeleitete Elemente|[Aktion](../objects/action-element-assl.md) ([Aktionen](../collections/actions-element-assl.md) Auflistung von [Perspektive](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,20 +28,20 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318040"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
   *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf.  
   
- **Prinzipale auf Windows-Ebene**  
+ **Auf Windows-Prinzipale**  
   
 -   Windows-Domänenanmeldename  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36061350"
   
 -   Serverrolle  
   
- **Prinzipale auf Datenbankebene**  
+ **Auf Datenbankebene-Prinzipale**  
   
 -   Datenbankbenutzer  
   
@@ -89,7 +88,7 @@ ms.locfileid: "36061350"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Der guest-Benutzer  
- Jede Datenbank enthält einen **Gast**. Dem **guest** -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Die **Gast** -Benutzer kann nicht gelöscht werden, aber es kann deaktiviert werden, indem Sperren des `CONNECT` Berechtigung. Die `CONNECT` Berechtigung aufgehoben werden kann, durch das Ausführen `REVOKE CONNECT FROM GUEST` in einer beliebigen Datenbank außer Master oder Tempdb.  
+ Jede Datenbank enthält einen **Gast**. Dem **guest** -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Die **Gast** Benutzer kann nicht gelöscht werden, aber sie kann deaktiviert werden, indem Sperren des `CONNECT` Berechtigung. Die `CONNECT` Berechtigung kann widerrufen werden, indem Sie Ausführung `REVOKE CONNECT FROM GUEST` in einer beliebigen Datenbank außer Master oder Tempdb.  
   
 ## <a name="client-and-database-server"></a>Client und Datenbankserver  
  Laut Definition sind ein Client und ein Datenbankserver Sicherheitsprinzipale und können gesichert werden. Diese Entitäten können gegenseitig authentifiziert werden, bevor eine sichere Netzwerkverbindung hergestellt wird. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) -Authentifizierungsprotokoll, das definiert, wie Clients mit einem Netzwerkauthentifizierungsdienst interagieren.  

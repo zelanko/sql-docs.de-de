@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Verbindungstyp (SSRS) | Microsoft Docs
+title: PowerPivot-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234750"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer PowerPivot-Arbeitsmappe abrufen, die in einem SharePoint-PowerPivot-Katalog veröffentlicht wird.  
@@ -38,7 +38,7 @@ ms.locfileid: "36061089"
  Die Verbindungszeichenfolge ist die URL zum PowerPivot-Arbeitsmappe auf SharePoint im PowerPivot-Katalog oder einer anderen Bibliothek, z. B. veröffentlicht http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
   
 ## <a name="credentials"></a>Anmeldeinformationen  
- Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die PowerPivot-Arbeitsmappe und die SharePoint-Website zuzugreifen, z. B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die PowerPivot-Arbeitsmappe und die SharePoint-Website zuzugreifen, z. B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
 ## <a name="queries"></a>Abfragen  
  Nachdem Sie eine Verbindung mit der PowerPivot-Datenquelle hergestellt haben, verwenden Sie die grafische MDX-Abfrage, um durch Durchsuchen und Auswählen aus den zugrunde liegenden Datenstrukturen eine Abfrage zu erstellen. Nach dem Erstellen einer Abfrage können Sie die Abfrage so ausführen, dass die Beispieldaten im Ergebnisbereich angezeigt werden.  

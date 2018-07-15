@@ -1,5 +1,5 @@
 ---
-title: Ändern des Systemadministratorkontos (Master Data Services) | Microsoft Docs
+title: Ändern des Systemadministratorkontos (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298610"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Ändern Systemadministratorkontos (Master Data Services)
-  Sie können ändern, dass das Benutzerkonto, das als festgelegt ist die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Systemadministrator.  
+  Sie können ändern, dass das Benutzerkonto, das als festgelegt ist die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Systemadministrator.  
   
 > [!WARNING]  
 >  Wenn Sie diese Prozedur ausführen, wird das Benutzerkonto des vorherigen Systemadministrators gelöscht.  
@@ -40,7 +40,7 @@ ms.locfileid: "36057587"
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank her.  
   
-2.  Suchen Sie in mdm.tblUser den Benutzer, die der neue Administrator sein, und kopieren Sie den Wert in der `SID` Spalte.  
+2.  Suchen Sie in mdm.tblUser den Benutzer, die den neuen Administrator und kopieren Sie den Wert in der `SID` Spalte.  
   
 3.  Erstellen Sie eine neue Abfrage.  
   

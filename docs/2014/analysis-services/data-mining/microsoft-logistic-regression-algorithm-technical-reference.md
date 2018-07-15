@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Logistic Regression-Algorithmus | Microsoft Docs
+title: Technische Referenz zu Microsoft Logistic Regression-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317468"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus, bei dem der *HIDDEN_NODE_RATIO* -Parameter auf 0 festgelegt ist. Bei dieser Einstellung wird ein neuronales Netzwerkmodell erstellt, in dem keine verborgene Ebene enthalten ist; daher ist diese Einstellung ein Äquivalent für die logistische Regression.  
@@ -40,7 +40,7 @@ ms.locfileid: "36147611"
   
  Die X-Achse enthält die Werte einer Eingabespalte. Die Y-Achse enthält die Wahrscheinlichkeiten, dass die vorhersagbare Spalte den einen oder anderen Status haben wird. Das Problem dabei ist, dass die lineare Regression die Spalte nicht auf einen Wert zwischen 0 und 1 einschränkt, obwohl dies die maximalen und minimalen Werte der Spalte sind. Um dieses Problem zu lösen, kann die logistische Regression ausgeführt werden. Anstatt eine gerade Linie zu erstellen, erstellt die logistische Regressionsanalyse eine Kurve in Form eines "S", die die maximalen und minimalen Einschränkungen enthält. Das folgende Diagramm stellt z. B. die resultierenden Ergebnisse dar, wenn Sie eine logistische Regression für die im vorigen Beispiel verwendeten Daten durchführen.  
   
- ![Daten mithilfe der logistischen Regression modellierte](../media/logistic-regression.gif "Daten durch Verwenden der logistischen Regression modelliert wird.")  
+ ![Daten mithilfe der logistischen Regression modellierte](../media/logistic-regression.gif "Daten modelliert werden, mithilfe der logistischen Regression")  
   
  Beachten Sie, dass die Kurve nicht über den Wert 1 bzw. nicht unter den Wert 0 geht. Sie können die logistische Regression verwenden, um zu beschreiben, welche Eingabespalten zur Statusbestimmung der vorhersagbaren Spalte wichtig sind.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36147611"
   
  **Kontinuierliche Werte**  
   
- Wert ist vorhanden: (X – μ) / σ / / X ist der tatsächliche Wert codiert wird)  
+ Wert ist vorhanden: (X – μ) / σ / / X ist der tatsächlich codierte Wert)  
   
- Wert ist abwesend: - μ/σ / / negative Mu geteilt durch die Sigma)  
+ Wert fehlt: – μ σ / / / negatives Mu geteilt durch Sigma)  
   
  **Diskrete Werte**  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36147611"
   
  StdDev = sqrt(p(1-p))  
   
- Wert ist vorhanden: (1 – μ) / σ / / (eine minus Mu) geteilt durch Sigma)  
+ Wert ist vorhanden: (1 – μ) / σ / / (eins minus Mu) geteilt durch Sigma)  
   
- Wert ist abwesend: (– μ) / σ / / negative Mu geteilt durch die Sigma)  
+ Wert ist abwesend: (– μ) / σ / / negatives Mu geteilt durch Sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Grundlegendes zu logistischen Regressionskoeffizienten  
  In der statistischen Literatur sind verschiedene Methoden zur Durchführung einer logistischen Regression vorhanden. Ein wichtiger Bestandteil aller Methoden besteht darin, die Güte des Modells zu bewerten. Eine Vielzahl von statistischen Daten zur Prüfung der Modellgüte sind vorgeschlagen worden, darunter Quotenverhältnisse (Odds Ratios) und Kovariaten-Muster. Eine Beschreibung, wie die Güte eines Modells gemessen wird, würde den Rahmen dieses Themas sprengen. Sie können jedoch den Wert der Koeffizienten im Modell abrufen und sie zur Entwicklung eigener Gütekennzahlen verwenden.  
@@ -141,7 +141,7 @@ WHERE NODE_TYPE = 23
  Gilt für die Miningstrukturspalten.  
   
  MODEL_EXISTENCE_ONLY  
- Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
+ Bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
   
  Gilt für die Miningmodellspalte.  
   
@@ -158,8 +158,8 @@ WHERE NODE_TYPE = 23
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
- [Lineare Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Miningmodellinhalt für logistische Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
+ [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)  
   
   

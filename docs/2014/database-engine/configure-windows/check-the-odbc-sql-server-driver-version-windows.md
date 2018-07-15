@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7655d56522f59a7a06793e2603b0d5fa50084f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 62fcc40b61265f93d01cd1257582754332df15e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318930"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Überprüfen der Version des ODBC SQL Server-Treibers (Windows)
   Auf Ihrem Computer sind möglicherweise verschiedene ODBC-Treiber von [!INCLUDE[msCoName](../../includes/msconame-md.md)] und anderen Unternehmen enthalten. In diesem Thema wird beschrieben, wie Sie den **ODBC-Datenquellen-Administrator** von Windows verwenden müssen, um die Version der installierten ODBC-Treiber zu überprüfen.  

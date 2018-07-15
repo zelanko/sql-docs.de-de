@@ -1,5 +1,5 @@
 ---
-title: Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP | Microsoft Docs
+title: Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory-OLTP | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312330"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
@@ -31,7 +31,7 @@ ms.locfileid: "36058586"
   
  Im Beispiel werden fünf Tabellen aus der AdventureWorks-Datenbank zu speicheroptimierten Tabellen migriert. Zusätzlich enthält es eine exemplarische Arbeitsauslastung zur Abwicklung von Verkaufsaufträgen. Die exemplarische Arbeitsauslastung veranschaulicht die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)] auf dem Server.  
   
- In der Beschreibung des Beispiels erörtert, die vor-und Nachteile, die vorgenommen wurden, bei der Migration der Tabellen zu [!INCLUDE[hek_2](../includes/hek-2-md.md)] zum Konto für die Funktionen, die nicht derzeit (noch) für Speicheroptimierte Tabellen unterstützt [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ In der Beschreibung des Beispiels erörtert die vor-und Nachteile, die vorgenommen wurden, bei der Migration der Tabellen zu [!INCLUDE[hek_2](../includes/hek-2-md.md)] zum Konto für die Funktionen, die werden (noch) nicht für Speicheroptimierte Tabellen unterstützt in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  Die Dokumentation dieses Beispiels ist wie folgt gegliedert:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36058586"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Laden Sie das Beispielskript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" aus [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner.  
+5.  Laden Sie das Beispielskript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" von [SQL Server 2014 RTM In-Memory-OLTP-Beispiel](http://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner.  
   
 6.  Aktualisieren Sie den Wert der Variablen checkpoint_files_location im Skript [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql, sodass sie auf den Zielspeicherort der [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Prüfpunktdateien verweist. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "36058586"
   
 -   *Alias-UDTs* : Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
   
--   *BIN2-Sortierung* – die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und benötigen daher BIN2-Sortierungen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
+-   *BIN2-Sortierung* – die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und müssen daher BIN2-Sortierungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -466,7 +466,7 @@ END
  Wir verwenden das OSTRESS-Tool, um die Skripts unter Verwendung mehrerer gleichzeitiger Verbindungen auszuführen. Dabei wird mit dem Parameter -n gesteuert, wie viele Verbindungen verwendet werden, und mit dem Parameter -r, wie oft das Skript für jede Verbindung ausgeführt wird.  
   
 #### <a name="functional-validation-of-the-workload"></a>Testen der Arbeitsauslastung  
- Um zu überprüfen, alles funktioniert, führen wir einen Testdurchlauf mit 10 gleichzeitigen Verbindungen und 5 Iterationen, wodurch insgesamt 10 * 5 \* 20 = 1000 Verkaufsauftrag.  
+ Um zu überprüfen, alles funktioniert, führen wir einen Testdurchlauf mit 10 gleichzeitigen Verbindungen und 5 Iterationen, Einfügen von insgesamt 10 * 5 \* 20 = 1000 Verkaufsauftrag.  
   
  Beim nachfolgenden Befehl gehen wir davon aus, dass die Standardinstanz auf dem lokalen Computer verwendet wird. Wenn Sie eine benannte Instanz oder einen Remoteserver verwenden, ändern Sie den Servernamen mit dem Parameter -S entsprechend.  
   

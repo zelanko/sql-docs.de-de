@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e3f9f8ad10a31fa7af4b6a517c0c36fcc817494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215560"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank auf einem neuen Speicherort wiederherstellen können und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
@@ -45,7 +44,7 @@ ms.locfileid: "36147938"
   
      [Security](#Security)  
   
--   **Wiederherstellen einer Datenbank zu einem neuen Speicherort, und benennen diese optional um die Datenbank mit:**  
+-   **Wiederherstellen einer Datenbank zu einem neuen Speicherort und optional Umbenennen der Datenbank mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -163,10 +162,10 @@ ms.locfileid: "36147938"
     > [!NOTE]  
     >  Wenn Sie die Datenbank auf einer anderen Serverinstanz wiederherstellen, können Sie anstelle eines neuen Namens den ursprünglichen Namen weiterverwenden.  
   
-     *Sicherungsgerät* [ `,`... *n* ]  
+     *Backup_device* [ `,`... *n* ]  
      Gibt eine durch Trennzeichen getrennte Liste von 1 bis 64 Sicherungsmedien an, von denen die Datenbanksicherung wiederhergestellt werden soll. Sie können ein physisches Sicherungsmedium angeben oder, sofern definiert, ein entsprechendes logisches Sicherungsmedium. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:  
   
-     {DISK | Band} `=` *Name des physischen Sicherungsmediums*  
+     {DISK | Band} `=` *name_des_physischen_sicherungsgeräts*  
   
      Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36147938"
   
      Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql) im Abschnitt „Angeben eines Sicherungssatzes“.  
   
-     Verschieben Sie **"*`logical_file_name_in_backup`*"** TO **"*`operating_system_file_name`*"** [ `,`... *n* ]  
+     Verschieben Sie **"*`logical_file_name_in_backup`*"** für **"*`operating_system_file_name`*"** [ `,`... *n* ]  
      Gibt an, dass die von *logical_file_name_in_backup* angegebenen Daten oder die Protokolldatei an dem von *operating_system_file_name*angegebenen Speicherort wiederhergestellt werden sollen. Geben Sie für jede logische Datei, die aus dem Sicherungssatz an einem neuen Speicherort wiederhergestellt werden soll, eine MOVE-Anweisung an.  
   
     |Option|Description|  

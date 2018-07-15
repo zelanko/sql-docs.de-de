@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Dimension anhand einer vorhandenen Tabelle | Microsoft Docs
+title: Erstellen einer Dimension anhand einer vorhandenen Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319250"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
@@ -57,12 +57,12 @@ ms.locfileid: "36060831"
 ## <a name="selecting-dimension-attributes"></a>Auswählen von Dimensionsattributen  
  Nachdem Sie die Dimensionstabellen ausgewählt haben, geben Sie auf der Seite **Dimensionsattribute auswählen** die Attribute an, die Sie in der Dimension aus diesen Tabellen einschließen möchten. Alle zugrunde liegenden Spalten dieser Tabellen sind als potenzielle Dimensionsattribute verfügbar. Das Dimensionsschlüsselattribut muss ausgewählt und zum Durchsuchen aktiviert werden.  
   
- Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Anstelle der Einstellungstyp `Regular` für dieses Attribut sollten Sie dieses Attribut zum Zuordnen der `Account Number` Typ.  
+ Standardmäßig legt der Assistent den Typ eines Attributs auf `Regular` fest. Unter Umständen empfiehlt es sich jedoch, bestimmte Attribute einem anderen Attributtyp zuzuordnen, der die Daten besser repräsentiert. Die &lt;localizedText&gt;dbo.DimAccount&lt;/localizedText&gt;-Tabelle in der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW-Beispieldatenbank enthält z. B. eine &lt;localizedText&gt;AccountCodeAlternateKey&lt;/localizedText&gt;-Spalte, die die Kontonummer bereitstellt. Statt den Typ zu `Regular` für dieses Attribut, Sie möchten dieses Attribut zum Zuordnen der `Account Number` Typ.  
   
 > [!NOTE]  
 >  Wenn der Dimensionstyp und die Standardattributtypen beim Erstellen der Dimension nicht festgelegt sind, können Sie diese Werte mit dem Business Intelligence-Assistenten festlegen, nachdem die Dimension erstellt wurde. Weitere Informationen finden Sie unter [Hinzufügen von Dimensionsintelligenz zu einer Dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) oder (bei Dimensionen vom Typ Accounts) [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- Der Assistent legt den Dimensionstyp automatisch auf Basis der angegebenen Attributtypen fest. In den Assistenten angegebenen Attributtypen der `Type` für die Attribute. Die `Type`-Eigenschafteneinstellungen für die Dimension und ihre Attribute stellen Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen bereit. In einigen Fällen diese `Type` -eigenschafteneinstellungen nur bieten eine Anleitung für Clientanwendungen und sind optional. In anderen Fällen wie für Konten, die Zeit oder Währung diese Dimensionen `Type` eigenschafteneinstellungen bestimmen spezifisches Verhalten für die Server-basierten und möglicherweise erforderlich, um bestimmte cubeverhalten zu implementieren.  
+ Der Assistent legt den Dimensionstyp automatisch auf Basis der angegebenen Attributtypen fest. In den Assistenten angegebenen Attributtypen die `Type` für die Attribute. Die `Type`-Eigenschafteneinstellungen für die Dimension und ihre Attribute stellen Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen bereit. In einigen Fällen diese `Type` -eigenschafteneinstellungen nur bieten eine Anleitung für Clientanwendungen bereit und sind optional. In anderen Fällen, wie Sie für Konten, Time- oder Currency Dimension, von diese `Type` eigenschafteneinstellungen bestimmen spezifisches Verhalten im Server-basierten und möglicherweise erforderlich, um bestimmte cubeverhalten zu implementieren.  
   
  Weitere Informationen zu Dimensions- und Attributtypen finden Sie unter [Dimensionstypen](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [Konfigurieren von Attributtypen](attribute-properties-configure-attribute-types.md).  
   

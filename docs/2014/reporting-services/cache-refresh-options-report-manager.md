@@ -1,5 +1,5 @@
 ---
-title: Cache-Optionen zur Cacheaktualisierung (Berichts-Manager) | Microsoft Docs
+title: Zwischenspeichern von Optionen zur Cacheaktualisierung (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282696"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Optionen zur Cacheaktualisierung (Berichts-Manager)
   Verwenden Sie die Seite Optionen zur Cacheaktualisierung, um Zeitpläne zum Vorabladen des Caches mit temporären Datenkopien für einen Bericht oder ein freigegebenes Dataset zu erstellen. Ein Aktualisierungsplan enthält einen Zeitplan und bietet die Möglichkeit, Werte für Parameter anzugeben oder zu überschreiben. Bei einem freigegebenen Dataset können keine Werte für Parameter überschrieben werden, die als schreibgeschützt gekennzeichnet sind. Sie können auf der Seite mit den Aktualisierungsoptionen auch mehrere Aktualisierungspläne erstellen und verwenden.  
@@ -69,9 +69,9 @@ ms.locfileid: "36148326"
  **Konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplan zu öffnen, auf der Sie Angaben zur Häufigkeit machen können.  
   
- Weitere Informationen finden Sie unter [neuer Zeitplan: Seite "Zeitplan" Bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Weitere Informationen finden Sie unter [neuer Zeitplan: Bearbeiten der Zeitplanseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **freigegebenen Zeitplan**  
+ **Freigegebenen Zeitplan**  
  Aktivieren Sie diese Option, um einen vorhandenen Zeitplan auszuwählen.  
   
  Weitere Informationen finden Sie unter [erstellen, ändern und Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md).  
@@ -106,12 +106,12 @@ ms.locfileid: "36148326"
   
  Wenn in der Definition des freigegebenen Datasets die Option **In Abfrage auslassen** für einen Parameter angegeben ist, müssen Sie keinen Standardwert bereitstellen. Dieses Flag gibt an, dass der Datasetparameter in der Abfrage nicht verwendet wird. Der Parameter ist z. B. in der Definition des freigegebenen Datasets vorhanden, da es sich um einen Berichtsparameter handelt, der ausschließlich im Datasetfilter verwendet wird.  
   
- Um Optionen für Datasetparameter anzuzeigen oder zu ändern, müssen Sie die Definition des freigegebenen Datasets bearbeiten. Weitere Informationen finden Sie unter [freigegebene Datasets verwalten](report-data/manage-shared-datasets.md).  
+ Um Optionen für Datasetparameter anzuzeigen oder zu ändern, müssen Sie die Definition des freigegebenen Datasets bearbeiten. Weitere Informationen finden Sie unter [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Berichtsparameter  
  Damit Sie einen Cacheaktualisierungsplan erstellen können, muss jeder Parameterwert für einen Bericht gültig sein. Sie müssen für jeden Berichtsparameter einen Standardwert eingeben oder auswählen. Der festgelegte Wert überschreibt den für den Berichtsparameter auf dem Berichtsserver definierten Standardwert.  
   
- Parameter müssen die Anforderungen erfüllen, die in den Parametereigenschaften auf dem Berichtsserver angegeben wurden. Wenn die Eigenschaft AllowBlank für einen Berichtsparameter false ist, ist eine leere Zeichenfolge z. B. keinen gültigen Wert.  
+ Parameter müssen die Anforderungen erfüllen, die in den Parametereigenschaften auf dem Berichtsserver angegeben wurden. Wenn die Eigenschaft AllowBlank für einen Berichtsparameter false ist, ist eine leere Zeichenfolge beispielsweise keinen gültigen Wert.  
   
  Zum Anzeigen oder Ändern von Optionen für Berichtsparameter müssen Sie die Berichtsparameter im Bericht oder unabhängig auf dem Berichtsserver bearbeiten. Weitere Informationen finden Sie unter [Berichtsparameter-Konzept &#40;Berichts-Generator und SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36148326"
   
 ## <a name="see-also"></a>Siehe auch  
  [Aufgaben auf Elementebene](security/tasks-and-permissions-item-level-tasks.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Zwischenspeichern von Berichten (SSRS)](report-server/caching-reports-ssrs.md)   
  [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ändern der Eigenschaften eines Miningmodells | Microsoft Docs
+title: Ändern der Eigenschaften eines Miningmodells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28e417708981a7184caa62ae74fe681397411d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279812"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Ändern der Eigenschaften eines Miningmodells
-  Einige Miningmodelleigenschaften gelten für das gesamte Modell, wohingegen andere Modelleigenschaften für einzelne Spalten gelten. Beispiele für Eigenschaften, die für das gesamte Modell gelten wäre die `Drillthrough` -Eigenschaft, die angibt, ob die Falldaten für Abfragen verfügbar sein sollen, und die `Description` Eigenschaft. Eigenschaften, die für die Spalte gültig sind, schließen `Usage` und `ModelingFlags` ein, die steuern, wie Daten in der Spalte im Modell verwendet werden.  
+  Einige Miningmodelleigenschaften gelten für das gesamte Modell, wohingegen andere Modelleigenschaften für einzelne Spalten gelten. Beispiele für Eigenschaften, die für das gesamte Modell gelten wären die `Drillthrough` -Eigenschaft, die angibt, ob die Falldaten für Abfragen verfügbar sein soll, und die `Description` Eigenschaft. Eigenschaften, die für die Spalte gültig sind, schließen `Usage` und `ModelingFlags` ein, die steuern, wie Daten in der Spalte im Modell verwendet werden.  
   
  Die folgenden Modelleigenschaften besitzen erweiterte Editor-Programme, mit denen Ausdrücke erstellt oder komplexe Modelleigenschaften konfiguriert werden können. Funktionen der folgenden Eigenschaften:  
   
--   `Filter` Eigenschaft: Öffnet die [Datasetfilter oder Modell Filterdialogfeld](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` Eigenschaft: Öffnet die [Datasetfilter oder im Dialogfeld "Filter" Modell](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Eigenschaft: Öffnet die [Algorithmusparameter Dialogfeld &#40;Miningmodellansicht&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` Eigenschaft: Öffnet die [im Dialogfeld "Parameter"-Algorithmus &#40;Miningmodelle-Sicht&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Informationen zum Festlegen der Eigenschaften eines Miningmodells finden Sie unter [Miningmodellspalten](mining-model-columns.md).  
   

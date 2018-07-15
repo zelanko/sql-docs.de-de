@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit der RollupChildren-Funktion (MDX) | Microsoft Docs
+title: Arbeiten mit der RollupChildren-Funktion (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314982"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Arbeiten mit der RollupChildren-Funktion (MDX)
-  Die MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [-Skript für Suchen und ersetzen]-Funktion führt ein Rollup der untergeordneten Elemente eines Elements, das Anwenden von eines anderen unären Operators an jedes untergeordnete Element und gibt den Wert des Rollups wird als Zahl zurück. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
+  Die MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [für Suchen und ersetzen] Skriptfunktion Rollup der untergeordneten Elemente eines Elements, das einen anderer unäroperator auf jedes untergeordnete Element angewendet und gibt den Wert des Rollups wird als eine Zahl zurück. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
   
 ## <a name="rollupchildren-function-examples"></a>Beispiele zur RollupChildren-Funktion  
  Die Verwendung der `RollupChildren`-Funktion in MDX-Anweisungen (Multidimensional Expressions) ist einfach zu erklären, die Funktion kann jedoch weit reichende Folgen für MDX-Abfragen haben.  
@@ -68,7 +68,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Beim Aufrufen der Funktion wird der Wert jedes untergeordneten Elements mithilfe des Operators, der in der Elementeigenschaft gespeichert ist, auf das Gesamtergebnis angewendet. Die Elemente für in- und ausländische Rücknahmen werden ignoriert, und der von der `RollupChildren`-Funktion zurückgegebene Rollupgesamtwert wird mit 1,1 multipliziert.  
   
 ### <a name="using-the-iif-function"></a>Verwenden der IIf-Funktion  
- Wenn der Beispiel-Vorgang nicht als Standard etabliert ist oder wenn der Vorgang nur für eine einzelne MDX-Abfrage gilt die [IIf](/sql/mdx/iif-mdx) Funktion kann verwendet werden, mit der `RollupChildren` Funktion, um dasselbe Ergebnis bereitzustellen. Die folgende MDX-Abfrage stellt dasselbe Ergebnis wie das vorherige MDX-Abfragebeispiel bereit, jedoch ohne die Verwendung einer benutzerdefinierten Elementeigenschaft:  
+ Wenn der beispielvorgang nicht als Standard etabliert ist oder der Vorgang nur für eine einzelne MDX-Abfrage gilt die [IIf](/sql/mdx/iif-mdx) Funktion kann verwendet werden, mit der `RollupChildren` Funktion, um dasselbe Ergebnis bereitzustellen. Die folgende MDX-Abfrage stellt dasselbe Ergebnis wie das vorherige MDX-Abfragebeispiel bereit, jedoch ohne die Verwendung einer benutzerdefinierten Elementeigenschaft:  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

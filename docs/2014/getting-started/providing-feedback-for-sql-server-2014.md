@@ -1,12 +1,12 @@
 ---
-title: Senden von Feedback zu SQLServer 2014 | Microsoft Docs
+title: Bereitstellen von Feedback für SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
 - errors [SQL Server], feedback reporting
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae86c2af70277c6dc3157d0cb3b3b73122397d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312100"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Senden von Feedback zu SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] möchte Ihnen dafür danken, dass Sie sich die Zeit nehmen, uns beim Verbessern unserer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Produkte und der zugehörigen Dokumentation zu helfen. Sie können Vorschläge zu den Produktfunktionen und zur Benutzeroberfläche sowie Fehlerberichte weitergeben, Feedback zur Dokumentation geben und sich dazu entschließen, Fehlerberichte und Verwendungsdaten automatisch an [!INCLUDE[msCoName](../includes/msconame-md.md)] zu senden. Jede dieser drei Feedbackoptionen wird hier beschrieben.  

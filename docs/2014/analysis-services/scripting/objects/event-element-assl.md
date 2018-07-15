@@ -1,5 +1,5 @@
 ---
-title: Event-Element (ASSL) | Microsoft Docs
+title: Event-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 441d8758f25092d1e10128a44ace8d12f3eee79a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119bc279e1313e0b7b8bd0790c631b8e9a896428
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233880"
 ---
 # <a name="event-element-assl"></a>Event-Element (ASSL)
-  Definiert eine `Event` als Teil der aufzuzeichnenden eine [Ablaufverfolgung](trace-element-assl.md) Element.  
+  Definiert eine `Event` als Teil des erfasst werden sollen eine [Ablaufverfolgung](trace-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36148706"
 |Untergeordnete Elemente|[Spalten](../collections/columns-element-assl.md), [EventID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.TraceEvent>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Trace-Element &#40;ASSL&#41;](trace-element-assl.md)   

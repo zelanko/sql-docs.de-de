@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
 - tools [Integration Services], SSIS Designer
@@ -19,13 +19,13 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5eb117c2f5f81c7a9d26fc3c0b62a101e1d9fb7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d10ae01b290425d5f00054d84311323c3332a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290986"
 ---
 # <a name="integration-services-user-interface"></a>SQL Server Integration Services-Benutzeroberfläche
   Neben den Entwurfsoberflächen auf den Registerkarten des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers stellt die Benutzeroberfläche den Zugriff auf die folgenden Fenster und Dialogfelder bereit, um Paketen Funktionen hinzuzufügen und die Eigenschaften von Paketobjekten zu konfigurieren:  

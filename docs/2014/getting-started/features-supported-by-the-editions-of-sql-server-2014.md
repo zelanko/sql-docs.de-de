@@ -1,5 +1,5 @@
 ---
-title: Von den Editionen von SQLServer 2014 unterstützte Funktionen | Microsoft Docs
+title: Funktionen, die von den Editionen von SQLServer 2014 unterstützte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,29 +14,29 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 caps.latest.revision: 126
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fea176058eeb35d13ab3e104652fdeb13979238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312310"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
   Dieses Thema bietet detaillierte Informationen zu den von verschiedenen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Versionen unterstützten Funktionen.  
   
-> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] steht in einer Evaluierungsedition für einen Testzeitraum von 180 Tagen. Weitere Informationen finden Sie unter der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Website für Probesoftware](http://go.microsoft.com/fwlink/?LinkId=190955).  
+> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] steht in einer Evaluierungsedition für einen Testzeitraum von 180 Tagen. Weitere Informationen finden Sie unter den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Website für Testsoftware](http://go.microsoft.com/fwlink/?LinkId=190955).  
   
-> **Hinweis:** von Evaluation und Developer-Editionen unterstützte Funktionen finden Sie unter der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise-Funktionssatz.  
+> **Hinweis:** von Evaluation und Developer-Editionen unterstützte Funktionen finden Sie unter den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise-Funktionssatz.  
   
  Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
- [Cross-Skalagrenzen](#CrossBoxScale)  
+ [Cross Skalagrenzen](#CrossBoxScale)  
   
  [High Availability (Hohe Verfügbarkeit)](#High_availability)  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36060804"
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankmodul)<sup>1</sup>|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
-|Maximale von einer einzelnen Instanz (Analysis Services, Reporting Services) verwendete Rechenkapazität <sup>1</sup>|Maximum des Betriebssystems|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
+|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbank-Engine)<sup>1</sup>|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
+|Maximale Rechenkapazität, die von einer einzelnen Instanz (Analysis Services, Reporting Services) verwendet <sup>1</sup>|Maximum des Betriebssystems|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
 |Maximaler genutzter Arbeitsspeicher (pro Instanz der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine)|Maximum des Betriebssystems|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |Maximaler genutzter Arbeitsspeicher (pro Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Maximum des Betriebssystems|Maximum des Betriebssystems|64 GB|Nicht zutreffend|–|–|–|  
 |Maximaler genutzter Arbeitsspeicher (pro Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Maximum des Betriebssystems|Maximum des Betriebssystems|64 GB|64 GB|4 GB|–|–|  
 |Maximale relationale Datenbankgröße|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition mit Server + Client Clientzugriffslizenz (CAL) basierte Lizenzierung (für neue Verträge nicht verfügbar) ist beschränkt auf maximal 20 Kerne pro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> Enterprise Edition mit Server + Clientzugriffslizenz (CAL) basierte Lizenzierung (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro beschränkt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="High_availability"></a> Hohe Verfügbarkeit  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36060804"
 |Onlineschemaänderung|ja|||||||  
 |Schnelle Wiederherstellung|ja|||||||  
 |Gespiegelte Sicherungen|ja|||||||  
-|Hinzufügen von Arbeitsspeicher und CPU-Auslastung im laufenden Systembetrieb<sup>2</sup>|ja|||||||  
+|Speicherebenen "Hot" Hinzufügen von Speicher und CPU-<sup>2</sup>|ja|||||||  
 |Datenbankwiederherstellungsberater|ja|ja|ja|ja|ja|ja|ja|  
 |Verschlüsselte Sicherung|ja|ja|ja|||||  
 |Intelligente Sicherung|ja|ja|ja|nein||||  
@@ -157,7 +157,7 @@ ms.locfileid: "36060804"
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Änderungsnachverfolgung|ja|ja|ja|ja|ja|ja|ja|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Änderungen nachverfolgen"|ja|ja|ja|ja|ja|ja|ja|  
 |Mergereplikation|ja|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
 |Transaktionsreplikation|ja|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
 |Momentaufnahmereplikation|ja|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
@@ -176,14 +176,14 @@ ms.locfileid: "36060804"
 |Distributed Replay – Administratortool|ja|ja|ja|ja|ja|ja||  
 |Distributed Replay - Client|ja|nein|ja|ja||||  
 |Distributed Replay - Controller|Ja (Enterprise unterstützt bis zu 16 Clients, Developer unterstützt nur 1 Client)|nein|Ja (nur 1 Client unterstützt)|Ja (nur 1 Client unterstützt)||||  
-|SQL Profiler|ja|ja|ja|Nicht<sup>2</sup>|Nicht<sup>2</sup>|Nicht<sup>2</sup>|Nicht<sup>2</sup>|  
+|SQL Profiler|ja|ja|ja|Keine<sup>2</sup>|Keine<sup>2</sup>|Keine<sup>2</sup>|Keine<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent|ja|ja|ja|ja||||  
 |Microsoft System Center Operations Manager Management Pack|ja|ja|ja|ja||||  
 |Datenbankoptimierungsratgeber (DTA)|ja|ja|Ja <sup>3</sup>|Ja <sup>3</sup>||||  
 |Assistent zum Bereitstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank auf einem virtuellen Computer in Windows Azure|ja|ja|ja|ja|ja|ja|ja|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datendateien in Windows Azure|ja|ja|ja|ja|ja|ja|ja|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools und [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services können mit profiliert werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools und [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services können mit profiliert werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
   
  <sup>3</sup> Optimierung ist nur in Funktionen der Standard Edition aktiviert.  
   
@@ -224,8 +224,8 @@ ms.locfileid: "36060804"
 |IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] und MDX)|ja|ja|ja|ja|ja|ja|ja|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|ja|ja|ja|ja|ja|||  
 |SQL-bearbeiten und-Entwurfstools<sup>1</sup>|ja|ja|ja|||||  
-|Versionskontrollunterstützung<sup>1</sup>|ja|ja|ja|||||  
-|MDX bearbeiten, Debuggen und Entwurfstools<sup>1</sup>|ja|ja|ja|||||  
+|Unterstützung für Versionskontrolle<sup>1</sup>|ja|ja|ja|||||  
+|MDX-bearbeitungs-, Debuggen und Entwurfstools<sup>1</sup>|ja|ja|ja|||||  
   
  <sup>1</sup> dieses Feature ist nicht für 64-Bit-Version von Standard Edition verfügbar.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "36060804"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist auf nur die 64-Bit-Editionen von Business Intelligence und Enterprise verfügbar.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist nur in den 64-Bit-Editionen von Business Intelligence und Enterprise verfügbar.  
   
 |Funktion|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -317,7 +317,7 @@ ms.locfileid: "36060804"
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Semiadditive Measures|ja|ja|Nicht<sup>1</sup>|||||  
+|Semiadditive Measures|ja|ja|Keine<sup>1</sup>|||||  
 |Hierarchien|ja|ja|ja|||||  
 |KPIs (Key Performance Indicators)|ja|ja|ja|||||  
 |Perspektiven|ja|ja||||||  
@@ -348,7 +348,7 @@ ms.locfileid: "36060804"
 |Direktes Rückschreiben|ja|ja||||||  
 |Measureausdrücke|ja|ja||||||  
   
- <sup>1</sup>der LastChild semiadditive Measures unterstützt wird in der standard Edition, jedoch andere semiadditive Measures, z. B. None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren und ByAccount, nicht. Additive Measures, z. B. Sum, Count, Min, Max und nicht additive Measures (DistinctCount) werden in allen Editionen unterstützt.  
+ <sup>1</sup>Semiadditives der LastChild-Measure wird in der standard Edition unterstützt, aber andere semiadditive Measures, z. B. None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren und ByAccount, nicht sind. Additive Measures, z. B. Sum, Count, Min, Max und nicht additive Measures (DistinctCount) werden in allen Editionen unterstützt.  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -442,7 +442,7 @@ ms.locfileid: "36060804"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Business Intelligence-Clients  
- Die folgenden softwareclientanwendungen sind im Microsoft Downloads Center verfügbar und bieten Unterstützung beim Erstellen von Business Intelligence-Dokumenten, die ausgeführt werden, auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz. Wenn Sie diese Dokumente in einer serverumgebung hosten, verwenden Sie eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die für diesen Dokumenttyp unterstützt wird. In der folgenden Tabelle wird dargestellt, welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen die Serverfunktionen zum Hosten der in den Clientanwendungen erstellten Dokumente besitzen.  
+ Die folgenden softwareclientanwendungen sind im Microsoft Downloads Center verfügbar und werden bereitgestellt, um unterstützt Sie beim Erstellen von Business Intelligence-Dokumenten, die ausgeführt werden, auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz. Wenn Sie diese Dokumente in einer serverumgebung hosten, verwenden Sie eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die für diesen Dokumenttyp unterstützt wird. In der folgenden Tabelle wird dargestellt, welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen die Serverfunktionen zum Hosten der in den Clientanwendungen erstellten Dokumente besitzen.  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -452,8 +452,8 @@ ms.locfileid: "36060804"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|ja|ja||||||  
   
 > [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] ist eine Excel-Add-in und hängt nicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ist jedoch für die Freigabe und das Zusammenarbeiten mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Arbeitsmappen in SharePoint erforderlich, und diese Funktion ist als Teil von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise und Business Intelligence-Editionen verfügbar.  
-> 2.  Die oben dargestellte Tabelle identifiziert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Editionen, die zur Aktivierung dieser Clienttools erforderlich sind, jedoch diese Funktionen auf eine beliebige Edition von gehostete Daten zugreifen können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] ist eine Excel-Add-in und hängt nicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ist jedoch für die Freigabe und das Zusammenarbeiten mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Arbeitsmappen in SharePoint erforderlich, und diese Funktion ist als Teil von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise und Business Intelligence-Editionen verfügbar.  
+> 2.  Die oben aufgeführten Tabelle sind die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Editionen, die zur Aktivierung dieser Clienttools erforderlich sind, jedoch diese Features Daten, die auf eine beliebige Edition von gehosteten zugreifen können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

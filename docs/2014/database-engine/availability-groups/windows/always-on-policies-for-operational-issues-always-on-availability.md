@@ -1,28 +1,27 @@
 ---
-title: Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQLServer) | Microsoft Docs
+title: Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d046706bcdfa5259feb19a7ad92805b8f37f7c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287916"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server)
   Das [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustandsmodell wertet eine Reihe vordefinierter Richtlinien der richtlinienbasierten Verwaltung aus. Sie können Thesen verwenden, um den Zustand einer Verfügbarkeitsgruppe sowie deren Verfügbarkeitsreplikate und Datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]anzuzeigen.  
@@ -85,10 +84,10 @@ ms.locfileid: "36061464"
   
 -   Wenn die Ausführung eines Failovers für die Verfügbarkeitsgruppe eine mögliche Problembehebung ist, wird ein Startpunkt für die Links[Assistent für das Failover von Verfügbarkeitsgruppen](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)bereitgestellt. Dieser Assistent führt den Datenbankadministrator durch den manuellen Failoverprozess.  
   
-##  <a name="ExtendHealthModel"></a> Erweitern des AlwaysOn-Zustandsmodells  
+##  <a name="ExtendHealthModel"></a> Erweitern des Always On-Zustandsmodells  
  Die Erweiterung des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodells bezieht sich darauf, dass Sie eigene benutzerdefinierte Richtlinien erstellen und diese je nach überwachtem Objekttyp bestimmten Kategorien zuweisen können.  Nachdem Sie einige Einstellungen geändert haben, wertet das AlwaysOn-Dashboard automatisch eigene benutzerdefinierte Richtlinien sowie vordefinierte AlwaysOn-Richtlinien aus.  
   
- Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das serverfacet stellt die folgenden Eigenschaften für die Überwachung [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Health: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
+ Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das serverfacet stellt die folgenden Eigenschaften für die Überwachung [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Integrität: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
   
  Weitere Informationen finden Sie unter [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (ein SQL Server AlwaysOn-Teamblog).  
   
@@ -104,7 +103,7 @@ ms.locfileid: "36061464"
   
 -   [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Problembehandlung bei einem fehlerhaften Dateien Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Problembehandlung bei einem fehlerhaften Dateihinzufügungsvorgängen Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36061464"
   
 -   [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Siehe auch  
  [AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](always-on-availability-groups-sql-server.md)   

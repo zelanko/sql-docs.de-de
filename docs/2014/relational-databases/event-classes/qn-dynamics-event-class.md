@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300470"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (Ereignisklasse)
   Die QN:Dynamics-Ereignisklasse übermittelt Informationen zu Hintergrundaktivitäten, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zur Unterstützung von Abfragebenachrichtigungen durchgeführt werden. In [!INCLUDE[ssDE](../../includes/ssde-md.md)]werden Abonnementtimeouts, auszulösende ausstehende Abonnements und das Löschen von Parametertabellen in einem Hintergrundthread überwacht.  
@@ -38,7 +38,7 @@ ms.locfileid: "36057857"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
 |EventClass|`int`|Ereignistyp = 202|27|nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Uhr Schritte ausführen: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen für den Cleanup gestartet wurde.<br /><br /> Uhr führen nicht mehr benötigen: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen für den Cleanup beendet wurde.<br /><br /> Master Cleanuptask gestartet: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements beginnt.<br /><br /> Master Cleanuptask abgeschlossen: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements endet.<br /><br /> Master Cleanuptask übersprungen: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Clock-Ausführung gestartet: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen geplant für die Bereinigung gestartet wurde.<br /><br /> Uhr fertig ausgeführt: Gibt an, dass der Hintergrundthread in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , dass abgelaufene Parametertabellen geplant für die Bereinigung abgeschlossen ist.<br /><br /> Master Cleanuptask gestartet: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements beginnt.<br /><br /> Master Cleanuptask abgeschlossen: Gibt an, wann der Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements endet.<br /><br /> Master Cleanuptask übersprungen: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kein Cleanup (Garbagecollection) zum Entfernen abgelaufener Abfragebenachrichtigungsabonnements ausgeführt wurde.|21|ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|nein|  

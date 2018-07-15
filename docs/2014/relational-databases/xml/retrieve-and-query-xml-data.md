@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bab6f72c83cc681443ee526a35fb4368db7ea6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313280"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
   In diesem Thema werden die Abfrageoptionen beschrieben, die für die Abfrage von XML-Daten anzugeben sind. Es beschreibt auch die Teile der XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.  
@@ -91,7 +91,7 @@ GO
   
   
 ##  <a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
- Beim Abfragen von `xml` Spalten oder Variablen mithilfe vom Typ `xml` -Datentypmethoden müssen die folgenden Optionen wie dargestellt festgelegt werden müssen.  
+ Beim Abfragen von `xml` Spalten oder Variablen mithilfe vom Typ `xml` -Datentypmethoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
   
 |SET-Optionen|Erforderliche Werte|  
 |-----------------|---------------------|  
@@ -103,7 +103,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- Wenn die Optionen nicht festgelegt werden, wie dargestellt, Abfragen und Änderungen auf `xml` -Datentypmethoden fehl.  
+ Wenn die Optionen nicht festgelegt werden, wie gezeigt, Abfragen und Änderungen auf `xml` -Datentypmethoden fehl.  
   
   
 ## <a name="see-also"></a>Siehe auch  

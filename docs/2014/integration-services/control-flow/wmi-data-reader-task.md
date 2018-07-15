@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9871b79451feacd256692513e767d9d693e6300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e31b3c63d1fab749aea96e0d55fd7a704301d26d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308100"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
   Der Task WMI-Datenleser führt Abfragen mithilfe von WQL (WMI Query Language) aus, womit Informationen von WMI zu einem Computersystem zurückgegeben werden. Der Task WMI-Datenleser kann für folgende Zwecke verwendet werden:  
@@ -88,7 +88,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Task-Editor für WMI-Datenleser &#40;WMI-Optionsseite&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Task-Editor für WMI-Datenleser &#40;WMI, Seite "Optionen"&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

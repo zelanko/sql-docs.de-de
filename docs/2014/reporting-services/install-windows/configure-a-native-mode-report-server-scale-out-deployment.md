@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie eine im einheitlichen Modus Report Server-Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager) | Microsoft Docs
+title: Konfigurieren Sie eine im einheitlichen Modus Report Server-Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296070"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)
   Der einheitliche Modus von Reporting Services unterstützt ein Bereitstellungsmodell für horizontales Skalieren, das die Ausführung mehrerer Berichtsserverinstanzen ermöglicht, die eine einzelne Berichtsserver-Datenbank gemeinsam nutzen. Die Bereitstellung für horizontales Skalieren wird verwendet, um die Skalierbarkeit von Berichtsservern zu erhöhen, sodass diese mehr gleichzeitige Benutzer und größere Berichtsausführungslasten unterstützen. Darüber hinaus können damit bestimmte Server für die Verarbeitung von interaktiven oder geplanten Berichten reserviert werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "36058457"
   
  **Führen Sie folgende Schritte aus, um eine Bereitstellung für horizontales Skalieren zu planen, zu installieren und zu konfigurieren:**  
   
--   Überprüfen Sie [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online Anweisungen zum Installieren von Berichtsserverinstanzen.  
+-   Überprüfen Sie [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation Anweisungen zum Installieren von Berichtsserverinstanzen.  
   
 -   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers auf einem Netzwerklastenausgleich-Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36058457"
   
      ![Screenshot von einem Ausschnitt der Seite „Bereitstellung für die horizontale Skalierung“](../../../2014/sql-server/install/media/scaloutscreen.gif "Partial screenshot of Scale-out Deployment page")  
   
-3.  Wählen Sie auf der Seite Bereitstellung für horizontales Skalieren der Berichtsserverinstanz her, die darauf warten, join mit der Bereitstellung, und klicken Sie auf **Server hinzufügen**.  
+3.  Wählen Sie auf der Seite Bereitstellung für horizontales Skalieren der Berichtsserverinstanz her, die darauf warten, fügen Sie die Bereitstellung, und klicken Sie auf **-Server hinzufügen**.  
   
     > [!NOTE]  
     >  **Problem** : Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, wird möglicherweise eine Fehlermeldung vom Typ „Zugriff verweigert“ angezeigt.  
@@ -126,7 +126,7 @@ ms.locfileid: "36058457"
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

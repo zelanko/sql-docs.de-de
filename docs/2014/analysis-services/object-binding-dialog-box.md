@@ -1,5 +1,5 @@
 ---
-title: Binden das Dialogfeld Objekt | Microsoft Docs
+title: Binden das Dialogfeld Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.objectbinding.f1
 helpviewer_keywords:
 - Object Binding dialog box
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13b0050733b21e99ac7395a26953338f4dbce176
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52a860a5228494eef64955c6f3ee4d0c577d9a87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299130"
 ---
 # <a name="object-binding-dialog-box"></a>Objektbindung (Dialogfeld)
   Mithilfe des Dialogfelds **Objektbindung** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Bindungen zwischen der Eigenschaft eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekts und einer Tabelle oder Spalte in einer Datenquellensicht definieren. Sie können das Dialogfeld **Objektbindung** anzeigen, indem Sie im Fenster **Eigenschaften** von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aus der Dropdownliste den Wert **(Neu)** für folgende Eigenschaften eines [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Objekts wählen:  
@@ -39,7 +39,7 @@ ms.locfileid: "36057892"
 -   UnaryOperatorColumn  
   
 ## <a name="options"></a>Tastatur  
- **Bindungstyp**  
+ **Typ der datenbankbindung**  
  Wählen Sie die Bindung aus, die für das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden soll. Folgende Bindungstypen können verwendet werden:  
   
  Spaltenbindung  
