@@ -1,5 +1,5 @@
 ---
-title: ConnectionString-Element (XMLA) | Microsoft Docs
+title: ConnectionString-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293210"
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString-Element (XMLA)
-  Enthält eine Verbindungszeichenfolge, die vom übergeordneten Element verwendeten [Speicherort](location-element-xmla.md) oder [Quelle](source-element-xmla.md) Element.  
+  Enthält eine Verbindungszeichenfolge ein, die das übergeordnete Element [Speicherort](location-element-xmla.md) oder [Quelle](source-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36048144"
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
 |Standardwert|InclusionThresholdSetting|  
-|Kardinalität - Vorgänger oder übergeordnetes Element|Cardinality|  
+|Cardinality - Vorgänger oder übergeordnetes Element|Cardinality|  
 |[Speicherort](location-element-xmla.md)|1-1: Erforderliches Element, das nur einmal auftritt.|  
 |[Quelle](source-element-xmla.md)|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36048144"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Für `Location` Elemente, die `ConnectionString` Element enthält die Verbindungszeichenfolge, die verwendet werden, indem Sie die `Restore` oder `Synchronize` -Befehl Aktualisieren einer lokalen Datenquelle oder zum Herstellen einer Verbindung mit einer Remoteinstanz.  
+ Für `Location` Elemente, die `ConnectionString` Element enthält die Verbindungszeichenfolge ein, die die `Restore` oder `Synchronize` Befehl aus, um eine lokale Datenquelle zu aktualisieren oder eine Verbindung mit einer remote-Instanz herstellen.  
   
  Für `Source`-Elemente enthält das `ConnectionString`-Element die Verbindungszeichenfolge, die vom `Synchronize`-Befehl zum Verbinden mit der Quellinstanz verwendet wird.  
   

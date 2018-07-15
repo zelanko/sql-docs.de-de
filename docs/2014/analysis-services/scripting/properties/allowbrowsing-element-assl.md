@@ -1,5 +1,5 @@
 ---
-title: AllowBrowsing-Element (ASSL) | Microsoft Docs
+title: AllowBrowsing-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282006"
 ---
 # <a name="allowbrowsing-element-assl"></a>AllowBrowsing-Element (ASSL)
-  Definiert, ob die Elemente einer [Rolle](../objects/role-element-assl.md) Element über die durchsuchenberechtigung zum für eine [MiningModel](../objects/miningmodel-element-assl.md) Element.  
+  Definiert, ob die Mitglieder einer [Rolle](../objects/role-element-assl.md) Element Browse-Berechtigung für eine [MiningModel](../objects/miningmodel-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36050662"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `AllowBrowsing` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
+ Das Element, das dem übergeordneten entspricht `AllowBrowsing` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

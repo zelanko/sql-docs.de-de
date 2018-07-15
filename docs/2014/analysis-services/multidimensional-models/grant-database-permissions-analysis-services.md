@@ -1,5 +1,5 @@
 ---
-title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft Docs
+title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286166"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
   Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
@@ -33,7 +33,7 @@ ms.locfileid: "36048354"
   
  Es gibt in Analysis Services keine Anmeldenamen. Sie erstellen einfach Rollen und weisen im Bereich **Mitgliedschaft** Windows-Konten zu. Alle Benutzer, einschließlich der Administratoren, stellen die Verbindung zu Analysis Services über ein Windows-Konto her.  
   
- ![Rolle erstellen, Dialogfeld mit Datenbankberechtigungen](../media/ssas-permsdbrole.png "Rolle Dialogfeld mit Datenbankberechtigungen erstellen.")  
+ ![Erstellen der Rolle Berechtigungen für die Datenbank von Dialogfeld zeigt](../media/ssas-permsdbrole.png "Rolle Berechtigungen für Dialogfeld zeigt die Datenbank erstellen.")  
   
  Auf Datenbankebene gibt es drei Berechtigungstypen.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36048354"
 > [!NOTE]  
 >  Serveradministratoren (Mitglieder der Serveradministratorrolle) besitzen ebenfalls impliziten Vollzugriff auf jede Datenbank auf dem Server.  
   
- `Process Database` ─ Diese Berechtigung wird verwendet, um die Verarbeitung auf Datenbankebene zu delegieren. Als Administrator können Sie diesen Task auslagern, indem Sie eine Rolle erstellen, mit der eine andere Person oder ein Dienst Verarbeitungsvorgänge für ein beliebiges Objekt in der Datenbank aufrufen kann. Alternativ können Sie auch Rollen für die Verarbeitung bestimmter Objekte erstellen. Weitere Informationen finden Sie unter [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` Lautet diese Berechtigung wird verwendet, um die Verarbeitung auf Datenbankebene zu delegieren. Als Administrator können Sie diesen Task auslagern, indem Sie eine Rolle erstellen, mit der eine andere Person oder ein Dienst Verarbeitungsvorgänge für ein beliebiges Objekt in der Datenbank aufrufen kann. Alternativ können Sie auch Rollen für die Verarbeitung bestimmter Objekte erstellen. Weitere Informationen finden Sie unter [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` ─ Diese Berechtigung haben die Möglichkeit, Objektmetadaten zu lesen können allerdings keine assoziierten Daten anzeigen. Meist wird diese Berechtigung für Rollen verwendet, die für die dedizierte Verarbeitung erstellt wurden. Dadurch können dann Tools wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] für die interaktive Verarbeitung einer Datenbank verwendet werden. Ohne `Read Definition` ist die Berechtigung `Process Database` nur in Skriptszenarios effektiv. Wenn Sie vielleicht durch SSIS oder ein anderes Zeitplanungsmodul Verarbeitung automatisieren möchten, Sie wahrscheinlich eine Rolle erstellen, verfügt `Process Database` ohne `Read Definition`. Erwägen Sie andernfalls, die beiden Eigenschaften in derselben Rolle zu kombinieren, um unbeaufsichtigte und interaktive Verarbeitung mit SQL Server-Tools zu unterstützen, die das Datenmodell auf einer Benutzeroberfläche grafisch darstellen.  
+ `Read Definition` Lautet, die diese Berechtigung, die Möglichkeit zum Lesen der Metadaten des Objekts gewährt, die Fähigkeit zum Anzeigen der zugehörigen Daten. Meist wird diese Berechtigung für Rollen verwendet, die für die dedizierte Verarbeitung erstellt wurden. Dadurch können dann Tools wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] für die interaktive Verarbeitung einer Datenbank verwendet werden. Ohne `Read Definition` ist die Berechtigung `Process Database` nur in Skriptszenarios effektiv. Wenn Sie planen, Verarbeitung, vielleicht durch SSIS oder ein anderes Zeitplanungsmodul automatisieren, Sie wahrscheinlich eine Rolle erstellen möchten, die `Process Database` ohne `Read Definition`. Erwägen Sie andernfalls, die beiden Eigenschaften in derselben Rolle zu kombinieren, um unbeaufsichtigte und interaktive Verarbeitung mit SQL Server-Tools zu unterstützen, die das Datenmodell auf einer Benutzeroberfläche grafisch darstellen.  
   
 ## <a name="full-control-administrator-permissions"></a>Berechtigung Vollzugriff (Administrator)  
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ist jede Windows-Benutzeridentität, die einer Rolle mit Berechtigung Vollzugriff (Administrator) zugewiesen ist, ein Datenbankadministrator. Ein Datenbankadministrator kann jeden Task innerhalb der Datenbank ausführen, einschließlich:  
@@ -59,7 +59,7 @@ ms.locfileid: "36048354"
   
 -   Registrieren von Assemblys (oder gespeicherten Prozeduren) für die Datenbank  
   
- Beachten Sie, dass Datenbankadministratoren keine Datenbanken auf dem Server hinzufügen oder löschen und für andere Datenbanken auf demselben Server auch keine Administratorrechte gewähren können. Diese Berechtigung besitzen nur Serveradministratoren. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) für Weitere Informationen zu dieser Berechtigungsstufe.  
+ Beachten Sie, dass Datenbankadministratoren keine Datenbanken auf dem Server hinzufügen oder löschen und für andere Datenbanken auf demselben Server auch keine Administratorrechte gewähren können. Diese Berechtigung besitzen nur Serveradministratoren. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) für Weitere Informationen zu dieser Berechtigungsebene.  
   
  Da alle Rollen über den Benutzer definiert werden, wird empfohlen, dass Sie für diesen Zweck eine Rolle erstellen (zum Beispiel mit dem Namen "dbadmin") und dann Windows-Konten von Benutzern und Gruppen entsprechend zuweisen.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "36048354"
 5.  Klicken Sie auf **OK** , um die Erstellung der Rolle zu abzuschließen.  
   
 ## <a name="process-database"></a>Process Database  
- Wenn Sie eine Rolle definieren, die Datenbankberechtigungen gewährt, können Sie Sie überspringen `Full Control` , und wählen Sie einfach `Process Database`. Diese Berechtigung ermöglicht auf Datenbankebene die Verarbeitung aller Objekte innerhalb der Datenbank. Weitere Informationen finden Sie unter [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ Wenn eine Rolle definieren, die Datenbankberechtigungen gewährt, können Sie überspringen `Full Control` , und wählen Sie einfach `Process Database`. Diese Berechtigung ermöglicht auf Datenbankebene die Verarbeitung aller Objekte innerhalb der Datenbank. Weitere Informationen finden Sie unter [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>Read Definition  
  Wie `Process Database`, wobei `Read Definition` Berechtigungen auf Datenbankebene hat einen kaskadierenden Effekt auf andere Objekte innerhalb der Datenbank. Wenn Sie Berechtigungen für das Lesen von Definitionen mit feinerer Granularität festlegen möchten, müssen Sie Im Bereich "Allgemein" "Definition lesen" als Datenbankeigenschaft entfernen. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Erteilen von Berechtigungen zum Verarbeiten &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Erteilen von verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

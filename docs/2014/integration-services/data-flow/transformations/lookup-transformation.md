@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298810"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -78,7 +78,7 @@ ms.locfileid: "36058553"
 -   Ausgabe nicht übereinstimmender Einträge. Bei der Ausgabe nicht übereinstimmender Einträge in der Eingabe werden die Zeilen verarbeitet, die nicht mindestens einem Eintrag im Verweisdataset entsprechen. Wenn Sie die Transformation für Suche so konfigurieren, dass die Zeilen ohne übereinstimmende Einträge als Fehler behandelt werden, werden die Zeilen an die Fehlerausgabe weitergeleitet. Andernfalls würde die Transformation diese Zeilen an die Ausgabe nicht übereinstimmender Einträge weiterleiten.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen dazu, wie Sie eine Transformation für Suche ausführen, die in erstellten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], finden Sie unter [Suchtransformationen Upgrade](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen dazu, wie Sie eine Transformation für Suche ausführen, die im erstellte [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], finden Sie unter [Suchtransformationen Upgrade](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Fehlerausgabe.  
   

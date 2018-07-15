@@ -1,5 +1,5 @@
 ---
-title: Lineare Regressionsmodell-Abfragebeispiele | Microsoft Docs
+title: Beispiele für lineare Regression | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303180"
 ---
 # <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die Regressionsformel zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, ob ein neuer Datenpunkt in das Modell passt. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [Zurück zum Anfang](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen von Einkommen mit einer SINGLETON-Abfrage  
- Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Sie können z. B. die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen auswählen **Singleton-Abfrage**, und klicken Sie dann Eingabe `20` als Wert für **Alter**.  
+ Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Sie können z. B. die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen auswählen **Singleton-Abfrage**, und geben dann `20` als Wert für **Alter**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -196,7 +196,7 @@ NATURAL PREDICTION JOIN
 |Vorhersagefunktion|Verwendung|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
@@ -208,6 +208,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
  [Datamining-Abfragen](data-mining-queries.md)   
  [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

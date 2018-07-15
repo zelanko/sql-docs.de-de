@@ -1,5 +1,5 @@
 ---
-title: AttributeRelationship-Element (ASSL) | Microsoft Docs
+title: AttributeRelationship-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85c63d69b413239d9bbacc074b1f6f5f0d3b864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a13dcac8fd37e16e90888e904cc6f0ae3587c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310700"
 ---
 # <a name="attributerelationship-element-assl"></a>AttributeRelationship-Element (ASSL)
   Bietet Details über die Beziehung zwischen zwei Attributen.  
@@ -70,7 +70,7 @@ ms.locfileid: "36059001"
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [Kardinalität](../properties/cardinality-element-assl.md), [Namen](../properties/name-element-assl.md), [Optionalität](../properties/optionality-element-assl.md), [OverrideBehavior ](../properties/overridebehavior-element-assl.md), [RelationshipType](../properties/relationshiptype-element-assl.md), [Übersetzungen](../collections/translations-element-assl.md), [sichtbar](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AttributeRelationship>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AttributeRelationship>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

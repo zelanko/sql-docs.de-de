@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
@@ -18,18 +18,18 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc5496a861334ec14a965b7f64fbe7ccd13cb856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9be09df9ab705d45dfdeee7caebfeb556a7a669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306120"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ-Verbindungs-Manager
   Mit einem MSMQ-Verbindungs-Manager kann ein Paket eine Verbindung mit einer Nachrichtenwarteschlange herstellen, die Message Queuing (MSMQ) verwendet. Der Task Nachrichtenwarteschlange von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet einen MSMQ-Verbindungs-Manager.  
   
- Wenn Sie ein Paket einen MSMQ-Verbindungs-Manager hinzufügen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt einen Verbindungs-Manager, der in eine MSMQ-Verbindung zur Laufzeit aufgelöst wird, die Verbindungs-Manager-Eigenschaften festlegt und fügt den Verbindungs-Manager die `Connections` -Auflistung in der das Paket. Die `ConnectionManagerType` des Verbindungs-Managers ist-Eigenschaftensatz auf `MSMQ`.  
+ Wenn Sie einem Paket einen MSMQ-Verbindungs-Manager hinzufügen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, die in eine MSMQ-Verbindung zur Laufzeit aufgelöst wird, die Verbindungs-Manager-Eigenschaften festlegt und fügt den Verbindungs-Manager erstellt die `Connections` Auflistung auf der das Paket. Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `MSMQ`.  
   
  Es gibt folgende Möglichkeiten, um einen MSMQ-Verbindungs-Manager zu konfigurieren:  
   
@@ -51,10 +51,10 @@ ms.locfileid: "36059181"
   
  Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [MSMQ-Verbindungs-Manager-Editor](../msmq-connection-manager-editor.md).  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Verbindungen programmgesteuert hinzufügen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Task "Nachrichtenwarteschlange"](../control-flow/message-queue-task.md)   
- [Integrationsservices &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
+ [Nachrichtenwarteschlange (Task)](../control-flow/message-queue-task.md)   
+ [Integrationsdienste &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
   
   

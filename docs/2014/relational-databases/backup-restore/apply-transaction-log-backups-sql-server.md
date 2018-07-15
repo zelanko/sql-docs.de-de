@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,32 +16,32 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289116"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Anwenden von Transaktionsprotokollsicherungen (SQL Server)
-  Dieses Thema ist nur für das vollständige und für das massenprotokollierte Wiederherstellungsmodell relevant.  
+   Dieses Thema ist nur für das vollständige und für das massenprotokollierte Wiederherstellungsmodell relevant.  
   
  In diesem Thema wird das Anwenden von Transaktionsprotokollsicherungen als Bestandteil der Wiederherstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erläutert.  
   
  **In diesem Thema:**  
   
--   [Anforderungen zum Wiederherstellen von Sicherungen des Transaktionsprotokolls](#Requirements)  
+-   [Anforderungen für die Wiederherstellung von Sicherungen des Transaktionsprotokolls](#Requirements)  
   
 -   [Wiederherstellungs- und Transaktionsprotokolle](#RecoveryAndTlogs)  
   
--   [Verwenden von Protokollsicherungen zum Zeitpunkt des Fehlers wiederherstellen](#PITrestore)  
+-   [Verwenden von Protokollsicherungen zum Wiederherstellen bis zum Zeitpunkt des Fehlers](#PITrestore)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Requirements"></a> Anforderungen zum Wiederherstellen von Sicherungen des Transaktionsprotokolls  
+##  <a name="Requirements"></a> Anforderungen für die Wiederherstellung von Sicherungen des Transaktionsprotokolls  
  Für das Anwenden einer Transaktionsprotokollsicherung müssen folgende Voraussetzungen erfüllt sein:  
   
 -   **Ausreichende Protokollsicherungen für eine Wiederherstellungssequenz:** Es müssen ausreichend Protokolldatensätze gesichert sein, damit eine Wiederherstellungssequenz abgeschlossen werden kann. Die erforderlichen Protokollsicherungen (einschließlich der [Sicherung des Protokollfragments](tail-log-backups-sql-server.md) , sofern erforderlich) müssen vor dem Start einer Wiederherstellungssequenz zur Verfügung stehen.  
@@ -62,7 +61,7 @@ ms.locfileid: "36049492"
 > [!NOTE]  
 >  Unter bestimmten Umständen können Sie eine Datei während der Protokollwiederherstellung explizit hinzufügen.  
   
-##  <a name="PITrestore"></a> Verwenden von Protokollsicherungen zum Zeitpunkt des Fehlers wiederherstellen  
+##  <a name="PITrestore"></a> Verwenden von Protokollsicherungen zum Wiederherstellen bis zum Zeitpunkt des Fehlers  
  Nehmen Sie die folgende Ereignissequenz an.  
   
 |Uhrzeit|Ereignis|  

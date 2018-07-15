@@ -1,5 +1,5 @@
 ---
-title: Ändern der Sicht der Ablaufverfolgungsergebnisse | Microsoft Docs
+title: Die Sicht der Ablaufverfolgungsergebnisse ändern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302760"
 ---
 # <a name="modify-the-trace-results-view"></a>Ändern der Sicht der Ablaufverfolgungsergebnisse
   In diesem Thema wird beschrieben, wie die Ablaufverfolgungsergebnisse-Sicht einer Sitzung für erweiterte Ereignisse in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] durch die Ausführung der folgenden Aufgaben geändert wird.  
@@ -30,11 +30,11 @@ ms.locfileid: "36049952"
   
 3.  [Sortieren der Ergebnisse](#SortResults)  
   
-4.  [Gruppieren der Ergebnisse](#GroupResults)  
+4.  [Die Ergebnisse gruppieren](#GroupResults)  
   
 5.  [Aggregieren der Ergebnisse](#AggregateResults)  
   
-6.  [Filtern der Ergebnisse](#Filter)  
+6.  [Die Ergebnisse filtern](#Filter)  
   
 7.  [Suchen nach Text in Spalten](#Search)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36049952"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="AggregateResults"></a> Aggregieren Sie Ergebnisse  
+##  <a name="AggregateResults"></a> Aggregieren der Ergebnisse  
  Erweiterte Ereignisse unterstützen fünf Aggregationsfunktionen:  
   
 -   SUM  
@@ -188,7 +188,7 @@ ms.locfileid: "36049952"
   
 7.  Klicken Sie auf **OK**.  
   
-##  <a name="Filter"></a> Filtern von Ergebnissen  
+##  <a name="Filter"></a> Ergebnisse filtern  
  Sie können Filter auf Ablaufverfolgungsergebnisse anwenden, um die Ablaufverfolgungsergebnisse einzugrenzen, die im Ablaufverfolgungsfenster angezeigt werden. Der Anzeigefilter umfasst einen Zeitfilter und einen erweiterten Filter. Sie filtern mithilfe des Zeitfilters die Ablaufverfolgungsergebnisse nach Ereigniszeitstempel und erstellen mithilfe des erweiterten Filters Filterbedingungen mit Ereignisfeldern und -aktionen. Zwischen Zeit- und erweitertem Filter besteht eine logische UND-Beziehung.  
   
 #### <a name="to-create-a-filter"></a>So erstellen Sie einen Filter  

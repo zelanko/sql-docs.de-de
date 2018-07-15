@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 10
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 62c6b2f80730ecb1d82cd0e35f8904651ac041d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c9c8ce45ca1ae4efdb65d8d1aae44261be80a0a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282200"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Anzeigen von Verfügbarkeitsreplikateigenschaften (SQL Server)
   In diesem Thema wird beschrieben, wie die Eigenschaften eines Verfügbarkeitsreplikats für eine AlwaysOn-Verfügbarkeitsgruppe unter Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]angezeigt werden.  
@@ -38,7 +37,7 @@ ms.locfileid: "36048322"
   
 4.  Klicken Sie mit der rechten Maustaste auf das Verfügbarkeitsreplikat, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie den Befehl **Eigenschaften** aus.  
   
-5.  Verwenden Sie im Dialogfeld **Eigenschaften des Verfügbarkeitsreplikats** die Seite **Allgemein** , um die Eigenschaften dieses Replikats anzuzeigen. Wenn eine Verbindung mit dem primären Replikat hergestellt wurde, können Sie die folgenden Eigenschaften ändern: Verfügbarkeitsmodus, Failovermodus, Verbindungszugriff für die primäre Rolle, Lesezugriff für die sekundäre Rolle (lesbares sekundäres Replikat) und Wert des Sitzungstimeouts. Weitere Informationen finden Sie unter [Verfügbarkeitsreplikateigenschaften &#40;Seite "Allgemein"&#41;](availability-replica-properties-general-page.md).  
+5.  Verwenden Sie im Dialogfeld **Eigenschaften des Verfügbarkeitsreplikats** die Seite **Allgemein** , um die Eigenschaften dieses Replikats anzuzeigen. Wenn eine Verbindung mit dem primären Replikat hergestellt wurde, können Sie die folgenden Eigenschaften ändern: Verfügbarkeitsmodus, Failovermodus, Verbindungszugriff für die primäre Rolle, Lesezugriff für die sekundäre Rolle (lesbares sekundäres Replikat) und Wert des Sitzungstimeouts. Weitere Informationen finden Sie unter [Eigenschaften des Verfügbarkeitsreplikats &#40;Seite "Allgemein"&#41;](availability-replica-properties-general-page.md).  
   
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  

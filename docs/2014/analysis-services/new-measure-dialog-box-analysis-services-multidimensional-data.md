@@ -1,5 +1,5 @@
 ---
-title: Neues Measure (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Neues Measure (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
 helpviewer_keywords:
 - New Measure dialog box
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1a2685f29e91d7fcef9018674dbcf67761afb2d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35bb394a835d8a667aa1ff3e339717ab4e1cf8e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310430"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Neues Measure' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Neues Measure** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie einer Measuregruppe im Cube-Designer ein neues Measure hinzufügen. Das Dialogfeld **Neues Measure** können Sie wie folgt aufrufen:  

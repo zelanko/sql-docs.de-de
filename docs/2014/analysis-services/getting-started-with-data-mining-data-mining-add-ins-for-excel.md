@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Data Mining (Data Mining-Add-ins für Excel) | Microsoft Docs
+title: Erste Schritte mit Data Mining (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303130"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Erste Schritte mit dem Data Mining (Data Mining-Add-Ins für Excel)
   Data Mining ist ein Vorgang zum Ermitteln wichtiger Muster in Daten. Data Mining ergänzt auf natürliche Weise das Untersuchen und Auswerten Ihrer Daten durch herkömmliche Business Intelligence. Mit Computeralgorithmen können große Datenmengen verarbeitet und Muster und Trends entdeckt werden, die andernfalls verborgen bleiben würden.  
   
- Um Datamining zu tun, erfassen Sie Daten, die für eine bestimmte Frage relevant ist, wie z. B. "Wer meine Kunden werden?" oder "welche Produkte wurden gekauft?" und wenden Sie dann einen Algorithmus, um statistische Korrelationen in den Daten zu suchen. Die durch die Analyse ermittelten Muster und Trends werden als Miningmodell gespeichert. Anschließend können Sie das Miningmodell auf neue Daten anwenden, z. B. in Geschäftsszenarien wie den Folgenden:  
+ Um Datamining zu tun, erfassen Sie Daten, die relevant für eine bestimmte Frage, wie z. B. "Wer"sind meine Kunden?" oder "welche Produkte wurden gekauft?" und wenden dann einen Algorithmus, um statistische Korrelationen in den Daten zu suchen. Die durch die Analyse ermittelten Muster und Trends werden als Miningmodell gespeichert. Anschließend können Sie das Miningmodell auf neue Daten anwenden, z. B. in Geschäftsszenarien wie den Folgenden:  
   
 -   Verwenden früherer Trends, um Umsätze für das nächste Quartal, den Bestandsbedarf oder die Kundenzufriedenheit zu prognostizieren.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36059272"
   
  Nach dem Abschluss des Modells sollten Sie die Ergebnisse eingehend überprüfen und Möglichkeiten ermitteln, die Daten zu ergänzen oder bessere Ergebnisse zu erzielen. Es ist außerordentlich selten, dass das erste Modell bereits alle Antworten liefert. Das Data Mining ist normalerweise ein iterativer Prozess.  
   
- Sie versuchen, Ihre Daten anders zu klassifizieren oder neue Spalten hinzufügen, denken Sie daran, verwenden Sie die **Dokumentmodell** Assistenten, um eine Momentaufnahme der Metadaten und die Ergebnisse des Modells zu erfassen. Auf der Grundlage lückenloser Aufzeichnungen können Sie den Fortschritt Ihrer Untersuchungen besser nachverfolgen.  
+ Wenn Sie versuchen, Ihre Daten anders zu klassifizieren, oder Hinzufügen neuer Spalten zu verwenden, denken Sie daran den **Dokumentmodell** Assistenten, um eine Momentaufnahme der Metadaten und die Ergebnisse jedes einzelnen Modells aufzuzeichnen. Auf der Grundlage lückenloser Aufzeichnungen können Sie den Fortschritt Ihrer Untersuchungen besser nachverfolgen.  
   
  [Durchsuchen und Bereinigen von Daten](exploring-and-cleaning-data.md)  
   
@@ -128,10 +128,10 @@ ms.locfileid: "36059272"
   
  [Anzeigen von Modellen &#40;Data Mining-Add-ins für Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Überprüfen von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [In der Data Inhalt Mining-Add-Ins für Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Technische Referenz &#40;Data Mining-Add-ins für Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+ [Was ist in der Data Mining-Add-Ins für Office enthalten](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Technische Referenz für den &#40;Data Mining-Add-ins für Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

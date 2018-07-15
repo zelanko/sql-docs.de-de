@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286696"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
-  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], berichtsteile auf Berichtsservern veröffentlicht und in anderen Berichten und von anderen Benutzern wieder verwendet, wenn sie die entsprechenden Berechtigungen verfügen werden können.  
+  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Bericht, Teilen in anderen Berichten und von anderen Benutzern wieder verwendet, wenn sie die entsprechenden Berechtigungen verfügen und auf Berichtsservern veröffentlicht werden können.  
   
  Berichtsteile können von mehreren Benutzern und in mehreren Berichten wiederverwendet werden. Benutzer können nach Berichtsteilen auf dem Server suchen und sie einem Bericht hinzufügen.  Benutzer können auch über Updates am Berichtsteil auf dem Server informiert werden und neue Versionen eines Berichtsteils erneut veröffentlichen. Diese Berichterstellungsaktionen können durch Sicherheitsberechtigungen der Reporting Services beeinflusst und gesteuert werden.  In diesem Thema werden Eigenschaften und Verhaltensweisen von Berichtsteilen erörtert, nachdem diese auf dem Server gespeichert wurden.  
   
 ## <a name="managing-report-parts"></a>Verwalten von Berichtsteilen  
- Um berichtsteile zu verwalten, können Sie die Berichts-Manager für einen Berichtsserver im einheitlichen Modus oder Anwendungsseiten für einen Berichtsserver im integrierten SharePoint-Modus.  
+ Um berichtsteile zu verwalten, können Sie Berichts-Manager für einen Berichtsserver im einheitlichen Modus oder Anwendungsseiten für einen Berichtsserver im integrierten SharePoint-Modus.  
   
 ### <a name="server-side-interaction-and-search"></a>Serverseitige Interaktion und Suche  
  Berichtsteile können entweder im einheitlichen Modus oder im integrierten SharePoint-Modus auf einem Berichtsserver veröffentlicht werden. Benutzer können die Berichtsteilkatalog-Funktion in einer Berichterstellungsanwendung wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Berichts-Generator verwenden, um Berichtsteile zu suchen und ihren Berichten hinzuzufügen. Wenn ein Benutzer einen Berichtsteil sucht, durchsucht die Suchfunktion unabhängig vom Modus, für den der Server installiert wurde, den Berichtsserverkatalog.  
@@ -96,9 +96,9 @@ ms.locfileid: "36059524"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsteile und Datasets im Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Allgemeine Eigenschaften (Seite), Berichtsteile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Elemente verschieben Seite &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
- [Melden von Berichtsserverinhalten &#40;SSRS im einheitlichen Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Allgemeine Eigenschaftenseite Berichtsteile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [Elemente verschieben-Seite &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Problembehandlung bei Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Berichtsteile im Berichts-Designer (SSRS)](report-parts-in-report-designer-ssrs.md)  
   

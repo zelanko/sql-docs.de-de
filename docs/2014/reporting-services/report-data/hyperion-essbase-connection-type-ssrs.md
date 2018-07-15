@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48296d180c5959ddbcd8377f65a87941aed1a00c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94a17b12d3d9c5ce30db7a57e76c3053008ff281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232536"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], die es Ihnen ermöglicht, mehrdimensionale Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle abzurufen.  
@@ -41,7 +41,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
   
 ##  <a name="Query"></a> Abfragen  
@@ -71,16 +71,16 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="Extended"></a> Erweiterte Feldeigenschaften  
  Die [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu `Value` und `IsMissing` , die von der datenverarbeitungserweiterung für ein Datasetfeld definiert werden. Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Bei vordefinierten Eigenschaften handelt es sich um Eigenschaften, die von mehreren Datenquellen gemeinsam verwendet werden. Benutzerdefinierte Eigenschaften gelten jeweils nur für eine Datenquelle.  
   
- Erweiterte Feldeigenschaften werden im Berichtsdatenbereich nicht als Elemente angezeigt, die in das Berichtslayout gezogen werden können. Stattdessen ziehen Sie das übergeordnete Feld der Eigenschaft in den Bericht und ändern Sie anschließend die Standardeigenschaft von `Value` der Eigenschaft, die Sie verwenden möchten.  
+ Erweiterte Feldeigenschaften werden im Berichtsdatenbereich nicht als Elemente angezeigt, die in das Berichtslayout gezogen werden können. Stattdessen ziehen Sie das übergeordnete Feld der Eigenschaft in den Bericht und ändern Sie dann auf die Standardeigenschaft von `Value` der Eigenschaft, die Sie verwenden möchten.  
   
- Der Name einer erweiterten Feldeigenschaft wird in der QuickInfo angezeigt, wenn Sie im Abfrage-Designer den Mauszeiger über ein Feld im Metadatenbereich bewegen. Weitere Informationen zum Abfrage-Designer zum Durchsuchen der zugrunde liegenden Daten können, finden Sie unter [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md).  
+ Der Name einer erweiterten Feldeigenschaft wird in der QuickInfo angezeigt, wenn Sie im Abfrage-Designer den Mauszeiger über ein Feld im Metadatenbereich bewegen. Weitere Informationen zum Abfrage-Designer, die Sie zum Durchsuchen der zugrunde liegenden Daten verwenden können, finden Sie unter [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md).  
   
 > [!NOTE]  
 >  Werte sind für erweiterte Feldeigenschaften nur dann vorhanden, wenn sie im MDX-Ausdruck enthalten sind. Diese Werte werden von der Datenquelle bereitgestellt, wenn der Bericht ausgeführt wird und die Daten für seine Datasets abgerufen werden. Sie können anschließend von einem beliebigen Ausdruck aus mithilfe der im folgenden Abschnitt erläuterten Syntax auf diese `Field`-Eigenschaftswerte verweisen. Da diese Felder jedoch vom Datenanbieter abhängen und nicht Bestandteil der Berichtsdefinitionssprache sind, werden an diesen Werten vorgenommene Änderungen nicht mit der Berichtsdefinition gespeichert.  
   
   
 ### <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
- Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Angenommen, die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft zugeordnet `UniqueName`. Verwenden Sie den Ausdruck `=Fields!`*\<Feldname>*`.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
+ Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Z. B. die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft zugeordnet `UniqueName`. Verwenden Sie den Ausdruck `=Fields!`*\<Feldname>*`.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
   
  Die folgende Tabelle enthält eine Liste vordefinierter Feldeigenschaften, die Sie für eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle verwenden können.  
   

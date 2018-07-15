@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279706"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
   In diesem Thema werden die Aktionen erläutert, die Sie im **Objekt-Explorer** ausführen können und die sich auf erweiterte Ereignisse auswirken:  
@@ -40,7 +40,7 @@ ms.locfileid: "36048507"
  Weitere Informationen zum Erstellen einer Sitzung für erweiterte Ereignisse finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Starten oder Beenden einer Sitzung für erweiterte Ereignisse  
- Starten oder Beenden einer Sitzung für erweiterte Ereignisse über die **Abfrage-Editor** mithilfe der `ALTER EVENT SESSION` -Anweisung, oder mithilfe der **Extended Events** Knoten **Objekt-Explorer**.  
+ Starten oder Beenden einer Sitzung für erweiterte Ereignisse über die **Abfrage-Editor** mit der `ALTER EVENT SESSION` -Anweisung, oder mithilfe der **Extended Events** Knoten **Objekt-Explorer**.  
   
  Wenn Sie eine Ereignissitzung beenden, wird die Sitzung in der dynamischen Verwaltungssicht (dynamic management view; DMV) von „sys.dm_xe_sessions“ nicht mehr als aktive Sitzung aufgeführt. Die Sitzungsdefinition bleibt jedoch intakt, und Sie können die Sitzung neu starten. Um eine Sitzungsdefinition vollständig zu entfernen, müssen Sie die Sitzung löschen.  
   

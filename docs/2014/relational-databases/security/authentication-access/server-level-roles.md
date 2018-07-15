@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301900"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Rollen auf Serverebene bereit, um Sie beim Verwalten der Berechtigungen auf einem Server zu unterstützen. Bei diesen Rollen handelt es sich um Sicherheitsprinzipale, in denen andere Prinzipale gruppiert sind. Der Geltungsbereich der Berechtigungen von Rollen auf Serverebene erstreckt sich auf den gesamten Server. (*Rollen* entsprechen den *Gruppen* im Betriebssystem Windows.)  
@@ -49,7 +48,7 @@ ms.locfileid: "36048478"
 |------------------------------|-----------------|  
 |sysadmin|Mitglieder der festen Serverrolle sysadmin können alle Aktivitäten auf dem Server ausführen.|  
 |serveradmin|Mitglieder der festen Serverrolle serveradmin können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.|  
-|securityadmin|Mitglieder der festen Serverrolle securityadmin können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen auf Datenbankebene auch über die Berechtigungen GRANT, DENY und REVOKE, sofern sie Zugriff eine Datenbank haben. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> **\*\* Sicherheitshinweis \*\*** Durch die Möglichkeit, Zugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zu gewähren und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Serverberechtigungen zuweisen. Die `securityadmin` Rolle behandelt werden soll als Entsprechung der `sysadmin` Rolle.|  
+|securityadmin|Mitglieder der festen Serverrolle securityadmin können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen auf Datenbankebene auch über die Berechtigungen GRANT, DENY und REVOKE, sofern sie Zugriff eine Datenbank haben. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> **\*\* Sicherheitshinweis \*\*** Durch die Möglichkeit, Zugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zu gewähren und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Serverberechtigungen zuweisen. Die `securityadmin` Rolle behandelt werden als Entsprechung der `sysadmin` Rolle.|  
 |processadmin|Mitglieder der festen Serverrolle processadmin können Prozesse beenden, die in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden.|  
 |setupadmin|Mitglieder der festen Serverrolle „setupadmin“ können Verbindungsserver mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen hinzufügen und entfernen. (Die Verwendung von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]erfordert die Mitgliedschaft in „sysadmin“.)|  
 |bulkadmin|Mitglieder der festen Serverrolle bulkadmin können die BULK INSERT-Anweisung ausführen.|  
@@ -61,7 +60,7 @@ ms.locfileid: "36048478"
  Jede feste Serverrolle besitzt bestimmte Berechtigungen. Eine Übersicht der Berechtigungen, die Serverrollen zugewiesen sind, finden Sie unter [Feste Serverrollen und feste Datenbankrollen der Datenbank-Engine](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Die `CONTROL SERVER` Berechtigung ist ähnlich, aber nicht identisch mit der `sysadmin` festen Serverrolle "". Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. `CONTROL SERVER` impliziert keine Mitgliedschaft der festen Serverrolle `sysadmin`.) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 im gespeicherter Systemprozeduren, die erfordern `sysadmin` Mitgliedschaft, finden Sie im folgenden Blogbeitrag von Andreas wolter: [CONTROL SERVER gegen Sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Berechtigungen Escalation - Vorsichtsmaßnahmen](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Die `CONTROL SERVER` Berechtigung ist ähnlich, aber nicht identisch mit der `sysadmin` -Serverrolle sein. Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. `CONTROL SERVER` impliziert keine Mitgliedschaft der festen Serverrolle `sysadmin`.) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 im gespeicherter Systemprozeduren, die erfordern `sysadmin` Mitgliedschaft, finden Sie im folgenden Blogbeitrag von Andreas wolter: [CONTROL SERVER gegen Sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Berechtigungen Escalation - Vorbehalte](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Berechtigung auf Serverebene  
  Benutzerdefinierten Serverrollen können nur Berechtigungen auf Serverebene hinzugefügt werden. Führen Sie zum Auflisten der Berechtigungen auf Serverebene die folgende Anweisung aus. Folgende Berechtigungen gelten auf Serverebene:  

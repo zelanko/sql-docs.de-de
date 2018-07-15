@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6261a52d4ff41923e87402327b98ff60622af7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1894d321f6dc8321f4c2b53369d7140f500ce003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310870"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL-Bereich (Visual Database Tools)
   Sie können den SQL-Bereich verwenden, um eine eigene SQL-Anweisung zu erstellen. Sie können auch den Kriterienbereich und den Diagrammbereich verwenden, um die Anweisung zu erstellen, wobei dadurch die SQL-Anweisungen im SQL-Bereich erstellt werden. Beim Erstellen einer Abfrage wird der SQL-Bereich automatisch aktualisiert und neu formatiert, um die Lesbarkeit zu verbessern.  
@@ -60,7 +60,7 @@ ms.locfileid: "36058414"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Ausführen von Abfragen &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [Entwerfen von Abfragen und Sichten Gewusst-wie-Themen &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Entwerfen von Abfragen und Ansichten: Themen zur Vorgehensweise &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Diagrammbereich &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [Im Kriterienbereich &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Ergebnisbereich &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  

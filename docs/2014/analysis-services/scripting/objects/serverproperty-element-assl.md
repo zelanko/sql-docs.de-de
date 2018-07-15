@@ -1,5 +1,5 @@
 ---
-title: ServerProperty-Element (ASSL) | Microsoft Docs
+title: ServerProperty-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6cb62681b0c25c83d54076a67a37addc764102da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300930"
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty-Element (ASSL)
   Definiert eine zugeordnete Servereigenschaft eine [Server](server-element-assl.md) Element.  
@@ -64,12 +64,12 @@ ms.locfileid: "36048575"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[ServerProperties](../collections/serverproperties-element-assl.md)|  
-|Untergeordnete Elemente|["DefaultValue"](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [Namen](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [Wert](../properties/value-element-assl.md)|  
+|Untergeordnete Elemente|[DefaultValue](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [Namen](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [Wert](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ServerProperty` -Element beschreibt die Daten und Metadaten einer Servereigenschaft, die mit einer Instanz des verknüpften [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Anders als Elemente, die in anderen Auflistungen in ASSL (Analysis Services Scripting Language) enthalten sind, verwendet das `ServerProperty`-Element zum Beschreiben von Servereigenschaften Name/Wert-Paare und keine explizit benannten Elemente. Die Name/Wert-Paare sorgen für Flexibilität und Erweiterbarkeit.  
+ Die `ServerProperty` Element beschreibt, die Daten und Metadaten einer Servereigenschaft, die mit einer Instanz von verknüpften [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Anders als Elemente, die in anderen Auflistungen in ASSL (Analysis Services Scripting Language) enthalten sind, verwendet das `ServerProperty`-Element zum Beschreiben von Servereigenschaften Name/Wert-Paare und keine explizit benannten Elemente. Die Name/Wert-Paare sorgen für Flexibilität und Erweiterbarkeit.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Element &#40;ASSL&#41;](server-element-assl.md)   

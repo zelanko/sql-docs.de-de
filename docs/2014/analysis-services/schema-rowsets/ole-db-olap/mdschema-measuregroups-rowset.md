@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASUREGROUPS-Rowset | Microsoft Docs
+title: MDSCHEMA_MEASUREGROUPS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 046674dc7c579a99e3d9fd90a86c466001c270c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7846fa9eb88a91a945c787cfec0fe19d0c520cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300980"
 ---
 # <a name="mdschemameasuregroups-rowset"></a>MDSCHEMA_MEASUREGROUPS-Rowset
   Beschreibt die Measuregruppen innerhalb einer Datenbank.  
@@ -47,7 +47,7 @@ ms.locfileid: "36059455"
  Dieses Schemarowset ist nicht sortiert.  
   
 ## <a name="restriction-columns"></a>Einschränkungsspalten  
- Die `MDSCHEMA_MEASUREGROUPS` Rowset kann eingeschränkt werden, für die Spalten in der folgenden Tabelle.  
+ Die `MDSCHEMA_MEASUREGROUPS` Rowset kann auf die Spalten in der folgenden Tabelle eingeschränkt werden.  
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  

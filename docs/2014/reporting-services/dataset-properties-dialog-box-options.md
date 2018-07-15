@@ -1,5 +1,5 @@
 ---
-title: Dataseteigenschaften (Dialogfeld), Optionen | Microsoft Docs
+title: DataSet Properties Dialog Box, Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d0f83c86076cc968d1b8896f3c857b9925fcbb81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7018038707462c2cf32a733b31cf66d25a275bfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319740"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Dataseteigenschaften (Dialogfeld), Optionen
-  Wählen Sie **Optionen** auf die **DatasetProperties** (Dialogfeld), um Datenoptionen, wie Sortierungsoptionen und Teilergebnisse, für die Abfrage zu ändern. Weitere Informationen finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+  Wählen Sie **Optionen** auf die **Dataseteigenschaften** um Datenoptionen, wie Sortierungsoptionen und Teilergebnisse, für die Abfrage zu ändern. Weitere Informationen finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="options"></a>Tastatur  
  **Sortierung**  
@@ -44,7 +44,7 @@ ms.locfileid: "36047795"
  Wählen Sie einen Wert aus, um die Unterscheidung nach Breite zu bestimmen. Mithilfe dieser Option wird angegeben, ob bei den Daten nach Breite unterschieden wird. Mögliche Werte sind **TRUE**, **FALSE**oder **Auto**. Der Standardwert **Auto** (Automatisch) gibt an, dass der Berichtsserver diesen Wert vom Datenanbieter herleiten soll, wenn der Bericht ausgeführt wird. Falls der Datenanbieter keine Unterscheidung nach Breite unterstützt, wird der Bericht so ausgeführt, als sei **False**festgelegt. Wenn Sie den Wert kennen und wissen, dass er unterstützt wird, wählen Sie **True**aus.  
   
  **Teilergebnisse als Detailzeilen interpretieren**  
- Wählen Sie einen Wert aus, der angibt, ob Teilergebniszeilen als Detailzeilen statt als Aggregatzeilen interpretiert werden sollen. Der Standardwert **Auto**, gibt an, dass die Teilergebniszeilen als Detailzeilen behandelt werden sollten, wenn der Bericht nicht die `Aggregate`()-Funktion, um den Zugriff auf alle Felder im DataSet. Wenn Teilergebniszeilen als Aggregatzeilen interpretiert werden sollen, wählen Sie **False**aus. Wenn die Teilergebniszeilen als Detailzeilen interpretiert werden sollen, und Sie wissen, dass sie nicht verwenden die `Aggregate`()-Funktion, wählen Sie **"true"**.  
+ Wählen Sie einen Wert aus, der angibt, ob Teilergebniszeilen als Detailzeilen statt als Aggregatzeilen interpretiert werden sollen. Der Standardwert **automatisch**, gibt an, dass die Teilergebniszeilen als Detailzeilen behandelt werden soll, wenn der Bericht nicht verwendet die `Aggregate`()-Funktion auf alle Felder im Dataset zugreifen. Wenn Teilergebniszeilen als Aggregatzeilen interpretiert werden sollen, wählen Sie **False**aus. Wenn die Teilergebniszeilen als Detailzeilen interpretiert werden sollen, und Sie wissen, dass sie nicht verwenden die `Aggregate`()-Funktion, wählen Sie **"true"**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen des Gebietsschemas für einen Bericht oder ein Textfeld &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   

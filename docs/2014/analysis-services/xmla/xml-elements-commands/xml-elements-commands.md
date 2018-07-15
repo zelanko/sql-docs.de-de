@@ -1,5 +1,5 @@
 ---
-title: Befehle (XMLA) | Microsoft Docs
+title: Befehle (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,29 +19,29 @@ helpviewer_keywords:
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bbfb56cc1ee12acd511c344ba3e1940fd5d56b32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 215db39cdf87cff69f2bfefbc28e730590daec15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298890"
 ---
 # <a name="commands-xmla"></a>Befehle (XMLA)
   Dieser Referenzabschnitt enthält XMLA-Elemente (XML for Analysis), die im `Command`-Element während eines `Execute`-Methodenaufrufs verwendet werden können.  
   
 |Element|Description|  
 |-------------|-----------------|  
-|[Alter-Element (XMLA)](alter-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elementen, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode, um Objekte auf einer Instanz von alter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Alter-Element (XMLA)](alter-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elemente, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode zum Ändern von Objekten in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Backup-Element](backup-element-xmla.md)|Sichert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in einer Sicherungsdatei.|  
-|[Batch-Element](batch-element-xmla.md)|Führt eine oder mehrere XML für Analysis (XMLA) Befehle als Batchvorgang ein, sequenziell oder parallel auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Batch-Element](batch-element-xmla.md)|Führt eine oder mehrere XML-Code für Befehle Analysis (XMLA) als Batchvorgang ein, entweder sequentiell oder parallel auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[BeginTransaction-Element](begintransaction-element-xmla.md)|Startet in der aktuellen Sitzung eine Transaktion mit einer Analysis Services-Instanz.|  
 |[Cancel-Element](cancel-element-xmla.md)|Bricht in einer Analysis Services-Instanz einen gerade ausgeführten Befehl ab.|  
 |[ClearCache-Element](clearcache-element-xmla.md)|Löscht den Arbeitsspeichercache des angegebenen Objekts in einer Analysis Services-Instanz.|  
 |[CommitTransaction-Element](committransaction-element-xmla.md)|Übermittelt in der aktuellen Sitzung eine Transaktion mit einer Analysis Services-Instanz.|  
-|[Create-Element](create-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elementen, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode zum Erstellen von Objekten auf einer Analysis Services-Instanz.|  
+|[Create-Element](create-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elemente, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode zum Erstellen von Objekten auf einer Analysis Services-Instanz.|  
 |[Delete-Element](delete-element-xmla.md)|Löscht auf einer Analysis Services-Instanz ein Objekt.|  
 |[DesignAggregations-Element](designaggregations-element-xmla.md)|Erstellt Aggregationen für einen Aggregationsentwurf auf einer Analysis Services-Instanz.|  
 |[Drop-Element](drop-element-xmla.md)|Löscht Attributelemente aus einer Dimension.|  

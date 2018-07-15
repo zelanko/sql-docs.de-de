@@ -1,32 +1,31 @@
 ---
-title: Volltextindex-Eigenschaften (Seite "Zeitpläne") | Microsoft Docs
+title: Volltextindex-Eigenschaften (Seite "Zeitpläne") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e564784e5f3fcae652068dcb200a805062a5e6bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83eeb3ca9ea1f2e22f3d2dadf8089b8ba510c951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306230"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Volltextindex-Eigenschaften (Seite "Zeitpläne")
-  Auf dieser Seite können Sie Zeitpläne zum Ausführen eines SQL Server-Agent-Auftrags anzeigen und erstellen, mit dem eine inkrementelle Auffüllung von Aktualisierungen für die Basistabelle des Volltextindexes gestartet wird. Wenn die Basistabelle oder Sicht keine Spalte enthält die `timestamp` -Datentyp, eine vollständige Auffüllung ausgeführt.  
+  Auf dieser Seite können Sie Zeitpläne zum Ausführen eines SQL Server-Agent-Auftrags anzeigen und erstellen, mit dem eine inkrementelle Auffüllung von Aktualisierungen für die Basistabelle des Volltextindexes gestartet wird. Wenn die Basistabelle oder Sicht nicht über eine Spalte enthält die `timestamp` -Datentyp, eine vollständige Auffüllung wird ausgeführt.  
   
- **Zum Anzeigen oder Ändern der Eigenschaften eines Volltextindex-**  
+ **Zum Anzeigen oder ändern die Eigenschaften einer Volltext-Indexes**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   

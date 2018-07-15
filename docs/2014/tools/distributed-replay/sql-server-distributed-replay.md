@@ -1,5 +1,5 @@
 ---
-title: SQLServer Distributed Replay | Microsoft Docs
+title: SQLServer Distributed Replay | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232630"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion unterstützt Sie beim Bewerten der Auswirkungen zukünftiger Upgrades von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Mit dem Hilfsprogramm können Sie auch die Auswirkungen von Hardware- und Betriebssystemupgrades sowie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Optimierungen bewerten.  
@@ -51,7 +51,7 @@ ms.locfileid: "36049825"
 ## <a name="distributed-replay-concepts"></a>Konzepte von Distributed Replay  
  Die folgenden Komponenten bilden die Distributed Replay-Umgebung:  
   
--   **Distributed Replay – Verwaltungstool**: eine Konsolenanwendung `DReplay.exe`, zur Kommunikation mit distributed Replay Controller verwendet. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
+-   **Verwaltungstool "Distributed Replay"**: eine Konsolenanwendung, `DReplay.exe`, zur Kommunikation mit distributed Replay Controller verwendet. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
   
 -   **Distributed Replay Controller**: Ein Computer, auf dem der Windows-Dienst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller ausgeführt wird. Der Distributed Replay Controller koordiniert die Aktionen der Distributed Replay Clients. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36049825"
 |Beschreibt, wie die Eingabedaten der Ablaufverfolgung vorbereitet werden.|[Vorbereiten der Eingabedaten für die Ablaufverfolgung](prepare-the-input-trace-data.md)|  
 |Beschreibt, wie die Ablaufverfolgungsdaten wiedergegeben werden.|[Wiedergeben von Ablaufverfolgungsdaten](replay-trace-data.md)|  
 |Beschreibt, wie die Ergebnisse der Ablaufverfolgungsdaten von Distributed Replay überprüft werden.|[Überprüfen der Wiedergabeergebnisse](review-the-replay-results.md)|  
-|Beschreibt, wie das Verwaltungstool zum Initiieren, Überwachen und Abbrechen von Vorgängen auf dem Controller verwendet wird.|[Administration Tool Befehlszeilenoptionen &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|Beschreibt, wie das Verwaltungstool zum Initiieren, Überwachen und Abbrechen von Vorgängen auf dem Controller verwendet wird.|[Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

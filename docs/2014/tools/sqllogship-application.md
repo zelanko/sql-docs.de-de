@@ -1,5 +1,5 @@
 ---
-title: Anwendung Sqllogship | Microsoft Docs
+title: Anwendung Sqllogship | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306680"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
   Von der Anwendung **sqllogship** werden ein Sicherungs-, Kopier- oder Wiederherstellungsvorgang und zugeordnete Cleanuptasks für eine Protokollversandkonfiguration ausgeführt. Der Vorgang wird in einer bestimmten Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für eine bestimmte Datenbank ausgeführt.  
   
- ![Thema Linksymbol](../../2014/database-engine/media/topic-link.gif "Thema Linksymbol") zu den Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Symbol zum Themenlink](../../2014/database-engine/media/topic-link.gif "Symbol zum Themenlink") den Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Der von **sqllogship** erstellte Protokollversandverlauf wird in den vom Protokollversand-Sicherungsauftrag, -Kopierauftrag und -Wiederherstellungsauftrag erstellten Verlauf eingefügt. Wenn Sie **sqllogship** wiederholt zum Ausführen von Sicherungs-, Kopier- und Wiederherstellungsvorgängen für eine Protokollversandkonfiguration verwenden möchten, sollten Sie den entsprechenden Protokollversandauftrag bzw. die entsprechenden Protokollversandaufträge deaktivieren. Weitere Informationen finden sie unter [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Die **Sqllogship** -Anwendung (SqlLogShip.exe) ist im Verzeichnis x:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\Tools\Binn installiert.  
+ Die **Sqllogship** SqlLogShip.exe,-Anwendung im Verzeichnis x:\Program Files\Microsoft SQL Server\120\Tools\Binn installiert ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für**sqllogship** wird die Windows-Authentifizierung verwendet. Für das Windows-Authentifizierungskonto zum Ausführen des Befehls sind ein Windows-Verzeichniszugriff und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Berechtigungen erforderlich. Die Anforderung hängt davon ab, ob der **sqllogship** -Befehl die Option **-backup**, **-copy**oder **-restore** festlegt.  

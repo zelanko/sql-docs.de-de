@@ -1,5 +1,5 @@
 ---
-title: Benutzerrollen für Change Data Capture Service für Oracle von Attunity | Microsoft Docs
+title: Benutzerrollen für Change Data Capture Service für Oracle von Attunity | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 196e8b952073fa4799c86549f1efdb26449c841c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc2db9d3a5df677cd1d687d2c5431c7db4affad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295150"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Benutzerrollen für Change Data Capture Service für Oracle von Attunity
   In diesem Abschnitt werden die Benutzerrollen für den Change Data Capture Service für Oracle von Attunity beschrieben. Die beschriebenen Rollen sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen, Windows-Rollen und Oracle-Datenbankrollen.  

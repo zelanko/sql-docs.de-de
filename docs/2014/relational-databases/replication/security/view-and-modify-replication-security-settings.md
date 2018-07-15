@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
 - replication [SQL Server], security
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3f07f5c5cce04561121a03a0c5634c352ae2b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3f5f4de1de339e3fc6d92106e645a6b84ead2cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292480"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
   In diesem Thema wird beschrieben, wie die Replikationssicherheitseinstellungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden. Die Verbindung des Protokolllese-Agents mit dem Verleger ist beispielsweise als SQL Server-Authentifizierung festgelegt, und Sie möchten Sie zu Integrierte Windows-Authentifizierung ändern, oder Sie müssen die zum Ausführen eines Agentauftrags verwendeten Anmeldeinformationen ändern, weil sich das Kennwort eines Windows-Kontos geändert hat. Informationen zu den für die jeweiligen Agents erforderlichen Berechtigungen finden Sie unter [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md).  
@@ -459,12 +459,12 @@ ms.locfileid: "36058905"
   
     -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Abonnenten verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>-Eigenschaft auf `true` fest.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Abonnenten verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> Eigenschaft, um `false`, und geben Sie die Anmeldeinformationen des Abonnenten für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Abonnenten Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Abonnenten für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Verteiler wird immer mit den durch <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie einen Wert des angegebenen `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server ausgeführt werden. Wenn Sie einen Wert des angegebenen `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standard), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Verteilungs-Agent für ein Pullabonnement einer Transaktionsveröffentlichung  
   
@@ -482,12 +482,12 @@ ms.locfileid: "36058905"
   
     -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Verteiler verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>-Eigenschaft auf `true` fest.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verteiler verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verteilers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verteiler Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verteilers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Abonnenten wird immer mit den durch <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie einen Wert des angegebenen `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server ausgeführt werden. Wenn Sie einen Wert des angegebenen `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standard), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent für ein Pullabonnement einer Mergeveröffentlichung  
   
@@ -505,16 +505,16 @@ ms.locfileid: "36058905"
   
     -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Verteiler verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>-Eigenschaft auf `true` fest.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verteiler verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verteilers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verteiler Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verteilers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
-    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verleger verwendet, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
+    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verleger verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft, um `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Abonnenten wird immer mit den durch <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie einen Wert des angegebenen `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server ausgeführt werden. Wenn Sie einen Wert des angegebenen `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standard), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>So ändern Sie die Sicherheitseinstellungen für den Merge-Agent für ein Pushabonnement einer Mergeveröffentlichung  
   
@@ -532,16 +532,16 @@ ms.locfileid: "36058905"
   
     -   Zur Angabe der integrierten Windows-Authentifizierung als Authentifizierungstyp, der vom Agent zum Verbindungsaufbau mit dem Abonnenten verwendet wird, legen Sie das <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>-Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>-Eigenschaft auf `true` fest.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Abonnenten verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> Eigenschaft, um `false`, und geben Sie die Anmeldeinformationen des Abonnenten für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Abonnenten Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Abonnenten für die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
-    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verleger verwendet, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
+    -   Integrierte Windows-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft `true`.  
   
-    -   Legen Sie zum Angeben von SQL Server-Authentifizierung als Authentifizierungstyp, der der Agent Verbindungsaufbau mit dem Verleger verwendet, die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft, um `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
+    -   SQL Server-Authentifizierung als Authentifizierungstyp, den der Agent beim Herstellen einer mit dem Verleger Verbindung, legen die <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> Feld der <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> Eigenschaft `false`, und geben Sie die Anmeldeinformationen des Verlegers für die <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>und <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> Felder.  
   
         > [!NOTE]  
         >  Die Agent-Verbindung zum Verteiler wird immer mit den durch <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>angegebenen Windows-Anmeldeinformationen hergestellt. Dieses Konto wird auch verwendet, um Remoteverbindungen unter Verwendung der Windows-Authentifizierung herzustellen.  
   
-6.  (Optional) Wenn Sie einen Wert des angegebenen `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server ausgeführt werden. Wenn Sie einen Wert des angegebenen `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standard), die Änderungen werden an den Server sofort gesendet.  
+6.  (Optional) Wenn Sie den Wert angegeben `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> Methode, um die Änderungen auf dem Server einzutragen. Wenn Sie einen Wert von angegeben `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (Standardeinstellung), die Änderungen werden an den Server sofort gesendet.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>So ändern Sie die Anmeldeinformationen, die von einem sofort aktualisierbaren Abonnenten beim Herstellen einer Verbindung mit dem Transaktionsverleger verwendet werden  
   
@@ -549,7 +549,7 @@ ms.locfileid: "36058905"
   
 2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse für die Abonnementdatenbank. Geben Sie <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>an.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Datenbankeigenschaften in Schritt 2 falsch definiert, oder das Abonnementdatenbank ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode zurückgibt `false`, entweder die Datenbankeigenschaften in Schritt 2 falsch definiert, oder die Abonnementdatenbank ist nicht vorhanden.  
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> -Methode auf, und übergeben Sie hierbei die folgenden Parameter:  
   

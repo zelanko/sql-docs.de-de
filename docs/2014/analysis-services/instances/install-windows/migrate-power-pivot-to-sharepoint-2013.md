@@ -1,5 +1,5 @@
 ---
-title: Migrieren von PowerPivot zu SharePoint 2013 | Microsoft Docs
+title: Migrieren von PowerPivot zu SharePoint 2013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 13
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1d817e1bf9b0e09479a15619eae9f25293d8461e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c975ffc274853aee6bd74ce15079626c6cb17a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280006"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrieren von PowerPivot zu SharePoint 2013
   
@@ -56,11 +56,11 @@ ms.locfileid: "36048380"
   
 2.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
   
-3.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [PowerPivot für SharePoint 2013-Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+3.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [PowerPivot für SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services SharePoint Integration" [PowerPivot für SharePoint 2013-Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+5.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services SharePoint Integration" [PowerPivot für SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ##  <a name="bkmk_backup_restore"></a> 2) Sichern, Kopieren und Wiederherstellen der Datenbanken  
  Der Prozess "SharePoint-Upgrade mit Anfügen der Datenbanken" umfasst eine Abfolge von Schritten, mit denen PowerPivot-bezogene Inhalts- und Dienstanwendungsdatenbanken auf der SharePoint 2013-Farm gesichert, kopiert und wiederhergestellt werden.  
@@ -94,7 +94,7 @@ ms.locfileid: "36048380"
   
 -   **Inhaltsdatenbanken einbinden:**  
   
-     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell-Inhalt](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt")  
+     Verwenden Sie PowerShell-Cmdlets in der SharePoint 2013-Verwaltungsshell, um die migrierte Inhaltsdatenbank einzubinden. Die dienstanwendungsdatenbank muss nicht eingebunden werden, sondern nur die Inhaltsdatenbanken: ![PowerShell related Content](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell verwandte Inhalte")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
@@ -112,7 +112,7 @@ ms.locfileid: "36048380"
   
 1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler auftreten, überprüfen Sie den Authentifizierungsmodus, der von den Quellwebanwendungen verwendet wird. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
   
-2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender PowerPivot-DLLs angezeigt werden die **spPowerPivot.msi** wurde nicht installiert oder die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] wurde nicht zur Konfiguration von PowerPivot-Konfigurationstool verwendet.  
+2.  **Fehlende PowerPivot-Dateien:** , wenn Sie Fehler bezüglich fehlender PowerPivot-DLLs finden Sie unter der **spPowerPivot.msi** wurde nicht installiert oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstool zur Konfiguration von PowerPivot nicht verwendet wurde.  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a> (4) aktualisieren von PowerPivot-Zeitplänen  
  In diesem Abschnitt werden die Details und Optionen zum Migrieren von PowerPivot-Zeitplänen beschrieben. Die Migration von Zeitplänen erfolgt in zwei Schritten. Zunächst konfigurieren Sie die PowerPivot-Dienstanwendung für die Verwendung der migrierten Dienstanwendungsdatenbank. Als Nächstes wählen Sie eine der beiden Optionen zur Migration von Zeitplänen aus.  
@@ -133,7 +133,7 @@ ms.locfileid: "36048380"
   
 -   **Option 1 zum Migrieren von Zeitplänen: SharePoint-Farmadministrator**  
   
-    1.  Führen Sie in der SharePoint 2013 Verwaltung der `Set-PowerPivotServiceApplication` Cmdlet mit dem `-StartMigratingRefreshSchedules` Switch So aktivieren Sie automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell-Inhalt](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell-Inhalt"). Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine PowerPivot-Dienstanwendung vorhanden ist.  
+    1.  In der SharePoint 2013-Management-Ausführung der `Set-PowerPivotServiceApplication` Cmdlet mit der `-StartMigratingRefreshSchedules` Switch So aktivieren Sie automatische bedarfsorientierte Migration von Zeitplänen ![PowerShell related Content](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell related Content"). Im folgenden Windows PowerShell-Skript wird davon ausgegangen, dass nur eine PowerPivot-Dienstanwendung vorhanden ist.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  

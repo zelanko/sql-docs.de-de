@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290226"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
   Im Berichts-Generator können Sie einen Bericht auf einem Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. Sie können einen Bericht am gleichen Speicherort speichern, an dem Sie ihn geöffnet haben, oder Sie können ihn an einem anderen Speicherort oder unter einem neuen Namen am gleichen Speicherort oder einem anderen Speicherort speichern. Standardmäßig wird ein Bericht an dem Speicherort erneut gespeichert, an dem er geöffnet wurde. Wenn Sie den Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefinition, in der das Berichtslayout beschrieben wird. Die Daten werden nicht gespeichert. Bei jeder Ausführung des Berichts werden die Berichtsdaten aktualisiert. Sie sind dann wahrscheinlich anders als bei der letzten Ausführung des Berichts.  
@@ -82,7 +82,7 @@ ms.locfileid: "36059987"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installieren, deinstallieren und Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
+ [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten (Berichts-Generator und SSRS)](print-reports-report-builder-and-ssrs.md)  

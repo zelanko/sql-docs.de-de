@@ -1,5 +1,5 @@
 ---
-title: DataAggregation-Element (ASSL) | Microsoft Docs
+title: DataAggregation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289586"
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation-Element (ASSL)
   Bestimmt, ob die Instanz persistente Daten oder zwischengespeicherte Daten für aggregieren kann die [MeasureGroup](../objects/group-element-assl.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "36048342"
 |*CacheAggregatable*|Zwischengespeicherte Daten können für diese Measuregruppe aggregiert werden.|  
 |*DataAndCacheAggregatable*|Sowohl persistente Daten als auch zwischengespeicherte Daten können für diese Measuregruppe aggregiert werden.|  
   
- Das Element, das das übergeordnete Element des entspricht `DataAggregation` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Das Element, das dem übergeordneten entspricht `DataAggregation` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services) | Microsoft Docs
+title: Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311908"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services)
   Aktivieren Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] eine Entität für explizite Hierarchien und Auflistungen, damit Sie explizite Hierarchien und Auflistungen für die Entität erstellen können.  
@@ -48,7 +48,7 @@ ms.locfileid: "36049229"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Aus der **explizite Hierarchien und Auflistungen aktivieren** Liste **Ja**.  
+6.  Von der **explizite Hierarchien und Auflistungen aktivieren** Liste **Ja**.  
   
 7.  In der **Name der expliziten Hierarchie** Feld Geben Sie einen Namen für eine explizite Hierarchie.  
   

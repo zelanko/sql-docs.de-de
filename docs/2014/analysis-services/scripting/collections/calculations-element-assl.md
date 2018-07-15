@@ -1,5 +1,5 @@
 ---
-title: Calculations-Element (ASSL) | Microsoft Docs
+title: Calculations-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Calculations element
 ms.assetid: 03e5e91c-1f66-4dc7-8aad-4d9876928df0
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12d1ad22a305c6adb198348a1cd7fe6b858e72cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130288eb3a628a746d3b7b19b1635a31250cdb8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319285"
 ---
 # <a name="calculations-element-assl"></a>Calculations-Element (ASSL)
   Enthält die Auflistung der [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) Elemente, die zu einem [Perspektive](../objects/perspective-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36049315"
 |Untergeordnete Elemente|[Berechnung](../objects/calculation-element-assl.md) des Typs [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveCalculationCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.PerspectiveCalculationCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

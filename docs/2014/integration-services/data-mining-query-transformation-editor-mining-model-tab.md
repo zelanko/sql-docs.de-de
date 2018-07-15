@@ -1,5 +1,5 @@
 ---
-title: Data Mining Query Transformation-Editor (Registerkarte Miningmodell) | Microsoft Docs
+title: Data Mining Query Transformation-Editor (Registerkarte Miningmodell) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fad00af545c430f5f1b7d9cf58085a2c378c84e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d47d8d95c08c2e625183832eec18a569b4171de0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304090"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Transformations-Editor für Data Mining-Abfragen (Registerkarte Miningmodell)
   Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Transformations-Editor für Data Mining-Abfragen** können Sie die Miningstruktur und deren Miningmodelle angeben.  
@@ -45,6 +45,6 @@ ms.locfileid: "36049974"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für Data Mining-Abfragen &#40;Fragen Sie die Registerkarte "&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Transformations-Editor für Data Mining-Abfrage &#40;Abfrage (Registerkarte)&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Behandeln von großen Objekten mit CLR | Microsoft Docs
+title: Behandeln von großen Objekten mit CLR | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310350"
 ---
 # <a name="handling-large-objects-using-clr"></a>Behandeln von großen Objekten mit CLR
   Das `HandlingLOBUsingCLR`-Beispiel für SQL Server veranschaulicht das Übertragen von LOBs (Large Objects) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem, das für den Server mithilfe von gespeicherten CLR (Common Language Runtime)-Prozeduren verfügbar ist. Dieses Beispiel veranschaulicht, wie Sie auf Dateien in serverseitigem Code zugreifen und dann aus CLR-basierten gespeicherten Prozeduren dynamische Abfragen und gespeicherte Prozeduren aufrufen. Darüber hinaus veranschaulicht es, wie Sie CLR-Methoden und CLR-Assemblys mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] registrieren und deren Registrierung aufheben.  
@@ -53,7 +53,7 @@ ms.locfileid: "36058975"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -578,7 +578,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) das Beispiel getestet, durch die gespeicherten Prozeduren anwenden.  
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) das Beispiel getestet, indem Sie die gespeicherten Prozeduren ausführen.  
   
 ```  
 USE AdventureWorks  

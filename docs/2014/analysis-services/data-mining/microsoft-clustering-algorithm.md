@@ -1,5 +1,5 @@
 ---
-title: Microsoft Clustering-Algorithmus | Microsoft Docs
+title: Microsoft Clustering-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308790"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein Segmentierungsalgorithmus gebotenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Algorithmus arbeitet mit iterativen Techniken, um die in einem Dataset enthaltenen Fälle in Clustern zu gruppieren, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
   
  Clustermodelle identifizieren Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Sie können z. B. logisch schlussfolgern, dass Personen, die mit dem Fahrrad zur Arbeit fahren, für gewöhnlich nicht weit von ihren Arbeitsplätzen entfernt wohnen. Der Algorithmus kann jedoch nach anderen Merkmalen von Fahrradpendlern suchen, die nicht so klar auf der Hand liegen. In dem folgenden Diagramm zeigt Cluster A Daten zu Personen, die dazu tendieren, mit dem Auto zur Arbeit fahren, während Cluster B Daten zu Personen zeigt, die dazu tendieren, mit dem Fahrrad zur Arbeit zu fahren.  
   
- ![Gruppiertes Muster von pendlertendenzen](../media/clustering-example.gif "gruppiertes Muster von pendlertendenzen")  
+ ![Cluster-Muster von pendlertendenzen](../media/clustering-example.gif "Muster von pendlertendenzen")  
   
  Der Clustering-Algorithmus unterscheidet sich von anderen Data Mining-Algorithmen, z. B. dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, dadurch, dass Sie keine vorhersagbare Spalte bestimmen müssen, um in der Lage zu sein, ein Clustermodell aufzubauen. Der Clustering-Algorithmus trainiert das Modell systematisch anhand der Beziehungen, die in den Daten bestehen, und anhand der Cluster, die der Algorithmus identifiziert.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36050003"
   
 -   **Eingabespalten** Jedes Modell muss mindestens eine Eingabespalte enthalten, welche die zur Bildung der Cluster verwendeten Werte enthält. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.  
   
--   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte zur Erstellung des Modells. Sie können aber eine vorhersagbare Spalte fast jeden Datentyps hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Z. B. Wenn Sie das Einkommen der Kunden vorhersagen, indem Sie Cluster auf Grundlage demografischer Daten wie Region oder ALTER bilden möchten, würden Sie angeben Einkommen als `PredictOnly` und alle übrigen Spalten, z. B. Region oder ALTER, als Eingabespalten hinzufügen.  
+-   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte zur Erstellung des Modells. Sie können aber eine vorhersagbare Spalte fast jeden Datentyps hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Z. B. Wenn Sie das Einkommen der Kunden vorhersagen, indem Sie Cluster auf der Grundlage demografischer Daten wie Region oder ALTER bilden möchten, Sie würden die einkommensspalte als `PredictOnly` und alle anderen Spalten, z. B. Region oder ALTER, als Eingabespalten hinzufügen.  
   
  Ausführliche Informationen zu den in Clustermodellen unterstützten Inhaltstypen und Datentypen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36050003"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
- [Miningmodellinhalt für Clusteringmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)  
   
   

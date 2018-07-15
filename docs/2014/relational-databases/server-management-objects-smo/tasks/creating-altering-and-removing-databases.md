@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Entfernen von Datenbanken | Microsoft Docs
+title: Erstellen, ändern und Entfernen von Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc53250e518b58e8f30c01da9c38bf68a0fd37a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a23c44b3260f3ce4e8dbe018ba1a24598cb5e59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318070"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Erstellen, Ändern und Löschen von Datenbanken
   In SMO wird eine Datenbank durch das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt dargestellt.  
@@ -33,7 +33,7 @@ ms.locfileid: "36048022"
  Um diese zu ändern oder zu löschen, ist es nicht erforderlich, ein <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt zu erstellen. Auf die Datenbank kann mit einer Sammlung verwiesen werden.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Datenbank in Visual Basic  
  In diesem Codebeispiel wird eine neue Datenbank erstellt. Dateien und Dateigruppen werden für die Datenbank automatisch erstellt.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4351b5581ccce3185c7354a29157f7ea9747631d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291346"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
   Eine Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der `sqlservr.exe` ausführbare Datei, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
@@ -39,8 +39,7 @@ ms.locfileid: "36059222"
 |Beschreibt, wie Verbindungsserverdefinitionen konfiguriert werden, die in einer Instanz ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, um in getrennten OLE DB-Datenquellen gespeicherte Daten zu verwenden.|
   [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
 |Beschreibt, wie ein LOGON-Trigger erstellt wird, der auszuführende Aktionen angibt, die nach der Überprüfung des Anmeldeversuchs, aber vor dem Beginn der Verwendung von Ressourcen in der Instanz ausgeführt werden sollen. LOGON-Trigger unterstützen Aktionen wie die Protokollierung der Verbindungsaktivität die logikbasierte Einschränkung von Anmeldungen, die zusätzlich zur Authentifizierung der Anmeldeinformationen durch Windows und SQL Server verwendet wird.|[Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)|  
-|Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|
-  [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)|  
+|Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|[Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)|  
 |Beschreibt, wie Servernetzwerk-Konfigurationstasks ausgeführt werden müssen, z. B. das Aktivieren von Protokollen, das Ändern eines von einem Protokoll verwendeten Ports oder einer Pipe, das Konfigurieren von Verschlüsselungen, das Konfigurieren des SQL Server-Browserdiensts, das Anzeigen oder das Ausblenden der SQL Server-Datenbank-Engine im Netzwerk und das Registrieren des Serverprinzipalnamens.|[Server-Netzwerkkonfiguration](server-network-configuration.md)|  
 |Beschreibt, wie Clientnetzwerk-Konfigurationstasks (beispielsweise das Konfigurieren von Clientprotokollen und das Erstellen oder Löschen eines Serveralias) ausgeführt werden.|[Client-Netzwerkkonfiguration](client-network-configuration.md)|  
 |Beschreibt die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren, die zum Entwerfen, Debuggen und Ausführen von Skripts, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, verwendet werden können. Beschreibt darüber hinaus, wie Windows PowerShell-Skripts für die Verwendung mit SQL Server-Komponenten codiert werden.|

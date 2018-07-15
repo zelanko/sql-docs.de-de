@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5323072d5c58fcbe37becd00daacaac6ed3fb161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fd6e0a992dd4f23b6da24ed70cb884025c969537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320450"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Erstellen eines domänenbasierten Attributs (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein domänenbasiertes Attribut, um die Werte eines Attributs mit Elementen aus einer Entität aufzufüllen.  
@@ -59,13 +59,13 @@ ms.locfileid: "36050140"
   
     -   Wenn das Attribut für Auflistungen bestimmt ist, klicken Sie im Bereich **Auflistungsattribute** auf **Auflistungsattribut hinzufügen**.  
   
-7.  Auf der **Attribut hinzufügen** Seite der **domänenbasierten** Option.  
+7.  Auf der **Attribut hinzufügen** Seite die **domänenbasierten** Option.  
   
 8.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Es muss nicht der gleiche Name wie derjenige der Entität sein, die Sie für die Quelle der Attributwerte verwenden.  
   
 9. Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-10. Aus der **Entität** wählen Sie die Entität, die verwendet werden, um die Attributwerte aufzufüllen.  
+10. Von der **Entität** Liste, und wählen Sie die Entität, die verwendet werden, um die Attributwerte aufzufüllen.  
   
 11. Optional. Wählen Sie **Änderungsnachverfolgung aktivieren** aus, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: RoleID-Element (ASSL) | Microsoft Docs
+title: RoleID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RoleID element
 ms.assetid: 811e24c9-c732-41f9-bd5f-5c9e3503706a
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61d5f14a5b45d3275e79ab729ccee8e0b736013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cff4cf8a86160f1f4cef93d4cd021ac917038a33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285916"
 ---
 # <a name="roleid-element-assl"></a>RoleID-Element (ASSL)
   Identifiziert die Rolle, für die Berechtigungen definiert werden.  
@@ -58,11 +58,11 @@ ms.locfileid: "36049298"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](../objects/dimensionpermission-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [miningstructurepermission-Objekte ](../objects/miningstructurepermission-element-assl.md), [Berechtigung](../data-type/permission-data-type-assl.md)|  
+|Übergeordnete Elemente|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](../objects/dimensionpermission-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission ](../objects/miningstructurepermission-element-assl.md), [Berechtigung](../data-type/permission-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `RoleID` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission>, und <xref:Microsoft.AnalysisServices.Permission>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `RoleID` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission>, und <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

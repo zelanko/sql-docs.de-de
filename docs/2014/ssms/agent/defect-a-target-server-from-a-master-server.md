@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], defecting
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07433af48c259d0f2654f01b3a6bc3a43c808c0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 35f113cfd0e038940c00b710b31f254da6343805
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305040"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Vollziehen des Austritts eines Zielservers aus einem Masterserver
   In diesem Thema wird beschrieben, wie Sie den Austritt eines Zielservers aus einem Masterserver in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects (SMO) vollziehen. Führen Sie die folgenden Schritte auf dem Zielserver aus.  
@@ -49,7 +49,7 @@ ms.locfileid: "36049611"
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Um diese gespeicherte Prozedur ausführen zu können, muss ein Benutzer ein Mitglied der `sysadmin` festen Serverrolle "".  
+ Um diese gespeicherte Prozedur auszuführen, muss ein Benutzer ein Mitglied der `sysadmin` -Serverrolle sein.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
@@ -77,7 +77,7 @@ sp_msx_defect ;
   
  Weitere Informationen finden Sie unter [Sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Verwenden von SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a> Verwendung von SQL Server Management Objects (SMO)  
  Verwenden der `MsxDefect Method`.  
   
 ## <a name="see-also"></a>Siehe auch  

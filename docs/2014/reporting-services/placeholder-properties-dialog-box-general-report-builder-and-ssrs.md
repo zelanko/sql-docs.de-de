@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Platzhalter", Allgemein (Berichts-Generator und SSRS) | Microsoft Docs
+title: Eigenschaftendialogfeld von Platzhalter, Allgemein (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ed0c21a7b55e0cf2387595e1c24dc430151f1e05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309730"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Verwenden Sie das Dialogfeld **Eigenschaften von Platzhalter** , um den Wert, die QuickInfo und die Markupoptionen eines Platzhalters innerhalb eines Textfelds zu ändern.  

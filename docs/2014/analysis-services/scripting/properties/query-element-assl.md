@@ -1,5 +1,5 @@
 ---
-title: Abfrage-Element (ASSL) | Microsoft Docs
+title: Abfrage-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac4774f6e8a2694ee79691a84f3333ab1a4226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308410"
 ---
 # <a name="query-element-assl"></a>Query-Element (ASSL)
   Enthält den Text der Abfrage, die für die Benachrichtigung ausgeführt werden muss.  
@@ -58,7 +58,7 @@ ms.locfileid: "36059241"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Query` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.QueryNotification>.  
+ Das Element, das dem übergeordneten entspricht `Query` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ProactiveCachingQueryBinding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

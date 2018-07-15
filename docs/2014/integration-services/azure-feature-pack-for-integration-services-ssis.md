@@ -1,5 +1,5 @@
 ---
-title: Azure FeaturePack | Microsoft Docs
+title: Azure FeaturePack für | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281736"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erweiterung, die die auf dieser Seite für SSIS aufgelisteten Komponenten für Verbindungen mit Azure-Diensten, für die Übertragung von Daten zwischen Azure und lokalen Datenquellen und für die Verarbeitung der in Azure gespeicherten Daten bereitstellt.
@@ -69,7 +69,7 @@ Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erwe
     
     -   [Azure Data Lake Store Destination](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob-Enumerator & ADLS-File-Enumerator. Siehe [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Azure-Blob-Enumerator und ADLS-Dateienumerator. Siehe [Foreach Loop Container](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Download des Feature Packs  

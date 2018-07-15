@@ -1,5 +1,5 @@
 ---
-title: Berechnet die Darstellung einer Spalte (tabellarisch) | Microsoft Docs
+title: Berechnete Spalte Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0918b315df0b97b3750306b7c4469ef2ddfaa9e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9712182e3416a81edab77d1cb19b50ee5bc4bd07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285836"
 ---
 # <a name="calculated-column-representation-tabular"></a>Darstellung einer berechneten Spalte (tabellarisch)
   Eine berechnete Spalte ist ein DAX-Ausdruck, der eine neue Spalte in einer Tabelle erstellt. Die abgerufenen Werte werden in der Tabelle gespeichert. Der berechnete Spaltenausdruck wird bei jeder Verarbeitung der Tabelle ausgewertet.  
@@ -28,7 +28,7 @@ ms.locfileid: "36059680"
 ## <a name="calculated-column-representation"></a>Darstellung einer berechneten Spalte  
   
 ### <a name="calculated-columns-in-amo"></a>Berechnete Spalten in AMO  
- Wenn AMO zum Verwalten einer Tabelle für ein tabellarisches Modell verwendet wird, besteht keine 1:1-Objektentsprechung zu einer berechneten Spalte in AMO. Eine berechnete Spalte dargestellt wird, durch ein Attribut in <xref:Microsoft.AnalysisServices.Dimension> und ein Attribut in <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Wenn AMO zum Verwalten einer Tabelle für ein tabellarisches Modell verwendet wird, besteht keine 1:1-Objektentsprechung zu einer berechneten Spalte in AMO. Eine berechnete Spalte ist dargestellt, durch ein Attribut in <xref:Microsoft.AnalysisServices.Dimension> und ein Attribut in <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
  Der folgende Codeausschnitt veranschaulicht, wie einem vorhandenen tabellarischen Modell eine berechnete Spalte hinzugefügt wird. Im Code wird davon ausgegangen, dass Sie über das AMO-Datenbankobjekt newDatabase und das AMO-Cubeobjekt modelCube verfügen.  
   

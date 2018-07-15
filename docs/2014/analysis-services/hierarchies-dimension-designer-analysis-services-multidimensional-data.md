@@ -1,5 +1,5 @@
 ---
-title: Hierarchien (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Hierarchien (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08b33cd4979076bc33604d1adaef5efaa6209266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bb71e3340fad2c94f844265b313cf8e533f4db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234310"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hierarchien (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Hierarchien** können Sie Hierarchien und Ebenen für die aktuell ausgewählte Dimension verwalten. Weitere Informationen zum Erstellen benutzerdefinierter Hierarchien finden Sie unter [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md).  

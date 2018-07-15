@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317550"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
   Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster ist eine Konfiguration, in der jeder Failoverclusterknoten mit einem anderen Subnetz oder einer anderen Gruppe von Subnetzen verbunden ist. Diese Subnetze können am gleichen Standort oder an geografisch verteilten Standorten sein. Das Clustering von weit verstreuten Standorten wird mitunter auch als Stretched Cluster bezeichnet. Da kein freigegebener Speicher vorhanden ist, auf den alle Knoten zugreifen können, sollten die Daten zwischen den Datenspeichern in den verschiedenen Subnetzen repliziert werden. Infolge der Datenreplikation ist mehr als eine Kopie der Daten verfügbar. Multisubnetz-Failovercluster bieten somit neben Hochverfügbarkeit auch eine Lösung zur Wiederherstellung im Notfall.  
@@ -71,7 +70,7 @@ ms.locfileid: "36047990"
  Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI und eine eigenständige [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]-Instanz parallel installiert sind, achten Sie darauf, dass Konflikte mit TCP-Portnummern für die IP-Adressen vermieden werden. Konflikte treten in der Regel auf, wenn in zwei [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Instanzen die Verwendung des TCP-Standartports (1433) konfiguriert wurde. Um Konflikte zu vermeiden, konfigurieren Sie in einer Instanz die Verwendung eines nicht standardmäßigen festen Ports. Die Konfiguration eines festen Ports kann in der Regel in der eigenständigen Instanz am einfachsten vorgenommen werden. Wenn [!INCLUDE[ssDE](../../../includes/ssde-md.md)] für die Verwendung anderer Ports konfiguriert wird, wird verhindert, dass ein unerwarteter IP-Adressen-/TCP-Port-Konflikt auftritt, der den Start einer Instanz blockiert, wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI ein Failover zu dem Standbyknoten ausführt.  
   
 ##  <a name="DNS"></a> Clientwiederherstellungs-Latenzzeit während der Failover  
- Die RegisterAllProvidersIP-Clusterressource wird von einer Multisubnetz-FCI für den Netzwerknamen standardmäßig aktiviert. In einer Multisubnetzkonfiguration werden die Online- und Offline-IP-Adressen des Netzwerknamens beim DNS-Server registriert. Die Clientanwendung ruft dann alle registrierten IP-Adressen vom DNS-Server ab und versucht, entweder geordnet oder parallel eine Verbindung mit den Adressen herzustellen. Demnach hängt die Clientwiederherstellungszeit in Multisubnetz-Failovern nicht länger von DNS-Aktualisierungs-Wartezeiten ab. Standardmäßig versucht der Client die IP-Adressen geordnet abzurufen. Wenn der Client den neuen optionalen `MultiSubnetFailover=True`-Parameter in seiner Verbindungszeichenfolge verwendet, versucht er stattdessen gleichzeitig die IP-Adressen abzurufen und stellt eine Verbindung mit dem ersten antwortenden Server her. Dadurch kann die Clientwiederherstellungs-Latenzzeit minimiert werden, wenn Failover auftreten. Weitere Informationen finden Sie unter [Always On-Clientkonnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) und [erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Die RegisterAllProvidersIP-Clusterressource wird von einer Multisubnetz-FCI für den Netzwerknamen standardmäßig aktiviert. In einer Multisubnetzkonfiguration werden die Online- und Offline-IP-Adressen des Netzwerknamens beim DNS-Server registriert. Die Clientanwendung ruft dann alle registrierten IP-Adressen vom DNS-Server ab und versucht, entweder geordnet oder parallel eine Verbindung mit den Adressen herzustellen. Demnach hängt die Clientwiederherstellungszeit in Multisubnetz-Failovern nicht länger von DNS-Aktualisierungs-Wartezeiten ab. Standardmäßig versucht der Client die IP-Adressen geordnet abzurufen. Wenn der Client den neuen optionalen `MultiSubnetFailover=True`-Parameter in seiner Verbindungszeichenfolge verwendet, versucht er stattdessen gleichzeitig die IP-Adressen abzurufen und stellt eine Verbindung mit dem ersten antwortenden Server her. Dadurch kann die Clientwiederherstellungs-Latenzzeit minimiert werden, wenn Failover auftreten. Weitere Informationen finden Sie unter [AlwaysOn-Clientkonnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) und [erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  Bei legacyclientbibliotheken oder drittanbieterdatenanbietern können Sie können keine der `MultiSubnetFailover` Parameter in der Verbindungszeichenfolge. Versuchen Sie, den Verbindungstimeout in der Clientverbindungszeichenfolge um 21 Sekunden für jede zusätzliche IP-Adresse anzupassen, damit sichergestellt wird, dass Ihre Clientanwendung optimal mit dem Multisubnetz-FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]interagiert. Dadurch wird sichergestellt, dass der Wiederverbindungsversuch des Clients nicht zu einem Timeout führt, bevor es in der Lage ist, alle IP-Adressen in der Multisubnetz-FCI durchzugehen.  
   

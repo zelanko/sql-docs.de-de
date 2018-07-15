@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0bdc2134723cddd5acf6ead6e137b91bf52f68e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319760"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Beispiel: Angeben der ID- und der IDREF-Direktive
   Dieses Beispiel entspricht fast dem Beispiel unter [Angeben der ELEMENTXSINIL-Direktive](example-specifying-the-elementxsinil-directive.md) . Der einzige Unterschied ist, dass in der Abfrage die **ID** -Direktive und die **IDREF** -Direktive angegeben werden. Diese Direktiven überschreiben die Typen des **SalesPersonID**-Attributs im <`OrderHeader`>-Element und im <`OrderDetail`>-Element. Auf diese Weise werden dokumentinterne Links gebildet. Sie benötigen das Schema, um die überschriebenen Typen anzuzeigen. Um das Schema abzurufen, gibt die Abfrage die Option **XMLDATA** in der FOR XML-Klausel an.  

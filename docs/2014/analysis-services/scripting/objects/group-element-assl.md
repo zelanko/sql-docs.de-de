@@ -1,5 +1,5 @@
 ---
-title: Group-Element (ASSL) | Microsoft Docs
+title: Group-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Group element
 ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6b10e557c91a27305ca0b9bff1d989e327b3b6f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bb2883a3cb988a2e6f53c4eca0c0e16da4ff74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215850"
 ---
 # <a name="group-element-assl"></a>Group-Element (ASSL)
   Definiert eine Gruppe von Elementen, die an ein Attribut gebunden sind.  
@@ -63,7 +63,7 @@ ms.locfileid: "36049557"
 |Untergeordnete Elemente|[Members](../collections/members-element-assl.md), [Name](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Group>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Group>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [UserDefinedGroupBinding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

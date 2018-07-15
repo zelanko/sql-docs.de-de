@@ -1,5 +1,5 @@
 ---
-title: Installieren von ADOMD.NET auf Web Front-End-Servern, die mit der zentralen Verwaltung | Microsoft Docs
+title: Installieren Sie ADOMD.NET auf Web Front-End-Servern, die mit der zentralen Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ccedd48fcebab07eeb7b27821917b684d98a11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317540"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird
   Wenn Sie PowerPivot für SharePoint in einer Farm installieren, die die Topologie "Zentraladministration ohne Excel Services oder PowerPivot für SharePoint" aufweist, laden Sie die Microsoft ADOMD.NET-Clientbibliothek herunter und installieren diese, wenn Sie Vollzugriff auf die integrierten Berichte im PowerPivot-Management-Dashboard erhalten möchten. Einige Berichte im Dashboard verwenden ADOMD.NET für den Zugriff auf interne Daten, die Berichtsdaten zur PowerPivot-Abfrageverarbeitung und zum Serverzustand in der Farm liefern.  
@@ -30,13 +30,13 @@ ms.locfileid: "36058220"
   
 ### <a name="download-and-install-the-client-library"></a>Herunterladen und Installieren der Clientbibliothek  
   
-1.  Auf der [Downloadseite für SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=296473), suchen Sie die Microsoft ADOMD.NET.  
+1.  Auf der [Downloadseite für SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=296473), suchen Sie Microsoft ADOMD.NET.  
   
 2.  Laden Sie das x64-Paket des `SQL_AS_ADOMD.msi`-Installationsprogramms herunter.  
   
 3.  Führen Sie die MSI-Datei aus, um die Bibliothek zu installieren.  
   
-4.  Setzen Sie IIS zurück, nachdem die Installation beendet wurde. Öffnen Sie eine administratoreingabeaufforderung und Typ **IISRESET**.  
+4.  Setzen Sie IIS zurück, nachdem die Installation beendet wurde. Öffnen Sie eine administratoreingabeaufforderung, und geben **"iisreset"**.  
   
 ### <a name="verify-installation"></a>Überprüfen der Installation  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36058220"
   
 3.  Klicken Sie auf **Version**.  
   
-4.  Stellen Sie sicher, dass der Version 12.00 enthält. \<Buildnummer > und die Beschreibung Microsoft.AnalysisService.AdomdClient lautet.  
+4.  Stellen Sie sicher, dass die Version 12.00 enthält. \<Buildnummer > und die Beschreibung Microsoft.AnalysisService.AdomdClient lautet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot-Management-Dashboard und -Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen (Analysis Services) | Microsoft Docs
+title: Übersetzungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293290"
 ---
 # <a name="translations-analysis-services"></a>Übersetzungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
   
  In einem mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenmodell können Sie mehrere Übersetzungen einer Beschriftung einbetten, um gebietsschemaspezifische Zeichenfolgen basierend auf der LCID bereitzustellen. Übersetzungen können für den Datenbanknamen, Cubeobjekte und Datenbankdimensionsobjekte hinzugefügt werden.  
   
- Durch Definieren einer Übersetzung werden die Metadaten und die übersetzte Beschriftung innerhalb des Modells erstellt. Um lokalisierte Zeichenfolgen in einer Clientanwendung zu rendern, müssen Sie jedoch entweder die `Language`-Eigenschaft für das Objekt festlegen oder einen `Locale Identifier`-Parameter in der Verbindungszeichenfolge übergeben (z. B. durch Festlegen von `LocaleIdentifier=1036`, um französische Zeichenfolgen zurückzugeben). Planen Sie die Verwendung von `Locale Identifier`, wenn Sie mehrere gleichzeitige Übersetzungen desselben Objekts in verschiedenen Sprachen unterstützen möchten. Festlegen der `Language` -Eigenschaft funktioniert, aber es ist auch der Auswirkungen auf Verarbeitung und Abfragen, die möglicherweise unerwartete Ergebnisse liefern. Festlegen von `Locale Identifier` ist die bessere Wahl, da es nur verwendet wird, um übersetzte Zeichenfolgen zurückzugeben.  
+ Durch Definieren einer Übersetzung werden die Metadaten und die übersetzte Beschriftung innerhalb des Modells erstellt. Um lokalisierte Zeichenfolgen in einer Clientanwendung zu rendern, müssen Sie jedoch entweder die `Language`-Eigenschaft für das Objekt festlegen oder einen `Locale Identifier`-Parameter in der Verbindungszeichenfolge übergeben (z. B. durch Festlegen von `LocaleIdentifier=1036`, um französische Zeichenfolgen zurückzugeben). Planen Sie die Verwendung von `Locale Identifier`, wenn Sie mehrere gleichzeitige Übersetzungen desselben Objekts in verschiedenen Sprachen unterstützen möchten. Festlegen der `Language` -Eigenschaft funktioniert, aber die Auswirkungen auf Verarbeitung und Abfragen, die möglicherweise unerwartete Ergebnisse liefern. Festlegen von `Locale Identifier` ist die bessere Wahl, da es nur verwendet wird, um übersetzte Zeichenfolgen zurückzugeben.  
   
  Eine Übersetzung besteht aus einem Gebietsschemabezeichner (LCID), einer übersetzten Beschriftung für das Objekt (z. B. Dimensions- oder Attributname), und optional eine Bindung an eine Spalte, die Datenwerte in der Zielsprache bereitstellt. Sie können mehrere Übersetzungen haben, jedoch nur jeweils eine für eine bestimmte Verbindung verwenden. Theoretisch können Sie beliebig viele Übersetzungen im Modell einbetten. Jede Übersetzung erhöht jedoch die Komplexität beim Testen, und alle Übersetzungen müssen dieselbe Sortierung verwenden. Beim Entwerfen Ihrer Lösung sollten Sie diese natürlichen Einschränkungen bedenken.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36049982"
   
 1.  Öffnen Sie das mehrdimensionale Adventure Works-Modell im Designer.  
   
-2.  Klicken Sie im Projektmappen-Explorer öffnen Datenquellensichten, und doppelklicken Sie auf Adventure Works DW\<Version > .dsv.  
+2.  Klicken Sie im Projektmappen-Explorer öffnen, und doppelklicken Sie auf Adventure Works DW\<Version > .dsv.  
   
 3.  Suchen Sie nach dimDate, dimProduct, dimProductCategory oder dimProductSubcateogry. Alle diese Dimensionen enthalten Attribute für übersetzte Elemente für Monat, Tag der Woche, Produktname, Kategoriename usw.  
   
@@ -121,9 +121,9 @@ ms.locfileid: "36049982"
  Wenn eine Clientanwendung einen Gebietsschemabezeichner anfordert, versucht die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, Daten und Metadaten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte in die nächste übereinstimmende LCID aufzulösen. Wenn die Clientanwendung keine Standardsprache und auch nicht den neutralen Gebietsschemabezeichner (0) oder den standardmäßigen Prozesssprachbezeichner (1024) vorgibt, dann verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Standardsprache für die Instanz, um Daten und Metadaten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte zurückzugeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globalisierungsszenarien für Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Festlegen oder Ändern der Spaltensortierung](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisierung Tipps und Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalisierung, Tipps und Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

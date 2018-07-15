@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64ed077658de8ba855bc2301a3db403e12a47511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8187e19e40eba87e663c800ba9e593b30fe87a86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296440"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
   Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
@@ -46,7 +45,7 @@ ms.locfileid: "36049166"
   
 -   Sie können einen semantischen Index für Spalten erstellen, die einen der für Volltextindizierung unterstützten Datentypen aufweisen. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
   
--   Sie können einen beliebigen Dokumenttyp, der für Volltextindizierung für unterstützt angeben `varbinary(max)` Spalten. Weitere Informationen finden Sie unter [Vorgehensweise: Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes) .  
+-   Sie können einen beliebigen Dokumenttyp, die für Volltextindizierung für unterstützte angeben `varbinary(max)` Spalten. Weitere Informationen finden Sie unter [Vorgehensweise: Ermitteln, welche Dokumenttypen indiziert werden können](#doctypes) .  
   
 -   Bei der semantischen Indizierung werden zwei Typen von Indizes für die ausgewählten Spalten erstellt – ein Index mit Schlüsselausdrücken und ein Index für Dokumentähnlichkeit. Wenn Sie die semantische Indizierung aktivieren, können Sie nur einen Indextyp auswählen. Sie können diese beiden Indizes jedoch unabhängig voneinander abfragen. Weitere Informationen finden Sie unter [Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche](find-key-phrases-in-documents-with-semantic-search.md) und [Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -187,7 +186,7 @@ GO
  **Löschen eines semantischen Indexes mithilfe von SQL Server Management Studio**  
  Sie können die Spalten, die für die semantische Indizierung und die Volltextindizierung verfügbar sind, auf der Seite **Volltextindexspalten** des Dialogfelds **Volltextindex-Eigenschaften** ändern. Weitere Informationen finden Sie unter [Verwalten von Volltextindizes](../../database-engine/manage-full-text-indexes.md).  
   
-###  <a name="dropreq"></a> Anforderungen und Einschränkungen beim Löschen eines semantischen Indexes  
+###  <a name="dropreq"></a> Anforderungen und Einschränkungen für das Löschen eines semantischen Indexes  
   
 -   Sie können die Volltextindizierung nicht aus einer Spalte löschen, während Sie die semantische Indizierung beibehalten. Die semantische Indizierung ist für Dokumentähnlichkeitsergebnisse von der Volltextindizierung abhängig.  
   
@@ -196,7 +195,7 @@ GO
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
   
 ###  <a name="HowToCheckEnabled"></a> Gewusst wie: Überprüfen Sie, ob die semantische Suche für Datenbankobjekte aktiviert ist  
- **Ist die semantische Suche für eine Datenbank aktiviert?**  
+ **Werden semantische Suche ist für eine Datenbank aktiviert?**  
  Fragen Sie die Eigenschaft **IsFullTextEnabled** der Metadatenfunktion [DATABASEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) ab.  
   
  Der Rückgabewert 1 gibt an, dass die Volltextsuche und die semantische Suche für die Datenbank aktiviert sind; der Rückgabewert 0 gibt an, dass sie nicht aktiviert sind.  
@@ -206,7 +205,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
- **Ist die semantische Suche für eine Tabelle aktiviert?**  
+ **Werden semantische Suche ist für eine Tabelle aktiviert?**  
  Fragen Sie die Eigenschaft **TableFullTextSemanticExtraction** der Metadatenfunktion [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql) ab.  
   
  Der Rückgabewert 1 gibt an, dass die semantische Suche für die Tabelle aktiviert ist; der Rückgabewert 0 gibt an, dass sie nicht aktiviert ist.  
@@ -216,7 +215,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
- **Ist die semantische Suche für eine Spalte aktiviert?**  
+ **Werden semantische Suche ist für eine Spalte aktiviert?**  
  So bestimmen Sie, ob die semantische Suche für eine bestimmte Spalte aktiviert ist:  
   
 -   Fragen Sie die Eigenschaft **StatisticalSemantics** der Metadatenfunktion [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql) ab.  
@@ -270,12 +269,12 @@ GO
 |Portugiesisch (Portugal)|2070|  
 |Spanisch|3082|  
   
-###  <a name="doctypes"></a> Gewusst wie: Ermitteln, welche Dokumenttypen indiziert werden können  
+###  <a name="doctypes"></a> Gewusst wie: Bestimmen, welche Dokumenttypen indiziert werden können  
  Fragen Sie die Katalogsicht [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) ab.  
   
  Wenn der zu indizierende Dokumenttyp nicht in der Liste der unterstützten Typen aufgeführt wird, müssen Sie möglicherweise zusätzliche Filter suchen, herunterladen und installieren. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: Erwägen der Erstellung einer separaten Dateigruppe für die Volltext- und semantischen Indizes  
+##  <a name="BestPracticeFilegroup"></a> Bewährte Methode: Erwägen Sie, eine Separate Dateigruppe für die Volltext- und semantischen Indizes erstellen  
  Erwägen Sie, eine separate Dateigruppe für den Volltext- und den semantischen Index zu erstellen, wenn Sie Bedenken im Hinblick auf die Speicherplatzzuordnung haben. Die semantischen Indizes werden in derselben Dateigruppe wie der Volltextindex erstellt. Ein vollständig aufgefüllter semantischer Index kann eine große Datenmenge enthalten.  
   
 ##  <a name="BestPracticeUnderstand"></a>   

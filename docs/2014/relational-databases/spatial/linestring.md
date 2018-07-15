@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286898"
 ---
 # <a name="linestring"></a>LineString
   Ein `LineString` ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
@@ -36,7 +36,7 @@ ms.locfileid: "36058665"
   
 -   Abbildung 1 zeigt eine einfache, nicht geschlossene `LineString`-Instanz.  
   
--   Abbildung 2 zeigt eine einfache, nicht geschlossene `LineString` Instanz.  
+-   Abbildung 2 ist, zeigt eine nicht einfache, nicht geschlossene `LineString` Instanz.  
   
 -   Abbildung 3 zeigt eine einfache, geschlossene `LineString`-Instanz und daher einen Ring.  
   
@@ -60,13 +60,13 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Für eine `LineString` Instanz gültig ist, muss die folgenden Kriterien erfüllen.  
+ Für eine `LineString` -Instanz gültig ist, muss die folgenden Kriterien erfüllen.  
   
 1.  Die `LineString` -Instanz muss akzeptiert sein.  
   
 2.  Wenn eine `LineString`-Instanz nicht leer ist, muss sie mindestens zwei unterschiedliche Punkte enthalten.  
   
-3.  Die `LineString` Instanz dürfen sich nicht selbst über ein Intervall von zwei oder mehr aufeinanderfolgenden Punkten überschneiden.  
+3.  Die `LineString` Instanz kann sich über ein Intervall von zwei oder mehr aufeinanderfolgenden Punkten nicht überlappen.  
   
  Die folgenden `LineString`-Instanzen sind gültig.  
   

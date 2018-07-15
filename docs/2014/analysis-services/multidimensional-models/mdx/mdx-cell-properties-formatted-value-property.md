@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE und FORMAT_STRING für FORMATTED_VALUE | Microsoft Docs
+title: LANGUAGE und FORMAT_STRING für FORMATTED_VALUE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319270"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE und FORMAT_STRING für FORMATTED_VALUE
   Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "36059257"
  Die Gebietsschemaspezifikation, die zusätzlich zu FORMAT_STRING übernommen werden soll, um eine lokalisierte Version von FORMATTED_VALUE zu generieren  
   
 ## <a name="formattedvalue-constructed"></a>Erstellte FORMATTED_VALUE-Eigenschaft  
- Die FORMATTED_VALUE-Eigenschaft wird mithilfe des Werts aus der VALUE-Eigenschaft und durch Anwenden der Formatvorlage erstellt, die in der FORMAT_STRING-Eigenschaft für diesen Wert angegeben wird. Darüber hinaus immer dem Formatierungswert ist eine `named formatting literal` die Spezifikation der LANGUAGE-Eigenschaft ändert die Ausgabe von FORMAT_STRING der Sprachverwendung für die benannte Formatierung folgt. Benannte Formatierungsliterale sind jeweils so definiert, dass eine Lokalisierung möglich ist. `"General Date"` ist beispielsweise eine Spezifikation, die lokalisiert werden kann, im Gegensatz zur Vorlage `"YYYY-MM-DD hh:nn:ss",` , die angibt, dass das Datum ungeachtet der Sprachspezifikation entsprechend der Definition durch die Vorlage dargestellt werden soll.  
+ Die FORMATTED_VALUE-Eigenschaft wird mithilfe des Werts aus der VALUE-Eigenschaft und durch Anwenden der Formatvorlage erstellt, die in der FORMAT_STRING-Eigenschaft für diesen Wert angegeben wird. Darüber hinaus jedes Mal, wenn der Formatierungswert ist eine `named formatting literal` die Spezifikation der LANGUAGE-Eigenschaft ändert, die Ausgabe von FORMAT_STRING, sodass der Sprachverwendung für die benannte Formatierung folgt. Benannte Formatierungsliterale sind jeweils so definiert, dass eine Lokalisierung möglich ist. `"General Date"` ist beispielsweise eine Spezifikation, die lokalisiert werden kann, im Gegensatz zur Vorlage `"YYYY-MM-DD hh:nn:ss",` , die angibt, dass das Datum ungeachtet der Sprachspezifikation entsprechend der Definition durch die Vorlage dargestellt werden soll.  
   
  Wenn ein Konflikt zwischen der FORMAT_STRING-Vorlage und der LANGUAGE-Spezifikation vorliegt, überschreibt die FORMAT_STRING-Vorlage die LANGUAGE-Spezifikation. Wenn beispielsweise FORMAT_STRING="$ #0" und LANGUAGE=1034 (Spanien) sowie VALUE=123.456, dann gilt FORMATTED_VALUE="$ 123" anstelle von FORMATTED_VALUE="€ 123". Das erwartete Format ist Euro, da der Wert der Formatvorlage die angegebene Sprache überschreibt.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "36059257"
  [FORMAT_STRING-Inhalt &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
  [Verwenden von Zelleneigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   
