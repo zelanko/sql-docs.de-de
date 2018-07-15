@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e98b169091b40ff24926ffef55f3687275b007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304210"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
   Im Dialogfeld **Paketeigenschaften** können Sie Eigenschaften für Pakete anzeigen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server gespeichert sind.  
@@ -61,7 +61,7 @@ ms.locfileid: "36056745"
  Listet die ID des Pakets auf.  
   
  **Einstiegspunkt**  
- Der Wert der `True` gibt an, dass das Paket direkt gestartet wird. Der Wert der `False` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet wird. Der Standardwert lautet `True`.  
+ Der Wert des `True` gibt an, dass das Paket direkt gestartet wird. Der Wert des `False` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet wird. Der Standardwert lautet `True`.  
   
  Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
   

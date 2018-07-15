@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine neue OLAP-Miningstruktur | Microsoft Docs
+title: Erstellen Sie eine neue OLAP-Miningstruktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297440"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
   Sie können den Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um eine Miningstruktur zu erstellen, in der Daten aus einem mehrdimensionalen Modell verwendet werden. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
@@ -84,7 +84,7 @@ ms.locfileid: "36057065"
   
         -   Wenn Sie die Spalte als eines der vorhersagbaren Attribute für das Modell einschließen möchten, wählen Sie die Option **Vorhersagen**aus.  
   
-        -   Jedes Element, das Sie in die Struktur einschließen, aber nicht als Eingabe angeben oder die Struktur mit dem Kennzeichen vorhersagbares Attribut hinzugefügt wird `Ignore`; Dies bedeutet, dass die Daten verarbeitet werden, wenn Sie das Modell zu erstellen, aber nicht in der Analyse verwendet werden und nur für dr steht Illthrough. Dies kann hilfreich sein, wenn Sie Details wie z. B. Kundennamen einschließen möchten, ohne sie jedoch in der Analyse zu verwenden.  
+        -   Jedes Element, das Sie in der Struktur einschließen, aber geben Sie nicht als Eingabe oder vorhersagbares Attribut auf die Struktur mit dem Flag hinzugefügt wird `Ignore`; Dies bedeutet, dass die Daten verarbeitet werden, wenn das Modell erstellen, aber nicht in der Analyse verwendet und nur für die notfallwiederherstellung steht Illthrough. Dies kann hilfreich sein, wenn Sie Details wie z. B. Kundennamen einschließen möchten, ohne sie jedoch in der Analyse zu verwenden.  
   
      Klicken Sie auf **Fertig stellen** , um den Teil des Assistenten zu schließen, in dem geschachtelte Tabellen verwendet werden. Sie können den Vorgang wiederholen, um mehrere geschachtelte Spalten hinzuzufügen.  
   

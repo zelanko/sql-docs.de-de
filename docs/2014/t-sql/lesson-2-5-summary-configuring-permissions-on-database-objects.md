@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuring permissions on databases
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 935d5131c22306aff49f1cee322fc2962d35d2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 88e9bd9a806237cd80fbcf6f5481252c8761b076
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308770"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte
   Anmeldungen erteilen Benutzern die Berechtigung, die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herzustellen. Bei Benutzern handelt es sich um Anmeldungen, die auf eine bestimmte Datenbank zugreifen können. Verwenden Sie die GRANT-Anweisung, um Benutzern die Berechtigung zum Lesen und zum Zugreifen und Ändern der Daten zu erteilen.  

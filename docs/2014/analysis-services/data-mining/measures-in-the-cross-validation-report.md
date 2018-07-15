@@ -1,5 +1,5 @@
 ---
-title: Measures in der übergreifenden Überprüfungsbericht | Microsoft Docs
+title: Measures in der übergreifenden Überprüfungsbericht | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
 - cross-validation [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bedc8656248ced7c8f25b0868804e36ad410d642
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7d45c1ff8501dff8c74de22a16ac47b69c5375a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304638"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Measures im Kreuzvalidierungsbericht
   Während der Kreuzvalidierung werden die Daten in einer Miningstruktur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in mehrere Querschnitte unterteilt. Anschließend werden die Struktur und zugeordnete Miningmodelle iterativ getestet. Auf Grundlage dieser Analyse wird eine Reihe standardmäßiger Genauigkeitsmeasures für die Struktur und jedes Modell ausgegeben.  
@@ -41,12 +41,12 @@ ms.locfileid: "36061071"
   
 |Testtyp|Measures und Beschreibungen|  
 |---------------|-------------------------------|  
-|Clustering|Auf Clustermodelle anwendbare Measures:<br /><br /> **Fallwahrscheinlichkeit**: dieses Measure gibt normalerweise an, wie wahrscheinlich es ist ein Fall einem bestimmten Cluster angehört. <br />                      Bei der Kreuzvalidierung werden die Ergebnisse addiert und dann durch die Anzahl der Fälle dividiert, sodass das Ergebnis in diesem Fall einer durchschnittlichen Fallwahrscheinlichkeit entspricht.|  
-|Klassifizierung|Auf klassifizierungsmodelle anwendbare Measures:<br /><br /> **WAHR positiv**/<br />                      **"True" Negative**/ **falsch Positive**/ **falsch Positive**: Anzahl der Zeilen oder Werte in der Partition, in denen der vorhergesagte Status den Zielstatus übereinstimmt, und die vorhersagewahrscheinlichkeit ist größer als der angegebene Schwellenwert. Fälle mit fehlenden Werten für das Zielattribut ausgeschlossen werden, möglichweise d. h. die Anzahl aller Werte nicht einrichten|  
-||**Erfolgreich/Fehler**: Anzahl der Zeilen oder Werte in der Partition, in denen der vorhergesagte Status mit den Zielstatus übereinstimmt und der vorhersagewahrscheinlichkeitswert größer als 0 ist.|  
-|Wahrscheinlichkeit|Wahrscheinlichkeitsmeasures können auf mehrere Modelltypen angewendet:<br /><br /> **Heben Sie**: das Verhältnis der tatsächlichen vorhersagewahrscheinlichkeit zur randwahrscheinlichkeit in den Testfällen. Zeilen mit fehlenden Werten für das Zielattribut werden ausgeschlossen. Dieses Measure gibt normalerweise den Grad an, um den sich die Wahrscheinlichkeit des Zielergebnisses verbessert, wenn das Modell verwendet wird.<br /><br /> **Wurzel des mittleren quadratischen Fehler**: Quadratwurzel des mittleren Fehlers für alle partitionsfälle geteilt durch die Anzahl der Fälle in der Partition, ohne die Zeilen mit fehlenden Werten für das Zielattribut. RMSE ist eine bekannte Schätzfunktion für Vorhersagemodelle. Im Ergebnis werden die Restwerte für jeden Fall gemittelt, wodurch sich ein einzelner Indikator für den Modellfehler ergibt.<br /><br /> **Protokollergebnis**: der Logarithmus der tatsächlichen Wahrscheinlichkeit für jeden Fall, summiert und dann dividiert durch die Anzahl der Zeilen im Eingabedataset, ohne die Zeilen mit fehlenden Werten für das Zielattribut. Da die Wahrscheinlichkeit als Dezimalbruch dargestellt wird, sind logarithmische Ergebnisse immer negative Zahlen. Eine Zahl, die näher bei 0 liegt, ist ein besseres Ergebnis. Während Rohergebnisse sehr unregelmäßige oder verfälschte Verteilungen aufweisen können, ist ein logarithmisches Ergebnis einem Prozentwert ähnlich.|  
-|Schätzung|Measures, die nur auf schätzungsmodelle angewendet, die ein kontinuierliches numerisches Attribut Vorhersagen:<br /><br /> **Wurzel des mittleren quadratischen Fehler**: durchschnittliche Abweichung, wenn der vorhergesagte Wert mit dem Istwert verglichen wird. RMSE ist eine bekannte Schätzfunktion für Vorhersagemodelle. Im Ergebnis werden die Restwerte für jeden Fall gemittelt, wodurch sich ein einzelner Indikator für den Modellfehler ergibt.<br /><br /> **Mittlerer absoluter Fehler**: durchschnittliche Abweichung, wenn vorhergesagte Werte mit Istwerten, berechnet als Mittelwert der absoluten Summe der Fehler verglichen werden. Mithilfe des mittleren absoluten Fehlers lässt sich einfacher verdeutlichen, wie nahe die Vorhersagen und die Istwerte insgesamt beieinander liegen. Ein kleineres Ergebnis bedeutet, dass die Vorhersagen genauer waren.<br /><br /> **Protokollergebnis**: der Logarithmus der tatsächlichen Wahrscheinlichkeit für jeden Fall, summiert und dann dividiert durch die Anzahl der Zeilen im Eingabedataset, ohne die Zeilen mit fehlenden Werten für das Zielattribut. Da die Wahrscheinlichkeit als Dezimalbruch dargestellt wird, sind logarithmische Ergebnisse immer negative Zahlen. Eine Zahl, die näher bei 0 liegt, ist ein besseres Ergebnis. Während Rohergebnisse sehr unregelmäßige oder verfälschte Verteilungen aufweisen können, ist ein logarithmisches Ergebnis einem Prozentwert ähnlich.|  
-|Aggregate|Aggregierte Measures geben die Varianz in den Ergebnissen für jede Partition an:<br /><br /> **Bedeuten**: Mittelwert der Partitionswerte für ein bestimmtes Measure-Werte.<br /><br /> **Standardabweichung**: Durchschnitt der Abweichung vom Mittelwert für ein bestimmtes Measure für alle Partitionen in einem Modell. Bei der Kreuzvalidierung impliziert ein höherer Wert für dieses Ergebnis eine erhebliche Variation zwischen den Folds.|  
+|Clustering|Auf Clustermodelle anwendbare Measures:<br /><br /> **Fallwahrscheinlichkeit**: dieses Measure gibt normalerweise an, wie wahrscheinlich es, die ein Fall einem bestimmten Cluster angehört. <br />                      Bei der Kreuzvalidierung werden die Ergebnisse addiert und dann durch die Anzahl der Fälle dividiert, sodass das Ergebnis in diesem Fall einer durchschnittlichen Fallwahrscheinlichkeit entspricht.|  
+|Klassifizierung|Auf klassifizierungsmodelle anwendbare Measures:<br /><br /> **Richtig positiv**/<br />                      **WAHR negativ**/ **falsch Positive**/ **falsch Positive**: Anzahl der Zeilen oder Werte in der Partition, in denen der vorhergesagte Status den Zielstatus übereinstimmt, und die vorhersagewahrscheinlichkeit ist größer als der angegebene Schwellenwert. Fälle mit fehlenden Werten für das Zielattribut ausgeschlossen werden, kann also die Anzahl aller Werte nicht bis hinzufügen|  
+||**Erfolg/Misserfolg**: Anzahl der Zeilen oder Werte in der Partition, in denen der vorhergesagte Status mit den Zielstatus übereinstimmt und der vorhersagewahrscheinlichkeitswert größer als 0 ist.|  
+|Wahrscheinlichkeit|Wahrscheinlichkeitsmeasures gelten für mehrere Modelltypen:<br /><br /> **Heben Sie**: das Verhältnis der tatsächlichen vorhersagewahrscheinlichkeit zur randwahrscheinlichkeit in den Testfällen. Zeilen mit fehlenden Werten für das Zielattribut werden ausgeschlossen. Dieses Measure gibt normalerweise den Grad an, um den sich die Wahrscheinlichkeit des Zielergebnisses verbessert, wenn das Modell verwendet wird.<br /><br /> **Wurzel des mittleren quadratischen Fehler**: Quadratwurzel des mittleren Fehlers für alle partitionsfälle geteilt durch die Anzahl der Fälle in der Partition ohne die Zeilen mit fehlenden Werten für das Zielattribut. RMSE ist eine bekannte Schätzfunktion für Vorhersagemodelle. Im Ergebnis werden die Restwerte für jeden Fall gemittelt, wodurch sich ein einzelner Indikator für den Modellfehler ergibt.<br /><br /> **Logarithmisches Ergebnis**: der Logarithmus der tatsächlichen Wahrscheinlichkeit für jeden Fall, summiert und dann dividiert durch die Anzahl der Zeilen im Eingabedataset, ohne die Zeilen mit fehlenden Werten für das Zielattribut. Da die Wahrscheinlichkeit als Dezimalbruch dargestellt wird, sind logarithmische Ergebnisse immer negative Zahlen. Eine Zahl, die näher bei 0 liegt, ist ein besseres Ergebnis. Während Rohergebnisse sehr unregelmäßige oder verfälschte Verteilungen aufweisen können, ist ein logarithmisches Ergebnis einem Prozentwert ähnlich.|  
+|Schätzung|Measures, die nur auf schätzungsmodelle angewendet, die ein kontinuierliches numerisches Attribut Vorhersagen:<br /><br /> **Wurzel des mittleren quadratischen Fehler**: durchschnittliche Abweichung, wenn der vorhergesagte Wert mit dem Istwert verglichen wird. RMSE ist eine bekannte Schätzfunktion für Vorhersagemodelle. Im Ergebnis werden die Restwerte für jeden Fall gemittelt, wodurch sich ein einzelner Indikator für den Modellfehler ergibt.<br /><br /> **Mittlerer absoluter Fehler**: durchschnittliche Abweichung, wenn vorhergesagte Werte mit Istwerten, berechnet als Mittelwert der absoluten Summe der Fehler verglichen werden. Mithilfe des mittleren absoluten Fehlers lässt sich einfacher verdeutlichen, wie nahe die Vorhersagen und die Istwerte insgesamt beieinander liegen. Ein kleineres Ergebnis bedeutet, dass die Vorhersagen genauer waren.<br /><br /> **Logarithmisches Ergebnis**: der Logarithmus der tatsächlichen Wahrscheinlichkeit für jeden Fall, summiert und dann dividiert durch die Anzahl der Zeilen im Eingabedataset, ohne die Zeilen mit fehlenden Werten für das Zielattribut. Da die Wahrscheinlichkeit als Dezimalbruch dargestellt wird, sind logarithmische Ergebnisse immer negative Zahlen. Eine Zahl, die näher bei 0 liegt, ist ein besseres Ergebnis. Während Rohergebnisse sehr unregelmäßige oder verfälschte Verteilungen aufweisen können, ist ein logarithmisches Ergebnis einem Prozentwert ähnlich.|  
+|Aggregate|Aggregierte Measures geben einen Überblick über die Abweichung in den Ergebnissen für jede Partition:<br /><br /> **Bedeutet, dass**: Mittelwert der Partitionswerte für ein bestimmtes Measure-Werte.<br /><br /> **Standardabweichung**: Durchschnitt der Abweichung vom Mittelwert für ein bestimmtes Measure für alle Partitionen in einem Modell. Bei der Kreuzvalidierung impliziert ein höherer Wert für dieses Ergebnis eine erhebliche Variation zwischen den Folds.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tests und Überprüfung &#40;Datamining&#41;](testing-and-validation-data-mining.md)  

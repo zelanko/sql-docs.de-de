@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Achse", Achsenoptionen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Dialogfeld "Achse", Achsenoptionen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315450"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)
-  Wählen Sie **Achsenoptionen** auf die **horizontale** oder **VerticalAxis Eigenschaften** (Dialogfeld), um die Darstellung der angegebenen Achse im Diagramm definieren. In älteren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurden standardmäßig alle Bezeichnungen auf der x-Achse angezeigt. Ab Version [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 werden Bezeichnungen ggf. übersprungen, um ein übersichtlicheres Bild zu erzielen und sich überlappende Beschriftungen zum vermeiden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Wählen Sie **Achsenoptionen** auf die **horizontale** oder **Eigenschaften für vertikale Achsen** im Dialogfeld, um die Darstellung der angegebenen Achse im Diagramm definieren. In älteren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurden standardmäßig alle Bezeichnungen auf der x-Achse angezeigt. Ab Version [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 werden Bezeichnungen ggf. übersprungen, um ein übersichtlicheres Bild zu erzielen und sich überlappende Beschriftungen zum vermeiden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Tastatur  
  **Skalierungsunterbrechungen aktivieren**  
@@ -43,7 +43,7 @@ ms.locfileid: "36049139"
  **Skalare Achse**  
  Wählen Sie diese Option, um einen Satz von Achsenwerten über eine fortlaufende Skala anzuzeigen. Wenn das Dataset beispielsweise Daten für Januar, März und November enthält, zeigt eine Nicht-Skalarachse nur diese Monate an, während eine Skalarachse alle Monate des Jahrs anzeigt.  
   
- **Logarithmische Skalierung verwenden**  
+ **Logarithmische Skala verwenden**  
  Wählen Sie diese Option aus, um anzugeben, dass die Achsenskalierung logarithmisch ist. Diese Option ist nur auf der Y-Achse verfügbar, wenn die Achse positive numerische Werte enthält.  
   
  Geben Sie die zu verwendende logarithmische Basis in das Feld ein, wenn für die Achse die Verwendung einer logarithmischen Skala festgelegt wurde. Standardmäßig verwendet das Diagramm eine Basis von 10 für die logarithmische Skalierung einer Achse. Diese Option ist nur auf der Y-Achse verfügbar, wenn die Achse numerische Werte enthält.  

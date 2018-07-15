@@ -1,5 +1,5 @@
 ---
-title: Annotation-Element (ASSL) | Microsoft Docs
+title: Annotation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304500"
 ---
 # <a name="annotation-element-assl"></a>Annotation-Element (ASSL)
   Enthält Elemente, die verwendet werden, um das ASSL-Schema (Analysis Services Scripting Language) zu erweitern.  
@@ -68,13 +68,13 @@ ms.locfileid: "36060396"
   
 -   XML kann nur Elemente enthalten.  
   
--   Jedes Element muss einen eindeutigen Namen haben. Es wird empfohlen, den Wert des der `Name` Element von der `Annotation` Element auf den Zielnamespace verweist.  
+-   Jedes Element muss einen eindeutigen Namen haben. Es wird empfohlen, den Wert des der `Name` Element der `Annotation` Element auf den Zielnamespace verweist.  
   
  Diese Regeln werden auferlegt, damit die Inhalte des `Annotation`-Elements als Menge von Name/Wert-Paaren über andere Schnittstellen, wie Decision Support Objects (DSO), verfügbar gemacht werden können.  
   
  Kommentare und Leerzeichen innerhalb des `Annotation`-Elements, die nicht in einem untergeordneten Element eingeschlossen sind, können nicht beibehalten werden. Außerdem müssen alle Elemente über Lese-/Schreibzugriff verfügen. Schreibgeschützte Elemente werden ignoriert.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Annotation>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Annotation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

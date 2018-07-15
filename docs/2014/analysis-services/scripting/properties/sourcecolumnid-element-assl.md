@@ -1,5 +1,5 @@
 ---
-title: SourceColumnID-Element (ASSL) | Microsoft Docs
+title: SourceColumnID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281776"
 ---
 # <a name="sourcecolumnid-element-assl"></a>SourceColumnID-Element (ASSL)
   Enthält den Bezeichner (ID) der Quellminingstruktur-Spalte in den Vorgänger [MiningStructure](../objects/miningstructure-element-assl.md) Element.  
@@ -62,9 +62,9 @@ ms.locfileid: "36057624"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert von der `SourceColumnID` Element entspricht dem Bezeichner der Miningstrukturspalte in der [Spalten](../collections/columns-element-assl.md) Auflistung des übergeordneten Elements `MiningStructure`.  
+ Der Wert des der `SourceColumnID` Element entspricht dem Bezeichner der Miningstrukturspalte in der [Spalten](../collections/columns-element-assl.md) Auflistung des übergeordneten Elements `MiningStructure`.  
   
- Das Element, das das übergeordnete Element des entspricht `SourceColumnID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
+ Das Element, das dem übergeordneten entspricht `SourceColumnID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

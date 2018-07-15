@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311460"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Verwalten und Überwachen der semantischen Suche
   In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
@@ -55,7 +54,7 @@ GO
 ```  
   
 ##  <a name="HowToCheckSize"></a> Gewusst wie: Überprüfen Sie die Größe der semantischen Indizes  
- **Was ist die logische Größe eines semantischen schlüsselausdruckindexes oder eines semantischen dokumentähnlichkeitsindexes?**  
+ **Was ist die logische Größe des semantischen schlüsselausdruckindexes oder eines semantischen dokumentähnlichkeitsindexes?**  
  Fragen Sie die dynamische Verwaltungssicht ab, [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  Die logische Größe wird in Anzahl von Indexseiten angezeigt.  
@@ -84,7 +83,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Gewusst wie: Erzwingen der Auffüllung der semantischen Indizes  
+##  <a name="HowToForcePopulation"></a> Gewusst wie: Erzwingen die Auffüllung der semantischen Indizes  
  Sie können die Auffüllung der Volltextindizes und semantischen Indizes mit der START/STOP/PAUSE-Klausel oder der RESUME POPULATION-Klausel mit der gleichen Syntax und dem für Volltextindizes beschriebenen Verhalten erzwingen. Weitere Informationen finden Sie unter [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) und [Auffüllen von Volltextindizes](../indexes/indexes.md).  
   
  Da die semantische Indizierung von der Volltextindizierung abhängig ist, werden semantische Indizes nur dann aufgefüllt, wenn die zugeordneten Volltextindizes aufgefüllt werden.  
@@ -141,10 +140,10 @@ GO
  **Werden die zugeordneten Volltextindizes aufgefüllt?**  
  Da die semantische Indizierung von der Volltextindizierung abhängig ist, werden semantische Indizes nur dann aufgefüllt, wenn die zugeordneten Volltextindizes aufgefüllt werden.  
   
- **Möchten Sie die Volltextsuche und semantische Suche ordnungsgemäß installiert und konfiguriert?**  
+ **Sind Volltextsuche und semantische Suche ordnungsgemäß installiert und konfiguriert**  
  Weitere Informationen finden Sie unter [Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md).  
   
- **Ist der FDHOST-Dienst nicht verfügbar, oder gibt es eine andere Bedingung, die Volltextindizierung fehlschlagen würde?**  
+ **Der FDHOST-Dienst nicht verfügbar, oder gibt es eine weitere Bedingung, die Volltextindizierung fehlschlagen würde?**  
  Weitere Informationen finden Sie unter [Behandeln von Problemen mit der Volltextindizierung](troubleshoot-full-text-indexing.md).  
   
   

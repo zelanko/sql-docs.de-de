@@ -1,5 +1,5 @@
 ---
-title: NamingTemplate-Element (ASSL) | Microsoft Docs
+title: NamingTemplate-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300840"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate-Element (ASSL)
-  Definiert, wie Ebenen in einer über-/ unterordnungshierarchie aus erstellter benannt werden die [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) übergeordneten Elements.  
+  Definiert, wie Ebenen in einer über-/ unterordnungshierarchie aus erstellt benannt werden die [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) übergeordneten Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36060121"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Den Wert des der `NamingTemplate` Element wird nur von übergeordneten Attributen verwendet (also der Wert der die [Verwendung](usage-element-dimensionattribute-assl.md) Element des der `DimensionAttribute` auf übergeordnetes Element festgelegt ist *übergeordneten*).  
+ Der Wert des der `NamingTemplate` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Nutzung](usage-element-dimensionattribute-assl.md) Element der `DimensionAttribute` übergeordnetes Element festgelegt ist, um *übergeordneten*).  
   
  Wenn ein übergeordnetes Attribut zum Erstellen einer Hierarchie verwendet wird, werden die Ebenen der Hierarchie durch die Über-/Unterordnungsbeziehungen zwischen den Elementen, die im übergeordneten Attribut enthalten sind, bestimmt. Daher können die Ebenennamen nicht wie in anderen Dimensionen von den Attributnamen, die für die Hierarchie verwendet werden, abgeleitet werden.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "36060121"
   
  Ein Benennungsmuster enthält ein Sternchen (`*`) als Platzhalterzeichen für einen Indikator, der mit jeder neuen und tieferen Ebene gesteigert und in den Namen eingefügt wird. Beispielsweise führt die Verwendung von `Level *` zu den Ebenennamen `Level 01`, `Level 02`, `Level 03`usw., wenn keine (ALL) Ebene definiert ist. Wenn ein Benennungsmuster kein Platzhalterzeichen enthält, wird es zunächst in seiner ursprünglichen Form verwendet. Danach werden dann alle folgenden Ebenen durch Anhängen eines Leerzeichens und einer Zahl an das Ende des Musters gebildet. Beispielsweise führt die Verwendung von `Level` zu den Ebenennamen `Level`, `Level 01`, `Level 02`usw.  
   
- Verwenden Sie einen bestimmten Satz von Namen für die Benennung, des Werts des der `NamingTemplate` Element auf eine durch Semikolons getrennte Liste von Ebenennamen festgelegt ist. Jeder Name in der Liste wird für einen nachfolgenden Ebenennamen verwendet. Wenn die Anzahl der Ebenen die Anzahl der Namen in der Liste überschreitet, wird der letzte Name in der Liste als Vorlage für etwaige zusätzliche Ebenennamen verwendet, wobei ein Leerzeichen und eine Ordnungszahl gemäß der Beschreibung oben an den letzten Namen angehängt wird. Beispielsweise führt die Verwendung von `Division;Group;Unit` zu den Ebenennamen `Division`, `Group`, `Unit`, `Unit 01`, `Unit 02`usw. Dagegen führt die Verwendung von `Division;Group;Unit *` zu den Ebenennamen `Division`, `Group`, `Unit 03`, `Unit 04`usw.  
+ Verwenden Sie einen bestimmten Satz von Namen für die Benennung, den Wert des der `NamingTemplate` -Elements auf eine durch Semikolons getrennte Liste von Ebenennamen festgelegt. Jeder Name in der Liste wird für einen nachfolgenden Ebenennamen verwendet. Wenn die Anzahl der Ebenen die Anzahl der Namen in der Liste überschreitet, wird der letzte Name in der Liste als Vorlage für etwaige zusätzliche Ebenennamen verwendet, wobei ein Leerzeichen und eine Ordnungszahl gemäß der Beschreibung oben an den letzten Namen angehängt wird. Beispielsweise führt die Verwendung von `Division;Group;Unit` zu den Ebenennamen `Division`, `Group`, `Unit`, `Unit 01`, `Unit 02`usw. Dagegen führt die Verwendung von `Division;Group;Unit *` zu den Ebenennamen `Division`, `Group`, `Unit 03`, `Unit 04`usw.  
   
  Jeder Name in der Liste wird als Vorlage behandelt, um die Eindeutigkeit von Ebenennamen sicherzustellen. Beispielsweise führt die Verwendung von `Manager;Team Lead;Manager;Team Lead;Worker *` zu den Ebenennamen `Manager`, `Team Lead`, `Manager 01`, `Team Lead 01`, `Worker 05`, `Worker 06`.  
   
- Verwenden Sie zwei Sternchen (*), um das Sternchen aufzunehmen (\*) Zeichen in einen Ebenennamen als Teil einer benennungsvorlage.  
+ Verwenden Sie zwei Sternchen (*), um das Sternchen enthalten (\*) Zeichen in einen Ebenennamen als Teil einer benennungsvorlage.  
   
- Das Element, das das übergeordnete Element des entspricht `NamingTemplate` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das Element, das dem übergeordneten entspricht `NamingTemplate` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Namingtemplatetranslation-Element &#40;ASSL&#41;](../collections/translations-element-assl.md)   

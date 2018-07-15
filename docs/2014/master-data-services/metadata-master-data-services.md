@@ -1,5 +1,5 @@
 ---
-title: Metadaten (Master Data Services) | Microsoft Docs
+title: Metadaten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
 - metadata [Master Data Services], about metadata
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25fa2078127816b2fd9d50bd7bd4c074c3577dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296680"
 ---
 # <a name="metadata-master-data-services"></a>Metadaten (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] handelt es sich bei benutzerdefinierten Metadaten um Informationen, mit denen Sie die Modellobjekte beschreiben. Sie möchten z. B. die Besitzer eines bestimmten Modells oder einer Entität oder die Quellsysteme verfolgen, die Daten für eine Entität bereitstellen.  
   
- Benutzerdefinierte Metadaten wird von einem Modell aufgerufen verwaltet **Metadaten**. Dieses Modell ist automatisch enthalten, wenn [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installiert ist, und es ist allen anderen MDS-Modellen ähnlich, mit dem Unterschied, dass Sie keine Versionen erstellen können.  
+ Benutzerdefinierte Metadaten wird von einem Modell mit dem Namen verwaltet **Metadaten**. Dieses Modell ist automatisch enthalten, wenn [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installiert ist, und es ist allen anderen MDS-Modellen ähnlich, mit dem Unterschied, dass Sie keine Versionen erstellen können.  
   
  Nach dem Ausfüllen des Metadatenmodells mit benutzerdefinierten Metadaten können Sie sie in Abonnementsichten einfügen, damit sie von abonnierenden Systemen verwendet werden können.  
   
 ## <a name="metadata-entities"></a>Metadatenentitäten  
- Das Modell Metadaten umfasst fünf Entitäten, von denen jede einen Typ eines Masterdaten-Modellobjekts darstellt, das benutzerdefinierte Metadaten unterstützt. Z. B. die **Modell-Metadatendefinition** Entität enthält Elemente, die Modelle, darstellen und die **Attribut-Metadatendefinition** -Entität verfügt über Elemente, die alle Attribute in allen Modellen darstellen.  
+ Das Modell Metadaten umfasst fünf Entitäten, von denen jede einen Typ eines Masterdaten-Modellobjekts darstellt, das benutzerdefinierte Metadaten unterstützt. Z. B. die **Modell-Metadatendefinition** Entität enthält Elemente, die Modelle, darstellen und die **Attribut-Metadatendefinition** -Entität verfügt über Elemente, die alle Attribute in allen Modellen stehen.  
   
- Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Beispielsweise ist in der **Entitäts-Metadatendefinition** Entität können Sie Beschreibungsattribut des Price-Elements, mit dem Text auffüllen: **der Produktpreis beim Verkauf an einen Kunden**.  
+ Um Metadaten für ein Modellobjekt zu definieren, füllen Sie die Attribute eines dieser Elemente auf. Z. B. in der **Entitäts-Metadatendefinition** Entität können Sie die Description-Attribut des Price-Elements mit dem Text auffüllen: **der Produktpreis beim Verkauf an einen Kunden**.  
   
  Die Elemente im Metadatenmodell werden automatisch immer dann aktualisiert, wenn Modellobjekte, die benutzerdefinierte Metadaten unterstützen, hinzugefügt oder gelöscht werden.  
   

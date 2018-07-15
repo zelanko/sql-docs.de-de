@@ -1,5 +1,5 @@
 ---
-title: Beziehungen (SSAS – tabellarisch) | Microsoft Docs
+title: Beziehungen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2796fb23a51d0da71e4314cdbeaab70a13332d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314536"
 ---
 # <a name="relationships-ssas-tabular"></a>Beziehungen (SSAS – tabellarisch)
   In tabellarischen Modellen ist eine Beziehung eine Verbindung, die Sie zwischen zwei Tabellen mit Daten erstellen. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen. Eine Customers-Tabelle und eine Orders-Tabelle können z. B. verknüpft werden, um den Kundennamen anzuzeigen, der jeder Bestellung zugeordnet ist.  
@@ -80,7 +80,7 @@ ms.locfileid: "36059239"
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, können Sie manuell erstellen Beziehungen in beschriebenen [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Wenn Sie diese Tabellen aus derselben Datenbank importieren, kann der Tabellenimport-Assistent die Beziehungen zwischen den Tabellen anhand der Spalten ermitteln, die in eckigen Klammern stehen, und diese Beziehungen im Modell-Designer reproduzieren. Weitere Informationen finden Sie unter " [Automatische Erkennung und Inferenz von Beziehungen](#detection) " in diesem Thema. Wenn Sie Tabellen aus mehreren Quellen importieren, Sie können Beziehungen manuell erstellen wie in beschrieben [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### <a name="columns-and-keys"></a>Spalten und Schlüssel  
  Beziehungen basieren auf den Spalten in jeder Tabelle, die die gleichen Daten enthalten. Die Tabellen "Customers" und "Orders" können z. B. miteinander verknüpft werden, da beide eine Spalte enthalten, in der eine Kundennummer (CustomerID) gespeichert ist. Im Beispiel sind die Spaltennamen identisch, dies ist jedoch keine Voraussetzung. Eine Spalte kann beispielsweise den Namen "CustomerID" und die andere "CustomerNumber" besitzen, sofern alle Zeilen in der Tabelle "Orders" eine ID enthalten, die auch in der Tabelle "Customers" gespeichert ist.  
@@ -116,7 +116,7 @@ ms.locfileid: "36059239"
 ### <a name="single-active-relationship-between-tables"></a>Nur eine aktive Beziehung zwischen zwei Tabellen  
  Mehrere Beziehungen können zu mehrdeutigen Abhängigkeiten zwischen Tabellen führen. Um genaue Berechnungen zu erstellen, benötigen Sie einen einzelnen Pfad von einer Tabelle zur nächsten Tabelle. Daher kann es zwischen jedem Tabellenpaar nur eine aktive Beziehung geben. Beispiel: In AdventureWorks DW 2012 enthält die Tabelle DimDate eine Spalte DateKey, die mit drei verschiedenen Spalten in der Tabelle FactInternetSales verknüpft ist: OrderDate, DueDate und ShipDate. Wenn Sie versuchen, diese Tabellen zu importieren, wird die erste Beziehung erfolgreich erstellt, bei den darauf folgenden Beziehungen, die dieselbe Spalte verwenden, wird jedoch der folgende Fehler ausgelöst:  
   
- \* Beziehung:-Tabelle [Spalte 1] -> Tabelle [Spalte 2] - Status: Fehler - Ursache: eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
+ \* Beziehung: Table [Spalte 1] -> Table [Spalte 2] - Status: Fehler - Ursache: eine Beziehung kann nicht erstellt werden, zwischen Tabellen \<Tabelle 1 > und \<in Tabelle 2 >. Zwischen zwei Tabellen kann nur eine direkte oder indirekte Beziehung vorhanden sein.  
   
  Wenn Sie zwei Tabellen mit mehreren Beziehungen zueinander haben, müssen Sie mehrere Kopien der Tabelle importieren, die die Suchspalte enthält, und dann eine Beziehung zwischen jedem Tabellenpaar erstellen.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "36059239"
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Erstellen Sie eine Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Beschreibt, wie Sie manuell eine Beziehung zwischen zwei Tabellen erstellen.|  
+|[Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Beschreibt, wie Sie manuell eine Beziehung zwischen zwei Tabellen erstellen.|  
 |[Löschen von Beziehungen &#40;SSAS – tabellarisch&#41;](relationships-ssas-tabular.md)|Beschreibt das Löschen einer Beziehung und welche Auswirkungen dies haben kann.|  
   
 ## <a name="see-also"></a>Siehe auch  

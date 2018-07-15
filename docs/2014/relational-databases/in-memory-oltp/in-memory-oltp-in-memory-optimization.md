@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316200"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]wurde in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] neu eingeführt und kann die Leistung der OLTP-Datenbank erheblich verbessern. 
@@ -30,7 +30,7 @@ ms.locfileid: "36049024"
   
 |||  
 |-|-|  
-|![Virtuellen Azure-Computer](../../master-data-services/media/azure-virtual-machine.png "virtuellen Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
+|![Azure VM](../../master-data-services/media/azure-virtual-machine.png "virtuellen Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
   
  Zur Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]definieren Sie eine Tabelle, auf die viel zugegriffen wird, als speicheroptimiert. Speicheroptimierte Tabellen sind vollständig transaktionsfähig und dauerhaft, und der Zugriff erfolgt genau wie bei datenträgerbasierten Tabellen über [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Eine Abfrage kann sowohl auf speicheroptimierte Tabellen als auch auf datenträgerbasierte Tabellen verweisen. Eine Transaktion kann Daten in speicheroptimierten Tabellen und in datenträgerbasierten Tabellen aktualisieren. Gespeicherte Prozeduren, die nur auf speicheroptimierte Tabellen verweisen, können zur weiteren Leistungsverbesserung systemintern in Computercode kompiliert werden. Die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]-Engine ist für außerordentlich hohe Sitzungsparallelität für Transaktionen vom OLTP-Typ konzipiert, die von einer hochgradigen Skalierung auf mittlerer Ebene gesteuert werden. Um dies zu erreichen, werden Datenstrukturen ohne Latches, jedoch mit Multiversionsverwaltung und optimistischer Nebenläufigkeitssteuerung verwendet. Das Ergebnis ist eine vorhersehbare niedrige Latenz unter einer Millisekunde sowie ein hoher Durchsatz mit linearer Skalierung für Datenbanktransaktionen. Der tatsächliche Leistungszuwachs hängt von vielen Faktoren ab, jedoch kann mit Leistungsverbesserungen um das 5- bis 20-fache gerechnet werden.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36049024"
   
 -   [In-Memory-OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Übersicht über die Merkmale von SQL Server In-Memory OLTP](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Übersicht über die Interna von SQL Server In-Memory-OLTP](http://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankfunktionen](../database-features.md)  

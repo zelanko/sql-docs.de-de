@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset | Microsoft Docs
+title: MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f607b966099f71acee460a5a343c557e2a81857e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae41cad794f31443dfa2fbfc2951f0b611d5766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308450"
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset
   Listet die Dimensionen der Measuregruppe auf.  
@@ -60,7 +60,7 @@ ms.locfileid: "36050402"
 |`CUBE_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Optional.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -Visible 1<br />-2 nicht sichtbar<br />-Die standardeinschränkung ist ein Wert von 1.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-sichtbar<br />– 2 nicht sichtbar<br />-Default-Einschränkung ist der Wert 1.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](ole-db-for-olap-schema-rowsets.md)  

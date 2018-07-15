@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc51cc2f2211238213ed6f25e18b907d16b08f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c64c9382e760374c0870e6ec1ef1b4d0dd2b607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303780"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
@@ -97,7 +97,7 @@ ms.locfileid: "36056677"
   
     2.  Die empfohlenen Indizes würden gegenüber dem aktuellen physischen Datenbankentwurf nicht genügend Verbesserungen bei der Abfrageleistung bieten.  
   
-    3.  Der Benutzer, der Datenbankmodul-Optimierungsratgeber ausgeführt wird, ist nicht Mitglied der `db_owner` Datenbankrolle oder der `sysadmin` festen Serverrolle "". Die Abfragen in der Arbeitsauslastung werden im Sicherheitskontext des Benutzers analysiert, der den Datenbankoptimierungsratgeber ausführt. Der Benutzer muss ein Mitglied der Datenbankrolle `db_owner` sein.  
+    3.  Der Benutzer, der den Datenbankoptimierungsratgeber ausführt, ist nicht Mitglied der `db_owner` Datenbankrolle oder der `sysadmin` festen Serverrolle. Die Abfragen in der Arbeitsauslastung werden im Sicherheitskontext des Benutzers analysiert, der den Datenbankoptimierungsratgeber ausführt. Der Benutzer muss ein Mitglied der Datenbankrolle `db_owner` sein.  
   
 -   Der Datenbankoptimierungsratgeber speichert Daten zu Optimierungssitzungen und andere Informationen in der `msdb`-Datenbank. Wenn an der `msdb`-Datenbank Änderungen vorgenommen werden, besteht das Risiko, dass Optimierungssitzungsdaten verloren gehen. Um dieses Risiko zu umgehen, müssen Sie für die `msdb`-Datenbank eine geeignete Sicherungsstrategie implementieren.  
   

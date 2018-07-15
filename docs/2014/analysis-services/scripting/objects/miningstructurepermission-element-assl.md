@@ -1,5 +1,5 @@
 ---
-title: Miningstructurepermissions-Element (ASSL) | Microsoft Docs
+title: Miningstructurepermissions-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295490"
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermissions-Element (ASSL)
-  Definiert den Berechtigungen, die Elemente einer [Rolle](role-element-assl.md) Element besitzen, für ein einzelnes [MiningStructure](miningstructure-element-assl.md) Element.  
+  Definiert den Berechtigungen, die Elemente einer [Rolle](role-element-assl.md) Element verfügen, für ein einzelnes [MiningStructure](miningstructure-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36060815"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] wurde die `AllowDrillthrough`-Berechtigung auf eine Miningstruktur erweitert. Wenn Sie diese Berechtigung einer Rolle zuordnen, kann jeder Benutzer, der ein Mitglied dieser Rolle ist, die Miningstruktur mit der folgenden Syntax direkt abfragen:  
   

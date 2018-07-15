@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279116"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
   Sie können Indizes für berechnete Spalten definieren, sofern die folgenden Anforderungen erfüllt sind:  
@@ -74,7 +73,7 @@ ms.locfileid: "36056695"
   
 -   Es handelt sich um keinen Ausdruck des `float`- oder `real`-Datentyps.  
   
--   Es werden keine verwendet eine `float` oder `real` -Datentyp in der Definition. Beispielsweise ist in der folgenden Anweisung Spalte `y` ist `int` und deterministisch, aber nicht präzise.  
+-   Es verwendet keine `float` oder `real` -Datentyp in der Definition. Beispielsweise in der folgenden Anweisung Spalte `y` ist `int` und deterministisch, aber nicht präzise.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,17 +85,17 @@ ms.locfileid: "36056695"
     ```  
   
 > [!NOTE]  
->  Alle `float` oder `real` Ausdruck gilt als unpräzise, und kann kein Schlüssel eines Indexes; ein `float` oder `real` -Ausdruck kann in einer indizierten Sicht, jedoch nicht als Schlüssel verwendet werden. Dies gilt auch für berechnete Spalten. Jede Funktion, Ausdruck oder eine benutzerdefinierte Funktion gilt als unpräzise, wenn es enthält `float` oder `real` Ausdrücke. Das gilt auch für logische (Vergleiche).  
+>  Alle `float` oder `real` Ausdruck gilt als unpräzise, und kann kein Schlüssel eines Indexes, ein `float` oder `real` -Ausdruck kann in einer indizierten Sicht, jedoch nicht als Schlüssel verwendet werden. Dies gilt auch für berechnete Spalten. Jede Funktion, Ausdruck oder eine benutzerdefinierte Funktion gilt als unpräzise, wenn es enthält `float` oder `real` Ausdrücke. Das gilt auch für logische (Vergleiche).  
   
  Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Ausdruck einer berechneten Spalte ( *computed_column_expression* ) präzise ist.  
   
  **Data Type Requirements**  
   
--   Die *Computed_column_expression* für die berechnete Spalte ausgewertet werden kann, definiert die `text`, `ntext`, oder `image` -Datentypen.  
+-   Die *Computed_column_expression* definiert, für die berechnete Spalte werden, um ausgewertet kann die `text`, `ntext`, oder `image` -Datentypen.  
   
--   Berechnete Spalten abgeleitet `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, und `xml` Datentypen können indiziert werden, solange der Datentyp der berechneten Spalte als indexschlüsselspalte zulässig ist.  
+-   Berechnete Spalten, die von abgeleiteten `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, und `xml` Datentypen können indiziert werden, solange der Datentyp der berechneten Spalte als indexschlüsselspalte zulässig ist.  
   
--   Berechnete Spalten abgeleitet `image`, `ntext`, und `text` Datentypen können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, solange der Datentyp der berechneten Spalte als nichtschlüssel-Indexspalte zulässig ist.  
+-   Berechnete Spalten, die von abgeleiteten `image`, `ntext`, und `text` Datentypen können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, solange der Datentyp der berechneten Spalte als nichtschlüssel-Indexspalte zulässig ist.  
   
  **SET Option Requirements**  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36056695"
      Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist.  
   
 ##  <a name="BKMK_persisted"></a> Erstellen von Indizes für persistente berechnete Spalten  
- Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] verwendet diese persistenten Werte, wenn ein Index für die Spalte erstellt wird und der Index in einer Abfrage verwiesen wird. Diese Option ermöglicht Ihnen die Erstellung ein Indexes für eine berechnete Spalte beim [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], deterministisch und präzise ist.  
+ Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] verwendet diese persistenten Werte, wenn ein Index für die Spalte erstellt wird und der Index in einer Abfrage verwiesen wird. Diese Option ermöglicht Ihnen die Erstellung ein Indexes für eine berechnete Spalte beim [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], ist deterministisch und präzise.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: Raster (Registerkarte Dimensionsverwendung, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Raster (Registerkarte "Dimensionsverwendung", Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295830"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Raster (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Raster** der Registerkarte **Dimensionsverwendung** können Sie im Cube-Designer die Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen anzeigen und bearbeiten. Jede Dimensionsbeziehung ist in einem Raster, in dem Measuregruppen als Spalten und Dimensionen als Zeilen angezeigt werden, als Zelle dargestellt.  
@@ -39,7 +39,7 @@ ms.locfileid: "36057895"
 |------------|----------------|  
 |**Cubedimension hinzufügen**|Wählen Sie diese Option aus, um das Dialogfeld **Cubedimension hinzufügen** anzuzeigen und vorhandenen oder neuen Datenbankdimensionen im Cube Verweise hinzuzufügen. Weitere Informationen zum Dialogfeld **Cubedimension hinzufügen** finden Sie unter [Dialogfeld „Cubedimension hinzufügen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Neues verknüpftes Objekt**|Wählen Sie diese Option aus, um **Assistent für verknüpfte Objekte** anzuzeigen und Measuregruppen mit Dimensionen aus anderen Cubes zu verknüpfen oder Aktionen, KPIs und Berechnungen in den ausgewählten Cube zu importieren. Weitere Informationen zum **Assistenten für verknüpfte Objekte**finden Sie unter [Assistent für verknüpfte Objekte (F1-Hilfe)](linked-object-wizard-f1-help.md).|  
-|**Ausgeschnitten werden.**|Hinweis: Diese Option ist deaktiviert.|  
+|**Ausschneiden**|Hinweis: Diese Option ist deaktiviert.|  
 |**Kopieren**|Hinweis: Diese Option ist deaktiviert.|  
 |**Einfügen**|Hinweis: Diese Option ist deaktiviert.|  
 |**Delete**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung aus dem Cube zu entfernen.|  

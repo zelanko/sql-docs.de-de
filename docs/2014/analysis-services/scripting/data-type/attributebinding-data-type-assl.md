@@ -1,5 +1,5 @@
 ---
-title: AttributeBinding-Datentyp (ASSL) | Microsoft Docs
+title: AttributeBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279746"
 ---
 # <a name="attributebinding-data-type-assl"></a>AttributeBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der eine Bindung für eine [Attribut](../objects/attribute-element-assl.md) Element.  
+  Definiert einen abgeleiteten Datentyp, der eine Bindung für ein [Attribut](../objects/attribute-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36057038"
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `Binding` -Datentyp, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, die abgeleitet wurde. die `Binding` -Datentyp, finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Datentyp, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, die von abgeleiteten der `Binding` -Datentyp, finden Sie [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AttributeBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AttributeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

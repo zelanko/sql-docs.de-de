@@ -1,5 +1,5 @@
 ---
-title: Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager) | Microsoft Docs
+title: Verarbeitungsoptionen Eigenschaftenseite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288386"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite Verarbeitungsoptionen können Sie Eigenschaften der Berichtsausführung für den aktuell ausgewählten Bericht festlegen. Mit diesen Optionen wird der Zeitpunkt der Verarbeitung von Daten für den Bericht bestimmt. Sie können diese Optionen festlegen, um die Berichtsdaten außerhalb der Spitzenbetriebszeiten abzurufen. Wenn ein Bericht häufig verwendet wird, können Sie auch vorübergehend Kopien des Berichts zwischenspeichern, um Wartezeiten zu vermeiden, falls mehrere Benutzer innerhalb von Minuten auf denselben Bericht zugreifen.  

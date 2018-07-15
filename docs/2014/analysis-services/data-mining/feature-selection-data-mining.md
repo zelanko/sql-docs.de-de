@@ -1,5 +1,5 @@
 ---
-title: Funktionsauswahl (Datamining) | Microsoft Docs
+title: Funktionsauswahl (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296000"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
-  *Funktionsauswahl* ist ein Begriff, die beim Datamining häufig verwendet werden, um die Tools und Techniken zum Reduzieren der Eingaben für die Analyse und Verarbeitung einer überschaubaren Größe zu beschreiben. Funktionsauswahl bewirkt nicht nur *Kardinalitätsreduzierung*, d. h., anwendet, die einer willkürlichen oder vordefinierten tiefpassfilters auf die Anzahl der Attribute, die beim Erstellen eines Modells, sondern auch die Auswahl der Attribute, d. h. berücksichtigt werden können vom Analysten oder Modellierungstool aktiv ausgewählt oder verwirft Attributen basierend auf deren Eignung für die Analyse.  
+  *Funktionsauswahl* ist ein Begriff, die im Datamining häufig verwendet werden, um die Tools und Techniken zum Reduzieren der Eingaben in eine verwaltbare Größe zur Verarbeitung und Analyse zu beschreiben. Funktionsauswahl bewirkt nicht nur *Kardinalitätsreduzierung*, was bedeutet anwendet, die einer willkürlichen oder vordefinierten Grenzwert für die Anzahl der Attribute, die beim Erstellen eines Modells, sondern auch die Auswahl der Attribute, d. h. berücksichtigt werden können dass entweder der Analyst oder das Modellierungstool aktiv ausgewählt oder Attribute, die basierend auf deren Eignung für die Analyse verwirft Sie.  
   
  Die Möglichkeit, eine Funktionsauswahl anzuwenden, ist wichtig für eine effiziente Analyse, da Datasets häufig wesentlich mehr Informationen enthalten, als für die Modellerstellung erforderlich ist. Ein Dataset kann z. B. 500 Spalten mit Kundenmerkmalen enthalten. Wenn die Daten in einigen Spalten jedoch nur einen geringen Informationswert haben, würden diese Spalten, wenn sie dem Modell hinzugefügt würden, nur einen sehr geringen Nutzen bringen. Wenn Sie die nicht verwendeten Spalten beim Erstellen des Modells beibehalten, ist während des Trainingsprozesses mehr CPU und Arbeitsspeicher erforderlich, und das fertige Modell erfordert mehr Speicherplatz.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36058206"
  Wenn von den 500 Spalten in der Datenquelle nur 50 Spalten Informationen enthalten, die bei der Modellerstellung von Nutzen sind, könnten Sie sie einfach nicht in das Modell einbeziehen. Alternativ könnten Sie mithilfe der Funktionsauswahl automatisch die besten Funktionen ermitteln und Werte ausschließen, die statistisch unbedeutend sind. Die Funktionsauswahl ist hilfreich bei der Lösung des doppelten Problems, dass zu viele Daten mit geringem Wert oder zu wenige hochwertige Daten vorhanden sind.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Die Funktionsauswahl bei Analysis Services Data Mining  
- Funktionsauswahl wird in der Regel automatisch durchgeführt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und jeder Algorithmus verfügt über eine Reihe von Standardtechniken für die Anwendung der funktionsreduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
+ In der Regel Funktionsauswahl erfolgt automatisch bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und jeder Algorithmus verfügt über einen Satz von Standardtechniken für die intelligente Anwendung der featurereduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
   
- Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse und die genaue Methode, die in jedem Modell angewendet wird, hängt diese Faktoren:  
+ Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Scores und welche spezifische Methode auf, die jeweilige Modell angewendet wird, die auf diesen Faktoren abhängig ist:  
   
 -   Im Modell verwendeter Algorithmus  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36058206"
  Im folgenden Abschnitt werden die Methoden der Funktionsauswahl einzeln beschrieben.  
   
 #### <a name="interestingness-score"></a>Interessantheitsgrad  
- Eine Funktion ist interessant, wenn sie eine nützliche Information offenbart. Da die Definition der was nützlich ist je nach Szenario variiert, hat die Datamining-Branche verschiedene Methoden zum Messen entwickelt *interessantheitsgrads*. Beispielsweise *Neuheit* möglicherweise interessante ausreißererkennung, aber die Fähigkeit, eng verwandte Elemente unterscheiden oder *diskriminante Gewicht*, möglicherweise weitere interessante für Klassifizierung.  
+ Eine Funktion ist interessant, wenn sie eine nützliche Information offenbart. Da die Definition, was nützlich ist abhängig vom jeweiligen Szenario variiert, hat die Datamining-Branche verschiedene Methoden zum Messen entwickelt *interessantheitsgrads*. Z. B. *Neuheit* ausreißererkennung, aber die Fähigkeit, eng verwandte Elemente unterscheiden zu können, interessant sein könnte oder *diskriminante Gewicht*, interessanter für sein Klassifizierung.  
   
- Ist das Maß der interessantheit, die in SQL Server Analysis Services verwendet wird *Entropie-basierte*, d. h., dass Attribute mit einer zufälligen Verteilung haben höhere Entropie und geringeren informationsgewinn; aus diesem Grund solche Attribute kleiner sind interessant. Die Entropie eines bestimmten Attributs wird wie folgt mit der Entropie aller anderen Attribute verglichen:  
+ Ist das Maß der interessantheit, die in SQL Server Analysis Services dient *Entropie-basierte*, das bedeutet, dass Attribute mit einer zufälligen Verteilung haben höhere Entropie und geringeren informationsgewinn aus diesem Grund kleiner sind sinnvoll zu nutzen. Die Entropie eines bestimmten Attributs wird wie folgt mit der Entropie aller anderen Attribute verglichen:  
   
  Interessantheit(Attribut) = - (m - Entropie(Attribut)) * (m - Entropie(Attribut))  
   

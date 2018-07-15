@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay-Sicherheit | Microsoft Docs
+title: Distributed Replay-Sicherheit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301280"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
   Bevor Sie die Distributed Replay-Funktion von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
@@ -51,7 +51,7 @@ ms.locfileid: "36060221"
   
 1.  Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie auf **starten**, Typ `services.msc` in der **Suche** Feld, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie auf **starten**, Typ `services.msc` in die **Suche** Feld, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `services.msc`, und drücken Sie dann die EINGABETASTE.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36060221"
   
     1.  Klicken Sie auf dem Controllercomputer auf **Start**.  
   
-    2.  Typ `dcomcnfg.exe` in der **Suche** Feld.  
+    2.  Typ `dcomcnfg.exe` in die **Suche** Feld.  
   
     3.  Drücken Sie die EINGABETASTE.  
   

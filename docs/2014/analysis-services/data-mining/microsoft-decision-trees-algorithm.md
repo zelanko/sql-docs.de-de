@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees-Algorithmus | Microsoft Docs
+title: Microsoft Decision Trees-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 70
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc3f7cac98736fe558bf19ce00fc57115cade782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310780"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft Decision Trees-Algorithmus
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist eine Klassifizierung und Regression-Algorithmus, die von bereitgestellten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Verwendung bei der vorhersagemodellierung von diskreten und kontinuierlichen Attributen.  
@@ -47,9 +47,9 @@ ms.locfileid: "36060417"
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt eine Reihe von Teilungen in der Entscheidungsstruktur, die zusammen ein Data Mining-Modell bilden. Diese Teilungen werden als *Knoten*dargestellt. Der Algorithmus fügt dem Modell jedes Mal einen Knoten hinzu, wenn eine Eingabespalte in erheblichem Ausmaß von der vorhersagbaren Spalte abhängig ist. Wie der Algorithmus eine Teilung bestimmt, unterscheidet sich danach, ob er eine Vorhersage zu einer kontinuierlichen Spalte oder zu einer diskreten Spalte trifft.  
   
- Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet die *Funktionsauswahl* als Rahmen für die Auswahl der nützlichsten Attribute. Funktionsauswahl wird von allen verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datamining-Algorithmen zur Verbesserung der Leistung und die Qualität der Analyse. Mit der Funktionsauswahl wird vermieden, dass unwichtige Attribute Prozessorzeit belegen. Wenn Sie beim Entwurf eines Data Mining-Modells zu viele Eingabe- und vorhersagbare Attribute verwenden, dauert die Verarbeitung des Modells u. U. sehr lange oder übersteigt sogar den vorhandenen Speicherplatz. Unter den Methoden zur Ermittlung, ob die Struktur geteilt werden sollte, gehören Metriken nach Industriestandard für *Entropie*- und Bayes-Netzwerke *.* Weitere Informationen zu den Methoden zur Auswahl nützlicher Attribute und zur Festlegung der Interessantheit und Rangfolge dieser finden Sie unter [Funktionsauswahl &#40;Data Mining&#41;](feature-selection-data-mining.md).  
+ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet die *Funktionsauswahl* als Rahmen für die Auswahl der nützlichsten Attribute. Funktionsauswahl wird von allen verwendete [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datamining-Algorithmen zur Verbesserung der Leistung und die Qualität der Analyse. Mit der Funktionsauswahl wird vermieden, dass unwichtige Attribute Prozessorzeit belegen. Wenn Sie beim Entwurf eines Data Mining-Modells zu viele Eingabe- und vorhersagbare Attribute verwenden, dauert die Verarbeitung des Modells u. U. sehr lange oder übersteigt sogar den vorhandenen Speicherplatz. Unter den Methoden zur Ermittlung, ob die Struktur geteilt werden sollte, gehören Metriken nach Industriestandard für *Entropie*- und Bayes-Netzwerke *.* Weitere Informationen zu den Methoden zur Auswahl nützlicher Attribute und zur Festlegung der Interessantheit und Rangfolge dieser finden Sie unter [Funktionsauswahl &#40;Data Mining&#41;](feature-selection-data-mining.md).  
   
- Ein häufiges Problem bei Datamining-Modellen ist, dass das Modell zu kleinen Unterschieden in den Trainingsdaten beachtet wird, in diesem Fall als *zu stark eingebaut* oder *überladen*. Ein überangepasstes Modell kann nicht zu anderen Datasets verallgemeinert werden. Um die Überanpassung an ein bestimmtes Dataset zu vermeiden, verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus Techniken zur Steuerung des Strukturwachstums. Eine nähere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus finden Sie unter [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md).  
+ Ein häufiges Problem bei Datamining-Modellen ist, dass das Modell auf kleinen Unterschieden in den Trainingsdaten festgelegt wird, die in diesem Fall wird als *stark angepasst* oder *überladen*. Ein überangepasstes Modell kann nicht zu anderen Datasets verallgemeinert werden. Um die Überanpassung an ein bestimmtes Dataset zu vermeiden, verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus Techniken zur Steuerung des Strukturwachstums. Eine nähere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus finden Sie unter [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md).  
   
 ### <a name="predicting-discrete-columns"></a>Vorhersagen diskreter Spalten  
  Auf welche Weise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus eine Struktur für eine diskrete vorhersagbare Spalte erstellt, lässt sich anhand eines Histogramms verdeutlichen. Im folgenden Diagramm ist ein Histogramm abgebildet, in dem die vorhersagbare Spalte Bike Buyers (Fahrradkäufer) mit der Eingabespalte Age (Alter) abgeglichen wird. Aus dem Histogramm geht hervor, dass das Alter einer Person Rückschlüsse darauf zulässt, ob diese Person ein Fahrrad kaufen wird.  
@@ -65,11 +65,11 @@ ms.locfileid: "36060417"
 ### <a name="predicting-continuous-columns"></a>Vorhersagen kontinuierlicher Spalten  
  Bei Entscheidungsstrukturen, die der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus anhand einer kontinuierlichen vorhersagbaren Spalte erstellt, enthält jeder Knoten eine Regressionsformel. Teilungen finden an Stellen der Nichtlinearität in der Regressionsformel statt. Betrachten Sie beispielsweise das folgende Diagramm.  
   
- ![Mehrere Regressionsgeraden Linien mit Nichtlinearität](../media/regression-tree1.gif "mehrfachregression Linien mit Nichtlinearität")  
+ ![Mehrfachregression Zeilen mit Nichtlinearität](../media/regression-tree1.gif "mehrfachregression Zeilen mit Nichtlinearität")  
   
  Das Diagramm enthält Daten, die sowohl durch eine einzelne Linie als auch durch zwei verbundene Linien dargestellt werden können. Eine einzelne Linie würde die Daten jedoch nur unzureichend wiedergeben. Wenn Sie stattdessen zwei Linien verwenden, lassen sich die Daten im Modell wesentlich besser darstellen. Die Stelle, an der die beiden Linien zusammentreffen, ist die Stelle der Nichtlinearität und damit die Stelle, an der sich ein Knoten im Entscheidungsstrukturmodell teilen würde. So könnte beispielsweise der Knoten, der der Stelle der Nichtlinearität im obigen Graphen entspricht, durch folgendes Diagramm dargestellt werden. Die beiden Gleichungen stellen die Regressionsgleichungen der beiden Linien dar.  
   
- ![Formel, die einen Punkt der Nichtlinearität darstellt](../media/regression-tree2.gif "Gleichung, die einen Punkt der Nichtlinearität darstellt")  
+ ![Formel, die einen Punkt der Nichtlinearität darstellt](../media/regression-tree2.gif "Gleichung, die einen Punkt der Nichtlinearität darstellt.")  
   
 ## <a name="data-required-for-decision-tree-models"></a>Erforderliche Daten für Entscheidungsstrukturmodelle  
  Wenn Sie Daten für die Verwendung in einem Entscheidungsstrukturmodell aufbereiten, müssen Sie sich mit den Anforderungen des jeweiligen Algorithmus, dessen Anforderungen an die Daten und der Verwendung der Daten vertraut machen.  
@@ -107,7 +107,7 @@ ms.locfileid: "36060417"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Decision Trees-Algorithmus technische Referenz](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Decision Trees-Abfragebeispiele](decision-trees-model-query-examples.md)   
- [Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)   
+ [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Programmieren von AMO-komplementärer Klassen und Methoden | Microsoft Docs
+title: Programmieren von AMO-komplementärer Klassen und Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317330"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programmieren AMO-komplementärer Klassen und Methoden
   Dieses Thema enthält folgende Abschnitte:  
@@ -43,7 +43,7 @@ ms.locfileid: "36050671"
 -   [CaptureLog-Klasse und CaptureXML-Attribut](#CL)  
   
 ##  <a name="Assembly"></a> Assembly-Klasse  
- Assemblys können Benutzer Erweitern der Funktionalität des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch neue gespeicherte Prozeduren oder Funktionen (Multidimensional Expressions) hinzufügen. Weitere Informationen finden Sie unter [andere AMO-Klassen und Methoden](amo-other-classes-and-methods.md).  
+ Assemblys können Benutzer Erweitern der Funktionalität von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch Hinzufügen von neuen gespeicherten Prozeduren oder Funktionen (Multidimensional Expressions). Weitere Informationen finden Sie unter [andere AMO-Klassen und Methoden](amo-other-classes-and-methods.md).  
   
  Das Hinzufügen und Löschen von Assemblys ist einfach und kann online ausgeführt werden. Sie müssen Datenbankadministrator sein, um der Datenbank eine Assembly hinzufügen zu können, bzw. Serveradministrator, um die Assembly dem Serverobjekt hinzufügen zu können.  
   
@@ -283,7 +283,7 @@ static public string TestCaptureLog(Server svr)
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Einführung in AMO-Klassen](amo-classes-introduction.md)   
- [AMO anderen Klassen und Methoden](amo-other-classes-and-methods.md)   
+ [AMO andere Klassen und Methoden](amo-other-classes-and-methods.md)   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](../processing-a-multidimensional-model-analysis-services.md)  

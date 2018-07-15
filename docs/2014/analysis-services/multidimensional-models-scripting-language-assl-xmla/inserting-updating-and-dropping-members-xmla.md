@@ -1,5 +1,5 @@
 ---
-title: Einfügen, aktualisieren und Löschen von Elementen (XMLA) | Microsoft Docs
+title: Einfügen, aktualisieren und Löschen von Elementen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b283d0eec203422b97b9e7981783ac81999dc18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308520"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
-  Können Sie die [einfügen](../xmla/xml-elements-commands/insert-element-xmla.md), [aktualisieren](../xmla/xml-elements-commands/update-element-xmla.md), und [löschen](../xmla/xml-elements-commands/drop-element-xmla.md) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Elementen aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Können Sie die [einfügen](../xmla/xml-elements-commands/insert-element-xmla.md), [aktualisieren](../xmla/xml-elements-commands/update-element-xmla.md), und [löschen](../xmla/xml-elements-commands/drop-element-xmla.md) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Mitgliedern aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff, finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Einfügen von neuen Elementen  
  Der `Insert`-Befehl fügt festgelegten Attributen in einer Dimension mit aktiviertem Schreibzugriff neue Elemente hinzu.  
@@ -51,9 +51,9 @@ ms.locfileid: "36060169"
   
  Der `Insert`-Befehl unterstützt nur zwei Eigenschaften:  
   
--   Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente eingefügt werden. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
+-   Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente eingefügt werden soll. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
   
--   Die [Attribute](../xmla/xml-elements-properties/attributes-element-xmla.md) -Eigenschaft, die einer mehreren oder [Attribut](../xmla/xml-elements-properties/attribute-element-xmla.md) Elemente die Attribute zu identifizieren, in dem Elemente eingefügt werden. Jedes `Attribute`-Element identifiziert ein Attribut und stellt den Namen, den Wert, Übersetzungen, den unären Operator, benutzerdefinierte Rollups, benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element bereit, das dem identifizierten Attribut hinzugefügt werden soll.  
+-   Die [Attribute](../xmla/xml-elements-properties/attributes-element-xmla.md) Eigenschaft, die eine oder mehrere enthält [Attribut](../xmla/xml-elements-properties/attribute-element-xmla.md) Elemente die Attribute zu identifizieren, in dem Elemente eingefügt werden soll. Jedes `Attribute`-Element identifiziert ein Attribut und stellt den Namen, den Wert, Übersetzungen, den unären Operator, benutzerdefinierte Rollups, benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element bereit, das dem identifizierten Attribut hinzugefügt werden soll.  
   
     > [!NOTE]  
     >  Alle Eigenschaften für das `Attribute`-Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
@@ -80,7 +80,7 @@ ms.locfileid: "36060169"
     > [!NOTE]  
     >  Alle Eigenschaften für das `Attribute`-Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
   
--   Die [, in denen](../xmla/xml-elements-properties/where-element-xmla.md) -Eigenschaft, die einer mehreren oder `Attribute` Elemente, die die Attribute zu beschränken, in denen Elemente aktualisiert werden. Die `Where` Eigenschaft ist wichtig für die Beschränkung ein `Update` -Befehls auf bestimmte Instanzen eines Elements. Wenn die `Where` Eigenschaft nicht angegeben ist, werden alle Instanzen eines bestimmten Elements aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, müssen Sie eine `Where`-Eigenschaft bereitstellen, die die drei Elemente im Customer-Attribut identifiziert, für die die Elemente im City-Attribut geändert werden sollen. Wenn Sie diese `Where`-Eigenschaft nicht bereitstellen, würde für jeden Kunden, dessen Stadtname zurzeit Redmond lautet, der Stadtname nach der Ausführung des `Update`-Befehls Bellevue lauten.  
+-   Die [, in denen](../xmla/xml-elements-properties/where-element-xmla.md) Eigenschaft, die eine oder mehrere enthält `Attribute` Elemente, die die Attribute zu beschränken, in dem Mitglieder sind, aktualisiert werden. Die `Where` Eigenschaft ist wichtig für die Beschränkung einer `Update` -Befehls auf bestimmte Instanzen eines Elements. Wenn die `Where` nicht angegeben wird, werden alle Instanzen eines bestimmten Elements aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, müssen Sie eine `Where`-Eigenschaft bereitstellen, die die drei Elemente im Customer-Attribut identifiziert, für die die Elemente im City-Attribut geändert werden sollen. Wenn Sie diese `Where`-Eigenschaft nicht bereitstellen, würde für jeden Kunden, dessen Stadtname zurzeit Redmond lautet, der Stadtname nach der Ausführung des `Update`-Befehls Bellevue lauten.  
   
     > [!NOTE]  
     >  Mit der Ausnahme von neuen Elementen kann der `Update`-Befehl nur Attributschlüsselwerte für Attribute aktualisieren, die nicht in der `Where`-Klausel enthalten sind. Der Stadtname kann beispielsweise nicht aktualisiert werden, wenn ein Kunde aktualisiert wird, andernfalls wird der Stadtname für alle Kunden geändert.  

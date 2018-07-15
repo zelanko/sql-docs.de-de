@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Ausführen von Warenkorbvorhersagen | Microsoft Docs'
+title: 'Lektion 4: Ausführen von Warenkorbvorhersagen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7f5ba3de919c8d38287e09061d399a331870f89a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: eb490ee36b9b1a3aff3d0477451d9534309b347a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303110"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lektion 4: Ausführen von Warenkorbvorhersagen
-  In dieser Lektion verwenden Sie die DMX `SELECT` -Anweisung zum Erstellen von Vorhersagen auf Grundlage der Zuordnung modelliert erstellten [Lektion 2: Hinzufügen von Miningmodellen zur der Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Eine Vorhersageabfrage wird unter Verwendung der DMX `SELECT`-Anweisung unter Hinzufügung einer `PREDICTION JOIN`-Klausel erstellt. Weitere Informationen zur Syntax eines Prediction Joins finden Sie unter [SELECT FROM &#60;Modell&#62; VORHERSAGEJOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  In dieser Lektion verwenden Sie die DMX `SELECT` Anweisung zum Erstellen von Vorhersagen auf Grundlage der Zuordnung modelliert, die Sie in erstellt [Lektion 2: Hinzufügen von Miningmodellen, die Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Eine Vorhersageabfrage wird unter Verwendung der DMX `SELECT`-Anweisung unter Hinzufügung einer `PREDICTION JOIN`-Klausel erstellt. Weitere Informationen zur Syntax eines Prediction Joins finden Sie unter [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Die **SELECT FROM \<Model > PREDICTION JOIN** Form der `SELECT` Anweisung besteht aus drei Teilen:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36312858"
  Vorhersageabfragen können auch mit dem Generator für Vorhersageabfragen in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellt werden.  
   
 ## <a name="singleton-prediction-join-statement"></a>PREDICTION JOIN-Anweisung in einer SINGLETON-Vorhersageabfrage  
- Der erste Schritt besteht, erstellen Sie eine Singleton-Abfrage mithilfe der **SELECT FROM \<Model > PREDICTION JOIN** Syntax und einen einzelnen Satz von Werten als Eingabe bereitstellt. Es folgt ein allgemeines Beispiel für die SINGLETON-Anweisung:  
+ Der erste Schritt ist, erstellen Sie eine Singleton-Abfrage mithilfe der **SELECT FROM \<Model > PREDICTION JOIN** Syntax und einen einzelnen Satz von Werten als Eingabe angeben. Es folgt ein allgemeines Beispiel für die SINGLETON-Anweisung:  
   
 ```  
 SELECT <select list>  
@@ -74,17 +74,17 @@ SELECT <select list> FROM [<mining model>]
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
   
--   Erstellen Sie eine Abfrage, die welche anderen Elemente vorhersagt, ein Kunde wahrscheinlich kaufen wird, basierend auf Elemente, die bereits im Einkaufswagen. Erstellen Sie diese Abfrage mithilfe des Miningmodells mit der standardmäßigen *MINIMUM_PROBABILITY*.  
+-   Erstellen Sie eine Abfrage, die vorhersagt, welche anderen Artikel ein Kunde wahrscheinlich kaufen wird, basierend auf Elementen, die bereits im Einkaufswagen. Erstellen Sie diese Abfrage mithilfe des Miningmodells mit der standardmäßigen *MINIMUM_PROBABILITY*.  
   
--   Erstellen einer Abfrage, die anhand von Artikeln, die sich bereits im Einkaufswagen eines Kunden befinden, vorhersagt, welche anderen Artikel ein Kunde wahrscheinlich kaufen wird. Diese Abfrage beruht auf einem anderen Modell, in dem *MINIMUM_PROBABILITY* auf 0,01 festgelegt wurde. Da der Standardwert für *MINIMUM_PROBABILITY* in zuordnungsmodellen 0,3 ist, sollte die Abfrage für dieses Modell mehr mögliche Artikel als die Abfrage zurückgeben, auf das Standardmodell.  
+-   Erstellen einer Abfrage, die anhand von Artikeln, die sich bereits im Einkaufswagen eines Kunden befinden, vorhersagt, welche anderen Artikel ein Kunde wahrscheinlich kaufen wird. Diese Abfrage basiert auf einem anderen Modell, in dem *MINIMUM_PROBABILITY* auf 0,01 festgelegt wurde. Da der Standardwert für *MINIMUM_PROBABILITY* in den zuordnungsmodellen 0,3 ist, sollte die Abfrage für dieses Modell mehr mögliche Artikel als bei der Abfrage zurückgeben, auf dem Standardmodell.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-the-default-minimumprobability"></a>Erstellen einer Vorhersage durch Verwenden eines Modells mit dem MINIMUM_PROBABILITY-Standardwert  
   
 #### <a name="to-create-an-association-query"></a>So erstellen Sie eine Zuordnungsabfrage  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` -Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -98,7 +98,7 @@ SELECT <select list> FROM [<mining model>]
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
     ```  
   
-     Sie konnte nur den Spaltennamen [Products] einschließen, aber in der [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) -Funktion, Sie können die Anzahl der Produkte, die vom Algorithmus auf drei zurückgegeben werden. Sie können auch `INCLUDE_STATISTICS` verwenden. Damit werden der Unterstützungswert, die Wahrscheinlichkeit und die angepasste Wahrscheinlichkeit für jedes Produkt zurückgegeben. Mithilfe dieser statistischen Informationen können Sie die Genauigkeit der Vorhersage bewerten.  
+     Sie könnten nur den Spaltennamen [Products] einschließen, aber in der [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) -Funktion können Sie die Anzahl der Produkte, die vom Algorithmus, auf drei zurückgegeben werden begrenzen. Sie können auch `INCLUDE_STATISTICS` verwenden. Damit werden der Unterstützungswert, die Wahrscheinlichkeit und die angepasste Wahrscheinlichkeit für jedes Produkt zurückgegeben. Mithilfe dieser statistischen Informationen können Sie die Genauigkeit der Vorhersage bewerten.  
   
 4.  Ersetzen Sie Folgendes:  
   
@@ -146,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-7.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Association Prediction.dmx`.  
+7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Association Prediction.dmx`.  
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
@@ -156,9 +156,9 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>So erstellen Sie eine Zuordnungsabfrage  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** um den Abfrage-Editor zu öffnen.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der `PREDICTION JOIN` -Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -218,17 +218,17 @@ SELECT <select list> FROM [<mining model>]
   
 6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-7.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Modified Association Prediction.dmx`.  
+7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Modified Association Prediction.dmx`.  
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
-     Die Abfrage gibt eine Tabelle zurück, die drei Produkte enthält: HL Mountain Tire, Water Bottle und Fender Set - Mountain. In der Tabelle werden diese Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das Produkt, das an der Spitze der Tabelle angezeigt wird, besitzt die höchste Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden. Die restlichen Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält außerdem statistische Daten, die Genauigkeit der Vorhersage beschreiben.  
+     Die Abfrage gibt eine Tabelle zurück, die drei Produkte enthält: HL Mountain Tire, Water Bottle und Fender Set - Mountain. In der Tabelle werden diese Produkte in der Reihenfolge ihrer Wahrscheinlichkeit aufgeführt. Das Produkt, das an der Spitze der Tabelle angezeigt wird, besitzt die höchste Wahrscheinlichkeit, zusammen mit den in der Abfrage angegebenen drei Produkten in den gleichen Warenkorb eingefügt zu werden. Die restlichen Produkte besitzen die nächsthöhere Wahrscheinlichkeit, in den Warenkorb eingefügt zu werden. Die Tabelle enthält auch Statistiken, die die Genauigkeit der Vorhersage beschreiben.  
   
-     Auf sehen Sie die Ergebnisse dieser Abfragen, die den Wert der *MINIMUM_PROBABILITY* Parameter wirkt sich auf die von der Abfrage zurückgegebenen Ergebnisse.  
+     Auf sehen Sie die Ergebnisse dieser Abfragen, die den Wert des der *MINIMUM_PROBABILITY* Parameter wirkt sich auf die von der Abfrage zurückgegebenen Ergebnisse.  
   
  Dies ist der letzte Schritt im Market Basket-Lernprogramm. Sie verfügen jetzt über einen Satz von Modellen, mit dem sich vorhersagen lässt, welche Produkte von Kunden möglicherweise gleichzeitig gekauft werden.  
   
- Gewusst wie: Verwenden von DMX in einem anderen vorhersageszenario finden Sie unter [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
+ Verwendung von DMX in einem anderen vorhersageszenario finden Sie unter [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnungsmodellabfragen](../../2014/analysis-services/data-mining/association-model-query-examples.md)   

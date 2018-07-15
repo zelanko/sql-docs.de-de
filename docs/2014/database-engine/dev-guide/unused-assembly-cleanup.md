@@ -1,5 +1,5 @@
 ---
-title: Bereinigung nicht verwendeter Assemblys | Microsoft Docs
+title: Bereinigung nicht verwendeter Assemblys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 277847c61e7ea41c569e2b73485e845c0c1da055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2951bc509d3ab745a9fd56766284cb6763444cc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300700"
 ---
 # <a name="unused-assembly-cleanup"></a>Bereinigung nicht verwendeter Assemblys
   Das `AssemblyCleanup`-Beispiel enthält eine gespeicherte .NET-Prozedur, die nicht verwendete Assemblys in der aktuellen Datenbank bereinigt, indem sie die Metadatenkataloge abfragt. Der einzige Parameter, `visible_assemblies`, wird verwendet, um anzugeben, ob nicht verwendete sichtbare Assemblys gelöscht werden sollen. Durch den Wert 'false' wird standardmäßig angegeben, dass nur nicht verwendete, unsichtbare Assemblys gelöscht werden, andernfalls werden alle nicht verwendeten Assemblys gelöscht. Der Satz an nicht verwendeten Assemblys umfasst die Assemblys, für die kein Einstiegspunkt definiert ist (Routinen, Typen und Aggregate) und auf die keine anderen Assemblys direkt oder indirekt verweisen.  
@@ -53,7 +53,7 @@ ms.locfileid: "36049262"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36049262"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+8.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 9. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

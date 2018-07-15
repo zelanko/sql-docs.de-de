@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CALC_DEPENDENCY-Rowset | Microsoft Docs
+title: DISCOVER_CALC_DEPENDENCY-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297240"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY-Rowset
   Berichtet von den Abhängigkeiten zwischen Berechnungen und auf den in jenen Berechnungen verwiesenen Objekten. Sie können diese Informationen in einer Clientanwendung verwenden, um Probleme mit komplexen Formeln zu melden oder um eine Warnung auszugeben, wenn verbundene Objekte gelöscht oder verändert werden. Sie können auch die in Measures oder berechneten Spalten verwendeten DAX-Ausdrücke mithilfe des Rowsets extrahieren.  
@@ -73,7 +73,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'RELATIONSHIP
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Filtern Sie nach Measures und berechneten Spalten, um die zugrunde liegende DAX-Ausdrücke anzuzeigen**  
+ **Filtern Sie nach Measures und berechneten Spalten, um die zugrunde liegenden DAX-Ausdrücke anzuzeigen**  
   
  In dieser Abfrage können Sie einfach nur das Measure oder die berechnete Spalte auswählen und dann den in der Berechnung verwendeten DAX-Ausdruck anzeigen. In der EXPRESSION-Spalte sind die DAX-Ausdrücke enthalten. Wenn Sie DISCOVER_CALC_DEPENDENCY verwenden, um den in diesem Modell verwendeten DAX-Ausdruck zu extrahieren, ist diese Abfrage dafür ausreichend. Sie gibt alle im Modell verwendeten Ausdrücke in aufsteigender Reihenfolge zurück.  
   
@@ -82,7 +82,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Filtern unter Verwendung von Abfrage**  
+ **Filtern Sie mit der Abfrage**  
   
  Mithilfe der QUERY-Einschränkung können Sie eine DAX-Abfrage angeben, um alle in dieser Abfrage verwendeten Objekte anzuzeigen. Als Beispiel dient eine einfache Abfrage wie 'Evaluate Customer'. Wie bereits erwähnt, gibt diese Abfrage Zeilen mit Kundendaten zurück, wobei die Zusammensetzung der Zeilen auf den Spalten in der Tabelle 'Customer' basiert. Wenn Sie nun DISCOVER_CALC_DEPENDENCY mit der QUERY-Einschränkung 'Evaluate Customer' ausführen, erhalten Sie die Spalten (oder Objekte), die in dieser Abfrage verwendet werden. In diesem Fall ist es eine Liste der Spalten in der Tabelle 'Customer'.  
   
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  Die erste Abfrage veranschaulicht, wie eine QUERY-Einschränkung für Objektnamen angegeben wird, die Leerzeichen enthalten. Die zweite, aus dem Artikel [Ausführen von DAX-Abfragen über OLE DB und ADOMD.NET](http://go.microsoft.com/fwlink/?LinkId=254329)entnommene Abfrage ist komplexer und umfasst Objekte aus mehreren Tabellen.  
   
 > [!NOTE]  
->  Obwohl es so aussieht, als würden doppelte Anführungszeichen verwendet, weisen die Abfragen tatsächlich nur einfache Anführungszeichen auf. Umschließt ein Paar einfacher Anführungszeichen ' Evaluate \<Tablename > ", und einfache Anführungszeichen verwendet, um den Tabellennamen müssen mit Escapezeichen versehen werden durch diese sich verdoppelt. Tabellennamen müssen nur in einfache Anführungszeichen eingeschlossen werden, wenn der Tabellenname ein Leerzeichen enthält.  
+>  Obwohl es so aussieht, als würden doppelte Anführungszeichen verwendet, weisen die Abfragen tatsächlich nur einfache Anführungszeichen auf. Umschließt ein Paar einfacher Anführungszeichen ' Evaluate \<Tablename >', und einfache Anführungszeichen verwendet, um den Tabellennamen müssen mit Escapezeichen versehen werden, wird ein zweites. Tabellennamen müssen nur in einfache Anführungszeichen eingeschlossen werden, wenn der Tabellenname ein Leerzeichen enthält.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -102,7 +102,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Abfragebeispiel Einschränkung anhand von XMLA**  
+ **Beispiel für eine Abfrage Einschränkung XMLA**  
   
  Sie können den Discover-Befehl in XMLA verwenden, um die Abfrageobjekte in einer Tabelle zurückzugeben. Die Ergebnisse werden von XMLA als unformatierte XML-Daten zurückgegeben. Mithilfe von ADOMD.NET können Sie die Ergebnisse in einem besser lesbaren Format analysieren.  
   

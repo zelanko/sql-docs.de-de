@@ -1,5 +1,5 @@
 ---
-title: DisplayKey-Element (CSDLBI) | Microsoft Docs
+title: DisplayKey-Element (CSDLBI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 907bb04d59225180fad91b63971d578181c6663d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: adcf9e8b2b87e0302158bbbf5652d8c32277170f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297150"
 ---
 # <a name="displaykey-element-csdlbi"></a>DisplayKey-Element (CSDLBI)
   Das DisplayKey-Element enthält eine Liste mit den folgenden Elementen, die einen starken Bezeichner bilden. DisplayKey ist nur als untergeordnetes Element des EntityType-Elements vorhanden. Das Element kann auf Spalten- oder Rollenenden verweisen.  

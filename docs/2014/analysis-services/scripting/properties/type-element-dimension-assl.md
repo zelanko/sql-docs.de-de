@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (Dimension) (ASSL) | Microsoft Docs
+title: Type-Element (Dimension) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 582d5b2052f2681630c5f0cd86facacd5e7cfc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283946"
 ---
 # <a name="type-element-dimension-assl"></a>Type-Element (Dimension) (ASSL)
   Stellt Informationen über den Inhalt der Dimension bereit.  
@@ -80,13 +80,13 @@ ms.locfileid: "36057027"
 |*Quantitative*|Die Dimension enthält quantitative Attribute.|  
 |*Hilfsprogramm*|Die Dimension enthält Hilfsprogrammattribute.|  
 |*Währung*|Die Dimension enthält Währungsattribute.|  
-|*Raten*|Die Dimension enthält Wechselkursattribute.|  
+|*Tarife*|Die Dimension enthält Wechselkursattribute.|  
 |*Channel*|Die Dimension enthält Kanalattribute.|  
-|*Promotion*|Die Dimension enthält höherstufungsbezogene Attribute.|  
+|*Heraufstufung*|Die Dimension enthält höherstufungsbezogene Attribute.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionType>.  
   
- Das Element, das das übergeordnete Element des entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
+ Das Element, das dem übergeordneten entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: MDX-Generator (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: MDX-Generator (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1df3416ee7b7016cbc6db8a1d694eadfdbc33a5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308540"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX-Generator (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **MDX-Generator** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie einen MDX-Ausdruck (Multidimensional Expressions) erstellen. Um das Dialogfeld **MDX-Generator** anzuzeigen, klicken Sie für die Option **Lesen des Cubeinhalts zulassen** ,**Lesen des Zelleninhalts abhängig von der Zellensicherheit zulassen**oder **Lesen und Schreiben des Cubeinhalts zulassen** auf der Seite **Zellendaten** von **Rollen-Designer** auf die Schaltfläche mit den drei Punkten ( **…** ) neben **MDX bearbeiten**.  
@@ -39,6 +39,6 @@ ms.locfileid: "36060409"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Zellendaten &#40;Rollen-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
+ [Zellendaten &#40;Rollen-Designers&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/ms177279(v=sql.120).aspx)  
   
   

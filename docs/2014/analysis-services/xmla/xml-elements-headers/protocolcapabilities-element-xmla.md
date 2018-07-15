@@ -1,5 +1,5 @@
 ---
-title: ProtocolCapabilities-Element (XMLA) | Microsoft Docs
+title: ProtocolCapabilities-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0243e0050111c0bc478f17403f3014fc619d9a43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c4183d90d07a54cf009daec59ca29ca802f2bf67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295430"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities-Element (XMLA)
-  Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht zur Identifizierung von Protokollfunktionen zwischen einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer Clientanwendung.  
+  Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht, um Protokollfunktionen zwischen einer Instanz von zu identifizieren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer Clientanwendung.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
   
@@ -81,13 +81,13 @@ ms.locfileid: "36050391"
   
 3.  Wenn die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz über die gleiche Protokollfunktion wie die angeforderte verfügt, sendet die Instanz eine SOAP-Antwort, zu der das gleiche `ProtocolCapabilities`-Element gehört, das in der SOAP-Anforderung gesendet wurde; außerdem wurde das Protokoll erfolgreich ausgehandelt. Andernfalls werden die Protokollfunktionen nicht erfolgreich ausgehandelt, und die Instanz gibt einen SOAP-Fehler zurück.  
   
- Nach erfolgreich Protokollfunktionen, wie lange die Clientanwendung und die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz Verwendung eines bestimmten Protokolls hängt davon ab, ob die Sitzung implizit oder explizit ist:  
+ Nach der erfolgreichen Aushandlung der Protokollfunktionen, wie lange die Clientanwendung und die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ein bestimmtes Protokoll verwenden, hängt davon ab, ob die Sitzung implizit oder explizit ist:  
   
--   Eine explizite Sitzung ist eine, die erstellt wird, mithilfe der [BeginSession](session-element-xmla.md) Header-Element. Bei einer expliziten Sitzung wird das ausgehandelte Protokoll verwendet, bis die Clientanwendung ein neues sendet `ProtocolCapabilities` Element oder die Sitzung beendet.  
+-   Eine explizite Sitzung ist eine, die erstellt wird, mit der [BeginSession](session-element-xmla.md) Header-Element. Bei einer expliziten Sitzung wird das ausgehandelte Protokoll verwendet werden, bis die Clientanwendung ein neues sendet `ProtocolCapabilities` Element oder die Sitzung beendet.  
   
 -   Eine implizite Sitzung ist eine Sitzung, die über eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz erstellt wird und nicht beim Übermitteln einer SOAP-Anforderung explizit von der Clientanwendung angegeben wird. Bei einer impliziten Sitzung wird das ausgehandelte Protokoll nur so lange verwendet, bis die SOAP-Anforderung abgeschlossen ist.  
   
- Protokollfunktionen müssen nicht explizit ausgehandelt werden. D. h. eine Clientanwendung muss keine enthalten eine `ProtocolCapabilities` -Element als Teil der SOAP-Anforderung. Wenn eine SOAP-Anforderung kein `ProtocolCapabilities`-Element enthält, antwortet die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz unter Verwendung des gleichen Formats wie die SOAP-Anforderung.  
+ Protokollfunktionen müssen nicht explizit ausgehandelt werden. D. h. eine Client-Anwendung muss nicht enthalten eine `ProtocolCapabilities` -Element als Teil der SOAP-Anforderung. Wenn eine SOAP-Anforderung kein `ProtocolCapabilities`-Element enthält, antwortet die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz unter Verwendung des gleichen Formats wie die SOAP-Anforderung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Verbindungen und Sitzungen &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

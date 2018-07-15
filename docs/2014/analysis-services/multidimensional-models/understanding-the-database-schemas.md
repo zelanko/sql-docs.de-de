@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Datenbankschemas | Microsoft Docs
+title: Grundlegendes zu Datenbankschemas | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282246"
 ---
 # <a name="understanding-the-database-schemas"></a>Grundlegendes zu Datenbankschemas
   Der Schemagenerierungs-Assistent generiert ein nicht normalisiertes relationales Schema für die Datenbank des Themenbereichs auf Basis der Dimensionen und Measuregruppen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Assistent generiert für jede Dimension eine relationale Tabelle zum Speichern von Dimensionsdaten, die als Dimensionstabelle bezeichnet wird, und für jede Measuregruppe eine relationale Tabelle zum Speichern von Faktendaten, die als Faktentabelle bezeichnet wird. Beim Generieren dieser relationalen Tabellen ignoriert der Assistent verknüpfte Dimensionen, verknüpfte Measuregruppen und Serverzeitdimensionen.  
@@ -48,7 +48,7 @@ ms.locfileid: "36059249"
  Der Schemagenerierungs-Assistent generiert für jede Dimension eine Dimensionstabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Dimensionstabelle hängt von den Optionen ab, die Sie beim Entwerfen der Dimension, auf der die Dimensionstabelle basiert, ausgewählt haben.  
   
  Spalte  
- Der Assistent generiert eine Spalte für die Bindungen, die verknüpft sind, die jedem Attribut in der Dimension, auf denen die Dimensionstabelle, z. B. die Bindungen für basiert, die `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`, und `UnaryOperatorColumn`Eigenschaften jedes Attributs.  
+ Der Assistent generiert eine Spalte für die Bindungen zugeordnet sind, die jedem Attribut in der Dimension auf der die Dimensionstabelle, z. B. die Bindungen für basiert die `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`, und `UnaryOperatorColumn`Eigenschaften jedes Attributs.  
   
  Beziehungen  
  Der Assistent generiert eine Beziehung zwischen der Spalte jedes übergeordneten Attributs und dem Primärschlüssel der Dimensionstabelle.  
@@ -68,7 +68,7 @@ ms.locfileid: "36059249"
  Der Schemagenerierungs-Assistent generiert für jede Measuregruppe eines Cubes eine Faktentabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Faktentabelle hängt von den Optionen ab, die Sie beim Entwerfen der Measuregruppe, auf der die Faktentabelle basiert, ausgewählt haben. Des Weiteren hängt die Struktur von den zwischen der Measuregruppe und den eingeschlossenen Dimensionen erstellten Beziehungen ab.  
   
  Spalte  
- Der Assistent generiert eine Spalte für jedes Measure, mit Ausnahme von Measures, mit denen die `Count` Aggregationsfunktion. Für diese Art von Measures ist in der Faktentabelle keine entsprechende Spalte erforderlich.  
+ Der Assistent generiert eine Spalte für jedes Measure, mit Ausnahme von Measures, mit denen die `Count` Aggregatfunktion. Für diese Art von Measures ist in der Faktentabelle keine entsprechende Spalte erforderlich.  
   
  Der Assistent generiert ebenfalls eine Spalte pro Granularitätsattributspalte für jede reguläre Dimensionsbeziehung der Measuregruppe. Bei Bedarf generiert der Assistent mindestens eine Spalte für die Bindungen, die jedem Attribut einer Dimension mit einer Faktendimensionsbeziehung zur Measuregruppe, auf der die Tabelle basiert, zugeordnet sind.  
   

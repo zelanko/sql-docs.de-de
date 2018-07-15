@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c1317806b4d0d6e5a52082b7fc343e3fe28cd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 64bc668f8f9d90ee2e2c99fb2d447d0eadc9de78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281276"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Löschen eines Attributs (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie ein Attribut löschen, wenn Sie das Attribut und alle zugehörigen Attributwerte dauerhaft entfernen möchten.  
@@ -46,12 +46,12 @@ ms.locfileid: "36049236"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Auf der **Entität bearbeiten** Seite, klicken Sie auf das Attribut, das Sie löschen möchten.  
+6.  Auf der **Entität bearbeiten** klicken Sie auf das Attribut, das Sie löschen möchten.  
   
     > [!NOTE]  
     >  Das Name-Attribut und das Code-Attribut können nicht gelöscht werden.  
   
-7.  Klicken Sie auf **löschen ausgewählte Attribut**.  
+7.  Klicken Sie auf **ausgewähltes Attribut löschen**.  
   
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296690"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Datenbank erstellen (Assistent im Konfigurations-Manager für Master Data Services)
   Verwenden Sie den Assistenten **Datenbank erstellen** , um eine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank anzulegen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36050348"
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
-|**Benutzername**|Geben Sie ein Domänenbenutzerkonto zu den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Systemadministrator. Für alle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Webanwendungen, die dieser Datenbank, die diesem Benutzer zugeordnet können alle Modelle und alle Daten in sämtlichen Funktionsbereichen aktualisieren. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
+|**Benutzername**|Geben Sie ein Domänenbenutzerkonto an, um die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Systemadministrator. Für alle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Webanwendungen, die diese Datenbank, die diesem Benutzer zugeordnete können alle Modelle und alle Daten in sämtlichen Funktionsbereichen aktualisieren. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).|  
   
 ## <a name="summary"></a>Zusammenfassung  
  Zeigt eine Zusammenfassung der ausgewählten Optionen an. Überprüfen Sie die Auswahl, und klicken Sie dann auf **Weiter** , um die Datenbank mit den angegebenen Einstellungen zu erstellen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36050348"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Einrichten von Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Datenbank-Anforderungen &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
+ [Einrichten der Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Datenbankanforderungen &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

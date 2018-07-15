@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307570"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
@@ -56,7 +56,7 @@ ms.locfileid: "36049023"
   
 -   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\<*<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
   
-     **\<Laufwerk >: \Programme\Microsoft SQL Server\MSSQL12. \<InstanceName > \MSSQL\Log**  
+     **\<Laufwerk >: \Programme\Microsoft SQL Server\MSSQL12. \<Instanzname > \MSSQL\Log**  
   
  Zum Überprüfen der Sicherheitseinstellungen für den WMI-Namespace können Sie das Snap-In WMI-Kontrolle verwenden.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36049023"
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie auf **starten**, Typ `wmimgmt.msc` in der **Suche starten** Feld, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie auf **starten**, Typ `wmimgmt.msc` in die **Suche starten** Feld, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `wmimgmt.msc`, und drücken Sie dann die EINGABETASTE.  
   

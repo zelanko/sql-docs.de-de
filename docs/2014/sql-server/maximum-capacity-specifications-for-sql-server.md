@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
 - number capacity specifications [SQL Server]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b85f0d59501aea5ef8a77daadd6f74796a82b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296040"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
   Die folgende Tabelle gibt die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
@@ -49,7 +49,7 @@ ms.locfileid: "36060658"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] Objekt (object)|Maximale Größe/Anzahl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32-Bit)|Maximale Größe/Anzahl – [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 Bit)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Batchgröße<br /><br /> Hinweis: Die Netzwerk-Paketgröße ist die Größe der Pakete tabular Data Stream (TDS) für die Kommunikation zwischen Anwendungen und relationalem verwendet [!INCLUDE[ssDE](../includes/ssde-md.md)]. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|65.536 * Netzwerkpaketgröße|65.536 * Netzwerkpaketgröße|  
+|Batchgröße<br /><br /> Hinweis: Die Netzwerkpaketgröße entspricht der Größe der Pakete tabular Data Stream (TDS) für die Kommunikation zwischen Anwendungen und relationalem verwendet [!INCLUDE[ssDE](../includes/ssde-md.md)]. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|65.536 * Netzwerkpaketgröße|65.536 * Netzwerkpaketgröße|  
 |Bytes pro Spalte mit kurzen Zeichenfolgen|8.000|8.000|  
 |Bytes pro GROUP BY, ORDER BY|8.060|8.060|  
 |Bytes pro Indexschlüssel<br /><br /> Hinweis: Die maximale Anzahl von Bytes in einem beliebigen Indexschlüssel Wert 900 nicht überschreiten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sie können einen Schlüssel mithilfe von Spalten variabler Länge definieren, deren maximale Größen zusammen mehr als 900 Bytes betragen, wenn niemals eine Zeile eingefügt wird, die in diesen Spalten mehr als 900 Bytes an Daten enthält. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können Sie Nichtschlüsselspalten in den nicht gruppierten Index aufnehmen, um die maximale Indexschlüsselgröße von 900 Bytes zu vermeiden.|900|900|  
@@ -63,7 +63,7 @@ ms.locfileid: "36060658"
 |Gruppierte Indizes pro Tabelle|1|1|  
 |Spalten in GROUP BY, ORDER BY|Begrenzung nur durch die Anzahl von Bytes|Begrenzung nur durch die Anzahl von Bytes|  
 |Spalten oder Ausdrücke in einer GROUP BY WITH CUBE- oder WITH ROLLUP-Anweisung|10|10|  
-|Spalten pro Indexschlüssel<br /><br /> Hinweis: Wenn die Tabelle einen oder mehrere XML-Indizes enthält, ist der Gruppierungsschlüssel der Benutzertabelle auf 15 Spalten beschränkt, da die XML-Spalte dem Gruppierungsschlüssel des primären XML-Index hinzugefügt wird. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], können Sie Nichtschlüsselspalten in einen nicht gruppierten Index auf die Beschränkung auf maximal 16 Schlüsselspalten zu vermeiden. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
+|Spalten pro Indexschlüssel<br /><br /> Hinweis: Wenn die Tabelle einen oder mehrere XML-Indizes enthält, ist der Gruppierungsschlüssel der Benutzertabelle auf 15 Spalten beschränkt, da die XML-Spalte dem Gruppierungsschlüssel des primären XML-Index hinzugefügt wird. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], können Sie Nichtschlüsselspalten in einen nicht gruppierten Index, um die Beschränkung auf maximal 16 Schlüsselspalten zu vermeiden. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
 |Spalten pro Fremdschlüssel|16|16|  
 |Spalten pro Primärschlüssel|16|16|  
 |Spalten pro Tabelle (keine breite Tabelle)|1.024|1.024|  
@@ -80,14 +80,14 @@ ms.locfileid: "36060658"
 |Dateigröße (Protokoll)|2 Terabytes|2 Terabytes|  
 |Datendateien für speicheroptimierte Daten pro Datenbank|Nicht unterstützt|4.096|  
 |Änderungsdatei pro Datendatei für speicheroptimierte Daten|Nicht unterstützt|1|  
-|Verweise auf Fremdschlüsseltabellen pro Tabelle<br /><br /> Hinweis: Obwohl eine Tabelle eine unbegrenzte Anzahl von FOREIGN KEY-Einschränkungen enthalten kann, ist das empfohlene Maximum 253. In Abhängigkeit von der Hardwarekonfiguration, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hostet, kann das Angeben weiterer FOREIGN KEY-Einschränkungen den Abfrageoptimierer bei der Verarbeitung stark beanspruchen.|253|253|  
+|Verweise auf Fremdschlüsseltabellen pro Tabelle<br /><br /> Hinweis: Auch wenn eine Tabelle eine unbegrenzte Anzahl von FOREIGN KEY-Einschränkungen enthalten kann, ist das empfohlene Maximum 253. In Abhängigkeit von der Hardwarekonfiguration, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hostet, kann das Angeben weiterer FOREIGN KEY-Einschränkungen den Abfrageoptimierer bei der Verarbeitung stark beanspruchen.|253|253|  
 |Bezeichnerlänge (in Zeichen)|128|128|  
-|Instanzen pro Computer|50 Instanzen auf einem eigenständigen Server für alle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen.<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 25 Instanzen auf einem Failovercluster zu Clustern, wenn Sie einen freigegebenen Clusterdatenträger als Speicheroption verwenden, für Ihre Clusterinstallation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 50 Instanzen auf einem Failovercluster bei Auswahl von SMB-Dateifreigaben als Speicheroption für Ihre Clusterinstallation Weitere Informationen finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 Instanzen auf einem eigenständigen Server.<br /><br /> 25 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation einen freigegebenen Clusterdatenträger als Speicheroption verwenden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 50 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation SMB-Dateifreigaben als Speicheroption verwenden.|  
+|Instanzen pro Computer|50 Instanzen auf einem eigenständigen Server für alle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen.<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 25 Instanzen auf einem Failovercluster zu Clustern, wenn Sie einen freigegebenen Clusterdatenträger als Speicheroption verwenden, für die Clusterinstallation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 50 Instanzen auf einem Failovercluster bei Auswahl von SMB-Dateifreigaben als Speicheroption für Ihre Clusterinstallation Weitere Informationen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 Instanzen auf einem eigenständigen Server.<br /><br /> 25 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation einen freigegebenen Clusterdatenträger als Speicheroption verwenden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt 50 Instanzen auf einem Failovercluster, wenn Sie für die Clusterinstallation SMB-Dateifreigaben als Speicheroption verwenden.|  
 |Indizes pro speicheroptimierter Tabelle|Nicht unterstützt|8|  
-|Länge einer Zeichenfolge, die SQL-Anweisungen enthält (Batchgröße)<br /><br /> Hinweis: Die Netzwerk-Paketgröße ist die Größe der Pakete tabular Data Stream (TDS) für die Kommunikation zwischen Anwendungen und relationalem verwendet [!INCLUDE[ssDE](../includes/ssde-md.md)]. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|65.536 * Netzwerkpaketgröße|65.536 * Netzwerkpaketgröße|  
+|Länge einer Zeichenfolge, die SQL-Anweisungen enthält (Batchgröße)<br /><br /> Hinweis: Die Netzwerkpaketgröße entspricht der Größe der Pakete tabular Data Stream (TDS) für die Kommunikation zwischen Anwendungen und relationalem verwendet [!INCLUDE[ssDE](../includes/ssde-md.md)]. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|65.536 * Netzwerkpaketgröße|65.536 * Netzwerkpaketgröße|  
 |Sperren pro Verbindung|Maximale Anzahl Sperren pro Server|Maximale Anzahl Sperren pro Server|  
-|Sperren pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Hinweis: Dieser Wert ist für die Zuordnung statischer Sperren. Dynamische Sperren sind nur durch den Arbeitsspeicher beschränkt.|Bis zu 2.147.483.647|Begrenzung nur durch Arbeitsspeicher|  
-|Schachtelungsebenen gespeicherter Prozeduren<br /><br /> Hinweis: Wenn eine gespeicherte Prozedur mehr als 64 Datenbanken oder sich mehr als 2 Datenbanken überlappen zugreift, werden Sie eine Fehlermeldung.|32|32|  
+|Sperren pro Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Hinweis: Dieser Wert ist, für die Zuordnung statischer Sperren. Dynamische Sperren sind nur durch den Arbeitsspeicher beschränkt.|Bis zu 2.147.483.647|Begrenzung nur durch Arbeitsspeicher|  
+|Schachtelungsebenen gespeicherter Prozeduren<br /><br /> Hinweis: Wenn eine gespeicherte Prozedur mehr als 64 Datenbanken oder sich mehr als 2 Datenbanken überlappen zugreift, erhalten Sie eine Fehlermeldung.|32|32|  
 |Geschachtelte Unterabfragen|32|32|  
 |Schachtelungsebenen für Trigger|32|32|  
 |Nicht gruppierte Indizes pro Tabelle|999|999|  
@@ -98,7 +98,7 @@ ms.locfileid: "36060658"
 |REFERENCES pro Tabelle|253|253|  
 |Zeilen pro Tabelle|Begrenzung durch verfügbaren Speicherplatz|Begrenzung durch verfügbaren Speicherplatz|  
 |Tabellen pro Datenbank<br /><br /> Hinweis: Datenbankobjekten zählen z. B. Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|Begrenzung durch die Anzahl der Objekte in einer Datenbank|Begrenzung durch die Anzahl der Objekte in einer Datenbank|  
-|Partitionen pro partitionierter Tabelle oder partitioniertem Index|1.000<br /><br /> **\*\* Wichtige \* \***  erstellen eine Tabelle oder einen Index mit mehr als 1.000 Partitionen ist möglich, auf einem 32-Bit-System, aber wird nicht unterstützt.|15.000|  
+|Partitionen pro partitionierter Tabelle oder partitioniertem Index|1.000<br /><br /> **\*\* Wichtige \* \* ** Erstellen von Tabellen und Indizes mit mehr als 1.000 Partitionen ist möglich, auf einem 32-Bit-System, aber wird nicht unterstützt.|15.000|  
 |Statistiken für nicht indizierte Spalten|30.000|30.000|  
 |Tabellen pro SELECT-Anweisung|Begrenzung nur durch verfügbare Ressourcen|Begrenzung nur durch verfügbare Ressourcen|  
 |Trigger pro Tabelle<br /><br /> Hinweis: Datenbankobjekten zählen z. B. Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|Begrenzung durch die Anzahl der Objekte in einer Datenbank|Begrenzung durch die Anzahl der Objekte in einer Datenbank|  
@@ -121,7 +121,7 @@ ms.locfileid: "36060658"
 |Protokolldateien pro Datenbank|1|1|  
 |Volumes pro Computer|3|3|  
   
- * Die maximale Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von unterstützten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm variieren basierend auf der Hardwarekonfiguration des Servers. Informationen zu ersten Schritten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Steuerungspunkt für das Hilfsprogramm ist nicht in jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ * Die maximale Anzahl von verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von unterstützten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm variieren basierend auf der Hardwarekonfiguration des Servers. Informationen zu ersten Schritten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Steuerungspunkt für das Hilfsprogramm ist nicht in jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenebenenanwendungs-Objekte  
  In der folgenden Tabelle wird die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenebenenanwendungen (DAC) getesteter Objekte angegeben.  
@@ -151,7 +151,7 @@ ms.locfileid: "36060658"
  ** Die Basistabelle kann die maximal zulässige Anzahl von Spalten in der Veröffentlichungsdatenbank (1.024 für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) enthalten. Die Spalten müssen aber aus dem Artikel herausgefiltert werden, wenn sie das für den Veröffentlichungstyp angegebene Maximum überschreiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hardware and Software Requirements for Installing SQLServer 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Hardware- und Softwareanforderungen zum Installieren von SQLServer 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Überprüfen der Parameter für die Systemkonfigurationsprüfung](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

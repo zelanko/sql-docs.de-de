@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319860"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue-Funktion (Berichts-Generator und SSRS)
   Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.  
@@ -39,7 +39,7 @@ RunningValue(expression, function, scope)
  Der Ausdruck, für den die Aggregation auszuführen ist, z.B. `[Quantity]`.  
   
  *Funktion*  
- (`Enum`) Der Name der Aggregatfunktion, die mit dem Ausdruck, z. B. `Sum`. Diese Funktion kann nicht `RunningValue`, `RowNumber`, oder `Aggregate`.  
+ (`Enum`) Der Name der Aggregatfunktion, die auf den Ausdruck, z. B. angewendet `Sum`. Diese Funktion kann nicht `RunningValue`, `RowNumber`, oder `Aggregate`.  
   
  *Bereich*  
  (`String`) Eine Zeichenfolgenkonstante als Name eines Datasets, eines Datenbereichs oder einer Gruppe oder NULL (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), der den Kontext angibt, in dem die Aggregation ausgewertet wird. `Nothing` Gibt an, der äußerste Kontext angegeben, normalerweise das Berichtsdataset.  
@@ -92,7 +92,7 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

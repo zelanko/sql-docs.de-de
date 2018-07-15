@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290872"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] bietet vollständige Dauerhaftigkeit für speicheroptimierte Tabellen. Wenn für eine Transaktion, durch die eine speicheroptimierte Tabelle geändert wurde, ein Commit ausgeführt wird, gewährleistet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (genauso wie bei datenträgerbasierten Tabellen), dass die Änderungen dauerhaft sind (bei einem Neustart der Datenbank erhalten bleiben), vorausgesetzt der zugrunde liegende Speicher ist verfügbar. Die Dauerhaftigkeit basiert auf zwei Hauptmechanismen: der Transaktionsprotokollierung und der dauerhaften Speicherung von Datenänderungen auf einem Datenträger.  
@@ -28,7 +28,7 @@ ms.locfileid: "36057576"
  Alle Änderungen, die an datenträgerbasierten oder dauerhaften speicheroptimierten Tabellen vorgenommen werden, werden in einem oder mehreren Transaktionsprotokoll-Datensätzen erfasst. Wenn für eine Transaktion ein Commit ausgeführt wird, werden die mit der Transaktion verknüpften Protokolldatensätze von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf den Datenträger geschrieben, bevor der Anwendung oder Benutzersitzung mitgeteilt wird, dass der Commit für die Transaktion abgeschlossen wurde. So wird sichergestellt, dass die von der Transaktion vorgenommenen Änderungen dauerhaft sind. Das Transaktionsprotokoll für speicheroptimierte Tabellen ist vollständig in den Protokolldatenstrom integriert, der auch von datenträgerbasierten Tabellen verwendet wird. Durch diese Integration sind vorhandene, für das Transaktionsprotokoll ausgeführte Sicherungs- und Wiederherstellungsvorgänge ohne zusätzliche Schritte weiterhin funktionsfähig. Da der Transaktionsdurchsatz der Arbeitsauslastung durch [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] jedoch deutlich anwachsen kann, müssen Sie sicherstellen, dass der Transaktionsprotokollspeicher für die Verarbeitung der erhöhten E/A-Anforderungen entsprechend konfiguriert wird.  
   
 ## <a name="data-and-delta-files"></a>Daten- und Änderungsdateien  
- Die Daten in speicheroptimierten Tabellen werden als Freiform-Datenzeilen gespeichert, die durch mindestens einen Index im Arbeitsspeicher verknüpft sind. Datenzeilen weisen im Gegensatz zu datenträgerbasierten Tabellen keine Seitenstrukturen auf. Wenn die Anwendung eines Commits die Transaktion ist die [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] die Protokolldatensätze für die Transaktion generiert. Die Persistenz speicheroptimierter Tabellen wird mit einer Reihe von Daten- und Änderungsdateien unter Verwendung eines Hintergrundthreads erzielt. Die Daten- und Änderungsdateien sind in einem oder mehreren Containern enthalten (und nutzen denselben Mechanismus wie für FILESTREAM-Daten). Diese Container werden einer neuen Art von Dateigruppe, einer sogenannten speicheroptimierten Dateigruppe, zugeordnet.  
+ Die Daten in speicheroptimierten Tabellen werden als Freiform-Datenzeilen gespeichert, die durch mindestens einen Index im Arbeitsspeicher verknüpft sind. Datenzeilen weisen im Gegensatz zu datenträgerbasierten Tabellen keine Seitenstrukturen auf. Wenn die Anwendung bereit ist, die Transaktion einen commit der [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] die Protokolldatensätze für die Transaktion generiert. Die Persistenz speicheroptimierter Tabellen wird mit einer Reihe von Daten- und Änderungsdateien unter Verwendung eines Hintergrundthreads erzielt. Die Daten- und Änderungsdateien sind in einem oder mehreren Containern enthalten (und nutzen denselben Mechanismus wie für FILESTREAM-Daten). Diese Container werden einer neuen Art von Dateigruppe, einer sogenannten speicheroptimierten Dateigruppe, zugeordnet.  
   
  Daten werden in diese Dateien streng sequenziell geschrieben. Dadurch wird die Datenträgerlatenz für herkömmliche Medien minimiert. Sie können mehrere Container auf verschiedenen Datenträgern verwenden, um die E/A-Aktivität zu verteilen. Daten- und Änderungsdateien in mehreren Containern auf verschiedenen Datenträgern verbessern die Wiederherstellungsleistung, wenn Daten aus den Daten- und Änderungsdateien auf dem Datenträger in den Arbeitsspeicher gelesen werden.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36057576"
 ### <a name="life-cycle-of-a-cfp"></a>Lebenszyklus eines CFP  
  CPFs durchlaufen mehrere Zustände, bevor ihre Zuordnung aufgehoben werden kann. CFPs können sich jeweils in einer der folgenden Phasen befinden: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE und TOMBSTONE. Eine Beschreibung dieser Phasen finden Sie unter [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Nach Berücksichtigung des von CFPs mit den verschiedenen Statusphasen belegten Speichers kann der insgesamt von dauerhaften speicheroptimierten Tabellen belegte Speicher deutlich mehr als das Doppelte der Größe der Tabellen im Arbeitsspeicher betragen. Die DMV [dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) abgefragt werden können, um alle CFPs in einer speicheroptimierten Dateigruppe sowie deren Phase aufzulisten. Der Übergang von CFPs vom MERGE SOURCE-Status zum TOMBSTONE-Status und die abschließende Garbage Collection können bis zu fünf Prüfpunkte beanspruchen, wobei auf jeden Prüfpunkt eine Transaktionsprotokollsicherung folgt, wenn die Datenbank für das vollständige oder massenprotokollierte Wiederherstellungsmodell konfiguriert ist.  
+ Nach Berücksichtigung des von CFPs mit den verschiedenen Statusphasen belegten Speichers kann der insgesamt von dauerhaften speicheroptimierten Tabellen belegte Speicher deutlich mehr als das Doppelte der Größe der Tabellen im Arbeitsspeicher betragen. Die DMV [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) abgefragt werden kann, um alle CFPs in einer speicheroptimierten Dateigruppe sowie deren Phase aufzulisten. Der Übergang von CFPs vom MERGE SOURCE-Status zum TOMBSTONE-Status und die abschließende Garbage Collection können bis zu fünf Prüfpunkte beanspruchen, wobei auf jeden Prüfpunkt eine Transaktionsprotokollsicherung folgt, wenn die Datenbank für das vollständige oder massenprotokollierte Wiederherstellungsmodell konfiguriert ist.  
   
  Sie können den Prüfpunkt gefolgt von einer Protokollsicherung manuell erzwingen, um die Garbage Collection zu beschleunigen. Dadurch werden jedoch 5 leere CFPs hinzugefügt (5 Daten-/Änderungsdateipaare mit einer jeweils 128 MB großen Datendatei). In Produktionsszenarien durchlaufen CFPs aufgrund der automatischen Prüfpunkte und Protokollsicherungen, die im Rahmen der Sicherungsstrategie ausgeführt werden, diese Phasen nahtlos, ohne dass ein manueller Eingriff erforderlich ist. Als Folge des Garbage Collection-Vorgangs weisen Datenbanken mit speicheroptimierten Tabellen gegenüber ihrer Größe im Arbeitsspeicher möglicherweise eine höhere Größe im Speicher auf. Es ist nicht ungewöhnlich, dass CFPs bis zu viermal so groß werden können wie die dauerhaften speicheroptimierten Tabellen im Arbeitsspeicher.  
   

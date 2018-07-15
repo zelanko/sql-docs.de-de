@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81bfb6671a5c504505de34d368c972de98e21b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300410"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
   Das systemeigene Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei empfohlen, die keinen erweiterten oder Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält.  
@@ -61,16 +60,16 @@ ms.locfileid: "36059844"
   
 -   Daten vom Typ `char` oder `varchar`  
   
-     Am Anfang jedes `char` oder `varchar` Feld **Bcp** fügt die Präfixlänge hinzu.  
+     Am Anfang jedes `char` oder `varchar` Feld **Bcp** fügt die Präfixlänge.  
   
     > [!IMPORTANT]  
     >  Wenn der einheitliche Modus verwendet wird, konvertiert das Hilfsprogramm **bcp** standardmäßig Zeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in OEM-Zeichen, bevor sie in eine Datendatei kopiert werden. Das Hilfsprogramm **bcp** konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor der Massenimport der Zeichen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausgeführt wird. Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.  
   
 -   `sql_variant` Daten  
   
-     Wenn `sql_variant` Daten werden als SQLVARIANT in einer Datendatei mit systemeigenen Format gespeichert, die Daten alle Merkmale. Die Metadaten, die den Datentyp jedes Datenwerts aufzeichnen, werden zusammen mit dem Datenwert gespeichert. Diese Metadaten werden verwendet, zum Neuerstellen des Datenwerts mit dem gleichen Datentyp im Ziel `sql_variant` Spalte.  
+     Wenn `sql_variant` Daten als SQLVARIANT in einer Datendatei mit systemeigenen Format gespeichert, die Daten alle Merkmale. Die Metadaten, die den Datentyp jedes Datenwerts aufzeichnen, werden zusammen mit dem Datenwert gespeichert. Diese Metadaten werden verwendet, um den Datenwert mit dem gleichen Datentyp im Ziel neu zu erstellen `sql_variant` Spalte.  
   
-     Wenn der Datentyp der Zielspalte nicht ist `sql_variant`, alle Datenwerte in den Datentyp der Zielspalte, Einhaltung der üblichen Regeln der impliziten Datenkonvertierung konvertiert wird. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ `char` und `varchar`, die zwischen `sql_variant`-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
+     Ist der Datentyp der Zielspalte nicht `sql_variant`, alle Datenwerte in den Datentyp der Zielspalte, Einhaltung der üblichen Regeln der impliziten Datenkonvertierung konvertiert wird. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ `char` und `varchar`, die zwischen `sql_variant`-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
   
      Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
@@ -81,7 +80,7 @@ ms.locfileid: "36059844"
   
 |Befehl|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|Bewirkt, dass die **Bcp** Hilfsprogramm verwendet die systemeigenen Datentypen der Daten.<sup> 1</sup>|  
+|**bcp**|**-n**|Bewirkt, dass die **Bcp** Hilfsprogramm, um die nativen Datentypen der Daten verwenden.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  
   
  <sup>1</sup> zum Laden nativer (**- n**) in ein Format, die kompatibel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients verwenden die **-V** wechseln. Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  

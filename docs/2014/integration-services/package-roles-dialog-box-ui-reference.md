@@ -1,5 +1,5 @@
 ---
-title: Referenz zur Benutzeroberfläche des Rollen Dialogfelds Paket | Microsoft Docs
+title: Referenz zur Benutzeroberfläche des Dialogfelds Rollen-Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad91939638592cfbd1265bd77bff13b1d60b093a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 688ecec3ac3e40221cb205273fe4d581d6be8de1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215380"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paketrollen
   Verwenden Sie das Dialogfeld **Paketrollen**, das in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar ist, um die Rollen auf Datenbankebene anzugeben, die Lesezugriff auf das Paket besitzen, sowie die Rollen auf Datenbankebene, die Schreibzugriff auf das Paket besitzen. Rollen auf Datenbankebene gelten nur für Pakete, die in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**-Datenbank gespeichert sind.  
@@ -46,6 +46,6 @@ ms.locfileid: "36060295"
   
 ## <a name="see-also"></a>Siehe auch  
  [Rollen auf Datenbankebene](../relational-databases/security/authentication-access/database-level-roles.md)   
- [Übersicht über die Sicherheit &#40;Integrationsservices&#41;](security/security-overview-integration-services.md)  
+ [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security/security-overview-integration-services.md)  
   
   

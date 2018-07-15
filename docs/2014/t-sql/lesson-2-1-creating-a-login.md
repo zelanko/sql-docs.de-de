@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312770"
 ---
 # <a name="creating-a-login"></a>Erstellen einer Anmeldung
   Benutzer benötigen eine Anmeldung, damit sie auf [!INCLUDE[ssDE](../includes/ssde-md.md)] zugreifen können. Die Anmeldung kann die Identität des Benutzers als Windows-Konto oder als Mitglied einer Windows-Gruppe darstellen, oder es kann sich dabei um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldung handeln, die nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]vorhanden ist. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
@@ -30,7 +30,7 @@ ms.locfileid: "36056838"
   
 ### <a name="to-create-a-new-windows-account"></a>So erstellen Sie ein neues Windows-Konto  
   
-1.  Klicken Sie auf **starten**, klicken Sie auf **ausführen**in der **öffnen** geben `%SystemRoot%\system32\compmgmt.msc /s`, und klicken Sie dann auf **OK** um das Programm Computerverwaltung zu öffnen.  
+1.  Klicken Sie auf **starten**, klicken Sie auf **ausführen**in die **öffnen** geben `%SystemRoot%\system32\compmgmt.msc /s`, und klicken Sie dann auf **OK** um das Programm Computerverwaltung zu öffnen.  
   
 2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.  
   

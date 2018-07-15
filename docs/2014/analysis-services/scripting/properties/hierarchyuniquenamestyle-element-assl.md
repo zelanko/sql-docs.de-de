@@ -1,5 +1,5 @@
 ---
-title: HierarchyUniqueNameStyle-Element (ASSL) | Microsoft Docs
+title: HierarchyUniqueNameStyle-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304290"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>HierarchyUniqueNameStyle-Element (ASSL)
-  Bestimmt, wie eindeutige Namen für die enthaltenen Hierarchien generiert werden, die [CubeDimension](../data-type/dimension-data-type-assl.md).  
+  Bestimmt, wie eindeutige Namen für Hierarchien, die in enthaltenen generiert werden, die [CubeDimension](../data-type/dimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36060390"
 |*IncludeDimensionName*|Der Name der Dimension ist im Namen der Hierarchie enthalten.|  
 |*ExcludeDimensionName*|Der Name der Dimension ist nicht im Namen der Hierarchie enthalten.|  
   
- Das Element, das das übergeordnete Element des entspricht `HierarchyUniqueNameStyle` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ Das Element, das dem übergeordneten entspricht `HierarchyUniqueNameStyle` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](../objects/cube-element-assl.md)   

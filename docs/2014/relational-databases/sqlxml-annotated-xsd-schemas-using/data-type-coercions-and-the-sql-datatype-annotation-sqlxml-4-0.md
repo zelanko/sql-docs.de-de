@@ -1,5 +1,5 @@
 ---
-title: 'Datentypumwandlungen und die SQL: DataType-Anmerkung (SQLXML 4.0) | Microsoft Docs'
+title: 'Datentypumwandlungen und die SQL: DataType-Anmerkung (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb04ef325a598382e014257dafdc979a47c05eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 095df15d5a917b54e1a518445f49a7ab1f351378
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297940"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Datentypumwandlungen und die sql:datatype-Anmerkung (SQLXML 4.0)
   In einem XSD-Schema gibt das `xsd:type`-Attribut den XSD-Datentyp eines Elements oder Attributs an. Wenn Daten anhand eines XSD-Schemas aus der Datenbank extrahiert werden, wird der angegebene Datentyp zur Formatierung der Daten verwendet.  
@@ -39,7 +39,7 @@ ms.locfileid: "36057154"
  Darüber hinaus können Sie neben dem XSD-Typ in einem Schema auch über die `sql:datatype`-Anmerkung einen Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp angeben. Die Attribute `xsd:type` und `sql:datatype` steuern die Zuordnung zwischen XSD-Datentypen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.  
   
 ## <a name="xsdtype-attribute"></a>xsd:type-Attribut  
- Sie können das `xsd:type`-Attribut verwenden, um den XML-Datentyp eines Attributs oder Elements anzugeben, das einer Spalte zugeordnet ist. `xsd:type` wirkt sich auf das vom Server zurückgegebene Dokument sowie auf die ausgeführte XPath-Abfrage aus. Wenn eine XPath-Abfrage für ein Zuordnungsschema ausgeführt wird, das `xsd:type` enthält, verwendet XPath den angegebenen Datentyp beim Verarbeiten der Abfrage. Weitere Informationen zur Verwendung von XPath `xsd:type`, finden Sie unter [Zuordnung von XSD-Datentypen zu XPath-Datentypen &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Sie können das `xsd:type`-Attribut verwenden, um den XML-Datentyp eines Attributs oder Elements anzugeben, das einer Spalte zugeordnet ist. `xsd:type` wirkt sich auf das vom Server zurückgegebene Dokument sowie auf die ausgeführte XPath-Abfrage aus. Wenn eine XPath-Abfrage für ein Zuordnungsschema ausgeführt wird, das `xsd:type` enthält, verwendet XPath den angegebenen Datentyp beim Verarbeiten der Abfrage. Weitere Informationen zur Verwendung von XPath `xsd:type`, finden Sie unter [Zuordnen von XSD-Datentypen zu XPath-Datentypen &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  In einem zurückgegebenen Dokument werden alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in Zeichenfolgendarstellungen konvertiert. Einige Datentypen erfordern zusätzliche Konvertierungen. In der folgenden Tabelle sind die Konvertierungen für verschiedene `xsd:type`-Werte aufgelistet.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36057154"
 ## <a name="sqldatatype-annotation"></a>sql:datatype-Anmerkung  
  Die `sql:datatype`-Anmerkung wird verwendet, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp anzugeben. Diese Anmerkung ist obligatorisch, wenn:  
   
--   Sie sind Massenladen in eine `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte von einem XSD- `dateTime`, `date`, oder `time` Typ. In diesem Fall müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spaltendatentyp mit `sql:datatype="dateTime"` angeben. Diese Regel gilt auch für Updategrams.  
+-   Sie sind Massenladen in eine `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte aus einer XSD `dateTime`, `date`, oder `time` Typ. In diesem Fall müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spaltendatentyp mit `sql:datatype="dateTime"` angeben. Diese Regel gilt auch für Updategrams.  
   
 -   Sie ein Massenladen in eine Spalte vom Typ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` durchführen und der XSD-Wert eine GUID mit Klammern ({ und }) ist. Wenn Sie `sql:datatype="uniqueidentifier"` angeben, werden die Klammern vor dem Einfügen in die Spalte aus dem Wert entfernt. Wird `sql:datatype` nicht angegeben, wird der Wert einschließlich Klammern gesendet, und der Einfüge- oder Updatevorgang erzeugt einen Fehler.  
   
@@ -122,11 +122,11 @@ ms.locfileid: "36057154"
   
  In diesem XSD-Schema gibt es drei Attribute, die einen Datumswert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgeben. Wenn das Schema:  
   
--   Gibt an, `xsd:type=date` auf die **OrderDate** -Attribut der Date-Teil, der den Rückgabewert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die **OrderDate** Attribut angezeigt wird.  
+-   Gibt an, `xsd:type=date` auf die **OrderDate** Attribut, die Date-Teil, der den Rückgabewert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die **OrderDate** Attribut wird angezeigt.  
   
--   Gibt an, `xsd:type=time` auf die **ShipDate** -Attribut den Uhrzeitteil des Werts, der von zurückgegeben wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die **ShipDate** Attribut angezeigt wird.  
+-   Gibt an, `xsd:type=time` auf die **ShipDate** Attribut, den Time-Teil des Werts, der von zurückgegeben wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die **ShipDate** Attribut wird angezeigt.  
   
--   Gibt keinen `xsd:type` auf die **DueDate** Attribut, den gleichen Wert, der zurückgegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird angezeigt.  
+-   Gibt keinen `xsd:type` auf die **DueDate** -Attribut, das von zurückgegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird angezeigt.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36057154"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -195,6 +195,6 @@ ms.locfileid: "36057154"
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Angeben des SQL-Datentyps mit "sql:datatype"  
- Ein funktionierendes Beispiel finden Sie unter Beispiel G in [XML Bulk Load Beispiele &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In diesem Beispiel wird ein GUID-Wert, der "{" und "}" enthält, massengeladen. Das Schema in diesem Beispiel gibt `sql:datatype` an, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp als `uniqueidentifier` zu identifizieren. Dieses Beispiel veranschaulicht, wann `sql:datatype` im Schema angegeben werden muss.  
+ Ein Arbeitsbeispiel finden Sie unter Beispiel G in [XML Bulk Load-Examples &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In diesem Beispiel wird ein GUID-Wert, der "{" und "}" enthält, massengeladen. Das Schema in diesem Beispiel gibt `sql:datatype` an, um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp als `uniqueidentifier` zu identifizieren. Dieses Beispiel veranschaulicht, wann `sql:datatype` im Schema angegeben werden muss.  
   
   

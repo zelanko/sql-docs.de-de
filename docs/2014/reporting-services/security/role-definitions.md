@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - roles [Reporting Services], security
@@ -18,19 +18,19 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 70fb0da3dccb70dc8ce706fe56dc83693084c114
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282666"
 ---
 # <a name="role-definitions"></a>Rollendefinitionen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine *Rollendefinition*** eine benannte Auflistung von Aufgaben, die die auf einem Berichtsserver verfügbaren Vorgänge definieren. Rollendefinitionen stellen die Regeln bereit, mit denen der Berichtsserver die Sicherheit erzwingt. Wenn ein Benutzer versucht, eine Aufgabe auszuführen, z. B. das Veröffentlichen eines Berichts in einem Ordner, überprüft der Berichtsserver die Rollenzuweisung des Benutzers, um zu bestimmen, ob die Aufgabe in der Rollendefinition enthalten ist. Falls die Aufgabe in der Rollendefinition enthalten ist, wird die Anforderung gesendet.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Autorisieren des Zugriffs auf einen Berichtsserver mithilfe von Rollen  
- Eine Rolle wird erst wirksam, wenn sie in einer Rollenzuweisung verwendet wird. Weitere Informationen darüber, wie Rollen Sicherheit bieten, finden Sie unter [Rollenzuweisungen](role-assignments.md).  
+ Eine Rolle wird erst wirksam, wenn sie in einer Rollenzuweisung verwendet wird. Weitere Informationen dazu, wie Rollen die Sicherheit erhöhen, finden Sie unter [Rollenzuweisungen](role-assignments.md).  
   
 ## <a name="types-of-role-definitions"></a>Typen von Rollendefinitionen  
  Rollendefinitionen sind entweder Definitionen auf Element- oder auf Systemebene. Eine *Rollendefinition auf Elementebene* beschreibt die Aufgaben, die sich auf die auf einem Berichtsserver gespeicherten und verwalteten Elemente beziehen, z.B. Berichte, Ordner und Modelle. Berichte verwalten, Ordner anzeigen und Einzelne Abonnements verwalten sind nur einige der Aufgaben, die Sie in eine Rollendefinition auf Elementebene integrieren können. Eine *Systemrollendefinition* enthält Aufgaben, die für die ganze Site gelten. Berichtsservereigenschaften anzeigen ist ein Beispiel für eine Aufgabe, die Sie in eine Systemrolle integrieren können.  
@@ -64,6 +64,6 @@ ms.locfileid: "36060238"
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](role-assignments-modify-or-delete.md)   
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sammlung von PowerPivot-Verwendungsdaten | Microsoft Docs
+title: Sammlung von PowerPivot-Verwendungsdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d16c55953bc3988a7de6c9d06929904d6dc0b67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304690"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Sammlung von PowerPivot-Verwendungsdaten
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden. Weitere Informationen zum Aktivieren und konfigurieren die Sammlung von Verwendungsdaten für PowerPivot-Ereignisse, finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Weitere Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **In diesem Thema:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36050463"
   
  **Hinweis:** Vergewissern Sie sich, dass die Sammlung von Verwendungsdaten aktiviert ist. Wechseln Sie dazu in der SharePoint-Zentraladministration zu **Überwachung** . Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Komponenten und Prozesse der verwendungsdatensammlung. ] (../media/gmni-usagedata.gif "Komponenten und Prozesse der verwendungsdatensammlung.")  
+ ![Komponenten und Prozesse bei der Sammlung von Verwendungsdaten. ] (../media/gmni-usagedata.gif "Komponenten und Prozesse der verwendungsdatensammlung.")  
   
 |Phase|Description|  
 |-----------|-----------------|  
@@ -66,22 +66,22 @@ ms.locfileid: "36050463"
 |Datenaktualisierung|Durch den PowerPivot-Dienst für geplante Datenaktualisierungen initiierte Datenaktualisierungsvorgänge. Der Verwendungsverlauf für Datenaktualisierungen wird auf Anwendungsebene für Betriebsberichte erfasst und auf der Seite Datenaktualisierung verwalten der jeweiligen Arbeitsmappe wiedergegeben.<br /><br /> **Hinweis:** Bei [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] - und SharePoint 2013-Bereitstellungen wird die Datenaktualisierung durch Excel Services und nicht durch den Analysis Services-Server verwaltet.|Nein. Verwendungsdaten für die Datenaktualisierung werden immer gesammelt, wenn Sie die Datenaktualisierung für die PowerPivot-Dienstanwendung aktivieren.|  
   
 ##  <a name="servicesjobs"></a> Dienste und Zeitgeberaufträge  
- In der folgenden Tabelle werden die Dienste sowie Speicherorte für Datensammlungen im System für die Sammlung von Verwendungsdaten beschrieben. Anweisungen zum Überschreiben der zeitgeberauftragsplanung, um eine datenaktualisierung für Serverdaten System- und Verwendungsdaten im PowerPivot-Management-Dashboard-Berichte zu erzwingen, finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Sie können die Zeitgeberaufträge in der SharePoint-Zentraladministration einsehen. Wechseln Sie zu **Überwachung**, und klicken Sie auf **Auftragsstatus überprüfen**. Klicken Sie auf **Definitionen für Zeitgeberauftrag überprüfen**.  
+ In der folgenden Tabelle werden die Dienste sowie Speicherorte für Datensammlungen im System für die Sammlung von Verwendungsdaten beschrieben. Anweisungen zum Überschreiben der zeitgeberauftragsplanung, um eine datenaktualisierung für Server und Verwendungsdaten im PowerPivot-Management-Dashboard-Berichte zu erzwingen, finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Sie können die Zeitgeberaufträge in der SharePoint-Zentraladministration einsehen. Wechseln Sie zu **Überwachung**, und klicken Sie auf **Auftragsstatus überprüfen**. Klicken Sie auf **Definitionen für Zeitgeberauftrag überprüfen**.  
   
 |Komponente|Standardzeitplan|Description|  
 |---------------|----------------------|-----------------|  
 |SharePoint-Zeitgeberdienst (SPTimerV4)||Dieser Windows-Dienst wird lokal auf jedem Mitgliedscomputer in der Farm ausgeführt und verarbeitet alle auf Farmebene definierten Zeitgeberaufträge.|  
 |Microsoft SharePoint Foundation für den Import von Verwendungsdaten|In SharePoint 2010 alle 30 Minuten. In SharePoint 2013 alle 5 Minuten.|Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er verschiebt Verwendungsdaten aus lokalen Verwendungsprotokolldateien in die zentrale Datenbank für Verwendungsdaten. Sie können diesen Zeitgeberauftrag manuell ausführen, um einen Datenimportvorgang zu erzwingen.|  
-|Microsoft SharePoint Foundation-Zeitgeberauftrag für die Verarbeitung von Verwendungsdaten|Täglich um 3:00 VORMITTAGS|**(\*)** Ab SQL Server 2012 PowerPivot für SharePoint wird dieser Zeitgeberauftrag für Upgrade- oder Migrationsszenarien Szenarien, in denen ältere Verwendungsdaten weiterhin in der SharePoint-verwendungsdatenbanken enthalten, unterstützt. Ab SQL Server 2012 PowerPivot für SharePoint wird die SharePoint-Verwendungsdatenbank weder für die Sammlung von PowerPivot-Verwendungsdaten noch für den Workflow des Management-Dashboards verwendet. Der Zeitgeberauftrag kann manuell ausgeführt werden, um verbliebene PowerPivot-bezogene Daten in der SharePoint-Verwendungsdatenbank in die Datenbanken der PowerPivot-Dienstanwendung zu verschieben.<br /><br /> Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er überprüft die zentrale Datenbank für Verwendungsdaten auf abgelaufene Verwendungsdaten (d. h. auf Datensätze, die älter als 30 Tage sind). Für PowerPivot-Server in der Farm führt dieser Zeitgeberauftrag eine zusätzliche Überprüfung auf PowerPivot-Verwendungsdaten aus. Wenn PowerPivot-Verwendungsdaten erkannt werden, verschiebt der Zeitgeberauftrag die Daten in die Datenbank einer Dienstanwendung und verwendet dabei den Anwendungsbezeichner, um die richtige Datenbank zu identifizieren.<br /><br /> Sie können diesen Zeitgeberauftrag manuell ausführen, um eine Überprüfung auf abgelaufene Daten oder einen Import von PowerPivot-Verwendungsdaten in die Datenbank einer PowerPivot-Dienstanwendung zu erzwingen.|  
+|Microsoft SharePoint Foundation-Zeitgeberauftrag für die Verarbeitung von Verwendungsdaten|Täglich um 3:00 VORMITTAGS|**(\*)** Ab SQL Server 2012 PowerPivot für SharePoint wird dieser Zeitgeberauftrag für Upgrade- oder Migrationsszenarien Szenarien, in denen ältere Verwendungsdaten immer noch in der SharePoint-verwendungsdatenbanken enthalten, unterstützt. Ab SQL Server 2012 PowerPivot für SharePoint wird die SharePoint-Verwendungsdatenbank weder für die Sammlung von PowerPivot-Verwendungsdaten noch für den Workflow des Management-Dashboards verwendet. Der Zeitgeberauftrag kann manuell ausgeführt werden, um verbliebene PowerPivot-bezogene Daten in der SharePoint-Verwendungsdatenbank in die Datenbanken der PowerPivot-Dienstanwendung zu verschieben.<br /><br /> Dieser Zeitgeberauftrag wird global auf Farmebene konfiguriert. Er überprüft die zentrale Datenbank für Verwendungsdaten auf abgelaufene Verwendungsdaten (d. h. auf Datensätze, die älter als 30 Tage sind). Für PowerPivot-Server in der Farm führt dieser Zeitgeberauftrag eine zusätzliche Überprüfung auf PowerPivot-Verwendungsdaten aus. Wenn PowerPivot-Verwendungsdaten erkannt werden, verschiebt der Zeitgeberauftrag die Daten in die Datenbank einer Dienstanwendung und verwendet dabei den Anwendungsbezeichner, um die richtige Datenbank zu identifizieren.<br /><br /> Sie können diesen Zeitgeberauftrag manuell ausführen, um eine Überprüfung auf abgelaufene Daten oder einen Import von PowerPivot-Verwendungsdaten in die Datenbank einer PowerPivot-Dienstanwendung zu erzwingen.|  
 |Zeitgeberauftrag für die Verarbeitung des PowerPivot-Management-Dashboards|Täglich um 3:00 VORMITTAGS|Dieser Zeitgeberauftrag aktualisiert die interne PowerPivot-Arbeitsmappe, die Verwaltungsdaten für das PowerPivot-Management-Dashboard enthält. Er ruft aktualisierte Informationen ab, die von SharePoint verwaltet werden, einschließlich Servernamen, Benutzernamen, Anwendungsnamen und Dateinamen, die in Dashboardberichten oder Webparts angezeigt werden.|  
   
 ##  <a name="reporting"></a> Berichte zu Verwendungsdaten  
  Um Verwendungsdaten zu PowerPivot-Daten zu überprüfen, können Sie integrierte Berichte im PowerPivot-Management-Dashboard anzeigen. In den integrierten Berichten werden Verwendungsdaten konsolidiert, die aus Berichtsdatenstrukturen in der Datenbank der Dienstanwendung abgerufen werden. Da die zugrunde liegenden Berichtsdaten täglich aktualisiert werden, enthalten die integrierten Verwendungsberichte erst aktuelle Informationen, nachdem die Daten vom Microsoft SharePoint Foundation-Zeitgeberauftrag für die Verarbeitung von Verwendungsdaten in die Datenbank einer PowerPivot-Dienstanwendung kopiert wurden. Standardmäßig geschieht dies einmal am Tag.  
   
- Weitere Informationen zum Anzeigen von Berichten finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Weitere Informationen über das Anzeigen von Berichten finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [PowerPivot Managementdashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)   
+ [PowerPivot-Management-Dashboard und Verwendungsdaten](power-pivot-management-dashboard-and-usage-data.md)   
  [Konfigurationseinstellungsverweis &#40;PowerPivot für SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

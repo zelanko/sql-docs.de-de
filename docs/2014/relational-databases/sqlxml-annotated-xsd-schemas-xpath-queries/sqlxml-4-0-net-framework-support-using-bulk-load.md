@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQLXML-Massenladen in der .NET-Umgebung | Microsoft Docs
+title: Verwenden von SQLXML-Massenladen in der .NET-Umgebung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f597ddc37d61337bd60714afbcb564c87c6747f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8133a762b1bc0f687529ee375bd8e9c5699051b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307480"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Verwenden von SQLXML-Massenladen in der .NET-Umgebung
   In diesem Thema wird erklärt, wie die XML-Massenladefunktionalität in der .NET-Umgebung verwendet werden kann. Ausführliche Informationen zu XML-Massenladen, finden Sie unter [Ausführen von Massenladen von XML von Daten &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "36057548"
  Um das SQLXML-Massenladen-COM-Objekt in einer verwalteten Umgebung zu verwenden, müssen Sie diesem Objekt eine Projektreferenz hinzufügen. Dies generiert eine verwaltete Wrapperschnittstelle um das Massenladen-COM-Objekt.  
   
 > [!NOTE]  
->  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die massenladenkomponente in einer Multithreadumgebung auszuführen, erhalten Sie eine InvalidCastException-Ausnahme mit der folgenden zusätzlichen Informationen: "Fehler bei QueryInterface für Schnittstelle SQLXMLBULKLOADLib.ISQLXMLBulkLoad." Die problemumgehung besteht darin, das Objekt zu machen, die das Massenladen singlethreads zugänglich enthält (z. B. mithilfe der **[STAThread]** -Attribut wie im Beispiel gezeigt).  
+>  Verwaltetes XML-Massenladen funktioniert nicht mit verwalteten Datenströmen und erfordert einen Wrapper um systemeigene Datenströme. Die SQLXML-Massenladenkomponente wird nicht in einer Multithreadumgebung ('[MTAThread]'-Attribut) ausgeführt. Wenn Sie versuchen, die massenladenkomponente in einer Umgebung mit mehreren Threads ausführen, erhalten Sie eine InvalidCastException-Ausnahme mit den folgenden zusätzlichen Informationen: "Fehler bei QueryInterface für Schnittstelle SQLXMLBULKLOADLib.ISQLXMLBulkLoad." Die problemumgehung besteht darin, das Objekt zu erstellen, die das Massenladen singlethreads zugänglich enthält (z. B. durch Verwendung der **[STAThread]** -Attribut wie im Beispiel gezeigt).  
   
  Dieses Thema stellt eine funktionierende C#-Beispielanwendung für das Massenladen von XML-Daten in der Datenbank bereit. Gehen Sie folgendermaßen vor, um ein funktionierendes Beispiel zu erstellen:  
   
@@ -116,11 +116,11 @@ ms.locfileid: "36057548"
   
 5.  Erstellen Sie eine C#-Konsolenanwendung.  
   
-6.  Aus der **Projekt** klicken Sie im Menü **Verweis hinzufügen**.  
+6.  Von der **Projekt** , wählen Sie im Menü **Verweis hinzufügen**.  
   
-7.  In der **COM** Registerkarte **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll), und klicken Sie auf **OK**. Daraufhin werden die **Interop.SQLXMLBULKLOADLib** Assembly im Projekt erstellt.  
+7.  In der **COM** Registerkarte **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll), und klicken Sie auf **OK**. Sie sehen die **Interop.SQLXMLBULKLOADLib** Assembly im Projekt erstellt.  
   
-8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Update der **"ConnectionString"** -Eigenschaft und den Dateipfad, auf das Schema und die Datendateien.  
+8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Update der **"ConnectionString"** -Eigenschaft und den Dateipfad, der Schema- und Datendateien.  
   
     ```  
     [STAThread]  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313297"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -92,7 +92,7 @@ ms.locfileid: "36060257"
   
      Im Resultset, das im Abfrage-Designer angezeigt wird, wird jede Zeile räumlicher Daten als Einheit behandelt und in einem einzelnen Kartenelement gespeichert. Wenn beispielsweise in einer Zeile im Resultset mehrere Punkte definiert werden, gelten Anzeigeeigenschaften für alle Punkte in diesem Kartenelement.  
   
--   **Benutzerdefinierte Orte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen von benutzerdefinierten Speicherorten zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Benutzerdefinierte Orte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen benutzerdefinierter Orte zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Räumliche Daten in der Entwurfsansicht  
  In der Entwurfsansicht des Berichtsprozessors werden räumliche Beispieldaten angezeigt, um den Entwurf der Kartenebene zu erleichtern. Die angezeigten Daten hängen von der Verfügbarkeit der räumlichen Daten ab:  
@@ -267,7 +267,7 @@ ms.locfileid: "36060257"
   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Anpassen der Daten und der Anzeige einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Anpassen der Daten und die Anzeige einer Karte oder Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
@@ -277,6 +277,6 @@ ms.locfileid: "36060257"
   
  [Hinzufügen benutzerdefinierter Orte zu einer Zuordnung &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Problembehandlung bei Berichten: Ordnen Sie Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

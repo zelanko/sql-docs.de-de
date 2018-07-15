@@ -1,5 +1,5 @@
 ---
-title: AMO-Konzepte und-Objektmodell | Microsoft Docs
+title: AMO-Konzepte und-Objektmodell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310720"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO-Konzepte und -Objektmodell
-  Dieses Thema enthält eine Definition von Analysis Management Objects (AMO) Beziehung zwischen AMO und anderen Tools und Bibliotheken in der Architektur des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], und eine begriffserklärung aller wichtigen Objekte in AMO.  
+  Dieses Thema enthält eine Definition von Analysis Management Objects (AMO) Beziehung zwischen AMO und anderen Tools und Bibliotheken, die in der Architektur des bereitgestellten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], und eine begriffserklärung aller wichtigen Objekte in AMO.  
   
- AMO ist eine vollständige Auflistung von Verwaltungsklassen für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], die programmatisch unter dem Namespace von <xref:Microsoft.AnalysisServices> in einer verwalteten Umgebung verwendet werden können. Die Klassen sind in der Datei AnalysisServices.dll, die sich in der Regel Where befindet enthalten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die Dateien unter dem Ordner \100\SDK\Assemblies\\. Um die AMO-Klassen zu verwenden, schließen Sie einen Verweis auf diese Assembly in die Projekte ein.  
+ AMO ist eine vollständige Auflistung von Verwaltungsklassen für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], die programmatisch unter dem Namespace von <xref:Microsoft.AnalysisServices> in einer verwalteten Umgebung verwendet werden können. Die Klassen befinden sich in der Datei AnalysisServices.dll, die in der Regel, bei denen gefunden wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die Dateien, unter dem Ordner \100\SDK\Assemblies\\. Um die AMO-Klassen zu verwenden, schließen Sie einen Verweis auf diese Assembly in die Projekte ein.  
   
- Mithilfe von AMO können Sie zum Erstellen, ändern und Löschen von Objekten wie Cubes, Dimensionen, Miningstrukturen und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbanken; für alle diese Objekte können Aktionen können von der Anwendung in .NET Framework ausgeführt werden. Sie können auch die in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken gespeicherten Informationen verarbeiten und aktualisieren.  
+ Mit AMO können Sie zum Erstellen, ändern und Löschen von Objekten wie Cubes, Dimensionen, Miningstrukturen und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbanken, die für alle diese Objekte, Aktionen, die von Ihrer Anwendung in .NET Framework ausgeführt werden können. Sie können auch die in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken gespeicherten Informationen verarbeiten und aktualisieren.  
   
  Mit AMO können Sie die Daten nicht abfragen. Um die Daten abzufragen, verwenden Sie [Entwickeln mit ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
@@ -51,16 +51,16 @@ ms.locfileid: "36059930"
  [Automatisieren von administrativen Tasks mit AMO](#AutomatingAdministrativeTaskswithAMO)  
   
 ##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO in der Analysis Services-Architektur  
- Programmbedingt ist AMO nur für die Objektverwaltung bestimmt und nicht zum Abfragen von Daten. Wenn der Benutzer muss Abfrage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Daten von einer Clientanwendung, die Clientanwendung die zu verwendende [Entwickeln mit ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
+ Programmbedingt ist AMO nur für die Objektverwaltung bestimmt und nicht zum Abfragen von Daten. Wenn der Benutzer muss Abfrage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Daten von einer Clientanwendung, die die Clientanwendung verwenden soll [Entwickeln mit ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> AMO-Architektur  
- AMO ist eine vollständige Bibliothek von Klassen zur Verwaltung einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] von einer Clientanwendung in verwaltetem Code in .NET Framework, Version 2.0.  
+ AMO ist eine vollständige Bibliothek von Klassen, die Verwaltung einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] von einer Clientanwendung in verwaltetem Code in .NET Framework, Version 2.0.  
   
  Die AMO-Bibliothek der Klassen wurde als Hierarchie von Klassen entwickelt, wobei bestimmte Klassen vor anderen instanziiert werden müssen, damit Sie sie in Ihrem Code verwenden können. Es gibt auch Erweiterungsklassen, die jederzeit in Ihrem Code instanziiert werden können. Bevor Sie eine Erweiterungsklasse verwenden, werden Sie jedoch wahrscheinlich mindestens eine Hierarchieklasse instanziieren.  
   
  Die folgende Abbildung ist eine Ansicht der AMO-Hierarchie auf hoher Ebene, die die Hauptklassen enthält. Die Abbildung zeigt die Platzierung der Klassen unter ihren Containern und ihren Peers an. Eine <xref:Microsoft.AnalysisServices.Dimension> gehört zu einer <xref:Microsoft.AnalysisServices.Database> und einem <xref:Microsoft.AnalysisServices.Server> und kann zum selben Zeitpunkt erstellt werden wie eine <xref:Microsoft.AnalysisServices.DataSource> und eine <xref:Microsoft.AnalysisServices.MiningStructure>. Bestimmte Peerklassen müssen instanziiert werden, bevor Sie andere verwenden können. Beispielsweise müssen Sie eine Instanz von <xref:Microsoft.AnalysisServices.DataSource> erstellen, bevor Sie eine neue <xref:Microsoft.AnalysisServices.Dimension> oder <xref:Microsoft.AnalysisServices.MiningStructure> hinzufügen können.  
   
- ![AMO-Klassen allgemeiner Überblick](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "allgemeiner Überblick der AMO-Klassen")  
+ ![Allgemeiner Überblick der AMO-Klassen](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "allgemeiner Überblick der AMO-Klassen")  
   
  Ein *Hauptobjekt* ist eine Klasse, die ein vollständiges Objekt als gesamte Entität und nicht als Teil eines anderen Objekts darstellt. Hauptobjekte schließen <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> und <xref:Microsoft.AnalysisServices.MiningStructure> ein, da es sich hierbei um eigenständige Entitäten handelt. Jedoch ist ein <xref:Microsoft.AnalysisServices.Level> kein Hauptobjekt, da es ein Bestandteil einer <xref:Microsoft.AnalysisServices.Dimension> ist. Hauptobjekte können von anderen Objekten unabhängig erstellt, gelöscht, modifiziert oder verarbeitet werden. Nebenobjekte sind Objekte, die nur im Rahmen der Erstellung des übergeordneten Hauptobjekts erstellt werden können. Nebenobjekte werden in der Regel im Anschluss an eine Hauptobjekterstellung erstellt. Die Werte für Nebenobjekte sollten zum Zeitpunkt der Erstellung definiert werden, da es keinen standardmäßigen Erstellungsprozess für Nebenobjekte gibt.  
   

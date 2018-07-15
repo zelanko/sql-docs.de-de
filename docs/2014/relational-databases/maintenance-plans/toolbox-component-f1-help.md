@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300360"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
   In der**Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projekten verwendet werden können. Die **Toolbox** können Sie über das Menü **Ansicht** öffnen. Bei Bedarf können Sie das Fenster der Toolbox verankern. Eine verankerte **Toolbox** kann in geöffnetem Zustand fixiert werden oder für die Zeit, in der sie nicht verwendet wird, auf **Automatisch ausblenden** gesetzt werden.  
   
- **Toolbox** Symbole gezogen und abgelegt oder kopiert und eingefügt werden können in Code-Editoren oder auf Entwurfssicht innerhalb [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Toolbox** Symbole gezogen und abgelegt oder kopiert und eingefügt werden können in Code-Editoren oder auf Flächen der Entwurfssicht in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Verwenden der Toolbox  
  Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen (**+**) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen (**-**) neben ihrem Namen.  

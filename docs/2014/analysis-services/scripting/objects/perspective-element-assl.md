@@ -1,5 +1,5 @@
 ---
-title: Perspective-Element (ASSL) | Microsoft Docs
+title: Perspective-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Perspective element
 ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 395aa7ab1495614a380436311fa73836aa8c2316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b006d7d48c072cb98a68e42c04cf75c4aaa9e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297400"
 ---
 # <a name="perspective-element-assl"></a>Perspective-Element (ASSL)
-  Definiert Details für eine Perspektive eines eine [Cube](cube-element-assl.md) Element.  
+  Details für eine Perspektive definiert eine [Cube](cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,12 +71,12 @@ ms.locfileid: "36056099"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Perspektiven](../collections/perspectives-element-assl.md)|  
-|Untergeordnete Elemente|[Actions](../collections/actions-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Calculations](../collections/calculations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [Name](../properties/name-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
+|Untergeordnete Elemente|[Aktionen](../collections/actions-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [Berechnungen](../collections/calculations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DefaultMeasure](measure-element-assl.md), [ Beschreibung](../properties/description-element-assl.md), [Dimensionen](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [ MeasureGroups](../collections/groups-element-assl.md), [Namen](../properties/name-element-assl.md), [Übersetzungen](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Eine Perspektive bietet eine Untermenge eines Cubes, indem sie die einzubeziehenden Dimensionen, Hierarchien, Attribute und anderen Details auswählt und einen einzubeziehenden Datenslice definiert. Eine Perspektive gehört einem einzelnen Cube. Objekte innerhalb einer Perspektive können nicht überschrieben oder hinzugefügt werden; alle Dimensionen, Hierarchien und anderen Details müssen im zugrunde liegenden Cube existieren. Es ist nicht möglich, Objekte einzuschließen und sie als nicht sichtbar zu markieren.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Perspective>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Perspective>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

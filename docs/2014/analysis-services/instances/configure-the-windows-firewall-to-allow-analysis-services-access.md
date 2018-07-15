@@ -1,5 +1,5 @@
 ---
-title: Die Windows-Firewall für den Analysis Services-Zugriff konfigurieren | Microsoft Docs
+title: Konfigurieren der Windows-Firewall, damit der Analysis Services-Zugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 076d8fdde6d26872ba1323b0091b4c5060a9dd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282256"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
   Ein unverzichtbarer erster Schritt beim Verfügbarmachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk besteht darin zu bestimmen, ob die Blockierung von Ports in einer Firewall aufgehoben werden muss. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
@@ -40,7 +40,7 @@ ms.locfileid: "36060178"
   
 -   Bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen, die auf virtuellen Computern in Windows Azure ausgeführt werden, führen Sie andere Schritte zum Konfigurieren des Serverzugriffs aus. Weitere Informationen finden Sie unter [SQL Server Business Intelligence auf virtuellen Computern in Windows Azure](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
- Obwohl die Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lauscht an TCP-Port 2383, Sie können den Server konfigurieren zum Lauschen an einem anderen festen Port Herstellen einer Verbindung mit dem Server im folgenden Format: \<Servername >:\<Portnumber >.  
+ Obwohl die Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP-Port 2383 lauscht, Sie können konfigurieren, der Server zum Lauschen an einem anderen festen Port, mit dem Server im folgenden Format: \<Servername >:\<Portnumber >.  
   
  Von einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz kann jeweils nur ein TCP-Port verwendet werden. Auf Computern, die über mehrere Netzwerkkarten oder mehrere IP-Adressen verfügen, lauscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bei allen IP-Adressen, die dem Computer zugewiesen sind oder ihm als Alias zur Verfügung stehen, an einem TCP-Port. Wenn Anforderungen zum Lauschen an mehreren Ports vorliegen, konfigurieren Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für den HTTP-Zugriff. Anschließend können Sie mehrere HTTP-Endpunkte für beliebige Ports einrichten. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36060178"
 ##  <a name="bkmk_checkport"></a> Überprüfen der für Analysis Services verwendeten Port- und Firewalleinstellungen  
  Unter Microsoft Windows-Betriebssystemen, die von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden, ist die Windows Firewall standardmäßig aktiviert und blockiert Remoteverbindungen. Sie müssen manuell einen Port in der Firewall öffnen, um eingehende Anforderungen für Analysis Services zuzulassen. Das SQL Server-Setup führt diesen Schritt nicht aus.  
   
- Porteinstellungen werden in der Datei msmdsrv.ini und in SQL Server Management Studio auf der Seite Allgemeine Eigenschaften einer Analysis Services-Instanz angegeben. Wenn `Port` festgelegt ist eine positive ganze Zahl, überwacht der Dienst wird auf einem festen Port. Wenn `Port` festgelegt ist, 0, der Dienst ist empfangsbereit Port 2383, wenn es sich um die Standardinstanz ist oder einen dynamisch zugewiesenen Port, wenn es sich um eine benannte Instanz handelt.  
+ Porteinstellungen werden in der Datei msmdsrv.ini und in SQL Server Management Studio auf der Seite Allgemeine Eigenschaften einer Analysis Services-Instanz angegeben. Wenn `Port` festgelegt ist eine positive ganze Zahl, der Dienst einen festen Port lauscht. Wenn `Port` festgelegt ist 0, überwacht der Dienst ist auf Port 2383, wenn es sich um die Standardinstanz ist oder auf einem dynamisch zugewiesenen Port, wenn es sich um eine benannte Instanz handelt.  
   
  Dynamische Portzuweisungen werden nur von benannten Instanzen verwendet. Der `MSOLAP$InstanceName`-Dienst ermittelt beim Start, welcher Port verwendet werden soll. Sie können die aktuell von einer benannten Instanz verwendete Portnummer auf folgende Weise ermitteln:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36060178"
   
 3.  Klicken Sie in der Regel des Typs, auf `Port` , und klicken Sie dann auf **Weiter**.  
   
-4.  Wählen Sie unter Protokoll und Ports **TCP** und geben Sie dann `2383` in **bestimmte lokale Ports**.  
+4.  Wählen Sie im Protokoll und Ports **TCP** und geben Sie dann `2383` in **bestimmte lokale Ports**.  
   
 5.  Klicken Sie unter „Aktion“ auf **Verbindung zulassen** , und klicken Sie anschließend auf **Weiter**.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "36060178"
   
  Wählen Sie einen der folgenden Ansätze, um den Remotezugriff auf eine benannte Instanz von Analysis Services zu aktivieren:  
   
--   Verwenden Sie dynamische Portzuweisungen und den SQL Server-Browser-Dienst. Heben Sie die Blockierung für den vom SQL Server-Browser-Dienst verwendeten Port in der Windows-Firewall auf. Herstellen einer Verbindung mit dem Server im folgenden Format: \<Servername >\\< Instancename\>.  
+-   Verwenden Sie dynamische Portzuweisungen und den SQL Server-Browser-Dienst. Heben Sie die Blockierung für den vom SQL Server-Browser-Dienst verwendeten Port in der Windows-Firewall auf. Verbinden mit dem Server im folgenden Format: \<Servername >\\< Instancename\>.  
   
--   Verwenden Sie gemeinsam einen festen Port und den SQL Server-Browser-Dienst. Mit diesem Ansatz können Sie eine Verbindung mit diesem Format herstellen: \<Servername >\\< Instancename\>, bei der dynamischen Port-Zuordnung identisch, außer dass in diesem Fall wird der Server auf einem festen Port überwacht. In diesem Szenario stellt der SQL Server-Browser-Dienst die Namensauflösung für die Analysis Services-Instanz bereit, die den festen Port überwacht. Um diesen Ansatz zu verwenden, konfigurieren Sie den Server für die Überwachung eines festen Ports. Heben Sie anschließend den Zugriff für diesen Port sowie für den vom SQL Server-Browser-Dienst verwendeten Port auf.  
+-   Verwenden Sie gemeinsam einen festen Port und den SQL Server-Browser-Dienst. Diesen Ansatz können Sie eine Verbindung mit diesem Format herstellen: \<Servername >\\< Instancename\>, identisch mit dem Ansatz der dynamischen portzuweisung, nur dass in diesem Fall der Server einen festen Port überwacht. In diesem Szenario stellt der SQL Server-Browser-Dienst die Namensauflösung für die Analysis Services-Instanz bereit, die den festen Port überwacht. Um diesen Ansatz zu verwenden, konfigurieren Sie den Server für die Überwachung eines festen Ports. Heben Sie anschließend den Zugriff für diesen Port sowie für den vom SQL Server-Browser-Dienst verwendeten Port auf.  
   
  Der SQL Server-Browser-Dienst wird nur mit benannten Instanzen verwendet, niemals mit der Standardinstanz. Der Dienst wird automatisch installiert und aktiviert, wenn Sie eine beliebige SQL Server-Funktion als benannte Instanz installieren. Wenn Sie einen Ansatz wählen, der den SQL Server-Browser-Dienst erfordert, achten Sie darauf, dass dieser auf dem Server aktiviert und gestartet bleibt.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36060178"
   
 3.  Klicken Sie in der Regel des Typs, auf `Port` , und klicken Sie dann auf **Weiter**.  
   
-4.  Wählen Sie unter Protokoll und Ports **TCP** und geben Sie dann `2382` in **bestimmte lokale Ports**.  
+4.  Wählen Sie im Protokoll und Ports **TCP** und geben Sie dann `2382` in **bestimmte lokale Ports**.  
   
 5.  Klicken Sie unter „Aktion“ auf **Verbindung zulassen** , und klicken Sie anschließend auf **Weiter**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36060178"
   
 7.  Geben Sie im Feld Name einen aussagekräftigen Namen für diese Regel (z. B. `SQL Server Browser Service (tcp-in) 2382`), und klicken Sie dann auf **Fertig stellen**.  
   
-8.  Um sicherzustellen, dass Remoteverbindungen aktiviert sind, öffnen Sie SQL Server Management Studio oder Excel auf einem anderen Computer aus, und Verbinden mit Analysis Services, indem Sie den Netzwerknamen des Servers und den Instanznamen im folgenden Format angeben: \<Servername > \\< Instancename\>. Beispielsweise lautet auf einem Server mit dem Namen **AW-SRV01** mit einer benannten Instanz von **Finanzen**der Servername **AW-SRV01\Finanzen**.  
+8.  Um sicherzustellen, dass Remoteverbindungen aktiviert sind, öffnen Sie SQL Server Management Studio oder Excel auf einem anderen Computer aus, und Verbinden mit Analysis Services, indem Sie den Netzwerknamen des Servers und den Instanznamen in diesem Format angeben: \<Servername > \\< Instancename\>. Beispielsweise lautet auf einem Server mit dem Namen **AW-SRV01** mit einer benannten Instanz von **Finanzen**der Servername **AW-SRV01\Finanzen**.  
   
  **Option 2: Verwenden eines festen Ports für eine benannte Instanz**  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36060178"
   
  Beachten Sie, dass durch die Verwendung eines festen Ports die Syntax der Verbindung für die Standardinstanz dahingehend geändert wird, dass Sie die Portnummer an den Servernamen anfügen müssen. Wenn Sie beispielsweise eine Verbindung mit einer lokalen Standardinstanz von Analysis Services herstellen möchten, die den Port 54321 in SQL Server Management Studio überwacht, müssen Sie in Management Studio im Dialogfeld Verbindung mit Server herstellen als Servernamen "localhost:54321" eingeben.  
   
- Wenn Sie eine benannte Instanz verwenden, können Sie einen festen Port ohne Änderungen zuweisen, wie Sie den Namen des Servers angeben (insbesondere können Sie \<Servername\Instanzname > für die Verbindung mit einer benannten Instanz auf einem festen Port lauscht). Dies funktioniert nur, wenn der SQL Server-Browser-Dienst ausgeführt wird und die Blockierung des Ports aufgehoben wurde, der überwacht wird. SQL Server-Browser-Dienst bietet eine Umleitung zum festen Port basierend auf \<Servername\Instanzname >. Solange Sie Ports sowohl für den SQL Server-Browserdienst als auch für die benannte Instanz von Analysis Services öffnen, die einen festen Port überwacht, löst der SQL Server-Browserdienst die Verbindung zu einer benannten Instanz auf.  
+ Wenn Sie eine benannte Instanz verwenden, können Sie einen festen Port ohne Änderungen zuweisen, wie Sie den Namen des Servers angeben (insbesondere können Sie \<Servername\Instanzname > für die Verbindung mit einer benannten Instanz auf einem festen Port lauscht). Dies funktioniert nur, wenn der SQL Server-Browser-Dienst ausgeführt wird und die Blockierung des Ports aufgehoben wurde, der überwacht wird. SQL Server-Browser-Dienst ermöglicht die Umleitung zum festen Port basierend auf \<Servername\Instanzname >. Solange Sie Ports sowohl für den SQL Server-Browserdienst als auch für die benannte Instanz von Analysis Services öffnen, die einen festen Port überwacht, löst der SQL Server-Browserdienst die Verbindung zu einer benannten Instanz auf.  
   
 1.  Ermitteln Sie einen verfügbaren TCP/IP-Port, der verwendet werden soll.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36060178"
   
 4.  Konfigurieren Sie die Windows-Firewall so, dass die Blockierung des angegebenen TCP-Ports aufgehoben wird. Oder, wenn Sie einen festen Port für eine benannte Instanz verwenden, heben Sie die Blockierung des für die Instanz angegebenen TCP-Ports und des TCP-Ports 2382 für den SQL Server-Browserdienst auf.  
   
-5.  Führen Sie eine Überprüfung durch, indem Sie eine lokale Verbindung herstellen (in Management Studio) und anschließend eine Remoteverbindung von einer Clientanwendung auf einem anderen Computer herstellen. Verwendung von Management Studio, Herstellen einer Verbindung mit einer Analysis Services-Standardinstanz durch Angabe eines Servernamens in folgendem Format: \<Servername >:\<Portnumber >. Geben Sie für eine benannte Instanz den Servernamen als \<Servername >\\< Instancename\>.  
+5.  Führen Sie eine Überprüfung durch, indem Sie eine lokale Verbindung herstellen (in Management Studio) und anschließend eine Remoteverbindung von einer Clientanwendung auf einem anderen Computer herstellen. Um Management Studio verwenden möchten, Herstellen einer Verbindung mit einer Standardinstanz von Analysis Services durch einen Servernamen in folgendem Format angeben: \<Servername >:\<Portnumber >. Geben Sie für eine benannte Instanz den Servernamen als \<Servername >\\< Instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Portkonfiguration für einen Analysis Services-Cluster  
  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Failovercluster lauscht immer an TCP-Port 2383, unabhängig davon, ob er als Standardinstanz oder benannte Instanz installiert wurde. Bei der Installation in einem Windows-Failovercluster verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keine dynamischen Portzuweisungen. Achten Sie darauf, TCP 2383 auf jedem Knoten zu öffnen, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Cluster ausgeführt wird. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Clustern finden Sie unter [Gewusst wie: Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
@@ -240,7 +240,6 @@ ms.locfileid: "36060178"
   [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  
   [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- 
-  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+ [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

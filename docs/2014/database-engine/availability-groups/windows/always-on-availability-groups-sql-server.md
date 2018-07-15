@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - secondary replicas, see Availability Groups [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 32
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a1591695b5676e4c37e7cd2a38b6c95c3a84ef75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 178df2f7de27a124eab42b472258c5b1b5d438d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314520"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On-Verfügbarkeitsgruppen (SQL Server)
   Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eingeführt und maximieren die Verfügbarkeit einer Gruppe von Benutzerdatenbanken für ein Unternehmen. Eine *Verfügbarkeitsgruppe* unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet), die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken mit Lese-/Schreibzugriff und einen bis acht Sätze entsprechender sekundärer Datenbanken. Optional können sekundäre Datenbanken für schreibgeschützten Zugriff und/oder einige Sicherungsvorgänge verfügbar gemacht werden.  
@@ -39,7 +38,7 @@ ms.locfileid: "36061219"
 -   Unterstützt bis zu neun Verfügbarkeitsreplikate. Ein *Verfügbarkeitsreplikat* ist eine Instanziierung einer Verfügbarkeitsgruppe, die von einer bestimmten Instanz von SQL Server gehostet wird und eine lokale Kopie jeder Verfügbarkeitsdatenbank beibehält, die zur Verfügbarkeitsgruppe gehört. Jede Verfügbarkeitsgruppe unterstützt ein primäres Replikat und bis zu acht sekundäre Replikate. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Jedes Verfügbarkeitsreplikat muss sich in einem anderen Knoten eines einzelnen WSFC-Clusters (Windows Server-Failoverclustering) befinden. Weitere Informationen zu Voraussetzungen, Einschränkungen und Empfehlungen für Verfügbarkeitsgruppen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen; SqlServer; ](prereqs-restrictions-recommendations-always-on-availability.md).  
+    >  Jedes Verfügbarkeitsreplikat muss sich in einem anderen Knoten eines einzelnen WSFC-Clusters (Windows Server-Failoverclustering) befinden. Weitere Informationen zu Voraussetzungen, Einschränkungen und Empfehlungen für Verfügbarkeitsgruppen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On Availability Groups; SqlServer ](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Unterstützt die folgenden alternativen Verfügbarkeitsmodi:  
   
@@ -59,33 +58,33 @@ ms.locfileid: "36061219"
   
      Durch die Verwendung aktiver sekundärer Replikate lassen sich durch die bessere Ressourcennutzung sekundärer Hardware die IT-Effizienz erhöhen und die Kosten reduzieren. Außerdem trägt das Auslagern reiner Lesevorgänge und Sicherungsaufträge auf sekundäre Replikate dazu bei, die Leistung auf dem primären Replikat zu verbessern.  
   
--   Unterstützt einen Verfügbarkeitsgruppenlistener für jede Verfügbarkeitsgruppe. Ein *Verfügbarkeitsgruppenlistener* ist ein Servername, mit dem Clients eine Verbindung herstellen können, um auf eine Datenbank in einem primären oder sekundären Replikat einer AlwaysOn-Verfügbarkeitsgruppe zuzugreifen. Verfügbarkeitsgruppenlistener leiten eingehende Verbindungen an das primäre Replikat oder ein schreibgeschütztes sekundäres Replikat weiter. Der Listener ermöglicht ein schnelles Anwendungsfailover, nachdem für eine Verfügbarkeitsgruppe ein Failover ausgeführt wurde. Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover; SqlServer; ](../../listeners-client-connectivity-application-failover.md).  
+-   Unterstützt einen Verfügbarkeitsgruppenlistener für jede Verfügbarkeitsgruppe. Ein *Verfügbarkeitsgruppenlistener* ist ein Servername, mit dem Clients eine Verbindung herstellen können, um auf eine Datenbank in einem primären oder sekundären Replikat einer AlwaysOn-Verfügbarkeitsgruppe zuzugreifen. Verfügbarkeitsgruppenlistener leiten eingehende Verbindungen an das primäre Replikat oder ein schreibgeschütztes sekundäres Replikat weiter. Der Listener ermöglicht ein schnelles Anwendungsfailover, nachdem für eine Verfügbarkeitsgruppe ein Failover ausgeführt wurde. Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover; SqlServer ](../../listeners-client-connectivity-application-failover.md).  
   
 -   Unterstützt eine flexible Failoverrichtlinie, um größere Kontrolle über das Failover von Verfügbarkeitsgruppen zu erlangen. Weitere Informationen finden Sie unter [Failover und Failovermodi; Always On-Verfügbarkeitsgruppen; ](failover-and-failover-modes-always-on-availability-groups.md).  
   
--   Unterstützt die automatische Seitenreparatur als Schutz vor Seitenbeschädigungen. Weitere Informationen finden Sie unter [automatische Seitenreparatur &#40;für Verfügbarkeitsgruppen und Datenbankspiegelung;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+-   Unterstützt die automatische Seitenreparatur als Schutz vor Seitenbeschädigungen. Weitere Informationen finden Sie unter [automatische Seitenreparatur &#40;für Verfügbarkeitsgruppen und Datenbankspiegelung](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Unterstützt Verschlüsselung und Komprimierung, die einen sicheren, leistungsstarken Transport ermöglichen.  
   
 -   Stellt einen integrierten Satz von Tools bereit, um die Bereitstellung und Verwaltung von Verfügbarkeitsgruppen zu erleichtern. Dazu gehören:  
   
-    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] -DDL-Anweisungen zum Erstellen und Verwalten von Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Übersicht von Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppe; SqlServer; ](transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] -DDL-Anweisungen zum Erstellen und Verwalten von Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Übersicht über Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppe, SqlServer ](transact-sql-statements-for-always-on-availability-groups.md).  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Tools:  
   
-        -   Mit dem [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] wird eine Verfügbarkeitsgruppe erstellt und verwaltet. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [verwenden Sie die neue Gruppe im Dialogfeld Verfügbarkeit; SQL Server Management Studio; ](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
+        -   Mit dem [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] wird eine Verfügbarkeitsgruppe erstellt und verwaltet. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [verwenden die neuen Dialogfelds Verfügbarkeitsgruppe; SQL Server Management Studio an; ](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
         -   Der [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] fügt einer vorhandenen Verfügbarkeitsgruppe eine oder mehrere primäre Datenbanken hinzu. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server)](availability-group-add-database-to-group-wizard.md).  
   
-        -   Der [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] fügt einer vorhandenen Verfügbarkeitsgruppe ein oder mehrere sekundäre Replikate hinzu. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [verwenden Sie das Hinzufügen von Replikaten zu Verfügbarkeitsgruppen-Assistenten; SQL Server Management Studio; ](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   Der [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] fügt einer vorhandenen Verfügbarkeitsgruppe ein oder mehrere sekundäre Replikate hinzu. In einigen Umgebungen kann dieser Assistent auch die sekundären Datenbanken automatisch vorbereiten und die Datensynchronisierung für jede von ihnen starten. Weitere Informationen finden Sie unter [verwenden Sie das Hinzufügen von Replikaten zu Verfügbarkeitsgruppen-Assistenten; SQL Server Management Studio an; ](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   Der [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] initiiert ein manuelles Failover für eine Verfügbarkeitsgruppe. Abhängig von der Konfiguration und dem Zustand des sekundären Replikats, das Sie als Failoverziel angeben, kann der Assistent entweder ein geplantes oder ein erzwungenes manuelles Failover ausführen. Weitere Informationen finden Sie unter [verwenden Sie die Verfügbarkeit Assistenten für Failover; SQL Server Management Studio; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+        -   Der [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] initiiert ein manuelles Failover für eine Verfügbarkeitsgruppe. Abhängig von der Konfiguration und dem Zustand des sekundären Replikats, das Sie als Failoverziel angeben, kann der Assistent entweder ein geplantes oder ein erzwungenes manuelles Failover ausführen. Weitere Informationen finden Sie unter [verwenden Sie den Fehler über Verfügbarkeitsgruppen-Assistenten; SQL Server Management Studio an; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   Die [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] überwacht AlwaysOn-Verfügbarkeitsgruppen, verfügbarkeitsreplikate und verfügbarkeitsdatenbanken und wertet Ergebnisse für AlwaysOn-Richtlinien. Weitere Informationen finden Sie unter [verwenden das AlwaysOn-Dashboard; SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   Die [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] überwacht AlwaysOn-Verfügbarkeitsgruppen, verfügbarkeitsreplikate und verfügbarkeitsdatenbanken und wertet Ergebnisse für AlwaysOn-Richtlinien. Weitere Informationen finden Sie unter [verwenden das AlwaysOn-Dashboard; SQL Server Management Studio an; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   Der Detailbereich im Objekt-Explorer zeigt grundlegende Informationen zu vorhandenen Verfügbarkeitsgruppen an. Weitere Informationen finden Sie unter [verwenden der Details zum Objekt-Explorer zum Monitor Availability Group; SQL Server Management Studio; ](use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   Der Detailbereich im Objekt-Explorer zeigt grundlegende Informationen zu vorhandenen Verfügbarkeitsgruppen an. Weitere Informationen finden Sie unter [verwenden Sie die Details zum Objekt-Explorer mit der Verfügbarkeitsgruppe "Monitor"; SQL Server Management Studio an; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
-    -   PowerShell-Cmdlets. Weitere Informationen finden Sie unter [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen; SQL Server; ](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
+    -   PowerShell-Cmdlets. Weitere Informationen finden Sie unter [Übersicht über die PowerShell-Cmdlets für Always On Availability Groups; Bei SQL Server; ](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Verfügbarkeitsgruppe  
@@ -113,14 +112,14 @@ ms.locfileid: "36061219"
  Ein Servername, mit dem Clients eine Verbindung herstellen können, um auf eine Datenbank in einem primären oder sekundären Replikat einer Always On-Verfügbarkeitsgruppe zuzugreifen. Verfügbarkeitsgruppenlistener leiten eingehende Verbindungen an das primäre Replikat oder ein schreibgeschütztes sekundäres Replikat weiter.  
   
 > [!NOTE]  
->  Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen; SQL Server; ](overview-of-always-on-availability-groups-sql-server.md).  
+>  Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen; Bei SQL Server; ](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="Interoperability"></a> Interoperabilität und Koexistenz mit anderen Datenbankmodul-Funktionen  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] können mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet werden:  
   
--   [Über Change Data Capture; SqlServer;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+-   [Über Change Data Capture; SqlServer](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
--   [Informationen zur Änderungsnachverfolgung; SQL Server;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
+-   [Informationen zur Änderungsnachverfolgung; Bei SQL Server;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
 -   [Eigenständige Datenbanken](../../../relational-databases/databases/contained-databases.md)  
   
@@ -145,17 +144,17 @@ ms.locfileid: "36061219"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Informationen zu Einschränkungen bei der Verwendung anderer Funktionen mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität; SqlServer; ](always-on-availability-groups-interoperability-sql-server.md).  
+>  Informationen zu Einschränkungen bei der Verwendung anderer Funktionen mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen: Interoperabilität SqlServer ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Erste Schritte mit Always On-Verfügbarkeitsgruppen; SqlServer;](getting-started-with-always-on-availability-groups-sql-server.md)  
+-   [Erste Schritte mit Always On-Verfügbarkeitsgruppen; SqlServer](getting-started-with-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Blogs:**  
   
-     [SQLServer AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL-Server immer ' aus, On-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   
      
   [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
@@ -164,7 +163,7 @@ ms.locfileid: "36061219"
   
      [Microsoft SQL Server Codename „Denali“ Always On-Reihe, Teil 1:Introducing the Next Generation High Availability Solution (Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Codename "Denali" Always On Series, Teil 2: Erstellen einer Mission-Critical High Availability-Lösung, die mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn Series, Teil 2: Erstellen einer Lösung für unternehmenskritische hohe Verfügbarkeit mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepaper:**  
   
@@ -173,13 +172,13 @@ ms.locfileid: "36061219"
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen; SqlServer;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über Always On-Verfügbarkeitsgruppen; SqlServer](overview-of-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Konfiguration einer Serverinstanz für Always On-Verfügbarkeitsgruppen SqlServer;](always-on-availability-groups-sql-server.md)   
- [Erstellung und Konfiguration von Verfügbarkeitsgruppen; SqlServer;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Verwaltung einer verfügbarkeitsgruppe; SqlServer;](administration-of-an-availability-group-sql-server.md)   
+ [Konfiguration einer Serverinstanz für Always On-Verfügbarkeitsgruppen SqlServer](always-on-availability-groups-sql-server.md)   
+ [Erstellung und Konfiguration von Verfügbarkeitsgruppen; SqlServer](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Die Verwaltung einer verfügbarkeitsgruppe; SqlServer](administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen; SqlServer;](transact-sql-statements-for-always-on-availability-groups.md)   
- [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen; SqlServer;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen; SqlServer](transact-sql-statements-for-always-on-availability-groups.md)   
+ [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen; SqlServer](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
