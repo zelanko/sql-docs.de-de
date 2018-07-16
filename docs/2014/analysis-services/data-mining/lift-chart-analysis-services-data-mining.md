@@ -1,5 +1,5 @@
 ---
-title: Prognosegütediagramm (Analysis Services – Datamining) | Microsoft Docs
+title: Prognosegütediagramm (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301250"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
-  Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form eines eine *lift* Ergebnis. Durch den Vergleich der Liftergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle können Sie bestimmen, welches Modell am besten geeignet ist, und wie viele Fälle im Dataset prozentual von der Anwendung der Modellvorhersagen profitieren würden.  
+  Ein **Prognosegütediagramm** grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form einer *lift* Bewertung. Durch den Vergleich der Liftergebnisse für verschiedene Teile des Datasets und unterschiedliche Modelle können Sie bestimmen, welches Modell am besten geeignet ist, und wie viele Fälle im Dataset prozentual von der Anwendung der Modellvorhersagen profitieren würden.  
   
  Mit einem Prognosegütediagramm können Sie die Genauigkeit der Vorhersagen für mehrere Modelle vergleichen, die über das gleiche vorhersagbare Attribut verfügen. Sie können auch die Genauigkeit einer Vorhersage entweder für ein einzelnes Ergebnis (ein einzelner Wert des vorhersagbaren Attributs) oder für alle Ergebnisse (alle Werte des angegebenen Attributs) bewerten.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36160333"
   
  Das Diagramm enthält mehrere Modelle, die auf den gleichen Daten basieren. Eines dieser Modelle wurde an bestimmte Zielkunden angepasst. Sie können ein Modell anpassen, indem Sie Filter für die Daten hinzufügen, mit denen der Modus trainiert wurde. Dieser Filter schränkt die Fälle ein, die sowohl für das Training als auch die Evaluierung für Kunden unter 30 Jahre verwendet werden. Ein Effekt der Filterung besteht darin, dass das grundlegende und das gefilterte Modell unterschiedliche Datasets verwenden. Daher unterscheidet sich auch die Anzahl der Fälle, die im Prognosegütediagramm zur Auswertung verwendet wurden. Dieser Punkt muss bei der Interpretation der Vorhersageergebnisse und anderer statistischer Daten berücksichtigt werden.  
   
- ![Lift Diagramm mit zwei Modellen](../media/newliftchart-tm30-30.gif "Lift Diagramm mit zwei Modellen")  
+ ![Lift Diagramm mit zwei Modellen](../media/newliftchart-tm30-30.gif "per Lift & Diagramm mit zwei Modellen")  
   
  Die X-Achse des Diagramms stellt den Prozentsatz des Testdatasets dar, das zum Vergleichen der Vorhersagen verwendet wird. Die Y-Achse des Diagramms stellt den Prozentsatz vorhergesagter Werte dar.  
   

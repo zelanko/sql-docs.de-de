@@ -1,5 +1,5 @@
 ---
-title: Speichern einer Kopie eines Pakets | Microsoft Docs
+title: Speichern einer Kopie eines Pakets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1a550e97bcb4cb14c56492edfa8cdd333599ecb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94439ee54ad468af77b89557fa63ad9c108d4f63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314160"
 ---
 # <a name="save-a-copy-of-a-package"></a>Speichern einer Kopie eines Pakets
   In diesem Verfahren wird beschrieben, wie Sie eine Kopie eines Pakets im Dateisystem, im Paketspeicher oder in der **msdb** -Datenbank in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern. Wenn Sie einen Speicherort zum Speichern der Paketkopie angeben, können Sie auch den Namen des Pakets aktualisieren.  
@@ -68,7 +68,7 @@ ms.locfileid: "36149396"
 9. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Konfigurieren der Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)  
   
   

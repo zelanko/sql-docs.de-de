@@ -1,5 +1,5 @@
 ---
-title: Cube-Speicher (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Cube-Speicher (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0e586c404575c0e7fe3b8b04641d8dba06b0f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295930"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cubespeicherung (Analysis Services – Mehrdimensionale Daten)
   Der Speicher kann nur Cubemetadaten oder alle Quelldaten aus der Faktentabelle sowie die Aggregationen enthalten, die durch Dimensionen im Bezug auf die Measuregruppe definiert sind. Die gespeicherte Datenmenge hängt vom ausgewählten Speichermodus und der Anzahl der Aggregationen ab. Die Abfrageleistung ist abhängig vom Umfang der direkt gespeicherten Daten. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] minimiert den erforderlichen Speicherplatz für Cubedaten und Aggregationen mithilfe verschiedener Verfahren:  
@@ -45,7 +45,7 @@ ms.locfileid: "36163027"
   
  Sie legen die Datenquelle für eine Partition fest, wenn Sie sie erstellen. Sie können die Datenquelle für eine vorhandene Partition auch ändern. Eine Measuregruppe kann vertikal oder horizontal partitioniert werden. Jede Partition in einer vertikal partitionierten Measuregruppe basiert auf der gefilterten Sicht einer einzelnen Quelltabelle. Wenn eine Measuregruppe beispielsweise auf einer einzelnen Tabelle mit mehreren Jahren an Daten basiert, können Sie eine separate Partition für die Daten der einzelnen Jahre erstellen. Im Gegensatz dazu basiert jede Partition in einer horizontal partitionierten Measuregruppe auf einer separaten Tabelle. Horizontale Partitionen sollten Sie verwenden, wenn die Datenquelle die Daten der einzelnen Jahre jeweils in einer separaten Tabelle speichert.  
   
- Partitionen werden zunächst mit denselben Speichereinstellungen erstellt wie die Measuregruppe, in der sie erstellt werden. Die Speichereinstellungen bestimmen, ob die Detail- und Aggregationsdaten im mehrdimensionalen Format auf der Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], im relationalen Format auf dem Quellserver oder in einer Kombination aus beidem gespeichert werden. Speichereinstellungen bestimmen außerdem, ob proaktives Zwischenspeichern verwendet wird, um automatisch an die mehrdimensionalen Daten auf quelldatenänderungen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Partitionen werden zunächst mit denselben Speichereinstellungen erstellt wie die Measuregruppe, in der sie erstellt werden. Die Speichereinstellungen bestimmen, ob die Detail- und Aggregationsdaten im mehrdimensionalen Format auf der Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], im relationalen Format auf dem Quellserver oder in einer Kombination aus beidem gespeichert werden. Speichereinstellungen bestimmen außerdem, ob proaktives Zwischenspeichern verwendet wird, um die Quelldaten ändern, die auf mehrdimensionalen Daten automatisch zu verarbeiten. die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Die Partitionen eines Cubes sind für den Benutzer nicht sichtbar. Allerdings kann die Auswahl von Speichereinstellungen für verschiedene Partitionen sich auf die Unmittelbarkeit von Daten, den erforderlichen Speicherplatz und die Abfrageleistung auswirken. Partitionen können auf mehreren Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert werden. Dies bietet bei der Cubespeicherung eine Art Clustering und verteilt die Arbeitsauslastung auf die Server mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Weitere Informationen finden Sie unter [Partition Speichermodi und Verarbeitung](partitions-partition-storage-modes-and-processing.md), [Remotepartitionen](partitions-remote-partitions.md), und [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41; ](partitions-analysis-services-multidimensional-data.md).  
   

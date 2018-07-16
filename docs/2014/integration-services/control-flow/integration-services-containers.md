@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283626"
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
   Bei Containern handelt es sich um Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , die für Pakete, Dienste sowie Tasks eine Struktur bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  
@@ -61,7 +61,7 @@ ms.locfileid: "36163184"
 |`DisableEventHandlers`|Ein boolescher Wert, der angibt, ob der Ereignishandler mit dem ausgeführten Container verbunden ist. Der Standardwert für diese Eigenschaft ist `False`.|  
 |`FailPackageOnFailure`|Ein boolescher Wert, der angibt, ob ein Paketfehler auftritt, wenn der Container fehlerhaft ist. Der Standardwert für diese Eigenschaft ist `False`.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>ausgewertet wird.|  
 |`FailParentOnFailure`|Ein boolescher Wert, der angibt, ob ein Fehler beim übergeordneten Container auftritt, wenn der Container fehlerhaft ist. Der Standardwert für diese Eigenschaft ist `False`.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>ausgewertet wird.|  
-|`ForcedExecutionValue`|Wenn `ForceExecutionValue` festgelegt ist, um `True`, das Objekt, das den optionalen Ausführungswert für den Container enthält. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>ausgewertet wird.|  
+|`ForcedExecutionValue`|Wenn `ForceExecutionValue` nastaven NA hodnotu `True`, das Objekt, das den optionalen Ausführungswert für den Container enthält. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>ausgewertet wird.|  
 |`ForcedExecutionValueType`|Der Datentyp des `ForcedExecutionValue`. Der Standardwert dieser Eigenschaft ist `Int32`.|  
 |`ForceExecutionResult`|Ein Wert, der das Ergebnis der erzwungenen Ausführung des Pakets oder Containers angibt. Die Werte sind `None`, `Success`, `Failure`, und `Completion`. Der Standardwert für diese Eigenschaft ist `None`.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>ausgewertet wird.|  
 |`ForceExecutionValue`|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>ausgewertet wird.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36163184"
  Container enthalten Ablaufsteuerungen, die aus ausführbaren Dateien und Rangfolgeneinschränkungen bestehen und Ereignishandler und Variablen verwenden können. Der Taskhostcontainer ist eine Ausnahme, da er einen einzelnen Task kapselt und deshalb keine Rangfolgeneinschränkungen verwendet.  
   
 ### <a name="executables"></a>Ausführbare Dateien  
- Ausführbare Dateien beziehen sich auf die Tasks auf Containerebene und Container innerhalb des Containers. Eine ausführbare Datei kann einer der Tasks und Container sein, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitstellt, oder ein benutzerdefinierter Task. Weitere Informationen finden Sie unter [Integration Services Tasks](integration-services-tasks.md) und [Integration Services-Container](integration-services-containers.md).  
+ Ausführbare Dateien beziehen sich auf die Tasks auf Containerebene und Container innerhalb des Containers. Eine ausführbare Datei kann einer der Tasks und Container sein, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitstellt, oder ein benutzerdefinierter Task. Weitere Informationen finden Sie unter [Integration Services-Tasks](integration-services-tasks.md) und [Integration Services-Container](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Rangfolgeneinschränkungen  
  Rangfolgeneinschränkungen verlinken Container und Tasks innerhalb desselben übergeordneten Containers zu einer geordneten Ablaufsteuerung. Weitere Informationen finden Sie unter [Precedence Constraints](precedence-constraints.md).  

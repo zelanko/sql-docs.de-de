@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d70ae44f8b32cdecbadf40d01d8ee01add3f491
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 52577abf219f82c9d6591d4c60fce6acab2045e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281066"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
   In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Entwurfsoberfläche für Wartungspläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  

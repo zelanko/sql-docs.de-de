@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294785"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
@@ -41,7 +41,7 @@ ms.locfileid: "36163136"
 ##  <a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Bei Verwendung [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erfordert `ALTER ANY LINKED SERVER` Berechtigung auf dem Server oder die Mitgliedschaft in der **Setupadmin** festen Serverrolle "". Bei Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] erfordert `CONTROL SERVER` Berechtigung oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".  
+ Bei Verwendung [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erfordert `ALTER ANY LINKED SERVER` Berechtigung auf dem Server oder die Mitgliedschaft in der **Setupadmin** -Serverrolle sein. Bei Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] erfordert `CONTROL SERVER` -Berechtigung oder die Mitgliedschaft in der **Sysadmin** -Serverrolle sein.  
   
 ##  <a name="Procedures"></a> So erstellen Sie einen Verbindungsserver  
  Sie können eine der folgenden Anwendungen verwenden:  
@@ -184,7 +184,7 @@ ms.locfileid: "36163136"
      Es werden nur OLE DB-Schnittstellen der Ebene 0 mit diesem Anbieter aufgerufen.  
   
      **InProcess zulassen**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter instanziiert wird, außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verarbeiten, Updates oder einfügungen auf lange Spalten verweisen (`text`, `ntext`, oder `image`) sind nicht zulässig.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter instanziiert wird, außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verarbeiten, Updates oder einfügungen, die auf lange Spalten verweisen (`text`, `ntext`, oder `image`) sind nicht zulässig.  
   
      **Nicht durchgeführte Updates**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt Updates zu, selbst wenn **ITransactionLocal** nicht zur Verfügung steht. Wenn diese Option aktiviert ist, sind Updates für den Anbieter nicht wiederherstellbar, da der Anbieter keine Transaktionen unterstützt.  

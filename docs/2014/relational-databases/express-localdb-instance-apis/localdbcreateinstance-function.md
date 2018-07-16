@@ -1,5 +1,5 @@
 ---
-title: LocalDBCreateInstance-Funktion | Microsoft Docs
+title: LocalDBCreateInstance-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2e413b18e76ab94b81df9ae0a3722f0669a49ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 51596ed8b3c8cc0e140b0dbb424f1b7cf1390be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320260"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance-Funktion
   Erstellt eine neue SQL Server Express LocalDB-Instanz.  
@@ -105,7 +105,7 @@ HRESULT LocalDBCreateInstance(
 ## <a name="remarks"></a>Hinweise  
  Wenn eine vollständig funktionierende LocalDB-Instanz mit dem angegebenen Namen bereits vorhanden ist und ihre Version der angeforderten entspricht oder höher ist, ist das Ergebnis S_OK.  
   
- In Fällen, wenn eine vorhandene Instanz beschädigt nachfolgende Aufrufe von wird der `LocalDBCreateInstance` API-Methode fehl. Beschädigte Instanzen müssen manuell korrigiert oder explizit gelöscht werden, bevor sie wieder verwendet werden können.  
+ In Fällen wird eine vorhandene Instanz beschädigt, schlagen nachfolgende Aufrufe der `LocalDBCreateInstance` API-Methode fehl. Beschädigte Instanzen müssen manuell korrigiert oder explizit gelöscht werden, bevor sie wieder verwendet werden können.  
   
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   

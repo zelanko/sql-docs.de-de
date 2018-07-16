@@ -1,12 +1,11 @@
 ---
-title: Implementieren von Assemblys | Microsoft Docs
+title: Implementieren von Assemblys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
@@ -15,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd0f474a0d71f0cb760f12a0c743696fddeac191
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695171"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353092"
 ---
-# <a name="assemblies---implementing"></a>Assemblys - Implementierung
+# <a name="assemblies---implementing"></a>Assemblys: Implementierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieser Abschnitt enthält Informationen zu folgenden Themen, die Sie hilfreich beim Implementieren und Arbeiten mit Assemblys in der Datenbank sind:  
   
@@ -43,7 +42,7 @@ ms.locfileid: "35695171"
   
  **So erstellen Sie eine Assembly mit SQL Server Management Studio**  
   
--   [Assemblyeigenschaften &#40;Seite "Allgemein"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [Eigenschaften für Assemblyobjekte &#40;Seite "Allgemein"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>Ändern von Assemblys  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Assemblys mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ALTER ASSEMBLY geändert. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit dem Assembly Assisted Editor. Eine Assembly können Sie wie folgt ändern:  
@@ -62,7 +61,7 @@ ms.locfileid: "35695171"
   
  **Ändern eine Assembly mit SQL Server Management Studio**  
   
--   [Assemblyeigenschaften &#40;Seite "Allgemein"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [Eigenschaften für Assemblyobjekte &#40;Seite "Allgemein"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>Löschen, Deaktivieren und Aktivieren von Assemblys  
  Assemblys werden mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung DROP ASSEMBLY oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gelöscht.  
@@ -75,14 +74,14 @@ ms.locfileid: "35695171"
   
 -   [Objekte löschen](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
   
- Standardmäßig ist die Ausführung aller in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Assemblys deaktiviert. Können Sie die **Clr-fähig** -Option von der **Sp_configure** gespeicherten Systemprozedur deaktivieren oder aktivieren die Ausführung aller Assemblys, die in hochgeladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Deaktivierung der Assemblyausführung verhindert die Ausführung von CLR-Funktionen (Common Language Runtime), gespeicherter Prozeduren, Trigger, Aggregate und benutzerdefinierter Typen – gerade ausgeführte werden beendet. Die Deaktivierung der Assemblyausführung deaktiviert nicht die Möglichkeit, Assemblys zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Clr aktiviert – Serverkonfigurationsoption](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ Standardmäßig ist die Ausführung aller in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Assemblys deaktiviert. Können Sie die **Clr-fähig** Möglichkeit, die **Sp_configure** gespeicherte Systemprozedur deaktivieren oder aktivieren die Ausführung aller Assemblys, die in hochgeladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Deaktivierung der Assemblyausführung verhindert die Ausführung von CLR-Funktionen (Common Language Runtime), gespeicherter Prozeduren, Trigger, Aggregate und benutzerdefinierter Typen – gerade ausgeführte werden beendet. Die Deaktivierung der Assemblyausführung deaktiviert nicht die Möglichkeit, Assemblys zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Server Configuration Option Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Deaktivieren und Aktivieren der Assemblyausführung**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 ##  <a name="_managing"></a> Verwalten von Assemblyversionen  
- Wenn eine Assembly in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hochgeladen wird, wird es in den Datenbanksystemkatalogen gespeichert und verwaltet. Alle Änderungen an der Definition der Assembly in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] weitergegeben werden sollten, auf die Assembly, die in der Datenbankkatalog gespeichert sind.  
+ Wenn eine Assembly in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hochgeladen wird, wird es in den Datenbanksystemkatalogen gespeichert und verwaltet. Alle Änderungen an der Definition der Assembly in den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] weitergegeben werden sollen, auf die Assembly, die in der Datenbank-Katalog gespeichert sind.  
   
  Zum Ändern einer Assembly müssen Sie eine ALTER ASSEMBLY-Anweisung ausgeben, die die Assembly in der Datenbank aktualisiert. Dadurch wird die Assembly mit der aktuellsten Kopie der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Module aktualisiert, die ihre Implementierung enthalten.  
   
@@ -95,13 +94,13 @@ ms.locfileid: "35695171"
 > [!CAUTION]  
 >  Wird WITH UNCHECKED DATA nicht angegeben, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Ausführung von ALTER ASSEMBLY zu verhindern, wenn die neue Assemblyversion Auswirkungen auf vorhandene Daten in Tabellen, Indizes oder anderen persistenten Sites hat. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiert jedoch nicht, dass berechnete Spalten, Indizes, indizierte Sichten oder Ausdrücke mit den zugrunde liegenden Routinen und Typen konsistent sein werden, wenn die CLR-Assembly aktualisiert wird. Gehen Sie beim Ausführen von ALTER ASSEMBLY mit Vorsicht vor, um sicherzustellen, dass es keine fehlende Übereinstimmung zwischen dem Ergebnis eines Ausdrucks und einem auf diesem Ausdruck basierenden Wert, der in der Assembly gespeichert ist, gibt.  
   
- Nur Mitglieder der **Db_owner** und **Db_ddlowner** feste Datenbankrolle können run ALTER ASSEMBLY mithilfe der WITH UNCHECKED DATA-Klausel ausführen.  
+ Nur Mitglieder der **Db_owner** und **Db_ddlowner** festen Datenbankrolle kann run ALTER ASSEMBLY ausführen, indem Sie mit der WITH UNCHECKED DATA-Klausel.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendet eine Meldung an das Windows-Anwendungsereignisprotokoll, die angibt, dass die Assembly mit ungeprüften Daten in den Tabellen geändert wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert anschließend alle Tabellen mit Daten, die von der Assembly abhängen, als ungeprüft. Die **Has_unchecked_assembly_data** Spalte die **sys.tables** -Katalogsicht enthält den Wert 1 für Tabellen, die nicht überprüfte Daten und 0 für Tabellen ohne nicht überprüfte Daten enthalten.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendet eine Meldung an das Windows-Anwendungsereignisprotokoll, die angibt, dass die Assembly mit ungeprüften Daten in den Tabellen geändert wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert anschließend alle Tabellen mit Daten, die von der Assembly abhängen, als ungeprüft. Die **Has_unchecked_assembly_data** Spalte die **sys.tables** -Katalogsicht enthält den Wert "1" für Tabellen, die nicht überprüfte Daten und 0 für Tabellen ohne nicht überprüfte Daten enthalten.  
   
- Um die Integrität der nicht überprüften Daten zu beheben, führen Sie DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS für jede Tabelle mit nicht überprüften Daten. Wenn DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS fehlschlägt, müssen Sie entweder löschen die Tabellenzeilen, die sind ungültig, oder ändern den Assemblycode zur Beseitigung von Problemen, und klicken Sie dann weitere ALTER ASSEMBLY-Anweisungen ausgeben.  
+ Um die Integrität der nicht überprüften Daten zu beheben, führen Sie DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS für jede Tabelle, die nicht überprüfte Daten. Wenn DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS fehlschlägt, müssen Sie entweder Löschen der Zeilen der Tabelle, die nicht gültig sind, oder ändern den Code für die Assembly zur Beseitigung von Problemen, und geben Sie dann weitere ALTER ASSEMBLY-Anweisungen.  
   
- Mit ALTER ASSEMBLY wird die Assemblyversion geändert. Die Kultur und das öffentliche Schlüsseltoken der Assembly bleiben unverändert. SQL Server lässt sich nicht auf verschiedene Versionen einer Assembly mit dem gleichen Namen, derselben Kultur und öffentlicher Schlüssel zu registrieren.  
+ Mit ALTER ASSEMBLY wird die Assemblyversion geändert. Die Kultur und das öffentliche Schlüsseltoken der Assembly bleiben unverändert. SQL Server lässt nicht zu, verschiedene Versionen einer Assembly mit dem gleichen Namen, derselben Kultur und öffentlichen Schlüssel zu registrieren.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Interaktionen mit der für den gesamten Computer geltenden Richtlinie zur Versionsbindung  
  Wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Verweise auf Assemblys mit der Herausgeberrichtlinie oder einer für den gesamten Computer geltenden Administratorrichtlinie an spezifische Versionen umgeleitet werden, müssen Sie eine der folgenden Maßnahmen ergreifen:  
@@ -112,12 +111,12 @@ ms.locfileid: "35695171"
   
  Anderenfalls verursacht das Laden einer neuen Assemblyversion in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz einen Fehler.  
   
- **Die Version einer Assembly aktualisieren**  
+ **Zum Aktualisieren der Version einer Assembly**  
   
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys &#40;-Datenbankmodul&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;Datenbank-Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Abrufen von Informationen zu Assemblys](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

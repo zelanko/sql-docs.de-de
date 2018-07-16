@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a263e00df1978f09a77a4eeebbf90f0059fb2590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8837cb450313df1c72a255a12fe0f26e29c941f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279848"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
   Dieses Thema enthält die Informationen, die Sie zur Vorbereitung und zum Verständnis des Aktualisierungsvorgangs benötigen. Dazu gehören:  
@@ -50,7 +50,7 @@ ms.locfileid: "36149705"
 >  Wenn Sie von einer früheren Version der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor der Aktualisierung  
- Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer erfolgen. Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren von Datenbanken, Sichern und wiederherstellen, mit der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Import / Export-Assistenten und Massenexport/Methoden importieren.  
+ Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer erfolgen. Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren, Sichern und wiederherstellen, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Import / Export-Assistenten und Massenexport oder Methoden zu importieren.  
   
  Lesen Sie vor dem Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]die folgenden Themen:  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36149705"
   
 -   Überprüfen oder entfernen Sie USE PLAN-Hinweise, die von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generiert werden und auf Abfragen auf partitionierte Tabellen und Indizes angewendet werden.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ändert die Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ändert die Weise, die Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
   
      **Wenn USE PLAN-Hinweis direkt in einer Abfrage angegeben wird:**  
   

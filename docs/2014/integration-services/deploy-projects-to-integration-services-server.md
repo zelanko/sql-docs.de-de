@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Projekten mit Integration Services-Server | Microsoft Docs
+title: Bereitstellen von Projekten für Integration Services-Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316890"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  

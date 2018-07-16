@@ -1,5 +1,5 @@
 ---
-title: Rowset-Datentyp (XMLA) | Microsoft Docs
+title: Rowset-Datentyp (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279446"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset-Datentyp (XMLA)
-  Definiert einen abgeleiteten Datentyp, der darstellt eine [Root](../xml-elements-properties/root-element-xmla.md) Element, das tabellarische Daten durch gibt eine [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) -Methodenaufruf.  
+  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [Stamm](../xml-elements-properties/root-element-xmla.md) -Element, das tabellarische Daten durch gibt eine [ermitteln](../xml-elements-methods-discover.md) oder [ausführen](../xml-elements-methods-execute.md) Methodenaufruf.  
   
- **Namespace** Urn: Schemas-Microsoft-com: XML-Analyse: Rowset  
+ **Namespace** Urn: Schemas-Microsoft-com: XML-XMLA-Rowset  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,12 +63,12 @@ ms.locfileid: "36162788"
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Zeile](../xml-elements-properties/row-element-xmla.md)|  
-|Abgeleitete Elemente|[Stamm](../xml-elements-properties/root-element-xmla.md)|  
+|Abgeleitete Elemente|[Stammverzeichnis](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- XML lässt bestimmte Zeichen nicht als Element- und Attributnamen zu. Um diese benennungseinschränkung zu adressieren, XML for Analysis (XMLA) unterstützt die Codierung gemäß der Definition von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Für Spaltennamen, die XML-Namenszeichen enthalten, die nicht entsprechend der XML 1.0-Spezifikation gültig sind, verwendet XMLA die entsprechenden Hexadezimalwerte, um Unicode-Zeichen zu codieren, die nicht gültig sind. Die Hexadezimalwerte erhalten _x*HHHH*\_, wobei *HHHH* steht für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in die erste höchstwertigen Bit-Bestellung. XMLA codiert beispielsweise den Namen "Order Details" als Order_x0020_Details, wobei das Leerzeichen durch den entsprechenden Hexadezimalcode ersetzt wird.  
+ XML lässt bestimmte Zeichen nicht als Element- und Attributnamen zu. Um diese benennungseinschränkung zu adressieren, unterstützt XML for Analysis (XMLA) die Codierung gemäß [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Für Spaltennamen, die XML-Namenszeichen enthalten, die nicht gemäß der XML 1.0-Spezifikation gültig sind, verwendet XMLA die entsprechenden Hexadezimalwerte, um Unicode-Zeichen zu codieren, die nicht gültig sind. Die hexadezimale Werte werden mit _x mit Escapezeichen versehen*HHHH*\_, wobei *HHHH* steht für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der ersten höchstwertige Bit-Reihenfolge. XMLA codiert beispielsweise den Namen "Order Details" als Order_x0020_Details, wobei das Leerzeichen durch den entsprechenden Hexadezimalcode ersetzt wird.  
   
- Die Codierung kann XSL-Transformationen (Extensible Style Language) erschweren. Zur Unterstützung von eines schnellen Lookup der echten, nicht codierten Spaltennamen, fügen Sie der `sql:field`-Attribut auf die XML-Rowsetschema für jede Spalte, wie im folgenden Beispiel gezeigt:  
+ Die Codierung kann XSL-Transformationen (Extensible Style Language) erschweren. Um ein schnelles Lookup der echten, unterstützen codierten Spaltennamen zu ermöglichen, fügen Sie der `sql:field`-Attribut auf die XML-Rowsetschema für jede Spalte, wie im folgenden Beispiel gezeigt:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

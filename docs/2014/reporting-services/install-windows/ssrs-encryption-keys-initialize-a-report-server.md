@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 70953e800019fd91afde599daa060abf3beda581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec18c65310311e51baf5c3d8a2d6939d4cac5f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232590"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
@@ -69,12 +69,12 @@ ms.locfileid: "36151520"
  Ein Berichtsserver wird nur initialisiert, wenn eine Übereinstimmung zwischen der Installations-ID und dem öffentlichen Schlüssel vorliegt. Bei einer Übereinstimmung wird ein symmetrischer Schlüssel erstellt, der die umkehrbare Verschlüsselung ermöglicht. Wenn die Übereinstimmung fehlschlägt, wird der Berichtsserver deaktiviert. In diesem Fall werden Sie möglicherweise aufgefordert, einen Sicherungsschlüssel anzuwenden oder die verschlüsselten Daten zu löschen, wenn ein Sicherungsschlüssel nicht verfügbar oder ungültig ist. Weitere Informationen zu Verschlüsselungsschlüsseln, die von einem Berichtsserver verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugriff auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+>  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugriff auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Bestätigen der Initialisierung eines Berichtsservers  
  Um die Initialisierung des Berichtsservers zu bestätigen, pingen Sie den Berichtsserver-Webdienst, indem Sie **http://<Servername\</reportserver** in das Befehlsfenster eingeben. Wenn der `RSReportServerNotActivated`-Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Verschlüsselter Berichtsserverdaten Store &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

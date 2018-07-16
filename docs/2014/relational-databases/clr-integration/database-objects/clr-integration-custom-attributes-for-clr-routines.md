@@ -1,13 +1,11 @@
 ---
-title: Benutzerdefinierte Attribute für CLR-Routinen | Microsoft Docs
+title: Benutzerdefinierte Attribute für CLR-Routinen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 caps.latest.revision: 82
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 21bb0d5bd6ea5dfe672b47ee9095416da6267dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a2f3e1980c164327e584d8f485c2d08571534245
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056497"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351042"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Benutzerdefinierte Attribute für CLR-Routinen
   Die aufgeführten Attribute können angewendet werden, common Language Runtime (CLR)-Routinen, benutzerdefinierte Typen und benutzerdefinierte Aggregate, die in registriert sind [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Wenn das Attribut nicht angewendet wird, nimmt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Standardwert an. Die aufgelisteten Attribute werden im `Microsoft.SqlServer.Server`-Namespace definiert.  
@@ -45,7 +43,7 @@ ms.locfileid: "36056497"
 ## <a name="the-sqlfunction-attribute"></a>Das 'SqlFunction'-Attribut  
  Das `SqlFunction`-Attribut gibt an, dass die Methode als eine Funktion mit den entsprechend festgelegten Funktionsattributen registriert werden soll.  
   
- Weitere Informationen finden Sie unter ["SqlFunctionAttribute"](http://go.microsoft.com/fwlink/?LinkId=128019).  
+ Weitere Informationen finden Sie unter [mit ' SqlFunctionAttribute '](http://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>Das 'SqlFacet'-Attribut  
  Das `SqlFacet`-Attribut wird verwendet, um Informationen über den Rückgabetyp eines UDT-Ausdrucks (Benutzerdefinierter Typ, User Defined Type) zurückzugeben.  
@@ -73,9 +71,9 @@ ms.locfileid: "36056497"
  Weitere Informationen finden Sie unter [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR User-Defined Aggregate](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
+ [Benutzerdefinierte CLR-Aggregate](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR-benutzerdefinierte Funktionen](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [Benutzerdefinierte CLR-Typen](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [CLR-benutzerdefinierte Typen](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR-gespeicherte Prozeduren](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [CLR-Trigger](../../../database-engine/dev-guide/clr-triggers.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Generator für Vorhersageabfragen (Datamining) | Microsoft Docs
+title: Generator für Vorhersageabfragen (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65f236bb738117de9775b6a1e6100433c71f81d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d1cb14a2ff16c4af5326bca111b07640604284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293550"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Generator für Vorhersageabfragen (Data Mining)
   Verwenden Sie die Ansicht **Miningmodellvorhersage** , um Vorhersagen, die auf Miningmodellen in einer Miningstruktur basieren, zu erstellen.  
@@ -36,14 +36,14 @@ ms.locfileid: "36163227"
   
  Die Ansicht **Miningmodellvorhersage** beinhaltet die folgenden Tools und Dialogfelder:  
   
--   [Entwurfsbereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](design-pane-mining-model-prediction-view.md)  
+-   [Entwerfen Sie im Bereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [Bereich Abfragen &#40;Mining Miningmodellvorhersage-Sicht&#41;](query-pane-mining-model-prediction-view.md)  
+-   [Abfragebereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](query-pane-mining-model-prediction-view.md)  
   
 -   [Führen Sie im Bereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](result-pane-mining-model-prediction-view.md)  
   
 -   [Dialogfeld Miningstruktur auswählen &#40;Mining Miningmodellvorhersage-Sicht&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [Speichern von Data Mining-Abfrage-Ergebnis-Dialogfeld &#40;Mining Miningmodellvorhersage-Sicht&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [Speichern Sie die Data Mining-Abfragedialogfeld &#40;Mining Miningmodellvorhersage-Sicht&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

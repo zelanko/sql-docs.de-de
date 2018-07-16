@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Trainingsdaten (Datamining-Assistent) | Microsoft Docs
+title: Geben Sie die Trainingsdaten (Datamining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291426"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Trainingsdaten angeben (Data Mining-Assistent)
   Mithilfe der Seite **Trainingsdaten angeben** können Sie festlegen, welche Spalten in der Miningstruktur enthalten sein sollen. Sie können auch Spalten für die Struktur auswählen, wenn Sie sie nicht in allen Modellen verwenden möchten. Wenn Sie beispielsweise einen Drillthrough zu den Spalten vom Miningmodell ausführen möchten, können Sie die Spalten in die Struktur aufnehmen, aber nicht in das Modell.  
@@ -34,10 +34,10 @@ ms.locfileid: "36150431"
  **Weitere Informationen:** [Miningstrukturen &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Tastatur  
- **Tabellen oder Spalten.**  
+ **Tabellen/Spalten**  
  Zeigt die Tabellen und Spalten an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   
- **\<das Kontrollkästchen >**  
+ **\<Aktivieren Sie das Kontrollkästchen >**  
  Wählen Sie die Spalten aus, die in die Miningstruktur aufgenommen werden sollen.  
   
  Wenn Ihre Datenquelle geschachtelte Tabellen oder mehrere Ansichten enthält, erweitern Sie die Spaltenliste, um die geschachtelten Tabellen anzuzeigen.  
@@ -69,8 +69,8 @@ ms.locfileid: "36150431"
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Verbundene Spalten vorschlagen &#40;Datamining-Assistenten&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Tabellentypen angeben &#40;Datamining-Assistenten&#41;](specify-table-types-data-mining-wizard.md)   
- [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistenten&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Verbundene Spalten vorschlagen &#40;Datamining-Assistent&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Tabellentypen angeben &#40;Datamining-Assistent&#41;](specify-table-types-data-mining-wizard.md)   
+ [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistent&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

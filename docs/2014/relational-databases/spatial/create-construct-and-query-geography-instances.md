@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec18679f1d466917e99f249c75c6ebf3bc42ff8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ea4dc0a27743e62f0a13f866895cd7fe0ed0ae79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284716"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
   Der räumliche `geography`-Datentyp stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der `geography`-Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert ellipsenähnliche (Erdkugel-)Daten, wie z. B. GPS-Breiten- und Längenkoordinaten.  
@@ -33,7 +33,7 @@ ms.locfileid: "36149865"
 ##  <a name="creating"></a> Erstellen einer neuen geography-Instanz  
   
 ###  <a name="existing"></a> Erstellen einer neuen geography-Instanz anhand einer vorhandenen Instanz  
- Die `geography` -Datentyp stellt zahlreiche integrierte Methoden zum Erstellen neuer können `geography` Instanzen auf Grundlage vorhandener Instanzen.  
+ Die `geography` -Datentyp stellt zahlreiche integrierte Methoden zum Erstellen von neuen können `geography` Instanzen auf Grundlage vorhandener Instanzen.  
   
  **So erstellen Sie einen Puffer um eine geography**  
  [STBuffer &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -80,7 +80,7 @@ ms.locfileid: "36149865"
  [STGeomCollFromText &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> Erstellen einer geography-Instanz aus einer WKB-Eingabe (Well-Known Binary)  
- WKB ist ein vom OGC, die ermöglicht Binärformat `Geography` Daten zwischen einer Clientanwendung und einer SQL-Datenbank ausgetauscht werden sollen. Die folgenden Funktionen akzeptieren die WKB-Eingabe zum Zweck der Erstellung von geography-Instanzen:  
+ WKB ist ein Binärformat, das vom OGC, die erlaubt `Geography` Daten zwischen einer Clientanwendung und einer SQL-Datenbank ausgetauscht werden. Die folgenden Funktionen akzeptieren die WKB-Eingabe zum Zweck der Erstellung von geography-Instanzen:  
   
  **So erstellen Sie einen beliebigen geography-Instanztyp anhand einer WKB-Eingabe**  
  [STGeomFromWKB &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -107,7 +107,7 @@ ms.locfileid: "36149865"
  [STGeomCollFromWKB &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (geography-Datentyp)  
   
 ###  <a name="gml"></a> Erstellen einer geography-Instanz anhand einer GML-Texteingabe  
- Die `geography` -Datentyp bietet eine Methode, generiert eine `geography` -Instanz aus GML bereit, eine XML-Darstellung einer `geography` Instanz. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
+ Die `geography` -Datentyp stellt eine Methode eine `geography` -Instanz aus GML bereit, eine XML-Darstellung einer `geography` Instanz. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
   
  Weitere Informationen über Geography Markup Language finden Sie in der OGC-Spezifikation: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36149865"
  [GeomFromGML &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> Zurückgeben von WKT (Well-Known Text) oder WKB (Well-Known Binary) von einer geography-Instanz  
- Anhand der folgenden Methoden können Sie entweder das WKT- oder das WKB-Format des zurückzugebenden eine `geography` Instanz:  
+ Sie können die folgenden Methoden verwenden, entweder das WKT- oder WKB-Format der zurückzugebenden eine `geography` Instanz:  
   
  **So geben Sie die WKT-Darstellung einer geography-Instanz zurück**  
  [STAsText &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -132,10 +132,10 @@ ms.locfileid: "36149865"
  [AsGml &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="query"></a> Abfragen von Eigenschaften und Verhalten von geography-Instanzen  
- Alle `geography` Instanzen haben eine Reihe von Eigenschaften, die durch Methoden abgerufen werden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitstellt. In den folgenden Themen werden die Eigenschaften und Verhalten von geography-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
+ Alle `geography` Instanzen haben eine Reihe von Eigenschaften, die über Methoden abgerufen werden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält. In den folgenden Themen werden die Eigenschaften und Verhalten von geography-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
   
 ###  <a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
- Nach einer `geography` -Instanz erstellt wurde, können Sie die folgenden Methoden den Instanztyp zurückgeben oder wenn sie eine `GeometryCollection` Instanz, die einen bestimmten zurückgeben `geography` Instanz.  
+ Nach einer `geography` -Instanz erstellt wurde, können Sie die folgenden Methoden den Instanztyp zurückgeben oder ist eine `GeometryCollection` Instanz, die einen bestimmten zurückgeben `geography` Instanz.  
   
  **So geben Sie den Instanztyp einer Geografie zurück**  
  [STGeometryType &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -165,7 +165,7 @@ ms.locfileid: "36149865"
  [STEndpoint &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> Dimension  
- Einen nicht leeren `geography` Instanz kann auf 0-1-, oder 2-dimensionale. Nulldimensionale `geography` Instanzen, z. B. `Point` und `MultiPoint`, haben weder Länge noch Fläche. Eindimensionale Objekte (z. B. `LineString, CircularString`, `CompoundCurve` und `MultiLineString`) weisen eine Länge auf. Zweidimensionale Instanzen, z. B. `Polygon, CurvePolygon`, und `MultiPolygon`, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird die maximale Dimension der darin enthaltenen Elemente zurückgegeben.  
+ Einen nicht leeren `geography` Instanz möglich 0-1-, oder 2-dimensionalen. Nulldimensionale `geography` Instanzen, z. B. `Point` und `MultiPoint`, haben weder Länge noch Fläche. Eindimensionale Objekte (z. B. `LineString, CircularString`, `CompoundCurve` und `MultiLineString`) weisen eine Länge auf. Zweidimensionale Instanzen, z. B. `Polygon, CurvePolygon`, und `MultiPolygon`, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird die maximale Dimension der darin enthaltenen Elemente zurückgegeben.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -183,9 +183,9 @@ ms.locfileid: "36149865"
  [STIsEmpty &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> Abgeschlossenheit  
- Ein *geschlossen* `geography` Instanz ist eine Abbildung, deren Ausgangs- und Endpunkte identisch sind. `Polygon` -Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
+ Ein *geschlossen* `geography` -Instanz ist eine Abbildung, deren Ausgangs- und Endpunkte identisch. `Polygon` -Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
   
- Ein Ring ist eine einfache geschlossen `LineString` Instanz.  
+ Ein Ring ist eine einfache, geschlossen `LineString` Instanz.  
   
  **So bestimmen Sie, ob eine Instanz abgeschlossen ist**  
  [STIsClosed &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
@@ -205,7 +205,7 @@ ms.locfileid: "36149865"
  Diese Eigenschaft kann geändert werden.  
   
 ##  <a name="rel"></a> Bestimmen von Beziehungen zwischen geography-Instanzen  
- Die `geography` -Datentyp bietet viele integrierte Methoden Sie die Beziehung zwischen zwei bestimmt können `geography` Instanzen.  
+ Die `geography` -Datentyp stellt viele integrierte Methoden Sie bestimmen von Beziehungen zwischen zwei können `geography` Instanzen.  
   
  **So bestimmen Sie, ob zwei Instanzen die gleiche Punktmenge umfassen**  
  [STEquals &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36149865"
  [STSymDifference &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> geography-Instanzen müssen unterstützte SRIDs verwenden  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt SRIDs auf der Grundlage der EPSG-Standards. Wenn Berechnungen mit geografischen räumlichen Daten ausgeführt werden oder Methoden mit geografischen räumlichen Daten verwendet werden, müssen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte SRIDs für `geography`-Instanzen verwendet werden. Die SRID muss mit einer der SRIDs übereinstimmen, die in der **sys.spatial_reference_systems** -Katalogsicht angezeigt werden. Wie bereits erwähnt, wenn Sie Berechnungen räumlichen Daten unter Verwendung der `geography` -Datentyp, Ihre Ergebnisse hängt von der Ellipsenform, bei der Erstellung Ihrer Daten verwendet wurde, da jeder Ellipsenform ein bestimmter Bezeichner (zugeordnet ist SRID)).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt SRIDs auf der Grundlage der EPSG-Standards. Wenn Berechnungen mit geografischen räumlichen Daten ausgeführt werden oder Methoden mit geografischen räumlichen Daten verwendet werden, müssen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte SRIDs für `geography`-Instanzen verwendet werden. Die SRID muss mit einer der SRIDs übereinstimmen, die in der **sys.spatial_reference_systems** -Katalogsicht angezeigt werden. Wie bereits erwähnt, wenn Sie Berechnungen mit räumlichen Daten unter Verwendung der `geography` -Datentyp, die Ergebnisse hängt von der Ellipsenform, bei der Erstellung Ihrer Daten verwendet wurde, da jeder Ellipsenform ein bestimmter Bezeichner (zugeordnet ist SRID).  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird beim Einsatz von Methoden für `geography`-Instanzen standardmäßig der SRID 4326 verwendet, der dem räumlichen Referenzsystem WGS 84 zugeordnet ist. Wenn Sie Daten aus einem anderen räumlichen Referenzsystem als WGS 84 (bzw. SRID 4326) verwenden, müssen Sie die SRID dieser geografischen räumlichen Daten bestimmen.  
   

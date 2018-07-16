@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303930"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
     
-##  <a name="top"></a> Per Massenladen von XML-Dokumenten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank bzw. exportieren aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Dieses Thema bietet Beispiele für diese beiden Situationen.  
+##  <a name="top"></a> Sie können einen Massenimport von XML-Dokumenten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank bzw. exportieren Sie sie aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Dieses Thema bietet Beispiele für diese beiden Situationen.  
   
  Verwenden Sie für den Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht Folgendes:  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36150814"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Weitere Informationen finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) und [Importieren von Massendaten durch Verwenden von BULK INSERT oder OPENROWSET&#40;BULK... &#41; &#40;SQLServer&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Weitere Informationen finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) und [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK... &#41; &#40;SQLServer&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Beispiele  
  Es werden folgende Beispiele aufgeführt:  
@@ -59,7 +58,7 @@ ms.locfileid: "36150814"
 -   E. [Massenexport von XML-Daten](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Massenimport von XML-Daten als binärer Bytedatenstrom  
- Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Die Option SINGLE_BLOB wird sichergestellt, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
+ Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Die Option SINGLE_BLOB verwenden, wird sichergestellt, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
   
 #### <a name="sample-table"></a>Beispieltabelle  
  Zum Testen des Beispiels A müssen Sie die folgende Beispieltabelle `T`erstellen:  

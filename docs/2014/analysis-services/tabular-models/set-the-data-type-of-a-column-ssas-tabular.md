@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Datentyps einer Spalte (SSAS – tabellarisch) | Microsoft Docs
+title: Festlegen des Datentyps einer Spalte (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c0c55e44192b348b9ae1510d9ee90731185b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312230"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Festlegen des Datentyps einer Spalte (SSAS – tabellarisch)
   Wenn Sie Daten importieren oder Daten in ein Modell einfügen, werden Datentypen vom Modell-Designer automatisch erkannt und angewendet. Nachdem Sie dem Modell Daten hinzugefügt haben, können Sie den Datentyp einer Spalte manuell ändern, um die Speicherung von Daten zu ändern. Bei Bedarf können Sie stattdessen nur das Anzeigeformat der Daten ändern, ohne die Methode der Datenspeicherung zu ändern.  
@@ -69,7 +69,7 @@ ms.locfileid: "36149501"
   
  Wenn der Datentyp unterstützt wird, der Modell-Designer jedoch Werte findet, die vom neuen Datentyp nicht unterstützt werden, erhalten Sie eine weitere Fehlermeldung. Sie müssen die Datenwerte korrigieren, bevor Sie fortfahren.  
   
- Ausführliche Informationen zu den Datentypen in Business Intelligence-Semantikmodellen verwendet Verwandtschaft implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden, finden Sie unter [unterstützte Datentypen &#40;SSAS – tabellarisch&#41; ](data-types-supported-ssas-tabular.md).  
+ Ausführliche Informationen zu den Datentypen in Business Intelligence-Semantikmodellen verwendet werden, wie sie implizit konvertiert und wie verschiedene Datentypen sind in Formeln verwendet werden, finden Sie unter [unterstützte Datentypen &#40;SSAS – tabellarisch&#41; ](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md)  

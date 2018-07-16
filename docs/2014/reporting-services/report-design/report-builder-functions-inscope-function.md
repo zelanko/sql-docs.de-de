@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e677c9e02f452a486b9168f15c662362640ea86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ebf90710587c73206408dfda1429a90b58f39621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228840"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope-Funktion (Berichts-Generator und SSRS)
   Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.  
@@ -35,17 +35,17 @@ InScope(scope)
   
 #### <a name="parameters"></a>Parameter  
  *Bereich*  
- (`String`) Den Namen des Datasets, eines Datenbereichs oder einer Gruppe, der einen Bereich angibt.  
+ (`String`) Den Namen der ein Dataset, Datenbereich oder Gruppe, die einen Bereich angibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt eine `Boolean`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `InScope` Funktion testet den Bereich für die Mitgliedschaft der aktuellen Instanz eines Berichtselements innerhalb des Bereichs, die gemäß der *Bereich*Parameter.  
+ Die `InScope` Funktion testet den Bereich für die Mitgliedschaft der aktuellen Instanz eines Berichtselements im Bereich gemäß der *Bereich*Parameter.  
   
  *Scope* darf kein Ausdruck sein.  
   
- Eine typische Verwendung für die `InScope` Funktion ist in Datenbereichen mit dynamischer Bereichsdefinierung. Beispielsweise `InScope` kann in einem Drillthroughlink in einer datenbereichszelle verwendet werden, um einen anderen Bericht bereitzustellen und unterschiedliche Sätze von Parametern abhängig, welche Zelle geklickt wird. Dies wird im folgenden Beispiel verdeutlicht:  
+ Eine typische Verwendung für die `InScope` Funktion ist in Datenbereichen mit dynamischer Bereichsdefinierung. Z. B. `InScope` kann in einem Drillthroughlink in einer datenbereichszelle verwendet werden, um unterschiedliche Berichtsnamen und unterschiedliche Parametersätze bereitzustellen abhängig, welche Zelle geklickt wird. Dies wird im folgenden Beispiel verdeutlicht:  
   
 -   Mit dem folgenden Ausdruck, der in einem Drillthroughlink als Berichtsname verwendet wird, wird der `ProductDetail` -Bericht geöffnet, wenn sich die angeklickte Zelle in der `Month` -Gruppierung befindet; andernfalls wird der `ProductSummary` -Bericht geöffnet.  
   
@@ -53,7 +53,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   Der folgende Ausdruck, der verwendet wird, der `Omit` -Eigenschaft eines Drillthroughberichts-Parameters, wird der Parameter an den Zielbericht übergeben, nur, wenn die angeklickte Zelle in ist die `Product` Gruppe.  
+-   Der folgende Ausdruck in verwendet die `Omit` -Eigenschaft eines Drillthroughberichts-Parameters, wird der Parameter an den Zielbericht übergeben, nur, wenn die angeklickte Zelle in ist die `Product` Gruppe.  
   
     ```  
     =Not(InScope("Product"))  
@@ -69,7 +69,7 @@ InScope(scope)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

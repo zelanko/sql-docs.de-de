@@ -1,5 +1,5 @@
 ---
-title: SqlXmlParameter-Objekt (verwaltete SQLXML-Klassen) | Microsoft Docs
+title: SqlXmlParameter-Objekt (verwaltete SQLXML Klassen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b8f787d8a3242fcaa5d2bf34d21484a8a2b74e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 59dd9b66e08c821d2603d6d21eb9d837890471f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282916"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter-Objekt (verwaltete SQLXML-Klassen)
   SqlXmlParameter-Objekt unterstützt die folgenden Eigenschaften:  
   
  Name  
- Der Name des Parameters. Befehlen können Parameter übergeben werden. Die CreateParameter-Methode des SqlXmlCommand-Objekt aufrufen, wird das Parameterobjekt erstellt.  
+ Der Name des Parameters. Befehlen können Parameter übergeben werden. Die CreateParameter-Methode, der die SqlXmlCommand-Objekt aufrufen, wird das Parameterobjekt erstellt.  
   
  value  
- Der Wert des Parameters. Ein funktionierendes Beispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwalteten SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ Der Wert des Parameters. Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SqlXmlCommand-Objekt &#40;verwaltete SQLXML-Klassen&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   

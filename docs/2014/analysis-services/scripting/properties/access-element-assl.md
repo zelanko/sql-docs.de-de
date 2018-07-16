@@ -1,5 +1,5 @@
 ---
-title: Zugriff auf Element (ASSL) | Microsoft Docs
+title: Zugriff auf-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314730"
 ---
 # <a name="access-element-assl"></a>Access-Element (ASSL)
-  Gibt an, die Zugriffsebene, die auf eine [CellPermission](../objects/cellpermission-element-assl.md) Element.  
+  Gibt die Zugriffsebene übergeben, um eine [CellPermission](../objects/cellpermission-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36150889"
 |-----------|-----------------|  
 |*Lesen*|Schreibgeschützter Zugriff ist zugelassen.|  
 |*Bei der ReadContingent*|Zugriff für abhängiges Lesen ist zugelassen.|  
-|*ReadWrite*|Lese-/Schreibzugriff ist zugelassen.|  
+|*"ReadWrite"*|Lese-/Schreibzugriff ist zugelassen.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `Access` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CellPermissionAccess>.  
   

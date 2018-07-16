@@ -1,13 +1,11 @@
 ---
-title: Erstellen eines benutzerdefinierten Typs | Microsoft Docs
+title: Erstellen eines benutzerdefinierten Typs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056716"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350974"
 ---
 # <a name="creating-a-user-defined-type"></a>Erstellen eines benutzerdefinierten Typs
   Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
@@ -45,9 +43,9 @@ Reconfigure
  Veranschaulicht Programmiertechniken, die bei der Erstellung benutzerdefinierter Typen relevant sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codelisting definiert den UDT Point, dies wird ausführlich beschrieben [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Das folgende Codelisting definiert den UDT Point, das ausführlich beschrieben wird [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
   
- Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anleitungen zum Installieren dieser Beispiele finden Sie unter [Beispiele für SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   

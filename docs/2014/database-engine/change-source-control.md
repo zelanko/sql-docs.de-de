@@ -1,5 +1,5 @@
 ---
-title: Ändern Sie die Quellcodeverwaltung | Microsoft Docs
+title: Quellcodeverwaltung ändern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312300"
 ---
 # <a name="change-source-control"></a>Quellcodeverwaltung ändern
   Erstellt und verwaltet die Verbindungen und Bindungen, über die eine lokal gespeicherte Projektmappe bzw. ein Projekt mit einem Ordner in der Datenbank für die Quellcodeverwaltung verknüpft ist.  
@@ -68,24 +68,24 @@ ms.locfileid: "36162346"
  **Servername**  
  Zeigt den Namen des Quellcode-Verwaltungsservers an, an den die betreffende Projektmappe bzw. das Projekt gebunden ist.  
   
- **Projektmappe/Projekt**  
+ **Projektmappe oder eines Projekts**  
  Zeigt die Namen der einzelnen Projektmappen und Projekte in der aktuellen Auswahl an.  
   
  **Sort**  
  Sortiert die Reihenfolge der angezeigten Spalten.  
   
  **Status**  
- Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Folgende Optionen sind möglich:  
+ Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Optionen sind möglich:  
   
 |**Option**|**Beschreibung**|  
 |----------------|---------------------|  
 |Gültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden und mit ihm verbunden.|  
-|Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden der **zur Quellcodeverwaltung hinzufügen** anstelle des Befehls **binden** für dieses Element.|  
+|Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden der **zur Quellcodeverwaltung hinzufügen** Befehl anstelle von **binden** für dieses Element.|  
 |Unknown|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
 |Nicht gesteuert|Das Element wurde nicht unter Quellcodeverwaltung gestellt.|  
   
  **Aufheben der Bindung**  
- Anzeigen der **Quellcodeverwaltung** (Dialogfeld), können Sie ausgewählte Elemente aus der quellcodeverwaltung entfernen und dauerhaft von ihren aktuellen Ordnern trennen.  
+ Anzeigen der **Quellcodeverwaltung** im Dialogfeld können Sie ausgewählte Elemente aus der quellcodeverwaltung zu entfernen und dauerhaft von ihren aktuellen Ordnern trennen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Quellcodeverwaltung des Projektmappen-Explorers](../../2014/database-engine/solution-explorer-source-control.md)  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320410"
 ---
 # <a name="data-compression"></a>Datenkomprimierung
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt Zeilen- und seitenkomprimierung für Rowstore-Tabellen und Indizes und columnstore- und columnstore-archivierungskomprimierung für columnstore-Tabellen und Indizes unterstützt.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt die Zeilen- und seitenkomprimierung für Rowstore-Tabellen und Indizes sowie Columnstore und die columnstore-archivierungskomprimierung für columnstore-Tabellen und Indizes unterstützt.  
   
  Verwenden Sie für rowstore-Tabellen und -Indizes die Datenkomprimierungsfunktion, um die Größe der Datenbank zu reduzieren. Zusätzlich zum Sparen von Speicherplatz kann mithilfe der Datenkomprimierung auch die Leistung von E/A-intensiven Arbeitsauslastungen verbessert werden, da die Daten auf weniger Seiten gespeichert werden und Abfragen weniger Seiten vom Datenträger lesen müssen. Zusätzliche CPU-Ressourcen sind jedoch auf dem Datenbankserver erforderlich, um die Daten zu komprimieren und dekomprimieren, während Daten mit der Anwendung ausgetauscht werden. Sie können die Zeilen- und Seitenkomprimierung für die folgenden Datenbankobjekte konfigurieren:  
   
@@ -171,7 +170,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadaten  
  Die folgenden Systemsichten enthalten Informationen zur Datenkomprimierung für gruppierte Indizes:  
   
--   [Sys.Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) – der `type` und `type_desc` Spalten enthalten CLUSTERED COLUMNSTORE und NONCLUSTERED COLUMNSTORE.  
+-   [Sys.Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : die `type` und `type_desc` Spalten enthalten CLUSTERED COLUMNSTORE und NONCLUSTERED COLUMNSTORE.  
   
 -   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – die `data_compression` und `data_compression_desc` -Spalte umfassen COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
   

@@ -1,5 +1,5 @@
 ---
-title: Datamining-Assistenten (Analysis Services – Datamining) | Microsoft Docs
+title: Datamining-Assistenten (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288416"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
   Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird immer dann gestartet, wenn Sie einem Data Mining-Projekt eine neue Miningstruktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  

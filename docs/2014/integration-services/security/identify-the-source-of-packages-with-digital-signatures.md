@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320660"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  
@@ -47,7 +47,7 @@ ms.locfileid: "36160012"
 >  Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Pakete](../integration-services-ssis-packages.md)   
- [Übersicht über die Sicherheit &#40;Integrationsservices&#41;](security-overview-integration-services.md)  
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../integration-services-ssis-packages.md)   
+ [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security-overview-integration-services.md)  
   
   

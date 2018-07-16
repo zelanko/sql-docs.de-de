@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307000"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Berichte sind XML-basierte Berichtsdefinitionen, die Berichtsdaten und Berichtslayoutelemente enthalten. Auf einem Clientdateisystem verfügen Berichtsdefinitionen über die Dateierweiterung ".rdl". Nachdem ein Bericht veröffentlicht wurde, wird er zu einem auf dem Berichtsserver oder der SharePoint-Website gespeicherten Berichtselement. Berichte stellen einen Teil der von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bereitgestellten serverbasierten Berichtsplattform dar.  
@@ -160,7 +160,7 @@ ms.locfileid: "36151299"
 ##  <a name="bkmk_SecureReportsSummary"></a> Sichern von Berichten  
  So sichern Sie einen Bericht  
   
--   Erfragen Sie beim Berichtsserveradministrator, welches Autorisierungs- und Authentifizierungssystem für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Installation verwendet wird. Standardmäßig [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Windows-Authentifizierung, integrierte Sicherheit und rollenzuweisung verwendet, um Steuern des Zugriffs auf veröffentlichte Berichte zu steuern. Weitere Informationen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md) und [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   Erfragen Sie beim Berichtsserveradministrator, welches Autorisierungs- und Authentifizierungssystem für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Installation verwendet wird. In der Standardeinstellung [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] wird der Windows-Authentifizierung, integrierte Sicherheit und rollenzuweisung verwendet werden, um den Zugriff auf veröffentlichte Berichte zu kontrollieren. Weitere Informationen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md) und [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Erstellen von Benachrichtigungen auf Grundlage von Berichtsdaten  
  Sie können Datenwarnungen für veröffentlichte Berichte auf einer SharePoint-Website erstellen. Datenwarnungen basieren auf Datenfeeds aus Datenbereichen im Bericht. Datenbereiche werden standardmäßig automatisch benannt. Berichtsautoren können die Erstellung von Datenwarnungen in Berichten vereinfachen, indem sie Datenbereiche entsprechend ihrem geschäftlichen Zweck benennen. Wenn Sie eine Datenwarnung erstellen, werden Sie per E-Mail benachrichtigt, sobald Daten die von Ihnen angegebenen Bedingungen erfüllen. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../create-a-data-alert-in-data-alert-designer.md) und [Reporting Services-Datenwarnungen](../reporting-services-data-alerts.md).  

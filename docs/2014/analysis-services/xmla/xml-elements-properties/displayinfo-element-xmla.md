@@ -1,5 +1,5 @@
 ---
-title: DisplayInfo-Element (XMLA) | Microsoft Docs
+title: DisplayInfo-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DisplayInfo element
 ms.assetid: 059ce038-38de-4c7d-a72f-4f919cfc7c4a
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e792ba01df58aacb42600fb9ff8ac686c026badc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 697678969f3e1f59f3a9d379d791bf285f0513be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321156"
 ---
 # <a name="displayinfo-element-xmla"></a>DisplayInfo-Element (XMLA)
   Enthält Anzeigeinformationen für das übergeordnete [HierarchyInfo](hierarchyinfo-element-xmla.md) - oder [Member](member-element-xmla.md) -Element.  

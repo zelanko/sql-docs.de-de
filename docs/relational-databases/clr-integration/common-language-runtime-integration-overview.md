@@ -1,12 +1,11 @@
 ---
-title: Übersicht über Common Language Runtime (CLR) Integration | Microsoft Docs
+title: Übersicht über Common Language Runtime (CLR)-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebc2a886b525d356dadaa665e0d1815fb6e97d91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701701"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352652"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Übersicht über Common Language Runtime-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

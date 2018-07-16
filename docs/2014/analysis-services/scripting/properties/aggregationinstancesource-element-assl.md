@@ -1,5 +1,5 @@
 ---
-title: AggregationInstanceSource-Element (ASSL) | Microsoft Docs
+title: AggregationInstanceSource-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 318f70f156d78df90ceeb53e56cbc83f9d4e43a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd2001d304d951f4eeb2ac737e3cfe6e8526c1af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312410"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>AggregationInstanceSource-Element (ASSL)
   Identifiziert die Quelle der Daten für benutzerdefinierte aggregationsinstanzen, die gebunden werden, um eine [Partition](../objects/partition-element-assl.md) Element.  
@@ -62,7 +62,7 @@ ms.locfileid: "36162786"
 ## <a name="remarks"></a>Hinweise  
  Wenn dieses Element fehlt oder auf eine leere Zeichenfolge gesetzt ist, wird standardmäßig die Datenquellensicht des Cubes verwendet, der der Besitzer der Partition ist.  
   
- Weitere Informationen zu der `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

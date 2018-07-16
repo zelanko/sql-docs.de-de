@@ -1,5 +1,5 @@
 ---
-title: Manuelles verarbeiten Daten (SSAS – tabellarisch) | Microsoft Docs
+title: Manuelles verarbeiten Daten (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edfb5ab290d6a5756e88f23497a4ea88c14db5d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304610"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Manuelle Verarbeitung von Daten (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Arbeitsbereichsdaten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]manuell verarbeitet werden.  
@@ -77,7 +77,7 @@ ms.locfileid: "36162579"
  Klicken Sie auf diese Option, um den Verarbeitungsvorgang anzuhalten. Diese Option ist nützlich, wenn der Vorgang zu lange dauert oder wenn es zu viele Fehler gibt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Daten verarbeiten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md)   
+ [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md)   
  [Problembehandlung von Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

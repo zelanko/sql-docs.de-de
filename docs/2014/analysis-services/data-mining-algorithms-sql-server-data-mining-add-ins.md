@@ -1,5 +1,5 @@
 ---
-title: Datamining-Algorithmen (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Datamining-Algorithmen (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
 - data mining algorithms
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ea33a6ee29965202189fd4149c243df3d1d91df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288536"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Data Mining-Algorithmen (SQL Server Data Mining-Add-Ins)
   Die Data Mining-Add-Ins für Office unterstützen das Erstellen von Analysemodellen mithilfe der folgenden Data Mining-Algorithmen. Alle Algorithmen basieren auf bekannten Computerlernmethoden und wurden von Microsoft Research implementiert.  
@@ -57,7 +57,7 @@ ms.locfileid: "36159451"
   
  Modelle können mithilfe dieser erweiterten Optionen auf zwei Weisen angepasst werden:  
   
--   Verwenden der **Data Mining-Abfragen** Assistenten, um das Modell zu erstellen.  
+-   Verwenden der **Data Mining-Abfragen** Assistenten, um Ihr Modell zu erstellen.  
   
 -   In der **Data Mining-Client**nach dem Starten des Assistenten klicken Sie auf **Parameter**.  
   

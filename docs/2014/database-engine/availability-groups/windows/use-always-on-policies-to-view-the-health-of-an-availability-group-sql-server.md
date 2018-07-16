@@ -1,30 +1,29 @@
 ---
-title: Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe (SQLServer) | Microsoft Docs
+title: Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ba1f977cf2846438494bedc7b084ade659fca753
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4189c70c8e4cf9e3d2fce378dbbb039ae2c0c601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297140"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe (SQL Server)
-  In diesem Thema wird beschrieben, wie der Betriebsstatus einer AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mithilfe einer AlwaysOn-Richtlinie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]bzw. mit PowerShell geändert wird. Informationen zu AlwaysOn mit der richtlinienbasierten Verwaltung finden Sie unter [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+  In diesem Thema wird beschrieben, wie der Betriebsstatus einer AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mithilfe einer AlwaysOn-Richtlinie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]bzw. mit PowerShell geändert wird. Weitere Informationen zu AlwaysOn-richtlinienbasierte Verwaltung, finden Sie unter [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Für AlwaysOn-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird die Funktion zur Integritätsüberprüfung unterbrochen. Daher sollten die Namen der AlwaysOn-Kategorie nicht geändert werden.  
@@ -56,7 +55,7 @@ ms.locfileid: "36160059"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe**  
   
-1.  Legen Sie den Standardwert (`cd`) mit einer Serverinstanz her, die eines der verfügbarkeitsreplikate hostet. Verwenden Sie zum Anzeigen von Informationen zu allen Verfügbarkeitsreplikaten in einer Verfügbarkeitsgruppe die Serverinstanz, die das primäre Replikat hostet.  
+1.  Legen Sie den Standardwert (`cd`) auf einer Serverinstanz, die eines der verfügbarkeitsreplikate hostet. Verwenden Sie zum Anzeigen von Informationen zu allen Verfügbarkeitsreplikaten in einer Verfügbarkeitsgruppe die Serverinstanz, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie die folgenden Cmdlets:  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36160059"
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -119,7 +118,7 @@ ms.locfileid: "36160059"
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
- **SQL Server AlwaysOn-Teamblogs – Überwachen des AlwaysOn-Zustands mit PowerShell:**  
+ **SQL Server AlwaysOn-Teamblogs – Überwachen von AlwaysOn-Zustands mit PowerShell:**  
   
 -   [Teil 1: Übersicht über grundlegende Cmdlets](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   

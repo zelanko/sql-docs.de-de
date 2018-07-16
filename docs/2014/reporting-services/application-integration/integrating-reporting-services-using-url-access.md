@@ -15,15 +15,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 287110485742ac9f8cce945d9fdb3864cfa69c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ccd35eb05019c606e794323fbd12bea60771e9be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319980"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrieren von Reporting Services mit URL-Zugriff
   Mit URL-Zugriff können Sie über eine Berichtsserver-URL auf Berichte zugreifen. Eine URL-Anforderung ermöglicht Ihnen, auf einen spezifischen Berichtsserver und die Berichte, Ressourcen und anderen Elemente in der Berichtsserver-Datenbank zuzugreifen. Sie können auch die Art und Weise anpassen, wie Benutzer Berichte anzeigen und in ihnen navigieren können. Die Abfragezeichenfolge der URL enthält Geräteinformationseinstellungen sowie Berichtsparameter, die den Bericht und die gewählte Renderingausgabe als Ziel haben. Wie URL-Anforderungen vom Berichtsserver behandelt werden, hängt von den Parametern, den Parameterpräfixen sowie dem Elementtyp ab, auf den Sie über die URL zugreifen.  

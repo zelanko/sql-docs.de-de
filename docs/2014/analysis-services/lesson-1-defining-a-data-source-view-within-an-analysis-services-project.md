@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekt | Microsoft Docs'
+title: 'Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303090"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts
   Der Entwurf einer Business Intelligence-Anwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beginnt mit dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Innerhalb dieses Projekts definieren Sie alle Elemente in Ihrer Projektmappe beginnend mit einer Datenquellensicht.  
@@ -48,6 +48,6 @@ ms.locfileid: "36151016"
  [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Lernprogramm&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

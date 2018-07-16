@@ -1,5 +1,5 @@
 ---
-title: Upgrade Advisor (Übersicht) | Microsoft Docs
+title: Upgrade Advisor – Übersicht | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - SQL Server Upgrade Advisor, components
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b204fd2f108ce4a2a12d6036e4ddc51ea5e9edfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315960"
 ---
 # <a name="upgrade-advisor-overview"></a>Übersicht über den Upgrade Advisor
   Upgrade Advisor stellt eine zentrale Konsole zum Analysieren der Komponenten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und zum Anzeigen von Berichten bereit, die Informationen über die Analyseergebnisse enthalten.  
@@ -43,10 +43,10 @@ ms.locfileid: "36150737"
   
 -   Hilfe zum Upgrade Advisor  
   
- Führen Sie bei der erstmaligen Verwendung des Upgrade Advisors den Analyse-Assistenten des Upgrade Advisors aus, um einen Server zu analysieren. Wenn der Assistent die Analyse abgeschlossen ist, klicken Sie auf **Bericht starten** oder kehren Sie zur Startseite Upgrade Advisors zurück. Führen Sie von dort aus den Berichts-Viewer des Upgrade Advisors aus, um den Bericht anzuzeigen. Der Bericht enthält Links zu Informationen, die Ihnen helfen, die bekannten Probleme zu beheben.  
+ Führen Sie bei der erstmaligen Verwendung des Upgrade Advisors den Analyse-Assistenten des Upgrade Advisors aus, um einen Server zu analysieren. Wenn der Assistent die Analyse abgeschlossen ist, klicken Sie auf **Bericht starten** aus dem Assistenten oder wechseln Sie zurück zur Startseite Upgrade Advisors. Führen Sie von dort aus den Berichts-Viewer des Upgrade Advisors aus, um den Bericht anzuzeigen. Der Bericht enthält Links zu Informationen, die Ihnen helfen, die bekannten Probleme zu beheben.  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>Analyse-Assistent des Upgrade Advisors  
- Klicken Sie zum Durchführen einer Analyse auf **starten Analyse-Assistenten** auf der Startseite des Upgrade Advisors. Der Analyse-Assistent des Upgrade Advisors sammelt Informationen über den Computer, die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten und die Ablaufverfolgungsdateien, die analysiert werden sollen. Nachdem alle Informationen gesammelt und bestätigt wurden, analysiert der Analyse-Assistent des Upgrade Advisors die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten.  
+ Klicken Sie zum Durchführen einer Analysis auf **starten Analyse-Assistenten** auf der Startseite des Upgrade Advisors. Der Analyse-Assistent des Upgrade Advisors sammelt Informationen über den Computer, die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten und die Ablaufverfolgungsdateien, die analysiert werden sollen. Nachdem alle Informationen gesammelt und bestätigt wurden, analysiert der Analyse-Assistent des Upgrade Advisors die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten.  
   
 > [!NOTE]  
 >  Jedes Mal, wenn Sie den Analyse-Assistenten des Upgrade Advisors ausführen, wird ein separater Bericht generiert, und vorhandene Berichte für die ausgewählten Komponenten werden nicht überschrieben. Der Berichts-Viewer zeigt jedoch nur die letzten fünf Berichte an.  
@@ -75,13 +75,13 @@ ms.locfileid: "36150737"
  Der Upgrade Advisor analysiert keine verschlüsselten gespeicherten Prozeduren, keinen Code in erweiterten gespeicherten Prozeduren sowie keinen Quellcode in anderen Sprachen als [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="upgrade-advisor-report-viewer"></a>Berichts-Viewer des Upgrade Advisors  
- Um ein Upgrade Advisor-Bericht anzuzeigen, klicken Sie auf **Viewer des Upgrade Advisors Bericht starten** auf der Startseite des Upgrade Advisors. Wenn der Berichts-Viewer des Upgrade Advisors gestartet wird, werden die Berichte im Standardverzeichnis geladen. Berichte werden nicht angezeigt, wenn der Upgrade Advisor-Berichts-Viewer keine Berichte im Standardverzeichnis findet. Wenn das Standardverzeichnis keine Berichte enthält, können Sie entweder den Analyse-Assistenten des Upgrade Advisors ausführen, um einen Bericht zu erstellen, oder einen vorhandenen Bericht eines anderen Servers oder Unterverzeichnisses laden.  
+ Um einen Bericht des Upgrade Advisors anzuzeigen, klicken Sie auf **Viewer des Upgrade Advisors Bericht starten** auf der Startseite des Upgrade Advisors. Wenn der Berichts-Viewer des Upgrade Advisors gestartet wird, werden die Berichte im Standardverzeichnis geladen. Berichte werden nicht angezeigt, wenn der Upgrade Advisor-Berichts-Viewer keine Berichte im Standardverzeichnis gefunden wird. Wenn das Standardverzeichnis keine Berichte enthält, können Sie entweder den Analyse-Assistenten des Upgrade Advisors ausführen, um einen Bericht zu erstellen, oder einen vorhandenen Bericht eines anderen Servers oder Unterverzeichnisses laden.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor überschreibt keine vorhandenen Berichte. Der Berichts-Viewer zeigt jedoch nur die letzten fünf Berichte an. Um einen früheren Bericht anzuzeigen, wählen Sie den Bericht aus der **Bericht** Dropdown Listenfeld aus. Der Zeitstempel gibt das Datum und die Uhrzeit an, an denen der Bericht generiert wurde.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor überschreibt keine vorhandenen Berichte. Der Berichts-Viewer zeigt jedoch nur die letzten fünf Berichte an. Um einen früheren Bericht anzuzeigen, wählen Sie den Bericht die **Bericht** im Dropdown Listenfeld. Der Zeitstempel gibt das Datum und die Uhrzeit an, an denen der Bericht generiert wurde.  
   
  Wenn XML-Dateien aus dem Analyse-Assistenten des Upgrade Advisors in den Berichts-Viewer des Upgrade Advisors geladen werden, wird für jede Komponente ein Bericht angezeigt. Der Bericht enthält alle bekannten Probleme, d. h. sowohl die auffindbaren als auch die nicht auffindbaren Probleme, die Sie beheben müssen. Für jedes Problem gibt es ein Symbol zur Angabe der Wichtigkeit, eine Bezeichnung, die Sie über den Zeitpunkt der Problembehebung informiert, und eine kurze Beschreibung. Wenn Sie ein Problem erweitern, sehen Sie ein längere Beschreibung, einen Link zu Problemdetails und einen Link zur Hilfedatei. Die Angaben für jedes Problem bieten genug Informationen, um das Problem beheben zu können.  
   
- Bei den meisten Komponenten gibt es Probleme, die nicht erkannt werden können. Um diese Probleme anzuzeigen, erweitern Sie die **sonstige Probleme beim Upgrade** -Element für die Komponente aus, und klicken Sie dann auf den Link, um weitere Informationen über Probleme, die in der Dokumentation anzuzeigen. Weitere Informationen zu Problemen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abwärtskompatibilität finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Bei den meisten Komponenten gibt es Probleme, die nicht erkannt werden können. Um diese Probleme anzuzeigen, erweitern Sie die **sonstige Probleme beim Upgrade** Element für die Komponente, und klicken Sie dann auf den Link, um weitere Informationen zu den Problemen in der Dokumentation anzuzeigen. Weitere Informationen zu Problemen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abwärtskompatibilität finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

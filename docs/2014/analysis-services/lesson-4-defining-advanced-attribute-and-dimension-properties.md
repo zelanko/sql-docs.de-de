@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Definieren von Attributen und Dimensionseigenschaften erweiterte | Microsoft Docs'
+title: 'Lektion 4: Definieren von Attributen und Dimensionseigenschaften erweiterte | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279810"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
   In dieser Lektion lernen Sie, wie einige erweiterte Attributeigenschaften, Attributhierarchien und Dimensionseigenschaften verwendet werden müssen.  
@@ -55,7 +55,7 @@ ms.locfileid: "36160532"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Lernprogramm&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

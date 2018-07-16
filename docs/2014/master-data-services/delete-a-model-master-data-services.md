@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9643b3d6094c2f0b3815668fc466d73e76f259f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5f0b813b20c91159b74a82d403ce21a473c85802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215250"
 ---
 # <a name="delete-a-model-master-data-services"></a>Löschen eines Modells (Master Data Services)
   Löschen Sie ein Modell, um das Modell und alle zugehörigen Daten aus [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zu entfernen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36161598"
   
 3.  Auf der **Modellverwaltung** Seite, wählen Sie die Zeile für das Modell, das Sie löschen möchten.  
   
-4.  Klicken Sie auf **löschen ausgewählte Modell**.  
+4.  Klicken Sie auf **ausgewähltes Modell löschen**.  
   
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36161598"
   
 ## <a name="see-also"></a>Siehe auch  
  [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Erstellen Sie ein Modell &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Erstellen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

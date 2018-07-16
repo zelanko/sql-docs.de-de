@@ -1,5 +1,5 @@
 ---
-title: Skripttask-Editor (Skriptseite) | Microsoft Docs
+title: Skripttask-Editor (Skriptseite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b5641a837761e113368eea47777c3c3bf82ee20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295040"
 ---
 # <a name="script-task-editor-script-page"></a>Skripttask-Editor (Seite Skript)
   Mithilfe der Seite **Skript** des Dialogfelds **Skripttask-Editor** können Sie Skripteigenschaften festlegen und Variablen angeben, auf die dieses Skript zugreifen kann.  
@@ -67,7 +67,7 @@ ms.locfileid: "36163154"
  [Skripttask-Editor &#40;Seite "Allgemein"&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [Skripttask-Beispiele](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
  [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

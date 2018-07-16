@@ -1,5 +1,5 @@
 ---
-title: Backup-Element (XMLA) | Microsoft Docs
+title: Backup-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bd1f2317c28acd2e6037520334168491ec0bbcbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215650"
 ---
 # <a name="backup-element-xmla"></a>Backup-Element (XMLA)
   Sichert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in einer Sicherungsdatei.  
@@ -71,9 +71,9 @@ ms.locfileid: "36163202"
 |Untergeordnete Elemente|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../xml-elements-properties/backupremotepartitions-element-xmla.md), [Datei](../xml-elements-properties/file-element-xmla.md), [Speicherorte](../xml-elements-properties/locations-element-xmla.md), [ Objekt](../xml-elements-properties/object-element-xmla.md), [Kennwort](../xml-elements-properties/password-element-xmla.md), [Sicherheit](../xml-elements-properties/security-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Backup` Befehl sichert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der [Objekt](../xml-elements-properties/object-element-xmla.md) Element, um eine Sicherungsdatei und optional sichert der Remotepartitionen in remotesicherungsdateien. Wenn das `Object`-Element auf ein Objekt verweist, bei dem es sich nicht um eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank handelt, tritt ein Fehler auf.  
+ Die `Backup` Befehl sichert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der [Objekt](../xml-elements-properties/object-element-xmla.md) Element auf eine Sicherungsdatei und optional Remotepartitionen in remotesicherungsdateien sichert. Wenn das `Object`-Element auf ein Objekt verweist, bei dem es sich nicht um eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank handelt, tritt ein Fehler auf.  
   
- Welche Informationen das `Backup` -Befehls gesichert werden, hängt von den Objekten in der Datenbank verwendeten Speichermodus. In der folgenden Tabelle werden die Informationen dargestellt, die basierend auf dem verwendeten Speichermodus gesichert werden.  
+ Welche Informationen das `Backup` -Befehls gesichert werden, hängt von Objekten in der Datenbank verwendeten Speichermodus. In der folgenden Tabelle werden die Informationen dargestellt, die basierend auf dem verwendeten Speichermodus gesichert werden.  
   
 |Speichermodus|Informationen, die gesichert werden|  
 |------------------|-----------------------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "36163202"
 |Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
 |Relationale OLAP (ROLAP)|Metadaten|  
   
- Während einer `Backup` Befehl, eine gemeinsame Sperre befindet sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `Object` Element. Die freigegebene Sperre wird nach Abschluss der `Backup` -Befehls wieder aufgehoben.  
+ Während ein `Backup` -Befehls wird eine freigegebene Sperre für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `Object` Element. Die freigegebene Sperre wird nach der `Backup` -Befehl ausgeführt wurde.  
   
  Mehrere `Backup` -Befehle können gleichzeitig ausgeführt werden, wenn die Befehle, in enthalten sind der [parallele](../xml-elements-properties/parallel-element-xmla.md) Auflistung von einer [Batch](batch-element-xmla.md) Befehl. Mihilfe der `Parallel`-Auflistung kann eine Datenbank in mehreren Sicherungsdateien gleichzeitig gesichert werden.  
   

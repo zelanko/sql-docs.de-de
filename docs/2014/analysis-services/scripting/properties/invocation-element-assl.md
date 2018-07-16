@@ -1,5 +1,5 @@
 ---
-title: Invocation-Element (ASSL) | Microsoft Docs
+title: Invocation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312240"
 ---
 # <a name="invocation-element-assl"></a>Invocation-Element (ASSL)
   Gibt an, wie ein [Aktion](../objects/action-element-assl.md) aufgerufen werden soll.  
@@ -62,7 +62,7 @@ ms.locfileid: "36162121"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Aufruf einer Aktion hängt von der Clientanwendung ab. Die `Invocation` -Element empfiehlt einer Clientanwendung wie eine Aktion erfolgen soll, und gibt keine mit der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wie eine Aktion aufrufen.  
+ Der Aufruf einer Aktion hängt von der Clientanwendung ab. Die `Invocation` -Element empfiehlt einer Clientanwendung wie eine Aktion erfolgen soll, und gibt keine mit der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wie Sie eine Aktion aufzurufen.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
