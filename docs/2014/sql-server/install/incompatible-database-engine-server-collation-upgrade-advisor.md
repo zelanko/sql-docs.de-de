@@ -1,5 +1,5 @@
 ---
-title: Serversortierung für Datenbankmodul inkompatible (Upgrade Advisor) | Microsoft Docs
+title: Nicht kompatible Datenbank-Engine-Server-Sortierung (Upgrade Advisor) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a81084ff6eba37d8a6fcc2643a760d879dcf13c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e182df78fc7faae8a50092fd51a8f2c0964fe2bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286646"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Inkompatible Serversortierung für Datenbank-Engine (Upgrade Advisor)
   Upgrade Advisor hat erkannt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mithilfe einer Instanz von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , die mit einer inkompatiblen serversortierung konfiguriert ist.  

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Datenaktualisierung mit SharePoint 2010 | Microsoft Docs
+title: PowerPivot-Datenaktualisierung mit SharePoint 2010 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2809ee4ed18ce4f1735bbdc2b99ae5490c7e4046
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b92bb0b217ba9d6511bb4b5f26ae68a834bd6935
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312700"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>PowerPivot-Datenaktualisierung mit SharePoint 2010
   Die [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Datenaktualisierung ist ein geplanter serverseitiger Vorgang, mit dem externe Datenquellen abgefragt werden, um eingebettete [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]-Daten in einer Excel 2010-Arbeitsmappe zu aktualisieren, die in einer Inhaltsbibliothek gespeichert ist.  
@@ -33,13 +33,13 @@ ms.locfileid: "36059705"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und Excel Services für SharePoint Server 2013 verwenden eine andere Architektur für die datenaktualisierung [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodelle. In der neuen Architektur wird Excel Services als Hauptkomponente zum Laden von PowerPivot-Datenmodellen genutzt. In der vorherigen Datenaktualisierungsarchitektur wurden Datenmodelle mithilfe eines Servers geladen, auf dem der PowerPivot-Systemdienst und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wurden. Weitere Informationen finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und Excel Services in SharePoint Server 2013 verwenden eine andere Architektur für die datenaktualisierung [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodelle. In der neuen Architektur wird Excel Services als Hauptkomponente zum Laden von PowerPivot-Datenmodellen genutzt. In der vorherigen Datenaktualisierungsarchitektur wurden Datenmodelle mithilfe eines Servers geladen, auf dem der PowerPivot-Systemdienst und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wurden. Weitere Informationen finden Sie unter [PowerPivot-Datenaktualisierung mit SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
   
  **In diesem Thema:**  
   
  [Schritt 1: Aktivieren von Secure Store Service und Generieren eines Hauptschlüssels](#bkmk_services)  
   
- [Schritt 2: Deaktivieren von Optionen für Anmeldeinformationen, die nicht unterstützt werden sollen](#bkmk_creds)  
+ [Schritt 2: Deaktivieren der Anmeldeinformationsoptionen, die Sie nicht unterstützen möchten.](#bkmk_creds)  
   
  [Schritt 3: Erstellen von zielanwendungen zum Speichern von Anmeldeinformationen, die bei der datenaktualisierung verwendet werden.](#bkmk_stored)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36059705"
   
  [Ändern der Konfigurationseinstellungen für Datenaktualisierung](#bkmk_config)  
   
- [Planen der Zeitgeberauftrag für PowerPivot-Datenaktualisierung](#configTimerJob)  
+ [Zeitgeberauftrags für die PowerPivot-Datenaktualisierung](#configTimerJob)  
   
  [Deaktivieren des Zeitgeberauftrags die Daten aktualisieren](#bkmk_disableDR)  
   
@@ -73,13 +73,13 @@ ms.locfileid: "36059705"
   
 2.  Klicken Sie im Menüband Dienstanwendungen unter Erstellen auf **neu**.  
   
-3.  Wählen Sie **Secure Store Service**.  
+3.  Wählen Sie **Secure Store Service-**.  
   
 4.  In der **Secure Store-Anwendung erstellen** Seite, geben Sie einen Namen für die Anwendung.  
   
 5.  In **Datenbank**, geben Sie die SQL Server-Instanz, die die Datenbank für diese dienstanwendung hostet. Der Standardwert entspricht der SQL Server-Datenbank-Engine-Instanz, die die Datenbanken für die Farmkonfiguration hostet.  
   
-6.  In **Datenbankname**, geben Sie den Namen der dienstanwendungs-Datenbank. Der Standardwert lautet Secure_Store_Service_DB_\<Guid >. Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
+6.  In **Datenbanknamen**, geben Sie den Namen der dienstanwendungs-Datenbank. Der Standardwert entspricht Secure_Store_Service_DB_\<Guid >. Der Standardname entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   
 7.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie die SQL-Authentifizierung auswählen, finden Sie im SharePoint-Administratorhandbuch eine Anleitung zum Verwenden des Authentifizierungstyps in der Farm.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36059705"
   
 12. Klicken Sie im Menüband Dienstanwendungen auf **verwalten**.  
   
-13. Klicken Sie unter Schlüsselverwaltung auf **neue Schlüssel generieren**.  
+13. Klicken Sie unter Schlüsselverwaltung auf **neuen Schlüssel generieren**.  
   
 14. Geben Sie eine Passphrase ein, und bestätigen Sie sie dann. Die Passphrase wird zum Hinzufügen zusätzlicher freigegebener Secure Store Service-Anwendungen verwendet.  
   
@@ -101,20 +101,20 @@ ms.locfileid: "36059705"
   
  Die für Problembehandlungszwecke nützliche Überwachungsprotokollierung von Secure Store Service-Vorgängen ist erst verfügbar, nachdem sie aktiviert wurde. Weitere Informationen zum Aktivieren der Protokollierung finden Sie unter [Secure Store Service konfigurieren (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
-##  <a name="bkmk_creds"></a> Schritt 2: Deaktivieren von Optionen für Anmeldeinformationen, die nicht unterstützt werden sollen  
+##  <a name="bkmk_creds"></a> Schritt 2: Deaktivieren der Anmeldeinformationsoptionen, die Sie nicht unterstützen möchten.  
  Die PowerPivot-Datenaktualisierung stellt drei Anmeldeinformationsoptionen in einem Datenaktualisierungszeitplan bereit. Wenn ein Besitzer einer Arbeitsmappe eine Datenaktualisierung plant, wählt er eine dieser Optionen aus. Anhand dieser Auswahl wird das Konto bestimmt, unter dem der Datenaktualisierungsauftrag ausgeführt wird. Als Administrator können Sie festlegen, welche Anmeldeinformationsoptionen für Zeitplanbesitzer verfügbar sind.  
   
  Es muss mindestens eine Option verfügbar sein, damit die Datenaktualisierung funktioniert.  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- Option 1 aus, **verwenden, die vom Administrator konfigurierte datenaktualisierungskonto**, immer auf der zeitplandefinitionsseite angezeigt, aber funktioniert nur, wenn Sie das unbeaufsichtigte datenaktualisierungskonto konfigurieren. Weitere Informationen zum Erstellen des Kontos finden Sie unter [Konfigurieren der PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+ Option 1 aus, **verwenden, das vom Administrator konfigurierte Konto für die datenaktualisierung**, immer auf der zeitplandefinitionsseite angezeigt, aber funktioniert nur, wenn Sie das unbeaufsichtigte datenaktualisierungskonto konfigurieren. Weitere Informationen zum Erstellen des Kontos finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
- Option 2, **Herstellen einer Verbindung mithilfe der folgenden Windows-Benutzeranmeldeinformationen**, immer auf der Seite angezeigt wird, aber funktioniert nur, wenn Sie aktivieren die **ermöglichen Benutzern die Eingabe benutzerdefinierter Windows-Anmeldeinformationen** Option im Dienst Konfigurationsseite der Anwendung. Diese Option ist standardmäßig aktiviert. Sie können sie aber deaktivieren, wenn die Verwendung dieser Option mehr Nachteile als Vorteile hat (siehe unten).  
+ Option 2, **Herstellen einer Verbindung mit dem folgenden Windows-Benutzeranmeldeinformationen**, immer auf der Seite angezeigt wird, aber funktioniert nur, wenn Sie aktivieren die **Benutzern die Eingabe benutzerdefinierte Windows-Anmeldeinformationen** -Option in den Dienst Seite für die Anwendungskonfiguration. Diese Option ist standardmäßig aktiviert. Sie können sie aber deaktivieren, wenn die Verwendung dieser Option mehr Nachteile als Vorteile hat (siehe unten).  
   
- Option 3, **mit den in Secure Store Service gespeicherten Anmeldeinformationen verbinden**, immer auf der Seite angezeigt wird, aber funktioniert nur, wenn ein Zeitplanbesitzer eine gültige Zielanwendung bereitstellt. Ein Administrator muss diese Zielanwendungen vorab erstellen und dann für die Personen, die Datenaktualisierungszeitpläne erstellen, den Anwendungsnamen bereitstellen. Weitere Informationen zum Erstellen einer Zielanwendung für Datenaktualisierungsvorgänge, finden Sie unter [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Option 3, **Herstellen einer Verbindung mit den in Secure Store Service gespeicherten Anmeldeinformationen**, immer auf der Seite angezeigt wird, aber funktioniert nur, wenn ein Zeitplanbesitzer eine gültige Zielanwendung bereitstellt. Ein Administrator muss diese Zielanwendungen vorab erstellen und dann für die Personen, die Datenaktualisierungszeitpläne erstellen, den Anwendungsnamen bereitstellen. Weitere Informationen zum Erstellen einer Zielanwendung für Datenaktualisierungsvorgänge, finden Sie unter [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
- **Konfigurieren von anmeldeinformationsoption 2, "Herstellen einer Verbindung mithilfe der folgenden Windows-Benutzeranmeldeinformationen"**  
+ **Konfigurieren von anmeldeinformationsoption 2, "Verbinden mit den folgenden Windows-Benutzeranmeldeinformationen"**  
   
  Eine PowerPivot-Dienstanwendung enthält eine Anmeldeinformationsoption, die Zeitplanbesitzern die Eingabe eines beliebigen Windows-Benutzernamens und -Kennworts zum Ausführen eines Datenaktualisierungsauftrags erlaubt. Dies ist die zweite Anmeldeinformationsoption auf der Seite zum Definieren des Zeitplans:  
   
@@ -130,15 +130,15 @@ ms.locfileid: "36059705"
   
  Wenn Sie diese Anmeldeinformationsoption deaktivieren, können Sie gefahrlos alle für die PowerPivot-Datenaktualisierung generierten Zielanwendungen löschen.  
   
- **Die Verwendung von beliebigen Windows-Anmeldeinformationen in Zeitplänen zur datenaktualisierung deaktivieren**  
+ **Deaktivieren die Verwendung von beliebigen Windows-Anmeldeinformationen in Zeitplänen zur datenaktualisierung**  
   
 1.  Klicken Sie in der Zentraladministration unter „Anwendungsverwaltung“ auf **Dienstanwendungen verwalten**.  
   
 2.  Klicken Sie auf den Namen der PowerPivot-Dienstanwendung. Das PowerPivot-Management-Dashboard wird angezeigt.  
   
-3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** , öffnen Sie die Seite "Anwendungseinstellungen" PowerPivot-Dienst "  
+3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** zum Öffnen der Seite PowerPivot Service-Anwendungseinstellungen  
   
-4.  Deaktivieren Sie im Abschnitt Datenaktualisierung der **ermöglichen Benutzern die Eingabe benutzerdefinierter Windows-Anmeldeinformationen** Kontrollkästchen.  
+4.  Deaktivieren Sie im Abschnitt Datenaktualisierung die **Benutzern die Eingabe benutzerdefinierte Windows-Anmeldeinformationen** Kontrollkästchen.  
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36059705"
   
  Damit bestimmte Anmeldeinformationsoptionen verwendet werden können, müssen Zielanwendungen erstellt werden, so wie bereits im vorherigen Abschnitt erwähnt. Insbesondere müssen Zielanwendungen für das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot sowie zusätzliche gespeicherte Anmeldeinformationen bereitgestellt werden, die voraussichtlich bei den Datenaktualisierungsvorgängen verwendet werden.  
   
- Weitere Informationen zum Erstellen von zielanwendungen, die gespeicherten Anmeldeinformationen enthalten, finden Sie unter [Konfigurieren der PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [ Konfigurieren von gespeicherten Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Weitere Informationen zum Erstellen von zielanwendungen, die gespeicherte Anmeldeinformationen enthalten, finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [ Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="bkmk_scale"></a> Schritt 4: Konfigurieren des Servers für die skalierbare datenaktualisierung  
  Standardmäßig unterstützt jede PowerPivot für SharePoint-Installation sowohl bedarfsgesteuerte Abfragen als auch geplante Datenaktualisierungen.  
@@ -170,25 +170,25 @@ ms.locfileid: "36059705"
   
  Neben den SharePoint-Berechtigungen müssen auch die Datenbankberechtigungen für externe Datenquellen geprüft werden, um sicherzustellen, dass die bei der Datenaktualisierung verwendeten Konten über ausreichende Rechte für den Zugriff auf die Daten verfügen. Zum Ermitteln der Berechtigungsanforderungen ist eine sorgfältige Auswertung erforderlich, da die zu erteilenden Berechtigungen von der Verbindungszeichenfolge in der Arbeitsmappe und von der Benutzeridentität abhängen, unter der der Datenaktualisierungsauftrag ausgeführt wird.  
   
- **Warum vorhandene Verbindungszeichenfolgen in einer PowerPivot-Arbeitsmappe für PowerPivot-Datenaktualisierungsvorgänge relevant**  
+ **Warum vorhandene Verbindungszeichenfolgen in einer PowerPivot-Arbeitsmappe für PowerPivot-Datenaktualisierungsvorgänge relevant ist**  
   
  Beim Ausführen der Datenaktualisierung sendet der Server eine Verbindungsanforderung an die externe Datenquelle. Bei diesem Vorgang wird die Verbindungszeichenfolge verwendet, die beim ursprünglichen Import der Daten erstellt wurde. Die in der Verbindungszeichenfolge angegebenen Serverstandort-, Datenbankname- und Authentifizierungsparameter werden jetzt bei der Datenaktualisierung verwendet, um auf dieselben Datenquellen zuzugreifen. Die Verbindungszeichenfolge und ihr Gesamtaufbau können für Datenaktualisierungszwecke nicht geändert werden. Die Verbindungszeichenfolge wird bei der Datenaktualisierung einfach unverändert wiederverwendet. In einigen Fällen können Sie den Benutzernamen und das Kennwort in der Verbindungszeichenfolge überschreiben, wenn Sie zum Verbinden mit einer Datenquelle eine Nicht-Windows-Authentifizierung verwenden. Ausführliche Informationen hierzu finden Sie weiter unten in diesem Thema.  
   
  Bei den meisten Arbeitsmappen wird als Standardauthentifizierungsoption für die Verbindung festgelegt, dass vertrauenswürdige Verbindungen oder die integrierte Sicherheit von Windows verwendet wird. In diesem Fall enthalten die Verbindungszeichenfolgen `SSPI=IntegratedSecurity` oder `SSPI=TrustedConnection`. Wenn die Verbindungszeichenfolge bei der Datenaktualisierung verwendet wird, wird das für die Ausführung des Datenaktualisierungsauftrags verwendete Konto der "aktuelle Benutzer". Daher benötigt dieses Konto Leseberechtigungen für jede externe Datenquelle, auf die über eine vertrauenswürdige Verbindung zugegriffen wird.  
   
- **Haben Sie die PowerPivot aktiviert unbeaufsichtigte datenaktualisierungskonto?**  
+ **Haben Sie ermöglichen das PowerPivot für die unbeaufsichtigte datenaktualisierung Konto?**  
   
  Falls ja, sollten Sie dem Konto Leseberechtigungen für die Datenquellen erteilen, auf die während der Datenaktualisierung zugegriffen wird. Dieses Konto benötigt Leseberechtigungen, da es in einer Arbeitsmappe, für die die standardmäßigen Authentifizierungsoptionen verwendet werden, bei der Datenaktualisierung der "aktuelle Benutzer" wird. Sofern der Zeitplanbesitzer die Anmeldeinformationen in der Verbindungszeichenfolge nicht überschreibt, benötigt dieses Konto Leseberechtigungen für alle Datenquellen, die aktiv in der Organisation verwendet werden.  
   
- **Verwenden Sie die anmeldeinformationsoption 2: ermöglichen der Zeitplanbesitzer einen Windows-Benutzernamen und ein Kennwort eingeben?**  
+ **Verwenden Sie die anmeldeinformationsoption 2: ermöglichen der Zeitplanbesitzer eine Windows-Benutzernamen und ein Kennwort eingeben?**  
   
  Normalerweise besitzen Benutzer, die PowerPivot-Arbeitsmappen erstellen, ausreichende Berechtigungen, da sie bereits Daten importiert haben. Wenn diese Benutzer anschließend konfigurieren, dass die Datenaktualisierung unter ihrer eigenen Windows-Benutzeridentität ausgeführt wird, wird ihr Windows-Benutzerkonto, das bereits über Rechte für die Datenbank verfügt, zum Abrufen von Daten bei der Datenaktualisierung verwendet. Die vorhandenen Berechtigungen sollten ausreichend sein.  
   
- **Verwenden Sie die anmeldeinformationsoption 3: Verwenden von eine Secure Store Service-Zielanwendung eine Benutzeridentität zum Ausführen von datenaktualisierungsaufträgen bereitstellen?**  
+ **Verwenden Sie die anmeldeinformationsoption 3: verwenden eine Secure Store Service-Zielanwendung eine Benutzeridentität zum Ausführen von datenaktualisierungsaufträgen bereitstellen?**  
   
  Jedes Konto, das zum Ausführen eines Datenaktualisierungsauftrags verwendet wird, benötigt Leseberechtigungen, und zwar aus denselben Gründen, die oben für das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot erläutert sind.  
   
- **So überprüfen die Verbindungszeichenfolgen, um zu bestimmen, ob während der datenaktualisierung verwendete Anmeldeinformationen überschrieben werden kann**  
+ **So prüfen Sie die Verbindungszeichenfolgen, um zu bestimmen, ob während der datenaktualisierung verwendete Anmeldeinformationen überschrieben werden kann**  
   
  Wie zuvor angemerkt, können Sie auf der Ebene des Datenaktualisierungsauftrags Benutzername und Kennwort durch andere Werte ersetzen, wenn für die Verbindung keine Windows-Authentifizierung verwendet wird (z. B. die SQL Server-Authentifizierung). Nicht-Windows-Anmeldeinformationen werden mit den Benutzer-ID- und Kennwortparametern an die Verbindungszeichenfolge übergeben. Wenn die Arbeitsmappe eine Verbindungszeichenfolge mit diesen Parametern enthält, können Sie optional für die Datenaktualisierung aus dieser Datenquelle einen anderen Benutzernamen und ein anderes Kennwort angeben.  
   
@@ -202,13 +202,13 @@ ms.locfileid: "36059705"
   
 4.  Klicken Sie auf **vorhandene Verbindungen**.  
   
-     Alle in der Arbeitsmappe verwendeten Verbindungen aufgeführt **PowerPivot-Datenverbindungen**.  
+     Alle in der Arbeitsmappe verwendeten Verbindungen finden Sie unter **PowerPivot-Datenverbindungen**.  
   
 5.  Wählen Sie die Verbindung, und klicken Sie auf **bearbeiten**, und klicken Sie dann auf **erweitert**. Die Verbindungszeichenfolge befindet sich unten auf der Seite.  
   
- Wenn dort **Integrated Security = SSPI** in der Verbindungszeichenfolge die Anmeldeinformationen in der Verbindungszeichenfolge kann nicht überschrieben. Für die Verbindung wird immer der aktuelle Benutzer verwendet. Wenn Sie Anmeldeinformationen bereitstellen, werden diese ignoriert.  
+ Wenn dort **Integrated Security = SSPI** in der Verbindungszeichenfolge kann nicht überschrieben werden die Anmeldeinformationen in der Verbindungszeichenfolge. Für die Verbindung wird immer der aktuelle Benutzer verwendet. Wenn Sie Anmeldeinformationen bereitstellen, werden diese ignoriert.  
   
- Wenn dort **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<Userlogin >**, haben Sie eine Verbindungszeichenfolge die Anmeldeinformationen überschrieben wird. Die in einer Verbindungszeichenfolge angezeigten Anmeldeinformationen (beispielsweise "UserID" und "Password") sind keine Windows-Anmeldeinformationen, sondern Datenbankanmeldungen oder andere Anmeldekonten, die für die Zieldatenquelle gültig sind.  
+ Wenn dort **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<Userlogin >**, haben Sie eine Verbindungszeichenfolge die Anmeldeinformationen überschrieben werden. Die in einer Verbindungszeichenfolge angezeigten Anmeldeinformationen (beispielsweise "UserID" und "Password") sind keine Windows-Anmeldeinformationen, sondern Datenbankanmeldungen oder andere Anmeldekonten, die für die Zieldatenquelle gültig sind.  
   
  **Gewusst wie: Überschreiben von Anmeldeinformationen in der Verbindungszeichenfolge**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36059705"
   
  ![SSAS_PowerPivotKJ_DataRefreshDSOptions](media/ssas-powerpivotkj-datarefreshdsoptions.gif "SSAS_PowerPivotKJ_DataRefreshDSOptions")  
   
- **Datenzugriffsanforderungen**  
+ **Identifizierung der datenzugriffsanforderungen**  
   
  Wie bereits in den vorherigen Abschnitten erwähnt, wird zum Ausführen der Datenaktualisierung und zum Verbinden mit externen Datenquellen häufig dasselbe Konto verwendet. Daher wird das Konto, das für den Zugriff auf die externen Datenquellen verwendet wird, anhand der Optionen ermittelt, die in diesem Bereich der Seite für den Datenaktualisierungszeitplan festgelegt sind. Hierbei kann es sich um ein unbeaufsichtigtes Datenaktualisierungskonto für PowerPivot, das Windows-Konto eines einzelnen Benutzers oder um das in der vordefinierten Zielanwendung gespeicherte Konto handeln.  
   
@@ -234,11 +234,11 @@ ms.locfileid: "36059705"
 ##  <a name="bkmk_verify"></a> Schritt 8: Überprüfen der datenaktualisierungskonfiguration  
  Zum Überprüfen der Datenaktualisierung ist eine PowerPivot-Arbeitsmappe erforderlich, die auf einer SharePoint-Website veröffentlicht ist. Sie benötigen Teilnahmeberechtigungen für die Arbeitsmappe und Berechtigungen für den Zugriff auf die Datenquellen, die im Datenaktualisierungszeitplan enthalten sind.  
   
- Wenn Sie den Zeitplan zu erstellen, wählen Sie die **außerdem so bald wie möglich eine Aktualisierung** Kontrollkästchen, um die datenaktualisierung sofort auszuführen. Auf der Seite mit dem Datenaktualisierungsverlauf der Arbeitsmappe können Sie dann überprüfen, ob die Datenaktualisierung erfolgreich ausgeführt wurde. Der Zeitgeberauftrag zur PowerPivot-Datenaktualisierung wird einmal pro Minute ausgeführt. Es dauert daher mindestens eine Minute, um eine Bestätigung über den Erfolg der Datenaktualisierung zu erhalten.  
+ Wenn Sie den Zeitplan erstellen, wählen Sie die **außerdem so bald wie möglich aktualisieren** Kontrollkästchen, um die datenaktualisierung sofort auszuführen. Auf der Seite mit dem Datenaktualisierungsverlauf der Arbeitsmappe können Sie dann überprüfen, ob die Datenaktualisierung erfolgreich ausgeführt wurde. Der Zeitgeberauftrag zur PowerPivot-Datenaktualisierung wird einmal pro Minute ausgeführt. Es dauert daher mindestens eine Minute, um eine Bestätigung über den Erfolg der Datenaktualisierung zu erhalten.  
   
  Probieren Sie unbedingt alle Anmeldeinformationsoptionen aus, die unterstützt werden sollen. Wenn Sie beispielsweise das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot konfiguriert haben, stellen Sie sicher, dass die Datenaktualisierung bei Verwendung dieser Option erfolgreich ist. Weitere Informationen zum Planen und Anzeigen von Statusinformationen finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md) und [Verlauf der Datenaktualisierung Ansicht &#40;PowerPivot für SharePoint &#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- Bei einem datenaktualisierungsfehler, finden Sie in der [Problembehandlung bei PowerPivot-Datenaktualisierung](http://go.microsoft.com/fwlink/?LinkID=223279) Seite nach möglichen Lösungen im TechNet-Wiki.  
+ Bei einem datenaktualisierungsfehler, finden Sie in der [Problembehandlung bei der PowerPivot-Datenaktualisierung](http://go.microsoft.com/fwlink/?LinkID=223279) Seite nach möglichen Lösungen im TechNet-Wiki.  
   
 ##  <a name="bkmk_config"></a> Ändern der Konfigurationseinstellungen für Datenaktualisierung  
  Jede PowerPivot-Dienstanwendung besitzt Konfigurationseinstellungen, die sich auf Datenaktualisierungsvorgänge auswirken. In diesem Abschnitt wird das Ändern dieser Einstellungen erläutert.  
@@ -252,7 +252,7 @@ ms.locfileid: "36059705"
   
 2.  Klicken Sie auf den Namen der PowerPivot-Dienstanwendung. Das PowerPivot-Management-Dashboard wird angezeigt.  
   
-3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** , öffnen Sie die Seite "Anwendungseinstellungen" PowerPivot-Dienst "  
+3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** zum Öffnen der Seite PowerPivot Service-Anwendungseinstellungen  
   
 4.  Geben Sie im Abschnitt Datenaktualisierung unter Geschäftsstunden eine Startzeit und Beendigungszeit ein, durch die der Zeitraum für die Verarbeitung außerhalb der Geschäftszeiten definiert wird.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "36059705"
   
 2.  Klicken Sie auf den Namen der PowerPivot-Dienstanwendung. Das PowerPivot-Management-Dashboard wird angezeigt.  
   
-3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** , öffnen Sie die Seite "Anwendungseinstellungen" PowerPivot-Dienst "  
+3.  Klicken Sie im Aktionsbereich auf **Einstellungen für dienstanwendung konfigurieren** zum Öffnen der Seite PowerPivot Service-Anwendungseinstellungen  
   
 4.  Geben Sie im Abschnitt Sammlung von Verwendungsdaten unter Verwendungsdatenverlauf einen Wert ein, der angibt, wie viele Tage ein Datensatz der Datenaktualisierungsaktivitäten für die einzelnen Arbeitsmappen gespeichert werden soll.  
   
@@ -277,9 +277,9 @@ ms.locfileid: "36059705"
   
  SharePoint-Benutzer können Verlaufsinformationen anzeigen, wenn sie für eine Arbeitsmappe, die über einen Datenaktualisierungsverlauf verfügt, die Option Datenaktualisierung verwalten auswählen. Diese Informationen werden auch von Farmadministratoren auf der Dashboardseite für die PowerPivot-Verwaltung verwendet, um PowerPivot-Dienstvorgänge zu verwalten. Weitere Informationen finden Sie unter [Verlauf der Datenaktualisierung Ansicht &#40;PowerPivot für SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- Die physische Langzeitspeicherung der Verlaufsdaten erfolgt in der Datenbank der PowerPivot-Dienstanwendung. Weitere Informationen dazu, wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [PowerPivot Usage Data Collection](power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
+ Die physische Langzeitspeicherung der Verlaufsdaten erfolgt in der Datenbank der PowerPivot-Dienstanwendung. Weitere Informationen wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [PowerPivot Usage Data Collection](power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
-##  <a name="configTimerJob"></a> Planen der Zeitgeberauftrag für PowerPivot-Datenaktualisierung  
+##  <a name="configTimerJob"></a> Zeitgeberauftrags für die PowerPivot-Datenaktualisierung  
  Geplante Datenaktualisierungen werden von einem Zeitgeberauftrag für die PowerPivot-Datenaktualisierung ausgelöst, der die Zeitplaninformationen in der Datenbank der PowerPivot-Dienstanwendung in einminütigen Intervallen durchsucht. Wenn eine Datenaktualisierung starten soll, fügt der Zeitgeberauftrag die Anforderung in eine Verarbeitungswarteschlange auf einem verfügbaren PowerPivot-Server ein.  
   
  Sie können die Zeit zwischen Suchläufen zum Zweck der Leistungsoptimierung erhöhen. Sie können den Zeitgeberauftrag auch deaktivieren, um Datenaktualisierungsvorgänge während der Problembehandlung vorübergehend zu stoppen.  
@@ -309,6 +309,6 @@ ms.locfileid: "36059705"
  [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung &#40;PowerPivot für SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)   
  [Konfigurieren des unbeaufsichtigten PowerPivot unbeaufsichtigte Datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
- [Konfigurieren von gespeicherten Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

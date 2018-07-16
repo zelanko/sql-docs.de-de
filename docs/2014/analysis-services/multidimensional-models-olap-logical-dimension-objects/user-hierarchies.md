@@ -1,5 +1,5 @@
 ---
-title: Benutzerhierarchien | Microsoft Docs
+title: Benutzerhierarchien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0ba2aa7e3941803e9afcbf124a8b02647832814a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286155"
 ---
 # <a name="user-hierarchies"></a>Benutzerhierarchien
-  Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in Form von hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
+  Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36149523"
 |1999|Quarter 3|Jul|  
 |1999|Quarter 3|Aug|  
 |1999|Quarter 3|Sep|  
-|1999|Quarter 4|Oct|  
+|1999|Quarter 4|Oktober|  
 |1999|Quarter 4|Nov|  
 |1999|Quarter 4|Dec|  
   

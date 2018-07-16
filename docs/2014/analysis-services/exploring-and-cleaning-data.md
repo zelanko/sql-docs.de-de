@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen und Bereinigen von Daten | Microsoft Docs
+title: Durchsuchen und Bereinigen von Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304720"
 ---
 # <a name="exploring-and-cleaning-data"></a>Durchsuchen und Bereinigen von Daten
   Die Datenvorbereitung umfasst viel mehr als die Datenbereinigung. Die Art und Weise der Datenvorbereitung wirkt sich auch darauf aus, wie Ergebnisse am Ende interpretiert werden. Die Datenvorbereitung umfasst folgende Tasks:  
@@ -36,10 +36,10 @@ ms.locfileid: "36047521"
   
 -   Konvertieren von Datentypen oder Kategorisieren von Werten für die Analyse (wo erforderlich)  
   
- Wenn Sie die datenmodellierung vertraut sind, wird empfohlen, das verwandte Thema zu lesen [Prüfliste der Vorbereitung für Data Mining](checklist-of-preparation-for-data-mining.md).  
+ Wenn Sie mit der datenmodellierung vertraut sind, es wird empfohlen, zu, das verwandte Thema lesen [Prüfliste der Vorbereitung für Data Mining](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Datenvorbereitungstools  
- Die Data Mining Add-ins für Office umfasst die folgenden Tools für die DatenBereinigung und vorbereiten:  
+ Die Data Mining-Add-ins für Office umfasst die folgenden Tools für die DatenBereinigung und vorbereiten:  
   
 ### <a name="explore-data"></a>Daten durchsuchen  
  Verwenden der **Stichprobenoptionen** Assistenten für die folgenden datenvorbereitungstasks:  
@@ -50,10 +50,10 @@ ms.locfileid: "36047521"
   
 -   Identifizieren hilfreicher Spalten für die Analyse und Planen der Datenmodellierungsphase.  
   
- [Durchsuchen Sie Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md).  
+ [Durchsuchen von Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Erkennen und Behandeln von Ausreißern  
- Die **Ausreißer** Assistenten für die Verteilung der Werte in Ihren Daten Diagramme bereit und hilft Extremwerten. Verwenden der **Ausreißer** Tool für die folgenden datenvorbereitungstasks:  
+ Die **Ausreißer** -Assistent stellt die Verteilung der Werte in Ihren Daten und hilft Ihnen, extreme Werte zu entfernen. Verwenden der **Ausreißer** Tool für die folgenden datenvorbereitungstasks:  
   
 -   Bestimmen der Zuverlässigkeit einzelner Werte anhand von Mustern, die in den Daten festgestellt wurden.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36047521"
   
 -   Klassifizieren von Daten, indem Gruppen erstellt werden, die Zahlenbereiche darstellen.  
   
-     Angenommen, Sie möchten möglicherweise ersetzen Sie z. B. eine numerische einkommensspalte mit Bezeichnungen **Einkommen – Mittel** und **Einkommen – hoch**.  
+     Angenommen, Sie möchten z. B. eine numerische einkommensspalte mit Bezeichnungen zu ersetzen **Einkommen – Mittel** und **Einkommen – hoch**.  
   
 -   Reduzieren diskreter Werte auf Kategorien.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36047521"
   
 -   Erkennen von fehlenden Werten und Entfernen dieser Werte oder Berechnen eines geeigneten Werts (z. B. eines Mittelwerts, NULL-Werts oder sonstigen Werts).  
   
- [Durchsuchen Sie Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+ [Durchsuchen von Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
  [Neu bezeichnen &#40;SQL Server Data Mining-Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36047521"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Datamining-Modells](creating-a-data-mining-model.md)   
- [Überprüfen von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Bereitstellen und Skalieren von Miningmodellen &#40;Data Mining-Add-ins für Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

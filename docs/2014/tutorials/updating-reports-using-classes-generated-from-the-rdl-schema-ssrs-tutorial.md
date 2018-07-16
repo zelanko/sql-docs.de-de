@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema (SSRS-Lernprogramm) generierten | Microsoft Docs
+title: Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema (SSRS-Lernprogramm) generierten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a13d94965eebf99c401159c86e5fed065f5ec7ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297560"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)
-  Dieses Lernprogramm zeigt, wie der XML-Schemadefinitionstools (Xsd.exe) Klassen generieren, mit denen Sie serialisieren und Deserialisieren von Berichtsdefinitionsdateien (RDL- und RDLC) mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
+  Dieses Tutorial veranschaulicht, wie das XML Schema Definition Tool (Xsd.exe) Klassen generieren, mit denen Sie zum Serialisieren und Deserialisieren von Berichtsdefinitionsdateien (RDL- und RDLC) mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  Im Rahmen dieses Lernprogramms führen Sie folgende Aufgaben aus:  
   
 -   Erstellen Sie eine Anwendung mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Konsolenanwendung-Projektvorlage.  
   
--   Generieren von Klassen aus der Berichtsdefinitionssprache (Report Definition Language, RDL) mithilfe der **Xsd** Tool.  
+-   Generieren von Klassen aus der Berichtsdefinitionssprache (Report Definition Language, RDL)-Schema mithilfe der **Xsd** Tool.  
   
 -   Sie stellen eine Verbindung mit einem Berichtsserver her und rufen eine Berichtsdefinition ab.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36046804"
 > [!NOTE]  
 >  Die Beispiele werden nicht automatisch beim Setup installiert. Sie können sie jedoch jederzeit installieren. Weitere Informationen zu Beispielen finden Sie unter [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Ungefähre Dauer dieses Lernprogramms:** 30 Minuten  
+ **Ungefähre Dauer dieses Tutorials:** 30 Minuten  
   
 ## <a name="tasks"></a>Aufgaben  
  [Lektion 1: Erstellen des RDL-Schema-Projekts in Visual Studio](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "36046804"
   
  [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [Lektion 6: Führen Sie die RDL-Schema-Anwendung &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [Lektion 6: Ausführen die RDL-Schema-Anwendung &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  

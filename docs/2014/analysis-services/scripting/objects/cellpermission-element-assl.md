@@ -1,5 +1,5 @@
 ---
-title: CellPermission-Element (ASSL) | Microsoft Docs
+title: CellPermission-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293370"
 ---
 # <a name="cellpermission-element-assl"></a>CellPermission-Element (ASSL)
-  Beschreibt den Berechtigungen der Elemente einer [Rolle](role-element-assl.md) Element besitzen, für einzelne Zellen innerhalb einer [Cube](cube-element-assl.md) Element.  
+  Beschreibt den Berechtigungen der Elemente einer [Rolle](role-element-assl.md) Element verfügen, für einzelne Zellen innerhalb einer [Cube](cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36047484"
 |Untergeordnete Elemente|[Zugriff](../properties/access-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [Ausdruck](../properties/expression-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.CellPermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CellPermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

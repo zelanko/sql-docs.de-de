@@ -1,28 +1,25 @@
 ---
-title: Entwickler&#39;Entwicklerhandbuch (Master Data Services) | Microsoft Docs
+title: Entwickler&#39;Benutzerhandbuch (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2a97da74004fb5f40d63cfac67cca253ef3f5e3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d16e4e431a7df73cd775b635ad6ebd8efb1e1e75
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162061"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349502"
 ---
-# <a name="developer39s-guide-master-data-services"></a>Entwickler&#39;Entwicklerhandbuch (Master Data Services)
+# <a name="developer39s-guide-master-data-services"></a>Entwickler&#39;Benutzerhandbuch (Master Data Services)
   Hier finden Sie Informationen zum Schreiben von Code, um anzupassen, wie Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] interagieren. Vorgehensweise:  
   
 -   Schreiben Sie ein Programm, das auf den [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst zugreift. Der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webdienst ist ein WCF-Dienst (Windows Communication Foundation), den Entwickler verwenden, um [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Funktionen durch Code zu steuern.  

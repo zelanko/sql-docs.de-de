@@ -1,13 +1,11 @@
 ---
-title: Aufrufen von CLR User-Defined Aggregatfunktionen | Microsoft Docs
+title: Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046236"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355052"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisungen können Sie CLR-benutzderdefinierte Aggregate (Common Language Runtime, CLR) aufrufen, für die dieselben Regeln gelten, wie für systembasierte Aggregatfunktionen.  
@@ -39,12 +37,12 @@ ms.locfileid: "36046236"
   
 -   Benutzerdefinierte Aggregate müssen aufgerufen werden, verwenden einen zweiteiligen Namen in Form von *udagg_name*.  
   
--   Der Argumenttyp des benutzerdefinierten Aggregats entsprechen oder implizit konvertiert werden können, muss die *Input_type* des Aggregats, gemäß der `CREATE AGGREGATE` Anweisung.  
+-   Der Argumenttyp des benutzerdefinierten Aggregats muss übereinstimmen oder implizit in den *Input_type* des Aggregats, gemäß der `CREATE AGGREGATE` Anweisung.  
   
--   Der Rückgabetyp des benutzerdefinierten Aggregats muss entsprechen den *Return_type* in der `CREATE AGGREGATE` Anweisung.  
+-   Der Rückgabetyp des benutzerdefinierten Aggregats muss übereinstimmen. die *Return_type* in die `CREATE AGGREGATE` Anweisung.  
   
 ## <a name="example-1"></a>Beispiel 1  
- Im folgenden finden ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die einen Satz von Zeichenfolgenwerten, die eine Spalte in einer Tabelle entnommen verkettet:  
+ Im folgenden finden ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die einen Satz von aus einer Spalte in einer Tabelle entnommenen Zeichenfolgenwerten verkettet:  
   
  [C#]  
   
@@ -201,7 +199,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Nachdem Sie den Code Kompilieren **MyAgg.dll**, registrieren Sie das Aggregat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
+ Nachdem Sie den Code Kompilieren **MyAgg.dll**, können Sie das Aggregat in registrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

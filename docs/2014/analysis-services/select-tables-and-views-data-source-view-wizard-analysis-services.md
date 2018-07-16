@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Tabellen und Sichten (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft Docs
+title: Wählen Sie Tabellen und Sichten (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279506"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Tabellen und Sichten auswählen (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Tabellen und Sichten auswählen** können Sie die Tabellen und Sichten aus der Datenquelle auswählen, die Sie in die Datenquellensicht aufnehmen möchten.  

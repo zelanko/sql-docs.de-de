@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Attributbeziehung bearbeiten Dialogfelder (Registerkarte von Attribut Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Attributbeziehung erstellen und Attribut Beziehung Dialogfelder "Bearbeiten" (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 460c38c498d4827973c6ba8cc08aaab17541eff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3215615dd979714d0ec6c133818eb689d085324b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315020"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dialogfelder Attributbeziehung erstellen und Attributbeziehung bearbeiten (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributbeziehung erstellen** können Sie neue Attributbeziehungen definieren, und mithilfe des Dialogfelds **Attributbeziehung bearbeiten** können Sie eine Attributbeziehung ändern. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
- **So zeigen Sie das Dialogfeld Attributbeziehung erstellen an**  
+ **Das Dialogfeld Attributbeziehung erstellen an**  
   
 1.  Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer auf eine Dimension, um den Dimensions-Designer zu öffnen, und klicken Sie dann auf die Registerkarte **Attributbeziehung** .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36148723"
   
      Klicken Sie im Attributbeziehungsdiagramm oder in der Liste **Attribute** mit rechten Maustaste auf ein Attribut, und klicken Sie dann auf **Neue Attributbeziehung**.  
   
- **So zeigen Sie das Dialogfeld Attributbeziehung bearbeiten an**  
+ **Das Dialogfeld Attributbeziehung bearbeiten an**  
   
 1.  Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer auf eine Dimension, um den Dimensions-Designer zu öffnen, und klicken Sie dann auf die Registerkarte **Attributbeziehung** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36148723"
  **Schlüsselspalten**  
  Gibt die Schlüsselspalten an, die für das Attribut definiert werden.  
   
- **Beziehungstyp "**  
+ **Beziehungstyp**  
  Gibt den Typ der zu erstellenden Beziehung an und kann entweder den Wert **Flexibel** (kann sich im Lauf der Zeit ändern) oder **Fest**(ändert sich nicht im Lauf der Zeit) haben.  
   
 ## <a name="see-also"></a>Siehe auch  

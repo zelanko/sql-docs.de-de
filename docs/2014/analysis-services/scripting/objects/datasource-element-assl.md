@@ -1,5 +1,5 @@
 ---
-title: DataSource-Element (ASSL) | Microsoft Docs
+title: DataSource-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c87b21c6a9b291728704d3e624c386d59b820ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ddee14c487f9e28d3bbeb83c419bcda548d5a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281926"
 ---
 # <a name="datasource-element-assl"></a>DataSource-Element (ASSL)
   Definiert eine Datenquelle in einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Datenbank](database-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36059896"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DataSource>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Database-Element &#40;ASSL&#41;](database-element-assl.md)   

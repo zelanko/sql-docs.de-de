@@ -1,5 +1,5 @@
 ---
-title: RequiresRestart-Element (ASSL) | Microsoft Docs
+title: RequiresRestart-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295420"
 ---
 # <a name="requiresrestart-element-assl"></a>RequiresRestart-Element (ASSL)
-  Enthält einen schreibgeschützten Wert, der zugeordnet einer [ServerProperty](../objects/serverproperty-element-assl.md) Element, das bestimmt, ob die Änderung des Werts der Servereigenschaft erfordert, dass die Instanz neu gestartet werden, damit die Änderung wirksam wird.  
+  Enthält einen schreibgeschützten Wert, der zugeordnete eine [ServerProperty](../objects/serverproperty-element-assl.md) -Element, das bestimmt, ob die Änderung des Werts der Servereigenschaft erfordert, dass die Instanz neu gestartet werden, damit die Änderung wirksam wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36047883"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `RequiresRestart` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Das Element, das dem übergeordneten entspricht `RequiresRestart` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ServerProperties-Element &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

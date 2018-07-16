@@ -1,37 +1,34 @@
 ---
-title: Sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs
+title: Sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78f4dd7ad5c76159413c7dbdd382f6c6cecc3807
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: c44633ebcfb79b433a7420055343faf36774da39
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33700233"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926951"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>Sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Dadurch werden in gespeicherten Anmeldeinformationen für das Netzwerk entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] auf eine Dateifreigabe im Netzwerk zugreifen. Verwenden Sie diese gespeicherte Prozedur z. B. So entfernen Sie die Berechtigung für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Sicherung durchführen und Wiederherstellungsvorgänge auf einem Server, die sich in Ihrem eigenen Netzwerk befindet.  
+  Dadurch wird in gespeicherten Anmeldeinformationen für das Netzwerk entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] auf eine Dateifreigabe im Netzwerk zugreifen. Verwenden Sie diese gespeicherte Prozedur z. B. beim Entfernen der Berechtigung für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Sicherung durchführen und Wiederherstellungsvorgänge auf einem Server, die in Ihrem eigenen Netzwerk befinden.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +40,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="arguments"></a>Argumente  
  "*Target_server_name*"  
- Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. Anmeldeinformationen für den Zugriff auf diesen Server aus entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Dies nicht ändern oder entfernen Sie alle Berechtigungen auf dem tatsächlichen Zielserver der von Ihr Team verwaltet wird.  
+ Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. Anmeldeinformationen für den Zugriff auf diesem Server aus entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Dies nicht ändern oder entfernen Sie alle Berechtigungen auf dem tatsächlichen Zielserver, der von Ihrem eigenen Team verwaltet wird.  
   
  *Target_server_name* als nvarchar(337) definiert ist.  
   
@@ -54,20 +51,20 @@ sp_pdw_remove_network_credentials 'target_server_name'
  Erfordert **ALTER SERVER STATE** Berechtigung.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- Ein Fehler tritt auf, wenn Entfernen von Anmeldeinformationen auf den Knoten "Zugriffssteuerung" und alle Serverknoten nicht erfolgreich ist.  
+ Ein Fehler tritt auf, wenn das Entfernen von Anmeldeinformationen auf dem steuerknoten und alle Computeknoten nicht erfolgreich ist.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Diese gespeicherte Prozedur entfernt die Anmeldeinformationen für das Netzwerk aus dem NetworkService-Konto für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Das NetworkService-Konto ausgeführt wird, jede Instanz des SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den Knoten "Zugriffssteuerung" und die Computeknoten. Z. B. bei ein Sicherungsvorgang ausgeführt wird, werden der Knoten "Zugriffssteuerung" und jeder Serverknoten verwenden die Anmeldeinformationen für das NetworkService-Konto auf den Zielserver zugreifen.  
+ Diese gespeicherte Prozedur entfernt die Anmeldeinformationen für das Netzwerk aus dem NetworkService-Konto für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Das Konto NetworkService ausgeführt wird, jede Instanz von SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem steuerknoten und den Compute-Knoten. Z. B. wenn ein Sicherungsvorgang ausgeführt wird, verwendet den Steuerelementknoten aus, und jeder Compute-Knoten die Anmeldeinformationen für das Konto NetworkService auf den Zielserver zugreifen.  
   
 ## <a name="metadata"></a>Metadaten  
- Verwenden Sie zum Auflisten aller Anmeldeinformationen und überprüfen die Anmeldeinformationen wurden entfernt [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+ Verwenden Sie zum Auflisten aller Anmeldeinformationen und überprüfen die Anmeldeinformationen wurden entfernt [Sys. dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
  Verwenden Sie zum Hinzufügen von Anmeldeinformationen [Sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Entfernen Sie die Anmeldeinformationen zum Ausführen einer datenbanksicherung  
- Im folgenden Beispiel wird die Benutzeranmeldeinformationen Namen und das Kennwort für den Zugriff auf dem Zielserver, der IP-Adresse 10.192.147.63 hat.  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Entfernen der Anmeldeinformationen für das Ausführen einer datenbanksicherung  
+ Im folgenden Beispiel wird die Benutzeranmeldeinformationen und das Kennwort für den Zugriff auf dem Zielserver, der IP-Adresse 10.192.147.63 verfügt.  
   
 ```  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  

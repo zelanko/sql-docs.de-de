@@ -1,5 +1,5 @@
 ---
-title: Benutzeroberfläche des relationalen Abfrage-Designers | Microsoft Docs
+title: Benutzeroberfläche des relationalen Abfrage-Designers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99cb45aa3f0709fe9d7360938b37133317ea2c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301872"
 ---
 # <a name="relational-query-designer-user-interface"></a>Benutzeroberfläche des relationalen Abfrage-Designers
   Berichts-Generator in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen bereit, mit dem die Daten angegeben werden, die aus relationalen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] für ein Berichtsdataset abgerufen werden. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -129,7 +129,7 @@ ms.locfileid: "36046405"
 -   **Automatische Erkennung** schaltet das Feature zur automatischen Erkennung um, die Beziehungen zwischen Tabellen automatisch erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
   
     > [!IMPORTANT]  
-    >  Bei Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt, und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
+    >  Bei Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt wird und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
   
 -   **Beziehung hinzufügen** Fügt der Liste **Beziehung** eine Beziehung hinzu.  
   

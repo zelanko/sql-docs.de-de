@@ -1,5 +1,5 @@
 ---
-title: Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts | Microsoft Docs
+title: Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320640"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
   Sie können einen optionalen Registrierungswert zum Verwalten einer Organisationsrichtlinie verwenden, um signierte und nicht signierte Pakete zu laden. Wenn Sie diesen Registrierungswert verwenden, müssen Sie ihn auf jedem Computer erstellen, auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete ausgeführt werden und auf dem Sie die Richtlinie durchsetzen möchten. Nachdem der Registrierungswert festgelegt wurde, überprüft oder verifiziert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Signaturen vor dem Laden der Pakete.  
@@ -58,7 +58,7 @@ ms.locfileid: "36047648"
   
 4.  Klicken Sie mit der rechten Maustaste auf **MSDTS**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **DWORD-Wert**.  
   
-5.  Aktualisieren Sie den Namen des neuen Werts auf `BlockedSignatureStates`.  
+5.  Aktualisieren Sie den Namen des neuen Werts zum `BlockedSignatureStates`.  
   
 6.  Mit der rechten Maustaste `BlockedSignatureStates` , und klicken Sie auf **ändern**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36047648"
 9. Klicken Sie im Menü **Datei** auf **Beenden**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit &#40;Integrationsservices&#41;](security/security-overview-integration-services.md)   
+ [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security/security-overview-integration-services.md)   
  [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

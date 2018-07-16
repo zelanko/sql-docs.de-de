@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319950"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -60,7 +60,7 @@ ms.locfileid: "36048669"
 -   Konvertieren eines aus der Datenquelle abgerufenen Werts von einem Datentyp in einen anderen Datentyp  
   
 ## <a name="determining-the-data-type-of-report-data"></a>Ermitteln des Datentyps von Berichtsdaten  
- Zum Ermitteln des Datentyps von Berichtselementen können Sie einen Ausdruck schreiben, der den Datentyp zurückgibt. Wenn Sie beispielsweise den Datentyp des Felds `MyField`anzeigen möchten, fügen Sie einer Tabellenzelle den folgenden Ausdruck hinzu: `=Fields!MyField.Value.GetType().ToString()`. Das Ergebnis zeigt den CLR-Datentyp, der zur Darstellung von `MyField`, z. B. `System.String` oder `System.DateTime`.  
+ Zum Ermitteln des Datentyps von Berichtselementen können Sie einen Ausdruck schreiben, der den Datentyp zurückgibt. Wenn Sie beispielsweise den Datentyp des Felds `MyField`anzeigen möchten, fügen Sie einer Tabellenzelle den folgenden Ausdruck hinzu: `=Fields!MyField.Value.GetType().ToString()`. Das Ergebnis zeigt den CLR-Datentyp verwendet, um darzustellen `MyField`, z. B. `System.String` oder `System.DateTime`.  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>Konvertieren von Datasetfeldern in einen anderen Datentyp  
  Sie können auch Datasetfelder konvertieren, bevor sie in einem Bericht verwendet werden. Im Folgenden werden Methoden beschrieben, mit denen Sie ein vorhandenes Datasetfeld konvertieren können:  
@@ -108,7 +108,7 @@ ms.locfileid: "36048669"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- Dieses Beispiel zeigt das Datum (1. Juli 2008), gefolgt von der Uhrzeit mit 7-stelliger Präzision (6:05:07.9999999), gefolgt von der UTC-Zeitzonenverschiebung in Stunden und Minuten (plus 8 Stunden, 0 Minuten). Für den folgenden Beispielen wird dieser Wert befindet sich in einem `String` Feld namens `MyDateTime.Value`.  
+ Dieses Beispiel zeigt das Datum (1. Juli 2008), gefolgt von der Uhrzeit mit 7-stelliger Präzision (6:05:07.9999999), gefolgt von der UTC-Zeitzonenverschiebung in Stunden und Minuten (plus 8 Stunden, 0 Minuten). Für den folgenden Beispielen wird dieser Wert befindet sich in einem `String` Feld mit dem Namen `MyDateTime.Value`.  
   
  Sie können diese Daten mit einer der folgenden Methoden in einen oder mehrere CLR-Werte konvertieren:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36048669"
   
          Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Daraus ergibt sich der folgende `DateTime`-Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
   
- Weitere Informationen zum Konvertieren von Zeichenfolgen in `DateTime` -Datentypen finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](http://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](http://go.microsoft.com/fwlink/?LinkId=89704), und [auswählen Zwischen "DateTime", "DateTimeOffset" und "TimeZoneInfo"](http://go.microsoft.com/fwlink/?linkid=110652) auf MSDN.  
+ Weitere Informationen zum Konvertieren von Zeichenfolgen, die `DateTime` -Datentypen finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](http://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](http://go.microsoft.com/fwlink/?LinkId=89704), und [auswählen Zwischen DateTime, DateTimeOffset und TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) auf MSDN.  
   
 -   Fügen Sie ein neues berechnetes Feld dem Berichtsdataset hinzu, das einen Ausdruck verwendet, mit dem Teile der Zeichenfolge extrahiert werden. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643f46f0e8339cbe5e5cc46c13e90796b1479bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7538c80ac8425e02f5ccc37ecffacfa07b8576c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318750"
 ---
 # <a name="create-a-model-master-data-services"></a>Erstellen eines Modells (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Modell, das Modellobjekte enthalten soll.  
@@ -38,15 +38,15 @@ ms.locfileid: "36162736"
   
 2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Modelle**.  
   
-3.  Auf der **Modellverwaltung** auf **Add Model**.  
+3.  Auf der **Modellverwaltung** auf **Modell hinzufügen**.  
   
 4.  In der **Modellname** geben den Namen des Modells.  
   
 5.  Optional können Sie **Entität mit demselben Namen wie das Modell erstellen** auswählen, um eine Entität mit dem gleichen Namen wie das Modell zu erstellen.  
   
-6.  Wählen Sie optional **explizite Hierarchie mit gleichem Namen wie Modell erstellen** um eine explizite Hierarchie mit dem gleichen Namen wie das Modell zu erstellen. Diese Option aktiviert auch die Entität für Auflistungen.  
+6.  Wählen Sie optional **explizite Hierarchie mit gleichem Namen wie Modell erstellen** eine explizite Hierarchie mit dem gleichen Namen wie das Modell zu erstellen. Diese Option aktiviert auch die Entität für Auflistungen.  
   
-7.  Wählen Sie optional **erforderliche Hierarchie (alle blattmember werden eingeschlossen** die explizite Hierarchie als verbindliche Hierarchie zu erstellen.  
+7.  Wählen Sie optional **erforderliche Hierarchie (alle Blattelemente werden eingeschlossen** die explizite Hierarchie als verbindliche Hierarchie zu erstellen.  
   
 8.  Klicken Sie auf **Modell speichern**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Dimension-Datentyp (ASSL) | Microsoft Docs
+title: Dimension-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Dimension data type
 ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1451da2c20228e00b99482a7c9b43a92a8478154
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b60c51847900fee89f0baee2d5b04d96dc3c9ad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289556"
 ---
 # <a name="dimension-data-type-assl"></a>Dimension-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der eine Datenbankdimension darstellt.  
@@ -95,7 +95,7 @@ ms.locfileid: "36060402"
   
 -   *UnknownMember* untergeordnetes Element muss festgelegt werden `AutomaticNull`  
   
--   Alle eindeutigen Attribute benötigen *NullProcessing* untergeordnetes Element festgelegt `Error`  
+-   Alle eindeutigen Attribute müssen *NullProcessing* untergeordnetes Element festgelegt `Error`  
   
  Die folgenden untergeordneten Attribute werden nicht unter den DeploymentMode-Werten 1 (SharePoint) und 2 (Tabelle) unterstützt.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36060402"
   
 -   *ProactiveCaching*  
   
- Die entsprechenden Elemente im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, und <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
+ Die entsprechenden Elemente im Analysis Management Objects (AMO)-Objektmodell sind <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, und <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

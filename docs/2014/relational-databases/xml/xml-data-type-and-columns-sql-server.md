@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b6e74d209c89a23ac4fff6ec728bd7e423b5b117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fe03ba5bafde60d2a653e49bcfe90b70978a25d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300030"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
-  Dieses Thema beschreibt die Vorteile und Einschränkungen von der `xml` -Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und hilft Ihnen, wie XML-Daten gespeichert werden soll.  
+  In diesem Thema wird erläutert, die Vorteile und Einschränkungen von der `xml` -Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und hilft Ihnen, wie XML-Daten gespeichert werden sollen.  
   
 ## <a name="relational-or-xml-data-model"></a>Relationales oder XML-Datenmodell  
  Wenn Ihre Daten sehr strukturiert sind und ein bekanntes Schema aufweisen, ist das relationale Modell möglicherweise zur Datenspeicherung am besten geeignet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die dazu erforderliche Funktionalität und die benötigten Tools bereit. Wenn Ihre Daten dagegen halbstrukturiert oder nicht strukturiert sind oder ihre Struktur unbekannt ist, müssen Sie das Modellieren dieser Daten in Erwägung ziehen.  
@@ -37,7 +37,7 @@ ms.locfileid: "36148552"
   
 -   Sie wollen basierend auf der Struktur Ihrer Daten Abfragen in den Daten ausführen oder Teile der Daten aktualisieren.  
   
- Wenn keine dieser Bedingungen zutrifft, sollten Sie das relationale Datenmodell verwenden. Wenn Ihre Daten im XML-Format ist jedoch Ihre Anwendung verwendet nur die Datenbank zum Speichern und Abrufen von Daten, z. B. eine `[n]varchar(max)` Spalte ist, Sie benötigen, lediglich. Das Speichern der Daten in einer XML-Spalte bietet weitere Vorteile. Beispielsweise kann mit der Engine ermittelt werden, ob die Daten wohlgeformt oder gültig sind, und es werden auch differenzierte Abfragen und Updates der XML-Daten unterstützt.  
+ Wenn keine dieser Bedingungen zutrifft, sollten Sie das relationale Datenmodell verwenden. Wenn Ihre Daten im XML-Format ist jedoch Ihre Anwendung verwendet die Datenbank nur zum Speichern und Abrufen von Daten, z. B. eine `[n]varchar(max)` Spalte ist, benötigen Sie. Das Speichern der Daten in einer XML-Spalte bietet weitere Vorteile. Beispielsweise kann mit der Engine ermittelt werden, ob die Daten wohlgeformt oder gültig sind, und es werden auch differenzierte Abfragen und Updates der XML-Daten unterstützt.  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Gründe für das Speichern von XML-Daten in SQL Server  
  Im Folgenden werden einige Gründe angeführt, die dafür sprechen, Ihre Daten nicht im Dateisystem zu verwalten, sondern die systemeigenen XML-Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verwenden.  
@@ -65,7 +65,7 @@ ms.locfileid: "36148552"
   
      Die Daten werden in einer internen Darstellung gespeichert, die den XML-Inhalt der Daten beibehält. Diese interne Darstellung umfasst Informationen über die Einkapselungshierarchie, die Dokumentreihenfolge sowie die Element- und Attributwerte. Insbesondere bleibt der InfoSet-Inhalt der XML-Daten erhalten. Weitere Informationen zu InfoSet finden Sie unter [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). Der InfoSet-Inhalt ist möglicherweise keine identische Kopie der Text-XML, weil die folgenden Informationen nicht erhalten bleiben: insignifikante Leerzeichen, Reihenfolge der Attribute, Namespace-Präfixe und XML-Deklaration.  
   
-     Für typisiertes `xml` -Datentyp, ein `xml` gebundener XML-Schemas, POST-Schema-Validation-InfoSet (PSVI) dem InfoSet Typinformationen hinzugefügt und in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den W3C-XML-Schemaspezifikationen unter [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) und [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Für typisiertes `xml` -Datentyp, ein `xml` -Datentyp gebunden, die in XML-Schemas, POST-Schema-Validation-InfoSet (PSVI) dem InfoSet Typinformationen hinzugefügt und wird in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den W3C-XML-Schemaspezifikationen unter [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) und [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Zuordnung zwischen XML- und relationaler Speicherung  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36148552"
   
      Eine identische Kopie der Daten wird gespeichert. Dies ist nützlich für Anwendungen mit einem besonderen Zweck wie z. B. zum Speichern juristischer Dokumente. Die meisten Anwendungen benötigen jedoch keine exakte Kopie, und es reicht der XML-Inhalt aus (InfoSet-Genauigkeit).  
   
- Im Allgemeinen müssen Sie eine Kombination aus diesen beiden Vorgehensweisen verwenden. Sie möchten z. B. Speichern von XML-Daten in eine `xml` Daten Spalte vom Typ und Eigenschaften daraus in relationale Spalten heraufstufen. Oder Sie möchten die zuordnungstechnologie verwenden, um nicht rekursive Teile in nicht-XML-Spalten und ausschließlich die rekursiven Teile in speichern `xml` Daten Spalten vom Typ.  
+ Im Allgemeinen müssen Sie eine Kombination aus diesen beiden Vorgehensweisen verwenden. Sie können beispielsweise zum Speichern Ihrer XML-Daten in eine `xml` Daten Spalte vom Typ und Eigenschaften daraus in relationale Spalten heraufstufen. Oder Sie möchten die zuordnungstechnologie verwenden, um nicht rekursive Teile in nicht-XML-Spalten und ausschließlich die rekursiven Teile in speichern `xml` Spalten vom Typ.  
   
 ### <a name="choice-of-xml-technology"></a>Auswählen der XML-Technologie  
  Die Auswahl der XML-Technologie – also systemeigene XML oder XML-Sicht – richtet sich im Allgemeinen nach den folgenden Faktoren:  
@@ -103,7 +103,7 @@ ms.locfileid: "36148552"
  Die verschiedenen Auswahlmöglichkeiten sind auch mit unterschiedlichen Leistungsmerkmalen verbunden.  
   
 ### <a name="native-xml-storage"></a>Systemeigene XML-Speicherung  
- Sie können Ihre XML-Daten in speichern ein `xml` -Datentypspalte auf dem Server. Dies ist eine geeignete Option, wenn folgende Aussagen zutreffen:  
+ Sie können Ihre XML-Daten im Speichern einer `xml` -Datentypspalte auf dem Server. Dies ist eine geeignete Option, wenn folgende Aussagen zutreffen:  
   
 -   Sie benötigen eine einfache Methode zum Speichern Ihrer XML-Daten auf dem Server und wollen gleichzeitig die Dokumentreihenfolge und die Dokumentstruktur beibehalten.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "36148552"
  Ein geeignetes Speichermodell für die XML-Dokumente ist eine `xml`-Datentypspalte. Dabei bleibt der InfoSet-Inhalt Ihrer XML-Daten erhalten. Durch Indizieren der XML-Spalte wird die Abfrageleistung gesteigert.  
   
 #### <a name="example-retaining-exact-copies-of-xml-data"></a>Beispiel: Beibehalten exakter Kopien von XML-Daten  
- Nehmen wir zur Veranschaulichung an, dass Sie durch gesetzliche Bestimmungen dazu verpflichtet sind, exakte Textkopien Ihrer XML-Dokumente beizubehalten. Bei diesen Dokumenten könnte es sich z. B. um unterschriebene Dokumente, juristisch relevante Dokumente oder Unterlagen zu Börsengeschäften handeln. Sie möchten die Dokumente in Speichern einer `[n]varchar(max)` Spalte.  
+ Nehmen wir zur Veranschaulichung an, dass Sie durch gesetzliche Bestimmungen dazu verpflichtet sind, exakte Textkopien Ihrer XML-Dokumente beizubehalten. Bei diesen Dokumenten könnte es sich z. B. um unterschriebene Dokumente, juristisch relevante Dokumente oder Unterlagen zu Börsengeschäften handeln. Möchten Sie Ihre Dokumente im Speichern einer `[n]varchar(max)` Spalte.  
   
  Zu Abfragezwecken konvertieren Sie die Daten in den `xml`-Datentyp zur Laufzeit und führen daran XQuery-Abfragen aus. Die Konvertierung zur Laufzeit kann jedoch teuer sein, insbesondere wenn es sich um ein großes Dokument handelt. Wenn Sie häufig Abfragen ausführen, können Sie die Dokumente redundant in einer `xml`-Datentypspalte speichern und diese indizieren, während Sie genaue Dokumentkopien aus der `[n]varchar(max)`-Spalte zurückgeben.  
   
- Die XML-Spalte handelt es sich möglicherweise um eine berechnete Spalte, die auf der Grundlage der `[n]varchar(max)` Spalte. Allerdings ist einen XML-Index kann nicht erstellt werden, auf eine berechnete XML-Spalte, und kann auf ein XML-Index erstellt werden `[n]varchar(max)` oder `varbinary(max)` Spalten.  
+ Die XML-Spalte handelt es sich möglicherweise um eine berechnete Spalte, die auf der Grundlage der `[n]varchar(max)` Spalte. Allerdings können nicht Sie einen XML-Index für eine berechnete XML-Spalte erstellen, und kann auf ein XML-Index erstellt werden `[n]varchar(max)` oder `varbinary(max)` Spalten.  
   
 ### <a name="xml-view-technology"></a>XML-Sichttechnologie  
  Durch Definieren einer Zuordnung zwischen Ihren XML-Schemas und den Tabellen in einer Datenbank erstellen Sie eine "XML-Sicht" Ihrer persistenten Daten. Mithilfe von XML-Massenladen können die zugrunde liegenden Tabellen anhand der XML-Sicht aufgefüllt werden. Sie können die XML-Sicht mithilfe von XPath Version 1.0 abfragen; die Abfrage wird in SQL-Abfragen für die Tabellen übersetzt. In gleicher Weise werden auch Updates an diese Tabellen weitergegeben.  

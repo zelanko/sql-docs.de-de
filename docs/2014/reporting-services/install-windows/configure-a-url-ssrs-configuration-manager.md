@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288576"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie den Berichts-Manager oder den Report Server-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert. Falls Sie mit einem Berichtsserver arbeiten, der für den integrierten SharePoint-Modus konfiguriert ist, und Sie die URL des Berichtsserver-Webdienstes mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool aktualisieren, müssen Sie auch die URL in der SharePoint-Zentraladministration aktualisieren.  
@@ -38,7 +38,7 @@ ms.locfileid: "36150527"
   
 -   Legen Sie erweiterte URL-Eigenschaften fest, um zusätzliche URLs zu definieren.  
   
- Weitere Informationen darüber, wie URLs gespeichert und verwaltet werden oder im Zusammenhang mit Interoperabilität finden Sie unter [URL-Reservierungen und Registrierungen &#40;SSRS-Konfigurations-Manager&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Reporting installieren Dienste und Internetinformation Services-Seite-an-Seite &#40;SSRS im einheitlichen Modus&#41;](install-reporting-and-internet-information-services-side-by-side.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
+ Weitere Informationen über die URLs gespeichert und verwaltet werden zu Interoperabilitätsproblemen finden Sie unter [über URL-Reservierungen und Registrierung &#40;SSRS-Konfigurations-Manager&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Reporting installieren Dienste und Internetinformationen Services-Seite-an-Seite &#40;einheitlicher SSRS-Modus&#41;](install-reporting-and-internet-information-services-side-by-side.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Bevor Sie eine URL erstellen oder ändern, beachten Sie folgende Punkte:  
@@ -51,7 +51,7 @@ ms.locfileid: "36150527"
   
 -   Wählen Sie eine Zeit mit niedriger Berichtsaktivität aus. Bei jeder Änderung der URL-Reservierung können Sie davon ausgehen, dass die Anwendungsdomänen für den Report Server-Webdienst und den Berichts-Manager möglicherweise wiederverwendet werden.  
   
--   Eine Übersicht über URL-Erstellung und-Verwendung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Berichtsserver-URLs konfigurieren &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Eine Übersicht über URL-Erstellung und-Verwendung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>So konfigurieren Sie eine URL für den Report Server-Webdienst  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36150527"
   
          Wenn Sie über mehrere Karten verfügen oder wenn Ihr Netzwerk sowohl IPv4- als auch IPv6-Adressen unterstützt, werden Ihnen mehrere IP-Adressen angezeigt. Wenn Sie nur eine einzige IP-Adresse auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostnamen, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können localhost nicht für den Zugriff auf einen Berichtsserver verwenden, und Sie können nicht die IP-Adressen anderer Netzwerkadapterkarten verwenden, die auf den Berichtsservercomputer installiert sind. Normalerweise wählen Sie diesen Wert aus, weil Sie mehrere URL-Reservierungen konfigurieren, die auch explizite IP-Adressen oder Hostnamen angeben (z. B. einen für eine Netzwerkadapterkarte für Intranetverbindungen und einen zweiten für Extranetverbindungen).  
   
-5.  Geben Sie den Port an. Port 80 ist der Standard für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] und Windows Server 2008, da er mit anderen Anwendungen gemeinsam genutzt werden kann. Wenn Sie eine benutzerdefinierte Portnummer verwenden möchten, müssen Sie sie immer in der URL angeben, die für den Zugriff auf den Berichtsserver verwendet wird. Mit folgenden Verfahren können Sie nach einem verfügbaren Port suchen:  
+5.  Geben Sie den Port an. Port 80 ist der Standardwert für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] und Windows Server 2008, da er mit anderen Anwendungen gemeinsam genutzt werden kann. Wenn Sie eine benutzerdefinierte Portnummer verwenden möchten, müssen Sie sie immer in der URL angeben, die für den Zugriff auf den Berichtsserver verwendet wird. Mit folgenden Verfahren können Sie nach einem verfügbaren Port suchen:  
   
     -   Geben Sie an einer Eingabeaufforderung den folgenden Befehl ein, um eine Liste der verwendeten TCP-Anschlüsse auszugeben:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36150527"
   
 10. Testen Sie die URL, indem Sie auf den Link im Abschnitt **URLs** der Seite klicken. Beachten Sie, dass die Berichtsserver-Datenbank erstellt und konfiguriert werden muss, bevor Sie die URL testen können. Anweisungen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen über das Aktualisieren der URL des Report Server-Webdienst im SharePoint-Zentraladministration finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;SharePoint-Modus von Reporting Services&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen über das Aktualisieren der URL des Berichtsserver-Webdienst im SharePoint-Zentraladministration finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>So erstellen Sie eine URL-Reservierung für den Berichts-Manager  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36150527"
   
 2.  Klicken Sie auf **Berichts-Manager-URL**.  
   
-3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen hierzu finden Sie unter [Berichts-Manager konfigurieren &#40;im einheitlichen Modus&#41; ](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen hierzu finden Sie unter [Berichts-Manager konfigurieren &#40;im einheitlichen Modus&#41; ](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 4.  Wenn Sie ein SSL-Zertifikat installiert haben, können Sie es auswählen, um festzulegen, dass alle Anforderungen an den Berichts-Manager über HTTPS geleitet werden.  
   

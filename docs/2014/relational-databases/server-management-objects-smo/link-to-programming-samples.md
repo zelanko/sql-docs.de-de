@@ -1,5 +1,5 @@
 ---
-title: Verlinkung auf Programmierungsbeispiele | Microsoft Docs
+title: Verlinkung auf Programmierungsbeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215010"
 ---
 # <a name="link-to-programming-samples"></a>Verlinkung auf Programmierungsbeispiele
-  In der folgenden Tabelle sind die Programmierungsbeispiele für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) aufgelistet, die im Verzeichnis "[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO" verfügbar sind. Diese Beispiele stehen in [!INCLUDE[csprcs](../../includes/csprcs-md.md)] und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
+  In der folgenden Tabelle sind die Programmierungsbeispiele für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) aufgelistet, die im Verzeichnis "[!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO" verfügbar sind. Diese Beispiele sind in beiden verfügbar [!INCLUDE[csprcs](../../includes/csprcs-md.md)] und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
- Weitere Informationen zum Installieren von Beispielen finden Sie unter [AdventureWorks für SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
+ Weitere Informationen zum Installieren von Beispielen, finden Sie unter [AdventureWorks für SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
 |Titel|Description|  
 |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "36047117"
 |DatabaseSearch|Zeigt alle Objekte in einer Datenbank an.|  
 |DependencyExplorer|Implementiert die Abhängigkeitsstruktur und das Anzeigefenster für Eigenschaften.|  
 |IndexSizes|Zeigt den Indexnamen und die Größe für die ausgewählte Datenbank an.|  
-|LoadRegAssembly|Veranschaulicht das Laden und registrieren einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwendet die UtilityConversion-Assembly.|  
+|LoadRegAssembly|Veranschaulicht das Laden und Registrieren einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwendet die UtilityConversion-Assembly.|  
 |ManageDatabases|Zeigt, wie Sie eine Datenbank erstellen, ändern oder löschen. Dazu gehört auch das Hinzufügen einer neuen Dateigruppe und Protokolldatei.|  
 |ManageDatabaseUsers|Zeigt, wie Sie Benutzer hinzufügen, ändern und entfernen.|  
 |ManageTables|Zeigt, wie Sie Tabellen erstellen, ändern oder löschen.|  

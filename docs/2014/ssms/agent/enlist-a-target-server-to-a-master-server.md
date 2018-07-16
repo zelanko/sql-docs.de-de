@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enlisting target servers [SQL Server]
 - SQL Server Agent jobs, target servers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - target servers [SQL Server], enlisting
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f51d0175c1d71f9c0dfaed4ea9a38aad14f8e31b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3005fedecb002b50c239f53f1726bb7b6c78e1bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315180"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Eintragen eines Zielservers bei einem Masterserver
   In diesem Thema wird die Vorgehensweise zum Hinzufügen eines Zielservers zu einer Multiserververwaltungskonfiguration beschrieben. Führen Sie die folgenden Schritte auf dem Masterserver aus. Die Schritte können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects (SMO) ausgeführt werden.  
@@ -60,7 +60,7 @@ ms.locfileid: "36059489"
   
 1.  Verwenden Sie die gespeicherte Prozedur `sp_msx_enlist`.  Weitere Informationen finden Sie unter [Sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> Verwenden von SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a> Verwendung von SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Automatisierte Verwaltung in einem Unternehmen](automated-administration-across-an-enterprise.md)  

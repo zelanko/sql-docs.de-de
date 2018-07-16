@@ -1,5 +1,5 @@
 ---
-title: TableNotification-Element (ASSL) | Microsoft Docs
+title: TableNotification-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12dec839000f56e8d82a3f5b0e6398f20ccfb35f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321130"
 ---
 # <a name="tablenotification-element-assl"></a>TableNotification-Element (ASSL)
-  Enthält Informationen für die [ProactiveCaching](proactivecaching-element-assl.md) Element zu einer Tabelle oder Sicht in einer Datenquelle, die geändert wurde.  
+  Enthält Informationen für die [ProactiveCaching](proactivecaching-element-assl.md) -Element über eine Tabelle oder Sicht in einer Datenquelle, die geändert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36150679"
 |Untergeordnete Elemente|[DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ProactiveCachingTablesBinding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

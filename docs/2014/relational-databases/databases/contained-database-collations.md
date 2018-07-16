@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316480"
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
   Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u. a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../collations/collation-and-unicode-support.md).  
@@ -62,7 +62,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte der Datenbank abhängt, in der die Tabelle erstellt wird, treten Probleme mit der Verwendung von temporären Tabellen und im rowsetcache `tempdb`. Die Sortierung der `tempdb` entspricht normalerweise der Sortierung für die Instanz, die nicht unbedingt die datenbanksortierung entsprechen.  
+ Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte der Datenbank abhängt, in dem die Tabelle erstellt wird, treten Probleme mit der Verwendung von temporären Tabellen und im rowsetcache `tempdb`. Die Sortierung der `tempdb` entspricht normalerweise der Sortierung für die Instanz, die nicht unbedingt die datenbanksortierung entsprechen.  
   
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  
@@ -122,9 +122,9 @@ END;
   
  In einer eigenständigen Datenbank ist die Katalogsortierung **Latin1_General_100_CI_AS_WS_KS_SC**. Diese Sortierung ist für alle eigenständigen Datenbanken in allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identisch und kann nicht geändert werden.  
   
- Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. Standardmäßig die Sortierung der Datenbank entspricht der Sortierung der Model-Datenbank, jedoch kann geändert werden, indem der Benutzer über ein `CREATE` oder `ALTER DATABASE` -Befehl als mit abhängigen Datenbanken.  
+ Die Datenbanksortierung wird beibehalten, sie wird jedoch nur für Benutzerdaten als Standardsortierung verwendet. In der Standardeinstellung die Sortierung der Datenbank entspricht der Sortierung der Model-Datenbank, kann jedoch geändert werden vom Benutzer über eine `CREATE` oder `ALTER DATABASE` -Befehl genauso wie mit einer nicht enthaltenen Datenbanken.  
   
- Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. D. h. in einer abhängigen Datenbank `CATALOG_DEFAULT` gibt die aktuelle datenbanksortierung zurück, da Metadaten in der datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
+ Das neue Schlüsselwort `CATALOG_DEFAULT` ist in der `COLLATE`-Klausel verfügbar. Diese wird als Verknüpfung zur aktuellen Sortierung der Metadaten in enthaltenen und nicht enthaltenen Datenbanken verwendet. D. h. in einer nicht enthaltenen Datenbank `CATALOG_DEFAULT` wird die aktuelle datenbanksortierung zurück, da Metadaten in der datenbanksortierung sortiert werden. In einer enthaltenen Datenbank können sich diese zwei Werte unterscheiden, da der Benutzer die Datenbanksortierung ändern kann, sodass sie von der Katalogsortierung abweicht.  
   
  Das Verhalten verschiedener Objekte in nicht enthaltenen und enthaltenen Datenbanken wird in dieser Tabelle zusammengefasst:  
   
@@ -159,7 +159,7 @@ JOIN #T2
   
 -   Das Sortierungsverhalten für einen Batch wird von der Datenbank bestimmt, in der der Batch beginnt.  
   
- Beachten Sie, dass diese Entscheidung getroffen wird, bevor Befehle ausgegeben werden, auch der anfängliche `USE`. Wenn ein Batch in einer eigenständigen Datenbank, jedoch mit dem ersten Befehl beginnt ist also eine `USE` mit einer nicht enthaltenen Datenbank wird das Sortierungsverhalten weiterhin für den Batch verwendet werden. Angesichts dessen kann beispielsweise ein Verweis auf eine Variable mehrere mögliche Ergebnisse haben:  
+ Beachten Sie, dass diese Entscheidung getroffen wird, bevor Befehle auch der anfängliche ausgegeben werden, `USE`. Beginnt ein Batch in einer eigenständigen Datenbank, jedoch mit dem ersten Befehl wird ein `USE` zu einer nicht enthaltenen Datenbank, wird das Sortierungsverhalten weiterhin für den Batch verwendet werden. Angesichts dessen kann beispielsweise ein Verweis auf eine Variable mehrere mögliche Ergebnisse haben:  
   
 -   Durch den Verweis kann genau eine Übereinstimmung gefunden werden. In diesem Fall funktioniert der Verweis ohne Fehler.  
   
@@ -239,7 +239,7 @@ GO
  Ungültiger Objektname '#A'.  
   
 ### <a name="example-3"></a>Beispiel 3  
- Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Wir zunächst `tempdb` (die Groß-/Kleinschreibung beachtet dieselbe Sortierung wie die gegebene Instanz aufweist), und führen Sie die folgenden Anweisungen.  
+ Im folgenden Beispiel wird der Fall veranschaulicht, wo durch den Verweis mehrere Übereinstimmungen gefunden werden, die sich ursprünglich voneinander unterschieden haben. Zunächst beginnen wir im `tempdb` (diese hat der gleichen Groß-/Kleinschreibung Sortierung wie die gegebene Instanz), und führen Sie die folgenden Anweisungen.  
   
 ```  
 USE tempdb;  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft Docs
+title: Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310850"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
   In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36162824"
 >  Standardmäßig werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Kennwörter nicht mit der Verbindungszeichenfolge gespeichert. Wenn das Kennwort nicht gespeichert wird, werden Sie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Eingabe des Kennworts aufgefordert, sobald es benötigt wird. Wenn Sie sich für die Speicherung des Kennworts entscheiden, wird es in verschlüsselter Form in der Datenverbindungszeichenfolge gespeichert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Kennwortinformationen für Datenquellen mithilfe des Verschlüsselungsschlüssels der Datenbank, die die Datenquelle enthält. Werden verschlüsselte Verbindungsinformationen verwendet, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, um das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto oder das zugehörige Kennwort zu ändern; andernfalls können die verschlüsselten Informationen nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definieren von Identitätswechselinformationen für Data Mining-Objekte  
- Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Für das Datamining `OPENQUERY` Vorgängen des Typs sollten Sie die Datamining-Abfrage im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausgeführt wird) und nicht im Kontext des Dienstkontos ausgeführt. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
+ Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Für das Datamining `OPENQUERY` Vorgängen des Typs sollten Sie die Datamining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
   
 ##  <a name="bkmk_steps"></a> Erstellen einer Datenquelle mit dem Datenquellen-Assistent  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36162824"
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
     1.  
-  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen beinhalten (z. B. \<Computername >\\< Instancename\>).  
+  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Namen der Instanz einschließen (z. B. \<Computername >\\< Instancename\>).  
   
     2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. Mit**SQL Server-Authentifizierung verwenden** wird eine Datenbank-Benutzeranmeldung für eine Windows Azure SQL-Datenbank- oder SQL Server-Instanz angegeben, die eine Authentifizierung im gemischten Modus unterstützt.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "36162824"
  Sie können mehrere Datenquellenobjekte erstellen, um Verbindungen mit zusätzlichen Datenquellen zu unterstützen. Jede Datenquelle muss Spalten aufweisen, die zur Erstellung von Beziehungen verwendet werden können.  
   
 > [!NOTE]  
->  Wenn mehrere Datenquellen definiert werden, und Daten aus mehreren Quellen in einer einzelnen Abfrage abgefragt werden, z. B. für eine Schneeflockendimension, muss definiert eine Datenquelle, die Remoteabfragen mithilfe unterstützt `OpenRowset`. In der Regel ist dies eine Microsoft SQL Server-Datenquelle.  
+>  Wenn mehrere Datenquellen definiert sind und von mehreren Quellen in einer einzelnen Abfrage Daten abgefragt, z. B. für eine Schneeflockendimension, muss definiert eine Datenquelle, die Remoteabfragen mithilfe unterstützt `OpenRowset`. In der Regel ist dies eine Microsoft SQL Server-Datenquelle.  
   
  Für die Verwendung mehrerer Datenquellen gelten die folgenden Anforderungen:  
   
 -   Legen Sie eine Datenquelle als primäre Datenquelle fest. Die primäre Datenquelle ist diejenige, die zum Erstellen einer Datenquellensicht verwendet wurde.  
   
--   Es muss eine primäre Datenquelle unterstützen die `OpenRowset` Funktion.  Weitere Informationen zu dieser Funktion in SQL Server finden Sie unter <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Eine primäre Datenquelle muss unterstützen die `OpenRowset` Funktion.  Weitere Informationen zu dieser Funktion in SQL Server finden Sie unter <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Gehen Sie folgendermaßen vor, um Daten von mehreren Datenquellen zu kombinieren:  
   

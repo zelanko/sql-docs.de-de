@@ -1,5 +1,5 @@
 ---
-title: PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyStrVal property
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33a4f92ade08aa88cf3938e00bce01a31ae830d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8bed8af98485f274fc6f76aebbdc2f07c59bb0c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307420"
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
   Ruft den Zeichenfolgenwert der aktuellen Eigenschaft ab, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  

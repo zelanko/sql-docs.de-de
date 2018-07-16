@@ -1,5 +1,5 @@
 ---
-title: Logische Architektur (Analysis Services – Datamining) | Microsoft Docs
+title: Logische Architektur (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299300"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Logische Architektur (Analysis Services - Data Mining)
   Das Data Mining ist ein Prozess, bei dem mehrere Komponenten interagieren.  
@@ -45,7 +45,7 @@ ms.locfileid: "36148955"
 ##  <a name="bkmk_SourceData"></a> Data Mining-Quelldaten  
  Die Daten, die Sie beim Data Mining verwenden, werden nicht in der Data Mining-Lösung gespeichert. Es werden nur die Bindungen gespeichert. Die Daten können sich in einer Datenbank befinden, die in einer vorherigen Version von SQL Server erstellt wurde, oder in einem CRM-System oder sogar einer Flatfile. Wenn für die Struktur oder das Modell ein Training auf Grundlage der Verarbeitung erfolgt, wird eine statistische Zusammenfassung der Daten erstellt und in einem Cache gespeichert, der zur Verwendung in späteren Vorgängen beibehalten oder nach der Verarbeitung gelöscht werden kann. Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Sie kombinieren ungleichartige Daten innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellensicht-Objekts (DSV), das im oberen Bereich der Datenquelle eine Abstraktionsebene bereitstellt. Sie können Joins zwischen Tabellen festlegen oder Tabellen hinzufügen, die eine n:1-Beziehung aufweisen, um geschachtelte Tabellenspalten zu erstellen. Die Definitionen dieser Objekte, der Datenquelle und der Datenquellensicht werden innerhalb der Projektmappe mit den Dateinamenerweiterungen *.ds oder \*.dsv gespeichert. Weitere Informationen zum Erstellen und Verwenden von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenquellen und Datenquellensichten finden Sie unter [unterstützte Datenquellen &#40;mehrdimensionale SSAS-&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Sie kombinieren ungleichartige Daten innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellensicht-Objekts (DSV), das im oberen Bereich der Datenquelle eine Abstraktionsebene bereitstellt. Sie können Joins zwischen Tabellen festlegen oder Tabellen hinzufügen, die eine n:1-Beziehung aufweisen, um geschachtelte Tabellenspalten zu erstellen. Die Definitionen dieser Objekte, der Datenquelle und der Datenquellensicht werden innerhalb der Projektmappe mit den Dateinamenerweiterungen *.ds oder \*.dsv gespeichert. Weitere Informationen zum Erstellen und verwenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenquellen und Datenquellensichten finden Sie unter [unterstützte Datenquellen &#40;mehrdimensionale SSAS-&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  Sie können Datenquellen und Datenquellensichten auch definieren und ändern, indem Sie AMO oder XMLA verwenden. Weitere Informationen zum programmgesteuerten Arbeiten mit diesen Objekten finden Sie unter [Übersicht über logische Architektur &#40;Analysis Services – Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36148955"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Eine Data Mining-Struktur ist ein logischer Datencontainer, der die Datendomäne definiert, aus der die Miningmodelle erstellt werden. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen.  
   
- Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die `CacheMode` -Eigenschaft des miningstrukturobjekts in den Wert `ClearAfterProcessing`. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die `CacheMode` Eigenschaft für das miningstrukturobjekt auf den Wert `ClearAfterProcessing`. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] können Sie die Daten auch in Trainings- und Testdatensätze unterteilen, damit Sie Ihre Data Mining-Modelle mit einem repräsentativen, zufällig ausgewählten Satz von Daten testen können. Die Daten werden eigentlich nicht getrennt gespeichert. Im Strukturcache werden die Falldaten eher mit einer Eigenschaft markiert, die angibt, ob der jeweilige Fall für Trainings- oder für Testzwecke verwendet wird. Wenn der Cache gelöscht wird, können diese Informationen nicht abgerufen werden.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36148955"
  Darüber hinaus enthält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viele gespeicherte Systemprozeduren, die intern für Data Mining verwendet werden. Obwohl die gespeicherten Systemprozeduren für die interne Verwendung ausgelegt sind, können Sie Ihnen unter Umständen nützliche Verknüpfungen bieten. Microsoft behält sich das Recht vor, diese gespeicherten Prozeduren je nach Bedarf zu ändern. Daher wird hinsichtlich einer produktiven Nutzung empfohlen, dass Sie Abfragen mit DMX, AMO oder XMLA erstellen.  
   
  **Benutzerdefinierte Plug-In-Algorithmen**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet einen Mechanismus zum Erstellen Ihrer eigenen Algorithmen und Hinzufügen von Algorithmen als eine neue Datamining-Dienst mit der Serverinstanz an.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet einen Mechanismus zum Erstellen von eigenen Algorithmen und anschließenden Hinzufügen von Algorithmen als neuer Datamining-Dienst mit der Serverinstanz an.  
   
  Analysis Services verwendet COM-Schnittstellen zum Kommunizieren mit den Plug-In-Algorithmen. Weitere Informationen darüber, wie neue Algorithmen implementiert werden, finden Sie unter [Plugin Algorithms](plugin-algorithms.md).  
   

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e87912fc00924698bf2fe735c0bd9ce9433cdb1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288526"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Ein `MultiLineString` ist eine Auflistung von NULL oder mehr `geometry` oder **GeographyLineString** Instanzen.  
+  Ein `MultiLineString` ist eine Sammlung von NULL oder mehr `geometry` oder **GeographyLineString** Instanzen.  
   
 ## <a name="multilinestring-instances"></a>MultiLineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für `MultiLineString` Instanzen.  
@@ -42,12 +42,12 @@ ms.locfileid: "36060459"
   
 -   Abbildung 4 zeigt eine nicht einfache, nicht geschlossene `MultiLineString`-Instanz.  
   
--   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Es ist nicht geschlossen, da seine `LineStrings` -Elemente nicht geschlossen sind. Sie ist einfach, da keiner der Innenbereiche der `LineStrings` Instanzen überschneiden.  
+-   Abbildung 5 zeigt eine einfache, nicht geschlossene `MultiLineString`-Instanz. Es ist nicht geschlossen, da die `LineStrings` -Elemente nicht geschlossen sind. Es ist ganz einfach weil keiner der Innenbereiche der der `LineStrings` Instanzen überschneiden.  
   
--   Abbildung 6 zeigt eine einfache geschlossen `MultiLineString` Instanz. Sie ist geschlossen, weil alle ihre Elemente geschlossen sind. Sie ist einfach, weil keines ihrer Elemente sich im Innenbereich mit anderen überschneidet.  
+-   Abbildung 6 zeigt eine einfache, geschlossen `MultiLineString` Instanz. Sie ist geschlossen, weil alle ihre Elemente geschlossen sind. Sie ist einfach, weil keines ihrer Elemente sich im Innenbereich mit anderen überschneidet.  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Für eine `MultiLineString` -Instanz akzeptiert wird, muss Sie entweder leer sein, oder der nur `LineString` bestehen, die akzeptiert werden. Weitere Informationen über akzeptierte `LineString` Instanzen finden Sie unter [LineString](../spatial/linestring.md). In den folgenden Beispielen werden akzeptierte `MultiLineString`-Instanzen veranschaulicht.  
+ Für eine `MultiLineString` -Instanz akzeptiert wird, muss Sie entweder leer sein, oder der nur `LineString` bestehen, die akzeptiert werden. Weitere Informationen über akzeptierte `LineString` -Instanzen finden Sie unter [LineString](../spatial/linestring.md). In den folgenden Beispielen werden akzeptierte `MultiLineString`-Instanzen veranschaulicht.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -63,7 +63,7 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Für eine `MultiLineString` Instanz gültig ist, muss die folgenden Kriterien erfüllen:  
+ Für eine `MultiLineString` -Instanz gültig ist, muss die folgenden Kriterien erfüllen:  
   
 1.  Alle Instanzen, die die `MultiLineString`-Instanz beinhalten, müssen gültige `LineString`-Instanzen sein.  
   
@@ -79,7 +79,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` gilt nicht da die zweite `LineString` Instanz überlappt, das erste `LineString` Instanz in einem Intervall. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
+ `@g4` gilt nicht da die zweite `LineString` Instanz überschneidet sich mit der ersten `LineString` Instanz in einem Intervall. Sie berühren sich mit einer unendlichen Anzahl von Punkten.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache `geometry``MultiLineString` -Instanz erstellt, die zwei `LineString` -Elemente mit der SRID 0 enthält.  

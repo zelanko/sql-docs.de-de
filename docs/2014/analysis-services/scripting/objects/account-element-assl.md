@@ -1,5 +1,5 @@
 ---
-title: Konto-Element (ASSL) | Microsoft Docs
+title: Konto-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321170"
 ---
 # <a name="account-element-assl"></a>Account-Element (ASSL)
   Enthält Details über einen Kontotyp innerhalb einer [Datenbank](database-element-assl.md) Element.  
@@ -65,13 +65,13 @@ ms.locfileid: "36161669"
 |Untergeordnete Elemente|[AccountType](../properties/accounttype-element-assl.md), [AggregationFunction](../properties/aggregationfunction-element-assl.md), [Aliase](../collections/aliases-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Dimensionen, deren [Typ](../properties/type-element-dimension-assl.md) -Elementgruppe ist *Konten,* können ein Attribut, das gibt des Kontotyp, wie "Income", "Expense und usw., dargestellt durch Elemente in der Dimension haben. Der Kontotyp wird dann von verwendet [Measure](measure-element-assl.md) Elemente, deren [AggregationFunction](../properties/aggregatefunction-element-assl.md) -Elementgruppe ist *ByAccount*, um zu bestimmen, die Aggregatfunktion verwendet wird, wenn aggregieren Sie die Elemente dieser Dimension. Die `Account` Element stellt einen einzelnen Kontotyp sowie die Aggregationsfunktion, die von solchen Measures verwendet werden soll.  
+ Dimensionen, deren [Typ](../properties/type-element-dimension-assl.md) -Elementgruppe ist *Konten* haben ein Attribut, das gibt an, den Kontotyp, wie "Income", "Expense und so weiter, dargestellt durch die Elemente in der Dimension. Der Kontotyp wird dann von verwendet [Measure](measure-element-assl.md) Elemente, deren [AggregationFunction](../properties/aggregatefunction-element-assl.md) Element nastaven NA hodnotu *ByAccount*, um zu bestimmen, die Aggregatfunktion verwendet wird, wenn Aggregieren der Elemente dieser Dimension. Die `Account` -Element stellt dar, einen einzelnen Kontotyp sowie die Aggregationsfunktion, die von solchen Measures verwendet werden soll.  
   
- Ein Kontotyp muss aufgelistet sein, wenn die Aggregatfunktion verwendeten vom Standard abweicht [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] für jeden Kontotyp.  
+ Ein Kontotyp muss aufgelistet sein, wenn die Aggregatfunktion standardmäßig verwendet unterscheidet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] für jeden Kontotyp.  
   
  Der Satz gültiger Kontotypen kann nicht geändert werden.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Account>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Database-Element &#40;ASSL&#41;](database-element-assl.md)   

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279636"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
@@ -47,12 +46,12 @@ ms.locfileid: "36059895"
  **Automatisches Failover (max. 2)**  
  Aktivieren Sie dieses Kontrollkästchen nur, wenn dieses Verfügbarkeitsreplikat ein automatischer Failoverpartner sein soll. Sie müssen zum Konfigurieren eines automatischen Failovers diese Option für das ursprüngliche primäre Replikat und ein sekundäres Replikat auswählen. Beide Replikate verwenden den Verfügbarkeitsmodus für synchrone Commits. Nur zwei Replikate können automatisches Failover unterstützen.  
   
- Informationen zum Verfügbarkeitsmodus für synchrone Commits finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das automatische Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Informationen zum Verfügbarkeitsmodus mit synchronem Commit finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das automatische Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Synchroner Commit (max. 3)**  
  Wenn Sie **Automatisches Failover (max. 2)** für das Replikat ausgewählt haben, wird auch **Synchroner Commit (max. 3)** aktiviert. Ist das Kontrollkästchen deaktiviert, aktivieren Sie es nur, wenn von diesem Replikat der Modus für synchrone Commits nur mit geplantem manuellem Failover verwendet werden soll. Nur drei Replikate können den Modus für synchrone Commits verwenden.  
   
- Wenn von diesem Replikat der Verfügbarkeitsmodus für asynchrone Commits verwendet werden soll, lassen Sie dieses Kontrollkästchen deaktiviert. Das Replikat unterstützt nur erzwungenes manuelles Failover (mit möglichem Datenverlust). Informationen zum Verfügbarkeitsmodus für asynchrone Commits finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das geplante manuelle Failover und das erzwungene manuelle Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Wenn von diesem Replikat der Verfügbarkeitsmodus für asynchrone Commits verwendet werden soll, lassen Sie dieses Kontrollkästchen deaktiviert. Das Replikat unterstützt nur erzwungenes manuelles Failover (mit möglichem Datenverlust). Informationen zum Verfügbarkeitsmodus mit asynchronem Commit finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das geplante manuelle Failover und das erzwungene manuelle Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Lesbare sekundäre Rolle**  
  Wählen Sie aus der Dropdownliste **Lesbare sekundäre Rolle** folgendermaßen einen Wert aus:  
@@ -210,7 +209,7 @@ ms.locfileid: "36059895"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Erstellen eines Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen Sie eine Datenbank mit dem Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Threadpooleigenschaften | Microsoft Docs
+title: Threadpooleigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
 - threads [Analysis Services]
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6a6225c80140d293fb505a5b1206a774b715d6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303030"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
   
- Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen eigenen Satz von Threadpools. Es gibt erhebliche Unterschiede in Bezug darauf, wie Threadpools von tabellarischen und mehrdimensionalen Instanzen verwendet werden. Der Hauptunterschied besteht darin, nur mehrdimensionale Lösungen verwenden die `IOProcess` ThreadPool. Daher die `PerNumaNode` Eigenschaft, die in diesem Thema beschriebenen ist nicht für tabellarische Instanzen bedeutungslos.  
+ Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen eigenen Satz von Threadpools. Es gibt erhebliche Unterschiede in Bezug darauf, wie Threadpools von tabellarischen und mehrdimensionalen Instanzen verwendet werden. Der wichtigste Unterschied besteht darin, nur von mehrdimensionalen Lösungen verwenden die `IOProcess` ThreadPool. Daher ist es möglich, die `PerNumaNode` Eigenschaft, die in diesem Thema beschrieben ist nicht für tabellarische Instanzen bedeutungslos.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -72,12 +72,12 @@ ms.locfileid: "36060163"
   
 -   `Query` ist der Threadpool, der alle Anforderungen ausführt, die nicht vom analysethreadpool behandelt werden. Threads in diesem Threadpool führen alle Vorgangstypen aus, z. B. Ermittlungen, MDX-, DAX-, DMX- und DDL-Befehle.  
   
--   `IOProcess` verwendet für e/a-Aufträge, die speichermodulabfragen im mehrdimensionalen Modul zugeordnet ist. Die von diesen Threads verarbeiteten Aufgaben sollten erwartungsgemäß keine Abhängigkeiten von anderen Threads aufweisen. Diese Threads scannen in der Regel ein einzelnes Segment einer Partition und führen eine Filterung und Aggregation der Segmentdaten durch. `IOProcess` Threads reagieren besonders empfindlich auf NUMA-Hardwarekonfigurationen. Daher dieser Threadpool verfügt über die `PerNumaNode` Konfigurationseigenschaft, die verwendet werden kann, um die Leistung bei Bedarf zu optimieren.  
+-   `IOProcess` für e/a-Aufträge, die Speicher-Engine-Abfragen in der mehrdimensionalen Engine zugeordnet ist, verwendet werden. Die von diesen Threads verarbeiteten Aufgaben sollten erwartungsgemäß keine Abhängigkeiten von anderen Threads aufweisen. Diese Threads scannen in der Regel ein einzelnes Segment einer Partition und führen eine Filterung und Aggregation der Segmentdaten durch. `IOProcess` Threads sind besonders empfindlich auf die NUMA-Hardwarekonfigurationen. Daher ist es möglich, dieser Threadpool verfügt über die `PerNumaNode` Konfigurationseigenschaft, die verwendet werden kann, um die Leistung zu optimieren, falls erforderlich.  
   
--   `Process` wird für längere speichermodulaufträge, einschließlich Aggregationen, Indizierung und Commitvorgänge. Der ROLAP-Speichermodus verwendet ebenfalls Threads aus dem Verarbeitungsthreadpool.  
+-   `Process` ist für längere Speicher-Engine-Aufträge verwendet, darunter Aggregationen, Indizierung und Commitvorgänge. Der ROLAP-Speichermodus verwendet ebenfalls Threads aus dem Verarbeitungsthreadpool.  
   
 > [!NOTE]  
->  Obwohl "Msmdsrv.ini" threadpooleinstellungen, in hat der `VertiPaq` Abschnitt `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` und `ThreadPool` \\ `CPUs` werden absichtlich undokumentiert. Diese Eigenschaften sind derzeit funktionslos und für die zukünftige Verwendung reserviert.  
+>  Obwohl "Msmdsrv.ini" threadpooleinstellungen, in verfügt der `VertiPaq` Abschnitt `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` und `ThreadPool` \\ `CPUs` sind absichtlich undokumentiert. Diese Eigenschaften sind derzeit funktionslos und für die zukünftige Verwendung reserviert.  
   
  Um Anforderungen zu bearbeiten, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] u. U. die maximale Threadpoolgrenze überschreiten und zusätzliche Threads anfordern, wenn diese für die Ausführung der Aufgabe erforderlich sind. Wenn jedoch ein Thread seine Aufgabe abgeschlossen hat und die aktuelle Threadanzahl höher als die maximale Grenze ist, wird der Thread einfach beendet und nicht an den Threadpool zurückgegeben.  
   
@@ -102,12 +102,12 @@ ms.locfileid: "36060163"
 |`IOProcess` \ `StackSizeKB`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der die Speicherbelegung während der Threadausführung angepasst werden kann.|0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Gilt nur für mehrdimensionale Modelle.|  
 |**Analysieren von**  \ `Long` \ `Concurrency`|double|Ein Gleitkommawert mit doppelter Genauigkeit, der den Algorithmus zum Festlegen eines Ziels für die Anzahl der Threads bestimmt, die gleichzeitig in eine Warteschlange gestellt werden können.|2.0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Die Parallelität wird verwendet, um Threadpools zu initialisieren, die mithilfe von E/A-Abschlussports in Windows implementiert werden. Einzelheiten finden Sie unter [I/O Completion Ports](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) (E/A-Abschlussports).|  
 |**Analysieren von**  \ `Long` \ `GroupAffinity`|Zeichenfolge|Ein Array von Hexadezimalwerten, die Prozessorgruppen im System entsprechen. Wird verwendet, um die Affinität von Analysethreads zu logischen Prozessoren in den einzelnen Prozessorgruppen festzulegen.|none|Mit dieser Eigenschaft können Sie benutzerdefinierte Affinitäten erstellen. Die Eigenschaft ist standardmäßig leer.<br /><br /> Details finden Sie unter [Festlegen von GroupAffinity, um Threads Prozessoren in einer Prozessorgruppe zuzuordnen](#bkmk_groupaffinity) .|  
-|**Analysieren von**  \ `Long` \ `NumThreads`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Anzahl von Threads definiert, die für Langbefehle erstellt werden können.|0|0 gibt an, dass der Server die Standardwerte bestimmt. Das Standardverhalten besteht festzulegende `NumThreads` auf einen absoluten Wert von 4 bzw. 2 Mal die Anzahl der logischen Prozessoren, welcher Wert größer ist.<br /><br /> Wenn Sie diesen Wert auf einen negativen Wert festlegen, multipliziert der Server den Wert mit der Anzahl der logischen Prozessoren. Wenn der Wert auf einem Server, der über 32 logische Prozessoren verfügt, beispielsweise auf -10 festgelegt ist, beträgt der Höchstwert 320 Threads.<br /><br /> Der Höchstwert ist abhängig von den verfügbaren Prozessoren der benutzerdefinierten Affinitätsmasken, die Sie zuvor festgelegt haben. Wenn Sie für die Threadpoolaffinität z. B. bereits festgelegt haben, dass 8 von 32 Prozessoren verwendet werden, und Sie NumThreads jetzt auf -10 festlegen, dann entspricht die obere Grenze für den Threadpool dem Ergebnis aus 10 x 8 (= 80 Threads).<br /><br /> Die für diese Threadpooleigenschaft tatsächlich verwendeten Werte werden beim Dienststart in die msmdsrv-Protokolldatei geschrieben.|  
+|**Analysieren von**  \ `Long` \ `NumThreads`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Anzahl von Threads definiert, die für Langbefehle erstellt werden können.|0|0 gibt an, dass der Server die Standardwerte bestimmt. Das Standardverhalten ist festzulegende `NumThreads` auf einen absoluten Wert von 4 bzw. 2 Mal die Anzahl der logischen Prozessoren, welcher Wert höher ist.<br /><br /> Wenn Sie diesen Wert auf einen negativen Wert festlegen, multipliziert der Server den Wert mit der Anzahl der logischen Prozessoren. Wenn der Wert auf einem Server, der über 32 logische Prozessoren verfügt, beispielsweise auf -10 festgelegt ist, beträgt der Höchstwert 320 Threads.<br /><br /> Der Höchstwert ist abhängig von den verfügbaren Prozessoren der benutzerdefinierten Affinitätsmasken, die Sie zuvor festgelegt haben. Wenn Sie für die Threadpoolaffinität z. B. bereits festgelegt haben, dass 8 von 32 Prozessoren verwendet werden, und Sie NumThreads jetzt auf -10 festlegen, dann entspricht die obere Grenze für den Threadpool dem Ergebnis aus 10 x 8 (= 80 Threads).<br /><br /> Die für diese Threadpooleigenschaft tatsächlich verwendeten Werte werden beim Dienststart in die msmdsrv-Protokolldatei geschrieben.|  
 |**Analysieren von**  \ `Long` \ `PriorityRatio`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der sichergestellt werden kann, dass Threads mit niedrigerer Priorität manchmal auch dann ausgeführt werden, wenn eine Warteschlange mit höherer Priorität nicht leer ist.|0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.|  
 |**Analysieren von**  \ `Long` \ `StackSizeKB`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der die Speicherbelegung während der Threadausführung angepasst werden kann.|0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.|  
 |**Analysieren von**  \ `Short` \ `Concurrency`|double|Ein Gleitkommawert mit doppelter Genauigkeit, der den Algorithmus zum Festlegen eines Ziels für die Anzahl der Threads bestimmt, die gleichzeitig in eine Warteschlange gestellt werden können.|2.0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Die Parallelität wird verwendet, um Threadpools zu initialisieren, die mithilfe von E/A-Abschlussports in Windows implementiert werden. Einzelheiten finden Sie unter [I/O Completion Ports](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) (E/A-Abschlussports).|  
 |**Analysieren von**  \ `Short` \ `GroupAffinity`|Zeichenfolge|Ein Array von Hexadezimalwerten, die Prozessorgruppen im System entsprechen. Wird verwendet, um die Affinität von Analysethreads zu logischen Prozessoren in den einzelnen Prozessorgruppen festzulegen.|none|Mit dieser Eigenschaft können Sie benutzerdefinierte Affinitäten erstellen. Die Eigenschaft ist standardmäßig leer.<br /><br /> Details finden Sie unter [Festlegen von GroupAffinity, um Threads Prozessoren in einer Prozessorgruppe zuzuordnen](#bkmk_groupaffinity) .|  
-|**Analysieren von**  \ `Short` \ `NumThreads`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Anzahl von Threads definiert, die für Kurzbefehle erstellt werden können.|0|0 gibt an, dass der Server die Standardwerte bestimmt. Das Standardverhalten besteht festzulegende `NumThreads` auf einen absoluten Wert von 4 bzw. 2 Mal die Anzahl der logischen Prozessoren, welcher Wert größer ist.<br /><br /> Wenn Sie diesen Wert auf einen negativen Wert festlegen, multipliziert der Server den Wert mit der Anzahl der logischen Prozessoren. Wenn der Wert auf einem Server, der über 32 logische Prozessoren verfügt, beispielsweise auf -10 festgelegt ist, beträgt der Höchstwert 320 Threads.<br /><br /> Der Höchstwert ist abhängig von den verfügbaren Prozessoren der benutzerdefinierten Affinitätsmasken, die Sie zuvor festgelegt haben. Wenn Sie für die Threadpoolaffinität z. B. bereits festgelegt haben, dass 8 von 32 Prozessoren verwendet werden, und Sie NumThreads jetzt auf -10 festlegen, dann entspricht die obere Grenze für den Threadpool dem Ergebnis aus 10 x 8 (= 80 Threads).<br /><br /> Die für diese Threadpooleigenschaft tatsächlich verwendeten Werte werden beim Dienststart in die msmdsrv-Protokolldatei geschrieben.|  
+|**Analysieren von**  \ `Short` \ `NumThreads`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, die die Anzahl von Threads definiert, die für Kurzbefehle erstellt werden können.|0|0 gibt an, dass der Server die Standardwerte bestimmt. Das Standardverhalten ist festzulegende `NumThreads` auf einen absoluten Wert von 4 bzw. 2 Mal die Anzahl der logischen Prozessoren, welcher Wert höher ist.<br /><br /> Wenn Sie diesen Wert auf einen negativen Wert festlegen, multipliziert der Server den Wert mit der Anzahl der logischen Prozessoren. Wenn der Wert auf einem Server, der über 32 logische Prozessoren verfügt, beispielsweise auf -10 festgelegt ist, beträgt der Höchstwert 320 Threads.<br /><br /> Der Höchstwert ist abhängig von den verfügbaren Prozessoren der benutzerdefinierten Affinitätsmasken, die Sie zuvor festgelegt haben. Wenn Sie für die Threadpoolaffinität z. B. bereits festgelegt haben, dass 8 von 32 Prozessoren verwendet werden, und Sie NumThreads jetzt auf -10 festlegen, dann entspricht die obere Grenze für den Threadpool dem Ergebnis aus 10 x 8 (= 80 Threads).<br /><br /> Die für diese Threadpooleigenschaft tatsächlich verwendeten Werte werden beim Dienststart in die msmdsrv-Protokolldatei geschrieben.|  
 |**Analysieren von**  \ `Short` \ `PriorityRatio`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der sichergestellt werden kann, dass Threads mit niedrigerer Priorität manchmal auch dann ausgeführt werden, wenn eine Warteschlange mit höherer Priorität nicht leer ist.|0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.|  
 |**Analysieren von**  \ `Short` \ `StackSizeKB`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der die Speicherbelegung während der Threadausführung angepasst werden kann.|64 * logische Prozessoren|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.|  
 |`Process` \ `Concurrency`|double|Ein Gleitkommawert mit doppelter Genauigkeit, der den Algorithmus zum Festlegen eines Ziels für die Anzahl der Threads bestimmt, die gleichzeitig in eine Warteschlange gestellt werden können.|2.0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Die Parallelität wird verwendet, um Threadpools zu initialisieren, die mithilfe von E/A-Abschlussports in Windows implementiert werden. Einzelheiten finden Sie unter [I/O Completion Ports](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) (E/A-Abschlussports).|  
@@ -124,25 +124,25 @@ ms.locfileid: "36060163"
 |`Query`  \ `StackSizeKB`|ssNoversion|Eine ganze 32-Bit-Zahl mit Vorzeichen, mit der die Speicherbelegung während der Threadausführung angepasst werden kann.|0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.|  
   
 ##  <a name="bkmk_groupaffinity"></a> Festlegen von GroupAffinity, um Threads Prozessoren in einer Prozessorgruppe zuzuordnen  
- `GroupAffinity` dient erweiterten Optimierungszwecken. Sie können die `GroupAffinity` -Eigenschaft zum Festlegen der Affinität zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools und spezifischen Prozessoren; jedoch für die meisten Installationen muss [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt am besten, wenn alle verfügbare logische Prozessoren genutzt werden können. Dementsprechend ist für die Gruppenaffinität standardmäßig kein Wert angegeben.  
+ `GroupAffinity` dient erweiterten Optimierungszwecken. Können Sie die `GroupAffinity` -Eigenschaft zum Festlegen der Affinität zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools und spezifischen Prozessoren; allerdings bei den meisten Installationen, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt am besten, wenn alle verfügbare logische Prozessoren genutzt werden können. Dementsprechend ist für die Gruppenaffinität standardmäßig kein Wert angegeben.  
   
  Sollten Leistungstests ergeben, dass eine CPU-Optimierung erforderlich ist, können Sie einen allgemeineren Ansatz in Betracht ziehen. Beispielsweise können Sie den Windows Server-Ressourcen-Manager verwenden, um die Affinität zwischen logischen Prozessoren und einem Serverprozess festzulegen. Ein derartiger Ansatz ist u. U. leichter zu implementieren und zu verwalten, als benutzerdefinierte Affinitäten für einzelne Threadpools zu definieren.  
   
  Wenn dieser Ansatz nicht ausreicht, können Sie eine höhere Genauigkeit erreichen, indem Sie benutzerdefinierte Affinitäten für Threadpools definieren. Anpassungen der Affinitätseinstellungen werden eher für große Multikernsysteme (NUMA oder Nicht-NUMA) empfohlen, bei denen aufgrund der Verteilung der Threadpools auf zu viele Prozessoren Leistungsabfälle auftreten. Sie können `GroupAffinity` zwar für Systeme mit weniger als 64 logischen Prozessoren festlegen, doch die Vorteile sind zu vernachlässigen, und es kann sogar zu Leistungseinbußen kommen.  
   
 > [!NOTE]  
->  `GroupAffinity` ist je nach Edition hinsichtlich der Anzahl der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendeten Kerne eingeschränkt. Beim Starten des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet editionsinformationen und die `GroupAffinity` Eigenschaften für jeden der von verwalteten 5 Threadpools Affinitätsmasken zu berechnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Für die Standard Edition können maximal 16 Kerne verwendet werden. Wenn Sie die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition auf einem großen Multikernsystem mit mehr als 16 Kernen installieren, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur 16 von diesen. Wenn Sie eine Enterprise-Instanz einer früheren Version aktualisieren, sind Sie auf 20 Kerne beschränkt. Weitere Informationen zu Editionen und Lizenzierung finden Sie in der [Lizenzübersicht für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=246061).  
+>  `GroupAffinity` ist je nach Edition hinsichtlich der Anzahl der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendeten Kerne eingeschränkt. Beim Start [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet editionsinformationen und die `GroupAffinity` Eigenschaften, die für jeden der von verwalteten 5 Threadpools Affinitätsmasken zu berechnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Für die Standard Edition können maximal 16 Kerne verwendet werden. Wenn Sie die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition auf einem großen Multikernsystem mit mehr als 16 Kernen installieren, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur 16 von diesen. Wenn Sie eine Enterprise-Instanz einer früheren Version aktualisieren, sind Sie auf 20 Kerne beschränkt. Weitere Informationen zu Editionen und Lizenzierung finden Sie in der [Lizenzübersicht für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=246061).  
   
 ### <a name="syntax"></a>Syntax  
  Der Wert ist für jede Prozessorgruppe hexadezimal, wobei der Hexadezimalwert die logischen Prozessoren darstellt, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zuerst zu verwenden versucht, wenn Threads für einen bestimmten Threadpool zugeordnet werden.  
   
  **Bitmaske für logische Prozessoren**  
   
- Eine einzelne Prozessorgruppe kann bis zu 64 logische Prozessoren enthalten. Die Bitmaske ist 1 (oder 0) für jeden logischen Prozessor in der Gruppe, der von einem Threadpool verwendet (oder nicht verwendet) wird. Berechnen die Bitmaske Berechnung Sie den Hexadezimalwert als Wert für `GroupAffinity`.  
+ Eine einzelne Prozessorgruppe kann bis zu 64 logische Prozessoren enthalten. Die Bitmaske ist 1 (oder 0) für jeden logischen Prozessor in der Gruppe, der von einem Threadpool verwendet (oder nicht verwendet) wird. Die Bitmaske berechnen Sie dann berechnen den Hexadezimalwert als Wert für `GroupAffinity`.  
   
  **Mehrere Prozessorgruppen**  
   
- Prozessorgruppen werden beim Systemstart bestimmt. `GroupAffinity` akzeptiert Hexadezimalwerte für jede prozessorgruppe in einer durch Trennzeichen getrennten Liste an. Bei mehreren Prozessorgruppen (bis zu 10 auf leistungsfähigeren High-End-Systemen) können Sie einzelne Gruppen umgehen, indem Sie 0x0 angeben. Auf einem System mit vier Prozessorgruppen (0, 1, 2, 3) können Sie z. B. die Gruppen 0 und 2 ausschließen, indem Sie 0x0 für den ersten und den dritten Wert eingeben.  
+ Prozessorgruppen werden beim Systemstart bestimmt. `GroupAffinity` akzeptiert Hexadezimalwerte für jede prozessorgruppe in einer durch Trennzeichen getrennte Liste an. Bei mehreren Prozessorgruppen (bis zu 10 auf leistungsfähigeren High-End-Systemen) können Sie einzelne Gruppen umgehen, indem Sie 0x0 angeben. Auf einem System mit vier Prozessorgruppen (0, 1, 2, 3) können Sie z. B. die Gruppen 0 und 2 ausschließen, indem Sie 0x0 für den ersten und den dritten Wert eingeben.  
   
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
@@ -173,21 +173,21 @@ ms.locfileid: "36060163"
   
 5.  **Eingeben des Hexadezimalwerts in der GroupAffinity-Eigenschaft**  
   
-     Legen Sie in "Msmdsrv.ini" oder in der Servereigenschaftenseite in Management Studio `GroupAffinity` auf den Wert berechnet, die Schritt 4.  
+     Legen Sie in "Msmdsrv.ini" oder in der Servereigenschaftenseite in Management Studio, `GroupAffinity` auf den Wert berechnet, die Schritt 4.  
   
 > [!IMPORTANT]  
 >  Festlegen von `GroupAffinity` ist eine manuelle Aufgabe, die mehrere Schritte umfasst. Bei der Berechnung `GroupAffinity`, überprüfen Sie Ihre Berechnungen sorgfältig. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt zwar einen Fehler zurück, wenn die gesamte Maske ungültig ist, aber eine Kombination aus gültigen und ungültigen Einstellungen führt dazu, dass [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Eigenschaft ignoriert. Wenn die Bitmaske zum Beispiel zusätzliche Werte enthält, ignoriert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Einstellung und verwendet alle Prozessoren des Systems. Bei Auftreten dieser Aktion werden keine Warnung und kein Fehler angezeigt, der Datei „msmdsrv.log“ können Sie jedoch entnehmen, wie die Affinitäten tatsächlich festgelegt sind.  
   
 ##  <a name="bkmk_pernumanode"></a> Festlegen von PerNumaNode, um Prozessoren in einem NUMA-Knoten IO-Threads zuzuordnen  
- Bei mehrdimensionalen Analysis Services-Instanzen können Sie festlegen können `PerNumaNode` auf die `IOProcess` -Threadpools Threadplanung und-Ausführung weiter zu optimieren. Während `GroupAffinity` festlegt, welcher Satz logischer Prozessoren für einen bestimmten Threadpool verwendet `PerNumaNode` einen Schritt weiter im Laufe der gibt an, ob mehrere Threadpools sollen zugeordnet, die einer Teilmenge der zulässigen logischen Prozessoren erstellt werden.  
+ Bei mehrdimensionalen Analysis Services-Instanzen können Sie festlegen können `PerNumaNode` auf die `IOProcess` Threadpool, um die Threadplanung und-Ausführung weiter zu optimieren. Während `GroupAffinity` festlegt, welcher Satz logischer Prozessoren, die für einen bestimmten Threadpool verwendet `PerNumaNode` geht einen Schritt weiter durch Angabe, ob mehrere Threadpools sollen, die eine Teilmenge der zulässigen logischen Prozessoren zugeordnet erstellt.  
   
 > [!NOTE]  
 >  Verwenden Sie unter Windows Server 2012 den Task-Manager, um die Anzahl der NUMA-Knoten auf dem Computer anzuzeigen. Wählen Sie im Task-Manager auf der Registerkarte „Leistung“ die Option **CPU** aus, und klicken Sie mit der rechten Maustaste auf den Diagrammbereich, um die NUMA-Knoten anzuzeigen. Alternativ können Sie das Coreinfo-Hilfsprogramm von Windows Sysinternals [herunterladen](http://technet.microsoft.com/sysinternals/cc835722.aspx) und `coreinfo –n` ausführen, um NUMA-Knoten und die logischen Prozessoren in den einzelnen Knoten zurückzugeben.  
   
- Gültige Werte für `PerNumaNode` sind -1, 0, 1, 2, wie beschrieben in der [Thread Pool Eigenschaftsverweis](#bkmk_propref) Abschnitt dieses Themas.  
+ Gültige Werte für `PerNumaNode` sind -1, 0, 1, 2, wie beschrieben in der [Referenz zu Threadpooleigenschaften](#bkmk_propref) in diesem Thema.  
   
 ### <a name="default-recommended"></a>Standard (empfohlen)  
- Für Systeme mit NUMA-Knoten wird empfohlen, die Standardeinstellung „PerNumaNode=-1“ zu verwenden, sodass [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Anzahl der Threadpools und deren Threadaffinität auf Grundlage der Knotenanzahl anpassen kann. Verfügt das System weniger als 4 Knoten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von beschriebenen Verhalten implementiert `PerNumaNode`= 0, wohingegen `PerNumaNode`= 1 auf Systemen mit 4 oder mehr Knoten verwendet wird.  
+ Für Systeme mit NUMA-Knoten wird empfohlen, die Standardeinstellung „PerNumaNode=-1“ zu verwenden, sodass [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Anzahl der Threadpools und deren Threadaffinität auf Grundlage der Knotenanzahl anpassen kann. Wenn das System weniger als 4 Knoten verfügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von beschriebenen Verhalten implementiert `PerNumaNode`= 0 (null), während `PerNumaNode`= 1 wird für Systeme mit 4 oder mehr Knoten verwendet.  
   
 ### <a name="choosing-a-value"></a>Auswählen eines Werts  
  Sie können den Standardwert auch überschreiben, um einen anderen gültigen Wert zu verwenden.  
@@ -208,16 +208,16 @@ ms.locfileid: "36060163"
   
  Diese Einstellung ist für sehr leistungsfähige High-End-Systeme mit intensiven [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Arbeitsauslastungen vorgesehen. Diese Eigenschaft legt die IOProcess-Threadpoolaffinität auf das detaillierteste Niveau fest, sodass separate Threadpools auf Ebene der logischen Prozessoren erstellt und zugeordnet werden.  
   
- Im folgenden Beispiel auf einem System müssen 4 NUMA-Knoten und 32 logischen Prozessoren festlegen `PerNumaNode` 2 würde 32 IOProcess-Threadpools. Die Threads in den ersten 8 Threadpools werden allen logischen Prozessoren im NUMA-Knoten 0 zugeordnet, wobei jedoch der ideale Prozessor auf 0, 1, 2 bis 7 festgelegt ist. Die nächsten acht Threadpools würden allen logischen Prozessoren im NUMA-Knoten 1 zugeordnet werden, wobei der ideale Prozessor auf 8,9, 10 bis zu 15 festgelegt wird, und so weiter.  
+ Im folgenden Beispiel auf einem System müssen 4 NUMA-Knoten und 32 logischen Prozessoren festlegen `PerNumaNode` auf 2 ergibt 32 IOProcess-Threadpools. Die Threads in den ersten 8 Threadpools werden allen logischen Prozessoren im NUMA-Knoten 0 zugeordnet, wobei jedoch der ideale Prozessor auf 0, 1, 2 bis 7 festgelegt ist. Die nächsten acht Threadpools würden allen logischen Prozessoren im NUMA-Knoten 1 zugeordnet werden, wobei der ideale Prozessor auf 8,9, 10 bis zu 15 festgelegt wird, und so weiter.  
   
  ![NUMA, Prozessor und Threadpool](../media/ssas-threadpool-numaex2.PNG "Numa, Prozessor und Threadpool")  
   
  Auf dieser Affinitätsebene versucht das Zeitplanungsmodul immer, zuerst den idealen logischen Prozessor im bevorzugten NUMA-Knoten zu verwenden. Wenn der logische Prozessor nicht verfügbar ist, wählt das Zeitplanungsmodul einen anderen Prozessor im selben Knoten oder in derselben Prozessorgruppe aus, wenn keine anderen Threads verfügbar sind. Weitere Informationen und Beispiele finden Sie unter [Analysis Services 2012 Configuration settings (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012-Konfigurationseinstellungen).  
   
 ###  <a name="bkmk_workdistrib"></a> Arbeitsverteilung unter IOProcess-Threads  
- Wie Sie erwägen, gibt an, ob die `PerNumaNode` -Eigenschaft, zu wissen, wie `IOProcess` Threads werden verwendet, können Sie eine fundierte Entscheidung treffen.  
+ Gibt an, ob berücksichtigen die `PerNumaNode` -Eigenschaft, zu wissen, wie `IOProcess` Threads werden verwendet, können Sie eine fundiertere Entscheidung zu treffen.  
   
- Bedenken Sie, dass `IOProcess` für e/a-Aufträge, die speichermodulabfragen im mehrdimensionalen Modul zugeordnet verwendet wird.  
+ Zur Erinnerung: `IOProcess` für e/a-Aufträge, die Speicher-Engine-Abfragen in der mehrdimensionalen Engine zugeordnet werden.  
   
  Beim Scannen eines Segments identifiziert die Engine die Partition, der das Segment angehört, und versucht, den Segmentauftrag in die Warteschlange des von der Partition verwendeten Threadpools einzureihen. Generell reihen alle Segmente, die einer Partition angehören, ihre Tasks in die Warteschlange desselben Threadpools ein. Insbesondere bei NUMA-Systemen ist dieses Verhalten von Vorteil, da bei allen Partitionsscans der Arbeitsspeicher im Dateisystemcache verwendet wird, der diesem NUMA-Knoten lokal zugeordnet ist.  
   
@@ -225,13 +225,13 @@ ms.locfileid: "36060163"
   
 -   Erhöhen Sie bei Measuregruppen, die unterpartitioniert sind (z. B. nur über eine Partition verfügen), die Anzahl der Partitionen. Die Verwendung nur einer Partition führt dazu, dass die Engine Tasks immer nur in die Warteschlange eines Threadpools (Threadpool 0) einreiht. Durch das Hinzufügen weiterer Partitionen kann die Engine zusätzliche Threadpools nutzen.  
   
-     Auch wenn Sie zusätzliche Partitionen erstellen können, versuchen Sie `PerNumaNode`= 0 als eine Möglichkeit, die Anzahl der für Threadpool 0 verfügbaren Threads zu erhöhen.  
+     Auch wenn Sie zusätzliche Partitionen erstellen können, versuchen Sie `PerNumaNode`= 0 festzulegen, um die Anzahl der für Threadpool 0 verfügbaren Threads zu erhöhen.  
   
--   Für Datenbanken, in denen segmentscans gleichmäßig auf mehrere Partitionen festlegen verteilt sind `PerNumaNode` auf 1 oder 2 können die abfrageleistung, da es erhöht die Gesamtanzahl von `IOProcess` Threadpools, die vom System verwendet.  
+-   Für Datenbanken, in denen segmentscans gleichmäßig auf mehrere Partitionen, Festlegen von verteilt sind `PerNumaNode` auf 1 oder 2 können die abfrageleistung, da es sich um die Anzahl der erhöht `IOProcess` Threadpools, die vom System verwendet werden.  
   
--   Für Lösungen, die über mehrere Partitionen, aber nur eine intensiv gescannt wird, versuchen Sie `PerNumaNode`= 0, um festzustellen, ob sie die Leistung verbessert.  
+-   Für Lösungen, die über mehrere Partitionen, sondern nur eine intensiv gescannt wird, versuchen Sie `PerNumaNode`= 0, um festzustellen, ob sie die Leistung verbessert.  
   
- Obwohl sowohl für Partitions-als auch für verwenden dimensionsscans die `IOProcess` Threadpool, dimensionsscans nur Threadpool 0-dimension. Dies kann zu einer etwas ungleichmäßigen Last für diesen Threadpool führen, wobei das Ungleichgewicht jedoch nur vorübergehend sein sollte, da Dimensionsscans tendenziell sehr schnell und selten auftreten.  
+ Obwohl sowohl für Partitions-als auch für verwenden dimensionsscans die `IOProcess` Threadpool, dimension dimensionsscans nur Threadpool 0. Dies kann zu einer etwas ungleichmäßigen Last für diesen Threadpool führen, wobei das Ungleichgewicht jedoch nur vorübergehend sein sollte, da Dimensionsscans tendenziell sehr schnell und selten auftreten.  
   
 > [!NOTE]  
 >  Bedenken Sie beim Ändern einer Servereigenschaft, dass die Konfigurationsoption für alle Datenbanken gilt, die unter der aktuellen Instanz ausgeführt werden. Wählen Sie Einstellungen, von denen die wichtigen Datenbanken oder die größte Anzahl von Datenbanken profitieren. Weder kann die Prozessoraffinität auf Datenbankebene festgelegt werden, noch können Sie die Affinität zwischen einzelnen Partitionen und spezifischen Prozessoren festlegen.  
@@ -239,7 +239,7 @@ ms.locfileid: "36060163"
  Weitere Informationen zur Auftragsarchitektur finden Sie in Abschnitt 2.2 unter [Leistungsleitfaden zu SQL Server 2008 Analysis Services](http://www.microsoft.com/download/details.aspx?id=17303).  
   
 ##  <a name="bkmk_related"></a> Abhängige oder verwandte Eigenschaften  
- Wie in Abschnitt 2.4 erläutert die [Analysis Services-Vorgangshandbuch](http://msdn.microsoft.com/library/hh226085.aspx), wenn Sie Verarbeitungsthreadpool erhöhen, Sie sollten sicherstellen, dass die `CoordinatorExecutionMode` Einstellungen als auch die `CoordinatorQueryMaxThreads` -Einstellungen Werte aufweisen, Aktivieren Sie die Poolgröße umfangreicheren Threadpool vollständig zu nutzen.  
+ Wie in Abschnitt 2.4 erläutert die [Analysis Services-Vorgangshandbuch](http://msdn.microsoft.com/library/hh226085.aspx), wenn Sie dem Verarbeitungsthreadpool erhöhen, Sie sollten sicherstellen, dass die `CoordinatorExecutionMode` Einstellungen als auch die `CoordinatorQueryMaxThreads` -Einstellungen Werte aufweisen, können Sie die Poolgröße umfangreicheren Threadpool vollständig zu nutzen.  
   
  Analysis Services verwendet einen Koordinatorthread zum Erfassen der Daten, die zum Abschließen einer Verarbeitungs- oder Abfrageanforderung erforderlich sind. Der Koordinator stellt zunächst einen Auftrag für jede Partition in die Warteschlange, die verwendet werden muss. Jeder dieser Aufträge stellt dann weitere Aufträge in die Warteschlange. Dies hängt von der Gesamtzahl der Segmente ab, die in der Partition durchsucht werden müssen.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "36060163"
  [Prozessorgruppen](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
  [Analysis Services-Threadpooländerungen in SQLServer 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Unterstützende Systeme, die mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Unterstützungssysteme mit mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

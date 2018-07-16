@@ -1,5 +1,5 @@
 ---
-title: Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen | Microsoft Docs
+title: Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f21b7340b4c2d0cc3457cf0a2169d0a7fe17b311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d4c515d6eb3c86143e1344b342b8ee29a781358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320730"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
   In vielen Szenarien müssen Sie die Transaktionsisolationsstufe angeben. Transaktionsisolation für speicheroptimierte Tabellen unterscheidet sich von Transaktionsisolation für datenträgerbasierte Tabellen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36147591"
   
  Die Garantie, welche die SNAPSHOT-Isolationsstufe (die unterste Ebene der Isolation, die für speicheroptimierte Tabellen unterstützt wird) bietet, umfasst die READ COMMITTED-Garantien. Jede Anweisung in der Transaktion liest die gleiche, konsistente Version der Datenbank. Er werden nicht nur alle von der Transaktion gelesenen Zeilen an die Datenbank übergeben, sondern bei allen Lesevorgängen wird auch der Satz von Änderungen angezeigt, die durch den gleichen Transaktionssatz ausgeführt wurden.  
   
- **Richtlinie**: Wenn nur die READ COMMITTED-isolationsgarantie erforderlich ist, verwenden die SNAPSHOT-Isolation mit systemintern kompilierten gespeicherten Prozeduren und zum Zugreifen auf Speicheroptimierte Tabellen über interpretiert [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Richtlinie**: Wenn nur die READ COMMITTED-isolationsgarantie erforderlich ist, interpretiert mit SNAPSHOT-Isolation mit systemintern kompilierten gespeicherten Prozeduren und für den Zugriff auf Speicheroptimierte Tabellen über [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Bei speicheroptimierten Tabellen wird für Autocommittransaktionen die Isolationsstufe READ COMMITTED implizit SNAPSHOT zugeordnet. Wenn die Sitzungseinstellung TRANSACTION ISOLATION LEVEL auf READ COMMITTED festgelegt wird, ist es daher nicht notwendig, die Isolationsstufe durch einen Tabellenhinweis anzugeben, wenn Sie auf speicheroptimierte Tabellen zugreifen.  
   
@@ -95,7 +95,7 @@ COMMIT
   
      Einige Anwendungen setzen möglicherweise voraus, dass Reader immer warten, bis Writer einen Commit durchgeführt haben, insbesondere wenn auf der Anwendungsebene eine Synchronisierung zwischen den beiden Transaktionen vorliegt.  
   
-     **Richtlinie:** Anwendungen können nicht auf Blockierverhalten basieren. Wenn eine Anwendung die Synchronisierung zwischen gleichzeitigen Transaktionen erfordert, solche Logik oder implementiert werden, auf der Anwendungsebene auf der Datenbankebene über [Sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Richtlinie:** Anwendungen können nicht auf Blockierverhalten basieren. Wenn eine Anwendung die Synchronisierung zwischen gleichzeitigen Transaktionen erfordert, solche Logik kann implementiert werden auf der Anwendungsebene oder in der Datenbankschicht über [Sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   In Transaktionen, die READ COMMITTED-Isolation verwenden, wird jeder Anweisung die neueste Version der Zeilen in der Datenbank angezeigt. Daher sind Änderungen des Datenbankstatus in nachfolgenden Anweisungen sichtbar.  
   

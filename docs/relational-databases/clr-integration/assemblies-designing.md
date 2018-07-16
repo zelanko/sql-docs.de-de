@@ -1,12 +1,11 @@
 ---
-title: Entwerfen von Assemblys | Microsoft Docs
+title: Entwerfen von Assemblys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -16,14 +15,14 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8607c326734f998ee536d884a57463765f7b67b2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695341"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353512"
 ---
-# <a name="assemblies---designing"></a>Assemblys - entwerfen
+# <a name="assemblies---designing"></a>Assemblys: Entwurf
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
   
@@ -31,14 +30,14 @@ ms.locfileid: "35695341"
   
 -   Verwalten der Assemblysicherheit  
   
--   Einschränkungen für Assemblys  
+-   Einschränkungen bei Assemblys  
   
 ## <a name="packaging-assemblies"></a>Verpacken von Assemblys  
  Eine Assembly kann Funktionen für mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Routinen oder -Typen in ihren Klassen und Methoden enthalten. In den meisten Fällen ist es sinnvoll, die Funktionen von Routinen, die verwandte Funktionen ausführen, in der gleichen Assembly zu verpacken, insbesondere, wenn diese Routinen Klassen gemeinsam verwenden, deren Methoden sich gegenseitig aufrufen. Klassen, die Dateneingabe-Verwaltungstasks für CLR-Trigger (Common Language Runtime) und CLR-gespeicherte Prozeduren ausführen, können z. B. in der gleichen Assembly verpackt werden. Dies hängt damit zusammen, dass sich die Methoden für diese Klassen mit größerer Wahrscheinlichkeit gegenseitig aufrufen als die Methoden anderer, weniger verwandter Tasks.  
   
  Sie sollten Folgendes beachten, wenn Sie Code in einer Assembly verpacken:  
   
--   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [implementieren Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md) und [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [Implementieren von Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md) und [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Wenn verwalteter Code höhere Berechtigungen verlangt, ist es besser, diesen Code in einer anderen Assembly als den Code zu speichern, für den die höheren Berechtigungen nicht erforderlich sind.  
   
@@ -121,7 +120,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys &#40;-Datenbankmodul&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;Datenbank-Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

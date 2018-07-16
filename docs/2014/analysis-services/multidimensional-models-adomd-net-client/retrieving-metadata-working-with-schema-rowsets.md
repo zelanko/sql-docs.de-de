@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Schemarowsets in ADOMD.NET | Microsoft Docs
+title: Arbeiten mit Schemarowsets in ADOMD.NET | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310750"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Arbeiten mit Schemarowsets in ADOMD.NET
   Wenn Sie mehr als die im ADOMD.NET-Objektmodell vorhandenen Metadaten benötigen, bietet ADOMD.NET die Möglichkeit, den vollständigen Bereich für XMLA-(XML for Analysis-), OLE DB-, OLE DB für OLAP- und OLE DB für Data Mining-Schemarowsets abzurufen:  
@@ -47,12 +47,12 @@ ms.locfileid: "36148717"
  **Datamining-Metadaten**  
  Zusätzlich zu OLAP-Metadaten können Data Mining-Metadaten mittels Schemarowsets abgerufen werden. Die verfügbaren Rowsets machen Informationen über die verfügbaren Data Mining-Modelle in der Datenbank, die verfügbaren Mining-Algorithmen, die für den Algorithmus erforderlichen Parameter, Miningstrukturen und vieles mehr verfügbar.  
   
- Weitere Informationen: [Data Mining-Schemarowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ Weitere Informationen: [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
  Für jeden dieser verschiedenen Schemarowsets rufen Sie Metadaten vom Rowset durch die Übergabe eines GUID oder XMLA-Namens mit der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>-Methode des <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekts ab.  
   
 ## <a name="retrieving-metadata-by-passing-guids"></a>Abrufen von Metadaten durch Übergabe von GUIDS  
- Die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid> Klasse enthält eine Liste von Feldern, die die Schemarowsets, die am häufigsten von Anbietern und analytischen Datenquellen unterstützt darstellen. Um sowohl allgemeine als auch anbieterspezifische Metadaten von einem Anbieter oder einer analytischen Datenquelle abzurufen, verwenden Sie die GUIDs, die als Bestandteil der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid> Objekt mit einer der folgenden Methoden:  
+ Die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid> -Klasse enthält eine Liste der Felder, die die Schemarowsets, die am häufigsten von Anbietern und analytischen Datenquellen unterstützt darstellen. Um sowohl allgemeine als auch anbieterspezifische Metadaten von einem Anbieter oder einer analytischen Datenquelle abzurufen, verwenden Sie die GUIDs, die innerhalb der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid> Objekt mit einer der folgenden Methoden:  
   
 -   <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36148717"
  Jede dieser Methoden gibt eine Instanz von einem `DataSet` -Objekt, das mit den Schemainformationen aufgefüllt wird. Das `DataSet`-Objekt stammt aus dem `System.Data`-Namespace der Microsoft .NET Framework-Klassenbibliothek.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Funktion GetActions nimmt eine Verbindung, den Cubenamen, eine Koordinate und einen Koordinatentyp, ruft eine [MDSCHEMA_ACTIONS-Rowsets](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md), und gibt die verfügbaren Aktionen auf der ausgewählten Koordinate.  
+ Im folgenden Beispiel ist die Funktion GetActions eine Verbindung, den Cubenamen, eine Koordinate und einen Koordinatentyp, ruft eine [MDSCHEMA_ACTIONS-Rowsets](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md), und gibt Sie auf der ausgewählten Koordinate verfügbaren Aktionen zurück.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   
