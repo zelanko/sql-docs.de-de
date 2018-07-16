@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e7a8ea0a461bb261b8a85769b0fe2048e6cc569c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 604933cc3cf24941ae0d1ef1b23c0966ffb007b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321190"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
   In diesem Thema wird die Interoperabilität von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit anderen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]dokumentiert.  
@@ -42,7 +41,7 @@ ms.locfileid: "36159637"
 |FILESTREAM und FileTable|[FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
 |Volltextsuche|Hinweis: Volltextindizes werden mit sekundären AlwaysOn-Datenbanken synchronisiert.|  
 |Protokollversand|[Voraussetzungen für das Migrieren vom Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
-|Remote Blob Store (RBS)|[Remote Blob-Speicher &#40;RBS&#41; und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
+|Remote Blob Store (RBS)|[Remote Blob Store &#40;RBS&#41; und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |Replikation[Konfigurieren der Replikation für AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQLServer&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
 |Analysis Services|[Analysis Services mit AlwaysOn-Verfügbarkeitsgruppen](analysis-services-with-always-on-availability-groups.md)|  
 |Reporting Services|Verwenden Sie schreibgeschützte sekundäre Replikate als Berichtsdatenquelle, und reduzieren Sie die Last des primären Lese-/Schreibreplikats.<br /><br /> [Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
@@ -73,7 +72,7 @@ ms.locfileid: "36159637"
   
      [Migrationshandbuch: Migrieren zu AlwaysOn-Verfügbarkeitsgruppen von vorherigen Bereitstellungen, die Kombination von Datenbankspiegelung und Protokollversand](http://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft-Whitepapers für SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
