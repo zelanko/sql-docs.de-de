@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c724f9dbbe5f381e5ab71927f70411ef147c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a8f481d395f05a50884a0ff2c03d89eb4dc1c622
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309540"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Verwenden des Hilfsprogramms sqlcmd
   Das Hilfsprogramm `sqlcmd` ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripttasks. Damit Sie `sqlcmd` interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von `sqlcmd` ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)] vertraut sein. Das Hilfsprogramm `sqlcmd` wird in der Regel wie folgt verwendet:  
   
--   Der Benutzer gibt [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ähnlich wie bei der Arbeit an der Eingabeaufforderung interaktiv ein. Die Ergebnisse werden an der Eingabeaufforderung angezeigt. Klicken Sie auf **Start**, **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Eingabeaufforderung**, um das Eingabeaufforderungsfenster zu öffnen. Geben Sie an der Eingabeaufforderung `sqlcmd` gefolgt von einer Liste der gewünschten Optionen. Eine vollständige Liste der Optionen, die von unterstützt werden `sqlcmd`, finden Sie unter [Hilfsprogramms "Sqlcmd"](../../tools/sqlcmd-utility.md).  
+-   Der Benutzer gibt [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen ähnlich wie bei der Arbeit an der Eingabeaufforderung interaktiv ein. Die Ergebnisse werden an der Eingabeaufforderung angezeigt. Klicken Sie auf **Start**, **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Eingabeaufforderung**, um das Eingabeaufforderungsfenster zu öffnen. Geben Sie an der Eingabeaufforderung den Befehl `sqlcmd` gefolgt von einer Liste von Optionen, die Sie möchten. Eine vollständige Liste der Optionen, die von Microsoft Intune `sqlcmd`, finden Sie unter [Hilfsprogramms "Sqlcmd"](../../tools/sqlcmd-utility.md).  
   
 -   Der Benutzer sendet einen `sqlcmd`-Auftrag entweder durch Angeben einer einzelnen auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder durch Verweisen auf eine Textdatei, in der die auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten sind. Die Ausgabe wird normalerweise in einer Textdatei gespeichert, sie kann jedoch auch an der Eingabeaufforderung angezeigt werden.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "36048485"
 ## <a name="typically-used-sqlcmd-options"></a>Normalerweise verwendete Optionen für sqlcmd  
  Die folgenden Optionen werden am häufigsten verwendet:  
   
--   Die Serveroption (**-S**), identifiziert die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , `sqlcmd` stellt eine Verbindung her.  
+-   Die Serveroption (**' -s'**), die kennzeichnet, dass die Instanz des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , `sqlcmd` stellt eine Verbindung her.  
   
 -   Authentifizierungsoptionen (**-E**, **- U**, und **-P**) angeben, dass die Anmeldeinformationen, die `sqlcmd` verwendet, um die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Die Option **-E** ist die Standardeinstellung und muss nicht angegeben werden.  
   
--   Eingabeoptionen (**-Q**, **- Q**, und **-i**), die die Position der Eingabe zum Kennzeichnen `sqlcmd`.  
+-   Eingabeoptionen (**-Q**, **- Q**, und **-i**), die den Speicherort der Eingabe identifizieren `sqlcmd`.  
   
--   Die Ausgabeoption (**-o**), mit der Datei angegeben, in dem `sqlcmd` ist die Ausgabe ausgeben soll.  
+-   Die Ausgabeoption (**- e/a**) gibt, die die Datei, in dem `sqlcmd` besteht darin, die Ausgabe ausgeben soll.  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>Herstellen einer Verbindung mit dem Hilfsprogramm "sqlcmd"  
  Das Hilfsprogramm `sqlcmd` wird häufig für folgende Aufgaben verwendet:  
@@ -65,7 +65,7 @@ ms.locfileid: "36048485"
     ```  
   
     > [!NOTE]  
-    >  Im vorherigen Beispiel **-E** nicht angegeben, da dies die Standardeinstellung ist und `sqlcmd` mithilfe der Windows-Authentifizierung eine Verbindung mit der Standardinstanz her.  
+    >  Im vorherigen Beispiel **-E** nicht angegeben, da dies die Standardeinstellung ist und `sqlcmd` stellt mithilfe der Windows-Authentifizierung eine Verbindung mit der Standardinstanz her.  
   
 -   Herstellen einer Verbindung mit einer benannten Instanz mithilfe der Windows-Authentifizierung, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen interaktiv auszuführen:  
   
@@ -107,15 +107,15 @@ ms.locfileid: "36048485"
     >  Eine vollständige Liste der von `sqlcmd` unterstützten Optionen erhalten Sie, indem Sie folgenden Befehl ausführen: `sqlcmd -?`.  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>Interaktives Ausführen von Transact-SQL-Anweisungen mithilfe von "sqlcmd"  
- Sie können das Hilfsprogramm `sqlcmd` interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Interaktiv auszuführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen mit `sqlcmd`, führen Sie das Hilfsprogramm ohne Verwendung der **-Q**, **- Q**, **-Z**, oder **- i** Optionen zum Angeben Eingabedateien und zum Abfragen. Zum Beispiel:  
+ Sie können das Hilfsprogramm `sqlcmd` interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Interaktiv ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen mit `sqlcmd`, führen Sie das Hilfsprogramm ohne Verwendung der **-Q**, **- Q**, **-Z**, oder **- i** Optionen zum Angeben Eingabedateien und zum Abfragen. Zum Beispiel:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
  Wenn der Befehl ohne Eingabedateien oder Abfragen ausgeführt wird, wird von `sqlcmd` eine Verbindung mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt und anschließend eine neue Zeile mit einer `1>` gefolgt von einem blinkenden Unterstrich angezeigt. Dies wird als `sqlcmd`-Aufforderung bezeichnet. `1` bedeutet, dass es sich um die erste Zeile einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung handelt, und die `sqlcmd`-Aufforderung ist die Stelle, an der die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung beginnt, wenn Sie sie eingeben.  
   
- An der `sqlcmd` Eingabeaufforderung können Sie sowohl [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen als auch `sqlcmd`-Befehle (z. B. `GO` und `EXIT`) eingeben. Die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einen Puffer geladen, den sogenannten Anweisungscache. Diese Anweisungen werden gesendet, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Eingeben der `GO` Befehl ein, und drücken Sie die EINGABETASTE. Zum Beenden `sqlcmd`, Typ `EXIT` oder `QUIT` am Anfang einer neuen Zeile.  
+ An der `sqlcmd` Eingabeaufforderung können Sie sowohl [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen als auch `sqlcmd`-Befehle (z. B. `GO` und `EXIT`) eingeben. Die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen werden in einen Puffer geladen, den sogenannten Anweisungscache. Diese Anweisungen werden gesendet, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Eingeben der `GO` Befehl aus, und drücken Sie EINGABETASTE. Zum Beenden `sqlcmd`, Typ `EXIT` oder `QUIT` am Anfang einer neuen Zeile.  
   
- Geben Sie den Anweisungscache zu deaktivieren, `:RESET`. Geben Sie `^C` bewirkt, dass `sqlcmd` zu beenden. `^C` kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem ein `GO`-Befehl ausgegeben wurde.  
+ Geben Sie zum Löschen der Anweisungscache `:RESET`. Eingabe `^C` bewirkt, dass `sqlcmd` zu beenden. `^C` kann auch dazu verwendet werden, die Ausführung des Anweisungscaches zu beenden, nachdem ein `GO`-Befehl ausgegeben wurde.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die in einer interaktiven Sitzung eingegeben wurden, können durch Eingabe bearbeitet die **: ED** Befehl und die `sqlcmd` Eingabeaufforderung. Der Editor wird geöffnet. Nachdem Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bearbeitet und den Editor geschlossen haben, wird die überarbeitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung im Eingabeaufforderungsfenster angezeigt. Geben Sie `GO` auszuführende überarbeitete [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.  
   
@@ -154,13 +154,13 @@ ms.locfileid: "36048485"
   
  Dies bedeutet, dass der Ordner `C:\` der aktuelle Ordner ist. Wenn Sie einen Dateinamen angeben, wird in Windows in diesem Ordner nach der Datei gesucht.  
   
- Typ `sqlcmd` für die Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer und den Inhalt des Eingabeaufforderungsfensters Fenster werden:  
+ Typ `sqlcmd` zur Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fenster werden auf dem lokalen Computer und den Inhalt der Eingabeaufforderung:  
   
  `C:\>sqlcmd`  
   
  `1> _`  
   
- Dies bedeutet, dass Sie eine Verbindung mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt haben und von `sqlcmd` ab sofort [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und `sqlcmd` -Befehle akzeptiert werden. Der blinkende Unterstrich hinter der `1>` ist die `sqlcmd` -Aufforderung. Damit wird die Stelle gekennzeichnet, an der die von Ihnen eingegebenen Anweisungen und Befehle angezeigt werden. Geben Sie nun `USE AdventureWorks2012` , und drücken Sie die EINGABETASTE, und geben Sie `GO` und drücken Sie die EINGABETASTE. Im Eingabeaufforderungsfensters wird der folgende Text angezeigt:  
+ Dies bedeutet, dass Sie eine Verbindung mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt haben und von `sqlcmd` ab sofort [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und `sqlcmd` -Befehle akzeptiert werden. Der blinkende Unterstrich hinter der `1>` ist die `sqlcmd` -Aufforderung. Damit wird die Stelle gekennzeichnet, an der die von Ihnen eingegebenen Anweisungen und Befehle angezeigt werden. Geben Sie nun `USE AdventureWorks2012` , und drücken Sie die EINGABETASTE, und geben Sie `GO` und drücken Sie EINGABETASTE. Im Eingabeaufforderungsfensters wird der folgende Text angezeigt:  
   
  `sqlcmd`  
   
@@ -211,7 +211,7 @@ ms.locfileid: "36048485"
  Bei den Zeilen im Anschluss an die Zeile `3> GO` handelt es sich um die Ausgabe einer `SELECT` -Anweisung. Nach dem Generieren einer Ausgabe wird die `sqlcmd` -Eingabeaufforderung durch `sqlcmd` zurückgesetzt, und es wird `1>`angezeigt. Nach der Eingabe von `EXIT` in der Zeile `1>`wird im Eingabeaufforderungsfenster dieselbe Zeile wie beim ersten Öffnen der Eingabeaufforderung angezeigt. Dies bedeutet, dass die Sitzung von `sqlcmd` beendet ist. Sie können das Eingabeaufforderungsfenster nun schließen, indem Sie einen weiteren `EXIT` -Befehl eingeben.  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von "sqlcmd"  
- Sie können `sqlcmd` zum Ausführen von Datenbankskriptdateien verwenden. Skriptdateien sind Textdateien, die verschiedene Clienttypen enthalten [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen `sqlcmd` Befehle und Skriptvariablen. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](sqlcmd-use-with-scripting-variables.md). In `sqlcmd` werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass die Eingabedatei von `sqlcmd` ohne Pause durchgelesen wird, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
+ Sie können `sqlcmd` zum Ausführen von Datenbankskriptdateien verwenden. Skripts sind Textdateien, die verschiedene Clienttypen enthalten [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen `sqlcmd` Befehle und Skriptvariablen. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](sqlcmd-use-with-scripting-variables.md). In `sqlcmd` werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass die Eingabedatei von `sqlcmd` ohne Pause durchgelesen wird, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
   
  Es gibt verschiedene Möglichkeiten, um Datenbankskriptdateien zu erstellen:  
   
@@ -484,7 +484,7 @@ ms.locfileid: "36048485"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. Verwenden von "sqlcmd" zum Festlegen der Verschlüsselung für eine Windows Azure SQL-Datenbank  
- Ein `sqlcmd`kann ausgeführt werden, bei einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Daten für Verschlüsselung und zertifikatsvertrauenswürdigkeit anzugeben. Zwei "Sqlcmd" "stehen Optionen zur Auswahl:  
+ Ein `sqlcmd`kann ausgeführt werden, bei einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Daten für Verschlüsselung und zertifikatsvertrauenswürdigkeit anzugeben. Zwei "Sqlcmd" ' stehen zur Verfügung:  
   
 -   Der Schalter "-N" wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern. Diese Option entspricht der ADO.NET-Option `ENCRYPT = true`.  
   

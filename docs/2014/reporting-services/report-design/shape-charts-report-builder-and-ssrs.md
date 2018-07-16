@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294060"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Formdiagramme (Berichts-Generator und SSRS)
   Ein Formdiagramm zeigt Wertdaten als Prozentsatz des Ganzen an. Formdiagramme werden üblicherweise zum Anzeigen proportionaler Vergleiche zwischen verschiedenen Werten in einem Satz verwendet. Kategorien werden durch einzelne Segmente der Form dargestellt. Die Größe des Segments wird durch den Wert bestimmt. Formdiagramme werden ähnlich verwendet wie Kreisdiagramme, außer dass die Kategorien von der größten zur kleinsten angeordnet werden.  
   
- Ein Trichterdiagramm zeigt Werte als progressiv abnehmende Verhältnisse an. Die Größe eines Bereichs wird durch den Reihenwert als Prozentsatz der Summe aller Werte bestimmt. Beispielsweise lassen sich in einem Trichterdiagramm Websitebesuchertrends darstellen. Das Trichterdiagramm zeigt meist einen großen Bereich ganz oben an, der die Besuche der Startseite angibt. Die anderen Bereiche werden proportional kleiner. Weitere Informationen zum Hinzufügen von Daten auf ein Trichterdiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Ein Trichterdiagramm zeigt Werte als progressiv abnehmende Verhältnisse an. Die Größe eines Bereichs wird durch den Reihenwert als Prozentsatz der Summe aller Werte bestimmt. Beispielsweise lassen sich in einem Trichterdiagramm Websitebesuchertrends darstellen. Das Trichterdiagramm zeigt meist einen großen Bereich ganz oben an, der die Besuche der Startseite angibt. Die anderen Bereiche werden proportional kleiner. Weitere Informationen zum Hinzufügen von Daten zu einem Trichterdiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt ein Beispiel für ein Trichterdiagramm.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36047319"
   
 -   Formdiagramme eignen sich sehr gut, um proportionale Prozentwerte in sortierter Reihenfolge anzuzeigen. Um die Konsistenz zu wahren, werden die Werte im Dataset jedoch standardmäßig nicht sortiert. Es bietet sich an, die Werte vom höchsten zum niedrigsten Wert zu sortieren, um die Daten möglichst exakt als Trichter oder Pyramide darzustellen. Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   NULL-, leere und negative Werte haben keine Auswirkungen auf die Berechnung von Verhältnissen. Aus diesem Grund werden diese Werte nicht in einem Formdiagramm angezeigt. Wenn Sie diese Werte in Ihrem Diagramm visuell darstellen möchten, ändern Sie den Diagrammtyp. Weitere Informationen zum Hinzufügen von leeren Punkte zu einem nicht-Formdiagramm finden Sie unter [Hinzufügen von leeren Punkten zum Diagramm &#40;Berichts-Generator und SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   NULL-, leere und negative Werte haben keine Auswirkungen auf die Berechnung von Verhältnissen. Aus diesem Grund werden diese Werte nicht in einem Formdiagramm angezeigt. Wenn Sie diese Werte in Ihrem Diagramm visuell darstellen möchten, ändern Sie den Diagrammtyp. Weitere Informationen zur Vorgehensweise beim Hinzufügen von leerer Punkten zu einem nicht-Formdiagramm finden Sie unter [Hinzufügen von leeren Punkten zum Diagramm &#40;Berichts-Generator und SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Wenn Sie mithilfe einer benutzerdefinierten Palette eigene Farben in einem Formdiagramm definieren, müssen in der Palette genügend Farben vorhanden sein, damit jeder Datenpunkt mit einer eigenen Farbe hervorgehoben werden kann. Weitere Informationen finden Sie unter [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Clustering Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Clustering Algorithm Technical Reference | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306600"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
   In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus einschließlich der Parameter erklärt, mit denen Sie das Verhalten von Clustermodellen steuern können. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
   
  Weitere Informationen zum Verwenden von Clustermodellen finden Sie in folgenden Themen:  
   
--   [Miningmodellinhalt für Clusteringmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36047295"
 |NOT NULL|Die Spalte darf keinen NULL-Wert enthalten. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  
- Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Spalten `Predict Only` werden nicht verwendet, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
+ Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Spalten `Predict Only` werden nicht verwendet werden, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
@@ -185,6 +185,6 @@ ms.locfileid: "36047295"
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)   
  [Clusteringmodellabfragen](clustering-model-query-examples.md)   
- [Miningmodellinhalt für Clusteringmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

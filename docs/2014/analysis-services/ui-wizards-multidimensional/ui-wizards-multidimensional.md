@@ -1,5 +1,5 @@
 ---
-title: UI-Assistenten für die mehrdimensionale Analyse | Microsoft Docs
+title: UI-Assistenten für mehrdimensionale Analysen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb8dc6a4d538944bd22ac69bf13d85435dd0dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccdd4a66b4b34cae9295cc553b795f0cda256a53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316070"
 ---
 # <a name="ui-wizards-for-multidimensional-analysis"></a>UI-Assistenten für die mehrdimensionale Analyse
 
-Dieser Abschnitt enthält die Dokumentation zu Benutzer-Benutzeroberfläche (UI)-Assistenten für die mehrdimensionale Analyse.
+Dieser Abschnitt enthält die Dokumentation zu Benutzer-Benutzeroberfläche (UI)-Assistenten für die multidimensionale Analyse.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a43c85e5bfc36927b5374d8fb5e2165c01482c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e2dbeac74a4640102ea6a8ccc41f6fc33ca6eec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301850"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Angeben der Größe eines Indikators mithilfe eines Ausdrucks (Berichts-Generator und SSRS)
   Zusätzlich zu Farbe, Richtung und Form können Sie die Größe anpassen und damit die visuelle Wirkung von Indikatoren maximieren.  
@@ -33,7 +33,7 @@ ms.locfileid: "36046609"
   
  Der Bereich **Eigenschaften** bietet Zugriff auf die Eigenschaften der IndicatorStates-Auflistung eines Indikators. Sie konfigurieren die Größe der Symbole, indem Sie die ScaleFactor-Eigenschaft der IndicatorStates-Auflistungselemente mit einem Ausdruck festlegen. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- Der Ausdruck, der in diesem Verfahren verwendeten wurde auch zum Generieren des Berichts mit unterschiedlichen Größen von Indikatoren, die in angezeigten verwendet [Indikatoren &#40;Berichts-Generator und SSRS&#41;](indicators-report-builder-and-ssrs.md).  
+ Der in diesem Verfahren verwendete Ausdruck wurde auch zum Erstellen des Berichts in unterschiedlichen Größen von Indikatoren suchen, siehe verwendet [Indikatoren &#40;Berichts-Generator und SSRS&#41;](indicators-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

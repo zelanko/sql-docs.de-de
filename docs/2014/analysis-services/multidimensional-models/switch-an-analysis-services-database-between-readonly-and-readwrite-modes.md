@@ -1,5 +1,5 @@
 ---
-title: Umschalten in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus | Microsoft Docs
+title: Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286106"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
   Es gibt häufig Situationen, wenn eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankadministrator (Dba) der Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank ändern möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. der Freigabe der Datenbank für einen Pool von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Servern zur Vereinfachung der Nutzung.  
@@ -59,7 +59,7 @@ ms.locfileid: "36046778"
   
 8.  Wählen Sie den Lese-/Schreibmodus für die Datenbank aus.  
   
-9. Geben Sie das Kennwort, das verwendet wird, wurde in Schritt 3, und klicken Sie auf **OK** den Befehl "Anfügen" ausführen.  
+9. Geben Sie das Kennwort, das verwendet wurde, in Schritt 3, und klicken Sie auf **OK** zum Ausführen des Attach-Befehls.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>So schalten Sie den Lese-/Schreibmodus einer Datenbank programmgesteuert mithilfe von AMO um  
   

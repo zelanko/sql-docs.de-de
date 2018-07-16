@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: defb9efed51b1739f35d7dc8f1bdfbae12decb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 006abb7b37e67938a060ed05ced726c3699dfbd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294010"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
   Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz Teil eines Failoverclusters ist, unterscheidet sich der Vorgang des Umbenennens des virtuellen Servers vom Umbenennen einer eigenständigen Instanz. Weitere Informationen finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "36047314"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem der Netzwerkname einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] -Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, könnte ein Upgrade- oder Deinstallationsvorgang u. U. zu einem Fehler führen. Um dieses Problem beheben, Aktualisieren der **ClusterName** -Registrierungseintrag entsprechend die Anweisungen im Abschnitt "Lösung" des [dies](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem der Netzwerkname einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] -Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, könnte ein Upgrade- oder Deinstallationsvorgang u. U. zu einem Fehler führen. Um dieses Problem beheben, Aktualisieren der **ClusterName** -Registrierungseintrag entsprechend die Anweisungen im Abschnitt "Lösung" [dies](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service, und führen Sie sie aus:  
   

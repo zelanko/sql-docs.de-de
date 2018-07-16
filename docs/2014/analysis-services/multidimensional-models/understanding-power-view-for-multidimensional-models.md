@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft Docs
+title: Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288056"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -112,7 +112,7 @@ ms.locfileid: "36047512"
   
  **Geography-Typen von Dimensionsattributen in SSDT und Power View-Feldliste**  
   
- ![Geography Typen von Dimensionsattributen](../media/daxmd-ssdt-attribute-geog-types.gif "Geography Typen von Dimensionsattributen")  
+ ![Geography-Typen von Dimensionsattributen](../media/daxmd-ssdt-attribute-geog-types.gif "Geography-Typen von Dimensionsattributen")  
   
 ### <a name="dimension-calculated-members"></a>Berechnete Dimensionselemente  
  Mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnete Elemente von Alle mit einem einzelnen realen Element. Beim Verfügbarmachen dieses Typs berechneter Elemente gelten folgende zusätzliche Einschränkungen:  
@@ -151,7 +151,7 @@ ms.locfileid: "36047512"
   
  **Dimensionsattributtyp "ImageURL" in SSDT**  
   
- ![Dimension-Attributeigenschaften](../media/daxmd-dimattribute-properties.gif "Attributeigenschaften Dimension")  
+ ![Attributeigenschaften Dimension](../media/daxmd-dimattribute-properties.gif "Dimension Attributeigenschaften")  
   
 ## <a name="parent-child-hierarchies"></a>Über-/Unterordnungshierarchien  
  Mehrdimensionale Modelle unterstützen Über-/Unterordnungshierarchien, die in den tabellarischen Metadaten als Hierarchie verfügbar gemacht werden. Jede Ebene der Über-/Unterordnungshierarchie wird als ausgeblendete Spalte verfügbar gemacht. Das Schlüsselattribut der über- und untergeordneten Dimension wird in den tabellarischen Metadaten nicht verfügbar gemacht.  

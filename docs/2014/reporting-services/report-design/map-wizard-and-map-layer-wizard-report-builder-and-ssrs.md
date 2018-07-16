@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299820"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
   Der Karten-Assistent und der Kartenebenen-Assistent automatisieren das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -33,7 +33,7 @@ ms.locfileid: "36047111"
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, müssen Sie über die folgenden Informationen verfügen:  
   
--   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung mit einer Datenquelle, die räumliche Daten, z. B. enthält den Namen des eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz und eine Datenbank, die räumliche Daten, oder der Name einer Shape-Environmental Systems Research Institute, Inc. (ESRI) Datei enthält.  
+-   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung mit einer Datenquelle, die räumliche Daten, z. B. bereitstellt den Namen des eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz und eine Datenbank, die räumliche Daten, oder der Name einer Environmental Systems Research Institute, Inc. (ESRI)-Shape-Datei enthält.  
   
 -   **anbieten.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36047111"
   
  Die folgenden Abschnitte enthalten Informationen zu Optionen, die Sie im Karten- und Kartenebenen-Assistenten angeben.  
   
-##  <a name="BackToTop"></a> Karten-Assistenten Seiten und des Kartenebenen-Assistenten  
+##  <a name="BackToTop"></a> Karten-Assistenten und Map Layer-Assistentenseiten  
  Führen Sie eine der folgenden Aktionen aus, um den Karten-Assistenten zu öffnen:  
   
 -   Öffnen Sie den Berichts-Generator, und klicken Sie auf das Assistentensymbol **Karte** in der Mitte der Entwurfsoberfläche.  
@@ -201,7 +201,7 @@ ms.locfileid: "36047111"
   
  Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planung für Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation .  
+ Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planen für Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation .  
   
  Weitere Informationen zu anderen Möglichkeiten, eine Kachelebene anzupassen, finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
