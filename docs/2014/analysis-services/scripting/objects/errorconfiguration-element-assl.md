@@ -1,5 +1,5 @@
 ---
-title: ErrorConfiguration-Element (ASSL) | Microsoft Docs
+title: ErrorConfiguration-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c509fa16348e6f91da1587f5879e651f2362678c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e36d41d9788b7c65079f7aff7a97d72dd44d8e17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316930"
 ---
 # <a name="errorconfiguration-element-assl"></a>ErrorConfiguration-Element (ASSL)
   Gibt Einstellungen für den Umgang mit Fehlern an, die auftreten können, wenn das übergeordnete Element verarbeitet wird.  
@@ -71,7 +71,7 @@ ms.locfileid: "36046275"
 |Untergeordnete Elemente|[KeyDuplicate](../properties/keyduplicate-element-assl.md), [KeyErrorAction](action-element-assl.md), [KeyErrorLimit](../properties/keyerrorlimit-element-assl.md), [KeyErrorLimitAction](../properties/keyerrorlimitaction-element-assl.md), [KeyErrorLogFile](file-element-assl.md), [ KeyNotFound](../properties/keynotfound-element-assl.md), [NullKeyConvertedToUnknown](../properties/nullkeyconvertedtounknown-element-assl.md), [NullKeyNotAllowed](../properties/nullkeynotallowed-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

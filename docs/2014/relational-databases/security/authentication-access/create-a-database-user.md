@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
 - sql12.swb.user.securables.f1
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 201d314b1f89b518559465c36736c2ab16ad7f18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299970"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
-  In diesem Thema wird beschrieben, wie zum Erstellen eines Datenbankbenutzers, der diesen einem Anmeldenamen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bereits eine Anmeldung vorhanden ist. Informationen über das Erstellen eines Anmeldenamens finden Sie unter [Erstellen eines Anmeldenamens](create-a-login.md).  
+  In diesem Thema wird beschrieben, wie zum Erstellen eines Datenbankbenutzers, der diesen einem Anmeldenamen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bereits eine Anmeldung vorhanden ist. Informationen dazu, wie Sie eine Anmeldung zu erstellen, finden Sie unter [erstellen Sie eine Anmeldung](create-a-login.md).  
   
  **In diesem Thema**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36162001"
   
      [Security](#Security)  
   
--   **So erstellen einen Datenbankbenutzer mit:**  
+-   **Zum Erstellen eines Datenbankbenutzers mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291046"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -56,7 +56,7 @@ ms.locfileid: "36149925"
     > [!NOTE]  
     >  Der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Protokollanbieter kann nicht in einem Paket verwendet werden, das im 64-Bit-Modus ausgeführt wird.  
   
--   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokollanbieter, der Schreibt Protokolleinträge in die `sysssislog` -Tabelle in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
+-   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokollanbieter, der Schreibt Protokolleinträge an die `sysssislog` -Tabelle in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
   
 -   Den Windows-Ereignisprotokollanbieter, der Einträge in das Anwendungsprotokoll im Windows-Ereignisprotokoll auf dem lokalen Computer schreibt.  
   

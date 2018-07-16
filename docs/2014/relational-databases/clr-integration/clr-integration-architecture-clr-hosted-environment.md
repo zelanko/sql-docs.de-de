@@ -1,13 +1,11 @@
 ---
-title: CLR-gehosteten Umgebung | Microsoft Docs
+title: CLR-gehosteten Umgebung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,15 +27,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06301efa5022c5ed686a4db97951c62bc85daf35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049726"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354692"
 ---
 # <a name="clr-hosted-environment"></a>Gehostete CLR-Umgebung
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-CLR (Common Language Runtime) ist eine Umgebung, die viele moderne Programmiersprachen ausführt, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual Basic und [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C++. Die CLR bietet der Garbage Collection unterworfenen Arbeitsspeicher, präemptives Threading, Metadatendienste (geben Sie „reflection“ ein), Codeüberprüfbarkeit und Codezugriffssicherheit. Die CLR verwendet Metadaten zum Suchen und Laden von Klassen, Anordnen von Instanzen im Speicher, Auflösen von Methodenaufrufen, Generieren von systemeigenem Code, Erzwingen von Sicherheit und zum Festlegen von Begrenzungen im Laufzeitkontext.  
@@ -54,7 +52,7 @@ ms.locfileid: "36049726"
   
  .NET Framework unterstützt benutzerdefinierte Attribute zum Hinzufügen von Anmerkungen zu Klassen, Eigenschaften, Funktionen und Methoden in Form von zusätzlichen Informationen, die von der Anwendung in Metadaten erfasst werden können. Alle .NET Framework-Compiler verwenden diese Anmerkungen ohne Auslegung und speichern sie als Assemblymetadaten. Diese Anmerkungen können auf die gleiche Weise wie beliebige andere Metadaten untersucht werden.  
   
- Verwalteter Code ist MSIL-Code, der in der CLR anstatt direkt vom Betriebssystem ausgeführt wird. Anwendungen mit verwaltetem Code verfügen über CLR-Dienste, z. B. automatische Garbage Collection, Typüberprüfung zur Laufzeit, Sicherheitsunterstützung usw. Diese Dienste stellen eine einheitliche Webplattform und sprachunabhängiges Verhalten von Anwendungen mit verwaltetem Code bereit.  
+ Verwalteter Code ist MSIL-Code, der in der CLR anstatt direkt vom Betriebssystem ausgeführt wird. Anwendungen mit verwaltetem Code verfügen über CLR-Dienste, z. B. automatische Garbage Collection, Typüberprüfung zur Laufzeit, Sicherheitsunterstützung usw. Diese Dienste stellen ein einheitliches Plattform- und sprachunabhängigen Verhalten von Anwendungen mit verwaltetem Code bereitzustellen.  
   
 ## <a name="design-goals-of-clr-integration"></a>Entwurfsziele der CLR-Integration  
  Bei der Ausführung von Benutzercode in der CLR-gehosteten Umgebung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (CLR-Integration genannt), gelten die folgenden Entwurfsziele:  
@@ -145,7 +143,7 @@ ms.locfileid: "36049726"
   
  Aus diesen Gründen raten wir von der Verwendung von statischen Variablen und Datenelementen von Klassen ab, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden. Bei Assemblys vom Typ SAFE und EXTERNAL_ACCESS untersucht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bei der Ausführung von CREATE ASSEMBLY die Metadaten der Assembly. Wenn die Verwendung statischer Datenelemente oder Variablen ermittelt wird, wird die Assembly nicht erstellt.  
   
- Darüber hinaus ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das Aufrufen von .NET Framework-APIs nicht möglich, die mit den Hostschutzattributen `SharedState`, `Synchronization` und `ExternalProcessMgmt` versehen sind. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [CLR Integration Programming Model Einschränkungen](database-objects/clr-integration-programming-model-restrictions.md).  
+ Darüber hinaus ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das Aufrufen von .NET Framework-APIs nicht möglich, die mit den Hostschutzattributen `SharedState`, `Synchronization` und `ExternalProcessMgmt` versehen sind. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [CLR-Integration Programmierung Einschränkungen](database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit der CLR-Integration](security/clr-integration-security.md)   

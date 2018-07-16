@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af69cc7956717388f9a8f97a8220e7ffe02db76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1c970d2472b304e3dbc2591019f7d70a9405cfd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234790"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Gestalten von XML mit geschachtelten FOR XML-Abfragen
   Das folgende Beispiel ist eine Abfrage der `Production.Product`-Tabelle zum Abrufen der Werte von `ListPrice` und `StandardCost` eines bestimmten Produkts. Damit die Abfrage interessant wird, werden beide Preise in einem <`Price`>-Element zurückgegeben, und jedes <`Price`>-Element verfügt über ein `PriceType`-Attribut.  
@@ -90,7 +90,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- Im vorherigen Beispiel wird die `query()` Methode der `xml` Daten geben, um durch die innere FOR XML-Abfrage zurückgegebene XML-Abfragen und das erwartete Ergebnis zu konstruieren.  
+ Im vorherigen Beispiel verwendet die `query()` Methode der `xml` Daten eingeben, um den von die innere FOR XML-Abfrage zurückgegebenen XML-Code abzufragen und das erwartete Ergebnis zu konstruieren.  
   
  Dies ist das Ergebnis:  
   

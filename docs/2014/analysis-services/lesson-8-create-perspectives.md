@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 9: Erstellen von Perspektiven | Microsoft Docs'
+title: 'Lektion 9: Erstellen von Perspektiven | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295950"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lektion 9: Erstellen von Perspektiven
   In dieser Lektion erstellen Sie eine Perspektive mit dem Namen Internet Sales. Eine Perspektive definiert eine sichtbare Teilmenge eines Modells, die fokussierte, unternehmensspezifische oder anwendungsspezifische Blickpunkte bereitstellt. Wenn ein Benutzer unter Verwendung einer Perspektive eine Verbindung mit einem Modell herstellt, werden ihm nur die als Felder in dieser Perspektive definierten Modellobjekte (Tabellen, Spalten, Measures, Hierarchien und KPIs) angezeigt.  
@@ -39,13 +39,13 @@ ms.locfileid: "36159658"
   
 #### <a name="to-create-an-internet-sales-perspective"></a>So erstellen Sie eine Internet Sales-Perspektive  
   
-1.  Klicken Sie im Modell-Designer auf die **Modell** Menü, und klicken Sie dann auf **Perspektiven**.  
+1.  Klicken Sie im Modell-Designer auf die **Modell** , und klicken Sie dann auf **Perspektiven**.  
   
 2.  Klicken Sie im Dialogfeld **Perspektiven** auf **Neue Perspektive**.  
   
 3.  Um die Perspektive umzubenennen, doppelklicken Sie auf die **neue Perspektive 1** Spaltenüberschrift, und geben Sie dann `Internet Sales`.  
   
-4.  In **Felder**, wählen Sie die folgenden Tabellen **Datum**, **Geography**, **Produkt**, **die Produktkategorie**, **Produktunterkategorie**, und `Internet Sales`.  
+4.  In **Felder**, wählen Sie die folgenden Tabellen **Datum**, **Geography**, **Produkt**, **Product Category**, **Produktunterkategorie**, und `Internet Sales`.  
   
      Beachten Sie, dass Sie die Tabelle Customer und alle ihre Spalten aus dieser Perspektive ausgeschlossen haben. In Lektion 12 testen Sie dann diese Perspektive mit der Funktion In Excel analysieren. Die PivotTable-Feldliste von Excel enthält jede Tabelle außer der Tabelle Customer.  
   

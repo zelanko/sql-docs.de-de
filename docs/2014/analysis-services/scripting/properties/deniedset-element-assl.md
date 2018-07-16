@@ -1,5 +1,5 @@
 ---
-title: DeniedSet-Element (ASSL) | Microsoft Docs
+title: DeniedSet-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DeniedSet element
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20a915d24291ec01fe619abf8fa259099c71c810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c63ced94ae8779e57fa8e9aebf84642fd4e468f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312400"
 ---
 # <a name="deniedset-element-assl"></a>DeniedSet-Element (ASSL)
   Enthält einen Mengenausdruck, der die Liste von Berechtigungen definiert, die auf dem zugeordneten Attribut verweigert werden.  
@@ -62,7 +62,7 @@ ms.locfileid: "36159647"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `DeniedSet` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ Das Element, das dem übergeordneten entspricht `DeniedSet` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

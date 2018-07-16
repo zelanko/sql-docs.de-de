@@ -1,13 +1,11 @@
 ---
-title: Bearbeiten von UDT-Daten | Microsoft Docs
+title: Bearbeiten von UDT-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159175"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349892"
 ---
 # <a name="manipulating-udt-data"></a>Bearbeiten von UDT-Daten
   [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Einfügen von Daten in eine UDT-Spalte  
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen fügen drei Zeilen Beispieldaten in die **Punkte** Tabelle. Die **Punkt** Datentyp besteht aus X- und Y-Ganzzahlwerten, werden als Eigenschaften des UDT verfügbar gemacht. Verwenden Sie entweder die CAST- oder CONVERT-Funktion, um die durch Kommas getrennten X- und Y-Werte in der **Punkt** Typ. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion zum Konvertieren eines Zeichenfolgenwertes in der **Punkt** Typ und die dritte Anweisung verwendet die CAST-Funktion:  
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen fügen drei Zeilen Beispieldaten in die **Punkte** Tabelle. Die **Punkt** -Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des UDT verfügbar gemacht werden. Sie müssen der CAST- oder CONVERT-Funktion verwenden, um die durch Kommas getrennten X- und Y-Werte die **Punkt** Typ. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion konvertiert einen Zeichenfolgenwert, der **Punkt** Typ und die dritte Anweisung verwendet die CAST-Funktion:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Aufrufen von UDT-Methoden  
- Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Punkt** Klasse enthält drei Methoden `Distance`, `DistanceFrom`, und `DistanceFromXY`. Die Codebeispiele, die diese drei Methoden definieren, finden Sie unter [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
+ Sie können auch Methoden aufrufen, die im UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert sind. Die **Punkt** -Klasse enthält drei Methoden, `Distance`, `DistanceFrom`, und `DistanceFromXY`. In den codeauflistungen, die diese drei Methoden definieren, finden Sie unter [Codieren benutzerdefinierter Typen](creating-user-defined-types-coding.md).  
   
  Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ruft die `PointValue.Distance`-Methode auf:  
   
@@ -182,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- Die `DistanceFrom` -Methode akzeptiert ein Argument des **zeigen** -Datentyp und zeigt die Entfernung vom angegebenen Punkt zum PointValue:  
+ Die `DistanceFrom` Methode akzeptiert ein Argument des **zeigen** -Datentyp, und zeigt die Entfernung vom angegebenen Punkt zum PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

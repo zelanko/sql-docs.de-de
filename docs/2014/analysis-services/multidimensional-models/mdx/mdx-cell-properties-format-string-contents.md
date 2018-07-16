@@ -1,5 +1,5 @@
 ---
-title: FORMAT_STRING-Inhalt (MDX) | Microsoft Docs
+title: FORMAT_STRING-Inhalt (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293590"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING-Inhalt (MDX)
-  Die `FORMAT_STRING` -Zelleigenschaft formatiert die `VALUE` Zelleigenschaft, indem den Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die `FORMAT_STRING` -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohwerten anwenden einen Formatausdruck auf der zurückzugebende Wert, einen formatierten Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
+  Die `FORMAT_STRING` -Zelleigenschaft formatiert die `VALUE` Zelleigenschaft, indem der Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die `FORMAT_STRING` -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, Anwenden von einen Formatausdruck auf der zurückzugebende Wert, einen formatierten Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
   
 ## <a name="string-values"></a>Zeichenfolgenwerte  
  Ein Formatausdruck für Zeichenfolgen kann aus einem Abschnitt oder aus zwei durch ein Semikolon (;) getrennten Abschnitten bestehen.  
@@ -156,6 +156,6 @@ ms.locfileid: "36161689"
  [LANGUAGE und FORMAT_STRING für FORMATTED_VALUE](mdx-cell-properties-formatted-value-property.md)   
  [Verwenden von Zelleneigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

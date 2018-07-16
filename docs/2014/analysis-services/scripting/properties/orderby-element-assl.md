@@ -1,5 +1,5 @@
 ---
-title: OrderBy-Element (ASSL) | Microsoft Docs
+title: OrderBy-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291316"
 ---
 # <a name="orderby-element-assl"></a>OrderBy-Element (ASSL)
   Beschreibt das Anordnen der im Attribut enthaltenen Elemente.  
@@ -58,7 +58,7 @@ ms.locfileid: "36060604"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,7 +68,7 @@ ms.locfileid: "36060604"
 |-----------|-----------------|  
 |*Name*|Geordnet nach dem Elementnamen.|  
 |*Key*|Geordnet nach dem Elementschlüssel.|  
-|*AttributeKey*|Nach dem Elementschlüssel des im angegebenen Attributs zu bestellen der [OrderByAttributeID](id-element-assl.md) Element des `DimensionAttribute`.|  
+|*AttributeKey*|Sortieren Sie nach dem Elementschlüssel des im angegebenen Attributs der [OrderByAttributeID](id-element-assl.md) Element `DimensionAttribute`.|  
 |*AttributeName*|Geordnet nach dem Elementnamen des im `OrderByAttributeID`-Element von `DimensionAttribute` angegebenen Attributs.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `OrderBy` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.OrderBy>.  

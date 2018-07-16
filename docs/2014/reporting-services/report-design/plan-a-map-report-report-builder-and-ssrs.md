@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309420"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
   Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  
@@ -66,7 +66,7 @@ ms.locfileid: "36050488"
   
 -   Karten aus Berichten im Kartenkatalog.  
   
--   Drittanbieterwebsites, die räumliche Daten in Form von ESRI-Shape-Dateien anbieten oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] räumliche Daten.  
+-   Websites von Drittanbietern, die räumliche Daten in Form von ESRI-Shape-Dateien bieten oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] räumliche Daten.  
   
 -   Bing-Kartenkacheln, die einen Hintergrund für die Kartenansicht bereitstellen. Wenn Sie in einer Karte Kacheln anzeigen möchten, muss der Berichtsserver zur Unterstützung der Bing Maps-Webdienste konfiguriert werden.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36050488"
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Tutorial: Kartenbericht (Berichts-Generator)](../tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Ordnen Sie Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

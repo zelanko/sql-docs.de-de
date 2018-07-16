@@ -1,5 +1,5 @@
 ---
-title: Behandeln von SMO-Ausnahmen | Microsoft Docs
+title: Behandeln von SMO-Ausnahmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 329cc87a9a82545708f71202f15de4eb219463e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2d8e121a9fdc76073a016041f102fa36e6685f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299840"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
   In verwaltetem Code werden Ausnahmen ausgelöst, wenn ein Fehler auftritt. SMO-Methoden und -Eigenschaften melden keinen Erfolg oder Fehler mit dem Rückgabewert. Stattdessen können Ausnahmen von einem Ausnahmehandler abgefangen und behandelt werden.  
@@ -35,20 +35,20 @@ ms.locfileid: "36149029"
  Die Ausnahmebehandlungsanweisungen sind für die Programmiersprache spezifisch. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic gibt es hierfür beispielsweise die `Catch`-Anweisung.  
   
 ## <a name="inner-exceptions"></a>Interne Ausnahmen  
- Ausnahmen können entweder allgemein oder spezifisch sein. Allgemeine Ausnahmen enthalten einen Satz spezifischer Ausnahmen. Mehrere `Catch` erwartete Fehler zu behandeln, und lassen die übrigen Fehler an den allgemeinen Ausnahmebehandlungscode können Anweisungen verwendet werden. Ausnahmen treten oft in einer überlappenden Sequenz auf. Häufig wird eine SMO-Ausnahme von einer SQL-Ausnahme verursacht. Die Möglichkeit, dies zu ermitteln ist die Verwendung der `InnerException` -Eigenschaft nacheinander auf die ursprüngliche Ausnahme zu bestimmen, die die letzte Ausnahme auf oberster Ebene verursacht hat.  
+ Ausnahmen können entweder allgemein oder spezifisch sein. Allgemeine Ausnahmen enthalten einen Satz spezifischer Ausnahmen. Mehrere `Catch` -Anweisungen können verwendet werden, erwartete Fehler zu behandeln, und lassen Sie die übrigen Fehler an den allgemeinen Ausnahmebehandlungscode. Ausnahmen treten oft in einer überlappenden Sequenz auf. Häufig wird eine SMO-Ausnahme von einer SQL-Ausnahme verursacht. Um dies zu ermitteln ist die Verwendung der `InnerException` -Eigenschaft nacheinander auf die ursprüngliche Ausnahme zu ermitteln, die die letzte Ausnahme auf oberster Ebene ausgelöst hat.  
   
 > [!NOTE]  
->  Die `SQLException` Ausnahme wird deklariert, der **System.Data.SqlClient** Namespace.  
+>  Die `SQLException` Ausnahme deklariert ist, der **"System.Data.SqlClient"** Namespace.  
   
  ![Ein Diagramm, das zeigt, die Ebenen aus dem ausnahmeflussebenen](../../../database-engine/dev-guide/media/exception-flow.gif "ein Diagramm, das zeigt, die Ebenen aus dem ausnahmeflussebenen")  
   
  Die Abbildung zeigt den Verlauf der Ausnahmen durch die Anwendungsebenen.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) oder [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Abfangen einer Ausnahme in Visual Basic  
- Dieses Codebeispiel zeigt, wie Sie die `Try…Catch…Finally` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie unter der [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET-Dokumentation.  
+ Dieses Codebeispiel zeigt, wie Sie mit der `Try…Catch…Finally` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie unter den [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Dokumentation zu .NET.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   

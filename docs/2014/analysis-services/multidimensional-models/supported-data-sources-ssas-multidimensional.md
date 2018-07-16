@@ -1,5 +1,5 @@
 ---
-title: Unterstützten Datenquellen (SSAS – mehrdimensional) | Microsoft Docs
+title: Unterstützten Datenquellen (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301170"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Datenquellen unterstützt (SSAS – mehrdimensional)
   In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
@@ -50,11 +50,11 @@ ms.locfileid: "36159445"
   
  <sup>1</sup> ODBC-Datenquellen werden für mehrdimensionale Lösungen nicht unterstützt. Zwar wird die Verbindung von Analysis Services selbst behandelt, doch können die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Erstellen von Lösungen verwendeten Designer keine Verbindung mit einer ODBC-Datenquelle auch dann nicht herstellen, wenn der MSDASQL-Treiber verwendet wird. Wenn die Geschäftsanforderungen eine ODBC-Datenquelle umfassen, erwägen Sie, stattdessen eine tabellarische Lösung zu erstellen.  
   
- <sup>2</sup> Weitere Informationen finden Sie unter [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Weitere Informationen finden Sie unter [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf ["Azure.Microsoft.com"](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW finden Sie unter [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> für Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW finden Sie unter [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> in einigen Fällen mithilfe des MSDAORA-OLE DB-Anbieters Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle führen kann. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
+ <sup>4</sup> in einigen Fällen die Verwendung des MSDAORA-OLE DB-Anbieters kann zu Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   
  <sup>5</sup> einige Funktionen erfordern, die lokal ausgeführte relationale SQL Server-Datenbank. Insbesondere für Rückschreibevorgänge und ROLAP-Speicher muss die zugrunde liegende Datenquelle eine relationale SQL Server-Datenbank sein.  
   

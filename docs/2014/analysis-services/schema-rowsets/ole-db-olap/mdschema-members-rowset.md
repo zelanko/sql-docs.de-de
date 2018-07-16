@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEMBERS-Rowset | Microsoft Docs
+title: MDSCHEMA_MEMBERS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280016"
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS-Rowset
   Beschreibt die Elemente innerhalb einer Datenbank.  
@@ -58,7 +58,7 @@ ms.locfileid: "36161233"
 |`MEMBER_KEY`|`DBTYPE_WSTR`||Der Wert der Schlüsselspalte des Elements. Gibt `NULL` zurück, wenn das Element einen zusammengesetzten Schlüssel besitzt.|  
 |`IS_PLACEHOLDERMEMBER`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob ein Element ein Platzhalterelement für eine leere Position in einer Dimensionshierarchie ist.<br /><br /> Dieser ist nur gültig, wenn die `MDX Compatibility`-Eigenschaft auf 2 festgelegt ist.|  
 |`IS_DATAMEMBER`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob das Element ein Datenelement ist.<br /><br /> Gibt "True" zurück, wenn das Element ein Datenelement ist.|  
-|`SCOPE`|`DBTYPE_I4`||Der Gültigkeitsbereich des Elements. Das Element kann ein in der Sitzung berechnetes Element oder ein global berechnetes Element sein. Die Spalte gibt `NULL` für nicht berechnete Elemente zurück.<br /><br /> Diese Spalte kann einen der folgenden Werte besitzen:<br /><br /> -MDMEMBER_SCOPE_GLOBAL = 1<br />-MDMEMBER_SCOPE_SESSION = 2|  
+|`SCOPE`|`DBTYPE_I4`||Der Bereich des Elements. Das Element kann ein in der Sitzung berechnetes Element oder ein global berechnetes Element sein. Die Spalte gibt `NULL` für nicht berechnete Elemente zurück.<br /><br /> Diese Spalte kann einen der folgenden Werte besitzen:<br /><br /> -MDMEMBER_SCOPE_GLOBAL = 1<br />-MDMEMBER_SCOPE_SESSION = 2|  
 |`Zero or more additional columns`|`DBTYPE_UI2`||Es werden keine Eigenschaften zurückgegeben, wenn das Element von mehreren Ebenen zurückgegeben werden könnte. Wenn der Tree-Operator beispielsweise `PARENT` ist und für andere als Über-/Unterordnungshierarchien `SELF` ist, werden keine Elementeigenschaften zurückgegeben.<br /><br /> Dies gilt für unregelmäßige Hierarchien, in denen Tree-Operatoren Elemente von unterschiedlichen Ebenen zurückgeben könnten (beispielsweise wenn die vorherige Ebene Lücken enthält und übergeordnete Elemente für Elemente angefordert werden).|  
   
  Das Rowset wird sortiert nach `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_UNIQUE_NAME`, `HIERARCHY_UNIQUE_NAME`, `LEVEL_UNIQUE_NAME`, `LEVEL_NUMBER`, `MEMBER_ORDINAL`.  
@@ -79,7 +79,7 @@ ms.locfileid: "36161233"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Optional.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Optional.|  
-|`TREE_OP`|`DBTYPE_I4`|(Optional) Gilt nur für ein einzelnes Element:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) gibt alle Vorgänger zurück.<br />-   `MDTREEOP_CHILDREN` (`0x01`) nur die unmittelbar untergeordneten Elemente zurückgegeben.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) gibt Elemente auf der gleichen Ebene zurück.<br />-   `MDTREEOP_PARENT` (`0x04`) gibt nur das unmittelbar übergeordnete Element.<br />-   `MDTREEOP_SELF` (`0x08`) selbst in der Liste der zurückgegebenen Zeilen zurück.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) gibt alle Nachfolger zurück.|  
+|`TREE_OP`|`DBTYPE_I4`|(Optional) Gilt nur für ein einzelnes Element:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) gibt alle Vorgänger zurück.<br />-   `MDTREEOP_CHILDREN` (`0x01`) nur die unmittelbar untergeordneten Elemente zurückgegeben.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) gibt Elemente auf der gleichen Ebene zurück.<br />-   `MDTREEOP_PARENT` (`0x04`) gibt nur das unmittelbar übergeordnete Element.<br />-   `MDTREEOP_SELF` (`0x08`) gibt sich selbst in der Liste der zurückgegebenen Zeilen zurück.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) gibt alle Nachfolger zurück.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-CUBE<br />-2-DIMENSION<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
   
 ## <a name="see-also"></a>Siehe auch  

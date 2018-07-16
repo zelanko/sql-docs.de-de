@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Verarbeiten der Market Basket-Miningstruktur | Microsoft Docs'
+title: 'Lektion 3: Verarbeiten der Market Basket-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cc4ea28876fa0b52577f0d78e357a3cb1fe0a9bf
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 0d14fe6f8cbfae7370c0b02626f54758d4159d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297580"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lektion 3: Verarbeiten der Market Basket-Miningstruktur
-  In dieser Lektion verwenden Sie die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) -Anweisung und vAssocSeqLineItems sowie vAssocSeqOrders aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank beim Verarbeiten der Miningstrukturen und Mining-Modelle, die Sie erstellt [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen zur der Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  In dieser Lektion verwenden Sie die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) -Anweisung und vAssocSeqLineItems sowie vAssocSeqOrders aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank zum Verarbeiten von Miningstrukturen und Mining-Modellen, die Sie im erstellten [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen, die Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Wenn Sie eine Miningstruktur verarbeiten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] liest die Quelldaten und erstellt die Strukturen, die die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden die von der Miningstruktur definierten Daten über die Datamining-Algorithmus übergeben, die Sie ausgewählt haben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Wenn Sie eine Miningstruktur verarbeiten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] liest die Daten und erstellt die Strukturen, die die Miningmodelle unterstützen. Wenn Sie ein Miningmodell verarbeiten, werden von der Miningstruktur definierten Daten über die Datamining-Algorithmus übergeben, die Sie ausgewählt haben. Der Algorithmus sucht nach Trends und Mustern und speichert diese Informationen dann im Miningmodell. Aus diesem Grund enthält das Miningmodell nicht die tatsächlichen Quelldaten, sondern die vom Algorithmus ermittelten Informationen. Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Sie müssen eine Miningstruktur nur erneut verarbeiten, wenn Sie eine Strukturspalte oder die Quelldaten ändern. Wenn Sie einer Miningstruktur, die bereits verarbeitet wurde, ein Miningmodell hinzufügen, können Sie das neue Miningmodell mithilfe der `INSERT INTO MINING MODEL`-Anweisung für die vorhandenen Daten trainieren.  
   
  Da die Market Basket-Miningstruktur eine geschachtelte Tabelle enthält, müssen Sie die zu trainierenden Miningspalten mithilfe der Struktur der geschachtelten Tabelle definieren und mithilfe des `SHAPE`-Befehls die Abfragen definieren, die die Trainingsdaten aus den Quelltabellen extrahieren.  
   
 ## <a name="insert-into-statement"></a>INSERT INTO-Anweisung  
- Trainieren der Market Basket-Miningstruktur und ihre zugeordneten Mining-Modelle verwenden die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte.   
+ Verwenden Sie zum Trainieren der Market Basket-Miningstruktur und ihre zugeordneten Mining-Modelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte.   
   
 -   Identifizieren der Miningstruktur  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36312668"
   
 -   Definieren der Trainingsdaten mithilfe von `SHAPE`  
   
- Folgender Ausdruck ist ein allgemeines Beispiel der `INSERT INTO` Anweisung:  
+ Folgendes ist ein allgemeines Beispiel der `INSERT INTO` Anweisung:  
   
 ```  
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
@@ -87,7 +87,7 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- In dieser Lektion verwenden Sie `OPENQUERY` zum Definieren der Quelldaten. Informationen zu anderen Methoden definieren Sie eine Abfrage für die Quelldaten finden Sie unter [ &#60;quelldatenabfrage&#62;](/sql/dmx/source-data-query).  
+ In dieser Lektion verwenden Sie `OPENQUERY` zum Definieren der Quelldaten. Weitere Informationen zu anderen Methoden zur Definition einer Abfrage für die Quelldaten, finden Sie unter [ &#60;quelldatenabfrage&#62;](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgende Aufgabe aus:  
@@ -98,7 +98,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>So verarbeiten Sie die Miningstruktur mithilfe von INSERT INTO  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -162,7 +162,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     Die Quellabfrage verweist auf die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] in definierte Datenquelle die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispielprojekt. Sie verwendet diese Datenquelle für den Zugriff auf die Sichten vAssocSeqLineItems und vAssocSeqOrders. Diese Sichten enthalten die Quelldaten, die zum Trainieren des Miningmodells verwendet werden. Wenn Sie dieses Projekt oder diesen Sichten nicht erstellt haben, finden Sie unter [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+     Die Quellabfrage verweist auf die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenquelle definiert, der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispielprojekt. Sie verwendet diese Datenquelle für den Zugriff auf die Sichten vAssocSeqLineItems und vAssocSeqOrders. Diese Sichten enthalten die Quelldaten, die zum Trainieren des Miningmodells verwendet werden. Wenn Sie dieses Projekt oder die Sichten nicht erstellt haben, finden Sie unter [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
      Im `SHAPE`-Befehl verwenden Sie `OPENQUERY`, um zwei Abfragen zu definieren. Die erste Abfrage definiert die übergeordnete Tabelle und die zweite Abfrage definiert die geschachtelte Tabelle. Die zwei Tabellen werden mithilfe der OrderNumber-Spalte, die in beiden Tabellen vorhanden ist, miteinander in Beziehung gesetzt.  
   
@@ -187,7 +187,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-7.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Process Market Basket.dmx`.  
+7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Process Market Basket.dmx`.  
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   

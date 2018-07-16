@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolIPAddress-Klasse | Microsoft Docs
+title: ServerNetworkProtocolIPAddress-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35a9492435fe5e7c1aef2aa9a78432b1068c2813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fa046009808e596876b3a1262db7739efff5195a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307330"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress-Klasse
-  [ServerNetworkProtocolIPAddress-Klasse] Servernetworkprotocolipaddress-class.md) stellt eine IP-Adresse von Server-Netzwerkprotokoll unterstützt werden.  
+  [ServerNetworkProtocolIPAddress-Klasse] Servernetworkprotocolipaddress-class.md) stellt eine IP-Adresse, die von Server-Netzwerkprotokoll unterstützt werden.  
   
  Mit dem [ServerNetworkProtocolIPAddress-Klasse] Servernetworkprotocolipaddress-class.md) können Sie die folgenden Aufgaben ausführen:  
   

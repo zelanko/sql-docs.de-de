@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zum WMI-Anbieter für Serverereignisse | Microsoft Docs
+title: Grundlegendes zum WMI-Anbieter für Serverereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b32cf566a749684ef3a942ff0766daabed65742b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 44d608a2eaccc667e3f21696e7d8e8ae395e8aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315552"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Grundlegendes zum WMI-Anbieter für Serverereignisse
-  Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Der Anbieter wandelt funktioniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können mithilfe dieses Anbieters von WMI verwendet werden. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
+  Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Der Anbieter funktioniert durch das Aktivieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe dieses Anbieters von WMI genutzt werden kann. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
   
- Verwaltungsanwendungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent erreichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse, indem Sie in der WMI-Anbieter für Serverereignisse WMI Query Language (WQL)-Anweisungen ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Bei Verwendung von WQL ruft eine Anwendung einen Ereignistyp für eine bestimmte Datenbank oder ein bestimmtes Datenbankobjekt ab. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine Ereignisbenachrichtigung und erstellt dadurch auf effektive Weise eine Ereignisbenachrichtigung in der Zieldatenbank. Weitere Informationen zur Funktionsweise von ereignisbenachrichtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [WMI Provider for Server Ereignisse Concepts](http://technet.microsoft.com/library/ms180560.aspx). Die Ereignisse, die abgefragt werden können, sind in aufgeführt [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Verwaltungsanwendungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zugreifen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse, die mit dem WMI-Anbieter für Serverereignisse von Windows-Verwaltungsinstrumentation (WMI Query Language, WQL)-Anweisungen ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Bei Verwendung von WQL ruft eine Anwendung einen Ereignistyp für eine bestimmte Datenbank oder ein bestimmtes Datenbankobjekt ab. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine Ereignisbenachrichtigung und erstellt dadurch auf effektive Weise eine Ereignisbenachrichtigung in der Zieldatenbank. Weitere Informationen zur Funktionsweise von ereignisbenachrichtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [WMI-Anbieter für Ereignisse Serverkonzepte](http://technet.microsoft.com/library/ms180560.aspx). Die Ereignisse, die abgefragt werden können, finden Sie in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
  Wenn ein Ereignis auftritt, das die Ereignisbenachrichtigungsfunktion zum Senden einer Meldung veranlasst, wird die Benachrichtigung an einen vordefinierten Zieldienst in **msdb** mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**übermittelt. Der Zieldienst fügt das Ereignis in eine vordefinierte Warteschlange in **msdb** ein. Ihr Name ist **WMIEventProviderNotificationQueue**. (Sowohl der Dienst als auch die Warteschlange werden vom Anbieter beim Herstellen der ersten Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch erstellt.) Der Anbieter liest die Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Anwendung zurück. Die folgende Abbildung veranschaulicht diesen Prozess:  
   
@@ -61,11 +61,11 @@ GO
   
  Weitere Informationen zur Arbeit mit WQL finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
- Verwaltungsanwendungen verweisen den WMI-Anbieter für Serverereignisse an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch Herstellen einer Verbindung mit einem WMI-Namespace, der vom Anbieter definiert ist. Der WMI-Dienst ordnet der Anbieter-DLL Sqlwep.dll diesen Namespace zu und lädt sie in den Arbeitsspeicher. Der Anbieter verwaltet einen WMI-Namespace für Serverereignisse für jede Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Format lautet: \\ \\.\\ *Root*\Microsoft\SqlServer\ServerEvents\\*Instance_name*, wobei *Instance_name* lautet standardmäßig MSSQLSERVER. Weitere Informationen zum Herstellen einer Verbindung mit einem WMI-Namespace für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Verwaltungsanwendungen verweisen den WMI-Anbieter für Serverereignisse an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch das Verbinden mit einem WMI-Namespace, die vom Anbieter definiert ist. Der WMI-Dienst ordnet der Anbieter-DLL Sqlwep.dll diesen Namespace zu und lädt sie in den Arbeitsspeicher. Der Anbieter verwaltet einen WMI-Namespace für Serverereignisse für jede Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Format ist: \\ \\.\\ *Stamm*\Microsoft\SqlServer\ServerEvents\\*Instance_name*, wobei *Instance_name* lautet standardmäßig MSSQLSERVER. Weitere Informationen zum Herstellen einer Verbindung mit einem WMI-Namespace für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
- Die Anbieter-DLL Sqlwep.dll geladen wird nur ein Mal in den WMI-Hostdienst des Betriebssystems des Servers an, wie viele Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Server sind.  
+ Die Anbieter-DLL Sqlwep.dll geladen wird nur ein Mal in der WMI-Hostdienst des Betriebssystems des Servers an, unabhängig davon, wie viele Instanzen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind auf dem Server.  
   
- Ein Beispiel für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-verwaltungsanwendung, die den WMI-Anbieter für Serverereignisse, verwendet finden Sie unter [Beispiel: Erstellen einer SQL Server-Agent-Warnung mithilfe der WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms186385.aspx). Ein Beispiel für eine Verwaltungsanwendung, die den WMI-Anbieter für Serverereignisse in verwaltetem Code verwendet, finden Sie unter [Beispiel: Verwenden des WMI-Ereignisanbieters in verwaltetem Code](http://technet.microsoft.com/library/ms179315.aspx). Weitere Informationen finden Sie auch über WMI in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Ein Beispiel für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-verwaltungsanwendung, die den WMI-Anbieter für Serverereignisse verwendet, finden Sie unter [Beispiel: Erstellen einer SQL Server-Agent Warnungen mithilfe der WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms186385.aspx). Ein Beispiel für eine Verwaltungsanwendung, die den WMI-Anbieter für Serverereignisse in verwaltetem Code verwendet, finden Sie unter [Beispiel: Verwenden des WMI-Ereignisanbieters in verwaltetem Code](http://technet.microsoft.com/library/ms179315.aspx). Weitere Informationen finden Sie auch zu WMI in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx)  

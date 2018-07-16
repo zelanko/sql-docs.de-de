@@ -1,5 +1,5 @@
 ---
-title: Prüfliste der Vorbereitung für das Datamining | Microsoft Docs
+title: Prüfliste der Vorbereitung für das Datamining | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f7429dd799a1081bd1a03e985a8772b04498129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232500"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Prüfliste der Vorbereitung für Data Mining
   Data Mining-Add-Ins stellen eine einfache und unkomplizierte Methode zum Erstellen und Testen von Modellen dar. Wenn es Ihnen jedoch auf wiederholbare und aussagekräftige Ergebnisse ankommt, müssen Sie genügend Zeit einplanen, um grundlegende Geschäftsanforderungen zu formulieren und die erforderlichen Daten zu beschaffen und bereitzustellen. Dieser Abschnitt enthält eine Prüfliste, die Sie beim Planen Ihrer Untersuchung unterstützen soll. Darüber hinaus werden häufig auftretende Probleme beschrieben.  
@@ -38,7 +38,7 @@ ms.locfileid: "36161924"
   
 -   Können Sie den erwarteten Ergebnissen neue Eingabedaten zuordnen?  
   
- **Mir ist die Bedeutung, Datentypen und Verteilung der Eingabedaten.**  
+ **Ich weiß der Bedeutung, Datentypen und Verteilung von Eingabedaten.**  
  Nehmen Sie sich ausreichend Zeit, um die Quelldaten zu untersuchen und zu verstehen. Die Personen, die mit dem Modell arbeiten, müssen wissen, welche Eingabedaten verwendet wurden und wie die Datentypen und die Variabilität sowie Ausgewogenheit und Qualität zu interpretieren sind.  
   
 -   Wie viele Daten besitzen Sie? Ist eine ausreichende Menge von Daten für die Modellierung vorhanden?  
@@ -53,7 +53,7 @@ ms.locfileid: "36161924"
   
 -   Enthalten die Eingabedaten einige Beispielergebnisse, die für das Training verwendet werden können?  
   
- **Ich nehme das Maß an Integrität der Daten, das wir haben und die Ebene, die Sie benötigen.**  
+ **Ich habe verstanden, die Integrität der Daten, die wir haben und der benötigten Ebene.**  
  Fehlerhafte Daten können die Qualität des Modells beeinträchtigen oder die Modellerstellung von vornherein verhindern. Sie sollten weit reichende Kenntnisse sowohl über die Verteilung als auch über die Bedeutung der Daten haben und wissen, wie der aktuelle Zustand erreicht wurde. Sie müssen untersuchen, ob es möglich oder angebracht ist, die Daten durch Kennzeichnung, gekürzte numerische Datentypen oder durch Zusammenfassungen zu vereinfachen.  
   
 -   Sind die Datenbeschriftungen deutlich und richtig?  
@@ -74,7 +74,7 @@ ms.locfileid: "36161924"
   
 -   Wenn Sie Datasets kombiniert haben: Haben Sie eine Überprüfung auf mehrere Spalten durchgeführt, die dieselben Daten darstellen?  
   
- **Grundlegendes Verständnis der Quelldaten: wo sind sie gespeichert, woher stammen sie, und wie werden sie verarbeitet? Der Prozess kann problemlos wiederholt werden, bei Bedarf.**  
+ **Grundlegendes Verständnis der Quelldaten: wo sind sie gespeichert, woher stammen sie, und wie werden sie verarbeitet? Der Prozess kann leicht wiederholt werden, bei Bedarf.**  
  Einmalige Datasets sind hervorragend für Experimente geeignet. Wenn Sie das Modell jedoch in die Produktion übernehmen möchten, sollten Sie sich vorab Gedanken darüber machen, wie der Bereinigungsprozess auf operative Daten angewendet werden kann. Bei operativen Daten muss Ihnen bekannt sein, wie diese eventuell geändert wurden, bevor sie zu Ihnen gelangt sind – Sie müssen zumindest wissen, wie sie gerundet oder zusammengefasst wurden.  
   
 -   Möchten Sie in der Lage sein, das Experiment zu wiederholen?  
@@ -85,20 +85,20 @@ ms.locfileid: "36161924"
   
 -   Ist Ihr Datenverarbeitungs-Framework in der Lage, Algorithmen für maschinelles Lernen anzuwenden, Tests auszuführen und Ergebnisse zu visualisieren?  
   
- **Wir haben vereinbart, auf der gewünschten detailgenauigkeit von Vorhersagen und unsere Daten wurde geändert, um diesen Einheiten ausgegeben.**  
+ **Wir haben vereinbart, auf der gewünschten detailgenauigkeit von Vorhersagen und unsere Daten wurde geändert, um diese Einheiten ausgegeben.**  
  Legen Sie vor der Vorbereitung von Daten fest, wie detailliert die Ergebnisse sein sollen. Möchten Sie Umsatzvorhersagen pro Tag oder Quartal erstellen? Sie können auch unterschiedliche Datenstrukturen für dieselben Daten einrichten, um verschiedene Zusammenfassungsebenen zu erhalten.  
   
 -   Welche Maßeinheit oder Zeiteinheit wird derzeit verwendet?  
   
      Welche Einheit möchten Sie in den Ergebnissen verwenden?  
   
--   Ist es möglich, eine Basiseinheit definieren (z. B. Tag / Stunde / min / Anweisungsaufruf) für alle Eingabedaten?  
+-   Ist es möglich, eine grundlegende aufgabeneinheit definieren (z. B. Tag / Stunde / Minute / Anweisungsaufruf) für alle Eingabedaten?  
   
      Möchten Sie ein Rollup auf übergeordnete Einheiten durchführen?  
   
 -   Sind Kategorien einheitlich beschriftet? Können Kategorien einfach hinzugefügt oder entfernt werden?  
   
- **Unsere Versuchsanordnung ist wiederholbare und reproduzierbare.**  
+ **Unsere experimentelle wäre die wiederholbare und reproduzierbare.**  
  Überdenken Sie Strategien zum Analysieren und Überprüfen der Ergebnisse, und planen Sie das Aufzeichnen einer Momentaufnahme der Daten, um sicherzustellen, dass Sie Auswirkungen zu den Daten zurückverfolgen können. Wenn ein zufälliger Ausgangswert verwendet wird, können sich die Ergebnisse leicht unterscheiden. Dadurch können sich der Vergleich und die Validierung der Modelle schwierig gestalten.  
   
 -   Wie wirken sich zahlreiche benutzerdefinierte Änderungen an den Daten auf das nächste Erstellen des Modells aus?  
@@ -107,7 +107,7 @@ ms.locfileid: "36161924"
   
 -   Haben Sie festgelegt, dass ein Ausgangswert für das Modell verwendet werden soll?  
   
- **Wir fundiertes Fachwissen, um die Ergebnisse überprüfen, oder Sie haben Zugriff auf fachliche Unterstützung von Experten können.**  
+ **Wir haben Fachwissen, um die Ergebnisse zu überprüfen, oder haben Zugriff auf den betrachteten Gegenstands-Experten beraten kann.**  
  Nehmen Sie sich ausreichend Zeit, um die Variablen, das Modell und die Ergebnisse zu überprüfen. Nehmen Sie beim Bewerten von Interaktionen und Ergebnissen die Unterstützung von Experten in Anspruch. Bewerten Sie jedoch Annahmen nicht höher als Beweise. Seien Sie offen für neue und unerwartete Ergebnisse.  
   
 -   Ist Domänenwissen vorhanden, welches das Filtern von Daten und das Mindern von Eingaberauschen erleichtert?  

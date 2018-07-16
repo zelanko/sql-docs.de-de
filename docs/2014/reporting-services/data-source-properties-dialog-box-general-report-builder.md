@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Dialogfeld "Eigenschaften", Allgemein (Berichts-Generator) | Microsoft Docs
+title: Datenquellen-Dialogfeld, Allgemein (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288456"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Datenquelleneigenschaften (Dialogfeld), Allgemein (Berichts-Generator)
   Wählen Sie **Allgemein** im Dialogfeld **Datenquelleneigenschaften** aus, um eine freigegebene Datenquelle aus einem Berichtsserver zu wählen oder um Verbindungsinformationen für eine Datenquelle zu erstellen oder zu ändern, die im Bericht eingebettet ist.  
@@ -61,7 +61,7 @@ ms.locfileid: "36160856"
  **Verbindungszeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge für die Datenquelle ein. Klicken Sie auf **Erstellen** , um die Verbindungszeichenfolge mithilfe des Dialogfelds **Verbindungseigenschaften** zu erstellen. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um den Ausdruck zu bearbeiten.  
   
- **Beim Verarbeiten der Abfragen verwenden Sie einzelne Transaktion**  
+ **Verwenden Sie eine einzelne Transaktion beim Verarbeiten der Abfragen**  
  Wählen Sie diese Option, um anzugeben, dass Datasets, die diese Datenquelle verwenden, in einer einzelnen Transaktion für die Datenbank ausgeführt werden. Um Transaktionen für Unterberichte aufzunehmen, die dieselbe Datenquelle verwenden, wählen Sie den Unterbericht und legen im Eigenschaftenbereich **MergeTransactions** auf **True**fest.  
   
  **Verbindung testen**  

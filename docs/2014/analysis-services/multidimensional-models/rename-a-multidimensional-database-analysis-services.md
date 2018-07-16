@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer mehrdimensionalen Datenbank (Analysis Services) | Microsoft Docs
+title: Umbenennen einer mehrdimensionalen Datenbank (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming databases
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 94b3adfb8c85509e05bf9df8f69cfef715bbe417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 192582ec7724e16b0c02d499fac89798c4c17cd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312660"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Umbenennen einer mehrdimensionalen Datenbank (Analysis Services)
   Wie der Name einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank geändert wird, hängt davon ab, wie Sie die Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank herstellen. Zum Ändern des Namens einer vorhandenen Datenbank müssen Sie die Verbindung im Onlinemodus herstellen. Zum Ändern des Namens der Datenbank, in die Objekte in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt instanziiert werden, müssen Sie die Verbindung im Projektmodus herstellen.  
@@ -56,7 +56,7 @@ ms.locfileid: "36159651"
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Servereigenschaften in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Festlegen von Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [Legen Sie Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
  [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

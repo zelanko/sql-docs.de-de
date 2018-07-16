@@ -1,5 +1,5 @@
 ---
-title: Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten | Microsoft Docs
+title: Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295980"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten
   Bei der Zeitintelligenz handelt es sich um eine Cubeerweiterung, durch die der ausgewählten Hierarchie Zeitberechnungen (oder Zeitsichten) hinzugefügt werden. Diese Erweiterung unterstützt die folgenden Berechnungskategorien:  
@@ -45,14 +45,14 @@ ms.locfileid: "36160096"
   
 -   Vergleiche paralleler Zeiträume.  
   
- Zeitintelligenz kann auf Cubes angewendet werden, die über eine Zeitdimension verfügen. (Eine Zeitdimension ist eine Dimension, deren `Type`-Eigenschaft auf `Time` festgelegt ist.) Darüber hinaus müssen die Zeitattribute dieser Dimension auch die entsprechende Einstellung (z. B. Jahre oder Monate) für ihre `Type`-Eigenschaft aufweisen. Die `Type` -Eigenschaft der Dimension und ihre Attribute wird richtig festgelegt, wenn Sie den Dimensions-Assistenten verwenden, um die Time-Dimension zu erstellen.  
+ Zeitintelligenz kann auf Cubes angewendet werden, die über eine Zeitdimension verfügen. (Eine Zeitdimension ist eine Dimension, deren `Type`-Eigenschaft auf `Time` festgelegt ist.) Darüber hinaus müssen die Zeitattribute dieser Dimension auch die entsprechende Einstellung (z. B. Jahre oder Monate) für ihre `Type`-Eigenschaft aufweisen. Die `Type` -Eigenschaft sowohl der Dimension als auch ihrer Attribute wird richtig festgelegt, wenn Sie den Dimensions-Assistenten verwenden, um die Time-Dimension zu erstellen.  
   
  Zum Hinzufügen von Zeitintelligenz zu einem Cube verwenden Sie den Business Intelligence-Assistenten, und wählen Sie auf der Seite **Erweiterung auswählen** die Option **Zeitintelligenz definieren** aus. Dieser Assistent führt Sie durch die Schritte zum Auswählen einer Hierarchie, der Sie Zeitintelligenz hinzufügen, sowie zum Angeben der Mitglieder in der Hierarchie, auf die Zeitintelligenz angewendet werden soll. Auf der letzten Seite des Assistenten werden die Änderungen an der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank angezeigt, die durch das Hinzufügen der ausgewählten Zeitintelligenz vorgenommen werden.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Auswählen einer Zeithierarchie  
  Wählen Sie auf der Seite **Zielhierarchie und Berechnungen auswählen** die Zeithierarchie aus, auf die sich die Zeiterweiterung beziehen soll. Die Zeiterweiterung kann je Ausführung des Business Intelligence-Assistenten nur einmal auf eine einzelne Zeithierarchie angewendet werden. Soll die Erweiterung auf mehrere Zeithierarchien angewendet werden, müssen Sie den Assistenten erneut ausführen.  
   
- Nach dem Auswählen einer Zeithierarchie wählen Sie in der Liste **Verfügbare Zeitberechnungen** die Berechnungen aus, die sich auf die Hierarchie beziehen. Die Berechnungen, die aufgeführt sind, hängt die Ebenen in der Hierarchie, und klicken Sie auf die `Type` -eigenschaftseinstellung des Attributs jeder Ebene. So unterstützt beispielsweise eine Jahre-Hierarchie die Optionen Jahr-bis-heute und Wachstum im Vergleich zum Vorjahr, nicht jedoch eine Quartale-Hierarchie.  
+ Nach dem Auswählen einer Zeithierarchie wählen Sie in der Liste **Verfügbare Zeitberechnungen** die Berechnungen aus, die sich auf die Hierarchie beziehen. Die Berechnungen, die aufgelistet werden abhängig von den Ebenen in der Hierarchie, und klicken Sie auf die `Type` -eigenschaftseinstellung des Attributs jeder Ebene. So unterstützt beispielsweise eine Jahre-Hierarchie die Optionen Jahr-bis-heute und Wachstum im Vergleich zum Vorjahr, nicht jedoch eine Quartale-Hierarchie.  
   
 > [!NOTE]  
 >  Die Vorlagendatei Timeintelligence.xml definiert die Zeitberechnungen, die in **Verfügbare Zeitberechnungen**aufgelistet sind. Erfüllen die aufgelisteten Berechnungen Ihre Anforderungen nicht, können Sie die vorhandenen Berechnungen entweder ändern oder der Datei Timeintelligence.xml neue Berechnungen hinzufügen.  

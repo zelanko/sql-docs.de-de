@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines Updategrams mit ADO (SQLXML 4.0) | Microsoft Docs
+title: Ausführen eines Updategramms mit ADO (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319970"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ausführen eines Updategrams mit ADO (SQLXML 4.0)
   Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
   
  Diese Beispielanwendung zeigt Folgendes:   
   
--   Die **Conn** Objekt (**ADODB. Verbindung**) stellt eine Verbindung mit einer ausgeführten Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem bestimmten Server.  
+-   Die **Conn** Objekt (**ADODB. Verbindung**) wird eine Verbindung mit einer ausgeführten Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem bestimmten Server-Computer.  
   
 -   Die **Cmd** Objekt (**ADODB.Command**) für die hergestellte Verbindung ausgeführt wird.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36151314"
   
 -   Das Updategram wird kopiert, in den befehlsdatenstrom (**StrmIn**).  
   
--   Ausgabedatenstrom des Befehls wird festgelegt, um die **StrmOut** Objekt (**ADODB. Streamen**) auf den Empfang hat Daten zurückgegeben.  
+-   Die Befehls Ausgabestream nastaven NA hodnotu der **StrmOut** Objekt (**ADODB. Stream**) auf den Empfang hat Daten zurückgegeben.  
   
 -   Schließlich wird der Befehl (Updategram) ausgeführt.  
   

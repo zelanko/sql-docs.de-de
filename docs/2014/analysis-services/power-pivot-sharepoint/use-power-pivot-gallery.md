@@ -1,5 +1,5 @@
 ---
-title: Verwenden des PowerPivot-Katalogs | Microsoft Docs
+title: Verwenden des PowerPivot-Katalogs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321260"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
   Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog ist eine zweckgebundene SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  
@@ -31,7 +31,7 @@ ms.locfileid: "36047293"
   
 -   [Symbole im PowerPivot-Katalog](#icons)  
   
--   [Speichern einer Excel-Arbeitsmappe PowerPivot-Katalog](#add)  
+-   [Speichern einer Excel-Arbeitsmappe in PowerPivot-Katalog](#add)  
   
 -   [Erstellen Sie neuer Berichte oder Arbeitsmappen auf Grundlage einer veröffentlichten PowerPivot-Arbeitsmappe](#newdocs)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36047293"
 > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
 >  Weitere Informationen zu den von Edge unterstützten Features finden Sie im Windows-Blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Eine vollständige Liste der erforderlichen Komponenten finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md).  
+ Eine vollständige Liste der erforderlichen Komponenten, finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Symbole im PowerPivot-Katalog  
  Symbole stellen einen visuellen Indikator zur Inhaltsverfügbarkeit und zum Status bereit.  
@@ -68,7 +68,7 @@ ms.locfileid: "36047293"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|Das Symbol für nicht verfügbaren Inhalt wird angezeigt, wenn das Dokument, das Sie hochgeladen haben, nicht im PowerPivot-Katalog gerendert werden kann. Zu den unterstützten Dokumenttypen gehören PowerPivot-Arbeitsmappen und im Berichts-Generator von SQL Server 2008 R2 Reporting Services-erstellte Berichte.<br /><br /> Dieses Symbol wird auch angezeigt, wenn Sie ein Dokument aus dem Papierkorb wiederverwenden.<br /><br /> Wenn dieses Symbol für ein Dokument angezeigt wird, das zuvor ein gültiges Vorschaubild gezeigt hat, können Sie das Bild aktualisieren, indem Sie eine Dokumenteigenschaft bearbeiten und die Änderungen dann speichern.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|Das Symbol für gesperrte Inhalte wird angezeigt, wenn Miniaturbilder absichtlich für dieses Dokument deaktiviert werden. Der PowerPivot-Katalog generiert keine Miniaturbilder für Excel-Arbeitsmappen, die keine PowerPivot-Daten enthalten, oder für PowerPivot-Arbeitsmappen oder Reporting Services-Berichte, die die Anforderungen für die Momentaufnahmegenerierung nicht erfüllen. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen in diesem Thema.|  
   
-##  <a name="add"></a> Speichern einer Excel-Arbeitsmappe PowerPivot-Katalog  
+##  <a name="add"></a> Speichern einer Excel-Arbeitsmappe in PowerPivot-Katalog  
  Sie können [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen in der Bibliothek veröffentlichen, indem Sie alle in Excel 2010 verfügbaren Freigabeverfahren verwenden. In Excel 2010 können Sie mit der Option Speichern unter den gesamten SharePoint-Pfad oder einen Teil davon in einer Bibliothek zu speichern.  
   
 1.  Speichern Sie die Datei.  
@@ -127,7 +127,7 @@ ms.locfileid: "36047293"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Klicken Sie auf die Schaltfläche Datenaktualisierung verwalten, um einen Zeitplan zu erstellen oder anzuzeigen, nach dem aktualisierte Daten aus verbundenen Datenquellen abgerufen werden. Informationen zum Erstellen eines Zeitplans finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Klicken Sie auf die Schaltfläche Datenaktualisierung verwalten, um einen Zeitplan zu erstellen oder anzuzeigen, nach dem aktualisierte Daten aus verbundenen Datenquellen abgerufen werden. Anweisungen dazu, wie Sie einen Zeitplan zu erstellen, finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
 ##  <a name="delete"></a> Löschen einer Arbeitsmappe oder eines Berichts im PowerPivot-Katalog  
  Um ein Dokument aus der Bibliothek zu löschen, wechseln Sie zunächst zur Ansicht Alle Dokumente.  
@@ -166,7 +166,7 @@ ms.locfileid: "36047293"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Löschen des PowerPivot-Katalogs](delete-power-pivot-gallery.md)   
+ [PowerPivot-Katalog löschen](delete-power-pivot-gallery.md)   
  [Erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md)   
  [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

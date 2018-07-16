@@ -1,5 +1,5 @@
 ---
-title: IsKey-Element (ASSL) | Microsoft Docs
+title: IsKey-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf2b45a6cc6b7963a894bea8316f5080676fef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 755d401f304b04e675f343911ef127050552b789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288026"
 ---
 # <a name="iskey-element-assl"></a>IsKey-Element (ASSL)
   Gibt an, ob die Spalte den Schlüssel für den Fall in bietet eine [MiningStructure](../objects/miningstructure-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36161431"
 ## <a name="remarks"></a>Hinweise  
  Eine oder mehrere Spalten können als Schlüsselspalten für jede Ebene der geschachtelten Tabellenstruktur zugewiesen werden.  
   
- Das Element, das das übergeordnete Element des entspricht `IsKey` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Das Element, das dem übergeordneten entspricht `IsKey` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

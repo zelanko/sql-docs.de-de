@@ -1,5 +1,5 @@
 ---
-title: Bestimmen der korrekten Bucketanzahl für Hashindizes | Microsoft Docs
+title: Bestimmen der korrekten Bucketanzahl für Hashindizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306167"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
-  Geben Sie einen Wert für die `BUCKET_COUNT` -Parameter, wenn Sie die Speicheroptimierte Tabelle erstellen. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
+  Geben Sie einen Wert für die `BUCKET_COUNT` Parameter an, wenn Sie die Speicheroptimierte Tabelle erstellen. Dieses Thema enthält Empfehlungen zum Bestimmen des geeigneten Werts für den `BUCKET_COUNT`-Parameter. Wenn Sie die richtige Bucketanzahl nicht ermitteln können, verwenden Sie einen nicht gruppierten Index.  Ein ungültiger `BUCKET_COUNT`-Wert kann, insbesondere wenn er zu niedrig ist, die Arbeitsauslastungsleistung sowie die Wiederherstellungszeit der Datenbank erheblich beeinträchtigen. Es ist besser, die Bucketanzahl zu überschätzen.  
   
  Doppelte Indexschlüssel können bei Verwendung eines Hashindexes die Leistung beeinträchtigen, da die Schlüssel demselben Hashbucket hinzugefügt werden, wodurch die Kette dieses Buckets anwächst.  
   
  Weitere Informationen zu nicht gruppierten Hashindizes finden Sie unter [Hashindizes](hash-indexes.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hashtabelle zugeordnet wurde, für ein Index, durch angegeben wird die `BUCKET_COUNT` im Parameters [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) oder [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
+ Für jeden Hashindex in einer speicheroptimierten Tabelle wird eine Hashtabelle zugeordnet. Die Größe der Hashtabelle zugeordnet, für ein Index, durch angegeben wird die `BUCKET_COUNT` Parameter im [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) oder [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Die Bucketanzahl wird intern bis zur nächsten Zweierpotenz aufgerundet. Wenn als Bucketanzahl beispielsweise 300.000 angegeben wird, führt dies zu einer tatsächlichen Bucketanzahl von 524.288.  
   
  Links zu einem Artikel und Videos zur Bucketanzahl finden Sie unter [Bestimmen der richtigen Bucketanzahl für Hashindizes (In-Memory OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## <a name="recommendations"></a>Empfehlungen  
  In den meisten Fällen sollte die Bucketanzahl das Ein- bis Zweifache der Anzahl von unterschiedlichen Werten im Indexschlüssel betragen. Wenn der Indexschlüssel zahlreiche doppelte Werte enthält und durchschnittlich über 10 Zeilen für jeden Indexschlüsselwert vorhanden sind, verwenden Sie einen nicht gruppierten Index.  
   
- Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Leistung sollte akzeptabel sein wenn die `BUCKET_COUNT` Wert liegt im 5-Mal der tatsächlichen Anzahl von Schlüsselwerten.  
+ Möglicherweise können Sie nicht immer prognostizieren, wie viele Werte ein bestimmter Indexschlüssel enthalten kann oder wird. Leistung sollte akzeptabel sein, wenn die `BUCKET_COUNT` Wert ist innerhalb von 5-Mal der tatsächlichen Anzahl von Schlüsselwerten.  
   
  Verwenden Sie zum Ermitteln der Anzahl von eindeutigen Indexschlüsseln in vorhandenen Daten Abfragen wie in den folgenden Beispielen:  
   
@@ -67,7 +67,7 @@ FROM
  Beim Beispielindex für (SpecialOfferID, ProductID) ist dies 121317/484 = 251. Dies bedeutet, dass der Durchschnitt von Indexschlüsselwerten 251 beträgt und es sich daher hier um einen nicht gruppierten Index handeln sollte.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Problembehandlung für die Bucketanzahl  
- Verwenden Sie zum Beheben der Bucketanzahl in speicheroptimierten Tabellen [dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) Statistiken zu den leeren Buckets und die Länge der zeilenketten abgerufen. Mit der folgenden Abfrage können Statistiken zu allen Hashindizes in der aktuellen Datenbank abgerufen werden. Die Abfrage kann einige Zeit in Anspruch nehmen, wenn die Datenbank große Tabellen enthält.  
+ Bucketanzahl in speicheroptimierten Tabellen verwenden um beheben, [Sys. dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) um Statistiken zu den leeren Buckets und die Länge der zeilenketten zu erhalten. Mit der folgenden Abfrage können Statistiken zu allen Hashindizes in der aktuellen Datenbank abgerufen werden. Die Abfrage kann einige Zeit in Anspruch nehmen, wenn die Datenbank große Tabellen enthält.  
   
 ```tsql  
 SELECT   
@@ -86,12 +86,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Zwei wichtige Indikatoren für den Zustand von Hashindizes lauten wie folgt:  
   
  *empty_bucket_percent*  
- *Empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex an.  
+ *Empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex.  
   
  Wenn *empty_bucket_percent* kleiner als 10 Prozent ist, ist die Bucketanzahl wahrscheinlich zu niedrig. Im Idealfall sollte *empty_bucket_percent* mindestens 33 Prozent betragen. Wenn die Bucketanzahl der Anzahl der Indexschlüsselwerte entspricht, ist ca. 1/3 der Buckets aufgrund der Hashverteilung leer.  
   
  *avg_chain_length*  
- *Avg_chain_length* gibt die durchschnittliche Länge der zeilenketten in den hashbuckets an.  
+ *Avg_chain_length* gibt die durchschnittliche Länge der zeilenketten in den hashbuckets.  
   
  Wenn *avg_chain_length* größer als 10 und *empty_bucket_percent* größer als 10 Prozent ist, sind wahrscheinlich zahlreiche doppelte Indexschlüsselwerte vorhanden, und ein nicht gruppierter Index wäre besser geeignet. Eine durchschnittliche Kettenlänge von 1 ist ideal.  
   
@@ -156,7 +156,7 @@ GO
   
 -   Je höher der Wert für die Bucketanzahl ist, desto mehr leere Buckets sind im Index enthalten. Dies hat Auswirkungen auf die Speicherauslastung (8 Bytes pro Bucket) und die Leistung von Tabellenscans, da jeder Bucket als Teil eines Tabellenscans überprüft wird.  
   
--   Je niedriger die Bucketanzahl, desto mehr Werte sind einem einzelnen Bucket zugewiesen. Dadurch wird die Leistung für punktsuchen und einfügungen verringert, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen möglicherweise mehrere Werte in einem einzelnen Bucket von die Suche Prädikat angegebenen Wert zu durchlaufen.  
+-   Je niedriger die Bucketanzahl, desto mehr Werte sind einem einzelnen Bucket zugewiesen. Dies verringert die Leistung für punktsuchen und einfügungen, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen möglicherweise mehrere Werte in einem einzelnen Bucket zum Auffinden des Werts, der durch das Suchprädikat angegebenen durchlaufen.  
   
  Wenn die Bucketanzahl deutlich niedriger als die Anzahl der eindeutigen Indexschlüssel ist, werden jedem Bucket zahlreiche Werte zugeordnet. Dadurch wird die Leistung der meisten DML-Vorgänge beeinträchtigt, insbesondere von Punktsuchen (Suchen nach einzelnen Indexschlüsseln) und Einfügevorgängen. Beispielsweise lässt sich eine Leistungsminderung bei SELECT-Abfragen sowie UPDATE- und DELETE-Vorgängen mit Gleichheitsprädikaten feststellen, durch die die Indexschlüsselspalten in der WHERE-Klausel verglichen werden. Eine niedrige Bucketanzahl hat außerdem Auswirkungen auf die Dauer der Datenbankwiederherstellung, da die Indizes beim Datenbankstart neu erstellt werden.  
   
@@ -181,7 +181,7 @@ GO
 -   Wenn es sich bei den wichtigsten leistungskritischen Vorgängen um vollständige Indexscans handelt, verwenden Sie eine Bucketanzahl, die nah an der tatsächlichen Anzahl von Indexschlüsselwerten liegt.  
   
 ### <a name="big-tables"></a>Große Tabellen  
- Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Beispielsweise ist der Aufwand für die Hashtabellen mit einer Tabelle von 250 Millionen Zeilen, die über 4 Hashindizes, jeder mit einer Bucketanzahl von einer Milliarde, 4 Indizes * 1 Milliarde Buckets \* 8 Bytes = 32 GB Arbeitsspeicher. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes speicherauslastung jeden Index fügt an jede einzelne Zeile in diesem Szenario 8 GB wird (4 Indizes \* 8 Bytes \* 250 Millionen Zeilen).  
+ Bei großen Tabellen kann die Arbeitsspeicherauslastung zu einem Problem werden. Beispielsweise ist der Mehraufwand für die Hashtabellen mit einer Tabelle von 250 Millionen Zeilen, die 4 Hashindizes, jeder mit einer Bucketanzahl von einer Milliarde, 4 Indizes * 1 Milliarde Buckets \* 8 Bytes = 32 GB Arbeitsspeicher. Wenn eine Bucketanzahl von 250 Millionen für jeden der Indizes ausgewählt wird, beträgt die benötigte Leistung für die Hashtabellen 8 GB. Beachten Sie, dass dies zusätzlich zu den 8 Bytes speicherauslastung jeder Index ist von jeder einzelnen Zeile, 8 GB in diesem Szenario wird hinzugefügt (4 Indizes \* 8 Byte \* 250 Millionen Zeilen).  
   
  Vollständige Tabellenscans befinden sich normalerweise nicht im leistungskritischen Pfad für OLTP-Arbeitsauslastungen. Daher muss eine Wahl zwischen Arbeitsspeicherauslastung und Leistung von Punktsuchen und Einfügevorgängen getroffen werden:  
   

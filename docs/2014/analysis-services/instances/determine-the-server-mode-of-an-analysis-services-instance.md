@@ -1,5 +1,5 @@
 ---
-title: Bestimmen des Servermodus einer Analysis Services-Instanz | Microsoft Docs
+title: Bestimmen des Servermodus einer Analysis Services-Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297430"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Bestimmen des Servermodus einer Analysis Services-Instanz
   Analysis Services können in einem von drei Servermodi installiert sein: mehrdimensional und Data Mining (Standard), PowerPivot für SharePoint und tabellarisch. Der Servermodus einer Analysis Services-Instanz wird während des Setups bestimmt, wenn Sie die Optionen zum Installieren des Servers auswählen.  
@@ -56,7 +56,7 @@ ms.locfileid: "36150464"
  [Installieren von Analysis Services im tabellarischen Modus](install-windows/install-analysis-services.md)   
  [Installieren von Analysis Services im mehrdimensionalen Modus und im Data Mining-Modus](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot für SharePoint 2010-Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Herstellen einer Verbindung mit Analysis Services](connect-to-analysis-services.md)   
+ [Verbinden von Analysis Services](connect-to-analysis-services.md)   
  [Projektmappen für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Miningmodelle &#40;Analysis Services – Datamining&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  

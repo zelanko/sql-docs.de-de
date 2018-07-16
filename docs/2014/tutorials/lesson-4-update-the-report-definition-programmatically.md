@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Programmgesteuertes Update der Berichtsdefinition | Microsoft Docs'
+title: 'Lektion 4: Aktualisieren die Berichtsdefinition programmgesteuert | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286496"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Programmgesteuertes Update der Berichtsdefinition
-  Nachdem die Berichtsdefinition vom Berichtsserver geladen wurde und mit dem Berichtsfelds ein Verweis darauf vorhanden ist, müssen Sie die Berichtsdefinition aktualisieren. In diesem Beispiel aktualisieren Sie die `Description` Eigenschaft für den Bericht.  
+  Nachdem die Berichtsdefinition vom Berichtsserver geladen wurde und mit dem Berichtsfelds ein Verweis darauf vorhanden ist, müssen Sie die Berichtsdefinition aktualisieren. In diesem Beispiel aktualisieren Sie die `Description` -Eigenschaft für den Bericht.  
   
 ### <a name="to-update-the-report-definition"></a>So aktualisieren Sie die Berichtsdefinition  
   
@@ -95,6 +95,6 @@ ms.locfileid: "36160823"
  In der nächsten Lektion speichern Sie die aktualisierte Berichtsdefinition wieder auf dem Berichtsserver. Finden Sie unter [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generierten &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

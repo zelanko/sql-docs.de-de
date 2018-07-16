@@ -1,5 +1,5 @@
 ---
-title: Freigeben von Dateien | Microsoft Docs
+title: Freigeben von Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308080"
 ---
 # <a name="share-files"></a>Freigeben von Dateien
   Mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie Elemente über mehrere Quellcodeverwaltungsprojekte freigeben. Wenn Sie ein Element freigeben, werden Änderungen an dem Element in den einzelnen Projekten angezeigt, für die das Element freigegeben ist.  
@@ -38,9 +38,9 @@ ms.locfileid: "36151405"
   
 1.  Wählen Sie im Projektmappen-Explorer den Ordner oder das Projekt aus, in dem die freigegebenen Dateien platziert werden sollen.  
   
-2.  Auf der **Datei** Sie im Menü **Quellcodeverwaltung**, und klicken Sie dann auf **Freigabe**.  
+2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **Freigabe**.  
   
-3.  In der **freigeben** (Dialogfeld), Durchsuchen Sie die Verzeichnisliste für das Element, das Sie freigeben möchten, und klicken Sie auf dieses Element.  
+3.  In der **freigeben** Dialogfeld Durchsuchen die Verzeichnisliste für das Element, das Sie freigeben möchten, und klicken Sie auf das Element.  
   
 4.  Klicken Sie auf **Freigabe**.  
   

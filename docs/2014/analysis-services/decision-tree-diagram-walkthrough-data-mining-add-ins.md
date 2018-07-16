@@ -1,5 +1,5 @@
 ---
-title: Exemplarische Vorgehensweise (Data Mining-Add-ins) die Entscheidung | Microsoft Docs
+title: Exemplarische Vorgehensweise (Data Mining-Add-ins) Decision | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
 - diagram, decision tree
@@ -16,51 +16,51 @@ helpviewer_keywords:
 - decision tree [data mining]
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 951a0e0722aaa5a631140da9ddec9255246aaffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4b4eb570d1d81bc724c885e8c277aa662cf4ff5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291716"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Entscheidung Exemplarische Vorgehensweise (Data Mining-Add-ins)
-  Wenn Sie ein Entscheidungsstrukturmodell erstellt haben, können Sie ein benutzerdefiniertes Diagramm in Visio erstellen. Dazu stehen Ihnen die Shapes Entscheidungsstruktur und Abhängigkeitsnetzwerk zur Verfügung. In diesem Thema wird beschrieben, die Anpassungen Sie ausführen können, mit der **Entscheidungsstruktur** Form und diese Steuerelemente:  
+  Wenn Sie ein Entscheidungsstrukturmodell erstellt haben, können Sie ein benutzerdefiniertes Diagramm in Visio erstellen. Dazu stehen Ihnen die Shapes Entscheidungsstruktur und Abhängigkeitsnetzwerk zur Verfügung. In diesem Thema wird beschrieben, die Anpassungen, die Sie ausführen können, mit der **Entscheidungsstruktur** Form und diese Steuerelemente:  
   
 -   Rendern von Steuerelementen für das Entscheidungsstrukturdiagramm  
   
-     Diese Optionen sind Teil der **Entscheidungsstruktur-Assistenten** , wird gestartet, wenn Sie ein Shape auf dem Visio-Arbeitsbereich ablegen.  
+     Diese Optionen sind Teil der **Entscheidungsstruktur-Assistenten** gestartet wird, wenn Sie eine Form auf dem Visio-Arbeitsbereich ablegen.  
   
 -   **Data Mining Layout** Symbolleiste  
   
      Diese Optionen werden dem Visio-Arbeitsbereich hinzugefügt, um Ihnen die Interaktion mit dem Shape zu erleichtern.  
   
 ## <a name="build-a-decision-tree-diagram"></a>Erstellen eines Entscheidungsstrukturdiagramms  
- Sie legen das Shape Entscheidungsstruktur auf der Visio-Seite zu starten der **Entscheidung Assistenten Shape in Visio** und Diagrammoptionen festzulegen.  
+ Sie legen Sie die Entscheidungsstruktur Form auf der Visio-Seite zum Starten der **Entscheidung Assistenten Shape in Visio** und Diagrammoptionen festzulegen.  
   
 #### <a name="use-the-decision-tree-wizard"></a>Verwenden des Entscheidungsstruktur-Assistenten  
   
-1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** Liste, klicken Sie auf **weitere Shapes**, wählen **Schablone öffnen**, und öffnen Sie die die Vorlage über den Standardinstallationspfad.  
+1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** auf **weitere Shapes**Option **Schablone öffnen**, und öffnen Sie die die Vorlage aus den standardmäßigen Installationsspeicherort.  
   
-     \<Laufwerk >: \Program Files (x85) \Microsoft SQL Server 2012 DM-Add-Ins  
+     \<Laufwerk >: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-Ins  
   
 2.  Ziehen Sie die **Entscheidungsstruktur** Shape auf der Seite.  
   
-3.  Auf der Seite Willkommen des der **Entscheidung Assistenten Shape in Visio**, klicken Sie auf **Weiter**.  
+3.  Klicken Sie auf der Seite Willkommen des der **Entscheidung Assistenten Shape in Visio**, klicken Sie auf **Weiter**.  
   
-4.  Auf der **wählen Sie eine Datenquelle** auf der Seite der **Clustererstellungs-Assistenten**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server mit dem Modell, das Sie visuell darstellen möchten.  
+4.  Auf der **Vybrat Zdroj DAT** auf der Seite die **Clustererstellungs-Assistenten**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server mit dem Modell, das Sie visuell darstellen möchten.  
   
 5.  Wählen Sie ein geeignetes Miningmodell aus, und klicken Sie auf **Weiter**.  
   
-     Dieser Diagrammtyp unterstützt Modelle, die mit dem Decision Trees oder Linear Regression-Algorithmus erstellt.  
+     Dieser Diagrammtyp unterstützt Modelle, die mit dem Decision Trees oder dem Linear Regression-Algorithmus erstellt.  
   
 6.  Auf der **Entscheidungsstruktur auswählen** Seite, und wählen Sie eine individuelle Struktur anzeigen.  
   
      In einer Struktur werden die Interaktionen abgebildet, die zu einem bestimmten modellierten Ergebnis geführt haben. Deshalb können Sie jeweils nur eine Struktur anzeigen, auch wenn das Modell mehrere Ergebnisse enthält.  
   
-7.  In der **Entscheidungsstruktur auswählen** (Dialogfeld), Sie können auch folgenden Renderingoptionen festlegen:  
+7.  In der **Entscheidungsstruktur auswählen** im Dialogfeld können Sie auch folgenden Renderingoptionen festlegen:  
   
      **Maximale Renderingtiefe**  
      Mit dieser Option steuern Sie, wie viele Knoten angezeigt werden.  
@@ -86,13 +86,13 @@ ms.locfileid: "36159875"
      **Wahrscheinlichkeit anzeigen**  
      Zeigt die Wahrscheinlichkeit der einzelnen Werte an.  
   
-     **Unterstützung anzeigen**  
+     **Zeigen Sie Unterstützung**  
      Zeigt die Unterstützung jedes einzelnen Werts an.  
   
-     **Fußzeile anzeigen**  
+     **Footer anzeigen**  
      Fügt eine Fußzeile hinzu, in der alle angezeigten Werte summiert werden.  
   
-     **Kopfzeile anzeigen**  
+     **Header anzeigen**  
      Fügt Spaltenüberschriften hinzu.  
   
      **Status ohne Unterstützung anzeigen**  
@@ -110,7 +110,7 @@ ms.locfileid: "36159875"
   
 #### <a name="using-the-decision-tree-option-menus"></a>Verwenden der Menüs mit Entscheidungsstrukturoptionen  
   
-1.  Klicken Sie auf die **-Add-Ins** Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten, die zum Arbeiten mit Datamining-Diagramme verwendet:  
+1.  Klicken Sie auf die **-Add-Ins** zuerst das Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten zur Bearbeitung von Datamining-Diagramme:  
   
      **Layout**  
      Optimiert die Anordnung der Struktur, sodass sie auf die aktuelle Seite passt.  
@@ -121,11 +121,11 @@ ms.locfileid: "36159875"
      **Beschreibung**  
      Wenn ein Strukturknoten ausgewählt ist, klicken Sie auf diese Option, um die Details der im Knoten enthaltenen Fälle anzuzeigen.  
   
-2.  Verwenden der **neues Seitenlayout** -Option in der Visio **Entwurf** Menüband, um verschiedene Strukturlayouts zu experimentieren.  
+2.  Verwenden der **neues Seitenlayout** -Option in der Visio **Entwurf** Multifunktionsleiste, um verschiedene Strukturlayouts experimentieren.  
   
 3.  Verwenden der **Connectors** option die **Entwurf** Tab, um die Verbinder zwischen Knoten in der Struktur zu ändern.  
   
-4.  Verwenden der **Schwenken und Zoomen** steuern, in der **Aufgabenbereich** des Visio **Ansicht** Menüband, um auf einen bestimmten Bereich des Diagramms zu konzentrieren.  
+4.  Verwenden der **Schwenken und Zoomen** zu steuern, in der **Aufgabenbereich** des Visio **Ansicht** Multifunktionsleiste, um auf einen bestimmten Bereich des Diagramms zu konzentrieren.  
   
 5.  Klicken Sie mit der rechten Maustaste auf einen beliebigen Strukturknoten, und wählen Sie im Kontextmenü spezifische Optionen für Entscheidungsstrukturdiagramme aus:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36159875"
      **Untergeordnete Knoten reduzieren**  
      Blendet die untergeordneten Elemente des aktuell ausgewählten Knotens aus.  
   
-     **Erweitern Sie die untergeordneten Knoten**  
+     **Untergeordnete Knoten erweitern**  
      Blendet untergeordnete Elemente des ausgewählten Knotens wieder ein.  
   
 ## <a name="see-also"></a>Siehe auch  

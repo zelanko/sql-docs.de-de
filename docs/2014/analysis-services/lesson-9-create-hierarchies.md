@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 10: Erstellen von Hierarchien | Microsoft Docs'
+title: 'Lektion 10: Erstellen von Hierarchien | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ea741676f07020291c2aa94d130c2f595a50f323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b8b1b0b3c38374061361df9980c74cfb6e5cbf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247820"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lektion 10: Erstellen von Hierarchien
   In dieser Lektion erstellen Sie Hierarchien. Hierarchien sind Gruppen von Spalten, die in Ebenen angeordnet werden. Beispielsweise könnte eine Geografiehierarchie Unterebenen für Land, Status, Landkreis und Stadt beinhalten. Hierarchien können getrennt von anderen Spalten in der Feldliste einer Clientanwendung zur Berichtserstellung angezeigt werden, sodass Clientbenutzer einfacher darin navigieren und sie in einen Bericht aufnehmen können. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](tabular-models/hierarchies-ssas-tabular.md).  
@@ -35,27 +35,27 @@ ms.locfileid: "36046789"
   
 #### <a name="to-create-a-category-hierarchy-in-the-product-table"></a>So erstellen Sie in der Product-Tabelle eine Kategoriehierarchie  
   
-1.  Im Modell-Designer, klicken Sie auf die `Model` Menü, zeigen Sie dann auf **Modellansicht**, und klicken Sie dann auf **Diagrammsicht**.  
+1.  Klicken Sie im Modell-Designer auf die `Model` Menü, und klicken Sie dann auf, zeigen Sie auf **Modellansicht**, und klicken Sie dann auf **Diagrammansicht**.  
   
     > [!TIP]  
     >  Verwenden Sie die Steuerelemente der Miniaturkarte oben rechts im Modell-Designer, um die Sicht der Objekte in der Diagrammsicht je nach Bedarf zu ändern. Ordnen Sie Objekte in der Diagrammsicht neu an, wird diese Sicht beim Speichern des Projekts beibehalten.  
   
-2.  Im Modell-Designer mit der Maustaste die `Product` Tabelle, und klicken Sie dann auf **Hierarchie erstellen**. Eine neue Hierarchie wird am unteren Rand des Tabellenfensters angezeigt.  
+2.  Im Modell-Designer mit der Maustaste der `Product` Tabelle, und klicken Sie dann auf **Hierarchie erstellen**. Eine neue Hierarchie wird am unteren Rand des Tabellenfensters angezeigt.  
   
-3.  Benennen Sie den Hierarchienamen die Hierarchie dazu `Category`, und drücken Sie dann die EINGABETASTE.  
+3.  Benennen Sie in den Hierarchienamen die Hierarchie durch Eingabe `Category`, und drücken Sie dann die EINGABETASTE.  
   
-4.  In der `Product` Tabelle, klicken Sie auf die **Product Category Name** Spalte ziehen Sie dann auf die `Category` Hierarchie, und lassen Sie auf der Basis von der `Category` Name.  
+4.  In der `Product` Tabelle, klicken Sie auf die **Product Category Name** Spalte ziehen Sie dann auf die `Category` Hierarchie, und lassen Sie auf der die `Category` Name.  
   
 5.  In der `Category` Hierarchie mit der rechten Maustaste die **Product Category Name** Spalte, klicken Sie dann auf **umbenennen**, und geben Sie dann `Category`.  
   
     > [!NOTE]  
     >  Durch das Umbenennen einer Spalte in einer Hierarchie wird die betreffende Spalte in der Tabelle nicht umbenannt. Eine Spalte in einer Hierarchie ist nur eine Darstellung der Spalte in der Tabelle.  
   
-6.  In der `Product` Tabelle der rechten Maustaste auf die **Product Subcategory Name** Spalte, zeigen Sie dann im Kontextmenü auf **Hierarchie hinzufügen**, und klicken Sie dann auf `Category`.  
+6.  In der `Product` Tabelle der rechten Maustaste auf die **Product Subcategory Name** Spalte, klicken Sie dann im Kontextmenü, zeigen Sie auf **zur Hierarchie hinzufügen**, und klicken Sie dann auf `Category`.  
   
-7.  Benennen Sie **Product Subcategory Name** auf `Subcategory`.  
+7.  Benennen Sie **Product Subcategory Name** zu `Subcategory`.  
   
-8.  Mittels Klick und ziehen oder mithilfe der **Hierarchie hinzufügen** Befehl im Kontextmenü, fügen Sie der **Modellname** und **Produktname** Spalten (in entsprechender Reihenfolge) und platzieren Sie sie unterhalb der **Product Subcategory Name** Spalte. Benennen Sie diese Spalten `Model` und `Product`zugeordnet.  
+8.  Durch Klicken und ziehen oder mithilfe der **zur Hierarchie hinzufügen** Befehl im Kontextmenü, fügen Sie der **Modellname** und **Product Name** Spalten (in Reihenfolge) und platzieren Sie sie unterhalb der **Product Subcategory Name** Spalte. Benennen Sie diese Spalten `Model` und `Product`bzw.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>So erstellen Sie Hierarchien in der Date-Tabelle  
   

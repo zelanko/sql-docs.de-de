@@ -1,5 +1,5 @@
 ---
-title: Abfrage-Designern (Berichts-Generator) | Microsoft Docs
+title: Abfrage-Designern (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: da6f00fbb3245dd7ff888350b54ce654db585399
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733c082ead217c7d3052faaef0342819e9c8fa20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307360"
 ---
 # <a name="query-designers-report-builder"></a>Abfrage-Designer (Berichts-Generator)
   Berichts-Generator stellt grafische und textbasierte Abfrage-Designer bereit, um Ihnen das Erstellen von Abfragen für Ihren Bericht zu erleichtern. Jeder Datenquellentyp hat einen zugeordneten Abfrage-Designer. Einige Datenquellen unterstützen grafische Designer, mit denen Sie eine Abfrage interaktiv erstellen können. Andere Datenquellen verwenden einen textbasierten Abfrage-Designer. Eine SQL Server-Datenquelle unterstützt sowohl grafische als auch textbasierte Abfrage-Designer.  

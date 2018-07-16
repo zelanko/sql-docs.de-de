@@ -1,5 +1,5 @@
 ---
-title: Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager) | Microsoft Docs
+title: Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b4115675e8f9529873eeeec5f71d2b5861fef9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294100"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager)
   Auf der Seite Sicherheit können Sie die Systemrollenzuweisungen anzeigen, die den Zugriff auf die Berichtsserversite steuern. Systemrollenzuweisungen sind außerhalb des Gültigkeitsbereichs des Berichtsserver-Namespace oder der Ordnerhierarchie vorhanden. Systemrollenzuweisungen sind global und für alle Elemente gleich. Die durch Systemrollenzuweisungen unterstützten Vorgänge schließen das Erstellen und Verwenden freigegebener Zeitpläne, das Verwenden des Berichts-Managers und das Festlegen von Standardwerten für einige Serverfunktionen ein.  
@@ -44,12 +44,12 @@ ms.locfileid: "36159918"
  Klicken Sie auf diese Schaltfläche, um eine vorhandene Rollenzuweisung zu löschen. Ehe Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben dem zu entfernenden Gruppen- oder Benutzernamen. Sie können keine Rollenzuweisung löschen, wenn sie die letzte und einzige Zuweisung ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  
- Klicken Sie auf diese Schaltfläche, um die Seite Neue Systemrollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Systemrollenzuweisungen für die Berichtsserversite erstellen. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: System Role Assignments Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Neue Systemrollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Systemrollenzuweisungen für die Berichtsserversite erstellen. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: Bearbeiten System Systemrollenzuweisungen (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Bearbeiten**  
- Klicken Sie auf diese Schaltfläche, um die Seite Systemrollenzuweisungen bearbeiten zu öffnen. Auf dieser Seite können Sie einzelne Systemrollenzuweisungen für die Berichtsserversite bearbeiten. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: System Role Assignments Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Systemrollenzuweisungen bearbeiten zu öffnen. Auf dieser Seite können Sie einzelne Systemrollenzuweisungen für die Berichtsserversite bearbeiten. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: Bearbeiten System Systemrollenzuweisungen (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
- **Gruppen- oder Benutzername**  
+ **Gruppen- oder Benutzernamen**  
  Führt die Gruppen und Benutzer auf, die Teil einer vorhandenen Rollenzuweisung sind. Vorhandene Rollenzuweisungen für den aktuellen Ordner werden für Gruppen und Benutzer definiert, die in dieser Spalte angezeigt werden. Klicken Sie auf **Bearbeiten** neben einem Gruppen- oder Benutzernamen, um Einzelheiten zu Rollenzuweisungen anzuzeigen oder zu bearbeiten.  
   
  **Roles**  

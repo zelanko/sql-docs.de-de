@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch) | Microsoft Docs
+title: Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1788cadfe3f84798c7143e069fc40a0acb75883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291436"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch)
   Data Analysis Expressions (DAX) ist die Formelsprache, mit der benutzerdefinierte Berechnungen in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Microsoft Excel-Arbeitsmappen und tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellprojekte erstellt werden. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
@@ -222,7 +222,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Zu den DAX-Funktionen zählen auch verschiedene *Zeitintelligenzfunktionen* . Mit diesen Funktionen können Sie Datumsbereiche definieren oder auswählen und dynamische Berechnungen auf Grundlage dieser Datumsangaben oder Bereiche durchführen. Sie können z. B. Summen über parallele Zeiträume vergleichen.  
   
 ### <a name="date-and-time-functions"></a>Datums- und Uhrzeitfunktionen  
- Die Datums- und Uhrzeitfunktionen in DAX funktionieren ebenfalls ähnlich wie in Microsoft Excel. DAX-Funktionen basieren jedoch auf die `datetime` von Microsoft SQL Server verwendeten Datentypen. Weitere Informationen finden Sie unter [Datums- und Zeitfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Die Datums- und Uhrzeitfunktionen in DAX funktionieren ebenfalls ähnlich wie in Microsoft Excel. DAX-Funktionen basieren jedoch auf die `datetime` Datentypen, die von Microsoft SQL Server verwendet. Weitere Informationen finden Sie unter [Datums- und Uhrzeitfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Filterfunktionen  
  Mit den Filterfunktionen in DAX können Sie bestimmte Datentypen abrufen, Werte in verknüpften Tabellen suchen und nach verknüpften Werten filtern. Die Suchfunktionen funktionieren mit Tabellen und Beziehungen wie bei einer Datenbank. Die Filterfunktionen ermöglichen die Anpassung des Datenkontexts zur Erstellung dynamischer Berechnungen. Weitere Informationen finden Sie unter [Filterfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -293,7 +293,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- Eine ausführliche exemplarische Vorgehensweise dieser Formel finden Sie unter der [EARLIER-Funktion](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx).  
+ Eine ausführliche exemplarische Vorgehensweise zu dieser Formel finden Sie unter den [EARLIER-Funktion](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx).  
   
  Zusammengefasst speichert die EARLIER-Funktion den Zeilenkontext des Vorgangs, der dem aktuellen Vorgang vorausging. Die Funktion speichert zu jedem Zeitpunkt zwei Kontextsätze im Arbeitsspeicher: Ein Kontextsatz stellt die aktuelle Zeile für die innere Schleife der Formel dar, und ein weiterer Kontextsatz stellt die aktuelle Zeile für die äußere Schleife der Formel dar. DAX übermittelt automatisch Werte zwischen den zwei Schleifen, sodass komplexe Aggregate erstellt werden können.  
   
@@ -318,11 +318,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  In tabellarischen Modellen gibt es verschiedene Möglichkeiten, einen Filterkontext zu erstellen. Innerhalb des Kontexts von Clients, die das Modell verwenden, z.B. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte, können Benutzer Filter bei Bedarf erstellen, indem sie Slicer oder Berichtsfilter für Zeilen- und Spaltenüberschriften hinzufügen. Sie können Filterausdrücke auch direkt in der Formel verwenden, um verknüpfte Werte anzugeben, Tabellen zu filtern, die als Eingaben verwendet werden, oder dynamisch den Kontext für Werte abzurufen, die in Berechnungen verwendet werden. Darüber hinaus können Sie die Filter für einzelne Spalten vollständig oder selektiv löschen. Beim Erstellen von Formeln, die Gesamtergebnisse berechnen, ist dies sehr nützlich.  
   
- Weitere Informationen zum Erstellen von Filtern innerhalb von Formeln finden Sie unter der [Filterfunktion](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
+ Weitere Informationen zum Erstellen von Filtern in Formeln finden Sie unter den [Filterfunktion](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
   
- Ein Beispiel dazu, wie Filter gelöscht werden können um Gesamtergebnisse erstellen zu können, finden Sie die [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
+ Ein Beispiel dazu, wie Filter gelöscht werden können um Gesamtergebnisse zu erzeugen, finden Sie die [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
   
- Beispiele zum selektiven löschen und Anwenden von Filtern innerhalb von Formeln finden Sie in der [ALLEXCEPT-Funktion](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
+ Beispiele zum selektiven löschen und Anwenden von Filtern in Formeln finden Sie in der [ALLEXCEPT-Funktion](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
   
 ####  <a name="bkmk_determine_context"></a> Bestimmen des Kontexts in Formeln  
  Wenn Sie eine DAX-Formel erstellen, wird die Formel zuerst auf gültige Syntax getestet, und dann wird überprüft, ob die Namen der Spalten und Tabellen innerhalb der Formel im aktuellen Kontext vorhanden sind. Wenn eine Spalte oder Tabelle innerhalb der Formel nicht gefunden wird, wird ein Fehler zurückgegeben.  
@@ -337,20 +337,20 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 1.  Die [RELATED-Funktion](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) Funktion erweitert den Kontext der aktuellen Zeile, um Werte aus einer verknüpften Spalte enthalten. Auf diese Weise können Sie Suchvorgänge ausführen. Das Beispiel in diesem Thema veranschaulicht die Interaktion des Filter- und Zeilenkontexts.  
   
-2.  Die [Filterfunktion](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) -Funktion können Sie angeben, die Zeilen in den aktuellen Kontext eingeschlossen werden sollen. Zudem wird anhand der Beispiele in diesem Thema veranschaulicht, wie Filter in andere Funktionen, die Aggregate ausführen, eingebettet werden.  
+2.  Die [Filterfunktion](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) -Funktion können Sie angeben, die Zeilen im aktuellen Kontext aufgenommen werden sollen. Zudem wird anhand der Beispiele in diesem Thema veranschaulicht, wie Filter in andere Funktionen, die Aggregate ausführen, eingebettet werden.  
   
-3.  Die [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx) Funktion legt den Kontext in einer Formel. Sie können Filter, die als Ergebnis des Abfragekontexts angewendet werden, mithilfe der ALL-Funktion überschreiben.  
+3.  Die [ALL-Funktion](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx) legt den Kontext innerhalb einer Formel fest. Sie können Filter, die als Ergebnis des Abfragekontexts angewendet werden, mithilfe der ALL-Funktion überschreiben.  
   
-4.  Die [ALLEXCEPT-Funktion](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) -Funktion können Sie alle Filter bis auf eine zu entfernen, die Sie angeben. Beide Themen enthalten Beispiele, die Sie durch das Erstellen von Formeln führen, um komplexe Kontexte besser verstehen zu können.  
+4.  Die [ALLEXCEPT-Funktion](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) -Funktion können Sie alle Filter bis zu entfernen, die Sie angeben. Beide Themen enthalten Beispiele, die Sie durch das Erstellen von Formeln führen, um komplexe Kontexte besser verstehen zu können.  
   
-5.  Die [EARLIER-Funktion](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) und [EARLIEST-Funktion](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) Funktionen können Sie Tabellen durchlaufen von Berechnungen durchgeführt werden, während von einer inneren Schleife auf einen Wert verwiesen. Wenn Sie mit dem Konzept der Rekursion und inneren und äußeren Schleifen vertraut sind, werden Sie die Leistungsfähigkeit zu schätzen wissen, die die Funktionen EARLIER und EARLIEST bereitstellen. Wenn Sie mit diesen Konzepten nicht vertraut sind, sollten Sie die Schritte in dem Beispiel sorgfältig durchführen, um den inneren und äußeren Kontext beim Durchführen von Berechnungen zu verstehen.  
+5.  Die [EARLIER-Funktion](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) und [EARLIEST-Funktion](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) können Sie Tabellen durchlaufen, indem Berechnungen durchgeführt werden, während von einer inneren Schleife auf einen Wert verwiesen. Wenn Sie mit dem Konzept der Rekursion und inneren und äußeren Schleifen vertraut sind, werden Sie die Leistungsfähigkeit zu schätzen wissen, die die Funktionen EARLIER und EARLIEST bereitstellen. Wenn Sie mit diesen Konzepten nicht vertraut sind, sollten Sie die Schritte in dem Beispiel sorgfältig durchführen, um den inneren und äußeren Kontext beim Durchführen von Berechnungen zu verstehen.  
   
 ##  <a name="bkmk_RelModel"></a> Formeln und das tabellarische Modell  
  Der Modell-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ist ein Bereich, in dem Sie mit mehreren Datentabellen arbeiten und die Tabellen in einem tabellarischen Modell verbinden können. Innerhalb dieses Modells werden Tabellen über Beziehungen zwischen Spalten mit gemeinsamen Werten (Schlüsseln) verknüpft. Im tabellarischen Modell können Sie Werte mit Spalten in anderen Tabellen verknüpfen und weitere interessante Berechnungen erstellen. Ebenso wie in einer relationalen Datenbank können Sie mehrere Ebenen verknüpfter Tabellen miteinander verbinden und Spalten aus allen Tabellen in den Ergebnissen verwenden.  
   
  Sie können z. B. eine Verkaufstabelle, eine Produkttabelle und eine Tabelle mit Produktkategorien verknüpfen und verschiedene Kombinationen der Spalten in PivotTables und Berichten verwenden. Verwandte Felder können verwendet werden, um verbundene Tabellen zu filtern oder Berechnungen über Teilmengen zu erstellen. (Wenn Sie mit relationalen Datenbanken und dem Arbeiten mit Tabellen und Joins nicht vertraut sind, finden Sie weitere Informationen unter [Beziehungen &#40;SSAS – tabellarisch&#41;](relationships-ssas-tabular.md).)  
   
- Tabellarische Modelle unterstützen mehrere Beziehungen zwischen Tabellen. Um Verwirrungen oder falsche Ergebnisse zu vermeiden, wird jeweils nur eine Beziehung als aktive Beziehung festgelegt, Sie können jedoch die aktive Beziehung nach Bedarf erstellen und ändern, um in Berechnungen unterschiedliche Verbindungen der Daten zu durchlaufen. Die [USERELATIONSHIP-Funktion &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx) können verwendet werden, um eine oder mehrere Beziehung anzugeben, in einer bestimmten Berechnung verwendet werden soll.  
+ Tabellarische Modelle unterstützen mehrere Beziehungen zwischen Tabellen. Um Verwirrungen oder falsche Ergebnisse zu vermeiden, wird jeweils nur eine Beziehung als aktive Beziehung festgelegt, Sie können jedoch die aktive Beziehung nach Bedarf erstellen und ändern, um in Berechnungen unterschiedliche Verbindungen der Daten zu durchlaufen. Die [USERELATIONSHIP-Funktion &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx) können verwendet werden, um mindestens eine Beziehung anzugeben, in einer bestimmten Berechnung verwendet werden soll.  
   
  In einem tabellarischen Modell sollten die folgenden Regeln für den Formelentwurf beachten werden:  
   
@@ -420,7 +420,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Zusätzliche Ressourcen  
  [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../tabular-modeling-adventure-works-tutorial.md) stellt Schritt-für-Schritt-Anleitungen zum Erstellen eines tabellarischen Modells bereit, das viele Berechnungen in berechneten Spalten, Measures und Zeilenfiltern enthält. Für die meisten Formeln ist eine Beschreibung ihrer Funktion verfügbar.  
   
- Die [Analysis Services und PowerPivot-Teamblog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, News und Ankündigungen über [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] und PowerPivot.  
+ Die [Analysis Services und PowerPivot-Teamblog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) enthält Informationen, Tipps, Neuigkeiten und Ankündigungen über [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] und PowerPivot.  
   
  Im [DAX-Ressourcencenter](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) finden Sie sowohl interne als auch externe Informationen zu DAX, z.B. zahlreiche DAX-Lösungen von führenden Business Intelligence-Experten.  
   

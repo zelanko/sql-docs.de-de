@@ -1,5 +1,5 @@
 ---
-title: Beispiel zu Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern | Microsoft Docs
+title: Sample Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290296"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern
-  Dieses Thema enthält und beschreibt ein [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS-Skript, mit dem Inhaltselemente und Einstellungen von einem kopiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichtsserver auf einen anderen Berichtsserver mithilfe der **RS.exe** Hilfsprogramm. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sowohl im einheitlichen als auch im SharePoint-Modus installiert. Das Skript kopiert [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Elemente, beispielsweise Berichte und Abonnements, von einem Server zu einem anderen Server. Das Skript unterstützt Berichtsserver im SharePoint-Modus und im einheitlichen Modus.  
+  Dieses Thema enthält und beschreibt ein [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS-Beispielskript, mit der Inhaltselemente und Einstellungen von einem kopiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichtsserver auf einen anderen Berichtsserver, mit der **RS.exe** Hilfsprogramm. RS.exe wird mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sowohl im einheitlichen als auch im SharePoint-Modus installiert. Das Skript kopiert [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Elemente, beispielsweise Berichte und Abonnements, von einem Server zu einem anderen Server. Das Skript unterstützt Berichtsserver im SharePoint-Modus und im einheitlichen Modus.  
   
 ||  
 |-|  
@@ -74,7 +74,7 @@ ms.locfileid: "36148995"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- Mit dem Skript können Inhalte zwischen Berichtsservern im gleichen Modus oder in unterschiedlichen Modi kopiert werden. Sie können z. B. Ausführen des Skripts zum Kopieren des Inhalts von einer [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Berichtsserver im einheitlichen Modus auf eine [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Berichtsserver im SharePoint-Modus. Sie können das Skript auf jedem Server ausführen, auf dem RS.exe installiert ist. In der folgenden Bereitstellung haben Sie z. B. folgende Möglichkeiten:  
+ Mit dem Skript können Inhalte zwischen Berichtsservern im gleichen Modus oder in unterschiedlichen Modi kopiert werden. Sie können z. B. Führen Sie das Skript zum Kopieren von Inhalten von einem [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Berichtsserver im einheitlichen Modus, um eine [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Berichtsserver im SharePoint-Modus. Sie können das Skript auf jedem Server ausführen, auf dem RS.exe installiert ist. In der folgenden Bereitstellung haben Sie z. B. folgende Möglichkeiten:  
   
 -   Führen Sie RS.exe und das Skript **AUF** Server A aus.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36148995"
 |Element|Migriert|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Kennwörter|**Nein**|**Nein**|Kennwörter werden **NICHT** migriert. Aktualisieren Sie nach dem Migrieren der Inhaltselemente die Anmeldeinformationen auf dem Zielserver. Beispiel: Datenquellen mit gespeicherten Anmeldeinformationen.|  
-|Meine Berichte|**Nein**|**Nein**|Die Funktion "Meine Berichte" im einheitlichen Modus basiert auf einzelnen Benutzeranmeldungen. Daher hat der Skriptdienst keinen Zugriff auf Inhalte im Ordner "Meine Berichte" für Benutzer, sofern nicht der **-u** -Parameter verwendet wird, mit dem das RSS-Skript ausgeführt wird. "Meine Berichte" ist außerdem keine Funktion des [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-SharePoint-Modus, und Elemente in den Ordnern können nicht in eine SharePoint-Umgebung kopiert werden. Das Skript kopieren daher keine Berichtselemente, die in den Ordnern "Meine Berichte" auf einem Berichtsserver im einheitlichen Modus Quelle sind. Führen Sie die folgenden Schritte aus, um die Inhalte der "Meine Berichte"-Ordner mit diesem Skript zu migrieren:<br /><br /> (1) erstellen Sie neue Ordner im Berichts-Manager. Optional können Sie Ordner oder Unterordner für jeden Benutzer erstellen.<br /><br /> (2) melden Sie sich als ein Benutzer mit "Meine Berichte" Inhalt.<br /><br /> (3) im Berichts-Manager, klicken Sie auf die **Meine Berichte** Ordner.<br /><br /> 4) klicken Sie auf die **Details** Ansicht für den Ordner.<br /><br /> (5) Wählen Sie die Berichte, die Sie kopieren möchten.<br /><br /> 6) klicken Sie auf **verschieben** auf der Symbolleiste des Berichts-Manager.<br /><br /> 7) Wählen Sie den gewünschten Zielordner ein.<br /><br /> 8) wiederholen Sie die Schritte 2 bis 7 für jeden Benutzer.<br /><br /> 9) führen Sie das Skript ein.|  
+|Meine Berichte|**Nein**|**Nein**|Die Funktion "Meine Berichte" im einheitlichen Modus basiert auf einzelnen Benutzeranmeldungen. Daher hat der Skriptdienst keinen Zugriff auf Inhalte im Ordner "Meine Berichte" für Benutzer, sofern nicht der **-u** -Parameter verwendet wird, mit dem das RSS-Skript ausgeführt wird. "Meine Berichte" ist außerdem keine Funktion des [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-SharePoint-Modus, und Elemente in den Ordnern können nicht in eine SharePoint-Umgebung kopiert werden. Das Skript kopiert daher keine Berichtselemente, die in den Ordnern "Meine Berichte" auf einem Berichtsserver im einheitlichen Modus Quelle befinden. Führen Sie die folgenden Schritte aus, um die Inhalte der "Meine Berichte"-Ordner mit diesem Skript zu migrieren:<br /><br /> (1) erstellen Sie neue Ordner im Berichts-Manager. Optional können Sie Ordner oder Unterordner für jeden Benutzer erstellen.<br /><br /> (2) melden Sie sich als einer der Benutzer mit Inhalten in "Meine Berichte".<br /><br /> (3) im Berichts-Manager, klicken Sie auf die **Meine Berichte** Ordner.<br /><br /> (4) klicken Sie auf die **Details** Ansicht für den Ordner.<br /><br /> (5) Wählen Sie jeden Bericht, den Sie kopieren möchten.<br /><br /> 6) klicken Sie auf **verschieben** auf der Symbolleiste des Berichts-Manager.<br /><br /> 7) Wählen Sie den gewünschten Zielordner aus.<br /><br /> 8) wiederholen Sie die Schritte 2 bis 7 für jeden Benutzer.<br /><br /> 9) führen Sie das Skript ein.|  
 |Verlauf|**Nein**|**Nein**||  
 |Verlaufseinstellungen|ja|ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Zeitpläne|ja|ja|Zum Migrieren von Zeitplänen muss der SQL Server-Agent auf dem Zielserver ausgeführt werden. Wenn der SQL Server-Agent auf dem Zielserver nicht ausgeführt wird, wird eine Fehlermeldung ähnlich wie in diesem Beispiel angezeigt:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -109,7 +109,7 @@ ms.locfileid: "36148995"
 |Abonnements|ja|ja||  
 |Verlaufseinstellungen|ja|ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Verarbeitungsoptionen|ja|ja||  
-|Optionen zur Cacheaktualisierung|ja|ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br /><br /> Migration des Abonnements speichern in \\\server\public\savedreports als TitleOnly... SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating processing options for report TitleOnly.rdl ... 0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|Optionen zur Cacheaktualisierung|ja|ja|Abhängige Einstellungen werden als Teil des Katalogelements migriert. Im Folgenden finden Sie die Beispielausgabe des Skripts, wenn ein Bericht (RDL) und dazugehörige Einstellungen wie Optionen zur Cacheaktualisierung migriert werden:<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br /><br /> Migrieren von Abonnements speichern in \\\server\public\savedreports as TitleOnly... SUCCESS<br /><br /> Migrating history settings for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating processing options for report TitleOnly.rdl ... 0 items found.<br /><br /> Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br /><br /> Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br /><br /> Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
 |Cacheaktualisierungspläne|ja|ja||  
 |Bilder|ja|ja||  
 |Berichtsteile|ja|ja||  
@@ -232,7 +232,7 @@ ms.locfileid: "36148995"
   
          `Report: /Reports/TitleOnly`  
   
--   Die SOURCE_URL und TARGET_URL muss gültige Berichtsserver-URLs, die auf den Quell- und Zielservern zeigen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichtsserver. Berichtsserver-URL im einheitlichen Modus:  
+-   Die quell_url und TARGET_URL muss gültige Berichtsserver-URLs, die auf den Quell- und Zielservern zeigen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichtsserver. Berichtsserver-URL im einheitlichen Modus:  
   
     -   `http://servername/reportserver`  
   

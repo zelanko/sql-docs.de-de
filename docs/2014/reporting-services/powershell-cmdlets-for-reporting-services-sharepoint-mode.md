@@ -1,5 +1,5 @@
 ---
-title: PowerShell-Cmdlets für Reporting Services-SharePoint-Modus | Microsoft Docs
+title: PowerShell-Cmdlets für SharePoint-Modus von Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a9ced7cb304b5cec0e329adc43f6572b45ebf19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29a9177685d94be437574e90a44a46a2391bcba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311362"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für SharePoint-Modus von Reporting Services
   Bei der Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus werden auch PowerShell-Cmdlets installiert, die Unterstützung für Berichtsserver im SharePoint-Modus bieten. Die Cmdlets decken drei Funktionalitätskategorien ab.  
   
--   Installation von die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gemeinsamer SharePoint-Diensts und -Proxys.  
+-   Installation von der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gemeinsamer SharePoint-Diensts und -Proxys.  
   
 -   Bereitstellung und Verwaltung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendungen und zugeordneten Proxys.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "36149850"
   
 -   [Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets](#bkmk_ssrsfeatures_cmdlets)  
   
--   [Basisbeispiele](#bkmk_basic_samples)  
+-   [Einfache Beispiele](#bkmk_basic_samples)  
   
 -   [Ausführliche Beispiele](#bkmk_detailedsamples)  
   
-    -   [Erstellen einer Reporting Services-dienstanwendung und eines Proxys](#bkmk_example_create_service_application)  
+    -   [Erstellen eines Reporting Services-dienstanwendung und -Proxys](#bkmk_example_create_service_application)  
   
     -   [Überprüfen Sie, und Aktualisieren einer Reporting Services-übermittlungserweiterung](#bkmk_example_delivery_extension)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36149850"
   
     -   [Auflisten der reporting services-datenerweiterungen – SharePoint-Modus](#bkmk_example_list_data_extensions)  
   
-    -   [Ändern und Aufführen von abonnementbesitzern](#bkmk_change_subscription_owner)  
+    -   [Ändern und Auflisten von abonnementbesitzern](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet-Zusammenfassung  
  Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starten von Windows PowerShell unter Windows Server](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx). In den folgenden Cmdlet-Zusammenfassungen verweisen die Verweise auf die Dienstanwendung "databases" auf sämtliche mit einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellten und von ihr verwendeten Datenbanken. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
@@ -68,7 +68,7 @@ ms.locfileid: "36149850"
   
  Eines der folgenden Probleme tritt auf:  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus nicht installiert ist und daher die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Cmdlets sind nicht installiert.  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus nicht installiert ist und daher die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Cmdlets nicht installiert sind.  
   
 -   Sie haben den PowerShell-Befehl in Windows PowerShell oder Windows PowerShell ISE statt in der SharePoint-Verwaltungsshell ausgeführt. Verwenden Sie die SharePoint-Verwaltungsshell, oder fügen Sie dem Windows PowerShell-Fenster mithilfe des folgenden Befehls das SharePoint-Snap-In hinzu:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36149850"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Weitere Informationen finden Sie unter [Verwenden von Windows PowerShell zur Verwaltung von SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx).  
+ Weitere Informationen finden Sie unter [mithilfe von Windows PowerShell zur Verwaltung von SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>So öffnen Sie die SharePoint-Verwaltungsshell und führen Cmdlets aus  
   
@@ -95,9 +95,9 @@ ms.locfileid: "36149850"
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installiert und registriert bzw. deinstalliert den gemeinsamen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienst. Dies kann nur auf dem Computer erfolgen, auf dem SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> (1) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst ist in der Farm installiert.<br /><br /> (2) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br />(1) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird auf dem aktuellen Computer deinstalliert.<br />(2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird aus der Farm deinstalliert.<br /><br /> <br /><br /> Hinweis: Es sind andere Computer in der Farm, die über die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst installiert ist, oder wenn es immer noch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dienstanwendungen, die in der Farm ausgeführt werden, eine Warnmeldung wird angezeigt.|  
+|Install-SPRSService|Installiert und registriert bzw. deinstalliert den gemeinsamen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienst. Dies kann nur auf dem Computer erfolgen, auf dem SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> (1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dienst in der Farm installiert ist.<br /><br /> (2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br />(1) die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird auf dem aktuellen Computer deinstalliert.<br />(2) der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst wird aus der Farm deinstalliert.<br /><br /> <br /><br /> Hinweis: Wenn andere Computer in der Farm, die die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienst installiert ist, oder wenn immer noch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dienstanwendungen, die in der Farm ausgeführt werden, es wird eine Warnmeldung angezeigt.|  
 |Install-SPRSServiceProxy|Installiert und registriert bzw. deinstalliert den Reporting Services-Dienstproxy in der SharePoint-Farm.|  
-|Get-SPRSProxyUrl|Ruft die URL(s) für den Zugriff auf die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dienst.|  
+|Get-SPRSProxyUrl|Ruft die URL(s) für den Zugriff auf die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Service.|  
 |Get-SPRSServiceApplicationServers|Ruft alle Server in der lokalen SharePoint-Farm ab, die eine Installation des gemeinsamen Diensts für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthalten. Dieses Cmdlet ist hilfreich für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Upgrades, um die Server zu ermitteln, auf denen der freigegebene Dienst ausgeführt wird und die folglich aktualisiert werden müssen.|  
   
 ###  <a name="bkmk_serviceapp_cmdlets"></a> Dienstanwendungs- und Proxy-Cmdlets  
@@ -112,13 +112,13 @@ ms.locfileid: "36149850"
 |New-SPRSServiceApplicationProxy|Erstellt einen neuen Proxy für die Reporting Services-Dienstanwendung.|  
 |Get-SPRSServiceApplicationProxy|Ruft eine oder mehrere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungsproxy.|  
 |Dismount-SPRSDatabase|Hebt die Einbindung der Dienstanwendungsdatenbank für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung auf.|  
-|Remove-SPRSDatabase|Entfernen Sie die dienstanwendungsdatenbanken für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.|  
+|Remove-SPRSDatabase|Entfernt die dienstanwendungs-Datenbanken für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.|  
 |Set-SPRSDatabase|Legt die Eigenschaften der einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung zugeordneten Datenbanken fest.|  
 |Mount-SPRSDatabase|Bindet Datenbanken für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.|  
-|New-SPRSDatabase|Erstellen Sie neue dienstanwendungsdatenbanken für die angegebene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.|  
+|New-SPRSDatabase|Erstellen Sie neue dienstanwendungs-Datenbanken für die angegebene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.|  
 |Get-SPRSDatabaseCreationScript|Gibt für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung das Datenbankerstellungsskript auf dem Bildschirm aus. Sie können dann das Skript in SQL Server Management Studio ausführen.|  
 |Get-SPRSDatabase|Ruft mindestens eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendungsdatenbank ab. Rufen Sie über den Befehl die ID der Dienstanwendungsdatenbank ab, damit Sie anhand des Set-SPRSDatabase-Cmdlets Eigenschaften ändern können, beispielsweise das `querytimeout`. Sehen Sie sich das Beispiel unter dem Thema [Abrufen und Festlegen von Eigenschaften der Reporting Services-Anwendungsdatenbank, z. B. Timeout der Datenbank](#bkmk_example_db_properties).|  
-|Get-SPRSDatabaseRightsScript|Gibt das Skript für Datenbankrechte auf dem Bildschirm für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung. Es fordert die Eingabe des gewünschten Benutzers und der Datenbank und gibt dann Transact-SQL zurück, das zum Ändern von Berechtigungen ausgeführt werden kann. Sie können dann dieses Skript in SQL Server Management Studio ausführen.|  
+|Get-SPRSDatabaseRightsScript|Gibt das Datenbankrechte-Skript zum Bildschirm für die ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung. Es fordert die Eingabe des gewünschten Benutzers und der Datenbank und gibt dann Transact-SQL zurück, das zum Ändern von Berechtigungen ausgeführt werden kann. Sie können dann dieses Skript in SQL Server Management Studio ausführen.|  
 |Get-SPRSDatabaseUpgradeScript|Gibt ein Datenbankupgradeskript auf dem Bildschirm aus. Das Skript führt ein Upgrade der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken auf die Datenbankversion der aktuellen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation durch.|  
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets  
@@ -135,8 +135,8 @@ ms.locfileid: "36149850"
 |Get-SPRSExtension|Ruft eine oder mehrere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Erweiterungen für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung.<br /><br /> Gültige Werte sind:<br /><br /> **Übermittlung**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **Authentifizierung**<br /><br /> **EventProcessing**<br /><br /> **Berichtselemente**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Ruft die SharePoint-Websites abhängig davon ab, ob die Funktion "ReportingService" aktiviert ist. Standardmäßig werden Websites zurückgegeben, für die die Funktion "ReportingService" aktiviert ist.|  
   
-##  <a name="bkmk_basic_samples"></a> Basisbeispiele  
- Gibt eine Liste von Cmdlets zurück, die "SPRS" im Namen enthalten. Dies ist die vollständige Liste der wird [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Cmdlets.  
+##  <a name="bkmk_basic_samples"></a> Einfache Beispiele  
+ Gibt eine Liste von Cmdlets zurück, die "SPRS" im Namen enthalten. Dadurch werden die vollständige Liste der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Cmdlets.  
   
 ```  
 Get-command –noun *SPRS*  
@@ -173,7 +173,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 ##  <a name="bkmk_detailedsamples"></a> Ausführliche Beispiele  
  Zusätzlich zu den folgenden Beispielen finden Sie weitere Beispiele im Abschnitt "Windows PowerShell-Skript" im Thema [Windows PowerShell script for Steps 1–4](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_full_script).  
   
-###  <a name="bkmk_example_create_service_application"></a> Erstellen einer Reporting Services-dienstanwendung und eines Proxys  
+###  <a name="bkmk_example_create_service_application"></a> Erstellen eines Reporting Services-dienstanwendung und -Proxys  
  Dieses Beispielskript führt die folgenden Tasks aus:  
   
 1.  Erstellt eine Reporting Services-Dienstanwendung und einen entsprechenden Proxy. Das Skript geht davon aus, dass der Anwendungspool "Mein Anwendungspool" bereits vorhanden ist.  
@@ -300,12 +300,12 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
      `SHAREPOINTLIST          Data`  
   
-###  <a name="bkmk_change_subscription_owner"></a> Ändern und Aufführen von abonnementbesitzern  
+###  <a name="bkmk_change_subscription_owner"></a> Ändern und Auflisten von abonnementbesitzern  
  Siehe [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex-SharePoint-Verwaltungs-PowerShell-Skripts](http://sharepointpsscripts.codeplex.com/)   
  [Verwalten von SSRS mit PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

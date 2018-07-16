@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320290"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren eine Teilmenge der Administratorfunktionen ausführen, die in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung verfügbar sind.  
@@ -37,7 +37,7 @@ ms.locfileid: "36059850"
   
 |Taskbeschreibung|Tool|Thema|  
 |----------------------|----------|-----------|  
-|Erstellen von Modellen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen Sie ein Modell &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|Erstellen von Modellen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen eines Modells &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
 |Erstellen einer Entität|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, Webdienst oder [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Erstellen einer Entität &#40;MDS-Add-In für Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |Erstellen eines domänenbasierten Attributs|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, Webdienst oder [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Erstellen von Attributgruppen|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung oder Webdienst|[Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  

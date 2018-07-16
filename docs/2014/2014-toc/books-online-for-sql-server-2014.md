@@ -1,7 +1,8 @@
 ---
-title: Onlinedokumentation für SQLServer 2014 | Microsoft Docs
+title: Onlinedokumentation für SQLServer 2014 | Microsoft-Dokumentation
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
+ms.technology: release-landing
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -17,19 +18,18 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92236bc057996a66ca12484e03154d91a1bbbd58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232532"
 ---
 # Onlinedokumentation für SQLServer 2014
-  Willkommen beim [!INCLUDE[msCoName](../includes/msconame-md.md)]®-Onlinedokumentation für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Die Onlinedokumentation enthält die Taskbeschreibungen und die Referenzdokumentation, die die Ausführung von Datenverwaltungs- und Business Intelligence-Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschreiben.  
+  Willkommen bei [!INCLUDE[msCoName](../includes/msconame-md.md)]®-Onlinedokumentation für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Die Onlinedokumentation enthält die Taskbeschreibungen und die Referenzdokumentation, die die Ausführung von Datenverwaltungs- und Business Intelligence-Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschreiben.  
   
  **Probieren Sie es aus:**  
  ![Azure Virtual Machine (klein)](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2014 Service Pack 1 (SP1) bereits installiert ist. Weitere Informationen zu SQL Server 2014 (SP1) finden Sie in den [Versionsinformationen zu SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865). 
@@ -39,7 +39,7 @@ ms.locfileid: "36161252"
   
 |||  
 |-|-|  
-|![Symbol für Datenbank-Engine](media/database-engine.gif "Datenbankmodul – Symbol")|[Datenbank-Engine](../database-engine/sql-server-database-engine-overview.md)<br /><br /> Die Datenbank-Engine ist der Hauptdienst für das Speichern, Verarbeiten und Sichern von Daten. Die Datenbank-Engine stellt kontrollierten Zugriff und schnelle Transaktionsverarbeitung bereit. So können Sie auch hohe Anforderungen von Daten verarbeitenden Anwendungen in Ihrem Unternehmen zu erfüllen. Die Datenbank-Engine stellt darüber hinaus vielfältige Unterstützung für die Aufrechterhaltung von Hochverfügbarkeit bereit.|  
+|![Datenbank-Engine – Symbol](media/database-engine.gif "-Datenbank-Engine – Symbol")|[Datenbank-Engine](../database-engine/sql-server-database-engine-overview.md)<br /><br /> Die Datenbank-Engine ist der Hauptdienst für das Speichern, Verarbeiten und Sichern von Daten. Die Datenbank-Engine stellt kontrollierten Zugriff und schnelle Transaktionsverarbeitung bereit. So können Sie auch hohe Anforderungen von Daten verarbeitenden Anwendungen in Ihrem Unternehmen zu erfüllen. Die Datenbank-Engine stellt darüber hinaus vielfältige Unterstützung für die Aufrechterhaltung von Hochverfügbarkeit bereit.|  
 |![DQS-Logo für startthema](media/dqs-logo.jpg "DQS-Logo für startthema")|[Data Quality Services](../data-quality-services/data-quality-services.md)<br /><br /> SQL Server Data Quality Services (DQS) stellt eine wissensgesteuerte Datenbereinigungslösung bereit. DQS ermöglicht das Erstellen einer Knowledge Base und die anschließende Verwendung dieser Knowledge Base zum Durchführen der Datenkorrektur und Deduplizierung für Ihre Daten mithilfe von computerunterstützten und interaktiven Mitteln. Sie können Cloud-basierte Verweisdatendienste verwenden und eine Datenverwaltungslösung erstellen, die DQS in SQL Server Integration Services und Master Data Services integriert.|  
 |![Symbol für Analysis Services](media/analysisserver.gif "Analysis Services (Symbol)")|[Analysis Services](../analysis-services/analysis-services.md)<br /><br /> [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist eine Plattform für analytische Daten und ein Business Intelligence-Toolset für Einzelpersonen, Teams und Unternehmen. Server und Client-Designer unterstützen herkömmliche OLAP-Lösungen, neue Tabellenmodellierungslösungen sowie Self-Service-Funktionen für die Analyse und Zusammenarbeit mit PowerPivot, Excel und einer SharePoint Server-Umgebung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ermöglicht zudem Data Mining, damit Sie die Muster und Beziehungen erkennen können, die in großen Datenvolumen versteckt sind.|  
 |![Integration Services (Symbol)](media/dts.gif "Integration Services (Symbol)")|[Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform für das Entwickeln von Hochleistungslösungen im Bereich Datenintegration, einschließlich Paketen zum Extrahieren, Transformieren und Laden (ETL) von Daten für den Data Warehouse-Betrieb.|  
@@ -58,11 +58,11 @@ ms.locfileid: "36161252"
   
 -   [SQL Server-TechCenter](http://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=42457)  
   
 -   [Data Platform Developer Center](http://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## Siehe auch  
  [Hilfe zu SQL Server-Konfigurations-Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

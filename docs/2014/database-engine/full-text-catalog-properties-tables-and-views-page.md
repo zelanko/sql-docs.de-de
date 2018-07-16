@@ -1,27 +1,26 @@
 ---
-title: Volltextkatalog-Eigenschaften (Seite Tabellen und Sichten) | Microsoft Docs
+title: Volltextkatalog-Eigenschaften (Seite Tabellen und Sichten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0954fcb44358599314c9993fa53fcfad8dec73ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0e73607bf54d066c0328ae45785151ceaa2cca1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298912"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Volltextkatalog-Eigenschaften (Seite „Tabellen und Sichten“)
   In diesem Dialogfeld können Sie die Tabellen und Sichten anzeigen oder bearbeiten, die dem Volltextkatalog zugewiesen sind.  
@@ -49,7 +48,7 @@ ms.locfileid: "36161403"
 |-|-|  
 |**Verfügbare Spalten**|Zeigt alle volltextindizierten Spalten an. Aktivieren Sie ein Kontrollkästchen, um eine Spalte zum Volltextindex hinzuzufügen.|  
 |**Sprache für die Wörtertrennung**|Zeigt die Sprache des Worttrennmoduls an.|  
-|**Spalte mit dem Datentyp**|Listet den Namen der Spalte in der Tabelle, die den Dokumenttyp der Spalte in aufgeführten enthält **verfügbaren Spalten** , wenn die Spalte ist eine `varbinary(max)` oder `image` Spalte.|  
+|**Datentypspalte**|Listet den Namen der Spalte in der Tabelle, die den Dokumenttyp aufgeführten Spalte enthält **verfügbaren Spalten** Wenn die Spalte ist eine `varbinary(max)` oder `image` Spalte.|  
 |**Statistische Semantik**|Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.|  
   
 ## <a name="track-changes"></a>Nachverfolgen von Änderungen  
@@ -57,7 +56,7 @@ ms.locfileid: "36161403"
 |||  
 |-|-|  
 |**Automatic**|Der Volltextindex wird automatisch aktualisiert, wenn in der zugrunde liegenden Tabelle Daten geändert, hinzugefügt oder gelöscht werden.|  
-|**Manuell**|Wenn Daten geändert, hinzugefügt oder werden, in den indizierten Daten gelöscht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Änderungen verfolgt werden. Wenn für die Nachverfolgung von Änderungen die Option **Manuell** aktiviert ist, werden die Änderungen nicht automatisch in den Index übernommen. Stattdessen ein Administrator kann die Änderungen manuell anzuwenden mithilfe einer [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) Anweisung.|  
+|**Manuell**|Wenn Daten geändert, hinzugefügt oder werden, in den indizierten Daten gelöscht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfolgt die Änderungen. Wenn für die Nachverfolgung von Änderungen die Option **Manuell** aktiviert ist, werden die Änderungen nicht automatisch in den Index übernommen. Stattdessen ein Administrator kann die Änderungen manuell anzuwenden mithilfe einer [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) Anweisung.|  
 |**Änderungen nicht nachverfolgen**|Wenn diese Option aktiviert ist, werden Änderungen an den indizierten Daten im Katalog nicht aufgezeichnet. Ein Administrator muss den Index mithilfe von ALTER FULLTEXT INDEX mit FULL POPULATION oder INCREMENTAL POPULATION erstellen.|  
   
 ## <a name="see-also"></a>Siehe auch  

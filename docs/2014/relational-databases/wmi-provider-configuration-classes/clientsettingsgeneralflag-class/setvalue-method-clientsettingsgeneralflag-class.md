@@ -1,5 +1,5 @@
 ---
-title: SetValue-Methode (ClientSettingsGeneralFlag-Klasse) | Microsoft Docs
+title: SetValue-Methode (ClientSettingsGeneralFlag-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3548492e83a9e9273901d9107ec2a1cd6fc8e80b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 668da5e97862fb27b9051e71be60d74713951d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297870"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue-Methode (ClientSettingsGeneralFlag-Klasse)
   Legt alle Werte des Flags fest, auf das verwiesen wird.  
@@ -55,7 +55,7 @@ Value
 |*ReplTest1*|Ein boleescher Wert, der den Wert des Flags angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

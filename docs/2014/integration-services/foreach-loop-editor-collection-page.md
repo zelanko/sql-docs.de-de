@@ -1,5 +1,5 @@
 ---
-title: Foreach-Schleifen-Editor (Seite "Sammlung") | Microsoft Docs
+title: Foreach-Schleifen-Editor (Seite Auflistung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318880"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach-Schleifen-Editor (Seite Auflistung)
   Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor**, um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
@@ -42,7 +42,7 @@ ms.locfileid: "36151193"
 |**Foreach-NodeList-Enumerator**|Zählt Knoten in einem XML-Dokument auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-NodeList-Enumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-SMO-Enumerator**|Zählt ein SMO-Objekt auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-SMO-Enumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-Azure-Blob-Enumerator**|Auflisten von Blob-Dateien am angegebenen Blob-Speicherort. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Foreach-Azure-Blob-Enumerator**angezeigt.|  
-|**Foreach-ADLS-Datei-Enumerator**|Auflisten von Dateien auf ADLS mit Filtern. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADLS-Datei-Enumerator** die dynamischen Optionen angezeigt.|
+|**Foreach-ADLS-Datei-Enumerator**|Auflisten von Dateien, die Azure Data Lake Store mit Filtern. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-ADLS-Datei-Enumerator** die dynamischen Optionen angezeigt.|
   
  **Ausdrücke**  
  Klicken Sie auf die Option **Ausdrücke** , oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um einer Enumeratoreigenschaft einen Eigenschaftsausdruck hinzuzufügen, oder um einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
@@ -165,7 +165,7 @@ ms.locfileid: "36151193"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach-NodeList-Enumerator  
  Mithilfe des Foreach-Nodelist-Enumerators wird der XML-Knotensatz, der das Ergebnis der Anwendung eines XPath-Ausdrucks auf eine XML-Datei ist, aufgezählt. Wenn die Foreach-Schleife einen Skripttask enthält, können Sie mit dem Foreach-NodeList-Enumerator einen Wert, der den Kriterien des XPath-Ausdrucks entspricht, von der XML-Datei an den Skripttask übergeben.  
   
- Der XPath-Ausdruck, der auf die XML-Datei angewendet wird, ist der in der OuterXPathString-Eigenschaft gespeicherte äußere XPath-Vorgang. Wenn der XPath-Enumerationstyp, um festgelegt ist `ElementCollection`, der Foreach-NodeList-Enumerator einen inneren XPath-Ausdruck, in der InnerXPathString-Eigenschaft, um eine Auflistung von Elementen gespeichert anwenden kann.  
+ Der XPath-Ausdruck, der auf die XML-Datei angewendet wird, ist der in der OuterXPathString-Eigenschaft gespeicherte äußere XPath-Vorgang. Wenn der XPath-Enumerationstyp, um festgelegt ist `ElementCollection`, kann anwenden, der Foreach-NodeList-Enumerator einen inneren XPath-Ausdruck, in der InnerXPathString-Eigenschaft, um eine Auflistung von Elementen gespeichert.  
   
  Weitere Informationen zum Arbeiten mit XML-Dokumenten und Daten finden Sie unter "[XML im .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in der MSDN Library.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36151193"
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Wenn **EnumerationType** festgelegt ist, um `ElementCollection`, wählen Sie den Typ des inneren Elements in der Liste.  
+ Wenn **EnumerationType** nastaven NA hodnotu `ElementCollection`, wählen Sie den Typ des inneren Elements in der Liste.  
   
  **InnerXPathStringSourceType**  
  Wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
@@ -277,17 +277,17 @@ ms.locfileid: "36151193"
   
  **Blob-Zeitbereichsfilter „von/bis“**  
  Geben Sie einen Filter für den Zeitbereich an. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, werden aufgezählt.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerator = foreach-ADLS-Datei-Enumerator  
-Die **ADLS-Dateienumerator** ermöglicht einem SSIS-Paket zum Aufzählen von Dateien auf ADLS mit Filtern. Der Schrägstrich (`/`) – mit Präfix vollständiger Pfad der aufgelisteten Dateien in einer Variablen gespeichert und in Aufgaben innerhalb des foreach-Schleifencontainers verwendet werden kann.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerator = Foreach-ADLS-Datei-Enumerator  
+Die **ADLS-Dateienumerator** ermöglicht einem SSIS-Paket zum Aufzählen von Dateien, die Azure Data Lake Store mit Filtern. Der Schrägstrich (`/`) – mit Präfix vollständiger Pfad der aufgelisteten Dateien in einer Variablen gespeichert und in Aufgaben innerhalb des Foreach-Schleifencontainers verwendet werden kann.
   
 **AzureDataLakeConnection**  
 Gibt einen Azure Data Lake-Verbindungs-Manager an oder erstellt einen neuen, der auf ein ADLS-Konto verweist.   
   
 **AzureDataLakeDirectory**  
-Gibt den ADLS zu durchsuchende Verzeichnis an.
+Gibt das ADLS-Verzeichnis zu suchen.
   
 **FileNamePattern**  
-Gibt einen Dateinamensfilter an. Nur Dateien, deren Name mit das angegebene Muster übereinstimmt, werden, aufgezählt. Die Platzhalterzeichen `*` und `?` werden unterstützt. 
+Gibt einen Dateinamensfilter an. Nur Dateien, deren Name mit dem angegebenen Muster übereinstimmt, werden aufgezählt werden. Die Platzhalterzeichen `*` und `?` werden unterstützt. 
   
 **SearchRecursively**  
 Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.  

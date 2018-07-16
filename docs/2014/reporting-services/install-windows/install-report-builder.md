@@ -1,5 +1,5 @@
 ---
-title: Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator) | Microsoft Docs
+title: Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 599f5aef18b38070d1543de351d0f99b68b4596e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0fb9e6b43faf8b3ff7e0b91ccb500b94547436aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305080"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installieren der eigenständigen Version des Berichts-Generators (Berichts-Generator)
-  Sie können den Berichts-Generator aus installieren der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature Packs der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) oder an einem Speicherort wie z. B. Öffentliche Ordner auf dem die Datei "reportbuilder3_x86.msi", die Windows Installer-Paket für den Berichts-Generator, hat heruntergeladen wurde.  
+  Sie können den Berichts-Generator über installieren die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature Packs der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) oder an einem Speicherort wie für Öffentliche Ordner, der die Datei "reportbuilder3_x86.msi", das Windows Installer-Paket für den Berichts-Generator verfügt über, heruntergeladen wurde.  
   
  Sie können auch eine Befehlszeileninstallation des Berichts-Generators ausführen und Argumente angeben, um die Installation anzupassen. Neben den systeminternen MSI-Standardparametern können Sie die vom Berichts-Generator bereitgestellten benutzerdefinierten Parameter "RBINSTALLDIR" und "REPORTSERVERURL" verwenden. "RBINSTALLDIR" dient zum Angeben des Stamminstallationsordners für den Berichts-Generator. Mit "REPORTSERVERURL" wird der Standardberichtsserver angegeben, der vom Berichts-Generator zum Speichern von Berichten auf dem Server verwendet wird.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "36159109"
   
 2.  Klicken Sie auf **X86 Paket**.  
   
-3.  In der **Dateidownload** (Dialogfeld), klicken Sie auf **ausführen**.  
+3.  In der **Dateidownload** Dialogfeld klicken Sie auf **ausführen**.  
   
     > [!IMPORTANT]  
     >  Laden Sie nur Dateien aus vertrauenswürdigen Quellen herunter.  
   
-4.  Klicken Sie im Dialogfeld Internet Explorer auf **ausführen**.  
+4.  Klicken Sie in der Internet Explorer-Dialogfeld auf **ausführen**.  
   
     > [!IMPORTANT]  
     >  Führen Sie nur Dateien aus vertrauenswürdigen Quellen aus.  
@@ -51,18 +51,18 @@ ms.locfileid: "36159109"
   
 6.  Auf der **Willkommen beim Installations-Assistenten** auf **Weiter**.  
   
-7.  Auf der **Lizenzvertrag** Seite lesen Sie den Lizenzvertrag, und wählen Sie dann die **ich stimme den Bedingungen des Lizenzvertrags** Option. Klicken Sie auf **Weiter**.  
+7.  Auf der **-Software-Lizenzbedingungen** Seite, lesen Sie den Lizenzvertrag, und wählen Sie dann die **ich stimme den Bedingungen des Lizenzvertrags** Option. Klicken Sie auf **Weiter**.  
   
 8.  Geben Sie Ihren Namen und den Firmennamen an. Klicken Sie auf **Weiter**.  
   
-9. Auf der **Funktionsauswahl** Seite klicken Sie optional auf **Durchsuchen** oder **Speicherplatz**. Klicken Sie auf **Weiter**.  
+9. Auf der **Funktionsauswahl** Seite, klicken Sie optional auf **Durchsuchen** oder **Speicherplatz**. Klicken Sie auf **Weiter**.  
   
-    -   Klicken Sie auf **Durchsuchen** auf das Standardverzeichnis des Berichts-Generator und zu aktualisieren.  
+    -   Klicken Sie auf **Durchsuchen** auf den Standardspeicherort von Berichts-Generator und zu aktualisieren.  
   
         > [!NOTE]  
         >  Der Standardinstallationsordner für Berichts-Generator ist \<Laufwerk > Programme\Microsoft SQL Server.  
   
-    -   Klicken Sie auf **Speicherplatz** um zu erfahren, wie viel Speicherplatz Berichts-Generator nutzt.  
+    -   Klicken Sie auf **Speicherplatz** , erfahren, wie viel Speicherplatz Berichts-Generator nutzt.  
   
         > [!NOTE]  
         >  Wenn ein Volume nicht genügend freien Speicherplatz hat, wird das Volume hervorgehoben.  
@@ -70,7 +70,7 @@ ms.locfileid: "36159109"
 10. Geben Sie optional auf der Seite **Standardzielserver** die URL zu dem Zielberichtsserver an, wenn nicht der Standardserver verwendet wird. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    >  Wenn Sie den Berichts-Generator mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Aber Sie können hierzu auch die **Optionen** (Dialogfeld), wenn Sie im Berichts-Generator arbeiten.  
+    >  Wenn Sie den Berichts-Generator mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Aber Sie können hierzu auch die **Optionen** im Dialogfeld, wenn Sie im Berichts-Generator arbeiten.  
   
 11. Klicken Sie auf **installieren** zum Abschließen der Installation von Berichts-Generator.  
   
@@ -84,18 +84,18 @@ ms.locfileid: "36159109"
   
 3.  Auf der **Willkommen beim Installations-Assistenten** auf **Weiter**.  
   
-4.  Auf der **Lizenzvertrag** Seite lesen Sie den Lizenzvertrag, und wählen Sie dann die **ich stimme den Bedingungen des Lizenzvertrags** Option. Klicken Sie auf **Weiter**.  
+4.  Auf der **-Software-Lizenzbedingungen** Seite, lesen Sie den Lizenzvertrag, und wählen Sie dann die **ich stimme den Bedingungen des Lizenzvertrags** Option. Klicken Sie auf **Weiter**.  
   
 5.  Geben Sie Ihren Namen und den Firmennamen an. Klicken Sie auf **Weiter**.  
   
-6.  Auf der **Funktionsauswahl** Seite klicken Sie optional auf **Durchsuchen** oder **Speicherplatz**. Klicken Sie auf **Weiter**.  
+6.  Auf der **Funktionsauswahl** Seite, klicken Sie optional auf **Durchsuchen** oder **Speicherplatz**. Klicken Sie auf **Weiter**.  
   
-    -   Klicken Sie auf **Durchsuchen** auf das Standardverzeichnis des Berichts-Generator und zu aktualisieren.  
+    -   Klicken Sie auf **Durchsuchen** auf den Standardspeicherort von Berichts-Generator und zu aktualisieren.  
   
         > [!NOTE]  
         >  Der Standardinstallationsordner für Berichts-Generator ist \<Laufwerk > Programme\Microsoft SQL Server.  
   
-    -   Klicken Sie auf **Speicherplatz** um zu erfahren, wie viel Speicherplatz Berichts-Generator nutzt.  
+    -   Klicken Sie auf **Speicherplatz** , erfahren, wie viel Speicherplatz Berichts-Generator nutzt.  
   
         > [!NOTE]  
         >  Wenn ein Volume nicht genügend freien Speicherplatz hat, wird das Volume hervorgehoben.  
@@ -103,7 +103,7 @@ ms.locfileid: "36159109"
 7.  Geben Sie optional auf der Seite **Standardzielserver** die URL zu dem Zielberichtsserver an, wenn nicht der Standardserver verwendet wird. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    >  Wenn Sie den Berichts-Generator mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Aber Sie können hierzu auch die **Optionen** (Dialogfeld), wenn Sie im Berichts-Generator arbeiten.  
+    >  Wenn Sie den Berichts-Generator mit einer Verbindung zu einem Berichtsserver verwenden möchten, geben Sie die URL zu dem Server jetzt an. Aber Sie können hierzu auch die **Optionen** im Dialogfeld, wenn Sie im Berichts-Generator arbeiten.  
   
 8.  Klicken Sie auf **installieren** zum Abschließen der Installation von Berichts-Generator.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36159109"
   
 3.  Klicken Sie auf Speichern.  
   
-4.  Optional, navigieren Sie zum Speicherort zu speichern, überprüfen die **speichern als** Option ist **Windows Installer-Paket**, und klicken Sie dann auf **speichern**.  
+4.  Optional: Navigieren Sie zum gewünschten Speicherort speichern, stellen Sie sicher die **speichern als** Option **Windows Installer-Paket**, und klicken Sie dann auf **speichern**.  
   
 5.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36159109"
 9. Um den Befehl auszuführen, drücken Sie die EINGABETASTE.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren, deinstallieren und Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
+ [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
  [Deinstallieren der eigenständigen Version des Berichts-Generators &#40;Berichts-Generator&#41;](install-report-builder.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: RestrictionList-Element (XMLA) | Microsoft Docs
+title: RestrictionList-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RestrictionList element
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 081722ea3a5bf001b22f8c193cd5530a37809e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 045c5644608c7f9537124450ef2c5637eebbb796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314590"
 ---
 # <a name="restrictionlist-element-xmla"></a>RestrictionList-Element (XMLA)
   Enthält eine Sammlung von Einschränkungsspalten und Werten, die von der [Discover](../xml-elements-methods-discover.md) -Methode verwendet werden.  

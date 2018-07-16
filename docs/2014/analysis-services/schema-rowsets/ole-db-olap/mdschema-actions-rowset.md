@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_ACTIONS-Rowsets | Microsoft Docs
+title: MDSCHEMA_ACTIONS-Rowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b3e3a4c91d998e0ba0459577f1e0b469ec7f78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319370"
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS-Rowset
   Beschreibt die Aktionen, die der Clientanwendung möglicherweise zur Verfügung stehen.  
@@ -43,11 +43,11 @@ ms.locfileid: "36159654"
 |`ACTION_TYPE`|`DBTYPE_I4`||Eine Bitmap, die verwendet wird, um die Triggermethode der Aktion anzugeben. Die Datei Msmd.h definiert die folgenden Bitwertkonstanten für diese Bitmap:<br /><br /> -   `MDACTION_TYPE_URL` (`0x01`)<br />-   `MDACTION_TYPE_HTML` (`0x02`)<br />-   `MDACTION_TYPE_STATEMENT` (`0x04`)<br />-   `MDACTION_TYPE_DATASET` (`0x08`)<br />-   `MDACTION_TYPE_ROWSET` (`0x10`)<br />-   `MDACTION_TYPE_COMMANDLINE` (`0x20`)<br />-   `MDACTION_TYPE_PROPRIETARY` (`0x40`)<br />-   `MDACTION_TYPE_REPORT` (`0x80`)<br />-   `MDACTION_TYPE_DRILLTHROUGH` (`0x100`)|  
 |`COORDINATE`|`DBTYPE_WSTR`||Ein MDX-Ausdruck (Multidimensional Expressions), der ein Objekt oder eine Koordinate im mehrdimensionalen Raum angibt, in dem die Aktion ausgeführt wird. Die Clientanwendung ist für die Bereitstellung des Werts für diese Einschränkungsspalte zuständig.<br /><br /> `CORDINATE` muss in das Objekt aufgelöst werden, das in `COORDINATE_TYPE` angegeben ist.|  
 |`COORDINATE_TYPE`|`DBTYPE_I4`||Eine Bitmap, die angibt, wie die `COORDINATE`-Einschränkungsspalte interpretiert wird. Die Datei Msmd.h definiert die folgenden Bitwertkonstanten für diese Bitmap:<br /><br /> -   `MDACTION_COORDINATE_CUBE` (`1`)<br />-   `MDACTION_COORDINATE_DIMENSION` (`2`)<br />     Bezieht sich auf die Dimensionshierarchien.<br />-   `MDACTION_COORDINATE_LEVEL` (`3`)<br />-   `MDACTION_COORDINATE_MEMBER` (`4`)<br />-   `MDACTION_COORDINATE_SET` (`5`)<br />-   `MDACTION_COORDINATE_CELL` (`6`)|  
-|`ACTION_CAPTION`|`DBTYPE_WSTR`||Der Aktionsname, wenn in der DDL keine Beschriftung und keine Übersetzungen angegeben wurden.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden und `CaptionIsMDX` den Wert False enthält, wird eine der folgenden Zeichenfolgen verwendet:<br /><br /> -Die Übersetzung für die entsprechende Sprache.<br />-Die angegebene Beschriftung, wenn keine Übersetzung für die angegebene Sprache gefunden wurde.<br />– Der Aktionsname, wenn keine Übersetzung gefunden und der Beschriftung wurde nicht im DDL-Code angegeben.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden und `CaptionIsMDX` den Wert True enthält, die Zeichenfolge, die aus der Suche nach der entsprechenden Übersetzung für die angegebene Sprache oder die in der DDL-Beschriftung angegebene Übersetzung und die Berechnung der Formel zur Erstellung der Zeichenfolge resultiert.<br /><br /> Wenn die Aktion im MDX-Skript angegeben wurde, gibt es keine Übersetzungen und die Beschriftung wird stets als MDX-Ausdruck behandelt.|  
+|`ACTION_CAPTION`|`DBTYPE_WSTR`||Der Aktionsname, wenn in der DDL keine Beschriftung und keine Übersetzungen angegeben wurden.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden und `CaptionIsMDX` den Wert False enthält, wird eine der folgenden Zeichenfolgen verwendet:<br /><br /> – Die Übersetzung für die entsprechende Sprache.<br />– Der angegebenen Beschriftung, wenn keine Übersetzung für die angegebene Sprache gefunden wurde.<br />– Der Aktionsname, wenn keine Übersetzung gefunden und der Beschriftung wurde nicht im DDL-Code angegeben.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden und `CaptionIsMDX` den Wert True enthält, die Zeichenfolge, die aus der Suche nach der entsprechenden Übersetzung für die angegebene Sprache oder die in der DDL-Beschriftung angegebene Übersetzung und die Berechnung der Formel zur Erstellung der Zeichenfolge resultiert.<br /><br /> Wenn die Aktion im MDX-Skript angegeben wurde, gibt es keine Übersetzungen und die Beschriftung wird stets als MDX-Ausdruck behandelt.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Eine benutzerfreundliche Beschreibung der Aktion.|  
 |`CONTENT`|`DBTYPE_WSTR`||Der Ausdruck oder Inhalt der Aktion, die ausgeführt werden soll.|  
 |`APPLICATION`|`DBTYPE_WSTR`||Der Name der Anwendung, die zur Ausführung der Aktion verwendet werden soll.|  
-|`INVOCATION`|`DBTYPE_I4`||Informationen darüber, wie die Aktion aufgerufen werden soll:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) gibt eine reguläre, während normaler Vorgänge verwendete Aktion an. Dies ist der Standardwert für diese Spalte.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) gibt an, dass die Aktion ausgeführt werden soll, wenn der Cube erstmalig geöffnet wird.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) gibt an, dass die Aktion, als Teil eines Batchvorgangs ausgeführt wird oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Aufgabe.<br /><br /> Diese Enumerationswerte sind in der Datei Msmd.h definiert.|  
+|`INVOCATION`|`DBTYPE_I4`||Informationen darüber, wie die Aktion aufgerufen werden soll:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) gibt eine reguläre Aktion, die während des normalen Betriebs verwendet. Dies ist der Standardwert für diese Spalte.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) gibt an, dass die Aktion ausgeführt werden soll, wenn der Cube erstmalig geöffnet wird.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) gibt an, dass die Aktion, als Teil eines Batchvorgangs ausgeführt wird oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Aufgabe.<br /><br /> Diese Enumerationswerte sind in der Datei Msmd.h definiert.|  
   
  Das Rowset wird sortiert nach `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `ACTION_NAME`.  
   

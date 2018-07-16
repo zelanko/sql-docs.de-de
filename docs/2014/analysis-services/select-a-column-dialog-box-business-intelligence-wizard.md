@@ -1,5 +1,5 @@
 ---
-title: Auswählen einer Spalte (Dialogfeld) (Business Intelligence-Assistent) | Microsoft Docs
+title: Auswählen einer Spalte (Dialogfeld) (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.columnselection.f1
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69400a145f24e6aa09a7f66868e76863ecebf71d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5267a67bcf89cb386731f612952ae661defde9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317020"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>Spalte auswählen (Dialogfeld) (Business Intelligence-Assistent)
   Im Dialogfeld **Spalte auswählen** können Sie eine Spalte aus der Liste der in Strukturansicht angezeigten Tabellen auswählen. Das Dialogfeld wird vom Business Intelligence-Assistenten geöffnet.  

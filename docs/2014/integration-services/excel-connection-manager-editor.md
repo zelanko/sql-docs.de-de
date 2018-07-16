@@ -1,5 +1,5 @@
 ---
-title: Excel-Verbindungs-Manager-Editor | Microsoft Docs
+title: Verbindungs-Manager-Editor für Excel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9396c9fe0a04dd7cf8c3f8e408ea22e83dc1c3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c7a601344f28f99a31adb9d635c44e9cca85471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287636"
 ---
 # <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
@@ -38,7 +38,7 @@ ms.locfileid: "36162523"
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei (XLS-Datei) ein.  
   
 > [!WARNING]  
->  Die **Ziel-Editor für Excel** erstellt automatisch die Excel-Datei aus, bei der Auswahl einer **Excel-Verbindung** , verweist auf einen neuen/nicht vorhandenen Datei, und klicken Sie dann auf **neu** für **Name der Excel-Tabelle**.  
+>  Die **Ziel-Editor für Excel** die Excel-Datei automatisch erstellt, bei der Auswahl einer **Excel-Verbindung** verweist auf einen neuen/nicht vorhandenen Datei, und klicken Sie auf **neu** für **Name der Excel-Tabelle**.  
   
  **Durchsuchen**  
  Verwenden Sie das Dialogfeld **Öffnen** , um zum Ordner zu navigieren, in dem die Excel-Datei enthalten ist bzw. in dem Sie die neue Datei erstellen möchten.  

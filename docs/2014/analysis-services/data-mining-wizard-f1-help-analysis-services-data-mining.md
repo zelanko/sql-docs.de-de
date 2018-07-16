@@ -1,5 +1,5 @@
 ---
-title: Data Mining-Assistent F1-Hilfe (Analysis Services – Datamining) | Microsoft Docs
+title: Data Mining-Assistent F1-Hilfe (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291676"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Data Mining-Assistent F1-Hilfe (Analysis Services - Data Mining)
   Verwenden Sie den **Data Mining-Assistenten** , um eine neue Miningstruktur und ein optionales zugeordnetes Miningmodell zu erstellen.  
@@ -61,27 +61,27 @@ ms.locfileid: "36160113"
  Wenn Sie die Miningstruktur und ein optionales Miningmodell erstellt haben, können Sie deren Eigenschaften mit dem **Data Mining-Designer** ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Assistenten &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Datamining-Designer](data-mining/data-mining-designer.md)   
- [Erstellen Sie eine relationale Miningstruktur](data-mining/create-a-relational-mining-structure.md)   
- [Definitionsmethode auswählen &#40;Datamining-Assistenten&#41;](select-the-definition-method-data-mining-wizard.md)   
- [Erstellen von Datamining-Struktur &#40;Datamining-Assistenten&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Wählen Sie die Datenquellensicht &#40;Datamining-Assistenten&#41;](select-data-source-view-data-mining-wizard.md)   
- [Datenquellensicht Durchsuchen &#40;Datamining-Assistenten&#41;](browse-data-source-view-data-mining-wizard.md)   
- [Tabellentypen angeben &#40;Datamining-Assistenten&#41;](specify-table-types-data-mining-wizard.md)   
- [Geben Sie die Trainingsdaten &#40;Datamining-Assistenten&#41;](specify-the-training-data-data-mining-wizard.md)   
- [Verbundene Spalten vorschlagen &#40;Datamining-Assistenten&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Quellcubedimension auswählen &#40;Datamining-Assistenten&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Auswählen des Fallschlüssels &#40;Datamining-Assistenten&#41;](select-the-case-key-data-mining-wizard.md)   
- [Select Case-Spalten auf Fallebene &#40;Datamining-Assistenten&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Geben Sie die Verwendung der Miningmodellspalte &#40;Datamining-Assistenten&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [Wählen Sie eine Measuregruppendimension &#40;Assistent für neue geschachtelte Tabelle hinzufügen&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
- [Schlüssel der geschachtelten Tabelle auswählen &#40;Assistent für neue geschachtelte Tabelle hinzufügen&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
- [Geschachtelte Tabellenspalten auswählen &#40;Assistent für neue geschachtelte Tabelle hinzufügen&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistenten&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [Quellcube in Slices aufzuteilen &#40;Datamining-Assistenten&#41;](slice-source-cube-data-mining-wizard.md)   
- [Fertigstellen des Assistenten &#40;Datamining-Assistenten&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Angeben von Spalteninhalt und Datentyp &#40;Datamining-Assistenten&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
- [Erstellen eines Testsatzes &#40;Datamining-Assistenten&#41;](create-testing-set-data-mining-wizard.md)  
+ [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)   
+ [Definitionsmethode auswählen &#40;Datamining-Assistent&#41;](select-the-definition-method-data-mining-wizard.md)   
+ [Erstellen von Datamining-Struktur &#40;Datamining-Assistent&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Wählen Sie die Datenquellensicht &#40;Datamining-Assistent&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Datenquellensicht Durchsuchen &#40;Datamining-Assistent&#41;](browse-data-source-view-data-mining-wizard.md)   
+ [Tabellentypen angeben &#40;Datamining-Assistent&#41;](specify-table-types-data-mining-wizard.md)   
+ [Geben Sie die Trainingsdaten &#40;Datamining-Assistent&#41;](specify-the-training-data-data-mining-wizard.md)   
+ [Verbundene Spalten vorschlagen &#40;Datamining-Assistent&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Wählen Sie die Quellcubedimension &#40;Datamining-Assistent&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Fallschlüssel auswählen &#40;Datamining-Assistent&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Select Case-Spalten auf &#40;Datamining-Assistent&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Geben Sie die Verwendung der Miningmodellspalte &#40;Datamining-Assistent&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [Wählen Sie eine Measuregruppendimension &#40;Assistenten für neue geschachtelte Tabelle hinzufügen&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [Wählen Sie die Schlüssel der geschachtelten Tabelle &#40;Assistenten für neue geschachtelte Tabelle hinzufügen&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [Geschachtelte Tabellenspalten auswählen &#40;Assistenten für neue geschachtelte Tabelle hinzufügen&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
+ [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistent&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [Slice-Quellcube &#40;Datamining-Assistent&#41;](slice-source-cube-data-mining-wizard.md)   
+ [Der Assistent &#40;Datamining-Assistent&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Angeben von Spalteninhalt und Datentyp der &#40;Datamining-Assistent&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
+ [Erstellen eines Testsatzes &#40;Datamining-Assistent&#41;](create-testing-set-data-mining-wizard.md)  
   
   

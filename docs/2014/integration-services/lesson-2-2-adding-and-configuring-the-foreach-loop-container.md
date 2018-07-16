@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312000"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
   In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
@@ -30,7 +30,7 @@ ms.locfileid: "36160943"
   
 -   **Foreach-Schleifencontainer:** Sie ordnen den aufgezählten Wert des Containers einer benutzerdefinierten Paketvariable zu. Vom Container wird dann diese benutzerdefinierte Variable verwendet, um die `ConnectionString`-Eigenschaft des Flatfile-Verbindungs-Managers dynamisch zu ändern und iterativ Verbindungen mit jeder Flatfile im Ordner herzustellen.  
   
--   **Verbindungs-Manager für Flatfiles:** ändern Sie den Verbindungs-Manager, die in Lektion 1 erstellt wurde, eine benutzerdefinierte Variable zum Auffüllen der Verbindungs-Manager mit `ConnectionString` Eigenschaft.  
+-   **Verbindungs-Manager für Flatfiles:** ändern Sie den Verbindungs-Manager, der in Lektion 1 erstellt wurde, eine benutzerdefinierte Variable zum Auffüllen der Verbindungs-Manager mit `ConnectionString` Eigenschaft.  
   
  Die Vorgänge in diesem Task verdeutlichen, wie Sie den Foreach-Schleifencontainer erstellen und ändern, um eine benutzerdefinierte Paketvariable zu verwenden, und wie der Schleife der Datenflusstask hinzugefügt wird. Sie lernen, wie der Flatfile-Verbindungs-Manager geändert wird, um eine benutzerdefinierte Variable in der nächsten Aufgabe zu verwenden.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36160943"
   
 3.  Klicken Sie mit der rechten Maustaste auf den neu hinzugefügten **Foreach-Schleifencontainer** , und wählen Sie **Bearbeiten**aus.  
   
-4.  In der **foreach-Schleifen-Editor** Dialogfeld auf die **allgemeine** Seite für **Namen**, geben Sie `Foreach File in Folder`. Klicken Sie auf **OK**.  
+4.  In der **Foreach-Schleifen-Editor** Dialogfeld auf die **allgemeine** Seite für **Namen**, geben Sie `Foreach File in Folder`. Klicken Sie auf **OK**.  
   
-5.  Mit der rechten Maustaste in des foreach-schleifencontainers, klicken Sie auf **Eigenschaften**, und klicken Sie im Eigenschaftenfenster überprüfen, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)**.  
+5.  Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>So konfigurieren Sie den Enumerator für den Foreach-Schleifencontainer  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36160943"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>So fügen Sie der Schleife den Datenflusstask hinzu  
   
--   Ziehen Sie die **Extract Sample Currency Data** -Datenflusstask zum ForEach-Schleifencontainer, der nun umbenannt `Foreach File in Folder`.  
+-   Ziehen Sie die **Extract Sample Currency Data** -Datenflusstask zum Foreach-Schleifencontainer umbenannt `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Aufgabe in der nächsten Lektion  
  [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren Sie einen ForEach-Schleifencontainer](control-flow/foreach-loop-container.md)   
+ [Konfigurieren eines Foreach-Schleifen-Containers](control-flow/foreach-loop-container.md)   
  [Verwenden von Variablen in Paketen](use-variables-in-packages.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (DimensionAttribute) (ASSL) | Microsoft Docs
+title: Type-Element (DimensionAttribute) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293470"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type-Element (DimensionAttribute) (ASSL)
   Enthält den Typ des Attributs.  
@@ -58,7 +58,7 @@ ms.locfileid: "36159863"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -87,11 +87,11 @@ ms.locfileid: "36159863"
 |*CaptionAbbreviation*|Das Attribut stellt eine Abkürzung dar.|  
 |*CaptionDescription*|Das Attribut stellt eine Beschreibung dar.|  
 |*Channel*|Das Attribut stellt einen Kanal dar.|  
-|*Ort*|Das Attribut stellt einen Ort dar.|  
-|*Unternehmensportal*|Das Attribut stellt eine Firma dar.|  
+|*Stadt*|Das Attribut stellt einen Ort dar.|  
+|*Unternehmen*|Das Attribut stellt eine Firma dar.|  
 |*Kontinent*|Das Attribut stellt einen Kontinent dar.|  
 |*Land*|Das Attribut stellt ein Land oder eine Region dar.|  
-|*Ein Bundesland oder Kanton*|Das Attribut stellt ein Bundesland oder einen Kanton dar.|  
+|*County*|Das Attribut stellt ein Bundesland oder einen Kanton dar.|  
 |*CurrencyDestination*|Das Attribut stellt die Zielwährung einer Währungsumrechnung dar.|  
 |*CurrencyISOcode*|Das Attribut stellt den ISO-Code einer Währung dar.|  
 |*CurrencName*|Das Attribut stellt den Namen einer Währung dar.|  
@@ -138,7 +138,7 @@ ms.locfileid: "36159863"
 |*FiscalWeekOfQuarter*|Das Attribut stellt die Ordnungszahl für eine Woche eines Quartals in einem Geschäftskalender dar.|  
 |*FiscalWeekOfTrimester*|Das Attribut stellt die Ordnungszahl für eine Woche eines Trimesters in einem Geschäftskalender dar.|  
 |*FiscalWeekOfYear*|Das Attribut stellt die Ordnungszahl für eine Woche eines Jahres in einem Geschäftskalender dar.|  
-|*FiscalYear*|Das Attribut stellt Jahre in einem Geschäftskalender dar.|  
+|*Geschäftsjahr*|Das Attribut stellt Jahre in einem Geschäftskalender dar.|  
 |*FormattingColor*|Das Attribut stellt die bei der Formatierung verwendete Farbe dar.|  
 |*FormattingFont*|Das Attribut stellt die bei der Formatierung verwendete Schriftart dar.|  
 |*FormattingFontEffects*|Das Attribut stellt die bei der Formatierung verwendeten Schriftarteffekte dar.|  
@@ -208,7 +208,7 @@ ms.locfileid: "36159863"
 |*PersonContact*|Das Attribut stellt Kontaktinformationen für eine Person dar.|  
 |*PersonDemographic*|Das Attribut stellt demografische Informationen für eine Person dar.|  
 |*PersonFirstName*|Das Attribut stellt den Vornamen einer Person dar.|  
-|*PersonFullName*|Das Attribut stellt den vollständigen Namen einer Person dar.|  
+|*"Personfullname"*|Das Attribut stellt den vollständigen Namen einer Person dar.|  
 |*PersonLastName*|Das Attribut stellt den Nachnamen einer Person dar.|  
 |*PersonMiddleName*|Das Attribut stellt die weiteren Vornamen einer Person dar.|  
 |*PhysicalColor*|Das Attribut stellt eine Farbe dar.|  
@@ -231,7 +231,7 @@ ms.locfileid: "36159863"
 |*ProjectEnddate*|Das Attribut stellt das Enddatum eines Projekts dar.|  
 |*Projektname*|Das Attribut stellt einen Projektnamen dar.|  
 |*ProjectStartDate*|Das Attribut stellt das Startdatum eines Projekts dar.|  
-|*Promotion*|Das Attribut stellt eine Höherstufung dar.|  
+|*Heraufstufung*|Das Attribut stellt eine Höherstufung dar.|  
 |*QtyRangeHigh*|Das Attribut stellt den größten Wert eines Bereichs von Mengen dar.|  
 |*QtyRangeLow*|Das Attribut stellt den niedrigsten Wert eines Bereichs von Mengen dar.|  
 |*Quantitative*|Das Attribut stellt ein quantitatives Attribut dar.|  
@@ -269,7 +269,7 @@ ms.locfileid: "36159863"
 |*ReportingWeekOfTrimester*|Das Attribut stellt die Ordnungszahl für eine Woche eines Trimesters in einem Berichtskalender dar.|  
 |*ReportingWeekOfYear*|Das Attribut stellt die Ordnungszahl für eine Woche eines Jahres in einem Berichtskalender dar.|  
 |*ReportingYear*|Das Attribut stellt Jahre in einem Berichtskalender dar.|  
-|*Vertreter*|Das Attribut stellt einen Vertriebsmitarbeiter dar.|  
+|*Mitarbeiter*|Das Attribut stellt einen Vertriebsmitarbeiter dar.|  
 |*Szenario*|Das Attribut stellt ein Szenario dar.|  
 |*Sekunden*|Das Attribut stellt Sekunden dar.|  
 |*Sequenz*|Das Attribut stellt ein sequenzielles Attribut dar.|  
@@ -300,10 +300,10 @@ ms.locfileid: "36159863"
   
  Die Enumeration, die den zulässigen Werten für entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- Das Element, das das übergeordnete Element des entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das Element, das dem übergeordneten entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute-Element &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes-Element &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Dimension-Element &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
   

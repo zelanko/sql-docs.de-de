@@ -1,5 +1,5 @@
 ---
-title: Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319450"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
   Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
@@ -42,7 +42,7 @@ ms.locfileid: "36150905"
   
  Das Ziel ist die eigentliche Position im Cube, wo die Aktion ausgeführt werden soll. Das Ziel besteht aus einem Zieltyp und einem Zielobjekt. Der Zieltyp stellt die Objektart im Cube dar, wo die Aktion aktiviert werden soll. Zieltyp können unter anderem Ebenenelemente, Zellen, Hierarchie und Hierarchieelemente sein. Das Zielobjekt ist ein spezifisches Objekt des Zieltyps. Wenn der Zieltyp "Hierarchie" ist, ist das Zielobjekt eine der definierten Hierarchien in dem Cube.  
   
- Die Bedingung ist ein `Boolean` MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn die Bedingung ergibt `true`, und klicken Sie dann die Aktion ausgeführt wird. Andernfalls wird die Aktion nicht ausgeführt.  
+ Die Bedingung ist ein `Boolean` MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn das Ergebnis der bedingungsauswertung `true`, und klicken Sie dann die Aktion ausgeführt wird. Andernfalls wird die Aktion nicht ausgeführt.  
   
  Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
   
