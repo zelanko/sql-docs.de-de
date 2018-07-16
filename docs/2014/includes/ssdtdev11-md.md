@@ -1,1 +1,1 @@
-SQL Server Datatools \- Business Intelligence für Visual Studio 2012
+SQL Server-Datentools \- Business Intelligence für Visual Studio 2012

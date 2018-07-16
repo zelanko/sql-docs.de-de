@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320680"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Tools zur Problembehandlung für die Paketentwicklung
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, mit denen Sie die Problembehandlung von Paketen vornehmen können, während Sie diese in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entwickeln.  
@@ -45,11 +45,11 @@ ms.locfileid: "36151155"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst die folgenden, zusätzlichen Funktionen, um Ihnen das Vermeiden von Überprüfungsfehlern zu erleichtern:  
   
--   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Im Gegensatz zu den `DelayValidation` -Eigenschaft, die **Offline arbeiten** Option ist verfügbar, noch bevor Sie ein Paket zu öffnen. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
+-   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Im Gegensatz zu den `DelayValidation` -Eigenschaft, die **Offline arbeiten** Option ist verfügbar, noch bevor Sie ein Paket öffnen. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
   
 -   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation` Eigenschaft kann aktiviert werden, auf Paketebene oder auf der Ebene der einzelnen Tasks und Container, die das Paket enthält. Normalerweise müssen Sie diese Eigenschaft auf festgelegt lassen `True` auf die betreffenden Paketelemente, wenn Sie das Paket aus, um zu verhindern, dass die gleichen Überprüfungsfehler zur Laufzeit bereitstellen.  
   
-     Die `DelayValidation` Eigenschaft kann festgelegt werden auf einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten verbunden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn der Wert dieser Eigenschaft ist jedoch `false`, die Komponente ist nicht bekannt Änderungen an den Metadaten externer Datenquellen.  
+     Die `DelayValidation` Eigenschaft kann festgelegt werden auf einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten verbunden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn der Wert dieser Eigenschaft ist jedoch `false`, die Komponente ist nicht über Änderungen an den Metadaten externer Datenquellen.  
   
  Wenn vom Paket verwendete Datenbankobjekte zum Zeitpunkt der Überprüfung gesperrt sind, reagiert der Überprüfungsvorgang möglicherweise nicht mehr. Unter diesen Umständen reagiert der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ebenfalls nicht mehr. Sie können die Überprüfung fortsetzen, indem Sie die zugehörigen Sitzung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]schließen. Sie können dieses Problem auch mit den in diesem Abschnitt beschriebenen Einstellungen umgehen.  
   

@@ -21,13 +21,13 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac2d2c8c45e359dafbed4d33dc26c3470fc13d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292890"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
   Bevor Sie benutzerdefinierten Code in der Skriptkomponente schreiben, müssen Sie sich für eine Datenflusskomponente entscheiden (Quelle, Transformation oder Ziel) und anschließend die Metadaten und Eigenschaften der Komponente im **Transformations-Editor für Skripterstellung** konfigurieren.  
@@ -54,7 +54,7 @@ ms.locfileid: "36159029"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Seite 'Eingabespalten' des Transformations-Editors für Skripterstellung  
  Die Seite **Eingabespalten** im **Transformations-Editor für Skripterstellung** wird für Transformationen und Ziele, nicht jedoch für Quellen angezeigt. Auf dieser Seite wählen Sie die Eingabespalten aus, die Sie für das benutzerdefinierte Skript verfügbar machen möchten, und legen Lese- oder Lese-/Schreibzugriff darauf fest.  
   
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Eingabe eine Klasse, die wiederum typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte beinhaltet. Wenn Sie eine ganze Zahl auswählen, z. B. **CustomerID** Spalte und eine Zeichenfolge **CustomerName** Spalte aus einer Eingabe, die mit dem Namen `CustomerInput`, enthält das Projektelement BufferWrapper eine `CustomerInput` Klasse abgeleitet, die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerInput` Klasse macht eine Ganzzahleigenschaft, die mit dem Namen **CustomerID** und eine Zeichenfolgeneigenschaft, die mit dem Namen **CustomerName**. Diese Konvention macht es möglich, Code mit einer Typprüfung wie im folgenden Beispiel zu schreiben:  
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Eingabe eine Klasse, die wiederum typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte beinhaltet. Wenn Sie eine ganze Zahl auswählen, z. B. **"CustomerID"** Spalte und eine Zeichenfolge **CustomerName** Spalte aus einer Eingabe namens `CustomerInput`, enthält das Projektelement BufferWrapper eine `CustomerInput` Klasse die von abgeleitet ist <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerInput` Klasse macht eine Ganzzahleigenschaft, die mit dem Namen **"CustomerID"** und eine Zeichenfolgeneigenschaft, die mit dem Namen **CustomerName**. Diese Konvention macht es möglich, Code mit einer Typprüfung wie im folgenden Beispiel zu schreiben:  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -72,7 +72,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   Wenn die Skriptkomponente als Ziel verwendet wird, unterstützt sie eine Eingabe, hat jedoch keine Ausgaben.  
   
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Ein- und Ausgabe eine Klasse. Angenommen, Sie erstellen eine Ausgabe mit dem Namen `CustomerOutput`, enthält das Projektelement BufferWrapper eine `CustomerOutput` von abgeleitete Klasse <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerOutput` Klasse enthält typisierte Accessoreigenschaften für jede erstellte Ausgabespalte.  
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement BufferWrapper für jede Ein- und Ausgabe eine Klasse. Angenommen, Sie erstellen Sie eine Ausgabe namens `CustomerOutput`, enthält das Projektelement BufferWrapper eine `CustomerOutput` abgeleitete Klasse <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, und die `CustomerOutput` -Klasse beinhaltet typisierte Accessoreigenschaften für jede erstellte Ausgabespalte.  
   
  Sie können Ausgabespalten nur auf der Seite **Eingaben und Ausgaben** konfigurieren. Eingabespalten für Transformationen und Ziele können Sie auf der Seite **Eingabespalten** auswählen. Für Ausgabespalten weisen die im Projektelement BufferWrapper erstellten typisierten Accessoreigenschaften nur Schreibzugriff auf. Die Accessoreigenschaften für Eingabespalten haben dagegen Lese- oder Lese-/Schreibzugriff, je nachdem, welche Nutzungsart Sie auf der Seite **Eingabespalten** für die jeweilige Spalte festgelegt haben.  
   
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Die `SynchronousInputID`-Eigenschaft verfügt nur in Transformationen mit synchronen Ausgaben über einen Wert ungleich null. Wenn der Wert dieser Eigenschaft null ist, bedeutet dies, dass die Ausgabe asynchron ist. Für eine synchrone Ausgabe, bei der Zeilen an die gewählten Ausgaben übergeben werden, ohne neue Zeilen hinzuzufügen, sollte die Eigenschaft die `ID` der Komponenteneingabe enthalten.  
   
 > [!NOTE]  
->  Wenn die **Skript Transformations-Editor** erstellt die erste Ausgabe, legt der `SynchronousInputID` -Eigenschaft die Ausgabe auf die `ID` der komponenteneingabe. Bei der Erstellung weiterer Ausgaben legt der Editor die `SynchronousInputID`-Eigenschaften dieser Ausgaben auf null fest.  
+>  Wenn die **Transformations-Editor** die erste Ausgabe generiert, legt die `SynchronousInputID` -Eigenschaft der Ausgabe, die `ID` der komponenteneingabe. Bei der Erstellung weiterer Ausgaben legt der Editor die `SynchronousInputID`-Eigenschaften dieser Ausgaben auf null fest.  
 >   
 >  Wenn Sie eine Komponente mit synchronen Ausgaben erstellen, muss die `SynchronousInputID`-Eigenschaft für jede Ausgabe auf die `ID` der Komponenteneingabe gesetzt sein. Daher muss für jede Ausgabe, die der Editor nach der ersten generiert, der `SynchronousInputID`-Wert von null in die `ID` der Komponenteneingabe geändert werden.  
 >   
@@ -108,7 +108,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Der boolesche Wert der `ValidateExternalMetadata`-Eigenschaft gibt an, ob die Komponente zur Entwurfszeit eine Prüfung anhand externer Datenquellen ausführen oder diese Prüfung bis zur Laufzeit verschieben soll. Standardmäßig weist diese Eigenschaft den Wert `True` auf, d. h. die externen Metadaten werden zur Entwurfs- und zur Laufzeit geprüft. Wenn eine externe Datenquelle zur Entwurfszeit nicht verfügbar ist, sollten Sie den Wert der Eigenschaft auf `False` setzen, beispielsweise falls das Paket die Quelle erst zur Laufzeit herunterlädt oder das Ziel erst dann erstellt.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>Eigenschaften 'ReadOnlyVariables' und 'ReadWriteVariables'  
- Sie können kommagetrennte Listen vorhandener Variablen als Werte dieser Eigenschaften eingeben, um die Variablen für schreibgeschützten oder Lese-/Schreibzugriff im Code der Skriptkomponente verfügbar zu machen. Auf Variablen wird im Code über die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> der automatisch generierten Basisklasse zugegriffen. Weitere Informationen finden Sie unter [Verwenden von Variablen in das Skript Component]((using-variables-in-the-script-component.md).  
+ Sie können kommagetrennte Listen vorhandener Variablen als Werte dieser Eigenschaften eingeben, um die Variablen für schreibgeschützten oder Lese-/Schreibzugriff im Code der Skriptkomponente verfügbar zu machen. Auf Variablen wird im Code über die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> der automatisch generierten Basisklasse zugegriffen. Weitere Informationen finden Sie unter [Verwenden von Variablen in der Skript-Component]((using-variables-in-the-script-component.md).  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
@@ -129,9 +129,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- Weitere Informationen finden Sie unter [Connecting to Data Sources in das Skript Component]((connecting-to-data-sources-in-the-script-component.md).  
+ Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Datenquellen in der Skript-Component]((connecting-to-data-sources-in-the-script-component.md).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services  **<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Coding and Debugging the Script Component] ((coding-and-debugging-the-script-component.md)  

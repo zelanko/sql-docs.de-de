@@ -1,5 +1,5 @@
 ---
-title: SetFlag-Methode (ServerNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: SetFlag-Methode (ServerNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetFlag method
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 285e00e7f4f8c7b640523d76f9bd9dc96f68d4e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be1c1ce569ccc68965106950f4371807cc88991e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296190"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag-Methode (ServerNetworkProtocolProperty-Klasse)
   Legt das Flag der Eigenschaft fest, auf die verwiesen wird.  
@@ -55,7 +55,7 @@ BoolValue
 |*BoolValue*|Ein boleescher Wert, der den neuen Wert des Flags angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

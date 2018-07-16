@@ -20,15 +20,15 @@ helpviewer_keywords:
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd33311f93f8634efc311f1dbddd35c292d8d36a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292270"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglichen gespeicherte Systemprozeduren den programmgesteuerten Zugriff auf alle vom Benutzer konfigurierbaren Funktionen in einer Replikationstopologie. Gespeicherte Prozeduren können einzeln mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder dem sqlcmd-Befehlszeilenhilfsprogramm ausgeführt werden. Es ist jedoch nützlich, [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skriptdateien zu schreiben, mit denen eine logische Sequenz von Replikationstasks ausgeführt werden können.  
@@ -132,7 +132,7 @@ GO
  Sobald ein Replikationsskript erstellt wurde, kann es wie folgt ausgeführt werden:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Erstellen einer SQL-Abfragedatei in SQL Server Management Studio  
- Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen über das Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] Skripts mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen über das Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skripts mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Um ein Skript zu verwenden, das Skriptvariablen enthält, muss [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] im **sqlcmd**-Modus ausgeführt werden. Im **sqlcmd**-Modus lässt der Abfrage-Editor zusätzliche **sqlcmd**-spezifische Syntax zu, wie `:setvar` zum Festlegen eines Werts für eine Variable. Weitere Informationen zum **sqlcmd**-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). Im folgenden Skript wird `:setvar` verwendet, um einen Wert für die `$(DistPubServer)`-Variable bereitzustellen.  
   

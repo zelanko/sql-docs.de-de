@@ -1,25 +1,24 @@
 ---
-title: SQL Serverarchitektur des Transaktionsprotokolls und Verwaltung | Microsoft Docs
+title: SQL Serverarchitektur des Transaktionsprotokolls und-Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301340"
 ---
 # SQL Server Architektur und Verwaltung von Transaktionsprotokollen
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36159459"
   
  Wenn das Ende des logischen Protokolls das Ende der physischen Protokolldatei erreicht, erfolgt ein Umbruch, und neue Protokolldatensätze werden nun wieder am Anfang der physischen Protokolldatei eingefügt.  
   
- ![Protokolldatensätze Wrap umher, um zu Anfang der Protokolldatei](media/tranlog4.gif "Protokolldatensätze umschließen rund um den Anfang der Protokolldatei")  
+ ![Protokolldatensätze Wrap rund um auf den Anfang der Protokolldatei](media/tranlog4.gif "Protokolldatensätze umschließen etwa zum Starten der Protokolldatei")  
   
  Solange das Ende des logischen Protokolls nicht den Anfang des logischen Protokolls erreicht, wird dieser Kreislauf endlos wiederholt. Wenn die alten Protokolldatensätze häufig genug abgeschnitten werden, um ausreichend Platz für alle neuen Protokolldatensätze freizugeben, die bis zum nächsten Prüfpunkt erstellt werden, wird das Protokoll nie vollständig aufgefüllt. Wenn das Ende des logischen Protokolls jedoch den Anfang des logischen Protokolls erreicht, wird eine der beiden folgenden Aktionen eingeleitet:  
   

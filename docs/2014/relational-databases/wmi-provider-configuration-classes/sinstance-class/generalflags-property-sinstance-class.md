@@ -1,5 +1,5 @@
 ---
-title: GeneralFlags-Eigenschaft (SInstance-Klasse) | Microsoft Docs
+title: GeneralFlags-Eigenschaft (SInstance-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54daa43c2ccb4e05691d04c2d9e20baad98b9ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 544536253cd7de2c62dbd54f891f5b72d534d74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294250"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags-Eigenschaft (SInstance-Klasse)
   Ruft die allgemeinen Flags ab, die einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind.  

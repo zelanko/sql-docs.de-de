@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.propertyexpressionseditor.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 82bad8b23883081df36f23872db9c37957f99668
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6ddae711763ef6e28dcc00ccc8baff52f17db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287658"
 ---
 # <a name="property-expressions-editor"></a>Eigenschaftsausdrucks-Editor
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
@@ -46,7 +46,7 @@ ms.locfileid: "36160476"
   
 ## <a name="see-also"></a>Siehe auch  
  [Seite Ausdrücke](expressions-page.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
  [Systemvariablen](../system-variables.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Verwenden von Eigenschaftsausdrücken in Paketen](use-property-expressions-in-packages.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket | Microsoft Docs
+title: Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - configurations [Integration Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ff545e52e36ca6019a6d9e367b8466d99bd7983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c522a87bfd20608d1e42080ad9ff3d3ae10973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287516"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
   In diesem Verfahren wird das Erstellen einer Paketkonfiguration beschrieben, die den Konfigurationstyp der übergeordneten Variablen verwendet. Durch diesen Konfigurationstyp kann ein untergeordnetes Paket, das von einem übergeordneten Paket ausgeführt wird, auf eine Variable im übergeordneten Element zugreifen.  
@@ -110,7 +110,7 @@ ms.locfileid: "36159612"
 ## <a name="see-also"></a>Siehe auch  
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
  [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)  
   
   

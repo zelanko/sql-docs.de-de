@@ -1,5 +1,5 @@
 ---
-title: Verwalten der Integration Services-Dienst | Microsoft Docs
+title: Verwalten des Integration Services-Diensts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281516"
 ---
 # <a name="manage-the-integration-services-service"></a>Verwalten des Integration Services-Diensts
     
@@ -32,7 +32,7 @@ ms.locfileid: "36159031"
  Wenn Sie die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installieren, wird auch der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst installiert. Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst gestartet, und der Starttyp des Dienstes ist auf automatisch festgelegt. Sie müssen jedoch auch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installieren, um den Dienst zur Verwaltung gespeicherter und ausgeführter [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete verwenden zu können.  
   
 > [!NOTE]  
->  Sie können keine Verbindung mit einer Instanz von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts von der [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Version [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Das heißt, im Dialogfeld **Verbindung mit Server herstellen** können Sie keinen Server eingeben, auf dem nur die [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts ausgeführt wird. Sie können jedoch die Konfigurationsdatei für den Dienst von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] aus bearbeiten und so Pakete verwalten, die in einer Instanz von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]gespeichert sind. Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md).  
+>  Sie keine Verbindung zu einer Instanz von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts von der [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Version [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Das heißt, im Dialogfeld **Verbindung mit Server herstellen** können Sie keinen Server eingeben, auf dem nur die [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts ausgeführt wird. Sie können jedoch die Konfigurationsdatei für den Dienst von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] aus bearbeiten und so Pakete verwalten, die in einer Instanz von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]gespeichert sind. Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md).  
   
  Es kann nur eine einzige Instanz des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienstes auf einem Computer installiert werden. Der Dienst ist nicht spezifisch für eine bestimmte Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem er ausgeführt wird.  
   

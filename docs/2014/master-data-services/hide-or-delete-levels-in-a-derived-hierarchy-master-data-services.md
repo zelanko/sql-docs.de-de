@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, hiding levels
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 898827072bfcebb869703d479628c290f3bf5fc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: da74b0ff57f6bb5488903730351dcacacf92b2f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300420"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Ausblenden oder Löschen von Ebenen in einer abgeleiteten Hierarchie (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Ebene in einer abgeleiteten Hierarchie ausblenden, wenn die Ebene zur Gruppierung benötigt wird, aber nicht angezeigt werden soll. Löschen Sie eine Ebene, wenn Sie sie nicht zur Gruppierung verwenden möchten.  
@@ -44,7 +44,7 @@ ms.locfileid: "36162504"
   
 4.  Wählen Sie die Zeile der abgeleiteten Hierarchie aus, die Sie bearbeiten möchten.  
   
-5.  Klicken Sie auf **bearbeiten, die ausgewählte abgeleitete Hierarchie**.  
+5.  Klicken Sie auf **abgeleitete Hierarchie bearbeiten, die ausgewählten**.  
   
 6.  Im Bereich **Aktuelle Ebenen** :  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - string literals
 - numeric literals [Integration Services]
@@ -20,13 +20,13 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 90b00837c6a1c652be601b4237fd4329b9ebbce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 812e0d2db0e0cc202e78e0bd920901509b9ae082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312030"
 ---
 # <a name="literals-ssis"></a>Literale (SSIS)
   Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Die Ausdrucksauswertung unterstützt eine Reihe von numerischen Literalen, wie z. B. ganze Zahlen, Dezimalzeichen und Gleitkommakonstanten. Außerdem unterstützt die Ausdrucksauswertung die long- und float-Suffixe, die die Behandlung von Werten durch die Ausdrucksauswertung angeben, sowie die wissenschaftliche Schreibweise bei numerischen Literalen.  

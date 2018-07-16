@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Definieren einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308550"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
   Eine Datenquellensicht enthält das logische Modell des Schemas, das von mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankobjekten, also Cubes, Dimensionen und Miningstrukturen, verwendet wird. Eine Datenquellensicht ist die im XML-Format gespeicherte Metadatendefinition dieser Schemaelemente, die vom UDM (Unified Dimensional Model) und von den Miningstrukturen verwendet werden. Eine Datenquellensicht:  
@@ -111,7 +111,7 @@ ms.locfileid: "36162145"
 ##  <a name="bkmk_secondaryDS"></a> Hinzufügen einer sekundären Datenquelle  
  Wenn Sie eine Datenquellensicht definieren, die Tabellen, Sichten oder Spalten aus mehreren Datenquellen enthält, wird die erste Datenquelle, aus der Sie Objekte zur Datenquellensicht hinzufügen, als primäre Datenquelle festgelegt (nach der Definition der primären Datenquelle kann diese Festlegung nicht mehr geändert werden). Nachdem Sie eine Datenquellensicht basierend auf Objekten aus einer einzelnen Datenquelle definiert haben, können Sie Objekte aus anderen Datenquellen hinzufügen.  
   
- Wenn ein OLAP-Verarbeitung oder eine Datamining-Abfrage Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe unterstützen `OpenRowset`. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine `OpenRowset`-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Jedoch wenn ein OLAP-Objekts aufgefüllt werden kann oder Data mining-Abfrage die Auflösung einer aus einer einzelnen Datenquelle ein `OpenRowset` Abfrage wird nicht erstellt werden. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine `OpenRowset`-Abfrage mehr erforderlich ist. Weitere Informationen zu attributbeziehungen finden Sie unter [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren Sie Attributbeziehungen](attribute-relationships-define.md).  
+ Wenn eine OLAP-Verarbeitungs- oder Datamining-Abfragen Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe unterstützen `OpenRowset`. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine `OpenRowset`-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn ein OLAP-Objekts aufgefüllt werden kann, oder ein Data mining-Auflösung Abfrage jedoch mithilfe einer einzelnen Datenquelle, und klicken Sie dann eine `OpenRowset` Abfrage wird nicht erstellt werden. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine `OpenRowset`-Abfrage mehr erforderlich ist. Weitere Informationen zu attributbeziehungen finden Sie unter [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren Sie Attributbeziehungen](attribute-relationships-define.md).  
   
  Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -139,8 +139,8 @@ ms.locfileid: "36162145"
  [Definieren logischer Primärschlüssel in einer Datenquellensicht &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Definieren von benannten Abfragen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Ersetzen einer Tabelle oder eine benannte Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Verwenden von Diagrammen im Datenquellensicht-Designers &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Ersetzen einer Tabelle oder einer benannten Abfrage in einer Datenquellensicht &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Durchsuchen von Daten in einer Datenquellensicht &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [Löschen eine Datenquellensicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  

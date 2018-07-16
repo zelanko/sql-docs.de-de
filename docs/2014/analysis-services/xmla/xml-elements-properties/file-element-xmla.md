@@ -1,5 +1,5 @@
 ---
-title: Datei-Element (XMLA) | Microsoft Docs
+title: File-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 644e08e68ef38338d5b93c5abc7afe211c04c935
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319220"
 ---
 # <a name="file-element-xmla"></a>File-Element (XMLA)
-  Identifiziert eine Datei, die vom übergeordneten Element verwendet werden [Sicherung](../xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../xml-elements-commands/restore-element-xmla.md) -Befehl oder vom übergeordneten [Speicherort](location-element-xmla.md) Element.  
+  Identifiziert eine Datei, die vom übergeordneten Element verwendet werden [Sicherung](../xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../xml-elements-commands/restore-element-xmla.md) -Befehl oder vom übergeordneten Element [Speicherort](location-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36151194"
   
  Bei `Backup`-Befehlen bestimmt das `File`-Element den Namen der vom `Backup`-Befehl erstellten Sicherungsdatei. Wenn kein Pfad als Teil des Dateinamens angegeben ist, wird der Pfad angegeben, der `BackupDir` Konfigurationseigenschaft für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwendet wird. Wenn die angegebene Datei bereits vorhanden ist, tritt ein Fehler auf, es sei denn, das `AllowOverwrite`-Element des übergeordneten `Backup`-Befehls ist auf `True` gesetzt.  
   
- Für `Restore` Befehle, die `File` Element bestimmt den Namen der wiederherzustellenden Sicherungsdatei der `Restore` Befehl.  
+ Für `Restore` Befehle, die `File` Element bestimmt den Namen der Sicherungsdatei aus, die wiederhergestellt werden die `Restore` Befehl.  
   
  Für `Location`-Elemente beschreibt das `File`-Element eine Remotesicherungsdatei für eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz, die Remotepartitionen enthält. Weitere Informationen zum Sichern und Wiederherstellen von Remotepartitionen finden Sie unter [sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9c7b436618a036e59c5ddbf6f2f435092d01111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fcb2e8e6b515fceedf106fd7cbf9ce3773e0c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280516"
 ---
 # <a name="soapexception-errors-table"></a>Tabelle für SoapException-Fehler
   Der Berichtsserver generiert die Fehler und Fehlermeldungen in der SOAP-Ausnahme ausgehend von Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. In folgender Tabelle sehen Sie die Fehler, die über Methoden durch eine **SoapException** im Berichtsserver-Webdienst zugänglich sind. Die Tabelle ist nach den Methoden geordnet, die die Ausnahme auslösen.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
 - "10118"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c3add2546128bedffdcbeb14c6cc819f6318871
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b395410bfe5a5a8a1dad97260c766500c0e814e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294150"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
   Ein Textfeld kann ein Berichtselement sein oder eine einzelne Zelle in einem Datenbereich mit Text, ein berechnetes Feld oder ein Zeiger auf ein Feld in einer Datenbank. Es kann sich auch um eine Kombination aus diesen drei Elementen handeln. Sie können Schriftarten und Farben kombinieren sowie Fett- und Kursivformatierungen hinzufügen; außerdem können Sie Absätze mithilfe von Ausrichtungen und Einzügen formatieren. Sie können ein vollständiges Textfeld formatieren, oder Sie können bestimmte Textelemente, Zahlen, Ausdrücke oder Felder in einem Textfeld formatieren.  

@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_KPIS-Rowset | Microsoft Docs
+title: MDSCHEMA_KPIS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314770"
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS-Rowset
   Beschreibt die Key Performance Indicators (KPIs) innerhalb einer Datenbank.  
@@ -39,11 +39,11 @@ ms.locfileid: "36161670"
 |`CATALOG_NAME`|`DBTYPE_WSTR`||Die Quelldatenbank.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Wird nicht unterstützt.|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||Der übergeordnete Cube für den KPI.|  
-|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||Die dem KPI zugeordnete Measuregruppe.<br /><br /> Sie können diese Spalte verwenden, um die Dimensionalität des KPI zu bestimmen. Wenn "**\<NULL >**", wird der KPI von allen Measuregruppen dimensioniert werden.<br /><br /> Der Standardwert ist "**\<NULL >**".|  
+|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||Die dem KPI zugeordnete Measuregruppe.<br /><br /> Sie können diese Spalte verwenden, um die Dimensionalität des KPI zu bestimmen. Wenn "**\<NULL >**", der KPI wird von allen Measuregruppen dimensioniert werden.<br /><br /> Der Standardwert ist "**\<NULL >**".|  
 |`KPI_NAME`|`DBTYPE_WSTR`||Der Name des KPI.|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||Eine Bezeichnung oder Beschriftung, die dem KPI zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Wenn keine Beschriftung vorhanden ist, wird `KPI_NAME` zurückgegeben.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||Eine lesbare Beschreibung des KPI.|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner bereitzustellen, verwenden Sie ein Semikolon (;), um die Ordner zu trennen.|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner bereitzustellen, verwenden Sie ein Semikolon (;), um die Ordner zu trennen.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||Der eindeutige Name des Elements in der Measuredimension für den KPI-Wert.|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||Der eindeutige Name des Elements in der Measuredimension für das KPI-Ziel.<br /><br /> Gibt `NULL` zurück, wenn kein Ziel definiert wurde.|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||Der eindeutige Name des Elements in der Measuredimension für den KPI-Status.<br /><br /> Gibt `NULL` zurück, wenn kein Status definiert wurde.|  

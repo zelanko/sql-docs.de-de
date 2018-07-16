@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4fd41d63d0086ac582cf0ca033453bf0d9bc7776
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256329"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
   Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](enhance-general-replication-performance.md)beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden beschriebenen zusätzlichen Aspekte im Zusammenhang mit einer Mergereplikation machen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36059123"
   
 -   Überlegen Sie, ob Sie Tabellen, die LOB-Datentypen (Large Object) enthalten, übernormalisieren sollten.  
   
-     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, wird empfohlen, dass Sie die Datentypen verwenden `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
+     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, es wird empfohlen, dass Sie der mithilfe `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
   
 ## <a name="publication-design"></a>Veröffentlichungsentwurf  
   

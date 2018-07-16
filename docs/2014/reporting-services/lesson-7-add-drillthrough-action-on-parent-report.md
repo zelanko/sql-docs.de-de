@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4692e2403cbe6ced24d09fb2a554f9a85b475b95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 133c91701744e22e12348fdb9f432062899b1a8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317890"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht
   Nachdem Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzugefügt haben, fügen Sie im nächsten Schritt eine Drillthroughaktion für den übergeordneten Bericht hinzu.  
@@ -38,7 +38,7 @@ ms.locfileid: "36151062"
   
 6.  Klicken Sie im Abschnitt **Diese Parameter zum Ausführen des Berichts verwenden** auf **Hinzufügen** .  
   
-7.  Typ **"ProductID"** in der **Namen** Feld, und klicken Sie dann auf **"ProductID"** in der **Wert** Dropdown-Liste.  
+7.  Typ **"ProductID"** in die **Namen** ein, und klicken Sie dann auf **"ProductID"** in die **Wert** Dropdown-Liste.  
   
 8.  Klicken Sie auf **OK** , um den Vorgang abzuschließen.  
   

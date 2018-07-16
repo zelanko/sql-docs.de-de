@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Variablen in Paketen | Microsoft Docs
+title: Verwenden von Variablen in Paketen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285416"
 ---
 # <a name="use-variables-in-packages"></a>Verwenden von Variablen in Paketen
   Variablen sind eine nützliche und flexible Erweiterung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete. Sie können die Kommunikation zwischen Objekten innerhalb des Pakets und zwischen übergeordneten und untergeordneten Paketen ermöglichen. Variablen können außerdem in Ausdrücken und Skripts verwendet werden.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Benutzerdefinierte Variablen und Systemvariablen  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Systemvariablen und benutzerdefinierte Variablen unterstützt. Wenn Sie ein neues Paket erstellen, einem Paket einen Container oder einen Task hinzufügen oder einen Ereignishandler erstellen, schließt [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Reihe von Systemvariablen für den Container ein. Systemvariablen enthalten nützliche Informationen zu einem Paket, einem Container, einem Task oder einem Ereignishandler. So enthält z. B. die Systemvariable **MachineName** zur Laufzeit den Namen des Computers, auf dem das Paket ausgeführt wird, und die Systemvariable **StartTime** enthält die Uhrzeit beim Start der Paketausführung. Systemvariablen sind schreibgeschützt. Weitere Informationen finden Sie unter [System Variables](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Systemvariablen und unterstützt benutzerdefinierte Variablen. Wenn Sie ein neues Paket erstellen, einem Paket einen Container oder einen Task hinzufügen oder einen Ereignishandler erstellen, schließt [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine Reihe von Systemvariablen für den Container ein. Systemvariablen enthalten nützliche Informationen zu einem Paket, einem Container, einem Task oder einem Ereignishandler. So enthält z. B. die Systemvariable **MachineName** zur Laufzeit den Namen des Computers, auf dem das Paket ausgeführt wird, und die Systemvariable **StartTime** enthält die Uhrzeit beim Start der Paketausführung. Systemvariablen sind schreibgeschützt. Weitere Informationen finden Sie unter [System Variables](system-variables.md).  
   
  Sie können benutzerdefinierte Variablen erstellen und diese in Paketen verwenden. Benutzerdefinierte Variablen können in [!INCLUDE[ssIS](../includes/ssis-md.md)]auf vielfältige Weise verwendet werden: in Skripts, in den von Rangfolgeeinschränkungen, vom For-Schleifencontainer, von der Transformation für abgeleitete Spalten und von der Transformation für bedingtes Teilen verwendeten Ausdrücken sowie in den Eigenschaftsausdrücken, die zum Aktualisieren von Eigenschaftswerten verwendet werden.  
   

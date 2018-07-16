@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282936"
 ---
 # <a name="extensions-ssrs"></a>Erweiterungen (SSRS)
   Der Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwendet Erweiterungen, um die Eingabe- und Ausgabetypen zu modularisieren, die für die Authentifizierung, die Datenverarbeitung, das Berichtsrendering und die Berichtsübermittlung akzeptiert werden. Dadurch wird für vorhandene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installationen die Verwendung neuer Softwarestandards in der Branche erleichtert, z. B. ein neues Authentifizierungsschema, oder ein benutzerdefinierter Datenquellentyp. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  
@@ -59,7 +59,7 @@ ms.locfileid: "36161752"
 ## <a name="rendering-extensions"></a>Renderingerweiterungen  
  Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stehen sieben Renderingerweiterungen zur Verfügung: HTML, Excel, CSV, XML, Image, PDF und [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
--   **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern in HTML &#40;Berichts-Generator und SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern von HTML &#40;Berichts-Generator und SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Excel-Renderingerweiterung** Die Excel-Renderingerweiterung rendert Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 oder höher angezeigt und geändert werden können. Diese Renderingerweiterung erstellt Dateien in BIFF (Binary Interchange File Format). BIFF ist das ursprüngliche Dateiformat für Excel-Daten. Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] gerendert werden, unterstützen alle für ein beliebiges Arbeitsblatt verfügbaren Funktionen. Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   

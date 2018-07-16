@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287662"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -76,15 +76,15 @@ ms.locfileid: "36160260"
  Erhöhen Sie die Puffergröße nicht bis zu dem Punkt, an dem die Auslagerung auf den Datenträger beginnt. Die Auslagerung auf den Datenträger beeinträchtigt die Leistung mehr als eine nicht optimierte Puffergröße. Überwachen Sie den Leistungsindikator „Gespoolte Puffer“ im Leistungs-Snap-In der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Management Console (MMC), um zu bestimmen, ob eine Auslagerung auftritt.  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Konfigurieren des Pakets zur parallelen Ausführung  
- Die parallele Ausführung verbessert die Leistung auf Computern, die über mehrere physische oder logische Prozessoren verfügen. Parallele Ausführung verschiedener Tasks im Paket, unterstützen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet zwei Eigenschaften: `MaxConcurrentExecutables` und `EngineThreads`.  
+ Die parallele Ausführung verbessert die Leistung auf Computern, die über mehrere physische oder logische Prozessoren verfügen. Um die parallele Ausführung verschiedener Tasks im Paket unterstützen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet zwei Eigenschaften: `MaxConcurrentExecutables` und `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Die MaxConcurrentExecutables-Eigenschaft  
  Die `MaxConcurrentExecutables` Eigenschaft ist eine Eigenschaft des Pakets selbst. Diese Eigenschaft definiert, wie viele Tasks gleichzeitig ausgeführt werden können. Der Standardwert ist -1, das bedeutet die Anzahl der physischen oder logischen Prozessoren plus 2.  
   
- Stellen Sie sich ein Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Wenn Sie festlegen, `MaxConcurrentExecutables` und 3 an, können alle drei Datenflusstasks gleichzeitig ausgeführt. Stellen Sie sich jedoch vor, dass jeder Datenflusstask über 10 Quelle-zu-Ziel-Ausführungsstrukturen verfügt. Wenn Sie `MaxConcurrentExecutables` auf 3 festlegen, wird nicht sichergestellt, dass die Ausführungsstrukturen innerhalb jedes Datenflusstasks parallel ausgeführt werden.  
+ Stellen Sie sich ein Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Setzen Sie `MaxConcurrentExecutables` , 3, können alle drei Datenflusstasks gleichzeitig ausgeführt. Stellen Sie sich jedoch vor, dass jeder Datenflusstask über 10 Quelle-zu-Ziel-Ausführungsstrukturen verfügt. Wenn Sie `MaxConcurrentExecutables` auf 3 festlegen, wird nicht sichergestellt, dass die Ausführungsstrukturen innerhalb jedes Datenflusstasks parallel ausgeführt werden.  
   
 #### <a name="the-enginethreads-property"></a>Die EngineThreads-Eigenschaft  
- Die `EngineThreads`-Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads die Datenfluss-Engine erstellen und parallel ausführen kann. Die `EngineThreads` -Eigenschaft ist gleichermaßen für die Quellthreads, die das Datenflussmodul für Quellen und die Arbeitsthreads, die das Modul für Transformationen und Ziele erstellt erstellt. Durch das Festlegen von `EngineThreads` auf 10 kann die Engine bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
+ Die `EngineThreads`-Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads die Datenfluss-Engine erstellen und parallel ausführen kann. Die `EngineThreads` Eigenschaft gilt für die Quellthreads, dass die Datenfluss-Engine für Quellen und der Arbeitsthreads, die die Engine für Transformationen und Ziele erstellt wird. Durch das Festlegen von `EngineThreads` auf 10 kann die Engine bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
   
  Stellen Sie sich das Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Jeder Datenflusstask enthält zehn Quelle-zu-Ziel-Ausführungsstrukturen. Wenn Sie die EngineThreads-Eigenschaft in jedem Datenflusstask auf 10 festlegen, können alle 30 Ausführungsstrukturen gleichzeitig ausgeführt werden.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36160260"
   
  Manchmal sind die Quelldaten bereits sortiert, bevor sie von einer Downstreamkomponente verwendet werden. Eine solche Vorsortierung kann auftreten, wenn die SELECT-Abfrage eine ORDER BY-Klausel verwendet hat oder wenn die Daten in sortierter Reihenfolge in die Quelle eingefügt wurden. Für solche vorsortierten Quelldaten können Sie einen Hinweis angeben, dass die Daten sortiert sind, und so die Verwendung einer Transformation zum Sortieren vermeiden, die anderenfalls zum Erfüllen der Sortieranforderungen von bestimmten Downstream-Transformationen erforderlich wäre. (Beispielsweise erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Eingaben.) Wenn Sie einen Hinweis geben möchten, dass die Daten sortiert sind, müssen Sie die folgenden Aufgaben ausführen:  
   
--   Legen Sie die `IsSorted` Eigenschaft auf der Ausgabe einer upstreamdatenfluss-Komponente zu `True`.  
+-   Legen Sie die `IsSorted` Eigenschaft für die Ausgabe einer upstreamdatenfluss-Komponente auf `True`.  
   
 -   Geben Sie die Sortierschlüsselspalten an, in denen die Daten sortiert werden.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36160260"
  Verbessern Sie mithilfe der Vorschläge in diesem Abschnitt die Leistung der Transformation für das Aggregieren, für Fuzzysuche, Fuzzygruppierung, Suche, Zusammenführungsjoin und für langsam veränderliche Dimensionen.  
   
 #### <a name="aggregate-transformation"></a>Transformation für das Aggregieren  
- Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen kennen, die als Ergebnis erwartet werden eine **Gruppieren nach** legen Sie den Vorgang, der `Keys` und `KeysScale` Eigenschaften, bzw. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte kennen, die als Ergebnis erwartet werden eine **Distinct Count** legen Sie den Vorgang, der `CountDistinctKeys` und `CountDistinctScale` Eigenschaften bzw.  
+ Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen, von denen kennen Ergebnis erwartet eine **Group by-** Vorgang, der `Keys` und `KeysScale` Eigenschaften, bzw.. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte, von denen kennen Ergebnis erwartet eine **Distinct Count** Vorgang, der `CountDistinctKeys` und `CountDistinctScale` Eigenschaften, bzw..  
   
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36160260"
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
   
 #### <a name="merge-join-transformation"></a>Transformation für Zusammenführungsjoin  
- Sie haben mehr so konfigurieren Sie den Wert von der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin einer übermäßigen arbeitsspeicherbelegung bei. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
+ Sie müssen nicht mehr so konfigurieren Sie den Wert des der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin übermäßig Arbeitsspeicher verbraucht. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen  
  Der Assistent für langsam veränderliche Dimensionen und die Transformation für langsam veränderliche Dimensionen sind universell einsetzbare Tools, die die Anforderungen der meisten Benutzer erfüllen. Der vom Assistenten generierte Datenfluss ist jedoch nicht leistungsoptimiert.  

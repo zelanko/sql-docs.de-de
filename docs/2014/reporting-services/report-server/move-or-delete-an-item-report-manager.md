@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309320"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Verschieben oder Löschen eines Elements (Berichts-Manager)
   Berichte und berichtsbezogene Elemente, die Sie auf einem Berichtsserver veröffentlichen, werden in Ordnern gespeichert. Sie können Elemente in einen anderen Ordner verschieben. Verweise auf diese Elemente werden automatisch vom Berichtsserver verwaltet. Bevor Sie ein Element löschen, ist zu überprüfen, ob Elemente davon abhängen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36159919"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>So verschieben Sie ein Element auf der Inhaltsseite  
   
-1.  Starten Sie [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;]... / Berichts-Manager-Ssrs-systemeigenen-mode.md).  
+1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;]... / Berichts-Manager-Ssrs-Native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und suchen Sie das zu verschiebende Element.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36159919"
   
 #### <a name="to-delete-a-report-or-item"></a>So löschen Sie einen Bericht oder ein Element  
   
-1.  Starten Sie [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;]... / Berichts-Manager-Ssrs-systemeigenen-mode.md).  
+1.  Starten Sie [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;]... / Berichts-Manager-Ssrs-Native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** , und suchen Sie das zu löschende Element.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36159919"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhaltsübersicht &#40;Berichts-Manager&#41;]... / Inhalts-Seite-Bericht-manager.md)   
+ [Inhalt Seite &#40;Berichts-Manager&#41;]... / Inhalt-Seite-Bericht-manager.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

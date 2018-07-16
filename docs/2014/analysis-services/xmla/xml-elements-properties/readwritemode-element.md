@@ -1,5 +1,5 @@
 ---
-title: ReadWriteMode-Element | Microsoft Docs
+title: ReadWriteMode-Element | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 88ebc7e23fc3ec4aad0d8273464636354958217a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285786"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode-Element
   Die `ReadWriteMode`-Datenbankeigenschaft gibt an, ob sich die Datenbank im `ReadWrite`-Modus oder im `ReadOnly`-Modus befindet. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft.  
@@ -56,18 +56,18 @@ ms.locfileid: "36163001"
 ## <a name="remarks"></a>Hinweise  
  Datenbanken können nur im `ReadWrite`-Modus erstellt werden. Datenbanken können nicht im `ReadOnly`-Modus erstellt werden.  
   
- Der Wert, der die `ReadWriteMode` -Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
+ Der Wert des der `ReadWriteMode` -Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
 |value|Description|  
 |-----------|-----------------|  
 |*ReadOnly*|Es können keine Änderungen oder Updates auf die Datenbank angewendet werden.|  
-|*ReadWrite*|Es können Änderungen oder Updates auf die Datenbank angewendet werden.|  
+|*"ReadWrite"*|Es können Änderungen oder Updates auf die Datenbank angewendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Attach-Element](../xml-elements-commands/attach-element.md)   
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Verschieben einer Analysis Services-Datenbank](../../multidimensional-models/move-an-analysis-services-database.md)   
  [Datenbank-ReadWriteModes](../../multidimensional-models/database-readwritemodes.md)   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   

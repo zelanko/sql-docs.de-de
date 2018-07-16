@@ -1,5 +1,5 @@
 ---
-title: Aus Beispiel (Tabellenanalysetools für Excel) füllen | Microsoft Docs
+title: Geben Sie in Beispiel (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - fill from example
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c92cd4cdc4cf3306ce0877f3e046c626e6f883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48972682ed3de37bfbffe3156b44f1e0d5b36039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308670"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Aus Beispiel füllen (Tabellenanalysetools für Excel)
-  ![Aus Beispiel füllen Schaltfläche in Tabellenanalysetools](media/tat-fillex.gif "aus Beispiel füllen Schaltfläche in Tabellenanalysetools")  
+  ![Aus Beispiel füllen-Schaltfläche in Tabellenanalysetools](media/tat-fillex.gif "aus Beispiel füllen-Schaltfläche in Tabellenanalysetools")  
   
- Die **aus Beispiel füllen** Tool können Sie die Daten auf Grundlage vorhandener Werte neue Datenspalten erstellen.  
+ Die **aus Beispiel füllen** Tool können Sie auf der Grundlage vorhandener Werte neue Datenspalten erstellen.  
   
- Nehmen wir beispielsweise an, die Daten enthalten ein **Kaufbetrag** Spalte ein **Bestellmenge** Spalte und eine **Premiumkunde** Spalte, auf die Formel mit basiert, die andere Spalten. Wenn die **Premiumkunde** Spalte viele leere Zeilen enthält, können Sie die **Kaufbetrag** und **Bestellmenge** Spalten als Eingaben, die fehlenden Werte ableiten. Das Tool analysiert die vorhandenen Datenmuster in Kombination mit den von Ihnen eingegebenen Beispielen und trifft eine Vorhersage dazu, welche Kategorie den einzelnen Kunden zugewiesen werden soll.  
+ Nehmen wir beispielsweise an, die Daten enthalten ein **Kaufbetrag** Spalte eine **Bestellmenge** Spalte und eine **Premier-Kunde** Spalte, die basierend auf eine Formel mit der andere Spalten. Wenn die **Premier-Kunde** Spalte enthält viele leere Zeilen, könnten Sie mit der **Kaufbetrag** und **Bestellmenge** Spalten als Eingaben, um die fehlenden Werte abzuleiten. Das Tool analysiert die vorhandenen Datenmuster in Kombination mit den von Ihnen eingegebenen Beispielen und trifft eine Vorhersage dazu, welche Kategorie den einzelnen Kunden zugewiesen werden soll.  
   
  Wenn Sie mit den Ergebnissen nicht zufrieden sind, können Sie sie optimieren, indem Sie weitere Beispiele bereitstellen.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36162820"
   
 3.  Erstellen Sie eine Spalte für die neuen Daten, und geben Sie Beispiele für die Daten ein, für die Sie eine Vorhersage treffen möchten. Stellen Sie sicher, dass für jeden vorherzusagenden Wert mindestens ein Beispiel vorhanden ist. Wenn Daten in eine bereits vorhandene Spalte eingetragen werden sollen, wählen Sie die Spalte mit den fehlenden Werten aus.  
   
-4.  Klicken Sie optional auf **wählen Sie Spalten in der Analyse zu verwendende**. In der **erweiterte Spaltenauswahl** Dialogfeld geben die Spalten, die am ehesten nützlich sein, wenn der fehlenden Daten zu füllen.  
+4.  Klicken Sie optional auf **wählen Sie Spalten in der Analyse zu verwendende**. In der **erweiterte Spaltenauswahl** Dialogfeld geben die Spalten, die am ehesten nützlich sein, beim Ausfüllen der fehlenden Daten.  
   
      Sie wissen beispielsweise aus Erfahrung, dass zwischen einer bestimmten Spalte und der Spalte mit den fehlenden Werten ein kausaler Zusammenhang besteht. In diesem Fall können Sie die Auswahl anderer Spalten aufheben, um bessere Ergebnisse zu erzielen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36162820"
   
 5.  Klicken Sie auf **Ausführen**.  
   
-     Wenn die Analyse abgeschlossen ist, erstellt das Tool ein neues **Muster** Arbeitsblatt, das die Ergebnisse der Analyse enthält. Der Bericht zeigt an, welche Regeln oder wichtigen Einflussfaktoren gefunden wurden und wie hoch die Wahrscheinlichkeit für die einzelnen Regeln ist.  
+     Wenn die Analyse abgeschlossen ist, erstellt das Tool eine neue **Muster** Arbeitsblatt, das die Ergebnisse der Analyse enthält. Der Bericht zeigt an, welche Regeln oder wichtigen Einflussfaktoren gefunden wurden und wie hoch die Wahrscheinlichkeit für die einzelnen Regeln ist.  
   
      Durch das Tool wird der ursprünglichen Datentabelle außerdem automatisch eine Spalte hinzugefügt, die die neuen Werte enthält. Sie können diese Werte überprüfen und mit den ursprünglichen Werten vergleichen.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36162820"
  Sie können nur Daten verwenden, die sich in Spalten befinden. Verwenden Sie die Einfügen/Transponieren-Funktion in Excel, um aufzufüllende Datenreihen, die in einer Zeile gespeichert sind, in das Spaltenformat umzuwandeln.  
   
 ## <a name="understanding-the-pattern-report"></a>Grundlegendes zum Musterbericht  
- Beim Ausführen der **aus Beispiel füllen** Tool, ein Bericht wird erstellt, die Weitere Informationen zu den Mustern bereitstellt, die erkannt wurden. Diese Muster werden zum Extrapolieren der neuen Datenwerte verwendet.  
+ Beim Ausführen der **aus Beispiel füllen** Tool ein Bericht erstellt, die Weitere Informationen zu den Mustern bereitstellt, die erkannt wurden. Diese Muster werden zum Extrapolieren der neuen Datenwerte verwendet.  
   
  Im Musterbericht werden die wichtigen Einflussfaktoren für jeden vorhergesagten Wert angezeigt. Jeder Einflussfaktor bzw. jede Regel wird als eine Kombination aus einer Spalte, des Werts in dieser Spalte und der relativen Auswirkung der Regel auf die Vorhersage beschrieben.  
   
@@ -74,12 +74,12 @@ ms.locfileid: "36162820"
 > [!NOTE]  
 >  **Relative Auswirkung** wird als schattierter Balken angezeigt. Je länger der Balken, desto größer ist die Wahrscheinlichkeit, dass die Regel für den ausgefüllten Wert zutrifft.  
   
- Das Tool auch eine neue Spalte hinzugefügt, um mit dem Namen der ursprünglichen Datentabelle \<Spaltenname > erweitert.  
+ Das Tool fügt auch eine neue Spalte, mit dem Namen der ursprünglichen Datentabelle \<Spaltenname > erweitert.  
   
  Wenn die ursprüngliche Datenspalte einen Wert enthält, wird dieser Wert in die neue Spalte kopiert. Wenn die ursprüngliche Spalte jedoch eine leere Zelle enthält, enthält die neue Spalte den durch den Assistenten vorhergesagten Wert.  
   
 ## <a name="related-tools-and-information"></a>Verwandte Tools und Informationen  
- Sie können auch die [Daten durchsuchen](explore-data-sql-server-data-mining-add-ins.md) Assistenten im Data Mining-Client für Excel verwenden, um die Verteilung der Werte in einer Excel-Spalte zu untersuchen. Weitere Informationen finden Sie unter [Forschungsarbeit und Bereinigen von Daten](exploring-and-cleaning-data.md).  
+ Sie können auch die [Daten durchsuchen](explore-data-sql-server-data-mining-add-ins.md) Assistenten im Data Mining-Client für Excel verwenden, um die Verteilung der Werte in einer Excel-Spalte zu untersuchen. Weitere Informationen finden Sie unter [Exploring und Bereinigen von Daten](exploring-and-cleaning-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  

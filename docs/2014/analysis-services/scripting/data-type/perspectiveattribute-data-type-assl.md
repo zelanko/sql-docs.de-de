@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAttribute-Datentyp (ASSL) | Microsoft Docs
+title: PerspectiveAttribute-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveAttribute data type
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e6125aa11dedf6fe1eda706e136caf989e3d4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f27d082f4d0ff13f736d00a3f6d521e830c402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295560"
 ---
 # <a name="perspectiveattribute-data-type-assl"></a>PerspectiveAttribute-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen über ein Attribut in einer [PerspectiveDimension](dimension-data-type-assl.md) Element.  
+  Definiert einen Grunddatentyp, der die Informationen über ein Attribut in einem [PerspectiveDimension](dimension-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36160527"
 |Abgeleitete Elemente|[Attribut](../objects/attribute-element-assl.md) ([Attribute](../collections/attributes-element-assl.md) Auflistung von [PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

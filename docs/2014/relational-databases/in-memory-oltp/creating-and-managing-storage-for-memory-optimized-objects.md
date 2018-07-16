@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285236"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Erstellen und Verwalten von Speicher für speicheroptimierte Objekte
   Die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]integriert, was es Ihnen ermöglicht, sowohl speicheroptimierte als auch (traditionelle) datenträgerbasierte Tabellen in der gleichen Datenbank zu haben. Jedoch unterscheidet sich die Speicherstruktur für speicheroptimierte Tabellen von der für datenträgerbasierte Tabellen.  
@@ -36,7 +36,7 @@ ms.locfileid: "36151567"
   
  Speicher für speicheroptimierte Tabellen weisen die folgenden Schlüsselattribute auf:  
   
--   Alle speicheroptimierten Tabellen werden in eine Speicheroptimierte Dateigruppe zugeordnet werden. Diese Dateigruppe wird mithilfe von Filestream-Dateigruppe erstellt.  
+-   Alle speicheroptimierten Tabellen werden in eine Speicheroptimierte Dateigruppe zugeordnet werden. Diese Dateigruppe basiert auf Filestream-Dateigruppe.  
   
 -   Es gibt keine Seiten und die Daten werden als Zeile dauerhaft gespeichert.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36151567"
   
 -   Im Gegensatz zum Speicher für datenträgerbasierten Tabellen wird der Speicher für speicheroptimierte Tabellen nicht komprimiert. Beim Migrieren einer komprimierten (ZEILE oder SEITE), datenträgerbasierten Tabelle zu einer speicheroptimierten Tabelle müssen Sie die Größenänderungen berücksichtigen.  
   
--   Eine speicheroptimierte Tabelle kann sowohl dauerhaft als auch nicht dauerhaft sein. Sie müssen nur zum Konfigurieren von Speicher für dauerhaften Speicher-Optimierung für Tabellen.  
+-   Eine speicheroptimierte Tabelle kann sowohl dauerhaft als auch nicht dauerhaft sein. Sie müssen nur zum Konfigurieren von Speicher für permanente Speicher – optimieren von Tabellen.  
   
  In diesem Abschnitt werden Prüfpunktdateipaare und weitere Aspekte der Speicherung von Daten in speicheroptimierten Tabellen beschrieben.  
   

@@ -1,5 +1,5 @@
 ---
-title: Geben Sie eine zu verwendenden Spalte in einem Modell als Regressor | Microsoft Docs
+title: Geben Sie eine zu verwendenden Spalte in einem Modell als Regressor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c2897d8b57b381a5a25cd83086f3cb2178994d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a8d3418ced07536e0ab02c6ad1324096f0898bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293620"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte
   Ein lineares Regressionsmodell stellt den Wert des vorhersagbaren Attributs als Ergebnis einer Formel dar, die die Eingaben so kombiniert, dass die Daten so nah wie möglich an einer geschätzten Regressionsgeraden liegen. Der Algorithmus akzeptiert nur numerische Werte als Eingaben und erkennt automatisch die am besten passenden Eingaben.  
@@ -67,6 +67,6 @@ ms.locfileid: "36162819"
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
  [Datamining-Abfragen](data-mining-queries.md)   
  [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

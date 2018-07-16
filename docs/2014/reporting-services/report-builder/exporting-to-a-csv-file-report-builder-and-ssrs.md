@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232690"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportieren als CSV-Datei (Berichts-Generator und SSRS)
   Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.  

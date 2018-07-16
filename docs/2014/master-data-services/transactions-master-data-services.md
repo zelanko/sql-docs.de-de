@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: debc2d15deda7079c54d3b763ef89afaa86f17f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283356"
 ---
 # <a name="transactions-master-data-services"></a>Transaktionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Transaktionen jedes Mal aufgezeichnet, wenn für ein Element eine Aktion ausgeführt wird. Transaktionen können von allen Benutzern angezeigt und von Administratoren umgekehrt werden. Für Transaktionen werden das Datum, die Uhrzeit, der Benutzer, der die Aktion ausgeführt hat, sowie weitere Details angezeigt. Benutzer können einer Transaktion eine Anmerkung hinzufügen, um anzugeben, wieso die Transaktion stattgefunden hat.  

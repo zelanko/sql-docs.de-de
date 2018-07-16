@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d35fcd33da67623a27cf8027e499c2ba9bbca429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 810d91175bdfd8e8c31eb42dfbab1c36b0dcce65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313950"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Abgeleitete Hierarchien (Master Data Services)
   Eine von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] abgeleitete Hierarchie wird von den domänenbasierten Attributbeziehungen abgeleitet, die zwischen Entitäten in einem Modell bereits vorhanden sind.  

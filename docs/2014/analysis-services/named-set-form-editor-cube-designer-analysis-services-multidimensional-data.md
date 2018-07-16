@@ -1,5 +1,5 @@
 ---
-title: Mit dem Namen Satz Formular-Editor (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Mit dem Namen Satz Formular-Editor (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291646"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Formular-Editor für benannte Mengen (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Formular-Editors für benannte Mengen** auf der Registerkarte **Berechnungen** des Cube-Designers können Sie eine benannte Menge erstellen oder ändern.  
@@ -46,10 +46,10 @@ ms.locfileid: "36162569"
  [Erstellen von benannten Mengen](multidimensional-models/create-named-sets.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Berechnungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Skriptplaner &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Berechnungstools &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Formular-Editor &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Skript-Editor &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Symbolleiste &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skriptplaner &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Berechnungstools &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Formular-Editor &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skript-Editor &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

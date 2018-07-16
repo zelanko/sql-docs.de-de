@@ -1,5 +1,5 @@
 ---
-title: Cuberaum | Microsoft Docs
+title: Cuberaum | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282186"
 ---
 # <a name="cube-space"></a>Cuberaum
   Der Cuberaum ist das Produkt aus den Elementen der Attributhierarchien eines Cubes und den Measures des Cubes. Daher wird der Cuberaum durch das Kombinationsprodukt aller Attributhierarchieelemente im Cube und den Measures des Cubes bestimmt und definiert die maximale Größe des Cubes. Beachten Sie, dass dieser Raum alle potenziellen Kombinationen von Attributhierarchieelementen umfasst, einschließlich Kombinationen, die in der wirklichen Welt unmöglich sind, z. B. Kombinationen aus der Stadt Paris und den Ländern England, Spanien, Japan oder Indien.  
@@ -133,7 +133,7 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Berechnungskontext  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Grundlegende Konzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tupel](tuples.md)   
  [Autoexists](autoexists.md)   
  [Arbeiten mit Elementen, Tupeln und Mengen &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 9f1dc6c0ff421909a672fe9abe1ccd94efe6c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 30707ed1e70c37fee37c4c84369853ef1fba5c12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311840"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
   In diesem Thema wird erläutert, wie Sie die Leistung von systemintern kompilierten gespeicherten Prozeduren überwachen können.  
@@ -33,7 +33,7 @@ ms.locfileid: "36159779"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Weitere Informationen zu den `sp_statement_completed` erweiterten Ereignis finden Sie unter [Gewusst wie: Abrufen der Anweisung, die ein Ereignis ausgelöst wurde](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Weitere Informationen zu den `sp_statement_completed` finden Sie mit der erweiterten Ereignis [Gewusst wie: Abrufen der Anweisung, die ein Ereignis ausgelöst wurde](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Unter Verwendung von Datenverwaltungssichten  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Ausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren sowohl auf Prozedur- als auch auf Abfrageebene. Das Sammeln statistischer Ausführungsdaten ist aufgrund der Leistungsauswirkungen standardmäßig nicht aktiviert.  

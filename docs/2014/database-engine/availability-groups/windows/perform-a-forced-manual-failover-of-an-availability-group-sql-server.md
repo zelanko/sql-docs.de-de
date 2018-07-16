@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287988"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
@@ -161,7 +160,7 @@ ms.locfileid: "36163018"
   
     -   `-AllowDataLoss`  
   
-         Durch den `-AllowDataLoss`-Parameter wird `Switch-SqlAvailabilityGroup` standardmäßig angewiesen, Sie daran zu erinnern, dass das Erzwingen eines Failovers zum Verlust von Transaktionen führen kann, für die kein Commit ausgeführt wurde, und eine Bestätigung anzufordern. Um den Vorgang fortzusetzen, geben Sie `Y`werden kann. Geben Sie den Vorgang Abbrechen `N`.  
+         Durch den `-AllowDataLoss`-Parameter wird `Switch-SqlAvailabilityGroup` standardmäßig angewiesen, Sie daran zu erinnern, dass das Erzwingen eines Failovers zum Verlust von Transaktionen führen kann, für die kein Commit ausgeführt wurde, und eine Bestätigung anzufordern. Um den Vorgang fortzusetzen, geben Sie `Y`; Geben Sie den Vorgang Abbrechen `N`.  
   
          Im folgenden Beispiel wird ein erzwungenes Failover (mit möglichem Datenverlust) der Verfügbarkeitsgruppe `MyAg` auf das sekundäre Replikat auf der Serverinstanz `SecondaryServer\InstanceName`durchgeführt. Sie werden aufgefordert, diesen Vorgang zu bestätigen.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "36163018"
   
     -   **-AllowDataLoss-Force**  
   
-         Um ein erzwungenes Failover ohne Bestätigung zu initiieren, geben Sie den `-AllowDataLoss`-Parameter und den `-Force`-Parameter an. Dies ist nützlich, wenn Sie den Befehl in ein Skript einschließen und dieses ohne Benutzerinteraktion ausführen möchten.  Verwenden Sie jedoch die `-Force` -Option mit Vorsicht, da ein erzwungenes Failover zum Verlust von Daten aus Datenbanken, die an der verfügbarkeitsgruppe teilnehmen führen kann.  
+         Um ein erzwungenes Failover ohne Bestätigung zu initiieren, geben Sie den `-AllowDataLoss`-Parameter und den `-Force`-Parameter an. Dies ist nützlich, wenn Sie den Befehl in ein Skript einschließen und dieses ohne Benutzerinteraktion ausführen möchten.  Verwenden Sie jedoch die `-Force` -Option mit Vorsicht, da ein erzwungenes Failover den Datenverlust in Datenbanken, die Teil der verfügbarkeitsgruppe dazu führen kann.  
   
          Im folgenden Beispiel wird ein erzwungenes Failover (mit möglichem Datenverlust) der Verfügbarkeitsgruppe `MyAg` auf die Serverinstanz `SecondaryServer\InstanceName`durchgeführt. Durch die `-Force`-Option wird die Bestätigung dieses Vorgangs unterdrückt.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "36163018"
         ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
@@ -313,7 +312,7 @@ ms.locfileid: "36163018"
   
 -   [Problembehandlung bei AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40;SQLServer&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [Problembehandlung bei einem fehlerhaften Dateien Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Problembehandlung bei einem fehlerhaften Dateihinzufügungsvorgängen Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
@@ -326,7 +325,7 @@ ms.locfileid: "36163018"
   
 -   **Whitepaper:**  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft-Whitepapers für SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

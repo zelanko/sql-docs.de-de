@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
 - SQL12.SWB.makemanaged.Summary.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ae119f84af86a44e994e0a4684f99783a7edf2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279156"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
   Registrieren Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm, um deren Leistung und Konfiguration als verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu überwachen. Der Steuerungspunkt für das Hilfsprogramm (UCP) erfasst alle 15 Minuten Konfigurations- und Leistungsinformationen von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Diese Informationen werden auf dem UCP im Utility Management Data Warehouse (UMDW) gespeichert. Der UMDW-Dateiname lautet "sysutility_mdw". [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsdaten werden mit Richtlinien verglichen, sodass Sie Engpässe bei der Ressourcennutzung und Konsolidierungsmöglichkeiten leichter erkennen können.  
@@ -66,7 +66,7 @@ ms.locfileid: "36162941"
   
 -   FILESTREAM-Daten werden von der Überwachungsfunktion des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms nicht unterstützt.  
   
- Weitere Informationen finden Sie unter [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) und [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Weitere Informationen finden Sie unter [Spezifikationen der maximalen Kapazität für SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) und [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md).  
   

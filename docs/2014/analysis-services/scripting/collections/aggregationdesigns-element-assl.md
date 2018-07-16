@@ -1,5 +1,5 @@
 ---
-title: AggregationDesigns-Element (ASSL) | Microsoft Docs
+title: AggregationDesigns-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesigns element
 ms.assetid: 7291956a-9c53-41fe-af2e-2418e26956c5
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dfddae8284e32f08edc4cf1e0868c7c71c97db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89140d57aafd7a74b5d1ad8082e8feba075c33bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279596"
 ---
 # <a name="aggregationdesigns-element-assl"></a>AggregationDesigns-Element (ASSL)
   Enthält die Auflistung der Aggregationsentwürfe, die für mehrere Partitionen in einer Datenbank freigegeben sein können.  
@@ -61,10 +61,10 @@ ms.locfileid: "36163009"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[MeasureGroup-Objekt](../objects/group-element-assl.md)|  
-|Untergeordnete Elemente|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
+|Untergeordnete Elemente|[Aggregationdesign-Objekts](../objects/aggregationdesign-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AggregationDesignCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AggregationDesignCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Partitions-Element &#40;ASSL&#41;](../objects/partition-element-assl.md)   

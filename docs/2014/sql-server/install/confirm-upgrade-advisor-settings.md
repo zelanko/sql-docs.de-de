@@ -1,5 +1,5 @@
 ---
-title: Bestätigen der Upgrade Advisor-Einstellungen | Microsoft Docs
+title: Bestätigen der Upgrade Advisor-Einstellungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - analyzing system [Upgrade Advisor], review settings
 - Upgrade Advisor [SQL Server], reviewing settings
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, reviewing settings
 ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba066e99c28893ef74609a28e34dcfa09fd7f11c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81df6e012d16e922724236d15005f3552db50456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293992"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Bestätigen der Upgrade Advisor-Einstellungen
-  Auf dieser Seite können Sie die ausgewählten Optionen und die von Ihnen eingegebenen Parameter für den Analyse-Assistenten des Upgrade Advisor überprüfen. Nachdem Sie die Optionen und Parameter überprüft haben, klicken Sie auf **ausführen** , die Analyse zu starten.  
+  Auf dieser Seite können Sie die ausgewählten Optionen und die von Ihnen eingegebenen Parameter für den Analyse-Assistenten des Upgrade Advisor überprüfen. Nachdem Sie die Optionen und Parameter überprüft haben, klicken Sie auf **ausführen** auf die Analyse zu starten.  
   
 ## <a name="options"></a>Tastatur  
  **Upgrade Advisor-Einstellungen**  

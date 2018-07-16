@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -19,20 +19,20 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8bd434ee91f53e747b6291d6c718f9e073f8af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292830"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  
   
  Ausdrücke basieren auf einer Ausdruckssprache und der Ausdrucksauswertung. Die Ausdrucksauswertung analysiert Ausdrücke und ermittelt, ob sich Ausdrücke an die Regeln der Ausdruckssprache halten. Weitere Informationen zur Ausdruckssyntax und zu unterstützten Literalen und Bezeichnern finden Sie in den folgenden Themen.  
   
--   [Syntax &#40;SSIS&#41;](syntax-ssis.md)  
+-   [Die Syntax &#40;SSIS&#41;](syntax-ssis.md)  
   
 -   [Literale &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   

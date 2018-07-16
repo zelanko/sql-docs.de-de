@@ -1,5 +1,5 @@
 ---
-title: Filtern einer Regel in einer Zuordnung | Microsoft Docs
+title: Filtern einer Regel in einer Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289796"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtern einer Regel in einem Zuordnungsregelmodell
   Sie können Filterung mit Zuordnungsmodellen verwenden, um die Ergebnisse auf die Zuordnungen zu beschränken, die für Sie von Interesse sind. Zum Beispiel können Sie die Regeln filtern, damit nur die Ergebnisse angezeigt werden, die ein bestimmtes Produkt enthalten.  

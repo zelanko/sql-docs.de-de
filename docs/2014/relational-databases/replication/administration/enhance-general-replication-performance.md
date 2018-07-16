@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172871"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
   Wenn Sie die Hinweise in diesem Thema beachten, können Sie die allgemeine Leistung aller Replikationstypen in der Anwendung und im Netzwerk verbessern.  
@@ -84,7 +84,7 @@ ms.locfileid: "36161792"
   
 -   Schränken Sie die Verwendung des LOB-Datentyps (Large OBjects) ein.  
   
-     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, wird empfohlen, dass Sie die Datentypen verwenden `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
+     LOBs beanspruchen mehr Speicherplatz und Verarbeitungszeit als andere Spaltendatentypen. Verwenden Sie diese Spalten nur dann in Artikeln, wenn sie für die Anwendung erforderlich sind. Die Datentypen `text`, `ntext`, und `image` sind veraltet. Wenn Sie LOBs verwenden, es wird empfohlen, dass Sie der mithilfe `varchar(max)`, `nvarchar(max)`, `varbinary(max)`bzw.  
   
      Verwenden Sie für die Transaktionsreplikation das Verteilungs-Agentprofil **Verteilungsprofil für das OLE DB-Streaming**. Weitere Informationen finden Sie unter [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   

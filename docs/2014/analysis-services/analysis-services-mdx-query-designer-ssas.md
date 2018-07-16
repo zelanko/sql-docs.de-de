@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-MDX-Abfrage-Designer (SSAS) | Microsoft Docs
+title: Analysis Services-MDX-Abfrage-Designer (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 252c4623149c4a96ccab9ded6ff76788e436d544
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bbe57da905e12d644de39eff98216bd2d0f1218
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282222"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX-Abfrage-Designer (SSAS)
   Der Analysis Services Multidimensional Expression-Abfrage-Designer (MDX) stellt eine grafische Benutzeroberfläche bereit, um MDX-Abfragen problemlos aus einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquelle erstellen zu können. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zum Abrufen der gewünschten Daten zu erstellen.  

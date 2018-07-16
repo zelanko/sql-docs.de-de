@@ -1,5 +1,5 @@
 ---
-title: Verarbeitung von mehrdimensionalen Modellobjekten | Microsoft Docs
+title: Verarbeitung von mehrdimensionalen Modellobjekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180977"
 ---
 # <a name="multidimensional-model-object-processing"></a>Verarbeitung von mehrdimensionalen Modellobjekten
   Die Verarbeitung bezeichnet den Schritt oder eine Abfolge von Schritten, durch die Daten von Analysis Services aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen werden. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
@@ -49,7 +49,7 @@ ms.locfileid: "36148710"
   
 ##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
   
--   Zur Verarbeitung werden Administratorberechtigungen auf der Analysis Services-Instanz benötigt. Bei der interaktiven Verarbeitung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus müssen Sie Mitglied der Serveradministratorrolle auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Um eine unbeaufsichtigte Verarbeitung durchzuführen, z. B. über ein SSIS-Paket, das zeitgesteuert vom SQL Server-Agent ausgeführt wird, muss das Konto, unter dem das Paket ausgeführt wird, Mitglied der Serveradministratorrolle sein. Weitere Informationen zum Festlegen von Administratorberechtigungen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   Zur Verarbeitung werden Administratorberechtigungen auf der Analysis Services-Instanz benötigt. Bei der interaktiven Verarbeitung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aus müssen Sie Mitglied der Serveradministratorrolle auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Um eine unbeaufsichtigte Verarbeitung durchzuführen, z. B. über ein SSIS-Paket, das zeitgesteuert vom SQL Server-Agent ausgeführt wird, muss das Konto, unter dem das Paket ausgeführt wird, Mitglied der Serveradministratorrolle sein. Weitere Informationen zur Einstellung von Administratorberechtigungen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   Das für den Datenempfang verwendete Konto wird im Datenquellenobjekt angegeben, entweder als eine Identitätswechseloption, wenn die Windows-Authentifizierung verwendet wird, oder als Benutzername in der Verbindungszeichenfolge, wenn die Datenbankauthentifizierung verwendet wird. Das Konto muss über Leseberechtigungen für relationale Datenquellen verfügen, die vom Modell verwendet werden.  
   

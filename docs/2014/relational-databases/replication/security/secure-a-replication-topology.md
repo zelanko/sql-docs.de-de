@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f18e04757068a33456f442648fe5f49ff29bbb65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a097c43f6081e024b0c7f06e0df9fe88234b5bce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311366"
 ---
 # <a name="secure-a-replication-topology"></a>Sichern einer Replikationstopologie
   Für die Replikation erforderliche Sicherheitskonten, Anmeldungen und Kennwörter werden bei der Konfiguration der Replikation und bei der Erstellung von Veröffentlichungen und Abonnements bereitgestellt. Diese Sicherheitseinstellungen können später mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], gespeicherten Replikationsprozeduren und Replikationsverwaltungsobjekten (RMO) geändert werden. In den folgenden Themen wird das Ändern der Einstellungen für die Replikationssicherheit beschrieben.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - deleting job step logs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - removing job step logs
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 13c1b12dcf6fcab2fe740b41c6d70f0b34f0eb43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 54b5c09761953037193e2dfa11677f97b7bf397a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297770"
 ---
 # <a name="delete-a-job-step-log"></a>Löschen eines Auftragsschrittprotokolls
   In diesem Thema wird beschrieben, wie Sie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen.  
@@ -87,7 +87,7 @@ ms.locfileid: "36162601"
  Weitere Informationen finden Sie unter [Sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
- Verwenden der `DeleteJobStepLogs` Methoden die `Job` Klasse, indem Sie eine Programmiersprache, die Sie, z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Verwenden der `DeleteJobStepLogs` Methoden der `Job` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309460"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
   Dieses Thema enthält Schrittanleitungen zum Migrieren einer der folgenden unterstützten Versionen einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus zu einer neuen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz:  
@@ -38,7 +38,7 @@ ms.locfileid: "36161754"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Weitere Schritte erforderlich, finden Sie unter [können keine SQL Server 2005 Host Berichtsserver 2014-Datenbanken](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Weitere Schritte erforderlich, finden Sie unter [können keine SQL Server 2005 zum Hosten von Berichtsserver 2014-Datenbanken](http://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -238,12 +238,12 @@ ms.locfileid: "36161754"
   
 |Anpassung|Information|  
 |-------------------|-----------------|  
-|Berichtsserver-E-Mail-Übermittlung mit benutzerdefinierten Einstellungen|[Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [e-Mail-Einstellungen – Konfigurations-Manager &#40;SSRS im einheitlichen Modus&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Berichtsserver-E-Mail-Übermittlung mit benutzerdefinierten Einstellungen|[Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [e-Mail-Einstellungen – Konfigurations-Manager &#40;einheitlicher SSRS-Modus&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Geräteinformationseinstellungen|[Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
 |Berichts-Manager für eine Remoteinstanz|[Berichts-Manager konfigurieren &#40;im einheitlichen Modus&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows-Dienstgruppe und Sicherheits-ACLs  
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]gibt es eine Dienstgruppe, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Dienstgruppe, mit deren Hilfe Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner erstellt werden, die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser$\<*Computer_Name*>$\<*Instanz_Name*> angezeigt. Diese Gruppe ersetzt die beiden Windows-Dienstgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie benutzerdefinierte ACLs eines zugeordnet haben die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Gruppen, müssen Sie diese ACLs für die neue Gruppe für die neue Instanz des Berichtsservers in gilt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]gibt es eine Dienstgruppe, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Dienstgruppe, mit deren Hilfe Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner erstellt werden, die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser$\<*Computer_Name*>$\<*Instanz_Name*> angezeigt. Diese Gruppe ersetzt die beiden Windows-Dienstgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie benutzerdefinierte ACLs eines zugeordnet haben die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Gruppen, Sie müssen diese ACLs auf die neue Gruppe Ihrer neuen Berichtsserverinstanz in anwenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Überprüfen der Bereitstellung  
   
@@ -272,7 +272,7 @@ ms.locfileid: "36161754"
   
 ## <a name="see-also"></a>Siehe auch  
  [Migrieren einer Reporting Services-Installation &#40;SharePoint-Modus&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Berichtsserver-Datenbank &#40;SSRS im einheitlichen Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Aktualisieren und Migrieren von Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Abwärtskompatibilität von Reporting Services](../reporting-services-backward-compatibility.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

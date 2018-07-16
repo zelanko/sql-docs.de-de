@@ -1,5 +1,5 @@
 ---
-title: ASSL XML-Konventionen | Microsoft Docs
+title: ASSL XML-Konventionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279896"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
   Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
@@ -50,7 +50,7 @@ ms.locfileid: "36161681"
  Zusätzlich zu dieser Konventionsliste werden in Analysis Services bestimmte Konventionen in Bezug auf Kardinalität, Vererbung, Leerzeichen, Datentypen und Standardwerte befolgt.  
   
 ## <a name="cardinality"></a>Cardinality  
- Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgende XML-Fragment stellt beispielsweise die `Dimensions` Auflistung innerhalb einer `Database` Element:  
+ Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgende XML-Fragment stellt beispielsweise die `Dimensions` Sammlung innerhalb einer `Database` Element:  
   
  `<Database>`  
   
@@ -140,10 +140,10 @@ ms.locfileid: "36161681"
   
 -   Interne Leerzeichen werden beibehalten.  
   
- `Name` und `ID` -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` Konventionen, finden Sie unter [ASSL-Objekte und-Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ `Name` und `ID` -Eigenschaft besitzen spezielle Beschränkungen für gültige Zeichen in Zeichenfolgenelementen. Weitere Informationen zu `Name` und `ID` -Konventionen, finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
- Ein `DateTime` -Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Die niedrigste Datum von unterstützt die `DataTime` -Datentyp wird dem 1. Januar 1601 steht für Programmierer als `DateTime.MinValue`. Das früheste unterstützte Datum gibt an, dass ein `DateTime` Wert ist nicht vorhanden.  
+ Ein `DateTime` Struktur von .NET Framework. Ein `DateTime`-Wert darf nicht NULL sein. Das niedrigste Datum von unterstützt die `DataTime` -Datentyp ist der 1. Januar 1601, steht für Programmierer als `DateTime.MinValue`. Das früheste unterstützte Datum gibt an, dass eine `DateTime` Wert fehlt.  
   
  `Boolean`  
  Eine Enumeration mit nur zwei Werten wie {true, false} oder {0, 1}.  
@@ -156,7 +156,7 @@ ms.locfileid: "36161681"
 |`Boolean`|False|  
 |`String`|"" (leere Zeichenfolge)|  
 |`Integer` oder `Long`|0 (Null)|  
-|`Timestamp`|12:00:00 Uhr, 1/1/0001 (entsprechend einer .NET Framework-Versionen `System.DateTime` mit 0 Takten)|  
+|`Timestamp`|12:00:00 Uhr, 1/1/0001 (entsprechend einer der .NET Framework-Versionen `System.DateTime` mit 0 Takten)|  
   
  Eine Element, das vorhanden, jedoch leer ist, wird interpretiert, als hätte es den Wert einer NULL-Zeichenfolge, nicht den Standardwert.  
   
@@ -183,6 +183,6 @@ ms.locfileid: "36161681"
   
  `</Dimension>`  
   
- Weitere Informationen zu geerbten Standards finden Sie unter [ASSL-Objekte und-Objekteigenschaften](assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu geerbten Standards finden Sie unter [ASSL-Objekte und Objekteigenschaften](assl-objects-and-object-characteristics.md).  
   
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71f0b516b53a7682665c54be4403c5d10a4e5417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3d8c7a80e7303c6120eabd029791a5401e4d253
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304310"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
-  Verwenden der **SSIS-Paket speichern** Seite zu benennen, beschreiben und Speichern einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) Paket nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` Datenbank oder auf eine Datei hat die DTSX Erweiterung.  
+  Verwenden der **SSIS-Paket speichern** Seite zu benennen, beschreiben und speichern Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) Paket die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` Datenbank oder in eine Datei mit der DTSX die Erweiterung.  
   
 > [!NOTE]  
 >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], die Möglichkeit, das vom Assistenten erstellte Paket speichern ist nicht verfügbar.  
   
- Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -56,17 +56,17 @@ ms.locfileid: "36159610"
  Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel angeben, ob die Verbindung mit dem Server mit SQL Server-Authentifizierung.  
   
  **Benutzername**  
- Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel und SQL Server-Authentifizierung Typ angegeben haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benutzername.  
+ Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel und SQL Server-Authentifizierung Typ angegeben haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benutzernamen ein.  
   
  **Kennwort**  
  Wenn Sie ausgewählt haben eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel und SQL Server-Authentifizierung Typ angegeben haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kennwort.  
   
 ### <a name="target--file-system"></a>Ziel = Dateisystem  
  **Dateiname**  
- Wenn Sie ein Dateiziel ausgewählt haben, geben Sie den Pfad für die Zieldatei oder mit der **Durchsuchen** Schaltfläche.  
+ Wenn Sie ein Dateiziel ausgewählt haben, geben Sie den Pfad zur Zieldatei, oder verwenden Sie die **Durchsuchen** Schaltfläche.  
   
  **Durchsuchen**  
- Wenn Sie ein Dateiziel ausgewählt haben, navigieren Sie zu der Zieldatei mithilfe der **Paket speichern** (Dialogfeld).  
+ Wenn Sie ein Dateiziel ausgewählt haben, navigieren Sie zu der Zieldatei mithilfe der **-Paket speichern** Dialogfeld.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speichern von Paketen](../save-packages.md)  

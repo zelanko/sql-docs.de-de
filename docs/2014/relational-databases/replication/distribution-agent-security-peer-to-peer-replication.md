@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.DA.f1
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a1f52e7fba90bcc03da9ca2f135be41013a29fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b017088d508525150a78e7f342f487c6adaca096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215500"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Sicherheit für den Verteilungs-Agent (Peer-zu-Peer-Replikation)
   Mithilfe der Seite **Sicherheit für den Verteilungs-Agent** können Sie die Konten angeben, unter denen der Verteilungs-Agent ausgeführt wird und Verbindungen mit den Computern in einer Peer-zu-Peer-Topologie hergestellt werden. Weitere Informationen zu den für Agents erforderlichen Berechtigungen und zu bewährten Methoden der Replikationssicherheit finden Sie unter [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md) und [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md).  

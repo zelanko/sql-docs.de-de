@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch) | Microsoft Docs
+title: Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293239"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch)
   Hierarchien können in der Diagrammsicht des Modell-Designers erstellt und verwaltet werden. Um den Modell-Designer in der Diagrammsicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen Sie dann auf **Modellansicht**, und klicken Sie dann auf **Diagrammsicht**.  

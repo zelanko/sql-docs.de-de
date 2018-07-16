@@ -1,5 +1,5 @@
 ---
-title: Anzeigen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Anzeigen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a025d6134391a02c107e4103dd696b4720c5834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284076"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle anzeigen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle anzeigen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Tabellen aus der Datenquellensicht einbeziehen, die einer Dimension, einem Cube oder einer Miningstruktur zugeordnet ist. Dieses Dialogfeld von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie folgendermaßen aufrufen:  

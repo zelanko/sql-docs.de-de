@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Definieren und Bereitstellen eines Cubes | Microsoft Docs'
+title: 'Lektion 2: Definieren und Bereitstellen eines Cubes | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284126"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lektion 2: Definieren und Bereitstellen eines Cubes
   Nach dem Definieren einer Datenquellensicht in Ihrem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt können Sie einen ersten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube definieren.  
@@ -54,7 +54,7 @@ ms.locfileid: "36162817"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Lernprogramm&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
