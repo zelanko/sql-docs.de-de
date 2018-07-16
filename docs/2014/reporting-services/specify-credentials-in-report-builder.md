@@ -1,5 +1,5 @@
 ---
-title: Angeben von Anmeldeinformationen im Berichts-Generator | Microsoft Docs
+title: Angeben von Anmeldeinformationen im Berichts-Generator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280326"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Angeben von Anmeldeinformationen im Berichts-Generator
   Anmeldeinformationen authentifizieren den Benutzer, der Daten von einer Datenquelle abrufen möchte. Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die verwendet werden müssen. Ein Datenbankadministrator kann zum Beispiel festlegen, dass der Benutzer einen Windows-Benutzernamen und ein Kennwort angeben muss.  
@@ -52,7 +52,7 @@ ms.locfileid: "36148758"
  Weitere Informationen finden Sie unter [Datenquelleneigenschaften, Dialogfeld „Allgemein“ (Berichts-Generator)](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Anmeldeinformationstypen  
- Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die eine Datenquelle unterstützt. Z. B. für den Zugriff auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbank müssen Sie möglicherweise angeben einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Benutzername und Kennwort. Um auf eine andere Datenquelle zuzugreifen, müssen Sie möglicherweise einen Windows-Benutzernamen und ein Kennwort angeben. Für einige Datenquellen sind eventuell keine Anmeldeinformationen erforderlich.  
+ Der Besitzer der Datenquelle legt den Typ der Anmeldeinformationen fest, die eine Datenquelle unterstützt. Z. B. für den Zugriff auf eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, Sie müssen möglicherweise eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzernamen und Kennwort. Um auf eine andere Datenquelle zuzugreifen, müssen Sie möglicherweise einen Windows-Benutzernamen und ein Kennwort angeben. Für einige Datenquellen sind eventuell keine Anmeldeinformationen erforderlich.  
   
 ### <a name="options-for-specifying-credentials"></a>Optionen für die Angabe von Anmeldeinformationen  
  Die folgenden Optionen sind für die Angabe von Anmeldeinformationen für eine Datenquelle verfügbar:  
@@ -75,12 +75,12 @@ ms.locfileid: "36148758"
  Wenn Sie eine Aufforderung zur Eingabe von Anmeldeinformationen angeben, muss jeder Benutzer, der auf den Bericht zugreift, einen Benutzernamen und ein Kennwort zum Abrufen der Daten eingeben. Diese Option wird für Berichte mit vertraulichen Daten empfohlen. Bei den angeforderten Anmeldeinformationen kann es sich um die Anmeldeinformationen für ein Windows-Konto oder für eine Datenbank-Anmeldung handeln. Wenn der Datenbankserver die angegebenen Anmeldeinformationen nicht erkennt oder wenn dem angegebenen Benutzer keine Berechtigung zum Abrufen der Daten gewährt wurde, kann die Verbindung nicht hergestellt werden.  
   
 ### <a name="no-credentials"></a>Keine Anmeldeinformationen  
- Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dokumentation in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren, deinstallieren und Berichts-Generator-Unterstützung](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
+ [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Berichts-Generator-Optionen (Dialogfeld), Einstellungen &#40;Berichts-Generator&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Berichts-Generator-Optionen im Dialogfeld Einstellungen &#40;Berichts-Generator&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  

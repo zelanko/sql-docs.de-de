@@ -17,13 +17,13 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e171650a4f3fa04644bf87303cf26caf4eb172dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6327983f42efbf0b8d891495c9048d1ab963d0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306210"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skripttask und einer Skriptkomponente
   In diesem Verfahren wird beschrieben, wie Sie in den Skripts Breakpoints festlegen, die im Skripttask und in der Skriptkomponente verwendet werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "36046469"
  Nachdem Sie im Skript Breakpoints festgelegt haben, werden im Dialogfeld **Breakpoints festlegen – \<Objektname>** die Breakpoints zusammen mit den integrierten Breakpoints aufgelistet.  
   
 > [!IMPORTANT]  
->  In bestimmten Fällen werden Breakpoints im Skripttask und in der Skriptkomponente ignoriert. Weitere Informationen finden Sie unter der **Debuggen des Skripttasks** im Abschnitt [codieren und Debuggen des Skripttasks](../control-flow/script-task.md) und **Debuggen der Skriptkomponente** Abschnitt [Codierung and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+>  In bestimmten Fällen werden Breakpoints im Skripttask und in der Skriptkomponente ignoriert. Weitere Informationen finden Sie unter den **Debuggen des Skripttasks** im Abschnitt [codieren und Debuggen des Skripttasks](../control-flow/script-task.md) und **Debuggen der Skriptkomponente** im Abschnitt [das Schreiben von Code und Debuggen der Skriptkomponente] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>So legen Sie einen Breakpoint im Skript fest  
   

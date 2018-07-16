@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282596"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Aktivieren und Deaktivieren der Reporting Services-Funktionen
   Sie können Berichtsserver-Funktionen, die Sie nicht als Teil einer Sicherheitsstrategie verwenden, deaktivieren, um die Angriffsfläche eines Produktionsberichtsservers zu verkleinern. In den meisten Fällen sollten Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Features gleichzeitig ausführen, damit Sie alle Funktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwenden können. Sie können jedoch je nach Bereitstellungsmodell die Funktionen deaktivieren, die Sie nicht benötigen. Beispielweise können Sie nur die Hintergrundverarbeitung aktivieren, wenn die gesamte Berichtsverarbeitung in Form von geplanten Vorgängen konfiguriert ist. Entsprechend können Sie nur den Report Server-Webdienst ausführen, wenn Sie ausschließlich interaktive, bedarfsgesteuerte Berichte wünschen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36151058"
   
 1.  Öffnen Sie die Datei `RsReportServer.config` in einem Texteditor. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-2.  Um auf die Berichtsserver-Webdienst zu aktivieren, setzen `IsWebServiceEnabled` auf `true`:  
+2.  Um auf die Berichtsserver-Webdienst zu aktivieren, setzen `IsWebServiceEnabled` zu `true`:  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -69,9 +69,9 @@ ms.locfileid: "36151058"
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um auf die Berichtsserver-Webdienst zu aktivieren, setzen **WebServiceAndHTTPAccessEnabled** auf `True`.  
+    -   Um auf die Berichtsserver-Webdienst zu aktivieren, setzen **WebServiceAndHTTPAccessEnabled** zu `True`.  
   
-    -   Um die Berichtsserver-Webdienst zu deaktivieren, setzen **WebServiceAndHTTPAccessEnabled** auf `False`.  
+    -   Um die Berichtsserver-Webdienst zu deaktivieren, setzen **WebServiceAndHTTPAccessEnabled** zu `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36151058"
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um geplante Ereignisse und Übermittlung aktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** auf `True`.  
+    -   Um geplante Ereignisse und Übermittlung aktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** zu `True`.  
   
-    -   Um geplante Ereignisse und Übermittlung zu deaktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** auf `False`.  
+    -   Um geplante Ereignisse und Übermittlung zu deaktivieren, setzen **ScheduleEventsAndReportDeliveryEnabled** zu `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36151058"
   
 1.  Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Anweisungen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-2.  Um Berichts-Manager zu aktivieren, setzen `IsReportManagerEnabled` auf `true`:  
+2.  Um Berichts-Manager zu aktivieren, setzen `IsReportManagerEnabled` zu `true`:  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Legen Sie zum Berichts-Manager zu deaktivieren, `IsReportManagerEnabled` auf `false`:  
+3.  Um Berichts-Manager zu aktivieren, setzen `IsReportManagerEnabled` zu `false`:  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  
@@ -151,9 +151,9 @@ ms.locfileid: "36151058"
   
 4.  Führen Sie unter **Facet-Eigenschaften**Folgendes durch:  
   
-    -   Um Berichts-Manager zu aktivieren, setzen **ReportManagerEnabled** auf `True`.  
+    -   Um Berichts-Manager zu aktivieren, setzen **ReportManagerEnabled** zu `True`.  
   
-    -   Legen Sie zum Berichts-Manager zu deaktivieren, **ReportManagerEnabled** auf `False`.  
+    -   Um Berichts-Manager zu aktivieren, setzen **ReportManagerEnabled** zu `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

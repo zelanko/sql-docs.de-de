@@ -1,5 +1,5 @@
 ---
-title: Debuggen eines Pakets durch Festlegen von Haltepunkten für einen Task oder Container | Microsoft Docs
+title: Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308110"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container
   In diesem Verfahren wird beschrieben, wie in einem Paket, Task, For-Schleifencontainer, Foreach-Schleifencontainer oder einem Sequenzcontainer Breakpoints festgelegt werden.  
@@ -51,7 +51,7 @@ ms.locfileid: "36161852"
 ## <a name="see-also"></a>Siehe auch  
  [Tools zur Problembehandlung für die Paketentwicklung](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skripttask und Skriptkomponente](data-flow/transformations/script-component.md)   
- [Beim Codieren und Debuggen des Skripttasks](control-flow/script-task.md)   
+ [Codieren und Debuggen des Skripttasks](control-flow/script-task.md)   
  [Codieren und Debuggen der Skriptkomponente](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

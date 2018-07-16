@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b1991dc8af140ee21089f9bd4096923d8e84742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219430"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
   Systemdatenbanken müssen neu erstellt werden, um Beschädigungen der Systemdatenbanken [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)oder [resource](resource-database.md) zu beheben oder die Standardsortierung auf Serverebene zu ändern. Dieses Thema enthält schrittweise Anweisungen für die Neuerstellung von Systemdatenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -108,7 +108,7 @@ ms.locfileid: "36148639"
     |/QUIET oder /Q|Gibt an, dass Setup ohne Benutzeroberfläche ausgeführt wird.|  
     |/ACTION=REBUILDDATABASE|Gibt an, dass die Systemdatenbanken vom Setup neu erstellt werden.|  
     |/INSTANCENAME=*InstanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt an, die Windows-Gruppen oder einzelne Konten hinzufügen der `sysadmin` festen Serverrolle "". Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. `NT AUTHORITY\SYSTEM`.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt an, die Windows-Gruppen oder einzelne Konten hinzufügen der `sysadmin` -Serverrolle sein. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. `NT AUTHORITY\SYSTEM`.|  
     |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` Konto. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **\*\* Sicherheitshinweis \* \***  der `sa` Konto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie ein sicheres Kennwort für die `sa` Anmeldung.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
     |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> **\*\* Wichtige \* \***  Änderung der Sortierung auf Serverebene ändert nicht die Sortierung vorhandener Benutzerdatenbanken. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../collations/set-or-change-the-server-collation.md).|  
   
@@ -151,10 +151,10 @@ ms.locfileid: "36148639"
 6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren**. Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
   
 ##  <a name="CreateMSDB"></a> Erstellen einer neuen msdb-Datenbank  
- Wenn die `msdb` -Datenbank beschädigt ist und Sie verfügen nicht über eine Sicherung der `msdb` Datenbank, Sie können ein neues erstellen `msdb` mithilfe der **Instmsdb** Skript.  
+ Wenn die `msdb` -Datenbank beschädigt ist und Sie verfügen nicht über eine Sicherung der `msdb` -Datenbank, Sie können ein neues erstellen `msdb` mithilfe der **Instmsdb** Skript.  
   
 > [!WARNING]  
->  Neuerstellen der `msdb` -Datenbank mithilfe der **Instmsdb** Skript werden alle Informationen, die in gespeicherten eliminieren `msdb` z. B. Aufträge, Warnung, Operatoren, Wartungspläne, Sicherungsverlauf, Einstellungen für die Richtlinie der richtlinienbasierten Verwaltung , Datenbank-Mail, Leistungs-Data Warehouse usw.  
+>  Neuerstellen der `msdb` -Datenbank mithilfe der **Instmsdb** Skript entfernt alle Informationen, die in gespeicherten `msdb` wie z. B. Aufträge, Warnung, Operatoren, Wartungspläne, Verlauf, Einstellungen für die Richtlinie der richtlinienbasierten Verwaltung , Datenbank-Mail, Leistungs-Data Warehouse usw.  
   
 1.  Beenden Sie alle Dienste, die mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind, einschließlich dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]und allen Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenspeicher verwenden.  
   
@@ -162,9 +162,9 @@ ms.locfileid: "36148639"
   
      Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Trennen Sie in einem weiteren Befehlszeilenfenster die `msdb` Datenbank durch Ausführen des folgenden Befehls ersetzen  *\<Servername >* mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Trennen Sie in einem weiteren Befehlszeilenfenster die `msdb` Datenbank durch Ausführen des folgenden Befehls, und Ersetzen Sie dabei  *\<Servername >* mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Benennen Sie den Windows-Explorer mit der `msdb` -Datenbankdateien. Diese befinden sich standardmäßig im Unterordner DATA der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
+4.  Benennen Sie die Windows-Explorer mit der `msdb` -Datenbankdateien. Diese befinden sich standardmäßig im Unterordner DATA der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
   
 5.  Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zum Beenden und erneuten Starten des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36148639"
   
 8.  Wenden Sie alle installierten Service Packs und Hotfixes auf die Instanz an.  
   
-9. Erneut gespeichert, der `msdb` Datenbank, z. B. Aufträge, Warnungen usw.  
+9. Erstellen Sie erneut gespeicherten Benutzerinhalte der `msdb` Datenbank, z. B. Aufträge, Warnungen usw.  
   
 10. Sicherung der `msdb` Datenbank.  
   

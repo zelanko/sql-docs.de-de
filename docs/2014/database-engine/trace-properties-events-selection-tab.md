@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgungseigenschaften (Registerkarte Ereignisauswahl) | Microsoft Docs
+title: Ablaufverfolgungseigenschaften (Registerkarte Ereignisauswahl) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 627785dc9be7d6b2d270d82f1bc6797c98980779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 033cde8c84edc6ceb7b0fb9686e31b6ce98ef1c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283826"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte 'Ereignisauswahl')
   Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Ablaufverfolgung von Ereignissen oder Datenspalten anzeigen und angeben.  

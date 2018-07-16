@@ -1,5 +1,5 @@
 ---
-title: Filter-Element (Binding) (ASSL) | Microsoft Docs
+title: Filter-Element (Bindung) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291306"
 ---
 # <a name="filter-element-binding-assl"></a>Filter-Element (Binding) (ASSL)
   Enthält einen MDX-Ausdruck (Multidimensional Expression), der die Inhalte des übergeordneten Elements filtert.  
@@ -62,11 +62,11 @@ ms.locfileid: "36161001"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `Binding` Typs, einschließlich der Tabellen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte Scripting Language (ASSL) der `Binding` Typ und der Vererbungshierarchie der `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+ Weitere Informationen zu der `Binding` -Typ und zu Tabellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL)-Objekte, der die `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `Filter` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CubeDimensionBinding> und <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Filter` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CubeDimensionBinding> und <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Binding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

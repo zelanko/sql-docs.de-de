@@ -1,5 +1,5 @@
 ---
-title: Level-Element (ASSL) | Microsoft Docs
+title: Ebenen-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Levels element
 ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aafc68525f656f77eca7c8cdcd0fdc4cb4534791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf2019ee06a053cc047bfd47a04a98865f611949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304570"
 ---
 # <a name="levels-element-assl"></a>Levels-Element (ASSL)
   Enthält die Auflistung der [Ebene](../objects/level-element-assl.md) Elemente in einem [Hierarchie](../objects/hierarchy-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36059688"
 |Untergeordnete Elemente|[Level](../objects/level-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.LevelCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.LevelCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

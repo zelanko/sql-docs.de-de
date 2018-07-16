@@ -1,14 +1,13 @@
 ---
-title: Installieren ein Servicepacks auf einem System mit minimaler Downtime für gespiegelte Datenbanken | Microsoft Docs
+title: Installieren Sie ein Servicepack auf einem System mit minimaler Ausfallzeit von gespiegelten Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296920"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installieren eines Service Packs auf einem System mit minimaler Downtime der gespiegelten Datenbanken
   In diesem Thema wird beschrieben, wie beim Installieren von Service Packs und Hotfixes die Ausfallzeit von gespiegelten Datenbanken minimiert werden kann. Dieser Prozess umfasst ein sequenzielles Upgrade der Instanzen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], die von der Datenbankspiegelung betroffen sind. Diese Form des Updates, die so genannte eine *paralleles Update*, reduziert Ausfallzeiten auf ein einziges Failover. Beachten Sie, dass für den Modus für hohe Leistung-Sitzungen, in denen der Spiegelserver vom Prinzipalserver geografisch entfernt ist, ein paralleles Update möglicherweise nicht geeignet.  
@@ -93,7 +92,7 @@ ms.locfileid: "36160773"
   
     -   Wenn bereits eine Serverinstanz als Spiegelserver in allen Spiegelungssitzungen fungiert, installieren Sie das Service Pack bzw. den Hotfix auf dieser Serverinstanz.  
   
-    -   Wenn alle Serverinstanzen derzeit als Prinzipalserver in allen spiegelungssitzungen fungieren, wählen Sie eine Serverinstanz zuerst aktualisiert. Führen Sie dann ein manuelles Failover für alle Prinzipaldatenbanken aus, und aktualisieren Sie die Serverinstanz, indem Sie das Service Pack bzw. das Hotfix installieren.  
+    -   Wenn alle Serverinstanzen aktuell als Prinzipalserver fungiert in allen spiegelungssitzungen sind, wählen Sie eine Serverinstanz zuerst aktualisiert. Führen Sie dann ein manuelles Failover für alle Prinzipaldatenbanken aus, und aktualisieren Sie die Serverinstanz, indem Sie das Service Pack bzw. das Hotfix installieren.  
   
      Nach dem Update nimmt eine Serverinstanz automatisch wieder an den zugehörigen Spiegelungssitzungen teil.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "36160773"
   
      Informationen zum Verwalten des potenziellen Datenverlusts finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-2.  Warten Sie bei jeder Spiegelungssitzung, deren Spiegelserverinstanz gerade aktualisiert wurde, die Synchronisierung der Sitzung ab. Stellen Sie dann eine Verbindung mit der Prinzipalserverinstanz her, und führen Sie manuell ein Failover zur Sitzung aus. Bei einem Failover wird die aktualisierte Serverinstanz zum Prinzipalserver dieser Sitzung, und der ehemalige Prinzipalserver zum Spiegelserver.  
+2.  Warten Sie bei jeder Spiegelungssitzung, deren Spiegelserverinstanz gerade aktualisiert wurde, die Synchronisierung der Sitzung ab. Stellen Sie dann eine Verbindung mit der Prinzipalserverinstanz her, und führen Sie manuell ein Failover zur Sitzung aus. Bei einem Failover die aktualisierte Serverinstanz wird zum Prinzipalserver für die jeweilige Sitzung, und der frühere Prinzipalserver wird zum Spiegelserver.  
   
      Ziel dieses Schritts ist es, dass eine andere Serverinstanz zum Spiegelserver in jeder Spiegelungssitzung wird, an der sie als Partner beteiligt ist.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "36160773"
   
 1.  Im Modus für hohe Sicherheit können Sie den Zeugen in jeder Spiegelungssitzung wiederherstellen.  
   
-     **Der Zeuge her**  
+     **Um den Zeugen wiederherzustellen.**  
   
     -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

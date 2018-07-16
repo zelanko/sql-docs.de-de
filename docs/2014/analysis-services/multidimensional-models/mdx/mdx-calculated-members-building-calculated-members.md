@@ -1,5 +1,5 @@
 ---
-title: Erstellen von berechneten Elementen in MDX (Multidimensional Expressions) | Microsoft Docs
+title: Erstellen von berechneten Elementen in MDX (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], calculated members
 - calculated members [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [MDX], calculated members
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf71de626272200dbd04cf97618db90a61e8aa14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f01746c6bb0c73705451db8f236c75c1b8935bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312650"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>Erstellen von berechneten Elementen in MDX (MDX)
   Ein berechnetes Element in MDX (Multidimensional Expressions) ist ein Element, das durch Berechnen eines MDX-Ausdrucks aufgelöst wird, um einen Wert zurückzugeben. Diese einfach klingende Definition hat immense Auswirkungen. Die Erstellung und Verwendung von berechneten Elementen in einer MDX-Abfrage eröffnet umfassende Änderungsmöglichkeiten für mehrdimensionale Daten.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285406"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
   Verwenden Sie das Dialogfeld **Website erstellen** , um eine neue Website auf dem lokalen Computer zu erstellen. Wenn Sie in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]eine Website erstellen, wird diese den Internetinformationsdiensten (IIS) auf dem lokalen Computer mit einer Stammanwendung hinzugefügt, die als die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung konfiguriert ist. Darüber hinaus wird ein neuer Anwendungspool erstellt und die Webanwendung in diesen Anwendungspool eingefügt.  
@@ -46,9 +46,9 @@ ms.locfileid: "36151601"
 |**Kennwort bestätigen**|Geben Sie das Kennwort für das angegebene Benutzerkonto erneut ein. Die Felder **Kennwort** und **Kennwort bestätigen** müssen das gleiche Kennwort enthalten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Web-Konfigurationsseite &#40;Master Data Services-Konfigurations-Manager&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Einrichten von Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web-Anwendungsanforderungen &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Seite "Konfiguration"-Web- &#40;Master Data Services-Konfigurations-Manager&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [Einrichten der Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Anforderungen für die Webanwendung &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Root-Element (XMLA) | Microsoft Docs
+title: Root-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321080"
 ---
 # <a name="root-element-xmla"></a>root-Element (XMLA)
-  Ein zurückgegebenes Ergebnis enthält die [Discover](../xml-elements-methods-discover.md) Methode oder ein XML for Analysis (XMLA)-Befehl ausgeführt wird, mithilfe der [Execute](../xml-elements-methods-execute.md) Methode.  
+  Enthält ein Ergebnis zurückgegeben, die von der [Discover](../xml-elements-methods-discover.md) Methode oder ein XML for Analysis (XMLA)-Befehl ausgeführt wird, mit der [Execute](../xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36149961"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `root` -Element enthält die Informationen, die entweder die [DiscoverResponse](../xml-elements-objects-discoverresponse.md) -Element über einen einzelnen `Discover` -Methodenaufruf, oder in der [ExecuteResponse](../xml-elements-objects-executeresponse.md) Element einen einzelnen XMLA-Befehl ausgeführt wird, über einen einzelnen zurückgegebenes `Execute` -Methodenaufruf.  
+ Die `root` -Element enthält die Informationen, die entweder die [DiscoverResponse](../xml-elements-objects-discoverresponse.md) -Element über ein einzelnes `Discover` -Methodenaufruf, oder in der [ExecuteResponse](../xml-elements-objects-executeresponse.md) Element durch einen einzelnen XMLA-Befehl ausgeführt, indem ein einzelnes zurückgegeben `Execute` Methodenaufruf.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  

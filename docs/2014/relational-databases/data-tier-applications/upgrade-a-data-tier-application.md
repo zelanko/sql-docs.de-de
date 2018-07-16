@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281696"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Verwenden Sie entweder den Assistenten zum Aktualisieren von Datenebenenanwendungen oder ein Windows PowerShell-Skript, um das Schema und die Eigenschaften einer derzeit bereitgestellten Datenebenenanwendung (DAC) so zu ändern, dass sie mit dem Schema und den Eigenschaften übereinstimmt, die in einer neuen Version der DAC definiert sind.  
@@ -48,13 +48,13 @@ ms.locfileid: "36150391"
 ###  <a name="ChoseDACUpgOptions"></a> Auswählen von DAC-Aktualisierungsoptionen  
  Für eine parallele Aktualisierung stehen vier Aktualisierungsoptionen zur Verfügung:  
   
--   **Datenverlust ignorieren** – Wenn `True`, das Upgrade wird fortgesetzt, auch wenn einige der Vorgänge zu Datenverlust führen. Wenn auf `False` festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Z. B. wenn eine Tabelle in der aktuellen Datenbank nicht im Schema der neuen DAC vorhanden ist, die Tabelle gelöscht, wenn `True` angegeben ist. Die Standardeinstellung ist `True`.  
+-   **Datenverlust ignorieren** – Wenn `True`, das Upgrade wird fortgesetzt, auch wenn einige der Vorgänge zu Datenverlust führen. Wenn auf `False` festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Z. B. wenn eine Tabelle in der aktuellen Datenbank nicht im Schema der neuen DAC vorhanden ist, in der Tabelle gelöscht, wenn `True` angegeben ist. Die Standardeinstellung ist `True`.  
   
--   **Bei Änderungen blockieren** – Wenn `True`, die Aktualisierung beendet, wenn das Datenbankschema in der vorherigen DAC definierten unterscheidet. Wenn `False`, das Upgrade wird fortgesetzt, auch wenn Änderungen erkannt werden. Die Standardeinstellung ist `False`.  
+-   **Bei Änderungen blockieren** – Wenn `True`, die Aktualisierung beendet, wenn das Schema der Datenbank, die in der vorherigen DAC definierten unterscheidet. Wenn `False`, das Upgrade wird fortgesetzt, auch wenn Änderungen erkannt werden. Die Standardeinstellung ist `False`.  
   
--   **Rollback bei Fehler** – Wenn `True`, die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf `False` festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist `False`.  
+-   **Rollback bei Fehler** – Wenn `True`, das Upgrade wird in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf `False` festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist `False`.  
   
--   **Richtlinienüberprüfung überspringen** – Wenn `True`, die Richtlinie zur Serverauswahl DAC wird nicht ausgewertet. Wenn `False`, die Richtlinie ausgewertet, und die Aktualisierung beendet, wenn ein Validierungsfehler vorliegt. Die Standardeinstellung ist `False`.  
+-   **Richtlinienüberprüfung überspringen** – Wenn `True`, die DAC-serverauswahlrichtlinie wird nicht ausgewertet. Wenn `False`, die Richtlinie ausgewertet, und die Aktualisierung beendet, wenn ein Überprüfungsfehler vorliegt. Die Standardeinstellung ist `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
@@ -139,7 +139,7 @@ ms.locfileid: "36150391"
   
  **Der DAC-Inhalt wird überprüft**: Die Statusanzeige, die den aktuellen Status des Überprüfungsprozesses angibt.  
   
- **\< Vorherige** -gibt an den Ausgangszustand zurück die **Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt, die in den ursprünglichen Zustand des der **Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36150391"
   
  **Richtlinienverletzungen ignorieren** : Verwenden Sie dieses Kontrollkästchen, um mit dem Upgrade fortzufahren, wenn eine oder mehrere Richtlinienbedingungen nicht erfüllt wurden. Aktivieren Sie diese Option nur, wenn Sie sicher sind, dass keine der fehlgeschlagenen Bedingungen die erfolgreiche Ausführung der DAC verhindert.  
   
- **\< Vorherige** -gibt, die **Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt die **Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur Seite **Änderung erkennen** über.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36150391"
   
  **Bericht speichern** : Klicken Sie auf die Schaltfläche, um einen Bericht der Änderungen zu speichern, die der Assistent zwischen den Objekten in der Datenbank und ihren Äquivalenten in der DAC-Definition festgestellt hat. Sie können dann den Bericht überprüfen, um zu bestimmen, ob Sie nach dem Upgrade Maßnahmen ergreifen müssen, um einige oder alle im Bericht aufgeführten Objekte in die neue Datenbank zu integrieren.  
   
- **\< Vorherige** -gibt, die **DAC-Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt die **DAC-Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur Seite **Optionen** über.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36150391"
   
  **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   
- **\< Vorherige** -gibt, die **Änderung erkennen** Seite.  
+ **\< Vorherige** -zurückgibt die **Änderung erkennen** Seite.  
   
  **Weiter >**: Geht zur Seite **Upgradeplan überprüfen** über.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36150391"
   
  **Standardwerte wiederherstellen**: Setzt die Option auf die Standardeinstellung „false“ zurück.  
   
- **\< Vorherige** -gibt, die **Änderung erkennen** Seite.  
+ **\< Vorherige** -zurückgibt die **Änderung erkennen** Seite.  
   
  **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
@@ -238,11 +238,11 @@ ms.locfileid: "36150391"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die zu aktualisierende DAC enthält.  
   
-2.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
 3.  Verwendung `System.IO.File` DAC-Paketdatei zu laden.  
   
-4.  Verwendung `add_DacActionStarted` und `add_DacActionFinished` zum Abonnieren der DAC-Aktualisierungsereignisse.  
+4.  Verwendung `add_DacActionStarted` und `add_DacActionFinished` zum Abonnieren die DAC-Aktualisierungsereignisse.  
   
 5.  Legen Sie die `DacUpgradeOptions`.  
   

@@ -1,5 +1,5 @@
 ---
-title: ConnectionString-Element (ASSL) | Microsoft Docs
+title: ConnectionString-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285996"
 ---
 # <a name="connectionstring-element-assl"></a>ConnectionString-Element (ASSL)
   Enthält die verschlüsselte Verbindungszeichenfolge für eine [DataSource](../objects/datasource-element-assl.md) Element.  
@@ -62,7 +62,7 @@ ms.locfileid: "36159054"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ConnectionString` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataSource>.  
+ Das Element, das dem übergeordneten entspricht `ConnectionString` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ausführen des SQLServer Import / Export-Assistenten | Microsoft Docs
+title: Ausführen des SQLServer Import / Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,22 +18,22 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307991"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQLServer Import / Export-Assistenten
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent stellt die einfachste Methode zum Kopieren von Daten zwischen Datenquellen und zum Erstellen von Basispaketen bereit. Weitere Informationen zum Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Ein Video, das veranschaulicht, wie die SQL Server-Import / Export-Assistenten zum Erstellen eines Pakets, das Daten aus einer SQL Server-Datenbank in einer Microsoft Excel-Kalkulationstabelle exportiert, finden Sie unter [Exportieren von SQL Server-Daten nach Excel (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=131024).  
+ Ein Video, das veranschaulicht, wie die SQL Server-Import / Export-Assistenten zum Erstellen eines Pakets, die Daten aus einer SQL Server-Datenbank in eine Microsoft Excel-Kalkulationstabelle exportiert werden, finden Sie unter [Exportieren von SQL Server-Daten nach Excel (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>So starten Sie den SQL Server-Import/Export-Assistenten  
   
--   Auf der **starten** Sie im Menü **Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **Daten importieren und exportieren**.  
+-   Auf der **starten** Startmenü **Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **importieren und Exportieren von Daten**.  
   
      – oder –  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36161606"
   
          Wenn es sich bei der Quelle um einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Anbieter handelt, können Sie auch die Option zum Kopieren von Abfrageergebnissen verwenden, wobei Sie die DBCommand-Zeichenfolge als Abfrage bereitstellen.  
   
-         Wenn die Quelldaten eine Sicht ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistenten müssen Sie die Ansicht automatisch konvertiert, in eine Tabelle in das Ziel.  
+         Wenn die Quelldaten eine Sicht, ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistent konvertiert Sie automatisch die Ansicht in eine Tabelle in das Ziel.  
   
     -   Geben Sie an, ob die Zieltabelle gelöscht und anschließend neu erstellt wird und ob IDENTITY_INSERT aktiviert werden soll.  
   
@@ -121,11 +121,11 @@ ms.locfileid: "36161606"
   
 6.  Speichern Sie ein Paket, und führen Sie es aus.  
   
-     Falls der Assistent in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder an der Eingabeaufforderung gestartet wird, kann das Paket sofort ausgeführt werden. Sie können optional das Paket zum Speichern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Msdb** Datenbank oder im Dateisystem. Weitere Informationen zu den **Msdb** finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md).  
+     Falls der Assistent in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder an der Eingabeaufforderung gestartet wird, kann das Paket sofort ausgeführt werden. Optional können Sie das Paket zum Speichern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Msdb** Datenbank oder im Dateisystem. Weitere Informationen zu den **Msdb** finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md).  
   
-     Beim Speichern des Pakets können Sie die Paketschutzebene festlegen und das Kennwort angeben, wenn für die Schutzebene ein Kennwort verwendet wird. Weitere Informationen zu paketschutzebenen finden Sie unter [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+     Beim Speichern des Pakets können Sie die Paketschutzebene festlegen und das Kennwort angeben, wenn für die Schutzebene ein Kennwort verwendet wird. Weitere Informationen zu paketschutzebenen finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Wenn der Assistent gestartet wird ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], Sie das Paket über den Assistenten ausführen. Stattdessen wird das Paket dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt hinzugefügt, in dem Sie den Assistenten gestartet haben. Sie können dann das Paket ausführen, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+     Wenn der Assistent gestartet wird ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], Sie können nicht das Paket über den Assistenten ausführen. Stattdessen wird das Paket dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt hinzugefügt, in dem Sie den Assistenten gestartet haben. Anschließend können Sie das Paket ausführen, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
     >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], die Möglichkeit, das vom Assistenten erstellte Paket speichern ist nicht verfügbar.  

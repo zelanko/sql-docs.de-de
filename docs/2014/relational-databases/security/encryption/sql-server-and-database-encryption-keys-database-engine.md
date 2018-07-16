@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234890"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet Verschlüsselungsschlüssel, um Daten, Anmelde- und Verbindungsinformationen zu sichern, die in einer Berichtsserver-Datenbank gespeichert sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besitzt zwei Arten von Schlüsseln: *symmetrische* und *asymmetrische*. Symmetrische Schlüssel verwenden das gleiche Kennwort, um Daten zu verschlüsseln und zu entschlüsseln. Asymmetrische Schlüssel verwenden ein Kennwort zum Verschlüsseln der Daten (den *öffentlichen* Schlüssel) und ein weiteres zum Entschlüsseln der Daten (den *privaten* Schlüssel).  
@@ -35,9 +34,9 @@ ms.locfileid: "36148341"
   
  Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Er kann auch zum Verschlüsseln von Daten verwendet werden. Allerdings gelten für diesen Schlüssel Längenbeschränkungen, durch die er für Daten weniger praktisch ist als ein symmetrischer Schlüssel.  
   
- Beim Erstellen wird der Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. Um die automatische Entschlüsselung des Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Er wird sowohl in der Datenbank gespeichert, während es verwendet wird, auch in der `master` Systemdatenbank.  
+ Beim Erstellen wird der Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. Um die automatische Entschlüsselung des Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Es wird sowohl in der Datenbank gespeichert, wo sie verwendet wird und in der `master` -Systemdatenbank.  
   
- Die Kopie des Datenbank-Hauptschlüssels gespeichert, der `master` System wird im Hintergrund aktualisiert, sobald die Datenbank-Hauptschlüssel geändert wird. Allerdings kann diese Standardeinstellung geändert werden, mithilfe der `DROP ENCRYPTION BY SERVICE MASTER KEY` -Option von der `ALTER MASTER KEY` Anweisung. Ein Datenbank-Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der `OPEN MASTER KEY`-Anweisung und eines Kennworts geöffnet werden.  
+ Die Kopie der Datenbank-Hauptschlüssel gespeichert werden, der `master` wird im Hintergrund aktualisiert, wenn der Datenbank-Hauptschlüssel geändert wird. Allerdings kann diese Standardeinstellung geändert werden, mithilfe der `DROP ENCRYPTION BY SERVICE MASTER KEY` Möglichkeit, die `ALTER MASTER KEY` Anweisung. Ein Datenbank-Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der `OPEN MASTER KEY`-Anweisung und eines Kennworts geöffnet werden.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Verwalten von SQL Server- und Datenbankschlüsseln  
  Zur Verwaltung der Verschlüsselungsschlüssel gehört das Erstellen neuer Datenbankschlüssel, das Erstellen einer Sicherung der Server- und Datenbankschlüssel und das Wissen darüber, wann und wie die Schlüssel wiederhergestellt, gelöscht oder geändert werden müssen.  

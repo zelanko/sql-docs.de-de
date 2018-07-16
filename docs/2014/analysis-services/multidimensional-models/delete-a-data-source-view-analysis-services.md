@@ -1,5 +1,5 @@
 ---
-title: Löschen eine Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Löschen eine Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data source views
 - data source views [Analysis Services], deleting
 - removing data source views
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e4467d476acbb45e0ec18c7a28fd1a9a143c386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8d04731a4b555b6e4afe9c8697fc5c4f907a9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284018"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Löschen einer Datenquellensicht (Analysis Services)
   Wenn Sie in einem OLAP-Projekt eine Datenquellensicht (Data Source View, DSV) nicht mehr verwenden, können Sie sie aus dem Projekt in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] löschen.  
@@ -34,7 +34,7 @@ ms.locfileid: "36162389"
   
  Durch das Löschen einer DSV werden andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte, die davon abhängig sind, ungültig. Aus diesem Grund wird vor dem Löschen der DSV die Liste der Objekte angezeigt, die durch das Entfernen der DSV ungültig werden. Überprüfen Sie die Liste sorgfältig, um sicherzustellen, dass keine Objekte enthalten sind, die Sie weiterhin verwenden möchten.  
   
- ![Löschen Sie im Dialogfeld Objekte](../media/ssas-olapdsv-deleteobjects.gif "Löschobjekte (Dialogfeld)")  
+ ![Löschen Sie das Dialogfeld](../media/ssas-olapdsv-deleteobjects.gif "Löschobjekte (Dialogfeld)")  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   

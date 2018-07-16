@@ -1,13 +1,11 @@
 ---
-title: Aktualisieren von UDT-Spalten mit "DataAdapters" | Microsoft Docs
+title: Aktualisieren von UDT-Spalten mit DataAdapters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047406"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354872"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Aktualisieren von UDT-Spalten mit DataAdapters
   Benutzerdefinierte Typen (User-Defined Types, UDTs) werden von `System.Data.DataSet` und `System.Data.SqlClient.SqlDataAdapter` unterstützt, um Daten abzurufen und zu ändern.  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Das folgende ADO.NET-Beispiel verfügt über zwei Methoden:  
   
--   `UserProvidedCommands`, das veranschaulicht, wie angeben `InsertCommand`, `UpdateCommand`, und `DeleteCommand` -Objekte zum Aktualisieren der `Point` UDT in der **Punkt** Tabelle (der keine `timestamp` Spalte).  
+-   `UserProvidedCommands`, das veranschaulicht, wie `InsertCommand`, `UpdateCommand`, und `DeleteCommand` Objekte für die Aktualisierung der `Point` UDT in der **Punkte** Tabelle (die keine `timestamp` Spalte).  
   
--   `CommandBuilder`, die veranschaulicht, wie eine `SqlCommandBuilder` in der **Points_ts** Tabelle, enthält die `timestamp` Spalte.  
+-   `CommandBuilder`, das veranschaulicht, wie eine `SqlCommandBuilder` in die **Points_ts** Tabelle mit den `timestamp` Spalte.  
   
 ```vb  
 Imports System  

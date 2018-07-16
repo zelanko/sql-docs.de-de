@@ -1,5 +1,5 @@
 ---
-title: Location-Element (XMLA) | Microsoft Docs
+title: Location-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295390"
 ---
 # <a name="location-element-xmla"></a>Location-Element (XMLA)
-  Enthält Informationen über einen Remoteserver für den übergeordneten [Sicherung](../xml-elements-commands/backup-element-xmla.md), [wiederherstellen](../xml-elements-commands/restore-element-xmla.md), oder [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) Befehl.  
+  Enthält Informationen über einen Remoteserver für das übergeordnete Element [Sicherung](../xml-elements-commands/backup-element-xmla.md), [wiederherstellen](../xml-elements-commands/restore-element-xmla.md), oder [synchronisieren](../xml-elements-commands/synchronize-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36160511"
 |[Synchronisieren](../xml-elements-commands/synchronize-element-xmla.md)|["ConnectionString"](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [Ordner](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Für `Backup` Befehle, die `Location` Element enthält Informationen zum Erstellen einer remotesicherungsdatei für eine Remoteinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Für `Backup` Befehle, die `Location` Element enthält Informationen über die Erstellung einer remotesicherungsdatei für eine Remoteinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Bei `Restore`-Befehlen bietet das `Location`-Element Informationen über die Identifizierung und Verbindung mit einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Remoteinstanz und die Remotesicherungsdatei, die für das Wiederherstellen von Remotepartitionen auf dieser Remoteinstanz verwendet wird.  
   

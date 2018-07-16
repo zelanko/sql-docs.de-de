@@ -1,5 +1,5 @@
 ---
-title: Wiedergeben bis zu einem Breakpoint (SQL Server Profiler) | Microsoft Docs
+title: Wiedergabe bis zu einem Breakpoint (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
 - traces [SQL Server], replaying
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22f9c80c8f17adba5bf939db65481a0ccde3a47a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef7c27eff6efd66d95a61a158a0f788f35757182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289866"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Wiedergeben bis zu einem Breakpoint (SQL Server Profiler)
   In diesem Thema wird das Festlegen von Breakpoints in einer Ablaufverfolgungsdatei oder -tabelle beschrieben, die Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wiedergeben möchten. Durch das Festlegen von Breakpoints in einer Ablaufverfolgungsdatei oder in einer Tabelle können Sie die Wiedergabe der Ablaufverfolgung bei speziellen Ereignissen anhalten. Die Verwendung von Breakpoints bei der Wiedergabe einer Ablaufverfolgung unterstützt das Debuggen, da Sie die Wiedergabe langer Ablaufverfolgungsskripts in kurze Segmente unterteilen und sie jeweils inkrementell analysieren können.  
@@ -56,7 +56,7 @@ ms.locfileid: "36149321"
 6.  Wiederholen Sie Schritt 5 bis zum Ende der Ablaufverfolgung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Wiedergabe auf einen Cursor &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [Wiedergeben bis zu einem Cursor &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [Wiedergeben von Ablaufverfolgungen](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

@@ -1,30 +1,29 @@
 ---
-title: Wählen Sie die Seite Datenbanken (Assistenten hinzufügen Datenbank Assistent für neue Verfügbarkeitsgruppen) | Microsoft Docs
+title: Wählen Sie die Seite "Datenbanken" (neue Verfügbarkeitsgruppe-Assistent-Add-Datenbank-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.selectdatabases.f1
 - sql12.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 304ce826a45debaf4d18a63e9d68061ef393705b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc83c051c75887ee58230e2a1276b8eb408c6830
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320930"
 ---
-# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Seite "Datenbanken auswählen" (Assistent hinzufügen Datenbank Assistent für neue Verfügbarkeitsgruppen)
+# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Wählen Sie die Seite "Datenbanken" (neue Verfügbarkeitsgruppe-Assistent-Add-Datenbank-Assistent)
   In diesem Hilfethema werden die Optionen der Seite für das **Angeben von Datenbanken** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und den [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Optionen für "Datenbanken auswählen"  

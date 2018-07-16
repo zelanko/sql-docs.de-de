@@ -1,5 +1,5 @@
 ---
-title: Erteilen Cube- oder modellberechtigungen (Analysis Services) | Microsoft Docs
+title: Gewähren von Berechtigungen des Cube- oder modellberechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306560"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
   Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
@@ -38,7 +38,7 @@ ms.locfileid: "36160529"
  Um die Rollendefinitionen für weitere Lösungsbereitstellungen beizubehalten, besteht eine bewährte Methode darin, Rollen in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] als integralen Bestandteil des Modells zu definieren, während die Rollenmitgliedschaften nach Veröffentlichung der Datenbank dann von einem Datenbankadministrator in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zugewiesen werden. Sie können jedoch beide Tools für beide Aufgaben verwenden. Um die Übung einfacher zu gestalten, verwenden wir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sowohl für die Rollendefinition als auch für die Mitgliedschaft.  
   
 > [!NOTE]  
->  Nur Serveradministratoren, oder Datenbankadministratoren mit Vollzugriff, können einen Cube von Quelldateien auf einem Server bereitstellen bzw. Rollen erstellen und Mitglieder zuweisen. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) ausführliche Informationen über diese Berechtigung Ebenen.  
+>  Nur Serveradministratoren, oder Datenbankadministratoren mit Vollzugriff, können einen Cube von Quelldateien auf einem Server bereitstellen bzw. Rollen erstellen und Mitglieder zuweisen. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) ausführliche Informationen über diese Berechtigungen Ebenen.  
   
 #### <a name="step-1-create-the-role"></a>Schritt 1: Erstellen der Rolle  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36160529"
   
 #### <a name="step-3-set-cube-permissions"></a>Schritt 3: Festlegen von Cubeberechtigungen  
   
-1.  In der **Cubes** , wählen Sie einen Cube, und klicken Sie dann auf `Read` oder **Lese-/Schreibzugriff** Zugriff.  
+1.  In der **Cubes** Bereich, wählen Sie einen Cube, und klicken Sie dann auf `Read` oder **Lese-/Schreibzugriff** Zugriff.  
   
-     `Read` Zugriff ist für die meisten Vorgänge ausreichend. **Lesen/Schreiben** wird nur zum Rückschreiben, nicht für die Verarbeitung verwendet. Weitere Informationen zu dieser Funktion finden Sie unter [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read` Zugriff ist ausreichend für die meisten Vorgänge. **Lesen/Schreiben** wird nur zum Rückschreiben, nicht für die Verarbeitung verwendet. Weitere Informationen zu dieser Funktion finden Sie unter [Set Partition Writeback](set-partition-writeback.md) .  
   
      Beachten Sie, dass Sie mehrere Cubes auswählen können sowie andere Objekte, die im Dialogfeld "Rolle erstellen" verfügbar sind. Wenn Sie Berechtigungen für einen Cube erteilen, gewährt dies auch Zugriff auf die Dimensionen und Perspektiven, die mit dem Cube verknüpft sind. Es besteht keine Notwendigkeit, Objekte, die bereits im Cube vorhanden sind, manuell hinzuzufügen.  
   

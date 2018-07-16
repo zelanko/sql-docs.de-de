@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311970"
 ---
 # <a name="system-variables"></a>Systemvariablen
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Reihe von Systemvariablen bereit, mit denen Informationen zum ausgeführten Paket und dessen Objekten gespeichert werden. Diese Variablen können in Ausdrücken und Eigenschaftsausdrücken verwendet werden, um Pakete, Container, Tasks und Ereignishandler anzupassen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36150401"
 |`ExecutionInstanceGUID`|Zeichenfolge|Der eindeutige Bezeichner der ausführenden Instanz eines Pakets.|  
 |`FailedConfigurations`|Zeichenfolge|Die Namen von fehlerhaften Paketkonfigurationen.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Gibt an, ob die Paketkonfigurationen beim Laden des Pakets ignoriert werden.|  
-|**InteractiveMode**|Boolean|Gibt an, ob das Paket im interaktiven Modus ausgeführt wird. Wenn ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer ausgeführt wird, ist diese Eigenschaft auf `True` festgelegt. Wenn ein Paket ausgeführt wird, mithilfe der **DTExec** eingabeaufforderungs-Hilfsprogramm die Eigenschaft wird festgelegt, um `False`.|  
+|**InteractiveMode**|Boolean|Gibt an, ob das Paket im interaktiven Modus ausgeführt wird. Wenn ein Paket im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer ausgeführt wird, ist diese Eigenschaft auf `True` festgelegt. Wenn ein Paket ausgeführt wird, mit der **DTExec** eingabeaufforderungs-Hilfsprogramm die Eigenschaft wird festgelegt, um `False`.|  
 |`LocaleId`|Int32|Das Gebietsschema, das vom Paket verwendet wird.|  
 |**MachineName**|Zeichenfolge|Der Name des Computers, auf dem das Paket ausgeführt wird.|  
 |**OfflineMode**|Boolean|Gibt an, ob sich das Paket im Offlinemodus befindet. Im Offlinemodus werden keine Verbindungen mit Datenquellen abgerufen.|  

@@ -1,5 +1,5 @@
 ---
-title: XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten | Microsoft Docs
+title: XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XmlSerializer class
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad6b9ebaba9f05b0a927cd65f788cdbdb672a6d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8b59c013a9a21aaa50465acd5a565eda5c1e0653
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279826"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten
   Die XML-Serialisierung ist in zwei Szenarien erforderlich:  
@@ -34,18 +34,18 @@ ms.locfileid: "36163190"
   
 -   Konvertieren eines benutzerdefinierten Typs (UDT) in XML  
   
- Wenn durch Aufrufen der `XmlSerializer`-Klasse eine XML-Serialisierung durchgeführt wird, wird in der Regel eine zusätzliche Serialisierungsassembly erstellt, die in das Projekt mit der Quellassembly überladen wird. Aus Sicherheitsgründen wird diese Überladung jedoch in der CLR deaktiviert. Aus diesem Grund zum Aufrufen eines Webdiensts oder zum Ausführen der Konvertierung von UDT in XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Assembly muss erstellt werden, manuell mithilfe eines Tools namens **Sgen.exe** bereitgestellten mit .NET Framework, die die erforderlichen generiert. Serialisierungsassemblys. Beim Aufrufen von `XmlSerializer` muss die Serialisierungsassembly wie folgt manuell erstellt werden:  
+ Wenn durch Aufrufen der `XmlSerializer`-Klasse eine XML-Serialisierung durchgeführt wird, wird in der Regel eine zusätzliche Serialisierungsassembly erstellt, die in das Projekt mit der Quellassembly überladen wird. Aus Sicherheitsgründen wird diese Überladung jedoch in der CLR deaktiviert. Aus diesem Grund zum Aufrufen eines Webdiensts oder zum Ausführen der Konvertierung von UDT in XML-Code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Assembly muss erstellt werden, manuell mithilfe eines Tools namens **Sgen.exe** bereitgestellten mit .NET Framework, die die erforderlichen generiert Serialisierungsassemblys. Beim Aufrufen von `XmlSerializer` muss die Serialisierungsassembly wie folgt manuell erstellt werden:  
   
-1.  Führen Sie die **Sgen.exe** Tool, das das .NET Framework SDK zum Erstellen der Assembly mit den XML-Serialisierungsprogrammen für die Assembly der Ereignisquelle zur Verfügung steht.  
+1.  Führen Sie die **Sgen.exe** Tool, das mit dem .NET Framework-SDK zum Erstellen der Assembly, die die XML-Serialisierungsprogrammen für die Assembly der Ereignisquelle enthält bereitgestellt wird.  
   
 2.  Registrieren Sie die generierte Assembly mithilfe der `CREATE ASSEMBLY`-Anweisung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Informationen zu Fehlern, die beim Empfangen Sie möglicherweise Durchführen einer XML-Serialisierung finden Sie unter den folgenden Microsoft Support-Artikel: ["Dynamisch generiertes Serialisierungsassembly kann nicht geladen werden"](http://support.microsoft.com/kb/913668).  
+ Informationen zu Fehlern, die beim Empfangen Sie möglicherweise Durchführen einer XML-Serialisierung, finden Sie unter den folgenden Microsoft-Support-Artikel: ["Kann nicht geladen werden dynamisch generiertes Serialisierungsassembly"](http://support.microsoft.com/kb/913668).  
   
  Informationen über Datentypen, die vom XML-Serialisierungsprogramm nicht unterstützt werden, finden Sie in der Dokumentation zu .NET Framework unter "Bindungsunterstützung für XML-Schema in .NET Framework".  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenzugriff von CLR-Datenbankobjekten aus](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Datenzugriff von CLR-Datenbankobjekten](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

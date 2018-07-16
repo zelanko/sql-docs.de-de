@@ -1,14 +1,13 @@
 ---
-title: Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen) | Microsoft Docs
+title: Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310440"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
@@ -70,9 +69,9 @@ ms.locfileid: "36162789"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatisches Failover|nein|nein|ja|  
 |Geplantes manuelles Failover|nein|ja|ja|  
-|erzwungenes Failover|ja|ja|Ja**<sup>*</sup>**|  
+|erzwungenes Failover|ja|ja|"Ja"**<sup>*</sup>**|  
   
- **<sup>*</sup>**  Wenn Sie den Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie ein manuelles Failover.  
+ **<sup>*</sup>**  Wenn Sie den Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   
  Die Zeitdauer, für die Datenbank während eines Failovers nicht verfügbar ist, hängt vom Failovertyp und seiner Ursache ab.  
   
@@ -239,14 +238,14 @@ ms.locfileid: "36162789"
   
 1.  Stellen Sie eine Verbindung mit dem primären Replikat her.  
   
-2.  Abfrage der `last_commit_lsn` (LSN der letzten Transaktion ein Commit ausgeführt wurde) und `last_commit_time` Spalten (Zeitpunkt des letzten Commits) der [dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) -verwaltungssicht.  
+2.  Abfrage der `last_commit_lsn` (LSN der letzten Transaktion ein Commit ausgeführt) und `last_commit_time` Spalten (Zeitpunkt des letzten Commits) der [Sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) dynamische verwaltungssicht.  
   
 3.  Vergleichen Sie die Werte, die für jede primäre Datenbank und ihre sekundären Datenbanken zurückgegeben werden. Der Unterschied zwischen den LSNs des letzten Commits gibt die Verzögerung an.  
   
 4.  Sie können eine Warnung ausgeben, wenn die Verzögerung für eine Datenbank oder einen Satz Datenbanken die gewünschte maximale Verzögerung für einen bestimmten Zeitraum überschreitet. Beispielsweise kann die Abfrage durch einen Auftrag ausgeführt werden, der einmal pro Minute für jede primäre Datenbank ausgeführt wird. Wenn der Unterschied zwischen `last_commit_time` einer primären Datenbank und einer ihrer sekundären Datenbanken das Recovery Point Objective (RPO) (beispielsweise 5 Minuten) seit der letzten Ausführung des Jobs überschreitet, kann der Job eine Warnung ausgeben.  
   
 > [!IMPORTANT]  
->  Wenn der wsfc-Cluster über kein Quorum verfügt oder das Quorum erzwungen wurde, `last_commit_lsn` und `last_commit_time` NULL sind. Weitere Informationen dazu, wie Sie nach der Erzwingung des Quorums Datenverluste vermeiden können, finden Sie unter „Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums“ in [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgetauscht werden.  
+>  Wenn der WSFC-Cluster kein Quorum aufweist oder das Quorum erzwungen wurden, `last_commit_lsn` und `last_commit_time` NULL sind. Weitere Informationen dazu, wie Sie nach der Erzwingung des Quorums Datenverluste vermeiden können, finden Sie unter „Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums“ in [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgetauscht werden.  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> Umgang mit potenziellem Datenverlust  
  Nach einem erzwungenen Failover werden alle sekundären Datenbanken angehalten. Dies schließt die früheren primären Datenbanken ein, nachdem das frühere primäre Replikat wieder online geschaltet wurde und ermittelt, dass es jetzt ein sekundäres Replikat ist. Sie müssen jede angehaltene Datenbank einzeln auf jedem sekundären Replikat manuell fortsetzen.  
@@ -289,7 +288,7 @@ ms.locfileid: "36162789"
   
 -   [Ändern des Failovermodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für das automatische Failover &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](configure-flexible-automatic-failover-policy.md)  
+-   [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für automatisches Failover &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](configure-flexible-automatic-failover-policy.md)  
   
  **So führen Sie ein manuelles Failover aus**  
   
@@ -311,7 +310,7 @@ ms.locfileid: "36162789"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   

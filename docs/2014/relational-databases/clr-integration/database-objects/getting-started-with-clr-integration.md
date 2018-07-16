@@ -1,13 +1,11 @@
 ---
-title: Erste Schritte mit CLR-Integration | Microsoft Docs
+title: Erste Schritte mit CLR-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,18 +25,18 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050824"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349811"
 ---
 # <a name="getting-started-with-clr-integration"></a>Erste Schritte mit der CLR-Integration
-  Dieses Thema bietet einen Überblick über die Namespaces und Bibliotheken, kompilieren Sie die Datenbankobjekte, die mit der [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] Integration mit der .NET Framework common Language Runtime (CLR). In diesem Thema wird außerdem erläutert, wie eine einfache gespeicherte CLR-Prozedur in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben, kompiliert und ausgeführt wird.  
+  Dieses Thema enthält eine Übersicht über die erforderlichen Namespaces und Bibliotheken zum Kompilieren von Datenbankobjekten mit dem die [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] Integration in die .NET Framework common Language Runtime (CLR). In diesem Thema wird außerdem erläutert, wie eine einfache gespeicherte CLR-Prozedur in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben, kompiliert und ausgeführt wird.  
   
 ## <a name="required-namespaces"></a>Erforderliche Namespaces  
  Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]. Die CLR-Integrationsfunktionalität wird in einer Assembly mit dem Namen system.data.dll verfügbar gemacht, die Teil von .NET Framework ist. Diese Assembly befindet sich im globalen Assemblycache (GAC) sowie im .NET Framework-Verzeichnis. Ein Verweis auf diese Assembly wird in der Regel sowohl von Befehlszeilentools als auch von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio automatisch hinzugefügt und muss daher nicht manuell hinzugefügt werden.  
@@ -90,12 +88,12 @@ End Class
   
 ```  
   
- Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode enthält die beiden neuen Klassen `SqlContext` und `SqlPipe` zum Erstellen von verwalteten Datenbankobjekten für die Ausgabe einer einfachen Textnachricht. Zudem weist die Methode die Zeichenfolge "Hello World!" als Wert des Out-Parameter. Diese Methode deklariert werden kann, wie eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] gespeicherten Prozedur.  
+ Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode enthält die beiden neuen Klassen `SqlContext` und `SqlPipe` zum Erstellen von verwalteten Datenbankobjekten für die Ausgabe einer einfachen Textnachricht. Zudem weist die Methode die Zeichenfolge "Hello World!" als Wert für einen Out-Parameter. Diese Methode kann deklariert werden, wie eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] gespeicherte Prozedur.  
   
  Dieses Programm wird im Folgenden als Bibliothek kompiliert, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] geladen und als gespeicherte Prozedur ausgeführt.  
   
 ## <a name="compiling-the-hello-world-stored-procedure"></a>Kompilieren der gespeicherten Prozedur "Hello World"  
- [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] .NET Framework-redistributionsdateien standardmäßig. Zu diesen Dateien zählen die Dateien csc.exe und vbc.exe, die Befehlszeilencompiler für Visual C# sowie Visual Basic-Programme. Zum Kompilieren des Beispiels müssen Sie die Pfadvariable so ändern, dass sie auf das Verzeichnis mit der Datei csc.exe oder mit der Datei vbc.exe zeigt. Der Standardinstallationspfad von .NET Framework lautet wie folgt:  
+ [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] .NET Framework-neuverteilungsdateien standardmäßig. Zu diesen Dateien zählen die Dateien csc.exe und vbc.exe, die Befehlszeilencompiler für Visual C# sowie Visual Basic-Programme. Zum Kompilieren des Beispiels müssen Sie die Pfadvariable so ändern, dass sie auf das Verzeichnis mit der Datei csc.exe oder mit der Datei vbc.exe zeigt. Der Standardinstallationspfad von .NET Framework lautet wie folgt:  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  Mit diesen Befehlen wird der Visual C# - bzw. Visual Basic-Compiler unter Angabe der /target-Option aufgerufen, die festlegt, dass eine Bibliotheks-DLL erstellt werden soll.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Laden und Ausführen der gespeicherten Prozedur "Hello World" in SQL Server  
- Sobald die Beispielprozedur erfolgreich kompiliert wurde, können Sie es in testen [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] , und erstellen Sie eine neue Abfrage zum Herstellen einer Verbindung mit einer geeigneten Testdatenbank (z. B. die AdventureWorks-Beispieldatenbank).  
+ Sobald die Beispielprozedur erfolgreich kompiliert wurde, können Sie testen in [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] , und erstellen Sie eine neue Abfrage zum Herstellen einer Verbindung mit einer geeigneten Testdatenbank (z. B. der AdventureWorks-Beispieldatenbank).  
   
  Die Funktion zum Ausführen von CLR-Code (Common Language Runtime) ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] standardmäßig deaktiviert. Der CLR-Code kann aktiviert werden, mithilfe der **Sp_configure** gespeicherten Systemprozedur. Weitere Informationen finden Sie unter [Enabling CLR Integration](../clr-integration-enabling.md).  
   

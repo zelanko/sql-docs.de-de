@@ -1,5 +1,5 @@
 ---
-title: Datamining-Dienste und Datenquellen | Microsoft Docs
+title: Datamining-Dienste und Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297470"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
   Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine bereitgestellte Komponenten.  
@@ -48,7 +48,7 @@ ms.locfileid: "36150008"
 -   Verwalten von Serverressourcen  
   
 ### <a name="xmla-listener"></a>XMLA-Überwachung  
- Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` -Konfigurationseinstellung in der Datei "Msmdsrv.ini" kann verwendet werden, an einen Port auf dem eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz überwacht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
+ Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Konfigurationseinstellung in der Datei "Msmdsrv.ini" kann verwendet werden, um einen anderen Port angeben, auf denen eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz überwacht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
   
 |Port|Description|  
 |----------|-----------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "36150008"
 -   `AllowAdHocOpenRowsetQueries` Steuert den ad-hoc-Zugriff auf OLE DB-Anbieter, die direkt in den serverspeicherbereich geladen werden.  
   
     > [!IMPORTANT]  
-    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert lautet `false`. Allerdings auch wenn diese Eigenschaft festgelegt wird, um `false`, Benutzer können weiterhin Singleton-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
+    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert lautet `false`. Aber auch wenn diese Eigenschaft festgelegt ist, um `false`, Benutzer können dennoch weiterhin Singleton-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
   
 -   **AllowedProvidersInOpenRowset** : Gibt den Anbieter an, wenn Ad-hoc-Zugriff aktiviert ist. Sie können mehrere Anbieter angeben, indem Sie eine durch Trennzeichen getrennte Liste von Programm-IDs eingeben.  
   

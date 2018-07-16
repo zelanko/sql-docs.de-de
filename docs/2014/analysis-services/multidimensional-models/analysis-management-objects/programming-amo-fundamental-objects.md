@@ -1,5 +1,5 @@
 ---
-title: Programmieren von AMO Fundamental Objects | Microsoft Docs
+title: Programming AMO Fundamental Objects | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321300"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programming AMO Fundamental objects
   Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  
@@ -47,8 +47,8 @@ ms.locfileid: "36049327"
   
 -   [DataSourceView-Objekte](#DSV)  
   
-##  <a name="ServerObjects"></a> Serverobjekte  
- Verwenden einer <xref:Microsoft.AnalysisServices.Server> Objekt erfordert die folgenden Schritte: Herstellen einer Verbindung mit dem Server, zu überprüfen, ob die <xref:Microsoft.AnalysisServices.Server> Objekt, mit dem Server verbunden ist, und wenn dies der Fall ist, Trennen der <xref:Microsoft.AnalysisServices.Server> vom Server.  
+##  <a name="ServerObjects"></a> Server-Objekte  
+ Verwenden einer <xref:Microsoft.AnalysisServices.Server> Objekt erfordert die folgenden Schritte: Verbinden mit dem Server, überprüfen, ob die <xref:Microsoft.AnalysisServices.Server> -Objekt mit dem Server verbunden ist und wenn dies der Fall ist, Trennen der <xref:Microsoft.AnalysisServices.Server> vom Server.  
   
 ### <a name="connecting-to-the-server-object"></a>Herstellen einer Verbindung mit dem Serverobjekt  
  Um eine Verbindung mit dem Server herzustellen, ist die richtige Verbindungszeichenfolge erforderlich.  

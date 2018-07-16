@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für Zusammenführungsjoin | Microsoft Docs
+title: Transformations-Editor für zusammenführungsjoin | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300480"
 ---
 # <a name="merge-join-transformation-editor"></a>Transformations-Editor für Zusammenführungsjoin
   Im Dialogfeld **Transformations-Editor für Zusammenführungsjoin** geben Sie den Jointyp, die Joinspalten und die Ausgabespalten für zwei Eingaben an, die durch einen Join zusammengeführt werden.  
@@ -53,8 +53,8 @@ ms.locfileid: "36149388"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sortieren von Daten für die Zusammenführung und Join von Transformationen für zusammenführen](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Erweitern eines Datasets mithilfe der Merge Join Transformations](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Sortieren von Daten für die Mergereplikation und Join von Transformationen für zusammenführen](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoin](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformation für zusammenführen](data-flow/transformations/merge-transformation.md)   
  [Transformation für UNION ALL](data-flow/transformations/union-all-transformation.md)  
   

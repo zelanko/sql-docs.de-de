@@ -1,5 +1,5 @@
 ---
-title: Zeiträume definieren (Dimensions-Assistent) | Microsoft Docs
+title: Definieren Sie die Zeiträume (Dimensions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315930"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Zeiträume definieren (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** können Sie Informationen zum Kalenderjahr sowie Zeithäufigkeiten für die Zeitdimension oder die Serverzeitdimension definieren.  
@@ -48,7 +48,7 @@ ms.locfileid: "36148299"
 > [!NOTE]  
 >  Der Zeitraum `Date` ist erforderlich.  
   
- **Sprache für die Zeitelemente**  
+ **Sprache für die Namen der Zeitelemente**  
  Wählen Sie die Sprache für die Elemente der Zeitdimension aus.  
   
 ## <a name="see-also"></a>Siehe auch  

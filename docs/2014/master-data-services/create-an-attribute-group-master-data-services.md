@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a063af91090ff2e8d5eb1145bb5968573d04523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd50daa9250f46f17feecb7dfdd16e4998ea47d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290856"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Erstellen einer Attributgruppe (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Attributgruppen, wenn Sie Attribute auf einzelnen Registerkarten im **Explorerraster** anzeigen möchten.  
   
 > [!NOTE]  
->  Beim Erstellen einer Attributgruppe wird diese automatisch für alle Benutzer bis auf den Ersteller ausgeblendet. Weitere Informationen zu die Gruppe sichtbar machen, finden Sie unter [für Benutzer ein Attribut Gruppe sichtbar machen &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
+>  Beim Erstellen einer Attributgruppe wird diese automatisch für alle Benutzer bis auf den Ersteller ausgeblendet. Weitere Informationen zum Sichtbarmachen der Gruppe finden Sie unter [für Benutzer eine Attribut-Gruppe sichtbar machen &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
@@ -53,10 +53,10 @@ ms.locfileid: "36149713"
   
 6.  Klicken Sie auf **Attributgruppe hinzufügen**.  
   
-7.  In der **Name der Blattgruppe** geben einen Namen für die Gruppe. Dies ist der Name angezeigt, auf der Registerkarte im **Explorer**.  
+7.  In der **Name der Blattgruppe** geben einen Namen für die Gruppe. Dies ist der Name, der auf der Registerkarte angezeigten **Explorer**.  
   
     > [!NOTE]  
-    >  Wenn Sie ausgewählt haben **konsolidierte Gruppen** oder **Auflistungsgruppen** in Schritt 5 dieses Feld ist **Name der konsolidierten Gruppe** oder **Auflistungsgruppe**bzw.  
+    >  Wenn Sie ausgewählt haben **konsolidierte Gruppen** oder **Auflistungsgruppen** in Schritt 5 dieses Feld ist **Name der konsolidierten Gruppe** oder **Name der Auflistungsgruppe**bzw..  
   
 8.  Klicken Sie auf **Gruppe speichern**.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36149713"
   
 11. Klicken Sie auf **ausgewähltes Element bearbeiten**.  
   
-12. Klicken Sie auf die Attribute in der **verfügbar** Feld, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
+12. Klicken Sie auf die Attribute in der **verfügbar** ein, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
   
-13. Klicken Sie optional auf die **einrichten** und **unten** Pfeile, um die links-nach-rechts-Reihenfolge der Attribute ändern.  
+13. Klicken Sie optional die **einrichten** und **unten** Pfeile, um die links-nach-rechts-Reihenfolge der Attribute zu ändern.  
   
 14. Klicken Sie auf **Speichern**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36149713"
  [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Ändern des Namens einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Löschen einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Blattelemente Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Blattberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

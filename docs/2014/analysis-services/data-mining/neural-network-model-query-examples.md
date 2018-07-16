@@ -1,5 +1,5 @@
 ---
-title: Neuronale Netzwerkmodellabfragen | Microsoft Docs
+title: Abfragebeispiele für neuronale Netzwerke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea75ce7875a828dc380f81b334d5b7376d2b38c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151811"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
@@ -72,7 +72,7 @@ WHERE NODE_TYPE = 24
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
- Eine Definition der Bedeutung der Spalten im Schemarowset im Kontext eines neuronalen Netzwerkmodells, finden Sie unter [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Eine Definition der Bedeutung der Spalten im Schemarowset im Kontext eines neuronalen Netzwerkmodells finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Query2"></a> Beispielabfrage 2: Abrufen von weiteren Modellmetadaten aus dem Schemarowset  
  Durch Abfragen des Data Mining-Schemarowsets erhalten Sie dieselben Informationen wie bei einer DMX-Inhaltsabfrage. Das Schemarowset stellt jedoch weitere Spalten bereit. Die folgende Beispielabfrage gibt das jeweilige Datum zurück, an dem das Modell erstellt, geändert und zuletzt verarbeitet wurde. Die Abfrage gibt außerdem die vorhersagbaren Spalten zurück, die nicht einfach im Modellinhalt verfügbar sind, sowie die Parameter, die zum Erstellen des Modells verwendet wurden. Diese Informationen können zum Dokumentieren des Modells nützlich sein.  
@@ -177,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Diese Ergebnisse zeigen, dass an den Knoten mit der ID 70000000200000000 sechs verschiedene Koeffizienten (VALUETYPE = 7) übergeben wurden. Die Werte der Koeffizienten sind in der ATTRIBUTE_VALUE-Spalte enthalten. Mit der Knoten-ID in der ATTRIBUTE_NAME-Spalte können Sie genau bestimmen, für welches Eingabeattribut der Koeffizient bestimmt ist. Die Knoten-ID 6000000000000000a verweist beispielsweise auf das Eingabeattribut und den Wert `Day of Week = 'Tue.'` . Mit der Knoten-ID können Sie eine Abfrage erstellen, oder Sie können den Knoten mit dem [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md)durchsuchen.  
   
- Entsprechend können Sie bei Abfrage der NODE_DISTRIBUTION-Tabelle der Knoten in der Ausgabeebene (NODE_TYPE = 23) die Koeffizienten für jeden Ausgabewert sehen. In der Ausgabeebene verweisen die Zeiger jedoch zurück auf die Knoten der verborgenen Ebene. Weitere Informationen finden Sie unter [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Entsprechend können Sie bei Abfrage der NODE_DISTRIBUTION-Tabelle der Knoten in der Ausgabeebene (NODE_TYPE = 23) die Koeffizienten für jeden Ausgabewert sehen. In der Ausgabeebene verweisen die Zeiger jedoch zurück auf die Knoten der verborgenen Ebene. Weitere Informationen finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>Verwenden eines neuronalen Netzwerkmodells zum Erstellen von Vorhersagen  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus unterstützt sowohl Klassifikation als auch Regression. Sie können Vorhersagefunktionen mit diesen Modellen verwenden, um neue Daten zur Verfügung zu stellen und entweder SINGLETON- oder Batchvorhersagen zu erstellen.  
@@ -217,7 +217,7 @@ NATURAL PREDICTION JOIN
 |Vorhersagefunktion|Verwendung|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den vorhergesagten Wert zurück.|  
@@ -228,7 +228,7 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
  [Technische Referenz zu Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
- [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

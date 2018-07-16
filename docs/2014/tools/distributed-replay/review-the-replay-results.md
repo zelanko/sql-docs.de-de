@@ -1,5 +1,5 @@
 ---
-title: Überprüfen der Wiedergabeergebnisse | Microsoft Docs
+title: Überprüfen der Wiedergabeergebnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecfcf05a685543e22d9ea9bf3b2889fcb8098064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308960"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
   Nachdem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay**-Option den **-o**-Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "36151491"
 ## <a name="event-class-column-mapping"></a>Zuordnung von Spalten zu Ereignisklassen  
  In der folgenden Abbildung wird gezeigt, welche Spalten im Ergebnis der Ablaufverfolgung für die einzelnen Typen von Ereignisklassen, die während der Wiedergabe aufgezeichnet werden, verfügbar sind.  
   
- ![Zuordnung von Spalten zu Ereignisklassen](../../database-engine/media/eventclassmappings.gif "Zuordnung von Spalten zu Ereignisklassen")  
+ ![Zuordnung von Spalte zu Ereignisklassen](../../database-engine/media/eventclassmappings.gif "Zuordnung von Spalte zu Ereignisklassen")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
@@ -83,7 +83,7 @@ ms.locfileid: "36151491"
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
- [Administration Tool Befehlszeilenoptionen &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Ändern einer Assembly | Microsoft Docs
+title: Ändern einer Assembly | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4bfe1ce30b77f8c0afff3db00dd95f9f36e5ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: aea33e50f60b824a122f3f320ba058ae2cae158f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058928"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349712"
 ---
 # <a name="altering-an-assembly"></a>Ändern einer Assembly
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registrierte Assemblys können von einer aktuelleren Version aus mithilfe der ALTER ASSEMBLY-Anweisung aktualisiert werden. Zum Aktualisieren einer Assembly verwenden Sie die ALTER ASSEMBLY-Anweisung mit der folgenden Syntax:  
@@ -59,7 +57,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von CLR-Integrationsassemblys](managing-clr-integration-assemblies.md)   
  [Erstellen einer Assembly](creating-an-assembly.md)   
- [Durch Löschen einer Assembly](dropping-an-assembly.md)   
+ [Löschen von Assemblys](dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   

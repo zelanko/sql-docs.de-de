@@ -1,27 +1,26 @@
 ---
-title: Aktualisieren des Protokollversands auf SQLServer 2014 (Transact-SQL) | Microsoft Docs
+title: Aktualisieren des Protokollversands auf SQLServer 2014 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 854b4da34daf031c4233a69fd67c4aa96cedfd8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 96179ecc9f49bde6b27e2d2bf8dab86835054f0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310400"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2014 (Transact-SQL)
   Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist es möglich, die Protokollversandkonfigurationen beizubehalten. In diesem Thema werden alternative Szenarien und bewährte Methoden zum Aktualisieren einer Protokollversandkonfiguration beschrieben.  
@@ -55,7 +54,7 @@ ms.locfileid: "36149951"
  
   
 ###  <a name="UpgradeSecondary"></a> Aktualisieren der sekundären Serverinstanz  
- Der Upgradevorgang erfordert die Aktualisierung der sekundären Serverinstanzen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher-Protokollversandkonfiguration auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vor dem Upgrade der primären Serverinstanz. Aktualisieren Sie immer zuerst die sekundäre Serverinstanz. Wenn der primäre Server vor einem sekundären Server aktualisiert wurden, wird beim Protokollversand fehl, weil eine Sicherung auf einer neueren Version von erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht wiederhergestellt werden, auf eine ältere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Der Upgradevorgang erfordert das Upgrade der sekundären Serverinstanzen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher-Protokollversandkonfiguration auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vor dem Upgrade der primären Serverinstanz. Aktualisieren Sie immer zuerst die sekundäre Serverinstanz. Wenn der primäre Server vor einem sekundären Server aktualisiert wurden, würde Protokollversand fehl, da eine Sicherung auf einer neueren Version von erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht wiederhergestellt werden, auf eine ältere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Der Protokollversand wird während des Upgradevorgangs weiter ausgeführt, weil die aktualisierten sekundären Server die Protokollsicherungen vom primären [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Server (oder höher) weiterhin wiederherstellen. Der Upgradevorgang für die sekundären Serverinstanzen hängt teilweise davon ab, ob die Protokollversandkonfiguration mehrere sekundäre Server umfasst Weitere Informationen finden Sie im Abschnitt [Aktualisieren von mehreren sekundären Serverinstanzen](#MultipleSecondaries)weiter hinten in diesem Thema.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36149951"
  Sobald der sekundäre Server aktualisiert wurde, werden die Protokollversandaufträge der Agents zum Kopieren und Wiederherstellen von Protokollsicherungen von der primären Serverinstanz, Server A, wieder aufgenommen und fortgesetzt. Wie lange der sekundäre Server für die Aktualisierung der sekundären Datenbank benötigt, hängt davon ab, wie lange das Upgrade des sekundären Servers dauert und wie häufig die Sicherungen auf dem primären Server ausgeführt werden.  
   
 > [!NOTE]  
->  Während des Serverupgrades wird die sekundäre Datenbank nicht auf aktualisiert eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Datenbank. Sie wird nur aktualisiert, wenn sie online geschaltet wird.  
+>  Während der serveraktualisierung wird die sekundäre Datenbank nicht auf aktualisiert eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Datenbank. Sie wird nur aktualisiert, wenn sie online geschaltet wird.  
   
 > [!IMPORTANT]  
 >  Die RESTORE WITH STANDBY-Option wird für Datenbanken, die eine Aktualisierung erfordern, nicht unterstützt. Wenn eine aktualisierte sekundäre Datenbank mithilfe von RESTORE WITH STANDBY konfiguriert wurde, können Transaktionsprotokolle nach einer Aktualisierung nicht wiederhergestellt werden. Um den Protokollversand auf dieser sekundären Datenbank fortzusetzen, müssen Sie ihn auf diesem Standbyserver erneut einrichten. Weitere Informationen zur STANDBY-Option finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
@@ -72,13 +71,13 @@ ms.locfileid: "36149951"
 ###  <a name="UpgradePrimary"></a> Aktualisieren der primären Serverinstanz  
  Bei der Planung eines Upgrades ist der Zeitraum, während dessen die Datenbank nicht verfügbar sein wird, ein maßgeblicher Aspekt. Im einfachsten Aktualisierungsszenario ist die Datenbank nicht verfügbar, während der primäre Server aktualisiert wird (Szenario 1, unten).  
   
- Eine kompliziertere Upgradevorgang wird dadurch allerdings können Sie durch Ausführen eines Failovers die datenbankverfügbarkeit Maximieren der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher-Primärserver zum eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sekundären Server, bevor Sie den ursprünglichen primären Server aktualisieren (Szenario 2, unten). Es sind zwei Varianten des Failoverszenarios denkbar. Sie können zurück zum ursprünglichen primären Server wechseln und die ursprüngliche Protokollversandkonfiguration beibehalten. Alternativ können Sie die ursprüngliche Protokollversandkonfiguration entfernen, bevor Sie den ursprünglichen primären Server aktualisieren, und später unter Verwendung des neuen primären Servers eine neue Konfiguration erstellen. In diesem Abschnitt werden diese beiden Szenarien beschrieben.  
+ Ein etwas komplizierteres Upgradevorgang wird dadurch allerdings können Sie die datenbankverfügbarkeit per Failover Maximieren der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher-Primärserver zum eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sekundären Server, bevor Sie den ursprünglichen primären Server aktualisieren (Szenario 2 weiter unten). Es sind zwei Varianten des Failoverszenarios denkbar. Sie können zurück zum ursprünglichen primären Server wechseln und die ursprüngliche Protokollversandkonfiguration beibehalten. Alternativ können Sie die ursprüngliche Protokollversandkonfiguration entfernen, bevor Sie den ursprünglichen primären Server aktualisieren, und später unter Verwendung des neuen primären Servers eine neue Konfiguration erstellen. In diesem Abschnitt werden diese beiden Szenarien beschrieben.  
   
 > [!IMPORTANT]  
 >  Aktualisieren Sie unbedingt die sekundäre Serverinstanz vor der primären Serverinstanz. Weitere Informationen finden Sie im Abschnitt [Aktualisieren der sekundären Serverinstanz](#UpgradeSecondary)weiter oben in diesem Thema.  
   
   
-####  <a name="Scenario1"></a> Szenario 1: Aktualisieren primären Serverinstanz ohne Failover  
+####  <a name="Scenario1"></a> Szenario 1: Upgrade primären Serverinstanz ohne Failover  
  Dies ist das einfachere Szenario, aber es verursacht eine längere Ausfallzeit als die Aktualisierung mit Failover. Die primäre Serverinstanz wird einfach aktualisiert, und die Datenbank ist während dieses Aktualisierungsvorgangs nicht verfügbar.  
   
  Sobald der Server aktualisiert wurde, wird die Datenbank automatisch online geschaltet. Daraufhin wird sie automatisch aktualisiert. Nachdem die Datenbank aktualisiert wurde, werden die Protokollversandaufträge fortgesetzt.  
@@ -95,7 +94,7 @@ ms.locfileid: "36149951"
 #####  <a name="Procedure1"></a> Schritt 1: Ausführen eines kontrollierten Failovers auf den sekundären Server  
  Kontrollierter Failover auf den sekundären Server:  
   
-1.  Führen Sie manuell eine [protokollfragmentsicherung](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) des Transaktionsprotokolls in der primären Datenbank mit der Angabe von WITH NORECOVERY. Mit dieser Protokollsicherung werden alle bislang noch nicht gesicherten Protokolldatensätze erfasst und die Datenbank offline geschaltet. Beachten Sie Folgendes: Während die Datenbank offline ist, kann der Protokollversandsicherungsauftrag nicht ausgeführt werden.  
+1.  Führen Sie manuell eine [protokollfragmentsicherung](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) des Transaktionsprotokolls in der primären Datenbank, die Angabe von WITH NORECOVERY. Mit dieser Protokollsicherung werden alle bislang noch nicht gesicherten Protokolldatensätze erfasst und die Datenbank offline geschaltet. Beachten Sie Folgendes: Während die Datenbank offline ist, kann der Protokollversandsicherungsauftrag nicht ausgeführt werden.  
   
      Im folgenden Beispiel wird das Ende des Protokolls für die `AdventureWorks` -Datenbank auf dem primären Server gesichert. Die Sicherungsdatei erhält den Namen `Failover_AW_20080315.trn`:  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36149951"
   
 2.  Auf dem sekundären Server:  
   
-    1.  Stellen Sie sicher, dass alle von Protokollversandsicherungsaufträgen durchgeführten Sicherungen automatisch übernommen wurden. Um zu überprüfen, welche Sicherungsaufträge angewendet wurden, verwenden die [Sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) gespeicherte Systemprozedur auf dem Überwachungsserver oder auf dem primären und sekundären Servern. Die gleiche Datei sollte in den Spalten **last_backup_file**, **last_copied_file**und **last_restored_file** aufgeführt sein. Wenn eine der Sicherungsdateien nicht kopiert und wiederhergestellt wurde, starten Sie die Aufträge der Agents zum Kopieren und Wiederherstellens für die Protokollversandkonfiguration manuell.  
+    1.  Stellen Sie sicher, dass alle von Protokollversandsicherungsaufträgen durchgeführten Sicherungen automatisch übernommen wurden. Um zu überprüfen, welche Sicherungsaufträge übernommen wurden, verwenden die [Sp_help_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql) System gespeicherte Prozedur aus, auf dem Überwachungsserver oder auf dem primären und sekundären Servern. Die gleiche Datei sollte in den Spalten **last_backup_file**, **last_copied_file**und **last_restored_file** aufgeführt sein. Wenn eine der Sicherungsdateien nicht kopiert und wiederhergestellt wurde, starten Sie die Aufträge der Agents zum Kopieren und Wiederherstellens für die Protokollversandkonfiguration manuell.  
   
          Informationen zum Starten eines Auftrags finden Sie unter [Starten eines Auftrags](../../ssms/agent/start-a-job.md).  
   
@@ -163,7 +162,7 @@ ms.locfileid: "36149951"
   
  Nachdem die Datenbank online geschaltet wurde, wird die ursprüngliche Protokollversandkonfiguration wieder aufgenommen.  
   
-######  <a name="KeepOldSecondaryAsNewPrimary"></a> Die alte sekundäre Serverinstanz als neue primäre Serverinstanz beibehalten  
+######  <a name="KeepOldSecondaryAsNewPrimary"></a> Die ursprüngliche sekundäre Serverinstanz als neue primäre Serverinstanz beibehalten  
  Richten Sie eine neue Protokollversandkonfiguration ein, in der die alte sekundäre Serverinstanz B als primärer Server und die alte primäre Serverinstanz A als neuer sekundärer Server fungiert. Beispiel:  
   
 > [!IMPORTANT]  
@@ -173,7 +172,7 @@ ms.locfileid: "36149951"
   
 2.  Sichern Sie das Protokoll der neuen primären Datenbank (auf Server B).  
   
-3.  Stellen Sie die Protokollsicherungen auf der neuen sekundären Serverinstanz (Server A) unter Angabe von WITH NORECOVERY wieder her. Der erste Restore-Vorgang aktualisiert die Datenbank zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Stellen Sie die Protokollsicherungen auf der neuen sekundären Serverinstanz (Server A) unter Angabe von WITH NORECOVERY wieder her. Der erste Restore-Vorgang aktualisiert die Datenbank [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 4.  Konfigurieren Sie den Protokollversand so, dass der frühere sekundäre Server (Server B) die primäre Serverinstanz bildet.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "36149951"
 > [!IMPORTANT]  
 >  Aktualisieren Sie stets sämtliche sekundäre Serverinstanzen vor der primären Serverinstanz.  
   
- **Upgrade mithilfe eines Failovers und wechseln dann zurück zum ursprünglichen primären server**  
+ **Um ein upgrade Sichern mithilfe eines Failovers und der anschließende Wechsel zum ursprünglichen primären server**  
   
 1.  Aktualisieren Sie alle sekundären Serverinstanzen (Server B und C).  
   

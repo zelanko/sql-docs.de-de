@@ -1,5 +1,5 @@
 ---
-title: DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014) | Microsoft Docs
+title: DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,35 +9,35 @@ ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 700fed6039c53bd7e3c485d06fe5df4eae32e7f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189477"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
-Die Programmiersprache Data Analysis Expression (DAX) dienen zum Erstellen von Measures und andere benutzerdefinierten Formeln für die Verwendung in Analysis Services-Tabellenmodelle, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodelle in Excel-Arbeitsmappen und Datenmodellen für Power BI Desktop. In vielerlei Hinsicht die Modelle, die Sie in diesen Umgebungen erstellen identisch sind und Sie können die gleichen Measures, Beziehungen und KPIs usw. Wenn Sie ein tabellarisches Analysis Services-Modell erstellen und im DirectQuery-Modus bereitgestellt haben, gibt es jedoch einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede, listet die Funktionen, die in SQL Server 2014 Analysis Services Tabulars Modell mit Kompatibilitätsgrad 1100 oder 1103 und im DirectQuery-Modus nicht unterstützt werden und listet die Funktionen, die unterstützt werden aber möglicherweise andere Ergebnisse zurückgeben.  
+Die Programmiersprache Data Analysis Expression (DAX) dienen zum Erstellen von Measures und andere benutzerdefinierten Formeln für die Verwendung in Analysis Services-tabellenmodellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Datenmodellen für Power BI Desktop. In den meisten Punkten, die Modelle, die Sie in diesen Umgebungen erstellen, identisch sind und können Sie die gleichen Measures, Beziehungen und KPIs usw. Wenn Sie ein tabellarisches Analysis Services-Modell erstellen und es im DirectQuery-Modus bereitstellen, gibt es jedoch einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede, listet die Funktionen, die nicht in SQL Server 2014 Analysis Services-Tabulars-Modell mit Kompatibilitätsgrad 1100 oder 1103 und im DirectQuery-Modus unterstützt werden und listet die Funktionen, die unterstützt werden aber möglicherweise andere Ergebnisse zurückgeben.  
   
-Im Rahmen dieses Themas verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* um auf Tabellenmodelle zu verweisen, die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einem Analysis Services-Server im tabellarischen Modus gehostet. Wir verwenden *DirectQuery-Modelle* zum Verweisen auf tabellarische Modelle, die erstellt wurden, und/oder im DirectQuery-Modus bereitgestellt wurden. Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+In diesem Thema verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* zum Verweisen auf tabellarische Modelle die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einer im tabellarischen Modus ausgeführten Analysis Services-Server gehostet. Wir verwenden *DirectQuery-Modelle* für tabellarische Modelle zu verweisen, die im DirectQuery-Modus bereitgestellt und/oder erstellt wurden. Weitere Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
-Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Dies ist, da mit DirectQuery-Daten direkt aus einem relationalen Datenspeicher abgefragt werden und für Formeln erforderliche Aggregationen ausgeführt werden, mithilfe des relevanten relationalen Moduls, anstatt das xVelocity-Modul im Arbeitsspeicher (VertiPaq) für Speicher und Berechnung.  
+Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Dies ist, da mit DirectQuery, Daten direkt aus einem relationalen Datenspeicher abgerufen und für Formeln erforderliche Aggregationen mithilfe der relevanten relationalen Engine, anstatt die xVelocity-in-Memory-Analyse-Engine (VertiPaq) für den Speicher ausgeführt werden und Berechnung.  
   
 Beispielsweise behandeln bestimmte relationale Datenspeicher numerische Werte, Daten, NULL-Werte usw. auf unterschiedliche Weise.  
   
 Im Gegensatz dazu dient die DAX-Programmiersprache zum möglichst genauen Emulieren des Verhaltens von Funktionen in Microsoft Excel. Beispielsweise versucht Excel bei der Behandlung von NULL-Werten, leeren Zeichenfolgen und Werten gleich 0 unabhängig vom genauen Datentyp die optimale Antwort bereitzustellen. Folglich verhält sich die xVelocity-Engine auf die gleiche Weise. Wird jedoch ein Tabellenmodell im DirectQuery-Modus bereitgestellt und übergibt es Formeln an eine relationale Datenquelle zur Auswertung, müssen die Daten gemäß der Semantik der relationalen Datenquelle behandelt werden. Dabei werden in der Regel leere Zeichenfolgen anders behandelt als NULL-Zeichenfolgen. Aus diesem Grund kann die gleiche Formel ein anderes Ergebnis zurückgeben als im Fall der Auswertung anhand von zwischengespeicherten Daten sowie Daten, die lediglich aus dem relationalen Speicher zurückgegeben wurden.  
   
-Darüber hinaus können nicht einige Funktionen überhaupt im DirectQuery-Modus verwendet werden, da die Berechnung erfordert die Daten im aktuellen Kontext an die relationale Datenquelle als Parameter gesendet werden. Misst z. B. einem [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Arbeitsmappe oftmals zeitintelligenzfunktionen, die innerhalb der Arbeitsmappe verfügbare Datumsbereiche verweisen verwenden. Derartige Formeln können im Allgemeinen nicht im DirectQuery-Modus verwendet werden.  
+Darüber hinaus können nicht einige Funktionen auf allen im DirectQuery-Modus verwendet werden, da die Berechnung erfordern würde, die Daten im aktuellen Kontext an die relationale Datenquelle als Parameter gesendet werden. Misst z. B. einem [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Arbeitsmappe verwenden häufig die Verwendung von zeitintelligenzfunktionen, die innerhalb der Arbeitsmappe verfügbare Datumsbereiche verweisen. Derartige Formeln können im Allgemeinen nicht im DirectQuery-Modus verwendet werden.  
   
 ## <a name="semantic-differences"></a>Semantische Unterschiede  
 Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
@@ -92,7 +92,7 @@ Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem F
 **Umwandeln einer Zeichenfolge in ein Datum/eine Uhrzeit**  
 Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime** -Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.  
   
-Informationen über die Regeln, die Umwandlungen von String in **"DateTime"** Datentypen in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Modellen finden Sie unter der [Syntaxreferenz für DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Informationen zu den Regeln für Umwandlungen von Zeichenfolgen in **"DateTime"** Datentypen in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Modellen finden Sie unter den [Syntaxreferenz für DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
@@ -115,7 +115,7 @@ In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite
   
 Im DirectQuery-Modus wird nur die direkte Umwandlung von **string** in **double** übernommen. Schlägt diese Umwandlung fehl, gibt die Formel einen Fehler zurück.  
   
-### <a name="bkmk_Math"></a>Mathematische Funktionen und arithmetische Operationen  
+### <a name="bkmk_Math"></a>Mathematische Funktionen und arithmetische Vorgänge  
 Einige mathematische Funktionen geben im DirectQuery-Modus andere Ergebnisse zurück. Dies ist auf Unterschiede des zugrunde liegenden Datentyps oder der Umwandlungen zurückzuführen, die in Vorgängen übernommen werden können. Zudem können sich die zuvor beschriebenen Einschränkungen der zulässigen Werte auf das Ergebnis von arithmetischen Vorgängen auswirken.  
   
 **Reihenfolge der Hinzufügung**  
@@ -161,8 +161,8 @@ Die folgenden Ausdrücke sind in speicherinternen Modellen gültig, schlagen jed
   
 Der Ausdruck `BLANK/BLANK` ist ein besonderer Fall, der `BLANK` sowohl in speicherinternen Modellen als auch im DirectQuery-Modus zurückgibt.  
   
-### <a name="bkmk_Ranges"></a>Unterstützte numerische und Datum / Uhrzeit-Bereiche  
-Formeln in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] und tabellarische Modelle im Arbeitsspeicher sind unterliegt den gleichen Einschränkungen wie Excel in Bezug auf die maximal zulässige Werte für reelle Zahlen und Datumsangaben. Unterschiede können jedoch entstehen, wenn der maximale Wert von einer Berechnung oder einer Abfrage zurückgegeben wird, oder wenn Werte konvertiert, umgewandelt, gerundet oder gekürzt werden.  
+### <a name="bkmk_Ranges"></a>Unterstützte numerische und Datums-/ Bereiche  
+Formeln in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] und tabellarische Modelle im Arbeitsspeicher sind unterliegen denselben Einschränkungen wie Excel in Bezug auf die maximal zulässige Werte für reelle Zahlen und Datumsangaben. Unterschiede können jedoch entstehen, wenn der maximale Wert von einer Berechnung oder einer Abfrage zurückgegeben wird, oder wenn Werte konvertiert, umgewandelt, gerundet oder gekürzt werden.  
   
 -   Werden Werte der Typen **Currency** und **Real** multipliziert, und ist das Ergebnis größer als der maximal mögliche Wert, wird im DirectQuery-Modus kein Fehler ausgelöst. Zudem wird ein NULL-Wert zurückgegeben.  
   
@@ -222,7 +222,7 @@ Im folgenden Beispiel wird veranschaulicht, wie dieser Wert berechnet wird:
 **SQL-Zeitdatentyp nicht unterstützt**  
 Bei speicherinternen Modellen wird die Verwendung des neuen **Time** -Datentyps nicht unterstützt. Im DirectQuery-Modus geben Formeln, die mit diesem Datentyp auf Spalten verweisen, einen Fehler zurück. Zeitdatenspalten können nicht in ein speicherinternes Modell importiert werden.  
   
-Allerdings in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in zwischengespeicherten Modellen wandelt das Modul mitunter der Uhrzeit-Wert, einen zulässigen Datentyp und die Formel gibt ein Ergebnis zurück.  
+Allerdings [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in zwischengespeicherten Modellen mitunter wandelt die Engine den Zeitwert in einen zulässigen Datentyp und die Formel gibt ein Ergebnis zurück.  
   
 Dieses Verhalten beeinflusst alle Funktionen, die eine Datumsspalte als Parameter verwenden.  
   
@@ -410,7 +410,7 @@ Einige DAX-Funktionen werden nicht in Modellen unterstützt, die im DirectQuery-
   
 Die folgenden DAX-Funktionen können in DirectQuery-Modellen nicht verwendet werden.  
   
-**Pfadfunktionen**  
+**Pfad-Funktionen**  
   
 PATH  
   
@@ -434,7 +434,7 @@ RAND
   
 RANDBETWEEN  
   
-**Zeitintelligenzfunktionen: Start-und Enddatum**  
+**Zeitintelligenzfunktionen: Start- und Enddatum**  
   
 DATESQTD  
   

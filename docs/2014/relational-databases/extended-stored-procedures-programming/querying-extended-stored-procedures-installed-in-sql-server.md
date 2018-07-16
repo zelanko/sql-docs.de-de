@@ -1,5 +1,5 @@
 ---
-title: Abfragen von erweiterten gespeicherten Prozeduren, die in SQLServer installierten | Microsoft Docs
+title: Abfragen von erweiterten gespeicherten Prozeduren, die in SQLServer installierten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,31 +14,31 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], querying
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 25e9b8d1de6acd52182e090f40d955cc17bf5cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0714011cb2ba76220517c02fe3d946556610869e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298320"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Abfragen von in SQL Server installierten erweiterten gespeicherten Prozeduren
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
- Ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifizierter Benutzer kann anzeigen, die zurzeit definierten erweiterten gespeicherten Prozeduren und den Namen der DLL für jedes gehört, durch Ausführen der **Sp_helpextendedproc** Systemprozedur. Im folgende Beispiel gibt z. B. die DLL zurück, zu dem **Xp_hello** gehört:  
+ Ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifizierter Benutzer kann anzeigen, die zurzeit definierten erweiterten gespeicherten Prozeduren und der Namen der DLL für jedes gehört, indem Sie Ausführung der **Sp_helpextendedproc** Systemprozedur. Das folgende Beispiel gibt beispielsweise die DLL zurück, zu dem **Xp_hello** gehört:  
   
 ```  
 sp_helpextendedproc 'xp_hello'  
 ```  
   
- Wenn **Sp_helpextendedproc** ausgeführt wird, ohne dass eine erweiterte gespeicherte Prozedur, die alle erweiterten gespeicherten Prozeduren und ihre DLLs angezeigt werden.  
+ Wenn **Sp_helpextendedproc** wird ausgeführt, ohne Angabe einer erweiterten gespeicherten Prozedur, die alle erweiterten gespeicherten Prozeduren und ihre DLLs angezeigt werden.  
   
 > [!IMPORTANT]  
->  Informationen werden nur für die erweiterten gespeicherten Prozeduren zurückgegeben, deren Besitzer der Benutzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Nur Mitglieder der der **Sysadmin** -Serverrolle und die **Db_owner**, **Db_securityadmin**, und die **Db_ddladmin** festen Datenbankrolle Rollen können Informationen zu allen erweiterten gespeicherten Prozeduren anzeigen.  
+>  Informationen werden nur für die erweiterten gespeicherten Prozeduren zurückgegeben, deren Besitzer der Benutzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Nur Mitglieder der der **Sysadmin** Serverrolle und die **Db_owner**, **Db_securityadmin**, und die **Db_ddladmin** fester Datenbankname Rollen können Informationen zu allen erweiterten gespeicherten Prozeduren anzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_helpextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql)   
