@@ -1,5 +1,5 @@
 ---
-title: Semiadditives Verhalten definieren (Business Intelligence-Assistent) | Microsoft Docs
+title: Definieren Sie Semiadditives Verhalten (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310810"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Semiadditives Verhalten definieren (Business Intelligence-Assistent)
   Verwenden Sie die Seite **Semiadditives Verhalten definieren**, um das semiadditive Verhalten für Measures zu aktivieren oder zu deaktivieren. Das semiadditive Verhalten bestimmt, wie in einem Cube enthaltene Measures über eine Zeitdimension aggregiert werden.  

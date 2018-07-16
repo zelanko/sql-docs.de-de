@@ -1,5 +1,5 @@
 ---
-title: XSD-Schemas in SQLXML 4.0 mit Anmerkungen | Microsoft Docs
+title: In SQLXML 4.0-XSD-Schemas mit Anmerkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,30 +19,30 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f657dd8c4c908dd39dc46ce4e1322cb5d465f89d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 83178076a7d42bedc0f22502bc423ae4f02e1fe0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303560"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>XSD-Schemas mit Anmerkungen in SQLXML 4.0
   Dieser Abschnitt enthält Informationen zum Verwenden von XSD-Schemas mit Anmerkungen in SQLXML 4.0. In früheren Versionen von SQLXML wurde eine ähnliche Funktionalität mit XDR-Schemas (XML-Data Reduced) bereitgestellt. Dieser Abschnitt enthält ebenfalls XDR-Informationen für ältere Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in mit Anmerkungen versehene XSD-Schemas &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+ [Einführung in die mit Anmerkungen versehene XSD-Schemas &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Bietet eine Übersicht über XSD-Schemas mit Anmerkungen in SQLXML 4.0.  
   
  [Verwenden von Anmerkungen in XSD-Schemas &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  Beschreibt, wie Anmerkungen in XSD-Schemas in zahlreichen Szenarien verwendet werden, und stellt Beispiele bereit.  
   
- [Mithilfe von XSD-Schemas in Abfragen kommentiert &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  Beschreibt, wie XSD-Schemas mit Anmerkungen in Abfragen verwendet werden.  
   
- [Konvertieren von XDR-Schemas in entsprechende XSD-Schemas kommentiert &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [Konvertieren von mit Anmerkungen in XDR-Schemas in gleichbedeutende XSD-Schemas &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  Beschreibt, wie XDR-Schemas in die entsprechenden XSD-Schemas für SQLXML 4.0 konvertiert werden.  
   
  [XDR-Schemas mit Anmerkungen &#40;in SQLXML 4.0 veraltet&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
@@ -53,11 +53,11 @@ ms.locfileid: "36046421"
   
 -   XML Schema Part 0: Primer, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Languages (XPath), ()http://www.w3.org/TR/xpath)  
+-   XML-Pfad ()-Programmiersprache (XPath)http://www.w3.org/TR/xpath)  
   
 -   XSL-Transformationen (XSLT),)http://www.w3.org/TR/xslt)  
   

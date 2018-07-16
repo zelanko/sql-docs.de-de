@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317520"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
   Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
@@ -33,7 +32,7 @@ ms.locfileid: "36048663"
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
- Die SQLDIAG werden standardmäßig gespeichert unter einem lokalen Ordner LOG des Verzeichnisses der SQL Server-Instanz, z. B. "c\programme\microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \<InstanceName > \MSSQL\LOG' für den besitzenden Knoten von der AlwaysOn-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
+ Die SQLDIAG werden standardmäßig gespeichert unter einem lokalen Ordner LOG des Verzeichnisses SQL Server-Instanz, z. B. "c\programme\microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \<Instanzname > \MSSQL\LOG' für den besitzenden Knoten der die AlwaysOn-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
   
  Die Protokolle verwenden das Dateiformat für erweiterte Ereignisse. Mit der Systemfunktion **sys.fn_xe_file_target_read_file** können Sie die Dateien lesen, die durch erweiterte Ereignisse erstellt wurden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben. Fragen Sie die Systemsicht ab, um die XML-Daten als Resultset zu analysieren. Weitere Informationen finden Sie unter [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Ein Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  
   
- Mit der Anweisung (Data Definition Language, Datendefinitionssprache) `ALTER SERVER CONFIGURATION`, Sie können starten oder beenden, die Protokollierung von Diagnosedaten erfasst werden, durch die [Sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) Prozedur und die Menge SQLDIAG-Protokolldatei Konfigurationsparameter, wie z. B. die Anzahl der protokolldateirollover, Protokolldateigröße und den Dateispeicherort. Einzelheiten zur Syntax finden Sie unter [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ Mithilfe der Anweisung (Data Definition Language, Datendefinitionssprache) `ALTER SERVER CONFIGURATION`, können Sie starten oder beenden, die Protokollierung von Diagnosedaten erfasst werden, indem die [Sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) Prozedur und die Set-SQLDIAG-Protokoll Konfigurationsparameter, wie z. B. die Anzahl der protokolldateirollover, Protokolldateigröße und den Dateispeicherort. Einzelheiten zur Syntax finden Sie unter [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Beispiele (Transact-SQL)  
   

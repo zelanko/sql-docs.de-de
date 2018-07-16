@@ -1,5 +1,5 @@
 ---
-title: Aktivieren von DirectQuery-Entwurfsmodus (SSAS – tabellarisch) | Microsoft Docs
+title: Aktivieren des DirectQuery-Entwurfsmodus (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ba954a8f296200070493625803aad263fa71520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93b95dc39c0efb088003af9d5fb8b68cfce11ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310410"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Aktivieren des DirectQuery-Entwurfsmodus (SSAS – tabellarisch)
   Um im DirectQuery-Modus ein Modell zu erstellen, müssen Sie zuerst die Entwurfszeitumgebung ändern, damit sie den Benutzer des DirectQuery-Modus unterstützt. Wenn Sie so vorgehen, führt der Designer ebenfalls die folgenden Schritte aus:  
@@ -40,9 +40,9 @@ ms.locfileid: "36050657"
   
 2.  Doppelklicken Sie in Objekt-Explorer auf die Datei "Model.bim".  
   
-3.  In der **Eigenschaften** Bereich, ändern Sie die Eigenschaft **DirectQueryMode**in **auf**.  
+3.  In der **Eigenschaften** Bereich ändern Sie die Eigenschaft, **DirectQueryMode**zu **auf**.  
   
-4.  Wenn Fehler vorhanden, in Visual Studio sind, öffnen Sie die **Fehlerliste** und beheben Sie alle Probleme, die das Modell in den DirectQuery-Modus wechselt verhindern würden.  
+4.  Wenn Fehler, in Visual Studio vorliegen, öffnen Sie die **Fehlerliste** und beheben Sie alle Probleme, die das Modell für die in den DirectQuery-Modus wechselt verhindern würden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md)  

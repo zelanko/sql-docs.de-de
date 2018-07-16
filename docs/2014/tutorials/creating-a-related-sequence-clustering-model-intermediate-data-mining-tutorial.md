@@ -1,5 +1,5 @@
 ---
-title: Erstellen verwandte Sequence Clustering-Modellen (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Erstellen ein Clustering-Modells (mittleres Datamining-Lernprogramm) für verwandte Sequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: c0820b087583194e78af1d1de46b4affe3a1d9fc
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2fe714a808a7b5e8b31b674027e00814a9632f58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234406"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen eines Clustermodells für verwandte Sequenzen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Sequenzclustermodells haben Sie gelernt, dass Attribute wie "Region" oder "Einkommen" starke Auswirkungen auf die Modelle haben. Aus diesem Grund erstellen Sie nun ein Clustermodell für verwandte Sequenzen und entfernen die Attribute für demografische Kundendaten, um ein besseres Verständnis der Sequenzen zu entwickeln.  
@@ -34,9 +34,9 @@ ms.locfileid: "36311808"
   
 2.  Klicken Sie mit der rechten Maustaste auf das Modell, das Sie kopieren möchten, und wählen Sie **Neues Miningmodell**aus.  
   
-3.  In der **Neues Miningmodell** (Dialogfeld), geben Sie einen Modellnamen ein, und wählen Sie Microsoft `Sequence Clustering`.  
+3.  In der **Neues Miningmodell** Dialogfeld Geben Sie einen Modellnamen ein, und wählen Sie die Microsoft `Sequence Clustering`.  
   
-     Geben Sie für dieses Lernprogramm den Namen `Sequence Clustering`.  
+     Geben Sie für dieses Tutorial den Namen `Sequence Clustering`.  
   
 4.  Klicken Sie auf **OK**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36311808"
   
      **Reihenfolge NumberKey**  
   
-     **Zeile Zahlentaste**  
+     **Anzahl ein Schlüssel für direktverbindungen**  
   
      **Modell Vorhersagen**  
   

@@ -1,5 +1,5 @@
 ---
-title: XML-Datentypunterstützung für SQLXML 4.0 | Microsoft Docs
+title: XML-Datentypunterstützung für SQLXML 4.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c3589b34087c5615179d2e7b6449372bea54d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 639dbfab6191b7266c367997396fa0d127031e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296360"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
   Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabe von XML-Daten mithilfe des `xml`-Datentyps. Dieses Thema enthält Informationen, wie SQLXML 4.0 Instanzen von `xml`-Datentyp erkennt und unterstützt.  
@@ -39,7 +39,7 @@ ms.locfileid: "36048928"
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   
--   **\<XSD: alle >** kann nicht zugeordnet werden, um eine Spalte z. B. eine `xml` -Datentyp. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
+-   **\<XSD: alle >** können nicht zugeordnet werden, um einer Spalte, eine `xml` -Datentyp. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
   
 -   XPath-Abfrage in den Inhalten von `xml`-Datentypspalten wird nicht unterstützt.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36048928"
   
 -   SQLXML 4.0 basiert auf der eingeschränkten Unterstützung für DTDs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestattet die Verwendung einer internen DTD in `xml`-Datentypdaten, die verwendet werden kann, um Standardwerte anzugeben und Entitätsverweise durch ihren erweiterten Inhalt zu ersetzen. SQLXML übergibt die XML-Daten unverändert an den Server (einschließlich der internen DTD). Mithilfe von Drittanbieter-Tools können Sie DTDs in XML-Schemadokumente (XSD) konvertieren und die Daten mit XML-Inlineschemas in die Datenbank laden.  
   
--   SQLXML 4.0 behält nicht verarbeitungsanweisungen für XML-Deklaration (z. B.) basierend auf dem Verhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
+-   SQLXML 4.0 behält nicht verarbeitungsanweisungen für XML-Deklaration (z. B.) auf das Verhalten des Basis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stattdessen wird die XML-Deklaration als Direktive an den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-XML-Parser behandelt, und seine Attribute (version, encoding und standalone) gehen nach der Konvertierung zum `xml`-Datentyp verloren. Die XML-Daten werden intern als UCS-2 gespeichert. Alle anderen Verarbeitungsanweisungen in der XML-Instanz bleiben erhalten. Sie sind in der `xml`-Spalte zulässig und können durch SQLXML unterstützt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

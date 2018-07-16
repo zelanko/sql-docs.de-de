@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Informationen und Ausführen von Aufgaben für die Agents einer Veröffentlichung (Replikationsmonitor) zugeordneten | Microsoft Docs
+title: Anzeigen von Informationen und Ausführen von Aufgaben für die Agents, die in Zusammenhang mit einer Veröffentlichung (Replikationsmonitor) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a82df3ae01b49d8ad7c8b48c5a07d6f57d2dbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f385a167fe56db1c9db2a2238b22de66daa3ab6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280996"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-publication-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben für die einer Veröffentlichung zugeordneten Agents (Replikationsmonitor)
   Der Replikationsmonitor stellt die Registerkarte **Agents** bereit, auf der Informationen zu den Agents enthalten sind, die der ausgewählten Veröffentlichung zugeordnet sind. Weitere Informationen zum Verteilungs-Agent und zum Merge-Agent, die Abonnements zugeordnet sind, finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  

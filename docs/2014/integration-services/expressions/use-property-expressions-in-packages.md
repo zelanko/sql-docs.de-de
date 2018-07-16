@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289376"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -56,7 +56,7 @@ ms.locfileid: "36056289"
   
  Eine Eigenschaft kann jeweils nur einen Eigenschaftsausdruck verwenden, und ein Eigenschaftsausdruck kann nur für eine einzige Eigenschaft angewendet werden. Allerdings können Sie mehrere identische Eigenschaftsausdrücke erstellen und diese unterschiedlichen Eigenschaften zuordnen.  
   
- Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Z. B. ein Eigenschaftsausdruck legt die `LoggingMode` -Eigenschaft, die einen Wert von verwendet die `DTSLoggingMode` -Enumeration, der Eigenschaftsausdruck muss 0, 1 oder 2 anstelle der Anzeigenamen verwenden `Enabled`, `Disabled`, oder `UseParentSetting`. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](enumerated-constants-in-property-expressions.md).  
+ Einige Eigenschaften werden mithilfe von Enumeratorwerten festgelegt. Wenn Sie in einem Eigenschaftsausdruck auf das Enumeratorelement verweisen, müssen Sie den numerischen Wert verwenden, der dem Anzeigenamen des Enumeratorelements entspricht. Beispielsweise ein Eigenschaftsausdruck festgelegt die `LoggingMode` -Eigenschaft, die einen Wert von verwendet die `DTSLoggingMode` Enumeration, muss der Eigenschaftsausdruck 0, 1 oder 2 anstelle der Anzeigenamen verwenden `Enabled`, `Disabled`, oder `UseParentSetting`. Weitere Informationen finden Sie unter [Aufgezählte Konstanten in Eigenschaftsausdrücken](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Benutzeroberfläche von Eigenschaftsausdrücken  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Stellt eine Reihe von Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken bereit.  
@@ -96,7 +96,7 @@ ms.locfileid: "36056289"
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.  
   
 > [!NOTE]  
->  Können Sie keine der `Set` -Option von der **Dtexec** Hilfsprogramm, um einen Eigenschaftsausdruck aufzufüllen.  
+>  Können keine der `Set` Möglichkeit, die **Dtexec** Hilfsprogramm, um einen Eigenschaftsausdruck aufzufüllen.  
   
  In der folgenden Tabelle finden Sie eine Auflistung von Situationen, in denen Eigenschaftsausdrücke von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ausgewertet und geladen werden.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36056289"
 |Foreach-Enumeratoren|Nach dem Laden von Konfigurationen<br /><br /> Vor der Prüfung<br /><br /> Vor der Ausführung<br /><br /> Vor jeder Enumeration der Schleife|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Verwenden von Eigenschaftsausdrücken in der Foreach-Schleife  
- Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der `ConnectionString`-Eigenschaft von Verbindungs-Managern festzulegen, die im Foreach-Schleifencontainer verwendet werden. Wenn der Enumerator eine Variable bei jeder Iteration der Schleife seinen aktuellen Wert zuordnet, können der Eigenschaftsausdruck den Wert dieser Variablen für das update der `ConnectionString` Eigenschaft dynamisch.  
+ Es ist häufig nützlich, einen Eigenschaftsausdruck zu implementieren, um den Wert der `ConnectionString`-Eigenschaft von Verbindungs-Managern festzulegen, die im Foreach-Schleifencontainer verwendet werden. Wenn der Enumerator eine Variable für jede Iteration der Schleife seinen aktuellen Wert zuordnet, können der Eigenschaftsausdruck den Wert dieser Variablen auf das update der `ConnectionString` Eigenschaft dynamisch.  
   
- Wenn Sie Eigenschaftsausdrücke zusammen mit der `ConnectionString`-Eigenschaft von Dateiverbindungs-Managern oder von Verbindungs-Managern für mehrere Dateien, für Flatfiles oder für mehrere Flatfiles verwenden möchten, der in einer Foreach-Schleife verwendet wird, sind einige Faktoren zu beachten. Ein Paket kann so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden, indem Sie die `MaxConcurrentExecutables`-Eigenschaft auf einen Wert größer als 1 bzw. auf den Wert -1 festlegen. Der Wert -1 lässt die maximale Anzahl gleichzeitig ausführbarer Dateien zu, die der Anzahl der Prozessoren plus zwei entspricht. Der Wert der `MaxConcurrentExecutables`-Eigenschaft sollte auf 1 festgelegt werden, um negative Auswirkungen einer parallelen Ausführung von ausführbaren Dateien zu vermeiden. Wenn `MaxConcurrentExecutables` ist nicht auf 1, und klicken Sie dann auf den Wert des festgelegt die `ConnectionString` -Eigenschaft nicht sichergestellt werden, und Ergebnisse sind unvorhersehbar.  
+ Wenn Sie Eigenschaftsausdrücke zusammen mit der `ConnectionString`-Eigenschaft von Dateiverbindungs-Managern oder von Verbindungs-Managern für mehrere Dateien, für Flatfiles oder für mehrere Flatfiles verwenden möchten, der in einer Foreach-Schleife verwendet wird, sind einige Faktoren zu beachten. Ein Paket kann so konfiguriert werden, dass mehrere ausführbare Dateien gleichzeitig ausgeführt werden, indem Sie die `MaxConcurrentExecutables`-Eigenschaft auf einen Wert größer als 1 bzw. auf den Wert -1 festlegen. Der Wert -1 lässt die maximale Anzahl gleichzeitig ausführbarer Dateien zu, die der Anzahl der Prozessoren plus zwei entspricht. Der Wert der `MaxConcurrentExecutables`-Eigenschaft sollte auf 1 festgelegt werden, um negative Auswirkungen einer parallelen Ausführung von ausführbaren Dateien zu vermeiden. Wenn `MaxConcurrentExecutables` ist nicht festgelegt, um 1, und klicken Sie dann auf den Wert des der `ConnectionString` -Eigenschaft nicht sichergestellt werden, und Ergebnisse sind unvorhersehbar.  
   
  Stellen Sie sich z. B. eine Foreach-Schleife vor, die die im Ordner enthaltenen Dateien aufzählt, die Dateinamen abruft und anschließend einen Task 'SQL ausführen' verwendet, um die Dateinamen in eine Tabelle einzufügen. Wenn die `MaxConcurrentExecutables`-Eigenschaft nicht auf 1 festgelegt ist, können Schreibkonflikte auftreten, wenn zwei Instanzen des Tasks "SQL ausführen" versuchen, gleichzeitig in die Tabelle zu schreiben.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36056289"
  Die folgenden Beispielausdrücke veranschaulichen das Verwenden von Systemvariablen, Operatoren, Funktionen und Zeichenfolgenliteralen in Eigenschaftsausdrücken.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Eigenschaftsausdruck für die LoggingMode-Eigenschaft eines Pakets  
- Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist das entsprechende des enumeratorelements LoggingMode `Enabled`, und der Wert 2 ist die ganze Zahl des Elements entspricht `Disabled`. Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.  
+ Der folgende Eigenschaftsausdruck kann verwendet werden, um die LoggingMode-Eigenschaft eines Pakets festzulegen. Der Ausdruck verwendet die DAY- und GETDATE-Funktionen, um eine Ganzzahl abzurufen, die den datepart-Wert für den Tag eines Datums darstellt. Handelt es sich dabei um den 1. oder 15. Tag des Monats, ist die Protokollierung aktiviert. Andernfalls ist die Protokollierung deaktiviert. Der Wert 1 ist die ganze Zahl der LoggingMode enumeratorelements entspricht `Enabled`, und der Wert 2 ist die ganze Zahl des Elements entspricht `Disabled`. Sie müssen im Ausdruck den numerischen Wert anstelle des Enumeratorelementnamens verwenden.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

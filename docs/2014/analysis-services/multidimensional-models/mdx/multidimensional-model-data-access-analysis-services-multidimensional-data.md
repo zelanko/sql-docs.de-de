@@ -1,5 +1,5 @@
 ---
-title: Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
 - objects [Analysis Services], data access interfaces
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac594d938497d90acd87e047aa8370144f8e8ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291726"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
   Verwenden Sie die Informationen in diesem Thema, um zu erfahren, wie mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierten Support für das Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server in Ihrem Netzwerk enthalten, auf mehrdimensionale [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Daten zugegriffen wird.  
@@ -73,9 +73,9 @@ ms.locfileid: "36047305"
   
  [Abfragen von mehrdimensionalen Daten mit MDX](querying-multidimensional-data-with-mdx.md)  
   
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Grundlegende Konzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
  [MDX-Skripts Grundlagen &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36047305"
 |ASSL (Analysis Services Scripting Language)|ASSL ist ein beschreibender Begriff, der auf Analysis Services-Erweiterungen des XMLA-Protokolls zutrifft. Mit ASSL-Erweiterungen können Analysis Services XMLA-Konstrukte jenseits der grundlegenden Bereitstellungen des Protokolls verwenden und fügen die Unterstützung von Datendefinitionen, Datenbearbeitungen und Datensteuerelementen hinzu.  Während die Execute- und die Discover-Methode vom XMLA-Protokoll beschrieben werden, fügt ASSL die folgende Funktion hinzu:<br /><br /> XMLA-Skript<br /><br /> XMLA-Objektdefinitionen<br /><br /> XMLA-Befehle<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit Analysis Services](../../instances/connect-to-analysis-services.md)   
+ [Verbinden von Analysis Services](../../instances/connect-to-analysis-services.md)   
  [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Entwickeln mit XMLA in Analysis Services](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Zugriff auf Daten im tabellarischen Modell](../../tabular-models/tabular-model-data-access.md)  

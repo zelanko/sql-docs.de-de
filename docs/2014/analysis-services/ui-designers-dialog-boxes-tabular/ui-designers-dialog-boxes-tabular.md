@@ -1,5 +1,5 @@
 ---
-title: UI-Designer und Dialogfelder für tabellarische Analysis | Microsoft Docs
+title: Benutzeroberflächen-Designer und Dialogfelder für tabellarische Analysis | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 31e3f28958c69883710e13f966d90efabaef1c60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3195a765ba6419db679a8e7928ffa3a49112a939
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308481"
 ---
-# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>UI-Designer und Dialogfelder für tabellarische Analysis
+# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Benutzeroberflächen-Designer und Dialogfelder für tabellarische Analysis
 
-Dieser Abschnitt enthält die Dokumentation über Benutzeroberflächen (UI)-Designer und Dialogfelder für tabellarische Analysis.
+Dieser Abschnitt enthält die Dokumentation zur Benutzeroberfläche (UI)-Designer und Dialogfelder für tabellarische Analysis.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

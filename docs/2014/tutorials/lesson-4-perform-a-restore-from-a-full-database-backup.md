@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung | Microsoft Docs'
+title: 'Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8869fa4bba6050dd0c15b8b59b7f2d091902936f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 9d3220d2012587a6deedad51156b49f13ed9266c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293670"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung
   In dieser Lektion wird veranschaulicht, wie mithilfe einer T-SQL-Anweisung eine Wiederherstellung von einer vollständigen Datenbanksicherung ausgeführt wird, die in der vorherigen Lektion erstellt wurde.  
@@ -29,7 +29,7 @@ ms.locfileid: "36047069"
   
 1.  Herstellen einer Verbindung mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Objektexplorer**, Herstellen einer Verbindung mit der Instanz von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+2.  In der **Objekt-Explorer**, eine Verbindung mit der Instanz [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 3.  Klicken Sie auf der Standardmenüleiste auf **Neue Abfrage**.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36047069"
 5.  Überprüfen Sie die T-SQL-Anweisung, und klicken Sie auf **Ausführen**.  
   
 ### <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
- [Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob-Speicherdienst](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage-Dienst](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

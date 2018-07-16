@@ -1,5 +1,5 @@
 ---
-title: ReportParameters-Element (ASSL) | Microsoft Docs
+title: ReportParameters-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96337ac9f31e654d88bef1b0ae077f7a73171ec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 004b23b3cbd2aa22dff73514b03257ac50dddd8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282106"
 ---
 # <a name="reportparameters-element-assl"></a>ReportParameters-Element (ASSL)
   Enthält die Auflistung der [ReportParameter](../objects/reportparameter-element-assl.md) Elemente für eine [ReportAction](../data-type/action-data-type-assl.md) Element.  
@@ -61,10 +61,10 @@ ms.locfileid: "36047885"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Action](../objects/action-element-assl.md) des Typs [ReportAction](../data-type/action-data-type-assl.md)|  
-|Untergeordnete Elemente|[ReportParameter](../objects/reportparameter-element-assl.md)|  
+|Untergeordnete Elemente|[ReportParameter-Objekt](../objects/reportparameter-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ReportParameterCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ReportParameterCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

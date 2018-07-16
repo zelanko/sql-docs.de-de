@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRACE_EVENT_CATEGORIES-Rowset | Microsoft Docs
+title: DISCOVER_TRACE_EVENT_CATEGORIES-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f447e0acbdc2f5e5cbcbf7d3773330cfc9cd39e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 085e5a58105b2fecd20a603d9adb735ff79b63ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316880"
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES-Rowset
   Zeigt die Liste der Ereigniskategorien an, die vom Ablaufverfolgungsanbieter unterstützt werden.  
@@ -32,7 +32,7 @@ ms.locfileid: "36046770"
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|`Data`|`DBTYPE_WSTR`||Enthält eine codierte XML-Zeichenfolge, die Ereigniskategorieinformationen zum Ablaufverfolgungsanbieter beschreibt, einschließlich Kategoriename, Typ und Beschreibung. Der Typ ist eine Zeichenfolge, die den Typ der Ereigniskategorie angibt. Folgende Enumerationswerte sind möglich:<br /><br /> -0 = Normal<br />-1 = signifikante<br />-2 = Fehler|  
+|`Data`|`DBTYPE_WSTR`||Enthält eine codierte XML-Zeichenfolge, die Ereigniskategorieinformationen zum Ablaufverfolgungsanbieter beschreibt, einschließlich Kategoriename, Typ und Beschreibung. Der Typ ist eine Zeichenfolge, die den Typ der Ereigniskategorie angibt. Folgende Enumerationswerte sind möglich:<br /><br /> -0 = Normal<br />– 1 = signifikante<br />– 2 = Fehler|  
   
  Dieses Schemarowset ist nicht sortiert.  
   

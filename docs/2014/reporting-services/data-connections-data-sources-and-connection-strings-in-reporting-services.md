@@ -1,5 +1,5 @@
 ---
-title: Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services | Microsoft Docs
+title: Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 caps.latest.revision: 112
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5b0e041438ccc01254478715bf4967f305b663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292260"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services
   Zum Einschließen von Daten in einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] melden möchten, müssen Sie zuerst erstellen *Datenquellen* und *Datasets*. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36046631"
 ##  <a name="bkmk_data_sources"></a> Eingebettete und freigegebene Datenquellen  
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung.  
   
--   Im Berichts-Designer, erstellen Sie eingebettete oder freigegebene Datenquellen als Teil einer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projekt. Sie können steuern, ob Sie sie für die Vorschau lokal verwenden oder sie als Teil des Projekts auf einem Berichtsserver oder einer SharePoint-Website bereitstellen möchten. Sie können benutzerdefinierte Datenerweiterungen verwenden, die auf dem Computer und dem Berichtsserver oder der SharePoint-Website installiert wurden, auf dem bzw. der die Berichte bereitgestellt werden.  
+-   Erstellen Sie eingebettete oder freigegebene Datenquellen im Berichts-Designer als Teil einer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projekt. Sie können steuern, ob Sie sie für die Vorschau lokal verwenden oder sie als Teil des Projekts auf einem Berichtsserver oder einer SharePoint-Website bereitstellen möchten. Sie können benutzerdefinierte Datenerweiterungen verwenden, die auf dem Computer und dem Berichtsserver oder der SharePoint-Website installiert wurden, auf dem bzw. der die Berichte bereitgestellt werden.  
   
      Systemadministratoren können zusätzliche Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter installieren und konfigurieren. Weitere Informationen finden Sie unter [Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36046631"
   
 -   ODBC  
   
--   Microsoft BI Semantikmodell für Power View: auf einer SharePoint-Website, die für eine PowerPivot-Katalog konfiguriert wurde und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], dieser Datenquellentyp verfügbar ist. Dieser Datenquellentyp wird nur für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]-Präsentationen verwendet. Weitere Informationen finden Sie unter [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantikmodell für Power View: auf einer SharePoint-Website, die für eine PowerPivot-Katalog konfiguriert wurde und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], es ist dieser Datenquellentyp verfügbar. Dieser Datenquellentyp wird nur für [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]-Präsentationen verwendet. Weitere Informationen finden Sie unter [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Eine vollständige Liste der Datenquellen und -versionen, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt, finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36046631"
     >  Gemäß Konzeption werden Anmeldeinformationen unabhängig von Datenquellen verwaltet. Anmeldeinformationen, mit denen Sie den Bericht in einem lokalen System in der Vorschau anzeigen, unterscheiden sich u. U. von den Anmeldeinformationen, mit denen Sie den veröffentlichten Bericht anzeigen. Nachdem Sie eine Datenquelle auf dem Berichtsserver oder der SharePoint-Website gespeichert haben, müssen Sie unter Umständen die Anmeldeinformationen ändern, um von diesem Ort aus arbeiten zu können. Weitere Informationen finden Sie unter [Anmeldeinformationen für Datenquellen](#bkmk_credentials).  
   
 > [!NOTE]  
->  Beim Erstellen einer eingebetteten Datenquelle für einen Bericht in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], müssen Sie die Datenquelle im Berichts-Designer im Projektmappen-Explorer oder dem Bereich Berichtsdaten, jedoch nicht in Server-Explorer erstellen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Berichts-Designer unterstützt keine [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Datenquellen im Server-Explorer erstellt.  
+>  Beim Erstellen einer eingebetteten Datenquelle für einen Bericht in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], müssen Sie die Datenquelle im Berichts-Designer im Projektmappen-Explorer oder im Bereich Berichtsdaten, aber nicht in Server-Explorer erstellen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Berichts-Designer unterstützt keine [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Datenquellen im Server-Explorer erstellt wurden.  
   
  Im Berichtsdatenbereich werden eingebettete Datenquellen und Verweise auf freigegebene Datenquellen angezeigt, die dem Bericht hinzugefügt wurden. In Berichts-Generator verweist ein freigegebener Datenquellenbezug auf eine freigegebene Datenquelle auf einem Berichtsserver oder einer SharePoint-Website. Im Berichts-Designer verweist eine freigegebene Datenquellenreferenz auf eine freigegebene Datenquelle im Projektmappen-Explorer.  
   
@@ -111,11 +111,11 @@ ms.locfileid: "36046631"
   
  Wenn Sie einen Bericht auf dem Berichtsserver oder der SharePoint-Website bereitstellen, werden die eingebetteten und freigegebenen Datenquellen unabhängig verwaltet. Die erforderlichen Datenquellen-Anmeldeinformationen für den Zugriff auf die Daten auf Ihrem Computer unterscheiden sich u. U. von den Anmeldeinformationen, die für den Zugriff auf die Daten durch den Berichtsserver erforderlich sind.  
   
- ![Hinweis](media/rs-fyinote.png "Hinweis")eine bewährte Methode besteht darin zu überprüfen, ob die datenquellenverbindungen weiterhin erfolgreich eine Verbindung herstellen, nachdem Sie einen Bericht veröffentlichen. Wenn Sie die Anmeldeinformationen ändern müssen, können Sie sie direkt auf dem Berichtsserver ändern.  
+ ![Beachten Sie](media/rs-fyinote.png "Hinweis")empfiehlt sich zu überprüfen, ob die datenquellenverbindungen weiterhin eine Verbindung herstellen, nachdem Sie einen Bericht veröffentlicht wird. Wenn Sie die Anmeldeinformationen ändern müssen, können Sie sie direkt auf dem Berichtsserver ändern.  
   
  Um die von einem Bericht verwendeten Datenquellen zu ändern, können Sie die Berichtseigenschaften im Berichts-Manager im einheitlichen Modus oder über die Dokumentbibliotheken im SharePoint-Modus ändern. Weitere Informationen finden Sie unter den folgenden Links:  
   
--   [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](report-data/store-credentials-in-a-reporting-services-data-source.md) [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Anmeldeinformationen in einer Reporting Services-Datenquelle Store](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store Anmeldeinformationen in einer Reporting Services-Datenquelle](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36046631"
 |XML-Datenquelle, XML-Dokument|`http://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf `XML`. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument.|  
 |XML-Datenquelle, eingebettetes XML-Dokument|*Leer*|Legen Sie den Datenquellentyp auf `XML`. Die XML-Daten sind in der Berichtsdefinition eingebettet.|  
   
- Wenn Sie keine Verbindung herstellen, um einen Bericht mit `localhost`, überprüfen Sie, dass das Netzwerkprotokoll für TCP/IP-Protokoll aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren von Clientprotokollen](../database-engine/configure-windows/configure-client-protocols.md).  
+ Wenn Sie keine Verbindung herstellen, um einen Bericht mithilfe `localhost`, überprüfen Sie, dass das Netzwerkprotokoll für TCP/IP-Protokoll aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren von Clientprotokollen](../database-engine/configure-windows/configure-client-protocols.md).  
   
  Weitere Informationen zu den Konfigurationen, die zum Herstellen einer Verbindung mit diesen Datenquellentypen erforderlich sind, finden Sie im spezifischen Datenverbindungsthema unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) oder [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36046631"
 ="data source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks"  
 ```  
   
- Datenquellenausdrücke werden zur Laufzeit oder beim Anzeigen einer Berichtsvorschau verarbeitet. Der Ausdruck geschrieben werden muss, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. Halten Sie sich an die folgenden Richtlinien, wenn Sie einen Datenquellenausdruck definieren:  
+ Datenquellenausdrücke werden zur Laufzeit oder beim Anzeigen einer Berichtsvorschau verarbeitet. Der Ausdruck muss geschrieben werden, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. Halten Sie sich an die folgenden Richtlinien, wenn Sie einen Datenquellenausdruck definieren:  
   
 -   Entwerfen Sie den Bericht mithilfe einer statischen Verbindungszeichenfolge. Eine statische Verbindungszeichenfolge bezeichnet eine Verbindungszeichenfolge, die nicht durch einen Ausdruck festgelegt wird (wenn Sie beispielsweise die Schritte zum Erstellen einer berichtsspezifischen oder freigegebenen Datenquelle ausführen, definieren Sie eine statische Verbindungszeichenfolge). Die Verwendung einer statischen Verbindungszeichenfolge ermöglicht es Ihnen, im Berichts-Designer eine Verbindung mit der Datenquelle herzustellen, sodass Sie die Abfrageergebnisse abrufen können, die Sie zum Erstellen des Berichts benötigen.  
   
@@ -182,8 +182,8 @@ ms.locfileid: "36046631"
 ## <a name="see-also"></a>Siehe auch  
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Datenquellensicht Eigenschaften (Dialogfeld), Anmeldeinformationen](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
- [Freigegebene Datenquellensicht Eigenschaften (Dialogfeld), Anmeldeinformationen](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
+ [Eigenschaften im Dialogfeld Datenquelle, Anmeldeinformationen](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
+ [Freigegebene Eigenschaften im Dialogfeld Datenquelle, Anmeldeinformationen](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

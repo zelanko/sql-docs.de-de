@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie ein neues Integration Services-Projekt | Microsoft Docs
+title: Erstellen ein neuen Integration Services-Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298730"
 ---
 # <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
   Mit diesem Verfahren wird ein neues Projekt und eine neue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projektmappe erstellt.  
@@ -52,10 +52,10 @@ ms.locfileid: "36049010"
     > [!NOTE]  
     >  Klicken Sie im Menü **Extras** auf **Optionen**, und erweitern Sie den Knoten **Quellcodeverwaltung**, um das ausgewählte Quellcodeverwaltungs-Plug-In anzuzeigen und zu ändern und um die Umgebung für die Quellcodeverwaltung zu konfigurieren.  
   
-8.  Klicken Sie auf **OK** auf die Projektmappe dem **Projektmappen-Explorer**r und das Projekt der Projektmappe hinzuzufügen.  
+8.  Klicken Sie auf **OK** zum Hinzufügen der Lösung um **Projektmappen-Explorer**r und das Projekt zur Projektmappe hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Projekte](integration-services-ssis-projects-and-solutions.md)   
+ [Integrationsdienste &#40;SSIS&#41; Projekte](integration-services-ssis-projects-and-solutions.md)   
  [Hinzufügen oder Entfernen eines Integration Services-Projekts in einer Projektmappe](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

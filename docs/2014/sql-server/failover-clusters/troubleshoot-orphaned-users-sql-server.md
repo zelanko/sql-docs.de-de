@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
 - logins [SQL Server], orphaned users
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 97bef9ba2298766539d6b852bb41bb89c716c829
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5ac7577269daca9d8d5974c3a98ade1a681d6d79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317850"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
   Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen auf einer Serverinstanz werden in der **Sys. server_principals** -Katalogsicht und die **sys.syslogins** -kompatibilitätssicht angezeigt.  
@@ -47,7 +46,7 @@ ms.locfileid: "36048453"
  Ein Datenbankbenutzer, für den ein entsprechender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename auf einer Serverinstanz nicht oder falsch definiert ist, kann sich bei der Instanz nicht anmelden. Diese Benutzer werden als *verwaiste Benutzer* der Datenbank dieser Serverinstanz bezeichnet. Ein Datenbankbenutzer kann zu einem verwaisten Benutzer werden, wenn der entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename gelöscht wird. Ein Datenbankbenutzer kann auch dann zu einem verwaisten Benutzer werden, wenn die Datenbank auf einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederhergestellt oder an eine andere SQL Server-Instanz angefügt wird. Verwaisungen treten auf, wenn der Datenbankbenutzer einer SID zugeordnet wird, die auf der neuen Serverinstanz nicht vorhanden ist.  
   
 > [!NOTE]  
->  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung kann nicht zugegriffen werden eine Datenbank, in denen es einen entsprechenden Datenbankbenutzer fehlt, es sei denn, **Gast** in dieser Datenbank aktiviert ist. Informationen zum Erstellen einer Datenbank-Benutzerkontos finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
+>  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung kann nicht zugegriffen werden eine Datenbank, in dem es einen entsprechenden Datenbankbenutzer fehlt, es sei denn, **Gast** in dieser Datenbank aktiviert ist. Weitere Informationen zum Erstellen einer Datenbank-Benutzerkonto, finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## <a name="to-detect-orphaned-users"></a>So ermitteln Sie verwaiste Benutzer  
  Zum Ermitteln von verwaisten Benutzern führen Sie die folgenden Transact-SQL-Anweisungen aus:  
@@ -79,7 +78,7 @@ GO;
   
      Weitere Informationen finden Sie unter [Sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
-2.  Nachdem Sie den im letzten Schritt angegebenen Code ausgeführt haben, kann der Benutzer wieder auf die Datenbank zugreifen. Der Benutzer kann dann das Kennwort des alter der *< Login_name >* Anmeldekonto mit der **Sp_password** gespeicherte Prozedur wie folgt:  
+2.  Nachdem Sie den im letzten Schritt angegebenen Code ausgeführt haben, kann der Benutzer wieder auf die Datenbank zugreifen. Der Benutzer kann dann das Kennwort des Ändern der *< Login_name >* Anmeldekonto mit den **Sp_password** gespeicherte Prozedur wie folgt:  
   
     ```  
     USE master   

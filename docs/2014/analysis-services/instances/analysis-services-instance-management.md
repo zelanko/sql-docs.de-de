@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Instanz Management | Microsoft Docs
+title: Analysis Services Management-Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b4bbcc49f28b0f8cd75d8d00e6935559d50c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289786"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services-Instanzverwaltung
   Eine Instanz von Analysis Services ist eine Kopie der ausführbaren Datei `msmdsrv.exe`, die als Betriebssystemdienst ausgeführt wird. Jede Instanz ist völlig unabhängig von anderen Instanzen auf dem gleichen Server. Sie hat ihre eigenen Konfigurationseinstellungen, Berechtigungen, Anschlüsse, Startkonten, Dateispeicher und Servermoduseigenschaften.  
@@ -44,7 +44,7 @@ ms.locfileid: "36047720"
  Im Allgemeinen sind die meisten administrativen Aufgaben, die Sie ausführen müssen, in den einzelnen Modi dieselben. Als Analysis Services-Systemadministrator können Sie unabhängig von der Installationsart die gleichen Prozeduren und Skripte für das Verwalten aller Analysis Services-Instanzen im Netzwerk verwenden.  
   
 > [!NOTE]  
->  Eine Ausnahme hiervon stellt PowerPivot für SharePoint dar. Die Serververwaltung einer PowerPivot-Bereitstellung findet immer innerhalb des Kontexts einer SharePoint-Farm statt. PowerPivot unterscheidet sich von anderen Servermodi darin, dass es sich immer um eine Einzelinstanz handelt, die immer über die SharePoint-Zentraladministration oder das PowerPivot-Konfigurationstool verwaltet wird. Obwohl es möglich ist, eine Verbindung mit PowerPivot für SharePoint in SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ist es nicht wünschenswert. Eine SharePoint-Farm enthält Infrastrukturen, die den Serverstatus synchronisieren und die Serververfügbarkeit überwachen. Die Verwendung anderer Tools kann diese Vorgänge beeinträchtigen. Weitere Informationen zur PowerPivot-serververwaltung finden Sie unter [PowerPivot für SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  Eine Ausnahme hiervon stellt PowerPivot für SharePoint dar. Die Serververwaltung einer PowerPivot-Bereitstellung findet immer innerhalb des Kontexts einer SharePoint-Farm statt. PowerPivot unterscheidet sich von anderen Servermodi darin, dass es sich immer um eine Einzelinstanz handelt, die immer über die SharePoint-Zentraladministration oder das PowerPivot-Konfigurationstool verwaltet wird. Obwohl es möglich ist, eine Verbindung mit PowerPivot für SharePoint in SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nicht erwünscht ist. Eine SharePoint-Farm enthält Infrastrukturen, die den Serverstatus synchronisieren und die Serververfügbarkeit überwachen. Die Verwendung anderer Tools kann diese Vorgänge beeinträchtigen. Weitere Informationen zur PowerPivot-serververwaltung finden Sie unter [PowerPivot für SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36047720"
 |[Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)|Beschreibt Verbindungszeichenfolgen-Eigenschaften, Clientbibliotheken, Authentifizierungsmethoden und Schritte zum Herstellen oder Löschen von Verbindungen.|  
 |[Überwachen einer Instanz von Analysis Services](monitor-an-analysis-services-instance.md)|Beschreibt Tools und Techniken zum Überwachen einer Serverinstanz, einschließlich der Verwendung von Systemmonitor und SQL Server Profiler.|  
 |[Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Erklärt, wie viele administrative Aufgaben automatisiert werden, einschließlich der Verarbeitung.|  
-|[Globalisierungsszenarien für Analysis Services Multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Erläutert die Unterstützung von Sprache und Sortierung, die Schritte zum Ändern der Eigenschaften und Tipps zum Festlegen und Testen von Sprache und Sortierungsverhalten.|  
+|[Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Erläutert die Unterstützung von Sprache und Sortierung, die Schritte zum Ändern der Eigenschaften und Tipps zum Festlegen und Testen von Sprache und Sortierungsverhalten.|  
 |[Protokollvorgänge in Analysis Services](log-operations-in-analysis-services.md)|Beschreibt die Protokolle und erklärt, wie Sie diese konfigurieren.|  
   
 ## <a name="see-also"></a>Siehe auch  

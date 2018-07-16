@@ -1,5 +1,5 @@
 ---
-title: Registerkarte Abhängigkeitsnetzwerk (Miningmodell-Viewer) | Microsoft Docs
+title: Registerkarte Abhängigkeitsnetzwerk (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3f8b993490c349cab5a6f25c722f83719b844af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279986"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Registerkarte "Abhängigkeitsnetzwerk" (Miningmodell-Viewer)
   Die Registerkarte **Abhängigkeitsnetzwerk** bietet eine grafische Sicht aller im Miningmodell enthaltenen Attribute und gibt die Beziehungen zwischen den Attributen an.  
@@ -35,13 +35,13 @@ ms.locfileid: "36046563"
  [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein anzuzeigendes Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird in einem benutzerdefinierten Viewer geöffnet. Der jeweils für ein Modell verwendete Typ von benutzerdefiniertem Viewer wird durch den Algorithmus bestimmt, mit dem Sie das Modell erstellt haben.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Für jedes Modell können Sie den benutzerdefinierten Viewer verwenden, der für das betreffende Miningmodell bereitgestellt wird, oder aber den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind. Der Microsoft Generic Content Tree Viewer kann mit allen Modellen verwendet werden, wobei der Modellinhalt in einer HTML-Tabelle dargestellt wird.  
   
  **Vergrößern**  

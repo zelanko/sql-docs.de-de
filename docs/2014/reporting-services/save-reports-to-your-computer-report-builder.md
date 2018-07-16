@@ -1,5 +1,5 @@
 ---
-title: Speichern von Berichten auf Ihrem Computer (Berichts-Generator) | Microsoft Docs
+title: Speichern von Berichten auf Ihrem Computer (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309230"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Speichern von Berichten auf dem Computer (Berichts-Generator)
   Im Berichts-Generator können Sie Berichtsdefinitionen auf dem Computer speichern. Wenn diese jedoch auf dem Computer gespeichert werden, können andere Benutzer die Berichte nicht anzeigen. Berichte, die auf freigegebene Datenquellen verweisen oder Berichtselemente wie Bilder und Unterberichte extern speichern, können möglicherweise nicht ausgeführt werden. Es empfiehlt sich, Berichte auf einem Berichtsserver oder einer SharePoint-Website zu speichern.  
@@ -31,7 +31,7 @@ ms.locfileid: "36046835"
     > [!NOTE]  
     >  Wenn Sie einen Bericht erneut speichern, wird er automatisch am vorherigen Speicherort erneut gespeichert. Verwenden Sie die Option **Speichern unter** , um den Speicherort zu ändern.  
   
-2.  Klicken Sie optional auf **Desktop**, **eigene**, oder **Arbeitsplatz** auf den Bericht auf einem dieser Ordner speichern.  
+2.  Klicken Sie optional auf **Desktop**, **eigene**, oder **Arbeitsplatz** um den Bericht auf einem dieser Ordner zu speichern.  
   
 3.  Navigieren Sie zum Speicherort auf dem Computer, auf dem Sie den Bericht speichern möchten. Geben Sie unter **Name**den Namen des Berichts ein.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36046835"
   
 2.  Navigieren Sie zum Speicherort auf dem Computer, auf dem Sie den Bericht speichern möchten.  
   
-3.  Geben Sie unter **Name**den Namen des Berichts ein. Klicken Sie optional auf **Desktop**, **eigene**, oder **Arbeitsplatz** auf den Bericht auf einem dieser Ordner speichern.  
+3.  Geben Sie unter **Name**den Namen des Berichts ein. Klicken Sie optional auf **Desktop**, **eigene**, oder **Arbeitsplatz** um den Bericht auf einem dieser Ordner zu speichern.  
   
 4.  Wählen Sie unter **Elemente des Typs**den Typ des Berichtselements aus, das Sie speichern. Der Typ für Berichte ist Berichte (* .rdl).  
   

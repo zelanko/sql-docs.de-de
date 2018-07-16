@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ee7c93ee0502deef50be0ed07e72bd6f0dab4342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: bf2413a954c0034e8122586f1054bdc0cffef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294711"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
   Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. In diesem Thema werden die Unterschiede und Vorteile der Verwendung von einem eigenständigen Datenbankmodell im Vergleich zum herkömmlichen Anmelde-/Benutzermodell sowie zu Firewallregeln für Windows bzw. auf Serverebene vorgestellt. Bestimmte Szenarien, Verwaltbarkeit oder Anwendungsgeschäftslogik können dennoch den Einsatz des herkömmlichen Anmelde-/Benutzermodells und von Firewallregeln auf Serverebene erfordern.  
@@ -31,7 +30,7 @@ ms.locfileid: "36047128"
 >  Bei der Entwicklung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Diensts durch [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und dem Wechsel zu stärker garantierten SLAs, müssen Sie möglicherweise zum eigenständigen Datenbankbenutzermodell und den datenbankbezogenen Firewallregeln wechseln, um die SLA für höhere Verfügbarkeit sowie höhere maximale Anmelderaten für eine bestimmte Datenbank zu erreichen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ermutigt Sie, solche Änderungen noch heute zu berücksichtigen.  
   
 ## <a name="traditional-login-and-user-model"></a>Herkömmliches Anmelde- und Benutzermodell  
- Beim herkömmlichen Verbindungsmodell stellen Windows-Benutzer oder Mitglieder der Windows-Gruppen eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] durch die Bereitstellung von Benutzer- oder Gruppenanmeldeinformationen her, die von Windows authentifiziert werden. Oder die Verbindung bietet sowohl einen Namen und ein Kennwort und verbindet sich über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung (das ist die einzige Option, bei der Verbindung [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). In beiden Fällen muss in der Masterdatenbank eine Anmeldung vorhanden sein, die den Anmeldeinformationen zur Verbindungsherstellung entspricht. Nachdem [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Anmeldeinformationen für die Windows-Authentifizierung bestätigt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen authentifiziert, versucht die Verbindung in der Regel eine Verbindung zu einer Benutzerdatenbank herzustellen. Zum Herstellen einer Verbindung mit einer Benutzerdatenbank muss die Anmeldung einem Datenbankbenutzer in der Datenbank zugeordnet werden können. Die Verbindungszeichenfolge kann auch angeben, dass eine Verbindung mit einer bestimmten Datenbank hergestellt werden soll, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optional und in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]erforderlich ist.  
+ Beim herkömmlichen Verbindungsmodell stellen Windows-Benutzer oder Mitglieder der Windows-Gruppen eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] durch die Bereitstellung von Benutzer- oder Gruppenanmeldeinformationen her, die von Windows authentifiziert werden. Oder die Verbindung bietet sowohl einen Namen und ein Kennwort und eine Verbindung herstellt, mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung (das ist die einzige Option, bei der Verbindung [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). In beiden Fällen muss in der Masterdatenbank eine Anmeldung vorhanden sein, die den Anmeldeinformationen zur Verbindungsherstellung entspricht. Nachdem [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Anmeldeinformationen für die Windows-Authentifizierung bestätigt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen authentifiziert, versucht die Verbindung in der Regel eine Verbindung zu einer Benutzerdatenbank herzustellen. Zum Herstellen einer Verbindung mit einer Benutzerdatenbank muss die Anmeldung einem Datenbankbenutzer in der Datenbank zugeordnet werden können. Die Verbindungszeichenfolge kann auch angeben, dass eine Verbindung mit einer bestimmten Datenbank hergestellt werden soll, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optional und in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]erforderlich ist.  
   
  Das wichtige Prinzip ist, dass sowohl die Anmeldung (in der Masterdatenbank) als auch der Benutzer (in der Benutzerdatenbank) vorhanden sein müssen und miteinander verknüpft werden können. Dies bedeutet, dass die Verbindung mit der Benutzerdatenbank eine Abhängigkeit von der Anmeldung in der Masterdatenbank hat und dies die Möglichkeiten zum Verschieben der Datenbank auf einen anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] -Hostingserver einschränkt. Wenn aus irgendeinem Grund eine Verbindung mit der Masterdatenbank nicht verfügbar ist (z. B. wenn ein Failover läuft), wird die Gesamtdauer der Verbindung erhöht oder es tritt ggf. ein Timeout auf. Dies kann folglich die Verbindungsskalierbarkeit beeinträchtigen.  
   

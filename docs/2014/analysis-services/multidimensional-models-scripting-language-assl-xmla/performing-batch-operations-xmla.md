@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Batchvorgängen (XMLA) | Microsoft Docs
+title: Ausführen von Batchvorgängen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -21,40 +21,40 @@ helpviewer_keywords:
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f164ca12c1de105bcd73f9b371ff4bfe2e00182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 186d5a0896814544f34531fe98ad88c8034ac63a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304590"
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
-  Können Sie die [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere im `Batch`-Befehl enthaltene Befehle entweder als Einzeltransaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel ausführen. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der `Batch` Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
+  Können Sie die [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA), führen Sie mehrere XMLA-Befehle, die mit einer einzigen XMLA- [Execute](../xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere im `Batch`-Befehl enthaltene Befehle entweder als Einzeltransaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel ausführen. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der `Batch` Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Ausführen von transaktionalen und nicht transaktionalen Batchbefehlen  
  Der Befehl `Batch` führt Befehle in einer von zwei Methoden aus:  
   
  **Transaktion**  
- Wenn die `Transaction` Attribut des der `Batch` Befehlssatz ist auf "true", die `Batch` Befehl führen Sie Befehle alle Befehle innerhalb der `Batch` Befehl in einer einzelnen Transaktion – eine *transaktionale* Batch.  
+ Wenn die `Transaction` Attribut der `Batch` Befehl festgelegt ist auf "true", die `Batch` Befehl führen Sie Befehle alle Befehle innerhalb der `Batch` Befehl in einer einzelnen Transaktion – eine *transaktionale* Batch.  
   
- Schlägt jeder Befehl in einem Transaktionsbatch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Rollback für alle Befehle aus, der `Batch` -Befehl, der vor dem Befehl fehlgeschlagenen ausgeführt wurde, und die `Batch` -Befehl wird unmittelbar beendet. Jegliche noch nicht ausgeführten Befehle im Befehl `Batch` werden nicht ausgeführt. Nachdem der Befehl `Batch` beendet wurde, meldet der Befehl `Batch` alle Fehler, die für den fehlgeschlagenen Befehl aufgetreten sind.  
+ Wenn ein Befehl in einem transaktionalen Batch fehlschlägt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Rollback für alle Befehle aus, der `Batch` -Befehl, der vor dem Befehl fehlgeschlagenen ausgeführt wurde, und die `Batch` -Befehl wird unmittelbar beendet. Jegliche noch nicht ausgeführten Befehle im Befehl `Batch` werden nicht ausgeführt. Nachdem der Befehl `Batch` beendet wurde, meldet der Befehl `Batch` alle Fehler, die für den fehlgeschlagenen Befehl aufgetreten sind.  
   
  **Nontransactional**  
- Wenn die `Transaction` -Attribut auf "false" festgelegt ist die `Batch` Befehl ausgeführt wird, jeden Befehl enthalten die `Batch` -Befehl in einer separaten Transaktion – eine *nicht transaktionalen* Batch. Wenn ein beliebiger Befehl in einem nicht transaktionalen Batch fehlschlägt, führt der `Batch`-Befehl weiterhin alle Befehle nach dem fehlgeschlagenen Befehl aus. Nachdem der `Batch`-Befehl versucht hat, alle im `Batch`-Befehl enthaltenen Befehle auszuführen, meldet der `Batch`-Befehl alle aufgetretenen Fehler.  
+ Wenn die `Transaction` -Attribut auf "False" festgelegt ist die `Batch` Befehl führt jeden Befehl enthalten die `Batch` Befehl in einer separaten Transaktion – eine *nicht transaktionalen* Batch. Wenn ein beliebiger Befehl in einem nicht transaktionalen Batch fehlschlägt, führt der `Batch`-Befehl weiterhin alle Befehle nach dem fehlgeschlagenen Befehl aus. Nachdem der `Batch`-Befehl versucht hat, alle im `Batch`-Befehl enthaltenen Befehle auszuführen, meldet der `Batch`-Befehl alle aufgetretenen Fehler.  
   
  Alle Ergebnisse, die von Befehlen zurückgegeben werden, die im `Batch`-Befehl enthalten sind, werden in der gleichen Reihenfolge zurückgegeben, in der die Befehle im `Batch`-Befehl enthalten sind. Die von einem `Batch`-Befehl zurückgegebenen Ergebnisse fallen unterschiedlich aus, je nachdem, ob der `Batch`-Befehl transaktional oder nicht transaktional ist.  
   
 > [!NOTE]  
->  Wenn eine `Batch` -Befehl einen Befehl, der keine Ausgabe, wie z. B. zurückgibt enthält die [Sperre](../xmla/xml-elements-commands/lock-element-xmla.md) Befehl, und dass der Befehl erfolgreich ausgeführt wurde, die `Batch` Befehl gibt ein leeres [Stamm](../xmla/xml-elements-properties/root-element-xmla.md) Element innerhalb des Elements der Ergebnisse. Das leere `root`-Element stellt sicher, dass jeder in einem `Batch`-Befehl enthaltene Befehl dem für die Ergebnisse des Befehls geeigneten `root`-Element zugeordnet werden kann.  
+>  Wenn eine `Batch` -Befehl enthält einen Befehl, der keine Ausgabe, z. B. zurückgibt der [Sperre](../xmla/xml-elements-commands/lock-element-xmla.md) Befehl, und dieser Befehl erfolgreich ausgeführt, die `Batch` Befehl gibt eine leere [Stamm](../xmla/xml-elements-properties/root-element-xmla.md) Element innerhalb des Elements der Ergebnisse. Das leere `root`-Element stellt sicher, dass jeder in einem `Batch`-Befehl enthaltene Befehl dem für die Ergebnisse des Befehls geeigneten `root`-Element zugeordnet werden kann.  
   
 ### <a name="returning-results-from-transactional-batch-results"></a>Zurückgeben von Ergebnissen von transaktionalen Batchergebnissen  
- Ergebnisse von Befehlen, die in einem transaktionalen Batch ausgeführt werden, werden nicht zurückgegeben, solange der `Batch`-Befehl noch nicht vollständig ausgeführt ist. Die Ergebnisse werden nicht nach Ausführung eines jeden Befehls zurückgegeben, da jeder fehlgeschlagene Befehl in einem transaktionalen Batch dazu führt, dass ein Rollback für den gesamten `Batch`-Befehl und alle darin enthaltenen Befehle durchgeführt wird. Wenn alle Befehle erfolgreich gestartet und ausgeführt, der [zurückgeben](../xmla/xml-elements-properties/return-element-xmla.md) Element von der [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md) zurückgegebene Element der `Execute` Methode für die `Batch` -Befehl enthält eine [Ergebnisse](../xmla/xml-elements-properties/results-element-xmla.md) Element, das wiederum ein `root` -Element für jeden erfolgreich ausgeführten Befehl innerhalb der `Batch` Befehl. Wenn ein Befehl im `Batch`-Befehl nicht gestartet werden kann oder fehlschlägt, gibt die `Execute`-Methode einen SOAP-Fehler für den `Batch`-Befehl aus, der den Fehler des fehlgeschlagenen Befehls enthält.  
+ Ergebnisse von Befehlen, die in einem transaktionalen Batch ausgeführt werden, werden nicht zurückgegeben, solange der `Batch`-Befehl noch nicht vollständig ausgeführt ist. Die Ergebnisse werden nicht nach Ausführung eines jeden Befehls zurückgegeben, da jeder fehlgeschlagene Befehl in einem transaktionalen Batch dazu führt, dass ein Rollback für den gesamten `Batch`-Befehl und alle darin enthaltenen Befehle durchgeführt wird. Wenn alle Befehle erfolgreich gestartet und ausgeführt, die [zurückgeben](../xmla/xml-elements-properties/return-element-xmla.md) Element der [ExecuteResponse](../xmla/xml-elements-objects-executeresponse.md) von zurückgegebene Element der `Execute` -Methode für die `Batch` -Befehl enthält eine [Ergebnisse](../xmla/xml-elements-properties/results-element-xmla.md) Element, das wiederum ein `root` -Element für jeden erfolgreich ausgeführten Befehl innerhalb der `Batch` Befehl. Wenn ein Befehl im `Batch`-Befehl nicht gestartet werden kann oder fehlschlägt, gibt die `Execute`-Methode einen SOAP-Fehler für den `Batch`-Befehl aus, der den Fehler des fehlgeschlagenen Befehls enthält.  
   
 ### <a name="returning-results-from-nontransactional-batch-results"></a>Zurückgeben von Ergebnissen von nicht transaktionalen Batchergebnissen  
- Ergebnisse von Befehlen, die in einem nicht transaktionalen Batch ausgeführt werden, werden in der Reihenfolge zurückgegeben, in der sie im `Batch`-Befehl enthalten sind und wie sie von jedem Befehl zurückgegeben werden. Wenn keiner der Befehle, die im `Batch`-Befehl enthalten sind, erfolgreich gestartet werden kann, gibt die `Execute`-Methode einen SOAP-Fehler zurück, der einen Fehler für den `Batch`-Befehl enthält. Wenn mindestens ein Befehl erfolgreich gestartet werden kann, enthält das `return`-Element des `ExecuteResponse`-Elements, das von der `Execute`-Methode für den `Batch`-Befehl ausgegeben wird, ein `results`-Element, das wiederum ein `root`-Element für jeden im `Batch`-Befehl enthaltenen Befehl enthält. Wenn eine oder mehrere Befehle in einem nicht transaktionalen Batch kann nicht gestartet werden kann oder fehlschlägt, die `root` -Element für diesen fehlgeschlagenen Befehl enthält ein [Fehler](../xmla/xml-elements-properties/error-element-xmla.md) Element, das den Fehler beschreibt.  
+ Ergebnisse von Befehlen, die in einem nicht transaktionalen Batch ausgeführt werden, werden in der Reihenfolge zurückgegeben, in der sie im `Batch`-Befehl enthalten sind und wie sie von jedem Befehl zurückgegeben werden. Wenn keiner der Befehle, die im `Batch`-Befehl enthalten sind, erfolgreich gestartet werden kann, gibt die `Execute`-Methode einen SOAP-Fehler zurück, der einen Fehler für den `Batch`-Befehl enthält. Wenn mindestens ein Befehl erfolgreich gestartet werden kann, enthält das `return`-Element des `ExecuteResponse`-Elements, das von der `Execute`-Methode für den `Batch`-Befehl ausgegeben wird, ein `results`-Element, das wiederum ein `root`-Element für jeden im `Batch`-Befehl enthaltenen Befehl enthält. Wenn eine oder mehrere Befehle in einem nicht transaktionalen Batch kann nicht gestartet werden oder kann nicht abgeschlossen werden, die `root` -Element für diesen fehlgeschlagenen Befehl enthält eine [Fehler](../xmla/xml-elements-properties/error-element-xmla.md) Element, das den Fehler beschreibt.  
   
 > [!NOTE]  
 >  Solange mindestens ein Befehl in einem nicht transaktionalen Batch gestartet werden kann, wird der nicht transaktionale Batch als erfolgreich ausgeführt angesehen, auch wenn jeder im nicht transaktionalen Batch enthaltene Befehl einen Fehler in den Ergebnissen des `Batch`-Befehls zurückgibt.  
@@ -62,7 +62,7 @@ ms.locfileid: "36047713"
 ## <a name="using-serial-and-parallel-execution"></a>Verwenden von serieller und paralleler Ausführung  
  Sie können den `Batch`-Befehl verwenden, um eingeschlossene Befehle seriell oder parallel auszuführen. Wenn die Befehle seriell ausgeführt werden, kann der nächste im `Batch`-Befehl enthaltene Befehl nicht gestartet werden, solange nicht der `Batch`-Befehl, der aktuell ausgeführt wird, abgeschlossen ist. Wenn die Befehle parallel ausgeführt werden, können mehrere Befehle gleichzeitig vom `Batch`-Befehl ausgeführt werden.  
   
- Um Befehle parallel ausgeführt werden, Sie die Befehle parallel ausgeführt werden Hinzufügen der [parallele](../xmla/xml-elements-properties/parallel-element-xmla.md) Eigenschaft von der `Batch` Befehl. Derzeit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann nur ausgeführt, zusammenhängender, sequenzieller [Prozess](../xmla/xml-elements-commands/process-element-xmla.md) Befehle parallel. Alle anderen XMLA-Befehle, wie z. B. [erstellen](../xmla/xml-elements-commands/create-element-xmla.md) oder [Alter](../xmla/xml-elements-commands/alter-element-xmla.md), enthalten in der `Parallel` Eigenschaft seriell ausgeführt wird.  
+ Damit Befehle parallel ausgeführt, Sie fügen die Befehle parallel ausgeführt werden hinzu, die [parallele](../xmla/xml-elements-properties/parallel-element-xmla.md) Eigenschaft der `Batch` Befehl. Derzeit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann nur ausgeführt, zusammenhängender, sequenzieller [Prozess](../xmla/xml-elements-commands/process-element-xmla.md) Befehle parallel. Alle anderen XMLA-Befehl, z. B. [erstellen](../xmla/xml-elements-commands/create-element-xmla.md) oder [Alter](../xmla/xml-elements-commands/alter-element-xmla.md), enthalten in der `Parallel` Eigenschaft seriell ausgeführt wird.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] versucht, alle `Process`-Befehle, die in die `Parallel`-Eigenschaft eingebunden werden, parallel auszuführen. Es gibt allerdings keine Garantie dafür, dass alle enthaltenen `Process`-Befehle parallel ausgeführt werden. Die Instanz analysiert jeden `Process`-Befehl, und wenn die Instanz ermittelt, dass der Befehl nicht parallel ausgeführt werden kann, wird der `Process`-Befehl seriell ausgeführt.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36047713"
   
 -   Befehl 3 wird seriell ausgeführt, nachdem Befehl 2 abgeschlossen wurde.  
   
--   Die Befehle 4 und 5, die parallel ausgeführt werden, nachdem Befehl 3 abgeschlossen ist. Obwohl Befehl 6 auch ein `Process`-Befehl ist, kann Befehl 6 nicht parallel mit den Befehlen 4 und 5 ausgeführt werden, da die `maxParallel`-Eigenschaft auf 2 gesetzt ist.  
+-   Befehle 4 und 5 werden parallel ausgeführt, nachdem Befehl 3 abgeschlossen wurde. Obwohl Befehl 6 auch ein `Process`-Befehl ist, kann Befehl 6 nicht parallel mit den Befehlen 4 und 5 ausgeführt werden, da die `maxParallel`-Eigenschaft auf 2 gesetzt ist.  
   
 -   Befehl 6 wird seriell ausgeführt, nachdem die Befehle 4 und 5 abgeschlossen wurden.  
   
@@ -119,14 +119,14 @@ ms.locfileid: "36047713"
   
 -   Die [DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md) Eigenschaft enthält eine Out-of-Line-Bindung für eine Datenquellensicht, die von allen verwendet die `Process` Befehle in der `Batch` Befehl.  
   
--   Die [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) Eigenschaft gibt an, wie in der die `Batch` Befehl behandelt alle aufgetretenen Fehler `Process` in enthaltenen Befehle die `Batch` Befehl.  
+-   Die [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) Eigenschaft gibt an, wie in der die `Batch` Befehl behandelt Fehler, die von allen `Process` in enthaltenen Befehle die `Batch` Befehl.  
   
     > [!IMPORTANT]  
     >  Ein `Process`-Befehl kann nicht die Eigenschaften `Bindings`, `DataSource`, `DataSourceView` oder `ErrorConfiguration` enthalten, wenn der `Process`-Befehl in einem `Batch`-Befehl enthalten ist. Wenn Sie diese Eigenschaften für einen `Process`-Befehl festlegen müssen, geben Sie die notwendigen Informationen in den entsprechenden Eigenschaften des `Batch`-Befehls an, der im `Process`-Befehl enthalten ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Batch-Element &#40;XMLA&#41;](../xmla/xml-elements-commands/batch-element-xmla.md)   
- [Verarbeiten von Element &#40;XMLA&#41;](../xmla/xml-elements-commands/process-element-xmla.md)   
+ [Element verarbeiten &#40;XMLA&#41;](../xmla/xml-elements-commands/process-element-xmla.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

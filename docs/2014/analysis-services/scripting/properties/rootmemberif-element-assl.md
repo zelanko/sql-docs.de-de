@@ -1,5 +1,5 @@
 ---
-title: RootMemberIf-Element (ASSL) | Microsoft Docs
+title: RootMemberIf-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280296"
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf-Element (ASSL)
   Bestimmt, wie das Stammelement oder die Elemente eines übergeordneten Attributs identifiziert werden.  
@@ -58,18 +58,18 @@ ms.locfileid: "36056321"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Den Wert des der `RootMemberIf` Element wird nur von übergeordneten Attributen verwendet (also der Wert der die [Verwendung](usage-element-dimensionattribute-assl.md) Element des der `DimensionAttribute` auf übergeordnetes Element festgelegt ist *übergeordneten*) bestimmen den Stamm ( obersten Elemente) einer über-/ unterordnungshierarchie.  
+ Der Wert des der `RootMemberIf` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Nutzung](usage-element-dimensionattribute-assl.md) Element der `DimensionAttribute` übergeordnetes Element festgelegt ist, um *übergeordneten*) bestimmt das Stammverzeichnis ( höchsten Elemente) einer über-/ unterordnungshierarchie.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
 |value|Description|  
 |-----------|-----------------|  
 |*ParentIsBlankSelfOrMissing*|Nur Elemente, die mindestens eine der für *ParentIsBlank*, *ParentIsSelf*oder *ParentIsMissing* geltenden Bedingungen erfüllen, werden als Stammelemente behandelt.|  
-|*ParentIsBlank*|Nur Elemente mit Null, eine 0 (null) oder eine leere Zeichenfolge in den Schlüsselspalten, dargestellt durch die [KeyColumns](../collections/columns-element-assl.md) Auflistung von `DimensionAttribute` werden als Stammelemente behandelt.|  
+|*ParentIsBlank*|Nur Elemente mit dem ein NULL-Wert, eine 0 (null) oder eine leere Zeichenfolge in den Schlüsselspalten, dargestellt durch die [KeyColumns](../collections/columns-element-assl.md) Auflistung von `DimensionAttribute` werden als Stammelemente behandelt.|  
 |*ParentIsSelf*|Es werden nur Elemente als Stammelemente behandelt, die für sich selbst als übergeordnetes Element festgelegt wurden.|  
 |*ParentIsMissing*|Es werden nur Elemente als Stammelemente behandelt, deren übergeordnete Elemente nicht gefunden werden.|  
   

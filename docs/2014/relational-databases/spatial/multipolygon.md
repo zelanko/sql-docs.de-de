@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d29c76541d87e950c973fd6dc7d57482c6d2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ae25be65e0fdf0cf88bf8dec6cf5c3f59f9c9e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311402"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  Ein `MultiPolygon` Instanz ist eine Auflistung von NULL oder mehr `Polygon` Instanzen.  
+  Ein `MultiPolygon` -Instanz ist eine Sammlung von NULL oder mehr `Polygon` Instanzen.  
   
 ## <a name="polygon-instances"></a>Polygon-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für `MultiPolygon` Instanzen.  
@@ -39,13 +39,13 @@ ms.locfileid: "36048226"
 -   Abbildung 2 zeigt eine `MultiPolygon`-Instanz mit zwei `Polygon`-Elementen. Die Begrenzung wird durch die beiden äußeren Ringe und die drei inneren Ringe definiert. Die beiden `Polygon`-Elemente überschneiden sich an einem Tangentenpunkt.  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Ein `MultiPolygon` -Instanz wird akzeptiert eine der folgenden Bedingungen erfüllt ist.  
+ Ein `MultiPolygon` -Instanz wird akzeptiert, eine der folgenden Bedingungen erfüllt ist.  
   
 -   Es ist eine leere `MultiPolygon` Instanz.  
   
--   Alle Instanzen, aus denen die `MultiPolygon` Instanz werden akzeptiert `Polygon` Instanzen. Weitere Informationen über akzeptierte `Polygon` Instanzen finden Sie unter [Polygon](../spatial/polygon.md).  
+-   Alle Instanzen, die mit der `MultiPolygon` Instanz akzeptiert `Polygon` Instanzen. Weitere Informationen über akzeptierte `Polygon` -Instanzen finden Sie unter [Polygon](../spatial/polygon.md).  
   
- Die folgenden Beispielen werden akzeptierte `MultiPolygon` Instanzen.  
+ Die folgenden Beispiele zeigen, akzeptierte `MultiPolygon` Instanzen.  
   
 ```  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
@@ -64,7 +64,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Gültige Instanzen  
  Eine `MultiPolygon`-Instanz ist gültig, wenn es sich um eine leere `MultiPolygon`-Instanz handelt bzw. wenn die folgenden Kriterien erfüllt werden.  
   
-1.  Alle Instanzen, aus denen die `MultiPolygon`-Instanz besteht, sind gültige `Polygon`-Instanzen. Für gültige `Polygon` Instanzen finden Sie unter [Polygon](../spatial/polygon.md).  
+1.  Alle Instanzen, aus denen die `MultiPolygon`-Instanz besteht, sind gültige `Polygon`-Instanzen. Für gültige `Polygon` -Instanzen finden Sie unter [Polygon](../spatial/polygon.md).  
   
 2.  Die `Polygon`-Instanzen, aus denen die `MultiPolygon`-Instanz besteht, überschneiden sich nicht.  
   
@@ -77,7 +77,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` ist gültig da die beiden `Polygon` -Instanzen nur an einem Tangentenpunkt berühren. `@g3` gilt nicht da die Innenflächen der zwei `Polygon` -Instanzen überschneiden.  
+ `@g2` gültig ist da die beiden `Polygon` -Instanzen nur an einem tangenspunkt berühren. `@g3` gilt nicht da die Innenbereiche der zwei `Polygon` -Instanzen überlappen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Erstellung einer `geometry``MultiPolygon` -Instanz veranschaulicht und das WKT-Format (Well-Known Text) der zweiten Komponente zurückgegeben.  

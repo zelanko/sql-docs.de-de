@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Cuberückschreiben (MDX) | Microsoft Docs
+title: Verwenden von Cuberückschreiben (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
 - cubes [Analysis Services], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 53a9b5ab5e3c5e6539304936bb62997f40576e02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e74303a0796f1b1ffbee4771b0e7ecbf40085b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310770"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Verwenden von Cuberückschreiben (MDX)
   Sie aktualisieren einen Cube, indem Sie die [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) -Anweisung verwenden. Mit dieser Anweisung können Sie ein Tupel mit einem bestimmten Wert aktualisieren. Damit Sie einen Cube mit der UPDATE CUBE-Anweisung effizient aktualisieren können, müssen Sie die Syntax der Anweisung, die Fehlerbedingungen, die auftreten können, und die Auswirkungen kennen, die Updates auf einen Cube haben können.  

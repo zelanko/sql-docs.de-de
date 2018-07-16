@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 47b33d5adc73e4e0096d6390140575ed30ec94ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0610b65013bce66f4ebcb6f446d63ecaf656463
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234830"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
   Im Dialogfeld **Spalten sortieren** können Sie Raster im Replikationsmonitor nach einer oder mehreren Spalten sortieren. (Zum Sortieren nach einer einzelnen Spalte klicken Sie im Raster im Replikationsmonitor auf den betreffenden Spaltenheader.) Wenn Sie z. B. die Abonnements auf der Registerkarte **Alle Abonnements** nach Status und Verbindungstyp sortieren möchten, führen Sie die folgenden Schritte aus:  

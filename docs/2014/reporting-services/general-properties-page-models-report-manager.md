@@ -1,5 +1,5 @@
 ---
-title: Allgemein (Eigenschaftenseite, Modelle) (Berichts-Manager) | Microsoft Docs
+title: Eigenschaftenseite "Allgemein", "Modelle (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280666"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Allgemein (Eigenschaftenseite) (Modelle, Berichts-Manager)
   Auf der Seite Allgemeine Eigenschaften für Berichtsmodelle können Sie die Modelldefinitionsdatei (Dateinamenerweiterung SMDL) umbenennen, löschen, verschieben oder ersetzen. Einzelheiten zu dem Benutzer, der das Modell erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  
@@ -47,7 +47,7 @@ ms.locfileid: "36047541"
  Geben Sie eine Beschreibung des Modells ein. Diese Beschreibung wird für Benutzer, die über die Zugriffsberechtigung auf das Modell verfügen, auf der Seite Inhalt angezeigt.  
   
  **In Listenansicht ausblenden**  
- Aktivieren Sie dieses Kontrollkästchen, um das Element auszublenden, wenn der Ordner auf Listenansicht festgelegt ist. Die Listenansicht ist ein vom Berichts-Manager unterstützter Modus für die Anzeige von Ordnerinhalten. Legen Sie diese Option in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] definieren, wie das Element im Berichts-Manager angezeigt wird. Weitere Informationen zu den Ansichtsmodi im Berichts-Manager finden Sie unter [Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Aktivieren Sie dieses Kontrollkästchen, um das Element auszublenden, wenn der Ordner auf Listenansicht festgelegt ist. Die Listenansicht ist ein vom Berichts-Manager unterstützter Modus für die Anzeige von Ordnerinhalten. Legen Sie diese Option in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] definieren, wie dieses Element im Berichts-Manager angezeigt wird. Weitere Informationen zu den Ansichtsmodi im Berichts-Manager finden Sie unter [Inhalt (Seite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
@@ -56,7 +56,7 @@ ms.locfileid: "36047541"
  Klicken Sie auf diese Schaltfläche, um das Modell aus der Berichtsserver-Datenbank zu löschen. Mit dem Löschen eines Modells wird weder die abhängige freigegebene Datenquelle gelöscht, die Verbindungsinformationen bereitstellt, noch werden die Berichte gelöscht, die das Modell als Datenquelle verwenden. Berichte, die das Modell verwenden, werden jedoch nicht mehr ausgeführt, nachdem das Modell gelöscht wurde.  
   
  **Verschieben**  
- Klicken Sie auf diese Schaltfläche, um ein Modell in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie unter [Elementseite verschieben &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um ein Modell in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie unter [Seite "Elemente" verschieben &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Speichern**  
  Klicken Sie auf diese Schaltfläche, um eine schreibgeschützte Kopie der Modelldefinition zu speichern. Abhängig von den auf Ihrem Computer definierten Dateizuordnungen wird die Datei in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder einer anderen Anwendung geöffnet. In den meisten Fällen wird das Modell als XML-Datei geöffnet.  

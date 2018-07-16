@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes MDX-Skript (MDX) | Microsoft Docs
+title: Grundlegendes MDX-Skript (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
 - statements [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 501268fe4537e261b21af317fd90da32efb0e917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fcdb7be7a4e3a9ab29dc93f899f3035cf68264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303100"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Grundlegendes MDX-Skript (MDX)
   Ein MDX-Skript (Multidimensional Expressions, mehrdimensionale Ausdrücke) definiert den Berechnungsprozess für einen Cube in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Es gibt zwei Arten von MDX-Skripts:  
@@ -58,13 +58,13 @@ ms.locfileid: "36056349"
   
 -   [BERECHNEN](/sql/mdx/mdx-scripting-calculate)  
   
--   [FIXIEREN](/sql/mdx/mdx-scripting-freeze)  
+-   [EINFRIEREN](/sql/mdx/mdx-scripting-freeze)  
   
 -   [BEREICH](/sql/mdx/mdx-scripting-scope)  
   
  Weitere Informationen zu MDX-Skriptanweisungen finden Sie unter [MDX-Skriptanweisungen &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
+ [ELEMENT ERSTELLEN](/sql/mdx/mdx-data-definition-create-member)  
  Die CREATE MEMBER-Anweisung erstellt berechnete Elemente. Weitere Informationen zum Erstellen berechneter Elemente finden Sie unter [Erstellen von berechneten Elementen in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
  [GRUPPE ERSTELLEN](/sql/mdx/mdx-data-definition-create-set)  

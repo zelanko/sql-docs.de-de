@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt (Analysis Services – Datamining) | Microsoft Docs
+title: Miningmodellinhalt (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282426"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
   Nachdem Sie ein Miningmodell, das Daten aus der zugrunde liegenden Miningstruktur enthält, entworfen und verarbeitet haben, ist das Miningmodell vollständig und enthält *Miningmodellinhalt*. Sie können diesen Inhalt verwenden, um Vorhersagen zu treffen oder die Daten zu analysieren.  
@@ -163,9 +163,9 @@ ms.locfileid: "36056364"
   
  Wenn mit dem Attributnamen eine Spalte bezeichnet wird, dann enthält ATTRIBUTE_VALUE im einfachsten Fall einen der diskreten Werte für diese Spalte.  
   
- Je nachdem wie der Algorithmus Werte verarbeitet, kann ATTRIBUTE_VALUE auch ein Flag, das Aufschluss darüber gibt, ob ein Wert für das Attribut vorhanden ist enthalten (`Existing`), oder ob der Wert null beträgt (`Missing`).  
+ Je nachdem wie der Algorithmus Werte verarbeitet, kann ATTRIBUTE_VALUE auch ein Flag, das Ihnen mitteilt, ob ein Wert für das Attribut vorhanden ist enthalten (`Existing`), oder ob der Wert null beträgt (`Missing`).  
   
- Angenommen, wenn das Modell so eingerichtet ist, Kunden zu finden, die ein bestimmtes Element über mindestens einmal gekauft haben, die ATTRIBUTE_NAME-Spalte enthält das Attribut / Wert-Paar, das Element von Interesse sind, z. B. definiert `Model = 'Water bottle'`, und die ATTRIBUTE_VALUE-Spalte würde nur das Schlüsselwort enthalten `Existing` oder `Missing`.  
+ Z. B. Wenn Ihr Modell eingerichtet ist, um Kunden zu suchen, die ein bestimmtes Produkt mindestens einmal gekauft haben, die ATTRIBUTE_NAME-Spalte möglicherweise enthalten das Attribut / Wert-Paar, das Element, von Interesse sind, z. B. definiert `Model = 'Water bottle'`, und in der ATTRIBUTE_VALUE-Spalte nur das Schlüsselwort enthält `Existing` oder `Missing`.  
   
  Alias  
  Anzahl der Fälle, die über dieses Attribut-Wert-Paar verfügen oder dieses Itemset bzw. diese Regel enthalten.  
@@ -276,15 +276,15 @@ ms.locfileid: "36056364"
   
 |Algorithmus oder Modelltyp|Modellinhalt|Abfragen von Mining-Modellen|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelle für Zuordnungsregeln|[Miningmodellinhalt für Zuordnungsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)|  
-|Clustermodelle|[Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)|  
-|Entscheidungsstrukturmodell|[Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)|  
-|Lineare Regressionsmodelle|[Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)|  
-|Logistische Regressionsmodelle|[Miningmodellinhalt für logistische Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)|[Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)|  
-|Naïve Bayes-Modelle|[Miningmodellinhalt für Naive Bayes-Modelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfragen](naive-bayes-model-query-examples.md)|  
-|Neuronale Netzwerkmodelle|[Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)|  
-|Sequenzclustering|[Miningmodellinhalt Sequence Clustering-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Beispiele für Abfragen von Sequenzclustermodellen](sequence-clustering-model-query-examples.md)|  
-|Zeitreihenmodelle|[Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Beispiele für Abfragen von Zeitreihenmodellen](time-series-model-query-examples.md)|  
+|Modelle für Zuordnungsregeln|[Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)|  
+|Clustermodelle|[Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)|  
+|Entscheidungsstrukturmodell|[Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)|  
+|Lineare Regressionsmodelle|[Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)|  
+|Logistische Regressionsmodelle|[Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)|[Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)|  
+|Naïve Bayes-Modelle|[Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfragen](naive-bayes-model-query-examples.md)|  
+|Neuronale Netzwerkmodelle|[Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)|  
+|Sequenzclustering|[Mingingmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Beispiele für Abfragen von Sequenzclustermodellen](sequence-clustering-model-query-examples.md)|  
+|Zeitreihenmodelle|[Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Beispiele für Abfragen von Zeitreihenmodellen](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Miningmodellinhalt-Anzeigetools  
  Wenn Sie ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]durchsuchen möchten, können Sie die Informationen im **Microsoft Generic Content Tree Viewer**anzeigen. Dieser ist sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar.  
@@ -307,7 +307,7 @@ SELECT * FROM [<mining model name>].CONTENT
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie außerdem auf die Informationen in den Data Mining-Schemarowsets zugreifen, indem Sie eine Verbindung zur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herstellen und die Systemtabellen abfragen. Weitere Informationen finden Sie unter [Abfragen von Data Mining-Schemarowsets &#40;Analysis Services – Data Mining&#41;](data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Generic Content Tree Viewer &#40;Datamining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Microsoft Generic Content Tree-Viewer &#40;Datamining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Permission-Datentyp (ASSL) | Microsoft Docs
+title: Permission-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233950"
 ---
 # <a name="permission-data-type-assl"></a>Permission-Datentyp (ASSL)
   Definiert einen abstrakten, Grunddatentyp, der Informationen über eine individuelle Berechtigung darstellt.  
@@ -59,7 +59,7 @@ ms.locfileid: "36046990"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](permission-data-type-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [miningstructurepermission-Objekte](../objects/miningstructurepermission-element-assl.md)|  
+|Abgeleitete Datentypen|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](permission-data-type-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
@@ -74,15 +74,15 @@ ms.locfileid: "36046990"
   
  Diesem Datentyp sind unter dem DeploymentMode-Wert 2 (tabellarischer Servermodus) die folgenden Überprüfungen zugeordnet:  
   
--   *Prozess* Standardwert des Attributs wird festgelegt, um `False`, außer wenn der Benutzer über die **aktualisieren** Berechtigung. Für Benutzer mit der **aktualisieren** Berechtigung der *Prozess* Attributwert wird festgelegt, um `True`.  
+-   *Prozess* Standardwert des Attributs wird festgelegt, um `False`, außer wenn der Benutzer über die **aktualisieren** Berechtigung. Für Benutzer mit der **aktualisieren** Berechtigung der *Prozess* -Attributwert auf `True`.  
   
--   *ReadDefinition* Attributwert wird festgelegt, um `None`; jeder andere Wert wird ein Fehler generiert.  
+-   *ReadDefinition* -Attributwert auf `None`; jeder andere Wert wird ein Fehler generiert.  
   
--   *Lesen* Attributwert wird festgelegt, um `Allowed` für Benutzer mit der **Benutzer** Berechtigung und `None` Wenn der Benutzer zugewiesen werden, die **aktualisieren** Berechtigung; Wenn ein Benutzer sowohl **Benutzer** und **aktualisieren** verfügt, wird das Attribut wird festgelegt, um `Allowed`. Für Benutzer mit Administratorrechten wird der Attributwert auf `Allowed` festgelegt.  
+-   *Lesen* -Attributwert auf `Allowed` für Benutzer mit der **Benutzer** Berechtigung und `None` Wenn die Benutzern zugewiesen sind die **aktualisieren** Berechtigung, wenn ein Benutzer sowohl **Benutzer** und **aktualisieren** verfügt, wird das Attribut nastaven NA hodnotu `Allowed`. Für Benutzer mit Administratorrechten wird der Attributwert auf `Allowed` festgelegt.  
   
--   *Schreiben von* Attributwert wird festgelegt, um `None`; jeder andere Wert wird ein Fehler generiert.  
+-   *Schreiben von* -Attributwert auf `None`; jeder andere Wert wird ein Fehler generiert.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Permission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Role-Element &#40;ASSL&#41;](../objects/role-element-assl.md)   
