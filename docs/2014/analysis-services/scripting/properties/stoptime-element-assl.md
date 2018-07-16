@@ -1,5 +1,5 @@
 ---
-title: StopTime-Element (ASSL) | Microsoft Docs
+title: StopTime-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StopTime element
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8de76230ef19e04d921c93ce54d368e55424c230
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0a646cf736afbf78b656a2e891b6dafbcfead5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302670"
 ---
 # <a name="stoptime-element-assl"></a>StopTime-Element (ASSL)
-  Gibt das Datum und Uhrzeit, zu denen ein [Trace](../objects/trace-element-assl.md) -Element beendet werden sollte.  
+  Gibt das Datum und Uhrzeit, zu dem eine [Ablaufverfolgung](../objects/trace-element-assl.md) -Element beendet werden sollte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36149141"
 |Übergeordnetes Element|[Ablaufverfolgung](../objects/trace-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
- Das Element, das das übergeordnete Element des entspricht `StopTime` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
+ Das Element, das dem übergeordneten entspricht `StopTime` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfolgt Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Führt eine Ablaufverfolgung für Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
   
   

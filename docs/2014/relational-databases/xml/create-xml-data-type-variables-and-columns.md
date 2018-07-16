@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309390"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
-  Die `xml` -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt anderen integrierten Typen wie z. B. `int` und `varchar`. Wie andere integrierte Typen können Sie mit der `xml` -Datentyp als Spaltentyp, bei der Erstellung einer Tabelle als Variablentyp, Parametertyp, eine funktionsrückgabestyp oder in [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Die `xml` Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie z. B. `int` und `varchar`. Wie andere integrierte Typen können Sie die `xml` -Datentyp als Spaltentyp, bei der Erstellung einer Tabelle, als Variablentyp, als Parametertyp, eine funktionsrückgabestyp oder in [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  
  Verwenden Sie zur Erstellung einer Spalte des `xml` -Typs als Teil einer Tabelle eine `CREATE TABLE` -Anweisung, wie im folgenden Beispiel gezeigt:  
@@ -57,7 +57,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>Zuweisen von Standardeinstellungen  
  Sie können einer Spalte vom Typ `xml` in einer Tabelle eine standardmäßige XML-Instanz zuweisen. Sie können das Standard-XML auf zweierlei Weise bereitstellen: durch Verwenden einer XML-Konstante oder durch Verwenden einer expliziten Umwandlung in den `xml`-Typ.  
   
- Um das Standard-XML als XML-Konstante bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax. Beachten Sie, das die Zeichenfolge implizit in UMGEWANDELT `xml` Typ.  
+ Um das Standard-XML als XML-Konstante bereitzustellen, verwenden Sie die im folgenden Beispiel gezeigte Syntax. Beachten Sie, die die Zeichenfolge implizit in UMGEWANDELT wird `xml` Typ.  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Eine Alternative zur Verwendung von Einschränkungen ist, um die Erstellung eines Wrappers, einer benutzerdefinierten Funktion, um umschließen die `xml` Daten Datentypmethode und eine benutzerdefinierte Funktion in der Check-Einschränkung angeben, wie im folgenden Beispiel gezeigt.  
+ Eine Alternative zur Verwendung von Einschränkungen ist zum Erstellen eines Wrappers, einer benutzerdefinierten Funktion, um umschließen der `xml` Daten Methode, und geben Sie eine benutzerdefinierte Funktion in der Check-Einschränkung, wie im folgenden Beispiel gezeigt.  
   
  Im folgenden Beispiel gibt die Einschränkung für `Col2` an, dass jede der in dieser Spalte gespeicherten XML-Instanzen ein `<ProductDescription>` -Element aufweisen muss, das ein `ProductID` -Attribut enthält. Diese Einschränkung wird durch folgende benutzerdefinierte Funktion erzwungen:  
   
@@ -131,17 +131,17 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Gleiche oder unterschiedliche Tabelle  
- Ein `xml` -Datentypspalte kann erstellt werden, in einer Tabelle, die andere relationale Spalten enthält, oder in einer separaten Tabelle mit einer fremdschlüsselbeziehung zu einer Haupttabelle.  
+ Ein `xml` -Datentypspalte kann erstellt werden, in einer Tabelle, die andere relationalen Spalten enthält, oder in einer separaten Tabelle mit einer fremdschlüsselbeziehung zu einer Haupttabelle.  
   
- Erstellen einer `xml` -Datentypspalte in derselben Tabelle, wenn eine der folgenden Bedingungen zutrifft:  
+ Erstellen Sie eine `xml` -Datentypspalte in derselben Tabelle, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   Ihre Anwendung führt einen Datenabruf für die XML-Spalte durch und benötigt keinen XML-Index für die XML-Spalte.  
   
 -   Sie möchten einen XML-Index für die `xml`-Datentypspalte erstellen, und der Primärschlüssel der Haupttabelle ist derselbe wie ihr Gruppierungsschlüssel. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](xml-indexes-sql-server.md).  
   
- Erstellen der `xml` Data Type-Spalte in einer separaten Tabelle, wenn Folgendes zutrifft:  
+ Erstellen der `xml` -Datentypspalte in einer getrennten Tabelle, wenn die folgenden Bedingungen erfüllt sind:  
   
--   Sie möchten einen XML-Index zu erstellen, auf die `xml` -Datentypspalte, aber der Primärschlüssel der Haupttabelle unterscheidet sich von ihrem Gruppierungsschlüssel, oder die Haupttabelle verfügt nicht über einen Primärschlüssel oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
+-   Sie möchten einen XML-Index zu erstellen, auf die `xml` -Datentypspalte, aber den Primärschlüssel der Haupttabelle unterscheidet sich von ihrem Gruppierungsschlüssel, oder die Haupttabelle verfügt nicht über einen Primärschlüssel oder die Haupttabelle ist ein Heap (kein Gruppierungsschlüssel). Das kann der Fall sein, wenn die Haupttabelle bereits vorhanden ist.  
   
 -   Sie wollen vermeiden, dass Tabellenscans verlangsamt werden, weil die XML-Spalte in der Tabelle vorhanden ist. Dies beansprucht Speicherplatz, unabhängig davon, ob die Speicherung innerhalb oder außerhalb der Zeile erfolgt.  
   

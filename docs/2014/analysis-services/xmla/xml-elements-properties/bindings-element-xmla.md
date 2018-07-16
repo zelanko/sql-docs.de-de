@@ -1,5 +1,5 @@
 ---
-title: Bindings-Element (XMLA) | Microsoft Docs
+title: Bindings-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Bindings element
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c630f6f5992c528ee89099c44d2ea69a9e352f5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ee02beeb04987680cf9cf516bc6f25e66287b7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302690"
 ---
 # <a name="bindings-element-xmla"></a>Bindings-Element (XMLA)
   Enthält eine Auflistung der [Binding](binding-element-xmla.md) -Elemente für das übergeordnete [Batch](../xml-elements-commands/batch-element-xmla.md) - oder [Process](../xml-elements-commands/process-element-xmla.md) -Element.  

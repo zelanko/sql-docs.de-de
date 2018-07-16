@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
 - publications [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ab132b903fcb15d11bac4a6d21ab6670397a13e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e13b845d6fba844ccf4199403240c5e8cb79bdbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303720"
 ---
 # <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) gelöscht wird.  
@@ -114,7 +114,7 @@ ms.locfileid: "36047841"
   
     1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurückgibt `false`, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
+    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurückgibt `false`, bestätigen Sie, dass die Datenbank vorhanden ist.  
   
     3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> Eigenschaft `false`.  
   

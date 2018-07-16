@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
 - data flow [Integration Services], elements
@@ -20,13 +20,13 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 53e32da7974bbf952a80a08cdf68e8eb2a8451a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d0093e96e4916ce2e23449bcc4044b86955a799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306200"
 ---
 # <a name="data-flow"></a>Datenfluss
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Datenflusskomponenten bereit: Quellen, Transformationen und Ziele. Quellen extrahieren Daten aus Datenspeichern, wie z. B. Tabellen und Sichten in relationalen Datenbanken, Dateien und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken. Mit Transformationen werden Daten geändert, zusammengefasst und bereinigt. Mit Zielen werden Daten in Datenspeicher geladen oder Datasets im Arbeitsspeicher erstellt.  

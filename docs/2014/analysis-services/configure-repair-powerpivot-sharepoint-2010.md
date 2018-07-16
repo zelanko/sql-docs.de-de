@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool) | Microsoft Docs
+title: Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284266"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)
   Verwenden Sie das PowerPivot-Konfigurationstool, um eine Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot für SharePoint 2010 zu konfigurieren oder zu reparieren. Das Konfigurationstool durchsucht zunächst das System und gibt dann eine Liste von Aktionen zurück, die notwendig sind, um eine Installation abzuschließen oder zu reparieren. Die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Setup-Assistent installiert das PowerPivot-Konfigurationstool für SharePoint 2010 sowie ein PowerPivot-Konfigurationstool für SharePoint 2013. In diesem Thema wird das PowerPivot-Konfigurationstool für SharePoint 2010 beschrieben. Weitere Informationen zu SharePoint 2010 finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2013 &#40;PowerPivot-Konfigurationstool&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -49,14 +49,14 @@ ms.locfileid: "36057371"
   
  Das Tool stellt eine Schnittstelle im Registerkartenformat bereit, die Parametereingaben, das Windows PowerShell-Skript und Statusmeldungen umfasst.  
   
- Das PowerPivot-Konfigurationstool verwendet Windows PowerShell, um den Server zu konfigurieren. Klicken Sie auf die **Skript** Tab, um das Windows PowerShell-Skript zu überprüfen der.  
+ Das PowerPivot-Konfigurationstool verwendet Windows PowerShell, um den Server zu konfigurieren. Klicken Sie auf die **Skript** Tab, um das Windows PowerShell-Skript überprüfen die.  
   
  ![Benutzeroberfläche des Konfigurationstools](media/ssas-pctui.gif "-Konfigurationstool-Benutzeroberfläche")  
   
 ##  <a name="bkmk_steps"></a> Konfigurationsschritte  
  Der Link zum Konfigurationstool ist nur sichtbar, wenn PowerPivot für SharePoint 2010 auf dem lokalen Server installiert ist.  
   
-1.  Auf der **starten** Sie im Menü **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], klicken Sie auf **Konfigurationstools**, und klicken Sie dann auf **PowerPivot-Konfigurationstool** .  
+1.  Auf der **starten** , zeigen Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], klicken Sie auf **Konfigurationstools**, und klicken Sie dann auf **PowerPivot-Konfigurationstool** .  
   
 2.  Klicken Sie auf **PowerPivot für SharePoint konfigurieren oder reparieren**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36057371"
   
 5.  **Port:** Geben Sie optional eine Portnummer für die Verbindung mit der Webanwendung für die Zentraladministration an, oder verwenden Sie die bereitgestellte, zufällig generierte Nummer. Das Konfigurationstool überprüft, ob die Nummer verfügbar ist, bevor sie als Option angeboten wird.  
   
-6.  Klicken Sie auf **SQL Server Analysis Services (PowerPivot) auf dem lokalen Server registrieren**.  
+6.  Klicken Sie auf **SQL Server Analysis Services (PowerPivot) auf lokalen Server registrieren**.  
   
      Geben Sie das Kennwort des Analysis Services-Dienstkontos ein.  
   
@@ -94,24 +94,24 @@ ms.locfileid: "36057371"
   
 |Seite|Eingabewert|Quelle|Description|  
 |----------|-----------------|------------|-----------------|  
-|**Konfigurieren oder Reparieren von PowerPivot für SharePoint**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird verwendet, um die PowerPivot-Dienstanwendung, Secure Store Service, Excel Services, die Webanwendungspoolidentität, den Websitesammlungsadministrator und das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot bereitzustellen.<br /><br /> Standardmäßig wird vom Tool das Domänenkonto des aktuellen Benutzers eingegeben. Außer wenn Sie einen Server zu Auswertungszwecken konfigurieren, sollten Sie das Konto durch ein anderes Domänenbenutzerkonto ersetzen.<br /><br /> Sie können Dienstidentitäten später auch in der Zentraladministration ändern.<br /><br /> Optional können Sie im PowerPivot-Konfigurationstool folgende dedizierte Konten angeben:<br /><br /> Webanwendung, anhand der Seite **Standardwebanwendung erstellen** (vorausgesetzt, das Tool erstellt eine Webanwendung für die Farm).<br /><br /> PowerPivot für die unbeaufsichtigte datenaktualisierung Kontos mit den **unbeaufsichtigtes Konto für Datenaktualisierung erstellen** Seite in diesem Tool.|  
+|**Konfigurieren oder Reparieren von PowerPivot für SharePoint**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird verwendet, um die PowerPivot-Dienstanwendung, Secure Store Service, Excel Services, die Webanwendungspoolidentität, den Websitesammlungsadministrator und das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot bereitzustellen.<br /><br /> Standardmäßig wird vom Tool das Domänenkonto des aktuellen Benutzers eingegeben. Außer wenn Sie einen Server zu Auswertungszwecken konfigurieren, sollten Sie das Konto durch ein anderes Domänenbenutzerkonto ersetzen.<br /><br /> Sie können Dienstidentitäten später auch in der Zentraladministration ändern.<br /><br /> Optional können Sie im PowerPivot-Konfigurationstool folgende dedizierte Konten angeben:<br /><br /> Webanwendung, anhand der Seite **Standardwebanwendung erstellen** (vorausgesetzt, das Tool erstellt eine Webanwendung für die Farm).<br /><br /> PowerPivot für die unbeaufsichtigte datenaktualisierung Kontos mit der **unbeaufsichtigtes Konto für Datenaktualisierung erstellen** Seite in diesem Tool.|  
 ||Datenbankserver|Lokale benannte PowerPivot-Instanz, falls verfügbar|Wenn eine Datenbank-Engine-Instanz als benannte PowerPivot-Instanz installiert ist, füllt das Tool das Datenbankserverfeld mit dieser Instanz auf. Wenn Sie die Datenbank-Engine nicht installiert haben, ist dieses Feld leer. Sie müssen eine Instanz bereitstellen. Es kann irgendeine Version oder eine Ausgabe von SQL Server sein, die für SharePoint-Farmen unterstützt wird.|  
 ||Passphrase|Benutzereingabe|Wenn Sie eine neue Farm erstellen, ist die Passphrase, die Sie eingeben, die Passphrase für die Farm. Wenn Sie PowerPivot für SharePoint zu einer vorhandenen Farm hinzufügen, müssen Sie die Passphrase bereitstellen, die für die Farm bei der Erstellung definiert wurde.|  
 ||SharePoint-Zentraladministration-Port|Standard, falls erforderlich|Wenn die Farm nicht konfiguriert ist, stellt das Tool Optionen zum Erstellen der Farm bereit, einschließlich eines HTTP-Endpunkts zur Zentraladministration. Es verwendet standardmäßig eine zufällig generierte Portnummer, die nicht in Gebrauch ist.|  
 |**Neue Farm konfigurieren**|Datenbankserver<br /><br /> Farmkonto<br /><br /> Passphrase<br /><br /> SharePoint-Zentraladministration-Port|Standard, falls erforderlich|Es werden standardmäßig die Einstellungen übernommen, die Sie auf der Hauptseite eingegeben haben.|  
-|**Lokale Dienstinstanz konfigurieren**|Analysis Services-Dienstkontokennwort|Benutzereingabe|Geben Sie das Kennwort des Analysis Services-Dienstkontos in der **registrieren Sie SQL Server Analysis Services (PowerPivot) auf dem lokalen Server** Seite.<br /><br /> Das Dienstkonto wurde während des Setups angegeben. Sie müssen jetzt das Kennwort als Eingabe zum Registrieren der lokalen Dienstinstanz bei SharePoint eingeben.|  
+|**Lokale Dienstinstanz konfigurieren**|Analysis Services-Dienstkontokennwort|Benutzereingabe|Geben Sie das Kennwort für das Analysis Services-Dienstkonto in der **registrieren Sie SQL Server Analysis Services (PowerPivot) auf lokalen Server** Seite.<br /><br /> Das Dienstkonto wurde während des Setups angegeben. Sie müssen jetzt das Kennwort als Eingabe zum Registrieren der lokalen Dienstinstanz bei SharePoint eingeben.|  
 |**PowerPivot-Dienstanwendung erstellen**|PowerPivot-Dienstanwendungsname|Default|Der Standardname lautet PowerPivot-Standarddienstanwendung. Sie können einen anderen Wert im Tool ersetzen.|  
 ||Datenbankserver für die PowerPivot-Dienstanwendung|Default|Der Datenbankserver, von dem die Datenbank der PowerPivot-Dienstanwendung gehostet wird. Der Standardservername ist der Name des für die Farm verwendeten Datenbankservers. Sie können einen anderen Wert im Tool ersetzen.|  
 ||Datenbankname der PowerPivot-Dienstanwendung|Default|Der Standarddatenbankname basiert auf dem Dienstanwendungsnamen, gefolgt von einer GUID, um einen eindeutigen Namen sicherzustellen. Sie können einen anderen Wert im Tool ersetzen.|  
-||Arbeitsmappen aktualisieren, um die Datenaktualisierung zuzulassen|Benutzereingabe|Die Datenaktualisierung schlägt fehl und wird nicht für SQL Server 2008 R2-PowerPivot-Arbeitsmappen unterstützt. Die Option **Aktualisieren von Arbeitsmappen aktualisieren, um Daten zu ermöglichen** aktualisiert die Arbeitsmappen auf SQL Server 2012 PowerPivot-Version.|  
-|**Standardwebanwendung erstellen**|Name der Webanwendung|Standard, falls erforderlich|Wenn keine Webanwendungen vorhanden sind, erstellt das Tool eine. Die Webanwendung wird für die Authentifizierung im klassischen Modus und das Lauschen konfiguriert **port 80**. Die maximale Dateiuploadgröße wird auf 2.047 MB festgelegt, den von SharePoint zugelassenen Höchstwert. Die größere Dateiuploadgröße dient der Unterstützung großer PowerPivot-Dateien.|  
+||Arbeitsmappen aktualisieren, um die Datenaktualisierung zuzulassen|Benutzereingabe|Die Datenaktualisierung schlägt fehl und wird nicht für SQL Server 2008 R2-PowerPivot-Arbeitsmappen unterstützt. Die Option **Arbeitsmappen aktualisieren, um die Daten aktualisieren** Arbeitsmappen ein Upgrade auf SQL Server 2012 PowerPivot-Version.|  
+|**Standardwebanwendung erstellen**|Name der Webanwendung|Standard, falls erforderlich|Wenn keine Webanwendungen vorhanden sind, erstellt das Tool eine. Die Webanwendung wird konfiguriert werden, für die Authentifizierung im klassischen Modus und das Lauschen **-port 80**. Die maximale Dateiuploadgröße wird auf 2.047 MB festgelegt, den von SharePoint zugelassenen Höchstwert. Die größere Dateiuploadgröße dient der Unterstützung großer PowerPivot-Dateien.|  
 ||URL|Standard, falls erforderlich|Das Tool erstellt eine URL auf Grundlage des Servernamens und verwendet die gleichen Dateinamenskonventionen wie SharePoint.|  
 ||Webanwendungspool|Standard, falls erforderlich|Das Tool erstellt in IIS einen Standardanwendungspool.|  
 ||Konto und Kennwort des Webanwendungspools|Standard, falls erforderlich|Das Anwendungspoolkonto basiert auf dem Standardkonto, aber Sie können es im Tool überschreiben.|  
 ||Webanwendungsdatenbankserver|Standard, falls erforderlich|Die Standarddatenbankinstanz ist vorausgewählt, um die Anwendungsdatenbank zu speichern, aber Sie können im Tool eine andere SQL Server-Instanz angeben.|  
 ||Webanwendungsdatenbankname|Standard, falls erforderlich|Der Datenbankname basiert auf den Dateinamenskonventionen von SharePoint, aber Sie können einen anderen Namen auswählen.|  
 |**Webanwendungslösung bereitstellen**|URL|Standard, falls erforderlich|Die Standard-URL wird von der Standardwebanwendung übernommen.|  
-||Maximale Dateigröße (in MB)|Standard, falls erforderlich|Die Standardeinstellung ist 2.047. SharePoint-Dokumentbibliotheken verfügen ebenfalls über eine maximale Größe, und die Einstellung der Dokumentbibliothek sollte von der PowerPivot-Einstellung nicht überschritten werden. Weitere Informationen finden Sie unter [konfigurieren Datei hochladen Maximalgröße &#40;PowerPivot für SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
+||Maximale Dateigröße (in MB)|Standard, falls erforderlich|Die Standardeinstellung ist 2.047. SharePoint-Dokumentbibliotheken verfügen ebenfalls über eine maximale Größe, und die Einstellung der Dokumentbibliothek sollte von der PowerPivot-Einstellung nicht überschritten werden. Weitere Informationen finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|  
 |**Websitesammlung erstellen**|Websiteadministrator|Standard, falls erforderlich|Das Tool verwendet das Standardkonto. Sie können es auf der Seite **Websitesammlung erstellen** überschreiben.|  
 ||Kontakt-E-Mail|Standard, falls erforderlich|Wenn Microsoft Outlook auf dem Server konfiguriert ist, verwendet das Tool die E-Mail-Adresse des aktuellen Benutzers. Andernfalls wird ein Platzhalterwert verwendet.|  
 ||Website-URL|Standard, falls erforderlich|Das Tool erstellt die Website-URL und verwendet die gleichen URL-Namenskonventionen wie SharePoint.|  
@@ -124,7 +124,7 @@ ms.locfileid: "36057371"
 ||Proxy für Dienstanwendung||Geben Sie den Namen für den Proxy der Secure Store Service-Anwendung ein.  Der Name wird in der Standardverbindungsgruppe angezeigt, über die Anwendungen den SharePoint-Inhaltswebanwendungen zugeordnet werden.|  
 |**Secure Store Service-Hauptschlüssel aktualisieren**|Proxy für Dienstanwendung||Geben Sie den Namen für den Proxy der Secure Store Service-Anwendung ein.|  
 ||Passphrase||Der Hauptschlüssel wird für die Datenverschlüsselung verwendet. Die zum Generieren des Schlüssels verwendete Passphrase entspricht standardmäßig der Passphrase, die zum Bereitstellen neuer Server in der Farm verwendet wird. Sie können die Standardpassphrase durch eine eindeutige Passphrase ersetzen.|  
-|**Unbeaufsichtigtes Konto für "datarefresh" erstellen**|Zielanwendungs-ID||Die Anwendungs-ID kann beschreibender Text sein.|  
+|**Unbeaufsichtigtes Konto für ' datarefresh ' erstellen**|Zielanwendungs-ID||Die Anwendungs-ID kann beschreibender Text sein.|  
 ||Anzeigename für die Zielanwendung|||  
 ||Benutzername und Kennwort des unbeaufsichtigten Kontos||Geben Sie die Anmeldeinformationen eines Windows-Benutzerkontos ein, das von der Zielanwendung verwendet und zur Ausführung einer unbeaufsichtigten Datenaktualisierung verwendet wird.|  
 ||Website-URL||Geben Sie die Website-URL der Websitesammlung ein, die der Zielanwendung zugeordnet ist. Um Zuordnungen mit zusätzlichen Websitesammlungen herzustellen, verwenden Sie die SharePoint-Zentraladministration.|  
@@ -182,10 +182,10 @@ ms.locfileid: "36057371"
  Sie können vertrauenswürdige Websites in Excel Services hinzufügen, um die Berechtigungen und Konfigurationseinstellungen auf Websites zu variieren, die Excel-Arbeitsmappen und PowerPivot-Daten bereitstellen. Weitere Informationen finden Sie unter [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="add-servers-or-applications"></a>Hinzufügen von Servern oder Anwendungen  
- Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Anweisungen hierzu finden Sie unter [Bereitstellungsprüfliste: Horizontales durch Hinzufügen von PowerPivot-Servern zu einer SharePoint 2010-Farm](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
+ Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm eine zweite Serverinstanz mit PowerPivot für SharePoint hinzufügen. Anleitungen hierzu finden Sie [Bereitstellungsprüfliste: Horizontales durch Hinzufügen von PowerPivot-Server zu einer SharePoint 2010-Farm](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen  
- ![SharePoint-Einstellungen](media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen") [Submit Feedback und Kontaktinformationen Informationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint-Einstellungen](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Senden von Feedback und Kontaktinformationen Informationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot-Konfigurationstools](power-pivot-sharepoint/power-pivot-configuration-tools.md)   

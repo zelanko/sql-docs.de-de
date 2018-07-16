@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319826"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
   Sie können die Berichtsserver-Datenbanken, die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Installation verwendet werden, in eine Instanz auf einem anderen Computer verschieben. Die Datenbanken reportserver und reportservertempdb müssen gemeinsam verschoben bzw. kopiert werden. Für eine Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sind beide Datenbanken erforderlich. Die reportservertempdb-Datenbank muss namentlich der zu verschiebenden primären reportserver-Datenbank entsprechen.  
@@ -62,7 +62,7 @@ ms.locfileid: "36148765"
   
 8.  Klicken Sie auf **Hinzufügen** , um die anzufügenden MDF- und LDF-Dateien der Berichtsserver-Datenbank auszuwählen. Wiederholen Sie diesen Schritt für die temporäre Berichtsserver-Datenbank.  
   
-9. Nach dem Anfügen der Datenbanken überprüfen, ob die `RSExecRole` ist eine Datenbankrolle in der Berichtsserver-Datenbank und die temporäre Datenbank. `RSExecRole` muss über Select, Insert, Update, Delete und Reference-Berechtigungen auf den Berichtsserver-Datenbanktabellen, und execute-Berechtigung für die gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Erstellen der Rolle RSExecRole](../security/create-the-rsexecrole.md).  
+9. Nach dem Anfügen der Datenbanken, überprüfen, ob die `RSExecRole` ist eine Datenbankrolle in der Berichtsserver-Datenbank und die temporäre Datenbank. `RSExecRole` muss über Select, Insert, Update, Delete und Reference-Berechtigungen auf dem Berichtsserver-Datenbanktabellen, und execute-Berechtigungen für die gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Erstellen der Rolle RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung mit dem Berichtsserver her.  
   
@@ -218,16 +218,16 @@ GO
 7.  Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.  
   
 > [!NOTE]  
->  Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Installation erfordert, dass die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Instanz enthalten die `RSExecRole` Rolle. Wenn Sie die Berichtsserver-Datenbankverbindung über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool festlegen, werden Rollen erstellt und Anmelderegistrierungen sowie Rollenzuweisungen vorgenommen. Wenn Sie zum Konfigurieren der Verbindung alternative Vorgehensweisen verwenden (insbesondere das Befehlszeilen-Hilfsprogramm rsconfig.exe), ist der Berichtsserver nicht betriebsbereit. Sie müssen möglicherweise WMI-Code schreiben, um den Berichtsserver verfügbar zu machen. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Installation erfordert, dass die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Instanz die `RSExecRole` Rolle. Wenn Sie die Berichtsserver-Datenbankverbindung über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool festlegen, werden Rollen erstellt und Anmelderegistrierungen sowie Rollenzuweisungen vorgenommen. Wenn Sie zum Konfigurieren der Verbindung alternative Vorgehensweisen verwenden (insbesondere das Befehlszeilen-Hilfsprogramm rsconfig.exe), ist der Berichtsserver nicht betriebsbereit. Sie müssen möglicherweise WMI-Code schreiben, um den Berichtsserver verfügbar zu machen. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen der Rolle RSExecRole](../security/create-the-rsexecrole.md)   
- [Starten Sie und beenden Sie des Berichtsserver-Diensts](start-and-stop-the-report-server-service.md)   
- [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Starten Sie und beenden Sie des Berichtsserverdiensts](start-and-stop-the-report-server-service.md)   
+ [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig-Hilfsprogramm (SSRS)](../tools/rsconfig-utility-ssrs.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Berichtsserver-Datenbank &#40;SSRS im einheitlichen Modus&#41;](report-server-database-ssrs-native-mode.md)  
+ [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](report-server-database-ssrs-native-mode.md)  
   
   

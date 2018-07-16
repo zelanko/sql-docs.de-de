@@ -1,12 +1,11 @@
 ---
-title: Assemblys (Datenbankmodul) | Microsoft Docs
+title: Assemblys (Database Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -17,18 +16,18 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5429ae69dfabd8d978e3dff6a2a29ff3f4ba56fe
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697111"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359392"
 ---
 # <a name="assemblies-database-engine"></a>Assemblys (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die Themen in diesem Abschnitt enthalten Informationen, damit Sie Assemblys verstehen, entwerfen und implementieren können.  
   
- Assemblys stellen DLL-Dateien, die in einer Instanz von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Bereitstellen von Funktionen, gespeicherte Prozeduren, Trigger, benutzerdefinierte Aggregate und benutzerdefinierte Typen, die in einer von gehosteten verwalteten Codesprachen geschrieben wurden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), statt in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Assemblys sind DLL-Dateien, die in einer Instanz von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Bereitstellen von Funktionen, gespeicherte Prozeduren, Trigger, benutzerdefinierte Aggregate und benutzerdefinierte Typen, die in einer der von gehosteten verwalteten Codesprachen geschrieben wurden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] gemeinsame Sprachlaufzeit (CLR), statt in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Eine Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein Objekt, das auf ein verwaltetes Anwendungsmodul (DLL-Datei) verweist, das in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR erstellt wurde. Eine Assembly enthält Klassenmetadaten und verwalteten Code. Das Hochladen einer Assembly in eine Instanz von SQL Server ist der erste Schritt beim Erstellen eines der folgenden Datenbankobjekte:  
   
@@ -38,7 +37,7 @@ ms.locfileid: "35697111"
   
 -   CLR-Trigger. Weitere Informationen finden Sie unter [Erstellen von CLR-Triggern](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Benutzerdefinierte Aggregatfunktionen. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Aggregaten](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Benutzerdefinierte Aggregatfunktionen. Weitere Informationen finden Sie unter [erstellen benutzerdefinierte Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Benutzerdefinierte Typen. Weitere Informationen finden Sie unter [Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md).  
   

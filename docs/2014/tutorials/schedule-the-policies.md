@@ -1,5 +1,5 @@
 ---
-title: Planen der Richtlinien | Microsoft Docs
+title: Planen der Richtlinien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99c6e3a4eacfea76ff16ea266d38f2087c088f33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: c328073f25c27ff05b8b6edbd79a56ad1fda85ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315130"
 ---
 # <a name="schedule-the-policies"></a>Planen der Richtlinien
   In dieser Aufgabe planen Sie die Best Practices-Richtlinien, die Sie in der vorherigen Aufgabe importiert haben.  
@@ -40,7 +40,7 @@ ms.locfileid: "36056604"
 5.  Wiederholen Sie die Schritte 1 bis 4 für jede Richtlinie, die Sie planen möchten.  
   
     > [!NOTE]  
-    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Öffnen das Protokoll, mit der Maustaste **richtlinienverwaltung**, und klicken Sie dann auf **Verlauf anzeigen**.  
+    >  Um nach der Ausführung einer geplanten Richtlinie die Auswertungsergebnisse anzuzeigen, öffnen Sie auf der Zielinstanz das Protokoll zum Richtlinienverlauf. Öffnen das Protokoll, mit der Maustaste **richtlinienverwaltung**, und klicken Sie dann auf **Versionsgeschichte**.  
   
 ## <a name="summary"></a>Zusammenfassung  
  Sie haben geplante Richtlinien konfiguriert, die auf einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt werden. Wenn Sie geplante Richtlinien auf mehreren Instanzen bereitstellen möchten, setzen Sie das Lernprogramm mit der nächsten Aufgabe fort.  

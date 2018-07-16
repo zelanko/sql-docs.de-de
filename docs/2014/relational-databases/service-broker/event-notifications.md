@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305110"
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
   Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Konzepte der Ereignisbenachrichtigungen  
  Wenn eine Ereignisbenachrichtigung erstellt wird, werden eine oder mehrere [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen zwischen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem von Ihnen angegebenen Zieldienst geöffnet. Die Konversationen bleiben in der Regel geöffnet, so lange die Ereignisbenachrichtigung als Objekt für die Serverinstanz vorhanden ist. In einigen Fehlerfällen können die Konversationen geschlossen werden, bevor die Ereignisbenachrichtigung gelöscht wird. Diese Konversationen werden niemals für Ereignisbenachrichtigungen freigegeben. Jede Ereignisbenachrichtigung besitzt ihre eigenen, exklusiven Konversationen. Das explizite Beenden einer Konversation verhindert, dass der Zieldienst weitere Nachrichten empfängt, und die Konversation wird bei der nächsten Auslösung der Ereignisbenachrichtigung nicht erneut geöffnet.  
   
- Ereignisinformationen übermittelt die [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst als Variable des Typs `xml` , die Informationen zum Zeitpunkt ein Ereignisses, zum betroffenen Datenbankobjekt zur bietet die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batchanweisung Beteiligten und andere Informationen. Weitere Informationen zum XML-Schema, das von Ereignisbenachrichtigungen erstellt wird, finden Sie unter [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Übermittelt Informationen zu Ereignissen der [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst als Variable des Typs `xml` stellt Informationen zum Auftreten eines Ereignisses, über die betroffenen Datenbankobjekt der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batchanweisung Beteiligten und andere Informationen. Weitere Informationen zum XML-Schema, das von Ereignisbenachrichtigungen erstellt wird, finden Sie unter [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Ereignisbenachrichtigungen im Vergleich zur Trigger  
  In der folgenden Tabelle werden Trigger und Ereignisbenachrichtigungen verglichen und Unterschiede aufgezeigt.  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Die Namen von DML-Triggern stammen aus dem Bereich des Schemas. Die Namen von DDL-Triggern stammen aus dem Bereich der Datenbank oder des Servers.|Die Namen von Ereignisbenachrichtigungen stammen aus dem Bereich des Servers oder der Datenbank. Ereignisbenachrichtigungen für ein QUEUE_ACTIVATION-Ereignis stammen aus dem Bereich einer bestimmten Warteschlange.|  
 |DML-Trigger weisen den gleichen Besitzer wie die Tabellen auf, auf die sie angewendet werden.|Der Besitzer einer Ereignisbenachrichtigung für eine Warteschlange kann einen anderen Besitzer als das Objekt aufweisen, auf das diese angewendet wird.|  
 |Trigger unterstützen die EXECUTE AS-Klausel.|Ereignisbenachrichtigungen unterstützen die EXECUTE AS-Klausel nicht.|  
-|Die Ereignisinformationen von DDL-Trigger kann aufgezeichnet werden, mithilfe der EVENTDATA-Funktion gibt eine `xml` -Datentyp.|Ereignisbenachrichtigungen senden `xml` -Ereignisinformationen an einen Service Broker-Dienst. Die Informationen werden für das gleiche Schema formatiert, das auch die EVENTDATA-Funktion verwendet.|  
+|Ereignisinformationen von DDL-Trigger kann erfasst werden, mithilfe der EVENTDATA-Funktion, wodurch ein `xml` -Datentyp.|Ereignisbenachrichtigungen senden `xml` -Ereignisinformationen an einen Service Broker-Dienst. Die Informationen werden für das gleiche Schema formatiert, das auch die EVENTDATA-Funktion verwendet.|  
 |Metadaten zu Triggern sind in den **sys.triggers** - und **sys.server_triggers** -Katalogsichten enthalten.|Metadaten zu Ereignisbenachrichtigungen sind in den **sys.event_notifications**- und **sys.server_event_notifications**-Katalogsichten enthalten.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Ereignisbenachrichtigungen im Vergleich zur SQL-Ablaufverfolgung  

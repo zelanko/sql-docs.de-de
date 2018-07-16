@@ -1,5 +1,5 @@
 ---
-title: 'Erstellen von konstanter Elemente mithilfe von Sql: ist-Constant (SQLXML 4.0) | Microsoft Docs'
+title: 'Erstellen von Konstanten Elementen unter Verwendung von Sql: ist-Constant (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b275f695057480bb2833d5b05e0cbef354a33ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e475ad2cef5ef5729b5893f3218b0659528ffa14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317980"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
   Zum Festlegen eines constant-Elements, d. h. eines Elements im XSS-Schema, das keiner Datenbanktabelle oder -spalte zugeordnet werden kann, können Sie die Anmerkung `sql:is-constant` verwenden. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die `sql:is-constant`-Anmerkung kann für ein Element angegeben werden, das über keine Attribute verfügt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
@@ -37,7 +37,7 @@ ms.locfileid: "36050516"
   
 -   Hinzufügen eines Elements der obersten Ebene zum XML-Dokument. XML erfordert ein einzelnes Element (Stammelement) der obersten Ebene für das Dokument.  
   
--   Erstellen von Containerelementen, z. B. ein  **\<Orders >** Element, das alle Reihenfolgen umschließt.  
+-   Erstellen von Containerelementen, z. B. eine  **\<Bestellungen >** -Element, das alle Reihenfolgen umschließt.  
   
  Die `sql:is-constant` -Anmerkung kann hinzugefügt werden, um eine  **\<ComplexType >** Element.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36050516"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Angeben von "sql:is-constant" zum Hinzufügen eines Containerelements  
- In diesem mit Anmerkungen in XSD-Schema  **\<CustomerOrders >** als constant-Element definiert, indem die `sql:is-constant` Attribut mit einem Wert von 1. Aus diesem Grund  **\<CustomerOrders >** keiner Datenbanktabelle oder – Spalte zugeordnet ist. Dieses constant-Element besteht aus den  **\<Reihenfolge >** untergeordnete Elemente.  
+ In diesem mit Anmerkungen in XSD-Schema  **\<CustomerOrders >** wird als constant-Element definiert, durch Angabe der `sql:is-constant` Attribut mit einem Wert von 1. Aus diesem Grund  **\<CustomerOrders >** ist nicht auf Sie keiner Datenbanktabelle oder – Spalte zugeordnet. Dieses constant-Element besteht aus den  **\<Reihenfolge >** untergeordnete Elemente.  
   
- Obwohl  **\<CustomerOrders >** entspricht keinem keiner Datenbanktabelle oder-Spalte wird immer noch im XML-Ergebnis als Containerelement mit den  **\<Reihenfolge >** untergeordnete Elemente.  
+ Obwohl  **\<CustomerOrders >** ordnet nicht auf Sie keiner Datenbanktabelle oder-Spalte erscheint weiterhin in der XML-Ergebnis als Containerelement mit den  **\<Reihenfolge >** untergeordnete Elemente.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -109,7 +109,7 @@ ms.locfileid: "36050516"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318330"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
   In diesem Thema wird beschrieben, wie ein Abonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) neu initialisiert wird. Einzelne Abonnements können für die erneute Initialisierung markiert werden, sodass während der nächsten Synchronisierung eine neue Momentaufnahme angewendet wird.  
@@ -123,7 +123,7 @@ ms.locfileid: "36049677"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>So initialisieren Sie ein Pullabonnement mit einer Mergeveröffentlichung erneut  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql) aus. Geben Sie **@publisher**, **@publisher_db**und **@publication**verfügbar ist. Geben Sie den Wert, um die Änderungen vom Abonnenten hochzuladen, bevor die neuinitialisierung durchgeführt, `true` für **@upload_first**. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Merge-Agents markiert.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql) aus. Geben Sie **@publisher**, **@publisher_db**und **@publication**verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die neuinitialisierung durchgeführt wird, geben Sie den Wert `true` für **@upload_first**. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Merge-Agents markiert.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
@@ -132,7 +132,7 @@ ms.locfileid: "36049677"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>So initialisieren Sie ein Pushabonnement mit einer Mergeveröffentlichung erneut  
   
-1.  Führen Sie auf dem Verleger [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql) aus. Geben Sie **@publication**, **@subscriber**und **@subscriber_db**verfügbar ist. Geben Sie den Wert, um die Änderungen vom Abonnenten hochzuladen, bevor die neuinitialisierung durchgeführt, `true` für **@upload_first**. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
+1.  Führen Sie auf dem Verleger [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql) aus. Geben Sie **@publication**, **@subscriber**und **@subscriber_db**verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die neuinitialisierung durchgeführt wird, geben Sie den Wert `true` für **@upload_first**. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  

@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Hinzufügen von Schleifen | Microsoft Docs'
+title: 'Lektion 2: Hinzufügen von Schleifen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f67531366ef7ff91e3afcc4b8d55b7cc08635e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1d67ffcac889a49de14f628cf7eb996895cf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281476"
 ---
 # <a name="lesson-2-adding-looping"></a>Lektion 2: Hinzufügen von Schleifen
-  In [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md), Sie erstellt ein Paket, das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe der Suchtransformationen transformiert und schließlich laden die Daten in der  **FactCurrency** der Faktentabelle der **AdventureWorksDW2012** -Beispieldatenbank.  
+  In [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md), Erstellung ein Pakets, das Daten aus einer einzelnen Flatfilequelle extrahiert, mithilfe der Suchtransformationen transformiert und schließlich laden die Daten in die  **FactCurrency** Faktentabelle der der **AdventureWorksDW2012** -Beispieldatenbank.  
   
  Das Verwenden einer einzelnen flachen Datei ist allerdings bei einem ETL-Vorgang (Extract, Transform and Load, Extrahieren, Transformieren und Laden) selten. Von einem typischen ETL-Vorgang würden Daten aus mehreren flachen Dateiquellen extrahiert. Das Extrahieren von Daten aus mehreren Quellen erfordert eine iterative (wiederholende) Ablaufsteuerung. Mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist es auf einfache Weise möglich, Iterationen oder Schleifen zu Paketen hinzuzufügen.  
   

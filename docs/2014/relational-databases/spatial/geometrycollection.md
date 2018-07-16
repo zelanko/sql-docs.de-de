@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307520"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  Ein `GeometryCollection` ist eine Auflistung von NULL oder mehr `geometry` oder `geography` Instanzen. Ein `GeometryCollection` kann leer sein.  
+  Ein `GeometryCollection` ist eine Sammlung von NULL oder mehr `geometry` oder `geography` Instanzen. Ein `GeometryCollection` kann leer sein.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection-Instanzen  
   
@@ -38,14 +38,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- Das folgende Beispiel löst eine `System.FormatException` da die `LinesString` Instanz die `GeometryCollection` Instanz wird nicht akzeptiert.  
+ Das folgende Beispiel löst eine `System.FormatException` da die `LinesString` -Instanz der `GeometryCollection` Instanz wird nicht akzeptiert.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Eine `GeometryCollection`-Instanz ist gültig, wenn alle Instanzen, die die `GeometryCollection`-Instanz beinhalten, gültig sind. Im folgenden werden drei gültige `GeometryCollection` -Instanzen und eine Instanz, die nicht gültig ist.  
+ Eine `GeometryCollection`-Instanz ist gültig, wenn alle Instanzen, die die `GeometryCollection`-Instanz beinhalten, gültig sind. Das folgende Beispiel zeigt drei gültigen `GeometryCollection` Instanzen und einer Instanz, die nicht gültig ist.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

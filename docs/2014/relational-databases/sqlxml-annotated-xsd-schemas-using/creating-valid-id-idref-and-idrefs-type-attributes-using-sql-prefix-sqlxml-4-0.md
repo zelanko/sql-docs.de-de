@@ -1,5 +1,5 @@
 ---
-title: Erstellen die gültige ID, IDREF und IDREFS-Typ-Attribute Sql:prefix (SQLXML 4.0) | Microsoft Docs
+title: Erstellen die gültige ID, IDREF und IDREFS-Typ Attribute verwenden Sql:prefix (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da57705288df64e630b0d69781c151cd1310299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215030"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit 'sql:prefix' (SQLXML 4.0)
   Für ein Attribut kann der ID-Attributtyp angegeben werden. Attribute vom Typ IDREF oder IDRES können dann verwendet werden, um auf das ID-Attribut zu verweisen. Auf diese Weise werden Links zwischen Dokumenten gebildet.  
   
- ID, IDREF und IDREFS entsprechen, abgesehen von wenigen Unterschieden, Primärschlüssel/Fremdschlüssel-Beziehungen in der Datenbank. In einem XML-Dokument müssen die Werte der Attribute vom Typ ID eindeutig sein. Wenn **CustomerID** und **OrderID** als ID-Typ in einem XML-Dokument Attribute angegeben sind, diese Werte müssen unterschiedlich sein. In einer Datenbank können die Spalten CustomerID und SalesOrderID allerdings die gleichen Werte haben. (Zum Beispiel sind die Einträge CustomerID = 1 und OrderID = 1 in der Datenbank gültig).  
+ ID, IDREF und IDREFS entsprechen, abgesehen von wenigen Unterschieden, Primärschlüssel/Fremdschlüssel-Beziehungen in der Datenbank. In einem XML-Dokument müssen die Werte der Attribute vom Typ ID eindeutig sein. Wenn **"CustomerID"** und **"OrderID"** als ID-Typ in einem XML-Dokument, Attribute angegeben werden, diese Werte müssen unterschiedlich sein. In einer Datenbank können die Spalten CustomerID und SalesOrderID allerdings die gleichen Werte haben. (Zum Beispiel sind die Einträge CustomerID = 1 und OrderID = 1 in der Datenbank gültig).  
   
  Für die Gültigkeit der Attribute ID, IDREF und IDREFS gelten folgende Voraussetzungen:  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36047118"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Angeben von ID- und IDREFS-Typen  
- Im folgenden Schema wird die  **\<Kunden >** Element besteht aus den  **\<Reihenfolge >** untergeordnetes Element. Die  **\<Reihenfolge >** Element verfügt auch über ein untergeordnetes Element der  **\<OrderDetail >** Element.  
+ Im folgenden Schema wird die  **\<Kunden >** Element besteht aus den  **\<Reihenfolge >** untergeordnetes Element. Die  **\<Reihenfolge >** -Element verfügt ebenso über ein untergeordnetes Element der  **\<OrderDetail >** Element.  
   
- Die **OrderIDList** Attribut des  **\<Kunden >** ist ein Attribut des IDREFS-Typ, der auf verweist die **OrderID** Attribut von der  **\< Reihenfolge >** Element.  
+ Die **OrderIDList** Attribut  **\<Kunden >** ist ein Attribut des IDREFS-Typ, der auf verweist die **"OrderID"** Attribut der  **\< Reihenfolge >** Element.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -135,7 +135,7 @@ ms.locfileid: "36047118"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Teilergebnis:  
   

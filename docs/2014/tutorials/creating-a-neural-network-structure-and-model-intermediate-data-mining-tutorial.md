@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer neuronalen Netzwerkstruktur und eines Modells (mittleres Datamining-Lernprogramm) | Microsoft Docs
+title: Erstellen einer Struktur des neuronalen Netzwerks und eines Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - DISCRETIZED column
@@ -19,32 +19,32 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 181ae461836c545a39430af08db7fb27693d7acb
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304750"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Um ein Data Mining-Modell zu erstellen, müssen Sie zuerst mithilfe des Data Mining-Assistenten eine neue Miningstruktur auf Grundlage der neuen Datenquellensicht erstellen. In diesem Task erstellen Sie mit dem Assistenten eine Miningstruktur und zugleich ein zugehöriges Miningmodell auf Grundlage des [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus.  
   
- Da neuronale Netzwerke äußerst flexibel sind und viele Kombinationen von Eingaben und Ausgaben analysieren können, sollten Sie mit mehreren Methoden der Datenverarbeitung experimentieren, um optimale Ergebnisse zu erhalten. Möglicherweise möchten z. B. die Methode anpassen, mit der das numerische Ziel für die Dienstqualität *klassifiziert*, oder gruppiert werden, um bestimmte geschäftsanforderungen zu entsprechen. Hierzu fügen Sie der Miningstruktur eine neue Spalte hinzu, die numerische Daten auf eine andere Weise gruppiert, und erstellen dann ein Modell, das die neue Spalte verwendet. Mithilfe dieser Miningmodelle werden Daten durchsucht.  
+ Da neuronale Netzwerke äußerst flexibel sind und viele Kombinationen von Eingaben und Ausgaben analysieren können, sollten Sie mit mehreren Methoden der Datenverarbeitung experimentieren, um optimale Ergebnisse zu erhalten. Beispielsweise möchten Sie die Methode anpassen, das numerische Ziel für die Dienstqualität *klassifiziert*, oder gruppiert werden, um bestimmte geschäftsanforderungen zu entsprechen. Hierzu fügen Sie der Miningstruktur eine neue Spalte hinzu, die numerische Daten auf eine andere Weise gruppiert, und erstellen dann ein Modell, das die neue Spalte verwendet. Mithilfe dieser Miningmodelle werden Daten durchsucht.  
   
  Wenn Sie vom neuronalen Netzwerkmodell dann gelernt haben, welche Faktoren sich am stärksten auf Ihre geschäftliche Fragestellung auswirken, erstellen Sie ein separates Modell für die Vorhersage und Bewertung. Sie verwenden hierzu den [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression-Algorithmus, der auf dem neuronalen Netzwerkmodell basiert, aber für das Suchen nach einer Lösung auf Grundlage von bestimmten Eingaben optimiert ist.  
   
  **Schritte**  
   
- [Die Standard-Miningstruktur und das Modell erstellen](#bkmk_defaul)  
+ [Erstellen Sie die standardmäßigen Miningstruktur und das Modell](#bkmk_defaul)  
   
  [Verwenden der Diskretisierung zum Klassifizieren der vorhersagbaren Spalte](#bkmk_ColumnCopy)  
   
- [Kopieren Sie die Spalte und Ändern der Diskretisierungsmethode für ein anderes Modell](#bkmk_Alias)  
+ [Kopieren Sie die Spalte aus, und Ändern der Diskretisierungsmethode für ein anderes Modell](#bkmk_Alias)  
   
  [Erstellen Sie einen Alias für die vorhersagbare Spalte, damit Modelle verglichen werden können](#bkmk_Alias2)  
   
- [Alle Modelle verarbeiten](#bkmk_SeedProcess)  
+ [Verarbeiten Sie aller Modelle](#bkmk_SeedProcess)  
   
 ## Erstellen der Callcenter-Standardstruktur  <a name="bkmk_defaul"></a>  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36313078"
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **Definitionsmethode auswählen** Seite, überprüfen Sie, ob **aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+3.  Auf der **Definitionsmethode auswählen** überprüfen Sie, ob Seite **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
-4.  Auf der **Data Mining-Struktur erstellen** Seite, überprüfen Sie, ob die Option **Miningstruktur ein Miningmodell erstellen** ausgewählt ist.  
+4.  Auf der **Erstellen von Data Mining-Struktur** Seite, überprüfen Sie, ob die Option **Miningstruktur mit Miningmodell erstellen** ausgewählt ist.  
   
 5.  Klicken Sie auf die Dropdownliste für die Option **welche Datamining-Technik möchten Sie verwenden?**, und wählen Sie dann **Microsoft Neural Networks**.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36313078"
   
 7.  Klicken Sie unter **verfügbare Datenquellensichten**Option `Call Center`, und klicken Sie auf **Weiter**.  
   
-8.  Auf der **Tabellentypen angeben** Seite der **Fall** das Kontrollkästchen neben den **FactCallCenter** Tabelle. Wählen Sie nichts für **DimDate**. Klicken Sie auf **Weiter**.  
+8.  Auf der **Tabellentypen angeben** Seite die **Fall** das Kontrollkästchen neben den **FactCallCenter** Tabelle. Wählen Sie nichts für **DimDate**. Klicken Sie auf **Weiter**.  
   
-9. Auf der **Trainingsdaten angeben** Seite **Schlüssel** neben der Spalte **FactCallCenterID.**  
+9. Auf der **Trainingsdaten** Seite **Schlüssel** neben der Spalte **FactCallCenterID.**  
   
 10. Wählen Sie die `Predict` und **Eingabe** Kontrollkästchen.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36313078"
   
      Beachten Sie, dass mehrere vorhersagbare Spalten ausgewählt wurden. Eine der Stärken des Neural Network-Algorithmus besteht in seiner Fähigkeit, alle möglichen Kombinationen von Eingabe- und Ausgabeattributen zu analysieren. Für ein großes Dataset ist dies nicht empfehlenswert, da es die Verarbeitungszeit exponentiell verlängern könnte.  
   
-12. Auf der **Inhalt und Datentyp der Spalten angeben** Seite stellen Sie sicher, dass das Raster enthält, Spalten, Inhaltstypen und Datentypen, wie in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
+12. Auf der **Inhalt und Datentyp der Spalten angeben** Seite stellen Sie sicher, dass das Raster enthält, die Spalten, Inhaltstypen und Datentypen, wie in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
   
     |Spalte|Inhaltstyp|Datentypen|  
     |-------------|------------------|----------------|  
@@ -110,22 +110,22 @@ ms.locfileid: "36313078"
     |Shift|Discrete|Textmodus|  
     |WageType|Discrete|Textmodus|  
   
-13. Auf der **legen erstellen Tests** Seite, deaktivieren Sie das Textfeld für die Option **Prozentsatz der Testdaten**. Klicken Sie auf **Weiter**.  
+13. Auf der **erstellen Tests legen** Seite, deaktivieren Sie im Textfeld für die Option **Prozentsatz der Testdaten**. Klicken Sie auf **Weiter**.  
   
 14. Auf der **Abschließen des Assistenten** Seite für die **Miningstrukturname**, Typ `Call Center`.  
   
 15. Für die **Miningmodellname**, Typ `Call Center Default NN`, und klicken Sie dann auf **Fertig stellen**.  
   
-     Die **Drillthrough zulassen** Feld ist deaktiviert, da Sie Drillthrough für Daten mit neuronalen netzwerkmodellen können nicht.  
+     Die **Drillthrough zulassen** Feld ist deaktiviert, da Sie Daten mit neuronalen netzwerkmodellen Drillthrough können nicht.  
   
-16. Im Projektmappen-Explorer mit der rechten Maustaste des Namens des Datamining-Struktur, die Sie soeben erstellt haben, und wählen Sie **Prozess**.  
+16. Im Projektmappen-Explorer mit der rechten Maustaste des Namens des Datamining-Struktur, die Sie soeben erstellt haben, und wählen **Prozess**.  
   
 ## <a name="use-discretization-to-bin-the-target-column"></a>Verwenden der Diskretisierung zum Klassifizieren der Zielspalte  
  Wenn Sie ein neuronales Netzwerkmodell erstellen, das über ein numerisches vorhersagbares Attribut verfügt, behandelt der Microsoft Neural Network-Algorithmus das Attribut in der Standardeinstellung als kontinuierliche Zahl. Zum Beispiel ist das ServiceGrade-Attribut eine Zahl, die theoretisch zwischen 0,00 (alle Anrufe werden beantwortet) und 1,00 (alle Anrufer hängen auf) liegt. In diesem Dataset verfügen die Werte über die folgende Verteilung:  
   
  ![Verteilung von Werten für Dienstqualität](../../2014/tutorials/media/skt-service-grade-valuesc.gif "Verteilung von Werten für Dienstqualität")  
   
- Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Beispielsweise bei Verwendung von clustering Identifizieren der besten Gruppen von Werten der Algorithmus teilt die Werte in ServiceGrade in Bereiche wie folgt: 0,0748051948 - 0,09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
+ Bei der Verarbeitung des Modells könnten die Ausgaben daher anders als erwartet gruppiert werden. Bei Verwendung von clustering Identifizieren der besten Wertegruppen teilt der Algorithmus die Werte in ServiceGrade z. B. in Bereiche wie folgt: 0,0748051948 - 0,09716216215. Obwohl diese Gruppierung mathematisch korrekt ist, sind solche Bereiche für Geschäftsbenutzer möglicherweise weniger sinnvoll.  
   
  In diesem Schritt gestalten Sie das Ergebnis intuitiver, indem Sie die numerischen Werte anders gruppieren und Kopien der numerischen Datenspalte erstellen.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36313078"
 |> = 0,12|36|  
   
 > [!NOTE]  
->  Diese Statistik kann nach der Verarbeitung aller Daten vom Knoten für Randstatistik des Modells abgerufen werden. Weitere Informationen über den Knoten für randstatistik finden Sie unter [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+>  Diese Statistik kann nach der Verarbeitung aller Daten vom Knoten für Randstatistik des Modells abgerufen werden. Weitere Informationen zu den Knoten für randstatistik, finden Sie unter [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  In dieser Tabelle zeigt die Spalte VALUE an, wie die Zahl für ServiceGrade behandelt wurde. Die Spalte SUPPORT zeigt Ihnen, wie viele Fälle über diesen Wert verfügen oder in diesen Bereich fallen.  
   
@@ -183,14 +183,14 @@ ms.locfileid: "36313078"
   
  Weitere Informationen zu klassifizierungsoptionen finden Sie unter [Diskretisierungsmethoden &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md).  
   
- Statt die numerischen Werte hinzufügen Sie alternativ eine separate abgeleitete Spalte, die die Dienstqualitäten in vordefinierte Zielbereiche, z. B. klassifiziert **bewährte** (ServiceGrade \<= 0,05),  **Akzeptable** (0,10 > ServiceGrade > 0,05), und **schlechte** (ServiceGrade > = 0,10).  
+ Alternativ, statt die numerischen Werte zu verwenden, können, fügen Sie eine separate abgeleitete Spalte, die die Dienstqualitäten in vordefinierte Zielbereiche, z. B. klassifiziert **bewährte** (ServiceGrade \<= 0,05),  **Zulässige** (0,10 > ServiceGrade > 0,05), und **schlechte** (ServiceGrade > = 0,10).  
   
-###  <a name="bkmk_newColumn"></a> Eine Kopie einer Spalte erstellen und Ändern der Diskretisierungsmethode  
- Sie stellen eine Kopie der Miningspalte, die das ServiceGrade-Zielattribut enthält und die Methode, wie die Zahlen gruppiert werden. Sie können mehrere Kopien einer Spalte in einer Miningstruktur erstellen, einschließlich des vorhersagbaren Attributs.  
+###  <a name="bkmk_newColumn"></a> Erstellen Sie eine Kopie einer Spalte, und Ändern der Diskretisierungsmethode  
+ Sie erstellen eine Kopie der Miningspalte, die das ServiceGrade-Zielattribut enthält und ändern, wie die Nummern gruppiert werden. Sie können mehrere Kopien einer Spalte in einer Miningstruktur erstellen, einschließlich des vorhersagbaren Attributs.  
   
  Für dieses Lernprogramm verwenden Sie die Equal Areas-Methode der Diskretisierung und geben vier Buckets an. Die Gruppierungen, die sich aus dieser Methode ergeben, liegen relativ nah an den Zielwerten, die für Ihre Geschäftsbenutzer von Interesse sind.  
   
-####  <a name="bkmk_ColumnCopy"></a> So erstellen eine angepasste Kopie einer Spalte in der Miningstruktur  
+####  <a name="bkmk_ColumnCopy"></a> Um eine angepasste Kopie einer Spalte in der Miningstruktur zu erstellen.  
   
 1.  Doppelklicken Sie im Projektmappen-Explorer auf die soeben erstellte Miningstruktur.  
   
@@ -202,13 +202,13 @@ ms.locfileid: "36313078"
   
      Geben Sie auch die Diskretisierungsmethode an.  
   
-4.  Maustaste auf ServiceGrade 1, und wählen Sie **Eigenschaften**.  
+4.  Mit der rechten Maustaste ServiceGrade 1, und wählen Sie **Eigenschaften**.  
   
-5.  In der **Eigenschaften** Fenster Suchen der **Namen** -Eigenschaft, und ändern Sie den Namen in **Dienst Dienstqualität-Klassifizierung** .  
+5.  In der **Eigenschaften** Fenster Suchen der **Namen** -Eigenschaft, und ändern Sie den Namen in **Dienstqualität-Klassifizierung** .  
   
 6.  Im angezeigten Dialogfeld können Sie auswählen, ob Sie die gleiche Änderung für die Namen aller zugehörigen Miningmodellspalten übernehmen möchten. Klicken Sie auf **Nein**.  
   
-7.  In der **Eigenschaften** Fenster, suchen Sie den Abschnitt **Datentyp** und erweitern Sie ihn bei Bedarf.  
+7.  In der **Eigenschaften** Fenster Suchen Sie den Abschnitt **Datentyp** und erweitern Sie ihn bei Bedarf.  
   
 8.  Ändern Sie den Wert der Eigenschaft `Content` von `Continuous` auf `Discretized`.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "36313078"
   
 #### <a name="to-add-a-mining-model-based-on-the-new-discretized-column"></a>So fügen Sie ein Miningmodell auf Grundlage der neuen diskretisierten Spalte hinzu  
   
-1.  Im Projektmappen-Explorer mit der rechten Maustaste der Miningstruktur, die Sie soeben erstellt haben, und wählen Sie **öffnen**.  
+1.  Im Projektmappen-Explorer mit der rechten Maustaste der Miningstruktur, die Sie soeben erstellt haben, und wählen **öffnen**.  
   
 2.  Klicken Sie auf die Registerkarte **Miningmodelle** .  
   
@@ -248,23 +248,23 @@ ms.locfileid: "36313078"
 6.  Suchen Sie analog dazu den Eintrag ServiceGrade-Klassifizierung, und legen Sie die Verwendung von `Ignore` auf `Predict` fest.  
   
 ##  <a name="bkmk_Alias2"></a> Erstellen eines Alias für die Zielspalte  
- In der Regel können Sie keine Miningmodelle vergleichen, die unterschiedliche vorhersagbare Attribute verwenden. Sie können jedoch einen Alias für eine Miningmodellspalte erstellen. D. h. können Sie die Spalte ServiceGrade-Klassifizierung, in dem Miningmodell umbenennen, sodass er den gleichen Namen wie die ursprüngliche Spalte aufweist. Anschließend können Sie diese beiden Modelle trotz der unterschiedlichen Diskretisierung der Daten in einem Genauigkeitsdiagramm direkt vergleichen.  
+ In der Regel können Sie keine Miningmodelle vergleichen, die unterschiedliche vorhersagbare Attribute verwenden. Sie können jedoch einen Alias für eine Miningmodellspalte erstellen. Also können Sie die Spalte ServiceGrade-Klassifizierung, in dem Miningmodell umbenennen, sodass er den gleichen Namen wie die ursprüngliche Spalte aufweist. Anschließend können Sie diese beiden Modelle trotz der unterschiedlichen Diskretisierung der Daten in einem Genauigkeitsdiagramm direkt vergleichen.  
   
-###  <a name="bkmk_Alias"></a> So fügen Sie einen Alias für eine Miningstrukturspalte in einem Miningmodell hinzu  
+###  <a name="bkmk_Alias"></a> Um einen Alias für eine Miningstrukturspalte in einem Miningmodell hinzuzufügen.  
   
-1.  In der **Miningmodelle** Registerkarte **Struktur**, wählen Sie die ServiceGrade-Klassifizierung.  
+1.  In der **Miningmodelle** Registerkarte **Struktur**, Eintrag ServiceGrade-Klassifizierung.  
   
      Beachten Sie, dass die **Eigenschaften** Fenster zeigt die Eigenschaften des ScalarMiningStructureColumn-Objekts.  
   
 2.  Klicken Sie unter der Spalte ServiceGrade-Klassifizierung NN für das Miningmodell auf die Zelle, die der Spalte ServiceGrade-Klassifizierung entspricht.  
   
-     Beachten Sie, die nun die **Eigenschaften** Fenster zeigt die Eigenschaften des MiningModelColumn-Objekts.  
+     Beachten Sie, die jetzt den **Eigenschaften** Fenster zeigt die Eigenschaften des MiningModelColumn-Objekts.  
   
 3.  Suchen Sie die **Namen** -Eigenschaft, und ändern Sie den Wert auf `ServiceGrade`.  
   
 4.  Suchen Sie die **Beschreibung** Eigenschaft, und geben **temporärer Spaltenalias**.  
   
-     Die **Eigenschaften** Fenster sollte die folgenden Informationen enthalten:  
+     Die **Eigenschaften** Fenster sollte Folgendes enthalten:  
   
     |Eigenschaft|value|  
     |--------------|-----------|  
@@ -312,7 +312,7 @@ ms.locfileid: "36313078"
     > [!NOTE]  
     >  Welchen Wert Sie als Ausgangswert auswählen, ist gleichgültig, solange für alle verwandten Modelle der gleiche Ausgangswert verwendet wird.  
   
-3.  In der **Miningmodelle** klicken Sie im Menü **Miningstruktur verarbeiten und alle Modelle**. Klicken Sie auf **Ja** , um das aktualisierte Data Mining-Projekt auf dem Server bereitzustellen.  
+3.  In der **Miningmodelle** , wählen Sie im Menü **Miningstruktur verarbeiten und alle Modelle**. Klicken Sie auf **Ja** , um das aktualisierte Data Mining-Projekt auf dem Server bereitzustellen.  
   
 4.  Klicken Sie im Dialogfeld **Miningmodell verarbeiten** auf **Ausführen**.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "36313078"
  Nachdem Sie nun die zwei zugehörigen Miningmodelle erstellt haben, durchsuchen Sie die Daten auf ihre Beziehungen.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Untersuchen des Modells Callcenter &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+ [Untersuchen des Callcentermodells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningstrukturen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  

@@ -5,10 +5,9 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 03111a596ba59bd22e2c6c4811ab37c93a9bf138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302740"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat (SQL Server)
   Standardmäßig sind sowohl der Lese-/Schreibzugriff als auch der Zugriff für beabsichtigte Lesevorgänge für das primäre Replikat zulässig, während für sekundäre Replikate einer AlwaysOn-Verfügbarkeitsgruppe keine Verbindungen zulässig sind. In diesem Thema wird beschrieben, wie der Verbindungszugriff für ein Verfügbarkeitsreplikat einer AlwaysOn-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] unter Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell konfiguriert wird.  
@@ -146,7 +145,7 @@ GO
   
 2.  Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityReplica`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityReplica`-Cmdlet. Die relevanten Parameter lauten wie folgt:  
   
-    -   Um Verbindungszugriff für die sekundäre Rolle zu konfigurieren, geben die `ConnectionModeInSecondaryRole` *Secondary_role_keyword* -Parameter, in dem *Secondary_role_keyword* einem der folgenden Werte entspricht:  
+    -   Um Verbindungszugriff für die sekundäre Rolle zu konfigurieren, geben die `ConnectionModeInSecondaryRole` *Secondary_role_keyword* -Parameter, in denen *Secondary_role_keyword* einem der folgenden Werte entspricht:  
   
          `AllowNoConnections`  
          Für die Datenbanken im sekundären Replikat sind keine direkten Verbindungen zugelassen, und die Datenbanken sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
@@ -166,7 +165,7 @@ GO
          Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist die Standardeinstellung.  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -189,7 +188,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach der Konfiguration des schreibgeschützten Zugriffs für ein Verfügbarkeitsreplikat  
  **Schreibgeschützter Zugriff auf ein lesbares sekundäres Replikat**  
   
--   Bei Verwendung der [Bcp (Hilfsprogramm)](../../../tools/bcp-utility.md) oder [Hilfsprogramms "Sqlcmd"](../../../tools/sqlcmd-utility.md), Sie können den schreibgeschützten Zugriff für alle sekundären Replikate, die aktiviert ist, für den nur-Lese Zugriff angeben, durch Angabe der `-K ReadOnly` wechseln.  
+-   Bei Verwendung der [Hilfsprogramm "Bcp"](../../../tools/bcp-utility.md) oder [Hilfsprogramms "Sqlcmd"](../../../tools/sqlcmd-utility.md), können Sie schreibgeschützten Zugriff für jedes sekundäre Replikat, das aktiviert ist, für den schreibgeschützten Zugriff angeben, durch Angabe der `-K ReadOnly` wechseln.  
   
 -   So ermöglichen Sie, dass Clientanwendungen eine Verbindung mit lesbaren sekundären Replikaten herstellen können  
   
@@ -218,7 +217,7 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [AlwaysOn: Leistungsversprechen Lesbarer sekundärer](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: Leistungsversprechen Lesbarer sekundärer Replikate](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
 -   [AlwaysOn: Warum gibt es zwei Optionen, um ein sekundäres Replikat für die lesearbeitslast zu aktivieren?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
@@ -226,7 +225,7 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [AlwaysOn: Ich habe gerade aktiviert lesbare sekundäre Replikate meine Abfrage wird jedoch blockiert.](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: Verfügbarmachen aktueller Statistiken auf lesbaren sekundären Replikaten, schreibgeschützten Datenbank und Datenbank-Momentaufnahme](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: Verfügbarmachen aktuelle Statistiken auf lesbaren sekundären Replikaten, schreibgeschützten Datenbank und Datenbank-Momentaufnahme](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
 -   [AlwaysOn: Herausforderungen bei Statistiken auf schreibgeschützten Datenbanken, Datenbank-Momentaufnahmen und sekundären Replikaten](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   

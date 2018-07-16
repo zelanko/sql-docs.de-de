@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316820"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
-  Wie in [Coding and Debugging the Script Component] erläutert (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, enthält das skriptkomponentenprojekt drei Projektelemente:  
+  Wie bereits erwähnt in [Coding and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, enthält das skriptkomponentenprojekt drei Projektelemente:  
   
 1.  Das `ScriptMain`-Element, das die `ScriptMain`-Klasse enthält, in die Sie den Code schreiben. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse.  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen `UserComponent`, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die `ScriptMain`-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von `UserComponent` abgeleitet. Die `UserComponent`-Klasse enthält die folgenden Methoden:  
   
--   Eine überschriebene Implementierung der `ProcessInput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit direkt im Anschluss an die `PreExecute`-Methode (und u. U. mehrfach) aufgerufen. `ProcessInput` übergibt die Verarbeitung an die  **\<Inputbuffer > _ProcessInput** Methode. Anschließend sucht die `ProcessInput`-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft dann beim letzten Ausgabepuffer `SetEndOfRowset` auf.  
+-   Eine überschriebene Implementierung der `ProcessInput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit direkt im Anschluss an die `PreExecute`-Methode (und u. U. mehrfach) aufgerufen. `ProcessInput` übergibt die Verarbeitung der  **\<Inputbuffer > _ProcessInput** Methode. Anschließend sucht die `ProcessInput`-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft dann beim letzten Ausgabepuffer `SetEndOfRowset` auf.  
   
 -   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInput**-Methode. Diese Standardimplementierung durchläuft jede Eingabezeile einmal und ruft **\<inputbuffer>_ProcessInputRow** auf.  
   
@@ -154,11 +154,11 @@ public override void PreExecute()
   
 -   Benannte, typisierte, lesegeschützte Accessoreigenschaften für jede ausgewählte Ausgabespalte.  
   
--   Ein lesegeschütztes  **\<Spalte > _IsNull** -Eigenschaft für jede ausgewählte Ausgabespalte, die Sie verwenden können, um den Spaltenwert auf festgelegt `null`.  
+-   Ein lesegeschütztes  **\<Spalte > _IsNull** -Eigenschaft für jede ausgewählte Ausgabespalte, die Sie, zum Festlegen des Spaltenwerts verwenden können auf `null`.  
   
 -   Eine `AddRow`-Methode, um dem Ausgabepuffer eine leere neue Zeile hinzuzufügen.  
   
--   Eine `SetEndOfRowset`-Methode, um der Datenfluss-Engine mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine `EndOfRowset`-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Diese Funktionen ist in der Regel nicht erforderlich, wenn Sie in implementierten eingabeverarbeitungsmethoden verwenden die `UserComponent` Basisklasse.  
+-   Eine `SetEndOfRowset`-Methode, um der Datenfluss-Engine mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine `EndOfRowset`-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Diese Funktionen ist in der Regel nicht erforderlich, wenn Sie die implementierten eingabeverarbeitungsmethoden verwenden die `UserComponent` Basisklasse.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen `UserComponent`, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die `ScriptMain`-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von `UserComponent` abgeleitet. Die `UserComponent`-Klasse enthält die folgenden Methoden:  
@@ -180,7 +180,7 @@ public override void PreExecute()
  Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse immer dann, wenn Sie eine Verarbeitung nur einmal durchführen müssen, nachdem Sie die Datenzeilen verarbeitet haben. In einer Quelle können Sie beispielsweise den von Ihnen zum Laden von Daten in den Datenfluss verwendeten `System.Data.SqlClient.SqlDataReader` schließen.  
   
 > [!IMPORTANT]  
->  Die Auflistung von `ReadWriteVariables` ist nur in der `PostExecute`-Methode verfügbar. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der `PostExecute` Methode auf, nachdem alle Daten wurden verarbeitet.  
+>  Die Auflistung von `ReadWriteVariables` ist nur in der `PostExecute`-Methode verfügbar. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Stattdessen erhöhen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der `PostExecute` -Methode, nachdem alle Daten verarbeitet wurden.  
   
 ## <a name="releaseconnections-method"></a>‚ReleaseConnections’-Methode  
  Quellen und Ziele müssen generell eine Verbindung mit einer externen Datenquelle herstellen. Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse, um die vorher in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>-Methode geöffnete Verbindung zu schließen und freizugeben.  
@@ -206,7 +206,7 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Configuring the Script Component in the Script Component Editor] ((configuring-the-script-component-in-the-script-component-editor.md)   

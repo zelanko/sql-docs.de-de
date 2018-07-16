@@ -1,5 +1,5 @@
 ---
-title: Gewinndiagramm (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Gewinndiagramm (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297360"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gewinndiagramm (SQL Server Data Mining-Add-Ins)
-  ![Schaltfläche auf Data Mining-Menüband Gewinn](media/dmc-profitchart.gif "Gewinndiagramm-Schaltfläche auf Data Mining-Menüband")  
+  ![Gewinn diagrammschaltfläche im Data Mining-Menüband](media/dmc-profitchart.gif "Gewinndiagramm-Schaltfläche im Data Mining-Menüband")  
   
  Ein Gewinndiagramm zeigt den geschätzten Gewinnanstieg an, der einem Miningmodell zugeordnet ist, um so zu ermitteln, welche Kunden in einem Geschäftsszenario angesprochen werden sollen. Auf der Y-Achse des Diagramms ist der Gewinn dargestellt, während auf der X-Achse der Prozentwert der vom Unternehmen angesprochenen Personen dargestellt ist. Ein typisches Gewinndiagramm zeigt einen Anstieg der Gewinne bis zu einem Wendepunkt an, nach dem die Gewinne abnehmen, wenn mehr Personen angesprochen werden.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36049602"
      Die Höhe des mit einem erfolgreichen Verkauf verbundenen Umsatzes.  
   
 ## <a name="using-the-profit-chart-wizard"></a>Verwenden des Gewinndiagramm-Assistenten  
- Beim Erstellen eines Gewinndiagramms müssen Sie auf ein bereits vorhandenes Data Mining-Modell verweisen. Sie können Modelle, um ein Modell zu suchen, die Ihre Daten entspricht, indem Sie auf Durchsuchen, **Modelle verwalten** oder **Durchsuchen** um Details zu den Algorithmus, der verwendet wurde und die Spalten im Miningmodell anzuzeigen.  
+ Beim Erstellen eines Gewinndiagramms müssen Sie auf ein bereits vorhandenes Data Mining-Modell verweisen. Sie können Modelle, um ein Modell zu finden, Ihre Daten durch Klicken auf entspricht, Durchsuchen **Modelle verwalten** oder **Durchsuchen** , finden Details zu den Algorithmus, der verwendet wurde und die Spalten im Miningmodell.  
   
  Weitere Informationen finden Sie unter [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) und [Modelle verwalten &#40;SQL Server Data Mining-Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36049602"
  Wenn Sie Vorhersagen für diskrete numerische Werte treffen möchten, müssen Sie den genauen vorherzusagenden Zielwert auswählen.  
   
 ## <a name="understanding-the-profit-chart"></a>Grundlegendes zum Gewinndiagramm  
- Das Gewinndiagramm enthält eine graue vertikale Linie, die Sie durch Klicken auf eine Stelle des Diagramms verschieben können. Die **Mininglegende** zeigt ein Ergebnis, auffüllungsrichtigkeit und die vorhersagewahrscheinlichkeit für den Speicherort der grauen Linie im Diagramm zugeordnet sind. Wenn Sie mit der grauen Linie im Diagramm den Punkt des höchsten Gewinns auswählen, können Sie über den Wert Vorhersagewahrscheinlichkeit einen Wahrscheinlichkeitsschwellenwert festlegen, ab dem ein Kunde angesprochen wird.  
+ Das Gewinndiagramm enthält eine graue vertikale Linie, die Sie durch Klicken auf eine Stelle des Diagramms verschieben können. Die **Mininglegende** zeigt ein Ergebnis, auffüllungsrichtigkeit und die vorhersagewahrscheinlichkeit, die durch den Speicherort der grauen Linie im Diagramm verknüpft sind. Wenn Sie mit der grauen Linie im Diagramm den Punkt des höchsten Gewinns auswählen, können Sie über den Wert Vorhersagewahrscheinlichkeit einen Wahrscheinlichkeitsschwellenwert festlegen, ab dem ein Kunde angesprochen wird.  
   
  Wenn beispielsweise die Gewinnkurve ihren höchsten Punkt bei 55 Prozent der Auffüllung erreicht und die zugeordnete Vorhersagewahrscheinlichkeit bei 20 Prozent liegt, bedeutet dies, dass zur Erzielung des Gewinnmaximums nur diejenigen Kunden angesprochen werden sollten, von denen mit einer Wahrscheinlichkeit von 20 Prozent oder mehr eine Antwort erwartet werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überprüfen von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

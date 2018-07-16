@@ -1,5 +1,5 @@
 ---
-title: Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 382fd81302cfccb378ef6c1a52cf996857cd2dcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b03009502d72fdff5eb27f4cd97165cf0eee451
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292310"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
   XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorlage angegeben werden. Das Zuordnungsschema bestimmt die Struktur des resultierenden Fragments, und die Werte werden aus der Datenbank abgerufen. Dieser Vorgang ähnelt prinzipiell dem Erstellen von Sichten mit der CREATE VIEW-Anweisung und dem Schreiben von SQL-Abfragen für diese Sichten.  
   
 > [!NOTE]  
->  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md), und die vom World Wide Web Consortium (W3C) definierten Standard.  
+>  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md), und die von der World Wide Web Consortium (W3C) definierten Standard.  
   
  Ein XML-Dokument besteht aus Knoten, z. B. Elementknoten, Attributknoten, Textknoten usw. Betrachten Sie z. B. folgendes XML-Dokument:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36059567"
 </root>  
 ```  
   
- In diesem Dokument  **\<Kunden >** ist ein Elementknoten **Cid** wird ein Attributknoten und **"Important"** ein Textknoten.  
+ In diesem Dokument  **\<Kunden >** ist ein Elementknoten **Cid** ist ein Attributknoten und **"Wichtig"** ein Textknoten.  
   
  XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Angenommen, eine Reihe von  **\<Kunden >** XPath-Knoten können auswählen, alle  **\<Reihenfolge >** Knoten mit der **Datum** -Attributwert **"7/14/1999"**. Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36059567"
   
 -   **Abfragen des Stammelements**  
   
-     In SQLXML 4.0 werden Abfragen des Stammelements (/) nicht unterstützt. Jede XPath-Abfrage muss auf einem der obersten Ebene beginnen  **\<ElementType >** im Schema.  
+     In SQLXML 4.0 werden Abfragen des Stammelements (/) nicht unterstützt. Jede XPath-Abfrage muss auf oberster Ebene beginnen  **\<ElementType >** im Schema.  
   
 -   **Erstellen von Fehlerberichten**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36059567"
      Das Fehlen einer Dokumentreihenfolge bedeutet auch, dass der Zeichenfolgenwert eines Knotens nur dann ausgewertet werden kann, wenn der betreffende Knoten nur einer Spalte in nur einer Zeile zugeordnet werden kann. Ein Element mit untergeordneten Elementen oder einem IDREFS-Knoten oder NMTOKENS-Knoten kann nicht in eine Zeichenfolge konvertiert werden.  
   
     > [!NOTE]  
-    >  In einigen Fällen können die `key-fields`-Anmerkung oder Schlüssel aus der `relationship`-Anmerkung in einer deterministischen Dokumentreihenfolge resultieren. Dies ist nicht der primäre Verwendungszweck dieser Anmerkungen Informationen jedoch finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40;SQLXML 4.0&#41; ](../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) und [angeben von Beziehungen mit Sql: Beziehung &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  In einigen Fällen können die `key-fields`-Anmerkung oder Schlüssel aus der `relationship`-Anmerkung in einer deterministischen Dokumentreihenfolge resultieren. Dies ist nicht der primäre Verwendungszweck dieser Anmerkungen Informationen jedoch finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40;SQLXML 4.0&#41; ](../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) und [angeben von Beziehungen mithilfe von Sql: Beziehung &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Datentypen**  
   

@@ -1,5 +1,5 @@
 ---
-title: Neuronales Netzwerk (Miningmodell-Viewer) | Microsoft Docs
+title: Neuronales Netzwerk (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297410"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neuronales Netzwerk (Miningmodell-Viewer)
   Verwenden Sie den **Viewer für neuronale Netzwerke** , um Miningmodelle zu durchsuchen, die auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmus oder dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression-Algorithmus aufgebaut sind.  
@@ -29,13 +29,13 @@ ms.locfileid: "36049586"
  **Weitere Informationen finden Sie unter:** [Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm.md), [Microsoft Logistic Regression-Algorithmus](data-mining/microsoft-logistic-regression-algorithm.md),[Modell mit dem Microsoft-Viewer für neuronale Netzwerke durchsuchen](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein anzuzeigendes Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den benutzerdefinierten Viewer oder den **Microsoft Generic Content Tree Viewer**verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Eingabe**  
@@ -43,7 +43,7 @@ ms.locfileid: "36049586"
   
 |value|Description|  
 |-----------|-----------------|  
-|**Attribut**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Standardauswahl, lassen  **\<alle >**, das Diagramm zeigt eine Liste aller Eingabeattribute, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
+|**Attribut**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Standardauswahl, lassen  **\<alle >**, das Diagramm zeigt eine Liste aller Eingabeattribute angezeigt, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
 |**ReplTest1**|Wählen Sie einen Wert für das Eingabeattribut aus.|  
   
  **Ausgabe**  
@@ -51,8 +51,8 @@ ms.locfileid: "36049586"
   
 |value|Description|  
 |-----------|-----------------|  
-|**Ausgabeattribut**|Wählen Sie ein vorhersagbares Attribut aus. Wenn Sie die Spalte beim Erstellen des Modells nicht als vorhersagbar definiert haben, ist das Hinzufügen hier nicht möglich.|  
-|**Wert 1**|Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 2**enthaltenen Wert verglichen wird.<br /><br /> Sie können zwei beliebige diskrete oder diskretisierte Werte vergleichen. Sie können jedoch keinen Wert mit seinem Komplement vergleichen wie in anderen Viewern.|  
+|**Output-Attributs**|Wählen Sie ein vorhersagbares Attribut aus. Wenn Sie die Spalte beim Erstellen des Modells nicht als vorhersagbar definiert haben, ist das Hinzufügen hier nicht möglich.|  
+|**Der Wert 1**|Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 2**enthaltenen Wert verglichen wird.<br /><br /> Sie können zwei beliebige diskrete oder diskretisierte Werte vergleichen. Sie können jedoch keinen Wert mit seinem Komplement vergleichen wie in anderen Viewern.|  
 |**Der Wert 2**|Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 1**enthaltenen Wert verglichen wird.|  
   
  **Variablen**  

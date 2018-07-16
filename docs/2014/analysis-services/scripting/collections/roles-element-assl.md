@@ -1,5 +1,5 @@
 ---
-title: Roles-Element (ASSL) | Microsoft Docs
+title: Roles-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Roles element
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8ced51e40e2804054a0c63368622d2df70f81fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6227c72cc4fdd20b8c739bcb6019a83fbaaaa58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295580"
 ---
 # <a name="roles-element-assl"></a>Roles-Element (ASSL)
   Enthält die Auflistung der [Role](../objects/role-element-assl.md) -Elemente, die unter dem übergeordneten Element definiert sind.  
@@ -68,7 +68,7 @@ ms.locfileid: "36150997"
   
  Die `Roles` Element Verknüpfen mit einer `Database` Element enthält, die für diese Datenbank definierten Rollen.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.RoleCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.RoleCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

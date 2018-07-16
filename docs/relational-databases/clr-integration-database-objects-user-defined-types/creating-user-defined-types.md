@@ -1,11 +1,11 @@
 ---
-title: Erstellen eines benutzerdefinierten Typs | Microsoft Docs
+title: Erstellen eines benutzerdefinierten Typs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,12 +18,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702611"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349482"
 ---
 # <a name="creating-user-defined-types"></a>Erstellen von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ Reconfigure
  Veranschaulicht Programmiertechniken, die bei der Erstellung benutzerdefinierter Typen relevant sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codelisting definiert den UDT Point, dies wird ausführlich beschrieben [Codieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Das folgende Codelisting definiert den UDT Point, das ausführlich beschrieben wird [Codieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anleitungen zum Installieren dieser Beispiele finden Sie unter [Beispiele für SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   

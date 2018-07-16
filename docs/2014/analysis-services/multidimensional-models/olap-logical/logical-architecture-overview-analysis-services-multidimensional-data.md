@@ -1,5 +1,5 @@
 ---
-title: Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284116"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
-  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als PowerPivot für SharePoint, die zum Laden und Abfragen von Excel- oder PowerPivot-Datenmodellen innerhalb einer Arbeitsmappe installiert wurde.  
+  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionaler und Data Mining-Modus** unterstützt herkömmliches OLAP und Datamining. **Im tabellarischen Modus** unterstützt tabellarische Modelle. **Integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als PowerPivot für SharePoint – wird verwendet, die für das Laden und Abfragen von Excel- oder PowerPivot-Datenmodellen innerhalb einer Arbeitsmappe installiert wurde.  
   
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [Tabellenmodellierung &#40;SSAS – tabellarisch&#41; ](../../tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Grundlegende Architektur  
- Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] heißen "\<ServerName >\\< InstanceName\>". Die folgende Abbildung zeigt alle genannten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte.  
+ Eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz kann mehrere Datenbanken enthalten, und eine Datenbank kann gleichzeitig OLAP-Objekte und Data Mining-Objekte enthalten. Anwendungen stellen eine Verbindung mit einer angegebenen Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und einer angegebenen Datenbank her. Ein Servercomputer kann mehrere Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] hosten. Instanzen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ihre Namen lauten "\<ServerName >\\< InstanceName\>". Die folgende Abbildung zeigt alle genannten Beziehungen zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte.  
   
  ![AMO ausgeführte objektbeziehungen](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "AMO ausgeführte objektbeziehungen")  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36150467"
  Die Route-Dimension stellt dar, auf welchem Weg die Importwaren ihr Ziel erreichen. Zu den Elementen dieser Dimension gehören ground, nonground, air, sea, road und rail. Die Source-Dimension gibt die Orte an, an denen die Importe produziert werden, z. B. Africa oder Asia. Die Time-Dimension stellt die Quartale und Halbjahre eines einzelnen Jahres dar.  
   
 ### <a name="aggregates"></a>Aggregate  
- Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können den "Measure"-Werte in der vorherigen Abbildung mithilfe der Calendar Time-Hierarchie in der Time-Dimension, wie im folgenden Diagramm veranschaulicht anhand einer Hierarchie Standardkalenders aggregiert werden.  
+ Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können die Measure-Werte in der vorherigen Abbildung gemäß einer Hierarchie aggregiert werden, mithilfe der Calendar Time-Hierarchie in der Time-Dimension, wie im folgenden Diagramm dargestellt.  
   
- ![Diagramm mit Measures entlang der Time-Dimension organisiert](../../../analysis-services/dev-guide/media/cubeintro2.gif "Diagramm mit Measures organisiert Time-Dimension")  
+ ![Diagramm mit Measures auf der Zeitdimension organisiert](../../../analysis-services/dev-guide/media/cubeintro2.gif "Diagramm mit Measures organisiert Time-Dimension")  
   
  Ergänzend zur Aggregation von Measures mithilfe einer einzigen Dimension können Sie Measures mithilfe von Kombinationen von Elementen unterschiedlicher Dimensionen aggregieren. Auf diese Weise ist es Anwendern des Produkts im geschäftlichen Bereich möglich, in mehreren Dimensionen gleichzeitig Measures auszuwerten. Wenn ein Anwender des Produkts im geschäftlichen Bereich z. B. die Quartalsimporte analysieren möchte, die per Luftfracht aus der östlichen und der westlichen Hemisphäre eingetroffen sind, kann der Anwender eine Abfrage an den Cube eingeben, um das folgende Dataset abzurufen.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36150467"
 |Half-Attribut in Time-Dimension|1st half, 2nd half|TimeDimensionTable|Half|2nd half|  
 |Quarter-Attribut in Time-Dimension|1st quarter, 2nd quarter, 3rd quarter, 4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- Daten in einer einzelnen Cubezelle werden normalerweise aus mehreren Zeilen in der Faktentabelle abgeleitet. Beispielsweise enthält die Cubezelle am Schnittpunkt von Air-Element, Africa-Element und 1st Quarter-Element einen Wert, der durch Aggregieren der folgenden Zeilen in abgeleitet wird die **ImportsFactTable** -Faktentabelle verknüpft werden sollen.  
+ Daten in einer einzelnen Cubezelle werden normalerweise aus mehreren Zeilen in der Faktentabelle abgeleitet. Die Cubezelle am Schnittpunkt von Air-Element, Africa-Element und 1st Quarter-Element enthält beispielsweise einen Wert, der durch Aggregieren der folgenden Zeilen in abgeleitet ist die **ImportsFactTable** Faktentabelle.  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -122,7 +122,7 @@ ms.locfileid: "36150467"
 |3645541|1|6|1|20|09.02.1999|  
 |3674906|1|6|1|36|17.02.1999|  
   
- In der vorangegangenen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
+ In der obigen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
   
  In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   

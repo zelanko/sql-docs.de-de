@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen eine Berichts des Upgrade Advisors | Microsoft Docs'
+title: 'Vorgehensweise: Anzeigen eine Berichts des Upgrade Advisors | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - viewing reports
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reports [Upgrade Advisor], viewing
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3617edd1d79e258490c0cc44fc3b21e012c4573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df6d91d700182c7d3828d9e35ac61cfaa0b3959d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303580"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors
   Der Upgrade Advisor erstellt Berichte für alle Komponenten, die Sie zur Analyse auswählen. In diesem Thema wird beschrieben, wie Sie einen Bericht des Upgrade Advisors über die Startseite des Upgrade Advisors anzeigen.  
@@ -43,7 +43,7 @@ ms.locfileid: "36057527"
   
     1.  In der **Server** Liste, wählen Sie einen Server.  
   
-    2.  In der **Instanz oder Komponente** wählen Sie eine Komponente oder Komponenteninstanz/Kombination.  
+    2.  In der **Instanz oder Komponente** wählen Sie eine Komponente oder die Komponente und einer Instanz-Kombination.  
   
      So wählen Sie an einem anderen Speicherort einen Bericht aus:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36057527"
   
     -   **Wichtigkeit**, die angibt, wie wichtig es ist, um das Problem zu beheben.  
   
-    -   **Zeitpunkt der Behebung**, der angibt, ob Sie das Problem vor oder nach dem Upgrade auf Update sollte (oder müssen) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vor oder nach der Migration der Anwendung oder die Daten oder jedes Mal, wenn.  
+    -   **Zeitpunkt der Behebung**, die angibt, ob Sie das Problem vor oder nach dem Upgrade auf beheben sollte (oder müssen) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vor oder nach der Migration der Anwendung oder die Daten oder jedes Mal, wenn.  
   
     -   Eine kurze Beschreibung des Problems.  
   
@@ -69,16 +69,16 @@ ms.locfileid: "36057527"
   
     -   Um die Objekte anzuzeigen, in denen dieses Problem gefunden wurde, klicken Sie auf **betroffene Objekte anzeigen**.  
   
-    -   Klicken Sie zum Anzeigen der Hilfe für das Problem auf **Weitere Informationen zu diesem Problem und dessen problemlösung**.  
+    -   Klicken Sie zum Anzeigen der Hilfe zum Beheben des Problems auf **Weitere Informationen zu diesem Problem und dessen problemlösung**.  
   
-    -   Um das Problem als gelöst zu markieren, sodass es beim erneuten des Berichts anzeigen ausgeblendet, wählen Sie **dieses Problem wurde behoben**.  
+    -   Um das Problem als gelöst zu markieren, sodass es das Problem wird ausgeblendet, wenn Sie den Bericht erneut anzeigen, wählen Sie **dieses Problem wurde behoben**.  
   
 > [!NOTE]  
 >  Der Bericht enthält möglicherweise ein Element für nicht zu erkennende Probleme. Dies sind Probleme, die nicht erkannt werden können oder zu viele falsche positive Ergebnisse generieren würden. Klicken Sie auf die **Weitere Informationen zu diesem Problem und dessen problemlösung** Link, um eine Liste der nicht erkennbaren Probleme für die Komponente anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweise: Exportieren von Berichten](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

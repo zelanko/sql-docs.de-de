@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades | Microsoft Docs
+title: Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234420"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades
   Mit dem Upgrade Advisor von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Upgrades auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vorbereiten. Upgrade Advisor analysiert die installierten Komponenten früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und generiert einen Bericht mit den Problemen, die entweder vor oder nach dem Upgrade behoben werden müssen.  
@@ -64,19 +64,19 @@ ms.locfileid: "36046025"
   
  Der Upgrade Advisor ist in einem Feature Pack verfügbar.  
   
- Voraussetzungen zum Installieren und Ausführen von Upgrade Advisor lauten wie folgt:  
+ Voraussetzungen zum Installieren und Ausführen von Upgrade Advisor lauten wie folgt aus:  
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 und [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer ab Version 4.5. Sie können Windows Installer von der [Windows Installer-Website](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer ab Version 4.5. Sie können Windows Installer von installieren die [Windows Installer-Website](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 finden Sie auf der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Produktmedien, und von der [.NET Framework 4-Downloadseite](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 ist verfügbar, auf die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Produktmedien, und von der [.NET Framework 4-Downloadseite](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Um .NET Framework 4 von den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Medien zu installieren, suchen Sie das Stammverzeichnis des Datenträgerlaufwerks. Doppelklicken Sie dann auf den Ordner \redist und auf den Ordner DotNetFrameworks, und führen Sie dotNetFx40_Full_x86_x64.exe aus (für 32-Bit- oder für 64-Bit-Betriebssysteme).  
   
  Klicken Sie auf der Downloadseite auf die Schaltfläche zum Herunterladen, um den Upgrade Advisor aus dem Web zu installieren. Sie können die Installation sofort ausführen oder die Datei SQLUA.msi speichern, um die Installation später auszuführen. Wenn Sie von der Produkt-CD installieren, führen Sie SQLUA.msi direkt vom Produktdatenträger.  
   
- Nach der Installation von Upgrade Advisor können Sie es aus öffnen die **starten** Menü:  
+ Nachdem Sie Upgrade Advisor installiert haben, können Sie es aus öffnen die **starten** Menü:  
   
 -   Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   

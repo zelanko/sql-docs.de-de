@@ -1,5 +1,5 @@
 ---
-title: Ziel ' Paarbildung ' Ereignis | Microsoft Docs
+title: Ziel ' Paarbildung ' Event | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291336"
 ---
 # <a name="event-pairing-target"></a>Ziel 'Ereignispaarbildung'
   Das Ziel Ereignispaarbildung ordnet zwei Ereignisse mithilfe mindestens einer Datenspalte in jedem Ereignis einander zu. Viele Ereignisse sind einander paarweise zugeordnet, z. B. die Anforderungen zur Einrichtung und Aufhebung einer Sperre. Nachdem eine Ereignissequenz paarweise zugeordnet wurde, werden beide Ereignisse verworfen. Das Verwerfen übereinstimmender Sätze ermöglicht ein problemloses Erkennen von eingerichteten Sperren, die noch nicht aufgehoben wurden.  
@@ -47,7 +47,7 @@ ms.locfileid: "36047672"
   
  Alle einem Ereignis zugeordneten Daten werden aufgezeichnet und für zukünftige paarweise Zuordnungen gespeichert. Außerdem werden von Aktionen hinzugefügte Daten gesammelt. Die aufgezeichneten Ereignisdaten werden im Arbeitsspeicher gespeichert und verfügen daher über eine feste Begrenzung. Diese Begrenzung basiert auf Systemkapazität und -aktivität. Statt die maximale Arbeitsspeichermenge als Parameter zu verwenden, wird der verwendete Arbeitsspeicher auf Grundlage der verfügbaren Systemressourcen festgelegt. Wenn keine verfügbar sind, werden nicht paarweise zugeordnete Ereignisse, die behalten wurden, gelöscht. Wenn ein Ereignis nicht paarweise zugeordnet wurde und gelöscht wird, wird das übereinstimmende Ereignis als nicht paarweise zugeordnetes Ereignis angezeigt.  
   
- Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Die  **\<nicht paarweise zugeordneten >** Element ist das Stammelement, gefolgt von einem. **\<Ereignis >** -Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. Die  **\<Ereignis >** -Element enthält ein Attribut mit dem Namen des nicht paarweise zugeordneten Ereignisses.  
+ Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Die  **\<nicht paarweise zugeordneten >** Element ist das Stammelement, gefolgt von einem. **\<Ereignis >** -Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. Die  **\<Event >** -Element enthält ein Attribut mit dem Namen des nicht paarweise zugeordneten Ereignisses.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das Paarvergleichsziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

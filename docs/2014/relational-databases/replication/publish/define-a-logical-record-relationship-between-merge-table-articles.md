@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298060"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
   In diesem Thema wird beschrieben, wie eine logische Datensatzbeziehung zwischen Mergetabellenartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) definiert wird.  
@@ -106,7 +106,7 @@ ms.locfileid: "36048482"
   
     -   Damit Konflikte, die innerhalb verknüpfter Zeilen im logischen Datensatz auftreten, erkannt und gelöst werden, geben Sie den Wert **true** für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution**.  
   
-    -   Um die standardmäßige Zeilen- oder Spaltenebene-konflikterkennung und-Lösung zu verwenden, geben Sie den Wert `false` für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution**, dies ist die Standardeinstellung.  
+    -   Um die standardmäßigen Zeilen- oder Spaltenebene-konflikterkennung und-Lösung zu verwenden, geben Sie den Wert `false` für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution**, dies ist die Standardeinstellung.  
   
 3.  Wiederholen Sie Schritt 2 für jeden Artikel, der den logischen Datensatz umfasst. Sie müssen für jeden Artikel im logischen Datensatz die gleiche Konflikterkennung und Konfliktlösungsoption verwenden. Weitere Informationen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   

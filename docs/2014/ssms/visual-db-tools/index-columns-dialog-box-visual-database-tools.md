@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 264ef7c420ecce145b58f5fc62c56c61fdc63adb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21004c5afbd0dc9e3eae2c70f2a45858a4a3d295
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232920"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Indexspalten (Dialogfeld) (Visual Database Tools)
   Verwenden Sie dieses Dialogfeld, um die Spalten für einen Index auszuwählen und deren Sortierreihenfolge festzulegen. Für einen Index können eine oder mehrere Spalten verwendet werden, und jede Spalte kann entweder in aufsteigender oder absteigender Reihenfolge sortiert werden. Klicken Sie im Dialogfeld **Indizes/Schlüssel** im Abschnitt **Allgemein** auf die Schaltfläche mit den drei Punkten für die Zeile **Spalten** , um auf dieses Dialogfeld zugreifen zu können.  
   
 ## <a name="options"></a>Tastatur  
  **Spaltenname**  
- Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie  **\<None >** diese Spalte aus dem Index entfernen...  
+ Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie  **\<None >** um diese Spalte aus dem Index entfernen...  
   
  **Sortierreihenfolge**  
  Wählen Sie eine Sortierreihenfolge für die angegebene Spalte aus. Die verfügbaren Optionen lauten **Aufsteigend** und **Absteigend**.  

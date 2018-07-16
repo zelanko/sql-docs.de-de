@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 22
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d0bd778d04b00c2d90da3cd6a77ca1bf8f9c830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8aeee9c6d0d11ba5dbb482e02595802c5d76fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281366"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Schritt 2: Hinzufügen und Konfigurieren der Protokollierung
   In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Paket Lesson 3.dtsx. Sie konfigurieren dann einen Protokollanbieter für Textdateien, um die Ereignisse PipelineExecutionPlan und PipelineExecuteTrees zu protokollieren. Der Protokollanbieter für Textdateien erstellt Protokolle, die auf einfache Weise angezeigt werden können und portabel sind. Die Einfachheit dieser Protokolldateien ist besonders während der grundlegenden Testphase eines Pakets nützlich. Sie können die Protokolleinträge auch im Fenster Protokollereignisse des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers anzeigen.  
@@ -34,11 +34,11 @@ ms.locfileid: "36048086"
   
      Von Integration Services wird ein neuer Protokollanbieter für Textdateien mit dem Standardnamen **SSIS-Protokollanbieter für Textdateien**zum Paket hinzugefügt. Sie können jetzt den neuen Protokollanbieter konfigurieren.  
   
-4.  In der **Namen** Geben Sie die Spalte `Lesson 3 Log File`.  
+4.  In der **Namen** Spalte, Datentyp `Lesson 3 Log File`.  
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  In der **Konfiguration** Spalte, klicken Sie auf  **\<neue Verbindung >** an das Ziel, in dem die Protokollinformationen geschrieben wird.  
+6.  In der **Konfiguration** Spalte, klicken Sie auf  **\<neue Verbindung >** um das Ziel anzugeben, wohin die Protokollinformationen geschrieben.  
   
      Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp**die Option **Datei erstellen**aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Dateien auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebiger Stelle speichern.  
   

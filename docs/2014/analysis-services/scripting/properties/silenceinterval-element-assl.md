@@ -1,5 +1,5 @@
 ---
-title: SilenceInterval-Element (ASSL) | Microsoft Docs
+title: SilenceInterval-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SilenceInterval element
 ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5914d870d9ebcd288dffa19d9402bf8c92e525a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c099e86540a29c6f60fb4510266d51fceaaed98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293063"
 ---
 # <a name="silenceinterval-element-assl"></a>SilenceInterval-Element (ASSL)
-  Definiert die minimalen Zeitdauer die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vor dem Starten der mehrdimensionale OLAP (MOLAP) auf Imagingprozesses anhält.  
+  Definiert die minimale Zeitspanne, während die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vor dem Starten der mehrdimensionale OLAP (MOLAP) auf Imagingprozesses anhält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36150194"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `SilenceInterval` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ Das Element, das dem übergeordneten entspricht `SilenceInterval` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

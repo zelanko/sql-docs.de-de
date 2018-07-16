@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eea2edc2e87d6a7f63f01a28ef06a1d3b3d179da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296500"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]parametrisierte Zeilenfilter definiert und geändert werden.  
@@ -115,9 +115,9 @@ ms.locfileid: "36059818"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>So ändern Sie einen parametrisierten Zeilenfilter für einen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie **@publication**, **@article**, einen Wert von `subset_filterclause` für **@property**, der Ausdruck, für den parametrisierten Filter definiert. **@value** (nicht einschließlich `WHERE`), und der Wert **1** für beide **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie **@publication**, **@article**, einen Wert von `subset_filterclause` für **@property**, der Ausdruck, für den parametrisierten Filter definiert. **@value** (nicht einschließlich `WHERE`), und den Wert **1** für beide **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
   
-2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) erneut aus. Geben Sie **@publication**, **@article**, einen Wert von `partition_options` für **@property**, und die am besten geeignete Partitionierungsoption für **@value**, kann die eines der folgenden sein:  
+2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) erneut aus. Geben Sie **@publication**, **@article**, einen Wert von `partition_options` für **@property**, und die am besten geeignete Partitionierungsoption für **@value**, stehen die folgenden:  
   
     -   **0** &ndash; Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition (eine "überlappende" Partition).  
   

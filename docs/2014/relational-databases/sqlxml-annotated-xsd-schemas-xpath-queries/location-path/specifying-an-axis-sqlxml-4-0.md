@@ -1,5 +1,5 @@
 ---
-title: Angeben einer Achse (SQLXML 4.0) | Microsoft Docs
+title: Angeben einer Achse (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3b9f58369cea876bc345300a945f85260b4326a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b97dc99b7de5d8829f88faad6a6df282e9cecd5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234780"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Angeben einer Achse (SQLXML 4.0)
     
@@ -38,7 +38,7 @@ ms.locfileid: "36050521"
   
      Enthält das untergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck (Speicherortpfad) Wählt alle aktuellen Kontextknotens aus der  **\<Kunden >** untergeordneten Elemente:  
+     Der folgende XPath-Ausdruck (Speicherortpfad) Wählt aus dem aktuellen Kontextknoten darstellen, die alle die  **\<Kunden >** untergeordnete Elemente:  
   
     ```  
     child::Customer  
@@ -50,7 +50,7 @@ ms.locfileid: "36050521"
   
      Enthält das übergeordnete Element des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt alle dem  **\<Kunden >** übergeordneten Elementen von der  **\<Reihenfolge >** untergeordneten Elemente:  
+     Der folgende XPath-Ausdruck wählt alle dem  **\<Kunden >** übergeordneten Elementen von der  **\<Reihenfolge >** untergeordnete Elemente:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -62,7 +62,7 @@ ms.locfileid: "36050521"
   
      Enthält das Attribut des Kontextknotens.  
   
-     Der folgende XPath-Ausdruck wählt den **CustomerID** Attribut des Kontextknotens:  
+     Der folgende XPath-Ausdruck wählt den **"CustomerID"** Attribut des Kontextknotens aus:  
   
     ```  
     attribute::CustomerID  
@@ -72,7 +72,7 @@ ms.locfileid: "36050521"
   
      Enthält den Kontextknoten selbst.  
   
-     Der folgende XPath-Ausdruck wählt den aktuellen Knoten wird jedoch die  **\<Reihenfolge >** Knoten:  
+     Der folgende XPath-Ausdruck wählt den aktuellen Knoten aus, ist dies die  **\<Reihenfolge >** Knoten:  
   
     ```  
     self::Order  

@@ -1,5 +1,5 @@
 ---
-title: Seite "Sicherheit" (Berichts-Manager) der modellelementsicherheit | Microsoft Docs
+title: Modellelementsicherheit (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299800"
 ---
 # <a name="model-item-security-page-report-manager"></a>Modellelementsicherheit (Seite) (Berichts-Manager)
   Verwenden Sie diese Seite, um Teile eines Modells zu sichern, indem Sie schreibgeschützte Berechtigungen für bestimmte Elemente erteilen oder aufheben. Die Modellelementsicherheit hat Auswirkungen auf die Ad-hoc-Durchsuchung von Daten zur Laufzeit und die Möglichkeit, Teile eines veröffentlichten Modells bei der Erstellung von Berichten im Berichts-Generator zu verwenden. Sie müssen über Inhalts-Manager-Berechtigungen verfügen, um diese Funktion zu verwenden.  

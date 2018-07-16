@@ -1,5 +1,5 @@
 ---
-title: Ändern von Standardtabellennamen | Microsoft Docs
+title: Ändern von Standardtabellennamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308590"
 ---
 # <a name="modifying-default-table-names"></a>Ändern von Standardtabellennamen
   Sie können den Wert der **FriendlyName**-Eigenschaft für Objekte in der Datenquellensicht ändern, um die Benutzerfreundlichkeit und Identifizierung zu optimieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "36059468"
   
      Es ist einfacher, die Eigenschaften für jede Tabelle in der Datenquellensicht zu ändern, wenn das Eigenschaftenfenster geöffnet bleibt. Wenn Sie das Fenster nicht mithilfe der Schaltfläche **Automatisch im Hintergrund** geöffnet halten, wird das Fenster geschlossen, sobald Sie auf ein anderes Objekt im Bereich **Diagramm** klicken.  
   
-3.  Ändern der **FriendlyName** -Eigenschaft für die **FactInternetSales** -Objekt *`InternetSales`*.  
+3.  Ändern der **FriendlyName** -Eigenschaft für die **"factinternetsales"** -Objekt *`InternetSales`*.  
   
      Wenn Sie außerhalb der Zelle für die **FriendlyName** -Eigenschaft klicken, wird die Änderung angewendet. In der nächsten Lektion definieren Sie eine Measuregruppe, die auf dieser Faktentabelle basiert. Der Name der Faktentabelle lautet dann InternetSales statt FactInternetSales, weil Sie in dieser Lektion Änderungen vorgenommen haben.  
   
