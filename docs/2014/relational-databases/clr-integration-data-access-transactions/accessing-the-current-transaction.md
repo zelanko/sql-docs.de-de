@@ -1,13 +1,11 @@
 ---
-title: Zugriff auf die aktuelle Transaktion | Microsoft Docs
+title: Zugriff auf die aktuelle Transaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159804"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351812"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
-  Wenn eine Transaktion aktiv ist, an die Stelle, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist eingegeben haben, wird die Transaktion durch verfügbar gemacht der `System.Transactions.Transaction` Klasse. Die `Transaction.Current` Eigenschaft wird verwendet, um die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET `Transaction.Current` automatisch, wenn die `Connection.Open` Methode wird aufgerufen, und trägt die Verbindung an dieser Transaktion (es sei denn, die `Enlist` Schlüsselwort auf "false" in der Verbindungszeichenfolge festgelegt ist).  
+  Wenn eine Transaktion aktiv ist, an dem Punkt, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eingegeben haben, wird die Transaktion über verfügbar gemacht der `System.Transactions.Transaction` Klasse. Die `Transaction.Current` Eigenschaft wird verwendet, um die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET `Transaction.Current` automatisch, wenn die `Connection.Open` Methode wird aufgerufen, und trägt die Verbindung in dieser Transaktion (es sei denn, die `Enlist` Schlüsselwort in der Verbindungszeichenfolge nicht false festgelegt ist).  
   
  Möglicherweise möchten Sie verwenden die `Transaction` Objekt direkt in den folgenden Szenarien:  
   
@@ -48,11 +46,11 @@ ms.locfileid: "36159804"
   
 -   Die verwaltete Prozedur oder die Funktion kann in einem Ausgabeparameter einen Wert zurückgeben. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur kann den zurückgegebenen Wert überprüfen und gegebenenfalls `ROLLBACK TRANSACTION` ausführen.  
   
--   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme wird von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie `ROLLBACK TRANSACTION`.  
+-   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme, die von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie `ROLLBACK TRANSACTION`.  
   
 -   Die verwaltete Prozedur oder Funktion Abbrechen die aktuelle Transaktion durch Aufrufen der `Transaction.Rollback` Methode, wenn eine bestimmte Bedingung erfüllt ist.  
   
- Wenn sie, in einer verwalteten Prozedur oder Funktion aufgerufen wird, die `Transaction.Rollback` Methode löst eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und können in einem Try/Catch-Block umschlossen werden. Die Fehlermeldung lautet wie folgt oder ähnlich:  
+ Wenn sie innerhalb einer verwalteten Prozedur oder Funktion aufgerufen wird die `Transaction.Rollback` Methode löst eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und kann in einem Try/Catch-Block eingebunden werden. Die Fehlermeldung lautet wie folgt oder ähnlich:  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  Diese Ausnahme ist ebenfalls zu erwarten, und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, welche die den Trigger auslösenden Aktion ausführt, muss in einen try/catch-Block eingeschlossen werden, damit die Ausführung fortgesetzt wird. Trotz der zwei ausgelösten Ausnahmen wird ein Rollback für die Transaktion ausgeführt, und für die Änderungen in der Tabelle wird kein Commit ausgeführt.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den Try/Catch-Block, um die `Transaction.Rollback` Methode im verwalteten Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, die die `EXEC uspRollbackFromProc` Anweisung ist in einem Try/Catch-Block umschlossen, sodass die Ausnahme wird ausgelöst, wenn die verwaltete Prozedur die Ausführung abschließt abgefangen wird.  
+ Im folgenden Beispiel wird von der verwalteten Prozedur für eine Transaktion mit der `Transaction.Rollback`-Methode ein Rollback für die Transaktion ausgeführt. Beachten Sie den Try/Catch-Block, um die `Transaction.Rollback` -Methode in verwaltetem Code. Das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript erstellt eine Assembly und eine verwaltete gespeicherte Prozedur. Beachten Sie, die die `EXEC uspRollbackFromProc` Anweisung in einem Try/Catch-Block umschlossen ist, sodass die Ausnahme wird ausgelöst, wenn die Ausführung der verwaltete Prozedur beendet abgefangen wird.  
   
 ```csharp  
 using System;  

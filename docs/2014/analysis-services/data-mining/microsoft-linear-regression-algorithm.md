@@ -1,5 +1,5 @@
 ---
-title: Microsoft Linear Regression-Algorithmus | Microsoft Docs
+title: Microsoft Linear Regression-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315084"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, der Ihnen dabei hilft, eine lineare Beziehung zwischen einer abhängigen und einer unabhängigen Variablen zu berechnen und diese zur Vorhersage zu verwenden.  
   
  Die Beziehung nimmt die Form einer Formel für eine Linie an, die eine Reihe von Daten am besten darstellt. Die Linie des folgenden Diagramms ist z. B. die bestmögliche lineare Darstellung der Daten.  
   
- ![Eine Linie, die einen Satz von Daten modelliert](../media/linear-regression.gif "eine Linie, die Modelliert einen Satz von Daten")  
+ ![Eine Zeile, die einen Satz von Daten modelliert](../media/linear-regression.gif "einer Zeile, die einen Satz von Daten modelliert.")  
   
  Zu jedem Datenpunkt im Diagramm ist ein Fehler zugeordnet. Dieser wird durch seinen Abstand von der Regressionslinie dargestellt. Der Koeffizient a und der Koeffizient b in der Regressionsgleichung passen den Winkel und die Position der Regressionsgleichung an. Sie können die Regressionsgleichung abrufen, indem Sie a und b anpassen, bis die Summe der Fehler, die mit allen Punkten verknüpft sind, ein Minimum erreicht hat.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36162590"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Lineare Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
+ [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

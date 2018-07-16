@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320750"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
   Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
@@ -48,14 +48,14 @@ ms.locfileid: "36151397"
  ![Datenflüsse](../media/mw-dts-09.gif "Datenflüsse")  
   
 ## <a name="log-entries"></a>Protokolleinträge  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt auch für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt auch viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
-|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat, durch den letzten Aufruf von festgelegtes die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat durch den letzten Aufruf von festgelegt ist die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePostPrimeOutput`|Gibt an, dass die Komponente ihren letzten Aufruf abgeschlossen wurde die `PrimeOutput` Methode. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet dieser Protokolleintrag, dass die Komponente die Zeilenverarbeitung abgeschlossen hat.|  
-|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten, durch den letzten Aufruf von festgelegtes die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal für Ende des Rowsets, der durch den letzten Aufruf der festgelegt wird, erhalten die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePrePrimeOutput`|Zeigt an, dass die Komponente einen Aufruf aus der `PrimeOutput`-Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |`OnPipelineRowsSent`|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der `ProcessInput`-Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |`PipelineBufferLeak`|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Aufrechterhaltene Puffer blockieren die Freigabe von Pufferressourcen und können Speicherverluste verursachen. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
@@ -96,7 +96,7 @@ ms.locfileid: "36151397"
 |------------|-----------------|-----------|  
 |**PathID**|Der Wert aus der `ID` Eigenschaft des Pfads zwischen der OLE DB-Quelle und die Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert aus der `Name` Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
-|**ComponentID**|Der Wert, der die `ID` Eigenschaft von der Transformation zum Sortieren.|1180|  
+|**ComponentID**|Der Wert des der `ID` Eigenschaft der Transformation zum Sortieren.|1180|  
 |**ComponentName**|Der Wert der `Name`-Eigenschaft der Transformation zum Sortieren.|Sort|  
 |**InputID**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
 |**InputName**|Der Wert der `Name`-Eigenschaft der Eingabe der Transformation zum Sortieren.|Sortiereingabe|  

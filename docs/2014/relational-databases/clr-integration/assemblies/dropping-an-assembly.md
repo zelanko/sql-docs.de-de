@@ -1,13 +1,11 @@
 ---
-title: Durch Löschen einer Assembly | Microsoft Docs
+title: Durch Löschen einer Assembly | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +15,17 @@ helpviewer_keywords:
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3551d0971a90c77135ca3e74b30d3009108646c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3920b679e017d5d0e4f069dea29ada7ba97bf13b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148840"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354592"
 ---
-# <a name="dropping-an-assembly"></a>Durch Löschen einer Assembly
+# <a name="dropping-an-assembly"></a>Löschen von Assemblys
   Assemblys, die mithilfe der CREATE ASSEMBLY-Anweisung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registriert wurden, können gelöscht oder verworfen werden, wenn die von ihnen bereitgestellte Funktionalität nicht mehr benötigt wird. Durch das Löschen einer Assembly werden die Assembly sowie alle zugehörigen Dateien, wie Debugdateien, aus der Datenbank entfernt. Zum Löschen einer Assembly verwenden Sie die DROP ASSEMBLY-Anweisung mit der folgenden Syntax:  
   
 ```  
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funktionen, gespeicherte Prozeduren oder Trigger, die Variablen und Parameter des UDT verwenden und in der Datenbank mit der WITH SCHEMABINDING-Klausel erzeugt wurden.  
   
 ### <a name="finding-udt-dependencies"></a>Ermitteln von UDT-Abhängigkeiten  
- Sie müssen zuerst alle abhängigen Objekte löschen und dann die DROP TYPE-Anweisung ausführen. Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage sucht nach alle Spalten und Parameter, mit denen einen UDT in der **AdventureWorks** Datenbank.  
+ Sie müssen zuerst alle abhängigen Objekte löschen und dann die DROP TYPE-Anweisung ausführen. Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage sucht nach allen Spalten und Parameter, mit denen einen UDT in der **AdventureWorks** Datenbank.  
   
 ```  
 USE Adventureworks;  

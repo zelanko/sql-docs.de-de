@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Elemente (Business Intelligence-Assistent) | Microsoft Docs
+title: Wählen Sie Elemente (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75cd6c2aeca77d55b4ec66baa3dccb4c77f4a66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321240"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Elemente auswählen (Business Intelligence-Assistent)
   Mithilfe der Seite **Elemente auswählen** können Sie bestimmen, auf welche Elemente der Business Intelligence-Assistent die Währungsumrechnungsfunktion anwenden soll, die auf der Seite **Optionen für die Währungsumrechnung festlegen** angegeben ist.  
@@ -51,7 +51,7 @@ ms.locfileid: "36149732"
 |**Measures**|Wählen Sie das Measure aus der Wechselkurs-Measuregruppe aus, das den Wechselkurs für die Konvertierung der Measures für das unter **Kontoelement** ausgewählte Element enthält.|  
   
  **Kontohierarchie basierend auf Typ**  
- Wählen Sie, um die Währungsumrechnungsfunktion auf alle Elemente anzuwenden Attribute in der Kontohierarchie, dessen `Type` Eigenschaft auf einen angegebenen Kontotyp festgelegt ist.  
+ Wählen aus, um die Währungsumrechnungsfunktion auf alle Elemente gelten in der Kontohierarchie Attributen, deren `Type` -Eigenschaft auf einen angegebenen Kontotyp festgelegt ist.  
   
  Wenn diese Option ausgewählt ist, werden im Raster die in der folgenden Tabelle aufgeführten Optionen angezeigt.  
   

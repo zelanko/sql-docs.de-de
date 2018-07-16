@@ -1,13 +1,11 @@
 ---
-title: Zuordnen von CLR-Parameterdaten | Microsoft Docs
+title: Zuordnen von CLR-Parameterdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161839"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354522"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
   In der folgenden Tabelle sind die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen, ihre Entsprechungen in CLR (Common Language Runtime) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im `System.Data.SqlTypes`-Namespace und ihre systemeigenen CLR-Entsprechungen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgeführt.  
@@ -44,38 +42,38 @@ ms.locfileid: "36161839"
 ||||  
 |-|-|-|  
 |**SQL Server-Datentyp**|Typ (in System.Data.SqlTypes oder Microsoft.SqlServer.Types)|**CLR-Datentyp ((.NET Framework)**|  
-|`bigint`|`SqlInt64`|**Int64, NULL-Werte zulassen\<Int64 >**|  
+|`bigint`|`SqlInt64`|**Int64, auf NULL festlegbare\<Int64 >**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Boolean "," NULL-Werte zulassen\<booleschen >**|  
+|`bit`|`SqlBoolean`|**Boolesch, auf NULL festlegbare\<booleschen >**|  
 |`char`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`cursor`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`date`|`SqlDateTime`|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
-|`datetime`|`SqlDateTime`|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
-|`datetime2`|InclusionThresholdSetting|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
-|`DATETIMEOFFSET`|`None`|**"DateTimeOffset", NULL-Werte zulassen\<"DateTimeOffset" >**|  
-|`decimal`|`SqlDecimal`|**Decimal, NULL-Werte zulassen\<Decimal >**|  
-|`float`|`SqlDouble`|**Double, NULL-Werte zulassen\<doppelte >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` wird in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` wird in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` wird in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
+|`date`|`SqlDateTime`|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
+|`datetime`|`SqlDateTime`|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
+|`datetime2`|InclusionThresholdSetting|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
+|`DATETIMEOFFSET`|`None`|**"DateTimeOffset", auf NULL festlegbare\<DateTimeOffset >**|  
+|`decimal`|`SqlDecimal`|**Decimal, auf NULL festlegbar\<Decimal >**|  
+|`float`|`SqlDouble`|**Doppelte, auf NULL festlegbar\<Double >**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
 |`image`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`int`|`SqlInt32`|**Int32, NULL-Werte zulassen\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal, NULL-Werte zulassen\<Decimal >**|  
+|`int`|`SqlInt32`|**Int32, auf NULL festlegbare\<Int32 >**|  
+|`money`|`SqlMoney`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`numeric`|`SqlDecimal`|**Decimal, NULL-Werte zulassen\<Decimal >**|  
+|`numeric`|`SqlDecimal`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<Char >**|  
-|`real`|`SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Einzelne, NULL-Werte zulassen\<einzelne >**|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char-Zeichen, String, Char [], Nullable\<Char >**|  
+|`real`|`SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Einzelne, auf NULL festlegbar\<einzelne >**|  
 |`rowversion`|InclusionThresholdSetting|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16, NULL-Werte zulassen\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal, NULL-Werte zulassen\<Decimal >**|  
+|`smallint`|`SqlInt16`|**Int16-Wert, auf NULL festlegbare\<Int16 >**|  
+|`smallmoney`|`SqlMoney`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`sql_variant`|InclusionThresholdSetting|`Object`|  
 |`table`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`text`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`time`|InclusionThresholdSetting|**Zeitspanne, die NULL-Werte zulassen\<TimeSpan >**|  
+|`time`|InclusionThresholdSetting|**TimeSpan, auf NULL festlegbare\<TimeSpan >**|  
 |`timestamp`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`tinyint`|`SqlByte`|**Byte, NULL-Werte zulassen\<Byte >**|  
+|`tinyint`|`SqlByte`|**Byte, auf NULL festlegbare\<Byte >**|  
 |`uniqueidentifier`|`SqlGuid`|**GUID, die NULL-Werte zulassen\<Guid >**|  
 |`User-defined type(UDT)`|InclusionThresholdSetting|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  

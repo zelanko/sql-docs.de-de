@@ -1,13 +1,11 @@
 ---
-title: Überwachung und Problembehandlung von verwalteten Datenbankobjekten | Microsoft Docs
+title: Überwachung und Problembehandlung von verwalteten Datenbankobjekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b19db2fdf4770ae17f3a0fe2fd8f59549814569
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b597c47815ca52055f999edda925c8c01bdcfe73
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057584"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354102"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
   In diesem Thema erhalten Sie Informationen zu den Tools, die zum Überwachen und zur Problembehandlung von verwalteten Datenbankobjekten und Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden können.  
@@ -36,9 +34,9 @@ ms.locfileid: "36057584"
 |Ereignis|Description|  
 |-----------|-----------------|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
-|[SQL: BatchStarting-Ereignisklasse](../event-classes/sql-batchstarting-event-class.md), [SQL: BatchCompleted (Ereignisklasse)](../event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
+|[SQL: BatchStarting-Ereignisklasse](../event-classes/sql-batchstarting-event-class.md), [SQL: BatchCompleted-Ereignisklasse](../event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
 |[SP: Starting-Ereignisklasse](../event-classes/sp-starting-event-class.md), [SP: Completed (Ereignisklasse)](../event-classes/sp-completed-event-class.md)|Wird verwendet, um die Ausführung von gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozeduren zu überwachen.|  
-|[SQL: StmtStarting-Ereignisklasse](../event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted (Ereignisklasse)](../event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Routinen zu überwachen.|  
+|[SQL: StmtStarting-Ereignisklasse](../event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted-Ereignisklasse](../event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Routinen zu überwachen.|  
   
 ## <a name="performance-counters"></a>Performance Counters  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Objekte und Leistungsindikatoren bereitgestellt, die vom Systemmonitor zum Überwachen der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausführen, verwendet werden können. Ein Objekt ist eine beliebige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressource, z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sperre oder ein Windows-Prozess. Jedes Objekt enthält einen oder mehrere Leistungsindikatoren, die verschiedene Aspekte der zu überwachenden Objekte ermitteln. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../performance-monitor/use-sql-server-objects.md).  
@@ -69,7 +67,7 @@ ms.locfileid: "36057584"
 |[sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|Gibt Informationen über die Assemblydateien zurück, die in der Datenbank registriert sind.|  
 |[sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|Identifiziert die benutzerdefinierten Typen (UDTs), die von einer Assembly definiert sind.|  
 |[sys.module_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql)|Identifiziert die Assemblys, in denen CLR-Module definiert sind.|  
-|[Sys. parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
+|[parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Gibt Informationen über Parameter zurück, die benutzerdefinierte Typen sind.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql)|Identifiziert die Assembly, in der CLR-Trigger definiert ist.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)|Identifiziert die DDL-Trigger auf Serverebene auf einem Server, einschließlich der CLR-Trigger.|  
 |[sys.type_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql)|Identifiziert die Assemblys, in denen benutzerdefinierten Typen definiert sind.|  

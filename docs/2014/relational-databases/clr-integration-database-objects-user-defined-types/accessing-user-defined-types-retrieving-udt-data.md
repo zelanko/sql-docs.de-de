@@ -1,13 +1,11 @@
 ---
-title: Abrufen von UDT-Daten | Microsoft Docs
+title: Abrufen von UDT-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3006fcd0c90cdc5a936b80a3f0fd635eee873b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7f7e8d895737f2bb8e7b446d2f02109757b9c65e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046938"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350042"
 ---
 # <a name="retrieving-udt-data"></a>Abrufen von UDT-Daten
   Zum Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT) auf dem Client muss die zuvor in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank als UDT registrierte Assembly für die Clientanwendung verfügbar sein. Die UDT-Assembly kann in dasselbe Verzeichnis gelegt werden wie die Anwendung oder in den globalen Assemblycache (GAC). Sie können auch in Ihrem Projekt einen Verweis auf die Assembly festlegen.  
@@ -43,7 +41,7 @@ ms.locfileid: "36046938"
  Sie brauchen keine Kopie der UDT-Assembly auf dem Client, um die Rohdaten aus einer UDT-Spalte einer Tabelle abzurufen.  
   
 > [!NOTE]  
->  **SqlClient** möglicherweise Fehler beim Laden der UDT bei nicht übereinstimmenden UDT-Versionen oder andere Probleme. Wenden Sie in diesem Fall die üblichen Maßnahmen zur Problembehandlung an, um zu ermitteln, aus welchem Grund die Assembly, die den UDT enthält, nicht von der aufrufenden Anwendung gefunden werden kann. Weitere Informationen finden Sie im Thema "Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen" in der .NET Framework-Dokumentation.  
+>  **SqlClient** kann fehlschlagen, um einen UDT bei nicht übereinstimmenden UDT-Versionen oder anderen Problemen zu laden. Wenden Sie in diesem Fall die üblichen Maßnahmen zur Problembehandlung an, um zu ermitteln, aus welchem Grund die Assembly, die den UDT enthält, nicht von der aufrufenden Anwendung gefunden werden kann. Weitere Informationen finden Sie im Thema "Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen" in der .NET Framework-Dokumentation.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>UDT-Zugriff über SqlDataReader  
  `System.Data.SqlClient.SqlDataReader` kann im Client-Code verwendet werden, um ein Resultset mit einer UDT-Spalte abzurufen, die als Instanz des Objekts verfügbar gemacht wird.  
@@ -162,7 +160,7 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Bindung von UDTs als Bytes  
- In bestimmten Situationen bietet es sich an, Rohdaten aus der UDT-Spalte abzurufen. Möglicherweise ist der Typ lokal nicht verfügbar, oder Sie möchten keine Instanz des UDT instanziieren. Erfahren Sie die rohbytes in ein Byte-Array mit den **GetBytes** Methode von einer `SqlDataReader`. Diese Methode liest, beginnend am angegeben Pufferoffset, einen Datenstrom von Bytes aus dem angegebenen Spaltenoffset in den Puffer eines Arrays. Eine andere Möglichkeit ist die Verwendung eines der **GetSqlBytes** oder **"GetSqlBinary"** Methoden und den Inhalt in einem einzigen Vorgang zu lesen. In keinem der beiden Fälle wird das UDT-Objekt instanziiert. Daher brauchen Sie in der Client-Assembly keinen Verweis auf den UDT festzulegen.  
+ In bestimmten Situationen bietet es sich an, Rohdaten aus der UDT-Spalte abzurufen. Möglicherweise ist der Typ lokal nicht verfügbar, oder Sie möchten keine Instanz des UDT instanziieren. Erhalten Sie die rohbytes in ein Byte-Array mithilfe der **GetBytes** Methode eine `SqlDataReader`. Diese Methode liest, beginnend am angegeben Pufferoffset, einen Datenstrom von Bytes aus dem angegebenen Spaltenoffset in den Puffer eines Arrays. Eine weitere Möglichkeit ist die Verwendung eines der **GetSqlBytes** oder **GetSqlBinary** Methoden und Lesen Sie den Inhalt in einem einzigen Vorgang. In keinem der beiden Fälle wird das UDT-Objekt instanziiert. Daher brauchen Sie in der Client-Assembly keinen Verweis auf den UDT festzulegen.  
   
 ### <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie zum Abrufen der **Punkt** -Daten als rohbytes in ein Byte-Array mit einem `SqlDataReader`. Der Code verwendet ein `System.Text.StringBuilder`-Objekt, um die Rohbytes in eine Zeichenfolgendarstellung zu konvertieren, die im Konsolenfenster angezeigt werden kann.  
@@ -271,7 +269,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>Beispiel: Verwenden von GetSqlBytes  
- In diesem Beispiel wird gezeigt, wie zum Abrufen der **Punkt** Daten als unformatierte Bytes in einem einzelnen Vorgang mithilfe der **GetSqlBytes** Methode. Der Code verwendet ein `StringBuilder`-Objekt, um die Rohbytes in eine Zeichenfolgendarstellung zu konvertieren, die im Konsolenfenster angezeigt werden kann.  
+ In diesem Beispiel wird gezeigt, wie zum Abrufen der **Punkt** -Daten als rohbytes in einem einzelnen Vorgang mithilfe der **GetSqlBytes** Methode. Der Code verwendet ein `StringBuilder`-Objekt, um die Rohbytes in eine Zeichenfolgendarstellung zu konvertieren, die im Konsolenfenster angezeigt werden kann.  
   
 ```vb  
 Option Explicit On  
@@ -379,7 +377,7 @@ class GetRawBytes
  UDTs können im ADO.NET-Code sowohl als Eingabe- als auch als Ausgabeparameter verwendet werden.  
   
 ## <a name="using-udts-in-query-parameters"></a>Verwenden von UDTs in Abfrageparametern  
- UDTs können beim Festlegen eines `SqlParameter`-Objekts für ein `System.Data.SqlClient.SqlCommand`-Objekt als Parameterwerte verwendet werden. Die `SqlDbType.Udt`-Enumeration eines `SqlParameter`-Objekts wird beim Aufrufen der `Add`-Methode für die `Parameters` Auflistung verwendet, um anzuzeigen, dass der Parameter ein UDT ist. Die `UdtTypeName` Eigenschaft eine `SqlCommand` Objekt wird verwendet, um den vollqualifizierten Namen des UDT in der Datenbank angeben der *schema_name* Syntax. Die Angabe des vollqualifizierten Namens ist zwar nicht erforderlich, macht den Code jedoch klarer.  
+ UDTs können beim Festlegen eines `SqlParameter`-Objekts für ein `System.Data.SqlClient.SqlCommand`-Objekt als Parameterwerte verwendet werden. Die `SqlDbType.Udt`-Enumeration eines `SqlParameter`-Objekts wird beim Aufrufen der `Add`-Methode für die `Parameters` Auflistung verwendet, um anzuzeigen, dass der Parameter ein UDT ist. Die `UdtTypeName` Eigenschaft eine `SqlCommand` -Objekt dient zum Angeben der vollqualifizierte Name des UDT in der Datenbank mithilfe der *object_name* Syntax. Die Angabe des vollqualifizierten Namens ist zwar nicht erforderlich, macht den Code jedoch klarer.  
   
 > [!NOTE]  
 >  Eine lokale Kopie der UDT-Assembly muss dem Clientprojekt zur Verfügung stehen.  

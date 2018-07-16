@@ -1,13 +1,11 @@
 ---
-title: Schreiben von Code von benutzerdefinierten Typen | Microsoft Docs
+title: Codieren von benutzerdefinierten Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059157"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354422"
 ---
 # <a name="coding-user-defined-types"></a>Programmieren benutzerdefinierter Typen
   Wenn Sie die Definition eines benutzerdefinierten Typs (UDT) schreiben, müssen Sie verschiedene Funktionen implementieren, abhängig davon, ob Sie den UDT als Klasse oder als Struktur implementieren, sowie abhängig von den von Ihnen gewählten Format- und Serialisierungsoptionen.  
@@ -202,7 +200,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>Implementieren der ToString-Methode  
- Die `ToString`-Methode konvertiert den `Point`-UDT in einen Zeichenfolgenwert. In diesem Fall wird die Zeichenfolge "NULL" für eine NULL-Instanz des `Point`-Typs zurückgegeben. Die `ToString`-Methode kehrt das Ergebnis der `Parse`-Methode mithilfe eines `System.Text.StringBuilder` um und gibt eine durch Kommas begrenzte `System.String`-Instanz zurück, die aus den Koordinatenwerten X und Y besteht. Da **InvokeIfReceiverIsNull** der Standardwert ist "false", die Prüfung auf eine null-Instanz des `Point` ist nicht erforderlich.  
+ Die `ToString`-Methode konvertiert den `Point`-UDT in einen Zeichenfolgenwert. In diesem Fall wird die Zeichenfolge "NULL" für eine NULL-Instanz des `Point`-Typs zurückgegeben. Die `ToString`-Methode kehrt das Ergebnis der `Parse`-Methode mithilfe eines `System.Text.StringBuilder` um und gibt eine durch Kommas begrenzte `System.String`-Instanz zurück, die aus den Koordinatenwerten X und Y besteht. Da **InvokeIfReceiverIsNull** der Standardwert ist "false", die Überprüfung auf einen null-Instanz des `Point` ist nicht erforderlich.  
   
 ```vb  
 Private _x As Int32  
@@ -372,10 +370,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Einschränkungen von Validierungsmethoden  
  Der Server ruft die Validierungsmethode auf, wenn er Konvertierungen durchführt, nicht wenn Daten durch das Festlegen einzelner Eigenschaften oder mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung INSERT eingefügt werden.  
   
- Sie müssen die Validierungsmethode explizit aufrufen, von Settern für Eigenschaften und die `Parse` Methode, wenn die Validierungsmethode in allen Situationen ausgeführt werden soll. Dies ist keine Voraussetzung, und in einigen Fällen ist es möglicherweise nicht einmal wünschenswert.  
+ Sie müssen die Validierungsmethode explizit aufrufen, von Settern für Eigenschaften und die `Parse` Methode, wenn die Überprüfungsmethode in allen Situationen ausführen soll. Dies ist keine Voraussetzung, und in einigen Fällen ist es möglicherweise nicht einmal wünschenswert.  
   
 ### <a name="parse-validation-example"></a>Beispiel für die Validierung in der Parse-Methode  
- Um sicherzustellen, dass die `ValidatePoint` Methode wird aufgerufen, der `Point` -Klasse, Sie müssen ihn aufrufen aus der `Parse` Methode und aus der Eigenschaft Prozeduren, die legen Sie die X- und Y-Koordinatenwerte. Das folgende Codefragment zeigt, wie die `ValidatePoint` Validierungsmethode aus der `Parse` Funktion.  
+ Um sicherzustellen, dass die `ValidatePoint` Methode wird aufgerufen, der `Point` -Klasse, müssen Sie sie aufrufen über die `Parse` Methode und aus der Eigenschaft Prozeduren, die legen Sie die X- und Y-Koordinatenwerte. Das folgende Codefragment zeigt, wie zum Aufrufen der `ValidatePoint` Validierungsmethode aus der `Parse` Funktion.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -421,7 +419,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Beispiel für die Validierung von Eigenschaften  
- Das folgende Codefragment zeigt, wie die `ValidatePoint` Validierungsmethode von den Eigenschaftenprozeduren, die die X- und Y-Koordinaten festgelegt.  
+ Das folgende Codefragment zeigt, wie zum Aufrufen der `ValidatePoint` Überprüfungsmethode, die von den Eigenschaftenprozeduren, die die X- und Y-Koordinaten festgelegt.  
   
 ```vb  
 Public Property X() As Int32  
@@ -495,10 +493,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codieren von UDT-Methoden  
- Bei Codieren von UDT-Methoden müssen Sie berücksichtigen, ob sich der verwendete Algorithmus möglicherweise im Lauf der Zeit ändern könnte. Wenn dem so ist, sollten Sie erwägen, eine separate Klasse für die vom UDT verwendeten Methoden zu erstellen. Wenn sich der Algorithmus ändert, können Sie die Klasse mit dem neuen Code erneut kompilieren und die Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden, ohne den UDT dadurch zu beeinflussen. In vielen Fälle können UDTs mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ALTER ASSEMBLY erneut geladen werden, dies könnte jedoch potenziell zu Problemen mit vorhandenen Daten führen. Z. B. die `Currency` UDT enthalten, mit der **AdventureWorks** -Beispiel Datenbank verwendet ein **ConvertCurrency** -Funktion zum Konvertieren von Währungswerten, die in einer eigenen Klasse implementiert. Es ist möglich, dass sich die Konvertierungsalgorithmen in der Zukunft auf unvorhersehbare Weise ändern oder dass eine neue Funktionalität erforderlich wird. Trennen der **ConvertCurrency** -Funktion von den `Currency` UDT-Implementierung bietet größere Flexibilität bei der Planung künftiger Änderungen.  
+ Bei Codieren von UDT-Methoden müssen Sie berücksichtigen, ob sich der verwendete Algorithmus möglicherweise im Lauf der Zeit ändern könnte. Wenn dem so ist, sollten Sie erwägen, eine separate Klasse für die vom UDT verwendeten Methoden zu erstellen. Wenn sich der Algorithmus ändert, können Sie die Klasse mit dem neuen Code erneut kompilieren und die Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden, ohne den UDT dadurch zu beeinflussen. In vielen Fälle können UDTs mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ALTER ASSEMBLY erneut geladen werden, dies könnte jedoch potenziell zu Problemen mit vorhandenen Daten führen. Z. B. die `Currency` UDT enthalten, mit der **AdventureWorks** -Beispieldatenbank wird eine **ConvertCurrency** -Funktion zum Konvertieren von Währungswerten, die in einer eigenen Klasse implementiert. Es ist möglich, dass sich die Konvertierungsalgorithmen in der Zukunft auf unvorhersehbare Weise ändern oder dass eine neue Funktionalität erforderlich wird. Trennen der **ConvertCurrency** -Funktion aus der `Currency` UDT-Implementierung bietet mehr Flexibilität, bei der Planung künftiger Änderungen.  
   
 ### <a name="example"></a>Beispiel  
- Die `Point` Klasse enthält drei einfache Methoden zum Berechnen von Entfernung: **Abstand**, **DistanceFrom** und **DistanceFromXY**. Jede dieser Methoden gibt einen Wert vom Typ `double` zurück, wobei die Entfernung von `Point` zum Nullpunkt, die Entfernung von einem angegebenen Punkt zu `Point` und die Entfernung von den angegebenen X- und Y-Koordinaten zu `Point` berechnet wird **Abstand** und **DistanceFrom** bei jedem Aufruf **DistanceFromXY**, und veranschaulichen, wie Sie für jede Methode andere Argumente verwenden.  
+ Die `Point` -Klasse enthält drei einfache Methoden zum Berechnen von Entfernung: **Abstand**, **DistanceFrom** und **DistanceFromXY**. Jede dieser Methoden gibt einen Wert vom Typ `double` zurück, wobei die Entfernung von `Point` zum Nullpunkt, die Entfernung von einem angegebenen Punkt zu `Point` und die Entfernung von den angegebenen X- und Y-Koordinaten zu `Point` berechnet wird **Abstand** und **DistanceFrom** jeder Aufruf **DistanceFromXY**, und veranschaulichen, wie Sie unterschiedliche Argumente für die einzelnen Methoden zu verwenden.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -548,7 +546,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Die `Microsoft.SqlServer.Server.SqlMethodAttribute`-Klasse stellt benutzerdefinierte Attribute zur Verfügung, mit denen Methodendefinitionen markiert werden können, um einen Determinismus anzugeben, das Verhalten beim Aufruf für NULL-Werte festzulegen und anzugeben, ob eine Methode eine Mutatormethode ist. Bei diesen Eigenschaften werden die Standardwerte vorausgesetzt, und das benutzerdefinierte Attribut wird nur verwendet, wenn ein anderer Wert als der Standardwert erforderlich ist.  
   
 > [!NOTE]  
->  Die `SqlMethodAttribute`-Klasse erbt von der `SqlFunctionAttribute`-Klasse, daher erbt die `SqlMethodAttribute`-Klasse die Felder `FillRowMethodName` und `TableDefinition` von `SqlFunctionAttribute`. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die `IEnumerable` zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name > "in Klasse\<Klasse >" in Assembly "\<Assembly >' hat ungültige Rückgabetyp. "  
+>  Die `SqlMethodAttribute`-Klasse erbt von der `SqlFunctionAttribute`-Klasse, daher erbt die `SqlMethodAttribute`-Klasse die Felder `FillRowMethodName` und `TableDefinition` von `SqlFunctionAttribute`. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die `IEnumerable` zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name > "in der Klasse\<Klasse >" in der Assembly "\<Assembly >' hat ungültigen Rückgabetyp. "  
   
  In der folgenden Tabelle werden einige der relevanten `Microsoft.SqlServer.Server.SqlMethodAttribute`-Eigenschaften beschrieben, die in UDT-Methoden verwendet werden können, und die zugehörigen Standardwerte aufgeführt.  
   
@@ -556,16 +554,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Gibt an, ob die Funktion auf die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Benutzerdaten zugreift. Der Standardwert lautet `DataAccessKind``None`.  
   
  IsDeterministic  
- Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Standardmäßig wird `false`.  
+ Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Der Standardwert ist `false`.  
   
  IsMutator  
- Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Standardmäßig wird `false`.  
+ Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Der Standardwert ist `false`.  
   
  IsPrecise  
- Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Standardmäßig wird `false`.  
+ Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Der Standardwert ist `false`.  
   
  OnNullCall  
- Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Standardmäßig wird `true`.  
+ Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Der Standardwert ist `true`.  
   
 ### <a name="example"></a>Beispiel  
  Mit der `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator`-Eigenschaft können Sie eine Methode markieren, die eine Änderung des Status einer Instanz eines UDTs gestattet. Mit [!INCLUDE[tsql](../../includes/tsql-md.md)] ist es nicht möglich, zwei UDT-Eigenschaften in der SET-Klausel einer UPDATE-Anweisung festzulegen. Sie können jedoch eine Methode als Mutator markieren, die zwei Elemente ändert.  
@@ -625,7 +623,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Durch die Auffüllung wird gewährleistet, dass die Länderangabe vollständig vom Währungsbetrag getrennt ist, sodass beim Vergleich zweier UDT-Werte im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code jeweils die Bytes mit den Länderangaben und die Bytes mit den Währungsbeträgen miteinander verglichen werden.  
   
- Für die vollständige codeauflistung für die `Currency` UDT, führen Sie die Anleitungen zur Installation der CLR-Beispiele in [Beispiele für SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Für die vollständige codeauflistung für die `Currency` UDT, führen Sie die Anweisungen zur Installation der CLR-Beispiele in [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Currency-Attribute  
  Der UDT `Currency` wurde mit den folgenden Attributen definiert.  
@@ -749,7 +747,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Für die vollständige codeauflistung für die `Currency` UDT, finden Sie unter [Beispiele für SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Für die vollständige codeauflistung für die `Currency` UDT, finden Sie unter [Beispiele für SQL Server-Datenbank-Engine](http://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines benutzerdefinierten Typs](creating-user-defined-types.md)  

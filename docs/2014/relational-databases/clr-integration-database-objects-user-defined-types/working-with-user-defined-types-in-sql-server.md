@@ -1,13 +1,11 @@
 ---
-title: Arbeiten mit benutzerdefinierten Typen in SQLServer | Microsoft Docs
+title: Arbeiten mit benutzerdefinierten Typen in SQLServer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - queries [CLR integration]
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad9af77979ef79642c0f12d8265ff590e218649f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7dd010705b0afc24e6f3855e8cd46e52ab5b1b73
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161813"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350985"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
-  Sie erreichen den benutzerdefinierten Typ (UDT) Funktionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache mithilfe von regulären Abfragesyntax. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
+  Sie können den benutzerdefinierten Typ (UDT) Funktionen in zugreifen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache durch reguläre Abfragesyntax verwenden. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren von UDT-Tabellen und -Spalten](working-with-user-defined-types-defining-udt-tables-and-columns.md)  

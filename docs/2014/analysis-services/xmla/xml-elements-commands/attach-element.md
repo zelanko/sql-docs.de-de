@@ -1,5 +1,5 @@
 ---
-title: Attach-Element | Microsoft Docs
+title: Attach-Element | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Attach command
 ms.assetid: a315d1f1-e220-4296-97cb-6d35606b9640
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0052882eec86aeb74dca98a21ebf236d1b0a65e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 12b450f705640de4ab4990c75794f17a82ea83a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321143"
 ---
 # <a name="attach-element"></a>Attach-Element
   Fügt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank, die zuvor von der aktuellen Serverinstanz oder von einer anderen Instanz getrennt wurde, an die aktuelle Serverinstanz an.  
@@ -62,6 +62,6 @@ ms.locfileid: "36057259"
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Verschieben einer Analysis Services-Datenbank](../../multidimensional-models/move-an-analysis-services-database.md)   
  [Datenbank-ReadWriteModes](../../multidimensional-models/database-readwritemodes.md)   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22a4ca7a-0d43-47eb-8078-eb4b167b6e72
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aa374d21c55557aa41072d72f2d6c0876d7eb26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed68f2c497e1cf007250a8667cf36a4f268036f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295480"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Übersetzungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Symbolleiste** können Sie die Aktionen ausführen, die häufig auf der Registerkarte **Übersetzungen** des Cube-Designers verwendet werden.  

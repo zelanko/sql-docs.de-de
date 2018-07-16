@@ -1,5 +1,5 @@
 ---
-title: CubeID-Element (ASSL) | Microsoft Docs
+title: CubeID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeID element
 ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d470f502eda90ffc95220aeca2bfe9d559752040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 941e8171a183bcbc66521b4f022be185cac7911a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321120"
 ---
 # <a name="cubeid-element-assl"></a>CubeID-Element (ASSL)
-  Identifiziert die [Cube](../objects/cube-element-assl.md) zugeordnete Element eine [binden](../data-type/binding-data-type-assl.md) Element.  
+  Identifiziert die [Cube](../objects/cube-element-assl.md) zugeordnete Element eine [Bindung](../data-type/binding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36058791"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `CubeID` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CubeAttributeBinding>, <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, und <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `CubeID` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CubeAttributeBinding>, <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, und <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

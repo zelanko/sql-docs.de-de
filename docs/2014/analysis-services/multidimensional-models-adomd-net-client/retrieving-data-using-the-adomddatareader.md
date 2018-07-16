@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten mittels AdomdDataReader | Microsoft Docs
+title: Abrufen von Daten mittels AdomdDataReader | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321230"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Abrufen von Daten mittels AdomdDataReader
   Beim Abruf von analytischen Daten stellt das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ein ausgewogenes Gleichgewicht zwischen Verwaltung und Interaktivität bereit. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ruft einen schreibgeschützten, vereinfachten Vorwärtsdatenstrom von einer analytischen Datenquelle ab. Dieser nicht zwischengespeicherte Datenstrom ermöglicht es der prozeduralen Logik, die Ergebnisse von einer analytischen Datenquelle effektiv sequenziell zu verarbeiten. Daher ist <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> eine gute Wahl für das Abrufen großer Datenmengen zu Anzeigezwecken, da die Daten nicht zwischengespeichert werden.  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> kann darüber hinaus die Anwendungsleistung erhöhen, indem Daten abgerufen werden, sobald diese zur Verfügung stehen, anstatt darauf zu warten, dass die vollständigen Ergebnisse der Abfrage zurückgegeben werden. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> reduziert des Weiteren den Systemverwaltungsaufwand, da dieser Leser standardmäßig nur jeweils eine Zeile speichert.  
   
- Der Nachteil der optimierten Leistung ist, dass das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt weniger Informationen über die abgerufenen Daten bereitstellt als andere Datenabrufmethoden. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt unterstützt kein großes Objektmodell für die Darstellung von Daten oder Metadaten. Darüber hinaus ermöglicht dieses Objektmodell keine komplexeren Analysefunktionen, wie beispielsweise Zellenrückschreiben. Allerdings bietet das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt eine Gruppe von Methoden mit starker Typisierung für das Abrufen von Cellset-Daten und eine Methode für das Abrufen von Cellset-Metadaten im Tabellenformat. Darüber hinaus <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementiert die **IDbDataReader** Schnittstelle, um die Datenbindung unterstützen und zum Abrufen von Daten mithilfe der `SelectCommand` -Methode, von der **"System.Data"** Namespace des der Microsoft .NET Framework-Klassenbibliothek.  
+ Der Nachteil der optimierten Leistung ist, dass das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt weniger Informationen über die abgerufenen Daten bereitstellt als andere Datenabrufmethoden. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt unterstützt kein großes Objektmodell für die Darstellung von Daten oder Metadaten. Darüber hinaus ermöglicht dieses Objektmodell keine komplexeren Analysefunktionen, wie beispielsweise Zellenrückschreiben. Allerdings bietet das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt eine Gruppe von Methoden mit starker Typisierung für das Abrufen von Cellset-Daten und eine Methode für das Abrufen von Cellset-Metadaten im Tabellenformat. Darüber hinaus <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementiert die **IDbDataReader** -Schnittstelle für die Unterstützung von Datenbindung und das Abrufen von Daten mithilfe der `SelectCommand` -Methode, aus der **"System.Data"** Namespace der Microsoft .NET Framework-Klassenbibliothek.  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>Abrufen von Daten aus AdomdDataReader  
  Um das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt für das Abrufen von Daten zu verwenden, führen Sie die folgenden Schritte durch:  
@@ -56,7 +56,7 @@ ms.locfileid: "36048190"
   
          Zu den verfügbaren typisierten Accessormethoden gehören <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDateTime%2A>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDouble%2A> und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetInt32%2A>. Eine vollständige Liste der typisierten Accessormethoden finden Sie unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.  
   
-3.  **Schließen des Readers an.**  
+3.  **Schließen Sie den Leser ein.**  
   
      Sie sollten immer die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Close%2A>-Methode aufrufen, wenn Sie die Verwendung des <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekts abgeschlossen haben. Während eine Instanz eines <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekts geöffnet ist, wird <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> ausschließlich von diesem <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> verwendet. Sie sind in diesem Fall nicht in der Lage, Befehle auf einer Instanz von <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> auszuführen, einschließlich der Erstellung eines weiteren <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oder `System.Xml.XmlReader`, bis Sie den ursprünglichen <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> schließen.  
   
@@ -88,7 +88,7 @@ objReader.Close();
 ```  
   
 ## <a name="retrieving-metadata-from-the-adomddatareader"></a>Abrufen von Metadaten aus AdomdDataReader  
- Während eine Instanz eines <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> -Objekts geöffnet ist, können Sie Schemainformationen oder Metadaten über den aktuellen Recordset mithilfe der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>-Methode abrufen. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>Gibt eine `DataTable` -Objekt, das mit den Schemainformationen für den aktuellen Recordset gefüllt ist. Die `DataTable` enthält eine Zeile für jede Spalte des Recordsets. Jede Spalte der Schematabellenzeile ist einer Eigenschaft der im Cellset zurückgegebenen Spalte zugeordnet, wobei `ColumnName` der Name der Eigenschaft und der Wert der Spalte der Wert der Eigenschaft ist.  
+ Während eine Instanz eines <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> -Objekts geöffnet ist, können Sie Schemainformationen oder Metadaten über den aktuellen Recordset mithilfe der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>-Methode abrufen. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>Gibt eine `DataTable` Objekt, das mit den Schemainformationen für das aktuelle Recordset gefüllt ist. Die `DataTable` enthält eine Zeile für jede Spalte des Recordsets. Jede Spalte der Schematabellenzeile ist einer Eigenschaft der im Cellset zurückgegebenen Spalte zugeordnet, wobei `ColumnName` der Name der Eigenschaft und der Wert der Spalte der Wert der Eigenschaft ist.  
   
 ### <a name="example-of-retrieving-metadata-from-the-adomddatareader"></a>Beispiel für das Abrufen von Metadaten aus AdomdDataReader  
  Im folgenden Codebeispiel werden die Schemainformationen für ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ausgeschrieben.  

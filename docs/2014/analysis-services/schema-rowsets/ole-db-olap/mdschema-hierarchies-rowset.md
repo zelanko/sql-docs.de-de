@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_HIERARCHIES-Rowset | Microsoft Docs
+title: MDSCHEMA_HIERARCHIES-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c6fa75c935256235d64ad337500923b5974c68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321220"
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES-Rowset
   Beschreibt jede Hierarchie innerhalb einer bestimmten Dimension.  
@@ -40,10 +40,10 @@ ms.locfileid: "36060612"
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Nicht unterstützt|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||(Erforderlich) Der Name des Cubes, zu dem diese Hierarchie gehört.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`||Der eindeutige Name der Dimension, zu der diese Hierarchie gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
-|`HIERARCHY_NAME`|`DBTYPE_WSTR`||Der Name der Hierarchie. Leer, wenn es nur eine einzelne Hierarchie in der Dimension gibt. Dies hat immer einen Wert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|`HIERARCHY_NAME`|`DBTYPE_WSTR`||Der Name der Hierarchie. Leer, wenn es nur eine einzelne Hierarchie in der Dimension gibt. Dies weist immer einen Wert in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`||Der eindeutige Name der Hierarchie.|  
 |`HIERARCHY_GUID`|`DBTYPE_GUID`||Nicht unterstützt|  
-|`HIERARCHY_CAPTION`|`DBTYPE_WSTR`||Eine Bezeichnung oder Beschriftung der Hierarchie zugeordnet. Wird hauptsächlich für Anzeigezwecke verwendet. Wenn keine Beschriftung vorhanden ist, wird `HIERARCHY_NAME` zurückgegeben. Wenn die Dimension keine oder nur eine einzelne Hierarchie enthält, enthält diese Spalte den Namen der Dimension.|  
+|`HIERARCHY_CAPTION`|`DBTYPE_WSTR`||Eine Bezeichnung oder Beschriftung, der Hierarchie zugeordnet. Wird hauptsächlich für Anzeigezwecke verwendet. Wenn keine Beschriftung vorhanden ist, wird `HIERARCHY_NAME` zurückgegeben. Wenn die Dimension keine oder nur eine einzelne Hierarchie enthält, enthält diese Spalte den Namen der Dimension.|  
 |`DIMENSION_TYPE`|`DBTYPE_I2`||Der Typ der Dimension. Gültige Werte sind unter anderem:<br /><br /> -   `MD_DIMTYPE_UNKNOWN` (`0`)<br />-   `MD_DIMTYPE_TIME` (`1`)<br />-   `MD_DIMTYPE_MEASURE` (`2`)<br />-   `MD_DIMTYPE_OTHER` (`3`)<br />-   `MD_DIMTYPE_QUANTITATIVE` (`5`)<br />-   `MD_DIMTYPE_ACCOUNTS` (`6`)<br />-   `MD_DIMTYPE_CUSTOMERS` (`7`)<br />-   `MD_DIMTYPE_PRODUCTS` (`8`)<br />-   `MD_DIMTYPE_SCENARIO` (`9`)<br />-   `MD_DIMTYPE_UTILIY` (`10`)<br />-   `MD_DIMTYPE_CURRENCY` (`11`)<br />-   `MD_DIMTYPE_RATES` (`12`)<br />-   `MD_DIMTYPE_CHANNEL` (`13`)<br />-   `MD_DIMTYPE_PROMOTION` (`14`)<br />-   `MD_DIMTYPE_ORGANIZATION` (`15`)<br />-   `MD_DIMTYPE_BILL_OF_MATERIALS` (`16`)<br />-   `MD_DIMTYPE_GEOGRAPHY` (`17`)|  
 |`HIERARCHY_CARDINALITY`|`DBTYPE_UI4`||Die Anzahl der Member in der Hierarchie.|  
 |`DEFAULT_MEMBER`|`DBTYPE_WSTR`||Das Standardelement für diese Hierarchie. Dies ist ein eindeutiger Name. Jede Hierarchie muss ein Standardelement haben.|  
@@ -59,7 +59,7 @@ ms.locfileid: "36060612"
 |`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||Gibt immer `TRUE`.|  
 |`HIERARCHY_IS_VISIBLE`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob die Hierarchie sichtbar ist.<br /><br /> Gibt `TRUE` zurück, wenn die Hierarchie sichtbar ist; andernfalls wird `FALSE` verwendet.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||Eine Bitmaske, die die Quelle der Hierarchie bestimmt:<br /><br /> -   `MD_USER_DEFINED` identifiziert benutzerdefinierte Hierarchien und hat den Wert `0x0000001`.<br />-   `MD_SYSTEM_ENABLED` identifiziert Attributhierarchien und verfügt über einen Wert von `0x0000002`.<br />-   `MD_SYSTEM_INTERNAL` identifiziert Attribute ohne Attributhierarchien und verfügt über einen Wert von **0 x 0000004**.<br /><br /> Eine Über-/Unterordnungs-Attributhierarchie ist sowohl `MD_USER_DEFINED` als auch `MD_SYSTEM_ENABLED`.|  
-|`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Der zu verwendende Pfad beim Anzeigen der Hierarchie in der Benutzeroberfläche. Ordnernamen werden durch ein Semikolon (;) voneinander getrennt. Geschachtelte Ordner werden durch einen umgekehrten Schrägstrich angegeben (\\).|  
+|`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Der zu verwendende Pfad beim Anzeigen der Hierarchie in der Benutzeroberfläche. Ordnernamen werden durch ein Semikolon (;) voneinander getrennt. Geschachtelte Ordner werden angezeigt, durch einen umgekehrten Schrägstrich (\\).|  
 |`INSTANCE_SELECTION`|`DBTYPE_UI2`||Ein Hinweis an die Clientanwendung, wie die Hierarchie angezeigt werden soll. Gültige Werte sind unter anderem:<br /><br /> -   `MD_INSTANCE_SELECTION_NONE`<br />-   `MD_INSTANCE_SELECTION_DROPDOWN`<br />-   `MD_INSTANCE_SELECTION_LIST`<br />-   `MD_INSTANCE_SELECTION_FILTEREDLIST`<br />-   `MD_INSTANCE_SELECTION_MANDATORYFILTER`|  
 |`GROUPING_BEHAVIOR`|`DBTYPE_I2`||Eine Enumeration, die das erwartete Gruppierungsverhalten von Clients für diese Hierarchie angibt. Mögliche Werte sind die folgenden:<br /><br /> -   **EncourageGrouping** (1)<br />-   **DiscourageGrouping** (2)|  
 |`STRUCTURE_TYPE`|`DBTYPE_WSTR`||Gibt den Typ der Hierarchie an. Gültige Werte sind unter anderem:<br /><br /> -   `Natural`<br />-   `Unnatural`<br />-   `Unknown`|  
@@ -79,7 +79,7 @@ ms.locfileid: "36060612"
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`HIERARCHY_ORIGIN`|`DBTYPE_UI2`|(Optional) Eine Standardeinschränkung ist für MD_USER_DEFINED und MD_SYSTEM_ENABLED gültig.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-CUBE<br />-2-DIMENSION<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
-|`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -Visible 1<br />-2 nicht sichtbar<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
+|`HIERARCHY_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-sichtbar<br />– 2 nicht sichtbar<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](ole-db-for-olap-schema-rowsets.md)  

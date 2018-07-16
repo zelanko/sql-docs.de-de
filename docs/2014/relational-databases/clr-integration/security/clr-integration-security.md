@@ -1,13 +1,11 @@
 ---
-title: CLR-Integrationssicherheit | Microsoft Docs
+title: CLR-Integrationssicherheit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +15,22 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050132"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349592"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
-  Das Sicherheitsmodell von der [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) verwaltet und sichert den Zugriff zwischen verschiedenen Typen von CLR- und nicht-CLR-Objekte, die ausgeführt werden, in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] -Anweisung oder einer anderen auf dem Server ausgeführtes CLR-Objekt. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  
+  Das Sicherheitsmodell von der [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) verwaltet und sichert den Zugriff zwischen verschiedenen Typen von CLR und nicht-CLR-Objekten, die auf [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] -Anweisung oder einer anderen CLR-Objekt, auf dem Server ausgeführt wird. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  
   
  Das Sicherheitsmodell der CLR Integration dient folgenden Zielen:  
   
--   Standardmäßig Ausführung von verwaltetem Benutzercode auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die Durchführung von Vorgängen, die die Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potenziell beeinträchtigen, sollte durch entsprechende Berechtigungen auf höherer Ebene geschützt werden.  
+-   In der Standardeinstellung Ausführung von verwaltetem Benutzercode auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die Durchführung von Vorgängen, die die Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potenziell beeinträchtigen, sollte durch entsprechende Berechtigungen auf höherer Ebene geschützt werden.  
   
 -   Verwalteter Benutzercode sollte keinen unbefugten Zugriff auf Benutzerdaten oder anderen in der Datenbank enthaltenen Benutzercode erhalten. Benutzerdefinierter Code sollte in dem Sicherheitskontext der Benutzersitzung, in der er aufgerufen wurde, und mit den richtigen Berechtigungen für diesen Sicherheitskontext ausgeführt werden.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36050132"
   
 -   Benutzerdefinierter Code sollte nicht in der Lage sein, nur deshalb unbefugten Zugriff auf Systemressourcen zu erlangen, weil er im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozess ausgeführt wird.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Code zugriffsbasierte Sicherheitsmodell der CLR. Einige Vorteile dieses kombinierten Sicherheitsansatzes werden in diesem Abschnitt erläutert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Code Access-basierten Sicherheitsmodell der CLR. Einige Vorteile dieses kombinierten Sicherheitsansatzes werden in diesem Abschnitt erläutert.  
   
  In der folgenden Tabelle sind die Themen dieses Abschnitts aufgeführt.  
   
