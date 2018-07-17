@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,15 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075447"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786011"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -260,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -430,7 +430,7 @@ TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen 
   
 -   Eine [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)-Anweisung konvertiert einen gruppierten Index in einen Heap. In diesem Fall können eine andere FILESTREAM-Dateigruppe, ein anderes Partitionsschema oder **"** default **"** angegeben werden.  
   
- Für die Dateigruppe in der Klausel `FILESTREAM_ON <filegroup>` bzw. für die einzelnen FILESTREAM-Dateigruppen im Partitionsschema muss jeweils eine Datei definiert sein. Diese Datei muss mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)- oder [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert werden, andernfalls wird ein Fehler ausgelöst.  
+ Für die Dateigruppe in der Klausel `FILESTREAM_ON <filegroup>` bzw. für die einzelnen FILESTREAM-Dateigruppen im Partitionsschema muss jeweils eine Datei definiert sein. Diese Datei muss mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)- oder [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert werden, andernfalls wird ein Fehler ausgelöst.  
   
  Verwandte Themen zu FILESTREAM finden Sie unter [Binary Large Object &#40;Blob&#41;-Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -550,7 +550,7 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
 
  Gibt die Platzierung der FILESTREAM-Daten für die Tabelle an, wenn ein gruppierter Index erstellt wird. Die FILESTREAM_ON-Klausel lässt zu, dass FILESTREAM-Daten in eine andere FILESTREAM-Dateigruppe oder ein anderes Partitionsschema verschoben werden.  
   
- *filestream_filegroup_name* ist der Name einer FILESTREAM-Dateigruppe. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
+ *filestream_filegroup_name* ist der Name einer FILESTREAM-Dateigruppe. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
   
  Wenn die Tabelle partitioniert ist, muss die FILESTREAM_ON-Klausel eingeschlossen werden und ein Partitionsschema von FILESTREAM-Dateigruppen angeben, das die gleiche Partitionsfunktion und die gleichen Partitionsspalten wie das Partitionsschema der Tabelle enthält. Andernfalls wird ein Fehler ausgelöst.  
   
