@@ -1,8 +1,7 @@
 ---
 title: Versionsanmerkungen zu SQL Server 2012 Service Pack | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: sql
-ms.technology: supportability
+ms.technology: install
 ms.custom: ''
 ms.date: 2/26/2018
 ms.reviewer: ''
@@ -14,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 5396011be5ce84816d83a4c85da120cb896b44bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037207"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926431"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

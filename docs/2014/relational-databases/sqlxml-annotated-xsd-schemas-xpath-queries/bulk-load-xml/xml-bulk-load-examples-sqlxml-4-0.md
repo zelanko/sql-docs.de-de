@@ -1,5 +1,5 @@
 ---
-title: XML Bulk Load-Beispiele (SQLXML 4.0) | Microsoft Docs
+title: XML Bulk Load-Beispiele (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,21 +33,21 @@ helpviewer_keywords:
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0b8a2db7b814d13e44b29fe0710cf97a4b9993e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 98dd96e8cc9a8751ea0d0ba02f2959c0545f4629
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284706"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Beispiele für XML-Massenladen (SQLXML 4.0)
   In den folgenden Beispielen wird das XML-Massenladen in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] veranschaulicht. Alle Beispiele enthalten ein XSD-Schema und das entsprechende XDR-Schema.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Skript für das Massenladen (ValidateAndBulkload.vbs)  
- Das folgende Skript geschrieben, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), lädt ein XML-Dokument in das XML-DOM; überprüft es anhand eines Schemas und, wenn das Dokument gültig ist, wird führt diesen einem XML-Massenladevorgang auf des Load der XML-Daten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle. Dieses Skript kann mit allen Beispielen in diesem Kapitel ausgeführt werden, die einen entsprechenden Verweis enthalten.  
+ Das folgende Skript geschrieben, die der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), lädt ein XML-Dokument in das XML-DOM, überprüft es anhand eines Schemas und wenn das Dokument gültig ist, ist führt einem XML-Massenladevorgang Load zu Laden der XML-Daten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle. Dieses Skript kann mit allen Beispielen in diesem Kapitel ausgeführt werden, die einen entsprechenden Verweis enthalten.  
   
 > [!NOTE]  
 >  Der XML-Massenladevorgang gibt keine Warnung aus, wenn kein Inhalt von der Datendatei hochgeladen wird. Es wird daher empfohlen, die XML-Datendatei vor dem Ausführen eines Massenladevorgangs zu überprüfen.  
@@ -116,7 +116,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. Massenladen von XML-Daten in eine Tabelle  
- In diesem Beispiel wird eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die in die "ConnectionString"-Eigenschaft (MyServer) angegeben wird. Im Beispiel wird auch die ErrorLogFile-Eigenschaft. Daher wird die Fehlerausgabe in der angegebenen Datei (C:\error.log) gespeichert. Sie können den Speicherort auch jederzeit ändern. Beachten Sie außerdem, dass die Execute-Methode als Parameter sowohl die Zuordnungsschemadatei (SampleSchema.xml) als auch die XML-Datendatei (SampleXMLData.xml) verfügt. Wenn das Massenladen ausführt, werden die Cust-Tabelle, die Sie in erstellt haben **Tempdb** Datenbank neue Datensätze basierend auf den Inhalt der XML-Datendatei enthält.  
+ In diesem Beispiel wird eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die in der "ConnectionString"-Eigenschaft (MyServer) angegeben wird. Im Beispiel wird auch die ErrorLogFile-Eigenschaft. Daher wird die Fehlerausgabe in der angegebenen Datei (C:\error.log) gespeichert. Sie können den Speicherort auch jederzeit ändern. Beachten Sie auch, dass die Execute-Methode als Parameter sowohl die Zuordnungsschemadatei (SampleSchema.xml) als auch der XML-Datendatei (samplexmldata.XML angibt). Wenn das Massenladen ausführt, werden die Cust-Tabelle, die Sie erstellt haben, in **Tempdb** Datenbank neue Datensätze basierend auf den Inhalt der XML-Datendatei enthält.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>So testen Sie ein Beispiel für einen Massenladevorgang  
   
@@ -174,7 +174,7 @@ End Function
     </ROOT>  
     ```  
   
-4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie zu dieser Datei den VBScript-Code hinzu, der am Anfang dieses Themas bereitgestellt wird. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Servernamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter für die Execute-Methode angegeben werden.  
+4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie zu dieser Datei den VBScript-Code hinzu, der am Anfang dieses Themas bereitgestellt wird. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Servernamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter an die Execute-Methode angegeben werden.  
   
 5.  Führen Sie den VBScript-Code aus. XML-Massenladen lädt den XML-Code in die Cust-Tabelle.  
   
@@ -204,7 +204,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Massenladen von XML-Daten in mehrere Tabellen  
- In diesem Beispiel wird das XML-Dokument besteht aus den  **\<Kunden >** und  **\<Reihenfolge >** Elemente.  
+ In diesem Beispiel das XML-Dokument besteht aus den  **\<Kunden >** und  **\<Reihenfolge >** Elemente.  
   
 ```  
 <ROOT>  
@@ -229,7 +229,7 @@ End Function
 </ROOT>  
 ```  
   
- Dieses Beispiel wird ein Massenimport lädt das XML-Daten in zwei Tabellen **Cust** und **CustOrder**:  
+ Dieses Beispiel wird ein Massenimport lädt die XML-Daten in zwei Tabellen, **Cust** und **CustOrder**:  
   
 ```  
 Cust(CustomerID, CompanyName, City)  
@@ -275,7 +275,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- Die Primärschlüssel-Fremdschlüssel-Beziehung zwischen der oben angegebene XML-Massenladen verwendet die  **\<Cust >** und  **\<CustOrder >** Elemente für den Massenimport Laden der Daten in beiden Tabellen .  
+ XML-Massenladen verwendet die Primärschlüssel-Fremdschlüssel-Beziehung zwischen der oben angegebene die  **\<Cust >** und  **\<CustOrder >** Elemente für den Massenimport Laden der Daten in beiden Tabellen .  
   
 #### <a name="to-test-a-sample-bulk-load"></a>So testen Sie ein Beispiel für einen Massenladevorgang  
   
@@ -295,7 +295,7 @@ CustOrder(OrderID, CustomerID)
   
 3.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleData.xml. Fügen Sie der Datei das XML-Dokument hinzu, das weiter oben in diesem Beispiel bereitgestellt wird.  
   
-4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie zu dieser Datei den VBScript-Code hinzu, der am Anfang dieses Themas bereitgestellt wird. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter für die Execute-Methode angegeben werden.  
+4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie zu dieser Datei den VBScript-Code hinzu, der am Anfang dieses Themas bereitgestellt wird. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter an die Execute-Methode angegeben werden.  
   
 5.  Führen Sie den oben angegebenen VBScript-Code aus. XML-Massenladen lädt das XML-Dokument in die Tabellen Cust und CustOrder.  
   
@@ -388,7 +388,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- Das Schema gibt ein  **\<Reihenfolge >** Element mit einer  **\<Product >** untergeordnetes Element. Die  **\<Reihenfolge >** Element ordnet Ord-Tabelle und die  **\<Product >** Element wird der Product-Tabelle in der Datenbank zugeordnet. Auf angegebene der  **\<Product >** Element identifiziert eine m: n-Beziehung, die durch die OrderDetail-Tabelle dargestellt. (Eine Bestellung kann viele Produkte beinhalten, und ein Produkt kann in vielen Bestellungen enthalten sein.)  
+ Das Schema gibt ein  **\<Reihenfolge >** -Element mit einer  **\<Product >** untergeordnetes Element. Die  **\<Reihenfolge >** -Element ordnet Ord-Tabelle und die  **\<Product >** Element wird der Product-Tabelle in der Datenbank zugeordnet. Auf angegebene die  **\<Product >** Element identifiziert eine m: n-Beziehung, die durch die OrderDetail-Tabelle dargestellt. (Eine Bestellung kann viele Produkte beinhalten, und ein Produkt kann in vielen Bestellungen enthalten sein.)  
   
  Wenn Sie mit diesem Schema einen Massenladevorgang für ein XML-Dokument durchführen, werden den Tabellen Ord, Product und OrderDetail Datensätze hinzugefügt.  
   
@@ -457,7 +457,7 @@ Product (ProductID, ProductName)
 OrderDetail (OrderID, ProductID)  
 ```  
   
- In diesem Beispiel der XML-Massenladen wird der KeepIdentity-Eigenschaft des Objektmodells BulkLoad auf "false" festgelegt. Daher erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Identitätswerte für die Spalten ProductID und OrderID in den Tabellen Product und Ord (alle in den Dokumenten für das Massenladen angegebenen Werte werden ignoriert).  
+ In diesem Beispiel der XML-Massenladen wird die KeepIdentity-Eigenschaft des BulkLoad-Objektmodells auf "false" festgelegt. Daher erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Identitätswerte für die Spalten ProductID und OrderID in den Tabellen Product und Ord (alle in den Dokumenten für das Massenladen angegebenen Werte werden ignoriert).  
   
  In diesem Fall gibt der XML-Massenladevorgang die Primärschlüssel- bzw. Fremdschlüsselbeziehung zwischen Tabellen an. Der Massenladevorgang fügt zunächst Datensätze in die Tabelle mit den Primärschlüsseln ein und gibt dann die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generierten Identitätswerte an die Tabellen mit den Fremdschlüsselspalten weiter. Im folgenden Beispiel fügt der XML-Massenladevorgang Daten in dieser Reihenfolge in Tabellen ein:  
   
@@ -563,7 +563,7 @@ OrderDetail (OrderID, ProductID)
 5.  Führen Sie den VBScript-Code aus. Der XML-Massenladevorgang lädt die Daten in die entsprechenden Tabellen.  
   
 ## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. Erstellen von Tabellenschemas vor dem Massenladen  
- Der XML-Massenladevorgang kann die Tabellen optional erstellen, wenn sie vor dem Massenladen nicht vorhanden sind. Festlegen der Eigenschaft "schemagen" SQLXMLBulkLoad-Objekt auf "true" wird dies. Sie können optional auch anfordern, dass XML-Massenladen an vorhandenen Tabellen löschen und Neuerstellen von SGDropTables-Eigenschaft auf "true" festlegen. Das folgende VBScript-Beispiel zeigt die Verwendung dieser Eigenschaften.  
+ Der XML-Massenladevorgang kann die Tabellen optional erstellen, wenn sie vor dem Massenladen nicht vorhanden sind. Festlegen der Eigenschaft "schemagen" SQLXMLBulkLoad-Objekt auf "true" unterstützt dies. Sie können optional auch anfordern, dass XML-Massenladen alle vorhandenen Tabellen gelöscht und neu erstellt werden, indem Sie die SGDropTables-Eigenschaft auf "true". Das folgende VBScript-Beispiel zeigt die Verwendung dieser Eigenschaften.  
   
  In diesem Beispiel werden außerdem zwei zusätzliche Eigenschaften auf TRUE festgelegt:  
   
@@ -592,14 +592,14 @@ Set objBL = Nothing
   
 1.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleSchema.xml. Fügen Sie der Datei das XSD-Schema aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu.  
   
-2.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleXMLData.xml. Fügen Sie der Datei das XML-Dokument aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu. Entfernen Sie die \<ROOT >-Element aus dem Dokument (um ein Fragment zu vereinfachen).  
+2.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als SampleXMLData.xml. Fügen Sie der Datei das XML-Dokument aus dem oben aufgeführten Beispiel "Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen" hinzu. Entfernen Sie die \<ROOT >-Element aus dem Dokument (um es zu einem Fragment machen).  
   
-3.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den VBScript-Code in diesem Beispiel hinzu. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter für die Execute-Methode angegeben werden.  
+3.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den VBScript-Code in diesem Beispiel hinzu. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter an die Execute-Methode angegeben werden.  
   
 4.  Führen Sie den VBScript-Code aus. Der XML-Massenladevorgang erstellt die erforderlichen Tabellen basierend auf dem bereitgestellten Zuordnungsschema und lädt die Daten in einem Massenvorgang.  
   
 ## <a name="f-bulk-loading-from-a-stream"></a>F. Massenladen von einem Datenstrom  
- Die Execute-Methode des XML-Massenladen-Objektmodells verwendet zwei Parameter. Der erste Parameter ist die Zuordnungsschemadatei. Der zweite Parameter gibt die XML-Daten an, die in die Datenbank geladen werden sollen. Es gibt zwei Möglichkeiten, um die XML-Daten an die Execute-Methode des XML-Massenladen übergeben:  
+ Die Execute-Methode des XML-Massenladen-Objektmodells verwendet zwei Parameter an. Der erste Parameter ist die Zuordnungsschemadatei. Der zweite Parameter gibt die XML-Daten an, die in die Datenbank geladen werden sollen. Es gibt zwei Möglichkeiten, die XML-Daten an die Execute-Methode von XML-Massenladen zu übergeben:  
   
 -   Angeben des Dateinamen als Parameter  
   
@@ -620,7 +620,7 @@ Set objBL = Nothing
   
  Das Skript übergibt dann den XML-Code als Datenstrom an die Execute-Methode als zweiten Parameter. Der Großteil der Execute-Methode lädt die Daten in die Cust-Tabelle.  
   
- Da dieses Skript die SchemaGen-Eigenschaft auf "true" und SGDropTables-Eigenschaft auf "true" festgelegt, erstellt XML-Massenladevorgang die Cust-Tabelle in der angegebenen Datenbank. (Wenn die Tabelle bereits vorhanden ist, löscht sie zuerst die Tabelle und erstellt sie dann erneut.)  
+ Da dieses Skript die SchemaGen-Eigenschaft auf "true" und SGDropTables-Eigenschaft auf "true" legt fest, erstellt XML-Massenladevorgang die Cust-Tabelle in der angegebenen Datenbank. (Wenn die Tabelle bereits vorhanden ist, löscht sie zuerst die Tabelle und erstellt sie dann erneut.)  
   
  Dies ist das VB-Script-Beispiel:  
   
@@ -711,7 +711,7 @@ Set objBL = Nothing
 ```  
   
 ### <a name="opening-a-stream-on-an-existing-file"></a>Öffnen eines Datenstroms in einer vorhandenen Datei  
- Sie können auch einen Datenstrom in eine vorhandene XML-Datendatei öffnen und übergeben Sie den Datenstrom als Parameter an die Execute-Methode (anstatt den Dateinamen als Parameter übergeben).  
+ Sie können auch einen Datenstrom in eine vorhandene XML-Datendatei zu öffnen und übergeben Sie den Datenstrom als Parameter an die Execute-Methode (anstelle der Dateiname als Parameter übergeben).  
   
  In diesem Visual Basic-Beispiel wird ein Datenstrom als Parameter übergeben:  
   
@@ -850,10 +850,10 @@ End Sub
 </xsd:schema>  
 ```  
   
- Das Schema identifiziert eine Überlaufspalte (OverflowColumn) für die Cust-Tabelle. Folglich alle XML-Daten für jede verbrauchten  **\<Kunden >** Element, das dieser Spalte hinzugefügt wird.  
+ Das Schema identifiziert eine Überlaufspalte (OverflowColumn) für die Cust-Tabelle. Daher nicht alle XML-Daten für jeden verwendeten  **\<Kunden >** Element wird für diese Spalte hinzugefügt.  
   
 > [!NOTE]  
->  Alle abstrakten Elemente (Elemente, für die **abstrakte = "true"** angegeben ist) und alle nicht zulässigen Attribute (Attribute, für die **verboten = "true"** angegeben wird) werden von XML-Massenladevorgang als Überlauf angesehen Laden und sind Overflow-Spalte hinzugefügt, wenn angegeben. (Andernfalls werden sie ignoriert.)  
+>  Alle abstrakten Elemente (Elemente, für die **abstrakte = "true"** angegeben ist) und alle nicht zulässigen Attribute (Attribute, für die **unzulässig = "true"** angegeben ist) werden von XML-Massenladevorgang als Überlauf angesehen Laden und sind die Overflow-Spalte hinzugefügt, angegeben. (Andernfalls werden sie ignoriert.)  
   
 #### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   
@@ -904,7 +904,7 @@ End Sub
     </ROOT>  
     ```  
   
-4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den folgenden VBScript-Code (Microsoft Visual Basic Scripting Edition) hinzu. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter für die Execute-Methode angegeben werden.  
+4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den folgenden VBScript-Code (Microsoft Visual Basic Scripting Edition) hinzu. Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter an die Execute-Methode angegeben werden.  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -977,11 +977,11 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  Der Pfad für die temporäre Datei muss ein freigegebener Speicherort sein, auf den das Dienstkonto der Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und das Konto, das die Massenladeanwendung ausführt, zugreifen können. Es sei denn, Sie Massenimport von Daten auf einem lokalen Server sind, muss der Pfad für die temporäre Datei einen UNC-Pfad (z. B. \\\servername\sharename).  
+>  Der Pfad für die temporäre Datei muss ein freigegebener Speicherort sein, auf den das Dienstkonto der Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und das Konto, das die Massenladeanwendung ausführt, zugreifen können. Wenn Sie den Massenladevorgang auf einem lokalen Server sind, muss der Pfad für die temporäre Datei einen UNC-Pfad sein (z. B. \\\servername\sharename).  
   
 #### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   
-1.  Erstellen Sie diese Tabelle im **Tempdb** Datenbank:  
+1.  Erstellen Sie diese Tabelle in **Tempdb** Datenbank:  
   
     ```  
     USE tempdb;  
@@ -1021,7 +1021,7 @@ set objBL=Nothing
     </ROOT>  
     ```  
   
-4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den folgenden VBScript-Code hinzu: Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter für die Execute-Methode angegeben werden. Geben Sie auch den entsprechenden Pfad für die TempFilePath-Eigenschaft.  
+4.  Erstellen Sie eine Datei in Ihrem bevorzugten Text- oder XML-Editor, und speichern Sie sie als ValidateAndBulkload.vbs. Fügen Sie dieser Datei den folgenden VBScript-Code hinzu: Ändern Sie die Verbindungszeichenfolge, um den entsprechenden Server- und Datenbanknamen bereitzustellen. Geben Sie den entsprechenden Pfad für die Dateien, die als Parameter an die Execute-Methode angegeben werden. Geben Sie auch den entsprechenden Pfad für die TempFilePath-Eigenschaft.  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -1036,7 +1036,7 @@ set objBL=Nothing
   
 5.  Führen Sie den VBScript-Code aus.  
   
-     Das Schema muss das entsprechende angeben `sql:datatype` für die **CustomerID** -Attribut festlegen, wenn der Wert für **CustomerID** als GUID, die geschweiften Klammern ({und}), z. B. enthält als angegeben ist:  
+     Das Schema muss das entsprechende anzugeben `sql:datatype` für die **"CustomerID"** -Attribut festlegen, wenn der Wert für **"CustomerID"** als eine GUID mit geschweiften Klammern ({und}), z. B. als angegeben wird:  
   
     ```  
     <ROOT>  
@@ -1068,7 +1068,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     Wenn `sql:datatype` angegeben ist, der Spaltentyp als `uniqueidentifier`, des Massenladevorgangs entfernt die geschweiften Klammern ({und}) aus der **CustomerID** Wert vor dem Einfügen in der Spalte.  
+     Wenn `sql:datatype` entspricht der Spaltentyp als `uniqueidentifier`, des Massenladevorgangs entfernt die geschweiften Klammern ({und}) aus der **"CustomerID"** Wert vor dem Einfügen in der Spalte.  
   
  Dies ist das entsprechende XDR-Schema:  
   
@@ -1093,7 +1093,7 @@ set objBL=Nothing
 ## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>I. Verwenden einer vorhandenen Datenbankverbindung mit der "ConnectionCommand"-Eigenschaft  
  Sie können eine vorhandene ADO-Verbindung für das XML-Massenladen verwenden. Dies ist dann hilfreich, wenn der XML-Massenladevorgang nur einer von mehreren Vorgängen ist, der für eine Datenquelle ausgeführt wird.  
   
- Der "connectioncommand"-Eigenschaft können Sie eine vorhandene ADO-Verbindung mit einer ADO-Befehlsobjekt verwenden. Dies wird im folgenden Visual Basic-Beispiel veranschaulicht:  
+ Der "connectioncommand"-Eigenschaft können Sie eine vorhandene ADO-Verbindung mithilfe einer ADO-Befehlsobjekt. Dies wird im folgenden Visual Basic-Beispiel veranschaulicht:  
   
 ```  
 Private Sub Form_Load()  
@@ -1250,7 +1250,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. Massenladen in XML-Datentypspalten  
  Wenn das Zuordnungsschema eine [Xml-Datentyp](/sql/t-sql/xml/xml-transact-sql) Spalte, indem die `sql:datatype="xml"` Anmerkung, XML-Massenladen kann untergeordnete XML-Elemente für das zugeordnete Feld aus dem Quelldokument in diese Spalte kopieren.  
   
- Beachten Sie das folgende XSD-Schema, das eine Sicht der Production.ProductModel-Tabelle in der AdventureWorks-Beispieldatenbank zuordnet. In dieser Tabelle wird das CatalogDescription-Feld der `xml` Datentyp zugeordnet ist, eine  **\<"DESC" >** Element mit dem `sql:field` und `sql:datatype="xml"` Anmerkungen.  
+ Beachten Sie das folgende XSD-Schema, das eine Sicht der Production.ProductModel-Tabelle in der AdventureWorks-Beispieldatenbank zuordnet. In dieser Tabelle ist die CatalogDescription-Feld des `xml` Datentyp zugeordnet ist, eine  **\<Desc >** Element mit dem `sql:field` und `sql:datatype="xml"` Anmerkungen.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -28,13 +28,13 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7cb436d29f4401122daba5985558e3bb50e665f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279546"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -74,7 +74,7 @@ ms.locfileid: "36149704"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |`CheckpointFileName`|Der Name der Datei, die die Prüfpunktinformationen aufzeichnet, mit der ein Paket neu gestartet werden kann. Wenn das Paket erfolgreich ausgeführt wurde, wird diese Datei gelöscht.|  
-|`CheckpointUsage`|Gibt an, wann ein Paket neu gestartet werden kann. Die Werte sind `Never`, `IfExists`, und `Always`. Der Standardwert dieser Eigenschaft ist `Never`, was bedeutet, dass das Paket neu gestartet werden kann. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
+|`CheckpointUsage`|Gibt an, wann ein Paket neu gestartet werden kann. Die Werte sind `Never`, `IfExists`, und `Always`. Der Standardwert dieser Eigenschaft ist `Never`, was bedeutet, dass das Paket nicht neu gestartet werden kann. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
 |`SaveCheckpoints`|Gibt an, ob die Prüfpunkte in die Prüfpunktdatei geschrieben werden, wenn das Paket ausgeführt wird. Der Standardwert dieser Eigenschaft ist `False`.|  
   
 > [!NOTE]  
@@ -99,7 +99,7 @@ ms.locfileid: "36149704"
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Wenn ForceExecutionValue, um festgelegt ist `True`, ein Wert, der das Paket zurückgegebenen optionalen Ausführungswert angibt. Der Standardwert dieser Eigenschaft ist **0**.|  
+|`ForcedExecutionValue`|Falls ForceExecutionValue, um festgelegt ist `True`, ein Wert, den optionalen Ausführungswert angibt, die vom Paket zurückgegebenen. Der Standardwert dieser Eigenschaft ist **0**.|  
 |`ForcedExecutionValueType`|Der Datentyp von ForcedExecutionValue. Der Standardwert dieser Eigenschaft ist `Int32`.|  
 |`ForceExecutionValue`|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist `False`.|  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36149704"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |`Configurations`|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
-|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften erstellen, die Objekt-Modell enthält, nicht nur die Eigenschaften im Eigenschaftenfenster aufgelistet.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(…)** , um einen Ausdruck zu ändern und auszuwerten.|  
+|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften erstellen, die Objekt-Modell enthält, nicht nur im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(…)** , um einen Ausdruck zu ändern und auszuwerten.|  
 |`ForceExecutionResult`|Das Ausführungsergebnis des Pakets. Die Werte sind `None`, `Success`, `Failure`, und `Completion`. Der Standardwert dieser Eigenschaft ist `None`. Weitere Informationen finden Sie unter T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.|  
 |`LoggingMode`|Ein Wert, der das Protokollierungsverhalten des Pakets angibt. Die Werte sind `Disabled`, `Enabled`, und `UseParentSetting`. Der Standardwert dieser Eigenschaft ist `UseParentSetting`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>ausgewertet wird.|  
 |`OfflineMode`|Gibt an, ob sich das Paket im Offlinemodus befindet. Diese Eigenschaft ist schreibgeschützt. Die Eigenschaft wird auf Projektebene festgelegt. Normalerweise versucht der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer eine Verbindung mit jeder Datenquellen herzustellen, die von dem Paket verwendet wird, um die den Quellen und Zielen zugeordneten Metadaten zu überprüfen. Wenn die Datenquellen nicht verfügbar sind, können Sie diese Verbindungsversuche und die resultierenden Überprüfungsfehler verhindern, indem Sie vor dem Öffnen eines Pakets im Menü **SSIS** die Option **Offline arbeiten** aktivieren. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.|  
 |`SuppressConfigurationWarnings`|Zeigt an, ob die von Konfigurationen generierten Warnungen unterdrückt werden. Der Standardwert dieser Eigenschaft ist `False`.|  
-|`UpdateObjects`|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Wenn diese Eigenschaft festgelegt wird, um z. B. `True`, ein Paket, das einen Masseneinfügungstask enthält wird aktualisiert, um die neuere Version des Masseneinfügungstasks task von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet. Der Standardwert dieser Eigenschaft ist `False`.|  
+|`UpdateObjects`|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Wenn diese Eigenschaft festgelegt wird, um z. B. `True`, ein Paket, das einen Masseneinfügungstask enthält wird aktualisiert, um die neuere Version des Masseneinfügungstasks task von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält. Der Standardwert dieser Eigenschaft ist `False`.|  
   
 ###  <a name="Security"></a> Sicherheit  
  Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "36149704"
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert, der die `IsolationLevel` von einem untergeordneten Container angeforderten Eigenschaft wird ignoriert, wenn Folgendes zutrifft:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Die `Snapshot` Wert, der die `IsolationLevel` Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Aus diesem Grund können keine der `IsolationLevel` -Eigenschaft zum Festlegen der Isolationsstufe von Pakettransaktionen auf `Shapshot`. Verwenden Sie stattdessen eine SQL-Abfrage zum Festlegen von Pakettransaktionen auf `Snapshot`. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert des der `IsolationLevel` von einem untergeordneten Container angeforderten Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Die `Snapshot` Wert, der die `IsolationLevel` -Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Aus diesem Grund können keine der `IsolationLevel` -Eigenschaft zum Festlegen der Isolationsstufe von Pakettransaktionen auf `Shapshot`. Verwenden Sie stattdessen eine SQL-Abfrage zum Festlegen von Pakettransaktionen auf `Snapshot`. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte sind `NotSupported`, `Supported`, `Required`. Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>ausgewertet wird.|  
   
 ###  <a name="Version"></a> Version  

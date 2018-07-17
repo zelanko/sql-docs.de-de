@@ -1,5 +1,5 @@
 ---
-title: Definieren von the Unknown Member and Null Processing Eigenschaften | Microsoft Docs
+title: Definieren von unbekannten Elementen und Eigenschaften Verarbeitung von Null | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 29c4958263524f6c702f112d5817231734a4b31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e355d6c376b8196118d056954f8a2694676e08a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317300"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
   Wenn von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine Dimension verarbeitet wird, werden die Attribute in der Dimension durch alle unterschiedlichen Werte aus den zugrunde liegenden Spalten in den Tabellen oder Ansichten in der Datenquellensicht aufgefüllt. Wenn [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bei der Verarbeitung auf einen NULL-Wert stößt, wird dieser standardmäßig für numerische Spalten in einen Nullwert oder für Zeichenfolgenspalten in eine leere Zeichenfolge konvertiert. Sie können diese Standardeinstellungen ändern oder NULL-Werte in Ihrem Extrahierungs-, Transformations- und Ladeprozess (falls vorhanden) des zu Grunde liegenden relationalen Data Warehouse konvertieren. Darüber hinaus können Sie den NULL-Wert auch von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in einen festgelegten Wert konvertieren lassen. Zu diesem Zweck konfigurieren Sie drei Eigenschaften: die **UnknownMember** - und die **UnknownMemberName** -Eigenschaften für die Dimension und die **NullProcessing** -Eigenschaft für das Schlüsselattribut der Dimension.  
@@ -28,7 +28,7 @@ ms.locfileid: "36150469"
   
  Wenn Sie jedoch Schneeflockendimensionen inkrementell erstellen, wie es bei der Product-Dimension in diesem Tutorial der Fall ist, oder wenn Sie Dimensionen mithilfe des Dimensions-Designers erstellen und anschließend diese vorhandenen Dimensionen in einen Cube integrieren, müssen die Eigenschaften **UnknownMember** und **NullProcessing** unter Umständen manuell festgelegt werden.  
   
- In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunterkategorieattribute der Product-Dimension aus der Schneeflockentabelle hinzu, die Sie der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzufügen werden. Aktivieren Sie dann die **UnknownMember** für die Product-Dimension, die Eigenschaft an `Assembly Components` als Wert für die **UnknownMemberName** -Eigenschaft, beziehen sich die `Subcategory` und `Category`Attribute für das Produkt name-Attribut, und definieren Sie benutzerdefinierte Fehlerbehandlung für das Schlüsselattribut Element, das die schneeflockentabellen verknüpft.  
+ In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunterkategorieattribute der Product-Dimension aus der Schneeflockentabelle hinzu, die Sie der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW-Datenquellensicht hinzufügen werden. Aktivieren Sie dann die **UnknownMember** Eigenschaft für die Product-Dimension angeben `Assembly Components` als Wert für die **UnknownMemberName** -Eigenschaft, beziehen sich die `Subcategory` und `Category`-Attribute dem Produktnamensattribut zu und definieren Sie dann die benutzerdefinierte Fehlerbehandlung für das elementschlüsselattribut, das die schneeflockentabellen verknüpft.  
   
 > [!NOTE]  
 >  Wenn Sie die Attribute Subcategory und Category bei der Definition des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cubes mithilfe des Cube-Assistenten hinzugefügt haben, wurden diese Schritte bereits automatisch ausgeführt.  
@@ -91,7 +91,7 @@ ms.locfileid: "36150469"
   
 8.  Suchen Sie im Bereich **Datenquellensicht** die **DimProductCategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductCategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.  
   
-9. In der **Attribute** Bereich, ändern Sie der Namen dieses neuen Attributs in `Category`.  
+9. In der **Attribute** Bereich, Änderung, die der Namen dieses neuen Attributs in `Category`.  
   
 10. Klicken Sie im Fenster „Eigenschaften“ in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen (**…**), um das Dialogfeld **Namensspalte** zu öffnen.  
   
@@ -99,13 +99,13 @@ ms.locfileid: "36150469"
   
 12. Suchen Sie im Bereich **Datenquellensicht** die **DimProductSubcategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductSubcategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.  
   
-13. In der **Attribute** Bereich, ändern Sie der Namen dieses neuen Attributs in `Subcategory`.  
+13. In der **Attribute** Bereich, Änderung, die der Namen dieses neuen Attributs in `Subcategory`.  
   
 14. Klicken Sie im Fenster „Eigenschaften“ in das Eigenschaftenfeld **NameColumn** und anschließend auf die Schaltfläche zum Durchsuchen ( **…** ), um das Dialogfeld **Namensspalte** zu öffnen.  
   
 15. Wählen Sie **EnglishProductSubcategoryName** in der **Quellspalte** -Liste aus, und klicken Sie auf **OK**.  
   
-16. Erstellen Sie eine neue benutzerdefinierte Hierarchie mit dem Namen **Produktkategorien** mit den folgenden Ebenen, in der Reihenfolge von oben nach unten: `Category`, `Subcategory`, und **Produktname**.  
+16. Erstellen Sie eine neue benutzerdefinierte Hierarchie namens **Produktkategorien** mit den folgenden Ebenen, in der Reihenfolge von oben nach unten: `Category`, `Subcategory`, und **Produktname**.  
   
 17. Geben Sie `All Products` als Wert für die **AllMemberName** Eigenschaft der benutzerdefinierten Product Categories-Hierarchie.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36150469"
   
 6.  Klicken Sie im Dimensions-Designer für die **Product** -Dimension auf die Registerkarte **Browser** und anschließend auf **Verbindung wiederherstellen**.  
   
-7.  Überprüfen Sie, ob **Product Model Lines** wird angezeigt, der **Hierarchie** aus, erweitern Sie `All Products`, und erweitern Sie dann **Komponenten**.  
+7.  Überprüfen Sie, ob **Product Model Lines** wird in der **Hierarchie** aus, erweitern Sie `All Products`, und erweitern Sie dann **Komponenten**.  
   
-8.  Wählen Sie **Produktkategorien** in der **Hierarchie** aus, erweitern Sie `All Products`, und erweitern Sie dann **Komponenten**.  
+8.  Wählen Sie **Produktkategorien** in die **Hierarchie** aus, erweitern Sie `All Products`, und erweitern Sie dann **Komponenten**.  
   
      Beachten Sie, dass keine der Assemblykomponenten angezeigt wird.  
   
- To modify the behavior mentioned in the previous task, you will enable the **UnknownMember** property of the Products dimension, set a value for the **UnknownMemberName** property, set the **NullProcessing** property for the `Subcategory` and **Model Name** attributes to **UnknownMember**, define the `Category` attribute as a related attribute of the `Subcategory` attribute, and then define the **Product Line** attribute as a related attribute of the **Model Name** attribute. Durch diese Schritte verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Namenswert des unbekannten Elements für jedes Produkt, das keinen Wert für die **SubcategoryKey** -Spalte aufweist. Dies wird in der folgenden Aufgabe gezeigt.  
+ Um das Verhalten, die bereits erwähnt, in der vorherigen Aufgabe zu ändern, aktivieren Sie die **UnknownMember** Eigenschaft von der Products-Dimension, legen Sie einen Wert für die **UnknownMemberName** Eigenschaftensatz, der  **NullProcessing** -Eigenschaft für die `Subcategory` und **Modellname** Attribute **UnknownMember**, definieren die `Category` -Attribut als ein verknüpftes Attribut des die `Subcategory` Attribut, und definieren Sie dann die **Product Line** -Attribut als ein verknüpftes Attribut des der **Modellname** Attribut. Durch diese Schritte verwendet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Namenswert des unbekannten Elements für jedes Produkt, das keinen Wert für die **SubcategoryKey** -Spalte aufweist. Dies wird in der folgenden Aufgabe gezeigt.  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>Aktivieren des unbekannten Elements, Definieren von Attributbeziehungen und Angeben von benutzerdefinierten Verarbeitungseigenschaften für NULL-Werte  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36150469"
   
 3.  Klicken Sie auf die Registerkarte **Attributbeziehungen** .  
   
-4.  Das Diagramm mit der Maustaste die `Subcategory` Attribut, und wählen Sie dann **neue Attributbeziehung**.  
+4.  Im Diagramm mit der Maustaste der `Subcategory` Attribut, und wählen Sie dann **neue Attributbeziehung**.  
   
-5.  In der **attributbeziehung erstellen < /** (Dialogfeld), die **Quellattribut** ist `Subcategory`. Legen Sie die **verknüpftes Attribut** auf `Category`. Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.  
+5.  In der **attributbeziehung erstellen < /** im Dialogfeld die **Quellattribut** ist `Subcategory`. Legen Sie die **verknüpftes Attribut** zu `Category`. Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36150469"
   
 12. Ändern Sie die **NullProcessing** -Eigenschaft in **UnknownMember**.  
   
-     Aufgrund dieser Änderungen beim [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erkennt einen null-Wert für die `Subcategory` Attribut oder die **Modellname** Attribut während der Verarbeitung den unbekannten Elementwert wird als der Schlüsselwert ersetzt werden und die benutzerdefinierte Hierarchien werden ordnungsgemäß erstellt werden.  
+     Aufgrund dieser Änderungen beim [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erkennt einen null-Wert für die `Subcategory` Attribut oder die **Modellname** Attribut während der Verarbeitung den unbekannten Elementwert als der Schlüsselwert ersetzt und die benutzerdefinierte Hierarchien werden ordnungsgemäß erstellt werden.  
   
 ## <a name="browsing-the-product-dimension-again"></a>Erneutes Durchsuchen der Product-Dimension  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36150469"
   
      Beachten Sie, dass Assembly Components als neues Element auf der Category-Ebene angezeigt wird.  
   
-4.  Erweitern Sie die `Assembly Components` Mitglied der `Category` Ebene, und erweitern Sie dann die `Assembly Components` Mitglied der `Subcategory` Ebene.  
+4.  Erweitern Sie die `Assembly Components` Mitglied der `Category` -Ebene und anschließend die `Assembly Components` Mitglied der `Subcategory` Ebene.  
   
      Beachten Sie, dass die Assemblykomponenten jetzt auf der **Product Name** -Ebene angezeigt werden, so wie in der folgenden Abbildung zu sehen ist.  
   

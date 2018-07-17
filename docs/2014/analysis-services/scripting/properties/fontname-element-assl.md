@@ -1,5 +1,5 @@
 ---
-title: FontName-Element (ASSL) | Microsoft Docs
+title: FontName-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289526"
 ---
 # <a name="fontname-element-assl"></a>FontName-Element (ASSL)
   Beschreibt schriftartbezogene Anzeigeeigenschaften der [CalculationProperty](../objects/calculationproperty-element-assl.md) oder [Measure](../objects/measure-element-assl.md) übergeordneten Elements.  
@@ -62,9 +62,9 @@ ms.locfileid: "36150192"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FontName` -Eigenschaft enthält einen Ausdruck (Multidimensional Expressions) und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder *Zellen* .  
+ Die `FontName` -Eigenschaft enthält einen Ausdruck für MDX (Multidimensional Expressions) und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder *Zellen* .  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `FontName` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CalculationProperty> und <xref:Microsoft.AnalysisServices.Measure>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `FontName` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CalculationProperty> und <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

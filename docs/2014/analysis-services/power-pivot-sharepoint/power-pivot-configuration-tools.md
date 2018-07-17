@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Konfigurationstools | Microsoft Docs
+title: PowerPivot-Konfigurationstools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317010"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Konfigurieren, reparieren oder Entfernen einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] mit PowerPivot-Konfigurationstools.  
@@ -66,9 +66,9 @@ ms.locfileid: "36160809"
 |Konfiguration von PowerPivot für SharePoint 2013|PowerPivot-Konfigurationstool|  
 |--------------------------------------------------|-----------------------------------|  
 |Die Hauptseite verfügt über eine neue Option für **PowerPivot-Server für Excel Services**. Die Option unterstützt die neue Architektur, in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] außerhalb der SharePoint-Farm ausgeführt wird. Sie konfigurieren Excel Services für die Verwendung eines oder mehrerer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, die im SharePoint-Modus ausgeführt werden.<br /><br /> ![PowerPivot-Server im neuen Konfigurationstool](../media/as-powerpivot-configtool-differences-new-mainpage.gif "PowerPivot-Server im neuen Konfigurationstool")||  
-||Das Tool für die Version 2010 enthält die Seite **registrieren Sie SQL Server Analysis Services (PowerPivot) auf dem lokalen Server** so konfigurieren Sie eine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Diese Seite ist im Tool für die Version 2013 nicht enthalten, da keine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]vorhanden ist.<br /><br /> ![ALS Dienstkonto im alten Konfigurationstool](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "als Dienstkonto im alten Konfigurationstool")|  
+||Tool für die Version 2010 enthält die Seite **registrieren Sie SQL Server Analysis Services (PowerPivot) auf lokalen Server** so konfigurieren Sie eine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Diese Seite ist im Tool für die Version 2013 nicht enthalten, da keine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]vorhanden ist.<br /><br /> ![ALS Dienstkonto im alten Konfigurationstool](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "als Dienstkonto im alten Konfigurationstool")|  
 ||Die Seite **PowerPivot-Dienstanwendung erstellen** verfügt über die zusätzliche Option **Arbeitsmappen aktualisieren, um die Datenaktualisierung zuzulassen**. Diese Option steht im Tool für die Version 2013 nicht zur Verfügung.<br /><br /> ![Aktualisieren von Arbeitsmappen im alten Konfigurationstool](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "Aktualisieren von Arbeitsmappen im alten Konfigurationstool")|  
-|Das Tool für die Version 2013 verfügt über die neue Seite **PowerPivot-Server konfigurieren**. Diese Seite unterstützt die neue Architektur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die außerhalb der SharePoint-Farm ausgeführt wird. Der Servername, der auf der Hauptseite im Textfeld **PowerPivot-Server für Excel Services**eingegeben wurde, wird standardmäßig auch unter **PowerPivot-Server konfigurieren**aufgeführt.<br /><br /> ![Registrieren von neuen Konfigurationstool für PowerPivot-Servern](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "registrieren PowerPivot-Servern neuen Konfigurationstool")||  
+|Das Tool für die Version 2013 verfügt über die neue Seite **PowerPivot-Server konfigurieren**. Diese Seite unterstützt die neue Architektur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die außerhalb der SharePoint-Farm ausgeführt wird. Der Servername, der auf der Hauptseite im Textfeld **PowerPivot-Server für Excel Services**eingegeben wurde, wird standardmäßig auch unter **PowerPivot-Server konfigurieren**aufgeführt.<br /><br /> ![Registrieren von neuen Konfigurationstool für PowerPivot-Servern](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "registrieren PowerPivot-Server neue-Konfigurationstool")||  
 |Das Tool für die Version 2013 verfügt die neue Seite **PowerPivot-Add-In als Tracker für die Verwendung von Excel Services registrieren**. Die PowerPivot-Verwendungsdaten werden von SharePoint 2010 Excel Services nicht nachverfolgt.||  
 ||Das Tool für die Version 2010 enthält die Seite **MSOLAP.5 als vertrauenswürdigen Anbieter hinzufügen** , um MSOLAP zu registrieren, damit PowerPivot-Modelle von Excel Services in SharePoint 2010 geladen werden können. Diese Seite ist im Tool für die Version 2013 nicht enthalten. SharePoint 2013 Excel Services verwendet nicht den MSOLAP-Anbieter, um Modelle zu laden.|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36160809"
   
 1.  Auf der **starten** Startbildschirm `powerpivot`  
   
-     Auf der **starten** Startbildschirm `powerpivot` oder auf die **starten** Menü klicken Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], klicken Sie auf **Konfigurationstools** , und klicken Sie dann auf eines der folgenden:  
+     Auf der **starten** geben `powerpivot` oder auf die **starten** Menü klicken Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], klicken Sie auf **-Konfigurationstools** , und klicken Sie dann auf einen der folgenden:  
   
     -   **PowerPivot-Konfigurationstool**  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36160809"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Aktualisieren von PowerPivot für SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) beschreibt den Workflow, der eine vorhandene Installation aktualisiert wird, die bereits in einer Farm befindet.  
   
- [PowerPivot für SharePoint Deinstallieren](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) beschreibt, wie PowerPivot für SharePoint-Dienste, Lösungen und-Anwendungsseiten aus einer Farm entfernt.  
+ [Deinstallieren von PowerPivot für SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) beschreibt, wie PowerPivot für SharePoint-Dienste, Lösungen und-Anwendungsseiten aus einer Farm entfernt.  
   
  [PowerPivot-Konfiguration mit Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

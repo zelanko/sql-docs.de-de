@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aef1d046b409a7ebcaa0cb7db8370cf2f61590eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f6bc6472ed6e40016448b9088db497c770eaaa09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300520"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
   Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen beziehen sich auf die `USER WITH PASSWORD` Authentifizierungsprozess, den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf Datenbankebene.  
   
 ## <a name="threats-related-to-users"></a>Bedrohungen in Bezug auf Benutzer  
- Benutzer in einer eigenständigen Datenbank mit der `ALTER ANY USER` Berechtigung, z. B. Mitglieder der der **Db_owner** und **Db_securityadmin** festen Datenbankrollen, können Sie Zugriff auf die Datenbank ohne gewähren die Wissen und Erlaubnis Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren sollten diese Delegierung der Zugriffssteuerung verstehen, und nur mit großer Vorsicht gewähren Benutzern in der eigenständigen Datenbank werden die `ALTER ANY USER` Berechtigung. Alle Datenbankbesitzer verfügen über die `ALTER ANY USER` Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
+ Benutzer in einer eigenständigen Datenbank mit der `ALTER ANY USER` Berechtigung, z. B. Mitglieder der der **Db_owner** und **Db_securityadmin** festen Datenbankrollen, können Sie den Zugriff auf die Datenbank ohne gewähren der Wissen und Erlaubnis Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator. Wenn Benutzern der Zugriff auf eine eigenständige Datenbank gewährt wird, vergrößert dies die potenzielle Angriffsfläche der gesamten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Administratoren sollten diese Delegierung der Zugriffssteuerung verstehen und seien Sie vorsichtig, zum Gewähren von Benutzern in der eigenständigen Datenbank die `ALTER ANY USER` Berechtigung. Alle Datenbankbesitzer verfügen über die `ALTER ANY USER` Berechtigung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren sollten die Benutzer in einer eigenständigen Datenbank in regelmäßigen Abständen überwachen.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Zugreifen auf andere Datenbanken mit dem guest-Konto  
  Datenbankbesitzer und Datenbankbenutzer mit der `ALTER ANY USER`-Berechtigung können Benutzer für die eigenständige Datenbank erstellen. Nach dem Herstellen einer Verbindung mit einer eigenständigen Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann ein Benutzer der eigenständigen Datenbank auf andere Datenbanken in [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugreifen, wenn für die anderen Datenbanken das **guest** -Konto aktiviert ist.  
@@ -49,7 +49,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Um eine datenbankübergreifende Abfrage auszuführen, legen Sie die `TRUSTWORTHY` Option für die aufrufende Datenbank. Wenn sich der oben definierte Benutzer (Carlo) beispielsweise in DB1 befindet und `SELECT * FROM db2.dbo.Table1;` ausgeführt werden soll, muss die `TRUSTWORTHY`-Einstellung für die Datenbank DB1 aktiviert sein. Führen Sie den folgenden Code aus, um die `TRUSTWORHTY` auf festlegen.  
+ Um eine datenbankübergreifende Abfrage auszuführen, müssen Sie festlegen, die `TRUSTWORTHY` Option für die aufrufende Datenbank. Wenn sich der oben definierte Benutzer (Carlo) beispielsweise in DB1 befindet und `SELECT * FROM db2.dbo.Table1;` ausgeführt werden soll, muss die `TRUSTWORTHY`-Einstellung für die Datenbank DB1 aktiviert sein. Führen Sie den folgenden Code hinzu, legen Sie die `TRUSTWORHTY` festlegen.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  
@@ -58,16 +58,16 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Erstellen eines Benutzers, der eine Anmeldung dupliziert  
  Wenn ein Benutzer einer eigenständigen Datenbank mit Kennwort erstellt wird und dabei ein Name angegeben wird, der einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung entspricht und mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung eine Verbindung unter Angabe der eigenständigen Datenbank als Anfangskatalog hergestellt wird, kann mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung keine Verbindung hergestellt werden. Die Verbindung wird als Benutzer der eigenständigen Datenbank mit Kennwortprinzipal für die eigenständige Datenbank und nicht als Benutzer entsprechend der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung ausgewertet. Dies kann einen vorsätzlichen oder versehentlichen Denial of Service-Angriff für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung verursachen.  
   
--   Als Best Practice sollten Mitglieder der festen Serverrolle **sysadmin** erwägen, Verbindungen immer ohne die Option des Anfangskatalogs herzustellen. Dadurch wird die Anmeldung mit der master-Datenbank hergestellt, und Missbrauchsversuche des Anmeldeversuchs durch Datenbankbesitzer sind ausgeschlossen. Der Administrator mit der eigenständigen Datenbank wechseln kann die `USE`  *\<Datenbank >* Anweisung. Sie können auch die Standarddatenbank der Anmeldung auf die eigenständige Datenbank festlegen. Dadurch wird die Anmeldung bei **master**abgeschlossen, und die Anmeldung wird an die eigenständige Datenbank übertragen.  
+-   Als Best Practice sollten Mitglieder der festen Serverrolle **sysadmin** erwägen, Verbindungen immer ohne die Option des Anfangskatalogs herzustellen. Dadurch wird die Anmeldung mit der master-Datenbank hergestellt, und Missbrauchsversuche des Anmeldeversuchs durch Datenbankbesitzer sind ausgeschlossen. Der Administrator zur eigenständigen Datenbank wechseln kann die `USE`  *\<Datenbank >* Anweisung. Sie können auch die Standarddatenbank der Anmeldung auf die eigenständige Datenbank festlegen. Dadurch wird die Anmeldung bei **master**abgeschlossen, und die Anmeldung wird an die eigenständige Datenbank übertragen.  
   
 -   Als Best Practice wird empfohlen, keine Benutzer von eigenständigen Datenbanken mit Kennwörtern zu erstellen, die denselben Namen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen aufweisen.  
   
--   Wenn die doppelte Anmeldung vorhanden ist, eine Verbindung herstellen, um die **master** Datenbank ohne einen Anfangskatalog anzugeben, und führen dann die `USE` Befehl aus, um zur eigenständigen Datenbank zu wechseln.  
+-   Wenn die doppelte Anmeldung vorhanden ist, Herstellen einer Verbindung mit der **master** Datenbank ohne einen Anfangskatalog anzugeben, und führen dann die `USE` Befehl aus, um zur eigenständigen Datenbank zu ändern.  
   
 -   Wenn eigenständige Datenbanken vorhanden sind, sollten Benutzer von Datenbanken, die keine eigenständigen Datenbanken darstellen, ohne Verwendung eines Anfangskatalogs oder unter Angabe des Namens einer abhängigen Datenbank als Anfangskatalog eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] herstellen. Dadurch wird vermieden, dass Verbindungen mit der eigenständigen Datenbank hergestellt werden, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Administratoren weniger direkt kontrolliert wird.  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Ausweiten des Zugriffs durch Ändern des Kapselungsstatus einer Datenbank  
- Anmeldungen, die über die `ALTER ANY DATABASE` Berechtigung, z. B. Mitglieder der der **Dbcreator** feste Serverrolle, und Benutzer in einer nicht enthaltenen Datenbank mit der `CONTROL DATABASE` Berechtigung, z. B. Mitglieder der der **Db_owner**  festen Datenbankrolle "", können die kapselungseinstellung einer Datenbank ändern. Wenn die Kapselungseinstellung einer Datenbank von `NONE` in `PARTIAL` oder `FULL` geändert wird, kann Benutzerzugriff gewährt werden, indem Benutzer von eigenständigen Datenbanken mit Kennwörtern erstellt werden. Dies kann den Zugriff ohne Wissen oder Zustimmung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren ermöglichen. Um zu verhindern, dass Datenbanken eigenständig sind, legen Sie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` -Option auf 0. Um Verbindungen von Benutzern eigenständiger Datenbanken mit Kennwörtern für ausgewählte eigenständige Datenbanken zu verhindern, verwenden Sie Anmeldungstrigger, um Anmeldeversuche von Benutzern eigenständiger Datenbanken mit Kennwörtern abzubrechen.  
+ Anmeldungen, die über die `ALTER ANY DATABASE` Berechtigung, z. B. Mitglieder der der **Dbcreator** feste Serverrolle und Benutzer in einer nicht enthaltenen Datenbank mit der `CONTROL DATABASE` Berechtigung, z. B. Mitglieder der der **Db_owner**  festen Datenbankrolle, können die kapselungseinstellung einer Datenbank ändern. Wenn die Kapselungseinstellung einer Datenbank von `NONE` in `PARTIAL` oder `FULL` geändert wird, kann Benutzerzugriff gewährt werden, indem Benutzer von eigenständigen Datenbanken mit Kennwörtern erstellt werden. Dies kann den Zugriff ohne Wissen oder Zustimmung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren ermöglichen. Um zu verhindern, dass Datenbanken eigenständig sind, legen Sie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] `contained database authentication` auf 0. Um Verbindungen von Benutzern eigenständiger Datenbanken mit Kennwörtern für ausgewählte eigenständige Datenbanken zu verhindern, verwenden Sie Anmeldungstrigger, um Anmeldeversuche von Benutzern eigenständiger Datenbanken mit Kennwörtern abzubrechen.  
   
 ### <a name="attaching-a-contained-database"></a>Anfügen einer eigenständigen Datenbank  
  Durch Anfügen einer eigenständigen Datenbank können Administratoren auch unerwünschten Benutzern den Zugriff auf die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz gewähren. Administrator, die bezüglich dieses Risikos besorgt sind, können die Datenbank im `RESTRICTED_USER`-Modus online schalten, in dem die Authentifizierung für Benutzer eigenständiger Datenbanken mit Kennwörtern verhindert wird. Nur Prinzipale, die durch Anmeldungen autorisiert wurden, können auf [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugreifen.  

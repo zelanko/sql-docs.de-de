@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316060"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Daten für ihre Eingaben. Die Eingabedaten müssen physisch sortiert werden, und die Sortierungsoptionen müssen für die Ausgaben und die Ausgabespalten in der Quelle oder Upstreamtransformation festgelegt werden. Wenn die Sortierungsoptionen anzeigen, dass die Daten sortiert sind, dies jedoch in Wirklichkeit nicht der Fall ist, sind die Ergebnisse des Vorgangs der Zusammenführung oder des Zusammenführungsjoins nicht vorhersagbar.  
@@ -55,9 +55,9 @@ ms.locfileid: "36160034"
 -   Die `IsSorted`-Eigenschaft der Ausgabe, die angibt, ob die Daten sortiert wurden. Diese Eigenschaft muss festgelegt werden, um `True`.  
   
     > [!IMPORTANT]  
-    >  Festlegen des Werts der `IsSorted` Eigenschaft `True` werden die Daten nicht sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden.  
+    >  Festlegen des Werts von der `IsSorted` Eigenschaft `True` werden die Daten nicht sortiert. Diese Eigenschaft ist lediglich ein Hinweis für die Downstreamkomponenten, dass die Daten vorher sortiert wurden.  
   
--   Die `SortKeyPosition` -Eigenschaft der Ausgabespalten, der angibt, ob eine Spalte sortiert ist, Sortierreihenfolge der Spalte und die Reihenfolge, in dem mehrere Spalten sortiert wurden. Diese Eigenschaft muss für jede Spalte sortierter Daten festgelegt werden.  
+-   Die `SortKeyPosition` -Eigenschaft der Ausgabespalten, der angibt, ob eine Spalte sortiert ist, Sortierreihenfolge der Spalte und die Sequenz, die in der mehrere Spalten sortiert werden. Diese Eigenschaft muss für jede Spalte sortierter Daten festgelegt werden.  
   
  Wenn Sie zum Sortieren der Daten eine Transformation zum Sortieren verwenden, legt die Transformation zum Sortieren diese beiden von der Transformation für Zusammenführen und für Zusammenführungsjoin verlangten Eigenschaften fest. Also die Transformation zum Sortieren legt die `IsSorted` -Eigenschaft ihrer Ausgabe auf `True`, und legt die `SortKeyPosition` Eigenschaften ihrer Ausgabespalten.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "36160034"
 6.  Klicken Sie auf  **\<Komponentenname > Ausgabe**, und legen Sie die `IsSorted` Eigenschaft `True`.  
   
     > [!NOTE]  
-    >  Wenn Sie manuell festlegen, die `IsSorted` -Eigenschaft die Ausgabe auf `True` und die Daten nicht sortiert ist, gibt es möglicherweise fehlenden oder beschädigten Daten kommen in der downstreamtransformation für Zusammenführung oder des Zusammenführungsjoins beim Ausführen des Pakets.  
+    >  Wenn Sie manuell festlegen der `IsSorted` -Eigenschaft der Ausgabe um `True` und die Daten nicht sortiert ist, gibt es möglicherweise Vergleichsvorgängen mit fehlenden oder beschädigten Daten kommen in der downstreamtransformation für Zusammenführung oder des Zusammenführungsjoins beim Ausführen des Pakets.  
   
 7.  Erweitern Sie **Ausgabespalten**.  
   
-8.  Klicken Sie auf die Spalte, die Sie angeben möchten, sortiert und legen Sie dessen `SortKeyPosition` Eigenschaft auf eine ganze Zahl ungleich NULL-Wert, durch die folgenden Richtlinien beachten:  
+8.  Klicken Sie auf die Spalte, die Sie angeben möchten, sortiert ist, und legen Sie dessen `SortKeyPosition` Eigenschaft, um ein ganze Zahl ungleich NULL-Wert, durch die folgenden Richtlinien halten:  
   
     -   Der ganzzahlige Wert muss eine numerische Sequenz darstellen, die bei 1 beginnt und sich jeweils um 1 erhöht.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36160034"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Legen Sie für diese Anweisung, die `SortKeyPosition` -Eigenschaft für jede Spalte wie folgt:  
+     Legen Sie für diese Anweisung, die `SortKeyPosition` -Eigenschaft für jede Spalte folgendermaßen:  
   
     -   Legen Sie die `SortKeyPosition`-Eigenschaft von ColumnA auf 1 fest. Dies gibt an, dass ColumnA die erste Spalte ist, die sortiert wird, und dass sie in aufsteigender Reihenfolge sortiert wird.  
   

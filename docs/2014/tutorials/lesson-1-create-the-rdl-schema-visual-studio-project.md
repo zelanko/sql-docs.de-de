@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen von RDL-Schema-Visual Studio-Projekt | Microsoft Docs'
+title: 'Lektion 1: Erstellen des RDL-Schema-Visual Studio-Projekts | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319810"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lektion 1: Erstellen des RDL-Schema-Projekts in Visual Studio
-  In diesem Lernprogramm erstellen Sie eine einfache Konsolenanwendung. In diesem Lernprogramm wird vorausgesetzt, Sie entwickeln [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+  In diesem Lernprogramm erstellen Sie eine einfache Konsolenanwendung. In diesem Tutorial wird vorausgesetzt, Sie entwickeln im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
 >  Wenn Sie auf den Berichtsserver-Webdienst zugreifen, der in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "_SQLExpress" an den "ReportServer"-Pfad anfügen. Zum Beispiel:  
@@ -31,7 +31,7 @@ ms.locfileid: "36159899"
   
 ### <a name="to-create-the-web-service-proxy"></a>So erstellen Sie den Webdienstproxy  
   
-1.  Aus der **starten** klicken Sie im Menü **Programme**, klicken Sie dann Microsoft Visual Studio, klicken Sie dann **Visual Studio-Tools**, und klicken Sie dann **Visual Studio 2010-Eingabeaufforderung** .  
+1.  Von der **starten** , wählen Sie im Menü **Programme**, klicken Sie dann Microsoft Visual Studio, klicken Sie dann **Visual Studio-Tools**, und klicken Sie dann **Visual Studio 2010-Eingabeaufforderung** .  
   
 2.  Führen Sie den folgenden Befehl im Eingabeaufforderungsfenster aus, wenn Sie C# verwenden:  
   
@@ -49,23 +49,23 @@ ms.locfileid: "36159899"
   
 ### <a name="to-create-a-console-application"></a>So erstellen Sie eine Konsolenanwendung  
   
-1.  Auf der **Datei** Startmenü nacheinander auf **neu**, und klicken Sie dann auf **Projekt** So öffnen die **neues Projekt** (Dialogfeld).  
+1.  Auf der **Datei** , zeigen Sie auf **neu**, und klicken Sie dann auf **Projekt** zum Öffnen der **neues Projekt** im Dialogfeld.  
   
-2.  Im linken Bereich unter **installierte Vorlagen**, klicken Sie auf **Visual Basic** oder **Visual C#-** Knoten, und wählen Sie eine Kategorie für Projekttypen, in der erweiterten Liste.  
+2.  Klicken Sie im linken Bereich unter **installierte Vorlagen**, klicken Sie auf **Visual Basic** oder **Visual C#-** Knoten, und wählen Sie eine Kategorie für Projekttypen wird, in der erweiterten Liste.  
   
 3.  Wählen Sie die **Konsolenanwendung** Projekttyp.  
   
-4.  In der **Namen** Geben Sie einen Namen für das Projekt. Geben Sie den Namen `SampleRDLSchema`.  
+4.  In der **Namen** Geben Sie einen Namen für Ihr Projekt. Geben Sie den Namen `SampleRDLSchema`.  
   
-5.  In der **Speicherort** Feld, geben Sie den Pfad, in dem Sie das Projekt gespeichert werden soll, oder klicken möchten **Durchsuchen** zu dem Ordner zu navigieren.  
+5.  In der **Speicherort** geben den Pfad, in dem Sie das Projekt speichern, oder klicken Sie auf möchten **Durchsuchen** , zu dem Ordner zu navigieren.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Eine reduzierte Ansicht des Projekts wird im Projektmappen-Explorer angezeigt.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Es wird eine reduzierte Ansicht des Projekts im Projektmappen-Explorer angezeigt.  
   
 7.  Klicken Sie im Menü **Projekt** auf **Vorhandenes Element hinzufügen**.  
   
-8.  Navigieren Sie zum Speicherort der CS- oder VB-Datei löschen, die Sie generiert, wählen Sie dann die Datei, und klicken Sie dann auf **hinzufügen**.  
+8.  Navigieren Sie zum Speicherort der CS- oder VB-Datei löschen, die Sie generiert, und wählen Sie die Datei, und klicken Sie dann auf **hinzufügen**.  
   
-     Sie müssen auch einen Verweis hinzufügen der <xref:System.Web.Services> Namespace-URI für den Webverweis arbeiten.  
+     Sie müssen auch einen Verweis zum Hinzufügen der <xref:System.Web.Services> Namespace-URI für den Webverweis funktioniert.  
   
 9. Klicken Sie auf das Menü Projekt auf **Verweis hinzufügen**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36159899"
   
      Weitere Informationen zum Herstellen einer Verbindung mit der Berichtsserver-Webdienst finden Sie unter [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
-10. Erweitern Sie den Projektknoten im Projektmappen-Explorer. Sehen Sie eine Codedatei mit dem Standardnamen Program.cs (Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) zu Ihrem Projekt hinzugefügt wurde.  
+10. Erweitern Sie den Projektknoten im Projektmappen-Explorer. Sehen Sie eine Codedatei mit dem Standardnamen Program.cs (Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) Ihrem Projekt hinzugefügt wurde.  
   
 11. Öffnen Sie die Datei "Program.cs" (bzw. Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])-Datei und Ersetzen Sie den Code durch Folgendes:  
   
@@ -201,10 +201,10 @@ ms.locfileid: "36159899"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion generieren Sie mithilfe des XML-Schemadefinitionstools (Xsd.exe) Klassen aus dem RDL-Schema und fügen diese in das Projekt ein. Finden Sie unter [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ In der nächsten Lektion generieren Sie mithilfe des XML-Schemadefinitionstools (Xsd.exe) Klassen aus dem RDL-Schema und fügen diese in das Projekt ein. Finden Sie unter [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generierten &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

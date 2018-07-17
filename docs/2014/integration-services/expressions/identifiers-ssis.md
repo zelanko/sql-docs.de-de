@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295050"
 ---
 # <a name="identifiers-ssis"></a>Bezeichner (SSIS)
   In Ausdrücken sind Bezeichner Spalten und Variablen, die für den Vorgang verfügbar sind. Reguläre und qualifizierte Bezeichner können in Ausdrücken verwendet werden.  
@@ -116,9 +116,9 @@ ms.locfileid: "36149488"
 > [!IMPORTANT]  
 >  Sie müssen die Kombination aus Namespace und qualifiziertem Variablennamen in eckige Klammern einschließen, damit die Ausdrucksauswertung die Variable erkennt.  
   
- Wenn der Wert der **Anzahl** in der **Benutzer** Namespace gleich 10 und der Wert der **Anzahl** in **MyNamespace** gleich 2 ist, ergibt des Ausdrucks `true` , da die ausdrucksauswertung zwei unterschiedliche Variablen erkennt.  
+ Wenn der Wert des **Anzahl** in die **Benutzer** Namespace gleich 10 und der Wert des **Anzahl** in **MyNamespace** 2 ist, ergibt der Ausdruck `true` , da die ausdrucksauswertung zwei unterschiedliche Variablen erkennt.  
   
- Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Z. B. der folgende Ausdruck zum Vergleichen der Werte (10 und 2) für zwei Separate vorgesehen war **Anzahl** Variablen, aber der Ausdruck ergibt `false` , da die ausdrucksauswertung dieselbe Instanz von der verwendet **Anzahl** -Variablen zweimal.  
+ Wenn Variablennamen nicht eindeutig sind, wird kein Fehler gemeldet. Die Ausdrucksauswertung verwendet stattdessen nur eine Instanz der Variablen zum Auswerten des Ausdrucks und gibt ein falsches Ergebnis zurück. Der folgende Ausdruck sollte z. B. zum Vergleichen der Werte (10 und 2) zweier separater **Anzahl** Variablen, aber der Ausdruck ausgewertet wird, um `false` , da die ausdrucksauswertung dieselbe Instanz von der verwendet **Anzahl** -Variablen zweimal.  
   
 ```  
 @Count > @Count  

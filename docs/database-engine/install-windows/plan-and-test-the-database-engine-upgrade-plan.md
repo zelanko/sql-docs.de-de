@@ -3,23 +3,21 @@ title: Planen und Testen des Upgradeplans für die Datenbank-Engine | Microsoft-
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b58c3b7a00b8ba886c189c5d4b4ff3678d57f4a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 17c19123ed16308ad1919ad9901508e838aa4370
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332250"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für die Datenbank-Engine
 
@@ -100,8 +98,7 @@ ms.locfileid: "34770666"
 -   **Den Upgradeplan testen:** Verwenden Sie Microsoft SQL Server Distributed Replay Utility, um die Leistung mit der tatsächlichen Arbeitsauslastung zu testen. Dieses Hilfsprogramm kann Ablaufverfolgungsdaten mithilfe mehrerer Computer wiedergeben, indem es eine für die Unternehmung maßgebliche Arbeitsauslastung simuliert. Durch Ausführen einer Wiedergabe auf einem Testserver vor und nach einem SQL Server-Upgrade können Sie Leistungsunterschiede messen und nach Inkompatibilitäten der Anwendung suchen, die möglicherweise durch das Upgrade verursacht werden. Weitere Informationen finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) und [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-
-  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
+[Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Weitere Ressourcen 
 [Datenbankmigrationsanleitung](https://aka.ms/datamigration)  

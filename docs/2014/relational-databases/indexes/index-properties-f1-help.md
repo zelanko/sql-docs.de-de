@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290946"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
   In den Abschnitten dieses Themas werden verschiedene Indexeigenschaften beschrieben, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Dialogfeldern verfügbar sind.  
@@ -184,7 +183,7 @@ ms.locfileid: "36161804"
 ### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
- Der Bereich zeigt die **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
+ Zeigt der Bereich der **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
   
  `X-min`  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
@@ -203,7 +202,7 @@ ms.locfileid: "36161804"
  Gibt das Mosaikschema für den Index an. Folgende Mosaikschemas werden unterstützt.  
   
  **Geometrieraster**  
- Gibt an, das geometrierastermosaikschema, die für eine Spalte mit gilt die `geometry` -Datentyp.  
+ Gibt an, das geometrierastermosaikschema, die für eine Spalte gilt die `geometry` -Datentyp.  
   
  **Automatisches Geometrieraster**  
  Diese Option wird für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aktiviert, wenn der Datenbank-Kompatibilitätsgrad auf 110 oder höher festgelegt wird.  

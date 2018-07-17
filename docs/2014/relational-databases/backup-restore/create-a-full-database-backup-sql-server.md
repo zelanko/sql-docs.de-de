@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320440"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
@@ -42,7 +41,7 @@ ms.locfileid: "36162964"
   
      [Security](#Security)  
   
--   **Erstellen einer vollständigen datenbanksicherung mit:**  
+-   **Zum Erstellen einer vollständigen Datenbank datenbanksicherung mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -165,7 +164,7 @@ ms.locfileid: "36162964"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
-     **Zum Anzeigen oder Ändern der aktuellen Komprimierungsstandard für Sicherung**  
+     **Zum Anzeigen oder Ändern der aktuellen backup Compression default**  
   
     -   [Anzeigen oder Konfigurieren der Serverkonfigurationsoption Standardeinstellung für die Sicherungskomprimierung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
   
-1.  Verwenden der `Backup-SqlDatabase` Cmdlet. Um ausdrücklich anzugeben, dass dies eine vollständige datenbanksicherung ist, geben die **- BackupAction** Parameter, mit dessen Standardwert `Database`. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
+1.  Verwenden der `Backup-SqlDatabase` Cmdlet. Um ausdrücklich anzugeben, dass es sich um eine vollständige datenbanksicherung handelt, geben die **- BackupAction** Parameter mit dessen Standardwert `Database`. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
   
      Im folgenden Beispiel wird eine vollständige Datenbanksicherung der `MyDB` -Datenbank am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt. Optional wird im Beispiel `-BackupAction Database` angegeben.  
   

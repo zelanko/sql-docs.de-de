@@ -1,11 +1,11 @@
 ---
-title: Aktualisieren von UDT-Spalten mit "DataAdapters" | Microsoft Docs
+title: Aktualisieren von UDT-Spalten mit DataAdapters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -26,16 +26,16 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab3e174062e3618d55f7cba5e715845e0c01327a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702041"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358222"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen – Aktualisieren von UDT-Spalten mit "DataAdapters"
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen: Aktualisieren von UDT-Spalten mit DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Benutzerdefinierte Typen (UDTs) werden unterstützt, mit einem **System.Data.DataSet** und ein **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
+  Benutzerdefinierte Typen (UDTs) werden unterstützt, mithilfe einer **System.Data.DataSet** und **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
   
 ## <a name="populating-a-dataset"></a>Auffüllen eines Datasets  
  Mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung können Sie UDT-Spaltenwerte zum Auffüllen eines Datasets mit einem Datenadapter auswählen. Im folgende Beispiel wird davon ausgegangen, dass Sie haben eine **Punkte** Tabelle mit der folgenden Struktur und einigen Beispieldaten definiert. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erstellen die **Punkte** Tabelle und einige Zeilen eingefügt.  
@@ -50,7 +50,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Das folgende Codefragment von ADO.NET eine gültige Verbindungszeichenfolge abgerufen, erstellt ein neues **SqlDataAdapter**, und füllt eine **"System.Data.DataTable"** mit den Zeilen von Daten aus der **Punkte**  Tabelle.  
+ Das folgende Codefragment von ADO.NET eine gültige Verbindungszeichenfolge abgerufen, erstellt ein neues **SqlDataAdapter**, und füllt eine **System.Data.DataTable** mit den Zeilen von Daten aus der **Punkte**  Tabelle.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -69,14 +69,14 @@ da.Fill(datTable);
 ## <a name="updating-udt-data-in-a-dataset"></a>Aktualisieren von UDT-Daten in einem Dataset  
  Sie können zwei Methoden zum Aktualisieren einer UDT-Spalteninhalts in einer **DataSet**:  
   
--   Geben Sie benutzerdefinierte **InsertCommand**, **UpdateCommand** und **DeleteCommand** von Objekten für einen **SqlDataAdapter** Objekt.  
+-   Geben Sie benutzerdefinierte **InsertCommand**, **UpdateCommand** und **DeleteCommand** von Objekten für die ein **SqlDataAdapter** Objekt.  
   
--   Verwenden Sie den Befehls-Generator (**System.Data.SqlClient.SqlCommandBuilder**) die Befehle INSERT, UPDATE und DELETE automatisch für Sie erstellt. Konflikte erkannt werden sollen, fügen einen **Zeitstempel** Spalte (Alias **Rowversion**), die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die den UDT enthält. Die **Zeitstempel** Datentyp können Sie die Zeilen in einer Tabelle einer versionskennung und wird sichergestellt, dass innerhalb einer Datenbank eindeutig sein. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
+-   Verwenden Sie die Befehls-Generator (**System.Data.SqlClient.SqlCommandBuilder**) automatisch die INSERT-, Update- und DELETE-Befehle für Sie erstellt. Um die Erkennung von Updatekonflikten zu haben, fügen Sie eine **Zeitstempel** Spalte (Alias **Rowversion**) auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die den UDT enthält. Die **Zeitstempel** Datentyp können Sie die Zeilen in einer Tabelle versionskennung und ist garantiert innerhalb einer Datenbank eindeutig sein. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
   
- Beachten Sie, dass die **SqlCommandBuilder** UDT für die konflikterkennung wird nicht berücksichtigt werden, es sei denn, es ist ein **Zeitstempel** Spalte in der zugrunde liegenden Tabelle. UDTs können zwar vergleichbar sein, sie sind jedoch nicht in der WHERE-Klausel enthalten, wenn die Option zum Vergleichen der ursprünglichen Werte verwendet wird, um einen Befehl zu erstellen.  
+ Beachten Sie, dass die **SqlCommandBuilder** UDT für die konflikterkennung wird nicht berücksichtigt werden, es sei denn eine **Zeitstempel** Spalte in der zugrunde liegenden Tabelle. UDTs können zwar vergleichbar sein, sie sind jedoch nicht in der WHERE-Klausel enthalten, wenn die Option zum Vergleichen der ursprünglichen Werte verwendet wird, um einen Befehl zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
- Im folgende Beispiel erfordert die Erstellung der Tabelle mit den **Punkt** UDT-Spalte als auch eine **Zeitstempel** Spalte. Beide Tabellen zur Veranschaulichung wie benutzerdefinierte Befehlsobjekte zum Aktualisieren von Daten erstellt und wie das update mit einer **Zeitstempel** Spalte. Führen Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen aus, um die zweite Tabelle zu erstellen und mit Beispieldaten aufzufüllen.  
+ Das folgende Beispiel erfordert die Erstellung von eine zweite Tabelle mit den **Punkt** UDT-Spalte als auch ein **Zeitstempel** Spalte. Beide Tabellen werden zum veranschaulichen, wie benutzerdefinierte Befehlsobjekte zum Aktualisieren von Daten erstellt, und wie das update mit einer **Zeitstempel** Spalte. Führen Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen aus, um die zweite Tabelle zu erstellen und mit Beispieldaten aufzufüllen.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -89,9 +89,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Das folgende ADO.NET-Beispiel verfügt über zwei Methoden:  
   
--   **UserProvidedCommands**, das veranschaulicht, wie angeben **InsertCommand**, **UpdateCommand**, und **DeleteCommand** -Objekte zum Aktualisieren der  **Punkt** UDT in der **Punkt** Tabelle (der keine **Zeitstempel** Spalte).  
+-   **UserProvidedCommands**, die veranschaulicht, wie **InsertCommand**, **UpdateCommand**, und **DeleteCommand** Objekte für die Aktualisierung der  **Punkt** UDT in der **Punkte** Tabelle (die keine **Zeitstempel** Spalte).  
   
--   **CommandBuilder**, die veranschaulicht, wie eine **SqlCommandBuilder** in der **Points_ts** Tabelle, enthält die **Zeitstempel** Spalte.  
+-   **CommandBuilder**, die veranschaulicht, wie eine **SqlCommandBuilder** in die **Points_ts** Tabelle mit den **Zeitstempel** Spalte.  
   
 ```vb  
 Imports System  

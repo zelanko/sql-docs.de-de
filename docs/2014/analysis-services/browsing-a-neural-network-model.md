@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines neuronalen Netzwerkmodells | Microsoft Docs
+title: Durchsuchen eines neuronalen Netzwerkmodells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286366"
 ---
 # <a name="browsing-a-neural-network-model"></a>Durchsuchen von Neural Network-Modellen
   Wenn Sie ein neuronales Netzwerk oder ein logistisches Regressionsmodell mithilfe von **Durchsuchen** öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der mit dem Viewer für neuronale Netzwerkmodelle in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vergleichbar ist. Mithilfe des Viewers können Sie Korrelationen untersuchen und Informationen zu den Mustern im Modell und zu den zugrunde liegenden Daten abrufen.  
   
-##  <a name="BKMK_Tabs"></a> Untersuchen des Modells  
+##  <a name="BKMK_Tabs"></a> Durchsuchen des Modells  
  Modelle, die auf den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen "Neural Network" oder "Logistic Regression" basieren, ähneln sich insofern, als sie Daten als eine Gruppe von Verbindungen zwischen bekannten Eingaben und Ausgaben analysieren. Mit dem **Durchsuchen**-Viewer können Sie diese Verbindungen mithilfe der folgenden Steuerelemente untersuchen:  
   
 -   [Variablen](#BKMK_Variables)  
@@ -46,7 +46,7 @@ ms.locfileid: "36159870"
   
  Mit diesem Viewer können Sie die Faktoren untersuchen, die den größten Einfluss darauf haben, ob ein Kunde eher der Fahrradkäuferkategorie oder der Nichtkäuferkategorie angehört.  
   
- ![Testen der Auswirkung auf das Ergebnis der ausgewählten Attribute](media/dm13-neuralnet-agebuyer1.gif "Testen der Auswirkung auf das Ergebnis der ausgewählten Attribute")  
+ ![Testen der Auswirkungen auf das Ergebnis der ausgewählten Attribute](media/dm13-neuralnet-agebuyer1.gif "Testen der Auswirkung auf das Ergebnis ausgewählte Attribute")  
   
 ##### <a name="explore-variables"></a>Untersuchen von Variablen  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36159870"
   
      Die Einkommensspalte wurde in Gruppierungen wie 78,4-154,06 (höchste Einkommensstufe) unterteilt.  
   
-     ![Sortieren, um anzuzeigen, wie Variablen klassifiziert wurden](media/dm13-nn-bucketing-variables.gif "Sortierung wie Variablen klassifiziert wurden")  
+     ![Sortieren, um anzuzeigen, wie Variablen klassifiziert wurden](media/dm13-nn-bucketing-variables.gif "Sortierreihenfolge an, wie Variablen klassifiziert wurden")  
   
      Wenn Sie unterschiedliche Gruppierungen verwenden möchten, sollten Sie das Tool [Neu bezeichnen &#40;SQL Server Data Mining Add-Ins&#41;](relabel-sql-server-data-mining-add-ins.md) oder die Excel-Funktionen verwenden, um vor der Modellerstellung neue Einkommenskategorien einzurichten.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36159870"
   
      Hinweis: Die QuickInfo enthält die gleichen Informationen, unabhängig davon, ob Sie die Maus auf der einen oder anderen Spalte positionieren.  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ###  <a name="BKMK_Inputs"></a> Eingaben  
  Im Bereich **Eingaben** können Sie einen Satz von Eingaben auswählen und diesen als Filter auf das Modell anwenden. So erkennen Sie auf der Grundlage der Trainingsdaten, wie sich diese Optionen auf das Ergebnis auswirken.  
@@ -93,7 +93,7 @@ ms.locfileid: "36159870"
   
 1.  Stellen Sie sich vor, Sie möchten eine bestimmte Zielgruppe analysieren und die Faktoren anzeigen, die den größten Einfluss auf das Kaufverhalten der Gruppe haben.  
   
-     In der **Eingabe** Bereich, klicken Sie auf die  **\<alle >** Zelle unter **Attribut**, und wählen Sie **Alter**.  
+     In der **Eingabe** Bereich klicken Sie auf die  **\<alle >** Zelle unter **Attribut**, und wählen Sie **Alter**.  
   
      Wählen Sie für **Wert** die jüngste Altersgruppe aus.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "36159870"
   
      Fügen Sie für das Eingabeattribut beispielsweise **Geschlecht** hinzu, und wählen Sie **Weiblich** als Wert aus.  
   
-     ![Testen der Auswirkung auf das Ergebnis der ausgewählten Attribute](media/dm13-neuralnet-agebuyer2.gif "Testen der Auswirkung auf das Ergebnis der ausgewählten Attribute")  
+     ![Testen der Auswirkungen auf das Ergebnis der ausgewählten Attribute](media/dm13-neuralnet-agebuyer2.gif "Testen der Auswirkung auf das Ergebnis ausgewählte Attribute")  
   
      Sie werden feststellen, dass sich die Liste der Variablen ändert. Jetzt ist **Einkommen** die Variable, die für die Vorhersage des Zielergebnisses die größte Bedeutung hat.  
   
      Die Reihenfolge, in der Sie die Eingabefilter anwenden, wirkt sich nicht auf die Ergebnisse aus.  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ###  <a name="BKMK_Outputs"></a> Ausgaben  
  Im Bereich **Ausgabe** können Sie das Ergebnis auswählen, das interessant für Sie ist. In neuronalen Netzwerken können Sie so viele Ergebnisspalten angeben, wie Sie möchten. Allerdings erhöht sich durch zusätzliche Ausgaben auch die Komplexität des Modells, sodass sich die Verarbeitungsdauer verlängern kann.  
@@ -128,7 +128,7 @@ ms.locfileid: "36159870"
   
 2.  Wählen Sie zwei Ergebnisse aus den Listen Wert 1 und Wert 2 aus. Diese beiden Status der Ausgabeattribute werden im Bereich **Variablen** verglichen.  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Weiteren Informationen über neuronale Netzwerkmodelle  
  Die im Viewer dargestellten Informationen werden anhand einer gespeicherten Prozedur, die spezifisch für den Modelltyp ist, vom Server abgerufen: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  

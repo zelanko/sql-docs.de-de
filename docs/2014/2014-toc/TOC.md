@@ -1,9 +1,4 @@
 # [Onlinedokumentation für SQL Server 2014](books-online-for-sql-server-2014.md) 
-## [Fallstudie: Aufbau eines skalierbaren und leistungsfähigen Ökosystems in einem Unternehmen mithilfe von Microsoft Dynamics ERP und SQL Server 2014-Replikation](case-study-building-an-enterprise-ecosystem.md)
-## [Index Design Guide (Handbuch zum Entwerfen von Indizes)](sql-server-index-design-guide.md)
-## [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [Transaction Log Architecture and Management (Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management.md)
-## [Glossar](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -15,6 +10,7 @@
 # [Features relationaler Datenbanken +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [Tutorials für SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Glossar](glossary.md)
 
 # [Neuigkeiten in SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [Upgrade Advisor +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [Setup und Wartungsinstallation +](../sql-server/install/setup-and-servicing-installation.md)
 # [Konfigurations-Manager-Hilfe +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [Index Design Guide (Handbuch zum Entwerfen von Indizes)](sql-server-index-design-guide.md)
+# [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [Transaction Log Architecture and Management (Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management.md)
+# [Fallstudie: Aufbau eines skalierbaren und leistungsfähigen Ökosystems in einem Unternehmen mithilfe von Microsoft Dynamics ERP und SQL Server 2014-Replikation](case-study-building-an-enterprise-ecosystem.md)
 

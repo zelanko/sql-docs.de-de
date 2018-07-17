@@ -7,29 +7,28 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 10
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 40f8af57d1caff81e7738fabfab0788154f90772
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 8282b2e24fbc3a0c1b69d2410e7df5484eb54d3f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702023"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926231"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt die Größe und die Anzahl der Zeilen der einzelnen Partitionen einer Tabelle in einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank an.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,12 +48,12 @@ Erfordert die **VIEW SERVER STATE**-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden sind die Ergebnisse des DBCC-Befehls PDW_SHOWPARTITIONSTATS dargestellt.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|Partitionsnummer.|  
-|used_page_count|bigint|Gesamtanzahl der für die Daten verwendeten Seiten.|  
-|reserved_page_count|bigint|Anzahl der der Partition zugeordneten Seiten.|  
-|row_count|bigint|Anzahl der Zeilen in der Partition.|  
+|used_page_count|BIGINT|Gesamtanzahl der für die Daten verwendeten Seiten.|  
+|reserved_page_count|BIGINT|Anzahl der der Partition zugeordneten Seiten.|  
+|row_count|BIGINT|Anzahl der Zeilen in der Partition.|  
 |pdw_node_id|ssNoversion|Computeknoten für die Daten.|  
 |distribution_id|ssNoversion|Die Verteilungs-ID für die Daten.|  
   

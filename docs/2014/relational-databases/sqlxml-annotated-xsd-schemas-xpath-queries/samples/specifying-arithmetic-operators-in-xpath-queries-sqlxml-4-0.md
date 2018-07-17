@@ -1,5 +1,5 @@
 ---
-title: Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fe4e247041306cfd00854ae021e2fb5ec64c0b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 389c249203416041831edec0f910a661f695805d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309450"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)
-  Im folgenden Beispiel wird gezeigt, wie arithmetische Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Im folgenden Beispiel wird gezeigt, wie arithmetische Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36147853"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knotentest (TRUE, wenn **OrderDetail** ist ein  **\<Elementknoten >**, da die  **\< Element >** ist der primäre Knoten für die `child` Achse). Für alle der  **\<OrderDetail >** Elementknoten, der Test im Prädikat angewendet wird, und nur die Knoten, die die Bedingung erfüllen, werden zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knotentest (TRUE, wenn **OrderDetail** ist ein  **\<Elementknoten >**, da die  **\< Element >** Knoten ist der primäre Knoten für die `child` Achse). Für alle der  **\<OrderDetail >** Elementknoten, der Test im Prädikat angewendet wird, und nur die Knoten, die die Bedingung erfüllen, werden zurückgegeben.  
   
 > [!NOTE]  
 >  Die in XPath verwendeten Zahlen sind Gleitkommazahlen mit doppelter Genauigkeit, durch Vergleich der Gleitkommazahlen wie im Beispiel werden die Werte gerundet.  
@@ -66,7 +66,7 @@ ms.locfileid: "36147853"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

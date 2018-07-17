@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
 - XML [SQL Server], typed
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 009ba26aa2ab0d12b6577d447f42e722f398e857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 81971c9b0fb1c6ebcdf4f90650dc5af3da558e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215060"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
   In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -44,7 +44,7 @@ ms.locfileid: "36060891"
 -   Verwenden von Massenladen  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Typumwandlung von Zeichenfolgen und Binärinstanzen  
- Sie können eine der Analysieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] string-Datentypen, wie z. B. [**n**] [**Var**]**Char**, **[n] Text**,  **Varbinary**, und **Image**, in der `xml` -Datentyp umwandeln (CAST) oder konvertieren (CONVERT) der Zeichenfolge in der `xml` -Datentyp. Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Wenn es ist ein Schema zugeordnet ist die `xml` , typüberprüfung wird auch ausgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
+ Sie können analysieren, eines der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] string-Datentypen, z. B. [**n**] [**Var**]**Char**, **[n] Text**,  **Varbinary**, und **Image**, in der `xml` -Datentyp umwandeln (CAST) oder konvertieren (CONVERT) die Zeichenfolge in die `xml` -Datentyp. Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Es ist ein Schema zugeordnet der `xml` , typüberprüfung wird ebenfalls durchgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
   
  XML-Dokumente können unterschiedlich codiert werden (z. B.: UTF-8, UTF-16, Windows-1252). Im Folgenden werden die Regeln erläutert, nach denen Zeichenfolgen- und Binärtypen mit der Codierung des XML-Dokuments interagieren und die das Verhalten des Parsers steuern.  
   
@@ -98,7 +98,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  Wenn der *style* -Parameter nicht verwendet oder sein Wert auf 0 festgelegt wird, werden insignifikante Leerzeichen für die Konvertierung der xml DT-Instanz nicht beibehalten. Weitere Informationen zum Verwenden des CONVERT-Operators und seines *style*-Parameters beim Konvertieren von Zeichenfolgendaten in XML DT-Instanzen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes XML und Zuweisen des Wertes zu einer Spalte  
- Das folgende Beispiel wandelt eine Zeichenfolgenvariable, die ein XML-Fragment enthält den `xml` Datentyp und speichert diesen dann in der `xml` Spalte vom Typ:  
+ Das folgende Beispiel wandelt eine Zeichenfolgenvariable, die eine XML-Fragment enthält den `xml` -Datentyp um und speichert Sie dann in der `xml` Spalte vom Typ:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -113,7 +113,7 @@ SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- Sie können cast() die Zeichenfolge explizit in den `xml` Typ:  
+ Sie cast() können explizit auf die Zeichenfolge, die die `xml` Typ:  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -126,7 +126,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisiertes XML und Zuweisen der Zeichenfolge zu einer Spalte  
- Im folgenden Beispiel wird in eine Zeichenfolge konvertiert `xml` geben und dann einer Variablen des zugewiesen der `xml` -Datentyp:  
+ Im folgenden Beispiel wird in eine Zeichenfolge konvertiert `xml` geben, einer Variablen zugewiesen, und wählen Sie die `xml` -Datentyp:  
   
 ```  
 declare @x xml  
@@ -148,7 +148,7 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- Die SELECT-Anweisung gibt ein XML-Textfragment, das dann während der Zuweisung zur analysiert wird die `xml` Variablen vom Datentyp.  
+ Die SELECT-Anweisung gibt ein XML-Textfragment, das dann während der Zuweisung zur Analyse der `xml` Variablen vom Datentyp.  
   
  Sie können auch die [TYPE-Direktive](type-directive-in-for-xml-queries.md) in der FOR XML-Klausel, die direkt ein FOR XML-Abfrageergebnis als zurückgibt `xml` Typ:  
   
@@ -167,7 +167,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- Im folgenden Beispiel, das typisierte `xml` Ergebnis einer FOR XML-Abfrage eingefügt wird ein `xml` Spalte vom Typ:  
+ Im folgenden Beispiel, das typisierte `xml` Ergebnis einer FOR XML-Abfrage eingelegt ist ein `xml` Spalte vom Typ:  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -196,7 +196,7 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- Im vorherige Beispiel implizit konvertiert die Zeichenfolge, die die `xml` -Datentyp und weist sie einer `xml` Typvariablen.  
+ Im vorherige Beispiel implizit konvertiert die Zeichenfolge, die die `xml` -Datentyp und weist sie einer `xml` Variablen vom Typ.  
   
  Das folgende Beispiel fügt eine Konstantenzeichenfolge in eine `xml` Spalte vom Typ:  
   
@@ -209,7 +209,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  Für typisiertes XML wird das XML für das angegebene Schema überprüft. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="using-bulk-load"></a>Verwenden von Massenkopieren  
- Die verbesserten [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) -Funktionen ermöglichen das Massenkopieren von XML-Dokumenten in der Datenbank. Sie können Massenimport von XML-Instanzen aus Dateien in die `xml` -Typspalten in der Datenbank. Funktionierende Beispiele finden Sie unter [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Weitere Informationen über das Laden von XML-Dokumenten finden Sie unter [Laden von XML-Daten](load-xml-data.md).  
+ Die verbesserten [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) -Funktionen ermöglichen das Massenkopieren von XML-Dokumenten in der Datenbank. Sie können Massenimport von XML-Instanzen aus Dateien in die `xml` Spalten vom Typ, in der Datenbank. Funktionierende Beispiele finden Sie unter [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Weitere Informationen über das Laden von XML-Dokumenten finden Sie unter [Laden von XML-Daten](load-xml-data.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Cubes mit einer Datenquellensicht | Microsoft Docs
+title: Erstellen eines Cubes mit einer Datenquellensicht | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf9a08773ef90bb4d316f7fb533e5a5a854c779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303050"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
   Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie beabsichtigen, eine vorhandene Datenquellensicht zu verwenden. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  
@@ -92,7 +92,7 @@ ms.locfileid: "36059698"
   
  Um ein Objekt in der Struktur aus dem Cube zu entfernen, deaktivieren Sie das Kontrollkästchen daneben. Wenn das Kontrollkästchen neben einem Objekt deaktiviert wird, werden auch alle Objekte unterhalb des Objekts entfernt. Da Abhängigkeiten zwischen Objekten erzwungen werden, werden auch alle vom Attribut abhängigen Hierarchieebenen entfernt, wenn Sie ein Attribut entfernen. Wenn Sie beispielsweise ein Kontrollkästchen neben einer Hierarchie deaktivieren, werden die Kontrollkästchen neben allen Ebenen in der Hierarchie ebenfalls deaktiviert und sowohl die Ebenen als auch die Hierarchien entfernt. Das Schlüsselattribut einer Dimension kann nicht entfernt werden.  
   
- Sie können eine beliebige Dimension, den Attribut, die Hierarchie oder Ebene umbenennen, entweder durch Klicken auf den Namen oder durch Rechtsklick auf den Namen und klicken Sie dann auf das Kontextmenü auf klicken **umbenennen \<Objekt >**, wobei  **\< Objekt >** ist **Dimension**, **Attribut**, oder **Ebene**.  
+ Sie können einer jeder Dimension, Attribut, Hierarchie oder Ebene umbenennen, entweder durch Klicken auf den Namen oder durch Rechtsklick auf den Namen und klicken Sie dann auf die im Kontextmenü auf **umbenennen \<Objekt >**, wobei  **\< Objekt >** ist **Dimension**, **Attribut**, oder **Ebene**.  
   
  Es muss nicht unbedingt eine 1:1-Beziehung zwischen der Anzahl der auf der Assistentenseite **Fakten- und Dimensionstabellen identifizieren** definierten Dimensionstabellen und der Anzahl der auf dieser Seite des Assistenten aufgeführten Dimensionen bestehen. Abhängig von den Beziehungen zwischen den Tabellen in der Datenquellensicht kann der Assistent zwei oder mehr Tabellen verwenden, um eine Dimension zu erstellen (wie z. B. für ein Schneeflockenschema erforderlich).  
   

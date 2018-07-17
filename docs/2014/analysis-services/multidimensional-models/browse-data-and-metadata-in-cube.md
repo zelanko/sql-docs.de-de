@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten und Metadaten in Cube | Microsoft Docs
+title: Durchsuchen von Daten und Metadaten in Cube | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288146"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
   Klicken Sie im Cube-Designer auf die Registerkarte **Browser** , um Cubedaten zu durchsuchen. Sie können diese Ansicht verwenden, um die Struktur eines Cubes zu untersuchen und die Daten, die Berechnung, die Formatierung und die Sicherheit der Datenbankobjekte zu überprüfen. Sie können schnell einen Cube untersuchen, während dieser von Endbenutzern in Berichterstellungstools oder anderen Clientanwendungen angezeigt wird. Wenn Sie Cubedaten durchsuchen, können Sie unterschiedliche Dimensionen anzeigen, einen Drilldown in Elemente ausführen und die Dimensionen in Slices aufteilen.  
@@ -61,7 +61,7 @@ ms.locfileid: "36060607"
   
      \- oder –  
   
--   In der **Dimension** Spalte die **Filter** Bereich, klicken Sie auf  **\<Dimension auswählen >** wählen Sie eine Dimension aus der Liste, und klicken Sie auf  **\<Hierarchie auswählen >** in der **Hierarchie** Spalte, und wählen Sie eine Hierarchie aus der Liste.  
+-   In der **Dimension** Spalte die **Filter** Bereich, klicken Sie auf  **\<Dimension auswählen >** wählen Sie eine Dimension aus der Liste aus, und klicken Sie auf  **\<Hierarchie auswählen >** in die **Hierarchie** Spalte und wählen Sie eine Hierarchie aus der Liste.  
   
  Nachdem Sie die Hierarchie angegeben haben, geben Sie den Operator und den Filterausdruck an. In der folgenden Tabelle werden die Operatoren und die Filterausdrücke beschrieben.  
   
