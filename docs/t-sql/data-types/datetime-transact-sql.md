@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2550514f373a91457a75bdf2c04b60ea13fe137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055177"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420459"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,23 +64,23 @@ Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert is
 ## <a name="supported-string-literal-formats-for-datetime"></a>Unterstützte Formate der Zeichenfolgenliterale für datetime  
 In den folgenden Tabellen werden die unterstützten Formate für Zeichenfolgenliterale für **datetime** aufgelistet. Außer bei ODBC stehen **datetime**-Zeichenfolgenliterale in einfachen Anführungszeichen ('), z.B. 'string_literaL'. Wenn die Umgebung nicht **us_english** lautet, sollten die Zeichenfolgenliterale das Format N'string_literaL' aufweisen.
   
-|Numerisch|Description|  
+|Numerisch|und Beschreibung|  
 |---|---|
 |Datumsformate:<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> Zeitformate:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|Sie können Datumsdaten mit der numerischen Angabe eines Monats angeben. So stellt z. B. das Datum 5/20/97 das Jahr 1997 und den zwanzigsten Tag des Monats Mai dar. Wenn Sie das numerische Datumsformat verwenden, müssen Sie den Monat, den Tag und das Jahr in einer Zeichenfolge mit Schrägstrichen (/), Bindestrichen (-) oder Punkten (.) als Trennzeichen angeben. Diese Zeichenfolge muss das folgende Format haben:<br /><br /> *Zahl Trennzeichen Zahl Trennzeichen number [time] [time]*<br /><br /> <br /><br /> Wenn die festgelegte Sprache **us_english** ist, gilt als Standarddatumsformat mdy. Sie können das Datumsformat mithilfe der [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)-Anweisung ändern.<br /><br /> Die SET DATEFORMAT-Einstellung bestimmt, wie Datumsangaben interpretiert werden. Wenn die Reihenfolge nicht mit der Einstellung übereinstimmt, werden die Werte nicht als Datumsangabe interpretiert, da sie außerhalb des Bereichs liegen, oder die Werte werden falsch interpretiert. Beispielsweise gibt es für 12/10/08 je nach der DATEFORMAT-Einstellung sechs verschiedene Interpretationen. Eine vierstellige Jahresangabe wird als Jahr interpretiert.|  
   
-|Alphabetisch|Description|  
+|Alphabetisch|und Beschreibung|  
 |---|---|
 |Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|Sie können Datumsdaten mit einem Monat angeben, der mit dem vollständigen Monatsnamen angegeben wird. Dabei können Sie beispielsweise den vollständigen Monatsnamen April oder die in der aktuellen Sprache angegebene Abkürzung für den Monat, z. B. Apr, angeben. Kommas können optional verwendet werden; die Groß-/Kleinschreibung wird ignoriert.<br /><br /> Es folgen einige Richtlinien für die Verwendung von alphabetischen Datumsformaten:<br /><br /> 1) Schließen Sie die Datums- und Zeitdaten in einfache Anführungszeichen ein ('). Verwenden Sie N' für andere Sprachen als Englisch.<br /><br /> 2) Zeichen, die in Klammern eingeschlossen werden, sind optional.<br /><br /> 3) Wenn Sie nur die letzten zwei Ziffern des Jahres angeben, liegen Werte, die niedriger als die letzten zwei Ziffern des Werts von [Konfigurieren des Umstellungsjahres für Angaben mit zwei Ziffern (Serverkonfigurationsoption)](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) sind, im selben Jahrhundert wie das Umstellungsjahr. Werte, die größer als oder gleich dem Wert dieser Option sind, liegen in dem Jahrhundert, das dem Umstellungsjahr vorangeht. Wenn z.B. **Umstellungsjahr für Angaben mit zwei Ziffern** den Wert 2050 hat (Standardeinstellung), wird das zweistellige Jahr 25 als 2025 und das zweistellige Jahr 50 als 1950 interpretiert. Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> 4) Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.<br /><br /> <br /><br /> Die SET DATEFORMAT-Sitzungseinstellung wird nicht angewendet, wenn Sie den Monat in alphabetischer Form (als Wort) angeben.|  
   
-|ISO 8601|Description|  
+|ISO 8601|und Beschreibung|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|Beispiele:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Wenn Sie das ISO 8601-Format verwenden, müssen Sie jedes Element in diesem Format angeben. Dazu gehören auch **T**, die Doppelpunkte (:) und der Punkt (.), die in diesem Format aufgeführt werden.<br /><br /> Die eckigen Klammern zeigen, dass der Teil, der die Sekunden angibt, optional ist. Die Uhrzeit wird im 24-Stunden-Format angegeben.<br /><br /> Der Buchstabe T zeigt den Beginn des Uhrzeitabschnitts des **datetime**-Werts an.<br /><br /> Der Vorteil der Verwendung des ISO 8601-Formats liegt darin, dass es sich um einen internationalen Standard mit eindeutigen Angaben handelt. Außerdem wird dieses Format nicht von der SET DATEFORMAT-Einstellung oder der [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)-Einstellung beeinflusst.|  
   
-|Unstrukturiert|Description|  
+|Unstrukturiert|und Beschreibung|  
 |---|---|
 |YYYYMMDD hh:mm:ss[.mmm]||  
   
-|ODBC|Description|  
+|ODBC|und Beschreibung|  
 |---|---|
 |{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|Die ODBC-API definiert Escapesequenzen zur Darstellung von Datums- und Uhrzeitwerten, die in der ODBC-Terminologie als Zeitstempel-Daten bezeichnet werden. Dieses ODBC-Zeitstempel-Format wird auch von der OLE DB-Sprachendefinition (DBGUID-SQL) unterstützt, die vom OLE DB-Anbieter [!INCLUDE[msCoName](../../includes/msconame-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. Anwendungen, die die ADO-, OLE DB- und ODBC-basierten APIs verwenden, können dieses ODBC-Zeitstempel-Format zur Darstellung von Datums- und Zeitangaben verwenden.<br /><br /> Escapesequenzen für ODBC-Zeitstempel-Daten haben das folgende Format: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* gibt die Art der Escapesequenz an. Zeitstempel-Daten besitzen drei *literal_type*-Bezeichner:<br />1) d = Nur Datum<br />2) t = Nur Uhrzeit<br />3) ts = Zeitstempel (Uhrzeit + Datum)<br /><br /> <br /><br /> *constant_value* ist der Wert der Escapesequenz. Für *constant_value* müssen folgende Formate für jeden *literal_type* gelten.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   

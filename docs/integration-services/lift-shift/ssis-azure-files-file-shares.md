@@ -1,26 +1,24 @@
 ---
 title: Öffnen und Speichern von Dateien mit in Azure bereitgestellten SSIS-Paketen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Dateien lokal und in Azure öffnen und speichern, wenn Sie SSIS-Pakete, die lokale Dateisysteme verwenden, per Lift & Shift in SSIS in Azure migrieren.
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410472"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065990"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Öffnen und Speichern von Dateien lokal und in Azure mit in Azure bereitgestellten SSIS-Paketen
 
 In diesem Artikel wird beschrieben, wie Sie Dateien lokal und in Azure öffnen und speichern, wenn Sie SSIS-Pakete, die lokale Dateisysteme verwenden, per Lift & Shift in SSIS in Azure migrieren.
-
-> [!IMPORTANT]
-> Derzeit unterstützt der SSIS-Katalog (SSISDB) nur einen einzelnen Satz von Anmeldeinformationen. Infolgedessen können Sie nicht verschiedene Sätze von Anmeldeinformationen verwenden, um eine Verbindung mit mehreren lokalen Dateifreigaben und Azure Files-Dateifreigaben herzustellen.
 
 ## <a name="save-temporary-files"></a>Speichern von temporären Dateien
 Wenn Sie temporäre Dateien während einer einzelnen Paketausführung speichern und verarbeiten müssen, können Pakete das aktuelle Arbeitsverzeichnis (`.`) oder den temporären Ordner (`%TEMP%`) Ihrer Azure SSIS Integration Runtime-Knoten verwenden.

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 caps.latest.revision: 154
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f16195a10c186e406571f65d8d79e2809f23dbad
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702943"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942276"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -544,7 +543,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Zusätzliche Hinweise finden Sie in den folgenden Themen:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -568,7 +567,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
  Das Verhalten der Option hängt von der Anweisung ab, wie in der folgenden Tabelle beschrieben:  
   
-|Statement|Verhalten der Sicherungssatzoption FILE|  
+|-Anweisung.|Verhalten der Sicherungssatzoption FILE|  
 |---------------|-----------------------------------------|  
 |RESTORE|Der Standardwert für die Sicherungssatz-Dateinummer ist 1. In einer RESTORE-Anweisung ist nur eine einzelne Sicherungssatzoption FILE zulässig. Es ist wichtig, dass Sicherungssätze in der richtigen Reihenfolge angegeben werden.|  
 |RESTORE FILELISTONLY|Der Standardwert für die Sicherungssatz-Dateinummer ist 1.|  
