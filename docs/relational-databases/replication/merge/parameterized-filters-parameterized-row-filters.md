@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965325"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356362"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Festlegen von 'partition options'  
  Der Wert für die **partition options** -Eigenschaft wird angegeben, wenn Sie einen Artikel erstellen. Ausschlaggebend für den Wert ist dabei die Art und Weise, wie die Daten in der gefilterten Tabelle für mehrere Abonnenten freigegeben werden. Die Eigenschaft kann mithilfe von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)und dem Dialogfeld **Artikeleigenschaften** auf einen von vier Werten festgelegt werden. Wird das Dialogfeld **Filter hinzufügen** oder **Filter bearbeiten** verwendet, kann aus zwei Werten ausgewählt werden. Diese beiden Dialogfelder stehen über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Die folgende Tabelle gibt einen Überblick über die verfügbaren Werte für diese Eigenschaft:  
   
-|Description|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
+|und Beschreibung|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die im parametrisierten Filter verwiesen wird, aktualisieren.|**Eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**|**Überlappend**|**0**|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die in parametrisierten Filtern verwiesen wird, nicht aktualisieren.|Nicht zutreffend*|**Überlappend, Datenänderungen außerhalb der Partition nicht zulassen**|**1**|  

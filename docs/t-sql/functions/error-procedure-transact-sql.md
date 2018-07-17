@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,16 +24,16 @@ helpviewer_keywords:
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dc8eb015031121e267622fa3ddadf882a642d17e
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 9c60a1904db3375eb512f2ed639faa47d14060c0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249903"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792051"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +68,7 @@ Wenn `ERROR_PROCEDURE` im CATCH-Block einer gespeicherten Prozedur aufgerufen wi
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
-Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
+Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -106,7 +105,7 @@ usp_ExampleProc
 ```  
   
 ### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_PROCEDURE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
-Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. Die gespeicherte Prozedur gibt Informationen zum Fehler zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, zurück.  
+Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. Die gespeicherte Prozedur gibt Informationen zum Fehler zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, zurück.  
   
 ```  
   

@@ -1,10 +1,9 @@
 ---
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e616434a72eb7c19d831874e475fcfed2ef57668
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b14711117e766e8ee4bdf4596b9b5ed6a75c645
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054457"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788421"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Gibt den Namen des Datenbankschemas für schemabezogene Objekte zurück. Eine Liste der schemabezogenen Objekte finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -72,7 +71,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  Wenn *database_id* nicht angegeben ist, wird in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] davon ausgegangen, dass sich *object_id* im Kontext der aktuellen Datenbank befindet. Eine Abfrage, die auf einen Wert für *object_id* in einer anderen Datenbank verweist, gibt entweder NULL oder falsche Ergebnisse zurück. Beispielsweise ist in der folgenden Abfrage [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] der Kontext der aktuellen Datenbank. [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, einen Objektschemanamen für die angegebene Objekt-ID in dieser Datenbank zurückzugeben, statt in der in der FROM-Klausel der Abfrage angegebenen Datenbank. Deshalb werden fehlerhafte Informationen zurückgegeben.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
   
@@ -80,7 +79,7 @@ FROM master.sys.objects;
   
  Im folgenden Beispiel wird die Datenbank-ID für die `master`-Datenbank in der `OBJECT_SCHEMA_NAME`-Funktion angegeben, und die richtigen Ergebnisse werden zurückgegeben.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
 FROM master.sys.objects;  
   
@@ -91,7 +90,7 @@ FROM master.sys.objects;
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. Zurückgeben des Objektschemanamens und des Objektnamens  
  Im folgenden Beispiel werden der Schemaname des Objekts, der Objektname und SQL-Text für alle zwischengespeicherten Abfragepläne zurückgegeben, bei denen es sich nicht um Ad-hoc- oder vorbereitete Anweisungen handelt.  
   
-```  
+```sql
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -105,7 +104,7 @@ GO
 ### <a name="b-returning-three-part-object-names"></a>B. Zurückgeben von Objektnamen, die aus drei Teilen bestehen  
  Im folgenden Beispiel werden für alle Objekte in allen Datenbanken die Datenbank, das Schema und der Objektname sowie alle anderen Spalten in der dynamischen Verwaltungssicht `sys.dm_db_index_operational_stats` zurückgegeben.  
   
-```  
+```sql
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -121,6 +120,4 @@ GO
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)  
-  
-  
+ [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)

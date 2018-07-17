@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964955"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359312"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32964955"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Veröffentlichungseigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changepublication**|**sync_method**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -49,7 +48,7 @@ ms.locfileid: "32964955"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Artikeleigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern eines Spaltenfilters|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -67,7 +66,7 @@ ms.locfileid: "32964955"
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changemergepublication**|**sync_mode**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -86,7 +85,7 @@ ms.locfileid: "32964955"
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
