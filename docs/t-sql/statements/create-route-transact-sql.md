@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,16 +27,16 @@ helpviewer_keywords:
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17d01e8997fc27cd26fda5b29644b0cc1418af9e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c47be98fa9a09b3abfdf6faa14146695182a0c4c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702439"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782571"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -68,7 +67,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Legt den Benutzer oder die Rolle der angegebenen Datenbank als Besitzer der Route fest. Für *owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer beliebigen Rolle verwendet werden, wenn der aktuelle Benutzer Mitglied der festen Datenbankrolle **db_owner** oder der festen Serverrolle **sysadmin** ist. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört. Wird diese Klausel weggelassen, gehört die Route dem aktuellen Benutzer.  
   
- WITH  
+ mit  
  Führt die Klauseln ein, über die die zurzeit erstellte Route definiert wird.  
   
  SERVICE_NAME = **'***service_name***'**  
@@ -128,7 +127,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, die **'LOCAL'** oder **'TRANSPORT'** für *next_hop_address* angibt, gibt möglicherweise keine Spiegeladresse an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei der Routingtabelle, in der die Routen gespeichert werden, handelt es sich um eine Metadatentabelle, die über die Katalogsicht **sys.routes** gelesen werden kann. Diese Katalogsicht kann nur durch CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisungen aktualisiert werden.  
   
  Standardmäßig enthält die Routingtabelle in jeder Benutzerdatenbank eine Route. Diese Route wird **AutoCreatedLocal** genannt. Die Route gibt **'LOCAL'** für *next_hop_address* an und ordnet Dienstname und Broker-Instanzbezeichner zu.  

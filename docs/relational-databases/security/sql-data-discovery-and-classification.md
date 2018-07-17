@@ -2,8 +2,6 @@
 title: SQL-Datenermittlung und -klassifizierung | Microsoft-Dokumentation
 description: SQL-Datenermittlung und -klassifizierung
 documentationcenter: ''
-author: giladm
-manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
@@ -13,12 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+author: giladm
+manager: shaik
+ms.openlocfilehash: 96861baa7fa28ef9f16f35c13f26327b824b44cc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743969"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926331"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
