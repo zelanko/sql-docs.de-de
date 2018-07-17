@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -34,12 +33,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc5ab13c00b5af13a68325fc50c252f0ca68f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0212edfaa4160bd0fbc0da9df6861cfa46056ed3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965395"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350022"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +272,7 @@ ms.locfileid: "32965395"
   
     -   *metricID* - ein <xref:System.Int32> -Wert, der die Schwellenwertmetrik für die Überwachung aus der folgenden Tabelle darstellt:  
   
-        |value|Description|  
+        |value|und Beschreibung|  
         |-----------|-----------------|  
         |1|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
         |2|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  

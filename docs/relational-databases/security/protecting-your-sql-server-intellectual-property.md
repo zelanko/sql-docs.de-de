@@ -14,15 +14,15 @@ helpviewer_keywords:
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: fef7f5aac1f6cb47fcd9737ee4057ef64c55294f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4d04910135ab34ae95e8e94182ed88396400e89f
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703031"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942496"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Schutz Ihres geistigen SQL Server-Eigentums
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,6 @@ Sie können auch ein [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md)  
 
