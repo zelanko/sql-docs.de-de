@@ -1,4 +1,4 @@
----
+﻿---
 title: Sys.Databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017

@@ -1,4 +1,4 @@
----
+﻿---
 title: CONCAT_WS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/25/2018
