@@ -1,5 +1,5 @@
 ---
-title: Planen der SSIS-Pakete in Azure | Microsoft-Dokumentation
+title: Planen der SIS-Pakete in Azure | Microsoft-Dokumentation
 description: Übersicht über die verfügbaren Methoden zum Planen der Ausführung von SSIS-Paketen, die für Azure SQL-Datenbank bereitgestellt sind.
 ms.date: 05/29/2018
 ms.topic: conceptual
@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 62367e0ece20f56b6447a23b78b03b8799eef119
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411582"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262174"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen
 

@@ -33,4 +33,5 @@
 
 # sqlpackage
 ## [Installieren von sqlpackage](sqlpackage-download.md)
+## [Versionsanmerkungen](sqlpackage-release-notes.md)
 ## [Referenz zu sqlpackage](sqlpackage.md)
