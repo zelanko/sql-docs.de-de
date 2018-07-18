@@ -1,5 +1,5 @@
 ---
-title: ObjectDefinition-Element (XMLA) | Microsoft Docs
+title: ObjectDefinition-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983565"
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "34575892"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Untergeordnete Elemente|Erforderliche ASSL-Elemente. Mindestens ein ASSL-Elemente, die zum Definieren [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte. Weitere Informationen über ASSL finden Sie unter [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
+|Untergeordnete Elemente|Erforderliche ASSL-Elemente. Eine oder mehrere ASSL-Elemente, die zum Definieren [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte. Weitere Informationen über ASSL finden Sie unter [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine leere Datenbank mit dem Namen **Testdatenbank** auf eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
+ Das folgende Beispiel erstellt eine leere Datenbank, die mit dem Namen **Testdatenbank** auf eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
   
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. security_predicates (Transact-SQL) | Microsoft Docs
+title: Sys. security_predicates (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 539ca48e5c55485a5a4b3fdecb3044c1feae6826
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221391"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993852"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>Sys. security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "33221391"
 |object_id|**int**|Die ID der Sicherheitsrichtlinie, die das Prädikat enthält.|  
 |security_predicate_id|**int**|Prädikat-ID innerhalb dieser Richtlinie.|  
 |target_object_id|**int**|Die ID des Objekts, an das das Sicherheitsprädikat gebunden ist.|  
-|predicate_definition|**nvarchar(max)**|Der vollqualifizierte Name der Funktion, die als Sicherheitsprädikat verwendet wird, einschließlich der Argumente. Beachten Sie, dass die `schema.function` Name möglicherweise normalisiert werden kann (d. h. durch Escapezeichen ersetzt) sowie alle anderen Elemente in den Text aus Gründen der Konsistenz. Beispiel:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
-|predicate_type|**int**|Der Typ des Prädikats, die durch die Sicherheitsrichtlinie verwendet:<br /><br /> 0 = FILTERPRÄDIKAT<br /><br /> 1 = BLOCK-PRÄDIKAT|  
-|predicate_type_desc|**nvarchar(60)**|Der Typ des Prädikats, die durch die Sicherheitsrichtlinie verwendet:<br /><br /> FILTER<br /><br /> BLOCKIEREN|  
-|Vorgang|**int**|Der Typ des Vorgangs für das Prädikat angegeben:<br /><br /> NULL = alle anwendbaren Vorgänge<br /><br /> 1 = AFTER INSERT<br /><br /> 2 = AFTER UPDATE<br /><br /> 3 = VOR DEM UPDATE<br /><br /> 4 = VOR DEM LÖSCHEN|  
-|operation_desc|**nvarchar(60)**|Der Typ des Vorgangs für das Prädikat angegeben:<br /><br /> NULL<br /><br /> NACH DEM EINFÜGEN<br /><br /> AFTER UPDATE<br /><br /> VOR DEM UPDATE<br /><br /> VOR DEM LÖSCHEN|  
+|predicate_definition|**nvarchar(max)**|Der vollqualifizierte Name der Funktion, die als Sicherheitsprädikat verwendet wird, einschließlich der Argumente. Beachten Sie, dass die `schema.function` Namen (d. h. durch Escapezeichen ersetzt) normalisiert werden kann sowie alle anderen Elemente in den Text für Konsistenz. Zum Beispiel:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_type|**int**|Der Typ des Prädikats, die von der Sicherheitsrichtlinie verwendet werden soll:<br /><br /> 0 = FILTERPRÄDIKAT<br /><br /> 1 = BLOCK-PRÄDIKAT|  
+|predicate_type_desc|**nvarchar(60)**|Der Typ des Prädikats, die von der Sicherheitsrichtlinie verwendet werden soll:<br /><br /> FILTER<br /><br /> BLOCK|  
+|Vorgang|**int**|Der Typ des Vorgangs für das Prädikat angegeben:<br /><br /> NULL = alle anwendbaren Vorgänge<br /><br /> 1 = AFTER INSERT<br /><br /> 2 = NACH UPDATE<br /><br /> 3 = VOR DER AKTUALISIERUNG<br /><br /> 4 = VOR DEM LÖSCHEN|  
+|operation_desc|**nvarchar(60)**|Der Typ des Vorgangs für das Prädikat angegeben:<br /><br /> NULL<br /><br /> NACH DEM EINFÜGEN<br /><br /> AFTER UPDATE<br /><br /> VOR DER AKTUALISIERUNG<br /><br /> VOR DEM LÖSCHEN|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Prinzipale mit den **ALTER ANY SECURITY POLICY** -Berechtigung haben Zugriff auf alle Objekte in dieser Katalogsicht sowie jede Person mit **SICHTDEFINITION** für das Objekt.  
@@ -61,6 +61,7 @@ ms.locfileid: "33221391"
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ 
+  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

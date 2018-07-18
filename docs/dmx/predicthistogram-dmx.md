@@ -1,5 +1,5 @@
 ---
-title: PredictHistogram (DMX) | Microsoft Docs
+title: PredictHistogram (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842143"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985359"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,10 +35,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Tabelle  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Histogramm generiert Statistikspalten. Die Spaltenstruktur des zurückgegebenen Histogramms hängt vom Typ des Spaltenverweises, die mit der **"PredictHistogram"** Funktion.  
+ Ein Histogramm generiert Statistikspalten. Die Spaltenstruktur des zurückgegebenen Histogramms hängt der Typ des Spaltenverweises, die verwendet wird, mit der **PredictHistogram** Funktion.  
   
 ## <a name="scalar-columns"></a>Skalare Spalten  
- Für eine \<skalarspaltenverweis >, das Histogramm, das **"PredictHistogram"** Funktionsrückgaben besteht aus den folgenden Spalten:  
+ Für eine \<skalarspaltenverweis >, das Histogramm, das **PredictHistogram** Funktionsrückgaben besteht aus den folgenden Spalten:  
   
 -   Der Wert, der vorhergesagt wird.  
   
@@ -56,10 +56,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     Die **$AdjustedProbability** Spalte ist eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Erweiterung der [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB-Spezifikation für Data Mining.  
+     Die **$AdjustedProbability** Spalte ist eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung der [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining-Spezifikation.  
   
 ## <a name="cluster-columns"></a>Clusterspalten  
- Das Histogramm, das **"PredictHistogram"** idatabasebackupreadstream für eine \<cluster Spaltenverweis > besteht aus den folgenden Spalten:  
+ Das Histogramm, das **PredictHistogram** Funktionsergebnis ist für eine \<Spaltenverweis cluster > besteht aus den folgenden Spalten:  
   
 -   **$Cluster** (entspricht dem Clusternamen)  
   
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der vorhergesagte Status der Bike Buyer-Spalte in einer SINGLETON-Abfrage zurückgegeben. Die Abfrage gibt auch die oberen beiden wahrscheinlichsten Statuswerte des Bike Buyer-Attributs basierend auf der angepassten Wahrscheinlichkeit abgerufen werden, mithilfe der **"PredictHistogram"** Funktion.  
+ Im folgenden Beispiel wird der vorhergesagte Status der Bike Buyer-Spalte in einer SINGLETON-Abfrage zurückgegeben. Die Abfrage gibt auch die oberen beiden wahrscheinlichsten Statuswerte des Bike Buyer-Attributs, basierend auf der angepassten Wahrscheinlichkeit abgerufen, indem Sie mit der **PredictHistogram** Funktion.  
   
 ```  
 SELECT  
@@ -93,7 +93,7 @@ NATURAL PREDICTION JOIN
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

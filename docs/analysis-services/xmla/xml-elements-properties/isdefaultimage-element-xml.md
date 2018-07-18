@@ -1,5 +1,5 @@
 ---
-title: IsDefaultImage-Element (XML) | Microsoft Docs
+title: IsDefaultImage-Element (XML) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf053ce660091fa9b47048e9dccb9b7f470acaad
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036838"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage-Element (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -1,5 +1,5 @@
 ---
-title: Fragt-Element (XMLA) | Microsoft Docs
+title: Abfragen-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae9da22e9afe449eecd0d173fbf998401ca6a7d4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994652"
 ---
 # <a name="queries-element-xmla"></a>Queries-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

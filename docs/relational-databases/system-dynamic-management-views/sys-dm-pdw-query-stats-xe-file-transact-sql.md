@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft Docs
+title: Sys.dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3c86acb9e3e68842a8982304670b24a66f15f7f6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000702"
 ---
 # <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Diese DMV ist veraltet und wird in einer zukünftigen Version entfernt. In dieser Version gibt es 0 Zeilen zurück.  
+  Diese dynamische Verwaltungssicht ist veraltet und wird in einer zukünftigen Version entfernt. In dieser Version gibt es 0 Zeilen zurück.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|Ereignis|**nvarchar(60)**|Der Schlüssel für diese Ansicht.||  
+|Ereignis|**nvarchar(60)**|Der Schlüssel für diese Sicht.||  
 |data|**xml**|||  
 |pdw_node_id|**int**|Knoten, auf denen diese Xevent-Instanz ausgeführt wird.||  
   

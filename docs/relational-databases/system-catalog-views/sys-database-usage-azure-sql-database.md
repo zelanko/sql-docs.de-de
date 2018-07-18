@@ -1,5 +1,5 @@
 ---
-title: Sys. database_usage (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. database_usage (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177453"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038818"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33177453"
   
  Listet Anzahl, Typ und Dauer der Datenbanken auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server.  
   
- Die **Sys. database_usage** Ansicht enthält die folgenden Spalten.  
+ Die **Sys. database_usage** -Ansicht enthält die folgenden Spalten.  
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
@@ -50,10 +50,10 @@ ms.locfileid: "33177453"
 |quantity|Die maximale Anzahl von Datenbanken eines SKU-Typs, der an diesem Tag vorhanden war.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur-Lese Zugriff auf diese Sicht ist verfügbar für alle Benutzer mit Berechtigungen zum Verbinden mit der **master** Datenbank.  
+ Nur-Lese Zugriff auf diese Sicht wird für alle Benutzer mit Berechtigungen zum Herstellen einer Verbindung mit der **master** Datenbank.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Sys. database_usage** Sicht gibt eine Zeile für jeden Tag des Abonnements zurück.  
+ Die **Sys. database_usage** Sicht gibt eine Zeile für jeden Tag des Ihrem Abonnement zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Preisdetails – SQL-Datenbank](http://go.microsoft.com/fwlink/?LinkID=394978)   

@@ -1,5 +1,5 @@
 ---
-title: Properties-Element (XMLA) | Microsoft Docs
+title: Properties-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c72d367944a79e86d9bfa251121e8589cbc0e86
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994552"
 ---
 # <a name="properties-element-xmla"></a>Properties-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält XML für Analysis (XMAL)-Eigenschaften, die verwendet werden, indem Sie die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
+  Enthält XML-Code für die Eigenschaften des Analysis (XMAL) ein, die die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34576122"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Ermitteln](../../../analysis-services/xmla/xml-elements-methods-discover.md), [ausführen](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Übergeordnete Elemente|[Entdecken Sie](../../../analysis-services/xmla/xml-elements-methods-discover.md), [ausführen](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Untergeordnete Elemente|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  

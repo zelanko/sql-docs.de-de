@@ -1,5 +1,5 @@
 ---
-title: NOT-Funktion (XQuery) | Microsoft Docs
+title: NOT-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999812"
 ---
-# <a name="functions-on-boolean-values---not-function"></a>Funktionen für boolesche Werte - not-Funktion 
+# <a name="functions-on-boolean-values---not-function"></a>Funktionen für boolesche Werte – not-Funktion 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt "true" zurück, wenn der effektive boolesche Wert der *$arg* lautet "false" und "false" zurückgegeben, wenn der effektive boolesche Wert der *$arg* ist "true".  
+  Gibt "true" zurück, wenn der effektive boolesche Wert des *$arg* ist "false", und gibt "false" zurück, wenn der effektive boolesche Wert des *$arg* ist "true".  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,9 +49,9 @@ fn:not($arg as item()*) as xs:boolean
  Eine Elementsequenz, für die es einen effektiven booleschen Wert gibt.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Verwenden der NOT()-XQuery-Funktion zum Suchen von Produktmodellen, deren katalogbeschreibungen enthalten nicht die \<Spezifikationen > Element.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Verwenden der NOT()-XQuery-Funktion zum Suchen nach Produktmodellen, deren katalogbeschreibungen enthalten nicht die \<Spezifikationen > Element.  
  Die folgende Abfrage erstellt XML mit den IDs von Produktmodellen, deren Katalogbeschreibung das <`Specifications`>-Element nicht enthält.  
   
 ```  
@@ -69,18 +69,18 @@ WHERE CatalogDescription.exist('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Da das Dokument Namespaces verwendet, wird in diesem Beispiel die WITH NAMESPACES-Anweisung verwendet. Eine andere Möglichkeit ist die Verwendung der **Namespace deklarieren** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) um das Präfix zu definieren.  
+-   Da das Dokument Namespaces verwendet, wird in diesem Beispiel die WITH NAMESPACES-Anweisung verwendet. Eine weitere Möglichkeit ist die Verwendung der **Namespace deklarieren** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) das Präfix zu definieren.  
   
--   Anschließend konstruiert die Abfrage der XML mit der <`Product`>-Element und dessen **ProductModelID** Attribut.  
+-   Anschließend konstruiert die Abfrage die XML mit der <`Product`>-Element und dessen **ProductModelID** Attribut.  
   
--   Die WHERE-Klausel verwendet die [EXIST()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md) zum Filtern der Zeilen. Die **exist()** -Methode gibt True zurück, wenn es sind \<ProductDescription >-Elemente, die keine \<Spezifikation > untergeordnete Elemente. Beachten Sie die Verwendung der **"NOT()" "** Funktion.  
+-   Die WHERE-Klausel verwendet die [EXIST()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md) zum Filtern von Zeilen. Die **exist()** Methode gibt True zurück, wenn es gibt \<ProductDescription >-Elemente, die keine \<Spezifikation > untergeordnete Elemente. Beachten Sie die Verwendung der **"NOT()" "** Funktion.  
   
  Dieses Resultset ist leer, da jedes Produktmodell-katalogbeschreibung enthält die \<Spezifikationen > Element.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Abrufen von Arbeitsplatzstandorten ohne MachineHours-Attribut mit der XQuery-Funktion not()  
  Die folgende Abfrage wird beispielsweise für die Instructions-Spalte angegeben. Diese Spalte speichert Anweisungen zur Fertigung der Produktmodelle.  
   
- Die Abfrage ruft Arbeitsplatzstandorte, für die kein MachineHours-Attribut angegeben ist, für ein bestimmtes Produktmodell ab. D. h. das Attribut **MachineHours** ist nicht angegeben, für die \<Speicherort > Element.  
+ Die Abfrage ruft Arbeitsplatzstandorte, für die kein MachineHours-Attribut angegeben ist, für ein bestimmtes Produktmodell ab. Das heißt, dass das Attribut **MachineHours** für nicht angegeben ist die \<Speicherort > Element.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -95,7 +95,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7   
 ```  
   
- Beachten Sie in der vorherigen Abfrage Folgendes:  
+ Beachten Sie in der vorherigen Abfrage gibt Folgendes an:  
   
 -   Die **Declarenamespace** in [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert das Namespacepräfix der fertigungsanweisungen in Adventure Works. Dieser Namespace ist mit dem in dem Fertigungsanweisungsdokument verwendeten identisch.  
   
@@ -114,7 +114,7 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **"NOT()" "** Funktion unterstützt nur Argumente vom Typ xs: Boolean, node() *, oder die leere Sequenz.  
+-   Die **"NOT()" "** Funktion unterstützt nur Argumente vom Typ xs: Boolean, oder node() *, oder eine leere Sequenz.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  

@@ -1,5 +1,5 @@
 ---
-title: Count-Funktion (XQuery) | Microsoft Docs
+title: Count-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076367"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987482"
 ---
-# <a name="aggregate-functions---count"></a>Aggregatfunktionen - Anzahl
+# <a name="aggregate-functions---count"></a>Aggregate Functions - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Anzahl der enthaltenen Elemente in der angegebenen Sequenz *$arg*.  
@@ -47,10 +47,10 @@ fn:count($arg as item()*) as xs:integer
  Zu zählende Elemente.  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt 0 zurück, wenn *$arg* ist eine leere Sequenz.  
+ Gibt 0 zurück, wenn *$arg* eine leere Sequenz.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Verwenden der count()-Funktion von XQuery zum Zählen der Arbeitsplatzstandorte im Fertigungsprozess eines Produktmodells  
  Die folgende Abfrage zählt die Anzahl der Arbeitsplatzstandorte im Fertigungsprozess eines Produktmodells (ProductModelID=7).  
@@ -106,7 +106,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- Anstelle von XML können Sie die Werte auch so zurückgeben, dass sie nicht vom Typ XML sind, wie in der folgenden Abfrage gezeigt. Die Abfrage verwendet die [Value()-Methode (Xml-Datentyp)](../t-sql/xml/value-method-xml-data-type.md) die Anzahl der Arbeitsaufgaben Center Speicherort abgerufen.  
+ Anstelle von XML können Sie die Werte auch so zurückgeben, dass sie nicht vom Typ XML sind, wie in der folgenden Abfrage gezeigt. Die Abfrage verwendet die [Value()-Methode (Xml-Datentyp)](../t-sql/xml/value-method-xml-data-type.md) um die Anzahl der Arbeitsaufgaben-Center-Speicherort abzurufen.  
   
 ```  
 SELECT  ProductModelID,   

@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
+title: Sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247163"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049548"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>Argumente  
  [ **@plan_id =**] **'***plan_id***'**  
- Gibt die ID des Wartungsplans. *"Plan_id"* ist **"uniqueidentifier"**.  
+ Gibt die ID des Wartungsplans. *Plan_id* ist **Uniqueidentifier**.  
   
  [ **@db_name =**] **'***database_name***'**  
  Gibt den Namen der Datenbank an, die aus dem Wartungsplan gelöscht werden soll. *database_name* ist **sysname**  
@@ -65,15 +65,15 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>Hinweise  
  **Sp_delete_maintenance_plan_db** muss ausgeführt werden, aus der **Msdb** Datenbank.  
   
- Die **Sp_delete_maintenance_plan_db** gespeicherte Prozedur entfernt die Zuordnung zwischen dem Wartungsplan und der angegebenen Datenbank; nicht gelöscht oder zerstören die Datenbank.  
+ Die **Sp_delete_maintenance_plan_db** gespeicherte Prozedur entfernt die Zuordnung zwischen dem Wartungsplan und der angegebenen Datenbank; nicht löschen oder zerstören die Datenbank.  
   
- Wenn **Sp_delete_maintenance_plan_db** dem letzten der Datenbank aus dem Wartungsplan entfernt, die gespeicherte Prozedur löscht auch den Wartungsplan.  
+ Wenn **Sp_delete_maintenance_plan_db** entfernt die letzte Datenbank, aus dem Wartungsplan, der die gespeicherte Prozedur löscht auch den Wartungsplan.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_delete_maintenance_plan_db**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Beispiele  
- Löscht den Wartungsplan in der **AdventureWorks2012** Datenbank, die zuvor hinzugefügten mit **Sp_add_maintenance_plan_db**.  
+ Löscht den Wartungsplan in der **AdventureWorks2012** -Datenbank mithilfe von zuvor hinzugefügte **Sp_add_maintenance_plan_db**.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
@@ -81,6 +81,6 @@ EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',
   
 ## <a name="see-also"></a>Siehe auch  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Datenbank-Wartungsplan gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Datenbank-Wartungsplans gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

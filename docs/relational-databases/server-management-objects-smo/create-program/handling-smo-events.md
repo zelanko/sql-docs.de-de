@@ -1,5 +1,5 @@
 ---
-title: Behandlung von Ereignissen SMO | Microsoft Docs
+title: Behandeln von SMO-Ereignissen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988212"
 ---
 # <a name="handling-smo-events"></a>Behandeln von SMO-Ereignissen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "32967605"
   
  Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen erhalten Informationen über das Ereignis aus der *ServerEventNotificatificationArgs* Parameter, der verwendet werden kann, um Informationen über das Ereignis zu melden.  
   
- Die Typen der Datenbank- und Serverereignisse, die behandelt werden können werden angezeigt, der <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> Klasse und die <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse.  
+ Die Typen von Datenbank- und Serverereignisse, die verarbeitet werden können finden Sie in der <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> Klasse und die <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse.  
   
 ## <a name="example"></a>Beispiel  
 Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

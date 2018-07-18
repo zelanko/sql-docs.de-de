@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_remove_query (Transact-SQL) | Microsoft Docs
+title: Sp_query_store_remove_query (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 803cd0f5df8d641eeb4119ea99b588571243dd0c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993652"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>Sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Entfernt die Abfrage als auch alle zugeordneten Pläne und Laufzeitstatistiken aus dem Abfragespeicher an.  
+  Entfernt die Abfrage sowie alle zugeordneten Pläne und Laufzeitstatistiken aus dem Abfragespeicher an.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@query_id =** ] *"query_id"*  
- Ist die Id der Abfrage aus dem Abfragespeicher entfernt werden soll. *"query_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@query_id =** ] *Query_id*  
+ Ist die Id der Abfrage aus dem Abfragespeicher entfernt werden soll. *Query_id* ist eine **Bigint**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -57,7 +57,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **löschen** -Berechtigung für die Abfrage Katalogsichten des Abfragespeichers.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **löschen** -Berechtigung für der Katalogsichten des Abfragespeichers.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie die "query_id", die Sie löschen möchten identifiziert, verwenden Sie im folgende Beispiel, um die Abfrage zu löschen.  
+ Nachdem Sie die Query_id, die Sie löschen möchten identifiziert, verwenden Sie das folgende Beispiel, um die Abfrage zu löschen.  
   
  Im folgenden Beispiel:  
   

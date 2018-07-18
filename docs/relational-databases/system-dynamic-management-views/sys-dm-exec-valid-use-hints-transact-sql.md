@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs
+title: dm_exec_valid_use_hints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -23,29 +23,29 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: d1fb0ffed04c77e280d02378429cf769107bdfbc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463596"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987142"
 ---
-# <a name="sysdmexecvalidusehints-transact-sql"></a>Sys.dm_exec_valid_use_hints (Transact-SQL)
+# <a name="sysdmexecvalidusehints-transact-sql"></a>dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Gibt [verwenden Hinweis](../../t-sql/queries/hints-transact-sql-query.md) Hinweis Namen unterstützt. Ein Hinweis Name pro Zeile aufgeführt.  
+Gibt [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) Hint-Namen unterstützt. Einen hinweisnamen pro Zeile aufgeführt.  
   
-Verwenden Sie diese DMV, um die Liste der alle unterstützten Hinweise unter der Schreibweise mit Hinweis anzuzeigen.  
+Verwenden Sie diese dynamische Verwaltungssicht, um eine Liste aller unterstützten Hinweise in der USE HINT-Notation anzuzeigen.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Der Name des Hinweises.|
+|NAME|**sysname**|Der Name des Hinweises.|
 
 Finden Sie unter [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md) Beschreibungen der einzelnen Hinweis.
 
-Eingeführt [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
+Eingeführt in [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   
 ## <a name="see-also"></a>Siehe auch  
     
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

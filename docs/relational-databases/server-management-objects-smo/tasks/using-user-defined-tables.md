@@ -1,5 +1,5 @@
 ---
-title: Verwenden von benutzerdefinierten Tabellen | Microsoft Docs
+title: Benutzerdefinierte Tabellen mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7231545e9037458669ff6eb3e9fcafcd0d3f9da9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971525"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985272"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  
   
- Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jede <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Spalten** -Eigenschaft, auf eine Auflistung von verweist <xref:Microsoft.SqlServer.Management.Smo.Column> -Objekten, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jede <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Spalten** Eigenschaft, auf eine Auflistung von verweist <xref:Microsoft.SqlServer.Management.Smo.Column> Objekte, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_polybase_join_group | Microsoft Docs
+title: Sp_polybase_join_group | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927c07456401bf441e3ad6491111bad6c85e3c19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037778"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>Sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Eine PolyBase-Gruppe für horizontale hochskalierungsberechnung hinzugefügt SQL Server-Instanz als Computeknoten.  
+  Eine PolyBase-Gruppe für die Berechnung für horizontales Skalieren hinzugefügt eine SQL Server-Instanz als Compute-Knoten.  
   
- SQL Server-Instanz benötigen den [PolyBase](../../relational-databases/polybase/polybase-guide.md) Feature installiert.  PolyBase ermöglicht die Integration von nicht - SQL Server-Datenquellen, z. B. Hadoop und Azure Blob-Speicher. Siehe auch ["sp_polybase_leave_group" aus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ SQL Server-Instanz benötigen den [PolyBase](../../relational-databases/polybase/polybase-guide.md) Feature installiert.  PolyBase ermöglicht die Integration von nicht - SQL Server-Datenquellen wie Hadoop und Azure-Blob-Speicher. Siehe auch [Sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
   
 ## <a name="arguments"></a>Argumente  
  *@head_node_address* = N'*Head_node_address*"  
- Der Name des Computers, den SQL Server-Hauptknoten des PolyBase-Erweiterungsgruppe hostet. *@head_node_address* ist vom Datentyp nvarchar(255).  
+ Der Name des Computers, den SQL Server-Hauptknoten des PolyBase-Erweiterungsgruppe hostet. *@head_node_address* ist vom Datentyp nvarchar(255) an.  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- Der Port, auf dem der Steuerungskanal für den Hauptknoten PolyBase-Datenverschiebungsdienst ausgeführt wird. *@dms_control_channel_port* ist eine nicht signierte __int16 an. Die Standardeinstellung ist **16450**.  
+ *@dms_control_channel_port* Dms_control_channel_port =  
+ Der Port, an dem der Steuerungskanal für den Hauptknoten PolyBase-Datenverschiebungsdienst ausgeführt wird. *@dms_control_channel_port* ist eine nicht signierte __int16 an. Der Standardwert ist **16450**.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Der Name des Hauptknotens SQL Server-Instanz in der PolyBase-Erweiterungsgruppe. *@head_node_sql_server_instance_name* ist nvarchar(16).  
+ *@head_node_sql_server_instance_name* Head_node_sql_server_instance_name =  
+ Der Name der SQL Server-Instanz Head-Knoten in der PolyBase-Erweiterungsgruppe. *@head_node_sql_server_instance_name* ist nvarchar(16) an.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -61,10 +61,10 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Erfordert die CONTROL SERVER-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Nach dem Ausführen der gespeicherten Prozedur, fahren Sie das PolyBase-Modul herunter, und starten Sie den PolyBase-Datenverschiebungsdienst auf den Computer neu. So überprüfen die folgende DMV auf dem Hauptknoten ausführen: **sys.dm_exec_compute_nodes**.  
+ Nach dem Ausführen der gespeicherten Prozedur, fahren Sie die PolyBase-Engine herunter, und starten Sie die PolyBase-Datenverschiebungsdienst auf den Computer neu. So überprüfen die folgende DMV auf dem Hauptknoten ausführen: **dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Beispiel  
- Im Beispiel werden den aktuellen Computer als Computeknoten einer PolyBase-Gruppe verknüpft.  Der Name des Hauptknotens ist **HST01** und der Name der SQL Server-Instanz auf dem Hauptknoten **MSSQLSERVER**.  
+ Im Beispiel werden den aktuellen Computer als Compute-Knoten zu einer PolyBase-Gruppe verknüpft.  Der Name des Head-Knotens ist **HST01** und der Name der SQL Server-Instanz auf dem Hauptknoten **MSSQLSERVER**.  
   
 ```  
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   

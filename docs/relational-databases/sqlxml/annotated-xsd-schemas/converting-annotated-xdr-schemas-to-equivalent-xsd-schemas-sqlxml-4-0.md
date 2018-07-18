@@ -1,5 +1,5 @@
 ---
-title: Konvertieren von XDR-Schemas in gleichbedeutende XSD-Schemas (SQLXML 4.0) versehen | Microsoft Docs
+title: Konvertieren von mit Anmerkungen in XDR-Schemas in gleichbedeutende XSD-Schemas (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047278"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Konvertieren von XDR-Schemas mit Anmerkungen in gleichbedeutende XSD-Schemas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Erläuterungen:  
   
  XDRFileName  
- Der Name der XDR-Datei, die in XSD konvertiert werden soll. Das Tool liest die XDR-Eingabedatei und erstellt im aktuellen Arbeitsverzeichnis eine XSD-Ausgabedatei. Wenn die Eingabedatei über die Namenerweiterung .XDR oder .XML verfügt, wird eine XSD-Ausgabedatei gleichen Namens mit der Erweiterung .XSD erstellt. Wenn die Eingabedatei-Dateinamenerweiterung ist als XML oder .xdr (bzw. wenn die Erweiterung fehlt), wird die Ausgabedatei mit demselben Namen erstellt, und die XSD-Erweiterung wird auf den Namen der Eingabedatei angehängt. Wenn der Name der XDR-Eingabedatei beispielsweise SampleFile.abc lautet, wird das resultierende XSD unter dem Namen SampleFile.abc.xsd gespeichert.  
+ Der Name der XDR-Datei, die in XSD konvertiert werden soll. Das Tool liest die XDR-Eingabedatei und erstellt im aktuellen Arbeitsverzeichnis eine XSD-Ausgabedatei. Wenn die Eingabedatei über die Namenerweiterung .XDR oder .XML verfügt, wird eine XSD-Ausgabedatei gleichen Namens mit der Erweiterung .XSD erstellt. Wenn die Eingabe Dateinamenerweiterung ist als XML oder .xdr (oder wenn die Erweiterung nicht vorhanden ist), wird die Ausgabedatei mit demselben Namen erstellt, und die Erweiterung XSD an den Eingabedateinamen angefügt wird. Wenn der Name der XDR-Eingabedatei beispielsweise SampleFile.abc lautet, wird das resultierende XSD unter dem Namen SampleFile.abc.xsd gespeichert.  
   
  -y  
  (Optional) Überschreibt die vorhandene XSD-Datei mit der XSD-Datei, die vom Konvertierungstool generiert wird. Wenn dieses Flag nicht angegeben wird, fordert Sie das Tool auf anzugeben, ob die vorhandene XSD-Datei überschrieben werden soll, und gibt Ihnen die Möglichkeit, den Namen der Ausgabedatei zu ändern.  
@@ -60,7 +60,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  (Optional) Gibt im Konvertierungsprozess des Tools generierte Warnungen zurück, die nicht schwerwiegend sind. Standardmäßig zeigt das Tool nur Meldungen für schwerwiegende Fehler an.  
   
  -?  
- Gibt eine Liste von Optionen, die Sie angeben können, mit **Cvtschema**, zusammen mit einer Erklärung.  
+ Gibt eine Liste von Optionen, die Sie angeben können, mit **Cvtschema**, und erläuterungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von XSD-Datentypen zu XPath-Datentypen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   

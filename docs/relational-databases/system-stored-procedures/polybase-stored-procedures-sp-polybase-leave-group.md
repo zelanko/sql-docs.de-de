@@ -1,5 +1,5 @@
 ---
-title: "\"sp_polybase_leave_group\" aus (Transact-SQL) | Microsoft Docs"
+title: Sp_polybase_leave_group (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984209"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>"sp_polybase_leave_group" aus (Transact-SQL)
+# <a name="sppolybaseleavegroup-transact-sql"></a>Sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt eine SQL Server-Instanz aus einer PolyBase-Gruppe für horizontale hochskalierungsberechnung an. 
+  Entfernt eine SQL Server-Instanz aus einer PolyBase-Gruppe für die horizontale hochskalierungsberechnung an. 
  
- SQL Server-Instanz benötigen den [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md) Feature installiert.  PolyBase ermöglicht die Integration von nicht - SQL Server-Datenquellen, z. B. Hadoop und Azure Blob-Speicher. Siehe auch [Sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ SQL Server-Instanz benötigen den [PolyBase-Handbuch](../../relational-databases/polybase/polybase-guide.md) Feature installiert.  PolyBase ermöglicht die Integration von nicht - SQL Server-Datenquellen wie Hadoop und Azure-Blob-Speicher. Siehe auch [Sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ sp_polybase_leave_group;
  Erfordert die CONTROL SERVER-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können nur als Computeknoten aus einer Gruppe entfernen.  
+ Sie können nur Compute-Knoten aus einer Gruppe entfernen.  
   
- Starten Sie nach dem Ausführen der gespeicherten Prozedur, auf dem Computer das PolyBase-Modul und PolyBase-Datenverschiebungsdienst neu. So überprüfen die folgende DMV auf dem Hauptknoten ausführen: **sys.dm_exec_compute_nodes**.  
+ Starten Sie nach dem Ausführen der gespeicherten Prozedur, die PolyBase-Engine und PolyBase-Datenverschiebungsdienst auf dem Computer neu. So überprüfen die folgende DMV auf dem Hauptknoten ausführen: **dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird den aktuellen Computer aus einer PolyBase-Gruppe entfernt.  

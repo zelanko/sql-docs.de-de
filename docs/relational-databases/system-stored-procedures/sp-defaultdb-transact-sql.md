@@ -1,5 +1,5 @@
 ---
-title: Sp_defaultdb (Transact-SQL) | Microsoft Docs
+title: Sp_defaultdb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ade405c0abdd5d3a07db3e7e5727677fd5d4e7be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037258"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Standarddatenbank für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
+  Ändert die Standarddatenbank für eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) stattdessen.  
@@ -48,7 +48,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
   
 ## <a name="arguments"></a>Argumente  
  [  **@loginame=**] **"***Anmeldung***"**  
- Der Anmeldename. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, einem Windows-Benutzer oder Gruppe. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
+ Der Anmeldename. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann sein, eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder einen Windows-Benutzer oder eine Gruppe. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
   
  [  **@defdb=**] **"***Datenbank***"**  
  Der Name der neuen Standarddatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert. *Datenbank* muss bereits vorhanden sein.  
@@ -57,7 +57,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_defaultdb** ruft ALTER LOGIN. Diese Anweisung unterstützt weitere Optionen. Informationen zum Ändern der Standarddatenbank, finden Sie unter [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+ **Sp_defaultdb** ruft ALTER LOGIN. Diese Anweisung unterstützt weitere Optionen. Weitere Informationen zum Ändern der Standarddatenbank, finden Sie unter [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **Sp_defaultdb** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

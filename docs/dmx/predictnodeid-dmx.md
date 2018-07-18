@@ -1,5 +1,5 @@
 ---
-title: PredictNodeId (DMX) | Microsoft Docs
+title: PredictNodeId (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842273"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037358"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ PredictNodeId(<scalar column reference>)
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Skalarausdruck >  
+ \<skalare Ausdrücke >  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt zurück, ob es wahrscheinlich ist, dass die angegebene Person ein Fahrrad kauft. Darüber hinaus wird die Knoten-ID des Knotens zurückgegeben, dem die Fälle am wahrscheinlichsten angehören.  
@@ -62,7 +62,7 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

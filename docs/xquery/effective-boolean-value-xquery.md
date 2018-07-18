@@ -1,5 +1,5 @@
 ---
-title: Effektiver boolescher Wert (XQuery) | Microsoft Docs
+title: Effektiver boolescher Wert (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077517"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987432"
 ---
 # <a name="effective-boolean-value-xquery"></a>Effektiver boolescher Wert (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "33077517"
   
 -   [Bedingte Ausdrücke](../xquery/conditional-expressions-xquery.md)  
   
--   [Quantifizierte Ausdrücke](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  Das folgende Beispiel zeigt einen effektiven booleschen Wert. Wenn die **Wenn** -Ausdruck verarbeitet wird, wird der effektive boolesche Wert der Bedingung bestimmt. Da `/a[1]` eine leere Sequenz zurückgibt, ist der effektive boolesche Wert False. Das Ergebnis wird als XML mit einem Textknoten (false) zurückgegeben.  
   
@@ -72,15 +72,15 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Bei Abfragen typisierter **Xml** -Spalten oder-Variablen können Knoten vom booleschen Typ. Die **data()** in diesem Fall einen booleschen Wert zurückgibt. Wenn der Abfrageausdruck einen booleschen Wert zurückgibt, ist der effektive boolesche Wert True, was im nächsten Beispiel dargestellt ist. Das Beispiel zeigt außerdem Folgendes:  
+ Bei Abfragen typisierter **Xml** Spalten oder Variablen, Sie können Knoten vom booleschen Typ haben. Die **data()** in diesem Fall einen booleschen Wert zurückgibt. Wenn der Abfrageausdruck einen booleschen Wert zurückgibt, ist der effektive boolesche Wert True, was im nächsten Beispiel dargestellt ist. Das Beispiel zeigt außerdem Folgendes:  
   
--   Es wird eine XML-Schemaauflistung erstellt. Das Element \<b > in der Auflistung befindet, einen Boolean-Typ.  
+-   Es wird eine XML-Schemaauflistung erstellt. Das Element \<b > in der Auflistung weist den Typ Boolesch.  
   
--   Eine typisierte **Xml** Variable wird erstellt und abgefragt werden.  
+-   Eine typisierte **Xml** Variable wird erstellt und abgefragt werden kann.  
   
 -   Der Ausdruck `data(/b[1])` gibt einen booleschen True-Wert zurück. Der effektive boolesche Wert ist deshalb in diesem Fall True.  
   
--   Der Ausdruck `data(/b[2])` gibt einen booleschen Wert "false" zurück. Der effektive boolesche Wert ist deshalb in diesem Fall False.  
+-   Der Ausdruck `data(/b[2])` gibt einen booleschen Wert für "false". Der effektive boolesche Wert ist deshalb in diesem Fall False.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  

@@ -1,5 +1,5 @@
 ---
-title: Sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
+title: Sys. database_scoped_configurations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172989"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989244"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "34172989"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Die ID der Konfigurationsoption.|  
-|**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Informationen zu den möglichen Konfigurationen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**value**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat festgelegt.|  
+|**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Weitere Informationen zu den möglichen Konfigurationen, finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**Wert**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat.|  
 |**value_for_secondary**|**sqlvariant**|Der Wert für diese Konfigurationsoption für die sekundären Replikate.|  
-|**elevate_online**|**nvarchar(60)** |Die Datenbank im Bereich einer Standardsatz für die online-Option für Indexvorgänge |
-|**elevate_resumable**|nvarchar(60)|Die Datenbank im Bereich einer Standardsatz für die fortsetzbar-Option für Indexvorgänge| 
+|**gültige elevate_online**|**nvarchar(60)** |Die datenbankweit gültige Standardsatz für die online-Option für Indexvorgänge |
+|**datenbankweit gültige elevate_resumable**|nvarchar(60)|Die datenbankweit gültige Standardsatz für die resumable-Option für Indexvorgänge| 
   
 ##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn NULL zurückgegeben wird, als der Wert für **Value_for_secondary**, dies bedeutet, dass die sekundäre Datenbank auf Primär festgelegt ist.  
+ Wenn NULL zurückgegeben wird, als Wert für **Value_for_secondary**, dies bedeutet, dass die sekundäre Datenbank zur primären festgelegt ist.  
  
  Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
   

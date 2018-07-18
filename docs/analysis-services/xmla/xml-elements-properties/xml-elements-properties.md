@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften (XMLA) | Microsoft Docs
+title: Eigenschaften (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577962"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037412"
 ---
-# <a name="xml-elements---properties"></a>XML-Elemente - Eigenschaften
+# <a name="xml-elements---properties"></a>XML-Elemente – Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Das XMLA-Protokoll (XML for Analysis) nutzt XML-Elemente für die Darstellung von Eigenschaftsinformationen und Werten für XMLA-Header, -Methoden, -Objekte, -Befehle und -Datentypen.  
   
@@ -27,9 +27,9 @@ ms.locfileid: "34577962"
 |-------------|-----------------|  
 |[AllowOverwrite-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)||  
 |[ApplyCompression-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)||  
-|[-Attribut Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)||  
+|[-Attribut des Elements &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)||  
 |[AttributeName-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)||  
-|[Attribute-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
+|[Attributes-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
 |[Axes-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)||  
 |[AxesInfo-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)||  
 |[Axis-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)||  
@@ -40,8 +40,8 @@ ms.locfileid: "34577962"
 |[CancelAssociated-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)||  
 |[Capability-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)||  
 |[Caption-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/caption-element-xmla.md)||  
-|[Cell-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
-|[Cell-Element &#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
+|[Zelle Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)||  
+|[Zelle Element &#40;MDDataSet&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)||  
 |[CellData-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)||  
 |[CellInfo-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md)||  
 |[CellOrdinal-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)||  
@@ -73,15 +73,15 @@ ms.locfileid: "34577962"
 |[ErrorCode-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)||  
 |[ErrorConfiguration-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md)||  
 |[Exception-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)||  
-|[Datei Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)||  
+|[File Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)||  
 |[Folder-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)||  
 |[Folders-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)||  
 |[HelpFile-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)||  
 |[HierarchyInfo-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md)||  
 |[ID-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)||  
 |[Keys-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)||  
-|[Schlüssel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)||  
-|[Sprachelement &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)||  
+|[Wichtige Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)||  
+|[Language-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)||  
 |[LastDataUpdate-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lastdataupdate-element-xmla.md)||  
 |[LastSchemaUpdate-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lastschemaupdate-element-xmla.md)||  
 |[LName-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lname-element-xmla.md)||  
@@ -113,12 +113,12 @@ ms.locfileid: "34577962"
 |[Password-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
 |[Properties-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
 |[PropertyList-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
-|[Fragt Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
+|[Element Abfragen &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
 |[Abfrageelement &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[RequestType-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
 |[RestrictionList-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)||  
 |[Restrictions-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)||  
-|[führt Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)||  
+|[Element führt &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)||  
 |[return-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)||  
 |[Root-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
 |[Row-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)||  
@@ -135,17 +135,17 @@ ms.locfileid: "34577962"
 |[SynchronizeSecurity-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)||  
 |[TableNotification-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)||  
 |[TableNotifications-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)||  
-|[Element als Ziel &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
+|[Target-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
 |[Zeit Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)||  
 |[Translation-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)||  
 |[Translations-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)||  
-|[Tupelelements &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
+|[Tuple-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
 |[Tuples-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)||  
-|[Geben Sie Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
+|[Type-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
 |[UName-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)||  
 |[UnaryOperator-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)||  
-|[Wert des Elements &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  
-|[Wert des Elements &#40;Parameter&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)||  
+|[Wert der Elements &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  
+|[Wert der Elements &#40;Parameter&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)||  
 |[Warning-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)||  
 |[In dem Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)||  
 |[WritebackTableCreation-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)||  

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_xe_database_sessions (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_xe_database_sessions (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984199"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>Sys. dm_xe_database_sessions (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34466456"
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "34466456"
  Erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
-Ab 2015-07-13 ist 'dm_xe_objects' mit einer der DMVs XEvents, die keine "voran _Datenbank" im Namen enthalten. Kein Tippfehler oder ein Fehler in der folgenden Tabelle rechten Spalte. Der Name entspricht dem in Microsoft SQL Server und Azure SQL-Datenbank. GeneMi.  
+Ab 2015-07-13 ist "dm_xe_objects" mit einer der folgenden XEvents-DMVs, die keine "_database" im Namen enthalten. Keine Tippfehler oder Fehler in der folgenden Tabelle rechten Spalte. Der Name ist in Microsoft SQL Server und Azure SQL-Datenbank identisch. GeneMi.  
   
 |Von|Aktion|Beziehung|  
 |--------|------|----------------|  

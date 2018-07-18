@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;Modell&gt;. DIMENSION_CONTENT (DMX) | Microsoft Docs
+title: SELECT FROM &lt;Modell&gt;. DIMENSION_CONTENT (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842523"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992624"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;Modell&gt;. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Ein Miningmodell kann als Dimension in einem OLAP-Cube verwendet werden, wobei jeder Knoten im Modell als Element der Dimension dargestellt wird. **SELECT FROM \<Modell >. Dimension_CONTENT** -Anweisung gibt den Inhalt des Modells, die sich auf die Verwendung als Dimension beziehen.  
+  Ein Miningmodell kann als Dimension in einem OLAP-Cube verwendet werden, wobei jeder Knoten im Modell als Element der Dimension dargestellt wird. **SELECT FROM \<Modell >. Dimension_CONTENT** -Anweisung gibt den Inhalt des Modells, die sich für dessen Verwendung als Dimension beziehen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *n*  
  Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Liste der Ausdrücke*  
+ *Liste mit Ausdrücken*  
  Eine durch Trennzeichen getrennte Liste mit Bezeichnern, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
   
  *model*  
@@ -55,11 +55,11 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |---------------------------|---------------------------------------|  
 |ATTRIBUTE_NAME|Member-Eigenschaft.|  
 |NODE_NAME|Member-Eigenschaft.|  
-|NODE_UNIQUE_NAME|Schlüsselattribut.|  
+|NODE_UNIQUE_NAME|Key-Attribut.|  
 |NODE_TYPE|Member-Eigenschaft.|  
 |NODE_CAPTION|CaptionColumn für **Schlüssel** Attribut.|  
 |CHILDREN_CARDINALITY|Member-Eigenschaft.|  
-|PARENT_UNIQUE_NAME|Zugeordnetes Attribut für **Schlüssel** -Attribut (übergeordnetes Attribut in über-/ unterordnungshierarchie).|  
+|PARENT_UNIQUE_NAME|Zugeordnetes Attribut für **Schlüssel** Attribut (ParentAttribute in über-/ unterordnungshierarchie).|  
 |NODE_DESCRIPTION|Member-Eigenschaft.|  
 |NODE_RULE|Member-Eigenschaft.|  
 |MARGINAL_RULE|Member-Eigenschaft.|  
@@ -81,7 +81,7 @@ FROM [TM Decision Tree].Dimension_Content
   
 ## <a name="see-also"></a>Siehe auch  
  [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

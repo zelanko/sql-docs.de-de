@@ -1,5 +1,5 @@
 ---
-title: query_store_query (Transact-SQL) | Microsoft Docs
+title: query_store_query (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,38 +27,38 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9d53bc6cd0219502698ba8a02b6ba19eaf5f34f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985186"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Enthält Informationen über die Abfrage und die zugehörigen allgemeinen aggregierten laufzeitausführung.  
+  Enthält Informationen über die Abfrage und die zugeordneten gesamte aggregierte Laufzeit-Ausführungsstatistik.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"query_id"**|**bigint**|Der Primärschlüssel.|  
+|**query_id**|**bigint**|Der Primärschlüssel.|  
 |**query_text_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).|  
 |**object_id**|**bigint**|ID des Datenbankobjekts, das die Abfrage angehört (gespeicherte Prozedur, Trigger, CLR-UDF/UDAgg, usw..). 0, wenn die Abfrage nicht als Teil eines Datenbankobjekts (Ad-hoc-Abfrage) ausgeführt wird.|  
-|**batch_sql_handle**|**varbinary(64)**|ID des-Anweisungsbatch, die Abfrage stammt. Nur aufgefüllt, wenn die Abfrage temporäre Tabellen oder Tabellenvariablen verweist auf.|  
-|**query_hash**|**binary(8)**|MD5-Hash der einzelnen Abfrage basierend auf der logischen Abfragestruktur. Enthält Hinweise für den Abfrageoptimierer an.|  
+|**batch_sql_handle**|**varbinary(64)**|ID des Anweisungsbatches der Abfrage stammt. Nur aufgefüllt, wenn die Abfrage verweist, temporäre Tabellen oder Tabellenvariablen auf.|  
+|**query_hash**|**binary(8)**|MD5-Hash, der die einzelne Abfrage, die basierend auf der logischen Abfragestruktur. Enthält Hinweise für den Abfrageoptimierer an.|  
 |**is_internal_query**|**bit**|Die Abfrage wurde intern generiert.|  
-|**query_parameterization_type**|**tinyint**|Die Art der Parametrisierung:<br /><br /> 0 – keine<br /><br /> 1 – Benutzer<br /><br /> 2 – einfach<br /><br /> 3 – erzwungen|  
+|**query_parameterization_type**|**tinyint**|Die Art der Parametrisierung:<br /><br /> 0 – none<br /><br /> 1 – Benutzer<br /><br /> 2 – einfach<br /><br /> 3 – erzwungen|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Die textbeschreibung für den Typ der Parametrisierung.|  
 |**initial_compile_start_time**|**datetimeoffset**|Kompilieren Sie die Startzeit.|  
 |**last_compile_start_time**|**datetimeoffset**|Kompilieren Sie die Startzeit.|  
-|**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung bezieht sich auf die letzte Endzeit des Abfrageplans /.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle der letzten SQL-Batches, die in der Abfrage zuletzt verwendet wurde. Es kann angegeben werden, als Eingabe für [Sys. dm_exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) beim Abrufen des vollständigen Texts des Batches.|  
-|**last_compile_batch_offset_start**|**bigint**|Informationen, die für Sys. dm_exec_sql_text zusammen mit Last_compile_batch_sql_handle bereitgestellt werden kann.|  
-|**last_compile_batch_offset_end**|**bigint**|Informationen, die für Sys. dm_exec_sql_text zusammen mit Last_compile_batch_sql_handle bereitgestellt werden kann.|  
+|**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung bezeichnet die letzte Beendigungszeit der den Abfrageplan.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle für den letzten SQL-Batch, die in dem Abfrage zuletzt verwendet wurde. Es kann bereitgestellt werden, als Eingabe für [Sys. dm_exec_sql_text &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) um den vollständigen Text des Batches zu erhalten.|  
+|**last_compile_batch_offset_start**|**bigint**|Informationen, die mit Sys. dm_exec_sql_text zusammen mit Last_compile_batch_sql_handle bereitgestellt werden kann.|  
+|**last_compile_batch_offset_end**|**bigint**|Informationen, die mit Sys. dm_exec_sql_text zusammen mit Last_compile_batch_sql_handle bereitgestellt werden kann.|  
 |**count_compiles**|**bigint**|Statistiken, die Kompilierung.|  
 |**avg_compile_duration**|**float**|Statistiken, die Kompilierung in Mikrosekunden.|  
 |**last_compile_duration**|**bigint**|Statistiken, die Kompilierung in Mikrosekunden.|  
-|**avg_bind_duration**|**float**|Binden von Statistiken in Mikrosekunden.|  
+|**avg_bind_duration**|**float**|Binden Statistiken in Mikrosekunden.|  
 |**last_bind_duration**|**bigint**|Statistiken, die Bindung.|  
 |**avg_bind_cpu_time**|**float**|Statistiken, die Bindung.|  
 |**last_bind_cpu_time**|**bigint**|Statistiken, die Bindung.|  
@@ -66,9 +66,9 @@ ms.locfileid: "33182206"
 |**last_optimize_duration**|**bigint**|Statistiken zur abfrageoptimierung.|  
 |**avg_optimize_cpu_time**|**float**|Statistiken zur abfrageoptimierung in Mikrosekunden.|  
 |**last_optimize_cpu_time**|**bigint**|Statistiken zur abfrageoptimierung.|  
-|**avg_compile_memory_kb**|**float**|Kompilieren einer Speicherstatistik an.|  
-|**last_compile_memory_kb**|**bigint**|Kompilieren einer Speicherstatistik an.|  
-|**max_compile_memory_kb**|**bigint**|Kompilieren einer Speicherstatistik an.|  
+|**avg_compile_memory_kb**|**float**|Speicherstatistiken zu kompilieren.|  
+|**last_compile_memory_kb**|**bigint**|Speicherstatistiken zu kompilieren.|  
+|**max_compile_memory_kb**|**bigint**|Speicherstatistiken zu kompilieren.|  
 |**is_clouddb_internal_query**|**bit**|Immer 0 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokal.|  
   
 ## <a name="permissions"></a>Berechtigungen  

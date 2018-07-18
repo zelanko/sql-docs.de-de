@@ -21,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987242"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Gibt Abfragen Ausführungsplan für in-Flight-Anforderungen. Verwenden Sie diese DMV, um Showplan XML vorübergehenden Statistiken abzurufen. 
+Gibt Abfrageplan Ausführung für in-Flight-Anforderungen. Verwenden Sie diese dynamische Verwaltungssicht, um die Showplan XML mit übergangsstatistiken abzurufen. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="arguments"></a>Argumente 
 *session_id*  
- Die Sitzungs-Id wird den Batch gesucht werden soll ausgeführt werden. *Session_id* ist **"smallint"**. *Session_id* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+ Führt die Sitzungs-Id den Batch gesucht werden soll. *Sitzungs-ID* ist **Smallint**. *Sitzungs-ID* aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden kann:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -58,40 +58,40 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML mit partiellen Statistiken. NULL-Werte sind zulässig.|
 
 ## <a name="remarks"></a>Hinweise
-Mit dieser Systemfunktion steht ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Dieser Systemfunktion steht ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-Mit dieser Systemfunktion funktioniert unter beiden **standard** und **einfache** abfrageausführungsstatistik Infrastruktur profilerstellung.  
+Dieser Systemfunktion funktioniert sowohl **standard** und **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur.  
   
-**Standard** Infrastruktur profilerstellung Statistiken können mit aktiviert werden:
-  -  [SET STATISTICS XML AUF](../../t-sql/statements/set-statistics-xml-transact-sql.md)
+**Standard** profilerstellungsinfrastruktur Statistics kann mithilfe von aktiviert werden:
+  -  [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
   -  [SET STATISTICS PROFILE AUF](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  die `query_post_execution_showplan` erweiterte Ereignisse.  
   
-**Lightweight** Statistiken Infrastruktur profilerstellung steht in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und kann aktiviert werden:
-  -  Global mithilfe von Trace flag 7412.
+**Lightweight** profilerstellungsinfrastruktur Statistiken finden Sie im [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und kann aktiviert werden:
+  -  Global mit Trace flag 7412.
   -  Mithilfe der [ *Query_thread_profile* ](http://support.microsoft.com/kb/3170113) erweiterte Ereignisse.
   
 > [!NOTE]
-> Nach der Aktivierung von Ablaufverfolgungsflag 7412 einfache profilerstellung aktiviert, um jeder Consumer der Infrastruktur statt standard Profil, z. B. die DMV profilerstellung abfrageausführungsstatistik [dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Standard-profilerstellung wird jedoch immer noch verwendet für SET STATISTICS XML *Istplan enthalten* Aktion in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], und `query_post_execution_showplan` xEvent.
+> Nach der Aktivierung von Ablaufverfolgungsflags 7412 lightweight-profilerstellung wird aktiviert werden, um alle Consumer von den Statistiken zur abfrageausführung profilerstellungsinfrastruktur anstelle der standard-profilerstellung, z. B. die DMV [dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
+> Standard-profilerstellung wird jedoch immer noch verwendet für die SET STATISTICS XML *Istplan enthalten* Aktion [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], und `query_post_execution_showplan` xEvent.
 
 > [!IMPORTANT]
-> In TPC C wie Arbeitslast Tests fügt das einfache statistikinfrastruktur profilerstellung aktivieren ein 1,5 bis 2 Prozent Mehraufwand aus. Im Gegensatz dazu kann die standardmäßigen Profilerstellungsdaten statistikinfrastruktur bis zu 90 Prozent Mehraufwand für das gleiche arbeitsauslastungsszenario hinzufügen.
+> In TPC-C wie workloadtests Fügt einen 1,5 bis 2 Prozent Mehraufwand hinzu, wenn Sie die einfache profilerstellung statistikinfrastruktur zu aktivieren. Im Gegensatz dazu kann die standardmäßigen profilerstellung statistikinfrastruktur bis zu 90 Prozent Mehraufwand für das gleiche Szenario für die Workload hinzufügen.
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
 
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Ansehen von Abfrageplan und Ausführungskontext Statistiken zu aktiven Abfragen für einen ausgeführten batch  
- Die folgende Beispielabfrage **Sys. dm_exec_requests** finden Sie interessante Abfrage- und kopieren die `session_id` aus der Ausgabe.  
+### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Planung und Ausführung Statistiken für aktive Abfragen für einen ausgeführten Batch ansehen  
+ Das folgende Beispiel fragt **Sys. dm_exec_requests** auf die entsprechende Abfrage kopieren zu suchen und dessen `session_id` aus der Ausgabe.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Klicken Sie dann, um den Abfrageplan und Ausführungskontext Statistiken zu aktiven Abfragen zu erhalten, verwenden den kopierten `session_id` mit der Systemfunktion **sys.dm_exec_query_statistics_xml**.  
+ Klicken Sie dann, um den Abfrageplan und Ausführungskontext Statistiken für aktive Abfragen zu erhalten, verwenden den kopierten `session_id` mit der Systemfunktion **dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
@@ -111,5 +111,5 @@ GO
 ## <a name="see-also"></a>Siehe auch
   [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

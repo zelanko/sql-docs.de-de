@@ -1,5 +1,5 @@
 ---
-title: Sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
+title: Sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049308"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Tabname* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@colname =** ] **"***Colname***"**  
- Dies ist der Namen der angegebenen räumlichen Spalte. *Colname* ist ein **Sysname**, hat keinen Standardwert.  
+ Dies ist der Namen der angegebenen räumlichen Spalte. *Colname* ist eine **Sysname**, hat keinen Standardwert.  
   
  [  **@resolution =** ] **"***Auflösung***"**  
- Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist ein **"tinyint"**, hat keinen Standardwert.  
+ Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
- [  **@xmin =** ] **"***Xmin***"**  
- Dies ist die X-Minimum-Eigenschaft des Begrenzungsrahmens. *Xmin* ist ein **"float"**, hat keinen Standardwert.  
+ [  **@xmin =** ] **"***" xmin "***"**  
+ Dies ist die X-Minimum-Eigenschaft des Begrenzungsrahmens. *"xmin"* ist eine **"float"**, hat keinen Standardwert.  
   
- [  **@ymin =** ] **"***" ymin "***"**  
- Dies ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens. *"ymin"* ist ein **"float"**, hat keinen Standardwert.  
+ [  **@ymin =** ] **"***Ymin***"**  
+ Dies ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens. *Ymin* ist eine **"float"**, hat keinen Standardwert.  
   
  [  **@xmax =** ] **"***" xmax "***"**  
- Dies ist die X-Maximum-Eigenschaft des Begrenzungsrahmens. *"xmax"* ist ein **"float"**, hat keinen Standardwert.  
+ Dies ist die X-Maximum-Eigenschaft des Begrenzungsrahmens. *"xmax"* ist eine **"float"**, hat keinen Standardwert.  
   
  [  **@ymax =** ] **"***Ymax***"**  
- Dies ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens. *Ymax* ist ein **"float"**, hat keinen Standardwert.  
+ Dies ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens. *Ymax* ist eine **"float"**, hat keinen Standardwert.  
   
  [  **@sample =** ] **"***Beispiel***"**  
- Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist ein **"float"**. Standardwert ist 100.  
+ Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist eine **"float"**. Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
@@ -90,7 +90,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Hinweise  
  Auf der räumlichen SSMS-Registerkarte wird eine grafische Darstellung der Ergebnisse angezeigt. Sie können die Ergebnisse für das räumliche Fenster abfragen, um die ungefähre Anzahl von Ergebniselementen abzurufen. Objekte in der Tabelle decken möglicherweise mehrere Zellen ab, daher ist die Summe der Zellen möglicherweise größer als die Anzahl der tatsächlichen Objekte.  
   
- Eine zusätzliche Zeile mit der Anzahl der Objekte, die sich außerhalb des Begrenzungsrahmens befinden oder den Rahmen des Begrenzungsrahmens berühren, kann dem Resultset hinzugefügt werden. Die **Cellid** dieser Zeile ist 0 und der **Zelle** dieser Zeile enthält eine **LineString** , die den Begrenzungsrahmen darstellt. Diese Zeile stellt den gesamten Bereich außerhalb des Begrenzungsrahmens dar.  
+ Eine zusätzliche Zeile mit der Anzahl der Objekte, die sich außerhalb des Begrenzungsrahmens befinden oder den Rahmen des Begrenzungsrahmens berühren, kann dem Resultset hinzugefügt werden. Die **Cellid** dieser Zeile ist 0 und der **Zelle** dieser Zeile enthält einen **LineString** , das das umgebende Feld darstellt. Diese Zeile stellt den gesamten Bereich außerhalb des Begrenzungsrahmens dar.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Beispieltabelle erstellt, und ruft dann **Sp_help_spatial_geometry_histogram** für die Tabelle.  

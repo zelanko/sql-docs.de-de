@@ -1,5 +1,5 @@
 ---
-title: Nachrichten mit | Microsoft Docs
+title: Verwenden von Nachrichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037848"
 ---
 # <a name="using-messages"></a>Verwenden von Meldungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO werden systemmeldungen durch dargestellt werden die <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> Objekt, gehört die **Server** Objekt. Da die Systemmeldungen nicht geändert werden können, sind **SystemMessage** -Objekteigenschaften schreibgeschützt.  
+  In SMO werden systemmeldungen durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> Objekt, gehört die **Server** Objekt. Da die Systemmeldungen nicht geändert werden können, sind **SystemMessage** -Objekteigenschaften schreibgeschützt.  
   
  Benutzerdefinierte Meldungen werden programmgesteuert vom <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>-Objekt in SMO dargestellt. Vorhandene benutzerdefinierte Meldungen können ermittelt werden, indem man die Auflistung durchläuft. Neue benutzerdefinierte Meldungen können durch Instanziierung eines neuen **UserDefinedMessage** -Objekts und Festlegung der entsprechenden Eigenschaften erstellt werden.  
   

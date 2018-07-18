@@ -1,5 +1,5 @@
 ---
-title: Sp_changedbowner (Transact-SQL) | Microsoft Docs
+title: Sp_changedbowner (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038828"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changedbowner [ @loginame = ] 'login'
  Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss ein bereits vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder Windows-Benutzer. *Anmeldung* kann nicht der Besitzer der aktuellen Datenbank werden, wenn er bereits Zugriff auf die Datenbank über ein vorhandenes Benutzersicherheitskonto innerhalb der Datenbank. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
   
  [ @map=] *Remap_alias_flag*  
- Die *Remap_alias_flag* Parameter ist veraltet, da Aliase für die Anmeldung von entfernten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mithilfe der *Remap_alias_flag* Parameter führt nicht dazu, dass einen Fehler hat jedoch keine Auswirkung.  
+ Die *Remap_alias_flag* Parameter ist veraltet, weil Aliase für die Anmeldung von entfernten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mithilfe der *Remap_alias_flag* Parameter bewirkt nicht, dass einen Fehler hat jedoch keine Auswirkungen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -62,7 +62,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
  Der Besitzer der Systemdatenbanken master, model oder tempdb kann nicht geändert werden.  
   
- Um eine Liste der gültigen anzuzeigen *Anmeldung* Werte und führen Sie die gespeicherte Prozedur sp_helplogins aus.  
+ Um eine Liste der gültigen anzuzeigen *Anmeldung* Werte, führen Sie die gespeicherte Prozedur Sp_helplogins.  
   
  Ausführung von Sp_changedbowner lediglich mit der *Anmeldung* Datenbankbesitz an Parameter *Anmeldung*.  
   

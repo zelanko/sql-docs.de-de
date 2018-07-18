@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Regeln | Microsoft Docs
+title: Erstellen, ändern und Löschen von Regeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046178"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Erstellen, Ändern und Löschen von Regeln
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In SMO werden Regeln durch das <xref:Microsoft.SqlServer.Management.Smo.Rule>-Objekt dargestellt. Die Regel wird durch die <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A>-Eigenschaft definiert, wobei es sich um eine Textzeichenfolge handelt, die einen Bedingungsausdruck enthält, der Operatoren oder Prädikate wie IN, LIKE oder BETWEEN verwendet. Eine Regel kann nicht auf Spalten oder andere Datenbankobjekte verweisen. Integrierte Funktionen, die nicht auf Datenbankobjekte verweisen, dürfen in einer Regel eingeschlossen sein.  
   
- Die Definition in der <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> Eigenschaft muss eine Variable enthalten, die auf den eingegebenen Datenwert verweist. Wenn Sie die Regel erstellen, können Sie den Wert durch einen beliebigen Namen bzw. ein Symbol darstellen; das erste Zeichen muss jedoch ein @-Zeichen sein.  
+ Die Definition in der <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> Eigenschaft darf eine Variable, die auf den eingegebenen Datenwert verweist. Wenn Sie die Regel erstellen, können Sie den Wert durch einen beliebigen Namen bzw. ein Symbol darstellen; das erste Zeichen muss jedoch ein @-Zeichen sein.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "32969205"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Erstellen, Ändern und Entfernen einer Regel in Visual Basic  
  Dieses Codebeispiel zeigt, wie eine Regel erstellt und an eine Spalte angefügt wird, wie Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Rule>-Objekts geändert werden, die Regel von der Spalte getrennt und anschließend gelöscht wird.  
   
- Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt wurde angegeben, mit dem vollständigen Assemblypfad zur Vermeidung von Mehrdeutigkeiten mit einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
+ Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> -Objekt angegeben wird, mit dem vollständigen Assemblypfad, um die Mehrdeutigkeit zu vermeiden einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Erstellen, Ändern und Löschen einer Regel in Visual C#  
  Dieses Codebeispiel zeigt, wie eine Regel erstellt und an eine Spalte angefügt wird, wie Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Rule>-Objekts geändert werden, die Regel von der Spalte getrennt und anschließend gelöscht wird.  
   
- Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt wurde angegeben, mit dem vollständigen Assemblypfad zur Vermeidung von Mehrdeutigkeiten mit einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
+ Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> -Objekt angegeben wird, mit dem vollständigen Assemblypfad, um die Mehrdeutigkeit zu vermeiden einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
   
 ```csharp  
 {  
@@ -103,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>Erstellen, Ändern und Löschen einer Regel in PowerShell  
  Dieses Codebeispiel zeigt, wie eine Regel erstellt und an eine Spalte angefügt wird, wie Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Rule>-Objekts geändert werden, die Regel von der Spalte getrennt und anschließend gelöscht wird.  
   
- Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt wurde angegeben, mit dem vollständigen Assemblypfad zur Vermeidung von Mehrdeutigkeiten mit einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
+ Die **Dim** -Anweisung für die <xref:Microsoft.SqlServer.Management.Smo.Rule> -Objekt angegeben wird, mit dem vollständigen Assemblypfad, um die Mehrdeutigkeit zu vermeiden einer <xref:Microsoft.SqlServer.Management.Smo.Rule> Objekt in der System.Data-Assembly.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
