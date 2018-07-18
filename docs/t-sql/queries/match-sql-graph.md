@@ -108,7 +108,7 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Finden von Freundne von Freunden
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Finden von Freunden von Freunden
  Im folgenden Beispiel wird versucht, einen Freund des Freundes von Alice zu finden. 
 
  ```
