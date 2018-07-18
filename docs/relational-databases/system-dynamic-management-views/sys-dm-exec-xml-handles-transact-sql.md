@@ -1,5 +1,5 @@
 ---
-title: dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
+title: dm_exec_xml_handles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66702418faae18f1c4582a28353e2f5ae7c156bc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046108"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
  <br>[Dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
  <br>[Ausführung bezogene dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
  <br>[Sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
- <br>[Sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>["sp_xml_removedocument" (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
 
 
  

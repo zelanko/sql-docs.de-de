@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_diag_event_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8219d8a60a08815ee11a8e80015956007f0638f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987323"
 ---
 # <a name="syspdwdiageventproperties-transact-sql"></a>Sys.pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33698903"
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|**event_name**|**nvarchar(255)**|Der Name des Ereignisses bestimmte Diagnosefunktionen.||  
+|**event_name**|**nvarchar(255)**|Der Name des Ereignisses anwendungsspezifischen Diagnosen.||  
 |**property_name**|**nvarchar(255)**|Der Name einer Eigenschaft des Ereignisses.||  
   
 ## <a name="see-also"></a>Siehe auch  
