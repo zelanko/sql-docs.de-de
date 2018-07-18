@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_trace_gettable (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_gettable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234771"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014928"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ fn_trace_gettable ( 'filename' , number_files )
  Gibt die erste Ablaufverfolgungsdatei an, die gelesen werden soll. *FileName* ist **nvarchar(256)**, hat keinen Standardwert.  
   
  *number_files*  
- Gibt die Anzahl der zu lesenden Rolloverdateien an. Diese Zahl umfasst die ursprüngliche Datei im angegebenen *Filename*. *Number_files* ist ein **Int**.  
+ Gibt die Anzahl der zu lesenden Rolloverdateien an. Diese Zahl umfasst auch die erste Datei im angegebenen *Filename*. *Number_files* ist ein **Int**.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn *Number_files* angegeben ist, als **Standard**, **Fn_trace_gettable** liest alle Rolloverdateien, bis das Ende der Ablaufverfolgung erreicht. **Fn_trace_gettable** gibt eine Tabelle mit allen Spalten für die angegebene Ablaufverfolgung gültigen zurück. Weitere Informationen finden Sie unter [Sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Wenn *Number_files* angegeben ist, als **Standard**, **Fn_trace_gettable** liest alle Rolloverdateien, bis das Ende der Ablaufverfolgung erreicht. **' fn_trace_gettable '** gibt eine Tabelle mit allen Spalten für die angegebene Ablaufverfolgung gültigen. Weitere Informationen finden Sie unter [Sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Beachten Sie, dass die Fn_trace_gettable-Funktion keine Rolloverdateien (Wenn diese Option angegeben wird, mithilfe der *Number_files* Argument), in dem der Name der ursprünglichen Ablaufverfolgungsdatei endet mit einem Unterstrich und einem numerischen Wert. (Dies gilt nicht für den Unterstrich und die Zahl, die beim Rollover automatisch angehängt werden.) Um das Problem zu umgehen, können Sie die Ablaufverfolgungsdateien umbenennen, um die Unterstriche im ursprünglichen Dateinamen zu entfernen. Wenn die ursprüngliche Datei heißt beispielsweise **Trace_Oct_5.trc** und die Rolloverdatei heißt **Trace_Oct_5_1.trc**, können Sie die Dateien umbenennen **TraceOct5.trc** und  **TraceOct5_1.trc**.  
+ Beachten Sie, dass die Fn_trace_gettable-Funktion keine Rolloverdateien lädt (Wenn diese Option angegeben wird, mithilfe der *Number_files* Argument), wenn der ursprüngliche Name der Ablaufverfolgungsdatei, die mit einem Unterstrich und einem numerischen Wert endet. (Dies gilt nicht für den Unterstrich und die Zahl, die beim Rollover automatisch angehängt werden.) Um das Problem zu umgehen, können Sie die Ablaufverfolgungsdateien umbenennen, um die Unterstriche im ursprünglichen Dateinamen zu entfernen. Wenn die ursprüngliche Datei heißt beispielsweise **Trace_Oct_5.trc** und die Rolloverdatei heißt **Trace_Oct_5_1.trc**, können Sie die Dateien umbenennen **TraceOct5.trc** und  **TraceOct5_1.trc**.  
   
  Diese Funktion kann eine Ablaufverfolgung lesen, die noch auf der Instanz aktiv ist, auf der sie ausgeführt wird.  
   

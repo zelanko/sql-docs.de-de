@@ -1,5 +1,5 @@
 ---
-title: Tuple-Element (XMLA) | Microsoft Docs
+title: Tuple-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0192a126b3be4338cedd47c1cd5b175ba1debc41
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062667"
 ---
 # <a name="tuple-element-xmla"></a>Tuple-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34576672"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Tupel](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
-|Untergeordnete Elemente|[Datenmember](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
+|Untergeordnete Elemente|[Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn eine Clientanwendung die **AxisFormat**-Eigenschaft auf *TupleFormat* festlegt, wird eine Achse als Menge von Tupeln dargestellt. Jedes **Axis**-Element enthält ein **Tuples**-Element, das die Menge von Tupeln auf dieser Achse darstellt. Jedes Tupel wird mithilfe eines **Tuple**-Elements dargestellt, das **Member**-Elemente aus jeder Hierarchie auf der Achse enthält.  

@@ -1,5 +1,5 @@
 ---
-title: Datamining-Erweiterungen (DMX)-Funktion Referenz | Microsoft Docs
+title: Datamining-Erweiterungen (DMX)-Funktionsreferenz | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998422"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Data Mining-Erweiterungen (DMX) - Funktionsreferenz
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34842533"
 |[BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)|Gibt eine Tabelle zurück, die die kleinste Anzahl von untersten Zeilen, die einem angegebenen Summenausdruck entsprechen, in aufsteigender Rangreihenfolge auf der Grundlage eines Rangausdrucks enthält.|  
 |[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Gibt den Cluster zurück, der mit der höchsten Wahrscheinlichkeit den Eingabefall enthält.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum Cluster gehört.|  
-|[Existiert &#40;DMX&#41;](../dmx/exists-dmx.md)|Gibt "True" zurück, wenn das von der angegebenen SELECT-Anweisung zurückgegebene Ergebnis mindestens eine Zeile enthält.|  
+|[Vorhanden &#40;DMX&#41;](../dmx/exists-dmx.md)|Gibt "True" zurück, wenn das von der angegebenen SELECT-Anweisung zurückgegebene Ergebnis mindestens eine Zeile enthält.|  
 |[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Zeigt an, ob der aktuelle Knoten ein untergeordneter Knoten des angegebenen Knotens ist.|  
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den Fall enthält.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Gibt an, ob ein Fall zu der Menge der Testfälle gehört.|  
@@ -45,8 +45,8 @@ ms.locfileid: "34842533"
 |[Vorhersagen &#40;DMX&#41;](../dmx/predict-dmx.md)|Führt eine Vorhersage für eine angegebene Spalte aus.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Gibt die angepasste Wahrscheinlichkeit für die angegebene vorhersagbare Spalte zurück.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Sagt eine assoziative Mitgliedschaft in einer Spalte voraus.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Gibt die Wahrscheinlichkeit an, der ein Eingabefall in das vorhandene Modell passt. Diese Funktion kann nur mit Clustermodellen verwendet werden.|  
-|["PredictHistogram" &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle zurück, die dem Histogramm für eine angegebene Spalte entspricht.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Gibt die Wahrscheinlichkeit, die ein Eingabefall in das vorhandene Modell passen. Diese Funktion kann nur mit Clustermodellen verwendet werden.|  
+|[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle zurück, die dem Histogramm für eine angegebene Spalte entspricht.|  
 |[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|Gibt die Knoten-ID für einen ausgewählten Fall zurück.|  
 |[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für die angegebene Spalte zurück.|  
 |[PredictSequence &#40;DMX&#41;](../dmx/predictsequence-dmx.md)|Sagt die nächsten Werte in einer Reihenfolge voraus.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34842533"
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

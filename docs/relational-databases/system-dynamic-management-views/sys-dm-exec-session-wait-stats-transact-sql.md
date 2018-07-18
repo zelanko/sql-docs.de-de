@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_session_wait_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d5932d5fa878f3816c636b6106c2723a40834be
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046068"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>Sys. dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu allen Wartevorgängen in Threads, die für jede Sitzung ausgeführt. Verwenden Sie diese Ansicht Diagnostizierung von Leistungsproblemen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sitzung sowie bei bestimmten Abfragen und Batches.  Diese Sicht gibt dieselbe Informationen, die aggregiert werden, für die Sitzung zurück [dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) bietet jedoch die **Session_id** auch Anzahl.  
+  Gibt Informationen zu allen Wartevorgängen in den von Threads, die für jede Sitzung ausgeführt. Mithilfe dieser Sicht können Sie zum Diagnostizieren von Leistungsproblemen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sitzung sowie bei bestimmten Abfragen und Batches.  Diese Sicht gibt dieselbe Informationen, die aggregiert werden, für die Sitzung zurück [Sys. dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) bietet jedoch die **Session_id** Anzahl als auch.  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -44,15 +44,15 @@ ms.locfileid: "34465076"
 |signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese DMV setzt die Informationen für eine Sitzung aus, wenn die Sitzung geöffnet wird, oder wenn die Sitzung zurückgesetzt wird (wenn Verbindungspooling),  
+ Diese DMV wird die Informationen für eine Sitzung zurückgesetzt, wenn die Sitzung geöffnet wird, oder wenn die Sitzung zurückgesetzt wird (wenn Verbindungspooling),  
   
- Informationen über die Wartetypen finden Sie unter [dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
+ Weitere Informationen über die Wartetypen finden Sie unter [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn der Benutzer hat **VIEW SERVER STATE** Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls der Benutzer sieht nur die aktuelle Sitzung.  
+ Wenn der Benutzer hat **VIEW SERVER STATE** -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

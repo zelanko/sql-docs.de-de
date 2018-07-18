@@ -1,5 +1,5 @@
 ---
-title: UnaryOperator-Element (XMLA) | Microsoft Docs
+title: UnaryOperator-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 062cf977e04eabfc09e6598167bc7530f1254436
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051578"
 ---
 # <a name="unaryoperator-element-xmla"></a>UnaryOperator-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

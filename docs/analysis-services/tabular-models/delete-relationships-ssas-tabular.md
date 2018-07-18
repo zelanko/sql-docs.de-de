@@ -1,5 +1,5 @@
 ---
-title: Löschen von Beziehungen | Microsoft Docs
+title: Löschen von Beziehungen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999179"
 ---
 # <a name="delete-relationships"></a>Löschen von Beziehungen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Sie können vorhandene Beziehungen in der Diagrammsicht des Modell-Designers oder über das Dialogfeld Beziehungen verwalten löschen. Informationen zur Verwendungsweise von Beziehungen in tabellarischen Modellen finden Sie unter [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+  Sie können vorhandene Beziehungen in der Diagrammsicht des Modell-Designers oder über das Dialogfeld Beziehungen verwalten löschen. Informationen, wie Beziehungen in tabellarischen Modellen verwendet werden, finden Sie unter [Beziehungen](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Überlegungen zum Löschen von Beziehungen  
  Berücksichtigen Sie vor dem Löschen einer Beziehung die folgenden Aspekte:  

@@ -1,5 +1,5 @@
 ---
-title: Path-Ausdrücke (XQuery) | Microsoft Docs
+title: Pfadausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b964a11fe7e726abf1e5342641171aa11f583cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063983"
 ---
 # <a name="path-expressions-xquery"></a>Pfadausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,21 +37,21 @@ ms.locfileid: "33077777"
   Über XQuery-Pfadausdrücke werden in einem Dokument enthaltene Knoten gesucht, z. B. Element-, Attribut- und Textknoten. Das Ergebnis eines Pfadausdrucks erscheint immer in der Dokumentreihenfolge ohne Duplikatknoten in der Ergebnissequenz. Beim Angeben eines Pfads können Sie entweder die vollständige oder die abgekürzte Syntax verwenden. Die folgenden Informationen beziehen sich auf die ungekürzte Syntax. Die abgekürzte Syntax wird anschließend beschrieben.  
   
 > [!NOTE]  
->  Da für die Beispielabfragen in diesem Thema angegeben sind die **Xml** Spalten vom Typ **CatalogDescription** und **Anweisungen**in der  **ProductModel** Tabelle, Sie sollten sich mit vertraut machen den Inhalt und die Struktur der XML-Dokumente in diesen Spalten gespeichert.  
+>  Da die Beispielabfragen in diesem Thema, für angegeben werden die **Xml** Spalten vom Typ **CatalogDescription** und **Anweisungen**in die  **ProductModel** Tabelle, Sie sollten sich vertraut machen mit dem Inhalt und Struktur der XML-Dokumente in diesen Spalten gespeichert.  
   
  Ein Pfadausdruck kann relativ oder absolut sein. Beide sind im Folgenden beschrieben:  
   
--   Ein relativer Pfadausdruck besteht aus einem oder mehreren Schritten, die durch einen oder zwei Schrägstriche (/ oder //) getrennt sind. Beispiel: `child::Features` ist ein relativer Pfadausdruck, in dem `Child` nur auf die untergeordneten Knoten des Kontextknotens verweist. Dies ist der Knoten der gegenwärtig verarbeitet wird. Ruft der Ausdruck ab, der \<Funktionen >-Element untergeordneten Knoten des Kontextknotens.  
+-   Ein relativer Pfadausdruck besteht aus einem oder mehreren Schritten, die durch einen oder zwei Schrägstriche (/ oder //) getrennt sind. Beispiel: `child::Features` ist ein relativer Pfadausdruck, in dem `Child` nur auf die untergeordneten Knoten des Kontextknotens verweist. Dies ist der Knoten der gegenwärtig verarbeitet wird. Ruft der Ausdruck ab, der \<Features >-Element untergeordneten Knoten des Kontextknotens.  
   
--   Ein absoluter Pfadausdruck beginnt mit einem oder zwei Schrägstrichen (/ oder //), auf die ein optionaler relativer Pfad folgt. Beispiel: Der erste Schrägstrich des Ausdrucks `/child::ProductDescription` gibt an, dass es sich um einen absoluten Pfadausdruck handelt. Da ein Schrägstrich am Anfang eines Ausdrucks den Stammknoten des Dokuments des Kontextknotens zurückgibt, wird der Ausdruck gibt alle dem \<ProductDescription > untergeordneten Elementknoten des Basisverzeichnisses.  
+-   Ein absoluter Pfadausdruck beginnt mit einem oder zwei Schrägstrichen (/ oder //), auf die ein optionaler relativer Pfad folgt. Beispiel: Der erste Schrägstrich des Ausdrucks `/child::ProductDescription` gibt an, dass es sich um einen absoluten Pfadausdruck handelt. Da ein Schrägstrich am Anfang eines Ausdrucks den Stammknoten des Dokuments Knoten des Kontextknotens zurückgibt, gibt der Ausdruck alle die \<ProductDescription > untergeordneten Elementknoten des Basisverzeichnisses.  
   
      Wenn ein absoluter Pfad mit einem einzelnen Schrägstrich beginnt, kann darauf ein relativer Pfad folgen. Wenn Sie nur einen Schrägstrich angeben, gibt der Ausdruck den Stammknoten des Kontextknotens zurück. Bei einem XML-Datentyp ist dies der Dokumentknoten.  
   
  Ein typischer Pfadausdruck besteht aus Schritten. Z. B. der absolute Pfadausdruck `/child::ProductDescription/child::Summary`, enthält zwei durch einen Schrägstrich getrennte Schritte.  
   
--   Der erste Schritt Ruft die \<ProductDescription > untergeordneten Elementknoten des Basisverzeichnisses.  
+-   Ruft ab, der erste Schritt der \<ProductDescription > untergeordneten Elementknoten des Basisverzeichnisses.  
   
--   Der zweite Schritt Ruft die \<Zusammenfassung > für jedes abgerufenen untergeordneten Elementknoten \<ProductDescription > Elementknoten, die wiederum den Kontextknoten wird.  
+-   Der zweite Schritt Ruft die \<Zusammenfassung > für jeden der abgerufenen untergeordneten Elementknoten \<ProductDescription > Elementknoten, der wiederum der Kontextknoten wird.  
   
  Bei einem Schritt eines Pfadausdrucks kann es sich um einen Achsen- oder um einen allgemeinen Schritt handeln.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33077777"
   
 -   Der relative Pfadausdruck `child::root/child::Location[attribute::LocationID=10]`, enthält zwei durch einen Schrägstrich getrennte Schritte. Der erste Schritt gibt eine Achse (`child`) und einen Knotentest (`root`) an. Der zweite Schritt gibt alle drei Komponenten eines Achsenschritts an: eine Achse (child), einen Knotentest (`Location`) und ein Prädikat (`[attribute::LocationID=10]`).  
   
- Weitere Informationen zu den Komponenten eines achsenschritts finden Sie unter [Achse angeben, in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-axis.md), [Knotentest angeben, in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-node-test.md), und [angeben von Auswahlprädikaten im ein Schritt eines pfadausdrucks](../xquery/path-expressions-specifying-predicates.md).  
+ Weitere Informationen zu den Komponenten eines achsenschritts finden Sie unter [Achse angeben, in einem Schritt eines Pfadausdrucks](../xquery/path-expressions-specifying-axis.md), [Knotentest angeben, in einem Schritt eines Pfadausdrucks](../xquery/path-expressions-specifying-node-test.md), und [angeben von Auswahlprädikaten im eine Schritt eines pfadausdrucks](../xquery/path-expressions-specifying-predicates.md).  
   
 ## <a name="general-step"></a>Allgemeiner Schritt  
  Ein allgemeiner Schritt ist lediglich ein Ausdruck, der eine Knotensequenz auswerten muss.  
@@ -93,7 +93,7 @@ id(/a/b)
  [Angeben einer Achse in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-axis.md)  
  Beschreibt das Arbeiten mit dem Achsenschritt in einem Pfadausdruck.  
   
- [Angeben eines Knotentests in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-node-test.md)  
+ [Angeben von Knotentests in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-node-test.md)  
  Beschreibt das Arbeiten mit Knotentests in einem Pfadausdruck.  
   
  [Angeben von Prädikaten in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-predicates.md)  

@@ -1,5 +1,5 @@
 ---
-title: dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs
+title: dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73be0586ae8f12633fff733f763f021f7133d119
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468286"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038808"
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "34468286"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**path_name**|**vom Datentyp nvarchar(512)**|Der Einbindungspunkt oder Laufwerkpfad des Volumes, der als Stammverzeichnis für Datenbank- und Protokolldateien verwendet werden kann. Lässt keine NULL-Werte zu.|  
-|**cluster_owner_node**|**nvarchar(64)**|Der aktuelle Besitzer des Laufwerks. Bei freigegebenen Clustervolumes (CSV) entspricht der Besitzer dem Knoten, der den MetaData-Server hostet. Lässt keine NULL-Werte zu.|  
+|**path_name**|**Nvarchar(512)**|Der Einbindungspunkt oder Laufwerkpfad des Volumes, der als Stammverzeichnis für Datenbank- und Protokolldateien verwendet werden kann. Lässt keine NULL-Werte zu.|  
+|**cluster_owner_node**|**Nvarchar(64)**|Der aktuelle Besitzer des Laufwerks. Bei freigegebenen Clustervolumes (CSV) entspricht der Besitzer dem Knoten, der den MetaData-Server hostet. Lässt keine NULL-Werte zu.|  
 |**is_cluster_shared_volume**|**Bit**|Gibt 1 zurück, wenn das Laufwerk, auf dem sich der Pfad befindet, ein freigegebenes Clustervolume ist; andernfalls wird 0 zurückgegeben.|  
   
 ## <a name="remarks"></a>Hinweise  

@@ -1,5 +1,5 @@
 ---
-title: dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 952f07e7112b316e9109e0761deecf99f694306a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997972"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34464136"
 ||||  
 |-|-|-|  
 |**Spaltenname**|**Typ**|**Beschreibung**|  
-|**object_id**|int|Objekt-ID der Tabelle, die den Index enthält.|  
+|**object_id**|ssNoversion|Objekt-ID der Tabelle, die den Index enthält.|  
 |**fulltext_index_page_count**|**bigint**|Logische Größe der Extraktion in Anzahl von Indexseiten.|  
 |**keyphrase_index_page_count**|**bigint**|Logische Größe der Extraktion in Anzahl von Indexseiten.|  
 |**similarity_index_page_count**|**bigint**|Logische Größe der Extraktion in Anzahl von Indexseiten.|  

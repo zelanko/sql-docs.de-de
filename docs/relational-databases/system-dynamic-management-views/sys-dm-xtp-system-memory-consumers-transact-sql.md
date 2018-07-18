@@ -1,5 +1,5 @@
 ---
-title: dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468636"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015190"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ select * from sys.dm_xtp_system_memory_consumers
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Interne ID für Arbeitsspeicherconsumer.|  
-|memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0 – Es wird kein Consumer angezeigt. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1 – LOOKASIDE: Verfolgt die arbeitsspeichernutzung für ein systemlookaside.<br /><br /> 2 – VARHEAP: Verfolgt die arbeitsspeichernutzung für einen Heap variabler Länge.<br /><br /> 4 – e/a-Seitenpool: verfolgt die arbeitsspeichernutzung für einen systemseitenpool für e/a-Vorgänge verwendet.|  
+|memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0 – Es wird kein Consumer angezeigt. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1 – LOOKASIDE: Verfolgt die arbeitsspeichernutzung für ein systemlookaside nach.<br /><br /> 2: VARHEAP: Verfolgt die arbeitsspeichernutzung für einen Heap variabler Länge.<br /><br /> 4 – e/a-Seitenpool: verfolgt die arbeitsspeichernutzung für einen systemseitenpool für e/a-Vorgänge verwendet.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Die Beschreibung des Typs des Arbeitsspeicherconsumers:<br /><br /> 0 – Es wird kein Consumer angezeigt.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Der Systemheap. Allgemein. Wird derzeit nur verwendet, um Arbeitsaufgaben der Garbage Collection zuzuordnen.<br />-ODER-<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> PGPOOL: Für e/a-System sind Systempools gibt es drei unterschiedliche Größen System 4-KB-Seitenpool System 64 KB-Seitenpool und systemseitenpool 256K.|  
+|memory_consumer_desc|**nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Der Systemheap. Allgemein. Wird derzeit nur verwendet, um Arbeitsaufgaben der Garbage Collection zuzuordnen.<br />-oder-<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> PGPOOL: Für e/a-System sind Systempools gibt es drei unterschiedliche Größen System 4-KB-Seitenpool System 64-KB-Seitenpool und System-256-KB-Seitenpool.|  
 |lookaside_id|**bigint**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
 |pagepool_id|**bigint**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  

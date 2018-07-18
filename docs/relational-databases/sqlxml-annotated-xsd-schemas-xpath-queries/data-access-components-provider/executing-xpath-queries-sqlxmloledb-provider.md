@@ -1,5 +1,5 @@
 ---
-title: Ausführen von XPath-Abfragen (SQLXMLOLEDB-Anbieter) | Microsoft Docs
+title: Ausführen von XPath-Abfragen (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049957"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ausführen von XPath-Abfragen (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "32969015"
   
 -   **Basispfad**  
   
--   **Zuordnungsschema**  
+-   **Mapping-Schema**  
   
- In dieser Beispiel-ADO-Anwendung wird eine XPath-Abfrage (Stamm) mit einem XSD-Zuordnungsschema (MySchema.xml) angegeben. Das Schema verfügt über eine  **\<Kontakte >** Element mit **ContactID**, **FirstName**, und **LastName** Attribute. Im Schema wird die Standardzuordnung verwendet: ein Elementname wird der gleichnamigen Tabelle zugeordnet, und die Attribute eines einfachen Typs werden den gleichnamigen Spalten zugeordnet.  
+ In dieser Beispiel-ADO-Anwendung wird eine XPath-Abfrage (Stamm) mit einem XSD-Zuordnungsschema (MySchema.xml) angegeben. Das Schema verfügt über eine  **\<Kontakte >** -Element mit **ContactID**, **FirstName**, und **"LastName"** Attribute. Im Schema wird die Standardzuordnung verwendet: ein Elementname wird der gleichnamigen Tabelle zugeordnet, und die Attribute eines einfachen Typs werden den gleichnamigen Spalten zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -61,14 +61,14 @@ ms.locfileid: "32969015"
 </xsd:schema>  
 ```  
   
- Das Zuordnungsschema-Eigenschaft stellt das Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Das Zuordnungsschema kann ein XSD- oder ein XDR-Schema sein. Die Basis-Pfad-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
+ Die Mapping-Schema-Eigenschaft stellt das Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Das Zuordnungsschema kann ein XSD- oder ein XDR-Schema sein. Die Basis-Path-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
   
  ClientSideXML-Eigenschaft wird auf "true" festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
   
  In der Anwendung wird eine XPath-Abfrage direkt angegeben. Deshalb muss der XPath-Dialekt {ec2a4293-e898-11d2-b1b7-00c04f680c56} eingeschlossen werden.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

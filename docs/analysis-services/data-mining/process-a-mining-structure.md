@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten einer Miningstruktur | Microsoft Docs
+title: Verarbeiten einer Miningstruktur | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999732"
 ---
 # <a name="process-a-mining-structure"></a>Verarbeiten einer Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "34017127"
   
      Wenn Sie Änderungen an der Struktur vorgenommen haben, werden Sie aufgefordert, die Struktur erneut bereitzustellen, bevor die Modelle verarbeitet werden. Klicken Sie auf **Ja**.  
   
-2.  Klicken Sie auf **ausführen** in der **Miningstruktur verarbeiten - \<Struktur >** (Dialogfeld).  
+2.  Klicken Sie auf **ausführen** in die **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld.  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt detaillierte Informationen zur Verarbeitung des Modells an.  
   
 3.  Klicken Sie nach Abschluss der Modellverarbeitung im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-4.  Klicken Sie auf **schließen** in der **Miningstruktur verarbeiten - \<Struktur >** (Dialogfeld).  
+4.  Klicken Sie auf **schließen** in die **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

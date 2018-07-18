@@ -1,5 +1,5 @@
 ---
-title: Local-Name-Funktion (XQuery) | Microsoft Docs
+title: Local-Name-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997132"
 ---
-# <a name="functions-on-nodes---local-name"></a>Funktionen für Knoten - Local-name
+# <a name="functions-on-nodes---local-name"></a>Functions on Nodes - Local-Name-Funktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den lokalen Teil des Namens des *$arg* als xs: String, die wird entweder die Zeichenfolge der Länge 0 (null) sein oder die lexikalische Form einen xs: NCName müssen. Wenn das Argument nicht bereitgestellt wird, ist der Standardwert der Kontextknoten.  
+  Gibt den lokalen Teil des Namens des *$arg* als xs: String, die werden entweder die Zeichenfolge der Länge 0 (null) oder die lexikalische Form einen xs: NCName verfügen. Wenn das Argument nicht bereitgestellt wird, ist der Standardwert der Kontextknoten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ fn:local-name($arg as node()?) as xs:string
 -   Wenn der Zielknoten keinen Namen besitzt, weil es sich um einen Dokumentknoten, einen Kommentar oder einen Textknoten handelt, gibt die Funktion die Zeichenfolge mit der Länge null zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Abrufen des lokalen Namens eines bestimmten Knotens  
  Die folgende Abfrage wird für eine nicht typisierte XML-Instanz angegeben. Der Abfrageausdruck `local-name(/ROOT[1])` ruft den lokalen Namensanteil des angegebenen Knotens ab.  
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Verwenden von local-name ohne Argument in einem Prädikat  
- Die folgende Abfrage wird angegeben, für die Instructions-Spalte, die typisierte **Xml** Spalte der ProductModel-Tabelle. Der Ausdruck gibt alle untergeordneten Elemente des <`root`>-Elements zurück, deren lokaler Namensbestandteil für den QName "Location" lautet. Die **local-name()** Funktion wird im Prädikat angegeben und besitzt keine Argumente, die der Kontextknoten wird von der Funktion verwendet.  
+ Die folgende Abfrage wird angegeben, für die Instructions-Spalte, die typisierte **Xml** Spalte der ProductModel-Tabelle. Der Ausdruck gibt alle untergeordneten Elemente des <`root`>-Elements zurück, deren lokaler Namensbestandteil für den QName "Location" lautet. Die **local-name()** -Funktion ist im Prädikat angegeben und besitzt keine Argumente. der Kontextknoten wird von der Funktion verwendet.  
   
 ```  
 SELECT Instructions.query('  

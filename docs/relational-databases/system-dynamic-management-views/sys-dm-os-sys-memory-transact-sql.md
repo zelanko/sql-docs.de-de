@@ -1,5 +1,5 @@
 ---
-title: dm_os_sys_memory (Transact-SQL) | Microsoft Docs
+title: dm_os_sys_memory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 173cef2bb02399e8145df1b5ff2a9d038eb6e03f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468316"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987402"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Gibt Arbeitsspeicherinformationen vom Betriebssystem zurück.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird durch begrenzt, und antwortet auf externe speicherbedingungen auf Betriebssystemebene und die physischen Grenzen der zugrunde liegenden Hardware. Die Ermittlung des Gesamtsystemstatus ist deshalb eine wichtige Komponente zur Auswertung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherauslastung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch begrenzt ist, und reagiert auf externen speicherbedingungen auf der Betriebssystemebene und die physischen Grenzen der zugrunde liegenden Hardware. Die Ermittlung des Gesamtsystemstatus ist deshalb eine wichtige Komponente zur Auswertung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherauslastung.  
   
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_sys_memory**.  
@@ -55,7 +55,7 @@ ms.locfileid: "34468316"
 |**system_memory_state_desc**|**nvarchar(256)**|Beschreibung des Speicherstatus. Siehe Tabelle unten.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
-|Bedingung|Wert|  
+|Bedingung|value|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> - und<br /><br /> System_low_memory_signal_state = 0|Ausreichend physischer Speicher verfügbar|  
 |System_high_memory_signal_state = 0<br /><br /> - und<br /><br /> system_low_memory_signal_state = 1|Nicht ausreichend physischer Speicher verfügbar|  
@@ -67,7 +67,7 @@ ms.locfileid: "34468316"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

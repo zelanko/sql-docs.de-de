@@ -1,5 +1,5 @@
 ---
-title: Sys. change_tracking_databases (Transact-SQL) | Microsoft Docs
+title: Sys. change_tracking_databases (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3ec7102bbbdc01694bea11911d0de9a89dbacc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049668"
 ---
-# <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>Ändern Sie die Katalogsichten für den Tracking - Sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>Ändern Sie die nachverfolgung Katalogsichten - Sys. change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede Datenbank zurück, für die die Änderungsnachverfolgung aktiviert ist.  
@@ -50,7 +50,7 @@ ms.locfileid: "33177906"
  Für sys.change_tracking_databases werden die gleichen Berechtigungsprüfungen wie für sys.databases durchgeführt. Wenn der Aufrufer von sys.change_tracking_databases nicht der Besitzer der Datenbank ist, sind zum Anzeigen der entsprechenden Zeile mindestens die Berechtigungen ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene oder die CREATE DATABASE-Berechtigung für die Masterdatenbank oder aktuelle Datenbank erforderlich.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Änderungsnachverfolgung für Katalogsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Katalogsichten der änderungsnachverfolgung &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
+title: dm_db_incremental_stats_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466236"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997872"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Dieses Verhalten ermöglicht die sichere Verwendung von `sys.dm_db_incremental_stats_properties` , wenn die Funktion übergreifend auf Zeilen in Sichten wie `sys.objects` und `sys.stats`angewendet wird. Diese Methode kann Eigenschaften für die Statistik zurückgeben, die den einzelnen Partitionen entsprechen. Verwenden Sie stattdessen „dm_db_stats_properties“, um die Eigenschaften für die zusammengeführten Statistiken für alle Partitionen kombiniert anzuzeigen. 
 
-Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *Last_updated* Spalte ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
+Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Beim Generieren von Statistikdaten keine Daten gelesen werden, das statistikblob nicht erstellt, das Datum nicht verfügbar ist, und die *Last_updated* Spalte ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert, dass der Benutzer über SELECT-Berechtigungen für Statistikspalten verfügt, Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin`, der festen Datenbankrolle `db_owner` oder der festen Datenbankrolle `db_ddladmin` ist.  

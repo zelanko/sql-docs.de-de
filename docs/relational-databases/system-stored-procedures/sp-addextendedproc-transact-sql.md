@@ -1,5 +1,5 @@
 ---
-title: Sp_addextendedproc (Transact-SQL) | Microsoft Docs
+title: Sp_addextendedproc (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046088"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>Argumente  
  [  **@functname =** ] **"***Prozedur***"**  
- Der Name der aufzurufenden Funktion innerhalb der DLL (Dynamic Link Library). *Prozedur* ist **nvarchar(517)**, hat keinen Standardwert. *Prozedur* optional den Namen des Besitzers im Format einschließen können *owner.function*.  
+ Der Name der aufzurufenden Funktion innerhalb der DLL (Dynamic Link Library). *Prozedur* ist **nvarchar(517)**, hat keinen Standardwert. *Prozedur* optional den Namen des Besitzers in der Form enthalten können *owner.function*.  
   
  [  **@dllname =** ] **"***Dll***"**  
  Der Name der DLL, die die Funktion enthält. *DLL* ist **varchar(255)**, hat keinen Standardwert. Es ist empfehlenswert, den vollständigen Pfad der DLL anzugeben.  
@@ -58,20 +58,20 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  Nachdem eine erweiterte gespeicherte Prozedur erstellt wurde, es muss hinzugefügt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit **Sp_addextendedproc**. Weitere Informationen finden Sie unter [Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
- Diese Prozedur kann nur in ausgeführt werden die **master** Datenbank. So führen Sie eine erweiterte gespeicherte Prozedur in einer Datenbank außer aus **master**, qualifizieren Sie den Namen der erweiterten gespeicherten Prozedur mit **master**.  
+ Diese Prozedur kann nur in ausgeführt werden die **master** Datenbank. Um eine erweiterte gespeicherte Prozedur aus einer Datenbank außer auszuführen **master**, qualifizieren Sie den Namen der erweiterten gespeicherten Prozedur mit **master**.  
   
- **Sp_addextendedproc** Einträge hinzugefügt der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht, registrieren den Namen der neuen erweiterten gespeicherten Prozedur mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es wird auch ein Eintrag in der [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalogsicht angezeigt.  
+ **Sp_addextendedproc** fügt Einträge, die die [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht, registrieren den Namen der neuen erweiterten gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es fügt auch einen Eintrag in der [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalogsicht angezeigt.  
   
 > [!IMPORTANT]  
->  Vorhandene DLLs, die nicht mit einem vollständigen Pfad registriert wurden, sind nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht mehr funktionsfähig. Verwenden Sie zum Beheben des Problems **Sp_dropextendedproc** zum Aufheben der Registrierung der DLL, und registrieren Sie ihn mit **Sp_addextendedproc**, Angabe des vollständigen Pfades.  
+>  Vorhandene DLLs, die nicht mit einem vollständigen Pfad registriert wurden, sind nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht mehr funktionsfähig. Verwenden Sie zum Beheben des Problems **Sp_dropextendedproc** zum Aufheben der Registrierung der DLL, und klicken Sie dann registrieren Sie ihn mit **Sp_addextendedproc**, den vollständigen Pfad angeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_addextendedproc**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_addextendedproc**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die **Xp_hello** der erweiterten gespeicherten Prozedur.  

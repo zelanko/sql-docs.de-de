@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
+title: Sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: abee195d109b751df856c720264a42241bf861f9
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466576"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052298"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>Sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Gilt für :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] und [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-CPU-affinitätsinformationen über die aktuelle Konfiguration der externen Ressourcenpools zurück.
+CPU-Affinität-Informationen über die aktuelle external Resource Pool-Konfiguration zurück.
   
 |Spaltenname|Datentyp|Description|
 |----------------|---------------|-----------------|
 |pool_id|**int**|Die ID des externen Ressourcenpools. Lässt keine NULL-Werte zu.|
 |processor_group|**smallint**|Die ID der logischen Windows-Prozessorgruppe. Lässt keine NULL-Werte zu.|
-|cpu_mask|**bigint**|Die binäre Maske, die diesem Pool zugeordnete CPUs darstellt. Lässt keine NULL-Werte zu.|
+|cpu_mask|**bigint**|Die binäre Maske, die die diesem Pool zugeordnete CPUs darstellt. Lässt keine NULL-Werte zu.|
   
 ## <a name="remarks"></a>Hinweise
 
-Pools, die mit der Affinität erstellt werden `AUTO` werden nicht in dieser Ansicht angezeigt, da sie keine Affinität besitzen. Weitere Informationen finden Sie unter der [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) und [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) Anweisungen.
+Pools, die mit der Affinität erstellt werden `AUTO` werden nicht in dieser Ansicht angezeigt, da sie keine Affinität besitzen. Weitere Informationen finden Sie unter den [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) und [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) Anweisungen.
 
 ## <a name="permissions"></a>Berechtigungen
 

@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_health_components (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_health_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5cc73d80ea4ca8c724a5cb0efbe63381de068cb1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000992"
 ---
 # <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Speichert Informationen über alle Komponenten und Geräten, die im System vorhanden sind. Dazu gehören Hardware, Speichergeräten und Netzwerkgeräten.  
+  Speichert Informationen über alle Komponenten und Geräten, die im System vorhanden sind. Dazu gehören die Hardware, Speichergeräte und Netzwerkgeräten.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|component_id|**int**|Eindeutige Bezeichner einer Komponente oder ein Gerät.<br /><br /> Der Schlüssel für diese Ansicht.|NOT NULL|  
-|group_id|**Int**|Der logische Komponentengruppe, zu der diese Komponente gehört. Finden Sie unter [sys.pdw_health_components (Parallel Data Warehouse)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
+|component_id|**int**|Eindeutiger Bezeichner einer Komponente oder das Gerät.<br /><br /> Der Schlüssel für diese Sicht.|NOT NULL|  
+|group_id|**Int**|Die logische Komponente-Gruppe, zu der diese Komponente gehört. Finden Sie unter [sys.pdw_health_components (Parallel Data Warehouse)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |component_name|**nvarchar(255)**|Name der Komponente.|NOT NULL|  
   
 ## <a name="see-also"></a>Siehe auch  

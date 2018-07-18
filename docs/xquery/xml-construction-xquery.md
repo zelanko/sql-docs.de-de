@@ -1,5 +1,5 @@
 ---
-title: XML-Konstruktion (XQuery) | Microsoft Docs
+title: XML-Konstruktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,33 +30,33 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077723"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995142"
 ---
 # <a name="xml-construction-xquery"></a>XML-Konstruktion (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In XQuery können Sie die **direkte** und **berechnet** Konstruktoren zum Erstellen von XML-Strukturen in einer Abfrage.  
+  In XQuery, können Sie mithilfe der **direkte** und **berechnet** von Konstruktoren zum Erstellen von XML-Strukturen in einer Abfrage.  
   
 > [!NOTE]  
->  Besteht kein Unterschied zwischen der **direkte** und **berechnet** Konstruktoren.  
+>  Es gibt keinen Unterschied zwischen der **direkte** und **berechnet** Konstruktoren.  
   
 ## <a name="using-direct-constructors"></a>Verwenden von direkten Konstruktoren  
  Wenn Sie direkte Konstruktoren verwenden, geben Sie beim Konstruieren des XML-Codes eine XML-ähnliche Syntax an. Die folgenden Beispiele veranschaulichen die XML-Konstruktion mit direkten Konstruktoren.  
   
 ### <a name="constructing-elements"></a>Konstruktion von Elementen  
- Sie können Elemente konstruieren, indem Sie die XML-Schreibweise verwenden. Im folgenden Beispiel wird die direkter Konstruktor als Ausdruck verwendet und erstellt eine \<ProductModel >-Element. Das konstruierte Element besitzt drei untergeordnete Elemente.  
+ Sie können Elemente konstruieren, indem Sie die XML-Schreibweise verwenden. Im folgenden Beispiel wird die direkter Konstruktor als Ausdruck verwendet und erstellt eine \<ProductModel > Element. Das konstruierte Element besitzt drei untergeordnete Elemente.  
   
 -   Einen Textknoten.  
   
--   Zwei Elementknoten, \<Zusammenfassung > und \<Funktionen >.  
+-   Zwei Elementknoten, \<Summary > und \<Funktionen >.  
   
     -   Die \<Summary >-Element verfügt über einen untergeordneten Textknoten, dessen Wert ist "Some Description".  
   
-    -   Die \<Features >-Element verfügt über drei untergeordnete Elementknoten, \<Color >, \<Gewichtung >, und \<Garantie >. Jeder dieser Knoten besitzt einen weiteren untergeordneten Textknoten mit den Werten Red, 25 und 2 years parts and labor.  
+    -   Die \<Features >-Element verfügt über drei untergeordnete Elementknoten, \<Farbe >, \<Gewichtung >, und \<Warranty >. Jeder dieser Knoten besitzt einen weiteren untergeordneten Textknoten mit den Werten Red, 25 und 2 years parts and labor.  
   
 ```  
 declare @x xml;  
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Die folgende Abfrage konstruiert beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten <`e`>-Element. Der Wert des Elements <`e`> wird berechnet, indem Sie die Angabe eines pfadausdrucks in geschweiften Klammern ("{... }").  
+ Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Die folgende Abfrage konstruiert beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten <`e`>-Element. Der Wert des Elements <`e`> wird berechnet, indem Sie die Angabe eines pfadausdrucks in geschweiften Klammern ("{...} }").  
   
 ```  
 DECLARE @x xml;  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- Die folgende Abfrage ist der vorherigen ähnlich, Allerdings gibt der Ausdruck in der geschweiften Klammern der **data()** -Funktion zum Abrufen von des atomaren Wert, der die <`root`> Element und weist sie auf das konstruierte Element <`e`>.  
+ Die folgende Abfrage ist der vorherigen ähnlich, Der Ausdruck in geschweiften Klammern gibt jedoch die **data()** Funktion zum Abrufen des atomaren Werts der <`root`> Element und weist sie auf das erstellte Element <`e`>.  
   
 ```  
 DECLARE @x xml;  
@@ -322,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   Verwenden der [Concat-Funktion](../xquery/functions-on-string-values-concat.md) um zwei Zeichenfolgenargumente in der resultierenden Attributwert zu verketten:  
+    -   Verwenden der [Concat-Funktion](../xquery/functions-on-string-values-concat.md) um zwei Zeichenfolgenargumente in im resultierenden Attributwert zu verketten:  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -352,7 +352,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Wenden Sie die **data()** -Funktion, die Abfrage funktioniert, da er ruft den atomaren Wert des Ausdrucks ab `/x`, die mit der Zeichenfolge verkettet wird. Es folgt eine Sequenz atomarer Werte:  
+     Wenn Sie anwenden, die **data()** -Funktion, die Abfrage funktioniert, da es sich um den atomaren Wert des Ausdrucks abruft `/x`, die mit der Zeichenfolge verkettet wird. Es folgt eine Sequenz atomarer Werte:  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Andere direkte XML-Konstruktoren  
  Die Konstruktoren für Verarbeitungsanweisungen und XML-Kommentare verwenden dieselbe Syntax wie die ihnen entsprechenden XML-Konstrukte. Berechnete Konstruktoren für Textknoten werden ebenfalls unterstützt. Sie werden jedoch hauptsächlich zum Konstruieren von Textknoten in der XML-Datenbearbeitungssprache verwendet.  
   
- **Hinweis** ein Beispiel der Verwendung einer expliziten textknotenkonstruktors finden Sie unter Beispiel in [einfügen &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **Beachten Sie** ein Beispiel der Verwendung einer expliziten textknotenkonstruktors finden Sie unter dem Beispiel in [einfügen &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  In der folgenden Abfrage enthält der konstruierte XML-Code ein Element, zwei Attribute, einen Kommentar und eine Verarbeitungsanweisung. Beachten Sie, dass vor <`FirstLocation`> ein Komma steht, da eine Sequenz konstruiert wird.  
   
@@ -589,7 +589,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Verwenden von berechneten Konstruktoren  
- aus. In diesem Fall geben Sie die Schlüsselwörter an, die den Typ des zu konstruierenden Knotens identifizieren. Es werden nur folgende Schlüsselwörter unterstützt:  
+ zugreifen. In diesem Fall geben Sie die Schlüsselwörter an, die den Typ des zu konstruierenden Knotens identifizieren. Es werden nur folgende Schlüsselwörter unterstützt:  
   
 -   element  
   
@@ -640,7 +640,7 @@ text{"Some text "},
   
  Beachten Sie, dass die berechneten Element- und Attributkonstruktoren ermöglichen, Knotennamen zu berechnen, wie in der XQuery-Spezifikation definiert. Wenn Sie direkte Konstruktoren in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden, müssen Sie die Knotennamen, wie Element und Attribut, als konstante Literale angeben. Daher gibt es in Bezug auf Elemente und Attribute zwischen dem direkten und dem berechneten Konstruktor keinen Unterschied.  
   
- Im folgenden Beispiel wird der Inhalt für die konstruierten Knoten aus der XML-fertigungsanweisungen in der Instructions-Spalte der gespeicherten abgerufen der **Xml** -Datentyp in der ProductModel-Tabelle.  
+ Im folgenden Beispiel wird der Inhalt für die konstruierten Knoten aus der in der Instructions-Spalte der gespeicherten XML-fertigungsanweisungen abgerufen der **Xml** -Datentyp in der ProductModel-Tabelle.  
   
 ```  
 SELECT Instructions.query('  

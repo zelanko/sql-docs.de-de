@@ -1,5 +1,5 @@
 ---
-title: ReadWriteMode-Element | Microsoft Docs
+title: ReadWriteMode-Element | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994852"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode-Element
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "34576492"
   
 |value|Description|  
 |-----------|-----------------|  
-|*readOnly*|Es können keine Änderungen oder Updates auf die Datenbank angewendet werden.|  
-|*ReadWrite*|Es können Änderungen oder Updates auf die Datenbank angewendet werden.|  
+|*ReadOnly*|Es können keine Änderungen oder Updates auf die Datenbank angewendet werden.|  
+|*"ReadWrite"*|Es können Änderungen oder Updates auf die Datenbank angewendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch
  [Attach-Element](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Verschieben einer Analysis Services-Datenbank](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Datenbank-ReadWriteModes](../../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   

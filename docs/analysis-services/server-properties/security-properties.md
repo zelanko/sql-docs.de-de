@@ -1,5 +1,5 @@
 ---
-title: Sicherheitseigenschaften | Microsoft Docs
+title: Sicherheitseigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991462"
 ---
 # <a name="security-properties"></a>Sicherheitseigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

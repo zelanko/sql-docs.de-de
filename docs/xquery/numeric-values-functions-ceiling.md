@@ -1,5 +1,5 @@
 ---
-title: CEILING-Funktion (XQuery) | Microsoft Docs
+title: CEILING-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1399fd20bf4d7af3fed85730fc397e1400347ad2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077497"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991332"
 ---
-# <a name="numeric-values-functions---ceiling"></a>Numerische Werte Funktionen - ceiling 
+# <a name="numeric-values-functions---ceiling"></a>Numerische Werte Functions - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die kleinste Anzahl ohne Stellen hinter dem Dezimalpunkt zurück, die nicht geringer ist als der Wert des Funktionsarguments. Wenn das Argument eine leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
@@ -49,17 +49,17 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="remarks"></a>Hinweise  
  Wenn der Typ des *$arg* ist einer der drei numerischen Basistypen **xs: float**, **xs: double**, oder **xs: decimal**, der Rückgabetyp ist identisch mit die *$arg* Typ.  
   
- Wenn der Typ des *$arg* ist ein Typ, der einen der numerischen Typen abgeleitet ist der Rückgabetyp ist der numerische Basistyp.  
+ Wenn der Typ des *$arg* ist ein Typ, der von einem der numerischen Typen abgeleitet ist der Rückgabetyp ist der numerische Basistyp.  
   
- Wenn die Eingabe für die Funktionen Fn: Floor, Fn: CEILING oder Fn: Round ist **xdt: UntypedAtomic**, er wird implizit umgewandelt in **xs: double**.  
+ Wenn die Eingabe für die Funktionen Fn: Floor, Fn: CEILING oder Fn: Round **xdt: UntypedAtomic**, es wird implizit umgewandelt in **xs: double**.  
   
  Alle anderen Typen führen zum Generieren eines statischen Fehlers.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. Verwenden der XQuery-Funktion ceiling()  
- Für Produktmodell 7 gibt die Abfrage eine Liste der Arbeitsplatzstandorte im Produktionsprozess des Produktmodells zurück. Für jeden einzelnen Arbeitsplatzstandort gibt die Abfrage die Standortkennung, die Arbeitsstunden sowie die Losgröße zurück, sofern diese dokumentiert ist. Die Abfrage verwendet die **Ceiling** -Funktion die Arbeitsstunden als Werte des Typs zurückgibt **decimal**.  
+ Für Produktmodell 7 gibt die Abfrage eine Liste der Arbeitsplatzstandorte im Produktionsprozess des Produktmodells zurück. Für jeden einzelnen Arbeitsplatzstandort gibt die Abfrage die Standortkennung, die Arbeitsstunden sowie die Losgröße zurück, sofern diese dokumentiert ist. Die Abfrage verwendet die **Ceiling** Funktion, um die Arbeitsstunden als Werte des Typs zurückzugeben **decimal**.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -81,13 +81,13 @@ WHERE ProductModelID=7
   
 -   Das AWMI-Namespacepräfix steht für Adventure Works Manufacturing Instructions. Dieses Präfix verweist auf denselben Namespace, der im abgefragten Dokument verwendet wird.  
   
--   **Anweisungen** ist ein **Xml** Typspalte. Aus diesem Grund die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) wird zum Angeben der XQuery verwendet. Die XQuery-Anweisung wird als Argument der query-Methode angegeben.  
+-   **Anweisungen** ist ein **Xml** Type-Spalte. Aus diesem Grund die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) dient zum Angeben von XQuery. Die XQuery-Anweisung wird als Argument der query-Methode angegeben.  
   
--   **für... zurückgeben** ist eine Schleifenkonstruktion. In der Abfrage die **für** Schleife gibt eine Liste mit \<Speicherort > Elemente. Für jeden einzelnen arbeitsplatzstandort der **zurückgeben** -Anweisung in der **für** Schleife beschreibt die XML generiert werden:  
+-   **für... zurückgeben** ist eine Schleifenkonstruktion. In der Abfrage die **für** Schleife gibt eine Liste mit \<Speicherort > Elemente. Für jeden einzelnen arbeitsplatzstandort die **zurückgeben** -Anweisung in der **für** Schleife beschreibt den XML-Code generiert werden:  
   
-    -   Ein \<Speicherort >-Element mit LocationId- und ein LaborHrs-Attribut. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
+    -   Ein \<Location >-Element mit LocationId- und ein LaborHrs-Attributen ist. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
   
-    -   Der {$i/@LotSize } Ausdruck ruft das LotSize-Attribut aus dem Dokument ab, falls vorhanden.  
+    -   Die {$i/@LotSize } Ausdruck ruft das LotSize-Attribut aus dem Dokument, ab, falls vorhanden.  
   
     -   Dies ist das Ergebnis:  
   

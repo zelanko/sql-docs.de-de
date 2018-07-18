@@ -1,5 +1,5 @@
 ---
-title: "\"true\"-Funktion (XQuery) | Microsoft Docs"
+title: "\"true\"-Funktion (XQuery) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077587"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014030"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>Boolesche Konstruktorfunktionen - "true" (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>Boolean Constructor Functions - True (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den xs:boolean-Wert True zurück. Dieser entspricht `xs:boolean("1")`.  
@@ -42,10 +42,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Verwenden der XQuery Boolean-Funktion true()  
- Das folgende Beispiel fragt eine nicht typisierte **Xml** Variable. Der Ausdruck in der **value()** Methodenrückgabe Boolean **true()** ist "aaa" den Wert des Attributs. Die **value()** Methode der **Xml** -Datentyp konvertiert den booleschen Wert in einen Bitwert und gibt ihn zurück.  
+ Das folgende Beispiel fragt eine nicht typisierte **Xml** Variable. Der Ausdruck in der **Value()-Methode** Methode gibt den booleschen Wert **TRUE()"** ist"aaa"den Wert des Attributs. Die **Value()-Methode** Methode der **Xml** -Datentyp konvertiert den booleschen Wert in einen Bitwert und gibt sie zurück.  
   
 ```  
 DECLARE @x XML  

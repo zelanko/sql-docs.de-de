@@ -1,5 +1,5 @@
 ---
-title: Sp_set_session_context (Transact-SQL) | Microsoft Docs
+title: Sp_set_session_context (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015006"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>Sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Legt ein Schlüssel-Wert-Paar im Sitzungskontext fest.  
+Legt den Schlüssel-Wert-Paar im Sitzungskontext fest.  
   
 
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,33 +51,33 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Argumente  
  [ @key=] 'Key'  
- Der Schlüssel festgelegt wird, vom Typ **Sysname**. Die maximale Schlüsselgröße beträgt 128 Bytes.  
+ Der Schlüssel, der festgelegt wird, vom Typ **Sysname**. Die größte gültige Schlüsselgröße ist 128 Bytes.  
   
  [ @value=] 'Value'  
- Der Wert für den angegebenen Schlüssel des Typs **Sql_variant**. Festlegen eines Werts von NULL gibt den Arbeitsspeicher frei. Die maximale Größe beträgt 8.000 Bytes.  
+ Der Wert für den angegebenen Schlüssel, der Typ **Sql_variant**. Festlegen eines Werts von NULL gibt den Arbeitsspeicher frei. Die maximale Größe beträgt 8.000 Bytes.  
   
  [ @read_only= ] { 0 | 1 }  
- Ein Kennzeichen vom Typ **Bit**. Bei 1 kann nicht der Wert für den angegebenen Schlüssel erneut auf dieses logische Verbindung geändert werden. Wenn 0 (Standard), wird der Wert geändert werden kann.  
+ Ein Flag des Typs **Bit**. Bei 1 kann nicht erneut der Wert für den angegebenen Schlüssel für die logische Verbindung geändert werden. Wenn 0 (Standard), wird der Wert geändert werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Jeder Benutzer kann einen Sitzungskontext für ihre Sitzung festlegen.  
+ Jeder Benutzer kann einen Sitzungskontext für seine Sitzung festlegen.  
   
 ## <a name="remarks"></a>Hinweise  
- Ähnlich wie andere gespeicherten Prozeduren können nur Literale und Variablen (keine Ausdrücke oder Funktionsaufrufe) als Parameter übergeben werden.  
+ Ähnlich wie andere gespeicherte Prozeduren können nur Literale und Variablen (not-Ausdrücke oder Funktionsaufrufe) als Parameter übergeben werden.  
   
- Die Gesamtgröße des Sitzungskontexts ist auf 256 kb beschränkt. Wenn der Satz einen Wert, der bewirkt, dass dieses Limit überschritten wird, schlägt die Anweisung fehl. Sie können überwachen, die gesamtspeicherauslastung in [dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ Die Gesamtgröße des Sitzungskontexts ist auf 256 kb beschränkt. Wenn festgelegt ist ein Wert, der bewirkt, dass dieser Grenzwert überschritten wird, schlägt die Anweisung fehl. Sie können überwachen, die gesamtspeicherauslastung in [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Sie können die gesamte Speicherverwendung überwachen, indem Sie Abfragen [Sys. dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) wie folgt: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Sie können die gesamte speicherauslastung überwachen, indem Sie Abfragen [Sys. dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) wie folgt: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie zum Festlegen und dann einen Sitzungen-Kontext-Schlüssel mit dem Namen mit dem Wert der englischen Sprache zurück.  
+ Das folgende Beispiel zeigt, wie Sie festlegen, und klicken Sie dann einen Sitzungen-Kontext-Schlüssel mit dem Namen Sprache mit einem Wert von Englisch zurück.  
   
 ```  
 EXEC sp_set_session_context 'language', 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- Das folgende Beispiel veranschaulicht die Verwendung des optionalen nur-Lese Flags.  
+ Im folgende Beispiel wird die Verwendung des optionalen Schreibschutz-Flags veranschaulicht.  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  

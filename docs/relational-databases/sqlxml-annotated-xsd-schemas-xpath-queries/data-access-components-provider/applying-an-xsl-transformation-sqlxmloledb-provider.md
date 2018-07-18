@@ -1,5 +1,5 @@
 ---
-title: Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter) | Microsoft Docs
+title: Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e4b71d22ddc26dc72f2cbb203178f416fbe3d28c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969559"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050008"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In dieser ADO-Beispielanwendung wird eine SQL-Abfrage ausgeführt und auf das Ergebnis eine XSL-Transformation angewendet. Festlegen der ClientSideXML-Eigenschaft auf "true" erzwingt die Verarbeitung des Rowsets auf der Clientseite. Der Befehlsdialekt wird auf {5d531cb2-e6ed-11d2-b252-00c04f681b71} festgelegt, da die SQL-Abfrage in einer Vorlage angegeben ist und dieser Dialekt angegeben werden muss, wenn eine Vorlage ausgeführt wird. Die Xsl-Eigenschaft gibt die XSL-Datei zu verwenden, um die Transformation anzuwenden. Der Wert der Eigenschaft des Basis-Pfad wird verwendet, um nach der XSL-Datei zu suchen. Wenn Sie einen Pfad im Wert der XSL-Eigenschaft angeben, ist der Pfad relativ zum Pfad, der in der Basis-Pfad-Eigenschaft angegeben ist.  
+  In dieser ADO-Beispielanwendung wird eine SQL-Abfrage ausgeführt und auf das Ergebnis eine XSL-Transformation angewendet. Festlegen der ClientSideXML-Eigenschaft auf "true" erzwingt die Verarbeitung des Rowsets auf der Clientseite. Der Befehlsdialekt wird auf {5d531cb2-e6ed-11d2-b252-00c04f681b71} festgelegt, da die SQL-Abfrage in einer Vorlage angegeben ist und dieser Dialekt angegeben werden muss, wenn eine Vorlage ausgeführt wird. Die Xsl-Eigenschaft gibt an, der XSL-Datei mit die Transformation angewendet wird. Der Wert des Basis-Path-Eigenschaft wird verwendet, um nach der XSL-Datei zu suchen. Wenn Sie einen Pfad im Wert der XSL-Eigenschaft angeben, ist der Pfad, relativ zum Pfad, der in die Basis-Path-Eigenschaft angegeben ist.  
   
  In diesem Beispiel wird gezeigt, wie die folgenden für den SQLXMLOLEDB-Anbieter spezifischen Eigenschaften verwendet werden:  
   
@@ -43,12 +43,12 @@ ms.locfileid: "32969559"
   
  Da die ClientSideXML-Eigenschaft auf "true" festgelegt ist, wird die SELECT-Anweisung ohne die FOR XML-Klausel an den Server gesendet. Der Server führt die Abfrage aus und gibt ein Rowset an den Client zurück. Der Client wendet anschließend die FOR XML-Transformation auf das Rowset an und generiert das XML-Dokument.  
   
- Die Xsl-Eigenschaft wird in der Anwendung angegeben. Daher gilt die XSL-Transformation im XML-Dokument, das auf dem Client generiert wird, und das Ergebnis ist eine zweispaltige Tabelle.  
+ Die Xsl-Eigenschaft, die in der Anwendung angegeben ist. aus diesem Grund wird die XSL-Transformation wird angewendet, um das XML-Dokument, das auf dem Client generiert wird, und das Ergebnis ist eine zweispaltige Tabelle.  
   
  Zum Ausführen des Vorlagenbefehls muss für die XML-Vorlage der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} angegeben werden.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

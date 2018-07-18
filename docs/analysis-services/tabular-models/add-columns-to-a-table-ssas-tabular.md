@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Spalten zu einer Tabelle | Microsoft Docs
+title: Hinzufügen von Spalten zu einer Tabelle | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991472"
 ---
 # <a name="add-columns-to-a-table"></a>Hinzufügen von Spalten zu einer Tabelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34043454"
   
 2.  Geben Sie in der Bearbeitungsleiste eine DAX-Formel ein, um Attribute für jede Zeile hinzuzufügen.  
   
-## <a name="add-a-blank-column"></a>Hinzufügen einer leeren Spalte  
+## <a name="add-a-blank-column"></a>Eine leere Spalte hinzufügen  
  Sie können eine benannte, leere Spalte in einer Modelltabelle erstellen. Leere Spalten können hilfreich sein, wenn Sie Daten aus einer anderen Quelle einfügen möchten. Bedenken Sie jedoch, dass eingefügte Daten anders gespeichert werden als importierte Daten. Weitere Informationen finden Sie unter [kopieren und Einfügen von Daten](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
 #### <a name="to-create-a-named-blank-column"></a>So erstellen Sie eine benannte, leere Spalte  

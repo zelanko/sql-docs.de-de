@@ -1,5 +1,5 @@
 ---
-title: Notfallwiederherstellung für SQL Server on Linux | Microsoft Docs
+title: Notfallwiederherstellung für SQL Server unter Linux | Microsoft-Dokumentation
 description: ''
 author: MikeRayMSFT
 ms.author: mihaelab
@@ -15,13 +15,13 @@ ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 24db7c4b1b1e76d9f16b8d33203fe8556d3dba96
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057298"
 ---
-# <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Business Continuity und Datenbank Wiederherstellung: SQL Server on Linux
+# <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Business Continuity und datenbankwiederherstellung – SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Kommentare in XQuery | Microsoft Docs
+title: Kommentare in XQuery | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 459507805f8b1a1803382e400722d910c802605b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042328"
 ---
 # <a name="comments-in-xquery"></a>Kommentare in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Sie können Kommentare zu XQuery hinzufügen. Die Kommentarzeichenfolgen werden mithilfe der Trennzeichen "`(:`" und "`:)`" hinzugefügt. Beispiel:  
+  Sie können Kommentare zu XQuery hinzufügen. Die Kommentarzeichenfolgen werden mithilfe der Trennzeichen "`(:`" und "`:)`" hinzugefügt. Zum Beispiel:  
   
 ```  
 declare @x xml  
@@ -44,7 +44,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Es folgt ein weiteres Beispiel, in denen eine Abfrage gegen eine Instruction-Spalte der angegeben wird, die **Xml** Typ:  
+ Es folgt ein weiteres Beispiel, in denen eine Abfrage, gegen eine Instruction-Spalte, der angegeben wird, die **Xml** Typ:  
   
 ```  
 SELECT Instructions.query('  

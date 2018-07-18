@@ -1,5 +1,5 @@
 ---
-title: Sp_fulltext_table (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b6c759bd422ae815a284ae2cd14bc8b1861281ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995607"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -60,9 +60,9 @@ sp_fulltext_table
  [ **@action=**] **'***action***'**  
  Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**Create**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
+|**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Drop**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  
 |**Activate**|Aktiviert die Möglichkeit, Volltextindexdaten für *qualified_table_name*nach der Deaktivierung zu sammeln. Es muss mindestens eine Spalte im Volltextindex vorhanden sein, damit er aktiviert werden kann.<br /><br /> Ein Volltextindex wird automatisch (für das Auffüllen) aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird. Wenn die letzte Spalte aus dem Index gelöscht wird, wird der Index inaktiv. Wenn die Änderungsprotokollierung aktiviert ist, wird durch Aktivieren eines inaktiven Index ein neuer Auffüllvorgang gestartet.<br /><br /> Beachten Sie, dass dadurch nicht der eigentliche Volltextindex aufgefüllt wird, sondern nur die Tabelle im Volltextkatalog des Dateisystems registriert wird, um Zeilen von *qualified_table_name* während der nächsten Volltextindexauffüllung abrufen zu können.|  
 |**Deaktivieren**|Deaktiviert den Volltextindex für *qualified_table_name* , sodass die Volltextindexdaten für *qualified_table_name*nicht mehr gesammelt werden können. Die Volltextindexmetadaten sind weiterhin vorhanden, und die Tabelle kann erneut aktiviert werden.<br /><br /> Wenn die Änderungsnachverfolgung aktiviert ist, wird der Status des Indexes durch die Deaktivierung eines aktiven Index eingefroren: derzeit ausgeführte Auffüllungsprozesse werden beendet, und dem Index werden keine Änderungen mehr hinzugefügt.|  
@@ -85,10 +85,10 @@ sp_fulltext_table
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
- Nachdem ein Volltextindex für eine bestimmte Tabelle deaktiviert wird, bleibt der vorhandene Volltextindex bis zum nächsten vollständigen Auffüllen; Allerdings dieser Index wird nicht verwendet, da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen für deaktivierte Tabellen blockiert.  
+ Nachdem ein Volltextindex für eine bestimmte Tabelle deaktiviert wurde, bleibt der vorhandene Volltextindex bis zum nächsten vollständigen Auffüllen; Allerdings dieser Index wird nicht verwendet, da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen für deaktivierte Tabellen blockiert.  
   
  Wenn die Tabelle erneut aktiviert, der Index jedoch nicht erneut aufgefüllt wird, ist der alte Index weiterhin für Abfragen für verbleibende, aber nicht für neue, volltextfähige Spalten verfügbar. Für Daten aus gelöschten Spalten werden Übereinstimmungen in Abfragen gefunden, für die eine umfassende Volltextspaltensuche angegeben ist.  
   

@@ -1,5 +1,5 @@
 ---
-title: XQuery-Abfragen verarbeiten von relationalen Daten | Microsoft Docs
+title: XQuery-Abfragen verarbeiten von relationalen Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b03a2aa4b8e6f2327a58884defe1e9435bfbc326
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077535"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987372"
 ---
 # <a name="xqueries-handling-relational-data"></a>Behandlung relationaler Daten mit XQuery-Abfragen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Sie XQuery dafür angeben einer **Xml** -Typspalte oder-Variable mithilfe eines der [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md). Dazu gehören **query()**, **value()**, **exist()**, oder **modify()**. Die XQuery wird für die XML-Instanz ausgeführt, die in der XML generierenden Abfrage angegeben ist.  
+  Sie geben die XQuery-Abfrage für eine **Xml** -Typspalte oder-Variable mithilfe einer der der [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md). Dazu gehören **query()**, **Value()-Methode**, **exist()**, oder **modify()**. Die XQuery wird für die XML-Instanz ausgeführt, die in der XML generierenden Abfrage angegeben ist.  
   
  XML, das durch Ausführen einer XQuery-Abfrage erzeugt wird, kann Werte enthalten, die aus anderen Transact-SQL-Variablen oder aus Rowsetspalten abgerufen werden. Um relationale Nicht-XML-Daten an das XML-Ergebnis zu binden, bietet SQL Server die folgenden Pseudofunktionen als XQuery-Erweiterungen:  
   
@@ -41,9 +41,9 @@ ms.locfileid: "33077535"
   
 -   **sql:variable()** function  
   
- Diese XQuery-Erweiterungen können beim Angeben einer XQuery-Abfrage in der **query()** Methode der **Xml** -Datentyp. Daher die **query()** Methode kann XML, das Daten von XML- und nicht-kombiniert erzeugen-**Xml** -Datentypen.  
+ Sie können diese XQuery-Erweiterungen verwenden, beim Angeben einer XQuery-Abfrage in der **query()** -Methode der der **Xml** -Datentyp. Daher die **query()** erzeugt die Methode kann XML, das Daten von XML- und nicht-kombiniert-**Xml** -Datentypen.  
   
- Sie können diese Funktionen auch verwenden, bei der Verwendung der **Xml** -Datentypmethoden **modify()**, **value()**, **query()**, und  **EXIST()** zum Verfügbarmachen eines relationalen Werts in XML.  
+ Sie können diese Funktionen auch verwenden, bei der Verwendung der **Xml** -Datentypmethoden **modify()**, **Value()-Methode**, **query()**, und  **EXIST()** zum Verfügbarmachen eines relationalen Werts in XML.  
   
  Weitere Informationen finden Sie unter [SQL:Column()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-column.md) und [SQL:Variable()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   

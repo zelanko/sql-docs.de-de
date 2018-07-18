@@ -1,5 +1,5 @@
 ---
-title: XQuery-Sprachreferenz (SQLServer) | Microsoft Docs
+title: XQuery-Sprachreferenz (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,24 +25,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 759904d735b754d9f51314b92c3d7763a0aa4ef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078167"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066820"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery-Sprachreferenz (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] unterstützt eine Teilmenge der XQuery-Sprache, die für die Abfrage verwendet, wird die **Xml** -Datentyp. Diese XQuery-Implementierung orientiert sich am Arbeitsentwurf für XQuery (Juli 2004). Diese Sprache wird zurzeit vom W3C (World Wide Web Consortium) unter Mitwirkung aller großen Datenbankhersteller und Microsoft entwickelt. Da die W3C-Spezifikationen möglicherweise überarbeitet werden, bevor eine W3C-Empfehlung ausgesprochen wird, kann sich diese Implementierung von der endgültigen Empfehlung unterscheiden. Dieses Thema beschreibt die Semantik und Syntax der Teilmenge von XQuery, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt wird.  
   
- Weitere Informationen finden Sie unter der [W3C XQuery 1.0-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=48846).  
+ Weitere Informationen finden Sie unter den [W3C XQuery 1.0-Sprachspezifikation](http://go.microsoft.com/fwlink/?LinkId=48846).  
   
  XQuery ist eine Sprache, die strukturierte oder halbstrukturierte XML-Daten abfragen kann. Mit der **Xml** -Datentyp-Unterstützung der [!INCLUDE[ssDE](../includes/ssde-md.md)], Dokumente in einer Datenbank gespeichert und dann mithilfe von XQuery abgefragt werden können.  
   
  XQuery basiert auf der vorhandenen XPath-Abfragesprache. Dieser wurde Unterstützung für bessere Iteration, bessere Sortierergebnisse und eine Funktion zum Erstellen des erforderlichen XML hinzugefügt. XQuery wird auf der Grundlage des XQuery-Datenmodells ausgeführt. Dabei handelt es sich um eine Abstraktion von XML-Dokumenten und die XQuery-Ergebnisse, die typisiert oder nicht typisiert sein können. Die Typinformationen basieren auf den von der W3C XML-Schemasprache bereitgestellten Typen. Wenn keine Typisierungsinformationen verfügbar sind, behandelt XQuery die Daten so, als wären sie nicht typisiert. XPath, Version 1.0, verarbeitet XML auf ähnliche Weise.  
   
- Zum Abfragen einer XML-Instanz, die in einer Variable oder Spalte gespeicherten **Xml** , verwenden Sie die [Xml-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md). Sie können z. B. eine Variable deklarieren **Xml** geben und es mithilfe von Abfragen die **query()** Methode der **Xml** -Datentyp.  
+ Zum Abfragen einer XML-Instanz, die in einer Variable oder Spalte gespeicherten **Xml** Typ, den Sie verwenden die [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md). Sie können z. B. eine Variable deklarieren **Xml** geben und verwendet die **query()** -Methode der der **Xml** -Datentyp.  
   
 ```  
 DECLARE @x xml  
@@ -50,7 +50,7 @@ SET @x = '<ROOT><a>111</a></ROOT>'
 SELECT @x.query('/ROOT/a')  
 ```  
   
- Im folgenden Beispiel wird die Abfrage angegeben, für die Instructions-Spalte der **Xml** Typ in der ProductModel-Tabelle der AdventureWorks-Datenbank.  
+ Im folgenden Beispiel wird die Abfrage für die Instructions-Spalte des angegeben **Xml** Typ in der ProductModel-Tabelle der AdventureWorks-Datenbank.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -62,14 +62,14 @@ WHERE ProductModelID=7
   
  Die XQuery umfasst die Namespacedeklaration `declare namespace``AWMI=...`, und der Abfrageausdruck `/AWMI:root/AWMI:Location[@LocationID=10]`.  
   
- Beachten Sie, dass die XQuery, für die Instructions-Spalte der angegeben wird **Xml** Typ. Die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md) der XML-Typ zum Angeben der XQuery verwendet wird.  
+ Beachten Sie, dass die XQuery-Abfrage, für die Instructions-Spalte der angegeben ist **Xml** Typ. Die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md) der Xml-Typ zum Angeben der XQuery verwendet wird.  
   
  Die folgende Tabelle enthält die verwandten Themen, die das Verständnis der Implementierung von XQuery in [!INCLUDE[ssDE](../includes/ssde-md.md)] vertiefen sollen.  
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Erläutert die Unterstützung für die **Xml**-Datentyp in der [!INCLUDE[ssDE](../includes/ssde-md.md)] und die Methoden, die Sie für diesen Datentyp verwenden können. Die **Xml** -Datentyp bildet das XQuery-Eingabedaten zu modellieren, auf die die XQuery-Ausdrücke ausgeführt werden.|  
-|[XML-Schemaauflistungen &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Beschreibt, wie die in einer Datenbank gespeicherten XML-Instanzen typisiert werden können. Dies bedeutet, Sie können eine XML-schemaauflistung mit Zuordnen der **Xml** Typspalte. Alle in der Spalte gespeicherten Instanzen werden in der Auflistung anhand des Schemas überprüft und typisiert und stellen die Typinformationen für XQuery bereit.|  
+|[XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Erläutert die Unterstützung für die **Xml**-Datentyp in der [!INCLUDE[ssDE](../includes/ssde-md.md)] und die Methoden, die Sie für diesen Datentyp verwenden können. Die **Xml** -Datentyp bildet die XQuery-Eingabedaten zu modellieren, auf dem die XQuery-Ausdrücke ausgeführt werden.|  
+|[XML-Schemaauflistungen &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Beschreibt, wie die in einer Datenbank gespeicherten XML-Instanzen typisiert werden können. Dies bedeutet, Sie können eine XML-schemaauflistung Zuordnen der **Xml** Type-Spalte. Alle in der Spalte gespeicherten Instanzen werden in der Auflistung anhand des Schemas überprüft und typisiert und stellen die Typinformationen für XQuery bereit.|  
 |||  
   
 > [!NOTE]  

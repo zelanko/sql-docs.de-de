@@ -1,5 +1,5 @@
 ---
-title: Threadpooleigenschaften | Microsoft Docs
+title: Threadpooleigenschaften | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239250"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050601"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -279,7 +279,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
  [Prozessorgruppen](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
  [Analysis Services-Threadpooländerungen in SQLServer 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Unterstützende Systeme, die mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Unterstützungssysteme mit mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

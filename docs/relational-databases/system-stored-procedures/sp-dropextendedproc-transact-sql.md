@@ -1,5 +1,5 @@
 ---
-title: Sp_dropextendedproc (Transact-SQL) | Microsoft Docs
+title: Sp_dropextendedproc (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049388"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +54,17 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  Ausführen von **Sp_dropextendedproc** löscht den Namen der benutzerdefinierten erweiterten gespeicherten Prozedur aus der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) Katalogsicht und entfernt den Eintrag aus der [extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalogsicht angezeigt. Diese gespeicherte Prozedur kann nur in ausgeführt werden die **master** Datenbank.  
   
-**Sp_dropextendedproc** erweiterte gespeicherte Systemprozeduren nicht gelöscht. Stattdessen sollte der Systemadministrator EXECUTE-Berechtigung für die erweiterte gespeicherte Prozedur zum Verweigern der **öffentlichen** Rolle.  
+**Sp_dropextendedproc** erweiterte gespeicherte Systemprozeduren nicht gelöscht. Stattdessen sollte der Systemadministrator EXECUTE-Berechtigung für die erweiterte gespeicherte Prozedur zum Verweigern der **öffentliche** Rolle.  
   
  **Sp_dropextendedproc** kann nicht innerhalb einer Transaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_dropextendedproc**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die erweiterte gespeicherte Prozedur `xp_hello` gelöscht.  

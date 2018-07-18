@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_events (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. database_event_session_events (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9287bfe2f99e4bebc7a57b9ac527c04ada95bf9b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065478"
 ---
-# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (Azure SQL-Datenbank)
+# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys. database_event_session_events (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt für jedes Ereignis in einer Ereignissitzung eine Zeile zurück.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |event_id|**int**|Die ID des Ereignisses. Diese ID ist innerhalb eines Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
+|NAME|**sysname**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
 |Paket|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |Modul|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |predicate|**nvarchar(3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird. Lässt NULL-Werte zu.|  

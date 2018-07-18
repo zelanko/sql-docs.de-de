@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_geteventinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33234506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051308"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ fn_trace_geteventinfo ( trace_id )
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**EventID**|**int**|ID des Ereignisses, dessen Ablauf verfolgt wird.|  
-|**columnid**|**int**|Die ID-Nummern aller Spalten, die für jedes Ereignis gesammelt wurden.|  
+|**Ereignis-ID**|**int**|ID des Ereignisses, dessen Ablauf verfolgt wird.|  
+|**Spalten-ID**|**int**|Die ID-Nummern aller Spalten, die für jedes Ereignis gesammelt wurden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die ID einer bestimmten Ablaufverfolgung übergeben **Fn_trace_geteventinfo** gibt Informationen zu dieser Ablaufverfolgung zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück.  

@@ -1,5 +1,5 @@
 ---
-title: Sichten des Datensammlers (Transact-SQL) | Microsoft Docs
+title: Sichten des Datensammlers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e93651a43d703ff9d7452f776bec533735ecec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33176543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003234"
 ---
 # <a name="data-collector-views-transact-sql"></a>Sichten des Datensammlers (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Der Datensammler bietet die folgenden Sichten, in denen Informationen zur Konfiguration des Datensammlers, beispielsweise Eigenschaften des Sammlertyps, Sammlungssätze und Elemente in Sammlungssätzen, sowie Ausführungsstatistiken, die bei der Ausführung eines Sammlungssatzes abgerufen werden, angezeigt werden können. Diese Ansichten in werden der **Msdb** Datenbank, die auch eine Abstraktionsebene für die zugrunde liegenden Tabellen. Diese Abstraktion erhöht die Sicherheit durch direkten Zugriff auf die Tabellen während der Übergabe von Änderungen an den Tabellen ohne Auswirkungen auf alle zugehörigen Anwendungen zu verhindern.  
+  Der Datensammler bietet die folgenden Sichten, in denen Informationen zur Konfiguration des Datensammlers, beispielsweise Eigenschaften des Sammlertyps, Sammlungssätze und Elemente in Sammlungssätzen, sowie Ausführungsstatistiken, die bei der Ausführung eines Sammlungssatzes abgerufen werden, angezeigt werden können. Diese Ansichten, mit denen in der **Msdb** Datenbank befinden, stellen auch eine Abstraktionsebene für die zugrunde liegenden Tabellen. Diese Abstraktion erhöht die Sicherheit durch direkten Zugriff auf die Tabellen, zugleich Änderungen an den Tabellen ohne Auswirkungen auf die zugeordneten Anwendungen zu verhindern.  
   
 |||  
 |-|-|  

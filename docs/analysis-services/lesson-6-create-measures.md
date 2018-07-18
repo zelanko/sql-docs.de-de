@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 7: Erstellen von Measures | Microsoft Docs'
+title: 'Lektion 7: Erstellen von Measures | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,31 +10,31 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 146d93bc2c7257ce409f3a293f6c9050acde9ca7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994962"
 ---
 # <a name="lesson-6-create-measures"></a>Lektion 6: Erstellen von Measures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure eine Berechnung, die mithilfe einer DAX-Formel erstellt. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters*ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde. Ein Wert für jede Zelle im Filter wird dann vom übernommenen Measure berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle für dynamische Berechnungen für numerische Daten einschließen möchten. Weitere Informationen finden Sie unter [Measures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
+In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure eine Berechnung, die mithilfe einer DAX-Formel erstellt. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters*ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde. Ein Wert für jede Zelle im Filter wird dann vom übernommenen Measure berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast allen tabellenmodellen für dynamische Berechnungen von numerischen Daten einschließen möchten. Weitere Informationen finden Sie unter [Measures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
 Um Measures zu erstellen, verwenden Sie die *Measureraster*. Standardmäßig hat jede Tabelle ein leeres Measureraster. Sie erstellen jedoch in der Regel keine Measures für jede Tabelle. Das Measureraster wird in der Datensicht unter einer Tabelle im Modell-Designer angezeigt. Um das Measureraster für eine Tabelle auszublenden oder anzuzeigen, klicken Sie auf das Menü **Tabelle** und anschließend auf **Measureraster anzeigen**.  
   
-Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im Measureraster klicken und dann eine DAX-Formel in die Bearbeitungsleiste eingeben. Nach dem Abschließen der Formelerstellung mit der EINGABETASTE wird das Measure in der Zelle angezeigt. Sie können auch Measures mit einer Standardaggregationsfunktion erstellen, indem Sie auf eine Spalte und anschließend auf die Schaltfläche AutoSumme (**∑**) in der Symbolleiste klicken. Measures, die mithilfe der AutoSumme-Funktion erstellt erscheint im measureraster direkt unterhalb der Spalte, aber Sie können verschoben werden.  
+Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im Measureraster klicken und dann eine DAX-Formel in die Bearbeitungsleiste eingeben. Nach dem Abschließen der Formelerstellung mit der EINGABETASTE wird das Measure in der Zelle angezeigt. Sie können auch Measures mit einer Standardaggregationsfunktion erstellen, indem Sie auf eine Spalte und anschließend auf die Schaltfläche AutoSumme (**∑**) in der Symbolleiste klicken. Measures, die mithilfe der Funktion AutoSumme erstellt wurden, erscheinen im measureraster direkt unterhalb der Spalte, aber verschoben werden können.  
   
 In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel in der Bearbeitungsleiste als auch mithilfe der AutoSumme-Funktion.  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).  
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
   
-#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>So erstellen Sie ein Measure DaysCurrentQuarterToDate in der DimDate-Tabelle  
+#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>Erstellen Sie ein DaysCurrentQuarterToDate-Measure in der DimDate-Tabelle  
   
 1.  Klicken Sie im Modell-Designer auf die **DimDate** Tabelle.  
   
@@ -46,16 +46,16 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     DaysCurrentQuarterToDate:=COUNTROWS( DATESQTD( 'DimDate'[Date])) 
     ```
   
-    Beachten Sie, dass die linke obere Zelle jetzt einen Measurenamen enthält **DaysCurrentQuarterToDate**, gefolgt von dem Ergebnis **92**.
+    Beachten Sie, dass die linke obere Zelle jetzt einen Measurenamen enthält, **DaysCurrentQuarterToDate**, gefolgt von dem Ergebnis **92**.
     
       ![als-tabellarische-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
-    Im Gegensatz zu berechneten Spalten können Sie mit measureformeln der Measurename gefolgt von einem Komma, gefolgt von der Formel Ausdruck eingeben.
+    Im Gegensatz zu berechneten Spalten können Sie mit measureformeln den Measurenamen gefolgt von einem Komma, gefolgt vom Formelausdruck eingeben.
 
   
-#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>So erstellen Sie ein Measure DaysInCurrentQuarter in der DimDate-Tabelle  
+#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>Erstellen Sie ein DaysInCurrentQuarter-Measure in der DimDate-Tabelle  
   
-1.  Mit der **DimDate** Tabelle im Modell-Designer im measureraster immer noch aktiv, klicken Sie auf die leere Zelle unterhalb des Measures, die Sie gerade erstellt haben.  
+1.  Mit der **DimDate** -Tabelle noch im Modell-Designer, im measureraster aktiv ist, klicken Sie auf die leere Zelle unterhalb des Measures, die Sie gerade erstellt haben.  
   
 2.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
   
@@ -63,11 +63,11 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     DaysInCurrentQuarter:=COUNTROWS( DATESBETWEEN( 'DimDate'[Date], STARTOFQUARTER( LASTDATE('DimDate'[Date])), ENDOFQUARTER('DimDate'[Date])))
     ```
   
-    Bei der Erstellung eines Vergleichsverhältnisses zwischen einem unvollständigen Zeitraum und dem vorherigen Zeitraum muss in der Formel der Anteil des verstrichenen Zeitraums berücksichtigt und mit dem gleichen Anteil des vorherigen Zeitraums verglichen werden. In diesem Fall [DaysCurrentQuarterToDate] / [DaysInCurrentQuarter] Gibt den Anteil des aktuellen Zeitraums vergangen.  
+    Bei der Erstellung eines Vergleichsverhältnisses zwischen einem unvollständigen Zeitraum und dem vorherigen Zeitraum muss in der Formel der Anteil des verstrichenen Zeitraums berücksichtigt und mit dem gleichen Anteil des vorherigen Zeitraums verglichen werden. In diesem Fall [gibt DaysCurrentQuarterToDate] / [DaysInCurrentQuarter] Gibt den Anteil des aktuellen Zeitraums vergangen.  
   
-#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>So erstellen Sie eine Measure InternetDistinctCountSalesOrder in die FactInternetSales-Tabelle  
+#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>Erstellen Sie eine InternetDistinctCountSalesOrder-Measure in der Tabelle "factinternetsales"  
   
-1.  Klicken Sie auf die **FactInternetSales** Tabelle.   
+1.  Klicken Sie auf die **"factinternetsales"** Tabelle.   
   
 2.  Klicken Sie auf die **SalesOrderNumber** Spaltenüberschrift.  
   
@@ -80,22 +80,22 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
 4.  Klicken Sie im measureraster auf das neue Measure, und klicken Sie dann in der **Eigenschaften** Fenster im **Measurename**, benennen Sie das Measure in **InternetDistinctCountSalesOrder**. 
  
   
-#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>So erstellen Sie zusätzliche Measures in der FactInternetSales-Tabelle  
+#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>Erstellen Sie zusätzliche Measures in der Tabelle "factinternetsales"  
   
 1.  Erstellen Sie unter Verwendung der AutoSumme-Funktion die folgenden Measures, und benennen Sie diese um:  
   
-    |Measurename|Column|AutoSumme (∑)|Formel|  
+    |Measurename|Spalte|AutoSumme (∑)|Formel|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
     |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
     |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
     |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |"Internettotalsales" an|SalesAmount|SUM|=SUM([SalesAmount])|  
     |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
     |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
     |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
   
-2.  Erstellen Sie durch Klicken auf eine leere Zelle im measureraster, und mithilfe der Bearbeitungsleiste und benennen Sie die folgenden Measures in der Reihenfolge:  
+2.  Erstellen Sie durch Klicken auf eine leere Zelle im measureraster, und mithilfe der Bearbeitungsleiste, und nennen Sie die folgenden Measures in der Reihenfolge aus:  
   
       ```
       InternetPreviousQuarterMargin:=CALCULATE([InternetTotalMargin],PREVIOUSQUARTER('DimDate'[Date]))

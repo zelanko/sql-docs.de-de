@@ -1,5 +1,5 @@
 ---
-title: '&lt;quelldatenabfrage&gt; | Microsoft Docs'
+title: '&lt;quelldatenabfrage&gt; | Microsoft-Dokumentation'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842983"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063960"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;quelldatenabfrage&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Um eine Datamining-Modell zu trainieren und Vorhersagen aus einem Miningmodell erstellen, müssen Sie Daten zugreifen, die außerhalb der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank. Verwenden Sie die \<quelldatenabfrage >-Klausel in Data Mining Extensions (DMX) diese externen Daten definieren. Die [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), und [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) verwenden Sie die Anweisungen, die alle  **\<quelldatenabfrage >**.  
+  Um Datamining-Modelle trainieren und Vorhersagen aus einem Miningmodell erstellen, Sie haben Zugriff auf Daten, die außerhalb der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank. Sie verwenden die \<quelldatenabfrage >-Klausel in Data Mining Extensions (DMX), die diese externen Daten definieren. Die [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), und [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) verwenden Sie die Anweisungen, die alle  **\<quelldatenabfrage >**.  
   
 ## <a name="query-types"></a>Abfragetypen  
  Die drei häufigsten Arten zum Angeben von Quelldaten sind:  
@@ -27,17 +27,17 @@ ms.locfileid: "34842983"
  [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
- Während **OPENQUERY** Funktionsweise her vergleichbar, **OPENROWSET**, **OPENQUERY** hat die folgenden Vorteile:  
+ Während **OPENQUERY** ähnelt der Funktion, um **OPENROWSET**, **OPENQUERY** hat die folgenden Vorteile:  
   
--   Eine DMX-Abfrage ist viel einfacher zu schreiben, **OPENQUERY**. Statt jedes Mal, wenn Sie eine Abfrage schreiben, eine neue Verbindungszeichenfolge zu erstellen, können Sie die vorhandene Verbindungszeichenfolge in der Datenquelle nutzen. Das Datenquellenobjekt kann außerdem den Datenzugriff für einzelne Benutzer steuern.  
+-   Eine DMX-Abfrage ist sehr viel einfacher schreiben **OPENQUERY**. Statt jedes Mal, wenn Sie eine Abfrage schreiben, eine neue Verbindungszeichenfolge zu erstellen, können Sie die vorhandene Verbindungszeichenfolge in der Datenquelle nutzen. Das Datenquellenobjekt kann außerdem den Datenzugriff für einzelne Benutzer steuern.  
   
 -   Der Administrator kann besser steuern, wie auf die Daten auf dem Server zugegriffen wird. Beispielsweise kann der Administrator festlegen, welche Anbieter in den Server geladen werden und auf welche externen Daten zugegriffen werden kann.  
   
  [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
- [FORM " &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
- Diese Anweisung fragt mehrere Datenquellen ab, um eine geschachtelte Tabelle zu erstellen. Mithilfe von **Form**, können Sie Daten aus mehreren Quellen in einer einzigen hierarchischen Tabelle kombinieren. Auf diese Weise können Sie die Möglichkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nutzen, Tabellen zu schachteln, indem eine Tabelle in eine andere Tabelle eingebettet wird.  
+ [FORM &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ Diese Anweisung fragt mehrere Datenquellen ab, um eine geschachtelte Tabelle zu erstellen. Mithilfe von **Form**, können Sie Daten aus mehreren Quellen in einer hierarchischen Tabelle kombinieren. Auf diese Weise können Sie die Möglichkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nutzen, Tabellen zu schachteln, indem eine Tabelle in eine andere Tabelle eingebettet wird.  
   
  Zur Angabe der Quelldaten haben Sie folgende Möglichkeiten:  
   

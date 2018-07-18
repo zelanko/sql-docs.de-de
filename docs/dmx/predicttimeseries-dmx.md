@@ -1,5 +1,5 @@
 ---
-title: PredictTimeSeries (DMX) | Microsoft Docs
+title: PredictTimeSeries (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040438"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,20 +38,20 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *\<Tabelle der Spaltenverweis >*,  *\<Referenc skalare Spalte >*  
+ *\<Tabellenreferenz für die Spalte >*,  *\<skalare Spalte auf >*  
  Gibt den Namen der vorherzusagenden Spalte an. Die Spalte kann entweder Skalar- oder Tabellendaten enthalten.  
   
  *n*  
- Gibt die Anzahl der nächsten vorherzusagenden Schritte an. Wenn kein Wert für angegeben ist *n*, der Standard ist 1.  
+ Gibt die Anzahl der nächsten vorherzusagenden Schritte an. Wenn ein Wert nicht angegeben wird, für die *n*, der Standardwert ist 1.  
   
  *n* darf nicht 0 sein. Die Funktion gibt einen Fehler zurück, wenn Sie nicht wenigstens eine Vorhersage machen.  
   
- *n-Start, n-end*  
+ *für die ersten n, n-Ende*  
  Gibt einen Bereich von Zeitreihenschritten an.  
   
- *n-Start* muss eine ganze Zahl sein und darf nicht 0 sein.  
+ *für die ersten n* muss eine ganze Zahl sein und darf nicht 0 sein.  
   
- *n-End-* muss eine ganze Zahl größer als *n Boot-*.  
+ *n-Ende-* muss eine ganze Zahl größer sein als *für die ersten n*.  
   
  *\<Quellabfrage >*  
  Definiert die externen Daten, die für Vorhersagen verwendet werden.  
@@ -71,7 +71,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="remarks"></a>Hinweise  
  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus unterstützt keine Vergangenheitsvorhersage, wenn Sie die PREDICTION JOIN-Anweisung zum Hinzufügen neuer Daten verwenden.  
   
- In einer PREDICTION JOIN-Anweisung beginnt die Vorhersage stets mit dem Zeitschritt unmittelbar nach dem Ende der ursprünglichen Trainingsreihe. Dies gilt auch dann, wenn Sie neue Daten hinzufügen. Aus diesem Grund die *n* Parameter und *n Boot-* Parameterwerte müssen eine ganze Zahl größer als 0 sein.  
+ In einer PREDICTION JOIN-Anweisung beginnt die Vorhersage stets mit dem Zeitschritt unmittelbar nach dem Ende der ursprünglichen Trainingsreihe. Dies gilt auch dann, wenn Sie neue Daten hinzufügen. Aus diesem Grund die *n* Parameter und *für die ersten n* Parameterwerte müssen eine ganze Zahl größer als 0 sein.  
   
 > [!NOTE]  
 >  Die Länge der neuen Daten beeinflusst den Ausgangspunkt für die Vorhersage nicht. Wenn Sie daher neue Daten hinzufügen und außerdem neue Vorhersagen vornehmen möchten, stellen Sie sicher, dass Sie entweder den Ausgangspunkt für die Vorhersage auf einen Wert größer als die Länge der neuen Daten festlegen oder den Endpunkt der Vorhersage um die Länge der neuen Daten erweitern.  
@@ -85,13 +85,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Im dritten Beispiel wird gezeigt, wie Sie mit dem EXTEND_MODEL_CASES-Parameter ein Miningmodell mit neuen Daten aktualisieren.  
   
- Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter der Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [Time Series Vorhersage DMX Lernprogramm](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter dem Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [Time Series Prediction DMX Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Ihr Modell liefert ggf. andere Ergebnisse. Die Ergebnisse der nachfolgenden Beispiele dienen lediglich zum Veranschaulichen des Ergebnisformats.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Beispiel 1: Vorhersagen einer Anzahl von Zeitscheiben  
- Im folgenden Beispiel wird die **PredictTimeSeries** Funktion zum Zurückgeben einer Vorhersage für die nächsten drei Zeitschritte und schränkt die Ergebnisse auf die Reihe m200 in den Regionen Europa und Pazifik. In diesem speziellen Modell ist das vorhersagbare Attribut Menge daher verwendet. Sie müssen `[Quantity]` als erstes Argument an die PredictTimeSeries-Funktion.  
+ Im folgenden Beispiel wird die **PredictTimeSeries** -Funktion zum Zurückgeben einer Vorhersage für die nächsten drei Zeitschritte und Ergebnisse werden auf die Reihe m200 in den Regionen Europa und Pazifik beschränkt. In diesem speziellen Modell wird ist das vorhersagbare Attribut-Menge, daher müssen Sie verwenden `[Quantity]` als erstes Argument an die PredictTimeSeries-Funktion.  
   
 ```  
 SELECT FLATTENED  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Beispiel 2: Hinzufügen von neuen Daten und Verwenden von REPLACE_MODEL_CASES  
  Angenommen Sie stellen fest, dass die Daten für eine bestimmte Region falsch waren. Sie möchten aber die Muster im Modell verwenden und die Vorhersagen entsprechend den neuen Daten anpassen. Oder Sie stellen fest, dass eine andere Region zuverlässigere Trends liefert, und möchten das zuverlässigste Modell auf Daten aus einer anderen Region anwenden.  
   
- In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Mining-Lernprogramm für fortgeschrittene Data&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Data Mining Tutorial für fortgeschrittene&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  Die folgende PREDICTION JOIN-Abfrage veranschaulicht die Syntax zum Ersetzen von Daten und Treffen neuer Vorhersagen. Im Beispiel wird für die Ersetzungsdaten der Wert der Spalten Amount und Quantity abgerufen und jeweils mit zwei multipliziert:  
   
@@ -154,7 +154,7 @@ ON
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
 |M200 Pacific|9/25/2008 12:00:00 AM|42|  
   
- Aktualisierte Vorhersagen:  
+ Aktualisierte Vorhersagen ausgibt:  
   
 ||||  
 |-|-|-|  
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Es werden neue Vorhersagen für die verbleibenden drei Zeitscheiben auf Grundlage des neu erweiterten Modells zurückgegeben.  
   
- Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben. Ein Beispiel hierzu finden Sie unter [Lektion 5: erweitern das Zeitreihenmodell](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben. Ein Beispiel dazu, finden Sie unter [Lektion 5: erweitern das Zeitreihenmodell](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Beachten Sie außerdem, dass für die Region Pazifik keine neuen Daten angegeben wurden. Deshalb gibt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] neue Vorhersagen für alle fünf Zeitscheiben zurück.  
   
@@ -219,9 +219,9 @@ WHERE ([Model Region] = 'M200 Europe'
 |11/25/2008 0:00|38|  
   
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Beispiel 4: Zurückgeben der Statistik in einer Zeitreihenvorhersage  
- Die **PredictTimeSeries** Funktion unterstützt keine *INCLUDE_STATISTICS* als Parameter. Mit der folgenden Abfrage kann jedoch die Vorhersagestatistik für eine Zeitreihenabfrage zurückgegeben werden. Diese Methode kann auch mit Modellen verwendet werden, in denen geschachtelte Tabellenspalten enthalten sind.  
+ Die **PredictTimeSeries** -Funktion nicht unterstützt *INCLUDE_STATISTICS* als Parameter. Mit der folgenden Abfrage kann jedoch die Vorhersagestatistik für eine Zeitreihenabfrage zurückgegeben werden. Diese Methode kann auch mit Modellen verwendet werden, in denen geschachtelte Tabellenspalten enthalten sind.  
   
- In diesem speziellen Modell ist das vorhersagbare Attribut Menge daher verwendet. Sie müssen `[Quantity]` als erstes Argument an die PredictTimeSeries-Funktion. Wenn Ihr Modell ein anderes vorhersagbares Attribut verwendet, können Sie den Spaltennamen durch einen anderen ersetzen.  
+ In diesem speziellen Modell wird ist das vorhersagbare Attribut-Menge, daher müssen Sie verwenden `[Quantity]` als erstes Argument an die PredictTimeSeries-Funktion. Wenn Ihr Modell ein anderes vorhersagbares Attribut verwendet, können Sie den Spaltennamen durch einen anderen ersetzen.  
   
 ```  
 SELECT FLATTENED [Model Region],  
@@ -253,7 +253,7 @@ OR [Model Region] = 'M200 North America'
 >  In diesem Beispiel wurde das FLATTENED-Schlüsselwort verwendet, um die Ergebnisse in der Tabelle übersichtlicher darzustellen. Wenn Ihr Anbieter jedoch hierarchische Rowsets unterstützt, können Sie das FLATTENED-Schlüsselwort auslassen. Bei Auslassung des FLATTENED-Schlüsselworts gibt die Abfrage zwei Spalten zurück. Die erste Spalte enthält den Wert, der die `[Model Region]`-Datenreihen angibt, und die zweite Spalte enthält die geschachtelte Tabelle mit der Statistik.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Time Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Vorhersagen &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
