@@ -45,21 +45,21 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@sent_before=** ] **'***sent_before***'**  
- Löscht E-mails bis zu dem Datum und Uhrzeit, das im *sent_before* Argument angegeben wurde. *sent_before* ist vom Datentyp **"DateTime"** und hat den Standardwert NULL. NULL steht für alle Daten.  
+ Löscht E-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before*-Argument angegeben werden. Das Argument *sent_before* ist vom Datentyp **datetime** und hat den Standardwert NULL. NULL steht für alle Daten.
   
  [ **@sent_status=** ] **'***sent_status***'**  
- Löscht E-mails mit dem im *sent_status* angegebenen Typ. *sent_status* ist vom Datentyp **varchar(8)** hat keinen Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
+ Löscht E-Mails mit dem in *sent_status* angegebenen Typ. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status. 
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Datenbank-Mail-Nachrichten und deren Anlagen werden in der **msdb** Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** sehr groß wird. Zur Einhaltung eventueller Aufbewahrungspflichten verwenden Sie ein für Sie in Frage kommendes Dokumentenmanagement. Mithilfe der gespeicherten Prozedur **sysmail_delete_mailitems_sp** Prozedurkönnen Sie e-Mail-Nachrichten dauerhaft aus den Datenbank-Mail-Tabellen löschen. Über eines optionales Argumentskönnen Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Ein weiteres optionales Argument **sent_status** dient zum Löschen von E-mails eines bestimmten Typs. Sie müssen zwingend mind. ein Argument angeben, also entweder  **@sent_before** oder **@sent_status**. Verwenden Sie zum Löschen aller Nachrichten  **@sent_before = getdate()**.  
+ Datenbank-E-Mail-Nachrichten und deren Anlagen werden in der **msdb** Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** sehr groß wird. Zur Einhaltung eventueller Aufbewahrungspflichten verwenden Sie ein für Sie in Frage kommendes Dokumentenmanagement. Mithilfe der gespeicherten Prozedur **sysmail_delete_mailitems_sp** können Sie E-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail-Tabellen löschen. Über ein optionales Argument können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Ein weiteres optionales **sent_status**-Argument dient zum Löschen von E-Mails eines bestimmten Typs. Sie müssen zwingend mindestens ein Argument angeben, also entweder **@sent_before** oder **@sent_status**. Verwenden Sie zum Löschen aller Nachrichten **@sent_before = getdate()**.   
   
- Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Das Löschen der e-Mails löscht allerdings keine entsprechenden Einträge in **sysmail_event_log**. Um Elemente aus dem Protokoll zu löschen, verwenden Sie die gespeicherte Prozedur [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) .  
+ Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Das Löschen der E-Mails löscht allerdings keine entsprechenden Einträge in **sysmail_event_log**. Um Elemente aus dem Protokoll zu löschen, verwenden Sie die gespeicherte Prozedur [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md). 
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig besitzen nur Mitglieder der **sysadmin** -Serverrolle und der **DatabaseMailUserRole** die Berechtigungen zur Ausführung der Prozedur. Mitglieder der **Sssadmin** -Serverrolle können über diese Prozedur sämtliche E-mails löschen, unabhängig vom Benutzer, der die E-Mail gesendet hat. Mitglieder der **DatabaseMailUserRole** können nur die von ihrem eigenen Benutzer gesendeten E-mails löschen.  
+ Standardmäßig besitzen nur Mitglieder der **sysadmin** -Serverrolle und der **DatabaseMailUserRole** die Berechtigungen zur Ausführung der Prozedur. Mitglieder der **Sssadmin** -Serverrolle können über diese Prozedur sämtliche E-Mails löschen, unabhängig vom Benutzer, der die E-Mail gesendet hat. Mitglieder der **DatabaseMailUserRole** können nur die von ihrem eigenen Benutzer gesendeten E-Mails löschen. 
   
 ## <a name="examples"></a>Beispiele  
   
