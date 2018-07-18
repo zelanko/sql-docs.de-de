@@ -1,5 +1,5 @@
 ---
-title: Handhabung von Namespaces in XQuery | Microsoft Docs
+title: Handhabung von Namespaces in XQuery | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077917"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031388"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Handhabung von Namespaces in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ WHERE ProductModelID=7
 …  
 ```  
   
- Beachten Sie, dass die **Namespace** Schlüsselwort wird verwendet, um ein neues Namespacepräfix zu definieren "AWMI:". Dieses Präfix muss dann in der Abfrage für alle Elemente verwendet werden, die in diesem Namespace liegen.  
+ Beachten Sie, dass die **Namespace** -Schlüsselwort wird verwendet, um ein neues Namespacepräfix zu definieren "AWMI:". Dieses Präfix muss dann in der Abfrage für alle Elemente verwendet werden, die in diesem Namespace liegen.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Deklarieren eines Standardnamespaces  
  In der vorherigen Abfrage wurde ein neues Namespacepräfix definiert. Dieses Präfix musste dann in der Abfrage verwendet werden, um die gesuchten XML-Strukturen auszuwählen. Alternativ können Sie einen Namespace als Standardnamespace deklarieren, was die folgende geänderte Abfrage zeigt:  
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Konstruktion mit Standardnamespaces  
- Für die Verwendung im konstruierten XML können Sie auch einen Standardnamespace definieren. Z. B. die folgende Abfrage zeigt, wie Sie einen Standardnamespace "SomeNamespace" angeben können\\, um als Standard für lokal benannte Elemente, die z. B. erstellt werden, verwenden die `<Result>` Element.  
+ Für die Verwendung im konstruierten XML können Sie auch einen Standardnamespace definieren. Z. B. die folgende Abfrage zeigt, wie Sie einen Standardnamespace – "SomeNamespace" angeben können\\, um als Standard für lokal benannte Elemente, die, wie z. B. erstellt werden, verwenden die `<Result>` Element.  
   
 ```  
 SELECT CatalogDescription.query('  

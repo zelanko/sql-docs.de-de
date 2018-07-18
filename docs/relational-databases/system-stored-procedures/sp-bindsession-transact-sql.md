@@ -1,5 +1,5 @@
 ---
-title: Sp_bindsession (Transact-SQL) | Microsoft Docs
+title: Sp_bindsession (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 7e1654987b889848fdc81f7be273aca10cd1d231
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036228"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Bindet oder hebt die Bindung einer Sitzungs mit anderen Sitzungen in derselben Instanz von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Bei Sitzungsbindungen können zwei oder mehr Sitzungen an derselben Transaktion teilnehmen und freigegebene Sperren verwenden, bis eine ROLLBACK TRANSACTION- oder COMMIT TRANSACTION-Anweisung ausgegeben wird.  
+  Bindet eine Sitzung oder hebt die Bindung einer Sitzungs mit anderen Sitzungen in der gleichen Instanz von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Bei Sitzungsbindungen können zwei oder mehr Sitzungen an derselben Transaktion teilnehmen und freigegebene Sperren verwenden, bis eine ROLLBACK TRANSACTION- oder COMMIT TRANSACTION-Anweisung ausgegeben wird.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Multiple Active Results Sets (MARS) oder verteilte Transaktionen. Weitere Informationen finden Sie unter [mithilfe von Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen Multiple Active Results Sets (MARS) oder verteilte Transaktionen. Weitere Informationen finden Sie unter [mithilfe von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Argumente  
  **"** *Bind_token* **"**  
- Wird das Token, das die Transaktion identifiziert ursprünglich über erzielt **Sp_getbindtoken** oder der Open Data Services **Srv_getbindtoken** Funktion. *Bind_token*ist **varchar(255)**.  
+ Wird das Token, die Transaktion identifiziert, ursprünglich mit abgerufen **Sp_getbindtoken** oder der Open Data Services **Srv_getbindtoken** Funktion. *Bind_token*ist **varchar(255)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -56,13 +56,13 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="remarks"></a>Hinweise  
  Zwei gebundene Sitzungen verwenden nur eine Transaktion und Sperren gemeinsam. Jede Sitzung behält ihre eigene Isolationsstufe. Das Festlegen einer neuen Isolationsstufe für eine Sitzung hat keine Auswirkungen auf die Isolationsstufe der anderen Sitzung. Jede Sitzung wird weiterhin über ihr Sicherheitskonto identifiziert und kann nur auf die Datenbankressourcen zugreifen, für die dem Konto Berechtigungen erteilt wurden.  
   
- **Sp_bindsession** ein Bindungstoken verwendet, um zwei oder mehr vorhandene Clientsitzungen zu binden. Diese Clientsitzungen müssen zu derselben Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] gehören, von der der Bindungstoken erhalten wurde. Eine Sitzung ist ein Client, der einen Befehl ausführt. Gebundene Datenbanksitzungen verwenden einen Transaktions- und Sperrbereich gemeinsam.  
+ **Sp_bindsession** mithilfe eines Bindungstokens um zwei oder mehr vorhandene Clientsitzungen zu binden. Diese Clientsitzungen müssen zu derselben Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] gehören, von der der Bindungstoken erhalten wurde. Eine Sitzung ist ein Client, der einen Befehl ausführt. Gebundene Datenbanksitzungen verwenden einen Transaktions- und Sperrbereich gemeinsam.  
   
- Ein von einer Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgegebenes Bindungstoken kann nicht für eine Clientsitzung mit einer anderen Instanz verwendet werden, auch nicht bei DTC-Transaktionen. Ein Bindungstoken ist nur lokal innerhalb einer Instanz gültig und kann nicht auf mehreren Instanzen freigegeben werden. Um Clientsitzungen auf einer anderen Instanz binden der [!INCLUDE[ssDE](../../includes/ssde-md.md)], Sie müssen ein anderes Bindungstoken abrufen, indem Sie die Ausführung **Sp_getbindtoken**.  
+ Ein von einer Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgegebenes Bindungstoken kann nicht für eine Clientsitzung mit einer anderen Instanz verwendet werden, auch nicht bei DTC-Transaktionen. Ein Bindungstoken ist nur lokal innerhalb einer Instanz gültig und kann nicht auf mehreren Instanzen freigegeben werden. Um Clientsitzungen auf einer anderen Instanz binden die [!INCLUDE[ssDE](../../includes/ssde-md.md)], Sie müssen ein anderes Bindungstoken abrufen, indem Sie Ausführung **Sp_getbindtoken**.  
   
- **Sp_bindsession** schlägt mit einem Fehler fehl, wenn er ein Token verwendet, die nicht aktiv ist.  
+ **Sp_bindsession** fehl mit Fehler, wenn es sich um ein Token verwendet, die nicht aktiv ist.  
   
- Heben Sie die Bindung aus einer Sitzung, die entweder mit **Sp_bindsession** ohne *Bind_token* oder übergeben Sie NULL in *Bind_token*.  
+ Aufheben der Bindung einer Sitzung, die entweder mit **Sp_bindsession** ohne *Bind_token* oder durch Übergabe von NULL-Wert in *Bind_token*.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -71,7 +71,7 @@ sp_bindsession { 'bind_token' | NULL }
  Im folgenden Beispiel wird das angegebene Bindungstoken an die aktuelle Sitzung gebunden.  
   
 > [!NOTE]  
->  Das Bindungstoken im Beispiel durch Ausführen abgerufen wurde **Sp_getbindtoken** vor der Ausführung **Sp_bindsession**.  
+>  Durch Ausführen des Bindungstokens, das im Beispiel gezeigte abgerufen wurde **Sp_getbindtoken** vor der Ausführung **Sp_bindsession**.  
   
 ```  
 USE master;  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_getbindtoken & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [Srv_getbindtoken &#40;gespeicherte API für erweiterte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

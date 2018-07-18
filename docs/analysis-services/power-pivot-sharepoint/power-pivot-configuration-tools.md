@@ -1,5 +1,5 @@
 ---
-title: Power Pivot-Konfigurationstools | Microsoft Docs
+title: Power Pivot-Konfigurationstools | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0a8bbdabd1fe02033de6dd9f718a4b0b02f8d25d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027057"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984472"
 ---
 # <a name="power-pivot-configuration-tools"></a>PowerPivot-Konfigurationstools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34027057"
 |Name|Unterstützte SharePoint-Versionen|Konfigurationsdetails|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfiguration von Power Pivot für SharePoint 2013|SharePoint 2013|[Konfigurieren oder Reparieren von Power Pivot für SharePoint 2013 &#40;Power Pivot-Konfigurationstool&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfigurationstool|SharePoint 2010 mit SharePoint 2010|[Konfigurieren oder Reparieren von Power Pivot für SharePoint 2010 (Power Pivot-Konfigurationstool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfigurationstool|SharePoint 2010 mit SharePoint 2010|[Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> Unterschiede zwischen den beiden Konfigurationstools  
  Die beiden Versionen des Konfigurationstools sind ähnlich, unterscheiden sich jedoch hinsichtlich der ausgeführten Konfigurationsschritte. Die Unterschiede resultieren aus den Änderungen zwischen SharePoint 2010 und SharePoint 2013 sowie den Architekturunterschieden zwischen der SQL Server 2012 SP1-Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und den Vorgängerversionen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint.  
@@ -66,7 +66,7 @@ ms.locfileid: "34027057"
 |Die Hauptseite verfügt über eine neue Option für **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server für Excel Services**. Die Option unterstützt die neue Architektur, in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] außerhalb der SharePoint-Farm ausgeführt wird. Sie konfigurieren Excel Services für die Verwendung eines oder mehrerer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, die im SharePoint-Modus ausgeführt werden.<br /><br /> ![PowerPivot-Server im neuen Konfigurationstool](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "PowerPivot-Server im neuen Konfigurationstool")||  
 ||Das Tool für die Version 2010 enthält die Seite **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) auf dem lokalen Server registrieren**, auf der eine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] konfiguriert werden kann. Diese Seite ist im Tool für die Version 2013 nicht enthalten, da keine lokale Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]vorhanden ist.<br /><br /> ![ALS Dienstkonto im alten Konfigurationstool](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "als Dienstkonto im alten Konfigurationstool")|  
 ||Die Seite **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Dienstanwendung erstellen** verfügt über die zusätzliche Option **Arbeitsmappen aktualisieren, um die Datenaktualisierung zuzulassen**. Diese Option steht im Tool für die Version 2013 nicht zur Verfügung.<br /><br /> ![Aktualisieren von Arbeitsmappen im alten Konfigurationstool](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "Aktualisieren von Arbeitsmappen im alten Konfigurationstool")|  
-|Das Tool für die Version 2013 verfügt über die neue Seite **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server konfigurieren**. Diese Seite unterstützt die neue Architektur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die außerhalb der SharePoint-Farm ausgeführt wird. Der Servername, der auf der Hauptseite im Textfeld **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server für Excel Services** eingegeben wurde, wird standardmäßig auch unter **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server konfigurieren** aufgeführt.<br /><br /> ![Registrieren von neuen Konfigurationstool für PowerPivot-Servern](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "registrieren PowerPivot-Servern neuen Konfigurationstool")||  
+|Das Tool für die Version 2013 verfügt über die neue Seite **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server konfigurieren**. Diese Seite unterstützt die neue Architektur von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die außerhalb der SharePoint-Farm ausgeführt wird. Der Servername, der auf der Hauptseite im Textfeld **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server für Excel Services** eingegeben wurde, wird standardmäßig auch unter **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Server konfigurieren** aufgeführt.<br /><br /> ![Registrieren von neuen Konfigurationstool für PowerPivot-Servern](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "registrieren PowerPivot-Server neue-Konfigurationstool")||  
 |Das Tool für die Version 2013 verfügt über die neue Seite **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Add-In als Tracker für die Verwendung von Excel Services registrieren**. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Verwendungsdaten werden von SharePoint 2010 Excel Services nicht nachverfolgt.||  
 ||Das Tool für die Version 2010 enthält die Seite **MSOLAP.5 als vertrauenswürdigen Anbieter hinzufügen** , um MSOLAP zu registrieren, damit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modelle von Excel Services in SharePoint 2010 geladen werden können. Diese Seite ist im Tool für die Version 2013 nicht enthalten. SharePoint 2013 Excel Services verwendet nicht den MSOLAP-Anbieter, um Modelle zu laden.|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34027057"
 >  Das Tool konfiguriert nicht Reporting Services. Wenn Sie der SharePoint-Umgebung Reporting Services hinzufügen, müssen Sie Reporting Services separat installieren und konfigurieren. Weitere Informationen finden Sie unter den folgenden Links:  
 >   
 >  -   [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)  
-> -   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c).  
+> -   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
 ##  <a name="bmkm_start_tool"></a> Starten eines der Power Pivot-Konfigurationstools  
   

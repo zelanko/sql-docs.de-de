@@ -1,5 +1,5 @@
 ---
-title: Discover-Methode (XMLA) | Microsoft Docs
+title: Discover-Methode (XMLA) | Microsoft-Dokumentation
 ms.date: 05/30/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 921afc6d17a0eddcba48e5a6a6064810a3b3b6ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979102"
 ---
-# <a name="xml-elements---methods---discover"></a>XML-Elemente - Methoden - Ermittlung
+# <a name="xml-elements---methods---discover"></a>XML-Elemente – Methoden – Discover
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Ruft die Informationen, z. B. die Liste der verfügbaren Datenbanken oder Details zu einem bestimmten Objekt von einer Instanz von Analysis Services ab. Die mit der **Discover** -Methode abgerufenen Daten hängen von den Werten der an sie übergebenen Parameter ab.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34575012"
  Die **Discover** -Methode fordert Metadaten über Instanzen und Objekten. Metadaten werden zurückgegeben, mit dem XMLA [Rowset](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) -Datentyp.  
  
 > [!TIP] 
-> Wenn Sie mit XML-Befehle nicht vertraut sind, klicken Sie auf die XMLA-Abfrage-Vorlage die **Abfrage** Symbolleiste in Management Studio, erstellen Sie die Abfrage, und fügen Sie Parameter hinzu. Weitere Informationen finden Sie unter [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md). 
+> Wenn Sie mit XML-Befehle nicht vertraut sind, klicken Sie auf der XMLA-Abfrage-Vorlage die **Abfrage** Symbolleiste in Management Studio, erstellen Sie die Abfrage aus, und fügen Sie Parameter hinzu. Weitere Informationen finden Sie unter [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md). 
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel sendet der Client die **Discover** Aufruf zum Anfordern einer Liste von Cubes von der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Analysis Services-Beispieldatenbank:  

@@ -1,5 +1,5 @@
 ---
-title: Datenspalten der Benachrichtigungsereignisse | Microsoft Docs
+title: Datenspalten der Benachrichtigungsereignisse | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017763"
 ---
 # <a name="notification-events-data-columns"></a>Datenspalten der Benachrichtigungsereignisse
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34045714"
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Benachrichtigungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |IntegerData|10|1|Enthält die mit dem Benachrichtigungsereignis verbundenen ganzzahligen Daten. Wenn die EventSubclass-Spalte 8 ist, sind die Werte:<br /><br /> 1 = Erstellt<br /><br /> 2 = Gelöscht<br /><br /> 3 = Geänderte Objekteigenschaften<br /><br /> 4 = Geänderte Eigenschaften der untergeordneten Elemente des Objekts<br /><br /> 6 = Untergeordnetes Element hinzugefügt<br /><br /> 7 = Untergeordnetes Element gelöscht<br /><br /> 8 = Objekt erfolgreich verarbeitet<br /><br /> 9 = Objekt teilweise verarbeitet<br /><br /> 10 = Objekt nicht verarbeitet<br /><br /> 11 = Objekt vollständig optimiert<br /><br /> 12 = Objekt teilweise optimiert<br /><br /> 13 = Objekt nicht optimiert|  
 |ObjectID|11|8|Enthält die Objekt-ID, für die diese Benachrichtigung ausgegeben wird; dies ist ein Zeichenfolgenwert.|  
 |ObjectType|12|1|Enthält den mit dem Benachrichtigungsereignis verbundenen Objekttyp.|  
@@ -75,6 +75,6 @@ ms.locfileid: "34045714"
 |ServerName|43|8|Enthält den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, in der das Benachrichtigungsereignis aufgetreten ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Benachrichtigungsereignisse (Ereigniskategorie)](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

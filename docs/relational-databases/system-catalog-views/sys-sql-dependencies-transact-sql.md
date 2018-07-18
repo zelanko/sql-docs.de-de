@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_dependencies (Transact-SQL) | Microsoft Docs
+title: sql_dependencies (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b458e22f8b0b803dcd359b870af6f14b85a95f48
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221381"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981391"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33221381"
 |**object_id**|**int**|ID des verweisenden Objekts.|  
 |**column_id**|**int**|Falls die verweisende ID eine Spalte angibt, ist dies die ID der verweisenden Spalte. Andernfalls ist der Wert 0.|  
 |**referenced_major_id**|**int**|ID der Entität, auf die verwiesen wird. Die ID wird nach dem Wert der Klasse interpretiert, wobei Folgendes gilt:<br /><br /> 0, 1 = Objekt-ID des Objekts oder der Spalte.<br /><br /> 2 = Typ-ID.<br /><br /> 3 = XML-Schemaauflistungs-ID.|  
-|**referenced_minor_id**|**int**|Sekundäre ID der Entität, auf die verwiesen wird. Die ID wird nach dem Wert der Klasse interpretiert, wobei Folgendes gilt:<br /><br /> Wenn class =:<br /><br /> 0 (null) **Referenced_minor_id** ist eine Spalten-ID, oder wenn nicht um eine Spalte, ist der Wert 0.<br /><br /> 1, **Referenced_minor_id** ist eine Spalten-ID, oder wenn nicht um eine Spalte, ist der Wert 0.<br /><br /> Andernfalls **Referenced_minor_id** = 0.|  
+|**referenced_minor_id**|**int**|Sekundäre ID der Entität, auf die verwiesen wird. Die ID wird nach dem Wert der Klasse interpretiert, wobei Folgendes gilt:<br /><br /> Wenn class =:<br /><br /> 0 (null) **Referenced_minor_id** ist eine Spalten-ID, oder wenn sich nicht um eine Spalte, 0.<br /><br /> 1, **Referenced_minor_id** ist eine Spalten-ID, oder wenn sich nicht um eine Spalte, 0.<br /><br /> Andernfalls **Referenced_minor_id** = 0.|  
 |**is_selected**|**bit**|Objekt oder Spalte ist ausgewählt.|  
 |**"is_updated"**|**bit**|Objekt oder Spalte ist aktualisiert.|  
 |**is_select_all**|**bit**|Objekt wird in SELECT *-Klausel verwendet (nur auf Objektebene).|  

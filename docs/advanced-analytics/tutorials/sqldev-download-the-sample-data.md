@@ -1,6 +1,6 @@
 ---
-title: Lektion 1-Download-Beispieldaten und Skripts für eingebettete R (SQL Server-Machine Learning) | Microsoft Docs
-description: Lernprogramm zur Einbettung von R in SQL Server gespeicherte Prozeduren und Funktionen des T-SQL
+title: Lektion 1-Download-Beispieldaten und Skripts für eingebettete R (SQL Server-Machine Learning) | Microsoft-Dokumentation
+description: Veranschaulicht, wie Sie R in SQL Server Einbetten von gespeicherten Prozeduren und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,20 +9,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249833"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030378"
 ---
 # <a name="lesson-1-download-data-and-scripts"></a>Lektion 1: Herunterladen von Daten und Skripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
+Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
-In diesem Schritt fügen Sie das Beispieldataset herunterladen und die [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdateien, die in diesem Lernprogramm verwendet werden. Die Daten und die Skriptdateien auf GitHub freigegeben werden, aber das PowerShell-Skript Daten-und Skripts auf Ihrer Wahl ein lokales Verzeichnis herunter.
+In diesem Schritt müssen Sie das Beispieldataset herunterladen und die [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdateien, die in diesem Tutorial verwendet werden. Die Daten und die Skriptdateien werden auf GitHub freigegeben, aber das PowerShell-Skript Herunterladen der Dateien Daten und Skriptdateien in ein lokales Verzeichnis Ihrer Wahl.
 
-## <a name="download-tutorial-files-from-github"></a>Herunterladen der Lernprogrammdateien von Github
+## <a name="download-tutorial-files-from-github"></a>Lernprogrammdateien von Github herunterladen
 
 1.  Öffnen Sie eine Windows PowerShell-Befehlskonsole.
   
@@ -62,8 +62,8 @@ In diesem Schritt fügen Sie das Beispieldataset herunterladen und die [!INCLUDE
   
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Lektion 2: Importieren von Daten in SQL Server mit PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lektion 2: Importieren von Daten in SQL Server mithilfe von PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Eingebetteten R-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Eingebettete R-Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)

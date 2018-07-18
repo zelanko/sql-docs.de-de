@@ -1,5 +1,5 @@
 ---
-title: --(Kommentar) (DMX)-Übersicht | Microsoft Docs
+title: --(Kommentar) (DMX)-Zusammenfassung | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031448"
 ---
 # <a name="---comment-dmx-summary"></a>--(Kommentar) (DMX)-Zusammenfassung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34841183"
  Weitere Informationen zur Verwendung von unterschiedlichen Arten von Kommentaren in DMX finden Sie unter [Kommentare &#40;DMX&#41;](../dmx/comments-dmx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schrägstrich Stern &#40;Kommentar&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [Schrägstrich-Stern &#40;Kommentar&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [Doppelten Schrägstrich &#40;Kommentar&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)  

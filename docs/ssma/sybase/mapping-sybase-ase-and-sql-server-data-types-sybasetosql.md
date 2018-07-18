@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Sybase ASE und SQL Server-Datentypen (SybaseToSQL) | Microsoft Docs
+title: Zuordnen von Sybase ASE und SQL Server-Datentypen (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,40 +19,40 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779139"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985322"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Zuordnen von Sybase ASE und SQL Server-Datentypen (SybaseToSQL)
-Datenbanktypen Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung ASE Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, müssen Sie angeben, Zuordnen von Datentypen aus ASE zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
+Datenbank-Datentypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung der ASE-Datenbankobjekten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, müssen Sie angeben, wie Sie Datentypen aus der App Service-Umgebung zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
-SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen finden Sie [Projekteinstellungen &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Projekteinstellungen &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Vererbung des Typmappings  
-Sie können Zuordnungen auf Projektebene, Objekt Category-Ebene (z. B. alle gespeicherten Prozeduren) oder Objektebene anpassen. Einstellungen werden von der höheren Ebene geerbt, es sei denn, die auf einer niedrigeren Ebene überschreiben. Angenommen, Sie ordnen **Smallmoney** auf **Money** der Ebene der Projekte werden alle Objekte im Projekt verwenden, diese Zuordnung, es sei denn, Sie die Zuordnung auf der Objektebene-Kategorie oder Objektebene anpassen.  
+## <a name="type-mapping-inheritance"></a>Typ zuordnen von Vererbung  
+Sie können die replikationsdatentyp-Zuordnungen auf Projektebene, Objekt Category-Ebene (z. B. alle gespeicherten Prozeduren) oder Objektebene anpassen. Einstellungen werden von der höheren Ebene vererbt werden, es sei denn, die auf einer niedrigeren Ebene überschreiben. Wenn Sie zuordnen, z. B. **Smallmoney** zu **Geld** der Ebene der Projekte werden alle Objekte im Projekt verwenden, diese Zuordnung verwendet werden, es sei denn, die Sie anpassen, dass die Zuordnung auf der Objektebene-Kategorie oder Objektebene.  
   
-Beim Anzeigen der **Type Mapping** Registerkarte im Hintergrund SSMA ist farbcodiert, um anzuzeigen, welche Typmappings geerbt werden. Der Hintergrund einer Zuordnung ist gelb alle geerbten Typzuordnung und weiß für eine beliebige Zuordnung auf der aktuellen Ebene angegeben.  
+Beim Anzeigen der **Type Mapping** Registerkarte im Hintergrund SSMA sind farbcodiert, um anzuzeigen, welche typzuordnungen geerbt werden. Der Hintergrund einer Zuordnung ist Gelb für alle geerbten Typ zuordnen und weiß, für die Zuordnung angegeben, die auf der aktuellen Ebene.  
   
 ## <a name="customizing-data-type-mappings"></a>Anpassen von Datentypzuordnungen  
-Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Projekt, Datenbank oder Objektebene.  
+Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Objektebene zugeordnet wird.  
   
 **Zuordnen von Datentypen**  
   
-1.  Datentypzuordnung für das gesamte Projekt anpassen möchten, öffnen Sie die **Projekteinstellungen** (Dialogfeld):  
+1.  Öffnen Sie zum Zuordnen von Datentypen für das gesamte Projekt anpassen, die **Projekteinstellungen** Dialogfeld:  
   
-    1.  Auf der **Tools** klicken Sie im Menü **Projekteinstellungen**.  
+    1.  Auf der **Tools** , wählen Sie im Menü **Projekteinstellungen**.  
   
     2.  Wählen Sie im linken Bereich **Type Mapping**.  
   
-        Der Typ Zuordnung Diagramm und Schaltflächen werden im rechten Bereich angezeigt.  
+        Das Diagramm für Typ-Zuordnung und die Schaltflächen werden im rechten Bereich angezeigt.  
   
-    Oder zum Anpassen von Datentyp Zuordnung an die Datenbank, Tabelle, Sicht oder gespeicherte Prozedur auf, wählen Sie Datenbank, des Objektkategorie oder des Objekts in Sybase-Metadaten-Explorer:  
+    Oder zum Anpassen der Datentyp Mapping finden Sie auf die Datenbank, Tabelle, Sicht oder gespeicherte Prozedur auf, wählen Sie die Datenbank, Objektkategorie oder Objekt in Sybase-Metadaten-Explorer:  
   
-    1.  Wählen Sie in der Sybase-Metadaten-Explorer den Ordner oder das Objekt, das Sie anpassen möchten.  
+    1.  Wählen Sie in der Sybase-Metadaten-Explorer den Ordner oder ein Objekt, das Sie anpassen möchten.  
   
     2.  Klicken Sie im rechten Bereich auf die **Type Mapping** Registerkarte.  
   
@@ -60,15 +60,15 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
     1.  Klicken Sie auf **Hinzufügen**.  
   
-    2.  Klicken Sie unter **Datenquellentyp**, wählen Sie die ASE-Datentyp zugeordnet.  
+    2.  Klicken Sie unter **Quelltyp**, wählen Sie die ASE-Datentyp zugeordnet.  
   
-    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** , und geben Sie die maximale Datenlänge für die Zuordnung in der **zu** Feld.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** , und geben Sie die maximale Datenlänge für die Zuordnung im der **zu** Feld.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzt** Feld.  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld.  
   
     5.  Klicken Sie auf **OK**.  
   
@@ -76,26 +76,26 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
     1.  Klicken Sie auf **Bearbeiten**.  
   
-    2.  Klicken Sie unter **Datenquellentyp**, wählen Sie die ASE-Datentyp zugeordnet.  
+    2.  Klicken Sie unter **Quelltyp**, wählen Sie die ASE-Datentyp zugeordnet.  
   
-    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** , und geben Sie die maximale Datenlänge für die Zuordnung in der **zu** Feld.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** , und geben Sie die maximale Datenlänge für die Zuordnung im der **zu** Feld.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzt** Feld, und klicken Sie dann auf **OK**.  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** ein, und klicken Sie dann auf **OK**.  
   
 4.  Um eine benutzerdefinierte datentypzuordnung zu entfernen, führen Sie folgende Schritte aus:  
   
-    1.  Wählen Sie die Zeile, in der Liste ' datentypzuordnung ', die die datentypzuordnung enthält, die Sie entfernen möchten.  
+    1.  Wählen Sie die Zeile, in der Liste ' datentypzuordnung ', die die Zuordnung von Datentypen enthält, die Sie entfernen möchten.  
   
     2.  Klicken Sie auf **Entfernen**.  
   
-        Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen auf einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
+        Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen in einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt des Migrationsvorgangs besteht entweder [Erstellen eines Berichts Assessment](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) oder [konvertieren Sybase ASE-Datenbankobjekte, die SQL Server- oder SQL Azure-Syntax](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). Wenn Sie einen Assessment-Bericht erstellen, sind Sybase ASE Objekte automatisch während der Bewertung konvertiert.  
+Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) oder [Konvertieren von Sybase ASE-Datenbankobjekten in SQL Server oder SQL Azure-Syntax](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Wenn Sie ein Bewertungsbericht erstellen, werden die Sybase ASE-Objekte während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

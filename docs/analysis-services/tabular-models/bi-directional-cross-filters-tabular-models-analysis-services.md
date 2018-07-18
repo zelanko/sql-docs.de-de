@@ -1,5 +1,5 @@
 ---
-title: Bidirektionale kreuzfilter in tabellarischen Modellen | Microsoft Docs
+title: Bidirektionale kreuzfilter in tabellarischen Modellen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033308"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Bidirektionale kreuzfilter in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "34044874"
   
  ![SSAS-Bidi-6-Prodcount-Withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "Ssas-Bidi-6-Prodcount-Withfilter")  
   
-## <a name="learn-step-by-step"></a>Schrittweises lernen  
+## <a name="learn-step-by-step"></a>Erfahren Sie Schritt für Schritt  
  Sie können bidirektionale Kreuzfilter durch schrittweises Durchlaufen dieser exemplarischen Vorgehensweise ausprobieren. Um folgen zu können, benötigen Sie Folgendes:  
   
 -   SQL Server 2016 Analysis Services-Instanz im tabellarischen Modus mit aktueller CTP-Version  
@@ -103,7 +103,7 @@ ms.locfileid: "34044874"
   
 3.  Legen Sie im Tabellenmodell-Designer die Arbeitsbereichs-Datenbank auf eine SQL Server 2016 Preview Analysis Services-Instanz im tabellarischen Servermodus fest.  
   
-4.  Überprüfen Sie die Modell-Kompatibilitätsgrad auf festgelegt ist **SQL Server 2016 RTM (1200)** oder höher.  
+4.  Überprüfen Sie, ob Kompatibilitätsgrad nastaven NA hodnotu **SQL Server 2016 RTM (1200)** oder höher.  
   
      Klicken Sie auf **OK** , um das Projekt zu erstellen.  
   
@@ -198,8 +198,8 @@ ms.locfileid: "34044874"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Beziehungen in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Ein praktisches Beispiel zur Behandlung einfacher m-Pivot-Beziehungen in Power Pivot und tabellarischen Modellen](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Auflösen von m: n-Beziehungen, die mithilfe der DAX-kreuztabellenfilterung](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Ein praktisches Beispiel Behandlung einfache m-zur Beziehungen in Power Pivot und tabellarischen Modellen](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Auflösen von m: n Beziehungen mithilfe der DAX-kreuztabellenfilterung](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [M: n-Revolution (SQLBI-Blog)](http://www.sqlbi.com/articles/many2many/)  
   
   

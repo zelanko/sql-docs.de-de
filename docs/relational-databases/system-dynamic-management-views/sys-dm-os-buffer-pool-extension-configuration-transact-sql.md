@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ecc569a1f112bba0ec49c46da77c1dbc29fcddab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020018"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>Siehe auch  
  [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [Sys. dm_os_buffer_descriptors & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

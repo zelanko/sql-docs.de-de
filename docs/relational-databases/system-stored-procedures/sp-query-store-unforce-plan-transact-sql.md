@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs
+title: Sp_query_store_unforce_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036158"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>Sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Aktiviert einen bestimmten Plan für eine bestimmte Abfrage unforcing.  
+  Ermöglicht einen bestimmten Plan für eine bestimmte Abfrage unforcing.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,11 +48,11 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@query_id =** ] *"query_id"*  
- Ist die Id der Abfrage. *"query_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@query_id =** ] *Query_id*  
+ Ist die Id der Abfrage. *Query_id* ist eine **Bigint**, hat keinen Standardwert.  
   
- [  **@plan_id =** ] *"Plan_id"*  
- Ist die Id des Abfrageplans, die nicht mehr erzwungen werden. *"Plan_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@plan_id =** ] *' plan_id '*  
+ Ist die Id des Abfrageplans, die nicht mehr erzwungen werden soll. *Plan_id* ist eine **Bigint**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -60,7 +60,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **einfügen**, **UPDATE**, und **löschen** -Berechtigung für das Query Store-Katalog Ansichten.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **einfügen**, **UPDATE**, und **löschen** -Berechtigung für den Abfrage-Store-Katalog Ansichten.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
@@ -74,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie identifiziert die "query_id" und "Plan_id", die Sie die Erzwingung wieder aufheben möchten, verwenden Sie das folgende Beispiel, um die Erzwingung des Plans.  
+ Nachdem Sie identifiziert die Query_id und ' plan_id ', die Sie die Erzwingung möchten, verwenden Sie das folgende Beispiel, das Erzwingen des.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

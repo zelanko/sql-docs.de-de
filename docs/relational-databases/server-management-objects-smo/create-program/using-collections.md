@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Auflistungen | Microsoft Docs
+title: Verwenden von Auflistungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85f06095f120086bd4f11e3fd5959b8fe17198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970797"
 ---
 # <a name="using-collections"></a>Verwenden von Auflistungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Eine Auflistung ist eine Liste von Objekten, die aus der gleichen Objektklasse gebildet wurden und über dasselbe übergeordnete Objekt verfügen. Das Auflistungsobjekt enthält immer den Namen des Objekttyps mit dem Suffix „Collection“. Um beispielsweise auf die Spalten einer gegebenen Tabelle zuzugreifen, verwenden Sie den <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>-Objekttyp. Er enthält alle <xref:Microsoft.SqlServer.Management.Smo.Column>-Objekte, die zum gleichen <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt gehören.  
   
- Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **für... Jede** Anweisung oder der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **Foreach** Anweisung kann verwendet werden, um jedes Element der Auflistung zu durchlaufen.  
+ Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **für... Jede** Anweisung oder der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **Foreach** Anweisung kann verwendet werden, um die einzelnen Elemente der Auflistung durchlaufen.  
   
 ## <a name="examples"></a>Beispiele  
 Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Verweisen auf ein Objekt mithilfe einer Auflistung in Visual Basic  
- In diesem Codebeispiel wird veranschaulicht, wie eine Spalteneigenschaft festlegen, indem die <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, und <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> Eigenschaften. Diese Eigenschaften repräsentieren Auflistungen, mit denen ein bestimmtes Objekt identifiziert werden kann, wenn sie mit einem Parameter verwendet werden, der den Namen des Objekts angibt. Der Name und das Schema sind erforderlich, damit die <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> auflistungsobjekteigenschaft.  
+ In diesem Codebeispiel wird veranschaulicht, wie eine Spalteneigenschaft mithilfe Festlegen der <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, und <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> Eigenschaften. Diese Eigenschaften repräsentieren Auflistungen, mit denen ein bestimmtes Objekt identifiziert werden kann, wenn sie mit einem Parameter verwendet werden, der den Namen des Objekts angibt. Der Name und das Schema sind erforderlich, damit die <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> auflistungsobjekteigenschaft.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -51,7 +51,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Verweisen auf ein Objekt mithilfe einer Auflistung in Visual C#  
- In diesem Codebeispiel wird veranschaulicht, wie eine Spalteneigenschaft festlegen, indem die <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, und <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> Eigenschaften. Diese Eigenschaften repräsentieren Auflistungen, mit denen ein bestimmtes Objekt identifiziert werden kann, wenn sie mit einem Parameter verwendet werden, der den Namen des Objekts angibt. Der Name und das Schema sind erforderlich, damit die <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> auflistungsobjekteigenschaft.  
+ In diesem Codebeispiel wird veranschaulicht, wie eine Spalteneigenschaft mithilfe Festlegen der <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, und <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> Eigenschaften. Diese Eigenschaften repräsentieren Auflistungen, mit denen ein bestimmtes Objekt identifiziert werden kann, wenn sie mit einem Parameter verwendet werden, der den Namen des Objekts angibt. Der Name und das Schema sind erforderlich, damit die <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> auflistungsobjekteigenschaft.  
   
 ```csharp  
 {   
@@ -66,7 +66,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Durchlaufen der Elemente einer Auflistung in Visual Basic  
- Dieses Codebeispiel durchläuft die <xref:Microsoft.AnalysisServices.Server.Databases%2A> Auflistungseigenschaft und zeigt alle mit der Instanz von Datenbankverbindungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Dieses Codebeispiel durchläuft die <xref:Microsoft.AnalysisServices.Server.Databases%2A> Sammlungseigenschaft und zeigt alle mit der Instanz von Datenbankverbindungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -87,7 +87,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Durchlaufen der Elemente einer Auflistung in Visual C#  
- Dieses Codebeispiel durchläuft die <xref:Microsoft.AnalysisServices.Server.Databases%2A> Auflistungseigenschaft und zeigt alle mit der Instanz von Datenbankverbindungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Dieses Codebeispiel durchläuft die <xref:Microsoft.AnalysisServices.Server.Databases%2A> Sammlungseigenschaft und zeigt alle mit der Instanz von Datenbankverbindungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

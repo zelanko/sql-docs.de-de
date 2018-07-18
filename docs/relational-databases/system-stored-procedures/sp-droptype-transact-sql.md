@@ -1,5 +1,5 @@
 ---
-title: Sp_droptype (Transact-SQL) | Microsoft Docs
+title: Sp_droptype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970312"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_droptype [ @typename = ] 'type'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Typ** alias-Datentyp kann nicht gelöscht werden, wenn Tabellen oder andere Datenbankobjekte verweisen.  
+ Die **Typ** alias-Datentyp kann nicht gelöscht werden, wenn Tabellen oder andere Datenbankobjekte, die darauf verweisen.  
   
 > [!NOTE]  
 >  Ein Aliasdatentyp kann nicht gelöscht werden, wenn er in einer Tabellendefinition verwendet wird oder wenn eine Regel oder ein Standard an ihn gebunden ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Db_owner** festen Datenbankrolle oder der **Db_ddladmin** festen Datenbankrolle "".  
+ Erfordert die Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder der **Db_ddladmin** festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Aliasdatentyp `birthday` gelöscht.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sp_addtype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

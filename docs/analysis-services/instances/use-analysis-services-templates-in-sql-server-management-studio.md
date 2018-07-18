@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio | Microsoft Docs
+title: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebed4cb2e230e3d3367131a8caca63544cf78b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019197"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981183"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019197"
   
  Wählen Sie zum Öffnen des **Vorlagen-Explorers**im Menü **Ansicht** die entsprechende Option. Klicken Sie auf das Cubesymbol, um eine Liste der Vorlagen anzuzeigen, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbar sind.  
   
- ![Vorlagen-Explorer für Analysis Services gefiltert](../../analysis-services/instances/media/ssas-templateexplorer.gif "Vorlagen-Explorer für Analysis Services gefiltert")  
+ ![Vorlagen-Explorer für Analysis Services gefiltert](../../analysis-services/instances/media/ssas-templateexplorer.gif "Vorlagen-Explorer, die für Analysis Services gefiltert")  
   
  Klicken Sie zum Öffnen einer Vorlage mit der rechten Maustaste auf den Vorlagennamen, und wählen Sie **Öffnen**aus, oder ziehen Sie die Vorlage in ein bereits geöffnetes Abfragefenster. Nachdem das Abfragefenster geöffnet wurde, können Sie die Befehle der Symbolleiste oder im Menü Abfrage verwenden, um Anweisungen zu erstellen:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34019197"
  In diesem Beispiel wird verdeutlicht, wie Sie in SQL Server Management Studio eine MDX-Abfrage erstellen, indem Sie eine tabellarische Modelldatenbank als Datenquelle verwenden. Um dieses Beispiel auf Ihrem Computer zu wiederholen, können Sie das [Adventureworks-Beispielprojekt mit einem tabellarischen Modell herunterladen](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Es ist nicht möglich, MDX-Abfragen für tabellarische Modelle zu verwenden, die im DirectQuery-Modus bereitgestellt werden. Sie können jedoch äquivalente Abfragen senden, indem Sie die DAX-Tabellenabfragen in Verbindung mit dem EVALUATE-Befehl verwenden. Weitere Informationen finden Sie unter [DAX-Abfrageparameter](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Es ist nicht möglich, MDX-Abfragen für tabellarische Modelle zu verwenden, die im DirectQuery-Modus bereitgestellt werden. Sie können jedoch äquivalente Abfragen senden, indem Sie die DAX-Tabellenabfragen in Verbindung mit dem EVALUATE-Befehl verwenden. Weitere Informationen finden Sie unter [DAX-Abfrageparameter](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Erstellen einer MDX-Abfrage aus einer Vorlage  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34019197"
   
 3.  Ziehen Sie mithilfe von **Metadaten-Explorer**die folgenden Felder und Measures in die Abfragevorlage:  
   
-    1.  Ersetzen Sie \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]**.  
+    1.  Ersetzen Sie dies \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]**.  
   
-    2.  Ersetzen Sie \<Column_axis, Mdx_set > mit **[Date]. [ Calendar Year]. [Kalenderjahr]** .  
+    2.  Ersetzen Sie dies \<Column_axis, Mdx_set > mit **[Date]. [ Calendar Year]. [Kalenderjahr]** .  
   
-    3.  Ersetzen Sie \<From_clause, Mdx_name > mit **[Internet Sales]**.  
+    3.  Ersetzen Sie dies \<From_clause, Mdx_name > mit **[Internet Sales]**.  
   
-    4.  Ersetzen Sie \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]**.  
+    4.  Ersetzen Sie dies \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]**.  
   
 4.  Sie können die Abfrage unverändert ausführen, aber in den meisten Fällen sind ggf. einige Änderungen erforderlich, z. B. das Hinzufügen einer Funktion zum Zurückgeben bestimmter Elemente. Geben Sie z.B. **.members** nach **[Product Category].[Product Category Name]** ein. Weitere Informationen finden Sie unter [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Öffnen Sie den **Vorlagen-Explorer**, und ziehen Sie die Vorlage **Discover Schema Rowsets**in das leere Abfragefenster.  
   
-3.  Ersetzen Sie in der Vorlage der [RequestType-Element &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) Element mit dem folgenden Text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  Ersetzen Sie in der Vorlage die [RequestType-Element &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) Element mit dem folgenden Text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Klicken Sie auf **Ausführen**.  
   
@@ -156,12 +156,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Kategorie|Elementvorlage|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Modellinhalt|Content Query|Veranschaulicht, wie der DMX SELECT FROM  *\<Modell >*. CONTENT-für-Schritt-Anweisung für das Schemarowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
-||Continuous Column Values|Veranschaulicht, wie der DMX SELECT DISTINCT FROM  *\<Modell >* -Anweisung mit der DMX **RangeMin** und **RangeMax** abzurufenden einen Satz von Funktionen Werten innerhalb eines angegebenen Bereichs aus kontinuierlichen Spalten in einem angegebenen Miningmodell.|  
-||Discrete Column Values|Veranschaulicht, wie der DMX SELECT DISTINCT FROM  *\<Modell >* Anweisung einen vollständigen Satz von Werten aus diskreten Spalten in einem angegebenen Miningmodell abrufen.|  
+|DMX\Modellinhalt|Content Query|Veranschaulicht, wie Sie mit der DMX SELECT FROM  *\<Modell >*. CONTENT-für-Schritt-Anweisung für den Schema Rowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
+||Continuous Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* -Anweisung mit der DMX **RangeMin** und **RangeMax** abzurufenden einen Satz von Funktionen die Werte innerhalb eines angegebenen Bereichs aus kontinuierlichen Spalten in einem angegebenen Miningmodell.|  
+||Discrete Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* Anweisung einen vollständigen Satz von Werten aus diskreten Spalten in einem angegebenen Miningmodell abrufen.|  
 ||Drillthrough Query|Zeigt, wie Sie mithilfe der DMX-Anweisung SELECT * FROM Modell.CASES in Verbindung mit der DMX-Funktion IsInNode eine Drillthroughabfrage ausführen können.|  
 ||Modellattribute|Zeigt, wie Sie mithilfe der DMX-Funktion System.GetModelAttributes eine Liste der von einem Modell verwendeten Attribute zurückgeben können.|  
-||PMML Content|Veranschaulicht, wie der DMX SELECT \* FROM  *\<Modell >*. PMML-Anweisung zum Abrufen von der Predictive Model Markup Language (PMML) Darstellung des Miningmodells für Algorithmen, die diese Funktionalität unterstützen.|  
+||PMML Content|Veranschaulicht, wie Sie mit der DMX SELECT \* FROM  *\<Modell >*. PMML-Anweisung, die die Darstellung der Predictive Model Markup Language (PMML) des Miningmodells, für die Algorithmen abzurufen, die diese Funktionalität zu unterstützen.|  
 |DMX\Modellverwaltung|Add Model|Zeigt, wie Sie mithilfe der DMX-Anweisung ALTER MINING MODEL STRUCTURE ein Miningmodell hinzufügen können.|  
 ||Clear Model|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE * FROM MINING MODEL den Inhalt eines angegebenen Miningmodells löschen können.|  
 ||Clear Structure Cases|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE FROM MINING STRUCTURE Miningmodell-Strukturfälle löschen können.|  
@@ -179,10 +179,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Train Model|Zeigt, wie Sie mithilfe der DMX-Anweisung INSERT INTO MINING MODEL ein Miningmodell innerhalb einer zuvor trainierten Struktur trainieren können.|  
 ||Train Nested Structure|Zeigt, wie Sie die DMX-Anweisung INSERT INTO MINING STRUCTURE mit der SHAPE-Quelldatenabfrage kombinieren können, um ein Miningmodell, das geschachtelte Spalten enthält, mit Daten zu trainieren, die geschachtelte Tabellen enthalten. Dabei werden die Tabellen mithilfe einer Abfrage aus einer vorhandenen Datenquelle abgerufen.|  
 ||Train Structure|Zeigt, wie Sie die DMX-Anweisung INSERT INTO MINING STRUCTURE mit der OPENQUERY-Quelldatenabfrage kombinieren können, um eine Miningstruktur zu trainieren.|  
-|DMX\Vorhersageabfragen|Base Prediction|Veranschaulicht, wie DMX SELECT FROM kombinieren  *\<Modell >* PREDICTION JOIN-Anweisung mit der OPENQUERY-quelldatenabfrage zum Ausführen einer Vorhersageabfrage für ein Miningmodell mit Rohdaten abgerufen, mithilfe einer Abfrage aus einem vorhandene Datenquelle.|  
-||Nested Prediction|Veranschaulicht, wie DMX SELECT FROM kombinieren  *\<Modell >* PREDICTION JOIN-Anweisung mit den Datenquellen Daten Quelldatenabfragen SHAPE und OPENQUERY zum Ausführen einer Vorhersageabfrage für ein Miningmodell mit enthaltenen Daten geschachtelt Tabellen, mithilfe einer Abfrage aus einer vorhandenen Datenquelle abgerufen.|  
-||Nested Singleton Prediction|Veranschaulicht, wie DMX SELECT FROM  *\<Modell >* NATURAL PREDICTION JOIN-Klausel, um eine Vorhersageabfrage für ein Miningmodell, das über einen einzelnen Wert, der in der Vorhersageabfrage in einer Spalte explizit angegebener auszuführen dessen Name mit eine Spalte im Miningmodell übereinstimmt, und enthält eine Gruppe von Werten in einer geschachtelten Tabelle erstellt, mit einer UNION-Anweisung, deren Namen ebenfalls mit geschachtelten Spalten im Miningmodell entsprechen.|  
-||Singleton Prediction|Veranschaulicht, wie DMX SELECT FROM \<Modell > NATURAL PREDICTION JOIN-Anweisung zum Ausführen einer Vorhersageabfrage für ein Miningmodell, das einen einzelnen Wert, der in in einer Spalte, deren Name eine Spalte in entspricht, der Vorhersageabfrage explizit angegebener Das Miningmodell.|  
+|DMX\Vorhersageabfragen|Base Prediction|Veranschaulicht, wie DMX SELECT FROM kombinieren  *\<Modell >* PREDICTION JOIN-Anweisung mit der OPENQUERY-quelldatenabfrage, führen Sie eine Vorhersageabfrage für ein Miningmodell werden abgerufen, mithilfe einer Abfrage aus einem vorhandene Datenquelle.|  
+||Nested Prediction|Veranschaulicht, wie DMX SELECT FROM kombinieren  *\<Modell >* PREDICTION JOIN-Anweisung mit den Quelle Daten Quelldatenabfragen SHAPE und OPENQUERY zum Ausführen einer Vorhersageabfrage für ein Miningmodell enthaltenen Daten geschachtelt Tabellen mit einer Abfrage aus einer vorhandenen Datenquelle abgerufen.|  
+||Nested Singleton Prediction|Veranschaulicht, wie DMX SELECT FROM  *\<Modell >* NATURAL PREDICTION JOIN-Klausel, um eine Vorhersageabfrage für ein Miningmodell, die über einen einzelnen Wert, der in der Vorhersageabfrage in einer Spalte explizit angegebenen auszuführen dessen Name mit eine Spalte im Miningmodell übereinstimmt, und enthält eine Gruppe von Werten in einer geschachtelten Tabelle erstellt, mit einer UNION-Anweisung, deren Namen ebenfalls mit geschachtelten Spalten im Miningmodell entsprechen.|  
+||Singleton Prediction|Veranschaulicht, wie DMX SELECT FROM \<Modell > NATURAL PREDICTION JOIN eine Vorhersageabfrage für ein Miningmodell, die über einen einzelnen Wert, der in der in einer Spalte, deren Name eine Spalte in entspricht, der Vorhersageabfrage explizit angegebener auszuführende Anweisung Das Miningmodell.|  
 ||Stored Procedure Call|Zeigt, wie Sie mithilfe der DMX-Anweisung CALL eine gespeicherte Prozedur aufrufen können.|  
 |MDX\Ausdrücke|Moving Average-Fixed|Zeigt, wie Sie mit MDX **ParallelPeriod** - und **CurrentMember** -Funktionen bei einer natürlich geordneten Menge ein berechnetes Measure erstellen, das den gleitenden Durchschnitt eines Measures über eine feste Anzahl von Zeiträumen bereitstellt, die in der Hierarchie einer Zeitdimension enthalten sind.|  
 ||Moving Average-Variable|Zeigt, wie Sie mithilfe der MDX **CASE** -Anweisung innerhalb der **Avg** -Funktion ein berechnetes Measure erstellen, das den gleitenden Durchschnitt eines Measures über eine variable Anzahl von Zeiträumen bereitstellt, die in der Hierarchie einer Zeitdimension enthalten sind.|  
@@ -197,26 +197,26 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Verwaltung|Sicherung|Zeigt, wie Sie mithilfe des Befehls XMLA **Sicherung** eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank in einer Datei sichern.|  
 ||Abbrechen|Zeigt, wie Sie mithilfe des XMLA **Cancel** -Befehls alle laufenden Operationen der aktuellen Sitzung (für alle Benutzer außer Administratoren oder Serveradministratoren), Datenbank (für Administratoren) oder Instanz (für Serveradministratoren) abbrechen.|  
 ||Create Remote Partition Database|Zeigt, wie Sie mithilfe des XMLA **Create** -Befehls in Verbindung mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language-Datenbankelement (ASSL) eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank und eine Datenquelle zum Speichern von Remotepartitionen erstellen.|  
-||Delete|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
+||DELETE|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
 ||Process Dimension|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl die Attribute einer Dimension durch eine parallele Stapeloperation aktualisieren.|  
 ||Process Partition|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl eine Partition durch eine parallele Stapeloperation vollständig verarbeiten.|  
 ||Wiederherstellung|Zeigt, wie Sie mithilfe des Befehls XMLA **Wiederherstellung** -Befehls eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aus einer vorhandenen Sicherungsdatei wiederherstellen.|  
 ||Synchronisieren|Zeigt, wie Sie mithilfe des Befehls XMLA **Synchronisieren** verwenden können, um eine andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchronisierenSecurity tag.|  
 |XMLA\Schemarowsets|Ermitteln von Schemarowsets|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|  
 |XMLA\Serverstatus|Verbindungen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_CONNECTIONS-Schemarowsets abrufen.|  
-||Aufträge|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
+||Jobs|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
 ||Speicherorte|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfads zum Standort der Sicherungsdateien abrufen.|  
 ||Locks|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_LOCKS-Schemarowsets abrufen.|  
 ||Memory Grant|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_MEMORYGRANT-Schemarowsets abrufen.|  
-||Leistungsindikatoren|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_PERFORMANCE_COUNTERS-Schemarowsets abrufen.|  
+||Performance Counters|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_PERFORMANCE_COUNTERS-Schemarowsets abrufen.|  
 ||Sitzungen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_SESSIONS-Schemarowsets abrufen.|  
 ||Traces|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_TRACES-Schemarowsets abrufen.|  
 ||Transaktionen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_TRANSACTIONS-Schemarowsets abrufen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Multidimensional Expressions &#40;MDX&#41; – Referenz](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language &#40;ASSL für XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL für XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

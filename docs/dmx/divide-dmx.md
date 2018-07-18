@@ -1,5 +1,5 @@
 ---
-title: (Division) (DMX) | Microsoft Docs
+title: (Division) (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972666"
 ---
 # <a name="divide-dmx"></a>(Division) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ Dividend / Divisor
  [Arithmetische Operatoren &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Teilen Sie &#40;SSIS-Ausdruck&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;Teilen Sie&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [Unterteilen &#40;SSIS-Ausdruck&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;Unterteilen&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

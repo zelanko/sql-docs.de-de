@@ -1,5 +1,5 @@
 ---
-title: Einfache Microsoft OLE DB-Anbieter | Microsoft Docs
+title: Einfache Microsoft OLE DB-Anbieter | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 366f4df5074288ec6950027cfa3444037d097924
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271519"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981052"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB-einfachen Anbieter (Übersicht)
-Der Microsoft OLE DB-einfachen Anbieter (OSP) können auf alle Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe von, ADO der [OLE DB-einfachen Anbieter (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen dem Zugriff auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erforderlich ist.
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple-Anbieter (Übersicht)
+Der Microsoft OLE DB Simple Anbieter (OSP) ermöglicht ADO auf Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe, der [OLE DB Simple Anbieter (OSP) Toolkit](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen zum Zugreifen auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erfordern.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
- Legen Sie zur Verbindung mit der OLE DB-einfachen Anbieter-DLL der *Anbieter* Argument an die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft, um:
+ Legen Sie zum Verbinden mit dem OLE DB Simple-Anbieter-DLL der *Anbieter* Argument für die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:
 
 ```
 MSDAOSP
 ```
 
- Dieser Wert kann auch festlegen oder lesen, mit der [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft.
+ Dieser Wert kann auch festlegen oder Lesen Sie mithilfe der [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft.
 
- Sie können auf einfachen Anbieter verbinden, die mit dem registrierten Anbieternamen, der bestimmt, indem die Anbieterwriter als vollständige OLE DB-Anbieter registriert wurden.
+ Sie können auf einfache Anbieter verbinden, die mithilfe der registrierten Anbietername, der bestimmt, indem die Anbieterwriter als vollständige OLE DB-Anbieter registriert wurden.
 
 ## <a name="typical-connection-string"></a>Typische Verbindungszeichenfolge
  Eine typische Verbindungszeichenfolge für diesen Anbieter ist:
@@ -50,13 +50,13 @@ MSDAOSP
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für SQL Server an.|
+|**Anbieter**|Gibt den OLE DB-Anbieter für SQL Server an.|
 |**Data Source**|Gibt den Namen eines Servers.|
 
-## <a name="xml-document-example"></a>XML-Dokument (Beispiel)
- Der OLE DB-einfachen Anbieter (OSP) in MDAC 2.7 oder höher und Windows Data Access Components (Windows DAC) wurde verbessert, um das Öffnen von hierarchischen ADO unterstützt **Recordsets** über beliebige XML-Dateien. Diese XML-Dateien können das ADO-XML-Persistenz-Schema enthalten, aber es ist nicht erforderlich. Dies wurde durch Herstellen einer Verbindung das OSP, implementiert die **"Msxml2.dll"** daher **"Msxml2.dll"** oder höher erforderlich.
+## <a name="xml-document-example"></a>Beispiel für XML-Dokument
+ Der OLE DB Simple-Anbieter (OSP) in MDAC 2.7 oder höher und Windows Data Access Components (Windows DAC) wurde verbessert, um Unterstützung für das Öffnen von hierarchischen ADO **Recordsets** für den beliebigen XML-Dateien. Diese XML-Dateien können das ADO-XML-Persistenz-Schema enthalten, aber es ist nicht erforderlich. Dies wurde durch das Verbinden des OSPS, implementiert die **"Msxml2.dll"** daher **"Msxml2.dll"** oder höher ist erforderlich.
 
- Die **portfolio.xml** -Datei verwendet, die im folgenden Beispiel enthält die folgende Struktur:
+ Die **portfolio.xml** Datei im folgenden Beispiel enthält die folgende Struktur:
 
 ```
 Portfolio
@@ -69,9 +69,9 @@ Portfolio
          WebSite
 ```
 
- Die XML-DSO anhand der integrierten Heuristik, konvertieren die Knoten in einer XML-Struktur in Kapitel in einer hierarchischen **Recordset**.
+ Das XML-DSO verwendet integrierte Heuristiken, um die Knoten in einer XML-Struktur zu Kapiteln in einer hierarchischen konvertieren **Recordset**.
 
- Verwenden diese integrierten Heuristiken, die XML-Struktur in eine hierarchische zweistufige konvertiert **Recordset** der folgenden Form:
+ Verwenden diese integrierte Heuristiken, wird die XML-Struktur in eine zwei-Ebenen-hierarchische konvertiert **Recordset** im folgenden Format:
 
 ```
 Parent Recordset
@@ -80,26 +80,26 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- Beachten Sie, dass die Tags Portfolio und Informationen nicht in der hierarchischen dargestellt werden **Recordset**. Eine Erläuterung, wie die XML-DSO XML-Strukturen in hierarchischen konvertiert **Recordsets**, finden Sie unter den folgenden Regeln. Die Spalte $Text wird im folgenden Abschnitt erläutert.
+ Beachten Sie, dass die Portfolio und Info-Tags nicht, in der hierarchischen dargestellt werden **Recordset**. Eine Erläuterung, wie das XML-DSO XML-Strukturen in hierarchisch konvertiert **Recordsets**, finden Sie unter den folgenden Regeln. Die Spalte $Text wird im folgenden Abschnitt erläutert.
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Regeln zum Zuweisen von XML-Elementen und-Attributen zu Zeilen und Spalten
- Die XML-DSO folgt ein Verfahren zum Zuweisen von Elementen und-Attribute verwenden, um Zeilen und Spalten in datengebundenen Anwendungen. XML ist als eine Struktur mit einem Tag modelliert, die die gesamte Hierarchie enthält. Eine XML-Beschreibung eines Buchs kann z. B. Kapitel Tags, Abbildung und Abschnitt Tags enthalten. Auf der höchsten Ebene wäre das Buch-Tag, mit der Unterelemente Kapitel, Abbildung, und dem Abschnitt. Wenn die XML-DSO-XML-Elemente in Zeilen und Spalten zugeordnet werden, werden die Teilelemente fest, nicht das oberste Element konvertiert.
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Regeln für das Zuweisen von XML-Elemente und Attribute, Spalten und Zeilen
+ Das XML-DSO folgt ein Verfahren zum Zuweisen von Elementen und Attribute zu Zeilen und Spalten in datengebundene Anwendungen. XML wird als eine Struktur mit einem Tag modelliert, die die gesamte Hierarchie enthält. Beispielsweise kann eine XML-Beschreibung eines Buchs Kapitel Tags, Abbildung und Tags für Abschnitte enthalten. Auf der höchsten Ebene wäre die Buch-Tag, mit dem die Unterelemente Kapitel, Abbildung und Abschnitt. Wenn das XML-DSO-XML-Elemente in Zeilen und Spalten zugeordnet wird, werden die Unterelemente, kein Element der obersten Ebene, konvertiert.
 
- Die XML-DSO greift auf dieses Verfahren zum Konvertieren von Unterelemente:
+ Das XML-DSO greift auf dieses Verfahren für die Konvertierung die untergeordneten Elemente:
 
--   Jede-Unterelement und ein Attribut entspricht einer Spalte in einigen **Recordset** in der Hierarchie.
+-   Jedes Unterelement und Attribut entspricht einer Spalte in einigen **Recordset** in der Hierarchie.
 
--   Der Name der Spalte ist identisch mit den Namen des Unterelements oder Attributs, es sei denn, das übergeordnete Element eines Attributs und ein Unterelement mit dem gleichen Namen in diesem Fall verfügt ein "!" wird an das Unterelement Spaltennamen vorangestellt.
+-   Der Name der Spalte ist identisch mit den Namen des Unterelements oder Attributs, es sei denn, das übergeordnete Element ein Attribut als auch ein Unterelement mit demselben Namen in diesem Fall ein "!" auf den Namen des Unterelements Spalte vorangestellt ist.
 
--   Jede Spalte handelt es sich um eine *einfache* Spalte mit skalaren Werten (in der Regel Zeichenfolgen) oder ein **Recordset** Spalte, die untergeordnete enthält **Recordsets**.
+-   Jede Spalte ist entweder ein *einfache* Spalte, die Skalare Werte (in der Regel Zeichenfolgen) enthält oder ein **Recordset** Spalte mit untergeordneten **Recordsets**.
 
--   Spalten, die Attribute sind stets einfach.
+-   Spalten, die Attributen entsprechen, sind stets einfach.
 
--   Spalten, die entspricht Teilelemente sind **Recordset** Spalten zurück, wenn das Teilelement verfügt über einen eigenen untergeordneten Elemente oder Attribute (oder beides) oder das Unterelement übergeordnetes Element mehr als eine Instanz des Unterelements als untergeordnetes Element besitzt. Andernfalls ist die Spalte einfach.
+-   Spalten, die Unterelemente sind **Recordset** Spalten zurück, wenn das Unterelement hat seine eigenen untergeordneten Elemente oder Attribute (oder beides) oder des Unterelements übergeordnetes Element, mehr als eine Instanz des Unterelements als untergeordnetes Element besitzt. Andernfalls ist die Spalte einfach.
 
--   Wenn mehrere Instanzen des ein Unterelement (unter verschiedenen übergeordneten Elementen) vorhanden sind, wird die Spalte ist eine **Recordset** Spalte Wenn *alle* implizieren die Instanzen einer **Recordset** Spalte; die Spalte ist einfach nur, wenn *alle* Instanzen implizieren, eine einfache Spalte.
+-   Wenn mehrere Instanzen von einem Unterelement (unter verschiedenen übergeordneten Elementen) vorhanden sind, wird die Spalte ist eine **Recordset** Spalte Wenn *alle* Instanzen beinhalten ein **Recordset** Spalte, dessen Spalte ist einfach nur, wenn *alle* Instanzen beinhalten eine einfache Spalte.
 
--   Alle **Recordsets** haben eine weitere Spalte namens $Text.
+-   Alle **Recordsets** eine zusätzliche Spalte mit dem Namen $Text.
 
  Der Code, der erforderlich ist, zum Erstellen einer **Recordset** lautet wie folgt:
 
@@ -115,7 +115,7 @@ adoRS.Open "http://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  Der Pfad der Datendatei kann mithilfe von vier unterschiedlichen Benennungskonventionen angegeben werden.
+>  Der Pfad der Datendatei kann angegeben werden, mithilfe von vier verschiedene Benennungskonventionen.
 
 ```
 'HTTP://
@@ -128,24 +128,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- Sobald die **Recordset** geöffnet wurde, den übliche ADO **Recordset** Navigationsbefehle verwendet werden können.
+ Sobald die **Recordset** geöffnet wurde, den übliche ADO **Recordset** Navigationsbefehle können verwendet werden.
 
- **Recordsets** durch das OSP generiert einige Einschränkungen:
+ **Durch Recordsets** generiert, durch das OSP weisen einige Einschränkungen auf:
 
 -   Clientcursor (**AdUseClient**) werden nicht unterstützt.
 
--   Hierarchische **Recordsets** für beliebige erstellt XML kann nicht persistent sein mit **Recordset.Save**.
+-   Hierarchische **Recordsets** erstellt für den beliebigen XML nicht beibehalten werden mithilfe von **Recordset.Save**.
 
--   **Recordsets** erstellt, mit der OSP sind schreibgeschützt.
+-   **Durch Recordsets** mit das OSP erstellt sind schreibgeschützt.
 
 -   Die XMLDSO Fügt eine zusätzliche Spalte mit Daten ($Text) auf die einzelnen **Recordset** in der Hierarchie.
 
- Weitere Informationen zum OLE DB-Simple-Anbieter finden Sie unter [Erstellen eines einfachen Anbieters](http://msdn.microsoft.com/en-us/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Weitere Informationen zu OLE DB Simple-Anbieter, finden Sie unter [Erstellen eines einfachen Anbieters](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
 
 ## <a name="code-example"></a>Codebeispiel
- Die folgenden Visual Basic-Code wird veranschaulicht, öffnen eine beliebige XML-Datei, erstellen eine hierarchische **Recordset**, und jeder Datensatz für jede schreiben rekursiv **Recordset** an das Debugfenster.
+ Die folgende Visual Basic-Code wird veranschaulicht, öffnen eine beliebige XML-Datei, erstellen eine hierarchische **Recordset**, und Schreiben jeden Datensatz der einzelnen rekursiv **Recordset** zum Debug-Fenster.
 
- Hier ist eine einfache XML-Datei, die Aktienkurse enthält. Der folgende Code verwendet diese Datei zum Erstellen einer hierarchischen zweistufige **Recordset**.
+ Hier ist eine einfache XML-Datei, die Aktienkurse enthält. Der folgende Code verwendet diese Datei zum Erstellen von hierarchischen einer zwei Ebenen **Recordset**.
 
 ```
 <portfolio>
@@ -188,7 +188,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- Es folgen zwei Visual Basic-Sub-Prozeduren. Die erste erstellt die **Recordset** und übergibt es an die *WalkHier* sub-Prozedur, welche rekursiv in der Hierarchie durchläuft, Schreiben jede **Feld** in jedem Datensatz in den einzelnen **Recordset** an das Debugfenster.
+ Es folgen zwei Visual Basic-Sub-Prozeduren. Die erste erstellt die **Recordset** und übergibt es an der *WalkHier* sub-Prozedur, die rekursiv in der Hierarchie führt, Schreiben jedes **Feld** in jedem Datensatz in den einzelnen **Recordset** zum Debug-Fenster.
 
 ```
 Private Sub BrowseHierRecordset()

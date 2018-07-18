@@ -2,7 +2,7 @@
 title: Führen Sie eine SQL Server-migrationsbewertung (Data Migration Assistant) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit um einer lokalen SQL Server zu bewerten, bevor Sie eine Migration auf einen anderen SQL Server oder Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782221"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934952"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Führen Sie eine SQL Server-migrationsbewertung mit Data Migration Assistant
 
@@ -86,7 +86,7 @@ Die Dauer der Bewertung der hängt davon ab, die Anzahl der Datenbanken, die hin
 
 2.  Überprüfen Sie die Kompatibilitätsprobleme für alle von der Ziel-SQL Server-Version unterstützt Kompatibilitätsgrade, die Sie ausgewählt haben, auf die **Optionen** Seite.
 
-Sie können Probleme mit der Anwendungskompatibilität überprüfen, durch die Analyse von dem betroffenen Objekt und die dazugehörigen Details für jedes Problem unter identifiziert **wichtige Änderungen**, **verhaltensänderungen**, und **als veraltet markierte Funktionen** .
+Sie können Kompatibilitätsprobleme prüfen, indem Sie analysieren, das betroffene Objekt, dessen Details und möglicherweise eine Lösung für jedes Problem identifiziert, die unter **wichtige Änderungen**, **verhaltensänderungen**, und  **Als veraltet markierte Funktionen**.
 
 ![Die Bewertung der Ergebnisse anzeigen](../dma/media/ReviewResults.png)
 

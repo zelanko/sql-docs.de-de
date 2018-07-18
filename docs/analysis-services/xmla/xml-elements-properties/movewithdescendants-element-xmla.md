@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants-Element (XMLA) | Microsoft Docs
+title: MoveWithDescendants-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575732"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969190"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34575732"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **MoveWithDescendants** -Element bestimmt, ob die **aktualisieren** Befehl sollte nicht nur die identifizierten Attributelemente Aktualisieren der [Attribute](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) -Element, aber Außerdem, die die Nachfolger dieser Attributelemente ebenfalls aktualisiert werden.  
+ Die **MoveWithDescendants** Element bestimmt, ob die **aktualisieren** Befehl sollte nicht nur die identifizierten Attributelemente aktualisieren die [Attribute](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) -Element, aber auch, die die Nachfolger dieser Attributelemente ebenfalls aktualisiert werden.  
   
 > [!NOTE]  
 >  Dieses Element gilt nur für Attributelemente in Über-/Unterordnungshierarchien.  

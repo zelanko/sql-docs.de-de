@@ -1,5 +1,5 @@
 ---
-title: Primäre Ausdrücke (XQuery) | Microsoft Docs
+title: Primärausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078117"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031438"
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33078117"
 |&quot;|"|  
 |&apos;|'|  
   
- Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Eurosymbol dargestellt werden, durch den Zeichenverweis "&\#8364;".  
+ Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Euro-Symbol dargestellt werden, durch den Zeichenverweis "&\#8364;".  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Die integrierten booleschen Funktionen **true()** und **"false()" "**, zur Darstellung von booleschen Werten verwendet werden können, wie im folgenden Beispiel gezeigt.  
+ Die integrierten booleschen Funktionen **True()"** und **" false()""**, zur Darstellung boolescher Werte verwendet werden können, wie im folgenden Beispiel gezeigt.  
   
 ```  
 DECLARE @var XML  
@@ -138,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Die Erweiterung SQL:Variable()-Funktion können Sie auf SQL-Variablen verweisen, wie in der folgenden Abfrage gezeigt.  
+ Sie können der SQL:Variable()-Funktion-Erweiterung verwenden, zum Verweisen auf SQL-Variablen, wie in der folgenden Abfrage gezeigt.  
   
 ```  
 DECLARE @price money  
@@ -159,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   Modulimport wird nicht unterstützt.  
   
--   Externe Variablendeklarationen werden nicht unterstützt. Eine Lösung für diese ist die Verwendung der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Externe Variablendeklarationen werden nicht unterstützt. Dies ist die Verwendung der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Kontextelementausdrücke  
- Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie können auch von der Nodes()-Methode, in den Kontext von XPath-Ausdrücken oder []-Prädikaten geändert werden.  
+ Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie können auch von der Nodes()-Methode, im Kontext von XPath-Ausdrücken oder []-Prädikaten geändert werden.  
   
  Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Beispielsweise wertet die folgende Abfrage jedes <`a`>-Element auf das Vorhandensein des `attr`-Attributs aus. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
   
@@ -180,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Funktionsaufrufe  
- Sie können integrierte XQuery-Funktionen aufrufen und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL:Variable() und SQL:Column() Funktionen. Eine Liste der implementierten Funktionen finden Sie unter [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Sie können integrierte XQuery-Funktionen aufrufen und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL:Variable() und SQL:Column() Funktionen. Eine Liste der implementierten Funktionen, finden Sie unter [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Implementierungseinschränkungen sind zu beachten:  

@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_targets (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. database_event_session_targets (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e3969ef0ff469392a93cd389a2104d2f3f82f87b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979472"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>Sys.database_event_session_targets (Azure SQL-Datenbank)
+# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>Sys. database_event_session_targets (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt für eine Ereignissitzung eine Zeile für jedes Ereignisziel zurück.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |target_id|**int**|Die ID des Ziels. Die ID ist innerhalb des Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Der Name des Ereignisziels. Lässt keine NULL-Werte zu.|  
+|NAME|**sysname**|Der Name des Ereignisziels. Lässt keine NULL-Werte zu.|  
 |Paket|**sysname**|Der Name des Ereignispakets, das das Ereignisziel enthält. Lässt keine NULL-Werte zu.|  
 |Modul|**sysname**|Der Name des Moduls, das das Ereignisziel enthält. Lässt keine NULL-Werte zu.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: Sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 852d8db43c417d828678929f46ee28f12623a4af
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979412"
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Diese Prozedur entfernt eine vorhandene Bindung zwischen einer Datenbank und einem Ressourcenpool nachzuverfolgen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] speicherauslastung.  Wenn derzeit kein Pool an die angegebene Datenbank gebunden ist, war die Ausführung erfolgreich. Wenn die Datenbankbindung aufgehoben wird, bleibt der zuvor zugeordnete Arbeitsspeicher für speicheroptimierte Objekte dem vorherigen Ressourcenpool zugeordnet. Sie müssen die Datenbank neu starten, um den zugeordneten Arbeitsspeicher freizugeben. Sobald die Bindung einer Datenbank an den Ressourcenpool aufgehoben wird, fällt sie an den DEFAULT-Ressourcenpool zurück.  
+  Diese Prozedur entfernt eine vorhandene Bindung zwischen einer Datenbank und einem Ressourcenpool zum Zweck der nachverfolgung [!INCLUDE[hek_2](../../includes/hek-2-md.md)] speicherauslastung.  Wenn derzeit kein Pool an die angegebene Datenbank gebunden ist, war die Ausführung erfolgreich. Wenn die Datenbankbindung aufgehoben wird, bleibt der zuvor zugeordnete Arbeitsspeicher für speicheroptimierte Objekte dem vorherigen Ressourcenpool zugeordnet. Sie müssen die Datenbank neu starten, um den zugeordneten Arbeitsspeicher freizugeben. Sobald die Bindung einer Datenbank an den Ressourcenpool aufgehoben wird, fällt sie an den DEFAULT-Ressourcenpool zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 ## <a name="arguments"></a>Argumente  
  database_name  
- Der Name eines vorhandenen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Datenbank aktiviert ist.  
+ Der Name eines vorhandenen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] aktivierte Datenbank.  
   
 #### <a name="parameters"></a>Parameter  
   
@@ -76,6 +76,6 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="see-also"></a>Siehe auch  
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Sys.sp_xtp_bind_db_resource_pool & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [Sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

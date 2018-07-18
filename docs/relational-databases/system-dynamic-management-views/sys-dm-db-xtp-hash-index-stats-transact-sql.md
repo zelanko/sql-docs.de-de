@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969772"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,20 +45,20 @@ ms.locfileid: "34465226"
 Hohe Kettenlängen können die Leistung aller DML-Vorgänge für einzelne Zeilen, einschließlich von SELECT oder INSERT, deutlich beeinträchtigen. Kurze Kettenlängen in Kombination mit einer hohen Anzahl von leeren Buckets weisen auf eine zu hohe Bucketanzahl hin. Dadurch wird die Leistung von Indexscans verringert.  
   
 > [!WARNING]
-> **Sys. dm_db_xtp_hash_index_stats** überprüft die gesamte Tabelle. Wenn große Tabellen in der Datenbank stehen also **dm_db_xtp_hash_index_stats** kann sehr lange dauern ausführen.  
+> **Sys. dm_db_xtp_hash_index_stats** überprüft die gesamte Tabelle. Wenn große Tabellen in der Datenbank vorhanden sind also **Sys. dm_db_xtp_hash_index_stats** dauert sehr lange ausgeführt.  
   
-Weitere Informationen finden Sie unter [Hash-Indizes für Speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Weitere Informationen finden Sie unter [Hashindizes für Speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Die Objekt-ID der übergeordneten Tabelle.|  
-|xtp_object_id|**bigint**|Die ID der speicheroptimierten Tabelle.|  
+|xtp_object_id|**bigint**|ID der speicheroptimierten Tabelle.|  
 |index_id|**int**|Die Index-ID.|  
 |total_bucket_count|**bigint**|Die Gesamtanzahl der Hashbuckets im Index.|  
 |empty_bucket_count|**bigint**|Die Anzahl der leeren Hashbuckets im Index.|  
 |avg_chain_length|**bigint**|Die durchschnittliche Länge der Zeilenketten für alle Hashbuckets im Index.|  
 |max_chain_length|**bigint**|Die maximale Länge der Zeilenketten in den Hashbuckets.|  
-|xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, der die Speicheroptimierte Tabelle entspricht.|  
+|xtp_object_id|**bigint**|Die in-Memory-OLTP Objekt-ID, die in der speicheroptimierten Tabelle entspricht.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter [Hash-Indizes für Speicheroptimierte Tab
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Problembehandlung bei Hashindex-Bucketanzahl
 
-Die folgende Abfrage kann verwendet werden, um einer vorhandenen Tabelle die Hashindex-Bucketanzahl zu beheben. Die Abfrage gibt Statistiken zu den Prozentsatz des leeren Buckets und kettenlänge für alle Hash-Indizes für Benutzertabellen.
+Die folgende Abfrage kann verwendet werden, um den Hashindex-Bucketanzahl von einer vorhandenen Tabelle zu beheben. Die Abfrage gibt Statistiken zu den Prozentsatz der leeren Buckets und kettenlänge für alle Hash-Indizes für Benutzertabellen.
 
 ```sql
   SELECT  
@@ -91,11 +91,11 @@ Die folgende Abfrage kann verwendet werden, um einer vorhandenen Tabelle die Has
   ORDER BY [table], [index];  
 ``` 
 
-Weitere Informationen zum Interpretieren der Ergebnisse dieser Abfrage finden Sie unter [Problembehandlung Hash-Indizes für Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Weitere Informationen zum Interpretieren der Ergebnisse dieser Abfrage finden Sie unter [zur Problembehandlung von Hashindizes für Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Hashindexstatistik für interne Tabellen
 
-Bestimmte Funktionen verwendet interne Tabellen, die den Hash-Indizes, z. B. columnstore-Indizes für Speicheroptimierte Tabellen zu nutzen. Die folgende Abfrage gibt Statistiken für Hashindizes für interne Tabellen, die an Benutzertabellen verknüpft sind.
+Bestimmte Funktionen verwenden Sie interne Tabellen, die Hash-Indizes, z. B. columnstore-Indizes für Speicheroptimierte Tabellen zu nutzen. Die folgende Abfrage gibt Statistiken für Hashindizes für interne Tabellen, die an Benutzertabellen verknüpft sind.
 
 ```sql
   SELECT  
@@ -116,9 +116,9 @@ Bestimmte Funktionen verwendet interne Tabellen, die den Hash-Indizes, z. B. col
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Beachten Sie, dass der bucket_count-Wert des Indexes für interne Tabellen kann nicht geändert werden, daher die Ausgabe dieser Abfrage sollte berücksichtigt werden informative nur. Keine Aktion erforderlich.  
+Beachten Sie, dass der bucket_count-Wert des Index für die internen Tabellen können nicht geändert werden, daher die Ausgabe dieser Abfrage angesehen werden informative nur. Keine Aktion erforderlich.  
 
-Diese Abfrage ist nicht davon keine Zeilen zurückgeben, es sei denn, Sie verwenden eine Funktion, die Hash-Indizes für Tabellen internen nutzt. Das folgende Speicheroptimierte Tabelle enthält einen columnstore-Index. Nach dem Erstellen dieser Tabelle, wird der Hash-Indizes für interne Tabellen angezeigt werden.
+Diese Abfrage wird nicht erwartet, alle Zeilen zurückgegeben, wenn Sie eine Funktion verwenden, die Hash-Indizes für interne Tabellen nutzt. In der folgende speicheroptimierten Tabelle enthält einen columnstore-Index. Nach dem Erstellen dieser Tabelle, wird der Hash-Indizes für interne Tabellen angezeigt werden.
 
 ```sql
   CREATE TABLE dbo.table_columnstore

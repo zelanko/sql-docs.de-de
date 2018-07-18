@@ -1,5 +1,5 @@
 ---
-title: Firewall-Regeln, gespeicherte Prozeduren (Azure SQL-Datenbank) | Microsoft Docs
+title: Firewall-Regeln, gespeicherte Prozeduren (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: ''
@@ -25,16 +25,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6de7f6cc9166b63cf53b7cae71b172b43651e09e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235410"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023792"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Firewall-Regeln, gespeicherte Prozeduren (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Dieser Abschnitt enthält die folgenden gespeicherten Prozeduren, die Firewallregeln festlegen oder löschen. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Firewall-Regeln können verwendet werden, mit [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Weitere Informationen finden Sie unter [Konfigurieren von Azure SQL-Datenbank-Firewallregeln - Übersicht](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  Dieser Abschnitt enthält die folgenden gespeicherten Prozeduren, die Firewallregeln festlegen oder löschen. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Firewall-Regeln können verwendet werden, mit [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Weitere Informationen finden Sie unter [Firewallregeln für Azure SQL-Datenbank konfigurieren – Übersicht über die](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
   
  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33235410"
 |[sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[Sp_delete_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
 |[sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[Sp_delete_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
   
-Für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], Fenster-Firewall-Regeln verwenden. Weitere Informationen zur Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
+Für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], Fenster-Firewall-Regeln verwenden. Weitere Informationen zur Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
   
 
 

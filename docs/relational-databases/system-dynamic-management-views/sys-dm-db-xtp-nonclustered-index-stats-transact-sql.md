@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464646"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978122"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "34464646"
   
  Eine große Anzahl wiederholter Versuche weist auf Parallelitätsprobleme hin; wenden Sie sich an den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support.  
   
- Weitere Informationen zu speicheroptimierten, nicht gruppierten Indizes finden Sie unter [Übersicht über die SQL Server In-Memory-OLTP-Merkmale](http://t.co/T6zToWc6y6), Seite 17.  
+ Weitere Informationen zu speicheroptimierten, nicht gruppierte Indizes, finden Sie unter [Übersicht über die SQL Server In-Memory OLTP Internals](http://t.co/T6zToWc6y6), Seite 17.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID des Objekts.|  
-|xtp_object_id|**bigint**|Die ID der speicheroptimierten Tabelle.|  
+|xtp_object_id|**bigint**|ID der speicheroptimierten Tabelle.|  
 |index_id|**int**|Die ID des Index.|  
 |delta_pages|**bigint**|Die Gesamtanzahl der Änderungsseiten für diesen Index in der Struktur.|  
 |internal_pages|**bigint**|Für die interne Verwendung. Die Gesamtanzahl der internen Seiten für diesen Index in der Struktur.|  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle | Microsoft Docs
+title: Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025167"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982602"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34025167"
   
 6.  Der Standardwert unter **Datenbankserver**entspricht der SQL Server-Datenbank-Engine-Instanz, die die Konfigurationsdatenbanken der Farm hostet. Sie können diesen Server verwenden oder einen anderen SQL Server auswählen.  
   
-7.  In **Datenbankname**, der Standardwert ist PowerPivotServiceApplication1_\<Guid >. Sie müssen eine eindeutige Datenbank für jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung erstellen. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
+7.  In **Datenbanknamen**, der Standardwert ist PowerPivotServiceApplication1_\<Guid >. Sie müssen eine eindeutige Datenbank für jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung erstellen. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   
 8.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie **SQL-Authentifizierung**auswählen, finden Sie im SharePoint-Administratorhandbuch bewährte Methoden zur Verwendung dieses Authentifizierungstyps in einer SharePoint-Bereitstellung.  
   
@@ -106,9 +106,9 @@ ms.locfileid: "34025167"
   
 9. Unter Datenaktualisierung in **Geschäftszeiten**können Sie den Zeitraum angeben, der einen Geschäftstag definiert. Zeitpläne zur Datenaktualisierung können am Ende eines Geschäftstags ausgeführt werden, um die während der regulären Geschäftszeiten generierten Transaktionsdaten zu sammeln.  
   
-10. Unter **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungskonto**können Sie eine vordefinierte Secure Store Service-Zielanwendung angeben, die ein vordefiniertes Konto zum Ausführen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungsaufträgen speichert. Stellen Sie sicher, dass Sie den Namen der Zielanwendung und nicht die ID angeben. Die Zielanwendung für die unbeaufsichtigte Datenaktualisierung wird automatisch erstellt, wenn Sie die Option „Neuer Server“ im SQL Server-Setup verwendet haben, um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zu installieren. Andernfalls müssen Sie die Zielanwendung manuell erstellen. Eine Anleitung zum Konfigurieren des Kontos finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. Unter **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungskonto**können Sie eine vordefinierte Secure Store Service-Zielanwendung angeben, die ein vordefiniertes Konto zum Ausführen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungsaufträgen speichert. Stellen Sie sicher, dass Sie den Namen der Zielanwendung und nicht die ID angeben. Die Zielanwendung für die unbeaufsichtigte Datenaktualisierung wird automatisch erstellt, wenn Sie die Option „Neuer Server“ im SQL Server-Setup verwendet haben, um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zu installieren. Andernfalls müssen Sie die Zielanwendung manuell erstellen. Eine Anleitung zum Konfigurieren des Kontos finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. Unter **Benutzer dürfen benutzerdefinierte Windows-Anmeldeinformationen eingeben**können Sie das Kontrollkästchen aktivieren oder deaktivieren, um anzugeben, ob Zeitplanbesitzer beliebige Windows-Anmeldeinformationen für die Ausführung eines Datenaktualisierungszeitplans eingeben können. Wenn Sie dieses Kontrollkästchen aktivieren, erstellt und verwaltet die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung eine Zielanwendung für jeden Satz gespeicherter Anmeldeinformationen. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. Unter **Benutzer dürfen benutzerdefinierte Windows-Anmeldeinformationen eingeben**können Sie das Kontrollkästchen aktivieren oder deaktivieren, um anzugeben, ob Zeitplanbesitzer beliebige Windows-Anmeldeinformationen für die Ausführung eines Datenaktualisierungszeitplans eingeben können. Wenn Sie dieses Kontrollkästchen aktivieren, erstellt und verwaltet die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung eine Zielanwendung für jeden Satz gespeicherter Anmeldeinformationen. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. Unter **Maximale Verarbeitungsverlaufslänge**können Sie angeben, wie lange ein Verlaufsdatensatz der Datenaktualisierungsverarbeitung beibehalten wird. Diese Informationen werden auf den Seiten für den Datenaktualisierungsverlauf angezeigt, die für jede Arbeitsmappe angelegt werden, die die Datenaktualisierung nutzt. Sie werden auch im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard angezeigt.  
   

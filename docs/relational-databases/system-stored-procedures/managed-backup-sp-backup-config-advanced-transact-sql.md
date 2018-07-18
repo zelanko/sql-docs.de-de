@@ -1,5 +1,5 @@
 ---
-title: sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
+title: sp_backup_config_advanced (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08c79b906a95c41013f28a559acdc7f98809c186
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970482"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ EXEC managed_backup.sp_backup_config_advanced
   
 ##  <a name="Arguments"></a> Argumente  
  @database_name  
- Der Name der Datenbank zum Aktivieren der verwalteten Sicherung in einer bestimmten Datenbank. Wenn der Wert NULL oder *, und klicken Sie dann diese verwaltete Sicherung für alle Datenbanken auf dem Server gilt.  
+ Der Name der Datenbank, für die verwaltete Sicherung in einer bestimmten Datenbank aktiviert werden soll. Wenn der Wert NULL oder *, und klicken Sie dann diese verwaltete Sicherung für alle Datenbanken auf dem Server gilt.  
   
  @encryption_algorithm  
- Der Name des Verschlüsselungsalgorithmus, der bei der Sicherung zum Verschlüsseln der Sicherungsdatei verwendet wird. Die @encryption_algorithm ist **SYSNAME**. Dies ist ein erforderlicher Parameter, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstmalig für die Datenbank konfiguriert wird. Geben Sie **NO_ENCRYPTION** , wenn Sie nicht, dass die Sicherungsdatei zu verschlüsseln möchten. Beim Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen ist dieser Parameter optional; wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten. Zulässige Werte für diesen Parameter:  
+ Der Name des Verschlüsselungsalgorithmus, der bei der Sicherung zum Verschlüsseln der Sicherungsdatei verwendet wird. Die @encryption_algorithm ist **SYSNAME**. Dies ist ein erforderlicher Parameter, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] erstmalig für die Datenbank konfiguriert wird. Geben Sie **NO_ENCRYPTION** , wenn Sie nicht, um die Sicherungsdatei zu verschlüsseln möchten. Beim Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen ist dieser Parameter optional; wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten. Zulässige Werte für diesen Parameter:  
   
 -   AES_128  
   
@@ -83,7 +83,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in **Db_backupoperator** -Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und **EXECUTE** Berechtigungen für **Sp_delete_ Backuphistory** gespeicherte Prozedur.  

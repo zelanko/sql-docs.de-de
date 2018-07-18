@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Oracle und SQL Server-Datentypen (OracleToSQL) | Microsoft Docs
+title: Zuordnen von Oracle- und SQL Server-Datentypen (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,40 +15,40 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 6c2b58c0a589501951c76f4930689f15f2e9def8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777456"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979323"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Zuordnen von Oracle und SQL Server-Datentypen (OracleToSQL)
-Oracle-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Bei der Konvertierung von Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, Zuordnen von Datentypen aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Zuordnen von Oracle- und SQL Server-Datentypen (OracleToSQL)
+Oracle-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Bei der Konvertierung zu Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, das Zuordnen von Datentypen aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
-SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen finden Sie [Projekteinstellungen &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Projekteinstellungen &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Vererbung des Typmappings  
-Sie können Zuordnungen auf Projektebene, Objekt Category-Ebene (z. B. alle gespeicherten Prozeduren) oder Objektebene anpassen. Einstellungen werden von der höheren Ebene geerbt, es sei denn, sie auf einer niedrigeren Ebene überschrieben werden. Angenommen, Sie ordnen **Smallmoney** auf **Money** auf Projektebene, werden alle Objekte im Projekt verwenden Sie diese Zuordnung, es sei denn, Sie anpassen, dass die Zuordnung auf der Ebene Objekt oder Kategorie.  
+## <a name="type-mapping-inheritance"></a>Typ zuordnen von Vererbung  
+Sie können die replikationsdatentyp-Zuordnungen auf Projektebene, Objekt Category-Ebene (z. B. alle gespeicherten Prozeduren) oder Objektebene anpassen. Einstellungen werden von der höheren Ebene vererbt werden, es sei denn, sie auf einer niedrigeren Ebene überschrieben werden. Wenn Sie zuordnen, z. B. **Smallmoney** zu **Geld** auf Projektebene, werden alle Objekte im Projekt verwenden, diese Zuordnung verwendet werden, es sei denn, die Sie anpassen, dass die Zuordnung auf der Ebene Objekt oder Kategorie.  
   
-Beim Anzeigen der **Type Mapping** Registerkarte im Hintergrund SSMA ist farbcodiert, um anzuzeigen, welche Typmappings geerbt werden. Der Hintergrund einer Zuordnung ist gelb alle geerbten Typzuordnung und weiß für eine beliebige Zuordnung, die auf der aktuellen Ebene angegeben ist.  
+Beim Anzeigen der **Type Mapping** Registerkarte im Hintergrund SSMA sind farbcodiert, um anzuzeigen, welche typzuordnungen geerbt werden. Der Hintergrund einer Zuordnung ist Gelb für alle geerbten Typ zuordnen und weiß für jede Zuordnung, die auf der aktuellen Ebene angegeben wird.  
   
 ## <a name="customizing-data-type-mappings"></a>Anpassen von Datentypzuordnungen  
-Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Projekt, Datenbank oder Objektebene:  
+Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Objektebene zugeordnet wird:  
   
 **Zuordnen von Datentypen**  
   
-1.  Datentypzuordnung für das gesamte Projekt anpassen möchten, öffnen Sie die **Projekteinstellungen** (Dialogfeld):  
+1.  Öffnen Sie zum Zuordnen von Datentypen für das gesamte Projekt anpassen, die **Projekteinstellungen** Dialogfeld:  
   
-    1.  Auf der **Tools** klicken Sie im Menü **Projekteinstellungen**.  
+    1.  Auf der **Tools** , wählen Sie im Menü **Projekteinstellungen**.  
   
     2.  Wählen Sie im linken Bereich **Type Mapping**.  
   
-        Der Typ Zuordnung Diagramm und Schaltflächen werden im rechten Bereich angezeigt.  
+        Das Diagramm für Typ-Zuordnung und die Schaltflächen werden im rechten Bereich angezeigt.  
   
-    Oder zum Anpassen von Datentyp Zuordnung an die Datenbank, Tabelle, Sicht oder gespeicherte Prozedur auf, wählen Sie Datenbank, des Objektkategorie oder des Objekts in Oracle-Metadaten-Explorer:  
+    Oder zum Anpassen der Datentyp Mapping finden Sie auf die Datenbank, Tabelle, Sicht oder gespeicherte Prozedur auf, wählen Sie die Datenbank, Objektkategorie oder Objekt in der Oracle-Metadaten-Explorer:  
   
-    1.  Wählen Sie in der Oracle-Metadaten-Explorer den Ordner oder das Objekt, um anzupassen.  
+    1.  Wählen Sie in der Oracle-Metadaten-Explorer den Ordner oder ein Objekt, um anzupassen.  
   
     2.  Klicken Sie im rechten Bereich auf die **Type Mapping** Registerkarte.  
   
@@ -56,15 +56,15 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
     1.  Klicken Sie auf **Hinzufügen**.  
   
-    2.  Klicken Sie unter **Datenquellentyp**, wählen Sie den Oracle-Datentyp zugeordnet.  
+    2.  Klicken Sie unter **Quelltyp**, wählen Sie den Oracle-Datentyp zugeordnet.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** Feld und die maximale Datenlänge in der **zu** Feld.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzt** Feld.  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld.  
   
     5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
@@ -72,27 +72,27 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
     1.  Klicken Sie auf **Bearbeiten**.  
   
-    2.  Klicken Sie unter **Datenquellentyp**, wählen Sie den Oracle-Datentyp zugeordnet.  
+    2.  Klicken Sie unter **Quelltyp**, wählen Sie den Oracle-Datentyp zugeordnet.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie die minimale Datenlänge für die Zuordnung in der **aus** Feld und die maximale Datenlänge in der **zu** Feld.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzt** Feld, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Um eine benutzerdefinierte datentypzuordnung zu entfernen, führen Sie folgende Schritte aus:  
   
-    1.  Wählen Sie die Zeile, in der Liste ' datentypzuordnung ', die die datentypzuordnung enthält, die Sie entfernen möchten.  
+    1.  Wählen Sie die Zeile, in der Liste ' datentypzuordnung ', die die Zuordnung von Datentypen enthält, die Sie entfernen möchten.  
   
     2.  Klicken Sie auf **Entfernen**.  
   
-        Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen auf einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
+        Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen in einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt des Migrationsvorgangs besteht entweder [Erstellen eines Berichts Assessment](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) oder [Objekte der Oracle-Datenbank in SQL Server-Syntax konvertieren](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Wenn Sie einen Assessment-Bericht erstellen, werden Oracle-Objekten während der Bewertung automatisch konvertiert.  
+Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) oder [konvertieren Sie Objekte des Oracle-Datenbank in SQL Server-Syntax](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Wenn Sie ein Bewertungsbericht erstellen, werden die Oracle-Objekte während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle-Datenbanken zu SQLServer &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

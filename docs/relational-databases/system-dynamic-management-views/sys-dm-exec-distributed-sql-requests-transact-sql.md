@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,35 +27,35 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8c1a818498ba0527511d82f1df31003a03e394ff
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982572"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>Sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen über alle Verteilungen der SQL-Abfrage als Teil eines SQL-Schritts in der Abfrage.  In dieser Ansicht werden die Daten für die letzten 1000 Anforderungen; aktive Anforderungen haben immer die Daten in dieser Ansicht vorhanden.  
+  Enthält Informationen über alle Verteilungen von SQL-Abfrage als Teil eines SQL-Schritts in der Abfrage.  In dieser Ansicht wird angezeigt, die Daten für die letzten 1000 Anforderungen. aktive Anforderungen haben immer die Daten in dieser Ansicht vorhanden.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Execution_id und Step_index bilden zusammen den Schlüssel für diese Ansicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Der Index des Schritts Abfrage, die diesem Verteilungspunkt gehört.|Finden Sie unter Step_index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|compute_node_id|**int**|Der Typ des Vorgangs durch diesen Schritt dargestellt.|Finden Sie unter Compute_node_id in [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|distribution_id|**int**|Gibt an, auf dem der Schritt ausgeführt wird.|-1 für die im Gültigkeitsbereich Knoten nicht Verteilungsbereich ausgeführten Anforderungen festgelegt ist.|  
-|status|**nvarchar(32)**|Status dieses Schritts|Aktive, abgebrochene, abgeschlossenen, fehlerhafte, in der Warteschlange|  
-|error_id|**nvarchar(36)**|Eindeutige Id des Fehlers bei diesem Schritt verknüpft sind, sofern vorhanden|Finden Sie die Id des [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL, wenn kein Fehler aufgetreten ist.|  
-|start_time|**datetime**|Zeitpunkt, zu dem der Schritt Ausführung begonnen hat|Kleiner oder gleich der aktuellen Uhrzeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört.|  
-|end_time|**datetime**|Zeitpunkt, zu dem dieser Schritt hat die Ausführung abgeschlossen, wurde abgebrochen oder fehlerhaft.|Kleiner oder gleich der aktuellen Uhrzeit und größer oder gleich Start_time, für die Schritte in der Ausführung auf NULL festgelegt oder in die Warteschlange eingereiht.|  
-|total_elapsed_time|**int**|Gesamtzeit hinzuaddiert, die die abfrageschritt, in Millisekunden ausgeführt wurde|Zwischen 0 und der Unterschied zwischen End_time und Start_time. 0 für Schritte in Warteschlange.|  
-|row_count|**bigint**|Gesamtanzahl der Zeilen, die geändert oder von dieser Anforderung zurückgegeben|0 für Schritte, die nicht ändern oder Daten, Anzahl der betroffenen andernfalls Zeilen zurückgeben. -1 für DMS-Schritte festgelegt ist.|  
+|execution_id|**nvarchar(32)**|Execution_id und Step_index stellen Sie den Schlüssel für diese Sicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Der Index des abfrageschritts, die diesem Verteilungspunkt gehört.|Finden Sie unter Step_index in [dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|compute_node_id|**int**|Der Typ des Vorgangs durch diesen Schritt dargestellt.|Finden Sie unter Compute_node_id in [dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|distribution_id|**int**|Gibt an, in der Schritt ausgeführt wird.|Legen Sie auf-1 für Anforderungen, die im Bereich von Knoten nicht den Verteilungsbereich ausgeführt werden.|  
+|status|**nvarchar(32)**|Status dieses Schritts|Aktive, abgebrochen, abgeschlossen, Fehler, in der Warteschlange|  
+|error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit diesem Schritt verknüpft ist, falls vorhanden|Finden Sie die Id des [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL, wenn kein Fehler aufgetreten ist.|  
+|start_time|**datetime**|Zeitpunkt, an dem der Schritt die Ausführung gestartet|Kleiner oder gleich der aktuellen Zeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört.|  
+|end_time|**datetime**|Zeitpunkt, an dem dieser Schritt ausgeführt wurden, wurde abgebrochen oder fehlerhaft.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich Start_time, für die Schritte, die derzeit in der Ausführung auf NULL festgelegt oder in die Warteschlange eingereiht.|  
+|total_elapsed_time|**int**|Gesamtmenge der Mal, wenn der abfrageschritt, in Millisekunden ausgeführt wurde|Zwischen 0 und der Unterschied zwischen End_time und Start_time. 0 für die Schritte in Warteschlange.|  
+|row_count|**bigint**|Gesamtanzahl der Zeilen, die geändert oder von dieser Anforderung zurückgegebene|0 für Schritte, die nicht ändern oder Rückgabedaten, Anzahl der Zeilen, die andernfalls betroffen. Zur DMS-Schritte auf-1 festgelegt.|  
 |spid|**int**|Sitzungs-Id für die SQL Server-Instanz, die die Verteilung von Abfragen ausführen||  
-|Befehl|nvarchar(4000)|Enthält den vollständigen Text des Befehls dieses Schritts an.|Eine beliebige gültige Anforderungszeichenfolge für einen Schritt. Bei mehr als 4000 Zeichen abgeschnitten.|  
+|Befehl|nvarchar(4000)|Enthält den vollständigen Text des Befehls dieses Schritts an.|Eine beliebige gültige Anforderungs-Zeichenfolge für einen Schritt. Bei mehr als 4000 Zeichen abgeschnitten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

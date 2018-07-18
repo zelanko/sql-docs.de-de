@@ -1,5 +1,5 @@
 ---
-title: SQL:Variable()-Funktion (XQuery) | Microsoft Docs
+title: Funktion (XQuery) von SQL:Variable() | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018201"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>XQuery-Erweiterungsfunktionen - SQL:Variable()
+# <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - SQL:Variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Macht eine Variable verfügbar, die einen relationalen SQL-Wert in einem XQuery-Ausdruck enthält.  
@@ -43,20 +43,20 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In diesem Thema beschriebenen [einbinden relationaler Daten in XML-Daten](../t-sql/xml/binding-relational-data-inside-xml-data.md), Sie können diese Funktion verwenden, bei der Verwendung [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md) zum Verfügbarmachen eines relationalen Werts in XQuery.  
+ Siehe das Thema [einbinden relationaler Daten in XML-Daten](../t-sql/xml/binding-relational-data-inside-xml-data.md), Sie können diese Funktion verwenden, bei der Verwendung [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md) zum Verfügbarmachen eines relationalen Werts in XQuery.  
   
- Z. B. die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um eine Abfrage für eine XML-Instanz angeben, die in gespeichert ist ein **Xml** -Datentyp, Variable oder Spalte. Manchmal sollen in einer Abfrage auch Werte aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen oder einem -Parameter verwendet werden, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL: Variable** Funktion.  
+ Z. B. die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um eine Abfrage für eine XML-Instanz angeben, die in gespeichert ist ein **Xml** -Datentypvariable oder-Spalte. Manchmal sollen in einer Abfrage auch Werte aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen oder einem -Parameter verwendet werden, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL: Variable** Funktion.  
   
- Der SQL-Wert wird in einen entsprechenden XQuery-Wert zugeordnet werden, und dessen Typ werden ein XQuery-Basistyp, der mit dem entsprechenden SQL-Datentyp entspricht.  
+ Der SQL-Wert wird in einen entsprechenden XQuery-Wert zugeordnet, und sein Typ wird eine XQuery-Basistyp, der in den entsprechenden SQL-Typ entspricht.  
   
- Sie können nur auf verweisen eine **Xml** Instanz im Zusammenhang mit dem quellenausdruck einer XML-DML-insert-Anweisung; andernfalls Sie nicht auf Werte vom Typ verweisen **Xml** oder eine common Language Runtime (CLR) einen benutzerdefinierten Typ.  
+ Sie verweisen nur auf eine **Xml** Instanz im Zusammenhang mit dem quellenausdruck einer XML-DML-insert-Anweisung; andernfalls Sie nicht auf Werte vom Typ verweisen **Xml** oder eine common Language Runtime (CLR) einen benutzerdefinierten Typ.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Einfügen einer Transact-SQL-Variablen in XML mit der sql:variable()-Funktion  
  Im folgenden Beispiel wird eine XML-Instanz erstellt, die aus Folgendem besteht:  
   
--   Einem Wert (`ProductID`) aus einer Nicht-XML-Spalte. Die [SQL:Column()-Funktion](../xquery/xquery-extension-functions-sql-column.md) zum Binden dieses Werts in der XML-Code verwendet wird.  
+-   Einem Wert (`ProductID`) aus einer Nicht-XML-Spalte. Die [SQL:Column()-Funktion](../xquery/xquery-extension-functions-sql-column.md) wird verwendet, um diesen Wert in der XML-Code binden.  
   
 -   Einem Wert (`ListPrice`) aus einer Nicht-XML-Spalte aus einer anderen Tabelle. Die `sql:column()`-Funktion wird auch hier zum Binden dieses Werts im XML-Code verwendet.  
   
@@ -101,7 +101,7 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server XQuery-Erweiterungsfunktionen](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [XQuery-Erweiterung für SQL Server-Funktionen](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   

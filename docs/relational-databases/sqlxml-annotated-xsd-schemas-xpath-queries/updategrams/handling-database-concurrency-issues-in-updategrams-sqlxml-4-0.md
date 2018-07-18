@@ -1,5 +1,5 @@
 ---
-title: Behandeln von Parallelitätsproblemen in Updategrams (SQLXML 4.0) Datenbank | Microsoft Docs
+title: Behandeln von Problemen mit der Datenbankparallelität in Updategramms (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -27,22 +27,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 73ae79d0831820366f5ec6454573df26c7b36e01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031268"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Behandlungsdatenbankparallelität gibt in Updategrams (SQLXML 4.0) heraus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese momentaufnahmewerte in den  **\<vor >** -Block der Updategrams. Vor dem Aktualisieren der Datenbank, überprüft das Updategram die Werte, die im angegebenen der  **\<vor >** Block für den aktuellen Werten in der Datenbank, um sicherzustellen, dass das Update gültig ist.  
+  Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese momentaufnahmewerte in den  **\<vor >** -Block der Updategrams. Vor dem Aktualisieren der Datenbank, überprüft das Updategram die Werte, die im angegebenen die  **\<vor >** Block für den aktuellen Werten in der Datenbank, um sicherzustellen, dass das Update gültig ist.  
   
  Die Steuerung durch vollständige Parallelität bietet drei Ebenen des Schutzes in einem Updategram: Niedrig (kein), mittel und hoch. Sie können entscheiden, welche Ebene des Schutzes Sie benötigen, indem Sie das Updategram entsprechend festlegen.  
   
 ## <a name="lowest-level-of-protection"></a>Niedrigste Ebene des Schutzes  
- Diese Ebene ist ein blindes Update, bei dem das Update ohne Verweis auf andere Updates verarbeitet wird, die seit dem letzten Lesen der Datenbank vorgenommen wurden. In einem solchen Fall geben Sie nur die Primärschlüsselspalte(n) in der  **\<vor >** -Block an, um den Datensatz zu identifizieren, und geben Sie die aktualisierte Informationen in den  **\<nach >** Block.  
+ Diese Ebene ist ein blindes Update, bei dem das Update ohne Verweis auf andere Updates verarbeitet wird, die seit dem letzten Lesen der Datenbank vorgenommen wurden. In diesem Fall geben Sie nur die Primärschlüsselspalte(n) im der  **\<vor >** -Block an, um den Datensatz zu identifizieren, und Sie geben Sie die aktualisierte Informationen in den  **\<nach >** Block.  
   
- Die neue Telefonnummer des Kontakts im folgenden Updategram ist beispielsweise korrekt, unabhängig davon, welche Telefonnummer davor verwendet wurde. Beachten Sie, dass der  **\<vor >** -Block gibt nur die Primärschlüsselspalte (ContactID).  
+ Die neue Telefonnummer des Kontakts im folgenden Updategram ist beispielsweise korrekt, unabhängig davon, welche Telefonnummer davor verwendet wurde. Beachten Sie, dass die  **\<vor >** -Block gibt nur die Primärschlüsselspalte (ContactID).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -60,9 +60,9 @@ ms.locfileid: "32973135"
 ## <a name="intermediate-level-of-protection"></a>Mittlere Ebene des Schutzes  
  Bei dieser Ebene des Schutzes vergleicht das Updategram die aktuellen Werte der Daten, die mit den Werten in den Datenbankspalten aktualisiert werden, um sicherzustellen, dass die Werte seit dem Lesen des Datensatzes durch Ihre Transaktion durch keine andere Transaktion geändert wurden.  
   
- Sie können dieses Maß an Schutz abrufen, indem Sie angeben, die Primärschlüsselspalte(n) und die Spalte(n), die Sie aktualisieren die  **\<vor >** Block.  
+ Sie erhalten diese Ebene des Schutzes durch Angabe der Primärschlüsselspalte(n) und die Spalte(n), die Sie aktualisieren die  **\<vor >** Block.  
   
- Bei diesem Updategam wird beispielsweise der Wert in der Spalte Phone der Tabelle Person.Contact für den Kontakt mit der ContactID 1 geändert. Die  **\<vor >** -Block gibt die **Phone** Attribut, um sicherzustellen, dass der Wert dieses Attributs den Wert in der entsprechenden Spalte in der Datenbank entspricht, bevor der aktualisierte Wert angewendet .  
+ Bei diesem Updategam wird beispielsweise der Wert in der Spalte Phone der Tabelle Person.Contact für den Kontakt mit der ContactID 1 geändert. Die  **\<vor >** -Block gibt den **Phone** Attribut, um sicherzustellen, dass der Wert dieses Attributs den Wert in der entsprechenden Spalte in der Datenbank entspricht, bevor der aktualisierte Wert angewendet .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -84,9 +84,9 @@ ms.locfileid: "32973135"
   
 -   Geben Sie zusätzliche Spalten in der Tabelle in der  **\<vor >** Block.  
   
-     Wenn Sie angeben, dass zusätzliche Spalten in der  **\<vor >** Block, das Updategram vergleicht die Werte, die für diese Spalten mit den Werten angegeben werden, die in der Datenbank wurden vor dem Anwenden des Updates. Wenn eine der Datensatzspalten seit dem letzten Lesen des Datensatzes durch Ihre Transaktion geändert wurde, wird das Update vom Updategram nicht durchgeführt.  
+     Bei Angabe von zusätzlichen Spalten in der  **\<vor >** das Updategram-Block vergleicht die Werte, die für diese Spalten mit den Werten angegeben werden, die in der Datenbank wurden vor dem Anwenden des Updates. Wenn eine der Datensatzspalten seit dem letzten Lesen des Datensatzes durch Ihre Transaktion geändert wurde, wird das Update vom Updategram nicht durchgeführt.  
   
-     Z. B. das folgende Updategram aktualisiert den schichtnamen, sondern zusätzliche Spalten (StartTime, EndTime) in der  **\<vor >** Block, wodurch ein höheres Maß an Schutz vor gleichzeitigen anfordern aktualisiert.  
+     Z. B. das folgende Updategram aktualisiert den schichtnamen, sondern zusätzliche Spalten (StartTime, EndTime) in der  **\<vor >** anfordern und einer höheren Ebene des Schutzes gegen gleichzeitige-Block aktualisiert.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -104,11 +104,11 @@ ms.locfileid: "32973135"
     </ROOT>  
     ```  
   
-     In diesem Beispiel gibt das höchste Maß an Schutz durch Angabe alle Spaltenwerte für den Datensatz in die  **\<vor >** Block.  
+     In diesem Beispiel wird das höchste Maß an Schutz durch Angabe von alle Spaltenwerte für den Datensatz in die  **\<vor >** Block.  
   
 -   Geben Sie die Timestamp-Spalte (falls vorhanden) in der  **\<vor >** Block.  
   
-     Statt alle Datensatzspalten im anzugeben der  **\<vor**>-Block können nur Geben Sie die Timestamp-Spalte (falls die Tabelle vorhanden) zusammen mit den Primärschlüsselspalte(n) im die  **\<vor >** Block. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Aus diesem Grund muss die Timestamp-Spalte angegeben werden, im Schema als **dt:type="bin.hex"**, **dt:type="bin.base64"**, oder **SQL: datatype = "Timestamp"**. (Geben Sie entweder die **Xml** -Datentyp oder die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.)  
+     Anstatt alle Datensatzspalten im der  **\<vor**>-Block können nur Geben Sie die Timestamp-Spalte (falls die Tabelle vorhanden) sowie die Primärschlüsselspalte(n) im der  **\<vor >** Block. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Aus diesem Grund muss die Timestamp-Spalte angegeben werden, im Schema als **dt:type="bin.hex"**, **dt:type="bin.base64"**, oder **SQL: datatype = "Timestamp"**. (Geben Sie entweder die **Xml** -Datentyp oder die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.)  
   
 #### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -172,7 +172,7 @@ ms.locfileid: "32973135"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das entsprechende XDR-Schema:  
   
@@ -194,6 +194,6 @@ ms.locfileid: "32973135"
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

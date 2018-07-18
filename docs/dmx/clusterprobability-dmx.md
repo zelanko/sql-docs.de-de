@@ -1,5 +1,5 @@
 ---
-title: ClusterProbability (DMX) | Microsoft Docs
+title: ClusterProbability (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4d8ce16bb07af07bd2bfd651cf5fc1ae15b7e08
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841683"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030276"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Weitere Informationen zum Verwenden dieser Syntax finden Sie unter [SELECT FROM &#60;Modell&#62;. Inhalt &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Weitere Informationen über Mining Model Content-Schemarowset finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Weitere Informationen zum Verwenden dieser Syntax finden Sie unter [SELECT FROM &#60;Modell&#62;. Inhalt &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Weitere Informationen zu den Miningmodell-Schemarowset, finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
   
- Wenn eine \<knotenbeschriftung > nicht angegeben ist, wird die Funktion gibt die Wahrscheinlichkeit, dass die eingabefälle zum wahrscheinlichsten Cluster gehören. Verwenden der **Cluster** Funktion, um die wahrscheinlichsten Cluster zurückzugeben.  
+ Wenn eine \<knotenbeschriftung > nicht angegeben ist, wird die Funktion gibt die Wahrscheinlichkeit, dass die eingabefälle zum wahrscheinlichsten Cluster gehören. Verwenden der **Cluster** Funktion wahrscheinlichsten Clusters zurück.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Wahrscheinlichkeit dafür zurückgegeben, dass der angegebene Fall im Cluster mit der Bezeichnung Cluster 2 enthalten ist.  
@@ -63,7 +63,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Siehe auch  
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

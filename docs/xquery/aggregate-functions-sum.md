@@ -1,5 +1,5 @@
 ---
-title: SUM-Funktion (XQuery) | Microsoft Docs
+title: SUM-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022628"
 ---
-# <a name="aggregate-functions---sum"></a>Aggregatfunktionen – Summe
+# <a name="aggregate-functions---sum"></a>Aggregatfunktionen – sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Summe einer Sequenz von Zahlen zurück.  
@@ -49,14 +49,14 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
 ## <a name="remarks"></a>Hinweise  
  Alle Typen der atomaren Werte, die übergeben werden **sum()** müssen Untertypen des gleichen Basistyps sein. Zu den akzeptierten Basistypen zählen die drei integrierten numerischen Basistypen oder xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:double umgewandelt. Wenn eine Mischung dieser Typen ist, oder wenn andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
   
- Das Ergebnis des **sum()** erhält den Basistyp der übergebenen Typen, z. B. xs: Double im Fall von xdt: UntypedAtomic, selbst wenn die Eingabe optional die leere Sequenz ist. Wenn die Eingabe statisch leer ist, ist das Ergebnis 0 mit dem statischen und dynamischen Typ xs:integer.  
+ Das Ergebnis des **sum()** erhält den Basistyp der übergebenen Typen wie z. B. xs: Double im Fall von xdt: UntypedAtomic, auch wenn die Eingabe optional die leere Sequenz ist. Wenn die Eingabe statisch leer ist, ist das Ergebnis 0 mit dem statischen und dynamischen Typ xs:integer.  
   
- Die **sum()** Funktion gibt die Summe der numerischen Werte zurück. Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz ignoriert *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird der Wert 0 des verwendeten Basistyps zurückgegeben.  
+ Die **sum()** Funktion gibt die Summe der numerischen Werte zurück. Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz, ignoriert *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird der Wert 0 des verwendeten Basistyps zurückgegeben.  
   
  Die Funktion gibt einen Laufzeitfehler zurück, wenn ein Ausnahmefehler wegen Überlauf oder Verstoß gegen den Gültigkeitsbereich auftritt.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** in Spalten vom Typ der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Ermitteln der kombinierten Gesamtanzahl der Arbeitsstunden für alle Arbeitsplatzstandorte im Produktionsprozess mit der XQuery-Funktion sum()  
  Die folgende Abfrage sucht nach der Gesamtanzahl der Arbeitsstunden für alle Arbeitsplatzstandorte im Produktionsprozess aller Produktmodelle, für die Produktionsanweisungen gespeichert sind.  
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 WHERE Instructions is not NULL          
 ```  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 ProductModelID Name                 TotalLaborHours         

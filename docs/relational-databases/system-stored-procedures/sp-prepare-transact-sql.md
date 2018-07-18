@@ -1,5 +1,5 @@
 ---
-title: Sp_prepare (Transact-SQL) | Microsoft Docs
+title: Sp_prepare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 08e1c0f988d480e7c0c98d0818591734574ece87
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036298"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,9 +55,9 @@ sp_prepare handle OUTPUT, params, stmt, options
  Definiert das Resultset des Cursors. Die *Stmt* -Parameter ist erforderlich und erfordert eine **Ntext**, **Nchar**, oder **Nvarchar** Eingabewert.  
   
  *options*  
- Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* den folgenden Int-Eingabewert erfordert:  
+ Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordert den folgenden Eingabedaten Int-Wert:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

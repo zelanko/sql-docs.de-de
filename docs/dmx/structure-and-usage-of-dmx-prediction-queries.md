@@ -1,5 +1,5 @@
 ---
-title: Struktur und die Verwendung von DMX-Vorhersageabfragen | Microsoft Docs
+title: Struktur und Verwendung von DMX-Vorhersageabfragen | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981913"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "34841863"
  Mit DMX können Sie folgende Typen von Vorhersagen erstellen:  
   
  PREDICTION JOIN-Abfrage  
- Wird dazu verwendet, Vorhersagen zu Eingabedaten auf Basis von Mustern zu erstellen, die im Miningmodell vorhanden sind. Diese abfrageanweisung muss darauf folgen einer **ON** -Klausel, die die Joinbedingungen zwischen den Spalten im Miningmodell und die Eingabespalten bereitstellt.  
+ Wird dazu verwendet, Vorhersagen zu Eingabedaten auf Basis von Mustern zu erstellen, die im Miningmodell vorhanden sind. Diese abfrageanweisung muss folgen einem **ON** -Klausel, die die Joinbedingungen zwischen den Miningmodellspalten und den Eingabespalten bereitstellt.  
   
  Natürliche PREDICTION JOIN-Abfrage  
- Wird zum Erstellen von Vorhersagen verwendet, die auf Spaltennamen im Miningmodell basieren, die genau mit den Spaltennamen der Tabelle übereinstimmen, für die Sie die Abfrage ausführen. Diese abfrageanweisung erfordert kein **ON** -Klausel, da die Joinbedingung automatisch generiert werden, basierend auf den übereinstimmenden Namen zwischen den Spalten im Miningmodell und die Eingabespalten.  
+ Wird zum Erstellen von Vorhersagen verwendet, die auf Spaltennamen im Miningmodell basieren, die genau mit den Spaltennamen der Tabelle übereinstimmen, für die Sie die Abfrage ausführen. Diese abfrageanweisung erfordert kein **ON** -Klausel, da die Joinbedingung automatisch generiert wird, basierend auf den entsprechenden Namen zwischen den Miningmodellspalten und den Eingabespalten.  
   
  Leere PREDICTION JOIN-Abfrage  
  Wird dazu verwendet, die wahrscheinlichste Vorhersage zu ermitteln, ohne Eingabedaten bereitstellen zu müssen. Es wird eine Vorhersage zurückgegeben, die nur auf dem Inhalt des Miningmodells basiert.  
@@ -45,7 +45,7 @@ ms.locfileid: "34841863"
   
 -   **TOP**  
   
--   **VON***\<Modell >***PREDICTION JOIN**  
+-   **VON***\<Modell >***PREDICTION JOIN-Anweisung**   
   
 -   **ON**  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34841863"
   
 -   **ORDER BY**  
   
- Die **wählen** -Element einer Vorhersageabfrage definiert die Spalten und Ausdrücke, die im Resultset angezeigt werden, und die folgenden Daten enthalten können:  
+ Die **wählen** -Element einer Vorhersageabfrage definiert die Spalten und Ausdrücken, die im Resultset angezeigt werden, und die folgenden Daten enthalten können:  
   
--   **Vorhersagen** oder **PredictOnly** Spalten aus dem Miningmodell.  
+-   **Vorhersagen** oder **PredictOnly** Spalten aus dem Miningmodell aus.  
   
 -   Jede Spalte aus den Eingabedaten, mit denen die Vorhersagen erstellt werden.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34841863"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

@@ -1,5 +1,5 @@
 ---
-title: OlapInfo-Element (XMLA) | Microsoft Docs
+title: OlapInfo-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8c0cc23eb76d3da97aadbb9a1738580ebdbc62f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968372"
 ---
 # <a name="olapinfo-element-xmla"></a>OlapInfo-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34576782"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Übergeordnete Elemente|[Stammverzeichnis](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Untergeordnete Elemente|[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md), [CellInfo](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md), [CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  

@@ -1,5 +1,5 @@
 ---
-title: Filestore (Eigenschaften) | Microsoft Docs
+title: Filestore (Eigenschaften) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975005"
 ---
 # <a name="filestore-properties"></a>FileStore (Eigenschaften)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "35239040"
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
  **RandomFileAccessMode**  
- Eine boolesche Eigenschaft, die angibt, ob auf Datenbankdateien und zwischengespeicherte Dateien im zufälligen Dateizugriffsmodus zugegriffen wird. Diese Eigenschaft ist standardmäßig deaktiviert. Standardmäßig ist der Server nicht Flag für den zufälligen Dateizugriff festgelegt, wenn partitionsdatendateien für den Lesezugriff.  
+ Eine boolesche Eigenschaft, die angibt, ob auf Datenbankdateien und zwischengespeicherte Dateien im zufälligen Dateizugriffsmodus zugegriffen wird. Diese Eigenschaft ist standardmäßig deaktiviert. Standardmäßig ist der Server nicht das Flag der zufälligen Dateizugriff Zugriff festlegen, beim Öffnen von Dateien der Partition Daten für den Lesezugriff.  
   
- In High-End-Systemen, insbesondere solchen mit umfangreichen Speicherressourcen und mehreren NUMA-Knoten, kann es vorteilhaft sein, zufälligen Dateizugriff zu verwenden. Im zufälligen Zugriffsmodus umgeht Windows Seite Zuordnungsvorgänge, die Daten vom Datenträger in den Systemdateicache eingelesen konfliktverringerung der Cache.  
+ In High-End-Systemen, insbesondere solchen mit umfangreichen Speicherressourcen und mehreren NUMA-Knoten, kann es vorteilhaft sein, zufälligen Dateizugriff zu verwenden. Im zufälligen Zugriffsmodus umgeht Windows Seite-Zuordnungsvorgänge, die Daten vom Datenträger gelesen, in den Systemdateicache konfliktverringerung der Cache.  
   
  Sie müssen Vergleichstests ausführen, um zu bestimmen, ob die Abfrageleistung durch Ändern dieser Eigenschaft verbessert wird. Best Practices zum Ausführen von Vergleichstests, einschließlich des Löschens des Caches und des Vermeidens von häufigen Fehlern, finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539). Weitere Informationen zu den Kompromissen Verwendung dieser Eigenschaft finden Sie unter [ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369).  
   

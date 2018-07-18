@@ -1,5 +1,5 @@
 ---
-title: Number-Funktion (XQuery) | Microsoft Docs
+title: Number-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 65faec31c6e89421ce05bab28dae97e18195bdde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031518"
 ---
-# <a name="functions-on-nodes---number"></a>Funktionen für Knoten - Anzahl
+# <a name="functions-on-nodes---number"></a>Functions on Nodes - Anzahl Funktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den numerischen Wert des Knotens, der durch angegebenen *$arg*.  
+  Gibt den numerischen Wert des Knotens, der angegebenen *$arg*.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ fn:number($arg as node()?) as xs:double?
  Knoten, dessen Wert als Zahl zurückgegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn *$arg* ist nicht angegeben wird, wird der numerische Wert des Kontextknotens, in einen Double konvertiert zurückgegeben. In SQL Server **Fn:Number()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden. Beispielsweise gibt der folgende Ausdruck das <`ROOT`>-Element zurück.  
+ Wenn *$arg* ist nicht angegeben ist, wird der numerische Wert des Kontextknotens aus, konvertiert in einen Double-Wert zurückgegeben. In SQL Server **Fn:Number()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden. Beispielsweise gibt der folgende Ausdruck das <`ROOT`>-Element zurück.  
   
 ```  
 declare @x xml  
@@ -56,10 +56,10 @@ set @x='<ROOT>111</ROOT>'
 select @x.query('/ROOT[number()=111]')  
 ```  
   
- Wenn der Wert des Knotens nicht gültige lexikalische Darstellung eines numerischen simple-Typs gemäß **XML Schema Part 2: Datatypes, W3C Recommendation**, die Funktion eine leere Sequenz zurückgibt. NaN wird nicht unterstützt.  
+ Wenn der Wert des Knotens keine gültige lexikalische Darstellung eines numerischen simple-Typs, gemäß **XML Schema Part 2: Datatypes, W3C-Empfehlung**, gibt die Funktion eine leere Sequenz zurück. NaN wird nicht unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Verwenden der number()-Funktion von XQuery zum Abrufen des numerischen Werts eines Attributs  
  Die folgende Abfrage ruft den numerischen Wert des LotSize-Attributs aus dem ersten Arbeitsplatzstandort im Fertigungsvorgang von Produktmodell 7 ab.  
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
   
 -   Die **number()** Funktion ist nicht erforderlich, wie durch die Abfrage für die **LotSizeA** Attribut. Es handelt sich dabei um eine XPath 1.0-Funktion, die hauptsächlich aus Gründen der Abwärtskompatibilität enthalten ist.  
   
--   Die XQuery für **LotSizeB** gibt die Number-Funktion und ist redundant.  
+-   Die XQuery für **LotSizeB** gibt an, die Number-Funktion und ist redundant.  
   
 -   Die Abfrage für **LotSizeD** veranschaulicht die Verwendung eines Number-Werts in einer arithmetischen Operation.  
   

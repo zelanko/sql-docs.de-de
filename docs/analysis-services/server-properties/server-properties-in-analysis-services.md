@@ -1,5 +1,5 @@
 ---
-title: Servereigenschaften in Analysis Services | Microsoft Docs
+title: Servereigenschaften in Analysis Services | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975098"
 ---
 # <a name="server-properties-in-analysis-services"></a>Servereigenschaften in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administrator kann die Standard-Serverkonfigurationseigenschaften einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden.  
   
- Konfigurieren Sie den Server, SQL Server Management Studio verwenden oder bearbeiten Sie die Datei "Msmdsrv.ini" einer bestimmten SQL Server Analysis Services-Instanz.  
+ Konfigurieren Sie den Server, SQL Server Management Studio verwenden, oder bearbeiten Sie die Datei "Msmdsrv.ini" einer bestimmten SQL Server Analysis Services-Instanz.  
  
 Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Eigenschaften, die wahrscheinlich geändert werden sollen. Den vollständigen Eigenschaftensatz finden Sie in der Datei „msmdsrv.ini“.   
   
 > [!NOTE]  
->  In einer Standardinstallation von SQL Server Analysis Services kann "Msmdsrv.ini" im \Programme\Microsoft SQL Server\MSAS13 gefunden werden. MSSQLSERVER\OLAP\Config-Ordner.
+>  In einer Standardinstallation von SQL Server Analysis Services können die Datei "Msmdsrv.ini" im \Programme\Microsoft SQL Server\MSAS13 gefunden werden. MSSQLSERVER\OLAP\Config-Ordner.
 > 
 > Zu anderen Eigenschaften, die die Serverkonfiguration beeinflussen, gehören Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  

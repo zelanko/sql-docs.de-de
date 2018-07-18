@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Sybase ASE Schemas in SQL Server-Schemas (SybaseToSQL) | Microsoft Docs
+title: Zuordnen von Sybase ASE Schemas in SQL Server-Schemas (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,57 +18,57 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6ab6b3e6d61290bdad64da2507e562d5cf7e2dae
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b2250ded7d76ad35de8ad960356d272358201e37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779076"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985102"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Zuordnen von Sybase ASE Schemas in SQL Server-Schemas (SybaseToSQL)
-In Sybase Adaptive Server Enterprise (ASE), dass jede Datenbank eine oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte innerhalb einer Datenbank und des Schemas in derselben Datenbank und Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen ASE anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken und Schemas.  
+In Sybase Adaptive Server Enterprise (ASE), dass jede Datenbank eine oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte in einer Datenbank und Schema auf die gleiche Datenbank und das Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen der ASE anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken und Schemas.  
   
-## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE und SQLServer oder SQL Azure Schemas  
-ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken und ihre Schemas zwei Teil Notierung angeben als *database.schema*. Beispielsweise ist in einer ASE **Demo** Datenbank, die möglicherweise eine **Dbo** Schema. Die Datenbank und Schema-Paar, als angegeben sind **demo.dbo**. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure hat die gleiche Datenbank und das Schema, das Paar auch als **demo.dbo**.  
+## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE und SQLServer oder SQL Azure-Schemas  
+ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken und ihre Schemas mithilfe von zwei Teil Notation als anzugeben *database.schema*. Z. B. in einer ASE **Demo** Datenbank, die möglicherweise eine **Dbo** Schema. Die Datenbank und Schema-Paar, als angegeben sind **demo.dbo**. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure hat die gleiche Datenbank und das Schema, das Paar wird auch als **demo.dbo**.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Ändern der Zieldatenbank und Schema  
-Sie können ein Schema ASE zum keine verfügbaren zuordnen, in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schema.  
+Sie können ein Schema für die ASE in SSMA zuordnen, um alle verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schema.  
   
 **So ändern Sie die Datenbank und schema**  
   
-1.  Wählen Sie im Metadaten-Explorer Sybase **Datenbanken**.  
+1.  Wählen Sie in der Sybase-Metadaten-Explorer, **Datenbanken**.  
   
-    Die **Schema zuordnen** Registerkarte ist auch verfügbar, wenn Sie eine einzelne Datenbank, wählen Sie die **Schemas** Ordner oder einzelne Schemas. Die Liste in die **Schema zuordnen** Registerkarte für das ausgewählte Objekt angepasst wird.  
+    Die **Zuordnen von Schemas** Registerkarte ist auch verfügbar, wenn Sie eine einzelne Datenbank, wählen Sie die **Schemas** Ordner oder einzelne Schemas. Die Liste in der **Zuordnen von Schemas** Registerkarte für das ausgewählte Objekt angepasst wird.  
   
-2.  Klicken Sie im rechten Bereich auf die **Schema zuordnen** Registerkarte.  
+2.  Klicken Sie im rechten Bereich auf die **Zuordnen von Schemas** Registerkarte.  
   
-    Sie sehen eine Liste aller ASE Datenbanken mit ihrer Schemas, gefolgt von einem Zielwert. Dieses Ziel wird in zwei Teilen Vermerk gekennzeichnet (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, in dem die Objekte und Daten migriert werden.  
+    Sie sehen eine Liste aller ASE-Datenbanken mit ihren Schemas, gefolgt von einem Zielwert. Dieses Ziel wird in einer zweiteiligen-Notation angegeben (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, in denen Ihre Objekte und Daten migriert werden.  
   
 3.  Wählen Sie die Zeile, die die Zuordnung, die Sie ändern möchten enthält, und klicken Sie dann auf **ändern**.  
   
-4.  In der **Zielschema auswählen** (Dialogfeld), können Sie für die Zieldatenbank verfügbar "und" Schema "oder" Geben Sie die Datenbank und das Schema in das Textfeld in einer zweiteiligen-Schreibweise (database.schema) und klicken Sie dann auf Durchsuchen **OK**.  
+4.  In der **Zielschema auswählen** im Dialogfeld können Sie für die Zieldatenbank verfügbar und Schema oder mit der Datenbank und des Schemas in das Textfeld in einer zweiteiligen-Schreibweise (database.schema) Namen, und klicken Sie dann auf Durchsuchen **OK**.  
   
-5.  Das Ziel ändert sich die **Schema zuordnen** Registerkarte.  
+5.  Das Ziel geändert werden, auf die **Zuordnen von Schemas** Registerkarte.  
   
-**Modi für eine Zuordnung**  
+**Modi der Zuordnung**  
   
--   Zuordnen von SQL Server  
+-   Zuordnung zu SQLServer  
   
-Sie können keiner Zieldatenbank Quelldatenbank zuordnen. Standardmäßig wird die Quelldatenbank zugeordnet Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, mit denen Sie über SSMA verbunden haben. Wenn die Zieldatenbank zuzuordnenden auf nicht vorhandene wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann mit einer Meldung werden Sie aufgefordert **"die Datenbank bzw. das Schema ist nicht im Ziel vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten. Sie würden während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen?"** Klicken Sie auf "Ja". Auf ähnliche Weise können Sie Schemas unter Ziel nicht vorhandenen Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, der während der Synchronisierung erstellt wird.  
+Sie können die Quelldatenbank zu keiner Zieldatenbank zuordnen. Standardmäßig wird die Quelldatenbank zugeordnet Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Sie verbunden haben, mit der SSMA. Wenn die Zieldatenbank, die zugeordnet wird, auf nicht vorhandene ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann mit einer Meldung werden Sie aufgefordert **"die Datenbank bzw. das Schema ist nicht im Ziel vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen?"** Klicken Sie auf "Ja". Auf ähnliche Weise können Sie Schemas unter Ziel nicht vorhandenen Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, der während der Synchronisierung erstellt wird.  
   
--   Zuordnen zu SQL Azure  
+-   Zuordnung zu SQL Azure  
   
-Sie können die Quelldatenbank in die verbundene SQL Azure-Zieldatenbank oder eines beliebigen Schemas in der verbundenen SQL Azure-Zieldatenbank zuordnen. Wenn Sie alle nicht vorhandenen Schema unter verbundenen Zieldatenbank Quelle Schema zuordnen, werden Sie mit einer Meldung aufgefordert **"das Schema ist im Ziel-Metadaten nicht vorhanden. Sie würden während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf "Ja".  
+Sie können die Quelldatenbank in die verbundene SQL Azure-Zieldatenbank oder eines beliebigen Schemas in der verbundenen SQL Azure-Datenbank zuordnen. Wenn Sie alle nicht vorhandenen Schema unter dem verbundenen Zieldatenbank Quelle Schema zuordnen, Sie werden aufgefordert, mit der Meldung **"das Schema ist in den Metadaten nicht vorhanden. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf "Ja".  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>Zurücksetzen auf die Standarddatenbank und das Schema  
-Wenn Sie die Zuordnung zwischen einem Schema ASE anpassen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schema können Sie die Zuordnung wieder auf die Standardwerte zurückgesetzt.  
+## <a name="reverting-to-the-default-database-and-schema"></a>Wiederherstellen der Standarddatenbank und des Schemas  
+Wenn Sie die Zuordnung zwischen einer ASE anpassen und ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder das Schema der SQL Azure können Sie die Zuordnung zurück auf die Standardwerte wiederherstellen.  
   
-**Um die Standarddatenbank und das Schema wiederherzustellen**  
+**Wieder in den Standarddatenbank und des Schemas**  
   
-1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
+1.  Klicken Sie unter der Registerkarte des Schema-Zuordnung, wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** wieder in den Standarddatenbank und des Schemas.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Wenn Sie die Konvertierung von Sybase ASE-Objekten in analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte können Sie [erstellen Sie ein Konvertierungsbericht](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Andernfalls können Sie [konvertieren ASE Datenbankobjektdefinitionen](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objektdefinitionen.  
+Wenn Sie die Konvertierung von Sybase ASE-Objekten in analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, können Sie [erstellen Sie einen Konvertierungsbericht](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Andernfalls können Sie [konvertieren Sie die ASE Datenbankobjektdefinitionen](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objektdefinitionen.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

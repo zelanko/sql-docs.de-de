@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL) | Microsoft Docs
+title: Zuordnen von MySQL-Datenbanken in SQL Server-Schemas (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,61 +19,61 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9ad7ad2647e0f1c9c6145d3277c1bee911fdcde9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 87720daab47ce4d21e7232b08b81e97b8171f43d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776716"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980532"
 ---
-# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL)
-Standardmäßig SSMA für die MySQL migriert alle Objekte in einer MySQL-Schema in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen Schemas MySQL anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken.  
+# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken in SQL Server-Schemas (MySQLToSQL))
+In der Standardeinstellung SSMA für MySQL migriert werden alle Objekte in einer MySQL-Schema in ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank, die mit dem Namen für das Schema. Sie können jedoch anpassen, die Zuordnungen zwischen MySQL-Schemas und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken.  
   
-## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL und SQLServer oder SQL Azure Schemas  
-Der MySQL-Konzept eines Schemas ist das SQL Server-Konzept einer Datenbank und eines seiner Schemas zugeordnet. SSMA bezieht sich auf die SQL Server-Kombination der Datenbank und Schema als ein Schema.  
+## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL und SQLServer oder SQL Azure-Schemas  
+Das MySQL-Konzept eines Schemas wird das SQL Server-Konzept für eine Datenbank und eines der Schemas zugeordnet. SSMA bezieht sich auf die SQL Server-Kombination als Schema der Datenbank und Schema.  
   
-Der MySQL-Konzept eines Schemas ist das SQL Server-Konzept einer Datenbank und eines seiner Schemas zugeordnet. Z. B. möglicherweise MySQL ein Schema mit dem Namen **HR**. Eine Instanz von SQL Server möglicherweise eine Datenbank namens **HR**, und innerhalb dieser Datenbank sind Schemas. Ein Schema ist die **Dbo** (oder Datenbankbesitzer) Schema. Standardmäßig wird der MySQL-Schema **HR** zugeordnet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank- und Schemaobjekte **HR.dbo**. SSMA bezieht sich auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Kombination von Datenbank und das Schema als ein Schema.  
+Das MySQL-Konzept eines Schemas wird das SQL Server-Konzept für eine Datenbank und eines der Schemas zugeordnet. Z. B. möglicherweise MySQL ein Schema mit dem Namen **HR**. Eine Instanz von SQL Server möglicherweise eine Datenbank namens **HR**, und innerhalb dieser Datenbank sind Schemas. Ein Schema ist die **Dbo** (oder der Datenbankbesitzer) Schema. Standardmäßig ist das MySQL-Schema **HR** zugeordnet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank und Schema **HR.dbo**. SSMA bezieht sich auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Kombination von Datenbank und das Schema als ein Schema.  
   
 Sie können die Zuordnung zwischen MySQL ändern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure-Schemas.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Ändern der Zieldatenbank und Schema  
-Sie können eine MySQL-Schema, keine verfügbaren zuordnen, in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schema.  
+Sie können ein MySQL-Schema in SSMA zuordnen, um alle verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schema.  
   
 **So ändern Sie die Datenbank und schema**  
   
-1.  Wählen Sie im MySQL-Metadaten-Explorer **Schemas**.  
+1.  Wählen Sie im MySQL-Metadaten-Explorer, **Schemas**.  
   
-    Die **Schema zuordnen** Registerkarte ist auch verfügbar, wenn Sie einzelne Schemas auswählen. Die Liste in die **Schema zuordnen** Registerkarte für das ausgewählte Objekt angepasst wird.  
+    Die **Zuordnen von Schemas** Registerkarte ist auch verfügbar, wenn Sie einzelne Schemas auswählen. Die Liste in der **Zuordnen von Schemas** Registerkarte für das ausgewählte Objekt angepasst wird.  
   
-2.  Klicken Sie im rechten Bereich auf die **Schema zuordnen** Registerkarte.  
+2.  Klicken Sie im rechten Bereich auf die **Zuordnen von Schemas** Registerkarte.  
   
-    Sie sehen eine Liste aller MySQL-Schemas, gefolgt von einem Zielwert. Dieses Ziel wird in zwei Teilen Vermerk gekennzeichnet (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, in dem die Objekte und Daten migriert werden.  
+    Sie sehen eine Liste aller MySQL-Schemas, gefolgt von einem Zielwert. Dieses Ziel wird in einer zweiteiligen-Notation angegeben (*database.schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, in denen Ihre Objekte und Daten migriert werden.  
   
 3.  Wählen Sie die Zeile, die die Zuordnung, die Sie ändern möchten enthält, und klicken Sie dann auf **ändern**.  
   
-    In der **Zielschema auswählen** (Dialogfeld), können Sie für die Zieldatenbank verfügbar "und" Schema "oder" Geben Sie die Datenbank und das Schema in das Textfeld in einer zweiteiligen-Schreibweise (database.schema) und klicken Sie dann auf Durchsuchen **OK**.  
+    In der **Zielschema auswählen** im Dialogfeld können Sie für die Zieldatenbank verfügbar und Schema oder mit der Datenbank und des Schemas in das Textfeld in einer zweiteiligen-Schreibweise (database.schema) Namen, und klicken Sie dann auf Durchsuchen **OK**.  
   
-4.  Das Ziel ändert sich die **Schema zuordnen** Registerkarte.  
+4.  Das Ziel geändert werden, auf die **Zuordnen von Schemas** Registerkarte.  
   
-**Modi für eine Zuordnung**  
+**Modi der Zuordnung**  
   
--   Zuordnen von SQL Server  
+-   Zuordnung zu SQLServer  
   
-Sie können keiner Zieldatenbank Quelldatenbank zuordnen. Standardmäßig wird die Quelldatenbank zugeordnet Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, mit denen Sie über SSMA verbunden haben. Wenn die Zieldatenbank zuzuordnenden auf nicht vorhandene wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann mit einer Meldung werden Sie aufgefordert **"die Datenbank bzw. das Schema ist nicht im Ziel vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten. Sie würden während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen?"** Klicken Sie auf "Ja". Auf ähnliche Weise können Sie Schemas unter Ziel nicht vorhandenen Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, der während der Synchronisierung erstellt wird.  
+Sie können die Quelldatenbank zu keiner Zieldatenbank zuordnen. Standardmäßig wird die Quelldatenbank zugeordnet Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Sie verbunden haben, mit der SSMA. Wenn die Zieldatenbank, die zugeordnet wird, auf nicht vorhandene ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann mit einer Meldung werden Sie aufgefordert **"die Datenbank bzw. das Schema ist nicht im Ziel vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen?"** Klicken Sie auf "Ja". Auf ähnliche Weise können Sie Schemas unter Ziel nicht vorhandenen Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, der während der Synchronisierung erstellt wird.  
   
--   Zuordnen zu SQL Azure  
+-   Zuordnung zu SQL Azure  
   
-Sie können die Quelldatenbank zuordnen, mit dem Ziel verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank oder alle Schemas in der verbundenen Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Wenn Sie alle nicht vorhandenen Schema unter verbundenen Zieldatenbank Quelle Schema zuordnen, werden Sie mit einer Meldung aufgefordert **"das Schema ist im Ziel-Metadaten nicht vorhanden. Sie würden während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf "Ja".  
+Sie können die Quelldatenbank zuordnen, an das Ziel verbundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank oder das Schema in der verbundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Wenn Sie alle nicht vorhandenen Schema unter dem verbundenen Zieldatenbank Quelle Schema zuordnen, Sie werden aufgefordert, mit der Meldung **"das Schema ist in den Metadaten nicht vorhanden. Es wird während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf "Ja".  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>Zurücksetzen auf die Standarddatenbank und das Schema  
-Wenn Sie die Zuordnung zwischen einer MySQL-Schema und eine SQL Server-Datenbankschemas anpassen, können die Zuordnung wieder auf die Standardwerte zurückgesetzt werden.  
+## <a name="reverting-to-the-default-database-and-schema"></a>Wiederherstellen der Standarddatenbank und des Schemas  
+Wenn Sie die Zuordnung zwischen einem MySQL-Schema und ein SQL Server-Schema anpassen, können Sie die Zuordnung zurück auf die Standardwerte wiederherstellen.  
   
-**Um die Standarddatenbank und das Schema wiederherzustellen**  
+**Wieder in den Standarddatenbank und des Schemas**  
   
-1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
+1.  Klicken Sie unter der Registerkarte des Schema-Zuordnung, wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** wieder in den Standarddatenbank und des Schemas.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Wenn Sie die Konvertierung von MySQL-Objekten in SQL Server- bzw. SQL Azure-Objekte analysieren möchten, können Sie [erstellen Sie ein Konvertierungsbericht](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) andernfalls können Sie [konvertieren Sie die MySQL-Datenbank-Objektdefinitionen](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) in SQL Server oder SQL Azure-Schemas  
+Wenn Sie die Konvertierung von MySQL-Objekten in SQL Server oder SQL Azure-Objekte analysieren möchten, können Sie [erstellen Sie einen Konvertierungsbericht](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) andernfalls können Sie [konvertieren Sie die MySQL-Datenbank-Objektdefinitionen](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7) in SQL Server oder SQL Azure-schemas  
   
 ## <a name="see-also"></a>Siehe auch  
 [Projekteinstellungen &#40;Konvertierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  

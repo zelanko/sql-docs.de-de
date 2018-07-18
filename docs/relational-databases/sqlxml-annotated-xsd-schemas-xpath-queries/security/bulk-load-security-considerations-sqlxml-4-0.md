@@ -1,5 +1,5 @@
 ---
-title: Massenimport von Sicherheitsüberlegungen (SQLXML 4.0) | Microsoft Docs
+title: Massenimport von Sicherheitsüberlegungen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd240ede23b5ff4845531bebf24529bd0219c5ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969575"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971842"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Sicherheitsüberlegungen zum Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Im Folgenden finden Sie Sicherheitsrichtlinien zur Verwendung zum XML-Massenladen:  
   
--   Wenn Sie angeben, dass der Massenladevorgang als Transaktion ausgeführt werden, Sie verwenden die **TempFilePath** -Eigenschaft an einen Ordner, in dem temporären Dateien erstellt.  
+-   Wenn Sie angeben, dass der Massenladevorgang als Transaktion ausgeführt werden, Sie verwenden die **TempFilePath** -Eigenschaft an einen Ordner, in dem die temporären Dateien erstellt.  
   
      Während des Massenladevorgangs werden diese temporären Dateien mit den folgenden Berechtigungen erstellt:  
   
@@ -61,6 +61,6 @@ ms.locfileid: "32969575"
 -   Wenn der Benutzer eine Fehlerprotokolldatei festlegt, in die SQLXML Fehler ausgeben soll, dann wird diese Datei bei jeder Ausführung des Massenladevorgangs mit den Daten aus dem letzten Massenladeprozess überschrieben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenladen von XML-Daten & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

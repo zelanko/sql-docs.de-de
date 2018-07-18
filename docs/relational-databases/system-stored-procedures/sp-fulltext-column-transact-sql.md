@@ -1,5 +1,5 @@
 ---
-title: Sp_fulltext_column (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_column (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259580"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018404"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -59,18 +59,18 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Der Name einer Spalte in *qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Volltextindizes von Textdaten, die in Spalten vom gespeicherten erstellen **varbinary(max)** oder **Image** -Datentyp. Bilder und Abbildungen werden nicht indiziert.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Volltextindizes von Textdaten, die in Spalten vom gespeicherten erstellen **'varbinary(max)'** oder **Image** -Datentyp. Bilder und Abbildungen werden nicht indiziert.  
   
  [  **@action=** ] **"***Aktion***"**  
  Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**add**|Fügt dem inaktiven Volltextindex der Tabelle den *column_name* von *qualified_table_name* hinzu. Durch diese Aktion wird die Volltextindizierung für die Spalte aktiviert.|  
 |**Löschen**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
   
  [ **@language=** ] **'***language_term***'**  
- Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der in enthaltenen Sprachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ Die Sprache der in der Spalte gespeicherten Daten. Eine Liste der Sprachen, die in enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Verwenden Sie 'Neutral', wenn eine Spalte Daten in mehreren Sprachen oder in einer nicht unterstützten Sprache enthält. Die Standardsprache wird mithilfe der Konfigurationsoption 'default full-text language' angegeben.  
@@ -82,7 +82,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Volltextindex aktiv ist, wird ggf. das derzeit ausgeführte Auffüllen beendet. Wenn für eine Tabelle mit einem aktiven Volltextindex die Änderungsnachverfolgung aktiviert ist, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] außerdem sicher, dass der Index aktuell ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet z. B. das aktuelle Auffüllen der Tabelle, löscht den vorhandenen Index und startet einen neuen Auffüllvorgang.  

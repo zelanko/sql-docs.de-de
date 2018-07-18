@@ -1,5 +1,5 @@
 ---
-title: Sp_adduser (Transact-SQL) | Microsoft Docs
+title: Sp_adduser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036098"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_adduser [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ **@loginame =** ] **'***login***'**  
- Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Windows-Anmeldung.  
+ Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* muss einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung oder Windows-Anmeldung.  
   
  [  **@name_in_db =** ] **"***Benutzer***"**  
- Der Name für den neuen Datenbankbenutzer. *Benutzer* ist ein **Sysname**, hat den Standardwert NULL. Wenn *Benutzer* nicht angegeben ist, wird standardmäßig der Name des neuen Datenbankbenutzers auf die *Anmeldung* Name. Angeben von *Benutzer* der neue Benutzer erhält einen Namen in der Datenbank, die sich von den Anmeldenamen auf Serverebene.  
+ Der Name für den neuen Datenbankbenutzer. *Benutzer* ist eine **Sysname**, hat den Standardwert NULL. Wenn *Benutzer* nicht angegeben ist, der Namen des neuen Datenbankbenutzers standardmäßig die *Anmeldung* Name. Angeben von *Benutzer* benennt dem neuen Benutzer mit einem Namen in der Datenbank, die den Anmeldenamen auf Serverebene unterscheidet.  
   
  [  **@grpname =** ] **"***Rolle***"**  
  Die Datenbankrolle, deren Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* muss eine gültige Datenbankrolle in der aktuellen Datenbank sein.  
@@ -68,13 +68,13 @@ sp_adduser [ @loginame = ] 'login'
   
  Verwendung **Sys. server_principals** um eine Liste gültiger Anmeldenamen anzuzeigen.  
   
- Verwendung **Sp_helprole** um eine Liste der gültigen Rollennamen anzuzeigen. Bei Angabe einer Rolle erhält der Benutzer automatisch die für diese Rolle definierten Berechtigungen. Wenn eine Rolle nicht angegeben wird, erhält der Benutzer die Berechtigungen auf den Standardwert **öffentlichen** Rolle. Zum Hinzufügen eines Benutzers zu einer Rolle, die einen Wert für die *Benutzername* muss angegeben werden. (*Benutzername* identisch sein *Anmelde-ID*.)  
+ Verwendung **Sp_helprole** um eine Liste der gültigen Rollennamen anzuzeigen. Bei Angabe einer Rolle erhält der Benutzer automatisch die für diese Rolle definierten Berechtigungen. Wenn eine Rolle nicht angegeben wird, erhält der Benutzer die Berechtigungen, die auf den Standardwert **öffentliche** Rolle. Zum Hinzufügen eines Benutzers zu einer Rolle, die einen Wert für die *Benutzernamen* muss angegeben werden. (*Benutzername* können identisch sein *Login_id*.)  
   
- Benutzer **Gast** bereits in jeder Datenbank vorhanden ist. Hinzufügen des Benutzers **Gast** dieser Benutzer wird aktiviert werden, falls sie zuvor deaktiviert war. Standardmäßig Benutzer **Gast** ist in neuen Datenbanken deaktiviert.  
+ Benutzer **Gast** bereits in jeder Datenbank vorhanden ist. Hinzufügen eines Benutzers **Gast** wird dieser aktiviert, wenn sie zuvor deaktiviert war. In der Standardeinstellung Benutzer **Gast** ist in neuen Datenbanken deaktiviert.  
   
  **Sp_adduser** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
- Sie können nicht hinzugefügt werden eine **Gast** Benutzer da eine **Gast** Benutzer bereits in jeder Datenbank vorhanden ist. So aktivieren Sie die **Gast** Benutzer, Grant **Gast** CONNECT-Berechtigung wie folgt:  
+ Sie können nicht hinzugefügt werden eine **Gast** Benutzer da eine **Gast** Benutzer, die bereits in jeder Datenbank vorhanden ist. So aktivieren Sie die **Gast** Benutzer, Grant **Gast** CONNECT-Berechtigung wie folgt:  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -94,7 +94,7 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Hinzufügen eines Datenbankbenutzers mit der gleichen Anmelde-ID  
- Im folgenden Beispiel wird der Benutzer `Arvind` der aktuellen Datenbank für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `Arvind` hinzugefügt. Dieser Benutzer gehört, auf den Standardwert **öffentlichen** Rolle.  
+ Im folgenden Beispiel wird der Benutzer `Arvind` der aktuellen Datenbank für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `Arvind` hinzugefügt. Dieser Benutzer gehört, auf den Standardwert **öffentliche** Rolle.  
   
 ```  
 EXEC sp_adduser 'Arvind';  

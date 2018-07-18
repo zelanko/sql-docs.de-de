@@ -1,5 +1,5 @@
 ---
-title: sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
+title: sp_backup_config_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8ebeca4b0a1c9079f8786303207bcbae4dfe74c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238830"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035278"
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Konfiguriert die automatisierte oder benutzerdefinierte Planungsoptionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Konfiguriert die Zeitplanoptionen für den automatisierten oder benutzerdefinierte [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
     
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,33 +54,33 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> Argumente  
  @database_name  
- Der Name der Datenbank zum Aktivieren der verwalteten Sicherung in einer bestimmten Datenbank. Wenn der Wert NULL oder *, und klicken Sie dann diese verwaltete Sicherung für alle Datenbanken auf dem Server gilt.  
+ Der Name der Datenbank, für die verwaltete Sicherung in einer bestimmten Datenbank aktiviert werden soll. Wenn der Wert NULL oder *, und klicken Sie dann diese verwaltete Sicherung für alle Datenbanken auf dem Server gilt.  
   
  @scheduling_option  
- Geben Sie "System", für die sicherungsplanung System gesteuert. Geben Sie "Benutzerdefiniert" für einen benutzerdefinierten Zeitplan durch die anderen Paratmeters definiert.  
+ Geben Sie "System", für die sicherungsplanung System gesteuert. Geben Sie "Benutzerdefiniert" für einen benutzerdefinierten Zeitplan, der von den anderen Paratmeters definiert.  
   
  @full_backup_freq_type  
- Der frequenztyp für die verwaltete Sicherung, die auf "Täglich" oder "Wöchentlich" festgelegt werden können.  
+ Der Typ der Frequenz für die verwaltete Sicherung, die auf "Täglich" oder "Wöchentlich" festgelegt werden können.  
   
  @days_of_week  
- Die Wochentage für die Sicherungen beim @full_backup_freq_type ist auf wöchentlich festgelegt. Geben Sie die vollständige Zeichenfolgennamen wie "Montag".  Sie können auch mehr als einen Tag-Namen durch einen senkrechten Strich getrennt angeben. Z. B. N'Monday | Mittwoch | Freitag ".  
+ Die Tage der Woche für die Sicherungen bei @full_backup_freq_type ist auf wöchentlich festgelegt. Geben Sie die vollständige Zeichenfolge-Namen, z. B. "Montag".  Sie können auch mehr als einen Tag-Namen, die durch einen senkrechten Strich getrennt angeben. Z. B. N'Monday | Mittwoch | Freitag ".  
   
  @backup_begin_time  
- Die Startzeit für das Zeitfenster für Sicherungen. Sicherungen werden nicht außerhalb des Zeitfensters, die durch eine Kombination von definiert ist gestartet @backup_begin_time und @backup_duration.  
+ Die Startzeit des Sicherungsfensters. Sicherungen werden nicht außerhalb des Fensters Zeit, die durch eine Kombination von definiert wird gestartet @backup_begin_time und @backup_duration.  
   
  @backup_duration  
- Die Dauer des Fensters Sicherungszeitpunkt aus. Beachten Sie, dass es gibt keine Garantie, dass Sicherungen während des Zeitfensters durch definierten abgeschlossen werden @backup_begin_time und @backup_duration. Sicherungsvorgänge, die in diesem Zeitfenster gestartet wurden, aber überschreiten die Dauer des Fensters werden nicht abgebrochen werden.  
+ Die Dauer der Zeitfenster für Sicherungen. Beachten Sie, dass es keine Garantie gibt, dass Sicherungen während des Zeitfensters, definiert durch abgeschlossen werden, @backup_begin_time und @backup_duration. Sicherungsvorgänge, die in diesem Zeitfenster gestartet wurden, aber die Dauer des Fensters überschreiten, werden nicht abgebrochen werden.  
   
  @log_backup_freq  
- Dies bestimmt die Häufigkeit der Sicherungen des Transaktionsprotokolls. Diese Sicherungen Vorkommen in regelmäßigen Abständen anstatt auf dem Zeitplan für die Datenbank gesichert wird. @log_backup_freq kann in Minuten oder Stunden und 0 ist gültig, womit keine protokollsicherungen. Deaktivieren von Sicherungen nur wäre für Datenbanken mit einem einfachen Wiederherstellungsmodell geeignet.  
+ Dies bestimmt die Häufigkeit der Sicherungen des Transaktionsprotokolls. Diese Sicherungen erfolgen in regelmäßigen Abständen und nicht auf dem angegebenen Zeitplan für die Datenbank gesichert wird. @log_backup_freq kann in Minuten oder Stunden und 0 ist ungültig. Dies bedeutet, dass keine protokollsicherungen. Deaktivieren von protokollsicherungen wird nur für Datenbanken mit einer einfachen Wiederherstellungsmodell geeignet sein.  
   
 > [!NOTE]  
->  Wenn das Wiederherstellungsmodell von simple in full geändert wird, müssen Sie die Log_backup_freq von 0 auf einen Wert ungleich 0 (null) neu konfigurieren.  
+>  Wenn das Wiederherstellungsmodell von simple in full geändert wird, müssen Sie die Log_backup_freq von 0 auf einen Wert ungleich 0 neu konfigurieren.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in **Db_backupoperator** -Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und **EXECUTE** Berechtigungen für **Sp_delete_ Backuphistory** gespeicherte Prozedur.  

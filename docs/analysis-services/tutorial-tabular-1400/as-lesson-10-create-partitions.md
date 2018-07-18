@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services Tutorial Lektion 10: Erstellen von Partitionen | Microsoft Docs'
+title: 'Analysis Services-Tutorial – Lektion 10: Erstellen von Partitionen | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,62 +10,62 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 ms.openlocfilehash: 4bfa52e31f2e2fb46acf10bf6f6e02e7a15a3c15
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043914"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017883"
 ---
 # <a name="create-partitions"></a>Erstellen von Partitionen
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In dieser Lektion erstellen Sie Partitionen, um die FactInternetSales-Tabelle in kleinere logische Teile aufzuteilen, die verarbeitet werden können (aktualisiert) unabhängig von anderen Partitionen. Standardmäßig verfügt jede Tabelle, die Sie in Ihr Modell einschließen eine Partition, die alle der Tabelle Spalten und Zeilen enthält. Die FactInternetSales-Tabelle möchten die Daten nach Jahr unterteilen. eine Partition für jeden der fünf Jahren der Tabelle. Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen](../tabular-models/partitions-ssas-tabular.md). 
+In dieser Lektion erstellen Sie Partitionen, um die FactInternetSales-Tabelle in kleinere logische Teile aufteilen, die verarbeitet werden können (aktualisiert) unabhängig von anderen Partitionen. Standardmäßig hat jede Tabelle in Ihrem Modell eine Partition, die alle in der Tabelle Spalten und Zeilen enthält. Wir möchten die Daten nach Jahr unterteilen, für die Tabelle "factinternetsales"; eine Partition für jedes der fünf Jahren der Tabelle. Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen](../tabular-models/partitions-ssas-tabular.md). 
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 9: Erstellen von Hierarchien](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 9: Erstellen von Hierarchien](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Erstellen von Partitionen  
   
-#### <a name="to-create-partitions-in-the-factinternetsales-table"></a>Zum Erstellen von Partitionen in der FactInternetSales-Tabelle  
+#### <a name="to-create-partitions-in-the-factinternetsales-table"></a>Zum Erstellen von Partitionen in der Tabelle "factinternetsales"  
   
-1.  Erweitern Sie im tabellarischen Modell-Explorer **Tabellen**, und klicken Sie dann mit der rechten Maustaste **FactInternetSales** > **Partitionen**.  
+1.  Erweitern Sie im tabellarischen Modell-Explorer **Tabellen**, und klicken Sie dann mit der rechten Maustaste **"factinternetsales"** > **Partitionen**.  
   
-2.  Klicken Sie im Partitions-Manager auf **Kopie**, und ändern Sie dann den Namen in **FactInternetSales2010**.
+2.  Klicken Sie im Partitions-Manager **Kopie**, und ändern Sie dann den Namen in **FactInternetSales2010**.
   
-    Da die Partition nur die Zeilen innerhalb eines bestimmten Zeitraums für das Jahr 2010 eingeschlossen werden soll, müssen Sie den Abfrageausdruck ändern.
+    Da Sie die Partition nur die Zeilen innerhalb eines bestimmten Zeitraums, für das Jahr 2010 enthalten soll, müssen Sie den Abfrageausdruck ändern.
   
-4.  Klicken Sie auf **Entwurf** Abfrage-Editor zu öffnen, und klicken Sie auf die **FactInternetSales2010** Abfrage.
+4.  Klicken Sie auf **Entwurf** Abfrage-Editor öffnen, und klicken Sie auf die **FactInternetSales2010** Abfrage.
 
-5.  Klicken Sie in der Vorschau auf den Pfeil nach unten in der **OrderDate** Spaltenüberschrift, und klicken Sie dann auf **Datum/Uhrzeit-Filter** > **zwischen**.
+5.  Klicken Sie in der Vorschau auf den Pfeil nach unten in der **OrderDate** Spaltenüberschrift, und klicken Sie dann auf **Datums-/Zeitfilter** > **zwischen**.
 
-    ![als-lesson10-Abfrage-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
+    ![als lesson10-Abfrage-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  Klicken Sie im Dialogfeld Filterzeilen im **Reihen anzeigen: OrderDate**, lassen Sie **ist nach oder gleich**, und geben Sie dann in das Feld Date **1/1/2010**. Lassen Sie die **und** Operator ausgewählt ist, wählen Sie dann **ist, bevor Sie**, geben Sie dann in das Feld Date **1/1/2011**, und klicken Sie dann auf **OK**.
+6.  Klicken Sie im Dialogfeld Filtern von Zeilen in **Zeilen anzeigen: OrderDate**, lassen Sie **ist nach oder gleich**, und geben Sie in der Date-Felds **1/1/2010**. Lassen Sie die **und** Operator ausgewählt ist, wählen Sie dann **ist, bevor Sie**, geben Sie im Datumsfeld **1/1/2011**, und klicken Sie dann auf **OK**.
 
-    ![als-lesson10-Filter-Zeilen](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![als-lesson10-Filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
-    Beachten Sie im Abfrage-Editor in ANGEWENDETE Schritte finden Sie einen weiteren Schritt mit dem Namen Zeilen gefiltert. Dieser Filter ist nur für die Bestelldaten 2010 aus.
+    Beachten Sie, dass im Abfrage-Editor bei ANGEWENDETE Schritte ein weiterer Schritt mit dem Namen gefilterte-Zeilen angezeigt. Diese Filter werden nur Bestelldaten aus 2010 ausgewählt.
 
 8.  Klicken Sie auf **Importieren**.
 
-    Im Partitions-Manager bemerkt haben, dass es sich bei der Abfrageausdruck jetzt zusätzliche Zeilen gefiltert Klausel hat.
+    Beachten Sie im Partitions-Manager, dass jetzt der Abfrageausdruck eine zusätzliche gefilterte-Zeilen-Klausel verfügt.
 
-    ![Abfrage als lesson10](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![als lesson10-Abfrage](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
-    Diese Anweisung gibt an, dass diese Partition nur die Daten in diesen Zeilen enthalten soll, in denen der OrderDate in Kalenderjahres 2010 wie in der gefilterten Rows-Klausel angegeben ist.  
+    Diese Anweisung gibt an, dass diese Partition nur die Daten der Zeilen beinhalten soll, in denen OrderDate im Kalenderjahr 2010 als in der gefilterte-Zeilen-Klausel angegeben.  
   
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>So erstellen Sie eine Partition für das Jahr 2011  
   
-1.  Klicken Sie in der Liste auf die **FactInternetSales2010** Partitionieren Sie erstellt haben, und klicken Sie dann auf **Kopie**.  Ändern Sie den Partitionsnamen zu **FactInternetSales2011**. 
+1.  Klicken Sie in der Liste auf die **FactInternetSales2010** Partitionieren Sie Sie erstellt haben, und klicken Sie dann auf **Kopie**.  Ändern Sie den Partitionsnamen in **FactInternetSales2011**. 
 
-    Sie müssen keine Abfrage-Editor verwenden, um eine neue Klausel für gefilterten Zeilen zu erstellen. Alles, was Sie tun müssen, da Sie eine Kopie der Abfrage für 2010 erstellt haben, ist eine geringfügige Änderung in der Abfrage für 2011 vornehmen.
+    Sie müssen nicht mit Abfrage-Editor zum Erstellen einer neuen gefilterte-Zeilen-Klausel. Da Sie eine Kopie der Abfrage für 2010 erstellt haben, müssen Sie, lediglich eine geringfügige Änderung in der Abfrage für 2011 vornehmen.
   
-2.  In **Abfrageausdruck**, Reihenfolge für diese Partition, um nur die Zeilen für das Jahr 2011 enthalten, ersetzen Sie die Jahren in der Zeilen gefiltert-Klausel mit **2011** und **2012**, z. B.:  
+2.  In **Abfrageausdruck**, in der richtigen Reihenfolge für die Partition aus, um nur die Zeilen für das Jahr 2011 enthalten, ersetzen Sie die Jahren in der gefilterte-Zeilen-Klausel mit **2011** und **2012**, jeweils wie folgt vor:  
   
     ```  
     let
@@ -80,36 +80,36 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
   
 #### <a name="to-create-partitions-for-2012-2013-and-2014"></a>Zum Erstellen von Partitionen für 2012, 2013 und 2014.  
   
-- Führen Sie die vorherigen Schritte, und Erstellen von Partitionen für 2012, 2013 und 2014, Ändern der Jahre in der Zeilen gefiltert-Klausel, um nur Zeilen für dieses Jahr einzuschließen. 
+- Führen Sie die vorherigen Schritte, und Erstellen von Partitionen für 2012, 2013 und 2014. ändern Sie die Jahre in der gefilterte-Zeilen-Klausel, um nur Zeilen für dieses Jahr enthält. 
   
 
-## <a name="delete-the-factinternetsales-partition"></a>Löschen Sie die FactInternetSales-partition
+## <a name="delete-the-factinternetsales-partition"></a>Löschen Sie die Partition "factinternetsales"
 
-Nun, da Sie Partitionen für jedes Jahr haben, können Sie die FactInternetSales-Partition löschen; verhindert die Überlappung bei der Auswahl von Prozess alle beim Verarbeiten von Partitionen.
+Nun, da Sie Partitionen für jedes Jahr haben, können Sie die Partition "factinternetsales" löschen; verhindert eine Überlappung bei der Auswahl alle Prozess, bei der Verarbeitung von Partitionen.
 
-#### <a name="to-delete-the-factinternetsales-partition"></a>So löschen Sie die FactInternetSales-partition
+#### <a name="to-delete-the-factinternetsales-partition"></a>So löschen Sie die Partition "factinternetsales"
 
--  Klicken Sie auf die **FactInternetSales** partitionieren, und klicken Sie dann auf **löschen**.
+-  Klicken Sie auf die **"factinternetsales"** partitionieren, und klicken Sie dann auf **löschen**.
 
 
 
 ## <a name="process-partitions"></a>Partitionen verarbeiten  
 
-Beachten Sie im Partitions-Manager die **letzten verarbeitet** Spalte für jede der neuen erstellten Partitionen zeigt diese Partitionen nie verarbeitet wurden. Wenn Sie Partitionen erstellen, sollten Sie einen Partitionsverarbeitungs- bzw. tabellenverarbeitungsvorgang aus, um die Daten dieser Partitionen zu aktualisieren ausführen.  
+Beachten Sie, dass im Partitions-Manager die **zuletzt verarbeitet** Spalte für jede der neu erstellten Partitionen wird diese Partitionen noch nicht verarbeitet wurden. Wenn Sie Partitionen erstellen, sollten Sie einen Partitionsverarbeitungs- bzw. tabellenverarbeitungsvorgang aus, um die Daten in diese Partitionen zu aktualisieren ausführen.  
   
 #### <a name="to-process-the-factinternetsales-partitions"></a>So verarbeiten Sie die FactInternetSales-Partitionen  
   
 1.  Klicken Sie auf **OK** Partitions-Manager zu schließen.  
   
-2.  Klicken Sie auf die **FactInternetSales** Tabelle, und klicken Sie auf die **Modell** Menü > **Prozess** > **Partitionen verarbeiten**.  
+2.  Klicken Sie auf die **"factinternetsales"** Tabelle, und klicken Sie dann die **Modell** Menü > **Prozess** > **Partitionen verarbeiten**.  
   
-3.  Überprüfen Sie im Dialogfeld Partitionen verarbeiten **Modus** festgelegt ist, um **Standard verarbeiten**.  
+3.  Die Partitionen verarbeiten, überprüfen Sie im Dialogfeld **Modus** nastaven NA hodnotu **Standard verarbeiten**.  
   
 4.  Aktivieren Sie das Kontrollkästchen in der Spalte **Verarbeiten** für jede der fünf von Ihnen erstellten Partitionen, und klicken Sie anschließend auf **OK**.  
 
-    ![als-lesson10-Prozess-Partitionen](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![als-lesson10--Partitionen verarbeiten](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
-    Wenn Sie für Identitätswechsel-Anmeldeinformationen aufgefordert werden, geben Sie den Windows-Benutzernamen und Kennwort an, das Sie in Lektion 2 angegeben.  
+    Wenn Sie für den Identitätswechsel-Anmeldeinformationen aufgefordert werden, geben Sie den Windows-Benutzernamen und das Kennwort, die Sie in Lektion 2 angegeben.  
   
     Das Dialogfeld **Datenverarbeitung** wird daraufhin angezeigt. Es zeigt die Verarbeitungsdetails für jede Partition an. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Jede Partition enthält nur die Zeilen für das Jahr in der WHERE-Klausel in der SQL-Anweisung angegeben. Wenn die Verarbeitung abgeschlossen ist, fahren Sie fort und schließen Sie das Dialogfeld „Datenverarbeitung“.  
   

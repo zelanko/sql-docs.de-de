@@ -1,5 +1,5 @@
 ---
-title: trace_events (Transact-SQL) | Microsoft Docs
+title: trace_events (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,16 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969622"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **trace_events** -Katalogsicht enthält eine Übersicht über alle SQL-Ablaufverfolgungsereignisse. Diese Ablaufverfolgungsereignisse ändern sich für eine bestimmte Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht.  
+  Die **trace_events** -Katalogsicht enthält eine Liste mit allen SQL-Ablaufverfolgungsereignisse. Diese Ablaufverfolgungsereignisse ändern sich für eine bestimmte Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht.  
   
 > **WICHTIG!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Katalogsichten für erweiterte Ereignisse.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33220651"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Eindeutige ID des Ereignisses. Diese Spalte wird auch in der **trace_event_bindings** und **trace_subclass_values** Katalogsichten.|  
-|**category_id**|**smallint**|Kategorie-ID des Ereignisses. Diese Spalte wird auch in der **trace_categories** -Katalogsicht angezeigt.|  
+|**category_id**|**smallint**|Kategorie-ID des Ereignisses. Diese Spalte wird auch in der **Sys. trace_categories** -Katalogsicht angezeigt.|  
 |**name**|**nvarchar(128)**|Eindeutiger Name dieses Ereignisses. Dieser Parameter ist nicht lokalisiert.|  
   
 ## <a name="permissions"></a>Berechtigungen  

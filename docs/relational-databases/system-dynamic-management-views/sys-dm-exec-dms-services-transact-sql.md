@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_dms_services (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,26 +27,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9654ffe4e6e77defac0466882d65ae45b792ea4d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463396"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982602"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu allen DMS-Dienste, die auf der PolyBase-Serverknoten ausgeführt wird. Sie enthält eine Zeile für jede Dienstinstanz.  
+  Enthält Informationen über alle DMS-Dienste, die auf der PolyBase-Computeknoten ausgeführt. Sie enthält eine Zeile für jede Instanz des Diensts.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|Eindeutige numerische Id DMS-Kern zugeordnet. Der Schlüssel für diese Ansicht.|Eindeutige ID auf.|  
-|compute_node_id|**int**|ID des Knotens, auf dem dieser DMS-Dienst ausgeführt wird|Finden Sie unter *Compute_node_id* in [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|status|**nvarchar(32)**|Aktueller Status des DMS-Diensts||  
+|dms_core_id|**int**|Eindeutige numerische Id der DMS-Kern zugeordnet. Der Schlüssel für diese Sicht.|Eindeutige ID auf.|  
+|compute_node_id|**int**|ID des Knotens, auf dem diese DMS-Dienst ausgeführt wird|Finden Sie unter *Compute_node_id* in [dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|status|**nvarchar(32)**|Aktuellen Status der DMS-Dienst||  
   
 ## <a name="see-also"></a>Siehe auch  
- [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

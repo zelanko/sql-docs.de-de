@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs
+title: managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4dae80911e6508a1a398cf208300bf4145faeecc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970502"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> Argumente  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -60,10 +60,10 @@ managed_backup.fn_backup_db_config ()
 |retention_days|INT|Die auf Instanzebene festgelegte Standardbeibehaltungsdauer.|  
 |storage_url|NVARCHAR(1024)|Die standardmäßige, auf Instanzebene festgelegte Speicherkonto-URL.|  
 |encryption_algorithm|SYSNAME|Der Name des Verschlüsselungsalgorithmus. Wird auf NULL festgelegt, wenn keine Verschlüsselung angegeben ist.|  
-|encryptor_type|NVARCHAR(32)|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. Wird auf NULL festgelegt werden, wenn es keine Verschlüsselung angegeben ist.|  
+|encryptor_type|NVARCHAR(32)|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. Wird auf NULL festgelegt werden, wenn keine Verschlüsselung angegeben ist.|  
 |encryptor_name|SYSNAME|Der Name des Zertifikats oder des asymmetrischen Schlüssels. Wird auf NULL festgelegt, wenn kein Name angegeben ist.|  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Db_backupoperator** Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen. Der Benutzer sollte nicht verweigert werden **VIEW ANY DEFINITION** Berechtigungen.  

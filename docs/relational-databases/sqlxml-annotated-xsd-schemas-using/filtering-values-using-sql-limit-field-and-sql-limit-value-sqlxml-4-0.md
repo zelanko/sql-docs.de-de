@@ -1,5 +1,5 @@
 ---
-title: "Filtern von Werten mithilfe von ' SQL: Limit-Feld und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft Docs"
+title: "Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,22 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972115"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032580"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen werden verwendet, um die Datenbankspalte zu identifizieren, die Grenzwerte enthält und geben Sie einen bestimmten Grenzwert verwendet werden, um die Daten filtern zurückgegeben.  
+  Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen werden verwendet, die Datenbankspalte, die Grenzwerte enthält, identifizieren und an einen bestimmten Grenzwert, zum Filtern der Daten verwendet werden soll zurückgegeben.  
   
- Die **' SQL: Limit-Feld** -Anmerkung verwendet, um eine Spalte identifizieren, die einen Grenzwert enthält; er ist für jedes zugeordnete Element oder Attribut zulässig.  
+ Die **' SQL: Limit-Feld** -Anmerkung verwendet, um eine Spalte identifizieren, die einen Grenzwert enthält; es ist für jeden zugeordneten Elemente oder Attribute zulässig.  
   
- Die **' SQL: Limit-Wert** -Anmerkung verwendet, um nur von begrenztem Wert in der Spalte anzugeben, die im angegebenen der **' SQL: Limit-Feld** Anmerkung. Die **' SQL: Limit-Wert** Anmerkung ist optional. Wenn **' SQL: Limit-Wert** ist nicht angegeben wird, wird ein NULL-Wert verwendet.  
+ Die **' SQL: Limit-Wert** -Anmerkung verwendet, um die nur von begrenztem Wert in der Spalte anzugeben, die im angegebenen die **' SQL: Limit-Feld** Anmerkung. Die **' SQL: Limit-Wert** Anmerkung ist optional. Wenn **' SQL: Limit-Wert** ist nicht angegeben wird, wird ein NULL-Wert verwendet.  
   
 > [!NOTE]  
->  Beim Arbeiten mit einem **' SQL: Limit-Feld** , in denen die zugeordnete SQL-Spalte ist vom Typ **real**, SQLXML 4.0 führt die Konvertierung auf der **' SQL: Limit-Wert** nach den Angaben in XML-Schemas als ein **Nvarchar** Wert angegeben. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
+>  Bei der Arbeit mit einer **' SQL: Limit-Feld** , in dem die zugeordnete SQL-Spalte ist vom Typ **echte**, SQLXML 4.0 führt die Konvertierung für die **' SQL: Limit-Wert** gemäß den Angaben in der XML-Schemas als ein **Nvarchar** angegebenen Wert. Hierzu müssen Dezimalgrenzwerte mithilfe der vollständigen wissenschaftlichen Schreibweise angegeben werden. Weitere Informationen finden Sie im Folgenden unter Beispiel B.  
   
 ## <a name="examples"></a>Beispiele  
  Um mithilfe dieser Daten funktionstüchtige Beispiele zu erstellen, muss Folgendes installiert sein:  
@@ -60,7 +60,7 @@ ms.locfileid: "32972115"
   
  Ein Kunde kann eine Liefer- und/oder eine Rechnungsadresse haben. Die AddressType-Spaltenwerte sind Shipping (Lieferadresse) und Billing (Rechnungsadresse).  
   
- Dies ist das Zuordnungsschema, in dem die **"ShipTo"** -Schemaattribut der StreetAddress-Spalte in der Addresses-Beziehung zugeordnet ist. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf Lieferadressen durch Angabe der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen. Auf ähnliche Weise die **"BillTo"** Schemaattribut gibt nur die Rechnungsadresse eines Kunden zurück.  
+ Dies ist das Zuordnungsschema, in dem die **"ShipTo"** -Schemaattribut der StreetAddress-Spalte in der Addresses-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf Lieferadressen durch Angabe der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen. Auf ähnliche Weise die **"BillTo"** Schemaattribut gibt nur die Rechnungsadresse eines Kunden zurück.  
   
  Das ist das Schema:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "32972115"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "32972115"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Dies ist das Zuordnungsschema, in dem die **OrderID** Attribut in den Bestellungsdetails der OrderID-Spalte in der Orders-Beziehung zugeordnet ist. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf jene, die den Wert 2.0000000e haben-001 (0,2) entsprechend den Angaben für die **Discount** -Attribut mit der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen.  
+ Dies ist das Zuordnungsschema, in dem die **"OrderID"** Attribut in den Bestellungsdetails der OrderID-Spalte in der Orders-Beziehung zugeordnet. Die für dieses Attribut zurückgegebenen Werte sind beschränkt auf jene, deren Wert der 2.0000000e-001 (0,2) gemäß der Einstellung für die **Discount** -Attribut mit der **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen.  
   
  Das ist das Schema:  
   
@@ -315,6 +315,6 @@ ms.locfileid: "32972115"
  [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [Nchar und Nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Mithilfe von XSD-Schemas in Abfragen kommentiert &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: return-Element (XMLA) | Microsoft Docs
+title: return-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8746fb9f8b397ef50b1a5c66a2132e5f0cf5c87
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968442"
 ---
 # <a name="return-element-xmla"></a>return-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält Informationen, indem Sie eine [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) -Element als Antwort auf eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methodenaufruf oder ein [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) -Element als Antwort auf eine [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) -Methodenaufruf.  
+  Enthält Informationen, indem eine [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) -Element als Antwort auf eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methodenaufruf oder ein [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) -Element als Antwort auf eine [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methodenaufruf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34576192"
   
 |Ancestor|Untergeordnete Elemente|  
 |--------------|--------------------|  
-|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[Stammverzeichnis](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) oder [Ergebnisse](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  

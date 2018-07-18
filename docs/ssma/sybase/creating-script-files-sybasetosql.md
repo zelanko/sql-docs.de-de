@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Skriptdateien (SybaseToSQL) | Microsoft Docs
+title: Erstellen von Skriptdateien (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,40 +21,40 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e091fa4cab4df4108cc4fbfa8ef21615cfd7e38c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778646"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979892"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Erstellen von Skriptdateien (SybaseToSQL)
-Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
+Der erste Schritt vor dem Starten der Anwendung der SSMA-Konsole die Skriptdatei erstellt werden, und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindungsdatei erstellen.  
   
-Die Skriptdatei kann begrenzt in drei Abschnitte unterteilt werden..,:  
+Die Skriptdatei kann viz in drei Abschnitte unterteilt werden..,:  
   
-1.  **Config:** ermöglicht es dem Benutzer die Konfigurationsparameter für die Konsolenanwendung festlegen.  
+1.  **Config:** ermöglicht es dem Benutzer die Konfigurationsparameter für die Konsolenanwendung festgelegt.  
   
-2.  **Server:** ermöglicht es dem Benutzer, das Quell-/Ziel Serverdefinitionen festzulegen. Dies kann auch in einem separaten Server-Verbindungsdatei sein.  
+2.  **Server:** ermöglicht es den Benutzer, die Quelle/Ziel-Serverdefinitionen festzulegen. Dies kann auch in einem separaten Server-Verbindungsdatei sein.  
   
-3.  **Befehle des Skripts:** ermöglicht es dem Benutzer SSMA Workflowbefehle ausführen.  
+3.  **Befehle des Skripts:** ermöglicht es dem Benutzer zum Ausführen von Befehlen der SSMA-Workflow.  
   
-Jeder Abschnitt ist im folgenden ausführlich beschrieben:  
+Jeder Abschnitt wird unten im Detail beschrieben:  
   
-## <a name="configuring-sybase-console-settings"></a>Konfigurieren von Einstellungen für Sybase-Konsole  
+## <a name="configuring-sybase-console-settings"></a>Konfigurieren von Einstellungen für die Sybase-Konsole  
 Die Konfigurationen eines Skripts werden in der Skriptdatei für die Konsole angezeigt.  
   
-Wenn eines der Elemente im Knoten "Konfiguration" angegeben werden, sind sie festgelegt als globale Einstellung d. h. sie gelten für alle Befehle des Skripts. Zu diesen Konfigurationselementen können auch festgelegt werden innerhalb jeder Befehl in der Skriptbefehl Abschnitt, wenn der Benutzer möchte die globale Einstellung außer Kraft setzen.  
+Wenn eines der Elemente im Knoten "Konfiguration" angegeben werden, werden festgelegt als die globale Einstellung d. h. sie gelten für alle Befehle des Skripts. Zu diesen Konfigurationselementen können auch festgelegt werden in jedem Befehl im Skript-Command-Abschnitt, wenn der Benutzer die globale Einstellung überschreiben möchte.  
   
-BenutzerKonfigurierbar-Optionen:  
+Die vom Benutzer konfigurierbaren Optionen umfassen:  
   
-1.  **Anbieter der Ausgabe-Fenster:** Wenn unterdrücken Nachrichten Attribut festgelegt ist, auf "true", die befehlsspezifische Nachrichten werden nicht in der Konsole angezeigt abrufen. Attribute werden im folgenden beschrieben:  
+1.  **Ausgabe-Fenster-Anbieter:** Wenn unterdrücken-Messages-Attribut festgelegt ist, auf "true", die zugehörigen Nachrichten werden nicht in der Konsole angezeigt zu erhalten. Attribute werden nachfolgend beschrieben:  
   
-    -   Ziel: Gibt an, ob die Ausgabe in einer Datei oder "stdout" gedruckt abrufen muss. Dies ist standardmäßig "false".  
+    -   Ziel: Gibt an, ob die Ausgabe in eine Datei oder ein "stdout" ausgegeben abrufen muss. Dies ist standardmäßig "false".  
   
     -   Dateiname: der Pfad der Datei (Optional).  
   
-    -   Unterdrücken Sie Nachrichten: Nachrichten in der Konsole unterdrückt. Dies ist standardmäßig "false".  
+    -   Unterdrücken Sie Nachrichten: Meldungen in der Konsole unterdrückt. Dies ist standardmäßig "false".  
   
     **Beispiel:**  
   
@@ -73,7 +73,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <…All commands…>  
@@ -91,13 +91,13 @@ BenutzerKonfigurierbar-Optionen:
     </…All commands…>  
     ```  
   
-2.  **Verbindungsanbieter des Daten-Migration:** Dies gibt an, welche Quell-/Zielelement-Server ist bei der Migration Daten berücksichtigt werden.  Source-Verwendung – zuletzt verwendete gibt an, dass die letzte verwendete Quellserver für die Datenmigration verwendet wird. Ziel-Verwendung – zuletzt verwendete gibt ebenso an, dass der zuletzt verwendeten Zielserver für die Datenmigration verwendet wird. Der Benutzer kann auch die Möglichkeit, den Server (Quelle oder Ziel) angeben, mit der Attribute-Quellserver oder Zielserver.  
+2.  **Data Migration-Verbindungsanbieter:** Dies gibt an, welche Quelle/Ziel-Server wird bei der Migration Daten berücksichtigt werden.  Source-Verwendung – zuletzt verwendete gibt an, dass die zuletzt verwendeten Quellserver für die Datenmigration verwendet wird. Auf ähnliche Weise gibt das Ziel-Verwendung – zuletzt verwendete an, dass der zuletzt verwendeten Zielserver für die Datenmigration verwendet wird. Der Benutzer kann auch auf den Server (Quelle oder Ziel) angeben, mithilfe der Attribute-Quellserver oder Zielserver.  
   
-    D. h. kann nur ein oder anderen angegebenen Attributs verwendet werden:  
+    Nur ein oder anderen angegebenen Attributs kann z. B. verwendet werden:  
   
-    -   Source-Verwendung – zuletzt verwendete = "Wahr" (Standard) oder die Quellserver = "Source_servername"  
+    -   Source-Verwendung – zuletzt verwendete = "True" (Standard) oder die Quellserver = "Source_servername"  
   
-    -   Ziel-Verwendung – zuletzt verwendete = "Wahr" (Standard) oder Ziel-Server = "Target_servername"  
+    -   Ziel-Verwendung – zuletzt verwendete = "True" (Standard) oder Ziel-Server = "Target_servername"  
   
     **Beispiel:**  
   
@@ -110,7 +110,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <migrate-data>  
@@ -122,15 +122,15 @@ BenutzerKonfigurierbar-Optionen:
     </migrate-data>  
     ```  
   
-3.  **Benutzer Eingabe Popup:** dadurch Behandlung von Fehlern, die Objekte aus der Datenbank geladen werden. Der Benutzer die Eingabe Modi, und im Falle eines Fehlers die Konsole wird fortgesetzt, wie Benutzer angibt.  
+3.  **Benutzer-Eingabe-Popup:** Dies ermöglicht die Behandlung von Fehlern, wenn die Objekte aus der Datenbank geladen werden. Der Benutzer gibt die Eingabemodi an, und bei einem Fehler die Konsole wird fortgesetzt, wie Benutzer angibt.  
   
     Die Modi sind:  
   
-    -   **Bitten Sie Benutzer –** fordert den Benutzer auf continue('yes') oder Fehler ausgegeben ("No").  
+    -   **Bitten Sie Benutzer -** fordert den Benutzer auf continue('yes') oder Fehler auf ("No").  
   
-    -   **Fehler –** die Konsole zeigt einen Fehler an und hält die Ausführung an.  
+    -   **Fehler:** die Konsole zeigt einen Fehler an und hält die Ausführung.  
   
-    -   **weiterhin-** die Konsole mit der Ausführung wird fortgesetzt.  
+    -   **weiterhin-** die Konsole, die mit der Ausführung wird fortgesetzt.  
   
     Der Standardmodus ist **Fehler**.  
   
@@ -143,7 +143,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -155,11 +155,11 @@ BenutzerKonfigurierbar-Optionen:
     </connect-target-database>  
     ```  
   
-4.  **Verbinden Sie die Anbieter:** Dies ermöglicht es dem Benutzer festzulegende Einstellungen zuzulassen, falls die erneute Verbindung der Verbindungsfehler. Dies kann für die Quell-und Zielserver festgelegt werden.  
+4.  **Verbinden Sie die Anbieter:** Dies ermöglicht den Benutzer, der verbindungswiederherstellung Einstellungen Ausschalten von Verbindungsfehlern festzulegen. Dies kann für die Quell-und Ziel festgelegt werden.  
   
     Die erneute Verbindung Modi sind:  
   
-    -   Verbinden und letzten-verwendet-Server: Wenn die Verbindung nicht aktiv ist, versucht wird, bis zum letzten darf höchstens 5-Mal verwendeten Server zu verbinden.  
+    -   erneut eine Verbindung herstellen und letzten-verwendet-Server: Wenn die Verbindung nicht aktiv ist, versucht wird, mit dem letzten maximal 5 Mal verwendete Server verbinden.  
   
     -   generiert einen Fehler: Wenn die Verbindung nicht aktiv ist, wird ein Fehler generiert.  
   
@@ -176,7 +176,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <!--synchronization-->  
@@ -187,7 +187,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </synchronize-target>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <!--data migration-->  
@@ -203,15 +203,15 @@ BenutzerKonfigurierbar-Optionen:
     </migrate-data>  
     ```  
   
-5.  **Konverter überschreiben Anbieter:** Dadurch kann der Benutzer Objekte zu behandeln, die bereits auf dem Zielgerät vorhanden sind Metabase. Die möglichen Aktionen zählen:  
+5.  **Konverter überschreiben-Anbieter:** Dadurch kann der Benutzer aus, um Objekte zu verarbeiten, die bereits auf dem Zielgerät vorhanden sind Metabasis. Die möglichen Aktionen gehören:  
   
-    -   Fehler: die Konsole zeigt einen Fehler an und hält die Ausführung an.  
+    -   Fehler: die Konsole zeigt einen Fehler an und hält die Ausführung.  
   
     -   Überschreiben: überschreibt vorhandene Werte des Objekts. Standardmäßig ist diese Aktion erfolgt.  
   
-    -   Überspringen: die Konsole überspringt die Objekte, die bereits vorhanden für die Datenbank  
+    -   übersprungen: die Konsole überspringt die Objekte, die bereits vorhanden sind, in der Datenbank  
   
-    -   Bitten Sie Benutzer: fordert den Benutzer zur Eingabe ("yes" / "Nein")  
+    -   Bitten Sie Benutzer: der Benutzer zur Eingabe aufgefordert ('Ja' / 'no')  
   
     **Beispiel:**  
   
@@ -222,7 +222,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -232,7 +232,7 @@ BenutzerKonfigurierbar-Optionen:
     </convert-schema>  
     ```  
   
-6.  **Fehlerhafte Voraussetzungen-Anbieter:** Dadurch kann der Benutzer, alle erforderlichen Komponenten zu behandeln, die für die Verarbeitung eines Befehls erforderlich sind. Standardmäßig ist der strict-Modus 'false'. Wenn sie festgelegt ist, auf "true", eine Ausnahme generiert für die Voraussetzungen erfüllt.  
+6.  **Fehlerhafte Voraussetzungen-Anbieter:** Dadurch kann der Benutzer alle erforderlichen Komponenten zu behandeln, die für die Verarbeitung eines Befehls erforderlich sind. Standardmäßig ist der strict-Modus – "false". Wenn sie festgelegt ist, auf "true", eine Ausnahme wird generiert, für die Voraussetzungen erfüllt.  
   
     **Beispiel:**  
   
@@ -244,21 +244,21 @@ BenutzerKonfigurierbar-Optionen:
     </output-providers>  
     ```  
   
-7.  **Der Beendigungsvorgang:** während des Mid-Vorgangs, ob der Benutzer möchte, klicken Sie dann den Vorgang Abbrechen **"STRG + C"** Hotkey verwendet werden kann. SSMA für Sybase-Konsole zum Abschließen des Vorgangs wartet, und beendet die Ausführung der Konsole.  
+7.  **Vorgang zum Beenden:** während des Mid-Vorgangs, wenn der Benutzer klicken Sie dann den Vorgang beenden möchte **"STRG + C"** Hotkey kann verwendet werden. SSMA für Sybase-Konsole nach Abschluss des Vorgangs warten und beendet die Ausführung der Verwaltungskonsole.  
   
-    Wenn der Benutzer die Ausführung dann sofort beenden möchte **"STRG + C"** Hotkey für abrupten Beendigung der Anwendung SSMA-Konsole erneut gedrückt werden kann  
+    Wenn der Benutzer die Ausführung dann sofort beenden möchte **"STRG + C"** Hotkey kann erneut gedrückt werden, für abrupten Beendigung der SSMA-Konsolenanwendung  
   
-8.  **Status-Anbieter:** den Status der einzelnen Datenbankkonsistenzprüfer informiert. Dies ist standardmäßig deaktiviert. Die Attribute statuserfassung umfassen:  
+8.  **Status-Anbieter:** informiert über den Fortschritt der einzelnen Befehle für die Konsole. Dies ist standardmäßig deaktiviert. Die Statusberichte-Attribute umfassen:  
   
     -   off  
   
-    -   Alle %1  
+    -   every - 1 %  
   
     -   alle %2%  
   
-    -   EVERY - 5 %  
+    -   alle 5 %  
   
-    -   alle %10  
+    -   alle 10 %  
   
     -   EVERY - 20 %  
   
@@ -275,7 +275,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <…All commands…>  
@@ -291,15 +291,15 @@ BenutzerKonfigurierbar-Optionen:
     </…All commands…>  
     ```  
   
-9. **Ausführlichkeit der Protokollierung:** legt Ausführlichkeit Protokollebene. Dies entspricht der Option alle Kategorien in der Benutzeroberfläche. Standardmäßig ist die Protokollebene für die Ausführlichkeit "Error".  
+9. **Ausführlichkeit der Protokollierung:** legt Protokollebene Ausführlichkeit. Dies entspricht der Option alle Kategorien auf der Benutzeroberfläche. Standardmäßig ist der Ausführlichkeitsgrad des Protokolls "Error".  
   
-    Die Protokollierung auf den Optionen gehören:  
+    Die Protokollierung auf Serverebene Optionen umfassen:  
   
     -   Schwerwiegender Fehler: Nachrichten, die nur schwerwiegende Fehler protokolliert werden.  
   
-    -   Fehler: nur Fehler und schwerwiegende Fehlermeldungen werden protokolliert.  
+    -   Fehler: Es werden nur Meldungen für Fehler und schwerwiegende Fehler protokolliert.  
   
-    -   Warnung: alle Ebenen außer Debug- und Info Meldungen werden protokolliert.  
+    -   Warnung: alle Ebenen mit Ausnahme von Debug- und Info Nachrichten protokolliert werden.  
   
     -   Info: alle Ebenen außer der Debugmeldungen protokolliert werden.  
   
@@ -317,7 +317,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *Oder*  
+    *oder*  
   
     ```xml  
     <…All commands…>  
@@ -327,13 +327,13 @@ BenutzerKonfigurierbar-Optionen:
     </…All commands…>  
     ```  
   
-10. **Außerkraftsetzung verschlüsselte Kennwort:** 'true', das Klartextkennwort angegebene im Abschnitt Definition Server, der die Server-Verbindungsdatei oder in der Skriptdatei überschreibt das verschlüsselte Kennwort gespeichert, die im Speicher geschützt, wenn vorhanden ist. Falls kein Kennwort in Klartext angegeben ist, wird der Benutzer aufgefordert, das Kennwort eingeben.  
+10. **Außerkraftsetzung verschlüsselte Kennwort:** bei "true", das unverschlüsselte Kennwort angegeben im Abschnitt Definition Server, der Server-Verbindungsdatei oder in der Skriptdatei, Außerkraftsetzungen, die das verschlüsselte Kennwort gespeichert, die im Speicher geschützt, wenn vorhanden ist. Wenn kein Kennwort als Klartext angegeben wird, wird der Benutzer aufgefordert, um das Kennwort einzugeben.  
   
-    Hier entstehen zwei Fällen:  
+    Hier entstehen zwei Fälle:  
   
-    1.  Wenn Option überschreiben ist **"false"**, die Reihenfolge der Suche werden geschützte Speicher -&gt;Skript-Datei -&gt;Server Verbindung Datei -&gt; Benutzer auffordern.  
+    1.  Wenn Option zur Außerkraftsetzung ist **"false"**, die Reihenfolge der Suche werden auf geschützten Speicher -&gt;Skript-Datei -&gt;Server Connection-Datei –&gt; Benutzer auffordern.  
   
-    2.  Wenn Option überschreiben ist **"true"**, die Reihenfolge der Suche werden Skript-Datei -&gt;Server Verbindung Datei -&gt;Benutzer auffordern.  
+    2.  Wenn Option zur Außerkraftsetzung ist **"true"**, die Reihenfolge der Suche werden Skript-Datei -&gt;Server Connection-Datei –&gt;Benutzer auffordern.  
   
     **Beispiel:**  
   
@@ -345,19 +345,19 @@ BenutzerKonfigurierbar-Optionen:
     </output-providers>  
     ```  
   
-Nicht konfigurierbare Option ist:  
+Die Option nicht konfiguriert ist:  
   
--   **Maximale Verbindungswiederherstellungsversuchen:** bei eine bereits eingerichteten Verbindung ein Timeout oder aufgrund von Netzwerkfehlern unterbricht, der Server ist erforderlich, um die Verbindung hergestellt werden. Der erneuten Herstellen einer Verbindung versucht dürfen maximal **5** Wiederholungen nach, die die Konsole wird automatisch beim erneuten Verbindungsversuch ausgeführt. Die Einrichtung der automatischen erneuten Herstellen einer Verbindung wird der Aufwand bei der erneuten Ausführen des Skripts reduziert.  
+-   **Maximale Verbindungswiederherstellungsversuchen:** der Server ist erforderlich, um die Verbindung wiederhergestellt werden, wenn eine bereits hergestellte Verbindung ein auftritt Timeout oder unterbrochen wird aufgrund von Netzwerkfehlern,. Die Versuche der verbindungswiederherstellung dürfen maximal **5** Wiederholungen nach, die die Konsole wird automatisch der verbindungswiederherstellung ausführt. Die Einrichtung der automatischen erneuten Herstellen einer Verbindung reduziert Ihres Aufwands in das Skript erneut ausführen.  
   
 ## <a name="server-connection-parameters"></a>Server-Verbindungsparameter  
-Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen die Server-Verbindungsdateien &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) Abschnitt, um weitere Details  
+Server-Verbindungsparameter können in der Skriptdatei oder in der Server-Connection-Datei definiert werden. Finden Sie in der [erstellen den Server Connection Files &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) finden Sie weitere Details  
   
 ## <a name="script-commands"></a>Skriptbefehle  
-Die Skriptdatei enthält eine Sequenz von Migration Workflowbefehle in das XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die angezeigt werden, in der Skriptdatei an.  
+Die Skriptdatei enthält eine Sequenz von Workflow-migrationsbefehle in das XML-Format. Die SSMA-Console-Anwendung verarbeitet die Migration in der Reihenfolge die Befehle in der Skriptdatei angezeigt werden.  
   
-Eine typische Datenmigration, der eine bestimmte Tabelle in einer Sybase-Datenbank folgt z. B. die Hierarchie der: Datenbank -&gt;Schema -&gt;Tabelle.  
+Zum Beispiel folgt eine typische Datenmigration von einer bestimmten Tabelle in einer Sybase-Datenbank die Hierarchie der: Datenbank -&gt;Schema -&gt;Tabelle.  
   
-Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet und das Steuerelement an den Benutzer zurückgegeben. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variableninformationen enthalten entweder in einem [Variable Wertdateien](http://msdn.microsoft.com/en-us/395be464-4b19-44f7-91e5-b8876d6743dc) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
+Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Console-Anwendung beendet, und das Steuerelement an den Benutzer zurückgibt. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variablen Informationen enthalten, entweder in einem [Variable Value Files](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
   
 **Beispiel:**  
   
@@ -384,7 +384,7 @@ Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SS
   
 </ssma-script-file>  
 ```  
-Vorlagen 3 Skriptdateien (zum Ausführen von verschiedenen Szenarios), bestehend aus Variablenwert-Datei und einer Server-Verbindung werden in der Konsole Beispielskripts-Ordner des Verzeichnisses Produkt bereitgestellt:  
+Vorlagen, bestehend aus 3-Skriptdateien (zum Ausführen von verschiedenen Szenarien), Wert der Variablen, und eine Server-Connection-Datei werden im Ordner "Beispielskripts für die Konsole" von der Produkt-Verzeichnis bereitgestellt:  
   
 -   AssessmentReportGenerationSample.xml  
   
@@ -396,16 +396,16 @@ Vorlagen 3 Skriptdateien (zum Ausführen von verschiedenen Szenarios), bestehend
   
 -   ServersConnectionFileSample.xml  
   
-Sie können Vorlagen (Dateien) ausgeführt wird, nachdem eine Änderung der Parameter für Relevanz darin angezeigt.  
+Sie können die Vorlagen (Dateien) ausführen, nach dem Ändern der Parameter für Relevanz darin angezeigt.  
   
-Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Vollständige Liste der Befehle des Skripts befinden sich [Executing the SSMA Console ausführen &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
-## <a name="script-file-validation"></a>Skript-Dateiüberprüfung  
-Benutzer kann problemlos Benutzervoreinstellung Skriptdatei anhand der Schemadefinitionsdatei überprüfen **"S2SSConsoleScriptSchema.xsd"** im Ordner "Schemas" verfügbar.  
+## <a name="script-file-validation"></a>Skriptvalidierung-Datei  
+Benutzer kann ganz einfach überprüfen, sein Skriptdatei anhand der Schemadefinitionsdatei **"S2SSConsoleScriptSchema.xsd"** im Ordner "Schemas" zur Verfügung.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [Variable Value-Dateien erstellen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+Der nächste Schritt in der Konsole ausgeführt wird [erstellen Variable Value Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen von Dateien Variablenwert &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[Erstellen die Variable Value Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

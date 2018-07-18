@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Systemprozeduren (Transact-SQL) | Microsoft Docs
+title: Gespeicherte Systemprozeduren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 481b0c451f5161231cf64402c5c758870a07be62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979462"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,40 +45,40 @@ ms.locfileid: "34708638"
   
 |Kategorie|Description|  
 |--------------|-----------------|  
-|[Aktive geografische Replikation gespeicherten Prozeduren](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Zum Verwalten, aktive geografische Replikation Konfigurationen in Azure SQL-Datenbank zu verwalten.|  
+|[Aktive geografische Replikation gespeicherten Prozeduren](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Zum Verwalten von Konfigurationen der aktiven geografischen Replikation in Azure SQL-Datenbank verwalten|  
 |[Gespeicherte Prozeduren für Kataloginformationen](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Implementieren Funktionen ODBC-Datenwörterbüchern und isolieren ODBC-Anwendungen von Änderungen an den zugrunde liegenden Systemtabellen.|  
 |[Gespeicherte Prozeduren für Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Wird verwendet, um Change Data Capture-Objekte zu aktivieren, zu deaktivieren oder über sie zu berichten.|  
 |[Gespeicherte CursorProzeduren](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Werden zum Implementieren von Cursorvariablenfunktionen verwendet.|  
-|[Gespeicherte Prozeduren für den Datensammler](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Wird zum Arbeiten mit dem Datensammler und folgenden Komponenten verwendet: Auflistsätze, Auflistelemente und Auflisttypen.|  
-|[Gespeicherte Datenbankmodulprozeduren](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Werden für die allgemeine Wartung von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet.|  
-|[Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Werden zum Ausführen von E-Mail-Operationen innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.|  
-|[Datenbank-Wartungsplan gespeicherte Prozeduren](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Werden zum Einrichten zentraler Wartungsaufgaben verwendet, die zur Optimierung der Datenbankleistung ausgeführt werden müssen.|  
+|[Gespeicherte Prozeduren den Datensammler](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Wird zum Arbeiten mit dem Datensammler und folgenden Komponenten verwendet: Auflistsätze, Auflistelemente und Auflisttypen.|  
+|[Datenbank-Engine gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Werden für die allgemeine Wartung von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet.|  
+|[Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Werden zum Ausführen von E-Mail-Operationen innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.|  
+|[Datenbank-Wartungsplans gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Werden zum Einrichten zentraler Wartungsaufgaben verwendet, die zur Optimierung der Datenbankleistung ausgeführt werden müssen.|  
 |[Gespeicherte Prozeduren für verteilte Abfragen](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Werden zum Implementieren und Verwalten verteilter Abfragen verwendet.|  
 |[FileStream und FileTable gespeicherten Prozeduren &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Werden zum Konfigurieren und Verwalten der FILESTREAM- und FileTable-Funktionen verwendet.|  
 |[Firewall-Regeln, gespeicherte Prozeduren &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Verwendet, um die Azure SQL-Datenbank-Firewall zu konfigurieren.|  
-|[Volltextsuche gespeicherte Prozeduren](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Werden zum Implementieren und Abfragen von Volltextindizes verwendet.|  
+|[Volltext-Suchdienst gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Werden zum Implementieren und Abfragen von Volltextindizes verwendet.|  
 |[Gespeicherte erweiterte allgemeine Prozeduren](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Werden zur Bereitstellung einer Schnittstelle zwischen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und externen Programmen für verschiedene Wartungsaktivitäten verwendet.|  
-|[Protokollversand gespeicherte Prozeduren](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Werden zum Konfigurieren, Ändern und Überwachen von Protokollversandkonfigurationen verwendet.|  
+|[Protokollversand gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Werden zum Konfigurieren, Ändern und Überwachen von Protokollversandkonfigurationen verwendet.|  
 |[Verwaltungs-Data Warehouse gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Zum Konfigurieren des Verwaltungs-Datawarehouse verwendet.|  
-|[Gespeicherte OLE-Automatisierungsprozeduren Prozeduren](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Werden zur Aktivierung standardmäßiger Automatisierungsobjekte für die Verwendung innerhalb eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Standardbatches verwendet.|  
-|[Gespeicherte Prozeduren Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Werden für die richtlinienbasierte Verwaltung verwendet.|  
+|[Gespeicherte OLE-Automatisierungsprozeduren](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Werden zur Aktivierung standardmäßiger Automatisierungsobjekte für die Verwendung innerhalb eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Standardbatches verwendet.|  
+|[Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Werden für die richtlinienbasierte Verwaltung verwendet.|  
 |[Gespeicherte PolyBase-Prozeduren](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Hinzufügen oder Entfernen eines Computers aus einer PolyBase-Erweiterungsgruppe.|  
-|[Gespeicherte Prozeduren den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Verwendet, um die Leistung zu optimieren.|  
+|[Query Store gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Verwendet, um die Leistung zu optimieren.|  
 |[Gespeicherte Replikationsprozeduren](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Werden für die Replikation verwendet.|  
 |[Gespeicherte Sicherheitsprozeduren](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Werden für die Verwaltung der Sicherheit verwendet.|  
-|[Momentaufnahme der Sicherung gespeicherte Prozeduren](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Verwendet die FILE_SNAPSHOT Sicherung sowie alle zugehörigen Momentaufnahmen löschen oder eine einzelne Sicherungsdatei-Momentaufnahme löschen.|  
-|[Gespeicherte Prozeduren für Räumlichkeitsindizes](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Zur Analyse und Optimierung der indizierungsleistung von räumlichkeitsindizes verwendet.|  
-|[SQL Server-Agent-Prozeduren](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Werden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verwendet, um die Leistung und die Aktivitäten zu überwachen.|  
-|[Gespeicherte Prozeduren für SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Verwalten geplanter und ereignisgesteuerter Aktivitäten verwendet.|  
-|[Stretch-Datenbank gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Zum Verwalten der Stretch-Datenbanken verwendet.|  
-|[Temporale Tabellen mit gespeicherten Prozeduren](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Verwenden von temporalen Tabellen|  
+|[Momentaufnahme Backup gespeicherte Prozeduren](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Wird verwendet, die FILE_SNAPSHOT-Sicherung sowie alle zugehörigen Momentaufnahmen zu löschen oder eine einzelne Sicherungsdatei-Momentaufnahme löschen.|  
+|[Gespeicherte Prozeduren für Räumlichkeitsindizes](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Zum Analysieren und Optimierung der indizierungsleistung von räumlichkeitsindizes.|  
+|[SQL Server-Agent-gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Werden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verwendet, um die Leistung und die Aktivitäten zu überwachen.|  
+|[SQL Server Profiler, gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Verwalten geplanter und ereignisgesteuerter Aktivitäten verwendet.|  
+|[Stretch Database von gespeicherten Prozeduren](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Zum Verwalten von Stretch Database-Instanzen verwendet.|  
+|[Temporale Tabellen mit gespeicherten Prozeduren](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Verwenden Sie für temporale Tabellen|  
 |[Gespeicherte XML-Prozeduren](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Werden für die XML-Textverwaltung verwendet.|  
   
 > [!NOTE]  
 >  Alle gespeicherten Systemprozeduren geben den Wert 0 für einen erfolgreichen Vorgang zurück, wenn nicht anders angegeben. Ein Wert ungleich 0 wird zurückgegeben, um einen Fehler anzuzeigen.  
   
 ## <a name="api-system-stored-procedures"></a>Gespeicherte API-Systemprozeduren  
- Benutzer, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für ADO-, OLE DB- und ODBC-Anwendungen ausführen, werden möglicherweise feststellen, dass diese Anwendungen gespeicherte Systemprozeduren verwenden, die nicht in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz behandelt werden. Diese gespeicherten Prozeduren werden verwendet, indem Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert die Funktionalität einer Datenbank-API. Diese gespeicherten Prozeduren sind lediglich der Mechanismus, mit dem der Anbieter oder Treiber Benutzeranforderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weitergeben. Sie sind ausschließlich für die interne Verwendung des Anbieters oder Treibers gedacht. Sie explizit durch Aufrufen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendung wird nicht unterstützt.  
+ Benutzer, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für ADO-, OLE DB- und ODBC-Anwendungen ausführen, werden möglicherweise feststellen, dass diese Anwendungen gespeicherte Systemprozeduren verwenden, die nicht in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz behandelt werden. Diese gespeicherten Prozeduren werden verwendet, durch die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, die Funktionalität einer Datenbank-API implementieren. Diese gespeicherten Prozeduren sind lediglich der Mechanismus, mit dem der Anbieter oder Treiber Benutzeranforderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weitergeben. Sie sind ausschließlich für die interne Verwendung des Anbieters oder Treibers gedacht. Explizit durch Aufrufen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]--basierten Anwendung wird nicht unterstützt.  
   
  Sp_createorphan und Sp_droporphans gespeicherte Prozeduren werden für ODBC verwendet **Ntext**, **Text**, und **Image** verarbeiten.  
   
@@ -182,9 +182,9 @@ ms.locfileid: "34708638"
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  
   [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [Ausführen von gespeicherten Prozeduren &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
- [Ausführen von gespeicherten Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Ausführen von gespeicherten Prozeduren &#40;OLE-DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
+ [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Module und Prologe (XQuery) | Microsoft Docs
+title: Module und Prologe (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 08d19f2a24c243647b4004a557fd25bf96d2dd62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076757"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974531"
 ---
 # <a name="modules-and-prologs-xquery"></a>Module und Prologe (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

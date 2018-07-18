@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
+title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029535"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ smart_admin.fn_get_current_xevent_settings ()
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Erweiterter Ereignistyp|  
-|is_configurable|NVARCHAR(128)|Dieser Wert ist festgelegt, um **"true"** Wenn das Ereignis konfigurierbar ist; andernfalls festgelegt werden, **"false"**.|  
+|is_configurable|NVARCHAR(128)|Dieser Wert auf festgelegt **"true"** Wenn das Ereignis konfigurierbar ist, andernfalls festgelegt werden, **"false"**.|  
 |is_enabled|NVARCHAR(128)|Ist auf True festgelegt, wenn das Ereignis aktiviert ist; ist auf False festgelegt, wenn es nicht aktiviert ist. Verwenden Sie den smart_admin.sp_set_parameter, um Debugereignisse zu aktivieren.|  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für die Funktion.  

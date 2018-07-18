@@ -1,6 +1,6 @@
 ---
-title: Installieren von SQL Server-Volltextsuche unter Linux | Microsoft Docs
-description: Dieser Artikel beschreibt, wie SQL Server-Volltextsuche unter Linux zu installieren.
+title: Installieren von SQL Server-Volltextsuche unter Linux | Microsoft-Dokumentation
+description: Dieser Artikel beschreibt, wie Sie SQL Server-Volltextsuche unter Linux zu installieren.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,20 +13,20 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324001"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021206"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Installieren Sie die folgenden Schritte [SQL Server-Volltextsuche](https://msdn.microsoft.com/library/ms142571.aspx) (**Mssql-Server-Fts**) unter Linux. Volltextsuche können Sie Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt. Bekannte Probleme in dieser Version finden Sie unter der [Release Notes](sql-server-linux-release-notes.md).
+Installieren Sie die folgenden Schritte aus [SQL Server-Volltextsuche](https://msdn.microsoft.com/library/ms142571.aspx) (**Mssql-Server-Volltextsuche**) unter Linux. Volltextsuche können Sie sämtliche Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt werden. Bekannte Probleme in dieser Version finden Sie unter den [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Vor der Installation von SQL Server-Volltext-Suchdienst, zuerst [Installieren von SQL Server](sql-server-linux-setup.md#platforms). Konfiguriert, um die Schlüssel und Repositorys, die Sie verwenden, bei der Installation der **Mssql-Server-Fts** Paket.
+> Vor der Installation von SQL Server-Volltext-Suchdienst, zuerst [Installieren von SQL Server](sql-server-linux-setup.md#platforms). Dadurch wird konfiguriert, die Schlüssel und Repositorys, mit denen Sie bei der Installation der **Mssql-Server-Volltextsuche** Paket.
 
 Installieren Sie SQL Server-Volltextsuche für Ihre Plattform:
 
@@ -36,59 +36,59 @@ Installieren Sie SQL Server-Volltextsuche für Ihre Plattform:
 
 ## <a name="RHEL">Installation unter RHEL</a>
 
-Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Fts** unter Red Hat Enterprise Linux. 
+Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Volltextsuche** unter Red Hat Enterprise Linux. 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-Falls Sie noch **Mssql-Server-Fts** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
+Wenn Sie bereits verfügen **Mssql-Server-Volltextsuche** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Installieren Sie auf Ubuntu</a>
+## <a name="ubuntu">Installieren unter Ubuntu</a>
 
-Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Fts** auf Ubuntu. 
+Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Volltextsuche** unter Ubuntu. 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-Falls Sie noch **Mssql-Server-Fts** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
+Wenn Sie bereits verfügen **Mssql-Server-Volltextsuche** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installieren Sie auf SLES</a>
+## <a name="SLES">Installieren unter SLES</a>
 
-Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Fts** für SUSE Linux Enterprise Server. 
+Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Volltextsuche** unter SUSE Linux Enterprise Server. 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-Falls Sie noch **Mssql-Server-Fts** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
+Wenn Sie bereits verfügen **Mssql-Server-Volltextsuche** installiert haben, können Sie auf die neueste Version mit den folgenden Befehlen aktualisieren:
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
-Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) feststellen, dass einzelne Wörter, die basierend auf Sprache identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Mit SQL Server-2017 werden wörtertrennungen für die folgenden Sprachen installiert:
+Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) feststellen, dass einzelne Wörter, die abhängig von Sprache zu identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Mit SQL Server 2017 werden wörtertrennungen für den folgenden Sprachen installiert:
 
 | Sprache | Sprach-ID |
 |---|---|
@@ -148,16 +148,16 @@ Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search
 
 ## <a id="filters"></a> Filter
 
-Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
+Volltextsuche funktioniert auch mit dem Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierter Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu filtern, finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 werden die folgenden Filter installiert:
+Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 werden die folgenden Filter installiert:
 
 | Komponentenname | Klassen-ID | Version |
 |---|---|---|
-|ein | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|ASCX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |ASM | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |ASP | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -168,7 +168,7 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |sql_Dateiname | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|".cmd" | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -180,50 +180,50 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |".dic" | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.FAQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.HHC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|HTA | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|".hta" | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |HTX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|trägt | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|Fügen | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.idl | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.IDQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |INF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |INI | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.Inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |".jav" | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.Java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|Java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.KCI | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgN | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|M3U | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |MAK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.PRC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |RC | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |RC2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|RCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |REG | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -238,16 +238,16 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |STM | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TLH | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TRG | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|".txt" | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|TXT | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |UDF | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|".vbs" | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|auch URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|Benutzerprofilpfad | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |VSCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -260,11 +260,11 @@ Sie erhalten eine Liste der installierten Filter durch Aufrufen von **Sp_help_fu
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Semantische Suche
-[Semantische Suche](../relational-databases/search/semantic-search-sql-server.md) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren, die für statistisch *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung von Dokumenten in der Datenbank abzufragen. Die Lösung schützt auch Dokumente zu identifizieren, die ähnlich sind.
+[Semantische Suche](../relational-databases/search/semantic-search-sql-server.md) baut auf die Volltext-Suchfunktion zu extrahieren und zu indizieren statistisch relevante *Schlüsselausdrücke*. Dadurch können Sie die Bedeutung innerhalb von Dokumenten in der Datenbank Abfragen. Außerdem können Dokumente zu identifizieren, die ähnlich sind.
 
-Um die semantische Suche zu verwenden, müssen Sie zuerst die Semantic Language Statistics-Datenbank auf den Computer wiederherstellen.
+Um der semantischen Suche zu verwenden, müssen Sie zuerst die Semantic Language Statistics-Datenbank auf Ihrem Computer wiederherstellen.
 
-1. Verwenden Sie ein Tool wie [Sqlcmd](sql-server-linux-setup-tools.md), um den folgenden Transact-SQL-Befehl für Ihre Linux SQL Server-Instanz ausführen. Dieser Befehl stellt die Language Statistics-Datenbank wieder her.
+1. Verwenden Sie ein Tool wie z. B. [Sqlcmd](sql-server-linux-setup-tools.md), um den folgenden Transact-SQL-Befehl für Ihre virtuellen SQL Server-Instanz ausführen. Durch diesen Befehl wird die Language Statistics-Datenbank.
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -277,7 +277,7 @@ Um die semantische Suche zu verwenden, müssen Sie zuerst die Semantic Language 
    > [!NOTE]
    > Aktualisieren Sie bei Bedarf die Pfade in der vorherigen RESTORE-Befehl, um für Ihre Konfiguration anzupassen.
 
-1. Führen Sie den folgenden Transact-SQL-Befehl, um die semantische sprachstatistikdatenbank zu registrieren.
+1. Führen Sie den folgenden Transact-SQL-Befehl, um die semantic Language Statistics-Datenbank zu registrieren.
 
     ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  

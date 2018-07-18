@@ -1,5 +1,5 @@
 ---
-title: Berechnete Spalten | Microsoft Docs
+title: Berechnete Spalten | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a79910d324a1e0c157a638745ad96a4bfff800e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043264"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982522"
 ---
 # <a name="calculated-columns"></a>Berechnete Spalten
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34043264"
   
 -   Wenn Sie eine berechnete Spalte umbenennen, müssen alle Formeln, die von der Spalte abhängig sind, manuell aktualisiert werden. Außer wenn Sie sich im manuellen Updatemodus befinden, werden die Formelergebnisse automatisch aktualisiert. Dieser Vorgang nimmt möglicherweise etwas Zeit in Anspruch.  
   
--   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter "Benennungsanforderungen" in der [DAX-Syntaxreferenz](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5).  
+-   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter "Benennungsanforderungen" in der [DAX-Syntaxreferenz](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  Die Formel für eine berechnete Spalte kann ressourcenintensiver als die für ein Measure verwendete Formel sein. Ein Grund hierfür ist, dass das Ergebnis für eine berechnete Spalte immer für jede Zeile in einer Tabelle berechnet wird, wohingegen ein Measure nur für die vom Filter definierten Zellen berechnet wird, die in einem Bericht, in der PivotTable oder im PivotChart verwendet werden. Zum Beispiel enthält eine Tabelle mit einer Million Zeilen immer eine berechnete Spalte mit einer Million Ergebnissen, was sich entsprechend auf die Leistung auswirkt. Eine PivotTable filtert Daten jedoch im Allgemeinen, indem eine Zeilen- und Spaltenüberschrift angewendet wird. Daher wird ein Measure nur für die Teilmenge der Daten in jeder Zelle der PivotTable berechnet.  

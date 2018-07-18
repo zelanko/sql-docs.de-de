@@ -1,5 +1,5 @@
 ---
-title: SQL:Column()-Funktion (XQuery) | Microsoft Docs
+title: SQL:Column()-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981942"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen - SQL:Column()
+# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - SQL:Column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Im Thema beschriebene [einbinden relationaler Daten in XML-Daten](../t-sql/xml/binding-relational-data-inside-xml-data.md), können Sie die **SQL:Column()** funktionieren bei Verwendung von [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md) zum Verfügbarmachen eines relationalen Werts in XQuery.  
   
- Z. B. die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um eine Abfrage für eine XML-Instanz angeben, in einer Variablen oder Spalte gespeichert ist **Xml** Typ. Manchmal kann es auch wünschenswert sein, dass eine Abfrage Werte aus einer anderen Nicht-XML-Spalte verwendet, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL:Column()** Funktion.  
+ Z. B. die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um eine Abfrage für eine XML-Instanz angeben, in einer Variablen oder Spalte gespeichert ist **Xml** Typ. Manchmal kann es auch wünschenswert sein, dass eine Abfrage Werte aus einer anderen Nicht-XML-Spalte verwendet, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **'sql:Column()'** Funktion.  
   
  Der SQL-Wert wird einem entsprechenden XQuery-Wert zugeordnet, und sein Datentyp ist ein XQuery-Basistyp, der mit dem entsprechenden SQL-Typ äquivalent ist.  
   
@@ -47,11 +47,11 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Beachten Sie diesen Verweis auf eine Spalte angegeben wird, der **SQL:Column()** -Funktion in einer XQuery bezieht sich auf eine Spalte in der Zeile, die verarbeitet wird.  
+ Beachten Sie diesen Verweis auf eine Spalte angegeben wird, der **'sql:Column()'** Funktion innerhalb einer XQuery-Abfrage bezieht sich auf eine Spalte in der Zeile, die verarbeitet wird.  
   
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Sie verweisen nur auf eine **Xml** Instanz im Zusammenhang mit dem quellenausdruck einer XML-DML-insert-Anweisung; andernfalls, Sie nicht auf Spalten vom Typ verweisen **Xml** oder eine CLR einen benutzerdefinierten Typ.  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], finden Sie nur in einer **Xml** Instanz im Zusammenhang mit dem quellenausdruck einer XML-DML-insert-Anweisung; andernfalls, Sie nicht auf Spalten des Typs verweisen **Xml** oder eine CLR einen benutzerdefinierten Typ.  
   
- Die **SQL:Column()** Funktion wird im JOIN-Vorgänge nicht unterstützt. Stattdessen kann der APPLY-Vorgang verwendet werden.  
+ Die **'sql:Column()'** Funktion wird im JOIN-Vorgänge nicht unterstützt. Stattdessen kann der APPLY-Vorgang verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -67,11 +67,11 @@ sql:column("columnName")
   
  Beachten Sie im erstellten XML Folgendes:  
   
--   Die **"ProductID"**, **ProductName**, und **ProductPrice** Attributwerte werden abgerufen, von der **Produkt** Tabelle.  
+-   Die **"ProductID"**, **ProductName**, und **ProductPrice** Attributwerte erhalten Sie vom der **Produkt** Tabelle.  
   
 -   Die **ProductModelID** -Attributwert abgerufen wird, aus der **ProductModel** Tabelle.  
   
--   Um die Abfrage interessanter zu gestalten die **ProductModelName** Attributwert abgerufen wird, aus der **CatalogDescription** Spalte **XML-Typ**. Da die XML-Produktmodell-Kataloginformationen nicht für alle Produktmodelle gespeichert werden, wird die `if`-Anweisung nur zum Abrufen des Werts verwendet, wenn dieser vorhanden ist.  
+-   Um die Abfrage interessanter zu gestalten die **ProductModelName** Attributwert aus einer der **CatalogDescription** Spalte **XML-Typ**. Da die XML-Produktmodell-Kataloginformationen nicht für alle Produktmodelle gespeichert werden, wird die `if`-Anweisung nur zum Abrufen des Werts verwendet, wenn dieser vorhanden ist.  
   
     ```  
     SELECT P.ProductID, CatalogDescription.query('  
@@ -98,9 +98,9 @@ sql:column("columnName")
   
 -   Da die Werte aus zwei verschiedenen Tabellen abgerufen werden, gibt die FROM-Klausel zwei Tabellen an. Die Bedingung in der WHERE-Klausel filtert das Ergebnis und ruft nur Produkte ab, deren Produktmodelle über Katalogbeschreibungen verfügen.  
   
--   Die **Namespace** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert das XML-Namespacepräfix "pd", das im Abfragetext verwendet wird. Beachten Sie, dass die Tabellenaliasse "P" und "PM" in der FROM-Klausel der Abfrage selbst definiert werden.  
+-   Die **Namespace** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert das XML-Namespacepräfix "pd", das im Hauptteil Abfrage verwendet wird. Beachten Sie, dass die Tabellenaliasse "P" und "PM" in der FROM-Klausel der Abfrage selbst definiert werden.  
   
--   Die **SQL:Column()** Funktion wird verwendet, um nicht-XML-Werte in XML zu bringen.  
+-   Die **'sql:Column()'** Funktion wird verwendet, um nicht-XML-Werten in XML zu bringen.  
   
  Dies ist das Teilergebnis:  
   
@@ -113,7 +113,7 @@ ProductID               Result
 ...  
 ```  
   
- Die folgende Abfrage erstellt XML, das produktspezifische Informationen enthält. Diese Informationen umfassen die Werte ProductID, ProductName, ProductPrice und, wenn verfügbar, ProductModelName für alle Produkte, die zu einem bestimmten Produktmodell, ProductModelID=19, gehören. Der XML-Code wird anschließend zugewiesen der @x -Variable der **Xml** Typ.  
+ Die folgende Abfrage erstellt XML, das produktspezifische Informationen enthält. Diese Informationen umfassen die Werte ProductID, ProductName, ProductPrice und, wenn verfügbar, ProductModelName für alle Produkte, die zu einem bestimmten Produktmodell, ProductModelID=19, gehören. Der XML-Code wird anschließend zugewiesen der @x der Variable **Xml** Typ.  
   
 ```  
 declare @x xml  
@@ -138,7 +138,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server XQuery-Erweiterungsfunktionen](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [XQuery-Erweiterung für SQL Server-Funktionen](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   

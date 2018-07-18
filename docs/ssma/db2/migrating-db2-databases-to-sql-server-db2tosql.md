@@ -1,5 +1,5 @@
 ---
-title: Migrieren von DB2-Datenbanken zu SQLServer (DB2ToSQL) | Microsoft Docs
+title: Migrieren von DB2-Datenbanken zu SQLServer (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,42 +16,42 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44f1d9a07ae6a33b2b9b8f2d81a2de66ea8ce111
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3af1de2e98b4baf4800603a8eb177b80fdb1da6f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775296"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985502"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Migrieren von DB2-Datenbanken zu SQLServer (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 ist eine umfassende Umgebung, mit denen Sie schnell zu DB2-Datenbanken migrieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank. SSMA für DB2 verwenden, können Sie überprüfen von Datenbankobjekten und Daten, Datenbanken für die Migration zu bewerten, migrieren Sie Datenbankobjekte auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank. Beachten Sie, dass Schemas SYS und DB2-SYSTEM migriert werden können.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) für DB2 ist eine umfassende Umgebung, die Sie schnell zu DB2-Datenbanken migrieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank. SSMA für DB2 verwenden, Sie können überprüfen, Datenbankobjekte und Daten, Datenbanken für die Migration zu bewerten, migrieren Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, und migrieren Sie dann die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank. Beachten Sie, dass Sie nicht SYS und SYSTEM DB2 Schemas migrieren können.  
   
-## <a name="recommended-migration-process"></a>Migrationsprozess empfohlen  
-Zur erfolgreichen Migration der Objekte und Daten von DB2-Datenbanken auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, das folgende Verfahren verwenden:  
+## <a name="recommended-migration-process"></a>Empfohlene Migrationsprozess  
+Für eine erfolgreiche Migration von Objekten und Daten aus DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, verwenden Sie den folgenden Prozess:  
   
-1.  [Neues SSMA-Projekt](http://msdn.microsoft.com/en-us/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
+1.  [Neues SSMA-Projekt](http://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   
-    Nachdem Sie das Projekt erstellt haben, können Sie die projektkonvertierung, Migrations- und Optionen des Typmappings festlegen. Informationen zu projekteinstellungen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) und Verwandte Abschnitte. Informationen zum Anpassen der datentypzuordnungen finden Sie unter [DB2 zuordnen und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+    Nachdem Sie das Projekt erstellt haben, können Sie die projektkonvertierung, Migration und Zuordnungsoptionen Typ festlegen. Weitere Informationen zu projekteinstellungen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) und Verwandte Abschnitte. Informationen dazu, wie Sie die replikationsdatentyp-Zuordnungen anpassen, finden Sie unter [Zuordnen von DB2- und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
-2.  [Herstellen einer Verbindung mit der DB2-Datenbank](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+2.  [Verbinden mit der DB2-Datenbank](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
   
-3.  [Herstellen einer Verbindung mit SQLServer](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e).  
+3.  [Herstellen einer Verbindung mit SQLServer](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
-4.  [Zuordnen von DB2-Schemas in SQL Server-Schemas](http://msdn.microsoft.com/en-us/05ff7bd4-e60b-4f48-a893-bc2346aa9a8a).  
+4.  [Zuordnen von DB2-Schemas zu SQL Server-Schemas](http://msdn.microsoft.com/05ff7bd4-e60b-4f48-a893-bc2346aa9a8a).  
   
-5.  Optional, [Bewertungsberichte](http://msdn.microsoft.com/en-us/9e13eba0-e3cf-4205-974f-c00f982061de) zum Bewerten der Datenbankobjekte für die Konvertierung und schätzen Sie die Konvertierungszeit.  
+5.  Optional [Bewertungsberichte](http://msdn.microsoft.com/9e13eba0-e3cf-4205-974f-c00f982061de) Datenbankobjekte für die Konvertierung zu bewerten und die Konvertierungszeit zu schätzen.  
   
-6.  [Konvertieren von DB2 Schemas](http://msdn.microsoft.com/en-us/7947efc3-ca86-4ec5-87ce-7603059c75a0).  
+6.  [Konvertieren von DB2 Schemas](http://msdn.microsoft.com/7947efc3-ca86-4ec5-87ce-7603059c75a0).  
   
-7.  [Laden Sie die konvertierte Datenbankobjekte in SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+7.  [Laden von konvertierten Datenbankobjekten in SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
-    Sie können dies in eine der folgenden Arten erfolgen:  
+    Dies ist in einem der folgenden Arten möglich:  
   
-    -   Speichern Sie ein Skript aus, und führen Sie es in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    -   Speichern Sie ein Skript, und führen Sie es in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
     -   Synchronisieren Sie die Datenbankobjekte.  
   
-8.  [Migrieren von DB2-Daten in SQLServer](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+8.  [Migrieren von DB2-Daten in SQLServer](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 9. Bei Bedarf datenbankanwendungen zu aktualisieren.  
   

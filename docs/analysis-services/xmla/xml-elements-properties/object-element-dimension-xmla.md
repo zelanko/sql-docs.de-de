@@ -1,5 +1,5 @@
 ---
-title: Objekt-Element (Dimension) (XMLA) | Microsoft Docs
+title: Objekt-Element (Dimension) (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b321a6c26edb4f569b4174d64a0a50b8ac23ae6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575762"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968306"
 ---
 # <a name="object-element-dimension-xmla"></a>Object-Element (Dimension) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

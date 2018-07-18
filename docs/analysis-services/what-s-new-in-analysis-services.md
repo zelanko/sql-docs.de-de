@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045594"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016087"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services umfasst viele neue Verbesserungen, die Leistung zu verbessern, einfacher Lösung erstellen, automatisierte datenbankverwaltung bereitstellen, verbesserte Beziehungen mit bidirektionale kreuzfilterung, parallele Verarbeitung von Partitionen und vieles mehr. Das Herzstück der meisten Verbesserungen in dieser Version ist der neue Kompatibilitätsgrad 1200 für tabellarische Modelldatenbanken.     
+SQL Server 2016 Analysis Services umfasst viele Verbesserungen zur leistungsverbesserung, einfachere Lösung erstellen, die Automatisierung der datenbankverwaltung, verbesserte Beziehungen mit der bidirektionalen kreuzfilterung, parallele partitionsverarbeitung, und viele weitere Vorteile. Das Herzstück der meisten Verbesserungen in dieser Version ist der neue Kompatibilitätsgrad 1200 für tabellarische Modelldatenbanken.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Wie auf der SQL PASS-Konferenz 2016 angekündigt, ist Analysis Services nun als Azure-Dienst in der Cloud verfügbar. **Azure Analysis Services** tabellarische Modelle mit dem Kompatibilitätsgrad 1200 oder höher unterstützt. DirectQuery, Partitionen, Sicherheit auf Zeilenebene, Bidirektionale Beziehungen und Übersetzungen werden unterstützt. Um mehr über den Dienst zu erfahren, und ihn kostenlos zu testen, wechseln Sie zu [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Wie auf der SQL PASS-Konferenz 2016 angekündigt, ist Analysis Services nun als Azure-Dienst in der Cloud verfügbar. **Azure Analysis Services** unterstützt tabellarische Modelle mit den Kompatibilitätsgraden 1200 und höher. DirectQuery, Partitionen, Sicherheit auf Zeilenebene, Bidirektionale Beziehungen und Übersetzungen werden unterstützt. Um mehr über den Dienst zu erfahren, und ihn kostenlos zu testen, wechseln Sie zu [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Was ist neu in Analysis Services für SQL Server 2016 Service Pack 1 (SP1)
 
@@ -40,12 +40,12 @@ Insbesondere bieten Analysis Services für SQL Server 2016 SP1 Verbesserungen in
 Leistungs- und Skalierbarkeitstests zeigten erhebliche Zuwächse im Abfragedurchsatz, wenn SQL Server 2016 SP1 Analysis Services auf großen Enterprise Servern mit vielen Knoten ausgeführt wird.
 
 
-## <a name="whats-new-in-sql-server-2016-analysis-services"></a>Neuigkeiten in SQL Server 2016 Analysis Services
+## <a name="whats-new-in-sql-server-2016-analysis-services"></a>Neuerungen in SQL Server 2016 Analysis Services
 
 Während die meisten Verbesserungen in dieser Version spezifisch für tabellarische Modelle sind, wurden auch einige Verbesserungen für mehrdimensionale Modelle vorgenommen. Dies betrifft z.B. die Optimierung bei Distinct Count ROLAP für Datenquellen wie DB2 und Oracle, die Unterstützung für die Drillthrough Mehrfachauswahl mit Excel 2016 sowie Excel-Optimierungen.    
 
 #### <a name="get-the-latest-tools"></a>Abrufen der neuesten Tools
-Um optimal von alle Erweiterungen in dieser Version nutzen zu können, werden Sie sicher, dass die neuesten Versionen von SSDT und SSMS installiert.    
+Um vollständige alle Verbesserungen in dieser Version nutzen, werden Sie darauf, dass die neuesten Versionen von SSDT und SSMS installiert.    
 - [Herunterladen von SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [SQL Server Management Studio (SSMS) herunterladen](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -64,14 +64,14 @@ Ab dieser Version benötigen Sie nicht mehr zwei Versionen von SSDT für die Ers
 Anzeigeordner sind jetzt für Tabellenmodelle 1200 verfügbar. Anzeigeordner werden in SQL Server Data Tools definiert und in Clientanwendungen wie Excel oder Power BI Desktop gerendert. Sie können damit eine große Anzahl von Measures in einzelnen Ordnern organisieren und so eine visuelle Hierarchie für eine einfachere Navigation in Feldlisten hinzufügen.
 ### <a name="bi-directional-cross-filtering"></a>Bidirektionale Kreuzfilterung
 Neu in dieser Version ist eine integrierte Methode zum Aktivieren bidirektionaler Kreuzfilter in tabellarischen Modellen, durch die keine Notwendigkeit für manuell erstellte DAX-Umgehungen für die Tabellenbeziehungen übergreifende Weitergabe des Filterkontexts mehr besteht. Filter werden nur automatisch generiert, wenn die Richtung mit einem hohen Grad an Sicherheit bestimmt werden kann. Bei einer Mehrdeutigkeit in Form von mehreren Abfragepfaden über Tabellenbeziehungen wird kein Filter automatisch erstellt. Weitere Informationen finden Sie unter [Bidirektionale Kreuzfilter für tabellarische Modelle in SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .
- ### <a name="translations"></a>Übersetzungen    
+ ### <a name="translations"></a>Translations    
  Sie können jetzt übersetzte Metadaten in einem tabellarischen 1200-Modell speichern. Metadaten im Modell enthalten Felder für **Culture**, übersetzte Beschriftungen und übersetzte Beschreibungen. Verwenden Sie zum Hinzufügen von Übersetzungen den Befehl **Modell** > **Übersetzungen** in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Einzelheiten finden Sie unter [Übersetzungen in Tabellenmodellen &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).    
  ### <a name="pasted-tables"></a>Eingefügte Tabellen    
  Es ist jetzt möglich, ein tabellarisches Modell mit 1100 oder 1103 auf 1200 zu aktualisieren, wenn das Modell eingefügte Tabellen enthält. Es wird empfohlen, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]zu verwenden. Legen Sie in SSDT **CompatibilityLevel** auf 1200 fest, und stellen Sie es dann in einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereit. Einzelheiten dazu finden Sie unter [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
  ### <a name="calculated-tables-in-ssdt"></a>Berechnete Tabellen in SSDT    
 Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-Ausdruck oder einer DAX-Abfrage in SSDT basiert. Wenn eine berechnete Tabelle in einer Datenbank bereitgestellt wird, kann sie nicht von regulären Tabellen unterschieden werden.    
 
- Es gibt verschiedene Verwendungsmöglichkeiten für berechnete Tabellen, einschließlich der Erstellung neuer Tabellen, um eine vorhandene Tabelle in einer bestimmten Rolle verfügbar zu machen. Das klassische Beispiel ist eine Datumstabelle, die in mehreren Kontexten (Bestelldatum, Versanddatum usw.) verwendet wird. Durch das Erstellen einer berechneten Tabelle für eine bestimmte Rolle können Sie jetzt eine Tabellenbeziehung aktivieren, um Abfragen oder Dateninteraktionen mit der berechneten Tabelle zu ermöglichen. Ein weiterer Verwendungszweck für berechnete Tabellen ist, Teile von vorhandenen Tabellen zu einer völlig neuen Tabelle zu kombinieren, die nur im Modell vorhanden ist.  Finden Sie unter [erstellen Sie eine Tabelle berechnet](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) um mehr zu erfahren.    
+ Es gibt verschiedene Verwendungsmöglichkeiten für berechnete Tabellen, einschließlich der Erstellung neuer Tabellen, um eine vorhandene Tabelle in einer bestimmten Rolle verfügbar zu machen. Das klassische Beispiel ist eine Datumstabelle, die in mehreren Kontexten (Bestelldatum, Versanddatum usw.) verwendet wird. Durch das Erstellen einer berechneten Tabelle für eine bestimmte Rolle können Sie jetzt eine Tabellenbeziehung aktivieren, um Abfragen oder Dateninteraktionen mit der berechneten Tabelle zu ermöglichen. Ein weiterer Verwendungszweck für berechnete Tabellen ist, Teile von vorhandenen Tabellen zu einer völlig neuen Tabelle zu kombinieren, die nur im Modell vorhanden ist.  Finden Sie unter [Erstellen einer berechneten Tabelle](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) um mehr zu erfahren.    
  ### <a name="formula-fixup"></a>Formelkorrektur    
  Mit der Formelkorrektur in einem tabellarischen 1200-Modell aktualisiert SSDT automatisch alle Measures, die auf eine Spalte oder Tabelle verweisen, die umbenannt wurde.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Unterstützung für den Visual Studio-Konfigurations-Manager    
@@ -81,7 +81,7 @@ Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-A
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Verwalten von tabellarischen 1200-Modellen in SSMS    
  In dieser Version kann eine Analysis Services-Instanz im tabellarischen Servermodus tabellarische Modelle mit jedem Kompatibilitätsgrad (1100, 1103, 1200) ausführen. Die neueste Version von [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) wurde aktualisiert, um Eigenschaften anzuzeigen und die Verwaltung von Datenbankmodellen für tabellarische Modelle mit Kompatibilitätsgrad 1200 zu ermöglichen.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Parallele Verarbeitung für mehrere Tabellenpartitionen in tabellarischen Modellen    
- Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und Verarbeiten von Tabellen finden Sie unter [tabellarische Modell Partitionen](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und zum Verarbeiten von Tabellen finden Sie unter [Tabellenmodellpartitionen](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Hinzufügen von Computerkonten als Administratoren in SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorgruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC für Analysis Services    
@@ -140,7 +140,7 @@ Durch Updates der Bearbeitungsleiste können Sie Formeln einfacher schreiben, in
 ### <a name="dax-variables"></a>DAX-Variablen    
 Diese Version bietet jetzt Unterstützung für Variablen in DAX. Variablen können jetzt das Ergebnis eines Ausdrucks als benannte Variable speichern, die dann als Argument für andere Measureausdrücke übergeben werden kann. Sobald die resultierenden Werte für einen Variablenausdruck berechnet wurden, werden diese Werte nicht wieder geändert, auch wenn auf die Variable in einem anderen Ausdruck verwiesen wird. Weitere Informationen finden Sie unter [VAR-Funktion](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### <a name="new-dax-functions"></a>Neue DAX-Funktionen
-Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
+Mit dieser Version stellt DAX über&50; neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
 ### <a name="save-incomplete-measures"></a>Speichern unvollständiger Measures
 Sie können jetzt unvollständige DAX-Measures direkt in einem Projekt mit einem tabellarischen 1200-Modell speichern und erneut verwenden, wenn Sie fortfahren möchten.
 ### <a name="additional-dax-enhancements"></a>Zusätzliche DAX-Erweiterungen

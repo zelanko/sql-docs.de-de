@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Agent-Tabellen (Transact-SQL) | Microsoft Docs
+title: SQL Server-Agent-Tabellen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f45847235f549eb80404236633111f5678f53825
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018431"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server-Agent-Tabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "33263528"
  Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausgeführt werden soll.  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- Enthält Zeitplaninformationen für Aufträge von auszuführenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+ Enthält Informationen zum Zeitplan für Aufträge ausgeführt werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  Speichert die Zuordnung oder Beziehung eines bestimmten Auftrags zu einem oder mehreren Zielservern.  
@@ -76,7 +76,7 @@ ms.locfileid: "33263528"
  Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen den einzelnen Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents zugeordnet sind.  
   
  [dbo.sysproxysubsystem](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)  
- Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Subsystem wird von den einzelnen Proxykonten verwendet.  
+ Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Subsystem wird von einzelnen Proxykonten verwendet.  
   
  [dbo.sysschedules](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
  Enthält Informationen zu Auftragszeitplänen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  

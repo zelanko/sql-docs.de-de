@@ -1,5 +1,5 @@
 ---
-title: Sys.Servers (Transact-SQL) | Microsoft Docs
+title: Sys.Servers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969792"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "33221791"
   
  Zum Anzeigen des lokalen Servers (**server_id** = 0) sind keine Berechtigungen erforderlich.  
   
- Wenn Sie einen Verbindungsserver oder Remoteserver erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine standardmäßige anmeldenamenzuordnung zur der **öffentlichen** -Serverrolle. Dies bedeutet, dass alle Verbindungs- und Remoteserver standardmäßig von allen Anmeldenamen angezeigt werden können. Um die Sichtbarkeit auf diesen Servern zu beschränken, entfernen Sie die standardmäßige anmeldenamenzuordnung dazu [Sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) und Angeben von NULL für den *Locallogin* Parameter.  
+ Wenn Sie einen Verbindungs- oder Remoteserver erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine standardmäßige anmeldenamenzuordnung, die **öffentliche** -Serverrolle. Dies bedeutet, dass alle Verbindungs- und Remoteserver standardmäßig von allen Anmeldenamen angezeigt werden können. Um die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige anmeldenamenzuordnung, indem Sie Ausführung [Sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) und Angeben von NULL für den *Locallogin* Parameter.  
   
  Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen. Zum Anzeigen aller Verbindungs- und Remoteserver nach dem Löschen der standardmäßigen Anmeldezuordnung sind folgende Berechtigungen erforderlich:  
   

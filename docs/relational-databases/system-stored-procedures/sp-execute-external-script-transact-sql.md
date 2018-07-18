@@ -1,5 +1,5 @@
 ---
-title: Sp_execute_external_script (Transact-SQL) | Microsoft Docs
+title: Sp_execute_external_script (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974092"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>Sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Führt das Skript, das als Argument an einen externen Speicherort bereitgestellt. Das Skript muss in einer unterstützten und registrierten Sprache geschrieben werden. Auszuführende **Sp_execute_external_script**, Sie müssen zunächst aktivieren externer Skripts, die mit der Anweisung `sp_configure 'external scripts enabled', 1;`.  
+  Führt das Skript, das als Argument an einen externen Speicherort bereitgestellt. Das Skript muss in einer unterstützten und registrierten Sprache geschrieben werden. Auszuführende **Sp_execute_external_script**, müssen Sie zunächst aktivieren externer Skripts, die mithilfe der Anweisung `sp_configure 'external scripts enabled', 1;`.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,93 +59,93 @@ sp_execute_external_script
  Gültige Werte sind `Python` oder `R`. 
   
  @script = N'*Skript*"  
- Externe sprachschrift Domänenmodells ein literal oder eine Variable angegeben. *Skript* ist **nvarchar(max)**.  
+ Externe Language-Skript, die als Eingabe Zeichenfolgenliteral oder eine Variable angegeben. *Skript* ist **nvarchar(max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*"]  
- Gibt den Namen der Variablen, die zur Darstellung von definierten Abfrage @input_data_1. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Falle von R wird die Eingabevariable einem Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  
+ [ @input_data_1_name = N'*input_data_1_name*']  
+ Gibt den Namen der Variablen verwendet, um die Abfrage von definiert darzustellen @input_data_1. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  
   
  Standardwert ist `InputDataSet`.  
   
- [ @input_data_1 = N'*input_data_1*"]  
- Gibt an, die Eingabedaten unter Verwendung des Skripts in Form von externen verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)**.
+ [ @input_data_1 = N'*input_data_1*']  
+ Gibt an, die Eingabedaten, die von externen Skripts in Form von verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)**.
   
- [ @output_data_1_name = N'*output_data_1_name*"]  
- Gibt den Namen der Variablen in externen Skripts mit den Daten zu zurückzugebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Abschluss des Aufrufs der gespeicherten Prozedur. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Für R muss die Ausgabe einem Datenrahmen. Für Python muss die Ausgabe einem Datenrahmen Pandas sein. *output_data_1_name* ist **Sysname**.  
+ [ @output_data_1_name = N'*output_data_1_name*']  
+ Gibt den Namen der Variablen in externen Skripts mit den Daten zu zurückzugebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Abschluss des Aufrufs der gespeicherten Prozedur. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Für R muss die Ausgabe einen Datenrahmen. Für Python muss die Ausgabe ein Pandas-dataframe. *output_data_1_name* ist **Sysname**.  
   
  Standardwert ist "OutputDataSet".  
   
- [ @parallel = 0 | 1] ermöglichen parallele Ausführung von R-Skripts durch Festlegen der `@parallel` -Parameter auf 1 fest. Der Standardwert für diesen Parameter ist 0 (keine Parallelität).  
+ [ @parallel = 0 | 1] Aktivieren der parallelen Ausführung von R-Skripts durch Festlegen der `@parallel` Parameter auf 1. Der Standardwert für diesen Parameter ist 0 (keine Parallelität).  
   
- Für R-Skripts, die nicht mithilfe von RevoScaleR-Funktionen verwenden die `@parallel` Parameter kann für die Verarbeitung großer Datasets, vorausgesetzt, das Skript im Grunde parallelisiert werden kann nützlich sein. Beispielsweise, wenn von der R `predict` Funktion mit einem Modell, um neue Vorhersagen generieren, legen Sie `@parallel = 1` als Hinweis für das Abfragemodul. Wenn die Abfrage parallelisiert werden kann, werden Zeilen gemäß verteilt die **MAXDOP** Einstellung.  
+ Für R-Skripts, die nicht mithilfe von RevoScaleR-Funktionen verwenden die `@parallel` Parameter kann sein, nützlich für die Verarbeitung großer Datasets, wenn das Skript einfach parallelisiert werden kann. Beispielsweise bei Verwendung von R `predict` Funktion mit einem Modell aus, um neue Vorhersagen generieren, legen Sie `@parallel = 1` als Hinweis für die Abfrage-Engine. Wenn die Abfrage parallelisiert werden kann, werden Zeilen gemäß verteilt die **MAXDOP** festlegen.  
   
- Wenn `@parallel = 1` und die Ausgabe wird direkt auf den Clientcomputer gestreamt wird und dann die `WITH RESULTS SETS` -Klausel ist erforderlich und einem Ausgabeschema muss angegeben werden.  
+ Wenn `@parallel = 1` und die Ausgabe wird direkt auf dem Clientcomputer gestreamt wird und dann die `WITH RESULTS SETS` -Klausel ist erforderlich, und einem Ausgabeschema muss angegeben werden.  
   
- Für R-Skripts, die RevoScaleR-Funktionen verwenden, paralleler Verarbeitung erfolgt automatisch und sollte nicht angegeben werden `@parallel = 1` auf die **Sp_execute_external_script** aufrufen.  
+ Für R-Skripts, die RevoScaleR-Funktionen verwenden, die parallelverarbeitung erfolgt automatisch und sollte nicht angegeben werden `@parallel = 1` auf die **Sp_execute_external_script** aufrufen.  
   
- [ @params = N' *@parameter_name Data_type* [OUT | Ausgabe] [,... ...n] "]  
- Eine Liste der Eingabeparameter-Deklarationen, die in der externen Skript verwendet werden.  
+ [ @params = N' *@parameter_name Data_type* [| Ausgabe] [,.. ...n] "]  
+ Eine Liste der Eingabeparameter-Deklarationen, die in externen Skripts verwendet werden.  
   
- [ @parameter1 = "*value1*' [| Ausgabe] [,... ...n]]  
- Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden soll.  
+ [ @parameter1 = '*value1*' [| Ausgabe] [,.. ...n]]  
+ Eine Liste von Werten für die Eingabeparameter, die von externen Skripts verwendet werden soll.  
 
 ## <a name="remarks"></a>Hinweise
 
-Verwendung **Sp_execute_external_script** zum Ausführen von Skripts, die in einer unterstützten Sprache geschrieben. Aktuell sind die unterstützte Sprachen für SQL Server 2016 und Python R und R für SQL Server-2017. 
+Verwendung **Sp_execute_external_script** zum Ausführen von Skripts, die in einer unterstützten Sprache geschrieben wurde. Derzeit sind die unterstützte Sprachen R für SQL Server 2016 und Python und R für SQL Server 2017. 
 
 > [!IMPORTANT]
 > Die Abfragestruktur wird gesteuert, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Benutzer beliebige Vorgänge für die Abfrage ausführen können. 
 
-Standardmäßig werden von dieser gespeicherten Prozedur zurückgegebenen Resultsets Ausgabe mit unbenannten Spalten. Spaltennamen, die in einem Skript verwendet gelten lokal in der skriptumgebung und werden nicht im ausgegebenen Resultset wiedergegeben. Verwenden Sie die Resultset-Spalten Name, der `WITH RESULTS SET` -Klausel der [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
+Standardmäßig sind von dieser gespeicherten Prozedur zurückgegebenen Resultsets Ausgabe mit unbenannten Spalten. Spaltennamen, die in einem Skript verwendet gelten lokal in der skriptumgebung und werden nicht in das ausgegebene Resultset wiedergegeben. Verwenden Sie zum Ergebnis-Spalten benennen, die `WITH RESULTS SET` -Klausel der [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
   
- Sie können zusätzlich zum Zurückgeben eines Resultsets, Skalare Werte zurückgeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von OUTPUT-Parameter. Das folgende Beispiel zeigt die Verwendung des OUTPUT-Parameters, um das serialisierte R-Modell zurückzugeben, das als Eingabe für das Skript verwendet wurde:  
+ Sie können zusätzlich zum Zurückgeben eines Resultsets, Skalare Werte zurückgeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der OUTPUT-Parameter. Das folgende Beispiel zeigt die Verwendung des OUTPUT-Parameters, der das serialisierte R-Modell zurückgegeben werden, das als Eingabe für das Skript verwendet wurde:  
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] besteht aus einer Serverkomponente, die mit installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und einen Satz von arbeitsstationstools und verbindungsbibliotheken, die Verbindung mit der hochleistungsumgebung von der Data Scientist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Müssen Sie installieren, Machine learning Komponenten während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, um die Ausführung externer Skripts ermöglichen. Weitere Informationen finden Sie unter [Einrichten von SQL Server-Machine Learning-Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] besteht aus einer Serverkomponente, die mit installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und eine Reihe von arbeitsstationstools und verbindungsbibliotheken, die Verbindung mit der hochleistungsumgebung von Data scientists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Müssen Sie die Machine learning-Komponenten während der installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, um die Ausführung externer Skripts zu ermöglichen. Weitere Informationen finden Sie unter [Einrichten von SQL Server Machine Learning Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).  
   
-Sie können Ressourcen von externer Skripts, die durch einen externen Ressourcenpool konfigurieren steuern. Weitere Informationen finden Sie unter [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Informationen über die arbeitsauslastung können aus den Katalogsichten der Ressourcenkontrolle, die DMVS und die Leistungsindikatoren abgerufen werden. Weitere Informationen finden Sie unter [Katalogsichten der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor verwandte dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), und [ SQLServer, externe Skripts Objekt](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
+Sie können die Ressourcen, die von externen Skripts verwendet werden, indem Sie einen externen Ressourcenpool konfigurieren, steuern. Weitere Informationen finden Sie unter [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Informationen zu der arbeitsauslastung kann aus den Katalogsichten der Ressourcenkontrolle DMVS und Leistungsindikatoren abgerufen werden. Weitere Informationen finden Sie unter [Resource Governor-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor dynamische Verwaltungssichten in Verbindung &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), und [ SQLServer, externes Skript-Objekt](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 
-Monitor-skriptausführung mit [dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) und [dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
+Monitor-skriptausführung mit [Sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) und [dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
 ## <a name="streaming-execution-for-r-and-python-scripts"></a>Streaming-Ausführung von R und Python-Skripts  
 
-Streaming ermöglicht das R oder Python-Skript zum Arbeiten mit mehr Daten als in den Arbeitsspeicher passen können. Um zu steuern, die Anzahl der Zeilen, die während der streaming übergeben, geben Sie einen ganzzahligen Wert für den Parameter `@r_rowsPerRead` in der `@params` Auflistung.  Zum Beispiel wenn Sie ein Modell, die sehr viele Daten verwendet trainieren, konnte Sie anpassen, den Wert zum Lesen von weniger Zeilen, um sicherzustellen, dass alle Zeilen in einem Datenblock gesendet werden können. Dieser Parameter können auch die Anzahl der Zeilen gelesen und gleichzeitig verarbeitet werden, um das Minimieren von Leistungsproblemen Server verwalten. 
+Streaming ermöglicht das R- oder Python-Skript zum Arbeiten mit mehr Daten als in den Speicher passen. Um die Anzahl der Zeilen, die beim streaming übergeben steuern möchten, geben Sie einen ganzzahligen Wert für den Parameter `@r_rowsPerRead` in die `@params` Auflistung.  Z. B. wenn eines Modells, das sehr Breite Daten verwendet trainieren, können Sie anpassen den Wert zum Lesen von weniger Zeilen, um sicherzustellen, dass alle Zeilen in einem Block von Daten gesendet werden können. Sie können auch diesen Parameter verwenden, verwalten Sie die Anzahl der Zeilen, die gelesen und verarbeitet gleichzeitig ausführen möchten, um Probleme mit der serverleistung zu minimieren. 
   
-Sowohl die `@r_rowsPerRead` Parameter für das streaming und die `@parallel` Argument sollte Hinweise berücksichtigt werden. Für den Hinweis, angewendet werden soll muss es möglich, einen SQL-Abfrageplan zu generieren, der parallelen Verarbeitung enthält. Wenn dies nicht möglich ist, kann die paralleler Verarbeitung nicht aktiviert werden.  
+Sowohl die `@r_rowsPerRead` Parameter für das streaming und die `@parallel` Argument sollte Hinweise berücksichtigt werden. Für den Hinweis, angewendet werden soll muss es möglich, einen SQL-Abfrage-Plan zu erstellen, der die parallelverarbeitung enthält. Wenn dies nicht möglich ist, kann die paralleler Verarbeitung aktiviert werden.  
   
 > [!NOTE]  
->  Streaming und parallele Verarbeitung werden nur in Enterprise Edition unterstützt. Sie können die Parameter in Ihren Abfragen in der Standard Edition einschließen, ohne ein Fehler ausgelöst wird, jedoch Parameter haben keine Auswirkung und R-Skripts, die in einem einzelnen Prozess ausführen.  
+>  Streaming und parallele Verarbeitung sind nur in Enterprise Edition unterstützt. Sie können die Parameter in Ihren Abfragen in der Standard Edition einschließen, ohne dass ein Fehler ausgelöst, aber die Parameter haben keine Auswirkungen und R-Skripts, die in einem einzelnen Prozess ausgeführt.  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
 
 
 ### <a name="data-types"></a>Datentypen
 
-Die folgenden Datentypen werden nicht unterstützt, bei der Verwendung in der Eingabeabfrage oder die Parameter des `sp_execute_external_script` Prozedur, und der Rückgabewert ein nicht unterstützter Typ-Fehler.  
+Die folgenden Datentypen werden nicht unterstützt, bei der Verwendung in der Eingabeabfrage oder Parameter des `sp_execute_external_script` Prozedur und die Rückgabe-Fehler nicht unterstützter Typ.  
 
-Dieses Problem zu umgehen **Umwandlung** die Spalte oder den Wert in einen unterstützten Typ in [!INCLUDE[tsql](../../includes/tsql-md.md)] vor dem Senden an das externe Skript.  
+Dieses Problem zu umgehen **Umwandlung** der Spalte oder den Wert in einen unterstützten Typ in [!INCLUDE[tsql](../../includes/tsql-md.md)] vor dem Senden an das externe Skript.  
   
 -   **Cursor**  
   
 -   **timestamp**  
   
--   **datetime2**, **"DateTimeOffset"**, **Zeit**  
+-   **datetime2**, **Datetimeoffset**, **Zeit**  
   
 -   **sql_variant**  
   
--   **Text**, **Bild**  
+-   **Text**, **Image**  
   
 -   **xml**  
   
 -   **Hierarchyid**, **Geometrie**, **Geography**  
   
--   Benutzerdefinierte CLR-Typen
+-   CLR-benutzerdefinierte Typen
 
-Im Allgemeinen einer Gruppe, die zugeordnet werden kann, führt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Datentyp, wird die Ausgabe als NULL.  
+Im Allgemeinen dazu führen, Gruppe, die zugeordnet werden kann eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Datentyp, wird die Ausgabe als NULL.  
 
 ### <a name="restrictions-specific-to-r"></a>Einschränkungen für R spezifisch
 
-Wenn die Eingabe enthält **"DateTime"** Werte, die nicht den zulässigen Wertebereich R groß genug ist, werden Werte in konvertiert **NA**. Dies ist erforderlich, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht eine größere Anzahl von Werten als in der Sprache "R" unterstützt wird.
+Wenn die Eingabe enthält **"DateTime"** Werte, die nicht den zulässigen Wertebereich in R passen, die Werte werden in konvertiert **NA**. Dies ist erforderlich, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht eine größere Anzahl von Werten, die in der Sprache R unterstützt.
 
-Float-Werte (z. B. `+Inf`, `-Inf`, `NaN`) können nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl beide Sprachen IEEE 754 verwenden. Aktuelle Verhalten sendet nur die Werte, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] direkt als Ergebnis der SQL-Client in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] löst einen Fehler aus. Daher werden diese Werte konvertiert, um **NULL**.
+Float-Werte (z. B. `+Inf`, `-Inf`, `NaN`) werden nicht unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl beide Sprachen IEEE 754 verwenden. Aktuelles Verhalten sendet nur die Werte, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] direkt, als Ergebnis der SQL-Client in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] löst einen Fehler aus. Aus diesem Grund werden diese Werte in konvertiert **NULL**.
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -153,11 +153,11 @@ Erfordert **EXECUTE ANY EXTERNAL SCRIPT** -Datenbankberechtigung.
 
 ## <a name="examples"></a>Beispiele
 
-Dieser Abschnitt enthält Beispiele, wie diese gespeicherte Prozedur verwendet werden kann, zum Ausführen von R oder Python-Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Dieser Abschnitt enthält Beispiele, wie diese gespeicherte Prozedur verwendet werden kann, zum Ausführen von R- oder Python-Skripts, die mit [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Zurückgeben eines R-Datasets zu SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Ein R-DataSet wird mit SQL Server zurück.  
 
-Das folgende Beispiel erstellt eine gespeicherte Prozedur, die verwendet **Sp_execute_external_script** zur Rückgabe des Iris-Datasets enthaltenen R zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Das folgende Beispiel erstellt eine gespeicherte Prozedur, die verwendet **Sp_execute_external_script** zur Rückgabe des Iris-Dataset, das in R enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ```sql
 DROP PROC IF EXISTS get_iris_dataset;  
@@ -180,10 +180,10 @@ GO
 
 ### <a name="b-generate-an-r-model-based-on-data-from-sql-server"></a>B. Generieren eines R-Modells, basierend auf Daten aus SQL Server  
 
-Das folgende Beispiel erstellt eine gespeicherte Prozedur, die verwendet **Sp_execute_external_script** ein Iris-Modell zu generieren und das Modell zurückgeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Das folgende Beispiel erstellt eine gespeicherte Prozedur, die verwendet **Sp_execute_external_script** ein Iris-Modell zu generieren und Zurückgeben des Modells zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE]
->  Dieses Beispiel benötigen Sie erweiterte Installation des Pakets e1071. Weitere Informationen finden Sie unter [Installieren zusätzlicher R-Pakete unter SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md).
+>  In diesem Beispiel ist die erweiterte Installation des Pakets e1071 erforderlich. Weitere Informationen finden Sie unter [Installieren zusätzlicher R-Pakete unter SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md).
 
 ```sql
 DROP PROC IF EXISTS generate_iris_model;
@@ -208,7 +208,7 @@ GO
 
 Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Sprachen-ID von `@language=N'R'` zu `@language = N'Python'` und nehmen die notwendigen Änderungen im `@script`-Argument vor. Alle anderen Parameter funktionieren genauso wie bei R.
 
-### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>C. Erstellen Sie ein Python-Modell und Generieren von Bewertungen aus
+### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>C. Erstellen eines Python-Modells und Generieren von Bewertungen daraus
 
 Dieses Beispiel veranschaulicht, wie Sie „sp\_execute\_external\_script“ verwenden, um Bewertungen in einem einfachen Python-Modell zu generieren. 
 
@@ -249,10 +249,10 @@ Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-
 ## <a name="see-also"></a>Siehe auch
 
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Python-Bibliotheken und Datentypen](../../advanced-analytics/python/python-libraries-and-data-types.md)  
+ [Python-Bibliotheken und -Datentypen](../../advanced-analytics/python/python-libraries-and-data-types.md)  
  [R-Bibliotheken und R-Datentypen](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
- [Bekannte Probleme bei SQL Server-Machine Learning-Dienste](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
+ [Bekannte Probleme bei der SQL Server Machine Learning-Dienste](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
  [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

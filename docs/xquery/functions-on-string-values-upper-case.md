@@ -1,5 +1,5 @@
 ---
-title: Upper-Case-Funktion (XQuery) | Microsoft Docs
+title: Upper-Case-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076213"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981897"
 ---
-# <a name="functions-on-string-values---upper-case"></a>Funktionen für Zeichenfolgenwerte - Großbuchstaben
+# <a name="functions-on-string-values---upper-case"></a>Funktionen für Zeichenfolgenwerte – Upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Diese Funktion konvertiert jedes Zeichen in *$arg* auf entsprechende großgeschriebene Variante. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Großbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard für die Zuordnung von Codepunkten.  
@@ -50,7 +50,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|Der Zeichenfolgenwert, der in Großbuchstaben konvertiert werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert der *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
+ Wenn der Wert des *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

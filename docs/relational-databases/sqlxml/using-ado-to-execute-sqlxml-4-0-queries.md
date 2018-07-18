@@ -1,5 +1,5 @@
 ---
-title: Verwenden von ADO zum Ausführen von SQLXML 4.0 Abfragen | Microsoft Docs
+title: Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031368"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32972635"
   
  Als Alternative können Sie Abfragen ausführen und SQLXML 4.0 mit Ihren COM-basierten Anwendungen verwenden, indem Sie die SQLXML-Erweiterungen für ActiveX Data Objects (ADO) nutzen, die in Microsoft Data Access Components (MDAC) 2.6 eingeführt wurden.  
   
- Dieses Thema veranschaulicht die Verwendung von SQLXML und ADO als Teil einer Visual Basic Scripting Edition (VBScript)-Anwendung (ein Skript mit der Erweiterung ".vbs"). Es enthält erste Setupschritte, die Ihnen helfen, Abfragebeispiele in der SQLXML 4.0-Dokumentation erneut zu erstellen und zu testen.  
+ Dieses Thema veranschaulicht die Verwendung von SQLXML und ADO als Teil einer Visual Basic Scripting Edition (VBScript)-Anwendung (ein Skript mit der Dateierweiterung vbs). Es enthält erste Setupschritte, die Ihnen helfen, Abfragebeispiele in der SQLXML 4.0-Dokumentation erneut zu erstellen und zu testen.  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>Erstellen des SQLXML 4.0-Testskripts  
  In diesem Schritt erstellen Sie eine VBScript-Datei (VBS), Sqlxml4test.vbs, mit der SQLXML-Abfragen durch Nutzen der SQLXML ADO-Erweiterungen in ADO 2.6 und höher ausgeführt werden können.  
@@ -106,7 +106,7 @@ ms.locfileid: "32972635"
   
      Aktualisieren Sie ggf. andere Werte, sofern dies in den entsprechenden Anweisungen für das Beispiel angegeben ist, das Sie lokal auf dem Computer neu erstellen möchten.  
   
-3.  Speichern Sie die Datei, und schließen Sie es.  
+3.  Speichern Sie die Datei, und schließen Sie sie.  
   
 4.  Überprüfen Sie, ob Sie zusätzliche Dateien wie XML-Vorlagen oder Schemas erstellt haben, die zu dem Beispiel gehören, das Sie lokal auf dem Computer neu erstellen möchten. Diese Dateien sollten sich in dem gleichen Verzeichnis befinden wie die Testskriptdatei (Sqlxml4test.vbs).  
   
@@ -119,11 +119,11 @@ ms.locfileid: "32972635"
   
 1.  Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert ist. Gehen Sie dazu wie folgt vor:  
   
-    1.  Aus der **starten** Sie im Menü **Einstellungen**, und klicken Sie dann auf **Systemsteuerung**.  
+    1.  Von der **starten** Startmenü **Einstellungen**, und klicken Sie dann auf **Systemsteuerung**.  
   
-    2.  Öffnen Sie in der Systemsteuerung **Software**  
+    2.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen oder entfernen**  
   
-    3.  Vergewissern Sie sich, die in der Liste der installierten Programme **Microsoft SQL Server Native Client** in der Liste angezeigt.  
+    3.  Stellen Sie sicher, die in der Liste der installierten Programme **Microsoft SQL Server Native Client** in der Liste angezeigt.  
   
         > [!NOTE]  
         >  Wenn Sie installieren müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  

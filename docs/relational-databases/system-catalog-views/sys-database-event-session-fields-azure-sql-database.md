@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_fields (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. database_event_session_fields (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981852"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys.database_event_session_fields (Azure SQL-Datenbank)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys. database_event_session_fields (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede anpassbare Spalte zurück, die explizit für Ereignisse und Ziele festgelegt wurde.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |object_id|**int**|Die ID des dem Objekt zugeordneten Felds Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Der Name des Felds. Lässt keine NULL-Werte zu.|  
+|NAME|**sysname**|Der Name des Felds. Lässt keine NULL-Werte zu.|  
 |Wert|**sql_variant**|Der Wert des Felds. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  

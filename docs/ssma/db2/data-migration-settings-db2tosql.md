@@ -1,5 +1,5 @@
 ---
-title: Daten-Migrationseinstellungen (DB2ToSQL) | Microsoft Docs
+title: Data Migration Settings (DB2ToSQL) Einstellungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,48 +16,48 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9b5d6ad21b98229d79ebcedddfe16c98cbc2d706
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 69d703b7e00efdd8c10c5f160a5ff3e29b80b57c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774976"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985672"
 ---
-# <a name="data-migration-settings-db2tosql"></a>Daten-Migrationseinstellungen (DB2ToSQL)
+# <a name="data-migration-settings-db2tosql"></a>Data Migration Settings (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Einstellungen für die Migration von Daten  
-**Einstellungen für die Migration von Daten** ermöglicht es dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
+**Data Migration Settings** ermöglicht dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
   
--   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** festgelegt ist, um **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Projekteinstellungen (Migration)](http://msdn.microsoft.com/en-us/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** nastaven NA hodnotu **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
--   Analysieren von benutzerdefinierten SQL-Anweisungen in implementiert **migrationseinstellungen Daten** Table-Knoten auf der Registerkarte.  
+-   Analysieren von benutzerdefinierten SQL-Anweisungen in implementiert **Data Migration Settings** Registerkarte der Tabelle.  
   
--   Es folgen zwei Kontrollkästchen Dialogfeldern, die in der **Daten Migrationseinstellungen** begrenzt.:  
+-   Es folgen die beiden Kontrollkästchen in verfügbaren der **Data Migration Settings** viz.:  
   
-    1.  Schneiden Sie SQL Server-Tabelle  
+    1.  Abschneiden von SQL Server-Tabelle  
   
     2.  Verwenden Sie benutzerdefinierte auswählen  
   
-1.  **Schneiden Sie die SQL Server-Tabelle:**  
-     Diese Option ermöglicht dem Benutzer, eine klare Sicht der migrierten Daten an die Zieldatenbank haben.  
+1.  **Abschneiden von SQL Server-Tabelle:**  
+     Hiermit kann die Benutzer ein klares Bild der migrierten Daten an die Zieldatenbank verfügen.  
   
     -   Standardmäßig wird dieses Textfeld überprüft.  
   
     -   Wenn dieses Textfeld deaktiviert ist, werden die Daten, die migriert werden an die vorhandenen Daten auf der Zieldatenbank hinzugefügt werden.  
   
 2.  **Verwenden Sie benutzerdefinierte auswählen:**  
-     Diese Option ermöglicht dem Benutzer zum Ändern der **wählen** Anweisung vorhanden (**wählen** Anweisung ermöglicht den Benutzern zur Auswahl der Daten in die Zieldatenbank angezeigt werden).  
+     Diese Option ermöglicht dem Benutzer zum Ändern der **wählen** Anweisung vorhanden (**wählen** -Anweisung können die Benutzer zur Auswahl der Daten, das an die Zieldatenbank angezeigt werden).  
   
-    1.  Dieses Textfeld ist standardmäßig deaktiviert.  
+    1.  In der Standardeinstellung ist deaktiviert dieses Textfeld.  
   
-    2.  Wenn dieses Textfeld aktiviert ist, ermöglicht Benutzern das Ändern der **wählen** Anweisung vorhanden.  
+    2.  Wenn dieses Textfeld wird überprüft, es ermöglicht Benutzern das Ändern der **wählen** Anweisung vorhanden.  
   
-Es begrenzt sind zwei Schaltflächen vorhanden.:  
+Es befinden sich zwei Schaltflächen, die vorhanden viz.:  
   
--   **Übernehmen:** klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
+-   **Anwenden:** klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
   
--   **"Abbrechen":** klicken Sie auf **"Abbrechen"** vorhanden wiederhergestellt, bevor die Änderungen wurden vorgenommen wird.  
+-   **Abbrechen:** klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Daten mit SQLServer](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[Migrieren von DB2-Daten in SQLServer](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_addrolemember (Transact-SQL) | Microsoft Docs
+title: Sp_addrolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032338"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ sp_addrolemember 'role', 'security_account'
  Der Name der Datenbankrolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [ @membername=] '*Security_account*"  
- Das Sicherheitskonto, das der Rolle hinzugefügt wird. *Security_account* ist ein **Sysname**, hat keinen Standardwert. *Security_account* kann ein Datenbankbenutzer, Datenbankrolle, Windows-Anmeldename oder Windows-Gruppe sein.  
+ Das Sicherheitskonto, das der Rolle hinzugefügt wird. *Security_account* ist eine **Sysname**, hat keinen Standardwert. *Security_account* kann ein Datenbankbenutzer, Datenbankrolle, Windows-Anmeldename oder Windows-Gruppe sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -70,9 +70,9 @@ sp_addrolemember 'role', 'security_account'
   
  Eine Rolle kann sich selbst nicht als Mitglied enthalten. Diese ringförmigen Definitionen sind ungültig, auch wenn die Mitgliedschaft nur indirekt durch eine Zwischenmitgliedschaft impliziert ist.  
   
- Sp_addrolemember kann keiner festen Datenbankrolle, feste Serverrolle oder Dbo zu einer Rolle hinzufügen. Sp_addrolemember kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
+ Sp_addrolemember kann nicht auf einer festen Datenbankrolle, feste Serverrolle oder Dbo zu einer Rolle hinzufügen. Sp_addrolemember kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
- Verwenden Sie ausschließlich sp_addrolemember, um einer Datenbankrolle ein Mitglied hinzuzufügen. Um einer Serverrolle ein Mitglied hinzuzufügen, verwenden Sie [Sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+ Verwenden Sie ausschließlich sp_addrolemember, um einer Datenbankrolle ein Mitglied hinzuzufügen. Verwenden Sie ein Mitglied einer Serverrolle hinzuzufügen, [Sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für das Hinzufügen von Mitgliedern zu flexiblen Datenbankrollen muss eine der folgenden Bedingungen erfüllt sein:  
@@ -113,7 +113,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
  Im folgenden Beispiel wird die Anmeldung `LoginMary` auf die `AdventureWorks2008R2` Datenbank als Benutzer `UserMary`. Der Benutzer `UserMary` wird dann der `Production`-Rolle hinzugefügt.  
   
 > [!NOTE]  
->  Da die Anmeldung `LoginMary` wird bezeichnet als Datenbankbenutzer `UserMary` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, den Benutzernamen `UserMary` muss angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Mary5` vorhanden. Anmeldungen und Benutzer haben in der Regel die gleichen Namen. Dieses Beispiel verwendet unterschiedliche Namen, um die Aktionen, die Auswirkungen auf die Anmeldung im Vergleich zu den Benutzer zu unterscheiden.  
+>  Da die Anmeldung `LoginMary` wird bezeichnet als Datenbankbenutzer `UserMary` in die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank, den Benutzernamen `UserMary` muss angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Mary5` vorhanden. Anmeldungen und Benutzern, in der Regel den gleichen Namen haben. Dieses Beispiel verwendet unterschiedliche Namen, um die Aktionen, die Auswirkungen auf die Anmeldung im Vergleich zu den Benutzer zu unterscheiden.  
   
 ```  
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [Sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [Sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)  

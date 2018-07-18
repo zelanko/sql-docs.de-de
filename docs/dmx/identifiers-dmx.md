@@ -1,5 +1,5 @@
 ---
-title: Bezeichner (DMX) | Microsoft Docs
+title: Bezeichner (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978604"
 ---
 # <a name="identifiers-dmx"></a>Bezeichner (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,13 +41,13 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  Das erste Zeichen eines regulären Bezeichners muss eines der folgenden Zeichen sein:  
   
-    -   Ein Buchstabe gemäß Unicode Standard 2.0. Dazu gehören die lateinischen Zeichen von a bis z und von A bis Z sowie Buchstaben aus anderen Sprachen.  
+    -   Ein Buchstabe gemäß Unicode-Standard 2.0. Dazu gehören die lateinischen Zeichen von a bis z und von A bis Z sowie Buchstaben aus anderen Sprachen.  
   
     -   Ein Unterstrich (_)  
   
 2.  Im Anschluss daran können die folgenden Zeichen verwendet werden:  
   
-    -   Buchstaben in Unicode Standard 2.0 definiert.  
+    -   Buchstaben, wie in Unicode-Standard 2.0 definiert.  
   
     -   Dezimalzahlen aus dem lateinischen Grundalphabet oder anderen nationalen Schriften.  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Wenn Sie reservierte Wörter für Objektnamen oder Teile von Objektnamen verwenden.  
   
-     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Sie ein von früheren Versionen von Upgrade [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die ein Wort, das nicht reserviert waren in der früheren Version von einfügen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aber zu den reservierten Wörtern für[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
+     Es empfiehlt sich, keine reservierten Schlüsselwörter als Objektnamen zu verwenden. Datenbanken, die Aktualisierung von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die Wörter, die nicht reserviert waren in der früheren Version von einfügen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aber zu den reservierten Wörtern für[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Bis Sie den Namen des Objekts ggf. ändern, können Sie mit einem Begrenzungsbezeichner auf ein solches Objekt verweisen.  
   
 -   Wenn Sie Zeichen verwenden, die nicht als qualifizierte Bezeichner aufgeführt sind.  
   
@@ -99,12 +99,12 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
+title: dm_db_xtp_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,24 +25,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031458"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Enthält Statistiken, die seit dem letzten Neustart der Datenbank erfasst wurden.  
   
- Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Weitere Informationen finden Sie unter [In-Memory OLTP &#40;In-Memory-Optimierung&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) und [Richtlinien zum Verwenden von Indizes für Speicheroptimierte Tabellen](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID des Objekts, zu dem dieser Index gehört.|  
-|xtp_object_id|**bigint**|Interne ID auf die aktuelle Version des Objekts entspricht.<br /><br /> Hinweis: Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|xtp_object_id|**bigint**|Interne ID, die auf die aktuelle Version des Objekts entspricht.<br /><br /> Hinweis: Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
 |index_id|**bigint**|Die ID des Index. Die index_id ist nur innerhalb des Objekts eindeutig.|  
 |scans_started|**bigint**|Anzahl der ausgeführten In-Memory OLTP-Indexscans. Jeder Auswähl-, Einfüge-, Update- oder Löschvorgang erfordert einen Indexscan.|  
 |scans_retries|**bigint**|Anzahl der Indexscans, die wiederholt werden mussten.|  

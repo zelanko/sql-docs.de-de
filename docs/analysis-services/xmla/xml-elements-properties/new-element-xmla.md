@@ -1,5 +1,5 @@
 ---
-title: New-Element (XMLA) | Microsoft Docs
+title: New-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ed98ed9c42d8cecddb07941855403925b1de6b8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969156"
 ---
 # <a name="new-element-xmla"></a>New-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält den neuen Speicherort im Dateisystem, in einem [Ordner](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) Element.  
+  Enthält den neue Dateisystem-Speicherort ein, die eine [Ordner](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

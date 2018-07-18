@@ -1,5 +1,5 @@
 ---
-title: SQL Server AlwaysOn Availability Group-Bereitstellungsmuster | Microsoft Docs
+title: SQL Server Always On Availability Group-Bereitstellungsmuster | Microsoft-Dokumentation
 ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql
@@ -15,149 +15,149 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36115370063292f3a3302dac4596222bb513fb67
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020619"
 ---
-# <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen
+# <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für die Konfigurationen von Verfügbarkeitsgruppen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel zeigt unterstützte Bereitstellungskonfigurationen für SQL Server Always On-Verfügbarkeitsgruppen für Linux-Servern. Eine verfügbarkeitsgruppe unterstützt hohe Verfügbarkeit und Schutz von Daten. Automatische fehlererkennung, automatisches Failover und transparente wiederverbindung nach einem Failover bereitstellen hohen Verfügbarkeit. Synchronisierte Replikate bereitzustellen Datenschutz. 
+Dieser Artikel stellt unterstützte Bereitstellungskonfigurationen für SQL Server Always On-Verfügbarkeitsgruppen auf Linux-Servern. Eine verfügbarkeitsgruppe unterstützt hohe Verfügbarkeit und Schutz von Daten. Bieten hochverfügbarkeit, automatische fehlererkennung, automatisches Failover und transparente verbindungswiederherstellung nach dem Failover. Synchronisierte Replikate Geben Sie den Schutz von Daten. 
 
-Auf einem Windows Server Failover Cluster (WSFC) verwendet eine gemeinsame Konfiguration für hohe Verfügbarkeit, zwei Replikate mit synchronem und einen dritten Server oder die Dateifreigabe wird, um Quorum zu ermöglichen. Der Dateifreigabenzeugen überprüft die verfügbarkeitsgruppenkonfiguration - Status der Synchronisierung und die Rolle des Replikats, zum Beispiel. Diese Konfiguration wird sichergestellt, dass das sekundäre Replikat als Ziel für das Failover die neuesten Daten und alle Änderungen an der Konfiguration von Availability-Gruppe ausgewählt. 
+Auf einem Windows Server Failover Cluster (WSFC) verwendet eine gemeinsame Konfiguration für hohe Verfügbarkeit, zwei synchronen Replikaten und einen dritten Server oder eine Dateifreigabe wird, um Quorum bereitzustellen. Den Dateifreigabenzeugen überprüft die Konfiguration der verfügbarkeitsgruppe – Status der Synchronisierung und die Rolle des Replikats, zum Beispiel. Diese Konfiguration wird sichergestellt, dass das sekundäre Replikat als Ziel für das Failover die neuesten Daten und Änderungen an der Konfiguration von Verfügbarkeitsgruppen-Gruppe wurde ausgewählt. 
 
-Der WSFC synchronisiert Konfigurationsmetadaten für die Failover-Vermittlung zwischen Replikate der verfügbarkeitsgruppe und die Dateifreigabenzeugen. Wenn eine verfügbarkeitsgruppe nicht für einen wsfc-Cluster ist, speichern die SQL Server-Instanzen Konfigurationsmetadaten in der master-Datenbank.
+Der WSFC synchronisiert die Konfigurationsmetadaten für Failover-Vermittlung zwischen die Replikate der verfügbarkeitsgruppe und den Dateifreigabenzeugen. Wenn eine verfügbarkeitsgruppe nicht auf einem WSFC ist, speichern SQL Server-Instanzen Konfigurationsmetadaten in der master-Datenbank.
 
-Z. B. eine verfügbarkeitsgruppe auf einem Linux-Cluster verfügt `CLUSTER_TYPE = EXTERNAL`. Es gibt keine WSFC Failover vermitteln konnte. In diesem Fall wird die Konfigurationsmetadaten verwaltet und von SQL Server-Instanzen verwaltet. Da in diesem Cluster ohne Zeugenserver vorhanden ist, ist eine dritte Instanz von SQL Server zum Speichern von Status Konfigurationsmetadaten erforderlich. Alle drei SQL Server-Instanzen bereitstellen zusammen verteilte Metadaten-Speicher für den Cluster. 
+Eine verfügbarkeitsgruppe auf einem Linux-Cluster enthält beispielsweise `CLUSTER_TYPE = EXTERNAL`. Es gibt keine WSFC Failover vermitteln konnte. In diesem Fall wird die Konfigurationsmetadaten verwaltet und von SQL Server-Instanz verwaltet wird. Da in diesem Cluster keine Dateifreigabenzeugen-Server vorhanden ist, muss eine dritte SQL Server-Instanz zum Konfigurationsmetadaten-Zustand zu speichern. Alle drei SQL Server-Instanzen bieten zusammen verteilte Metadatenspeicher für den Cluster. 
 
-Der Cluster-Manager kann Abfragen von SQL Server-Instanzen in der verfügbarkeitsgruppe und orchestriert Failover aus, um hohe Verfügbarkeit sicherzustellen. In einem Linux-Cluster ist Schrittmacher der Cluster-Manager. 
+Der Cluster-Manager können Sie Abfragen von SQL Server-Instanzen in der verfügbarkeitsgruppe und orchestriert Failover aus, um hochverfügbarkeit zu gewährleisten. In einem Linux-Cluster ist Pacemaker der Clustermanager. 
 
-SQL Server 2017 CU 1 ermöglicht hohe Verfügbarkeit für eine verfügbarkeitsgruppe mit `CLUSTER_TYPE = EXTERNAL` für zwei synchrone Replikate plus eines Replikats Konfiguration. Das einzige Replikat der Konfiguration kann auf eine beliebige Edition von SQL Server 2017 CU1 oder höher - einschließlich SQL Server Express Edition gehostet werden. Das einzige Replikat von Configuration Konfigurationsinformationen zur verfügbarkeitsgruppe in der master-Datenbank verwaltet, jedoch keine Benutzerdatenbanken in der verfügbarkeitsgruppe. 
+SQL Server 2017 CU 1 ermöglicht hohen Verfügbarkeit für eine verfügbarkeitsgruppe mit `CLUSTER_TYPE = EXTERNAL` für zwei synchronen Replikaten sowie einen reinen konfigurationsreplikat. Die reinen konfigurationsreplikat kann auf einer beliebigen Edition von SQL Server 2017 CU1 oder höher – einschließlich SQL Server Express Edition gehostet werden. Die reinen konfigurationsreplikat enthält verwaltet die Konfigurationsinformationen für die verfügbarkeitsgruppe in der master-Datenbank jedoch keine Benutzerdatenbanken in der verfügbarkeitsgruppe. 
 
 ## <a name="how-the-configuration-affects-default-resource-settings"></a>Auswirkungen von Standardeinstellungen für die Ressource in die Konfiguration
 
-SQL Server-2017 führt die `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` -clusterressourceneinstellung. Diese Einstellung garantiert der angegebenen Anzahl von sekundären Replikaten Schreiben der Transaktionsdaten anmelden, bevor das primäre Replikat jeder Transaktion ein Commit ausgeführt wird. Wenn Sie einen externen Cluster-Manager verwenden, wirkt sich diese Einstellung auf hohe Verfügbarkeit und Schutz von Daten aus. Der Standardwert für die Einstellung hängen von der Architektur, die zum Zeitpunkt der Clusterressource erstellt wird. Bei der Installation des SQL Server-Ressource-Agents - `mssql-server-ha` - und erstellen Sie eine Clusterressource für die verfügbarkeitsgruppe, wird der Cluster-Manager erkennt die Verfügbarkeit gruppieren, Konfiguration und legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` entsprechend. 
+SQL Server 2017 führt die `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` clusterressourceneinstellung ist. Diese Einstellung garantiert der angegebene Anzahl der sekundären Replikate die Transaktionsdaten anmelden, bevor das primäre Replikat jeder Transaktion ein Commit ausgeführt. Wenn Sie einen externen Cluster-Manager verwenden, wirkt sich diese Einstellung auf hohe Verfügbarkeit und Schutz von Daten aus. Der Standardwert für die Einstellung hängt von der Architektur zu dem Zeitpunkt, der die Clusterressource erstellt wurde. Bei der Installation der SQL Server-Ressourcen-Agent - `mssql-server-ha` - und eine Clusterressource für die verfügbarkeitsgruppe erstellen, wird der Clustermanager erkennt die Verfügbarkeit gruppieren, Konfiguration und legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` entsprechend. 
 
-Wenn von der Konfiguration die Ressource Agentparameter unterstützt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` festgelegt ist, auf den Wert an, die hohe Verfügbarkeit und Datenschutz bietet. Weitere Informationen finden Sie unter [verstehen von SQL Server-Ressource-Agent für Schrittmacher](#pacemakerNotify).
+Wenn von der Konfiguration der Ressourcen-Agent-Parameter unterstützt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` festgelegt ist, auf den Wert an, die hohe Verfügbarkeit und Datenschutz bietet. Weitere Informationen finden Sie unter [verstehen von SQL Server-Ressourcen-Agent für Pacemaker](#pacemakerNotify).
 
-In den folgenden Abschnitten wird das Standardverhalten für die Clusterressource erläutert. 
+In den folgenden Abschnitten wird erläutert, das Standardverhalten für die Clusterressource. 
 
-Wählen Sie einen Verfügbarkeit Entwurf entsprechend den geschäftlichen Anforderungen für hohe Verfügbarkeit sowie von Datenschutz- und Skalieren von Lesevorgängen erfüllen.
+Wählen Sie ein Entwurfs von Verfügbarkeit auf bestimmte unternehmensanforderungen für hohe Verfügbarkeit, den Schutz von Daten und für die leseskalierung.
 
-Die folgenden Konfigurationen werden den Entwurfsmustern für die Verfügbarkeit-Gruppe und die Funktionen der einzelnen Muster beschrieben. Diese Entwurfsmuster anwenden, um Verfügbarkeitsgruppen mit `CLUSTER_TYPE = EXTERNAL` für Lösungen mit hoher Verfügbarkeit. 
+Die folgenden Konfigurationen werden die Availability Group-Entwurfsmuster und die Funktionen der einzelnen Muster beschrieben. Diese Muster gelten für Verfügbarkeitsgruppen mit `CLUSTER_TYPE = EXTERNAL` für Lösungen mit hoher Verfügbarkeit. 
 
 - **Drei synchroner Replikate**
 - **Zwei synchrone Replikate**
-- **Zwei synchrone Replikate und eines Replikats Konfiguration**
+- **Zwei synchronen Replikaten und einer reinen konfigurationsreplikat**
 
 <a name="threeSynch"></a>
 
-## <a name="three-synchronous-replicas"></a>Drei synchroner Replikate
+## <a name="three-synchronous-replicas"></a>Drei synchronen Replikaten
 
-Diese Konfiguration umfasst drei synchroner Replikate. Standardmäßig wird die hohe Verfügbarkeit und Datenschutz. Es kann auch Skalieren von Lesevorgängen bereitstellen.
+Diese Konfiguration besteht aus drei synchronen Replikaten. Standardmäßig wird eine hohe Verfügbarkeit und Datenschutz. Sie können auch schreibgeschützte horizontale Skalierung bereitstellen.
 
 ![Drei Replikate][3]
 
-Eine verfügbarkeitsgruppe mit drei synchroner Replikate bieten Skalieren von Lesevorgängen, hohe Verfügbarkeit und Schutz von Daten. In der folgenden Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
+Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte horizontale Skalierung, hohe Verfügbarkeit und Schutz von Daten bereitstellen. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |Skalieren von Lesevorgängen|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
+| |schreibgeschützte horizontale Skalierung|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neue primäre ist R / w. |Automatisches Failover. Neue primäre ist R / w. |Automatisches Failover. Neue primäre ist nicht verfügbar für Benutzertransaktionen, bis vorherigen primären wiederhergestellt und als sekundäre verfügbarkeitsgruppe verknüpft. 
-|Ausfall eines sekundären Replikats  | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt fehl. |Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar für Benutzertransaktionen. 
+|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. 
+|Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. 
 <sup>*</sup> Standardwert
 
 <a name="twoSynch"></a>
 
 ## <a name="two-synchronous-replicas"></a>Zwei synchrone Replikate
 
-Mit dieser Konfiguration können den Datenschutz. Wie die anderen verfügbarkeitsgruppenkonfigurationen können sie Skalieren von Lesevorgängen aktivieren. Die Konfiguration von zwei synchronen Replikaten bietet keine automatische hohen Verfügbarkeit. 
+Diese Konfiguration ermöglicht den Schutz von Daten. Wie die anderen Konfigurationen von Verfügbarkeitsgruppen können sie schreibgeschützte horizontale Skalierung aktivieren. Die Konfiguration von zwei synchronen Replikaten bietet keine automatische hochverfügbarkeit. 
 
 ![Zwei synchrone Replikate][1]
 
-Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten bietet Skalieren von Lesevorgängen und den Datenschutz. In der folgenden Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
+Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten enthält die schreibgeschützte horizontale Skalierung und den Datenschutz. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |Skalieren von Lesevorgängen |Schutz von Daten
+| |schreibgeschützte horizontale Skalierung |Schutz von Daten
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neue primäre ist R / w.| Automatisches Failover. Neue primäre ist nicht verfügbar für Benutzertransaktionen, bis vorherigen primären wiederhergestellt und als sekundäre verfügbarkeitsgruppe verknüpft.
-|Ausfall eines sekundären Replikats  |Primäre ist R/W, läuft Sie ungeschützt zu Datenverlusten. |Primäre steht nicht für Benutzertransaktionen bis sekundären wiederhergestellt.
+|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w.| Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär.
+|Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.
 <sup>*</sup> Standardwert
 
 >[!NOTE]
->Die oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU-1. 
+>Das oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
-## <a name="two-synchronous-replicas-and-a-configuration-only-replica"></a>Zwei synchrone Replikate und eines Replikats Konfiguration
+## <a name="two-synchronous-replicas-and-a-configuration-only-replica"></a>Zwei synchronen Replikaten und einer reinen konfigurationsreplikat
 
-Eine verfügbarkeitsgruppe mit zwei (oder mehr) synchrone Replikate und eines Replikats Konfiguration bietet Schutz der Daten und möglicherweise auch hohen Verfügbarkeit. Das folgende Diagramm zeigt diese Architektur:
+Eine verfügbarkeitsgruppe mit zwei (oder mehr) einen synchronen Replikaten und einer reinen konfigurationsreplikat Datenschutz bietet und möglicherweise auch hohen Verfügbarkeit. Im folgenden Diagramm dargestellt, diese Architektur:
 
-![Konfiguration nur verfügbarkeitsgruppe.][2]
+![Konfiguration nur der verfügbarkeitsgruppe][2]
 
-1. Synchrone Replikation von Benutzerdaten auf dem sekundären Replikat. Darüber hinaus verfügbarkeitsgruppenmetadaten Konfiguration.
-2. Synchrone Replikation der Konfiguration der verfügbarkeitsgruppenmetadaten. Es umfasst nicht die Benutzerdaten.
+1. Synchrone Replikation von Daten des Benutzers an das sekundäre Replikat. Darüber hinaus Konfigurationsmetadaten von Verfügbarkeitsgruppen.
+2. Synchrone Replikation von Konfigurationsmetadaten von Verfügbarkeitsgruppen. Er umfasst keine Benutzerdaten.
 
-Im Diagramm Gruppe Verfügbarkeit schiebt ein primäres Replikat Konfigurationsdaten als einziges Replikat der Konfiguration und das sekundäre Replikat. Das sekundäre Replikat empfängt auch Benutzerdaten. Das einzige Configuration-Replikat empfängt keine Benutzerdaten. Das sekundäre Replikat ist im Verfügbarkeitsmodus für synchrone. Das einzige Replikat der Konfiguration enthält keine Datenbanken in der verfügbarkeitsgruppe – nur Metadaten zur verfügbarkeitsgruppe. Konfigurationsdaten für die Konfiguration nur Replikat sind synchron ein Commit ausgeführt wurde.
+Im Diagramm Gruppe Verfügbarkeit überträgt ein primäres Replikat Konfigurationsdaten auf dem reinen konfigurationsreplikat und das sekundäre Replikat. Das sekundäre Replikat empfängt auch die Daten des Benutzers. Die reinen konfigurationsreplikat erhält keine Benutzerdaten. Das sekundäre Replikat ist im Verfügbarkeitsmodus für synchrone. Die reinen konfigurationsreplikat enthält keine Datenbanken in der verfügbarkeitsgruppe – nur die Metadaten zur verfügbarkeitsgruppe. Konfigurationsdaten auf dem reinen konfigurationsreplikat ist synchron ein Commit ausgeführt.
 
 >[!NOTE]
->Eine Availabilility-Verwaltungsgruppe mit der Konfiguration nur Replikat ist für SQL Server 2017 CU1 neu. Alle Instanzen von SQL Server in der verfügbarkeitsgruppe muss SQL Server 2017 CU1 oder höher. 
+>Eine Availabilility-Gruppe mit reinen konfigurationsreplikat ist neu in SQL Server 2017 CU1. Alle Instanzen von SQL Server in der verfügbarkeitsgruppe muss SQL Server 2017 CU1 oder höher. 
 
-Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In der folgenden Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
+Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
 | |Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Ausfall des primären Replikats | Automatisches Failover. Neue primäre ist R / w. | Automatisches Failover. Neue primäre ist nicht verfügbar für Benutzertransaktionen. 
-|Ausfall des sekundären Replikats | Primäre ist R/W, läuft Sie ungeschützt zu Datenverlusten (falls der primäre schlägt fehl, und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar für Benutzertransaktionen. Kein Replikat für ein Failover, wenn das primäre schlägt auch fehl. 
-|Konfiguration nur Replikat Ausfall | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
-|Synchrone sekundäre + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar für Benutzertransaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar für Benutzertransaktionen. Kein Replikat für ein Failover aus, wenn auch primäre ein Fehler auftritt. 
+|Ausfall des primären Replikats | Automatisches Failover. Neues primäres Replikat ist R / w. | Automatisches Failover. Neue primäre Replikat ist nicht verfügbar, für Transaktionen. 
+|Ausfall des sekundären Replikats | Primäre Replikat ist R/W, mit Gefahr von Datenverlust (wenn primäre schlägt fehl und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. Kein für den Failover zu durchführen, wenn das primäre Replikat schlägt auch fehl. 
+|Konfiguration nur Replikat Ausfall | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
+|Synchronen sekundären Replikat + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar, für Transaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar, für Transaktionen. Kein Replikat für ein Failover auf, wenn auch die primären fehlschlägt. 
 <sup>*</sup> Standardwert
 
 >[!NOTE]
->Die Instanz von SQL Server, die die Konfiguration nur Replikat hostet, kann auch andere Datenbanken hosten. Sie können auch als eine einzige Konfigurationsdatenbank für mehr als eine verfügbarkeitsgruppe teilnehmen. 
+>Die Instanz von SQL Server, dem reinen konfigurationsreplikat hostet, kann auch andere Datenbanken hosten. Sie können auch als eine einzige Konfigurationsdatenbank für mehr als eine verfügbarkeitsgruppe teilnehmen. 
 
 ## <a name="requirements"></a>Anforderungen
 
-* Alle Replikate in einer verfügbarkeitsgruppe mit einem einzigen Configuration-Replikat müssen SQL Server 2017 CU 1 oder höher sein.
-* Eine beliebige Edition von SQL Server kann eine einzige Replikat Konfiguration, einschließlich SQL Server Express hosten. 
+* Alle Replikate in einer verfügbarkeitsgruppe mit einer reinen konfigurationsreplikat müssen SQL Server 2017 CU 1 oder höher sein.
+* Eine beliebige Edition von SQL Server kann es sich um einen reinen konfigurationsreplikat, einschließlich SQL Server Express hosten. 
 * Die verfügbarkeitsgruppe benötigt mindestens ein sekundäres Replikat – zusätzlich zu das primäre Replikat.
-* Nur Replikate Konfiguration zählen nicht für die maximale Anzahl der Replikate pro Instanz von SQL Server. SQL Server standard Edition kann bis zu drei Replikate, SQL Server Enterprise Edition können bis zu 9.
+* Konfiguration nur Replikate werden für die maximale Anzahl von Replikaten pro Instanz von SQL Server nicht berücksichtigt. SQL Server standard Edition kann bis zu drei Replikate, SQL Server Enterprise Edition können bis zu 9.
 
 ## <a name="considerations"></a>Weitere Überlegungen
 
-* Einzige Replikat, das nicht mehr als eine Konfiguration pro verfügbarkeitsgruppe. 
-* Ein einzige Replikat, das Konfiguration darf nicht über ein primäres Replikat sein.
-* Den Verfügbarkeitsmodus des Replikats eine Konfiguration kann nicht geändert werden. Um auf ein sekundäres Replikat für synchrone oder asynchrone von eines Replikats Konfiguration zu ändern, entfernen Sie das einzige Replikat der Konfiguration und Hinzufügen eines sekundären Replikats mit den erforderlichen Verfügbarkeitsmodus. 
-* Ein einzige Konfiguration-Replikat ist synchron mit der Metadaten der verfügbarkeitsgruppe. Es sind keine Benutzerdaten. 
-* Eine verfügbarkeitsgruppe mit einem primären Replikat und einzige Replikat, das eine Konfiguration, aber kein sekundäres Replikat ist ungültig. 
+* Nicht mehr als einen reinen konfigurationsreplikat pro verfügbarkeitsgruppe. 
+* Einen reinen konfigurationsreplikat darf nicht über ein primäres Replikat sein.
+* Den Verfügbarkeitsmodus des reinen konfigurationsreplikat kann nicht geändert werden. Um von einem reinen konfigurationsreplikat an ein sekundäres Replikat für synchrone oder asynchrone ändern möchten, entfernen Sie die reinen konfigurationsreplikat und Hinzufügen eines sekundären Replikats mit den erforderlichen Verfügbarkeitsmodus. 
+* Einen reinen konfigurationsreplikat ist synchron Metadaten der verfügbarkeitsgruppe. Es sind keine Benutzerdaten. 
+* Eine verfügbarkeitsgruppe mit einem primären Replikat und einem reinen konfigurationsreplikat, aber kein sekundäres Replikat ist ungültig. 
 * Das Erstellen einer verfügbarkeitsgruppe auf einer Instanz von SQL Server Express Edition ist nicht möglich. 
 
 <a name="pacemakerNotify"></a>
 
-## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>SQL Server-Agent-Ressource für Schrittmacher verstehen
+## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Verstehen von SQL Server-Ressourcen-Agent für pacemaker
 
-SQL Server 2017 CTP 1.4 hinzugefügt `sequence_number` auf `sys.availability_groups` ermöglichen Schrittmacher wie auf dem neuesten Stand sekundäre identifizieren Replikate, die mit dem primären Replikat sind. `sequence_number` ist eine monoton ansteigende "bigint", die Aktualität des lokalen verfügbarkeitsgruppenreplikats darstellt. Schrittmacher Updates der `sequence_number` mit jeder Availability Group-konfigurationsänderung. Beispiele für Änderungen an der Konfiguration sind Failover, Replikat hinzufügen oder entfernen. Die Anzahl der primären Datenbank aktualisiert, dann auf sekundäre Replikate repliziert. Daher hat ein sekundäres Replikat, das der aktuellen Konfiguration verfügt wie die primäre Datenbank die gleichen Sequenznummer. 
+SQL Server 2017 CTP 1.4 hinzugefügt `sequence_number` zu `sys.availability_groups` Pacemaker wie aktuell sekundäre identifizieren können Replikate, die mit dem primären Replikat sind. `sequence_number` ist ein monoton ansteigender bigint-DATENTYP, der wie aktuell das lokale verfügbarkeitsgruppenreplikat darstellt. Pacemaker-Updates der `sequence_number` mit jeder konfigurationsänderung des Availability-Gruppe. Beispiele für Änderungen an der Konfiguration sind Failover, Replikat hinzufügen oder entfernen. Die Zahl wird auf dem primären Replikat aktualisiert, anschließend an sekundäre Replikate repliziert. Daher muss ein sekundäres Replikat, das der aktuellen Konfiguration hat die gleiche Sequenznummer wie die primäre Datenbank. 
 
-Wenn Schrittmacher entscheidet, die ein Replikat zur primären höher stufen, sendet er zuerst eine *vorab heraufstufen* Benachrichtigung an alle Replikate. Die Replikate zurück, die Sequenznummer. Als Nächstes Schrittmacher tatsächlich versucht, ein Replikat zur primären höher stufen, stuft das Replikat nur selbst wenn die Sequenznummer der höchsten die Sequenznummern ist. Wenn eine eigene Sequenznummer nicht mit die höchste Sequenznummer übereinstimmt, lehnt das Replikat den Promote-Vorgang ab. Auf diese Weise kann nur das Replikat mit der höchsten Sequenznummer zu einem primären heraufgestuft werden, sodass es nicht zu Datenverlust kommt. 
+Wenn Pacemaker entscheidet, ein Replikat zum primären heraufzustufen, sendet er zuerst eine *heraufstufen* Benachrichtigung an alle Replikate. Die Replikate zurück, die Sequenznummer. Als Nächstes beim Pacemaker tatsächlich versucht, ein Replikat zum primären heraufzustufen, stuft das Replikat nur selbst wenn seine Sequenznummer die höchste die Sequenznummern ist. Wenn Sie eine eigene Sequenznummer die höchste Sequenznummer nicht übereinstimmt, lehnt das Replikat die heraufstufung ab. Auf diese Weise kann nur das Replikat mit der höchsten Sequenznummer zu einem primären heraufgestuft werden, sodass es nicht zu Datenverlust kommt. 
 
-Dieser Prozess erfordert mindestens ein Replikat verfügbar, für die heraufstufung mit der gleichen Sequenznummer wie die frühere primäre Datenbank. Der Agent Schrittmacher Ressourcensätze `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` so, dass mindestens ein sekundäres Replikat wird, auf dem neuesten Stand und für das Ziel in der Standardeinstellung ein automatisches Failover verfügbar. Mit jeder Überwachung Aktion, den Wert des `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` berechnet (und bei Bedarf aktualisiert). Die `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` Wert ist "Anzahl der synchronen Replikate" geteilt durch 2. Zum Zeitpunkt der Failover der Ressourcen-Agent benötigt (`total number of replicas`  -  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` Replikate) So reagieren Sie auf die Benachrichtigung vorab heraufstufen. Das Replikat mit der höchsten `sequence_number` primäre heraufgestuft wird. 
+Dieser Prozess erfordert mindestens ein Replikat verfügbar, für die heraufstufung mit der gleichen Sequenznummer wie das bisherige primäre. Die Pacemaker-Agent-Ressourcensätzen `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` so, dass mindestens ein sekundäres Replikat ist, auf dem neuesten Stand und das Ziel in der Standardeinstellung ein automatisches Failover zur Verfügung. Mit jeder Überwachungsaktion wird der Wert des `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` berechnet (und aktualisiert werden, falls erforderlich). Die `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` Wert ist "Anzahl der synchronen Replikate" geteilt durch 2. Zeitpunkt des Failovers erfordert der Ressourcen-Agent (`total number of replicas`  -  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` Replikate), reagiert die Vorabbenachrichtigung. Das Replikat mit der höchsten `sequence_number` zum primären heraufgestuft wird. 
 
-Z. B. eine verfügbarkeitsgruppe mit drei synchronen Replikaten - ein primäres Replikat und zwei synchrone sekundäre Replikate.
+Z. B. eine verfügbarkeitsgruppe mit drei synchronen Replikaten: ein primäres Replikat und zwei synchrone sekundäre Replikate.
 
 - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 1. (3 / 2-1 >).
 
-- Die erforderliche Anzahl von Replikaten zu reagieren, um eine Aktion vorab zu erzielen, ist 2. (3: 1 = 2). 
+- Die erforderliche Anzahl von Replikaten auf berührungen reagieren Vorabbenachrichtigung ist 2. (3 – 1 = 2). 
 
-In diesem Szenario haben zwei Replikate für die Reaktion für das Failover ausgelöst werden soll. Für das erfolgreiche automatische Failover nach einem Ausfall des primären Replikats, beide sekundäre Replikate müssen auf dem neuesten Stand und reagieren auf die Benachrichtigung vorab heraufstufen. Wenn sie online und synchron sind, haben sie die gleichen Sequenznummer. Die verfügbarkeitsgruppe stuft eine davon. Wenn nur eines der sekundären Replikate auf reagiert der vorab heraufstufen Aktion, der Resource-Agent kann nicht garantieren, dass die sekundäre Datenbank, die geantwortet hat die höchste Sequence_number hat und ein Failover wird nicht ausgelöst.
+In diesem Szenario haben zwei Replikate für das Failover ausgelöst werden zu reagieren. Für eine erfolgreiche automatische testfailover nach einem Ausfall des primären Replikats, beide sekundären Replikate müssen auf dem neuesten Stand und reagieren auf die Vorabbenachrichtigung. Wenn sie online und synchron sind, haben sie die gleiche Sequenznummer. Die verfügbarkeitsgruppe wird eine davon. Wenn nur einer der sekundären Replikate, reagiert das Heraufstufen, der Ressourcen-Agent kann nicht garantieren, dass das sekundäre Replikat, das geantwortet die höchste Sequence_number hat, und ein Failover wird nicht ausgelöst.
 
 >[!IMPORTANT]
->Wenn `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 (null) entspricht, besteht das Risiko von Datenverlust. Bei einem Ausfall primäre Replikat wird der Agent für die Ressource nicht automatisch einen Failover ausgelöst. Sie können entweder warten, vom primären zum Wiederherstellen oder manuell ein Failover mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>Wenn `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 (null) entspricht, besteht das Risiko von Datenverlust. Bei einem Ausfall des primären Replikats ist der Ressourcen-Agent nicht automatisch ein Failover auslösen. Sie können entweder warten, bis vom primären zum Wiederherstellen oder Ausführen des manuellen Failovers mit `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
-Sie können auswählen, um das Standardverhalten überschreiben und verhindern, dass die verfügbarkeitsgruppenressource Einstellung `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatisch.
+Sie können das Standardverhalten außer Kraft setzen und verhindern, dass die verfügbarkeitsgruppenressource Einstellung `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatisch.
 
 Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 0 für eine verfügbarkeitsgruppe mit dem Namen `<**ag1**>`. Ersetzen Sie `<**ag1**>` vor der Ausführung durch den Namen der Verfügbarkeitsgruppe.
 
@@ -172,7 +172,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 >[!NOTE]
->Wenn Sie die vorherigen Befehle ausführen, wird das primäre vorübergehend zum sekundären herabgestuft anschließend erneut heraufgestuft. Das Update der Ressource bewirkt, dass alle Replikate beenden und neu starten. Der neue Wert für`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` wird nur festgelegt werden, sobald die Replikate neu gestartet werden, nicht sofort.
+>Wenn Sie die vorherigen Befehle ausführen, wird das primäre vorübergehend zum sekundären Standort, herabgestuft, klicken Sie dann erneut heraufgestuft. Das Update der Ressource bewirkt, dass alle Replikate beendet und neu gestartet wird. Der neue Wert für`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` wird nur festgelegt werden, sobald die Replikate neu gestartet werden, nicht sofort.
 
 ## <a name="see-also"></a>Siehe auch
 

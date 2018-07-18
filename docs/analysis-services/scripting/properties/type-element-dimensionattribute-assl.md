@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (DimensionAttribute) (ASSL) | Microsoft Docs
+title: Type-Element (DimensionAttribute) (ASSL) | Microsoft-Dokumentation
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971452"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type-Element (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,23 +33,23 @@ ms.locfileid: "34045684"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*Regulär*|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|*Reguläre*|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*Konto*|Das Attribut stellt den Namen eines Kontos dar.|  
 |*AccountNumber*|Das Attribut stellt die Nummer eines Kontos dar.|  
@@ -72,18 +72,18 @@ ms.locfileid: "34045684"
 |*CaptionAbbreviation*|Das Attribut stellt eine Abkürzung dar.|  
 |*CaptionDescription*|Das Attribut stellt eine Beschreibung dar.|  
 |*Channel*|Das Attribut stellt einen Kanal dar.|  
-|*City*|Das Attribut stellt einen Ort dar.|  
-|*Unternehmensportal*|Das Attribut stellt eine Firma dar.|  
-|*Continent*|Das Attribut stellt einen Kontinent dar.|  
+|*Stadt*|Das Attribut stellt einen Ort dar.|  
+|*Unternehmen*|Das Attribut stellt eine Firma dar.|  
+|*Kontinent*|Das Attribut stellt einen Kontinent dar.|  
 |*Land*|Das Attribut stellt ein Land oder eine Region dar.|  
-|*Ein Bundesland oder Kanton*|Das Attribut stellt ein Bundesland oder einen Kanton dar.|  
+|*County*|Das Attribut stellt ein Bundesland oder einen Kanton dar.|  
 |*CurrencyDestination*|Das Attribut stellt die Zielwährung einer Währungsumrechnung dar.|  
 |*CurrencyISOcode*|Das Attribut stellt den ISO-Code einer Währung dar.|  
 |*CurrencName*|Das Attribut stellt den Namen einer Währung dar.|  
 |*CurrencySource*|Das Attribut stellt die Ausgangswährung einer Währungsumrechnung dar.|  
 |*CustomerGroup*|Das Attribut stellt eine Kundengruppe dar.|  
 |*CustomerHousehold*|Das Attribut stellt einen Kundenhaushalt dar.|  
-|*Customers*|Das Attribut stellt einen Kunden dar.|  
+|*Kunden*|Das Attribut stellt einen Kunden dar.|  
 |*Datum*|Das Attribut stellt ein Datum dar.|  
 |*DateCanceled*|Das Attribut stellt ein Abbruchdatum dar.|  
 |*DateDuration*|Das Attribut stellt eine Dauer dar.|  
@@ -91,11 +91,11 @@ ms.locfileid: "34045684"
 |*DateModified*|Das Attribut stellt ein Änderungsdatum dar.|  
 |*DateStart*|Das Attribut stellt ein Startdatum dar.|  
 |*DayOfHalfYears*|Das Attribut stellt die Ordnungszahl für einen Tag eines Halbjahres dar.|  
-|*dayOfMonth*|Das Attribut stellt die Ordnungszahl für einen Tag eines Monats dar.|  
+|*DayOfMonth*|Das Attribut stellt die Ordnungszahl für einen Tag eines Monats dar.|  
 |*DayOfQuarter*|Das Attribut stellt die Ordnungszahl für einen Tag eines Quartals dar.|  
 |*DayOfTrimester*|Das Attribut stellt die Ordnungszahl für einen Tag eines Trimesters dar.|  
-|*dayOfWeek*|Das Attribut stellt die Ordnungszahl für einen Tag einer Woche dar.|  
-|*dayOfYear*|Das Attribut stellt die Ordnungszahl für einen Tag eines Jahres dar.|  
+|*DayOfWeek*|Das Attribut stellt die Ordnungszahl für einen Tag einer Woche dar.|  
+|*DayOfYear*|Das Attribut stellt die Ordnungszahl für einen Tag eines Jahres dar.|  
 |*Tage*|Das Attribut stellt Tage dar.|  
 |*DaysOfTenDays*|Das Attribut stellt die Ordnungszahl für einen Tag innerhalb eines Zeitraums von 10 Tagen dar.|  
 |*FiscalDay*|Das Attribut stellt Tage in einem Geschäftskalender dar.|  
@@ -123,7 +123,7 @@ ms.locfileid: "34045684"
 |*FiscalWeekOfQuarter*|Das Attribut stellt die Ordnungszahl für eine Woche eines Quartals in einem Geschäftskalender dar.|  
 |*FiscalWeekOfTrimester*|Das Attribut stellt die Ordnungszahl für eine Woche eines Trimesters in einem Geschäftskalender dar.|  
 |*FiscalWeekOfYear*|Das Attribut stellt die Ordnungszahl für eine Woche eines Jahres in einem Geschäftskalender dar.|  
-|*FiscalYear*|Das Attribut stellt Jahre in einem Geschäftskalender dar.|  
+|*Geschäftsjahr*|Das Attribut stellt Jahre in einem Geschäftskalender dar.|  
 |*FormattingColor*|Das Attribut stellt die bei der Formatierung verwendete Farbe dar.|  
 |*FormattingFont*|Das Attribut stellt die bei der Formatierung verwendete Schriftart dar.|  
 |*FormattingFontEffects*|Das Attribut stellt die bei der Formatierung verwendeten Schriftarteffekte dar.|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045684"
 |*MonthOfTrimester*|Das Attribut stellt die Ordnungszahl für einen Monat eines Trimesters dar.|  
 |*MonthOfYear*|Das Attribut stellt die Ordnungszahl für einen Monat eines Jahres dar.|  
 |*Monate*|Das Attribut stellt Monate dar.|  
-|*organizationalUnit*|Das Attribut stellt eine Organisationseinheit dar.|  
+|*OrganizationalUnit*|Das Attribut stellt eine Organisationseinheit dar.|  
 |*OrgTitle*|Das Attribut stellt einen Organisationstitel dar.|  
 |*PercentOwnership*|Das Attribut stellt einen Besitzprozentwert dar.|  
 |*PercentVoteRight*|Das Attribut stellt einen Prozentwert für Abstimmungsrechte dar.|  
@@ -193,7 +193,7 @@ ms.locfileid: "34045684"
 |*PersonContact*|Das Attribut stellt Kontaktinformationen für eine Person dar.|  
 |*PersonDemographic*|Das Attribut stellt demografische Informationen für eine Person dar.|  
 |*PersonFirstName*|Das Attribut stellt den Vornamen einer Person dar.|  
-|*PersonFullName*|Das Attribut stellt den vollständigen Namen einer Person dar.|  
+|*"Personfullname"*|Das Attribut stellt den vollständigen Namen einer Person dar.|  
 |*PersonLastName*|Das Attribut stellt den Nachnamen einer Person dar.|  
 |*PersonMiddleName*|Das Attribut stellt die weiteren Vornamen einer Person dar.|  
 |*PhysicalColor*|Das Attribut stellt eine Farbe dar.|  
@@ -204,8 +204,8 @@ ms.locfileid: "34045684"
 |*PhysicalVolume*|Das Attribut stellt das Volumen dar.|  
 |*PhysicalWeight*|Das Attribut stellt das Gewicht dar.|  
 |*PhysicalWidth*|Das Attribut stellt die Breite dar.|  
-|*Punkt*|Das Attribut stellt einen Punkt dar.|  
-|*PostalCode*|Das Attribut stellt eine Postleitzahl dar.|  
+|*Point*|Das Attribut stellt einen Punkt dar.|  
+|*Postleitzahl*|Das Attribut stellt eine Postleitzahl dar.|  
 |*Product*|Das Attribut stellt ein Produkt dar.|  
 |*ProductBrand*|Das Attribut stellt eine Produktmarke dar.|  
 |*"ProductCategory"*|Das Attribut stellt eine Produktkategorie dar.|  
@@ -216,7 +216,7 @@ ms.locfileid: "34045684"
 |*ProjectEnddate*|Das Attribut stellt das Enddatum eines Projekts dar.|  
 |*Projektname*|Das Attribut stellt einen Projektnamen dar.|  
 |*ProjectStartDate*|Das Attribut stellt das Startdatum eines Projekts dar.|  
-|*Promotion*|Das Attribut stellt eine Höherstufung dar.|  
+|*Heraufstufung*|Das Attribut stellt eine Höherstufung dar.|  
 |*QtyRangeHigh*|Das Attribut stellt den größten Wert eines Bereichs von Mengen dar.|  
 |*QtyRangeLow*|Das Attribut stellt den niedrigsten Wert eines Bereichs von Mengen dar.|  
 |*Quantitative*|Das Attribut stellt ein quantitatives Attribut dar.|  
@@ -226,7 +226,7 @@ ms.locfileid: "34045684"
 |*Rate*|Das Attribut stellt ein Rate dar.|  
 |*RateType*|Das Attribut stellt ein Ratentyp dar.|  
 |*Region*|Das Attribut stellt eine kundendefinierte Region dar.|  
-|*Regulär*|Das Attribut stellt ein reguläres Attribut dar.|  
+|*Reguläre*|Das Attribut stellt ein reguläres Attribut dar.|  
 |*RelationToParent*|Das Attribut stellt eine Beziehung zu einem übergeordneten Element dar.|  
 |*ReportingDay*|Das Attribut stellt Tage in einem Berichtskalender dar.|  
 |*ReportingDayOfHalfYears*|Das Attribut stellt die Ordnungszahl für einen Tag eines Halbjahres in einem Berichtskalender dar.|  
@@ -254,7 +254,7 @@ ms.locfileid: "34045684"
 |*ReportingWeekOfTrimester*|Das Attribut stellt die Ordnungszahl für eine Woche eines Trimesters in einem Berichtskalender dar.|  
 |*ReportingWeekOfYear*|Das Attribut stellt die Ordnungszahl für eine Woche eines Jahres in einem Berichtskalender dar.|  
 |*ReportingYear*|Das Attribut stellt Jahre in einem Berichtskalender dar.|  
-|*Vertreter*|Das Attribut stellt einen Vertriebsmitarbeiter dar.|  
+|*Mitarbeiter*|Das Attribut stellt einen Vertriebsmitarbeiter dar.|  
 |*Szenario*|Das Attribut stellt ein Szenario dar.|  
 |*Sekunden*|Das Attribut stellt Sekunden dar.|  
 |*Sequenz*|Das Attribut stellt ein sequenzielles Attribut dar.|  
@@ -285,11 +285,11 @@ ms.locfileid: "34045684"
   
  Die Enumeration, die den zulässigen Werten für entspricht **Typ** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- Das Element, das das übergeordnete Element des entspricht **Typ** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das Element, das dem übergeordneten entspricht **Typ** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension-Element & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributes-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension-Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Eigenschaften &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

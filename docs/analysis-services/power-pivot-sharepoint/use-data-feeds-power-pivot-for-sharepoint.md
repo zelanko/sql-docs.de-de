@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datenfeeds (PowerPivot für SharePoint) | Microsoft Docs
+title: Verwenden von Datenfeeds (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027750"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979864"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Verwenden von Datenfeeds (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027750"
   
  Sie müssen über einen Webdienst oder Datendienst verfügen, der Daten im Atom 1.0-Format bereitstellt. Sowohl [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] als auch SharePoint 2010 können Daten in diesem Format bereitstellen.  
   
- Bevor Sie eine SharePoint-Liste als Datenfeed exportieren können, müssen Sie ADO.NET Data Services auf dem SharePoint-Server installieren. Weitere Informationen finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Bevor Sie eine SharePoint-Liste als Datenfeed exportieren können, müssen Sie ADO.NET Data Services auf dem SharePoint-Server installieren. Weitere Informationen finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Erstellen eines Datenfeeds aus einer SharePoint-Liste  
  In einer SharePoint 2010-Farm verfügt eine SharePoint-Liste über eine Schaltfläche Als Datenfeed exportieren auf dem Listenmenüband. Sie können auf diese Schaltfläche klicken, um die Liste als Feed zu exportieren. Excel 2010 sollte mit der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung auf der Arbeitsstation ausgeführt werden, um optimale Ergebnisse zu erzielen. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung wird als Reaktion auf den Datenfeedexport gestartet und erstellt eine neue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Tabelle, die die Liste enthält.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027750"
   
 5.  Wenn Sie **Öffnen**auswählen, verwenden Sie den Tabellenimport-Assistenten, um ein Datenfeed in ein Arbeitsblatt zu importieren. Der Datenfeed wird als neue Tabelle im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Fenster hinzugefügt.  
   
- Wenn ADO.NET Data Services 3.5.1 nicht auf dem SharePoint-Server installiert ist, tritt ein Fehler auf. Weitere Informationen über den Fehler und seine Behebung finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Wenn ADO.NET Data Services 3.5.1 nicht auf dem SharePoint-Server installiert ist, tritt ein Fehler auf. Weitere Informationen über den Fehler und seine Behebung finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Erstellen eines Datenfeeds aus einem Reporting Services-Bericht  
  Wenn Sie über eine SQL Server 2008 R2 Reporting Services-Bereitstellung verfügen, können Sie einen Datenfeed mithilfe der neuen Atom-Renderingerweiterung aus einem vorhandenen Bericht generieren. Excel 2010 sollte mit dem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel-Add-In auf der Arbeitsstation ausgeführt werden, um optimale Ergebnisse zu erzielen. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Clientanwendung wird als Reaktion auf den Datenfeedexport gestartet, fügt automatisch die gestreamten Tabellen und Spalten hinzu und verknüpft diese.  
@@ -82,7 +82,7 @@ ms.locfileid: "34027750"
   
     1.  **Basis-URL** ist optional. Sie sollten dies angeben, wenn ein Datendienstdokument mehrere Feeds bereitstellt. Basis-URL sollte den Teil der URL angeben, der allen Feeds (z. B. der Servername und die Website) gemeinsam ist. Wenn Sie zu einem Reporting Services-Bericht ein Datendienstdokument erstellen, wäre die Basis-URL die Berichtsserver-URL und der Bericht.  
   
-    2.  **Webdienst-URL** ist erforderlich. Dieser Wert muss ohne die Basis-URL enthalten `http://` oder `https://` in der Adresse. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL wird beispielsweise `http://adventure-works/inventory/today.aspx`, wäre die Basis-URL `http://adventure-works/inventory`, und die Webdienst-URL wäre/Today.aspx.  
+    2.  **Webdienst-URL** ist erforderlich. Ohne die Basis-URL muss dieser Wert enthalten `http://` oder `https://` die Adresse ein. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL lautet z. B. `http://adventure-works/inventory/today.aspx`, die Basis-URL wäre `http://adventure-works/inventory`, und die Webdienst-URL wäre/Today.aspx.  
   
          Die Webdienst-URL kann Parameter enthalten, die eine Teilmenge der Daten filtern oder auswählen. Die Anwendung oder der Dienst, die/der den Feed bereitstellt, muss die Parameter unterstützen, die Sie in der URL angeben.  
   

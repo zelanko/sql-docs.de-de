@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Massenladen von XML-Daten (SQLXML 4.0) | Microsoft Docs
+title: Ausführen von Massenladen von XML-Daten (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032488"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Ausführen von Massenladen von XML-Daten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML-Massenladen ist ein eigenständiges COM-Objekt, mit dem Sie semistrukturierte XML-Daten in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen laden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in XML-Massenladen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  
+ [Einführung in die XML-Massenladen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  Stellt allgemeine Informationen über das Massenladen von XML-Daten mit dem XML-Massenladen-Hilfsprogramm zur Verfügung. Die Themen enthalten XML-Daten-Streaming und einen Vergleich zwischen transaktiv und nicht durchgeführten Massenladevorgängen.  
   
  [Datensatzgenerierungsprozess &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "34708178"
  Beschreibt, wie XML-Massenladen Anmerkungen in XSD- und XDR-Schemas interpretiert.  
   
  [SQL Server XML Bulk Load-Objektmodell &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
- Beschreibt das SQLXMLBulkLoad-Objekt und seine Methoden und Eigenschaften.  
+ Beschreibt die SQLXMLBulkLoad-Objekt und seine Methoden und Eigenschaften.  
   
  [Beispiele für XML-Massenladen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
  Stellt Beispielcode bereit, der XML-Massenladen verwendet.  

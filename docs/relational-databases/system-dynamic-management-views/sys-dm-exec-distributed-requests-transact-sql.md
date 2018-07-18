@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,32 +27,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7d61b26c1af6a588140cdf47308ee8f69ecd42b2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982542"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu allen Anforderungen, die zurzeit oder zuletzt aktiv in PolyBase-Abfragen. Eine Zeile pro Anforderung bzw. die Abfrage aufgeführt.  
+  Enthält Informationen zu Anforderungen, die alle zurzeit oder zuletzt in der PolyBase-Abfragen aktiv. Sie enthält eine Zeile für jede Anforderung bzw. die Abfrage.  
   
- Basierend auf der Sitzung und Anforderungs-ID, ein Benutzer kann dann abrufen, die tatsächlichen verteilte-Anforderungen, die generiert wird, um über sys.dm_exec_distributed_requests – ausgeführt werden. Beispielsweise wird eine Abfrage, die im Zusammenhang mit regulären SQL und externe SQL-Tabellen in verschiedenen Anweisungen/ausgeführten Anforderungen, die über die verschiedenen Serverknoten zerlegt werden sollen. Um die verteilte Schritte auf allen Serverknoten nachzuverfolgen, führen wir eine "global" ausführungs-ID, der verwendet werden kann, um alle Vorgänge auf den Serverknoten, die eine bestimmte Anforderung und -Operator, jeweils zugeordneten nachzuverfolgen.  
+ Basierend auf der Sitzung und Anforderungs-ID, ein Benutzer kann dann abrufen, die tatsächlichen verteilte Anforderungen generiert, um über sys.dm_exec_distributed_requests – ausgeführt werden. Beispielsweise wird eine Abfrage, die im Zusammenhang mit regulären SQL und externe SQL-Tabellen in verschiedenen Anweisungen/Anforderungen, die über die verschiedenen Computeknoten ausgeführt zerlegt werden. Um die verteilte Schritte auf allen Computeknoten nachzuverfolgen, führen wir eine 'global' ausführungs-ID, mit dem verfolgen alle Vorgänge auf den Computeknoten, die eine bestimmte Anforderung und Operator bzw. zugeordnet werden kann.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary(64)**|Der Schlüssel für diese Ansicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Für alle Anforderungen im System eindeutig.|  
-|execution_id|**Nvarchar (32**|Eindeutige numerische Id der Sitzung, in der diese Abfrage ausgeführt wurde, zugeordnet.||  
-|status|**Nvarchar (32**|Aktueller Status der Anforderung.|"Ausstehend" fehlgeschlagen "Autorisieren", "AcquireSystemResources", "Initialisieren", "Planung", "Analysieren", "AquireResources", "Wird ausgeführt", "Abbrechen", "Vollständig","", "Abgebrochen".|  
-|error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit der Anforderung verknüpft sind, sofern vorhanden.|Auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
-|start_time|**datetime**|Zeitpunkt, an dem die anforderungsausführung gestartet wurde.|für Anforderungen in der Warteschlange 0; andernfalls, gültige DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
-|end_time|**datetime**|Zeitpunkt, an dem das Modul abgeschlossen Kompilieren die Anforderung.|NULL für in der Warteschlange "oder" aktiv Anforderungen. andernfalls einen gültigen DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
-|total_elapsed_time|**int**|Bei der Ausführung verstrichene Zeit seit dem Start die Anforderung, in Millisekunden.|Zwischen 0 und der Unterschied zwischen Start_time und end_time des Intervalls. Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, weiterhin Total_elapsed_time der maximale Wert sein. Diese Bedingung generiert die Warnung "der maximale Wert überschritten wurde." Der maximale Wert in Millisekunden entspricht 24.8 Tage.|  
+|sql_handle|**varbinary(64)**|Der Schlüssel für diese Sicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Für alle Anforderungen im System eindeutig.|  
+|execution_id|**Nvarchar (32**|Eindeutige numerische Id in Zusammenhang mit der Sitzung, in der diese Abfrage ausgeführt wurde.||  
+|status|**Nvarchar (32**|Aktuellen Status der Anforderung.|"Ausstehend" fehlgeschlagen "Autorisieren", "AcquireSystemResources", "Initialisierung", "Plan", "Analyse", "AquireResources', 'Running', 'Abbrechen', 'Vollständig'," ","Abgebrochen".|  
+|error_id|**nvarchar(36)**|Eindeutige Id des Fehlers der Anforderung zugeordnet ist, falls vorhanden.|Auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
+|start_time|**datetime**|Zeitpunkt, an dem die anforderungsausführung gestartet wurde.|0 für Anforderungen in der Warteschlange andernfalls, gültige DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
+|end_time|**datetime**|Zeitpunkt, an dem das Modul abgeschlossen Kompilieren die Anforderung.|NULL für in der Warteschlange oder aktiven Anforderungen. andernfalls einen gültigen DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
+|total_elapsed_time|**int**|Bei der Ausführung verstrichene Zeit seit Beginn die Anforderung, in Millisekunden.|Zwischen 0 und der Unterschied zwischen Start_time "und" End_time. Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, weiterhin Total_elapsed_time der maximale Wert sein. Diese Bedingung generiert die Warnung "der maximale Wert überschritten wurde." Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datenbanken-Assistent (Wählen Sie Speicherorte) suchen (AccessToSQL) | Microsoft Docs
+title: Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,53 +18,53 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773656"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979482"
 ---
-# <a name="find-databases-wizard-select-locations-accesstosql"></a>Datenbanken-Assistent (Wählen Sie Speicherorte) suchen (AccessToSQL)
-Auf der Seite Standorte auswählen des Assistenten Datenbanken suchen Geben Sie die Suchparameter zum Suchen von Access-Datenbanken.  
+# <a name="find-databases-wizard-select-locations-accesstosql"></a>Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL)
+Geben Sie auf der Seite Standorte auswählen des Assistenten für Datenbanken finden Sie die Suchparameter für die Suche nach den Zugriff auf Datenbanken fest.  
   
-Klicken Sie im Assistenten zum Suchen von Datenbanken zum Öffnen der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+So öffnen Sie im Assistenten finden Sie Datenbanken auf der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
 ## <a name="options"></a>Tastatur  
 **Durchsuchen**  
 Klicken Sie auf diese Option, um den Computer oder im Netzwerk zu suchen. Wählen Sie den Ordner oder den Speicherort zu suchen, und klicken Sie dann auf **OK**. Klicken Sie auf **hinzufügen** an diesem Speicherort zur Liste hinzuzufügen.  
   
 **Pfad-Feld**  
-Zeigt den Pfad, um die Speicherorte hinzuzufügen. Geben Sie ein, oder wechseln Sie zu dem Pfad zu scannen, und klicken Sie dann auf die **hinzufügen** Schaltfläche.  
+Zeigt den Pfad, um die Speicherorte hinzuzufügen. Geben Sie ein, oder navigieren Sie zu dem Pfad zu scannen, und klicken Sie dann auf die **hinzufügen** Schaltfläche.  
   
 **Feld Speicherorte**  
-Listet die Speicherorte, die SSMA überprüft werden. Beim Klicken auf die **hinzufügen** Schaltfläche, der angegebene Pfad ist in diesem Feld hinzugefügt.  
+Listet die Speicherorte, die SSMA überprüft werden. Beim Klicken auf die **hinzufügen** Schaltfläche, der angegebene Pfad ist dieses Kontrollkästchen hinzugefügt.  
   
 **Hinzufügen**  
-Fügt den Speicherort in das Textfeld für den Pfad der Liste der Speicherorte.  
+Fügt den Speicherort in das Textfeld für den Pfad zur Liste der Standorte hinzu.  
   
 **Ersetzen**  
-Wenn ein Element in der Liste der Speicherorte ausgewählt ist, ersetzt das Element in das Textfeld für den Pfad des ausgewählten Elements an.  
+Wenn ein Element in der Liste der Standorte ausgewählt ist, ersetzt das Element in das Textfeld für den Pfad des ausgewählten Elements an.  
   
 **Entfernen**  
 Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicherorte.  
   
 **Alle oder einen Teil des Dateinamens**  
-Geben Sie die Zeichenfolge, um Datenbanken zu suchen, deren Namen, die eine bestimmte Zeichenfolge enthalten. Sie können verwenden Sie Platzhalterzeichen nicht.  
+Um Datenbanken zu suchen, deren Namen, die eine bestimmte Zeichenfolge enthalten, geben Sie in der Zeichenfolge. Verwenden Sie keine Platzhalterzeichen enthalten.  
   
 **Erstellungsdatum**  
-Datenbanken suchen, die innerhalb eines bestimmten Zeitraums erstellt wurden, geben Sie das Startdatum im die **aus** Datum Feld und das Ende der **zu** Feld.  
+Um Datenbanken zu suchen, die innerhalb eines bestimmten Zeitraums erstellt wurden, geben Sie auf das Startdatum im der **aus** Feld und dem End-Datum in der **zu** Feld.  
   
 **Datum der letzten Aktualisierung**  
-Datenbanken suchen, die innerhalb eines bestimmten Zeitraums zuletzt aktualisiert wurden, geben Sie das Startdatum im die **aus** Datum Feld und das Ende der **zu** Feld.  
+Um Datenbanken zu suchen, die innerhalb eines bestimmten Zeitraums zuletzt aktualisiert wurden, geben Sie auf das Startdatum im der **aus** Feld und dem End-Datum in der **zu** Feld.  
   
 **Größe**  
-Um Datenbanken zu suchen, die eine Größenkriterien entsprechen, wählen Sie einen Vergleich Zeichen im ersten Feld, geben Sie eine Zahl für die Größe und wählen Sie dann aus dem dritten Feld Bytes, KB oder MB.  
+Um Datenbanken zu suchen, die eine Größenkriterien entsprechen, wählen Sie einen Vergleich Zeichen im ersten Feld, geben Sie eine Zahl für die Größe, und wählen Sie dann aus dem dritten Feld Bytes, Kilobytes und Megabytes.  
   
 **Besitzer**  
-Geben Sie den vollständigen Windows-Benutzername des Besitzers. Dadurch werden möglicherweise als formatiert *Domäne*\\*Benutzer*.  
+Geben Sie die vollständige Windows-Benutzername des Besitzers. Dadurch werden möglicherweise als formatiert *Domäne*\\*Benutzer*.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   
