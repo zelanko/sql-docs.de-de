@@ -1,26 +1,25 @@
 ---
 title: Unterstützung für Scale Out mit SQL Server Integration Services (SSIS) für Hochverfügbarkeit | Microsoft-Dokumentation
-ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: ''
-ms.date: 12/19/2017
+description: In diesem Artikel wird beschrieben, wie Sie SSIS Scale Out für Hochverfügbarkeit konfigurieren.
+ms.custom: performance
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411802"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -47,7 +46,7 @@ Dieses Konto sollte zukünftig Zugriff auf die SSISDB auf dem Sekundärknoten im
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Nehmen Sie den DNS-Hostnamen des Scale Out-Masterdiensts in den allgemeinen Namen des Scale Out-Masterzertifikats auf
 
-Dieser Hostname wird im Scale Out-Masterendpunkt verwendet. 
+Dieser Hostname wird im Scale Out-Masterendpunkt verwendet. (Achten Sie darauf, einen DNS-Hostnamen anzugeben, keinen Servernamen.)
 
 ![Masterkonfiguration für Hochverfügbarkeit](media/ha-master-config.PNG)
 
@@ -61,9 +60,9 @@ Verwenden Sie dasselbe Scale Out-Masterzertifikat wie für den Primärknoten. Ex
 > [!NOTE]
 > Sie können mehrere Sicherungskopien des Scale Out-Masters einrichten, indem Sie diese Vorgänge für die Scale Out-Master auf weiteren Sekundärknoten wiederholen.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Einrichten von Always On für SSISDB
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Einrichten und Konfigurieren der SSISDB-Unterstützung für Always On
 
-Führen Sie die Anweisungen zur Einrichtung von Always On für SSISDB aus, die unter [Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) beschrieben werden.
+Führen Sie die Anweisungen zur Einrichtung und Konfiguration der SSISDB-Unterstützung für Always On durch, die unter [Always On for SSIS Catalog (SSISDB) (Always On für den SSIS-Katalog (SSISDB))](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) beschrieben werden.
 
 Außerdem müssen Sie einen Verfügbarkeitsgruppenlistener für die Verfügbarkeitsgruppe erstellen, zu der Sie SSISDB hinzufügen. Vgl. [Create or Configure an Availability Group Listener (Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
@@ -85,7 +84,7 @@ Rufen Sie die gespeicherte Prozedur `[catalog].[update_logdb_info]` mithilfe der
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Konfigurieren der Rolle des Scale Out-Masterdiensts des Windows-Failoverclusters
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Konfigurieren der Rolle des Scale Out-Masterdiensts des Windows Server-Failoverclusters
 
 1.  Stellen Sie im Failovercluster-Manager eine Verbindung mit dem Cluster für Scale Out her. Wählen Sie den Cluster aus. Wählen Sie im Menü zunächst **Aktion** und dann **Rolle konfigurieren** aus.
 
@@ -96,6 +95,12 @@ Rufen Sie die gespeicherte Prozedur `[catalog].[update_logdb_info]` mithilfe der
     ![Hochverfügbarkeitsassistent 1](media/ha-wizard1.PNG)
 
 4.  Beenden Sie den Assistenten.
+
+Auf virtuellen Azure-Computern erfordert diese Konfiguration zusätzliche Schritte. Eine vollständige Erläuterung dieser Konzepte und dieser Schritte ist nicht Gegenstand dieses Artikels.
+
+1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Durchführen eines Lastenausgleichs für internen Datenverkehr an virtuelle Computer mit einem Load Balancer im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aktualisieren der Scale Out-Masteradresse in SSISDB
 

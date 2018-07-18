@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899765"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Kompatibilität von Desktop-Datenbank
 Unicode ist, dass eine Methode der Software zeichencodierung, die alle Zeichen behandelt, als mit einer festen Breite von zwei Bytes. Diese Methode dient als Alternative zur Windows-ANSI-zeichencodierung, d. h., da es Zeichen in ein Byte repräsentiert auf 256 Zeichen beschränkt. Da Unicode über 65.000 Zeichen darstellen kann, verfügt es viele Sprachen, deren Zeichen werden nicht dargestellt, in ANSI-Codierung.  

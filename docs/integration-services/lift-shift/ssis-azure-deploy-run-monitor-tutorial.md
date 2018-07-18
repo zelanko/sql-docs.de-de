@@ -1,25 +1,26 @@
 ---
 title: Bereitstellen und Ausführen von SSIS-Paketen in Azure | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie ein SSIS-Projekt (SQL Server Integration Services) für den SSIS-Katalog auf einer Azure SQL-Datenbank bereitstellen und ein Paket ausführen.
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262494"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Bereitstellen und Ausführen eines SSIS-Pakets in Azure
-Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SSISDB-Katalogdatenbank auf einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
+In diesem Tutorial wird gezeigt, wie ein SSIS-Projekt für den SSIS-Katalog in einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -29,7 +30,7 @@ Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank in Azure eingerichtet un
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Abrufen der Verbindungsinformationen für Azure SQL-Datenbank
 
-Um das Paket auf Azure SQL-Datenbank auszuführen, rufen Sie die Verbindungsinformationen ab, die benötigt werden, um eine Verbindung mit der SSIS-Katalogdatenbank (SSISDB) herzustellen. Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Prozeduren.
+Um das Paket auf Azure SQL-Datenbank auszuführen, rufen Sie die Verbindungsinformationen ab, die für eine Verbindungsherstellung mit der SSIS-Katalogdatenbank (SSISDB) benötigt werden. Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Prozeduren.
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.
 2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
@@ -101,7 +102,8 @@ Weitere Informationen zum Bereitstellen von Paketen und zum Bereitstellungs-Assi
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Vorherige** klicken, oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen**, um den Bereitstellungsprozess zu starten.
 
-    > ![HINWEIS] Wenn Sie die Fehlermeldung **Es liegt kein aktiver Worker-Agent vor (.Net SqlClient-Datenanbieter)** erhalten, stellen Sie sicher, dass die Azure-SSIS Integration Runtime (Azure-SSIS IR) ausgeführt wird. Dieser Fehler tritt auf, wenn Sie versuchen, eine Bereitstellung durchzuführen, während die Azure-SSIS IR beendet ist.
+    > [!NOTE]
+    > Wenn Sie die Fehlermeldung **Es liegt kein aktiver Worker-Agent vor (.Net SqlClient-Datenanbieter)** erhalten, stellen Sie sicher, dass die Azure-SSIS Integration Runtime ausgeführt wird. Dieser Fehler tritt auf, wenn Sie versuchen, eine Bereitstellung durchzuführen, während die Azure-SSIS IR beendet ist.
 
 5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehlgeschlagen**, um eine Erklärung über den Fehler anzuzeigen.
@@ -190,9 +192,17 @@ Sie können auch im Objekt-Explorer ein Paket auswählen, mit der rechten Mausta
 
 Weitere Informationen zum Überwachen von ausgeführten Paketen in SSMS finden Sie unter [Monitor Running Packages and Other Operations (Überwachen ausgeführter Pakete und anderer Vorgänge)](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Überwachen der SSIS-Paketaktivität
+
+Wenn Sie ein Paket als Teil einer Azure Data Factory-Pipeline mit der Aktivität „SSIS-Paket ausführen“ ausführen, können Sie die Pipelineausführungen auf der Data Factory-Benutzeroberfläche überwachen. Anschließend können Sie Ausführungs-ID von SSISDB aus der Ausgabe der Aktivitätsausführung abrufen und diese ID dann zum Überprüfen verständlicherer Ausführungsprotokolle und Fehlermeldungen in SSMS verwenden.
+
+![Abrufen der Paketausführungs-ID in Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Überwachen der Azure SSIS Integration Runtime
 
-Um die Statusinformationen über die Azure SSIS Integration Runtime-Komponente abzurufen, in der Pakete ausgeführt werden, verwenden Sie die folgenden PowerShell-Befehle. Stellen Sie für jeden Befehl die Namen der Data Factory, Azure SSIS IR sowie die Ressourcengruppe bereit. Weitere Informationen finden Sie unter [Monitor Azure-SSIS integration runtime (Überwachen der Azure SSIS Integration Runtime)](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Um die Statusinformationen über die Azure SSIS Integration Runtime-Komponente abzurufen, in der Pakete ausgeführt werden, verwenden Sie die folgenden PowerShell-Befehle. Stellen Sie für jeden Befehl die Namen der Data Factory, Azure SSIS IR sowie die Ressourcengruppe bereit.
+
+Weitere Informationen finden Sie unter [Monitor Azure-SSIS integration runtime (Überwachen der Azure SSIS Integration Runtime)](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Abrufen von Metadaten über Azure SSIS Integration Runtime
 

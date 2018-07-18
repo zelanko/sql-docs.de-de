@@ -2,7 +2,6 @@
 title: Optimieren Sie die Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd78e57693ccd87cd04bb389a119f7a274d2b1e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90d3234b54c4dd0c0c8e51cbade0199b4d67ade1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279989"
 ---
 # <a name="optimize-property-example-vc"></a>Optimieren Sie die Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) Objekt Dynamic **optimieren** Eigenschaft. Die **Zip** Feld der **Autoren** -Tabelle in der **Pubs** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die **Zip** Feld autorisiert ADO zum Erstellen eines Indexes, die die Leistung verbessert die [Suchen](../../../ado/reference/ado-api/find-method-ado.md)Methode.  

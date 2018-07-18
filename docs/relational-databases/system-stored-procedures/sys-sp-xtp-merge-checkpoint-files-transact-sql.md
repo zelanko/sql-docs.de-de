@@ -1,5 +1,5 @@
 ---
-title: sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs
+title: sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bc2c91d93ad24147fa288ffb8164823f4f8a84c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979422"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 ||  
 |-|  
-|**Hinweis**: Diese gespeicherte Prozedur ist in veraltet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Es wird nicht mehr benötigt und kann nicht verwendet werden, beginnend [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Beachten Sie**: Diese gespeicherte Prozedur ist in veraltet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Es wird nicht mehr benötigt und kann nicht verwendet werden, beginnend [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,16 +55,16 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  Der Name der Datenbank, für die die Zusammenführung aufgerufen werden soll. Wenn die Datenbank keine Tabellen im Arbeitsspeicher aufweist, gibt diese Prozedur einen Benutzerfehler zurück. Falls die Datenbank offline ist, wird ein Fehler zurückgegeben.  
   
  *lower_bound_Tid*  
- Die Untergrenze (Bigint), der Transaktionen für eine Datendatei entsprechend [dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) entsprechend der prüfpunktstartdatei der Zusammenführung. Bei einem ungültigen transactionId-Wert wird ein Fehler generiert.  
+ Die Untergrenze (Bigint) von Transaktionen für eine Datendatei, siehe [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) entsprechend der prüfpunktstartdatei der Zusammenführung. Bei einem ungültigen transactionId-Wert wird ein Fehler generiert.  
   
  *upper_bound_Tid*  
- Die Obergrenze (Bigint) von Transaktionen für eine Datendatei entsprechend [dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Bei einem ungültigen transactionId-Wert wird ein Fehler generiert.  
+ Die obere Grenze (Bigint) von Transaktionen für eine Datendatei, siehe [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Bei einem ungültigen transactionId-Wert wird ein Fehler generiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die feste Serverrolle sysadmin und die feste Datenbankrolle db_owner.  

@@ -2,7 +2,6 @@
 title: Anbieterfehler | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272339"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieterfehler auftritt, wird ein Laufzeitfehler-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält einen oder mehrere Fehler, die beschreiben, was aufgetreten ist.  
@@ -68,7 +68,7 @@ End Function
 ## <a name="the-error-object"></a>Die Error-Objekt  
  Mithilfe einer **Fehler** -Objekts können Sie bestimmen, welche Fehler aufgetreten ist und noch wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Die **Fehler** Objekt hat die folgenden Eigenschaften:  
   
-|Eigenschaftsname|Description|  
+|Eigenschaftenname|Description|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext HelpFile**|Bezieht sich auf das Hilfethema und Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  

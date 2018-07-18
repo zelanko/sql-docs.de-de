@@ -1,5 +1,5 @@
 ---
-title: XQuery-Abfragen, die die Reihenfolge | Microsoft Docs
+title: XQueries Involving Order | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,15 +25,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051678"
 ---
 # <a name="xqueries-involving-order"></a>XQuery-Abfragen, die die Reihenfolge berücksichtigen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Sie können jedoch ein XML-Dokument Abfragen und Abrufen der ersten \<Customer > Element. In diesem Fall wird immer der gleiche Kunde abgerufen.  
+  In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Jedoch kann ein XML-Dokument Abfragen und Abrufen der ersten \<Customer > Element. In diesem Fall wird immer der gleiche Kunde abgerufen.  
   
  Dieses Thema stellt Abfragen vor, die auf der Reihenfolge basieren, in der Knoten im Dokument vorhanden sind.  
   
@@ -88,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass die gesamte <`step`> Entfernen Sie das Element stattdessen zurückgegeben der **string()** Funktion aus der Abfrage:  
+ Die vorherige Abfrage ruft nur die Textknoten ab. Wenn Sie möchten, dass die gesamte <`step`> Entfernen Sie das Element stattdessen zurückgegeben, die **string()** Funktion aus der Abfrage:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Suchen aller Materialen und Werkzeuge, die am zweiten Arbeitsplatzstandort zur Fertigung eines Produkts verwendet werden  
  Die folgende Abfrage ruft die Materialien und Werkzeuge für ein bestimmtes Produktmodell an einem zweiten Arbeitsplatzstandort in der Abfolge von Arbeitsplatzstandorten im Fertigungsprozess ab.  
@@ -166,7 +167,7 @@ where ProductModelID=19
   
  Der Abfragetext erstellt XML mit dem <`ProductModel`>-Element, das das ProductModelID-Attribut und das ProductModelName-Attribut enthält.  
   
--   Die Abfrage verwendet eine FOR ... RETURN-Schleife zum Abrufen der Produktmodell-Funktionsbeschreibungen. Die **position()** Funktion wird verwendet, um die ersten beiden Funktionen abzurufen.  
+-   Die Abfrage verwendet eine FOR ... RETURN-Schleife zum Abrufen der Produktmodell-Funktionsbeschreibungen. Die **position()** Funktion dient zum Abrufen der ersten beiden Funktionen.  
   
  Dies ist das Ergebnis:  
   

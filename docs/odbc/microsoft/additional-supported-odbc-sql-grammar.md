@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898925"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Zusätzliche unterstützte ODBC-SQL-Grammatik
 Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden Klauseln vollständig in der Grammatik Core und erweiterte ODBC 2.5. Zusätzliche Informationen kann angezeigt werden, indem springen zu den [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md), [Korrelationsnamen](../../odbc/microsoft/correlation-names.md), und [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) Themen.  

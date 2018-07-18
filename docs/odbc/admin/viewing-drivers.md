@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897765"
 ---
 # <a name="viewing-drivers"></a>Anzeigen von Treibern
 Zum Konfigurieren von Datenquellen, müssen Sie mindestens einen Treiber auf Ihrem System installiert haben. Die **Treiber** Registerkarte der **ODBC-Datenquellenadministrator** Dialogfeld listet alle Treiber auf dem Computer, einschließlich Name, Version, Unternehmen, Dateiname und Erstellungsdatum der Datei für jeden Treiber installiert. Sie müssen den Treiber-Setup-Programm verwenden, hinzufügen oder Löschen einen Treiber aus dem System. Weitere Informationen zum Ändern von Treibern finden Sie unter [Datenquellen verwalten](../../odbc/admin/managing-data-sources.md).

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913155"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Auswählen einer Datenquelle oder Treiber
 Die Datenquelle oder von einer Anwendung verwendeten Treiber ist in einigen Fällen in der Anwendung hartcodiert. Z. B. eine benutzerdefinierte Anwendung ein MIS abteilungsweise zu übertragenden Daten aus einer Datenquelle in eine andere enthält die Namen dieser Datenquellen – die Anwendung einfach funktioniert nicht mit allen anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung, wie z. B. nach Auftragseingabe eines verwendet. Eine solche Anwendung immer verwendet die gleiche Datenquelle, mit einem vordefinierten Schema, das von der Anwendung bezeichnet.  

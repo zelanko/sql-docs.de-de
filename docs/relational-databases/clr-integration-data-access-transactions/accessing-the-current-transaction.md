@@ -1,13 +1,11 @@
 ---
-title: Zugriff auf die aktuelle Transaktion | Microsoft Docs
+title: Zugriff auf die aktuelle Transaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,16 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b157a9c72533d6c92f71ddc93e7c8023eab6edc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358752"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Wenn eine Transaktion aktiv ist, an die Stelle, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist eingegeben haben, wird die Transaktion durch verfügbar gemacht der **"System.Transactions.Transaction"** Klasse. Mit der **Transaction.Current** -Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET **Transaction.Current** automatisch beim Aufruf der **Connection.Open** -Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort **Enlist** in der Verbindungszeichenfolge nicht false angegeben wurde).  
+  Wenn eine Transaktion aktiv ist, an dem Punkt, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eingegeben haben, wird die Transaktion über verfügbar gemacht der **System.Transactions.Transaction** Klasse. Mit der **Transaction.Current** -Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET **Transaction.Current** automatisch beim Aufruf der **Connection.Open** -Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort **Enlist** in der Verbindungszeichenfolge nicht false angegeben wurde).  
   
  In den folgenden Szenarien sollten Sie das **Transaction** -Objekt direkt verwenden:  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="canceling-an-external-transaction"></a>Abbrechen einer externen Transaktion  
  Sie können externe Transaktionen wie folgt von einer verwalteten Prozedur oder einer Funktion aus abbrechen:  
   
--   Die verwaltete Prozedur oder die Funktion kann in einem Ausgabeparameter einen Wert zurückgeben. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozedur kann den zurückgegebenen Wert überprüfen und ggf. ausführen **ROLLBACK TRANSACTION**.  
+-   Die verwaltete Prozedur oder die Funktion kann in einem Ausgabeparameter einen Wert zurückgeben. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann den zurückgegebenen Wert überprüfen und gegebenenfalls **ROLLBACK TRANSACTION**.  
   
--   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme wird von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie **ROLLBACK TRANSACTION**.  
+-   Die verwaltete Prozedur oder die Funktion kann eine benutzerdefinierte Ausnahme auslösen. Die aufrufende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur kann die Ausnahme, die von der verwalteten Prozedur oder Funktion in einem Try/Catch-Block ausgelöst, und führen Sie **ROLLBACK TRANSACTION**.  
   
 -   Die verwaltete Prozedur oder die Funktion kann die aktuelle Transaktion durch einen Aufruf der **Transaction.Rollback** -Methode abbrechen, wenn eine bestimmte Bedingung erfüllt wird.  
   
@@ -206,6 +205,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR-Integration und -Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs
+title: Sp_add_maintenance_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018467"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +53,17 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
  [  **@plan_name =**] **"***Plan_name***"**  
  Gibt den Namen des Wartungsplans an, der hinzugefügt werden soll. *Plan_name* ist **varchar(128)**.  
   
- **@plan_id = "** *" Plan_id "* **"**  
- Gibt die ID des Wartungsplans an. *"Plan_id"* ist **"uniqueidentifier"**.  
+ **@plan_id = '** *Plan_id* **"**  
+ Gibt die ID des Wartungsplans an. *Plan_id* ist **Uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_add_maintenance_plan** muss ausgeführt werden, aus der **Msdb** Datenbank und erstellt einen neuen, aber leer ist, Wartungsplan. Führen Sie zum Hinzufügen von einer oder mehreren Datenbanken, und sie einen Auftrag oder Aufträge zuzuordnen, **Sp_add_maintenance_plan_db** und **Sp_add_maintenance_plan_job**.  
+ **Sp_add_maintenance_plan** muss ausgeführt werden, aus der **Msdb** Datenbank und erstellt einen neuen, aber leer ist, Wartungsplan. Führen Sie zum Hinzufügen einer oder mehreren Datenbanken und ordnen sie einen Auftrag oder Aufträge, **Sp_add_maintenance_plan_db** und **Sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_add_maintenance_plan**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Beispiele  
  Erstellen eines Wartungsplans namens Myplan.  
@@ -82,6 +83,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Datenbank-Wartungsplan gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Datenbank-Wartungsplans gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

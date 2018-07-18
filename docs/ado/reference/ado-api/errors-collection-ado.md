@@ -2,7 +2,6 @@
 title: Errors-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7c259dda6c491c1992c19ed0ebe3decdc4a42d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278159"
 ---
 # <a name="errors-collection-ado"></a>Errors-Auflistung (ADO)
 Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) in Reaktion auf einen einzelnen anbieterbezogenen Fehler erstellten Objekte.  

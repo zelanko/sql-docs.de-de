@@ -1,8 +1,7 @@
 ---
-title: 'ADO für Visual C++-Syntax Index mit #import | Microsoft Docs'
+title: 'ADO für Visual C++-Syntaxindex mit #import | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,20 +21,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957703"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++-Syntax Index mit #import
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++-Syntaxindex mit #import
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++ und die **#import** Richtlinie.  
   
- Durch das Kompilieren eines Programms mit diesem bestimmte Index abgeleitet wurde die **#import** Richtlinie für die ADO-DLL-Datei, und klicken Sie dann die Datei *.tlh umzuformatieren, die generiert wurde. Es wurde nur Informationen zu Methoden, Eigenschaften und Ereignisse beibehalten. Die alternative Syntax deklariert werden, für jede Eigenschaft, mit den entsprechenden aufgeführt ist "`__declspec(property...)`" Richtlinie.  
+ Durch das Kompilieren eines Programms mit diesem bestimmten Index abgeleitet wurde die **#import** die Richtlinie für die ADO-DLL-Datei, und klicken Sie dann neuformatierung der \*TLH-Datei, die generiert wurde. Es wurde nur Informationen zu Methoden, Eigenschaften und Ereignisse beibehalten. Die alternative Syntax deklariert werden, für jede Eigenschaft mit den entsprechenden aufgelistet ist "`__declspec(property...)`" Richtlinie.  
   
- Es wird dringend empfohlen, zu lesen [Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md) für Weitere Informationen.  
+ Es wird dringend empfohlen, zum Lesen [Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md) für Weitere Informationen.  
   
- Methoden- und Syntax in Visual C++ mit den **#import** Richtlinie ist für die folgenden Elemente aufgeführt:  
+ -Methode und Eigenschaft-Syntax in Visual C++ mit der **#import** Richtlinie wird aufgeführt, für die folgenden Elemente:  
   
 -   [ADO-Collections](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -51,7 +51,7 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
   
 -   [Property-Objekt](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Datensatzobjekt](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [-Objekt](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   

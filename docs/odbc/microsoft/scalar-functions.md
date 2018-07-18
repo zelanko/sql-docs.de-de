@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900065"
 ---
 # <a name="scalar-functions"></a>Skalarfunktionen
 Microsoft ODBC-Desktop-Datenbanktreiber unterstützen die folgenden skalaren Funktionen:  

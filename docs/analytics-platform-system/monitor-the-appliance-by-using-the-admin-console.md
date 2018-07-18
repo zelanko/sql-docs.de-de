@@ -1,6 +1,6 @@
 ---
-title: Überwachung mit Admin-Konsole – Analytics Platform System | Microsoft Docs
-description: Für Analytics Platform System stellt die Verwaltungskonsole für eine Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen bereitstellt. Benutzer eine Verbindung herstellen, um die Verwaltungskonsole über einen Internet-Browser.
+title: Monitor mit Admin Console - Analytics Platform System | Microsoft-Dokumentation
+description: Für Analytics Platform System ist die Verwaltungskonsole für eine Anwendung, die die Appliance Zustand, Integrität und Leistung Informationen angezeigt. Herstellen einer Verbindung auf die Verwaltungskonsole über einen Internetbrowser.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,108 +9,88 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5f7c6ef68a8f91121a63def8e2153a5c38873aa3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909850"
 ---
-# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Überwachen Sie die Einheit mit der Verwaltungskonsole - Analyseplattformsystem
-Die Verwaltungskonsole ist eine SQL Server PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen bereitstellt. Benutzer eine Verbindung herstellen, um die Verwaltungskonsole über Internet Explorer.  
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Überwachen der Appliance mit der Admin Console - Analytics Platform System
+Die Verwaltungskonsole ist eine SQL Server-PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen angezeigt. Herstellen einer Verbindung auf die Verwaltungskonsole über Internet Explorer.  
   
 ## <a name="About"></a>Informationen zur Verwaltungskonsole  
 ![Anwendungskonsole, Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
 Home  
-Bietet eine kurze Zusammenfassung des Status Appliance.  
+Bietet eine kurze Übersicht über den Anwendungszustand.  
   
 Integrität  
-Zeigt die Anwendungstopologie mit Indikatoren zeigt die Integrität der einzelnen überwachten Komponenten innerhalb eines jeden Knotens. Können Sie den aktuellen Status der einzelnen Knoten und Eigenschaften der Komponenten Knoten anzuzeigen.  
+Zeigt die appliancetopologie mit Indikatoren zeigt die Integrität der einzelnen überwachten Komponenten innerhalb eines jeden Knotens. Können Sie den aktuellen Status der einzelnen Knoten und die Eigenschaften der Komponenten des Knotens anzuzeigen.  
   
-Werden Warnungen von Hardware und Software angezeigt.  
+Zeigt Warnungen an Hardware und Software.  
   
 Systemmonitor  
-Zeigt Diagramme für die Performance Monitor an.  
+Zeigt Leistungsdiagramme für die Überwachung an.  
   
 **Parallel Data Warehouse**  
 Home  
-Enthält eine kurze Zusammenfassung des PDW-Status.  
+Bietet eine kurze Übersicht über die PDW-Zustand.  
   
 Sitzungen  
-Zeigt aktive Sitzungen von PDW-Benutzer. Dies kann helfen, für die Überwachung Ressourcenkonflikte.  
+Zeigt aktive Sitzungen von PDW-Benutzer. Dies kann helfen, für die Überwachung der Ressourcenkonflikte.  
   
 Abfragen  
-Zeigt eine Liste der ausgeführten Abfragen und zuletzt abgeschlossenen Abfragen. Verwandte Fehler werden angezeigt, sofern vorhanden. Außerdem bietet die Möglichkeit zum Anzeigen von Details der Ausführungsinformationen für die Abfrage Ausführung planen und Knoten.  
+Zeigt eine Liste der ausgeführten Abfragen und kürzlich abgeschlossenen Abfragen. Verwandte Fehler werden angezeigt, sofern vorhanden. Außerdem bietet die Möglichkeit zum Anzeigen von Details der Ausführungsinformationen für die Abfrage Ausführung planen und Knoten aus.  
   
 Lädt  
-Zeigt geladen werden Pläne, die den aktuellen Status der Laden von PDW sowie verwandte Fehler, sofern vorhanden.  
+Zeigt geladen werden Plänen, die den aktuellen Zustand der PDW-Ladevorgänge sowie verknüpfte Fehler, falls vorhanden.  
   
-Sicherungen/Wiederherstellungen  
-Zeigt ein Protokoll von PDW sicherungs- und Wiederherstellungsvorgänge.  
+Sicherung und Wiederherstellung  
+Zeigt ein Protokoll mit PDW sicherungs- und Wiederherstellungsvorgänge.  
   
 Integrität  
-Zeigt die PDW-Topologie mit Indikatoren zeigt die Integrität der einzelnen überwachten Komponenten innerhalb eines jeden Knotens. Können Sie den aktuellen Status der einzelnen Knoten und Eigenschaften der Komponenten Knoten anzuzeigen.  
+Zeigt die PDW-Topologie mit Indikatoren zeigt die Integrität der einzelnen überwachten Komponenten innerhalb eines jeden Knotens. Können Sie den aktuellen Status der einzelnen Knoten und die Eigenschaften der Komponenten des Knotens anzuzeigen.  
   
-Werden Warnungen von Hardware und Software angezeigt.  
+Zeigt Warnungen an Hardware und Software.  
   
 Ressourcen  
-Zeigt eine Liste der PDW-Ressourcensperren und ihren aktuellen Status.  
+Zeigt eine Liste von PDW-Ressourcensperren sowie deren aktuellen Status.  
   
 Speicherung  
-Enthält eine Zusammenfassung der PDW-speicherauslastung.  
+Fasst zusammen, die PDW-speichernutzung.  
   
 Systemmonitor  
-Zeigt Diagramme für die PDW Performance Monitor an.  
-  
-**HDInsight**  
-Home  
-Enthält eine kurze Zusammenfassung des HDInsight-Status.  
-  
-HDFS  
-Fasst die speicherplatzausnutzung HDInsight, und listet die Top 10 Speicherplatz Consumer.  
-  
-Zuordnen/reduzieren  
-Fasst den Status der MapReduce-Aufträge an.  
-  
-Integrität  
-Zeigt die HDInsight-Topologie mit Indikatoren zeigt die Integrität der einzelnen überwachten Komponenten innerhalb eines jeden Knotens. Können Sie den aktuellen Status der einzelnen Knoten und Eigenschaften der Komponenten Knoten anzuzeigen.  
-  
-Werden Warnungen von Hardware und Software angezeigt.  
-  
-Speicherung  
-Enthält eine Zusammenfassung der HDInsight-speicherauslastung.  
-  
-Systemmonitor  
-Zeigt Diagramme für die Performance Monitor an.  
-  
+Zeigt die PDW-Monitor Leistungsdiagramme an.  
+ 
 > [!NOTE]  
-> Die-Verwaltungskonsole verfügt über eine Auflösung von 1024 x 768. Die Administratorkonsole zeigt am besten mit einer Bildschirmauflösung von 1280 X 1024 oder höher.  
+> Die Verwaltungskonsole verfügt über eine Auflösung von 1024 x 768 Bildschirm. Die Administratorkonsole zeigt die am besten mit einer Bildschirmauflösung von 1280 X 1024 oder höher.  
   
-## <a name="Connect"></a>Herstellen einer Verbindung mit der Verwaltungskonsole  
-Verbindung mit der Verwaltungskonsole erfordert:  
+## <a name="Connect"></a>Verbinden Sie mit der Verwaltungskonsole  
+Verbindung mit der Admin-Konsole erfordert:  
   
--   AT Internet Explorer Version 10.  
+-   Mindestens Internet Explorer Version 10.  
   
 -   Berechtigungen für die Verwaltungskonsole zugreifen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Die IP-Adresse des Clusters mit Knoten Steuerelement.  Rufen Sie dies von den SQL Server PDW-Administrator.  
+-   Die IP-Adresse der Steuerelement-Knoten-Cluster.  Rufen Sie diese von Ihrem SQL Server-PDW-Administrator.  
   
-Verwenden Sie zur Verbindung mit der Verwaltungskonsole Internet Explorer- und Https, um die IP-Adresse des Clusters mit Knoten Steuerelement zu suchen. Wenn die IP-Adresse des Clusters mit Knoten Steuerelement ist beispielsweise `10.192.63.102`, geben Sie `https://10.192.63.102` in der Adressleiste des Browsers. Der erste Bildschirm fordert Ihre **Anmeldung** und **Kennwort**. Geben Sie entweder eine Anmeldung für SQL Server-Authentifizierung und ein Kennwort oder eine Windows-authentifizierte Anmeldung und Windows-Kennwort ein. Wenn Sie einen Anmeldenamen für Windows-Authentifizierung verwenden, wird der Verwaltungskonsole Identitätswechsel verwendet werden.  
+Verwenden Sie zum Verbinden mit der Verwaltungskonsole Internet Explorer und Https, um die IP-Adresse der Steuerelement-Knoten-Cluster zu suchen. Wenn die IP-Adresse des Clusters Knoten Steuerelement beispielsweise `10.192.63.102`, geben Sie `https://10.192.63.102` in die Adressleiste Ihres Browsers. Der erste Bildschirm fordert Ihre **Anmeldung** und **Kennwort**. Geben Sie entweder eine SQL Server-authentifizierungsanmeldung und ein Kennwort oder eine Anmeldung mit Windows-Authentifizierung und Windows-Kennwort ein. Wenn Sie eine Anmeldung mit Windows-Authentifizierung zu verwenden, wird die Verwaltungskonsole Identitätswechsel verwendet werden.  
   
 ## <a name="RelatedTasks"></a>Admin-Konsolentasks  
-Die Admin-Konsole bietet die Möglichkeit zur Überwachung der folgenden:  
+Die Verwaltungskonsole bietet die Möglichkeit, folgende Aspekte überwachen:  
   
 |||  
 |-|-|  
-|**Informationstyp**|**Vorgehensweise beim Zugriff in der Verwaltungskonsole**|  
-|Gesamtstatus des Geräts|Klicken Sie auf **Anwendungszustand** im oberen Menü oder **Home**.|  
-|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin-Konsole Warnungen &#40;Analyseplattformsystem&#41;](understanding-admin-console-alerts.md).|  
-|Appliance-Komponenten und deren status|Klicken Sie auf **Anwendungszustand** im oberen Menü oder **Home**.|  
-|Monitor-Anforderungen (einschließlich Abfragen, lädt, Sicherungen und Wiederherstellungen)|Klicken Sie auf **Sitzungen** , die derzeit aktive oder aktuelle Sitzungen finden Sie unter.<br /><br />Klicken Sie auf **Abfragen** , die derzeit aktive oder aktuelle Abfragen finden Sie unter. Die für Abfragen angezeigten Informationen gehören lädt, Sicherungen und Wiederherstellungen.<br /><br />Klicken Sie auf **Sperren** zu aktiven Sperren finden Sie unter.|  
-|Zusätzliche Informationen für lädt, Sicherungen und Wiederherstellungen zu überwachen.|Klicken Sie auf **lädt** oder **Sicherungen/Wiederherstellungen**.|  
+|**Informationstyp**|**Wie Sie in der Verwaltungskonsole zuzugreifen.**|  
+|Gesamtstatus des Geräts|Klicken Sie auf **Anwendungszustand** in der oberen Menüleiste oder **Startseite**.|  
+|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin-Konsole Warnungen &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Appliance-Komponenten und deren status|Klicken Sie auf **Anwendungszustand** in der oberen Menüleiste oder **Startseite**.|  
+|Monitor-Anforderungen (einschließlich Abfragen, lädt, Sicherungen und Wiederherstellungen)|Klicken Sie auf **Sitzungen** derzeit aktive oder aktuelle Sitzungen angezeigt.<br /><br />Klicken Sie auf **Abfragen** derzeit aktive oder aktuelle Abfragen angezeigt. Für Abfragen angezeigte Informationen enthält, lädt, Sicherungen und Wiederherstellungen.<br /><br />Klicken Sie auf **Sperren** zu aktiven Sperren finden Sie unter.|  
+|Überwachen Sie zusätzliche Informationen für Lasten, Sicherungen und Wiederherstellungen.|Klicken Sie auf **lädt** oder **Sicherung und Wiederherstellung**.|  
 |Leistungsinformationen|Klicken Sie auf **Systemmonitor**.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
+[Applianceüberwachung &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Sichten | Microsoft Docs
+title: Erstellen, ändern und Löschen von Sichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,22 +19,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f0df94a2e52f1c8e4287246d8e1917db80b787d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995872"
 ---
 # <a name="creating-altering-and-removing-views"></a>Erstellen, Ändern und Löschen von Sichten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sichten durch das <xref:Microsoft.SqlServer.Management.Smo.View>-Objekt dargestellt.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.View>-Objekts definiert die Sicht. Es ist das Äquivalent der [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung für eine Sicht erstellen.  
+ Die <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.View>-Objekts definiert die Sicht. Dies entspricht dem von der [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung zum Erstellen einer Ansicht.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Sicht in Visual Basic  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus, erstellt das <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird erstellt, mit dem Textmodus, sodass die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -56,7 +57,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>Erstellen, Ändern und Löschen einer Sicht in Visual C#  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus, erstellt das <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird erstellt, mit dem Textmodus, sodass die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
   
 ```csharp  
 {  
@@ -80,7 +81,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>Erstellen, Ändern und Löschen einer Sicht in PowerShell  
- In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird im Textmodus, erstellt das <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
+ In diesem Codebeispiel wird gezeigt, wie eine Sicht von zwei Tabellen mit einem inneren Join erstellt wird. Die Sicht wird erstellt, mit dem Textmodus, sodass die <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> Eigenschaft muss festgelegt werden.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

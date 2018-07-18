@@ -1,5 +1,5 @@
 ---
-title: 'Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint | Microsoft Docs'
+title: 'Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint | Microsoft-Dokumentation'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985412"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Prüfliste: Überprüfen von PowerPivot für SharePoint mithilfe von PowerShell
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Installations- oder -Wiederherstellungsvorgänge sind erst abgeschlossen, nachdem ein solider Überprüfungstestlauf ausgeführt wurde, durch den die Einsatzbereitschaft der Dienste und Daten bestätigt wird. In diesem Artikel erfahren Sie, wie Sie diese Schritte mit Windows PowerShell ausführen. Jeder Schritt wird in einem eigenen Abschnitt behandelt, sodass Sie direkt zu einer bestimmten Aufgabe wechseln können. Führen Sie z. B. das Skript im Abschnitt [Datenbanken](#bkmk_databases) dieses Themas aus, um die Namen von Dienstanwendung und Inhaltsdatenbanken zu überprüfen, wenn Sie Wartungen oder Sicherungen für sie planen möchten.  
   
-![PowerShell-Inhalt](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") ein vollständiges Powershellskript an das Ende des Themas enthalten ist. Verwenden Sie das vollständige Skript als Ausgangspunkt für die Erstellung eines benutzerdefinierten Skripts, das zur Überwachung der gesamten [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Bereitstellung eingesetzt wird.
+![PowerShell verwandte Inhalte](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related Content") ein vollständiges Powershellskript finden Sie am unteren Rand im Thema. Verwenden Sie das vollständige Skript als Ausgangspunkt für die Erstellung eines benutzerdefinierten Skripts, das zur Überwachung der gesamten [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] -Bereitstellung eingesetzt wird.
   
   
 ##  <a name="bkmk_prerequisites"></a> Vorbereitung der PowerShell-Umgebung  
@@ -47,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![PowerPivot in Sharepoint allgemeine Anwendung Menge](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "Powerpivot in Sharepoint allgemeine Anwendung festlegen")|Die meisten Komponenten in der Zentraladministration können mithilfe des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboards optional überprüft werden. Um das Dashboard in der Zentraladministration zu öffnen, klicken Sie auf **Allgemeine Anwendungseinstellungen**und dann auf **Management-Dashboard** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Weitere Informationen zum Dashboard finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot in Sharepoint allgemeine Gruppe](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "Powerpivot in Sharepoint allgemeine Gruppe")|Die meisten Komponenten in der Zentraladministration können mithilfe des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboards optional überprüft werden. Um das Dashboard in der Zentraladministration zu öffnen, klicken Sie auf **Allgemeine Anwendungseinstellungen**und dann auf **Management-Dashboard** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Weitere Informationen zum Dashboard finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Symptome und empfohlene Aktionen  
  Die folgende Tabelle enthält eine Liste der Symptome oder Probleme und den jeweiligen Abschnitt, in dem Sie Unterstützung für die Problemlösung finden.  
@@ -56,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |Datenaktualisierung wird nicht ausgeführt|Lesen Sie den Abschnitt [Zeitgeberaufträge](#bkmk_timer_jobs) , und stellen Sie sicher, dass der **Online [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Zeitgeberauftrag für die Onlinedatenaktualisierung** online ist.|  
 |Die Daten im Management-Dashboard sind veraltet|Lesen Sie den Abschnitt [Zeitgeberaufträge](#bkmk_timer_jobs) , und stellen Sie sicher, dass der **Zeitgeberauftrag für die Verarbeitung des Management-Dashboards** online ist.|  
-|Einige Bereiche des Management-Dashboards|Wenn Sie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint in einer Farm installieren, die die Topologie der Zentraladministration ohne Excel Services oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint aufweist, müssen Sie die Microsoft ADOMD.NET-Clientbibliothek herunterladen und installieren, wenn Sie Vollzugriff auf die integrierten Berichte im [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboard erhalten möchten. Einige Berichte im Dashboard verwenden ADOMD.NET für den Zugriff auf interne Daten, die Berichtsdaten zur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Abfrageverarbeitung und zum Serverzustand in der Farm liefern. Siehe den Abschnitt [ADOMD.Net-Clientbibliothek](#bkmk_adomd) und das Thema [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Einige Bereiche des Management-Dashboards|Wenn Sie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint in einer Farm installieren, die die Topologie der Zentraladministration ohne Excel Services oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint aufweist, müssen Sie die Microsoft ADOMD.NET-Clientbibliothek herunterladen und installieren, wenn Sie Vollzugriff auf die integrierten Berichte im [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Management-Dashboard erhalten möchten. Einige Berichte im Dashboard verwenden ADOMD.NET für den Zugriff auf interne Daten, die Berichtsdaten zur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Abfrageverarbeitung und zum Serverzustand in der Farm liefern. Siehe den Abschnitt [ADOMD.Net-Clientbibliothek](#bkmk_adomd) und das Thema [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Windows-Dienst von Analysis Services  
  Durch das Skript in diesem Abschnitt wird die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz im SharePoint-Modus überprüft. Überprüfen Sie, ob der Dienst **ausgeführt**wird.  
@@ -166,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![Hinweis](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis")der Anwendungspool kann auch auf der Seite für die Zentraladministration überprüft werden **Dienstanwendungen verwalten**. Klicken Sie auf den Namen der Dienstanwendung und dann im Menüband auf **Eigenschaften** .  
+ ![Beachten Sie](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis")der Anwendungspool kann auch überprüft werden, auf der Seite "Zentraladministration" **Dienstanwendungen verwalten**. Klicken Sie auf den Namen der Dienstanwendung und dann im Menüband auf **Eigenschaften** .  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] und Excel-Dienstanwendungsproxys**  
   
@@ -270,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows- und ULS-Protokolle  
  **Windows-Ereignisprotokoll**  
   
- Mit dem folgenden Befehl wird das Windows-Ereignisprotokoll nach Ereignissen durchsucht, die sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz im SharePoint-Modus beziehen. Informationen zum Deaktivieren von Ereignissen oder Ändern der Ereignisebene, finden Sie unter [konfigurieren und Anzeigen von SharePoint-Protokolldateien und-diagnoseprotokollierung &#40;Power Pivot für SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ Mit dem folgenden Befehl wird das Windows-Ereignisprotokoll nach Ereignissen durchsucht, die sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz im SharePoint-Modus beziehen. Informationen zum Deaktivieren von Ereignissen oder Ändern der Ereignisebene finden Sie unter [konfigurieren und Anzeigen von SharePoint-Protokolldateien und-diagnoseprotokollierung &#40;Power Pivot für SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **Dienstname:** MSOLAP$POWERPIVOT  
   
@@ -349,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) und [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) und [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.NET-Clientbibliothek  
   
@@ -366,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Weitere Informationen finden Sie unter [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Weitere Informationen finden Sie unter [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Regeln zur Sammlung von Integritätsdaten  
  Überprüfen Sie, ob der **Status** auf Online und **Enabled** auf True festgelegt ist.  

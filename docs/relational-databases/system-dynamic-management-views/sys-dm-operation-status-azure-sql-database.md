@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_operation_status (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_operation_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
 ms.prod: ''
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1df62f4ac877ed82ba1d7b555f8fd9ef759362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979452"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -46,26 +47,26 @@ ms.lasthandoff: 05/23/2018
 |minor_resource_id|**sql_variant**|Nur zur internen Verwendung. Nicht null ist.|  
 |Vorgang|**nvarchar(60)**|Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführter Vorgang, z. B. CREATE oder ALTER.|  
 |state|**tinyint**|Der Zustand des Vorgangs.<br /><br /> 0 = Ausstehend<br />1 = Vorgang wird ausgeführt<br />2 = Abgeschlossen<br />3 = Fehler<br />4 = Abgebrochen|  
-|state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Finden Sie unter der **Error_desc** Spalte.<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
-|percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht fortlaufend aus, und die gültigen Werte sind unten aufgeführt. Nicht NULL ist.<br/><br/>0 = Vorgang wurde nicht gestartet.<br/>50 = Vorgang wird ausgeführt<br/>100 = ist abgeschlossen|  
+|state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Finden Sie unter den **Error_desc** Spalte.<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
+|percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht fortlaufend, und die gültigen Werte sind nachfolgend aufgeführt. Nicht NULL ist.<br/><br/>0 = Vorgang wurde nicht gestartet werden.<br/>50 = Vorgang wird ausgeführt<br/>100 = Vorgang wurde abgeschlossen|  
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar(2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
-|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu Schweregraden von Fehlern, finden Sie unter [Datenbankmodulfehlern](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu den Fehler Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehler](http://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Zur künftigen Verwendung reserviert. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |start_time|**datetime**|Zeitstempel, an dem der Vorgang begonnen wurde.|  
 |last_modify_time|**datetime**|Zeitstempel, an dem der Datensatz zuletzt für einen länger ausgeführten Vorgang geändert wurde. Im Fall von erfolgreich abgeschlossenen Vorgängen wird in diesem Feld der Zeitstempel angezeigt, an dem der Vorgang abgeschlossen wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Diese Sicht ist nur verfügbar, in der **master** Datenbank der prinzipalanmeldung auf Serverebene.  
+ Diese Ansicht ist nur verfügbar, in der **master** Datenbank, um die prinzipalanmeldung auf Serverebene.  
   
 ## <a name="remarks"></a>Hinweise  
- Um diese Ansicht verwenden, müssen Sie mit verbunden werden die **master** Datenbank. Verwenden der `sys.dm_operation_status` anzeigen in der **master** Datenbank von der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server den Status der folgenden Vorgänge nachzufolgen verfolgen eine [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+ Um diese Ansicht verwenden zu können, müssen Sie mit verbunden werden die **master** Datenbank. Verwenden der `sys.dm_operation_status` anzeigen in der **master** Datenbank mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verfolgen den Status der folgenden Vorgänge ausgeführt werden, auf eine [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Datenbank erstellen  
   
 -   Kopieren einer Datenbank. Mit Datenbankkopie wird ein Datensatz in dieser Sicht auf den Quell- und Zielservern erstellt.  
   
--   Alter database  
+-   Datenbank ändern  
   
 -   Ändern der Leistungsebene einer Dienstebene  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/23/2018
 -   Datenbank löschen  
   
 ## <a name="example"></a>Beispiel  
- Zeigen Sie die letzte geografischen Replikationsvorgängen, die Datenbank "Mydb" zugeordnet.  
+ Zeigen Sie die neuesten georeplikationsvorgänge Datenbank "Mydb" zugeordnet.  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
@@ -89,9 +90,9 @@ SELECT * FROM sys.dm_ operation_status
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Geografische Replikation dynamische Verwaltungssichten und-Funktionen &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [Sys.dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [Sys.geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Geografische Replikation, dynamische Verwaltungssichten und-Funktionen &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [Sys. geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

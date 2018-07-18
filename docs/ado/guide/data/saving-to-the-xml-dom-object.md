@@ -2,7 +2,6 @@
 title: Speichern die XML-DOM-Objekt | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c53d65a0ff66c560f43361cb6de97a2bc36146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82c9c8a04669d360362f68d8c1b0a524d954efa0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272529"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Speichern der XML-DOM-Objekt
 Ein Recordset können im XML-Format mit einer Instanz eines Objekts MSXML DOM gespeichert werden, wie im folgenden Visual Basic-Code dargestellt:  

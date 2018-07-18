@@ -1,38 +1,20 @@
 ---
-title: ERSTELLEN VON MINING-MODELL (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+title: MINING-MODELL (DMX) ERSTELLEN | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980590"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +23,7 @@ ms.lasthandoff: 05/03/2018
   
  Der Name der Miningstruktur ergibt sich, indem "_structure" an den Modellnamen angefügt wird. Dadurch ist sichergestellt, dass sich der Strukturname vom Modellnamen unterscheidet.  
   
- Verwenden Sie zum Erstellen eines Miningmodells für eine vorhandene Miningstruktur die [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) Anweisung.  
+ Um ein Miningmodell für eine vorhandene Miningstruktur erstellen, verwenden die [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Der Name eines Data Mining-Algorithmus, der vom aktuellen Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der vom aktuellen Anbieter unterstützten Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). So zeigen Sie in der aktuellen Instanz der unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  Eine Liste der vom aktuellen Anbieter unterstützt Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Die in der aktuellen Instanz von unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -74,7 +56,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML-Zeichenfolge*  
  (Nur für fortgeschrittene Benutzer.) Ein XML-codiertes Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
   
- Die **SITZUNG** -Klausel können Sie ein Miningmodell zu erstellen, die automatisch vom Server entfernt wird, wenn die Verbindung geschlossen oder das Timeout der Sitzung. **SITZUNG** -Miningmodelle sind nützlich, da den Benutzer ein Datenbankadministrator ist nicht erforderlich, und Speicherplatz für die sie nur verwenden, solange die Verbindung geöffnet ist.  
+ Die **SITZUNG** -Klausel können Sie ein Miningmodell erstellen, die automatisch vom Server entfernt wird, wenn die Verbindung geschlossen oder das Sitzungstimeout. **SITZUNG** Miningmodelle sind nützlich, da sie nicht erfordern, dass Benutzer ein Datenbankadministrator und Speicherplatz für sie nur verwenden, solange die Verbindung geöffnet ist.  
   
  Die **WITH DRILLTHROUGH** -Klausel aktiviert Drillthrough für das neue Miningmodell. Drillthrough kann nur aktiviert werden, wenn das Modell erstellt wird. Bei einigen Modelltypen ist ein Drillthrough erforderlich, um das Modell im benutzerdefinierten Viewer zu durchsuchen. Ein Drillthrough ist nicht erforderlich für Vorhersagen oder das Durchsuchen des Modells mit dem Microsoft Generic Content Tree Viewer.  
   
@@ -93,7 +75,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Inhaltstyp (obligatorisch)  
   
--   Vorhersageanforderung, die für den Algorithmus, um vorherzusagen, diese Spalte gibt an, angegeben durch die **PREDICT** oder **PREDICT_ONLY** Klausel  
+-   Vorhersageanforderung, die auf den diese Spalte vorhergesagt-Algorithmus angibt, angegeben durch die **PREDICT** oder **PREDICT_ONLY** Klausel  
   
 -   Beziehung zu einer Attributspalte (nur obligatorisch, wenn sie angewendet wird), angegeben durch die **RELATED TO** Klausel  
   
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Spalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen & #40; Datamining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Datentypen &#40;Datamining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Content-Arten & #40; Datamining & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Inhaltstypen &#40;Datamining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Spaltenverteilungen &#40;Datamining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modellierungsflags &#40;Datamining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden \<Column Relationship >-Klausel.  
   
@@ -140,7 +122,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- Eine Liste der Parameter, die jedem Algorithmus zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Eine Liste der Parameter, die mit jedem Algorithmus zusammenhängen, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Modell mit einem integrierten Testdataset erstellen möchten, sollten Sie die Anweisung CREATE MINING STRUCTURE gefolgt von ALTER MINING STRUCTURE verwenden. Jedoch unterstützen nicht alle Modelltypen ein zurückgehaltenes Dataset. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -162,7 +144,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>Beispiel für Association-Algorithmus  
- Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus verwendet, um ein neues Miningmodell zu erstellen. Für die Anweisung wird die Möglichkeit genutzt, eine Tabelle in einer Modelldefinition zu schachteln, indem eine Tabellenspalte verwendet wird. Das Modell geändert wird, mithilfe der *MINIMUM_PROBABILITY* und *MINIMUM_SUPPORT* Parameter.  
+ Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus verwendet, um ein neues Miningmodell zu erstellen. Für die Anweisung wird die Möglichkeit genutzt, eine Tabelle in einer Modelldefinition zu schachteln, indem eine Tabellenspalte verwendet wird. Das Modell wird geändert, indem Sie mit der *MINIMUM_PROBABILITY* und *MINIMUM_SUPPORT* Parameter.  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -175,7 +157,7 @@ USING Microsoft_Association_Rules (Minimum_Probability = 0.1, MINIMUM_SUPPORT = 
 ```  
   
 ## <a name="sequence-clustering-example"></a>Beispiel für den Sequence Clustering-Algorithmus  
- Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet, um ein neues Miningmodell zu erstellen. Das Modell wird mit zwei Schlüsseln definiert. Die OrderNumber-Spalte wird als Fallschlüssel verwendet und gibt einzelne Bestellungen. Die Zeilennummer-Spalte als Schlüsselspalte der geschachtelten Tabelle verwendet wird, und gibt die Reihenfolge, in der Elemente einer Bestellung hinzugefügt wurden.  
+ Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet, um ein neues Miningmodell zu erstellen. Das Modell wird mit zwei Schlüsseln definiert. Die OrderNumber-Spalte wird als Fallschlüssel verwendet, und gibt einzelne Bestellungen. Die LineNumber-Spalte als Schlüsselspalte der geschachtelten Tabelle verwendet wird, und gibt die Reihenfolge, in der Artikel einer Bestellung hinzugefügt wurden.  
   
 ```  
 CREATE MINING MODEL BuyingSequence (  
@@ -190,10 +172,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>Beispiel für den Time Series-Algorithmus  
- Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Zeitreihenalgorithmus verwendet, um mit dem ARTxp-Algorithmus ein neues Miningmodell zu erstellen. Berichtsdatum ist die Schlüsselspalte für die Zeitreihe, und ModelRegion ist die Schlüsselspalte für die Datenreihe. In diesem Beispiel wird davon ausgegangen, dass die Periodizität der Daten alle 12 Monate ist. Aus diesem Grund die *PERIODICITY_HINT* -Parameter auf 12 festgelegt ist.  
+ Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Zeitreihenalgorithmus verwendet, um mit dem ARTxp-Algorithmus ein neues Miningmodell zu erstellen. Berichtsdatum ist die Schlüsselspalte für die Zeitreihe und ModelRegion ist die Schlüsselspalte für die Datenreihe. In diesem Beispiel wird davon ausgegangen, dass die Periodizität der Daten alle 12 Monate ist. Aus diesem Grund die *PERIODICITY_HINT* -Parameter auf 12 festgelegt ist.  
   
 > [!NOTE]  
->  Sie müssen angeben, die *PERIODICITY_HINT* -Parameter mit geschweiften Klammern. Darüber hinaus, da der Wert eine Zeichenfolge ist, er muss werden eingeschlossen in einfache Anführungszeichen eingeschlossen: "{\<numerischen Wert >}".  
+>  Sie müssen angeben, die *PERIODICITY_HINT* -Parameter mit geschweiften Klammern. Darüber hinaus, da der Wert eine Zeichenfolge ist, muss er gesetzt werden in einfache Anführungszeichen einschließen: "{\<numerischer Wert >}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -206,8 +188,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

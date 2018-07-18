@@ -1,36 +1,20 @@
 ---
-title: Struktur und die Verwendung von DMX-Vorhersageabfragen | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- empty prediction joins [DMX]
-- natural prediction joins [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- queries [DMX], prediction queries
-- singleton query predictions [DMX]
-- Data Mining Extensions [Analysis Services], prediction queries
-ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
-author: Minewiskan
+title: Struktur und Verwendung von DMX-Vorhersageabfragen | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f4e5d0f723851776340d3435c05e382c88552ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981913"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,10 +27,10 @@ ms.lasthandoff: 05/03/2018
  Mit DMX können Sie folgende Typen von Vorhersagen erstellen:  
   
  PREDICTION JOIN-Abfrage  
- Wird dazu verwendet, Vorhersagen zu Eingabedaten auf Basis von Mustern zu erstellen, die im Miningmodell vorhanden sind. Diese abfrageanweisung muss darauf folgen einer **ON** -Klausel, die die Joinbedingungen zwischen den Spalten im Miningmodell und die Eingabespalten bereitstellt.  
+ Wird dazu verwendet, Vorhersagen zu Eingabedaten auf Basis von Mustern zu erstellen, die im Miningmodell vorhanden sind. Diese abfrageanweisung muss folgen einem **ON** -Klausel, die die Joinbedingungen zwischen den Miningmodellspalten und den Eingabespalten bereitstellt.  
   
  Natürliche PREDICTION JOIN-Abfrage  
- Wird zum Erstellen von Vorhersagen verwendet, die auf Spaltennamen im Miningmodell basieren, die genau mit den Spaltennamen der Tabelle übereinstimmen, für die Sie die Abfrage ausführen. Diese abfrageanweisung erfordert kein **ON** -Klausel, da die Joinbedingung automatisch generiert werden, basierend auf den übereinstimmenden Namen zwischen den Spalten im Miningmodell und die Eingabespalten.  
+ Wird zum Erstellen von Vorhersagen verwendet, die auf Spaltennamen im Miningmodell basieren, die genau mit den Spaltennamen der Tabelle übereinstimmen, für die Sie die Abfrage ausführen. Diese abfrageanweisung erfordert kein **ON** -Klausel, da die Joinbedingung automatisch generiert wird, basierend auf den entsprechenden Namen zwischen den Miningmodellspalten und den Eingabespalten.  
   
  Leere PREDICTION JOIN-Abfrage  
  Wird dazu verwendet, die wahrscheinlichste Vorhersage zu ermitteln, ohne Eingabedaten bereitstellen zu müssen. Es wird eine Vorhersage zurückgegeben, die nur auf dem Inhalt des Miningmodells basiert.  
@@ -61,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **TOP**  
   
--   **VON***\<Modell >***PREDICTION JOIN**   
+-   **VON***\<Modell >***PREDICTION JOIN-Anweisung**   
   
 -   **ON**  
   
@@ -69,9 +53,9 @@ ms.lasthandoff: 05/03/2018
   
 -   **ORDER BY**  
   
- Die **wählen** -Element einer Vorhersageabfrage definiert die Spalten und Ausdrücke, die im Resultset angezeigt werden, und die folgenden Daten enthalten können:  
+ Die **wählen** -Element einer Vorhersageabfrage definiert die Spalten und Ausdrücken, die im Resultset angezeigt werden, und die folgenden Daten enthalten können:  
   
--   **Vorhersagen** oder **PredictOnly** Spalten aus dem Miningmodell.  
+-   **Vorhersagen** oder **PredictOnly** Spalten aus dem Miningmodell aus.  
   
 -   Jede Spalte aus den Eingabedaten, mit denen die Vorhersagen erstellt werden.  
   
@@ -86,10 +70,10 @@ ms.lasthandoff: 05/03/2018
  Weitere Informationen zur Syntax einer vorhersageanweisung finden Sie unter [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) und [SELECT FROM &#60;Modell&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

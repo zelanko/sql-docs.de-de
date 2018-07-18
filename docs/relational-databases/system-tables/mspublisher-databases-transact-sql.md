@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (Transact-SQL) | Microsoft Docs
+title: MSpublisher_databases (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993502"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSpublisher_databases** Tabelle enthält eine Zeile für jedes vom lokalen Verteiler bediente Verleger/Verlegerdatenbank-Paar. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSpublisher_databases** Tabelle enthält eine Zeile für jede vom lokalen Verteiler bediente Verleger/Verlegerdatenbank-Paar. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

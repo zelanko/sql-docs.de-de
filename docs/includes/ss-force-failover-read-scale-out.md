@@ -7,13 +7,14 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: f5655e73481d830c848aea34c4a4f49613be0913
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513070"
 ---
-Jede Verfügbarkeitsgruppe verfügt über nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Sie können ein Failover ausführen, um das primäre Replikat zu ändern. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe mit Clustertyp „NONE“ erfolgt der Failovervorgang manuell. 
+Jede Verfügbarkeitsgruppe hat nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Sie können ein Failover ausführen, um das primäre Replikat zu ändern. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ erfolgt der Failovervorgang manuell. 
 
 Es gibt zwei Möglichkeiten, ein Failover für ein primäres Replikat in einer Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ auszuführen:
 
@@ -24,7 +25,7 @@ Es gibt zwei Möglichkeiten, ein Failover für ein primäres Replikat in einer V
 
 Verwenden Sie diese Methode, wenn das primäre Replikat nicht verfügbar ist und nicht wiederhergestellt werden kann. 
 
-Stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Zielreplikat hostet, und führen Sie folgenden Befehl aus, um ein Failover mit Datenverlust auszuführen:
+Um ein Failover mit Datenverlust auszuführen, stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Zielreplikat hostet, und führen Sie dann den folgenden Befehl aus:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
@@ -32,7 +33,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 ### <a name="manual-failover-without-data-loss"></a>Manuelles Failover ohne Datenverlust
 
-Verwenden Sie diese Methode, wenn das primäre Replikat verfügbar ist. Dabei müssen Sie allerdings vorübergehend oder dauerhaft die Konfiguration ändern und die SQL Server-Instanz ändern, die das primäre Replikat hostet. Bevor Sie das manuelle Failover ausführen, stellen Sie sicher, dass das sekundäre Zielreplikat aktuell ist, um potenzielle Datenverluste zu vermeiden. 
+Verwenden Sie diese Methode, wenn das primäre Replikat verfügbar ist. Dabei müssen Sie allerdings vorübergehend oder dauerhaft die Konfiguration ändern und die SQL Server-Instanz ändern, die das primäre Replikat hostet. Um potenzielle Datenverluste zu vermeiden, stellen Sie vor der Ausführung eines manuellen Failovers sicher, dass das sekundäre Zielreplikat aktuell ist. 
 
 So führen ein manuelles Failover ohne Datenverlust aus:
 
@@ -44,7 +45,7 @@ So führen ein manuelles Failover ohne Datenverlust aus:
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. Führen Sie die folgende Abfrage aus, um zu ermitteln, ob für aktive Transaktionen ein Commit auf das primäre Replikat und gleichzeitig auf mindestens ein synchrones sekundäres Replikat ausgeführt wurde: 
+2. Um zu ermitteln, ob für aktive Transaktionen ein Commit auf das primäre Replikat und gleichzeitig auf mindestens ein synchrones sekundäres Replikat ausgeführt wurde, führen Sie die folgende Abfrage aus: 
 
    ```SQL
    SELECT ag.name, 
@@ -61,7 +62,7 @@ So führen ein manuelles Failover ohne Datenverlust aus:
 
 3. Aktualisieren Sie `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1.
 
-   Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1 für eine Verfügbarkeitsgruppe namens `ag1` fest. Ersetzen Sie `ag1` vor der Ausführung des Skripts durch den Namen Ihrer Verfügbarkeitsgruppe.
+   Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf „1“ für eine Verfügbarkeitsgruppe mit dem Namen `ag1` fest. Ersetzen Sie `ag1` vor der Ausführung des Skripts durch den Namen Ihrer Verfügbarkeitsgruppe:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -70,7 +71,7 @@ So führen ein manuelles Failover ohne Datenverlust aus:
 
    Diese Einstellung stellt sicher, dass für jede aktive Transaktion ein Commit auf das primäre Replikat und auf mindestens ein synchrones sekundäres Replikat ausgeführt wurde. 
 
-4. Stufen Sie das primäre Replikat auf ein sekundäres Replikat herunter. Anschließend ist es schreibgeschützt. Führen Sie diesen Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet, um die Rolle auf `SECONDARY` zu aktualisieren:
+4. Stufen Sie das primäre Replikat auf ein sekundäres Replikat herunter. Anschließend ist es schreibgeschützt. Um die Rolle auf `SECONDARY` zu aktualisieren, führen Sie diesen Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -84,4 +85,4 @@ So führen ein manuelles Failover ohne Datenverlust aus:
    ```  
 
    > [!NOTE] 
-   > Wenn Sie eine Verfügbarkeitsgruppe löschen möchten, verwenden Sie [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Bei Verfügbarkeitsgruppen, die mit dem Clustertyp „NONE“ oder „EXTERNAL“ erstellt wurden, muss der Befehl für alle Replikate ausgeführt werden, die der Verfügbarkeitsgruppe angehören.
+   > Verwenden Sie [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql) (Verfügbarkeitsgruppe löschen), um eine Verfügbarkeitsgruppe zu löschen. Führen Sie bei Verfügbarkeitsgruppen, die mit dem Clustertyp „NONE“ oder „EXTERNAL“ erstellt wurden, den Befehl für alle Replikate aus, die der Verfügbarkeitsgruppe angehören.

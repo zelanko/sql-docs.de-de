@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70bc35baf6121a7a9339064f68d8252b48db22e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308159"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Die folgende Tabelle enthält die möglichen *Key_pair* Werte.
 |Key|Description|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|Definiert das Cursorverhalten. Der Standardwert ist „PDO::CURSOR_FWDONLY“. Mit „PDO::CURSOR_SCROLL“ ist der Cursor statisch.<br /><br />Beispiel: `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Wenn Sie „PDO::CURSOR_SCROLL“ verwenden, können wie nachstehend beschrieben Sie auch „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE“ verwenden.<br /><br />Finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) für Weitere Informationen zu Resultsets und Cursorn im PDO_SQLSRV-Treiber.|  
-|PDO::ATTR_EMULATE_PREPARES|Wenn PDO:: attr_emulate_prepares aktiviert ist, wird die Platzhalter in einer vorbereiteten Anweisung von gebundenen Parametern ersetzt. Eine vollständige SQL-Anweisung mit keine Platzhalter wird dann auf die Datenbank beim Ausführen gesendet. <br /><br />PDO:: attr_emulate_prepares kann verwendet werden, um einige Einschränkungen in SQL Server zu umgehen. SQL Server unterstützt beispielsweise keine benannten oder positionellen Parameter in einige Transact-SQL-Klauseln. Darüber hinaus muss SQL Server maximal 2100 Bindungsparameter.<br /><br />Sie können das PDO:: attr_emulate_prepares-Attribut auf "true" festlegen. Beispiel:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />Standardmäßig ist dieses Attribut auf "false" festgelegt.<br /><br />**Hinweis:** Bei der Verwendung von `PDO::ATTR_EMULATE_PREPARES => true`kommt der Sicherheitsgewinn durch parametrisierte Anfragen nicht zum Tragen. Ihre Anwendung sollte sicherstellen, dass die Daten, die an die Parameter gebunden ist, nicht böswilligen Transact-SQL-Code enthält.<br /><br />**Einschränkungen:**: Da die Parameter nicht gebunden werden mithilfe der Datenbankfunktion parametrisierte Abfrage, wird Input_output und Ausgabeparameter werden nicht unterstützt.|  
+|PDO::ATTR_EMULATE_PREPARES|Wenn PDO:: attr_emulate_prepares aktiviert ist, wird die Platzhalter in einer vorbereiteten Anweisung von gebundenen Parametern ersetzt. Eine vollständige SQL-Anweisung mit keine Platzhalter wird dann auf die Datenbank beim Ausführen gesendet. <br /><br />PDO:: attr_emulate_prepares kann verwendet werden, um einige Einschränkungen in SQL Server zu umgehen. SQL Server unterstützt beispielsweise keine benannten oder positionellen Parameter in einige Transact-SQL-Klauseln. Darüber hinaus muss SQL Server maximal 2100 Bindungsparameter.<br /><br />Sie können das PDO:: attr_emulate_prepares-Attribut auf "true" festlegen. Zum Beispiel:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />Standardmäßig ist dieses Attribut auf "false" festgelegt.<br /><br />**Hinweis:** Bei der Verwendung von `PDO::ATTR_EMULATE_PREPARES => true`kommt der Sicherheitsgewinn durch parametrisierte Anfragen nicht zum Tragen. Ihre Anwendung sollte sicherstellen, dass die Daten, die an die Parameter gebunden ist, nicht böswilligen Transact-SQL-Code enthält.<br /><br />**Einschränkungen:**: Da die Parameter nicht gebunden werden mithilfe der Datenbankfunktion parametrisierte Abfrage, wird Input_output und Ausgabeparameter werden nicht unterstützt.|  
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (Standard)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Wird hierfür der Wert „true“ festgelegt, werden Abfragen direkt ausgeführt. Der Wert „false“ sorgt dafür, dass vorbereitete Anweisungen ausgeführt werden. Weitere Informationen zu PDO:: sqlsrv_attr_direct_query finden Sie unter [direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|  
@@ -62,7 +62,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 In der folgenden Tabelle sind die möglichen Werte für „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE“ aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |---------|---------------|  
 |PDO::SQLSRV_CURSOR_BUFFERED|Erstellt einen clientseitigen statischen Cursor (gepuffert). Weitere Informationen zu clientseitigen Cursorn finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Erstellt einen serverseitigen (gepufferten) dynamischen Cursor, der es Ihnen erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen und Änderungen in der Datenbank widerspiegelt.|  

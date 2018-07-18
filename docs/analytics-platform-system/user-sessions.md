@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544712"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Benutzersitzungen in Analyseplattformsystem
 Eine Anmeldung mit den entsprechenden Berechtigungen können Sie die Sitzungen aller Anmeldenamen auf einer SQL Server PDW Appliance, einschließlich Ausführen dieser Aktionen verwalten:  

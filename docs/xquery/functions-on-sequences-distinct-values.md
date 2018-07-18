@@ -1,5 +1,5 @@
 ---
-title: DISTINCT-Values-Funktion (XQuery) | Microsoft Docs
+title: DISTINCT-Values-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040508"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>Funktionen für Sequenzen - distinct-Werte
+# <a name="functions-on-sequences---distinct-values"></a>Functions on Sequences - distinct-Werte Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt doppelte Werte aus der angegebenen Sequenz *$arg*. Wenn *$arg* ist eine leere Sequenz, die leere Sequenz zurückgegeben.  
+  Entfernt doppelte Werte aus der angegebenen Sequenz *$arg*. Wenn *$arg* ist eine leere Sequenz ist, gibt die Funktion die leere Sequenz zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +45,17 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  Sequenz der atomaren Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Typen der atomaren Werte, die übergeben werden **distinct-values()** müssen Untertypen des gleichen Basistyps sein. Basistypen, die akzeptiert werden, sind Typen, die die **Eq** Vorgang. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:string umgewandelt. Wenn eine Mischung dieser Typen vorliegt oder andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
+ Alle Typen der atomaren Werte, die übergeben werden **distinct-values()** müssen Untertypen des gleichen Basistyps sein. Basistypen, die akzeptiert werden, sind die Typen, unterstützen die **Eq** Vorgang. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:string umgewandelt. Wenn eine Mischung dieser Typen vorliegt oder andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
   
  Das Ergebnis des **distinct-values()** erhält den Basistyp der übergebenen Typen, z. B. xs: String im Fall von xdt: UntypedAtomic, mit der ursprünglichen Kardinalität. Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler ausgelöst wird.  
   
  Werte vom Typ xs:string werden mit der Unicode-Codepunkt-Standardsortierung von XQuery verglichen.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Verwenden der distinct-values()-Funktion zum Entfernen doppelter Werte aus der Sequenz  
- In diesem Beispiel wird eine XML-Instanz, die Rufnummern enthält zugewiesen ist ein **Xml** Typvariablen. Die XQuery, die auf diese Variable wird verwendet, die mit der **distinct-values()** Funktion, um eine Liste von Rufnummern zu kompilieren, die keine Duplikate enthalten.  
+ In diesem Beispiel erhält eine XML-Instanz, die Rufnummern enthält eine **Xml** Variablen vom Typ. Die XQuery-Abfrage auf diese Variable wird verwendet, die mit der **distinct-values()** Funktion, um eine Liste von Rufnummern zu kompilieren, die keine Duplikate enthalten.  
   
 ```  
 declare @x xml  
@@ -75,7 +76,7 @@ select @x.query('
 111-111-1111 222-222-2222    
 ```  
   
- In der folgenden Abfrage wird übergeben eine Sequenz von Zahlen (1, 1, 2) in der **distinct-values()** Funktion. Die Funktion entfernt anschließend die doppelten Werte in der Sequenz und gibt die beiden verbleibenden Werte zurück.  
+ In der folgenden Abfrage wird eine Sequenz von Zahlen (1, 1, 2) übergeben die **distinct-values()** Funktion. Die Funktion entfernt anschließend die doppelten Werte in der Sequenz und gibt die beiden verbleibenden Werte zurück.  
   
 ```  
 declare @x xml  
@@ -92,7 +93,7 @@ select @x.query('
   
 -   Die **distinct-values()** -Funktion ordnet ganzzahligen Werte xs: Decimal.  
   
--   Die **distinct-values()** Funktion nur die oben erwähnten Typen unterstützt und die Mischung der Basistypen nicht unterstützt.  
+-   Die **distinct-values()** Funktion nur die zuvor aufgeführten Typen unterstützt, und unterstützt keine Mischung der Basistypen.  
   
 -   Die **distinct-values()** Funktion auf xs: Duration-Werten wird nicht unterstützt.  
   

@@ -1,46 +1,44 @@
 ---
 title: Planen der SIS-Pakete in Azure | Microsoft-Dokumentation
-ms.date: 05/09/2018
+description: Übersicht über die verfügbaren Methoden zum Planen der Ausführung von SSIS-Paketen, die für Azure SQL-Datenbank bereitgestellt sind.
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62367e0ece20f56b6447a23b78b03b8799eef119
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262174"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Planen der Ausführung eines SSIS-Pakets in Azure
-Sie können die Ausführung von Paketen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind, mithilfe einer der folgenden Planungsoptionen planen:
--   [Die Option „Zeitplan“ in SQL Server Management Studio (SSMS)](#ssms)
--   [Die Aktivität „SSIS-Paket ausführen“ von Azure Data Factory](#execute)
--   [Die Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren](#storedproc)
--   [SQL-Datenbank für elastische Aufträge](#elastic)
--   [SQL Server-Agent](#agent)
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen
+
+Sie können die Ausführung von SSIS-Paketen planen, die im SSISDB-Katalog eines Azure SQL-Datenbankservers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder indirekt als Teil einer Azure Data Factory-Pipeline planen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
+
+- Direktes Planen eines Pakets
+
+  - [Planen mit der Option „Zeitplan“ in SQL Server Management Studio (SSMS)](#ssms)
+
+  - [SQL-Datenbank für elastische Aufträge](#elastic)
+
+  - [SQL Server-Agent](#agent)
+
+- [Indirektes Planen eines Pakets als Teil einer Azure Data Factory-Pipeline](#activity)
+
 
 ## <a name="ssms"></a> Planen eines Pakets mit SSMS
 
-In SQL Server Management Studio (SSMS) können Sie mit der rechten Maustaste auf ein Paket klicken, das in der SSIS-Katalogdatenbank SSISDB bereitgestellt wird, und **Zeitplan** auswählen, um das Dialogfeld **Neuer Zeitplan** zu öffnen. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure mit SSMS](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS) können Sie mit der rechten Maustaste auf ein Paket klicken, das in der SSIS-Katalogdatenbank SSISDB bereitgestellt wird, und **Zeitplan** auswählen, um das Dialogfeld **Neuer Zeitplan** zu öffnen. Weitere Informationen finden Sie unter [Planen der Ausführung von SSIS-Paketen in Azure mit SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Dieses Feature erfordert SQL Server Management Studio, Version 17.7 oder höher. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) abrufen.
-
-## <a name="execute"></a> Planen eines Pakets mit der Aktivität „SSIS-Paket ausführen“
-
-Weitere Informationen dazu, wie Sie ein SSIS-Paket mithilfe der Aktivität „SSIS-Paket ausführen“ in Azure Data Factory planen, finden Sie unter [Ausführen eines SSIS-Pakets mit der SSIS-Aktivität in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
-
-## <a name="storedproc"></a> Planen eines Pakets mit der Aktivität „Gespeicherte Prozedur“
-
-Weitere Informationen dazu, wie Sie ein SSIS-Paket mithilfe der Aktivität „Gespeicherte Prozedur“ in Azure Data Factory planen, finden Sie unter [Ausführen eines SSIS-Pakets mithilfe der Aktivität einer gespeicherten Prozedur in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
-
-Weitere Informationen zu Version 1 von Data Factory finden Sie unter [Aufrufen eines SSIS-Pakets mithilfe einer Aktivität einer gespeicherten Prozedur in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="elastic"></a> Planen eines Pakets mit SQL-Datenbank für elastische Aufträge
 
@@ -88,7 +86,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> Planen eines Pakets mit SQL Server-Agent
+## <a name="agent"></a> Lokales Planen eines Pakets mit SQL Server-Agent
+
+Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).
 
 ### <a name="prerequisite---create-a-linked-server"></a>Voraussetzung: Erstellen Sie einen Verbindungsserver
 
@@ -158,7 +158,24 @@ Erstellen Sie mithilfe eines Auftragsschritts einen Auftrag, der die gespeichert
 
 6.  Stellen Sie die Konfiguration und die Planung des Auftrags fertig.
 
-## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).
+## <a name="activity"></a> Planen eines Pakets als Teil einer Azure Data Factory-Pipeline
 
-Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Sie können ein Paket indirekt planen, indem Sie einen Trigger verwenden, um eine Azure Data Factory-Pipeline auszuführen, die ein SSIS-Paket ausführt.
+
+Verwenden Sie einen der folgenden Trigger, um eine Data Factory-Pipeline zu planen:
+
+- [Zeitplantrigger](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [Trigger für rollierende Fenster](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [Ereignisbasierter Trigger](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+Verwenden Sie eine der folgenden Aktivitäten, um ein SSIS-Paket als Teil einer Data Factory-Pipeline auszuführen:
+
+- [Ausführen einer SSIS-Paketaktivität](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
+
+- [Aktivität der gespeicherten Prozedur](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Überprüfen Sie die Optionen für das Ausführen von SSIS-Paketen, die in Azure bereitgestellt wurden. Weitere Informationen finden Sie unter [Ausführen eines SSIS-Pakets in Azure](ssis-azure-run-packages.md).

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909715"
 ---
 # <a name="diagnostic-tools"></a>Diagnosetools
 Diagnostizieren von Problemen in ODBC-Anwendungen können zwei Funktionen unterstützt. Beide sind die ODBC-Administrator verfügbar ist und vom Treiber-Manager implementiert. *Ablaufverfolgung* bietet die Möglichkeit, in eine Protokolldatei die Sequenz von Funktionsaufrufen aufzeichnen. Visual Studio Analyzer ermöglicht die Analyse von Informationen zur Interaktion der Komponenten in einer verteilten Umgebung.  

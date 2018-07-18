@@ -21,14 +21,15 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689218"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
-In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, mit dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
+In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, in dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Mit datengesteuerten Abonnements können Sie die Verteilung eines Berichts auf der Basis dynamischer Abonnementdaten anpassen und automatisieren. Datengesteuerte Abonnements sind für folgende Arten von Szenarios gedacht:  
   
 -   Verteilen von Berichten an einen großen Empfängerpool, dessen Mitglieder sich bis zur nächsten Verteilung ändern können. Beispiel: das Versenden einer E-Mail mit einem Monatsberichts an alle aktuellen Kunden.  
@@ -46,7 +47,7 @@ In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Tutorial l
 
  Im folgenden Diagramm wird der im Tutorial verwendete grundlegende Workflow veranschaulicht.
 
-Schritt  |Description 
+Schritt  |und Beschreibung 
 ---------|---------
 (1)     |  Die Abonnementkonfiguration schreibt den Quellbericht, den Zeitplan und die Feldzuordnung in die Datenbank des Abonnenten.        
 (2)     | Die OrderInfo-Tabelle enthält 4 Bestellnummern, die für das Filtern verwendet werden, – eine pro Datei. Die Tabelle enthält auch die Dateiformate für die generierten Berichte.

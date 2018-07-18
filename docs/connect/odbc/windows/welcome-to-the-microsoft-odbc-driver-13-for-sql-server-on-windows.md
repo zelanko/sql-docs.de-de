@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32856245"
 ---
 # <a name="welcome-to-the-microsoft-odbc-driver-13-for-sql-server-on-windows"></a>Willkommen bei Microsoft ODBC Driver 13 für SQL Server unter Windows
 Microsoft hat die Dokumentation dieses Produkts online bereitgestellt, um seinen Kunden aktuelle Informationen zu bieten. Finden Sie unter der [SQL Server-Treiber auf der Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx) für Weitere Informationen.  

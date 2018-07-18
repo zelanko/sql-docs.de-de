@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917335"
 ---
 # <a name="translation-dll-api-reference"></a>Übersetzung DLL-API-Referenz
 Dieser Abschnitt beschreibt die Syntax der Übersetzung DLL-API besteht aus zwei Funktionen: **SQLDriverToDataSource** und **SQLDataSourceToDriver**. Diese Funktionen müssen in der DLL enthalten sein, die Übersetzung für den Treiber ausführt.  

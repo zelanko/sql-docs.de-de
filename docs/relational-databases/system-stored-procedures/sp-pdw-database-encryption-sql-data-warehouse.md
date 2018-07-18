@@ -1,34 +1,33 @@
 ---
-title: sp_pdw_database_encryption aktiviert werden (SQL Data Warehouse) | Microsoft Docs
+title: sp_pdw_database_encryption aktiviert werden (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
-caps.latest.revision: 8
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: adb48589c9ba6268aa229cd21871504392151f8e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 6508d150df663a6e95437d0b6b3bfd0c8f65906f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052228"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption aktiviert werden (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Verwendung **sp_pdw_database_encryption aktiviert werden** So aktivieren Sie für die transparente datenverschlüsselung auf eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Appliance. Wenn **sp_pdw_database_encryption aktiviert werden** auf 1 festgelegt, verwendet der **ALTER DATABASE** Anweisung, um eine Datenbank mit TDE zu verschlüsseln.  
+  Verwendung **sp_pdw_database_encryption aktiviert werden** So aktivieren Sie die transparente datenverschlüsselung auf für eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Appliance. Wenn **sp_pdw_database_encryption aktiviert werden** auf 1 festgelegt, verwendet der **ALTER DATABASE** Anweisung, um eine Datenbank mit TDE zu verschlüsseln.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,19 +45,19 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = Aktiviert  
   
- Ausführen von **sp_pdw_database_encryption aktiviert werden** ohne Parameter gibt den aktuellen Status von TDE in der Anwendung als skalare Resultset zurück: 0 für deaktiviert oder 1 für aktiviert.  
+ Ausführen von **sp_pdw_database_encryption aktiviert werden** ohne Parameter gibt den aktuellen Status von TDE auf dem Gerät als skalare Resultset zurück: 0 für deaktiviert oder 1 für aktiviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der TDE aktiviert ist, mit **sp_pdw_database_encryption aktiviert werden**, die Tempdb-Datenbank gelöscht, neu erstellt und verschlüsselt. Aus diesem Grund kann nicht auf eine Einheit der TDE aktiviert werden, während andere aktive Sitzungen, die mithilfe von ' tempdb ' vorhanden sind. Aktivieren bzw. deaktivieren TDE für eine Einheit ist eine Aktion, die den Zustand der Anwendung in den meisten Fällen ändert muss einmal in der Lebensdauer der Anwendung ausgeführt werden und sollte ausgeführt werden, wenn kein Datenverkehr auf dem Gerät vorhanden ist.  
+ Wenn der TDE aktiviert ist, mithilfe von **sp_pdw_database_encryption aktiviert werden**, die Tempdb-Datenbank gelöscht, neu erstellt und verschlüsselt. Aus diesem Grund kann der für TDE auf einer Appliance aktiviert werden, während andere aktive Sitzungen, die mithilfe von ' tempdb ' vorhanden sind. Aktivieren oder Deaktivieren von TDE auf einer Appliance ist eine Aktion, die den Zustand der Anwendung, in den meisten Fällen ändert einmal in der Lebensdauer der Anwendung ausgeführt werden soll, und sollte ausgeführt werden, wenn kein Datenverkehr, auf dem Gerät vorliegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Sysadmin** feste Datenbankrolle oder **CONTROL SERVER** Berechtigung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden TDE auf dem Gerät aktiviert.  
+ Im folgenden Beispiel wird TDE auf dem Gerät.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  

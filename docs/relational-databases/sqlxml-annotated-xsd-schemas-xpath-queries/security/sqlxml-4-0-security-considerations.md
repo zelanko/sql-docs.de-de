@@ -1,5 +1,5 @@
 ---
-title: Sicherheitsüberlegungen zu SQLXML 4.0 | Microsoft Docs
+title: Sicherheitsüberlegungen zu SQLXML 4.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f4a7e0ea6b195f4b77c844eba2fce133e1f8b21
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035308"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Sicherheitsüberlegungen zu SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "34708478"
  [Wichtige Sicherheitsüberlegungen zu SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  
  Stellt Sicherheitsrichtlinien zur Verwendung von SQLXML für den Datenzugriff bereit.  
   
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
  Stellt Sicherheitsrichtlinien zur Verwendung von Updategrams mit SQLXML 4.0 bereit.  
   
- [Versehen Sie Sicherheitsaspekte Schema &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [Überlegungen zur Sicherheit von Schemas versehen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
  Stellt Sicherheitsrichtlinien zur Verwendung von Schemas mit Anmerkungen für SQLXML 4.0 bereit.  
   
  [FOR XML-Sicherheitsüberlegungen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  

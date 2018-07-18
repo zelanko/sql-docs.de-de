@@ -3,8 +3,6 @@ title: Ausführen von Testfällen (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5a6f403bd7f4d3168ceeea447c541f311e5eab6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5751a704fdea6e7c87aa43e1b4fedc1107d89f8c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779356"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -57,10 +56,10 @@ Die folgenden Objekte werden an Sybase erstellt, in der Datenbank SSMATESTER2005
 |USER_TABLE$ "TRG"|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
 |USER_TABLE$ Aud|Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
 |USER_TABLE$ AudID|Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$new|Sicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
-|USER_TABLE$new_id|Sicht|Kennung des eingefügten und geänderten Zeilen.|  
-|USER_TABLE$old|Sicht|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
+|USER_TABLE|Anzeigen|Vereinfachte Darstellung der tabellenänderungen.|  
+|USER_TABLE$new|Anzeigen|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
+|USER_TABLE$new_id|Anzeigen|Kennung des eingefügten und geänderten Zeilen.|  
+|USER_TABLE$old|Anzeigen|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt wird in der überprüften Tabelle auf Sybase-Datenbank erstellt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   

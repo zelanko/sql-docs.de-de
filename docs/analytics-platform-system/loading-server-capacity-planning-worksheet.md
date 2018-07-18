@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539440"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Arbeitsblatt für Kapazität der Server-Planung Laden für Analytics Platform System
 Mit diesem Arbeitsblatt Kapazität können Sie die Anforderungen für einen Server laden zum Laden von Daten in SQL Server PDW zu bestimmen. Hiermit können Sie Ihren Plan für den Kauf bzw. Bereitstellung vorhandene Server laden erstellen.  

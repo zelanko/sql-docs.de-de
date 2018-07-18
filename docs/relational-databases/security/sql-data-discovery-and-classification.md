@@ -2,8 +2,6 @@
 title: SQL-Datenermittlung und -klassifizierung | Microsoft-Dokumentation
 description: SQL-Datenermittlung und -klassifizierung
 documentationcenter: ''
-author: giladm
-manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
@@ -13,20 +11,22 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+author: giladm
+manager: shaik
+ms.openlocfilehash: 96861baa7fa28ef9f16f35c13f26327b824b44cc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926331"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die Datenermittlung und -klassifizierung führt ein neues Tool in SSMS (SQL Server Management Studio) für das **Ermitteln**, **Klassifizieren**, **Bezeichnen** & **Melden** von sensiblen Daten in Ihren Datenbanken ein.
-Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, finanzielle, gesundheitliche, personenbezogene Daten, usw.) kann in dem Informationsschutzformat Ihres Unternehmens eine entscheidende Rolle spielen. Sie kann für Folgendes als Infrastruktur gelten:
-* Zur Unterstützung, um Datenschutzstandards und gesetzlich geregelten Konformitätsanforderungen, wie z.B. GDPR, zu entsprechen.
+Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, finanzielle, gesundheitliche usw.) kann im Informationsschutzformat Ihres Unternehmens eine entscheidende Rolle spielen. Sie kann für Folgendes als Infrastruktur gelten:
+* Maßnahmen zum Einhalten von Datenschutzstandards.
 * Steuern des Zugriffs auf und Verstärken der Sicherheit von Datenbanken oder Spalten, die hochsensible Daten enthalten.
-
 
 > [!NOTE]
 > Die Datenermittlung und -klassifizierung werden **in SQL Server 2008 und höher unterstützt**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ Die Klassifizierung umfasst zwei Metadatenattribute:
     ![Navigationsbereich][10]
 
 
-## <a id="subheading-3"></a>Nächste Schritte
+## <a id="subheading-3"></a>Zugriff auf Klassifizierungsmetadaten
+
+Die Klassifizierungsmetadaten für *Informationstypen* und *Vertraulichkeitsstufen* werden in den folgenden erweiterten Eigenschaften gespeichert: 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+Sie können mit der Ansicht des Katalogs der erweiterten Eigenschaften [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) auf die Metadaten zugreifen.
+
+Das folgenden Codebeispiel gibt alle klassifizierten Spalten mit der jeweiligen Klassifizierung zurück:
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Nächste Schritte
 
 Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ Ziehen Sie in Betracht, Ihre sensiblen Spalten durch Anwenden von Sicherheitsmec
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

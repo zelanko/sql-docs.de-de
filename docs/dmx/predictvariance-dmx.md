@@ -1,31 +1,20 @@
 ---
-title: PredictVariance (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictVariance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictVariance function
-ms.assetid: 3c535237-083a-4102-bdfe-9f3c929e7b2c
-caps.latest.revision: 34
-author: Minewiskan
+title: PredictVariance (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f8aff8d02e787aa598290a040552a3d2e8e1af5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989892"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ PredictVariance(<scalar column reference>)
  Ein Skalarwert des Typs, der angegebenen  *\<skalarspaltenverweis >*.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Spaltenverweis diskret ist, ist **PredictVariance** gibt 0 zurück, weil aus diskreten Werten die Varianz berechnet werden kann.  
+ Wenn der Spaltenverweis diskret ist **PredictVariance** gibt 0 zurück, weil aus diskreten Werten die Varianz berechnet werden kann.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine natürliche PREDICTION JOIN-Anweisung verwendet, um basierend auf dem TM Decision Tree-Miningmodell zu bestimmen, ob es wahrscheinlich ist, dass eine Person ein Fahrrad kaufen wird. Außerdem wird die Varianz für die Vorhersage bestimmt.  
@@ -66,7 +55,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

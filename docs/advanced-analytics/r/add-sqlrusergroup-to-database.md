@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203132"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Fügen Sie SQLRUserGroup als einen Datenbankbenutzer hinzu.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ Jedoch Wenn R oder Python-Skripts von einem remote Data Science-Client ausgefüh
 
 4. In der **Objekttypen** wählen Sie im Dialogfeld **Gruppen**. Deaktivieren Sie alle anderen Kontrollkästchen.
 
-     ![Wählen Sie im Dialogfeld Objekttypen Gruppen](media/implied-auth-login3.png "Gruppen auswählen, im Dialogfeld "Objekttypen"")
+     ![Wählen Sie im Dialogfeld Objekttypen Gruppen](media/implied-auth-login3.png "Gruppen auswählen, im Dialogfeld \"Objekttypen\"")
 
 4. Klicken Sie auf **erweitert**, überprüfen Sie, ob die zu suchende Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
 

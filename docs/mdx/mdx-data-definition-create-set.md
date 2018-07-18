@@ -1,6 +1,6 @@
 ---
 title: CREATE SET-Anweisung (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579342"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741689"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX-Datendefinition - festgelegten erstellen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Erstellt eine benannte Menge mit Sitzungsbereich für den aktuellen Cube.  
   
@@ -93,7 +93,7 @@ SELECT [Core Products] ON 0
  Gibt an, dass die Menge für Benutzer, die den Cube abfragen, nicht sichtbar ist.  
   
 ## <a name="standard-properties"></a>Standardeigenschaften  
- Jede Menge verfügt über Standardeigenschaften. Wenn eine Clientanwendung mit verbunden ist [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Standardeigenschaften sind entweder unterstützt oder verfügbar ist, unterstützt werden müssen, wie der Administrator wählt.  
+ Jede Menge verfügt über Standardeigenschaften. Wenn eine Clientanwendung mit verbunden ist [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Standardeigenschaften sind entweder unterstützt oder verfügbar ist, unterstützt werden müssen, wie der Administrator wählt.  
   
 |Eigenschaftsbezeichner|Bedeutung|  
 |-------------------------|-------------|  

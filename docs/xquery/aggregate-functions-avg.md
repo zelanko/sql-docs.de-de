@@ -1,5 +1,5 @@
 ---
-title: AVG-Funktion (XQuery) | Microsoft Docs
+title: AVG-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983459"
 ---
-# <a name="aggregate-functions---avg"></a>Aggregatfunktionen - durchschn.
+# <a name="aggregate-functions---avg"></a>Aggregate Functions - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den Mittelwert einer Sequenz von Zahlen zurück.  
@@ -48,21 +49,21 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler ausgegeben.  
   
- Die **avg()** Funktion gibt den Mittelwert der berechneten Zahlen zurück. Beispiel:  
+ Die **avg()** Funktion gibt den Mittelwert der berechneten Zahlen zurück. Zum Beispiel:  
   
  **SUM (** *$arg* **) Div-Anzahl (** *$arg* **)**  
   
  Wenn *$arg* ist eine leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
   
- Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz ignoriert *$arg*.  
+ Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz, ignoriert *$arg*.  
   
  In allen anderen Fällen gibt die Funktion einen statischen Fehler zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Verwenden der XQuery-Funktion avg() zum Suchen nach Arbeitsplatzstandorten im Fertigungsprozess, an denen die Anzahl der Arbeitsstunden größer als der Mittelwert für alle Arbeitsplatzstandorte ist.  
- Sie können die Abfrage im bereitgestellten umschreiben [min-Funktion (XQuery)](../xquery/aggregate-functions-min.md) verwenden die **avg()** Funktion.  
+ Sie können die Abfrage, die im bereitgestellten umschreiben [min-Funktion (XQuery)](../xquery/aggregate-functions-min.md) verwenden die **avg()** Funktion.  
   
 ## <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  

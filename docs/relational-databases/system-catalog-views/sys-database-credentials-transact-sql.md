@@ -1,5 +1,5 @@
 ---
-title: Sys. database_credentials (Transact-SQL) | Microsoft Docs
+title: database_credentials (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -24,27 +24,28 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 88ec73b3c29dfa8d9db0d4322b34b08ac535a621
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995689"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>Sys. database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Gibt eine Zeile für jede Datenbank begrenzt Anmeldeinformationen in der Datenbank.  
+  Gibt eine Zeile für jede Datenbank von datenbankweit gültigen Anmeldeinformationen in der Datenbank.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) stattdessen.    
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|Die ID der datenbankweite Anmeldeinformationen. Ist in der Datenbank eindeutig.|  
-|name|**sysname**|Name der Datenbank, begrenzt Anmeldeinformationen. Ist in der Datenbank eindeutig.|  
+|credential_id|**int**|ID der datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
+|NAME|**sysname**|Name der Datenbank von datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
 |credential_identity|**nvarchar(4000)**|Name der zu verwendenden Identität. In der Regel ist dies ein Windows-Benutzer. Er muss nicht eindeutig sein.|  
-|create_date|**datetime**|Zeitpunkt, zu dem die datenbankbezogenen Anmeldeinformationen erstellt wurde.|  
-|modify_date|**datetime**|Der Zeitpunkt, zu dem die datenbankbezogenen Anmeldeinformationen zuletzt geändert wurde.|  
-|target_type|**Nvarchar(100)**|Typ der Datenbank im Bereich einer Anmeldeinformationen aus. Gibt NULL für die Datenbank beschränkt Anmeldeinformationen.|  
-|target_id|**int**|Die ID des Objekts, das die datenbankbezogenen Anmeldeinformationen zugeordnet ist. Gibt 0 zurück, für die Datenbank beschränkt, Anmeldeinformationen|  
+|create_date|**datetime**|Zeitpunkt, zu dem die datenbankweit gültige Anmeldeinformationen erstellt wurde.|  
+|modify_date|**datetime**|Zeitpunkt, an der datenbankweit gültigen Anmeldeinformationen zuletzt geändert wurde.|  
+|target_type|**nvarchar(100)**|Typ der Datenbank von datenbankweit gültigen Anmeldeinformationen. Gibt NULL für die Datenbank beschränkt Anmeldeinformationen.|  
+|target_id|**int**|Die ID des Objekts, das die datenbankweit gültigen Anmeldeinformationen zugeordnet ist. Gibt 0 zurück, für die Datenbank beschränkt, Anmeldeinformationen|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `CONTROL`-Berechtigung für die Datenbank.  

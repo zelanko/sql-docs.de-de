@@ -1,5 +1,5 @@
 ---
-title: Verwenden von XPath-Abfragen in SQLXML 4.0 | Microsoft Docs
+title: Verwenden von XPath-Abfragen in SQLXML 4.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6101bbe97a4ca329aba1e455fbaa234bdd5a32d
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046118"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Verwenden von XPath-Abfragen in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Anmerkungen versehene XSD-Schemas unterstützt, können Sie XML-Sichten der in einer Datenbank gespeicherten relationalen Daten erstellen. Mit einer Teilmenge der Xpath-Sprache können Sie die von dem mit Anmerkungen versehenen XSD-Schema erstellten XML-Sichten abfragen.  
   
 > [!NOTE]  
->  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Weitere Informationen zu XPath finden Sie unter der vom World Wide Web Consortium (W3C) definierten Standard http://www.w3.org/TR/xpath.  
+>  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Weitere Informationen zu XPath finden Sie unter der von der World Wide Web Consortium (W3C) definierten Standard http://www.w3.org/TR/xpath.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in die Verwendung von XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  

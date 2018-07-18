@@ -20,18 +20,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970512"
 ---
 # <a name="system-functions-for-transact-sql"></a>Systemfunktionen für Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt die folgenden Gruppen von Systemfunktionen bereit.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden Gruppen von Systemfunktionen an.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Funktionen Always On-Verfügbarkeitsgruppen](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
+ [Always On-Verfügbarkeitsgruppen Funktionen](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [Change Data Capture-Funktionen](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Änderungsnachverfolgungsfunktionen](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Funktionen des Datensammlers](../../relational-databases/system-functions/data-collector-functions-transact-sql.md)  

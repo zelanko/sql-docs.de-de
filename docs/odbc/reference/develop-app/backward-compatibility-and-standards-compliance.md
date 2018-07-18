@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908655"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und zur Einhaltung von Standards
 Abwärtskompatibilität ist die Fähigkeit eines neuere ODBC-Komponenten, die mit alten ODBC-Komponenten funktionieren. Den folgenden Abschnitten wird erläutert, wie diese Komponenten durch die Änderungen in ODBC 3. betroffen sind *.x*. Die in erster Linie in ihnen enthaltenen Informationen behandelt das Schreiben von einer ODBC 3.*.x* Anwendung und wie rückwärts Kompatibilitätsprobleme vom ODBC-Treiber verarbeitet werden. Bestimmte Richtlinien dazu, wie Abwärtskompatibilität Probleme betreffen das Schreiben von einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

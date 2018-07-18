@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs
+title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ba68c331ee4fea313bd0186516d5cc9675758c20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049608"
 ---
 # <a name="sysfnhadrdistributedagreplica-transact-sql"></a>Sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Verwendet, um die lokale verfügbarkeitsgruppe ein Replikat in einer verteilten verfügbarkeitsgruppe zuzuordnen.  
+  Wird verwendet, um ein Replikat in einer verteilten verfügbarkeitsgruppe mit der lokalen verfügbarkeitsgruppe zuzuordnen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +47,22 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
   
 ## <a name="arguments"></a>Argumente  
  "*Lag_Id*"  
- Ist der Bezeichner der verteilten verfügbarkeitsgruppe. *Lag_Id* Typ **"uniqueidentifier"**.  
+ Ist der Bezeichner der verteilten verfügbarkeitsgruppe. *Lag_Id* Typ **Uniqueidentifier**.  
   
  "*Replica_id*"  
- Ist der Bezeichner eines Replikats in der verteilten verfügbarkeitsgruppe. *Replica_id* Typ **"uniqueidentifier"**.  
+ Ist der Bezeichner, der ein Replikat in der verteilten verfügbarkeitsgruppe. *Replica_id* Typ **Uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  Gibt die folgenden Informationen zurück.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|Eindeutige Bezeichner (GUID) der lokalen verfügbarkeitsgruppe.|  
+|**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner (GUID) der lokalen verfügbarkeitsgruppe.|  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="using-sysfnhadrdistributedagreplica"></a>Verwenden von sys.fn_hadr_distributed_ag_replica  
- Das folgende Beispiel gibt eine Tabelle mit der lokalen Verfügbarkeit Gruppen-ID, die dem angegebenen verteilte verfügbarkeitsgruppe und dem Replikat zugeordnet ist.  
+ Das folgende Beispiel gibt eine Tabelle mit der lokalen verfügbarkeitsgruppe Gruppen-ID, die dem angegebenen verteilte verfügbarkeitsgruppe und Replikat zugeordnet ist.  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -73,9 +74,9 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen von AlwaysOn-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn-Verfügbarkeitsgruppen & #40; SQLServer & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

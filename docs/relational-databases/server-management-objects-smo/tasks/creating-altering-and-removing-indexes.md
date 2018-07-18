@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Indizes | Microsoft Docs
+title: Erstellen, ändern und Löschen von Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049738"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Erstellen, Ändern und Löschen von Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von dargestellt <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> -Objekten dargestellt, die durch die <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> Eigenschaft.  
+  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von dargestellt <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> -Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> Eigenschaft.  
   
- Sie können einen Index für eine XML-Spalte erstellen, durch Angeben der <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Management.Smo.Index> Objekt.  
+ Sie können einen Index für eine XML-Spalte erstellen, durch Angabe der <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Index> Objekt.  
   
 ## <a name="examples"></a>Beispiele  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -191,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Erstellen eines XML-Index in Visual Basic  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung mysamplecollection, die in erstellt wird [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -254,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Erstellen eines XML-Index in Visual C#  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung mysamplecollection, die in erstellt wird [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -317,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Erstellen eines XML-Index in PowerShell  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung mysamplecollection, die in erstellt wird [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit SQL Server-2017 auf Ubuntu | Microsoft Docs
-description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server-2017 auf Ubuntu und erstellen und Abfragen einer Datenbank mit Sqlcmd.
+title: Erste Schritte mit SQL Server 2017 unter Ubuntu | Microsoft-Dokumentation
+description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server 2017 unter Ubuntu und klicken Sie dann zu erstellen und Abfragen einer Datenbank mit Sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,52 +13,53 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057318"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank für Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank unter Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Schnellstart installieren Sie zunächst SQL Server 2017 auf Ubuntu 16.04. Stellen Sie anschließend eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
 > [!TIP]
-> Dieses Lernprogramm erfordert Benutzereingaben und eine Internetverbindung. Wenn Sie interessiert sind die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
+> Dieses Lernprogramm erfordert eine Benutzereingabe und eine Internetverbindung besteht. Wenn Sie möchten die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie benötigen einen Computer Ubuntu 16.04 mit **mindestens 2 GB** des Arbeitsspeichers.
+Sie benötigen einen Ubuntu 16.04-Computer mit **mindestens 2 GB** des Arbeitsspeichers.
 
-Um Ubuntu auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Sie können auch Ubuntu virtuelle Computer in Azure erstellen. Finden Sie unter [erstellen und verwalten Sie virtuelle Linux-Computer mit der Azure-CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Um Ubuntu auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Sie können auch den virtuellen Ubuntu-Computern in Azure erstellen. Finden Sie unter [erstellen und Verwalten von Linux-VMs mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Zu diesem Zeitpunkt die [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel für eine wird nicht unterstützt.
+> Zu diesem Zeitpunkt die [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als ein Installationsziel wird nicht unterstützt.
 
-Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
+Weitere Informationen zu den Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server unter Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Installieren von SQLServer
 
-Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befehle in einem abschließenden zum Installieren der **Mssql Server** Paket.
+Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Server unter Ubuntu konfigurieren zu können, die **Mssql-Server** Paket.
 
 > [!IMPORTANT]
-> Wenn Sie eine CTP bzw. RC-Version von SQL Server-2017 zuvor installiert haben, müssen Sie zuerst die alte Repository entfernen, vor der Registrierung eines den GA-Repositorys. Weitere Informationen finden Sie unter [ändern Repositorys aus dem Repository Vorschau in GA-Repository](sql-server-linux-change-repo.md).
+> Wenn Sie eine CTP-Version oder die RC-Version von SQL Server 2017 bereits installiert haben, müssen Sie zuerst die alte Repository entfernen, vor der Registrierung eines der GA-Repositorys. Weitere Informationen finden Sie unter [ändern Repositorys aus dem Repository für die Vorschau zu GA-Repositorys](sql-server-linux-change-repo.md).
 
-1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel:
+1. Importieren Sie die öffentlichen Repository GPG-Schlüssel:
 
    ```bash
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Das Microsoft SQL Server-Ubuntu-Repository zu registrieren:
+1. Registrieren Sie das Microsoft SQL Server-Ubuntu-Repository:
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
-   > Dies ist das kumulative Update (CU)-Repository. Weitere Informationen zu Ihrem Repository-Optionen und deren Unterschiede finden Sie unter [konfigurieren Repositorys für SQL Server on Linux](sql-server-linux-change-repo.md).
+   > Dies ist das kumulative Update (CU)-Repository. Weitere Informationen zu Ihrem repositoryoptionen und ihre Unterschiede finden Sie unter [Repositorys für SQL Server unter Linux konfigurieren](sql-server-linux-change-repo.md).
 
 1. Führen Sie die folgenden Befehle zum Installieren von SQL Server:
 
@@ -67,19 +68,19 @@ Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befeh
    sudo apt-get install -y mssql-server
    ```
 
-1. Nach der Paket-Installation abgeschlossen ist, führen Sie **Mssql-Conf Setup** und befolgen Sie die Anweisungen, um das SA-Kennwort festlegen, und wählen die Version.
+1. Nach der Paket-Installation abgeschlossen ist, führen Sie **Mssql-Conf Setup** , und befolgen Sie die aufforderungen, um das SA-Kennwort festgelegt, und wählen Sie die Version.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > Wenn Sie SQL Server-2017 in diesem Lernprogramm versuchen, die folgenden Editionen kostenlos lizenziert: Evaluation, Developer und Express.
+   > Wenn Sie SQL Server 2017 in diesem Tutorial versuchen, werden die folgenden Editionen kostenlos lizenziert: Evaluation, Developer und Express.
 
    > [!NOTE]
-   > Stellen Sie sicher, dass ein sicheres Kennwort für das SA-Konto (minimale Länge von 8 Zeichen, einschließlich Groß- und Kleinbuchstaben, Ziffern der Basis 10 und/oder nicht alphanumerische Symbole) angeben.
+   > Stellen Sie sicher, dass ein sicheres Kennwort für das SA-Konto (minimale Länge von 8-Zeichen, wie z. B. Groß- und Kleinbuchstaben, Basis 10-Ziffern und/oder nicht-alphanumerischen Zeichen) an.
 
-1. Sobald die Konfiguration abgeschlossen ist, stellen Sie sicher, dass der Dienst ausgeführt wird:
+1. Nachdem die Konfiguration abgeschlossen ist, stellen Sie sicher, dass der Dienst ausgeführt wird:
 
    ```bash
    systemctl status mssql-server
@@ -87,27 +88,27 @@ Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befeh
 
 1. Wenn Sie eine Remoteverbindung herstellen möchten, müssen Sie möglicherweise auch die SQL Server-TCP-Port (Standardport: 1433) in Ihrer Firewall öffnen.
 
-An diesem Punkt wird SQL Server ausgeführt wird, auf dem Computer Ubuntu und ist einsatzbereit!
+An diesem Punkt wird SQL Server auf Ihrem Ubuntu-Computer ausgeführt wird, und ist einsatzbereit!
 
-## <a id="tools"></a>Installieren Sie die SQL Server-Befehlszeilentools
+## <a id="tools"></a>Installieren der SQL Server-Befehlszeilentools
 
-Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Tool, das auf dem SQL Server Transact-SQL-Anweisungen ausgeführt werden kann. Die folgenden Schritte aus der SQL Server-Befehlszeilentools zu installieren: [Sqlcmd](../tools/sqlcmd-utility.md) und [Bcp](../tools/bcp-utility.md).
+Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Tool, das auf dem SQL Server Transact-SQL-Anweisungen ausgeführt werden kann. Die folgenden Schritte aus, Installieren der SQL Server-Befehlszeilentools: [Sqlcmd](../tools/sqlcmd-utility.md) und [Bcp](../tools/bcp-utility.md).
 
-Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** auf Ubuntu. 
+Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools** unter Ubuntu. 
 
-1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel.
+1. Importieren Sie die öffentlichen Repository GPG-Schlüssel.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Registrieren Sie die Microsoft Ubuntu-Repositorys.
+1. Registrieren Sie das Microsoft-Ubuntu-Repository.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl den UnixODBC Developer-Paket aus.
+1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl mit dem UnixODBC-Developer-Paket.
 
    ```bash
    sudo apt-get update 
@@ -115,21 +116,21 @@ Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** auf Ub
    ```
 
    > [!Note] 
-   > Beim Aktualisieren auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
+   > Aktualisieren Sie auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** -Umgebungsvariable in der Bash-Shell.
+1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
 
-   Vornehmen **Sqlcmd/Bcp** zugegriffen werden kann, aus der Bash-Shell für anmeldesitzungen, Ändern der **Pfad** in der **~/.bash_profile** Datei mit dem folgenden Befehl:
+   Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Vornehmen **Sqlcmd/Bcp** zugegriffen werden kann, aus der Bash-Shell für interaktive/nicht-anmeldesitzungen, Ändern der **Pfad** in der **~/.bashrc** -Datei mit den folgenden Befehl aus:
+   Vornehmen **Sqlcmd/Bcp-** zugegriffen werden kann, in der Bash-Shell für interaktive/Sitzungen ohne Anmeldung, ändern Sie die **Pfad** in die **~/.bashrc** -Datei mit den folgenden Befehl aus:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -137,7 +138,7 @@ Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** auf Ub
    ```
 
 > [!TIP]
-> **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Verwaltungs- und Entwicklungstools Aufgaben ausführen. Andere Tools umfassen:
+> **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Ausführen von Aufgaben für Verwaltungs- und Entwicklungstools. Andere Tools sind:
 >
 > * [SQL Server Operations Studio (Vorschauversion)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)

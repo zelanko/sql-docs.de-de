@@ -1,6 +1,6 @@
 ---
 title: Operatoren (MDX-Syntax) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580662"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742749"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   In MDX (Multidimensional Expressions) können Sie mit Operatoren die folgenden Aktionen ausführen:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580662"
  Wenn mehrere Operatoren verwendet werden, spielt die Reihenfolge eine Rolle, in der MDX die Operatoren auswertet. Darüber hinaus kann es für das Verwenden von Operatoren erforderlich sein, dass ein Datentyp in einen anderen Datentyp konvertiert wird, bevor die Operatoren ausgewertet werden können.  
   
 ## <a name="evaluating-complex-expressions"></a>Auswerten von komplexen Ausdrücken  
- Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In solchen komplexen Ausdrücken wertet MDX die Operatoren in Abhängigkeit von der Definition der Operatorenrangfolge von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
+ Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In solchen komplexen Ausdrücken wertet MDX die Operatoren in Abhängigkeit von der Definition der Operatorenrangfolge von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
   
 ### <a name="understanding-operator-precedence"></a>Grundlegendes zur Rangfolge von Operatoren  
  Die folgende Liste zeigt die Operatorenrangfolge (vom höchsten bis zum niedrigsten Operator). Operatoren, die in derselben Zeile stehen, sind in der Rangfolge gleichwertig und werden von links nach rechts ausgewertet, es sei denn, durch Klammern wird eine andere Reihenfolge erzwungen:  

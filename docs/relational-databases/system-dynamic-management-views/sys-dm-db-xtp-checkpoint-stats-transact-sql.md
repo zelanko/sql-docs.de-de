@@ -1,5 +1,5 @@
 ---
-title: dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993862"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/23/2018
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich deutlich von neueren Versionen und wird unten im Thema zur erläutert [SQL Server 2014](#bkmk_2014).**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich deutlich von neueren Versionen und wird im Thema zur niedriger erläutert [SQL Server 2014](#bkmk_2014).**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher  
  Die folgende Tabelle beschreibt die Spalten in `sys.dm_db_xtp_checkpoint_stats`ab **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
@@ -51,43 +52,43 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Letzte LSN, die vom Controller angezeigt werden.|  
 |end_of_log_lsn|**numeric(38)**|Die LSN der das Ende des Protokolls.|  
-|bytes_to_end_of_log|**bigint**|Protokollbytes, die nicht verarbeitet, durch den Controller, auf die Bytes zwischen entsprechenden `last_lsn_processed` und `end_of_log_lsn`.|  
-|log_consumption_rate|**bigint**|Rate der Transaktion Protokoll Auslastung durch den Controller (in KB/s).|  
-|active_scan_time_in_ms|**bigint**|Von der Controller aktiv Scannen des Transaktionsprotokolls benötigte Zeit.|  
-|total_wait_time_in_ms|**bigint**|Kumulierte Wartezeit für den Controller bei der Suche nach nicht das Protokoll.|  
-|waits_for_io|**bigint**|Anzahl von Wartevorgängen für Protokoll-e/a durch die controllerthread verursacht wird.|  
-|io_wait_time_in_ms|**bigint**|Kumulierte Zeit für die Wartezeit für Protokoll-e/a durch den controllerthread.|  
-|waits_for_new_log_count|**bigint**|Anzahl der Wartevorgänge werden, die den controllerthread für ein neues Protokoll generiert werden soll.|  
-|new_log_wait_time_in_ms|**bigint**|Kumulierte Wartezeit auf ein neues Protokoll vom controllerthread.|  
-|idle_attempts_count|**bigint**|Anzahl der Wiederholungen, die der Controller in den Leerlauf gewechselt hat.|  
-|tx_segments_dispatched|**bigint**|Die Anzahl der Segmente, die von der Controller und die Serialisierungsprogramme weitergeleitet. -Segment ist ein zusammenhängender Bereich des Protokolls, die der Serialisierung bildet. Er ist derzeit auf 1MB großen allerdings in Zukunft ändern kann.|  
-|segment_bytes_dispatched|**bigint**|Gesamtzahl der Byte-Anzahl von Bytes, die vom Controller für Serialisierungsprogramme, verteilt werden, da die Datenbank neu starten.|  
-|bytes_serialized|**bigint**|Gesamtanzahl der Bytes, die serialisiert werden, da die Datenbank erneut zu starten.|  
-|serializer_user_time_in_ms|**bigint**|Zeit im Benutzermodus Serialisierungsprogramme.|  
-|serializer_kernel_time_in_ms|**bigint**|Zeit im Kernelmodus Serialisierungsprogramme.|  
-|xtp_log_bytes_consumed|**bigint**|Gesamtanzahl der Protokollbytes, die seit der die Datenbank neu starten.|  
-|checkpoints_closed|**bigint**|Die Anzahl der Prüfpunkte geschlossen, da die Datenbank neu starten.|  
-|last_closed_checkpoint_ts|**bigint**|Der Zeitstempel des letzten Prüfpunkts geschlossen.|  
-|hardened_recovery_lsn|**numeric(38)**|Wiederherstellung wird aus dieser LSN gestartet.|  
-|hardened_root_file_guid|**uniqueidentifier**|Die GUID der Stammdatei, die als Ergebnis der letzten abgeschlossenen Prüfpunkt festgeschrieben.|  
-|hardened_root_file_watermark|**bigint**|**Interne nur**. Wie weit an die Stammdatei bis zu gelesen werden (Dies ist ein intern relevanten Typ nur – BSN bezeichnet).|  
-|hardened_truncation_lsn|**numeric(38)**|LSN des den Protokollkürzungspunkt.|  
-|log_bytes_since_last_close|**bigint**|Bytes vom letzten Schließen, um das aktuelle Ende des Protokolls.|  
+|bytes_to_end_of_log|**bigint**|Protokollbytes, die nicht verarbeitet, durch den Controller, die für die Bytes zwischen `last_lsn_processed` und `end_of_log_lsn`.|  
+|log_consumption_rate|**bigint**|Rate der Transaction Log-Auslastung durch den Controller (in KB/s).|  
+|active_scan_time_in_ms|**bigint**|Zeit vom Controller aktiv Scannen des Transaktionsprotokolls.|  
+|total_wait_time_in_ms|**bigint**|Kumulierte Wartezeit für den Controller während des Protokolls nicht gescannt.|  
+|waits_for_io|**bigint**|Anzahl von Wartevorgängen für Protokoll-e/a durch die controllerthread anfallen.|  
+|io_wait_time_in_ms|**bigint**|Kumulierte Wartezeit für Protokoll-e/a vom controllerthread.|  
+|waits_for_new_log_count|**bigint**|Anzahl der Wartevorgänge, die durch den controllerthread für ein neues Protokoll zu generierenden anfallen.|  
+|new_log_wait_time_in_ms|**bigint**|Kumulierte Wartezeit für ein neues Protokoll vom controllerthread.|  
+|idle_attempts_count|**bigint**|Anzahl von Wiederholungen, die der Controller in einen Leerlaufzustand gewechselt.|  
+|tx_segments_dispatched|**bigint**|Anzahl von Segmenten, die vom Controller gefunden und wird an die Serialisierungsprogramme verteilt. Segment ist ein zusammenhängender Bereich des Protokolls, die der Serialisierung bildet. Es ist derzeit auf 1MB groß, aber Sie können in Zukunft ändern.|  
+|segment_bytes_dispatched|**bigint**|Gesamtzahl der Byte-Anzahl der Bytes, die durch den Controller für Serialisierungsprogramme, weitergeleitet werden, da die Datenbank neu starten.|  
+|bytes_serialized|**bigint**|Gesamtanzahl der Bytes, die serialisiert werden, da die Datenbank neu starten.|  
+|serializer_user_time_in_ms|**bigint**|Zeit von Serialisierungsprogrammen, im Benutzermodus.|  
+|serializer_kernel_time_in_ms|**bigint**|Zeit von Serialisierungsprogrammen im Kernelmodus ausgeführt.|  
+|xtp_log_bytes_consumed|**bigint**|Gesamte Anzahl von Protokollbytes, die seit der die Datenbank neu starten.|  
+|checkpoints_closed|**bigint**|Anzahl von Prüfpunkten wird geschlossen, weil die Datenbank neu starten.|  
+|last_closed_checkpoint_ts|**bigint**|Zeitstempel des letzten Prüfpunkts geschlossen.|  
+|hardened_recovery_lsn|**numeric(38)**|Wiederherstellung wird von dieser LSN gestartet.|  
+|hardened_root_file_guid|**uniqueidentifier**|GUID der Datei des Stammzertifikats, die als Ergebnis der letzten abgeschlossenen Prüfpunkt festgeschrieben.|  
+|hardened_root_file_watermark|**bigint**|**Interne nur**. Wie weit-Datei des Stammzertifikats bis zu gelesen werden kann (Dies ist nur ein intern relevante Typ Startsequenznummer bezeichnet).|  
+|hardened_truncation_lsn|**numeric(38)**|LSN des den Protokollkürzungspunkt dar.|  
+|log_bytes_since_last_close|**bigint**|Bytes vom letzten Schließen Sie auf das aktuelle Protokollende.|  
 |time_since_last_close_in_ms|**bigint**|Zeit seit der letzten Schließen des Prüfpunkts.|  
-|current_checkpoint_id|**bigint**|Derzeit neue Segmente werden auf diesen Prüfpunkt zugewiesen wird. Prüfpunkt-Systems handelt es sich um eine Pipeline. Der aktuelle Prüfpunkt wird die Segmente aus dem Protokoll zugewiesen werden. Einen Grenzwert erreicht wurde, wird der Prüfpunkt durch den Controller und ein neues Konto erstellt, die als aktuell freigegeben.|  
+|current_checkpoint_id|**bigint**|Derzeit neue Segmenten werden diesen Prüfpunkt zugewiesen wird. Checkpoint Systems handelt es sich um eine Pipeline. Die aktuelle Prüfpunkt wird die Segmente aus dem Protokoll zugeordnet sind. Einen Grenzwert erreicht wurde, wird der Prüfpunkt durch den Controller und eine neue erstellt als aktuell freigegeben.|  
 |current_checkpoint_segment_count|**bigint**|Die Anzahl der Segmente in der aktuellen Prüfpunkt.|  
-|recovery_lsn_candidate|**bigint**|**Intern nur**. Mögliche als Recoverylsn entnommen werden, wenn Current_checkpoint_id geschlossen wird.|  
-|outstanding_checkpoint_count|**bigint**|Die Anzahl der Prüfpunkte in der Pipeline, die darauf warten, geschlossen werden.|  
-|closing_checkpoint_id|**bigint**|Die ID des Prüfpunkts schließen.<br /><br /> Serialisierungsprogramme arbeiten parallel, also, sobald sie fertig sind. Klicken Sie dann der Prüfpunkt ein Kandidat zum Schließen Thread geschlossen werden. Aber schließende Thread kann nur jeweils einzeln schließen, und muss er in der Reihenfolge, damit das schließende Prüfpunkt ist, an der der Thread schließende arbeitet.|  
-|recovery_checkpoint_id|**bigint**|Die ID des Prüfpunkts in Recovery verwendet werden.|  
-|recovery_checkpoint_ts|**bigint**|Der Zeitstempel des Prüfpunkts wiederherstellen.|  
-|bootstrap_recovery_lsn|**numeric(38)**|Wiederherstellungs-LSN für den Bootstrap.|  
-|bootstrap_root_file_guid|**uniqueidentifier**|GUID der für den Bootstrap-Stammdatei.|  
-|internal_error_code|**bigint**|Fehler, die mithilfe einer der Controller, Serialisierungsprogramm geschlossen wurden, und der Merge-Threads angezeigt werden.|
-|bytes_of_large_data_serialized|**bigint**|Die Datenmenge, die serialisiert wurde. |  
+|recovery_lsn_candidate|**bigint**|**Intern nur**. Der Kandidat als Recoverylsn entnommen werden, wenn Current_checkpoint_id geschlossen wird.|  
+|outstanding_checkpoint_count|**bigint**|Die Anzahl von Prüfpunkten in der Pipeline, die darauf warten, geschlossen werden.|  
+|closing_checkpoint_id|**bigint**|Die ID des Prüfpunkts schließen.<br /><br /> Serialisierungsprogramme arbeiten parallel, also sobald sie fertig sind. Klicken Sie dann der Prüfpunkt ein Kandidat durch Schließen Thread geschlossen werden. Aber der schließende-Thread kann nur jeweils einzeln schließen, und es muss in der Reihenfolge, damit der schließen-Prüfpunkt handelt, in der der Thread schließende arbeitet.|  
+|recovery_checkpoint_id|**bigint**|Die ID des Prüfpunkts in der Wiederherstellung verwendet werden.|  
+|recovery_checkpoint_ts|**bigint**|Zeitstempel des Wiederherstellungs-Prüfpunkt.|  
+|bootstrap_recovery_lsn|**numeric(38)**|Wiederherstellungs-LSN für den Bootstrap-Stil.|  
+|bootstrap_root_file_guid|**uniqueidentifier**|GUID der-Datei des Stammzertifikats für den Bootstrap-Stil.|  
+|internal_error_code|**bigint**|Fehler, die von einem der Controller, der Serialisierer, geschlossen wurden, und der Merge-Threads angezeigt werden.|
+|bytes_of_large_data_serialized|**bigint**|Die Menge der Daten, die serialisiert wurde. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Die folgende Tabelle beschreibt die Spalten in `sys.dm_db_xtp_checkpoint_stats`, für **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ Die folgende Tabelle beschreibt die Spalten in `sys.dm_db_xtp_checkpoint_stats`, für die **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  

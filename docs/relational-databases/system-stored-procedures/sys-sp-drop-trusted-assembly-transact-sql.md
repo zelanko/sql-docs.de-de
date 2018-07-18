@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs
+title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971852"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>Sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>Argumente
 
 [ @hash =] '*Wert*"  
-Der Hashwert des SHA2_512 der Assembly, die aus der Liste der vertrauenswürdigen Assemblys für den Server zu löschen. Vertrauenswürdige Assemblys möglicherweise geladen, wenn Clr strikte Sicherheit aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank ist nicht als vertrauenswürdig gekennzeichnet.
+Der Hashwert des SHA2_512 der Assembly, die aus der Liste der vertrauenswürdigen Assemblys für den Server zu löschen. Wenn Clr strict Security aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank wird nicht als vertrauenswürdig markiert, werden möglicherweise vertrauenswürdige Assemblys geladen.
 
 ## <a name="remarks"></a>Hinweise  
 
@@ -56,7 +57,7 @@ Diese Prozedur entfernt eine Assembly aus [sys.trusted_assemblies](../../relatio
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die Mitgliedschaft in der `sysadmin` feste Serverrolle oder `CONTROL SERVER` Berechtigung.
+Erfordert die Mitgliedschaft in der `sysadmin` -Serverrolle sein oder `CONTROL SERVER` Berechtigung.
 
 ## <a name="examples"></a>Beispiele  
 
@@ -68,7 +69,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>Siehe auch  
-  [Sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

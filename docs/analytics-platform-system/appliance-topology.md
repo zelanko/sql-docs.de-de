@@ -1,6 +1,6 @@
 ---
-title: Anwendungstopologie - Analytics Platform System | Microsoft Docs
-description: Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System an.
+title: Appliancetopologie – Analytics Platform System | Microsoft-Dokumentation
+description: Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,19 +9,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: fac27805730a7afa9541ed835f7900acf6e309d2
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909760"
 ---
-# <a name="appliance-topology---analytics-platform-system"></a>Anwendungstopologie - Analyseplattformsystem
-Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System an.  
+# <a name="appliance-topology---analytics-platform-system"></a>Appliancetopologie – Analytics Platform System
+Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System.  
   
-Erweitern Sie die Elemente in diesem Abschnitt, um Informationen zu konfigurieren, die für die gesamte Anwendung gilt. Wählen Sie in den Abschnitten Parallel Data Warehouse-Topologie oder HDInsight Topology, um Informationen zu konfigurieren, die gilt nur für diese Region des Geräts.  
+Die Seite zeigt eine schreibgeschützte Version aller Hosts und Fabric-Knoten in der aktuellen Einheit, einschließlich ihrer Ethernet und Infiniband-IP-Adressen.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md)  
+[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

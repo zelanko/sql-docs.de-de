@@ -1,5 +1,5 @@
 ---
-title: Programmieren spezifischer Tasks | Microsoft Docs
+title: Programmieren von bestimmten Tasks | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998123"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,6 +59,6 @@ ms.lasthandoff: 05/03/2018
 |[Einbinden einer Volltextsuche](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Beschreibt, wie Volltextsuchkataloge und Indizes in SMO implementiert werden.|  
 |[Implementieren von Endpunkten](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Beschreibt, wie Endpunkte erstellt werden, um Nutzlasten für Datenbankspiegelungen, SOAP-Anforderungen und Service Broker zu handhaben.|  
 |[Erstellen und Aktualisieren von Statistiken](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Beschreibt, wie Bildschirmstatistiken auf einer Datenbank in SMO eingerichtet werden.|  
-|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die **Ablaufverfolgung** und **wiedergeben** Objekte im SMO-Ablaufverfolgungsobjekte und -Ereignisse.|  
+|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die **Ablaufverfolgung** und **wiedergeben** Objekten in SMO-Ablaufverfolgung und-Wiedergabe Ereignisse.|  
   
   

@@ -2,7 +2,6 @@
 title: Übersicht über multidimensionale Schemas und Daten | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7dad7be35de7e15ae560f56c3ad51f7222be53b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2d17b02ff9f340a432e2d096a07a6cf5328c5de
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273535"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über multidimensionale Schemas und Daten
 ## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu MDX-Schemas  
@@ -72,7 +72,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Städte `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Element  
+### <a name="members"></a>Member  
  Elemente auf der Blattebene einer Hierarchie haben keine untergeordneten Elemente und Elemente auf der Stammebene gibt es kein übergeordnetes. Alle anderen Elemente verfügen über mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Ein partielle Durchlauf der Hierarchie in der Geography-Dimension ergibt z. B. die folgenden über-und untergeordneten Beziehungen:  
   
 -   `{All} (parent of) {Europe, North America}`  

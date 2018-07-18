@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_continuous_copy_status (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_continuous_copy_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,17 +27,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 478e5ed025fb371d7b615e39580865346413d4b6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061798"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>Sys. dm_continuous_copy_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Benutzerdatenbank (V11), die derzeit in einer Beziehung mit kontinuierlichem kopieren geografische Replikation beteiligt ist. Wenn für eine bestimmte primäre Datenbank mehr als eine Beziehung mit kontinuierlichem Kopieren initiiert wird, enthält diese Tabelle für jede aktive sekundäre Datenbank eine Zeile.  
+  Gibt eine Zeile für jede Benutzerdatenbank (V11), die derzeit in einer Beziehung mit kontinuierlichem kopieren Geo-Replikation beteiligt ist. Wenn für eine bestimmte primäre Datenbank mehr als eine Beziehung mit kontinuierlichem Kopieren initiiert wird, enthält diese Tabelle für jede aktive sekundäre Datenbank eine Zeile.  
   
-Bei Verwendung von SQL-Datenbank V12 sollten Sie verwenden [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (da *Sys. dm_continuous_copy_status* gilt nur für Version 11).
+Bei Verwendung von SQL-Datenbank V12 sollten Sie verwenden [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (da *Sys. dm_continuous_copy_status* gilt nur für V11).
 
   
 |Spaltenname|Datentyp|Description|  
@@ -47,21 +48,21 @@ Bei Verwendung von SQL-Datenbank V12 sollten Sie verwenden [sys.dm_geo_replicati
 |**partner_database**|**sysname**|Name der Verbindungsdatenbank auf dem SQL-Datenbankverbindungsserver.|  
 |**last_replication**|**datetimeoffset**|Der Zeitstempel der zuletzt durchgeführten replizierten Transaktion.|  
 |**replication_lag_sec**|**int**|Der Zeitunterschied in Sekunden zwischen der aktuellen Zeit und dem Zeitstempel der letzten Transaktion in der primären Datenbank, für die erfolgreich ein Commit ausgeführt wurde und die von der aktiven sekundären Datenbank nicht bestätigt wurde.|  
-|**replication_state**|**tinyint**|Der Status der fortlaufenden kopierbeziehung für diese Datenbank. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 1: seeding. Für das Replikationsziel, das einen inkonsistenten Transaktionsstatus aufweist, wird ein Seeding durchgeführt. Solange das Seeding noch nicht abgeschlossen wurde, können Sie keine Verbindung mit der aktiven sekundären Datenbank herstellen. <br />2: aufholen. Die aktive sekundäre Datenbank holt derzeit den Rückstand zur primären Datenbank auf und weist hinsichtlich der Transaktionen einen konsistenten Status auf.<br />3: Erneutes seeding. Für die aktive sekundäre Datenbank wird aufgrund eines nicht behebbaren Replikationsfehlers automatisch ein erneutes Seeding durchgeführt.<br />4: angehalten. Dies ist keine aktive Beziehung mit kontinuierlichem Kopieren. Dieser Status gibt normalerweise an, dass die Bandbreite, die für den Interlink verfügbar ist, für die Ebene der Transaktionsaktivität in der primären Datenbank nicht ausreicht. Die Beziehung mit kontinuierlichem Kopieren ist jedoch nach wie vor intakt.|  
+|**replication_state**|**tinyint**|Der Status der fortlaufenden kopierbeziehung für diese Datenbank. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 1: das seeding. Für das Replikationsziel, das einen inkonsistenten Transaktionsstatus aufweist, wird ein Seeding durchgeführt. Solange das Seeding noch nicht abgeschlossen wurde, können Sie keine Verbindung mit der aktiven sekundären Datenbank herstellen. <br />2: Abrufen der neuesten Informationen. Die aktive sekundäre Datenbank holt derzeit den Rückstand zur primären Datenbank auf und weist hinsichtlich der Transaktionen einen konsistenten Status auf.<br />3: Erneutes seeding. Für die aktive sekundäre Datenbank wird aufgrund eines nicht behebbaren Replikationsfehlers automatisch ein erneutes Seeding durchgeführt.<br />4: angehalten. Dies ist keine aktive Beziehung mit kontinuierlichem Kopieren. Dieser Status gibt normalerweise an, dass die Bandbreite, die für den Interlink verfügbar ist, für die Ebene der Transaktionsaktivität in der primären Datenbank nicht ausreicht. Die Beziehung mit kontinuierlichem Kopieren ist jedoch nach wie vor intakt.|  
 |**replication_state_desc**|**nvarchar(256)**|Beschreibung von replication_state. Folgende Werte sind möglich:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Wird immer auf 0 festgelegt.|  
 |**is_target_role**|**bit**|0 = Quelle der Kopienbeziehung<br /><br /> 1 = Ziel der Kopienbeziehung|  
 |**is_interlink_connected**|**bit**|1 = Interlink ist verbunden.<br /><br /> 0 = Interlink-Verbindung ist getrennt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Abrufen von Daten, erfordert die Mitgliedschaft in der **Db_owner** -Datenbankrolle. Die Dbo-Benutzer, der Mitglied der **Dbmanager** Datenbankrolle und Anmeldenamens "sa" können alle Abfragen in dieser Ansicht auch.  
+ Zum Abrufen von Daten, erfordert die Mitgliedschaft in der **Db_owner** -Datenbankrolle. Die Dbo-Benutzer, der Mitglied der **"DBManager"** Datenbankrolle und Anmeldenamens "sa" können alle Abfragen in dieser Ansicht auch.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Sys. dm_continuous_copy_status** Sicht wird erstellt, der **Ressource** -Datenbank und in allen Datenbanken, einschließlich der logischen Masterdatenbank sichtbar ist. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
+ Die **Sys. dm_continuous_copy_status** Sicht wird erstellt, der **Ressource** -Datenbank und in allen Datenbanken, einschließlich der logischen Master sichtbar ist. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
   
  Wenn die fortlaufende kopierbeziehung, in einer Datenbank, die Zeile für diese Datenbank in beendet wird der **Sys. dm_continuous_copy_status** -Sicht nicht mehr angezeigt.  
   
- Wie die **dm_database_copies** Ansicht **Sys. dm_continuous_copy_status** zeigt den Status der fortlaufenden kopierbeziehung in dem die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist . Im Gegensatz zu **dm_database_copies**, **Sys. dm_continuous_copy_status** enthält mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Diese Spalten enthalten **Last_replication**, und **Replication_lag_sec**...  
+ Wie die **Sys. dm_database_copies** Ansicht **Sys. dm_continuous_copy_status** zeigt den Status der fortlaufenden kopierbeziehung in der die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist . Im Gegensatz zu **Sys. dm_database_copies**, **Sys. dm_continuous_copy_status** enthält mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Diese Spalten enthalten **Last_replication**, und **Replication_lag_sec**...  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sys. dm_database_copies &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   

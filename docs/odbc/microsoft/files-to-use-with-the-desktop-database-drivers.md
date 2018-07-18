@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901216"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Dateien für die Verwendung mit dem Desktop-Datenbanktreiber
 Der ODBC-Datenbanktreiber Desktop werden mit der Microsoft Jet-Datenbankmodul, die installierbaren ISAM-Dateien und der Microsoft ODBC-Dateien verwendet. Nicht alle für die Verteilung des Produkts erforderlich sind, und nicht alle Kernkomponenten sind.  

@@ -1,58 +1,57 @@
 ---
-title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 10
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 99577a71d2819ca0d2ce86d901eecf5ce87ae7ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 458fd50e6387a2929e660deb81400fc79271ff20
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36874998"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis der Administrator System Management in Entscheidungen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich jenen, als gelöscht markiert) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Gruppen, haben Sie einen hohen Prozentsatz der gelöschten Zeilen, und sollte neu erstellt.  
+  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis um den Administrator, die Systems Management in Entscheidungen unterstützen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich als gelöscht markierten) und eine Spalte für die Anzahl der Zeilen als gelöscht markiert. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Zeile Gruppen haben einen hohen Prozentsatz gelöschter Zeilen und neu erstellt werden sollen.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Die ID der zugrunde liegenden Tabelle. Dies ist der physische Tabelle auf den Computeknoten nicht die Objekt-ID für die logische Tabelle auf den Knoten "Zugriffssteuerung". Object_id stimmt beispielsweise nicht mit Object_id in sys.tables überein.<br /><br /> Verwenden Sie zum Verknüpfen mit sys.tables sys.pdw_index_mappings.|  
+|**object_id**|**int**|Die ID der zugrunde liegenden Tabelle. Dies ist der physischen Tabelle auf dem Computeknoten, die nicht dem Objekt-ID für der logischen Tabelle auf dem steuerknoten. Object_id entspricht z. B. nicht mit Object_id in ' sys.Tables '.<br /><br /> Verwenden Sie zum Verknüpfen mit sys.tables sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID des gruppierten columnstore-Indexes auf *Object_id* Tabelle.|  
-|**partition_number**|**int**|ID der Tabellenpartition, die Zeilengruppe enthält *Row_group_id*. Sie können *Partition_number* auf diese DMV mit sys.partitions zu verknüpfen.|  
+|**partition_number**|**int**|ID der Tabellenpartition, die Zeilengruppe enthält *Row_group_id*. Sie können *Partition_number* Diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID der dieser Zeilengruppe. Diese ist innerhalb der Partition eindeutig.|  
-|**dellta_store_hobt_id**|**bigint**|Die hobt_id für Deltazeilengruppen oder NULL, wenn der Zeilengruppentyp nicht Delta ist. Eine Deltazeilengruppe ist eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine deltazeilengruppe hat die **öffnen** Status. Eine Deltazeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.|  
+|**dellta_store_hobt_id**|**bigint**|Die hobt_id für Deltazeilengruppen oder NULL, wenn der Zeilengruppentyp nicht Delta ist. Eine Deltazeilengruppe ist eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine deltazeilengruppe hat den **öffnen** Status. Eine Deltazeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.|  
 |**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> OPEN: Eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> CLOSED: Eine Zeilengruppe, die aufgefüllt, aber vom Tupelverschiebungsprozess noch nicht komprimiert wurde.<br /><br /> COMPRESSED: Eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Anzahl der Zeilen in der Zeilengruppe physisch gespeichert, die zum Löschen markiert sind.<br /><br /> Die Zeile immer 0 für DELTA-Gruppen.|  
-|**size_in_bytes**|**int**|Gesamtgröße in Bytes aller Seiten in dieser Zeilengruppe. Diese Größe schließt nicht die Größe, die zum Speichern von Metadaten oder freigegebenen Wörterbüchern erforderlich.|  
-|**pdw_node_id**|**int**|Eindeutige Id des ein [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|  
+|**size_in_bytes**|**int**|Kombinierte Größe in Bytes für alle Seiten in dieser Zeilengruppe. Diese Größe umfasst nicht die Größe, die zum Speichern von Metadaten oder freigegebenen Wörterbüchern erforderlich.|  
+|**pdw_node_id**|**int**|Eindeutige Id des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|  
 |**distribution_id**|**int**|Eindeutige Id der Verteilung.|
   
 ## <a name="remarks"></a>Hinweise  
  Gibt eine Zeile für jede columnstore-Zeilengruppe für jede Tabelle zurück, die über einen gruppierten oder nicht gruppierten columnstore-Index verfügt.  
   
- Verwendung **sys.pdw_nodes_column_store_row_groups** bestimmt die Anzahl der Zeilen in der Zeilengruppe und die Größe der Zeilengruppe enthalten.  
+ Verwendung **sys.pdw_nodes_column_store_row_groups** um die Anzahl der in der Zeilengruppe und die Größe der Zeilengruppe enthaltenen Zeilen zu bestimmen.  
   
- Wenn die Anzahl der gelöschten Zeilen in einer Zeilengruppe auf einen hohen Prozentsatz der Gesamtzeilen ansteigt, wird die Tabelle weniger effizient. Erstellen Sie den columnstore-Index neu, um die Tabellengröße zu verringern und die Datenträger-E/A zu reduzieren, die zum Lesen der Tabelle erforderlich ist. Die Verwendung des columnstore-Index neu erstellt die **REBUILD** -Option von der **ALTER INDEX** Anweisung.  
+ Wenn die Anzahl der gelöschten Zeilen in einer Zeilengruppe auf einen hohen Prozentsatz der Gesamtzeilen ansteigt, wird die Tabelle weniger effizient. Erstellen Sie den columnstore-Index neu, um die Tabellengröße zu verringern und die Datenträger-E/A zu reduzieren, die zum Lesen der Tabelle erforderlich ist. Die Verwendung des columnstore-Index neu erstellen. die **neu erstellen** Möglichkeit, die **ALTER INDEX** Anweisung.  
   
- Aktualisierbare Columnstore fügt zunächst neue Daten in eine **öffnen** Zeilengruppe, die im Rowstore-Format und wird manchmal auch als Deltatabelle bezeichnet.  Sobald eine offene Zeilengruppe voll ist, ändert sich der Status **geschlossen**. Eine geschlossene Zeilengruppe wird durch die tupelverschiebungsfunktion in columnstore-Format komprimiert und ändert den Zustand zu **COMPRESSED**.  Die Tupelverschiebungsfunktion ist ein Hintergrundprozess, der regelmäßig aktiv wird und überprüft, ob geschlossene Zeilengruppen vorhanden sind, die in eine columnstore-Zeilengruppe komprimiert werden können.  Die Tupelverschiebungsfunktion gibt außerdem alle Zeilengruppen frei, in denen alle Zeilen gelöscht wurden. Freigegebene Zeilengruppen werden als **ZURÜCKGEZOGEN**. Um die tupelverschiebungsfunktion direkt auszuführen, verwenden die **REORGANIZE** -Option von der **ALTER INDEX** Anweisung.  
+ Aktualisierbare Columnstore fügt zunächst neue Daten in eine **öffnen** Zeilengruppe, die im Rowstore-Format und wird manchmal auch als Deltatabelle bezeichnet.  Wenn eine offene Zeilengruppe voll ist, ändert sich der Status **geschlossen**. Eine geschlossene Zeilengruppe im columnstore-Format komprimiert wird, durch die tupelverschiebungsfunktion und ändert sich der Status **COMPRESSED**.  Die Tupelverschiebungsfunktion ist ein Hintergrundprozess, der regelmäßig aktiv wird und überprüft, ob geschlossene Zeilengruppen vorhanden sind, die in eine columnstore-Zeilengruppe komprimiert werden können.  Die Tupelverschiebungsfunktion gibt außerdem alle Zeilengruppen frei, in denen alle Zeilen gelöscht wurden. Freigegebene Zeilengruppen werden als **veraltet**. Um die tupelverschiebungsfunktion direkt auszuführen, verwenden Sie die **neu organisieren** Möglichkeit, die **ALTER INDEX** Anweisung.  
   
  Wenn eine columnstore-Zeilengruppe aufgefüllt wurde, wird sie komprimiert und akzeptiert keine neuen Zeilen mehr. Wenn aus einer komprimierten Gruppe Zeilen gelöscht werden, verbleiben sie zwar, werden aber als gelöscht gekennzeichnet. Updates einer komprimierten Gruppe werden als Löschvorgang für die komprimierte Gruppe und als Einfügevorgang für eine offene Gruppe implementiert.  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/04/2018
  Erfordert die **VIEW SERVER STATE**-Berechtigung.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Das folgende Beispiel verknüpft die **sys.pdw_nodes_column_store_row_groups** Tabelle mit anderen Systemtabellen, um Informationen über bestimmte Tabellen zurückzugeben. Die berechnete `PercentFull`-Spalte ist eine Schätzung der Effizienz der Zeilengruppe. Zum Suchen von Informationen zu einer einzelnen Tabelle entfernen Kommentar Bindestriche vor der WHERE-Klausel aus, und geben Sie einen Tabellennamen.  
+ Das folgende Beispiel verknüpft die **sys.pdw_nodes_column_store_row_groups** Tabelle mit anderen Systemtabellen, um Informationen über bestimmte Tabellen zurückzugeben. Die berechnete `PercentFull`-Spalte ist eine Schätzung der Effizienz der Zeilengruppe. Informieren Sie sich auf eine einzelne Tabelle entfernen Kommentar Bindestriche vor der WHERE-Klausel aus, und geben Sie einen Tabellennamen.  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -86,7 +85,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-Die folgenden [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] Beispiel zählt die Zeilen pro Partition, für die gruppierte Spalte ebenfalls speichert, wie viele Zeilen in Gruppen geöffnet, geschlossen oder komprimierte Zeile sind:  
+Die folgenden [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] Beispiel zählt die Zeilen pro Partition aus, für gruppierte columnstore auch, speichert wie viele Zeilen in Gruppen geöffnet, geschlossen oder komprimierte Zeile sind:  
 
 ```
 SELECT
@@ -112,7 +111,7 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Erstellen von columnstore-INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [Columnstore-INDEX erstellen &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   

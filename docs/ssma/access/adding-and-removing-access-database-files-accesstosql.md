@@ -1,8 +1,6 @@
 ---
-title: Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL) | Microsoft Docs
+title: Hinzufügen und entfernen Sie den Zugriff von Datenbankdateien (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -37,108 +35,109 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e2fbd70bf6427b7f5dbe694f4abd2fed2f28b4b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983362"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL)
-Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken die SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Access verfügen, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Dazu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
+Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken in der SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Zugriff haben, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Hierzu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Was geschieht, wenn Sie die Access-Datenbankdateien hinzufügen?  
-Wenn Sie eine Access-Datenbank zu einem SSMA-Projekt hinzufügen, SSMA Datenbankmetadaten liest, und klicken Sie dann die Projektdatei diese Metadaten hinzugefügt. Diese Metadaten werden der Datenbank und seine Objekte beschrieben. SSMA anhand der Metadaten aus, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax, und wenn sie Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können diese Metadaten in Access-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften der einzelnen Datenbankobjekte.  
+Wenn Sie eine Access-Datenbank zu einem SSMA-Projekt hinzufügen, SSMA liest Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten beschreiben die Datenbank und die Objekte an. SSMA verwendet die Metadaten aus, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können diese Metadaten in der Access-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
   
 > [!NOTE]  
-> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: ein Back-End-Datenbank, die Tabellen enthält, und die Front-End-Datenbanken, Abfragen, Formulare, Berichte, Makros, Module und Verknüpfungen enthalten. Wenn Sie eine Teilung Datenbank migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Front-End-Datenbank SSMA hinzuzufügen.  
+> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, Tabellen enthält, und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Front-End-Datenbank SSMA hinzuzufügen.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>Berechtigungen, die von SSMA erforderlich sind  
-Zum Migrieren einer Access-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Benutzergruppe und die Admin-Benutzer müssen über Verwaltungsberechtigungen verfügen. Informationen zum Migrieren von Datenbanken mit Arbeitsgruppe Schutz finden Sie unter [Access-Datenbanken für die Migration vorbereiten](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+Migrieren eine Access-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Benutzergruppe und der Administratorbenutzer müssen über Verwaltungsberechtigungen verfügen. Weitere Informationen zum Migrieren von Datenbanken mit Arbeitsgruppe Schutz, finden Sie unter [Access-Datenbanken für die Migration vorbereiten](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-## <a name="selecting-databases-to-add"></a>Auswählen von Datenbanken hinzufügen  
-Wenn Sie eine oder mehrere Datenbanken zu einem SSMA-Projekt hinzufügen möchten, und die Dateien befinden sich alle in einem bekannten Speicherort, können Sie die Dateien hinzufügen, indem Sie mithilfe des folgenden Verfahrens.  
+## <a name="selecting-databases-to-add"></a>Auswählen Hinzuzufügender Datenbanken  
+Wenn Sie eine oder mehrere Datenbanken zu einem SSMA-Projekt hinzufügen möchten, und die Dateien, die an einem bekannten Ort sind, können Sie die Dateien mithilfe des folgenden Verfahrens hinzufügen.  
   
-**So fügen Sie einzelne Datenbankdateien hinzu**  
+**Hinzufügen der einzelnen Datenbankdateien**  
   
 1.  Auf der **Datei** Menü klicken Sie auf **Datenbanken hinzufügen**.  
   
-2.  In der **öffnen** Dialogfeld Feld, suchen Sie den Ordner, der die Datenbankdatei oder Dateien enthält.  
+2.  In der **öffnen** Dialogfeld Suchen den Ordner, die Datenbank-Dateien enthält.  
   
 3.  Wählen Sie die Dateien, die Sie hinzufügen möchten, und klicken Sie dann auf **öffnen**.  
   
-## <a name="finding-databases-to-add"></a>Suchen von Datenbanken hinzufügen  
-Wenn Sie mehrere Access-Datenbanken in unterschiedlichen Ordnern zu einem SSMA-Projekt hinzufügen möchten, oder Sie verwenden möchten, fügen eine einzelne Datei, jedoch müssen Sie die Datei nicht finden, können Sie die folgenden Schritte durchführen, um eine weitere Dateien suchen, und fügen sie dem Projekt hinzu.  
+## <a name="finding-databases-to-add"></a>Suchen die Datenbanken hinzufügen  
+Wenn Sie mehrere Access-Datenbanken aus unterschiedlichen Ordnern zu einem SSMA-Projekt hinzufügen möchten, oder Sie möchten eine einzelne Datei hinzufügen, jedoch müssen Sie die Datei nicht finden, können Sie die folgenden Schritte durchführen, um eine von mehreren Dateien suchen, und fügen sie dem Projekt hinzu.  
   
 **Suchen und Hinzufügen von Datenbanken**  
   
 1.  Auf der **Datei** Menü klicken Sie auf **Datenbanken suchen**.  
   
-2.  Geben Sie den Namen des Laufwerks, Dateipfad oder den UNC-Pfad, den Sie suchen möchten, klicken Sie im Assistenten zum Suchen von Datenbanken. Klicken Sie alternativ auf **Durchsuchen** auf dem Laufwerk oder Ordner zu suchen.  
+2.  Geben Sie den Namen des Laufwerks, Dateipfad oder den UNC-Pfad, den Sie suchen möchten, im Assistenten Datenbanken gefunden. Klicken Sie alternativ auf **Durchsuchen** auf dem Laufwerk oder Ordner zu suchen.  
   
-3.  Klicken Sie auf **hinzufügen** auf den Speicherort der Liste hinzufügen.  
+3.  Klicken Sie auf **hinzufügen** den Speicherort der Liste hinzu.  
   
-    Wiederholen Sie die vorherigen beiden Schritte, um weitere Suche Speicherorte hinzuzufügen.  
+    Wiederholen Sie die vorherigen beiden Schritte aus, um weitere Suche Speicherorte hinzuzufügen.  
   
-4.  Fügen Sie Suchkriterien, um die Liste der Datenbanken zu optimieren, die zurückgegeben werden.  
+4.  Fügen Sie optional Suchkriterien, um die Liste der Datenbanken zu optimieren, die zurückgegeben werden.  
   
     > [!IMPORTANT]  
     > Die **alle oder einen Teil des Dateinamens** Textfeld unterstützt keine Platzhalterzeichen enthalten.  
   
-5.  Klicken Sie auf **Scan**.  
+5.  Klicken Sie auf **Scannen**.  
   
-    Die Seite "Überprüfung" wird angezeigt. Dies zeigt die Datenbanken, die gefunden wurden, und den Fortschritt der Suche. Um die Suche zu beenden, klicken Sie auf **beenden**.  
+    Die Seite "Überprüfung" wird angezeigt. Es werden die Datenbanken, die gefunden wurden und den Fortschritt der Suche. Um die Suche zu beenden, klicken Sie auf **beenden**.  
   
-6.  Wählen Sie auf der Seite "Dateien auswählen" die Datenbanken, die Sie dem Projekt hinzufügen möchten.  
+6.  Wählen Sie die Datenbanken, die Sie dem Projekt hinzufügen möchten, klicken Sie auf der Seite "Dateien auswählen".  
   
-    Können Sie die **Alles markieren** und **alle löschen** Schaltflächen am oberen Rand der Liste aktivieren oder deaktivieren Sie alle Datenbanken. Sie können die STRG-Taste gedrückt, um mehrere Datenbanken auszuwählen oder gedrückter Umschalttaste auf Wählen Sie einen Bereich von Datenbanken.  
+    Können Sie die **Alles markieren** und **deaktivieren Sie alle** Schaltflächen am oberen Rand der Liste aktivieren oder deaktivieren Sie alle Datenbanken. Sie können die STRG-Taste gedrückt, um mehrere Datenbanken auszuwählen, oder halten die UMSCHALTTASTE gedrückt, wählen Sie einen Bereich von Datenbanken.  
   
 7.  Klicken Sie auf **Weiter**.  
   
 8.  Klicken Sie auf der Seite "Überprüfen" auf **Fertig stellen**.  
   
-## <a name="browsing-access-metadata"></a>Durchsuchen von Metadaten zugreifen  
-Nachdem Sie eine Access-Datenbank zu einem Projekt hinzugefügt haben, wird die Projektmetadaten im Access-Metadaten-Explorer angezeigt. Sie können die Hierarchie von Datenbanken und Datenbankobjekte im Explorer durchsuchen.  
+## <a name="browsing-access-metadata"></a>Durchsuchen von Metadaten für den Zugriff  
+Nachdem Sie eine Access-Datenbank zu einem Projekt hinzugefügt haben, wird die Projektmetadaten in Access-Metadaten-Explorer angezeigt. Sie können die Hierarchie der Datenbanken und Datenbankobjekte im Explorer navigieren.  
   
 **Durchsuchen von Metadaten**  
   
-1.  Erweitern Sie im Metadaten-Explorer für den Zugriff, **Zugriff Metabasis**, und erweitern Sie dann **Datenbanken**.  
+1.  Erweitern Sie im Metadaten-Explorer für den Zugriff, **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
 2.  Erweitern Sie die Datenbank, die Sie überprüfen möchten, und erweitern dann **Abfragen**.  
   
-    Beachten Sie die Liste der Abfragen. Wenn Sie eine Abfrage Auswählen einer **SQL** Registerkarte und eine **Eigenschaften** Registerkarte im rechten Bereich angezeigt.  
+    Beachten Sie, dass die Liste der Abfragen. Wenn Sie eine Abfrage, wählen Sie eine **SQL** Registerkarte und eine **Eigenschaften** Registerkarte im rechten Bereich angezeigt.  
   
-3.  Erweitern Sie **Tabellen** und wählen Sie eine Tabelle.  
+3.  Erweitern Sie **Tabellen** und wählen Sie dann auf eine Tabelle.  
   
     Beachten Sie, dass vier Registerkarten angezeigt: **Tabelle**, **Type Mapping**, **Eigenschaften**, und **Daten**.  
   
-4.  Erweitern Sie eine Tabelle und **Schlüssel**, und wählen Sie einen Schlüssel.  
+4.  Erweitern Sie eine Tabelle und **Schlüssel**, und wählen Sie dann auf einen Schlüssel.  
   
     Die wichtigsten Eigenschaften werden im rechten Bereich angezeigt.  
   
-5.  Erweitern Sie **Indizes**, und wählen Sie einen Index.  
+5.  Erweitern Sie **Indizes**, und wählen Sie dann einen Index.  
   
     Die Indexeigenschaften werden im rechten Bereich angezeigt.  
   
 ## <a name="refreshing-databases"></a>Aktualisieren von Datenbanken  
-Wenn Sie eine Access-Datenbank ändert, nachdem Sie die Datei hinzufügen, können Sie Metadaten aus der Access-Datenbank aktualisieren.  
+Wenn es sich bei eine Access-Datenbank ändert, nachdem Sie die Datei hinzugefügt haben, können Sie Metadaten aus der Access-Datenbank aktualisieren.  
   
 **So aktualisieren Sie Metadaten für den Zugriff**  
   
--   In Access-Metadaten-Explorer mit der rechten Maustaste in der Datenbank, und wählen Sie dann **aus der Datenbank aktualisieren**.  
+-   Access-Metadaten-Explorer mit der rechten Maustaste in der Datenbank, und wählen Sie dann **Refresh from Database aktualisieren**.  
   
 ## <a name="removing-databases"></a>Entfernen von Datenbanken  
-Sie können eine Access-Datenbank aus einem Projekt entfernen, indem Sie folgende Schritte.  
+Sie können eine Access-Datenbank aus einem Projekt entfernen, indem Sie diese Schritte.  
   
 **So entfernen Sie eine Datenbank aus einem Projekt**  
   
-1.  Erweitern Sie im Metadaten-Explorer für den Zugriff, **Zugriff Metabasis**, und erweitern Sie dann **Datenbanken**.  
+1.  Erweitern Sie im Metadaten-Explorer für den Zugriff, **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
-2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie dann **"Datenbank entfernen"**.  
+2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie dann **Remove Database**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+Der nächste Schritt des Migrationsvorgangs besteht darin [Verbinden mit SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Erstellen und Verwalten von Projekten](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Erstellen und Verwalten von Projekten](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   

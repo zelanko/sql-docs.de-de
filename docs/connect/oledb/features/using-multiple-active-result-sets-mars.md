@@ -2,7 +2,7 @@
 title: Verwenden von Multiple Active Resultsets (MARS) | Microsoft Docs
 description: Verwenden von Multiple Active Result Sets (MARS)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612085"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] führte die Unterstützung für mehrere aktive Resultsets (MARS) in Anwendungen, die Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB-Treiber für SQL Server beschränkt nicht die Anzahl aktiver Anweisungen über eine Verbindung.  
   
- Typische Anwendungen, bei denen kein Bedarf für mehrere Batches oder gespeicherte Prozeduren aus mehreren gleichzeitig ausgeführten Anweisungen besteht, profitieren von MARS, ohne die Implementierung von MARS verstehen zu müssen. Anwendungen mit komplexeren Anforderungen müssen diese jedoch berücksichtigen.  
+ In vielen Anwendungen, die nicht mehr als einen einzelnen Batch mit mehreren Anweisungen oder gespeicherte Prozedur, die zur gleichen Zeit ausführen, profitieren von MARS ohne Implementierung von MARS verstehen müssen. Anwendungen mit komplexeren Anforderungen müssen diese jedoch berücksichtigen.  
   
  MARS ermöglicht die verschachtelte Ausführung mehrerer Anforderungen innerhalb einer einzelnen Verbindung. Das bedeutet, dass innerhalb der Ausführung eines Batches eine weitere Anforderung ausgeführt werden kann. Beachten Sie jedoch, dass MARS mit Blick auf Interleaving, nicht die parallele Ausführung definiert ist.  
   
- Die MARS-Infrastruktur ermöglicht die verschachtelte Ausführung mehrerer Batches, die Ausführung kann jedoch nur an genau definierten Punkten gewechselt werden. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Zeilen zurückgegeben, an den Client, die manchmal auch als bezeichnet werden *zwischenergebnispunkte*, um die Ausführung vor Abschluss verschachteln, während die Zeilen an den Client, z. B. gesendet werden dürfen:  
+ Die MARS-Infrastruktur ermöglicht mehrere Batches auszuführende verschachtelte, Ausführung nur an genau definierten Punkten gewechselt werden kann. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Zeilen zurückgegeben, an den Client, die manchmal auch als bezeichnet werden *zwischenergebnispunkte*, um die Ausführung vor Abschluss verschachteln, während die Zeilen an den Client, z. B. gesendet werden dürfen:  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  Ein Beispiel der Verwendung von MARS aus ADO finden Sie unter [mithilfe von ADO mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>In-Memory OLTP  
- In-Memory OLTP unterstützt MARS mithilfe von Abfragen und systemintern kompilierte gespeicherte Prozeduren. MARS ermöglicht die anfordernde Daten aus mehreren Abfragen ohne die Notwendigkeit, jedes Resultset vor dem Senden einer Anforderung zum Abrufen von Zeilen aus einem neuen Resultset vollständig abzurufen. Zum Lesen von aus mehrere öffnen Ergebnis erfolgreich aktiviert Mengen, die Sie verwenden müssen, eine MARS Verbindung.  
+ In-Memory OLTP unterstützt MARS mithilfe von Abfragen und systemintern kompilierte gespeicherte Prozeduren. MARS ermöglicht die anfordernde Daten aus mehreren Abfragen ohne die Notwendigkeit, jedes Resultset vor dem Senden einer Anforderung zum Abrufen von Zeilen aus einem neuen Resultset vollständig abzurufen. Um mehrere offene Resultsets erfolgreich gelesen werden, müssen Sie den aktivierter MARS-Verbindung verwenden.  
   
  MARS ist standardmäßig deaktiviert, damit Sie sie explizit durch Hinzufügen von aktivieren müssen `MultipleActiveResultSets=True` auf eine Verbindungszeichenfolge. Im folgenden Beispiel wird veranschaulicht, wie eine Verbindung mit einer Instanz von SQL Server und angeben, dass MARS aktiviert ist:  
   

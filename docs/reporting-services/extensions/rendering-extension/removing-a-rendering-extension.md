@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014177"
 ---
 # <a name="removing-a-rendering-extension"></a>Entfernen von Renderingerweiterungen
   Um eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Renderingerweiterung zu entfernen, entfernen Sie einfach das **Extension**-Element für Ihre Renderingerweiterung im Ordner **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instanzname>\Reporting Services\ReportServer** aus der Datei „rsreportserver.config“. Wenn Sie Einträge für einen Berichts-Designer und einen Berichtsserver vorgenommen haben, entfernen Sie das **Extension**-Element auch aus der [Konfigurationsdatei RSReportDesigner](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Nachdem Sie die Konfigurationsdaten entfernt haben, steht die Renderingerweiterung nicht mehr für die Komponente zur Verfügung.  

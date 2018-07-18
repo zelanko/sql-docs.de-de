@@ -1,5 +1,5 @@
 ---
-title: Sp_fulltext_catalog (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_catalog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fccb384317102ef2818a49ef09c5faeb0fc42eb1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047248"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,42 +57,42 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  Die Aktion, die ausgeführt werden soll. *Aktion* ist **varchar(20)**, und kann einen der folgenden Werte sein.  
   
 > [!NOTE]  
->  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können ausgeführt werden, mithilfe der **Sp_fulltext_table** gespeicherte Prozedur, die die empfohlene Vorgehensweise ist.  
+>  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können ausgeführt werden, mithilfe der **Sp_fulltext_table** gespeicherte Prozedur, die die empfohlene Methode ist.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**Create**|Erstellt einen leeren, neuen Volltextkatalog im Dateisystem und fügt eine entsprechende Zeile in **Sysfulltextcatalogs** mit der *Fulltext_catalog_name* und *Root_directory*, Werte, sofern vorhanden. *Fulltext_catalog_name* muss innerhalb der Datenbank eindeutig sein.|  
+|**Erstellen**|Erstellt einen leeren, neuen Volltextkatalog im Dateisystem und fügt eine entsprechende Zeile in **Sysfulltextcatalogs** mit der *Fulltext_catalog_name* und *Root_directory*, Wenn Sie vorhanden ist, Werte. *Fulltext_catalog_name* muss innerhalb der Datenbank eindeutig sein.|  
 |**Drop**|Löscht *Fulltext_catalog_name* aus dem Dateisystem entfernt wird, und löschen die zugehörige Zeile in **Sysfulltextcatalogs**. Diese Aktion schlägt fehl, wenn der Katalog Indizes für eine oder mehrere Tabellen enthält. **Sp_fulltext_table** "*Table_name*', 'drop' sollte ausgeführt werden, um die Tabellen aus dem Katalog zu löschen.<br /><br /> Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet.|  
-|**start_incremental**|Startet eine inkrementelle Auffüllung für *Fulltext_catalog_name*. Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet. Wenn bereits eine Auffüllaktion für den Volltextindex aktiv ist, wird eine Warnung angezeigt und keine weitere Auffüllaktion durchgeführt. Beim inkrementellen Auffüllen werden nur geänderte Zeilen für die Volltextindizierung, abgerufen, vorhanden ist eine **Zeitstempel** Spalte in der Tabelle wird die Volltext-indiziert.|  
+|**start_incremental**|Startet eine inkrementelle Auffüllung für *Fulltext_catalog_name*. Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet. Wenn bereits eine Auffüllaktion für den Volltextindex aktiv ist, wird eine Warnung angezeigt und keine weitere Auffüllaktion durchgeführt. Beim inkrementellen Auffüllen werden nur geänderte Zeilen für die Volltextindizierung, abgerufen, vorausgesetzt, es ist ein **Zeitstempel** Spalte, die in der Tabelle vorhanden Volltextindex indiziert.|  
 |**start_full**|Startet ein vollständiges Auffüllen für *Fulltext_catalog_name*. Alle Zeilen aller Tabellen, die diesem Volltextkatalog zugeordnet sind, werden für die Volltextindizierung abgerufen, auch wenn sie bereits indiziert wurden.|  
 |**Beenden**|Beendet eine indexauffüllung für *Fulltext_catalog_name*. Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet. Wenn das Auffüllen bereits beendet wurde, wird keine Warnung angezeigt.|  
-|**Neu erstellen**|Neu *Fulltext_catalog_name*. Bei der Neuerstellung eines Katalogs wird der vorhandene Katalog gelöscht und an seiner Stelle ein neuer Katalog erstellt. Alle Tabellen, in denen Referenzen für die Volltextindizierung vorhanden sind, werden dem neuen Katalog zugeordnet. Durch das erneute Erstellen werden die Volltextmetadaten in den Datenbanksystemtabellen zurückgesetzt.<br /><br /> Wenn die Änderungsnachverfolgung OFF ist, wird durch das erneute Erstellen keine Neuauffüllung des neu erstellten Volltextkatalogs verursacht. Führen Sie in diesem Fall um erneut aufzufüllen, **Sp_fulltext_catalog** mit der **Start_full** oder **Start_incremental** Aktion.|  
+|**Neu erstellen**|Neu *Fulltext_catalog_name*. Bei der Neuerstellung eines Katalogs wird der vorhandene Katalog gelöscht und an seiner Stelle ein neuer Katalog erstellt. Alle Tabellen, in denen Referenzen für die Volltextindizierung vorhanden sind, werden dem neuen Katalog zugeordnet. Durch das erneute Erstellen werden die Volltextmetadaten in den Datenbanksystemtabellen zurückgesetzt.<br /><br /> Wenn die Änderungsnachverfolgung OFF ist, wird durch das erneute Erstellen keine Neuauffüllung des neu erstellten Volltextkatalogs verursacht. In diesem Fall führen Sie zum Katalog erneut aufzufüllen, **Sp_fulltext_catalog** mit der **Start_full** oder **Start_incremental** Aktion.|  
   
  [ **@path=**] **'***root_directory***'**  
- Ist das Stammverzeichnis (nicht der vollständige physische Pfad) für eine **erstellen** Aktion. *Root_directory* ist **nvarchar(100)** und hat den Standardwert NULL, womit die Verwendung der beim Setup angegebene Standardspeicherort. Dies ist das Unterverzeichnis Ftdata im Mssql-Verzeichnis; Beispiel: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+ Ist das Stammverzeichnis (nicht der vollständige physische Pfad) für eine **erstellen** Aktion. *Root_directory* ist **nvarchar(100)** und hat den Standardwert NULL, womit die Verwendung der beim Setup angegebene Standardspeicherort. Dies ist das Unterverzeichnis Ftdata im Mssql-Verzeichnis. Beispiel: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
- **@path** ist nur gültig, wenn *Aktion* ist **erstellen**. Für andere Aktionen als **erstellen** (**beenden**, **rebuild**usw.), **@path** muss NULL sein oder nicht angegeben.  
+ **@path** ist nur gültig, wenn *Aktion* ist **erstellen**. Für andere Aktionen als **erstellen** (**beenden**, **rebuild**und so weiter), **@path** muss NULL sein oder ausgelassen.  
   
- Falls es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um einen virtuellen Server in einem Cluster handelt, muss das Katalogverzeichnis auf einem freigegebenen Datenträgerlaufwerk angegeben sein, von dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressource abhängt. Wenn @path nicht angegeben wird, der Speicherort des standardkatalogverzeichnisses auf dem freigegebenen Datenträgerlaufwerk in das Verzeichnis, das bei der Installation des virtuellen Servers angegeben wurde.  
+ Falls es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um einen virtuellen Server in einem Cluster handelt, muss das Katalogverzeichnis auf einem freigegebenen Datenträgerlaufwerk angegeben sein, von dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressource abhängt. Wenn @path nicht angegeben ist, der Speicherort des standardkatalogverzeichnisses auf den freigegebenen Datenträger in das Verzeichnis, das bei der Installation des virtuellen Servers angegeben wurde.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Start_full** Aktion wird verwendet, um eine vollständige Momentaufnahme der Volltextdaten in erstellen *Fulltext_catalog_name*. Die **Start_incremental** Aktion wird verwendet, um nur die geänderten Zeilen in der Datenbank neu zu indizieren. Inkrementelles Auffüllen kann angewendet werden, nur, wenn die Tabelle eine Spalte des Typs hat **Zeitstempel**. Wenn eine Tabelle in der Volltextkatalog keine Spalte des Typs **Zeitstempel**, die Tabelle vollständig aufgefüllt.  
+ Die **Start_full** Aktion dient dem Erstellen Sie einer vollständigen Momentaufnahme der Volltext-Daten in *Fulltext_catalog_name*. Die **Start_incremental** Aktion wird verwendet, um nur die geänderten Zeilen in der Datenbank neu zu indizieren. Inkrementelle Auffüllung kann angewendet werden, nur, wenn die Tabelle eine Spalte des Typs **Zeitstempel**. Wenn eine Tabelle in der Volltextkatalog nicht über eine Spalte des Typs enthält **Zeitstempel**, in der Tabelle vollständig aufgefüllt.  
   
  Volltextkatalog- und Indexdaten werden in Dateien gespeichert, die in einem Volltextkatalogverzeichnis erstellt werden. Der Volltextkatalog-Verzeichnis wird erstellt, als Unterverzeichnis des Verzeichnisses im angegebenen **@path** oder im Standard-Volltextkatalog Serververzeichnis Wenn **@path** nicht angegeben. Der Name des Volltextkatalogverzeichnisses wird so erstellt, dass er auf dem Server eindeutig ist. Deshalb können alle Volltextkatalogverzeichnisse auf einem Server denselben Pfad verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Der Aufrufer muss Mitglied der **Db_owner** Rolle. Abhängig von der angeforderten Aktion der Aufrufer sollte nicht verweigert werden Alter- oder CONTROL-Berechtigungen (die **Db_owner** hat) auf dem Ziel-Volltextkatalog.  
+ Der Aufrufer muss Mitglied der **Db_owner** Rolle. Abhängig von der angeforderten Aktion der Aufrufer sollte nicht verweigert werden Alter- oder CONTROL-Berechtigungen (die **Db_owner** hat) auf der Ziel-Volltextkatalog.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-create-a-full-text-catalog"></a>A. Erstellen eines Volltextkatalogs  
- In diesem Beispiel wird eine leere Volltextkatalog **Cat_Desc**in der **AdventureWorks2012** Datenbank.  
+ In diesem Beispiel wird einen leeren Volltextkatalog **Cat_Desc**in die **AdventureWorks2012** Datenbank.  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ### <a name="b-to-rebuild-a-full-text-catalog"></a>B. So erstellen Sie einen Volltextkatalog erneut  
- In diesem Beispiel erstellt einen vorhandenen Volltextkatalog neu **Cat_Desc**in der **AdventureWorks2012** Datenbank.  
+ In diesem Beispiel wird einen vorhandenen Volltextkatalog neu erstellt. **Cat_Desc**in die **AdventureWorks2012** Datenbank.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +112,7 @@ GO
 ```  
   
 ### <a name="c-start-the-population-of-a-full-text-catalog"></a>C. Starten des Auffüllens eines Volltextkatalogs  
- In diesem Beispiel startet eine vollständige Auffüllung der **Cat_Desc** Katalog.  
+ In diesem Beispiel wird eine vollständige Auffüllung des der **Cat_Desc** Katalog.  
   
 ```  
 USE AdventureWorks2012;  
@@ -121,7 +122,7 @@ GO
 ```  
   
 ### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. Beenden des Auffüllens eines Volltextkatalogs  
- In diesem Beispiel wird die Auffüllung des beendet die **Cat_Desc** Katalog.  
+ In diesem Beispiel beendet die Auffüllung des der **Cat_Desc** Katalog.  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [FULLTEXTCATALOGPROPERTY & #40; Transact-SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [Sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   

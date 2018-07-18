@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,20 +24,21 @@ helpviewer_keywords:
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051d120a972f681879a72f3a7f2e59fb2ae63adf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c60a1904db3375eb512f2ed639faa47d14060c0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792051"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, an der bzw. an dem ein Fehler aufgetreten ist, durch den die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts verursacht wurde.  
+Diese Funktion gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, an der bzw. an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts verursacht wurde.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,26 +49,26 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt beim Aufruf in einem CATCH-Block den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
+Wenn `ERROR_PROCEDURE` im CATCH-Block einer gespeicherten Prozedur aufgerufen wird, in der ein Fehler auftritt, wird der Name dieser gespeicherten Prozedur zurückgegeben.  
   
- Gibt NULL zurück, wenn der Fehler nicht in einer gespeicherten Prozedur bzw. nicht in einem Trigger aufgetreten ist.  
+`ERROR_PROCEDURE` gibt NULL zurück, wenn der Fehler nicht in einer gespeicherten Prozedur bzw. nicht in einem Trigger aufgetreten ist.  
   
- Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
+`ERROR_PROCEDURE` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_PROCEDURE kann innerhalb des Bereichs eines CATCH-Blocks an beliebigen Stellen aufgerufen werden.  
+`ERROR_PROCEDURE` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
- ERROR_PROCEDURE gibt den Namen der gespeicherten Prozedur bzw. des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, unabhängig davon, wie oft die Funktion aufgerufen wurde bzw. wo sie innerhalb des Bereichs des CATCH-Blocks aufgerufen wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die die Fehlernummer in der Anweisung sofort (gefolgt von der Nummer, die den Fehler verursacht hat) oder in der ersten Anweisung des CATCH-Blocks zurückgeben.  
+`ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur oder des Triggers, bei der bzw. bei dem ein Fehler auftritt, unabhängig davon zurück, wie oft die Funktion ausgeführt wurde oder wo im Bereich des `CATCH`-Blocks sie ausgeführt wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
   
- In geschachtelten CATCH-Blöcken gibt ERROR_PROCEDURE den Namen der gespeicherten Prozedur oder des Triggers im Bereich des CATCH-Blocks zurück, in dem auf die gespeicherte Prozedur bzw. auf den Trigger verwiesen wird. Der CATCH-Block eines TRY…CATCH-Konstrukts kann beispielsweise ein geschachteltes TRY…CATCH-Konstrukt enthalten. Innerhalb des geschachtelten CATCH-Blocks gibt ERROR_PROCEDURE den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, mit dem der geschachtelte CATCH-Block aufgerufen wurde. Wenn ERROR_PROCEDURE im äußeren CATCH-Block ausgeführt wird, gibt die Funktion den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, mit dem dieser CATCH-Block aufgerufen wurde.  
+`ERROR_PROCEDURE` gibt in einem geschachtelten `CATCH`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_PROCEDURE` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_PROCEDURE` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
-## <a name="examples"></a>Beispiele  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
- Das folgende Codebeispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
+Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,10 +91,21 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorProcedure
+--------------------
+usp_ExampleProc
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_PROCEDURE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
- Das folgende Codebeispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. Zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, werden Informationen zurückgegeben, die sich auf den Fehler beziehen.  
+Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. Die gespeicherte Prozedur gibt Informationen zum Fehler zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, zurück.  
   
 ```  
   
@@ -124,66 +135,17 @@ BEGIN CATCH
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
- Das folgende Codebeispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
-  
-```  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>D. Verwenden von ERROR_PROCEDURE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
- Das folgende Codebeispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. Zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, werden Informationen zurückgegeben, die sich auf den Fehler beziehen.  
-  
-```  
-  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-        END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage                       ErrorLine
+----------- ------------- ----------- ---------------- ---------------------------------- -----------
+8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs
+title: Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e9db70d57cca76574f5f3e5e1aa77decade35392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035737"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** blockiert. Die Elemente im angegebenen der  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), werden die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Datensätze nach Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
+  Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** Blöcke. Der im angegebenen Elemente den  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), sind die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Einträge nach dem Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
   
  Dies ist das Updategramformat für einen Updatevorgang:  
   
@@ -63,32 +64,32 @@ ms.lasthandoff: 05/03/2018
  Die Elemente in der  **\<vor >** -Block identifizieren vorhandene Datensätze in den Datenbanktabellen.  
   
  **\<updg:after>**  
- Die Elemente in der  **\<nach >** Block wird beschrieben, wie die Datensätze im angegebenen der  **\<vor >** Block sollte so aussehen, nachdem die Updates angewendet wurden.  
+ Die Elemente in der  **\<nach >** -Block beschreiben, wie die Datensätze in angegeben die  **\<vor >** Block sollte so aussehen, nachdem die Updates angewendet wurden.  
   
- Die **Zuordnungsschema** Attribut identifiziert das Zuordnungsschema vom Updategram verwendet werden. Wenn das Updategram ein Zuordnungsschema angibt, die Element- und Attributnamen Namen angegeben, der  **\<vor >** und  **\<nach >** -Blöcke müssen den Namen im Schema übereinstimmen. Das Zuordnungsschema ordnet diese Element- oder Attributnamen der Datenbanktabelle und den Spaltennamen zu.  
+ Die **Zuordnungsschema** Attribut identifiziert das Zuordnungsschema, indem Sie das Updategram verwendet werden. Wenn das Updategram ein Zuordnungsschema angegeben ist, wird die Element- und Attributnamen Namen angegeben, der  **\<vor >** und  **\<nach >** Blöcke müssen die Namen im Schema entsprechen. Das Zuordnungsschema ordnet diese Element- oder Attributnamen der Datenbanktabelle und den Spaltennamen zu.  
   
- Wenn ein Updategram kein Schema angibt, verwendet das Updategram die Standardzuordnung. Im Standardmodus zuordnen, die  **\<ElementName >** in der Updategram Karten der Datenbanktabelle und die untergeordneten Elemente oder Attribute den Datenbankspalten angegeben.  
+ Wenn ein Updategram kein Schema angibt, verwendet das Updategram die Standardzuordnung. In der Zuordnung der  **\<ElementName >** in das Updategram Datenbanktabelle zugeordnet, die die untergeordneten Elemente oder Attribute einen zugeordnet, die Datenbankspalten angegeben.  
   
- Ein Element in der  **\<vor >** Block muss mit nur einer Tabellenzeile in der Datenbank übereinstimmen. Wenn das Element entweder mehreren Tabellenzeilen entspricht oder keiner Tabellenzeile stimmt nicht überein, wird das Updategram einen Fehler zurück und bricht die gesamte  **\<Sync >** Block.  
+ Ein Element in der  **\<vor >** Block muss mit nur einer Tabellenzeile in der Datenbank übereinstimmen. Wenn das Element entweder mehrere Zeilen der Tabelle übereinstimmt oder keiner Tabellenzeile stimmt nicht überein, wird das Updategram einen Fehler zurück und bricht die gesamte  **\<Sync >** Block.  
   
- Ein Updategram kann mehrere enthalten  **\<Sync >** blockiert. Jede  **\<Sync >** Block wird als Transaktion behandelt. Jede  **\<Sync >** Block kann verfügen über mehrere  **\<vor >** und  **\<nach >** blockiert. Beispielsweise, wenn Sie zwei der vorhandenen Datensätze aktualisieren, geben Sie zwei  **\<vor >** und  **\<nach >** -Paare an, eine für jeden zu aktualisierenden Datensatz.  
+ Fügen Sie ein Updategram kann mehrere  **\<Sync >** Blöcke. Jede  **\<Sync >** Block wird als Transaktion behandelt. Jede  **\<Sync >** Block kann verfügen über mehrere  **\<vor >** und  **\<nach >** Blöcke. Z. B. Wenn Sie zwei der vorhandenen Datensätze aktualisieren, geben Sie zwei  **\<vor >** und  **\<nach >** -Paare, eines für jeden Datensatz aktualisiert wird.  
   
 ## <a name="using-the-updgid-attribute"></a>Verwenden des updg:id-Attributs  
- Wenn mehrere Elemente angegeben werden, der  **\<vor >** und  **\<nach >** -Blöcke verwenden die **updg: ID** -Attribut markieren von Zeilen in der  **\<vor >** und  **\<nach >** blockiert. Die Verarbeitungslogik verwendet diese Informationen, um zu bestimmen, welcher Datensatz den  **\<vor >** -Block zu welchem Datensatz der  **\<nach >** Block.  
+ Wenn mehrere Elemente angegeben werden, der  **\<vor >** und  **\<nach >** -Blöcke verwenden die **updg: ID** -Attribut markieren von Zeilen in der  **\<vor >** und  **\<nach >** Blöcke. Die Verarbeitungslogik verwendet diese Informationen, um zu bestimmen, welcher Datensatz den  **\<vor >** -Block zu welchem Datensatz der  **\<nach >** Block.  
   
- Die **updg: ID** Attribut ist nicht notwendig (aber empfohlen), wenn eines der folgenden vorhanden ist:  
+ Die **updg: ID** -Attribut ist nicht notwendig (aber empfohlen), wenn eine der folgenden vorhanden ist:  
   
 -   Die Elemente im angegebenen Zuordnungsschema verfügen über die **SQL: Key-Felder** Attribut definiert werden.  
   
 -   Ein oder mehrere bestimmte Werte sind für das Schlüsselfeld oder die Schlüsselfelder im Updategram angegeben.  
   
- Wenn entweder der Fall ist, verwendet das Updategram die Schlüsselspalten, die im angegebenen der **SQL: Key-Felder** auf die Elemente in der  **\<vor >** und  **\< Nachdem >** blockiert.  
+ Wenn entweder der Fall ist, verwendet das Updategram die im angegebenen Schlüsselspalten der **SQL: Key-Felder** auf die Elemente in der  **\<vor >** und  **\< nach dem >** Blöcke.  
   
- Wenn das Zuordnungsschema keine Schlüsselspalten identifiziert (mit **SQL: Key-Felder**) oder wenn das Updategram einen schlüsselspaltenwert aktualisiert wird, müssen Sie angeben **updg: ID**.  
+ Wenn das Zuordnungsschema keine Schlüsselspalten identifiziert (mithilfe von **SQL: Key-Felder**) oder wenn das Updategram einen schlüsselspaltenwert aktualisiert wird, müssen Sie angeben **updg: ID**.  
   
- Die Einträge, die im angegebenen der  **\<vor >** und  **\<nach >** Blöcke müssen nicht in derselben Reihenfolge befinden. Die **updg: ID** -Attribut erzwingt die Zuordnung zwischen den Elementen, die im angegebenen der  **\<vor >** und  **\<nach >** blockiert werden.  
+ Die Einträge, die im angegebenen die  **\<vor >** und  **\<nach >** Blöcke müssen nicht in der gleichen Reihenfolge angegeben werden. Die **updg: ID** -Attribut erzwingt die Zuordnung zwischen den Elementen, die im angegebenen die  **\<vor >** und  **\<nach >** blockiert.  
   
- Wenn Sie angeben, dass ein Element in der  **\<vor >** Block und nur ein entsprechendes Element in der  **\<nach >** mit blockiert **updg: ID** ist nicht erforderlich. Es wird jedoch empfohlen, die Angabe **updg: ID** trotzdem um Mehrdeutigkeiten zu vermeiden.  
+ Wenn Sie angeben, dass ein Element in der  **\<vor >** Block und nur ein entsprechendes Element im der  **\<nach >** blockieren, mit **updg: ID** ist nicht erforderlich. Es wird jedoch empfohlen, dass Sie angeben, **updg: ID** ohnehin um Mehrdeutigkeiten zu vermeiden.  
   
 ## <a name="examples"></a>Beispiele  
  Bevor Sie die Updategrambeispiele verwenden, beachten Sie Folgendes:  
@@ -113,9 +114,9 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- Der Datensatz beschrieben, der  **\<vor >** Block stellt den aktuellen Datensatz in der Datenbank. Das Updategram verwendet alle im angegebenen Spaltenwerte der  **\<vor >** Block, um den Datensatz zu suchen. In diesem Updategram der  **\<vor >** Block stellt nur die ContactID-Spalte; aus diesem Grund verwendet das Updategram nur den Wert für den Datensatz zu suchen. Wenn Sie diesem Block den LastName-Wert hinzufügen würden, würde das Updategram sowohl den ContactID- als auch den LastName-Wert für die Suche verwenden.  
+ Der Eintrag beschrieben wird, der  **\<vor >** Block dar, den aktuellen Datensatz in der Datenbank. Das Updategram verwendet alle im angegebenen Spaltenwerte der  **\<vor >** Block, um den Datensatz zu suchen. In diesem Updategram bietet der  **\<vor >** Block stellt nur die ContactID-Spalte; aus diesem Grund verwendet das Updategram nur den Wert für den Datensatz zu suchen. Wenn Sie diesem Block den LastName-Wert hinzufügen würden, würde das Updategram sowohl den ContactID- als auch den LastName-Wert für die Suche verwenden.  
   
- In diesem Updategram der  **\<nach >** Block enthält nur den LastName-Spaltenwert, da dies der einzige Wert ist, die geändert wird.  
+ In diesem Updategram bietet der  **\<nach >** Block stellt nur den LastName-Spaltenwert, da dies der einzige Wert ist, die geändert wird.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Aktualisieren von mehreren Datensätzen mit dem Attribut "updg:id"  
  In diesem Beispiel führt das Updategram zwei Updates auf die HumanResources.Shift-Tabelle in der AdventureWorks-Datenbank aus:  
@@ -132,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Es fügt eine neue Schicht namens "Late Morning" ein, die um 10.00 Uhr beginnt.  
   
- In das Updategram die **updg: ID** Attribut erstellt Zuordnungen zwischen Elementen in der  **\<vor >** und  **\<nach >** blockiert.  
+ Im Updategram der **updg: ID** -Attribut erstellt Zuordnungen zwischen Elementen in der  **\<vor >** und  **\<nach >** Blöcke.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- Beachten Sie, dass wie die **updg: ID** Attribut-Paare für die erste Instanz von der \<HumanResources.Shift > Element in der  **\<vor >** Block mit der zweiten Instanz von der \< HumanResources.Shift >-Elements in der  **\<nach >** Block.  
+ Beachten Sie, dass wie die **updg: ID** -Attribut ordnet die erste Instanz von der \<HumanResources.Shift >-Element in der  **\<vor >** Block mit der zweiten Instanz von der \< HumanResources.Shift >-Elements in der  **\<nach >** Block.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -159,13 +160,13 @@ ms.lasthandoff: 05/03/2018
   
 2.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Angeben von mehreren \<vor > und \<nach > Blöcke  
- Um Mehrdeutigkeiten zu vermeiden, können Sie das Updategram in Beispiel B schreiben, durch die Verwendung mehrerer  **\<vor >** und  **\<nach >** -blockpaaren. Angeben von  **\<vor >** und  **\<nach >** -Paaren ist eine Möglichkeit, mehrere Updates mit einem Minimum von Verwechslungen angeben. Auch, wenn jeder von der  **\<vor >** und  **\<nach >** Blöcke geben Sie höchstens einem Element, Sie müssen keine verwenden die **updg: ID** Attribut .  
+ Um Mehrdeutigkeiten zu vermeiden, können Sie das Updategram in Beispiel B schreiben, indem Sie mehrere  **\<vor >** und  **\<nach >** -blockpaaren. Angeben von  **\<vor >** und  **\<nach >** -Paaren ist eine Methode des, mehrere Updates möglichst eindeutig anzugeben. Auch wenn jeder von der  **\<vor >** und  **\<nach >** Blöcke höchstens ein Element angeben, müssen Sie nicht mit der **updg: ID** Attribut .  
   
 > [!NOTE]  
->  Um ein Paar bilden die  **\<nach >** Tag muss unmittelbar folgen dem entsprechenden  **\<vor >** Tag.  
+>  Um ein paar zu bilden die  **\<nach >** Tag muss unmittelbar folgen der entsprechenden  **\<vor >** Tag.  
   
  Im folgenden Updategram das erste  **\<vor >** und  **\<nach >** Paar aktualisiert den schichtnamen für die Tagschicht. Das zweite Paar fügt einen neuen Schichtdatensatz ein.  
   
@@ -196,16 +197,16 @@ ms.lasthandoff: 05/03/2018
   
 2.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="d-specifying-multiple-sync-blocks"></a>D. Angeben von mehreren \<Sync > Blöcke  
  Sie können angeben, dass mehrere  **\<Sync >** -Blöcke in einem Updategram. Jede  **\<Sync >** Block, der angegeben wird, ist eine unabhängige Transaktion.  
   
- Im folgenden Updategram das erste  **\<Sync >** Block aktualisiert einen Datensatz in der Sales.Customer-Tabelle. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  
+ Im folgenden Updategram das erste  **\<Sync >** Block wird ein Datensatz in der Sales.Customer-Tabelle aktualisiert. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  
   
- Die zweite  **\<Sync >** Block der Sales.SalesOrderHeader-Tabelle zwei Datensätze hinzugefügt. Für diese Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Daher das Updategram gibt keinen den Wert von SalesOrderID in jedem der \<Sales.SalesOrderHeader > Elemente.  
+ Die zweite  **\<Sync >** Block der Sales.SalesOrderHeader-Tabelle zwei Datensätze hinzugefügt. Für diese Tabelle ist SalesOrderID eine Spalte vom Typ IDENTITY. Aus diesem Grund das Updategram gibt keinen den Wert von SalesOrderID in jedem der \<Sales.SalesOrderHeader > Elemente.  
   
- Angeben von mehreren  **\<Sync >** -Blöcke ist nützlich da Wenn das zweite  **\<Sync >** Block (eine Transaktion) Sales.SalesOrderHeader-Tabelle Datensätze hinzufügen kann die erste  **\<Sync >** Block kann dennoch den Kundendatensatz in der Sales.Customer-Tabelle aktualisieren.  
+ Angeben von mehreren  **\<Sync >** -Blöcke ist nützlich da Wenn die zweite  **\<Sync >** Block (eine Transaktion) ein Fehler auftritt, Sales.SalesOrderHeader-Tabelle Datensätze hinzufügen der erste  **\<Sync >** blockieren können Sie dennoch den Kundendatensatz in der Sales.Customer-Tabelle aktualisieren.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -262,14 +263,14 @@ ms.lasthandoff: 05/03/2018
   
 2.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="e-using-a-mapping-schema"></a>E. Verwenden eines Zuordnungsschemas  
  In diesem Beispiel gibt das Updategram ein Zuordnungsschema mit der **Zuordnungsschema** Attribut. (Es gibt keine Standardzuordnung, d. h. das Zuordnungsschema bietet die erforderliche Zuordnung der Elemente und Attribute im Updategram zu den Datenbanktabellen und -spalten.)  
   
  Die im Updategram angegebenen Elemente und Attribute verweisen auf die Elemente und Attribute im Zuordnungsschema.  
   
- Die folgenden XSD-Zuordnungsschema umfasst  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OD >** Elemente, die zum Zuordnen der Tabellen Sales.Customer, Sales.SalesOrderHeader und Sales.SalesOrderDetail in der Datenbank.  
+ Hat das folgende XSD-Zuordnungsschema  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OD >** Elemente, die zum Zuordnen der Tabellen Sales.Customer, Sales.SalesOrderHeader und Sales.SalesOrderDetail in der Datenbank.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -322,7 +323,7 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- Dieses Zuordnungsschema (UpdategramMappingSchema.xml) wird im folgenden Updategram angegeben. Das Updategram fügt in der Sales.SalesOrderDetail-Tabelle ein Auftragselement für einen bestimmten Auftrag hinzu. Das Updategram schließt geschachtelte Elemente: ein  **\<OD >** Element geschachtelt ein  **\<Reihenfolge >** Element. Die Primärschlüssel-Fremdschlüssel-Beziehung zwischen diesen beiden Elementen wird im Zuordnungsschema angegeben.  
+ Dieses Zuordnungsschema (UpdategramMappingSchema.xml) wird im folgenden Updategram angegeben. Das Updategram fügt in der Sales.SalesOrderDetail-Tabelle ein Auftragselement für einen bestimmten Auftrag hinzu. Das Updategram schließt geschachtelte Elemente: ein  **\<OD >** Element verschachtelt innerhalb einer  **\<Reihenfolge >** Element. Die Primärschlüssel-Fremdschlüssel-Beziehung zwischen diesen beiden Elementen wird im Zuordnungsschema angegeben.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -348,7 +349,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
@@ -363,7 +364,7 @@ ms.lasthandoff: 05/03/2018
   
  Da ein Student sich in viele Kurse einschreiben kann und an einem Kurs zahlreiche Studenten teilnehmen können, wird die dritte Tabelle, die Enrollment-Tabelle, benötigt, um diese m:n-Beziehung darzustellen.  
   
- Das folgende XSD-Zuordnungsschema stellt eine XML-Sicht der Tabellen mithilfe der  **\<Student >**,  **\<Kurs >**, und  **\<Registrierung >** Elemente. Die **IDREFS** Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen. Die **StudentIDList** -Attribut auf die  **\<Kurs >** Element ist ein **IDREFS** Type-Attribut, das auf die StudentID-Spalte in der Enrollment-Tabelle verweist. Entsprechend der **EnrolledIn** -Attribut auf die  **\<Student >** Element ist ein **IDREFS** Type-Attribut, das auf die CourseID-Spalte in der Registrierung verweist Tabelle.  
+ Das folgende XSD-Zuordnungsschema stellt eine XML-Sicht der Tabellen mithilfe der  **\<für Schüler und Studenten >**,  **\<Kurs >**, und  **\<Registrierung >** Elemente. Die **IDREFS** Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen. Die **StudentIDList** -Attribut für die  **\<Kurs >** Element ist ein **IDREFS** Type-Attribut, das auf die StudentID-Spalte in der Enrollment-Tabelle verweist. Ebenso die **EnrolledIn** -Attribut für die  **\<für Schüler und Studenten >** Element ist ein **IDREFS** Type-Attribut, das auf die CourseID-Spalte in der Registrierung verweist Tabelle.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -460,7 +461,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 6.  Speichern Sie das Updategram wie in den vorherigen Schritten beschrieben und führen Sie es aus. Das Updategram fügt den Studenten mit StudentID="1" wieder dem Kurs CS102 hinzu, indem der Enrollment-Tabelle ein Datensatz hinzugefügt wird.  
   
@@ -561,6 +562,6 @@ ms.lasthandoff: 05/03/2018
  Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -2,7 +2,7 @@
 title: Was ist SQL Server Reporting Services (SSRS) | Microsoft-Dokumentation
 description: Erfahren Sie mehr über Tools und Dienste für mobile und paginierte Reporting Services-Berichte.
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,17 +22,18 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404912"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Was ist SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Interessieren Sie sich für Power BI-Berichtsserver? Informationen finden Sie unter [Get started with Power BI Report Server (Erste Schritte mit Power BI-Berichtsserver)](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Interessieren Sie sich für Power BI-Berichtsserver? Weitere Informationen finden Sie unter [Was ist der Power BI-Berichtsserver?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
 Mit einer Reihe von direkt einsatzbereiten Tools und Diensten, die von SQL Server Reporting Services (SSRS) bereitgestellt werden, können Sie mobile und paginierte Reporting Services-Berichte lokal erstellen, bereitstellen und verwalten.
 

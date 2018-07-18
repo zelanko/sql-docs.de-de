@@ -1,36 +1,20 @@
 ---
-title: SELECT INTO (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- SELECT_INTO
-- SELECT INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining models [Analysis Services], copying
-- SELECT INTO statement
-- mining models [Analysis Services], creating
-- copying mining models
-ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
-author: Minewiskan
+title: SELECT INTO (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ab2052950624fa7c322336e3855bda72e74726f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040418"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +54,7 @@ FROM <existing model>
  Die **WITH DRILLTHROUGH** -Klausel aktiviert Drillthrough für das neue Miningmodell. Drillthrough kann nur aktiviert werden, wenn das Modell erstellt wird.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Beispiel 1: Ändern der Parameter des Modells  
- Das folgende Beispiel erstellt ein neues Miningmodell, basierend auf einem vorhandenen Miningmodell `TM_Clustering`, die Sie erstellen, in der [Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In dem neuen Modell wird der CLUSTER_COUNT-Parameter geändert, sodass das neue Modell maximal fünf Cluster enthält. Demgegenüber verwendet das vorhandene Modell den Standardwert 10.  
+ Das folgende Beispiel erstellt ein neues Miningmodell, basierend auf einem vorhandenen Miningmodell `TM_Clustering`, die Sie erstellen, in der [Lernprogramm zu Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In dem neuen Modell wird der CLUSTER_COUNT-Parameter geändert, sodass das neue Modell maximal fünf Cluster enthält. Demgegenüber verwendet das vorhandene Modell den Standardwert 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -91,8 +75,8 @@ FROM [TM Clustering]
 >  Filter, die auf die Falltabelle angewendet werden, können mithilfe der SELECT INTO-Anweisung geändert werden, wie in diesem Beispiel erläutert wird. Wenn das ursprüngliche Modell jedoch einen Filter für eine geschachtelte Tabelle enthält, kann dieser Filter nicht mithilfe dieser Syntax geändert oder entfernt werden, er wird stattdessen unverändert aus dem ursprünglichen Modell kopiert. Um ein Modell mit einem anderen Filter für eine geschachtelte Tabelle zu erstellen, verwenden Sie stattdessen die ALTER STRTUCTURE...ADD MODEL-Syntax.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

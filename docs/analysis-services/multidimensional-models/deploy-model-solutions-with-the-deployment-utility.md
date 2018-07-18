@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm | Microsoft Docs
+title: Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975161"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  Mithilfe des Hilfsprogramms **Microsoft.AnalysisServices.Deployment** können Sie das Bereitstellungsmodul von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von der Eingabeaufforderung aus starten. Als Eingabedatei verwendet das Hilfsprogramm die XML-Ausgabedateien, die beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert werden. Die Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
+  Mithilfe des Hilfsprogramms **Microsoft.AnalysisServices.Deployment** können Sie die Bereitstellungs-Engine von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von der Eingabeaufforderung aus starten. Als Eingabedatei verwendet das Hilfsprogramm die XML-Ausgabedateien, die beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert werden. Die Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
   
 > [!NOTE]
-> Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistenten/Bereitstellungshilfsprogramm wird mit installiert [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Achten Sie darauf, dass Sie die neueste Version verwenden. Standardmäßig ist die neueste Version des bereitstellungs-Assistenten C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio installiert. 
+> Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistenten/Bereitstellungshilfsprogramm wird mit installiert [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Achten Sie darauf, dass Sie die neueste Version verwenden. Standardmäßig ist die neueste Version des bereitstellungs-Assistenten zu C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio installiert. 
 
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +62,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>Hinweise  
  Das Hilfsprogramm **Microsoft.AnalysisServices.Deployment** liest eine Gruppe von Dateien, die die Objektdefinitionen, Bereitstellungsziele, Bereitstellungsoptionen und Konfigurationseinstellungen angeben, und versucht, die Objektdefinitionen mithilfe der angegebenen Bereitstellungsoptionen und Konfigurationseinstellungen auf den angegebenen Bereitstellungszielen bereitzustellen. Dieses Hilfsprogramm kann eine Benutzeroberfläche bereitstellen, wenn es im Antwort- oder Ausgabemodus aufgerufen wird. Weitere Informationen zum Verwenden der Benutzeroberfläche, die für dieses Hilfsprogramm zum Erstellen von Antwortdateien bereitgestellt wird, finden Sie unter [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
- Das Hilfsprogramm befindet sich im Ordner "\Programme Dateien (x86) \Microsoft SQL Server\140\Binn\ManagementStudio".  
+ Das Hilfsprogramm befindet sich in den Ordner "\Programme (x86) \Microsoft SQL Server\140\Binn\ManagementStudio".  
   
 ##  <a name="Modes"></a> Modi  
  Das Hilfsprogramm kann in den folgenden Modi ausgeführt werden.  
@@ -84,6 +85,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ 
+  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

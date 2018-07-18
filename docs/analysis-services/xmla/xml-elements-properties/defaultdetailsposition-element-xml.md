@@ -1,5 +1,5 @@
 ---
-title: DefaultDetailsPosition-Element (XML) | Microsoft Docs
+title: DefaultDetailsPosition-Element (XML) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae920ba37f210e4f9bbdf6305899eb79eac74167
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34573842"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994902"
 ---
 # <a name="defaultdetailsposition-element-xml"></a>DefaultDetailsPosition-Element (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

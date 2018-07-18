@@ -1,5 +1,5 @@
 ---
-title: Members-Element (XMLA) | Microsoft Docs
+title: Members-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994712"
 ---
 # <a name="members-element-xmla"></a>Members-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,19 +45,19 @@ ms.locfileid: "34579102"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)|  
-|Untergeordnete Elemente|[Datenmember](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
+|Untergeordnete Elemente|[Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
 ## <a name="attributes"></a>Attribute  
   
 |attribute|Description|  
 |---------------|-----------------|  
-|Hierarchy|Erforderliches **String** -Attribut. Der Name der Hierarchie, der die Elemente, durch enthält, die **Elemente** Element gehören.|  
+|Hierarchy|Erforderliches **String** -Attribut. Der Name der Hierarchie, der die Elemente, durch enthält, die **Mitglieder** Element gehören.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Clientanwendung legt die **AxisFormat** Eigenschaft, um *' Clusterformat '*, die Elemente auf jeder Achse in Cluster in der jeder Cluster ein Kreuzprodukt geordneten Mengen an darstellt unterteilt Elemente aus jeder Hierarchie. Jede **Achse** Element besteht aus einem oder mehreren **CrossProduct** Elemente. Jede **CrossProduct** Element enthält eine **Elemente** -Element für jede Hierarchie auf der Achse. Die **Elemente** -Element wiederum enthält ein **Member** -Element für jedes Mitglied in das Kreuzprodukt enthaltenen Hierarchie.  
+ Wenn eine Client-Anwendung legt die **AxisFormat** Eigenschaft, um *' Clusterformat '*, die Elemente auf jeder Achse in Cluster, in dem jeder Cluster ein Kreuzprodukt geordneten Mengen an dargestellt, unterteilt, Elemente aus jeder Hierarchie. Jede **Achse** Element besteht aus einem oder mehreren **CrossProduct** Elemente. Jede **CrossProduct** Element enthält eine **Mitglieder** -Element für jede Hierarchie auf der Achse. Die **Mitglieder** -Element wiederum enthält ein **Member** -Element für jedes Mitglied im Kreuzprodukt enthaltenen Hierarchie.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Struktur der **Mitglieder** -Element, wenn ein Client angibt, *' Clusterformat '* für die **AxisFormat** angegebene XMLA-Eigenschaft der folgende Elemente für die Achse:  
+ Das folgende Beispiel veranschaulicht die Struktur der der **Mitglieder** -Element, wenn ein Client angibt, *' Clusterformat '* für die **AxisFormat** XMLA-Eigenschaft, erhält der befolgen die Mitglieder für die Achse:  
   
 ||||||  
 |-|-|-|-|-|  

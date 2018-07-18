@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913785"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Mit Standards kompatible Anwendungen und-Treiber
 Eine mit Standards kompatible Anwendung oder Treiber ist, die Open Group CAE-Spezifikation "Data Management: SQL Call-Level Interface (CLI)" und der ISO/IEC 9075 entspricht-3:1995 (E) Call-Level-Interface (SQL/CLI).  

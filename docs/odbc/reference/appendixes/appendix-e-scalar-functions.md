@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914485"
 ---
 # <a name="appendix-e-scalar-functions"></a>Anhang E: Skalarfunktionen
 ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Informationen zu den einzelnen von dieser Funktionstypen, die in den entsprechenden Abschnitten in diesem Anhang bereitgestellt. Zugeordnete Syntax einschließen, die die Beschreibungen der Funktion.  

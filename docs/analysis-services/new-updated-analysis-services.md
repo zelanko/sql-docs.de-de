@@ -16,6 +16,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023047"
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Neue und kürzlich aktualisierte: Analysis Services für SQLServer
 

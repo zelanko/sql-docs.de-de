@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911295"
 ---
 # <a name="buffers"></a>Puffer
 Ein Puffer ist jedem Teil einer Anwendung Arbeitsspeicher verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Beispielsweise Anwendungspuffer können zugeordnet werden, oder *gebunden* Resultsetspalten mit **SQLBindCol**. Wie jede Zeile abgerufen wird, werden die Daten für jede Spalte in diesen Puffern zurückgegeben. *Geben Sie Puffer* dienen zum Übergeben von Daten aus der Anwendung an den Treiber; *Ausgabepuffer* werden verwendet, um Daten aus dem Treiber an die Anwendung zurückgegeben.  

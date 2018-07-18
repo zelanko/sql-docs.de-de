@@ -1,5 +1,5 @@
 ---
-title: Message-Element (XMLA) | Microsoft Docs
+title: Message-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29780b5578c5e48c2ff8781719f9ebffe065e62c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065888"
 ---
 # <a name="message-element-xmla"></a>Message-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält eine Meldung zurückgegeben, die von einer Instanz von Analysis Services durch eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) -Methodenaufruf.  
+  Enthält eine Meldung zurückgegeben, die von einer Instanz von Analysis Services durch eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methodenaufruf.  
   
 ## <a name="syntax"></a>Syntax  
   

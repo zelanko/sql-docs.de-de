@@ -1,8 +1,7 @@
 ---
-title: Service-Anbieter und -Komponenten | Microsoft Docs
+title: -Dienstanbieter und Komponenten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,17 +18,18 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a49731edea9e0aa59977eec3aa73cac32b372b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984312"
 ---
 # <a name="service-providers-and-components"></a>Dienstanbieter und Komponenten
-Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbietern erweitern, indem implementieren die erweiterten Schnittstellen, die vom Datenspeicher nicht systemeigen unterstützt werden.  
+Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbieter erweitern, durch die Implementierung von erweiterter Schnittstellen, die nicht nativ vom Datenspeicher unterstützt werden.  
   
- Universal Data Access enthält ein *Komponentenarchitektur* einzelne, spezielle Komponenten zum Implementieren der separate Sätze von Datenbankfunktionen oder "Dienste", über weniger leistungsfähige speichert ermöglicht. Daher geben Sie Dienstkomponenten anstatt das Erzwingen eines jeden Datenspeicher, um eine eigene Implementierung der erweiterten Funktionen bereitzustellen, oder durch das Erzwingen des allgemeiner Anwendungen, die intern zu implementieren, eine verbreitete Implementierung, die jede Anwendung kann Verwenden Sie, wenn Sie einen beliebigen Datenspeicher zugreifen. Die Tatsache, dass einige Funktionen systemintern durch den Datenspeicher und durch allgemeine Komponenten implementiert wird, ist für die Anwendung transparent.  
+ Universal Data Access ermöglicht einen *Komponentenarchitektur* , einzelne, spezielle Komponenten zum Implementieren von diskreter Gruppen von Funktionen für Datenbanken oder "Dienste", auf weniger leistungsstarken Speicher ermöglicht. Daher geben Sie Dienstkomponenten anstatt jeden Datenspeicher, eine eigene Implementierung der erweiterten Funktionen erzwingen, oder erzwingen allgemeine Anwendungen, Datenbankfunktionalität intern zu implementieren, eine gängige Implementierung, die eine Anwendung kann Verwenden Sie Wenn Sie einen beliebigen Datenspeicher zugreifen. Die Tatsache, dass einige Funktionen systemintern von Datenspeicher und durch allgemeine Komponenten implementiert wird, ist für die Anwendung transparent.  
   
- Angenommen, ein Cursor Modul, wie z. B. [des Cursordiensts für OLE DB-](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), ist eine Dienstkomponente, die Daten aus einem sequenziellen, Vorwärtscursor Datenspeicher bildlauffähige Daten erstellt nutzen kann. Andere häufig verwendete ADO Dienstanbieter umfassen die [Microsoft OLE DB-Anbieter für Persistenz (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (zum Speichern von Daten in eine Datei), die [Microsoft-Datenstrukturierungsdiensts für OLE DB (ADO-Dienstanbieter) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (für hierarchische **Recordsets**), und die [Microsoft OLE DB-Anbieter für Remoting (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (zum Aufrufen von Datenanbieter auf einem Remotecomputer befindet).  
+ Z. B. ein Cursor-engine, wie z. B. [der Cursor Service für OLE DB](http://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), ist eine Dienstkomponente, die Daten aus einem sequenziellen, nur vorwärts gerichteten Datenspeicher bildlauffähigen Daten verwenden. Andere Dienstanbieter, die häufig für ADO verwendeten umfassen die [Microsoft OLE DB-Persistenz-Anbieter (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (zum Speichern von Daten in eine Datei), die [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (für hierarchische **Recordsets**), und die [Microsoft OLE DB Remoting-Anbieter (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (zum Aufrufen von Datenanbieter auf einem Remotecomputer).  
   
- Weitere Informationen zum Dienst und Datenanbieter finden Sie unter [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Weitere Informationen zu Dienst- und Anbietern finden Sie unter [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md).

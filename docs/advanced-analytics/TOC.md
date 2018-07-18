@@ -69,13 +69,13 @@
 #### [Analysieren von Daten in einem lokalen Rechenkontext](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Verschieben von Daten zwischen SQL Server und einer XDF-Datei](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Erstellen einer einfachen Simulation](tutorials/deepdive-create-a-simple-simulation.md)
-### [R: Datenbankinterne Analysen für SQL-Entwickler](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [Schritt 1: Herunterladen der Beispieldaten](tutorials/sqldev-download-the-sample-data.md)
-#### [Schritt 2: Importieren von Daten nach SQL Server mithilfe von PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [Schritt 3: Durchsuchen und Visualisieren der Daten](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [Schritt 4: Erstellen von Datenfunktionen mit T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [Schritt 5: Trainieren und Speichern eines Modells mit T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [Schritt 6: Operationalisieren des Modells](tutorials/sqldev-operationalize-the-model.md)
+### [R-Code in gespeicherten Prozeduren](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1: Abrufen von Daten und Skripts](tutorials/sqldev-download-the-sample-data.md)
+#### [2: Einrichten der Umgebung](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3: Visualisieren von Daten](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4: Erstellen von Datenfeatures](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5: Trainieren und Speichern in SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6: Vorhersagen von Ergebnissen](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: Ausführen von Python mit T-SQL](tutorials/run-python-using-t-sql.md)
@@ -104,8 +104,8 @@
 #### [Verwenden von RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
 ##### [Remoteverwaltung für R-Pakete aktivieren](r/r-package-how-to-enable-or-disable.md)
 ##### [Synchronisieren von R-Paketen](r/package-install-uninstall-and-sync.md)
-#### [Erstellen Sie ein Repository miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-#### [Tipps zur Verwendung von R-Pakete](r/packages-installed-in-user-libraries.md)
+#### [Erstellen eines miniCRAN-Repositorys](r/create-a-local-package-repository-using-minicran.md)
+#### [Tipps für die Verwendung von R-Paketen](r/packages-installed-in-user-libraries.md)
 
 ## Durchsuchen und Modellieren von Daten
 ### [R-Bibliotheken und -Datentypen](r/r-libraries-and-data-types.md)
@@ -134,7 +134,7 @@
 ### [Ändern des Benutzerkontenpools für SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](r/add-sqlrusergroup-to-database.md)
 ### [Bereitstellen und Verarbeiten von Modellen mithilfe von Webdiensten](operationalization-with-mrsdeploy.md)
-### [Verwalten und Überwachen von Lösungen] (r/managing-and-monitoring-r-solutions.md
+### [Verwalten und Überwachen von Lösungen](r/managing-and-monitoring-r-solutions.md)
 ### [Ressourcenkontrolle bei Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Erstellen eines Ressourcenpools für Machine Learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Erweiterte Ereignisse bei Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
@@ -159,9 +159,9 @@
 ## [Einrichten eines virtuellen Computers](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [Problembehandlung](machine-learning-troubleshooting-faq.md)
 ### [Datensammlung](data-collection-ml-troubleshooting-process.md)
-### [Installation und Upgrade-Fehler](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Launchpad und externen Fehler bei der Ausführung von Skripts](common-issues-external-script-execution.md)
-### [R-Skript-Fehler](r-script-execution-errors.md)
+### [Installations- und Upgradefehler](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Fehler bei der Ausführung von Launchpads und externen Skripts](common-issues-external-script-execution.md)
+### [Skripterstellungsfehler bei R](r-script-execution-errors.md)
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
@@ -170,4 +170,4 @@
 
 ## Foren
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Machine Learning-Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

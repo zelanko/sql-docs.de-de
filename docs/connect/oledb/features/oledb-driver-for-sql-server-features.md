@@ -2,7 +2,7 @@
 title: OLE DB-Treiber für SQL Server-Funktionen | Microsoft Docs
 description: OLE DB-Treiber für SQL Server-Funktionen
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612355"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB-Treiber für SQL Server-Funktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  [Programmgesteuertes Ändern von Kennwörtern](../../oledb/features/changing-passwords-programmatically.md)  
  Erläutert, wie OLE DB-Treiber für SQL Server so, dass Kennwörter jetzt auf dem Client ohne Eingreifen eines Administrators geändert werden können, die Handhabung abgelaufener Kennwörter unterstützt.  
   
- [Arbeiten mit Momentaufnahmeisolation](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Arbeiten mit der Momentaufnahmeisolation](../../oledb/features/working-with-snapshot-isolation.md)  
  Erläutert, wie OLE DB-Treiber für SQL Server-Erweiterung aus der zeilenversionsverwaltung unterstützt, die die datenbankleistung verbessert, indem Leser-schreiberblockierungsszenarien vermieden.  
   
  [Arbeiten mit Abfragebenachrichtigungen](../../oledb/features/working-with-query-notifications.md)  

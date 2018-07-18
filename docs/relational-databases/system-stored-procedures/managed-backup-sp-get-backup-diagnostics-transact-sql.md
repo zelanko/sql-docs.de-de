@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
+title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,17 +26,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051318"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gibt die erweiterten Ereignisse zurück, die von Smart Admin protokolliert wurden.  
   
- Verwenden Sie diese gespeicherte Prozedur zum Überwachen von Smart Admin protokollierten erweiterten Ereignisse. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Ereignisse werden in diesem System protokolliert und können überprüft werden und mit dieser gespeicherten Prozedur überwacht.  
+ Verwenden Sie diese gespeicherte Prozedur zum Überwachen von Smart Admin protokollierten erweiterten Ereignisse. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Ereignisse werden in diesem System protokolliert und können überprüft werden, und mit dieser gespeicherten Prozedur überwacht.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +49,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Argumente  
  @xevent_channel  
- Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können den vollständigen Ereignisnamen oder eine Teilzeichenfolge angeben, wie z. B.: **"Admin"**, **'Analytic'**, **"Operational"**, und **'Debug'** . Die @event_channel ist **VARCHAR (255)**.  
+ Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können den vollständigen Ereignisnamen oder eine Teilzeichenfolge angeben, wie z. B.: **'Admin'**, **'Analytic'**, **'Operational'**, und **"Debug"** . Die @event_channel ist **VARCHAR (255)**.  
   
- Zum Abrufen einer Liste von Ereignis derzeit aktivierten Ereignistypen können die **managed_backup.fn_get_current_xevent_settings** Funktion.  
+ Um eine Liste der derzeit aktivierten Ereignistypen Ereignis erhalten die **managed_backup.fn_get_current_xevent_settings** Funktion.  
   
  [@begin_time  
  Der Beginn des Zeitraums, für den die Ereignisse angezeigt werden sollen. Die @begin_time Parameter ist "DateTime" hat den Standardwert NULL. Wenn dieser nicht angegeben ist, werden die Ereignisse der letzten 30 Minuten angezeigt.  
@@ -64,14 +65,14 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ||||  
 |-|-|-|  
 |Spaltenname|Datentyp|Description|  
-|event_type|VOM DATENTYP NVARCHAR(512)|Typ des erweiterten Ereignisses.|  
-|Ereignis|VOM DATENTYP NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
-|Timestamp|TIMESTAMP|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
+|event_type|NVARCHAR(512)|Typ des erweiterten Ereignisses.|  
+|Ereignis|NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
+|Timestamp|timestamp|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert **EXECUTE** Berechtigungen für die gespeicherte Prozedur. Darüber hinaus müssen **VIEW SERVER STATE** Berechtigungen, da er intern andere Systemobjekte aufruft, diese Berechtigung erfordern.  
+ Erfordert **EXECUTE** Berechtigungen für die gespeicherte Prozedur. Darüber hinaus müssen **VIEW SERVER STATE** Berechtigungen, da sie andere Systemobjekte, die ruft intern diese Berechtigung erfordern.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle für die letzten 30 Minuten protokollierten Ereignisse zurückgegeben.  

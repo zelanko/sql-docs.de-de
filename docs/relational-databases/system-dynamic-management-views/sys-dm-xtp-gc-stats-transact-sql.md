@@ -1,5 +1,5 @@
 ---
-title: dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_xtp_gc_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005652"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Enthält Informationen (Gesamtstatistiken) über das aktuelle Verhalten der [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Garbage Collection-Prozesses.  
   
- Zeilen werden im Rahmen der regulären Transaktionsverarbeitung von der Garbage Collection oder vom Garbage Collection-Hauptthread bereinigt, der als Leerlaufthread bezeichnet wird. Wenn eine Benutzertransaktion ein Commit ausgeführt wird, entfernt Sie eine Arbeitsaufgabe aus der Warteschlange der Garbage Collection ([Sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Alle Zeilen, die durch die Garbage Collection bereinigt werden konnten, auf die jedoch nicht durch die Hauptbenutzertransaktion zugegriffen wurde, werden im Rahmen des Dusty-Corner-Scans (einem Scan der Indexbereiche, auf die seltener zugegriffen wird) durch den Leerlaufthread bereinigt.  
+ Zeilen werden im Rahmen der regulären Transaktionsverarbeitung von der Garbage Collection oder vom Garbage Collection-Hauptthread bereinigt, der als Leerlaufthread bezeichnet wird. Wenn eine Benutzertransaktion ein Commit ausgeführt werden, entfernt er eine Arbeitsaufgabe aus der Garbage Collection-Warteschlange ([Sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Alle Zeilen, die durch die Garbage Collection bereinigt werden konnten, auf die jedoch nicht durch die Hauptbenutzertransaktion zugegriffen wurde, werden im Rahmen des Dusty-Corner-Scans (einem Scan der Indexbereiche, auf die seltener zugegriffen wird) durch den Leerlaufthread bereinigt.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

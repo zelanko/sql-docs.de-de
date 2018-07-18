@@ -1,5 +1,5 @@
 ---
-title: Xp_sqlmaint (Transact-SQL) | Microsoft Docs
+title: Xp_sqlmaint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979382"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ruft die **Sqlmaint** -Hilfsprogramm mit eine Zeichenfolge, enthält **Sqlmaint**Switches. Die **Sqlmaint** -Hilfsprogramm führt eine Reihe von Wartungsvorgänge für eine oder mehrere Datenbanken.  
+  Ruft die **Sqlmaint** -Hilfsprogramm mit der eine Zeichenfolge mit **Sqlmaint**Switches. Die **Sqlmaint** -Hilfsprogramm führt eine Reihe von Wartungsvorgänge für eine oder mehrere Datenbanken.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -52,10 +53,10 @@ xp_sqlmaint 'switch_string'
  Die **-?** Switch ist nicht gültig für **Xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine. Gibt einen Fehler zurück, wenn die **Sqlmaint** Hilfsprogramm ein Fehler auftritt.  
+ Keine. Gibt einen Fehler zurück, wenn die **Sqlmaint** Dienstprogramm ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn diese Prozedur von einem Benutzer, die mit SQL Server-Authentifizierung angemeldet aufgerufen, wird die **- U "***Anmelde-ID***"** und **-P "***Kennwort***"** Switches vorangestellt *Switch_string* vor der Ausführung. Wenn der Benutzer in Windows-Authentifizierung angemeldet ist, auf *Switch_string* übergeben wird, ohne Änderung **Sqlmaint**.  
+ Wenn diese Prozedur von einem Benutzer, die mit SQL Server-Authentifizierung angemeldet aufgerufen, wird der **- U "***Login_id***"** und **-P "***Kennwort***"** Switches werden *Switch_string* vor der Ausführung. Wenn der Benutzer mit Windows-Authentifizierung angemeldet ist *Switch_string* übergeben wird, ohne Änderung **Sqlmaint**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -75,7 +76,7 @@ The command(s) executed successfully.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sqlmaint (Hilfsprogramm)](../../tools/sqlmaint-utility.md)   
+ [sqlmaint (Hilfsprogramm)](../../tools/sqlmaint-utility.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

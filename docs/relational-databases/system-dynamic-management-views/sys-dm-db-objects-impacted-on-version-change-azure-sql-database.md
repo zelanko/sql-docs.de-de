@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051288"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,17 +40,17 @@ ms.lasthandoff: 05/23/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|class|**Int** NOT NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
-|class_desc|**nvarchar(60)** NOT NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**Int** NOT NULL|Objekt-ID der Einschränkung oder Objekt-ID der Tabelle, die den Index oder Heap enthält.|  
+|class|**Int** nicht NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
+|class_desc|**nvarchar(60)** nicht NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|major_id|**Int** nicht NULL|Objekt-ID der Einschränkung oder Objekt-ID der Tabelle, die den Index oder Heap enthält.|  
 |minor_id|**Int** NULL|**NULL** für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|Abhängigkeit|**nvarchar(60)** NOT NULL|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index betroffen sind. Derselbe Wert wird auch für Warnungen verwendet, die während des Upgrades generiert werden.<br /><br /> Beispiele:<br /><br /> **Speicherplatz** (für systeminterne)<br /><br /> **Geometrie** (für System-UDT)<br /><br /> **Geography:: Parse** (für System-UDT-Methode)|  
+|Abhängigkeit|**nvarchar(60)** nicht NULL|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index betroffen sind. Derselbe Wert wird auch für Warnungen verwendet, die während des Upgrades generiert werden.<br /><br /> Beispiele:<br /><br /> **Speicherplatz** (für systeminterne)<br /><br /> **Geometry** (für System-UDT)<br /><br /> **Geography:: Parse** (für System-UDT-Methode)|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine Abfrage für **Sys. dm_db_objects_impacted_on_version_change** Suchen der Objekte, die ein Upgrade auf die nächstgrößeren Serverversion betroffen  
+ Im folgende Beispiel wird eine Abfrage für **Sys. dm_db_objects_impacted_on_version_change** zur Suche nach den Objekten, die durch ein Upgrade auf die nächste wichtige Serverversion beeinflusst  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -72,7 +73,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Order|Betroffenes Objekt|Korrekturmaßnahme|  
 |-----------|---------------------|-----------------------|  
-|1|**Indizes**|Alle identifizierten Index neu erstellen **Sys. dm_db_objects_impacted_on_version_change** zum Beispiel:  `ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objekt**|Alle Einschränkungen, die durch **Sys. dm_db_objects_impacted_on_version_change** muss erneut überprüft werden, nachdem die Geometrie und Geografie-Daten in der zugrunde liegenden Tabelle neu berechnet werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Indizes**|Alle identifizierten Index neu erstellen **Sys. dm_db_objects_impacted_on_version_change** z. B.:  `ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objekt**|Alle Einschränkungen, die durch **Sys. dm_db_objects_impacted_on_version_change** muss erneut überprüft werden, nachdem die Geometry- und Geography-Daten in der zugrunde liegenden Tabelle neu berechnet werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Zum Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

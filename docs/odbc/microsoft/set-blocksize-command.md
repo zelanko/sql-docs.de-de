@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901815"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE-Befehl
 Gibt an, wie der Speicherplatz für die Speicherung von Memo-Felder verwendet wird.  

@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren Sie SQLServer Always On-Verfügbarkeitsgruppe unter Windows und Linux | Microsoft Docs
-description: Konfigurieren Sie SQL Server Availability Group, mit Replikaten unter Windows und Linux.
+title: Konfigurieren Sie SQLServer Always On-Verfügbarkeitsgruppe unter Windows und Linux | Microsoft-Dokumentation
+description: Configure SQL-Server-Verfügbarkeitsgruppe mit Replikaten auf Windows und Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -14,68 +14,69 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9ccd5cb5fdc7d5c5bc6ff62b203bee0bbce6e5e8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983912"
 ---
-# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe unter Windows und Linux (Cross-Platform)
+# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe unter Windows und Linux (plattformübergreifend)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt die Schritte zum Erstellen einer immer auf Verfügbarkeit Gruppe (AG) mit einem Replikat auf einem WindowsServer und das andere Replikat auf einem Linux-Server. Diese Konfiguration ist plattformübergreifende, da die Replikate befinden sich unter verschiedenen Betriebssystemen. Verwenden Sie diese Konfiguration für die Migration von einer Plattform, die andere oder Wiederherstellung im Notfall (DR). Diese Konfiguration unterstützt keine hohe Verfügbarkeit, da es keine Clusterlösung zum Verwalten der Konfiguration einer plattformübergreifenden gibt. 
+Dieser Artikel beschreibt die Schritte zum Erstellen einer immer auf Availability Group (AG) mit einem Replikat auf einem Windows-Server und das andere Replikat auf einem Linux-Server. Diese Konfiguration ist plattformübergreifend, da die Replikate befinden sich unter verschiedenen Betriebssystemen. Verwenden Sie diese Konfiguration für die Migration von einer Plattform mit dem anderen oder Wiederherstellung im Notfall (DR). Diese Konfiguration unterstützt keine hohe Verfügbarkeit, da es keine Clusterlösung zum Verwalten der einer Cross-Platform-Konfigurations gibt. 
 
-![Hybride None](./media/sql-server-linux-availability-group-overview/image1.png)
+![Hybride keine](./media/sql-server-linux-availability-group-overview/image1.png)
 
 Bevor Sie fortfahren, sollten Sie mit der Installation und Konfiguration für SQL Server-Instanzen unter Windows und Linux vertraut sein. 
 
 ## <a name="scenario"></a>Szenario
 
-In diesem Szenario sind zwei Server unter verschiedenen Betriebssystemen. Windows Server 2016 mit dem Namen `WinSQLInstance` das primäre Replikat hostet. Ein Linux-Beispielserver namens `LinuxSQLInstance` das sekundäre Replikat hosten.
+In diesem Szenario sind zwei Server unter verschiedenen Betriebssystemen. Windows Server 2016 mit dem Namen `WinSQLInstance` das primäre Replikat hostet. Eine Linux-Server mit dem Namen `LinuxSQLInstance` das sekundäre Replikat hosten.
 
 ## <a name="configure-the-ag"></a>Konfigurieren der Verfügbarkeitsgruppe 
 
-Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erstellen einer Verfügbarkeitsgruppe für das Skalieren von Lesevorgängen Arbeitslasten identisch. Der Clustertyp AG ist keine ",", da es kein Cluster-Manager ist. 
+Die Schritte zum Erstellen der Verfügbarkeitsgruppe entsprechen die Schritte zum Erstellen einer Verfügbarkeitsgruppe für schreibgeschützte arbeitsauslastungen. Der Clustertyp der Verfügbarkeitsgruppe ist keine ",", da es kein Clustermanager ist. 
 
    >[!NOTE]
-   >Für die Skripts in diesem Artikel spitze Klammern `<` und `>` identifizieren Werte, die Sie für Ihre Umgebung ersetzen müssen. Die spitzen Klammern selbst sind nicht erforderlich, für die Skripts. 
+   >Für die Skripts in diesem Artikel spitze Klammern `<` und `>` identifizieren Sie die Werte, die Sie für Ihre Umgebung ersetzen müssen. Die Klammern selbst sind nicht erforderlich, damit die Skripts. 
 
-1. Installieren Sie 2017 von SQL Server unter Windows Server 2016, aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen von SQL Server-Konfigurations-Manager und legen Sie die Authentifizierung im gemischten Modus. 
+1. Installieren von SQL Server 2017 unter Windows Server 2016, aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen von SQL Server-Konfigurations-Manager, und legen Sie die Authentifizierung im gemischten Modus. 
 
    >[!TIP]
-   >Wenn Sie diese Lösung in Azure überprüfen, platzieren Sie beide Server in derselben verfügbarkeitsgruppe, um sicherzustellen, dass sie im Datencenter getrennt werden. 
+   >Wenn Sie diese Lösung in Azure überprüfen, platzieren Sie beide Server in derselben verfügbarkeitsgruppe festgelegt, um sicherzustellen, dass sie in das Rechenzentrum getrennt sind. 
 
-   **Aktivieren von Verfügbarkeitsgruppen**
+   **Aktivieren Sie Verfügbarkeitsgruppen**
 
    Anweisungen hierzu finden Sie unter [aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
-   ![Aktivieren von Verfügbarkeitsgruppen](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
+   ![Aktivieren Sie Verfügbarkeitsgruppen](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   SQL Server-Konfigurations-Manager fest, dass es sich bei der Computer kein Knoten in einem Failovercluster ist. 
+   SQL Server-Konfigurations-Manager – Anmerkungen dieser, dass der Computer nicht um einen Knoten in einem Failovercluster ist. 
 
-   Starten Sie SQL Server neu, nachdem Sie Verfügbarkeitsgruppen zu aktivieren.
+   Nach der Aktivierung von Verfügbarkeitsgruppen für starten Sie SQL Server neu.
 
    **Festlegen der Authentifizierung im gemischten Modus**
 
    Anweisungen hierzu finden Sie unter [Ändern des Serverauthentifizierungsmodus](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
 
-1. Installieren von SQLServer 2017 unter Linux. Anweisungen hierzu finden Sie unter [installieren SQL Sever](sql-server-linux-setup.md). Aktivieren Sie `hadr` über Mssql-conf
+1. Installieren Sie SQLServer 2017 unter Linux. Anweisungen hierzu finden Sie unter [installieren Sie SQL Server](sql-server-linux-setup.md). Aktivieren Sie `hadr` über Mssql-conf
 
-   So aktivieren Sie `hadr` über Mssql-Conf in einer Shell-Eingabeaufforderung den folgenden Befehl ausgeben:
+   So aktivieren Sie `hadr` über Mssql-Conf über eine shelleingabeaufforderung, geben Sie den folgenden Befehl:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
    ```
 
-   Nach der Aktivierung `hadr`, die SQL Server-Instanz neu.  
+   Nach der Aktivierung `hadr`, die SQL Server-Instanz neu starten.  
 
-   Die folgende Abbildung zeigt dieses Schritts.
+   Die folgende Abbildung zeigt diesen Schritt abschließen.
 
-   ![Verfügbarkeit Gruppen Linux aktivieren](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Aktivieren Sie die Verfügbarkeit Gruppen Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
-1. Konfigurieren Sie Hosts-Datei auf beiden Servern, oder registrieren Sie den Servernamen mit DNS.
+1. Konfigurieren Sie die Datei "Hosts" auf beiden Servern aus, oder registrieren Sie den Namen der Server mit DNS.
 
-1. Öffnen von Firewallports für TPC 1433 und 5022 auf Windows- und Linux.
+1. Öffnen Sie Firewallports für TPC 1433 und 5022 unter Windows und Linux.
 
 1. Erstellen Sie auf dem primären Replikat einen Datenbank-Anmeldenamen und ein Kennwort ein.
 
@@ -99,7 +100,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    GO
    ```
 
-1. Kopieren Sie das Zertifikat und den privaten Schlüssel mit dem Linux-Server (sekundären Replikat entspricht) am `/var/opt/mssql/data`. Sie können `pscp` auf die Dateien auf dem Linux-Server kopieren. 
+1. Kopieren Sie das Zertifikat und den privaten Schlüssel mit dem Linux-Server (sekundäres Replikat) auf `/var/opt/mssql/data`. Sie können `pscp` um die Dateien auf den Linux-Server zu kopieren. 
 
 1. Legen Sie die Gruppe und den Besitz des privaten Schlüssels und das Zertifikat an `mssql:mssql`.
 
@@ -110,12 +111,12 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.cer
    ```
 
-   Im folgenden Diagramm werden Objektbesitz und Gruppe für das Zertifikat und Schlüssel ordnungsgemäß festgelegt.
+   Im folgenden Diagramm werden den Besitz und die Gruppe für das Zertifikat und Schlüssel ordnungsgemäß festgelegt.
 
-   ![Verfügbarkeit Gruppen Linux aktivieren](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Aktivieren Sie die Verfügbarkeit Gruppen Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. Erstellen Sie einen Datenbank-Anmeldenamen und ein Kennwort und erstellen Sie einen Hauptschlüssel, auf dem sekundären Replikat.
+1. Erstellen Sie auf dem sekundären Replikat einen Datenbank-Anmeldenamen und ein Kennwort und erstellen Sie einen Hauptschlüssel.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -154,24 +155,24 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    ```
 
    >[!IMPORTANT]
-   >Die Firewall muss für den Listener TCP-Port geöffnet sein. Im Skript ist der Port 5022. Verwenden Sie einen beliebigen verfügbaren TCP-Port. 
+   >Die Firewall muss für den Listener-TCP-Port geöffnet sein. Im obigen Skript ist der Port 5022. Verwenden Sie einen beliebigen verfügbaren TCP-Port. 
 
-1. Erstellen Sie den Endpunkt, auf dem sekundären Replikat. Wiederholen Sie dieses Skript auf dem sekundären Replikat einen Endpunkt erstellen. 
+1. Erstellen Sie den Endpunkt, auf dem sekundären Replikat. Wiederholen Sie dieses Skript auf dem sekundären Replikat auf den Endpunkt zu erstellen. 
 
-1. Erstellen Sie auf dem primären Replikat die Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE`. Das Beispielskript verwendet `SEEDING_MODE = AUTOMATIC` zum Erstellen der Verfügbarkeitsgruppe. 
+1. Erstellen Sie auf dem primären Replikat die Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE`. Das Beispielskript verwendet `SEEDING_MODE = AUTOMATIC` die Verfügbarkeitsgruppe zu erstellen. 
 
    >[!NOTE]
-   >Wenn verwendet die Windows-Instanz von SQL Server unterschiedliche Pfade für Daten- und Protokolldateien, automatisches seeding ein Fehler auftritt, mit der Linux-Instanz von SQL Server, da diese Pfade nicht auf dem sekundären Replikat vorhanden sind. Um das folgende Skript für eine plattformübergreifende AG verwenden zu können, muss die Datenbank im gleichen Pfad für die Daten und Protokolldateien auf dem WindowsServer. Alternativ können Sie das Skript festzulegende aktualisieren `SEEDING_MODE = MANUAL` sichern und Wiederherstellen der Datenbank mit `NORECOVERY` auf das Seeding der Datenbank. 
+   >Wenn verwendet die Windows-Instanz von SQL Server unterschiedliche Pfade für Daten- und Protokolldateien, automatische seeding ein Fehler auftritt, mit der Linux-Instanz von SQL Server, da diese Pfade nicht auf dem sekundären Replikat vorhanden sind. Um das folgende Skript für eine Verfügbarkeitsgruppe für die plattformübergreifende verwenden zu können, muss die Datenbank den gleichen Pfad für die Daten und Protokolldateien auf dem Windows Server. Alternativ können Sie das Skript, um aktualisieren `SEEDING_MODE = MANUAL` und klicken Sie dann zu sichern und Wiederherstellen der Datenbank mit `NORECOVERY` zum Seeding der Datenbank. 
    >
    >Dieses Verhalten gilt für Azure Marketplace-Images. 
    >
-   >Weitere Informationen zu automatischen seeding, finden Sie unter [automatischem Seeding - Datenträgerlayout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
+   >Weitere Informationen zu automatischen Seedings, finden Sie unter [Automatisches Seeding - Datenträgerlayout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-   Bevor Sie das Skript ausführen, aktualisieren Sie die Werte für Ihre Testreihen.
+   Bevor Sie das Skript ausführen, aktualisieren Sie die Werte Ihrer Verfügbarkeitsgruppen.
 
-      * Ersetzen Sie `<WinSQLInstance>` mit den Namen des SQL Server-Instanz das primäre Replikat.
+      * Ersetzen Sie dies `<WinSQLInstance>` mit den Namen des SQL Server-Instanz das primäre Replikat.
 
-      * Ersetzen Sie `<LinuxSQLInstance>` mit den Namen des SQL Server-Instanz das sekundäre Replikat. 
+      * Ersetzen Sie dies `<LinuxSQLInstance>` mit den Namen des Replikats in SQL Server-Instanz. 
 
    Um die Verfügbarkeitsgruppe zu erstellen, aktualisieren Sie die Werte, und führen Sie das Skript auf dem primären Replikat.  
 
@@ -200,7 +201,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    
    Weitere Informationen finden Sie unter [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
 
-1. Verknüpfen Sie auf dem sekundären Replikat der Verfügbarkeitsgruppe.
+1. Verknüpfen Sie auf dem sekundären Replikat der Verfügbarkeitsgruppe ein.
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -208,15 +209,15 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    GO
    ```
 
-1. Erstellen Sie eine Datenbank für die Verfügbarkeitsgruppe an. Die Beispielschritte verwenden Sie eine Datenbank namens `<TestDB>`. Wenn Sie das automatische seeding verwenden, legen Sie den gleichen Pfad für die Daten und Protokolldateien. 
+1. Erstellen Sie eine Datenbank, für die Verfügbarkeitsgruppe. Die Beispielschritte verwenden, eine Datenbank namens `<TestDB>`. Wenn Sie das automatische seeding verwenden, legen Sie den gleichen Pfad für die Daten und Protokolldateien. 
 
-   Bevor Sie das Skript ausführen, aktualisieren Sie die Werte für Ihre Datenbank.
+   Bevor Sie das Skript ausführen, aktualisieren Sie die Werte für Ihre Datenbank ein.
 
-      * Ersetzen Sie `<TestDB>` durch den Namen der Datenbank.
+      * Ersetzen Sie dies `<TestDB>` mit dem Namen Ihrer Datenbank.
 
-      * Ersetzen Sie `<F:\Path>` durch den Pfad für Ihre Datenbank und Protokolldateien. Verwenden Sie denselben Pfad für die Datenbank und Protokolldateien an. 
+      * Ersetzen Sie dies `<F:\Path>` durch den Pfad für Ihre Datenbank und Protokolldateien. Verwenden Sie denselben Pfad für die Datenbank und Protokolldateien an. 
 
-      Sie können auch die Standardpfaden verwenden. 
+      Sie können auch die Standardpfaden. 
 
     Führen Sie das Skript, um Ihre Datenbank zu erstellen. 
 
@@ -228,24 +229,24 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    GO
    ```
 
-1. Nehmen Sie eine vollständige Sicherung der Datenbank. 
+1. Führen Sie eine vollständige Sicherung der Datenbank. 
 
-1. Wenn Sie das automatische seeding nicht verwenden, wird wiederherstellen Sie die Datenbank auf dem sekundären (Linux)-Replikatserver. [Migration von einer SQL Server-Datenbank von Windows, Linux mit Sicherung und Wiederherstellung](sql-server-linux-migrate-restore-database.md). Wiederherstellen der Datenbank `WITH NORECOVERY` auf dem sekundären Replikat. 
+1. Wenn Sie das automatische seeding nicht verwenden, wird wiederherstellen Sie die Datenbank auf dem sekundären Replikat (Linux)-Server. [Migrieren eine SQL Server-Datenbank von Windows bis Linux, die mit Sicherung und Wiederherstellung](sql-server-linux-migrate-restore-database.md). Wiederherstellen der Datenbank `WITH NORECOVERY` auf dem sekundären Replikat. 
 
-1. Die Datenbank der Verfügbarkeitsgruppe hinzufügen. Aktualisieren Sie das Beispielskript. Ersetzen Sie `<TestDB>` durch den Namen der Datenbank. Führen Sie die SQL-Abfrage, um die Datenbank der Verfügbarkeitsgruppe hinzuzufügen, auf dem primären Replikat.
+1. Die Datenbank zur Verfügbarkeitsgruppe hinzufügen. Aktualisieren Sie das Beispielskript. Ersetzen Sie dies `<TestDB>` mit dem Namen Ihrer Datenbank. Führen Sie die SQL-Abfrage, um die Datenbank der Verfügbarkeitsgruppe hinzuzufügen, auf dem primären Replikat.
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
-1. Stellen Sie sicher, dass die Datenbank auf dem sekundären Replikat aufgefüllt erhalten wird. 
+1. Stellen Sie sicher, dass die Datenbank auf dem sekundären Replikat aufgefüllt wird. 
 
 ## <a name="fail-over-the-primary-replica"></a>Führen Sie ein Failover des primären Replikats
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-In diesem Artikel überprüft die Schritte zum Erstellen einer plattformübergreifenden AG zur Migration oder Skalieren von Lesevorgängen arbeitsauslastungen zu unterstützen. Es kann für die manuelle Wiederherstellung verwendet werden. Es wird erläutert, wie für ein Failover der Verfügbarkeitsgruppe wird. Eine plattformübergreifende AG verwendet Clustertyp `NONE` und hohen Verfügbarkeit, da es kein Cluster Tool auf-Plattformen ist nicht unterstützt. 
+Diesen Artikel überarbeitet hat, die Schritte zum Erstellen einer plattformübergreifenden Verfügbarkeitsgruppe um Migration oder schreibgeschützte Workloads zu unterstützen. Es kann für die manuelle Wiederherstellung verwendet werden. Darüber hinaus wurde erläutert, wie Sie das Failover der Verfügbarkeitsgruppe. Eine Verfügbarkeitsgruppe für die plattformübergreifende verwendet Clustertyp `NONE` und hohen Verfügbarkeit nicht unterstützt, da es keine Cluster-Tool auf-Plattformen gibt. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796513"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO-dynamische Property-Index
 Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenschaften zum Hinzufügen der **Eigenschaften** Sammlungen von der geöffnete [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte. Ein angegebenen Anbieter möglicherweise auch weitere Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften sind aufgeführt, der [dynamische Eigenschaften der ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) Abschnitt. Weitere sind aufgeführt, unter bestimmten Anbieter in der [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) Abschnitt.  

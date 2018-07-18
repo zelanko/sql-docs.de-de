@@ -1,5 +1,5 @@
 ---
-title: SessionID-Element (XMLA) | Microsoft Docs
+title: SessionID-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76e30e2e14cc0e98c1a275831dabefde7d8db948
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036568"
 ---
 # <a name="sessionid-element-xmla"></a>SessionID-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Identifiziert eine aktive Sitzung, für das übergeordnete Element ausgeführt ["Abbrechen"](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) Element.  
+  Identifiziert eine aktive Sitzung auf dem das übergeordnete [Abbrechen](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

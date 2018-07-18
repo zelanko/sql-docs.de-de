@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020027"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Drucken eines Berichts (Reporting Services im SharePoint-Modus)
   Bei einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, gibt es drei Möglichkeiten zum Drucken eines Berichts aus einer SharePoint-Webanwendung:  

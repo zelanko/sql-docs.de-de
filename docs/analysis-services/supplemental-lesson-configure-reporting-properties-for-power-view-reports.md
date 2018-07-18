@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte | Microsoft Docs
+title: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033429"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In dieser ergänzenden Lektion legen Sie berichterstellungseigenschaften für das Projekt AW Internet Sales. Berichterstellungseigenschaften erleichtern Endbenutzern das Auswählen und Anzeigen von Modelldaten in Power View. Zusätzlich legen Sie Eigenschaften fest, um bestimmte Spalten und Tabellen auszublenden und neue Daten zur Verwendung in Diagrammen zu erstellen.   
+In dieser ergänzenden Lektion legen Sie berichterstellungseigenschaften für das AW Internet Sales-Projekt. Berichterstellungseigenschaften erleichtern Endbenutzern das Auswählen und Anzeigen von Modelldaten in Power View. Zusätzlich legen Sie Eigenschaften fest, um bestimmte Spalten und Tabellen auszublenden und neue Daten zur Verwendung in Diagrammen zu erstellen.   
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
@@ -26,7 +27,7 @@ Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**
 Diese ergänzende Lektion ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
 Zum Ausführen dieser ergänzenden Lektion benötigen Sie zusätzlich Folgendes:  
   
--   Das AW Internet Sales-Projekt (dieses Lernprogramms abgeschlossen ') kann jetzt bereitgestellt oder bereits auf einem Analysis Services-Server bereitgestellt werden.  
+-   Das AW Internet Sales-Projekt (dieses Tutorial abgeschlossen) möchten Sie die bereitgestellt oder bereits mit einem Analysis Services-Server bereitgestellt werden.  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>Modelleigenschaften, die sich auf die Berichterstellung auswirken  
@@ -68,9 +69,9 @@ Es kann zeitweise erforderlich sein, mithilfe von DAX-Formeln neue Daten im Mode
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
   
 ## <a name="default-field-set"></a>Standardfeldsatz  
-Standardfeldsatz ist eine vordefinierte Liste von Spalten und Measures für eine Tabelle, die in einem Berichtsbereich automatisch hinzugefügt werden, wenn die Tabelle in der berichtsfeldliste geklickt wird. Im Wesentlichen können Sie die standardmäßigen Spalten und Measures sowie die Feldreihenfolge angeben, die Benutzer erwarten würden, wenn diese Tabelle in Power View-Berichten visuell dargestellt wird.  Für das Modell Internet Sales definieren Sie einen Standardfeldsatz und eine Standardreihenfolge für die Tabellen Customer, Geography und Product. Es werden nur die am häufigsten verwendeten Spalten aufgenommen, die Benutzer zum Analysieren der Daten in Adventure Works Internet Sales mithilfe von Power View-Berichten benötigen.  
+Der Standardfeldsatz ist eine vordefinierte Liste von Spalten und Measures für eine Tabelle, die auf einem Zeichenbereich des Berichts automatisch hinzugefügt werden, wenn die Tabelle in der berichtsfeldliste geklickt wird. Im Wesentlichen können Sie die standardmäßigen Spalten und Measures sowie die Feldreihenfolge angeben, die Benutzer erwarten würden, wenn diese Tabelle in Power View-Berichten visuell dargestellt wird.  Für das Modell Internet Sales definieren Sie einen Standardfeldsatz und eine Standardreihenfolge für die Tabellen Customer, Geography und Product. Es werden nur die am häufigsten verwendeten Spalten aufgenommen, die Benutzer zum Analysieren der Daten in Adventure Works Internet Sales mithilfe von Power View-Berichten benötigen.  
   
-Ausführliche Informationen zum Standardfeldsatz finden Sie unter [konfigurieren Standardfeldsatz für Power View-Berichte](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) in SQL Server-Onlinedokumentation.  
+Ausführliche Informationen zum Standardfeldsatz finden Sie unter [konfigurieren Standardfeldsatzes für Power View-Berichte](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) in SQL Server-Onlinedokumentation.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>So legen Sie den Standardfeldsatz für Tabellen fest  
   
@@ -130,7 +131,7 @@ Ausführliche Informationen zu tabellenverhaltenseigenschaften finden Sie unter 
 ## <a name="reporting-properties-for-columns"></a>Berichterstellungseigenschaften für Spalten  
 Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Genauso wie Sie zuvor die Tabellen Product Category und Product Subcategory ausgeblendet haben, können Sie mithilfe der Spalteneigenschaft Ausgeblendet bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
   
-Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu berichterstellungseigenschaften Spalte finden Sie unter [Spalteneigenschaften](../analysis-services/tabular-models/column-properties-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
+Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu berichterstellungseigenschaften finden Sie unter [Spalteneigenschaften](../analysis-services/tabular-models/column-properties-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
 #### <a name="to-set-properties-for-columns"></a>So legen Sie Eigenschaften für Spalten fest  
   
@@ -146,57 +147,57 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Customer**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|Wahr|  
+    |Geography Id|Ausgeblendet|Wahr|  
     |Birth Date|Datenformat|Short Date|  
   
     **Date**  
   
     > [!NOTE]  
-    > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [geben markieren als Date-Tabelle für die Verwendung mit Zeitintelligenz](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
+    > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [geben markieren als Datumstabelle für die Verwendung mit Zeitintelligenz](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Datum|Datenformat|Short Date|  
-    |Day Number of Week|Hidden|Wahr|  
+    |date|Datenformat|Short Date|  
+    |Day Number of Week|Ausgeblendet|Wahr|  
     |Day Name|Nach Spalte sortieren|Day Number of Week|  
-    |Day of Week|Hidden|Wahr|  
-    |Day of Month|Hidden|Wahr|  
-    |Day of Year|Hidden|Wahr|  
+    |Day of Week|Ausgeblendet|Wahr|  
+    |Day of Month|Ausgeblendet|Wahr|  
+    |Day of Year|Ausgeblendet|Wahr|  
     |Month Name|Nach Spalte sortieren|Month|  
-    |Month|Hidden|Wahr|  
-    |Month Calendar|Hidden|Wahr|  
-    |Fiscal Quarter|Hidden|Wahr|  
-    |Fiscal Year|Hidden|Wahr|  
+    |Month|Ausgeblendet|Wahr|  
+    |Month Calendar|Ausgeblendet|Wahr|  
+    |Fiscal Quarter|Ausgeblendet|Wahr|  
+    |Fiscal Year|Ausgeblendet|Wahr|  
     |Fiscal Semester|Ausgeblendet|Wahr|  
   
     **Geography**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|Wahr|  
-    |Sales Territory Id|Hidden|Wahr|  
+    |Geography Id|Ausgeblendet|Wahr|  
+    |Sales Territory Id|Ausgeblendet|Wahr|  
   
     **Product**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Product Id|Hidden|Wahr|  
+    |Product Id|Ausgeblendet|Wahr|  
     |Product Alternate Id|Standardbeschriftung|Wahr|  
-    |Product Subcategory Id|Hidden|Wahr|  
+    |Product Subcategory Id|Ausgeblendet|Wahr|  
     |Product Start Date|Datenformat|Short Date|  
     |Product End Date|Datenformat|Short Date|  
   
     **Internet Sales**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Product Id|Hidden|Wahr|  
-    |Customer Id|Hidden|Wahr|  
-    |Promotion Id|Hidden|Wahr|  
-    |Currency Id|Hidden|Wahr|  
-    |Sales Territory Id|Hidden|Wahr|  
+    |Product Id|Ausgeblendet|Wahr|  
+    |Customer Id|Ausgeblendet|Wahr|  
+    |Promotion Id|Ausgeblendet|Wahr|  
+    |Currency Id|Ausgeblendet|Wahr|  
+    |Sales Territory Id|Ausgeblendet|Wahr|  
     |Order Quantity|Datentyp<br /><br />Datenformat<br /><br />Dezimalstellen|Decimal Number<br /><br />Decimal Number<br /><br />0|  
     |Order Date|Datenformat|Short Date|  
     |Due Date|Datenformat|Short Date|  
@@ -207,7 +208,7 @@ Da Sie das Modell geändert haben, müssen Sie es erneut bereitstellen.
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>So stellen Sie das tabellarische Modell "Adventure Works Internet Sales" erneut bereit  
   
--   Klicken Sie in SSDT, auf die **erstellen** Menü, und klicken Sie dann auf **bereitstellen Adventure Works Internet Sales Model**.  
+-   Klicken Sie in SSDT auf das **erstellen** , und klicken Sie dann auf **bereitstellen Adventure Works Internet Sales Model**.  
   
     Das Dialogfeld **Bereitstellen** öffnet sich und zeigt den Bereitstellungsstatus der Metadaten sowie jede im Modell enthaltene Tabelle an.  
   

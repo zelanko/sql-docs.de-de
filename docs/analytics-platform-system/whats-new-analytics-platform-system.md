@@ -1,63 +1,72 @@
 ---
-title: Was ist neu in Analytics Platform System – ein horizontaler Datawarehouse
-description: Neuigkeiten in Microsoft® Analytics Platform System angezeigt wird, eine horizontale Skalierung einer lokalen Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
+title: Neuerungen in Analytics Platform System – ein horizontaler Datawarehouse
+description: Neuigkeiten in Microsoft® Analytics Platform System, die beim horizontalen hochskalieren auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
 author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c2408e84e7ff81f54ad00a98f85cd8dce7b04131
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137889"
 ---
-# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Was ist neu in Analytics Platform System ein horizontaler MPP Datawarehouse
-Neuigkeiten Sie in der aktuellen Einheit Updates für Microsoft® Analytics Platform System (APS). APS ist ein lokaler mit horizontaler Skalierung, die MPP SQL Server Parallel Data Warehouse hostet. 
+# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
+Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft® Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 
 ## <a name="aps-au7"></a>APS-AU7
-APS2016 ist eine Voraussetzung für die Aktualisierung auf AU7. Es folgen die neuen Funktionen für APS AU7:
+APS 2016 ist eine Voraussetzung für die ein Upgrade auf AU7 durchführen. Folgendes ist neu in der APS-AU7:
 
-### <a name="auto-create-and-auto-update-statistics"></a>Erstellen Sie automatisch "und" Statistiken automatisch aktualisieren
-APS-AU7 erstellt und aktualisiert die Statistiken automatisch standardmäßig. Um Einstellungen für Statistiken zu aktualisieren, können Administratoren ein neues Feature-Switch Menüelement in der [Configuration Manager](appliance-configuration.md#CMTasks). Die [funktionsschalter](appliance-feature-switch.md) steuert die Auto-create, automatische Aktualisierung und Verhalten von asynchronen Aktualisieren von Statistiken. Sie können auch die Einstellungen der Treiberstatistik mit Aktualisieren der [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) Anweisung.
+### <a name="auto-create-and-auto-update-statistics"></a>Automatische Erstellung und Aktualisierung von Statistiken
+APS-AU7 erstellt und Statistics wird standardmäßig automatisch aktualisiert. Um statistikeinstellungen für zu aktualisieren, können Administratoren ein neues Feature-Switch-Menüelement in der [Configuration Manager](appliance-configuration.md#CMTasks). Die [featureschalter](appliance-feature-switch.md) steuert die Auto-create, automatische Aktualisierung und Verhalten der asynchronen Aktualisieren von Statistiken. Sie können auch die Einstellungen der Treiberstatistik mit aktualisieren die [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) Anweisung.
 
 ### <a name="t-sql"></a>T-SQL
-Wählen Sie @var wird jetzt unterstützt. Weitere Informationen finden Sie unter [select lokale Variable] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Wählen Sie @var wird jetzt unterstützt. Weitere Informationen finden Sie unter [auf lokale Variablen] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Abfragehinweise HASH und ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage] (/ Sql/t-Sql/Abfragen/Hinweise-transact-Sql-Abfrage)
+Abfragehinweise HASH "und" ORDER GROUP werden jetzt unterstützt. Weitere Informationen finden Sie unter [Hints(Transact-SQL) - Abfrage] (/ Sql/t-Sql/Abfragen/Hinweise-transact-Sql-Abfrage)
 
 ### <a name="feature-switch"></a>Feature-Switch
-APS-AU7 führt Feature-Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled und DmsProcessStopMessageTimeoutInSeconds sind jetzt die konfigurierbare Optionen, die von Administratoren geändert werden können.
+APS-AU7 führt Feature-Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled und DmsProcessStopMessageTimeoutInSeconds werden nun konfigurierbare Optionen, die von Administratoren geändert werden können.
 
 ### <a name="known-issues"></a>Bekannte Probleme
-Mit der APS-AU7 Software sind wir Verpacken und Bereitstellen der Intel-BIOS-Update, das behoben werden "seitenkanalangriffe spekulative Ausführung" (Alias) Absorptionsspektrum und überdauern Sicherheitsrisiken). Obwohl zusammengefasst, wird die BIOS-Aktualisierung manuell installiert und nicht Teil der APS-AU7-Software installieren. Microsoft empfiehlt, alle Kunden, die BIOS-Aktualisierung zu installieren. Microsoft hat die Auswirkung der Kernel virtuelle Adresse Shadowing (KVAS), Kernel Seite Tabelle Dereferenzierung (KPTI) und indirekte Verzweigung Vorhersage Entschärfung (IBP) auf verschiedenen SQL-Arbeitslasten in verschiedenen Umgebungen gemessen und signifikanten Einbußen hinsichtlich auf einige gefunden Arbeitslasten. Es wird empfohlen, zu, die Auswirkung auf die Leistung Testen der BIOS-Update aktivieren, bevor Sie sie in einer produktionsumgebung bereitstellen. Wenn die Auswirkung auf die Leistung dieser Funktionen aktivieren für eine vorhandene Anwendung zu hoch ist, können Sie Wägen Sie, ob Isolieren der APS-Appliance aus nicht vertrauenswürdigen Code ausgeführt wird eine bessere Lösung für Ihre Anwendung. Siehe SQL Server-Leitfaden [hier](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Bei APS AU7-Software, wird ein Intel BIOS-Update bereitgestellt, die als Problem behebt *seitenkanalangriffe mit spekulativer Ausführung*. Sollen, dass die Angriffe ausnutzen bezeichnet, was *Spectre und Meltdown Sicherheitsrisiken*. Zwar zusammen mit APS gepackt werden, wird die BIOS-Aktualisierung manuell installiert und nicht als Teil der APS-AU7-Softwareinstallation.
 
-## <a name="aps-2016"></a>APS-2016
-Dies sind die neuen Funktionen für APS 2016:
+Microsoft empfiehlt, alle Kunden die BIOS-Aktualisierung installiert wird. Microsoft verfügt über die Auswirkungen der Kernel virtuelle Adresse Shadowing (KVAS), Kernel Seite Tabelle Dereferenzierung (KPTI) und indirekte Branch Vorhersage-Lösung (IBP) für verschiedene SQL-Workloads in verschiedenen Umgebungen gemessen. Die Messwerte erheblichen Leistungsabfall auf einige Workloads zu finden. Basierend auf den Ergebnissen, wird empfohlen, dass Sie die leistungsbezogenen Auswirkungen der Aktivierung von BIOS-Update vor der Bereitstellung in einer produktionsumgebung testen. Finden Sie unter SQL Server-Leitfaden [hier](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+
+::: moniker-end
+::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+
+## <a name="aps-2016"></a>APS 2016
+In diesem Abschnitt werden die neuen Features für APS 2016-AU6 beschrieben.
 
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
-APS 2016 wird auf die neueste Version von SQL Server 2016 ausgeführt und verwendet die standardmäßige Datenbank-Kompatibilitätsgrad 130 zur Verfügung.  SQL Server 2016 ermöglicht einige der neuen Features wie z. B. sekundäre Indizes für gruppierte columnstore-Indizes und Kerberos für PolyBase unterstützen. 
+APS-AU6 auf die neueste Version von SQL Server 2016 ausgeführt wird und der standardmäßige Datenbank-Kompatibilitätsgrad 130 verwendet. SQL Server 2016 ermöglicht die Unterstützung für neue Features wie z. B.:
 
+- Sekundäre Indizes für gruppierte columnstore-Indizes.
+- Kerberos für PolyBase.
 
 ### <a name="t-sql"></a>T-SQL
-APS-2016 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zusätzliche Sprachelemente vereinfachen die Migration von SQL Server und anderen Datenquellen. 
+APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zusätzliche Sprachelemente vereinfachen die Migration von SQL Server und anderen Datenquellen. 
 
-- [SQL-Sortierungen auf Spaltenebene][] werden jetzt zusätzlich zu den Windows-Sortierungen unterstützt.
-- [Nicht gruppierte Indizes für gruppierte columnstore-Indizes][] Umfang zur Leistungssteigerung von Abfragen, Suchen nach bestimmten Werten in den gruppierten columnstore-Index. 
-- [WÄHLEN SIE... IN][] 
-- [sp_spaceused()][] zeigt der Speicherplatz verwendet, oder in einer Tabelle oder Datenbank reserviert.
-- [Breite Tabellen][] Unterstützung entspricht dem SQL Server 2016. Das vorherige Limit von 32 KB für die Zeilengröße ist nicht mehr vorhanden. 
+- [SQL-Sortierungen auf Spaltenebene][] werden jetzt unterstützt, zusätzlich zu Windows-Sortierungen.
+- [Nicht gruppierte Indizes für gruppierte columnstore-Indizes][] Verbessern der Leistung von Abfragen, die in den gruppierten columnstore-Index nach bestimmten Werten suchen. 
+- [AUSWÄHLEN... IN][] 
+- [sp_spaceused()][] zeigt, wie viel Speicherplatz verwendet oder in einer Tabelle oder Datenbank reserviert.
+- [Breite Tabellen][] Unterstützung entspricht dem SQL Server 2016. Der vorherige Grenzwert von 32 KB für die Zeilengröße ist nicht mehr vorhanden. 
 
 **Datentypen**
 
-- [VARCHAR(max)][], [NVARCHAR(MAX)][] und [VARBINARY(MAX)][]. Diese LOB-Datentypen haben eine Maximalgröße von 2 GB. Laden Sie diese Objekte verwenden [bcp Utility][]. Polybase und Dwloader unterstützen derzeit diese Datentypen. 
+- [VARCHAR(max)][], [NVARCHAR(MAX)][] und [VARBINARY(MAX)][]. Diese LOB-Datentypen haben eine Maximalgröße von 2 GB. Um diese zu laden Objekten [bcp Utility][]. Polybase und Dwloader unterstützen derzeit diese Datentypen. 
 - [SYSNAME][]
-- ["UNIQUEIDENTIFIER"][]
+- [UNIQUEIDENTIFIER][]
 - [NUMERIC][] und dezimaldatentypen verwendet.
 
 **Fensterfunktionen**
@@ -76,50 +85,57 @@ APS-2016 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus
 **Zusätzliche Funktionen**
 
 - [NEWID()][]
-- [RAND()][]
+- [ZUFALLSZAHL)][]
 
-### <a name="polybasehadoop-enhancements"></a>PolyBase-Hadoop-Erweiterungen
+### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop-Verbesserungen
 
 - Kompatibilität mit Hortonworks HDP 2.4 und HDP 2.5
 - Unterstützung für Kerberos über datenbankweit gültige Anmeldeinformationen
-- Unterstützung von Anmeldeinformationen mit Azure-Speicher-Blobs
+- Unterstützung von Anmeldeinformationen mit Azure Storage-Blobs
 
-### <a name="install-and-upgrade-enhancements"></a>Installation und Upgrade-Erweiterungen
+### <a name="install-and-upgrade-enhancements"></a>Installieren und Aktualisieren von Erweiterungen
 
-**Enterprise-Architektur Updates** ein Upgrade Ihrer vorhandene Appliance auf APS 2016 installiert die neuesten Firmware- und Treiberupdates zu erhalten, darunter Sicherheitsupdates. 
+**Enterprise-Architektur Updates** ein Upgrade Ihrer vorhandene Appliance auf APS AU6 installiert die neuesten Firmware- und Treiberupdates, einschließlich Sicherheitsupdates. 
 
 Eine neue Einheit von DELL oder HPE enthält die neuesten Updates plus:
 
-- Aktuelle Generation-Prozessor-Unterstützung (Broadwell)
-- Aktualisieren auf DDR4 DIMM
+- Aktuelle Unterstützung für Generation-Prozessoren (Broadwell)
+- Aktualisieren auf DDR4-DIMMs
 - Verbesserte DIMM-Durchsatz
 
 **Integration**
 
-- Vollständig vereinfacht qualifizierten Domänennamen (FQDN)-Unterstützung zum Einrichten einer Vertrauensstellung mit der Einheit. 
-- Um FQDN verwenden, müssen Sie führen eine vollständige Aktualisierung und während des Upgrades teilnehmen. 
+- Vollständig ermöglicht vollqualifizierten Domänennamen (FQDN)-Unterstützung zum Einrichten einer Vertrauensstellung an dieses Gerät. 
+- Um FQDN verwenden zu können, müssen Sie ein vollständiges Update und während des Upgrades teilnehmen. 
 
-**Verringerte Ausfallzeiten** installieren oder Aktualisieren von auf APS 2016 ist schneller und erfordert weniger Ausfallzeiten als in vorherigen Versionen. Reduzieren von Ausfallzeiten, die zum Installieren oder aktualisieren: 
+**Verringerte Ausfallzeiten** installieren oder Aktualisieren auf APS AU6 ist schneller und erfordert weniger Ausfallzeiten als mit vorherigen Versionen. Reduzieren von Ausfallzeiten, die Installation oder des Upgrades: 
 
- - Anwenden von WSUS-Updates mithilfe eines Bildes optimiert enthält, die alle Updates bis Juni 2016
- - Wendet die Sicherheits-Updates mit den Treiber und Firmware-updates
- - Fügt die neuesten Hotfixes und das Dienstprogramm zum Überprüfen der Appliance (PAV) auf Ihrem Gerät, sodass Sie sie bereit zum Installieren von mit nicht erforderlich, um sie herunterzuladen sind.
+ - Anwenden von WSUS-Updates unter Verwendung eines Images optimiert enthält, die alle Updates bis Juni 2016
+ - Wendet von Sicherheitsupdates mit der Treiber und Firmware-updates
+ - Platziert die neuesten Hotfixes und das Gerät Überprüfung-Dienstprogramm (PAV) auf Ihrem Gerät, sodass sie bereit sind, ohne dass diese herunterladen installieren werden.
 
+::: moniker-end
 
-<!--MSDN references-->
-[database compatibility level 130]:/sql/t-sql/statements/alter-database-transact-sql-compatibility-level
-[SQL-Sortierungen auf Spaltenebene]:/sql/relational-databases/collations/collation-and-unicode-support
+<!--
+Link references to other articles in this same GitHub repo.
+
+The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate for common links within the same repo (as most of these link are).  The first couple links have been edited to show the proper syntax, but all other links in this article need to be similarly edited.
+The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
+-->
+[database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
+[SQL-Sortierungen auf Spaltenebene]: ~/relational-databases/collations/collation-and-unicode-support.md
+
 [Nicht gruppierte Indizes für gruppierte columnstore-Indizes]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[WÄHLEN SIE... IN]:/sql/t-sql/queries/select-into-clause-transact-sql
+[AUSWÄHLEN... IN]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp Utility]:/sql/tools/bcp-utility
-["UNIQUEIDENTIFIER"]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [ROWS oder RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
@@ -130,7 +146,7 @@ Eine neue Einheit von DELL oder HPE enthält die neuesten Updates plus:
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
 [NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[ZUFALLSZAHL)]:/sql/t-sql/functions/rand-transact-sql
 
 
   

@@ -1,5 +1,5 @@
 ---
-title: Betrieb der verfügbarkeitsgruppe SQL Server on Linux | Microsoft Docs
+title: Arbeiten Sie die verfügbarkeitsgruppe SQL Server unter Linux | Microsoft-Dokumentation
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,41 +13,42 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 6a24d1cb2e9bff3555aa24eb0df079bc2894ec79
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984294"
 ---
-# <a name="operate-always-on-availability-groups-on-linux"></a>Betreiben Sie Always On-Verfügbarkeitsgruppen unter Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux arbeiten
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-## <a name="upgrade-availability-group"></a>Aktualisieren der verfügbarkeitsgruppe.
+## <a name="upgrade-availability-group"></a>Aktualisieren der verfügbarkeitsgruppe
 
-Überprüfen Sie vor dem upgrade von einer verfügbarkeitsgruppe die Muster und Praktiken zur [Upgrade von Verfügbarkeitsgruppen-replikatsinstanzen](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
+Vor dem upgrade von einer verfügbarkeitsgruppe befindet, überprüfen Sie die Muster und Praktiken auf [ein Upgrade von Verfügbarkeitsgruppen-replikatsinstanzen](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
 
-In den folgenden Abschnitten wird erläutert, wie ein paralleles Upgrade mit SQL Server-Instanzen unter Linux mit Verfügbarkeitsgruppen ausführen. 
+In den folgenden Abschnitten wird erläutert, wie ein paralleles Upgrade mit SQL Server-Instanzen unter Linux mit Verfügbarkeitsgruppen ausgeführt wird. 
 
-### <a name="upgrade-steps-on-linux"></a>Aktualisieren Sie die Schritte unter Linux
+### <a name="upgrade-steps-on-linux"></a>Upgradeschritte für Linux
 
-Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Linux sind, ist der Clustertyp der verfügbarkeitsgruppe entweder `EXTERNAL` oder `NONE`. Eine verfügbarkeitsgruppe, die von einem Cluster-Manager verwaltet wird, neben Windows Server-Failovercluster (WSFC ist) `EXTERNAL`. Schrittmacher mit Corosync ist ein Beispiel für einen externen Cluster-Manager. Eine verfügbarkeitsgruppe mit keine Cluster-Manager verfügt Clustertyp `NONE` die Aktualisierung hier beschriebenen Schritte sind spezifisch für Verfügbarkeitsgruppen von Clustertyp `EXTERNAL` oder `NONE`.
+Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Linux sind, ist der Clustertyp der verfügbarkeitsgruppe entweder `EXTERNAL` oder `NONE`. Eine verfügbarkeitsgruppe, die von einem Cluster-Manager verwaltet wird, neben Windows Server-Failovercluster (WSFC) ist `EXTERNAL`. Pacemaker mit Corosync ist ein Beispiel für einen externen Cluster-Manager. Eine verfügbarkeitsgruppe ohne Cluster-Manager verfügt Clustertyp `NONE` die Aktualisierung hier erläuterten Schritte sind spezifisch für Verfügbarkeitsgruppen der Clustertyp `EXTERNAL` oder `NONE`.
 
-Die Reihenfolge, die Instanzen aktualisiert, hängt ist ihrer Rolle Sekundär und davon, ob sie den synchronen bzw. asynchronen Replikate hosten. Aktualisieren Sie die Instanzen von SQL Server, die zuerst asynchronen sekundären Replikate hosten. Aktualisieren Sie dann die Instanzen, die synchronen sekundären Replikate hosten. 
+Die Reihenfolge, in der Sie Instanzen aktualisieren, hängt ab, wenn ihre Rolle ist die sekundäre Datenbank und davon, ob sie die synchrone oder asynchrone Replikate hosten. Aktualisieren Sie die Instanzen von SQL Server, die zuerst asynchrone sekundäre Replikate zu hosten. Aktualisieren Sie Instanzen, die synchronen sekundären Replikate hosten. 
 
    >[!NOTE]
-   >Wenn eine verfügbarkeitsgruppe nur asynchrone verfügt Replikate, um Datenverluste zu vermeiden ändern ein Replikat, synchrone, und warten Sie, bis er synchronisiert wird. Aktualisieren Sie dann dieses Replikat aus.
+   >Wenn eine verfügbarkeitsgruppe nur die asynchrone Replikate, um Datenverluste zu vermeiden ein Replikat als synchron zu ändern, und warten, bis er synchronisiert wird. Klicken Sie dann ein upgrade dieses Replikat aus.
    
 Bevor Sie beginnen, müssen Sie jede Datenbank sichern.
 
-1. Beenden Sie die Ressource auf dem Knoten, der das sekundäre Replikat als Ziel für Upgrade hostet.
+1. Beenden Sie die Ressource, auf dem Knoten, die das sekundäre Replikat als Ziel für das Upgrade hostet.
    
-   Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
+   Beenden Sie vor dem Ausführen von Upgrade-Befehls, der Ressource, damit der Cluster nicht werden überwacht und es unnötig fehl. Im folgenden Beispiel wird eine speicherorteinschränkung auf dem Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten hostet das Replikat als Ziel für das Upgrade.
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
 
-1. Aktualisieren Sie SQL Server, auf dem sekundären Replikat.
+1. Upgrade von SQL Server auf dem sekundären Replikat.
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -55,42 +56,42 @@ Bevor Sie beginnen, müssen Sie jede Datenbank sichern.
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-1. Die standorteinschränkung zu entfernen.
+1. Entfernen Sie die Einschränkung für den Standort.
 
-   Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
+   Beenden Sie vor dem Ausführen von Upgrade-Befehls, der Ressource, damit der Cluster nicht werden überwacht und es unnötig fehl. Im folgenden Beispiel wird eine speicherorteinschränkung auf dem Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten hostet das Replikat als Ziel für das Upgrade.
 
    ```bash
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
-   Stellen Sie als bewährte Methode sicher die Ressource wird gestartet (mit `pcs status` Befehl) und das sekundäre Replikat ist verbunden und Zustand "synchronisiert" nach dem Upgrade.
+   Als bewährte Methode, stellen Sie sicher die Ressource wird gestartet (mithilfe von `pcs status` Befehl) und das sekundäre Replikat ist verbunden und Zustand nach dem Upgrade "synchronisiert".
 
-1. Nachdem alle sekundären Replikate aktualisiert werden, ein manuelles Failover zu einem synchronen sekundären Replikate.
+1. Nachdem alle sekundären Replikate aktualisiert werden, manuell ein Failover auf eines der synchronen sekundären Replikaten.
 
-   Für Verfügbarkeitsgruppen mit `EXTERNAL` cluster-Typ, verwenden Sie die Verwaltungstools fehlschlagen Over; Verfügbarkeitsgruppen mit `NONE` Clustertyp sollten Transact-SQL verwenden, um Failover auszuführen. 
-   Im folgenden Beispiel wird ein Failover einer verfügbarkeitsgruppe mit die Verwaltungstools. Ersetzen Sie `<targetReplicaName>` durch den Namen des synchronen sekundären Replikats, das primäre werden soll:
+   Für Verfügbarkeitsgruppen mit `EXTERNAL` Clustertyp, verwenden Sie die Clusterverwaltungstools, nicht über; Verfügbarkeitsgruppen mit `NONE` Clustertyp sollten Transact-SQL verwenden, um ein Failover auszuführen. 
+   Im folgenden Beispiel wird ein Failover einer verfügbarkeitsgruppe mit die Verwaltungstools. Ersetzen Sie dies `<targetReplicaName>` durch den Namen des synchronen sekundären Replikats, das primäre werden soll:
 
    ```bash
    sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
    ``` 
    
    >[!IMPORTANT]
-   >Die folgenden Schritte gelten nur für Verfügbarkeitsgruppen, die nicht über einen Manager verfügen.
+   >Die folgenden Schritte gelten nur für Verfügbarkeitsgruppen, die nicht über einen Cluster-Manager verfügen.
 
-   Wenn der Cluster Verfügbarkeit Gruppentyp ist `NONE`manuell ein Failover. Führen Sie die folgenden Schritte wie folgt aus:
+   Wenn der Clustertyp Gruppe ist `NONE`manuell ein Failover. Führen Sie die folgenden Schritte wie folgt aus:
 
-      A. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
+      A. Der folgende Befehl legt das primäre Replikat zum sekundären Standort. Ersetzen Sie dies `AG1` mit dem Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. Der folgende Befehl legt ein sekundäres Replikat zum primären. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
+      B. Der folgende Befehl legt ein synchrones sekundäres Replikat zum primären Replikat. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Aktualisieren Sie nach einem Failover SQL Server auf dem alten primären Replikat durch Wiederholen der vorherigen Prozedur ein.
+1. Nach dem Failover aktualisieren Sie SQL Server auf dem alten primären Replikat durch Wiederholen der vorherigen Prozedur ein.
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -113,23 +114,23 @@ Bevor Sie beginnen, müssen Sie jede Datenbank sichern.
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Bereinigen Sie für eine Verfügbarkeitsgruppen mit einem externen Cluster-Manager - wobei Clustertyp extern ist die standorteinschränkung, die durch das manuelle Failover verursacht wurde. 
+1. Bereinigen Sie für ein Verfügbarkeitsgruppen mit einem externen Cluster-Manager -, in dem Clustertyp "EXTERNAL" ist die Einschränkung für den Standort, der durch das manuelle Failover verursacht wurde. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
 
-1. Fortsetzen der datenverschiebung für die aktualisierten sekundären Replikat - das frühere primäre Replikat. Dieser Schritt ist erforderlich, wenn eine höhere Version Instanz von SQL Server Protokollblöcke auf eine niedrigere Version-Instanz in einer verfügbarkeitsgruppe übertragen wird. Führen Sie den folgenden Befehl auf dem neuen sekundären Replikat (das frühere primäre Replikat).
+1. Fortsetzen der datenverschiebung für das neu aktualisierte sekundäre Replikat – das frühere primäre Replikat. Dieser Schritt ist erforderlich, wenn Sie eine höhere Version Instanz von SQL Server Protokollblöcken, die mit einer niedrigeren Version einer Instanz in einer verfügbarkeitsgruppe übertragen wird. Führen Sie den folgenden Befehl auf dem neuen sekundären Replikat (das frühere primäre Replikat).
 
    ```transact-sql
    ALTER DATABASE database_name SET HADR RESUME;
    ```
 
-Nach dem Upgrade alle Server, können Sie ein Failback auszuführen. Führen Sie ein Failover zurück auf den ursprünglichen primären -, falls erforderlich. 
+Nach dem Upgrade aller Server können Sie ein Failback. Führen einen Sie Failover auf den ursprünglichen primären -, falls erforderlich. 
 
 ## <a name="drop-an-availability-group"></a>Löschen einer verfügbarkeitsgruppe
 
-Führen Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Wenn der Clustertyp ist `EXTERNAL` oder `NONE` führen Sie den Befehl für jede Instanz von SQL Server, die ein Replikat hostet. Z. B. zum Löschen einer verfügbarkeitsgruppe namens `group_name` führen Sie den folgenden Befehl:
+Führen Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Wenn der Typ des Clusters ist `EXTERNAL` oder `NONE` führen Sie den Befehl auf jeder Instanz von SQL Server, die ein Replikat hostet. Z. B. Löschen einer verfügbarkeitsgruppe mit dem Namen `group_name` führen Sie den folgenden Befehl:
 
    ```transact-sql
    DROP AVAILABILITY GROUP group_name
@@ -138,8 +139,8 @@ Führen Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren Sie Red Hat Enterprise Linux-Cluster für SQL Server-Verfügbarkeitsgruppe Clusterressourcen](sql-server-linux-availability-group-cluster-rhel.md)
+[Konfigurieren von Red Hat Enterprise Linux-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Konfigurieren von SUSE Linux Enterprise Server-Cluster für Clusterressourcen für SQL Server-Verfügbarkeitsgruppe](sql-server-linux-availability-group-cluster-sles.md)
+[Konfigurieren von SUSE Linux Enterprise Server-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-sles.md)
 
-[Konfigurieren Sie Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Konfigurieren Sie Ubuntu-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)

@@ -2,7 +2,7 @@
 title: Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
 description: Versionshinweise für Microsoft SQL Operations Studio (Vorschau)
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,15 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271011"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
 
-**[Herunterladen der öffentlichen Vorschau von Mai](download.md)**
+**[Der Juni-öffentliche Vorschau herunterladen](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>Juni 2018 (Juni öffentliche Vorschau)
+
+Veröffentlichungsdatum: 20 Juni 2018  
+Version: 0.30.6
+
+Die *öffentliche Vorschau Juni* enthält die folgenden Merkmale:  
+
+- **SQL Server Profiler für die SQL-Vorgänge Studio *Vorschau***  erste Version der Erweiterung.
+- Die neue **SQL Data Warehouse** Erweiterung enthält umfangreiche anpassbares dashboardwidgets einbringen Einblicke in Ihr Datawarehouse. Dies entsperrt Schlüsselszenarien zu verwalten und optimieren Ihr Datawarehouse, um sicherzustellen, dass es für die konsistente Leistung optimiert ist.
+- **Bearbeiten von Daten "Filtern und sortieren"** unterstützen.
+- **SQL Server-Agent für SQL-Vorgänge Studio *Vorschau***  Erweiterung Erweiterungen für Aufträge und Auftragsverlauf auf Sichten.
+- Verbesserte **-Assistenten & Dialogfeld Generator Benutzeroberflächenframework** -Erweiterbarkeits-APIs.
+- Aktualisieren Sie die Integration von Visual Studio Code-Plattform Quelle-Code [März 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) und [April 2018 ("1,23")](https://code.visualstudio.com/updates/v1_23) frei.
+- Beheben von Problemen von GitHub:
+  - Anforderung zur ([ausstellen 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Bitte nehmen Sie die Ergebnisse AutoAnpassen-Spalte Rasterbreite an Daten und/oder manuelle Änderungen beachten, wenn dieselbe Abfrage erneut ausgeführt wird.
+  - Beheben Sie [ausstellen 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): sollten anzeigen und hinzufügen, message Konto Konto Schaltfläche hinzufügen, wenn verknüpften Kontos leer ist.
+  - Beheben Sie [ausstellen 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Registerkarte "verknüpfte Konto" ist unterbrochen, wenn die Sicht reduziert wird.
+  - Beheben Sie [ausstellen 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools-Dienst stürzt ab, wenn es sich bei SQL-Datei vom Datenträger zu öffnen.
+  - Beheben Sie [ausstellen 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): fehlende SQL-Schlüsselwort "BETWEEN".
+  - Beheben Sie [ausstellen 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH'-Schlüsselwort stürzt SQL Tools-Dienst ab.
+  - Beheben Sie [ausstellen 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New-Profiler" Kontextmenüoption im Objekt-Explorer wird keine Aktion ausgeführt.
+  - Beheben Sie [ausstellen 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Abfrage-Editor "Erklärung" Abfrageplan ist unterbrochen.
+
+
+Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## <a name="may-2018-may-public-preview"></a>Mai 2018 (kann öffentliche Vorschau)
@@ -46,8 +74,6 @@ Die *öffentliche Vorschau möglicherweise* konzentriert sich auf die Stabilisie
    - Beheben Sie [ausstellen 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent-Erweiterung und die Statusleiste
    - Beheben Sie [ausstellen 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL-Agent nicht Größe nach Windows kann Größe ändern
 
-
-Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

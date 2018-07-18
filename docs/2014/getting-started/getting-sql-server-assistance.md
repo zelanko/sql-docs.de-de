@@ -1,0 +1,103 @@
+---
+title: Informationsquellen für SQL Server | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 05/25/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- offline resources [SQL Server]
+- Books Online [SQL Server], additional resources
+- SQL Server Community
+- SQL Server TechNet Site
+- Microsoft Help and Support [SQL Server]
+- getting assistance [SQL Server]
+- TechNet [SQL Server]
+- technical support [SQL Server]
+- SQL Server Developer Center Community
+- Microsoft Learning [SQL Server]
+- Internet [SQL Server], additional information
+- Data Access and Storage Developer Center [SQL Server]
+- product support [SQL Server]
+- PSS [SQL Server]
+- additional resources [SQL Server]
+- online resources [SQL Server]
+- XML Developer Center [SQL Server]
+- Web site resources [SQL Server]
+- documentation [SQL Server], additional resources
+- Microsoft Knowledge Base [SQL Server]
+- SQL Server Developer Center
+- SQL Server documentation, information resources available
+- Help [SQL Server], getting assistance
+- MSDN [SQL Server]
+- Microsoft Developer Network [SQL Server]
+- SQL Server Books Online, additional resources
+- customer service [SQL Server]
+- Microsoft Press [SQL Server]
+- SQL Server assistance
+- SQL Server Solution Center
+ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
+caps.latest.revision: 40
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171161"
+---
+# <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
+  Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  
+-   Die als lokale Sammlung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation installierte Dokumentation.  
+  
+-   Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sites im [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) und TechNet.  
+  
+-   Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf weiteren [!INCLUDE[msCoName](../includes/msconame-md.md)]-Websites.  
+  
+ Wenn Sie die gewünschten Informationen nicht in diesen Quellen finden, können Sie in den Foren und Newsgroups der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Community Fragen stellen oder sich an den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support wenden.  
+  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Bücher von Online-Dokumente, die Konzepte und Prozeduren, die für die Verwendung erforderlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+ Es gibt folgende Möglichkeiten, um auf die Onlinedokumentation zuzugreifen:  
+  
+-   Eine Kopie der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Onlinedokumentation ist in der MSDN Library sowie in der TechNet Library im Internet veröffentlicht. Die Themen in diesen Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten Kommentare aus der Community, z. B. zusätzliche Informationen und Codebeispiele von anderen Kunden. Sie finden die MSDN Library-Version auf die [SQL Server 2014-Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+  
+-   Sie können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation auf einem lokalen Computer mithilfe des Hilfebibliotheks-Managers installieren. Weitere Informationen finden Sie unter [hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+  
+ Die Kopie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation in der MSDN Library und die Dateien der Onlinedokumentation, die mithilfe des Hilfebibliotheks-Managers aufgerufen werden können, werden aktualisiert, wenn von [!INCLUDE[msCoName](../includes/msconame-md.md)] ein Update für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation veröffentlicht wird.  
+  
+## <a name="information-on-msdn-and-technet"></a>Informationen im MSDN und TechNet  
+ MSDN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network) stellt Online- und Offlinedienste bereit, durch die Entwickler beim Schreiben von Anwendungen mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkten und -Technologien unterstützt werden. Das [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet-Programm liefert umfassende technische Ressourcen, die IT-Experten dabei helfen, [!INCLUDE[msCoName](../includes/msconame-md.md)]-Lösungen effizient auszuwerten, bereitzustellen und zu unterstützen.  
+  
+ Auf mehreren MSDN- und TechNet-Websites werden für eine bestimmte Zielgruppe Links zu den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Informationen angeboten, die für ihre Arbeit besonders relevant sind. Dazu gehören auch die Informationen in den MSDN- und TechNet-Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation. Auf diesen Websites finden Sie auch Informationen, die über den Inhalt der SQL Server-Onlinedokumentation hinausgehen.  
+  
+ In der folgenden Tabelle werden diese Ressourcen und deren beabsichtigte Zielgruppen beschrieben.  
+  
+|Ressource|Zielgruppe|  
+|--------------|--------------|  
+|[SQL Server-Entwicklercenter](http://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
+|[XML-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=42458)|Entwickler von Websites und Anwendungen, deren Sites und Anwendungen XML für die Datenspeicherung und -bearbeitung verwenden.|  
+|[SQL Server-TechNet-Website](http://technet.microsoft.com/sqlserver/dn135309)|Administratoren und Operatoren, die Systeme planen, verwalten, und unterstützen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden.|  
+  
+## <a name="additional-online-information"></a>Zusätzliche Onlineinformationen  
+ Auf diesen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Websites sind zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)]-Informationen verfügbar.  
+  
+|Ressource|Description|  
+|--------------|-----------------|  
+|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Beinhaltet Produktinformationen, die eine Einschätzung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Datenspeicher- und Business Intelligence-Tool ermöglichen.|  
+|[Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=42461)|Bietet ein durchsuchbares Repository mit Artikeln zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Support geschrieben wurden.|    
+  
+ Jedes [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkt verfügt über einen Support-Lebenszyklus, der definiert, wie lange Sie für jede Version auf den Support zugreifen können. Der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support pflegt eine Website, die den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support-Lebenszyklus erklärt. Auf der Seite finden Sie Links zu anderen Seiten, die Informationen über die Verfügbarkeit von Support für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produkte geben. Weitere Informationen finden Sie unter [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der Produktdokumentation für SQLServer](../2014-toc/books-online-for-sql-server-2014.md)  
+  
+  

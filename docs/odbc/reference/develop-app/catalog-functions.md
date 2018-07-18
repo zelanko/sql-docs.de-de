@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911155"
 ---
 # <a name="catalog-functions"></a>Katalogfunktionen
 Alle Datenbanken weisen eine Struktur, die beschreibt, wie Daten in der Datenbank gespeichert werden. Z. B. möglicherweise eine einfachen Auftrag Datenbank die Struktur, die in der folgenden Abbildung, in der die ID-Spalten, zum Verknüpfen der Tabellen verwendet werden angezeigt.  

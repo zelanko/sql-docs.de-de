@@ -1,40 +1,25 @@
 ---
 title: Bezeichner (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740809"
 ---
 # <a name="identifiers-mdx"></a>Bezeichner (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Ein Bezeichner ist der Name des ein [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekt. Jedes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Objekt muss einen Bezeichner haben. Dies gilt für Cubes, Dimensionen, Hierarchien, Ebenen, Elemente usw. Sie verwenden den Bezeichner eines Objekts, um in MDX-Anweisungen (Multidimensional Expressions) auf das Objekt zu verweisen.  
+
+  Ein Bezeichner ist der Name eines Analysis Services-Objekts. Jedes Objekt kann und muss einen Bezeichner haben. Dies gilt für Cubes, Dimensionen, Hierarchien, Ebenen, Elemente usw. Sie verwenden den Bezeichner eines Objekts, um in MDX-Anweisungen (Multidimensional Expressions) auf das Objekt zu verweisen.  
   
  Abhängig davon, wie Sie ein Objekt benennen, ist der Objektbezeichner ein regulärer oder ein Begrenzungsbezeichner.  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Wenn der Name eines Objekts oder ein Teil des Namens ein reserviertes Wort ist.  
   
-     Es wird empfohlen, dass reservierte Schlüsselwörter nicht als Objektnamen verwendet werden. Datenbanken, die ein Upgrade von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die in der früheren Version nicht reservierten Wörter enthalten, jedoch sind reservierte Wörter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. So lange, bis Sie den Bezeichner des Objekts ändern können, können Sie mit dem Begrenzungsbezeichner auf das Objekt verweisen.  
+     Es wird empfohlen, dass reservierte Schlüsselwörter nicht als Objektnamen verwendet werden. Datenbanken, die ein Upgrade von früheren Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthalten möglicherweise Bezeichner, die in der früheren Version nicht reservierten Wörter enthalten, jedoch sind jetzt reserviert. So lange, bis Sie den Bezeichner des Objekts ändern können, können Sie mit dem Begrenzungsbezeichner auf das Objekt verweisen.  
   
 -   Wenn für den Namen eines Objekts Zeichen verwendet werden, die nicht als qualifizierte Bezeichner aufgeführt sind.  
   
@@ -139,8 +124,8 @@ ms.lasthandoff: 05/03/2018
  Außerdem ist im vorherigen Beispiel der Bezeichner Measures begrenzt, um zu zeigen, wie mehrere Bezeichner begrenzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

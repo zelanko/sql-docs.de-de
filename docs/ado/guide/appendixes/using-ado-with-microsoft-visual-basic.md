@@ -2,7 +2,6 @@
 title: Mithilfe von ADO mit Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 842671f5859fc0522c30aec8a0d363d3f101473c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0250faf780229ec06c5fce38997bbf4eaf51cc43
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271299"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Verwenden von ADO mit Microsoft Visual Basic und Visual Basic für Applikationen
 Einrichten eines ADO-Projekts und Schreiben von Code für ADO gleicht gibt an, ob Sie Visual Basic oder Visual Basic für Applikationen verwenden. In diesem Thema behandelt wird, mithilfe von ADO mit Visual Basic und Visual Basic für Applikationen und Anmerkungen dieser Unterschiede.
@@ -102,7 +102,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Instanziieren von Objekten mit **CreateObject** sind spät gebunden, d. h., die sie nicht stark typisiert und Befehlszeilen Abschluss ist deaktiviert. Allerdings lässt zu überspringen, Verweis auf die ADO-Bibliothek aus Ihrem Projekt und ermöglicht es Ihnen, bestimmte Versionen von Objekten zu instanziieren. Beispiel:
+ Instanziieren von Objekten mit **CreateObject** sind spät gebunden, d. h., die sie nicht stark typisiert und Befehlszeilen Abschluss ist deaktiviert. Allerdings lässt zu überspringen, Verweis auf die ADO-Bibliothek aus Ihrem Projekt und ermöglicht es Ihnen, bestimmte Versionen von Objekten zu instanziieren. Zum Beispiel:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

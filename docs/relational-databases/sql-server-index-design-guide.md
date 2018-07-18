@@ -28,11 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812164"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -642,37 +643,33 @@ Im Zusammenhang mit Columnstore-Indizes werden die Begriffe *Rowstore* und *Colu
 
 - Ein **Columnstore** enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und physisch in einem Spaltendatenformat gespeichert sind.
   
-Ein Columnstore-Index speichert die meisten Daten physisch im Columnstore-Format. Im Columnstore-Format werden die Daten als Spalten komprimiert und dekomprimiert. Es ist nicht erforderlich, andere Werte in jeder Zeile zu dekomprimieren, die nicht von der Abfrage angefordert werden. Das schnelle Scannen einer ganzen Spalte einer großen Tabelle wird dadurch erleichtert. 
+  Ein Columnstore-Index speichert die meisten Daten physisch im Columnstore-Format. Im Columnstore-Format werden die Daten als Spalten komprimiert und dekomprimiert. Es ist nicht erforderlich, andere Werte in jeder Zeile zu dekomprimieren, die nicht von der Abfrage angefordert werden. Das schnelle Scannen einer ganzen Spalte einer großen Tabelle wird dadurch erleichtert. 
 
 - Ein **Rowstore** enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und anschließend physisch in einem Zeilendatenformat gespeichert sind. Dies stellte die herkömmliche Methode zum Speichern von Daten (z.B. Heaps oder gruppierte B-Strukturindizes) aus relationalen Tabellen dar.
 
-Ein Columnstore-Index speichert einige Zeilen auch physisch in einem Rowstore-Format, ein sogenannter Deltastore. Beim Deltastore, auch Delta-Zeilengruppe genannt, handelt es sich um einen Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Jede Deltazeilengruppe wird als gruppierter B-Strukturindex implementiert. 
+  Ein Columnstore-Index speichert einige Zeilen auch physisch in einem Rowstore-Format, ein sogenannter Deltastore. Beim Deltastore, auch Delta-Zeilengruppe genannt, handelt es sich um einen Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Jede Deltazeilengruppe wird als gruppierter B-Strukturindex implementiert. 
 
 - Der **Deltastore** ist ein Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Der Deltastore speichert die Zeilen im Rowstore-Format. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Vorgänge werden für Zeilengruppen und Spaltensegmente ausgeführt
 
-Der Columnstore-Index gruppiert Zeilen in verwaltbare Einheiten. Diese Einheiten werden jeweils als eine Zeilengruppe bezeichnet. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.
-
-* Eine **Zeilengruppe** ist eine Gruppe von Zeilen, für die der Columnstore-Index Verwaltungs- und Komprimierungsvorgänge ausführt. 
+Der Columnstore-Index gruppiert Zeilen in verwaltbare Einheiten. Diese Einheiten werden jeweils als eine **Zeilengruppe** bezeichnet. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.
 
 Der Columnstore-Index führt diese Vorgänge z.B. auf Zeilengruppen aus:
 
 * Komprimiert Zeilengruppen in den Columnstore. Die Komprimierung wird für jedes Spaltensegment innerhalb einer Zeilengruppe ausgeführt.
-* Die Zeilengruppen werden während eines ALTER INDEX REORGANIZE-Vorgangs erstellt.
-* Die Zeilengruppen werden während eines ALTER INDEX REBUILD-Vorgangs erstellt.
+* Führt Zeilengruppen während einem `ALTER INDEX ... REORGANIZE`-Vorgang zusammen.
+* Erstellt neue Zeilengruppen während eines `ALTER INDEX ... REBUILD`-Vorgangs.
 * Meldet Zeilengruppen-Integrität und Fragmentierung in dynamischen Verwaltungsansichten (DMVs).
 
-Der Deltastore besteht aus ein oder mehr Zeilengruppen, die Delta-Zeilengruppen genannt werden. Bei jeder Deltazeilengruppe handelt es sich um einen gruppierten B-Strukturindex, der Zeilen speichert, wenn deren Anzahl für eine Komprimierung in den Columnstore zu gering ist.  
+Der Deltastore besteht aus mindestens einer Zeilengruppe, die **Delta-Zeilengruppen** genannt werden. Jede Deltazeilengruppe ist ein gruppierter B-Strukturindex, bei dem kleine Massenladevorgänge gespeichert werden, bis die Zeilengruppe 1.048.576 Zeilen enthält oder der Index neu erstellt wird.  Wenn eine Delta-Zeilengruppe 1.048.576 Zeilen enthält, wird diese als geschlossen markiert und wartet, bis ein sogenannter Tupelverschiebungsvorgang aufgerufen wird, um sie im Columnstore zu komprimieren. 
 
-* Eine **Deltazeilengruppe** ist ein gruppierter B-Strukturindex, bei dem kleine Massenladevorgänge gespeichert werden, bis die Zeilengruppe 1.048.576 Zeilen enthält oder der Index neu erstellt wird.  Wenn eine Delta-Zeilengruppe 1.048.576 Zeilen enthält, wird diese als geschlossen markiert und wartet, bis ein sogenannter Tupelverschiebungsvorgang gestartet wird, um sie im Columnstore zu komprimieren. 
+Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als **Spaltensegmente** bezeichnet. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe.
 
-Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als Spaltensegmente bezeichnet. Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren.
-
-* Bei einem **Spaltensegment** handelt es sich um den Teil der Spaltenwerte in einer Zeilengruppe. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe. | 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+Wenn der Columnstore-Index eine Zeilengruppe komprimiert, wird jedes Spaltensegment separat komprimiert. Um eine ganze Spalte zu dekomprimieren, muss der Columnstore-Index nur ein Spaltensegment von jeder Zeilengruppe dekomprimieren.   
+
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Kleine Ladungen und Einfügungen werden im Deltastore gespeichert
 Ein Columnstore-Index verbessert die Columnstore-Komprimierung und Leistung durch das Komprimieren von mindestens 102.400 Zeilen gleichzeitig in den Columnstore-Index. Um Zeilen in einem Sammelvorgang zu komprimieren, sammelt der Columnstore-Index kleine Lasten, und fügt diese im Deltastore ein. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore. 
 

@@ -1,1 +1,1 @@
-SQL Server Management Studio
+SQL Server Management Studio

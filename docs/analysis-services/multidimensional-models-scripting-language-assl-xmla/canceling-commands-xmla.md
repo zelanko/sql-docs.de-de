@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020257"
 ---
 # <a name="canceling-commands-xmla"></a>Abbrechen von Befehlen (XMLA)
   Abhängigkeit von den Administrationsberechtigungen des Benutzers, der den Befehl ausgibt die ["Abbrechen"](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) -Befehl in XML for Analysis (XMLA) einen Befehl, die sich auf eine Sitzung, eine Sitzung, eine Verbindung, einem Serverprozess oder einer zugeordneten Sitzung abbrechen können oder Verbindung.  

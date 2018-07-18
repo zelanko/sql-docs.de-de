@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842903"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
+## <a name="execution-modes"></a>Ausführungsmodi
+Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] kann SQL-Anweisungen mit zwei verschiedenen Verarbeitungsmodi verarbeiten:
+- Zeilenmodusausführung
+- Batchmodusausführung
+
+### <a name="row-mode-execution"></a>Zeilenmodusausführung
+Die *Zeilenmodusausführung* ist eine Methode zur Abfrageverarbeitung, die mit herkömmlichen RDMBS-Tabellen verwendet wird, bei denen Daten im Zeilenformat gespeichert werden. Wenn eine Abfrage ausgeführt wird und auf Daten in Rowstore-Tabellen zugreift, lesen die Operatoren der Ausführungsstruktur und die untergeordneten Operatoren jede erforderliche Zeile in allen Spalten, die im Tabellenschema angegeben wurden. Für jede gelesene Zeile ruft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Spalten ab, die für das Resultset erforderlich sind und auf die durch SELECT-Anweisungen, JOIN-Prädikate oder Filterprädikate verwiesen wird.
+
+> [!NOTE]
+> Die Zeilenmodusausführung ist für OLTP-Szenarios sehr effizient, kann jedoch beim Überprüfen großer Datenmengen (z.B. in einem Data Warehousing-Szenario) weniger effizient sein.
+
+### <a name="batch-mode-execution"></a>Batchmodusausführung  
+Die*Batchmodusausführung* ist eine Methode zur Abfrageverarbeitung, die zum gleichzeitigen Abfragen mehrerer Zeilen (d.h. eines Batchs) verwendet wird. Jede Spalte innerhalb eines Batchs wird als Vektor in einem separaten Bereich des Arbeitsspeichers gespeichert. Die Batchmodusverarbeitung ist also vektorbasiert. Die Batchmodusverarbeitung verwendet ebenfalls Algorithmen, die für Mehrkern-CPUs und erhöhten Arbeitsspeicherdurchsatz bei moderner Hardware optimiert sind.      
+
+Die Batchmodusausführung ist eng in das Columnstore-Speicherformat integriert und für dieses optimiert. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden die [Austauschoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) beseitigt, die von der Zeilenmodusausführung verwendet werden. Das Ergebnis ist eine bessere Parallelität und Leistung.    
+
+Wenn eine Abfrage im Batchmodus ausgeführt wird und auf Daten in Columnstore-Indizes zugreift, lesen die Operatoren der Ausführungsstruktur und die untergeordneten Operatoren mehrere Zeilen gleichzeitig in Spaltensegmenten. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] liest nur die Spalten, die für das Ergebnis erforderlich sind und auf die durch eine SELECT-Anweisung, ein JOIN-Prädikat oder ein Filterprädikat verwiesen wird.    
+Weitere Informationen zu Columnstore-Indizes finden Sie unter [Columnstore-Indizes: Architektur](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> Die Batchmodusausführung ist in Data Warehousing-Szenarios, bei denen große Datenmengen gelesen und aggregiert werden, sehr effizient.
+
 ## <a name="sql-statement-processing"></a>Verarbeiten von SQL-Anweisungen
+Die Verarbeitung einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
 
-Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
-
-#### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
+### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
 
 Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
+### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
 
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
@@ -104,7 +128,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer st�
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist deshalb so wichtig, weil er es dem Datenbankserver ermöglicht, dynamische Anpassungen an geänderte Bedingungen in der Datenbank vorzunehmen, ohne dass eine Eingabe durch einen Programmierer oder Datenbankadministrator erforderlich ist. Programmierer können sich somit darauf konzentrieren, das endgültige Ergebnis der Abfrage zu beschreiben. Sie können sich darauf verlassen, dass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer bei jeder Ausführung der Anweisung einen effizienten Ausführungsplan auf der Basis des aktuellen Status der Datenbank erstellt.
 
-#### <a name="processing-a-select-statement"></a>Verarbeiten einer SELECT-Anweisung
+### <a name="processing-a-select-statement"></a>Verarbeiten einer SELECT-Anweisung
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] führt zur Verarbeitung einer einzelnen SELECT-Anweisung die folgenden grundlegenden Schritte aus: 
 
@@ -114,7 +138,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 4. Die relationale Engine beginnt mit der Ausführung des Ausführungsplans. Während der Verarbeitung von Schritten, für die Daten aus den Basistabellen erforderlich sind, fordert die relationale Engine an, dass die Speicher-Engine die Daten aus den Rowsets übergibt, die durch die relationale Engine angefordert wurden.
 5. Die relationale Engine transformiert die Daten, die von der Speicher-Engine zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
 
-#### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
+### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
 
 Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELECT` -Anweisung gelten ebenfalls für andere SQL-Anweisungen, wie z.B. `INSERT`, `UPDATE`und `DELETE`. `UPDATE` - und `DELETE` -Anweisungen müssen sich auf die Gruppe von Zeilen beziehen, die geändert bzw. gelöscht werden soll. Der Vorgang zum Identifizieren dieser Zeilen ist der gleiche Vorgang, der zum Identifizieren der Quellzeilen verwendet wird, die einen Beitrag zum Resultset einer `SELECT` -Anweisung leisten. `UPDATE` - und `INSERT` -Anweisungen können eingebettete SELECT-Anweisungen enthalten, die die Datenwerte bereitstellen, die aktualisiert oder eingefügt werden sollen.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio-Showplanfunktion wird deutlich, dass die relationale Engine für beide `SELECT`-Anweisungen denselben Ausführungsplan erstellt.
 
-#### <a name="using-hints-with-views"></a>Verwenden von Hinweisen mit Sichten
+### <a name="using-hints-with-views"></a>Verwenden von Hinweisen mit Sichten
 
 Hinweise, die für Sichten in einer Abfrage gespeichert werden, können zu Konflikten mit anderen Hinweisen führen, die beim Erweitern der Sicht für den Zugriff auf ihre Basistabellen erkannt werden. Wenn das passiert, gibt die Abfrage einen Fehler zurück. Angenommen, die folgende Sicht enthält einen Tabellenhinweis in ihrer Definition:
 

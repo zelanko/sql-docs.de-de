@@ -1,5 +1,5 @@
 ---
-title: fn_available_backups (Transact-SQL) | Microsoft Docs
+title: fn_available_backups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040358"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Bei Lücken in der LSN, die eine Unterbrechung der Protokollkette anzeigen, enth
 |backup_start_date|DATETIME|Datum und Uhrzeit des Beginns des Sicherungsvorgangs.|  
 |backup_finish_date|NVARCHAR(128)|Datum und Uhrzeit des Endes des Sicherungsvorgangs.|  
 |machine_name|NVARCHAR(128)|Der Name des Computers, auf dem die SQL Server-Instanz installiert ist und auf dem [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ausgeführt wird.|  
-|last_recovery_fork_id|UNIQUEIDENTIFIER|ID der letzten Wiederherstellungs-verzweigungspunkts.|  
+|last_recovery_fork_id|UNIQUEIDENTIFIER|ID für den letzten Wiederherstellungs-verzweigungspunkts.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|ID des ersten Wiederherstellungs-Verzweigungspunkts. Bei Datensicherungen ist first_recovery_fork_guid mit last_recovery_fork_guid identisch.|  
 |fork_point_lsn|NUMERIC(25, 0)|Wenn first_recovery_fork_id ungleich last_recovery_fork_id ist, entspricht dieser Wert der Protokollfolgenummer des Verzweigungspunkts. Andernfalls ist der Wert NULL.|  
 |availability_group_guid|UNIQUEIDENTIFIER|Wenn eine Datenbank einer Always On-Datenbank ist, ist dies die GUID der verfügbarkeitsgruppe. Andernfalls ist dieser Wert NULL.|  
@@ -72,7 +73,7 @@ Bei Lücken in der LSN, die eine Unterbrechung der Protokollkette anzeigen, enth
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für diese Funktion.  
@@ -87,7 +88,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+ [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Wiederherstellen von in Microsoft Azure gespeicherten Sicherungen](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

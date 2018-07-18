@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900375"
 ---
 # <a name="set-exclusive-command"></a>EXKLUSIVE SET-Befehl
 Gibt an, ob die Tabellendateien für die exklusive oder gemeinsame Verwendung in einem Netzwerk geöffnet werden.  

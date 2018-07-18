@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538610"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Stellen Sie eine durch TDE in Parallel Data Warehouse geschützte Datenbank wieder her
 Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die mit transparenter datenverschlüsselung verschlüsselt wird.  

@@ -1,5 +1,5 @@
 ---
-title: Architektur der clientseitigen und serverseitigen XML-Formatierung (SQLXML 4.0) | Microsoft Docs
+title: Architektur der Client- und serverseitigen XML-Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,18 +26,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 32fd7cf959e5dbf87b0052e32f796428ede3f040
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035552"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architektur clientseitiger und serverseitiger XML-Formatierung (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die folgende Abbildung zeigt die Architektur der XML-Formatierung auf Serverseite:  
   
- ![Architektur der XML-Formatierung auf Serverseite. ] (../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Architektur der XML-Formatierung auf Serverseite.")  
+ ![Architektur der XML-Formatierung auf dem Server. ] (../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Architektur der XML-Formatierung auf dem Server.")  
   
- In diesem Beispiel wird der Befehl, der auf dem Client angegeben wird, an den Server gesendet. Der Server erstellt ein XML-Dokument und sendet es an den Client zurück. In diesem Fall enthält der Server eine Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Bei der serverseitigen XML-Formatierung können Sie entweder den SQLXMLOLEDB-Anbieter oder den SQLOLEDB-Anbieter verwenden.  Der SQLXMLOLEDB-Anbieter verwendet die Datei Sqlxml4.dll, die in SQLXML 4.0 enthalten ist. Bei der Verwendung des SQLOLEDB-Anbieters erhalten Sie die von Sqlxmlx.dll bereitgestellte SQLXML-Funktionalität standardmäßig. Diese Funktionalität wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows oder in Microsoft Data Access Components (MDAC) 2.6 oder höher angeboten. Um Sqlxml4.dll mit SQLOLEDB zu verwenden, müssen Sie die Version von SQLXML-Eigenschaft auf "SQLXML.4.0" für den SQLOLEDB-Verbindungsobjekt festlegen. In beiden Fällen erzeugt der Server das XML-Dokument und sendet es an den Client.  
+ In diesem Beispiel wird der Befehl, der auf dem Client angegeben wird, an den Server gesendet. Der Server erstellt ein XML-Dokument und sendet es an den Client zurück. In diesem Fall hat der Server eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Bei der serverseitigen XML-Formatierung können Sie entweder den SQLXMLOLEDB-Anbieter oder den SQLOLEDB-Anbieter verwenden.  Der SQLXMLOLEDB-Anbieter verwendet die Datei Sqlxml4.dll, die in SQLXML 4.0 enthalten ist. Bei der Verwendung des SQLOLEDB-Anbieters erhalten Sie die von Sqlxmlx.dll bereitgestellte SQLXML-Funktionalität standardmäßig. Diese Funktionalität wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows oder in Microsoft Data Access Components (MDAC) 2.6 oder höher angeboten. Um Sqlxml4.dll mit SQLOLEDB zu verwenden, müssen Sie die SQLXML-Version-Eigenschaft auf "SQLXML.4.0" für den SQLOLEDB-Verbindungsobjekt festlegen. In beiden Fällen erzeugt der Server das XML-Dokument und sendet es an den Client.  
   
 > [!NOTE]  
 >  XPath-Abfragen und Updategrams werden auf dem Client analysiert. Um die XPath-Vorlage oder Updategramfunktionalität in SQLXML 4.0 zu erhalten, verwenden Sie Sqlxml4.dll.  

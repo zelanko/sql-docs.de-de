@@ -1,6 +1,6 @@
 ---
-title: PDW-Firewall-Konfiguration – Analytics Platform System | Microsoft Docs
-description: Auf der Seite Firewall von SQL Server PDW-Konfigurations-Manager können Sie aktivieren oder deaktivieren die Firewallregeln, die zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System.
+title: PDW-Firewallkonfiguration - Analytics Platform System | Microsoft-Dokumentation
+description: Auf der Seite Firewall der SQL Server PDW-Konfigurations-Manager können Sie Firewallregeln, die zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System aktivieren oder deaktivieren.
 aauthor: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,57 +9,58 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909840"
 ---
-# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallel Data Warehouse-Firewallkonfiguration in Analytics Platform System
-Die **Firewall** Seite von SQL Server PDW-Konfigurations-Manager können Sie aktivieren oder deaktivieren die Firewallregeln, zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System.  
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallel Data Warehouse-Firewall-Konfiguration in Analytics Platform System
+Die **Firewall** von SQL Server PDW-Konfigurations-Manager können Sie Ihre Firewallregeln, die zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System aktivieren oder deaktivieren.  
   
-## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Verwalten von Ports und firewall-Regeln für die Appliance-Knoten  
+## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Verwalten von Ports und firewall-Regeln für applianceknoten  
   
-1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md).  
+1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-2.  Erweitern Sie im linken Bereich der Configuration Manager- **Parallel Data Warehouse-Topologie**, und klicken Sie dann auf **Firewall**.  
+2.  Erweitern Sie im linken Bereich des Konfigurations-Managers **Parallel Data Warehouse-Topologie**, und klicken Sie dann auf **Firewall**.  
   
-3.  Suchen Sie den Port oder eine Firewall-Regel aktualisieren in der Liste, und klicken Sie dann zu aktivieren oder deaktivieren das Kontrollkästchen neben diesem Element. Nur SQL Server PDW Admin konfigurierbare Optionen werden in dieser Liste, einschließlich öffnen und Schließen von Ports auf extern angezeigte Knoten angezeigt.  
+3.  Suchen Sie nach der Regel Port oder eine Firewall, aktualisieren Sie in der Liste, und klicken Sie dann aktivieren oder deaktivieren das Kontrollkästchen neben diesem Element. Nur SQL Server PDW-Admin konfigurierbare Optionen werden in dieser Liste, einschließlich öffnen und Schließen von Ports in der extern angezeigte Knoten angezeigt.  
   
 4.  Klicken Sie auf **übernehmen** zum Speichern der Änderungen.  
   
-![DWConfig-Anwendung PDW-Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+![DWConfig-Anwendung-PDW-Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>Externe Ports  
-Die folgenden Ports werden für Clientverbindungen stammen von außerhalb von PDW geöffnet.  
+Die folgenden Ports werden für Clientverbindungen stammen, die außerhalb von PDW geöffnet.  
   
 |Zweck|Port #|Knoten|  
 |-----------|-----------|---------|  
-|SQL Client-Zugriff für PDW (TDS)|17001|CTL|  
-|Ladeprogramm Clientzugriff (Dwloader & SSIS)|8001|CTL|  
-|Remotedesktopzugriff|3389|CTL CMP|  
+|SQL-Client-Zugriff für PDW (TDS)|17001|CTL|  
+|Ladeprogramm-Clientzugriff (Dwloader und SSIS)|8001|CTL|  
+|Remotedesktopzugriff|3389|CTL, CMP|  
 |SSIS-BinaryLoaderDataChannel|16551|CTL|  
 |Dwloader BinaryLoaderDataChannel|16551|CMP|  
-|SSL-verschlüsselte Verbindungen (für die interne Kommunikation, um die Verwaltungskonsole zugreifen und Zugriff auf HDInsight-Cluster-Dienste)|443|Alle Knoten|  
-|SQL Server PDW laden Ablaufsteuerung - Windows-Anmeldeinformationen|8002|CTL|  
-|_Kerberos|88|AD01 und AD02|  
+|SSL verschlüsselte Verbindungen (für die interne Kommunikation, um die Verwaltungskonsole zugreifen)|443|Alle Knoten|  
+|SQL Server PDW Load Ablaufsteuerung - Windows-Anmeldeinformationen|8002|CTL|  
+|_Kerberos|88|AD01 und AD02,|  
 |_ldap|389|AD01 und AD02|  
   
 ## <a name="internal-ports"></a>Interne Ports  
-Die folgenden Ports werden von PDW für die interne Kommunikation verwendet, aber nicht für die von außerhalb der PDW-Anwendung ausgehenden Verbindungen geöffnet.  
+Die folgenden Ports werden für die interne Kommunikation von PDW verwendet, aber nicht für Verbindungen von außerhalb der PDW-Anwendung geöffnet werden.  
   
 |Zweck|Port #|Knoten|  
 |-----------|-----------|---------|  
-|DMS-Steuerungskanal-Datenverkehr|16450|CTL CMP|  
-|DMS-Datenkanal-Datenverkehr|16550|CTL CMP|  
-|Interne Diagnose|16650|CTL CMP|  
-|Der failoverstatus (DMS)|15000|CTL CMP|  
-|Der failoverstatus (Datenbankmodul)|15001|CMP|  
-|Dynamische (temporären) Portbereich|20000-65535|CTL CMP|  
-|SQL Server-Portbereiche (TDS)|1433, 1500-1508|CTL CMP|  
+|DMS-Steuerungskanal Datenverkehr|16450|CTL, CMP|  
+|DMS-Datenkanal-Datenverkehr|16550|CTL, CMP|  
+|Interne Diagnose|16650|CTL, CMP|  
+|Failoverstatus (DMS)|15000|CTL, CMP|  
+|Failoverstatus (-Engine)|15001|CMP|  
+|Bereich für dynamische (kurzlebige) Ports|20000-65535|CTL, CMP|  
+|Bereiche (TDS) für SQL Server-port|1433, 1500-1508|CTL, CMP|  
   
 > [!NOTE]  
-> Erstellen externen Tabellen oder Daten aus externen Quellen verwendet standardmäßig den TCP-Port 8020. Diese Anweisungen können stattdessen andere Ports konfiguriert werden. Der Standardport für Hortonworks JOB_TRACKER_LOCATION ist 50300. Integration in andere Systeme und die Tools möglicherweise zusätzliche Ports erforderlich.  
+> Erstellen von externen Tabellen oder externen Datenquellen verwendet standardmäßig den TCP-Port 8020. Diese Anweisungen können konfiguriert werden, um andere Ports verwenden. Der Standardport für Hortonworks JOB_TRACKER_LOCATION ist 50300. Die Integration mit anderen Systemen und -Tools unter Umständen zusätzliche Ports.  
   
 <!-- MISSING LINKS ## See Also  
 [HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  

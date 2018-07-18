@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842813"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
@@ -102,7 +103,7 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 
 Dieses Lernprogramm verwendet den [Beispieldatenbank von Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Verwenden Sie die folgenden Schritte aus, um herunterladen und kopieren Sie die Datenbanksicherungsdatei Wide World Importers in Ihrer SQL Server-Container.
 
-1. Verwenden Sie zuerst **Docker Exec** zum Erstellen eines Sicherungsordners. Der folgende Befehl erstellt eine **/Var/opt/Mssql/** innerhalb der SQL Server-Container.
+1. Verwenden Sie zuerst **Docker Exec** zum Erstellen eines Sicherungsordners. Der folgende Befehl erstellt eine **/var/opt/mssql/backup** innerhalb der SQL Server-Container.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

@@ -2,10 +2,10 @@
 title: 'Abrufen von Blobdaten, die mithilfe von IRow:: Open and ISequentialStream | Microsoft Docs'
 description: 'Abrufen von BLOB-Daten, die mithilfe von IRow:: Open and ISequentialStream'
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5b26f5227e762b20f50873bf02163233d3e6a2b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690083"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Abrufen von BLOB-Daten mithilfe von 'IRow::Open' und 'ISequentialStream'
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow:: Open** unterstützt nur Typs DBGUID_STREAM und DBGUID_NULL von Objekten, die geöffnet werden.  
   
@@ -84,6 +87,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Umfangreiche Daten können gebunden oder abgerufen, indem die **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abrufen von Blobdaten mithilfe von IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+ [Abrufen von BLOB-Daten mit IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900537"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Für Fehler, die in der Datenquelle auftreten, ordnet der ODBC-Treiber den entsprechenden SQLSTATE der systemeigenen Fehlercode zurückgegeben. Für Fehler, die durch den Treiber oder der Treiber-Managers, ODBC-Treiber erkannt werden, oder -Treiber-Manager generiert die entsprechenden SQLSTATE-Code.

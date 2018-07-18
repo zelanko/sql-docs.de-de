@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916865"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC und die Standard-CLI
 ODBC richtet die folgenden Spezifikationen und Standards, die mit der Call-Level Interface (CLI) zu verarbeiten. (Die ODBC-Funktionen sind eine Obermenge aller dieser Standards.)  

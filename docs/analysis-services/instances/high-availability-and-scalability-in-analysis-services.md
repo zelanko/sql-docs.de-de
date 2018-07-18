@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700901"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/10/2018
 |Mehrdimensionale Modelle mit MOLAP-Speicher|Wählen Sie eine ausgeglichene Konfiguration, die Datenträger-E/A zum schnellen Laden von Daten und ausreichend Arbeitsspeicher für gecachete Daten bietet.|  
 |Mehrdimensionale Modelle mit ROLAP-Speicher|Maximieren Sie Datenträger-E/A, und minieren Sie Netzwerklatenz.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Hohe Verfügbarkeit und Redundanz mithilfe von WSFC  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Hohe Verfügbarkeit und Redundanz mithilfe von WSFC  
  Analysis Services können auf einem vorhandenen Windows Server-Failovercluster (WSFC) installiert werden, um Hochverfügbarkeit zu erzielen, die den Dienst innerhalb der kürzest möglichen Zeit wiederherstellt.  
   
  Failovercluster bieten Vollzugriff (Lesen und Rückschreiben) auf die Datenbank, jedoch immer nur auf einem Knoten. Sekundäre Datenbanken werden auf weiteren Knoten im Cluster ausgeführt, die als Ersatzserver dienen, falls der erste Knoten ausfällt.  

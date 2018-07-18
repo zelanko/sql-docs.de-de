@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307699"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,40 +37,40 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
   
 |SQL Server-Typ|PHP-Standardtyp|Standardcodierung|  
 |-------------------|--------------------|--------------------|  
-|bigint|String|8-Bit-Zeichen<sup>1</sup>|  
+|BIGINT|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |BINARY|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |bit|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|char|String|8-Bit-Zeichen<sup>1</sup>|  
-|Datum<sup>4</sup>|Datetime|Nicht verfügbar|  
-|"DateTime"<sup>4</sup>|Datetime|Nicht verfügbar|  
-|datetime2<sup>4</sup>|Datetime|Nicht verfügbar|  
-|datetimeoffset<sup>4</sup>|Datetime|Nicht verfügbar|  
-|Decimal|String|8-Bit-Zeichen<sup>1</sup>|  
-|float|Float|8-Bit-Zeichen<sup>1</sup>|  
+|char|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|Datum<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|"DateTime"<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|datetime2<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|datetimeoffset<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|Decimal|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|FLOAT|float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
 |Geometrie|Datenstrom|Binär<sup>3</sup>|  
 |Bild<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|int|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|money|String|8-Bit-Zeichen<sup>1</sup>|  
-|NCHAR|String|8-Bit-Zeichen<sup>1</sup>|  
-|numeric|String|8-Bit-Zeichen<sup>1</sup>|  
-|nvarchar|String|8-Bit-Zeichen<sup>1</sup>|  
+|ssNoversion|Integer|8-Bit-Zeichen<sup>1</sup>|  
+|money|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|NCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|NUMERIC|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|NVARCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |nvarchar(MAX)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |Ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|real|Float|8-Bit-Zeichen<sup>1</sup>|  
-|smalldatetime|Datetime|8-Bit-Zeichen<sup>1</sup>|  
-|smallint|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|smallmoney|String|8-Bit-Zeichen<sup>1</sup>|  
-|sql_variant<sup>7</sup>|String|8-Bit-Zeichen<sup>1</sup>|  
+|REAL|float|8-Bit-Zeichen<sup>1</sup>|  
+|smalldatetime|DATETIME|8-Bit-Zeichen<sup>1</sup>|  
+|SMALLINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
+|SMALLMONEY|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |Text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|time<sup>4</sup>|Datetime|Nicht verfügbar|  
-|timestamp|String|8-Bit-Zeichen<sup>1</sup>|  
-|tinyint|Integer|8-Bit-Zeichen<sup>1</sup>|  
+|time<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|timestamp|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|TINYINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |UDT|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|uniqueidentifier|Zeichenfolge<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Zeichenfolge<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |varbinary|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varbinary(MAX)|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|varchar|String|8-Bit-Zeichen<sup>1</sup>|  
+|varchar|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |varchar(MAX)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|
 |xml|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
   

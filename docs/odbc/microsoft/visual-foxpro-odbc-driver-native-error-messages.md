@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914155"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro-ODBC-Treiber systemeigene Fehlermeldungen
 Die folgenden Tabellen enthalten die Fehlermeldungen, die systemeigenen Visual FoxPro-ODBC-Treiber.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_query_text (Transact-SQL) | Microsoft Docs
+title: Sys.query_store_query_text (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,22 +27,23 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985116"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)] Text und das SQL-Handle von der Abfrage.  
+  Enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)] Text und die SQL-Handle für die Abfrage.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Der Primärschlüssel.|  
-|**query_sql_text**|**nvarchar(max)**|SQL-Text der Abfrage, wie vom Benutzer angegeben. Enthält Leerzeichen, Hinweise und Kommentare.|  
-|**statement_sql_handle**|**vabinary(64)**|SQL-Handle die einzelne Abfrage.|  
-|**is_part_of_encrypted_module**|**bit**|Abfragetext stammt aus einem verschlüsselten-Modul.|  
+|**query_sql_text**|**nvarchar(max)**|SQL-Text der Abfrage, wie vom Benutzer bereitgestellt. Enthält nur Leerzeichen enthalten, Hinweise und Kommentare.|  
+|**statement_sql_handle**|**vabinary(64)**|SQL-Handle für die einzelne Abfrage.|  
+|**is_part_of_encrypted_module**|**bit**|Abfragetext ist Teil eines verschlüsselten-Moduls.|  
 |**has_restricted_text**|**bit**|Abfragetext enthält, ein Kennwort oder andere unmentionable Wörter.|  
   
 ## <a name="permissions"></a>Berechtigungen  

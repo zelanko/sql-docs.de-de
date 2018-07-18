@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018027"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lektion 9-1: definieren und Durchsuchen von Perspektiven
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie verschiedene Perspektiven und
   
     In der **Perspektivenname** -Spalte wird eine neue Perspektive mit dem Standardnamen **Perspektive**angezeigt, wie in der folgenden Abbildung dargestellt. Die Kontrollkästchen aller Objekte sind so lange aktiviert, bis Sie eines der Kontrollkästchen für ein Objekt deaktivieren. Diese Perspektive entspricht der Standardperspektive dieses Cubes.  
   
-    ![Neue Perspektive in der Spalte "Name der Perspektive"](../analysis-services/media/l9-perspectives-2.gif "neue Perspektive in der Spalte "Name der Perspektive"")  
+    ![Neue Perspektive in der Spalte "Name der Perspektive"](../analysis-services/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Name der Perspektive\"")  
   
 3.  Ändern Sie den Perspektivennamen zu **Internet Sales**.  
   

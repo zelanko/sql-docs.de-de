@@ -1,6 +1,6 @@
 ---
 title: MDX-Operatorreferenz (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580602"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742479"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX-Operatorreferenz (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Die MDX-Sprache (Multidimensional Expressions) unterstützt arithmetische, logische, Vergleichs-, Mengen-, Zeichenfolgen- und unäre Operatoren. In der folgenden Liste sind die unterstützten Operatoren und ihre Beschreibungen aufgeführt.  
   

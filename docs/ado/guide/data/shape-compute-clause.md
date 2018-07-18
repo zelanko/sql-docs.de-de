@@ -2,7 +2,6 @@
 title: Form von COMPUTE-Klausel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272829"
 ---
 # <a name="shape-compute-clause"></a>Shape-COMPUTE-Klausel
 Eine Form "COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; Dies ist optional Spalten, deren Inhalt neue, Kapitel oder berechnete Spalten werden, oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten aus den untergeordneten **Recordset** abgelesen Das optionale BY-Klausel.  
@@ -65,7 +65,7 @@ SHAPE child-command [AS] child-alias
   
  Wenn die BY-Klausel weggelassen wird, das gesamte untergeordnete **Recordset** so behandelt, als eine einzelne Gruppe und das übergeordnete Element **Recordset** genau eine Zeile enthält. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Das Weglassen der BY-Klausel können Sie zum Berechnen von Aggregaten "Gesamtsumme" über das gesamte untergeordnete **Recordset**.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -83,12 +83,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
+|oder|Medford|200,000|  
+|oder|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|SAN Diego|600,000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|oder|Corvallis|300,000|  
   
  Geben Sie nun diese Shape-Befehl ein:  
   
@@ -112,7 +112,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Verweis auf child1|CA|  
 |1,200,000|Verweis auf child2|WA|  
-|1,100,000|Verweis auf child3|OR|  
+|1,100,000|Verweis auf child3|oder|  
   
 ## <a name="child1"></a>Child1  
   
@@ -132,9 +132,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|oder|Medford|200,000|  
+|oder|Portland|400,000|  
+|oder|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

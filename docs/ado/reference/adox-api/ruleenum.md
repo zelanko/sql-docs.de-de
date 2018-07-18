@@ -1,11 +1,8 @@
 ---
 title: Diesen zurück | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fb427caf5d398099af5aa812280e8b45836575
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 66a6a38010487345e2b50ae1267bbe291e05407b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286887"
 ---
 # <a name="ruleenum"></a>Diesen zurück
 Gibt die Regel beim Verfolgen von einem [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird gelöscht.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|CASCADE; kaskadierende Änderungen.|  
 |**adRINone**|0|Standard. Es wird keine Aktion ausgeführt.|  

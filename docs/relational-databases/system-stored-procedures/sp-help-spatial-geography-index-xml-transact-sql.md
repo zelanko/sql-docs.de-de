@@ -1,5 +1,5 @@
 ---
-title: Sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs
+title: Sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 13c388b03208c015ab8f0f6405b33b8ac3bd4a80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000712"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +62,9 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geography_index_xml` um den räumlichkeitsindex **SIndx_SpatialTable_geography_col2** für die Tabelle definierten **Geography_col** für das angegebene Abfragebeispiel in  **@qs**. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
+ Im folgenden Beispiel wird `sp_help_spatial_geography_index_xml` um den räumlichkeitsindex **SIndx_SpatialTable_geography_col2** für Tabelle definierten **Geography_col** für das angegebene Abfragebeispiel in  **@qs**. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
   
- Ein [XQuery](../../xquery/xquery-basics.md) dann ausgeführt wird, für das Resultset, das eine bestimmte Eigenschaft zurückgibt.  
+ Ein [XQuery](../../xquery/xquery-basics.md) führen Sie dann auf das Resultset, das eine bestimmte Eigenschaft zurückgibt.  
   
 ```  
 declare @qs geography  
@@ -73,7 +74,7 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Ähnlich wie [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), diese gespeicherte Prozedur bietet vereinfachten programmgesteuerten Zugriff auf die Eigenschaften des eine **Geography** räumlichkeitsindex und dokumentiert das Resultset in XML.  
+ Ähnelt [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), diese gespeicherte Prozedur bietet vereinfachten programmgesteuerten Zugriff auf die Eigenschaften des eine **Geography** räumlichkeitsindex und dokumentiert das Resultset in XML-Datei.  
   
  Das umgebende Feld einer **geography** ist die gesamte Erde.  
   

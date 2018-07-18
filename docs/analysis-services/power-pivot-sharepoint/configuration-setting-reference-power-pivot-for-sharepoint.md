@@ -1,5 +1,5 @@
 ---
-title: Konfigurationseinstellungsverweis (PowerPivot für SharePoint) | Microsoft Docs
+title: Konfigurationseinstellungsverweis (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcc526e6527431c3f8dc1a09f112ff40c556fe3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982612"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="LoadingData"></a> Data Load Timeout  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten werden durch Analysis Services-Serverinstanzen abgerufen und in die Farm geladen. Je nachdem, wie und wann zuletzt auf die Daten zugegriffen wurde, werden sie entweder aus einer Inhaltsbibliothek oder aus einem lokalen Dateicache geladen. Daten werden immer dann in den Arbeitsspeicher geladen, wenn eine Abfrage- oder Verarbeitungsanforderung empfangen wird. Um die Gesamtverfügbarkeit des Servers zu maximieren, können Sie einen Timeoutwert festlegen, der den Server anweist, eine Anforderung zum Laden von Daten zu beenden, wenn sie nicht innerhalb der vorgesehenen Zeit abgeschlossen werden kann.  
   
-|Name|Standardwert|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Data Load Timeout|1800 (in Sekunden)|1 bis 3600|Gibt an, wie lange eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung auf eine Antwort von einer bestimmten Analysis Services-Serverinstanz wartet.<br /><br /> Standardmäßig wartet die Dienstanwendung 30 Minuten auf eine Datennutzlast von der Engine-Dienstinstanz, an die sie eine bestimmte Anforderung weitergeleitet hat.<br /><br /> Falls die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle nicht innerhalb dieses Zeitraums geladen werden kann, wird der Thread beendet und ein neuer gestartet.|  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/10/2018
   
  Jeder Typ von Verbindungspool verfügt über Obergrenzen, die Sie für die Verbindungsverwaltung festlegen können, um sicherzustellen, dass der Systemspeicher optimal genutzt wird.  
   
-|Name|Standardwert|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Verbindungspool-Timeout|1800 (in Sekunden)|1 bis 3600.|Diese Einstellung gilt für Datenverbindungspools.<br /><br /> Sie gibt an, wie lange eine Verbindung im Leerlauf im Verbindungspool verbleiben kann, bevor sie entfernt wird.<br /><br /> Die Dienstanwendung entfernt eine Verbindung standardmäßig, wenn sie länger als fünf Minuten inaktiv ist.|  
 |Maximale Größe für den Benutzerverbindungspool|1000|-1, 0 oder 1 bis 10000.<br /><br /> -1 gibt eine unbegrenzte Anzahl von Verbindungen im Leerlauf an.<br /><br /> 0 bedeutet, dass keine Verbindungen im Leerlauf beibehalten werden. Es muss jedes Mal eine neue Verbindung mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle erstellt werden.|Diese Einstellung gilt für die Anzahl von Verbindungen im Leerlauf in allen für eine bestimmte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsinstanz erstellten Datenverbindungspools.<br /><br /> Für einmalige Kombinationen aus einem SharePoint-Benutzer, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und einer Dienstinstanz werden individuelle Verbindungspools erstellt. Falls zahlreiche Benutzer auf unterschiedliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquellen zugreifen, könnte die Serverleistung möglicherweise durch einen größeren Verbindungspool verbessert werden.<br /><br /> Falls sich mehr als 100 Verbindungen mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstinstanz im Leerlauf befinden, werden neue im Leerlauf befindliche Verbindungen getrennt, statt an den Pool zurückgegeben.|  
@@ -64,25 +65,25 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="AllocationScheme"></a> Lastenausgleich  
  Zu den Funktionen des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensts gehört die Bestimmung der verfügbaren [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstinstanz, in der Analysis Services-Daten geladen werden. Die Einstellung für die Zuordnungsmethode ( **AllocationMethod** ) gibt die Kriterien an, nach denen eine Dienstinstanz ausgewählt wird.  
   
-|Name|Standardwert|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Zuordnungsmethode|RoundRobin|Roundrobin<br /><br /> Zustandsbasiert|Ein Schema zum Zuordnen von Ladeanforderungen unter mindestens zwei Analysis Services-Serverinstanzen.<br /><br /> Standardmäßig verteilt der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst die Anforderungen auf Grundlage des Serverzustands. Bei Zustandsbasiert werden Anforderungen dem Server zugeordnet, dem unter Berücksichtigung des verfügbaren Arbeitsspeichers und der CPU-Auslastung die meisten Systemressourcen zur Verfügung stehen.<br /><br /> Bei Roundrobin werden die Anforderungen in sequenzieller Reihenfolge auf die verfügbaren Servern verteilt, unabhängig von der aktuellen Serverauslastung oder vom Serverzustand.|  
   
 ##  <a name="DataRefresh"></a> Datenaktualisierung  
  Geben Sie den Zeitraum an, der einem normalen bzw. typischen Geschäftstag in Ihrer Organisation entspricht. Diese Konfigurationseinstellungen bestimmen den Zeitpunkt, zu dem Datenaktualisierungsvorgänge nach den Geschäftsstunden verarbeitet werden. Die Verarbeitung nach den Geschäftsstunden kann am Ende des Geschäftstags initiiert werden. Die Verarbeitung nach den Geschäftsstunden ist eine Zeitplanoption für Dokumentbesitzer, die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle mit Transaktionsdaten aktualisieren möchten, die während normaler Geschäftszeiten generiert wurden.  
   
-|Name|Standardwert|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konto für die unbeaufsichtigte Datenaktualisierung|Keine|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
-|Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konto für die unbeaufsichtigte Datenaktualisierung|InclusionThresholdSetting|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
+|Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
 |Maximale Verarbeitungsverlaufslänge|365|1 bis 5000 Tage|Bestimmt, wie lange der Datenaktualisierungsverlauf in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungs-Datenbank beibehalten wird. Weitere Informationen finden Sie unter [PowerPivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Sammlung von Verwendungsdaten  
  Verwendungsberichte, die im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard angezeigt werden, können wichtige Informationen darüber enthalten, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-aktivierte Arbeitsmappen verwendet werden. Die folgenden Konfigurationseinstellungen steuern Aspekte bei der Sammlung von Verwendungsdaten für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Serverereignisse, die anschließend in Verwendungs- oder Aktivitätsberichten präsentiert werden.  
   
-|Name|Standardwert|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
 |Abfrage eines Berichtsintervalls|300 (in Sekunden)|1 bis n Sekunden, wobei n eine beliebige gültige ganze Zahl darstellt.|Um sicherzustellen dass die Datenübertragungskapazität der Farm bei der Sammlung von Verwendungsdaten nicht zu stark beansprucht wird, wird für jede Verbindung eine Abfragestatistik erstellt und als einzelnes Ereignis gemeldet. Das Abfrageberichtsintervall bestimmt, wie oft ein Ereignis gemeldet wird. Standardmäßig wird eine Abfragestatistik alle 5 Minuten ausgegeben.<br /><br /> Da Verbindungen sofort nach dem Senden einer Anforderung geschlossen werden, generiert das System selbst dann eine sehr große Anzahl von Verbindungen, wenn nur ein Benutzer auf eine einzelne [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle zugreift. Aus diesem Grund werden für jede Kombination aus Benutzer und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle Verbindungspools erstellt, damit eine einmal erstellte Verbindung vom gleichen Benutzer für dieselben Daten wiederverwendet werden kann. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung generiert in regelmäßigen, durch diese Konfigurationseinstellung angegeben Abständen einen Verwendungsdatenbericht für jede Verbindung im Verbindungspool.<br /><br /> Wenn Sie das Intervall für die Berichterstellung vergrößern, werden weniger Ereignisse protokolliert. Falls Sie den Wert jedoch zu hoch ansetzen, riskieren Sie den Verlust von Ereignisdaten, wenn der Server neu gestartet oder eine Verbindung geschlossen wird.<br /><br /> Das Herabsetzen des Wertes führt dazu, dass mehr Ereignisse in kürzeren Abständen protokolliert werden, und dem Datensammlungssystem in der SharePoint-Verwendungsdatenbank zusätzliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Verwendungsdaten zugefügt werden.<br /><br /> Im Allgemeinen sollten Sie diese Konfigurationseinstellung nicht ändern, sofern Sie nicht versuchen, ein bestimmtes Problem zu beheben (beispielsweise, wenn die Verwendungsdatenbank aufgrund der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Verwendungsdaten zu schnell anwächst).|  
 |Verwendungsdatenverlauf|365 (in Tagen)|0 oder 1 bis n Tage, wobei n eine beliebige gültige ganze Zahl darstellt.<br /><br /> 0 bedeutet, dass der Verlauf immer beibehalten und nie gelöscht wird.|Verwendungsdaten werden standardmäßig ein Jahr in der Datenbank der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung vorgehalten. Datensätze von über einem Jahr werden aus der Datenbank gelöscht.<br /><br /> Eine Überprüfung der abgelaufenen Verlaufdaten findet täglich statt, wenn der Microsoft Share Point Foundation Usage Data Processing-Auftrag läuft. Der Zeitgeberauftrag liest diese Einstellung und löst in der Datenbank der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung einen Befehl zum Löschen obsoleter Verlaufsdaten aus.|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [PowerPivot-Datenaktualisierung mit SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [PowerPivot-Datenaktualisierung mit SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Konfigurieren von Power Pivot-Dienstkonten](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

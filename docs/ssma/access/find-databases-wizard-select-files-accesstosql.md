@@ -1,8 +1,6 @@
 ---
 title: Datenbanken-Assistent (Select-Dateien) suchen (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773516"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Datenbanken-Assistent (Select-Dateien) suchen (AccessToSQL)
 Die Seite "Dateien auswählen" des Assistenten Datenbanken Suchen listet die Dateien, die während der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei SSMA hinzu. Wenn Sie alle Dateien ausgewählt haben, klicken Sie auf **Weiter** zum Anzeigen der Seite zur Auswahl überprüfen.  
@@ -33,7 +32,7 @@ Im Netzwerk Scan für den Assistenten zum Öffnen der **Datei** Menü klicken Si
   
 Wählen Sie das Kontrollkästchen neben dem Dateinamen, zum Auswählen einer Datei SSMA hinzu. Wenn Sie alle Dateien ausgewählt haben, klicken Sie auf **Weiter** auf der Seite "Abschluss" anzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Alle auswählen**  
 Wählen Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auswählen.  
   

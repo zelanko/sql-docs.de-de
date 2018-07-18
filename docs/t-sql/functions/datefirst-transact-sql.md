@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -33,22 +32,23 @@ helpviewer_keywords:
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4231c534aa021192a45ad56f059cb02c2ddffaec
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792201"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den aktuellen Wert des [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)-Parameters für eine Sitzung zurück.
+Diese Funktion gibt den aktuellen Wert von [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) für eine bestimmte Sitzung zurück.
   
-Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +62,20 @@ Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktio
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-SET DATEFIRST gibt den ersten Tag der Woche an. Der Standardparameter für Englisch (USA) ist 7 (Sonntag).
+SET DATEFIRST *n* gibt den ersten Tag der Woche an (Sonntag, Montag, Dienstag usw.). Der Wert *n* liegt zwischen 1 und 7.
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+Bei einer US-englischen Umgebung ist der Wert @@DATEFIRST standardmäßig 7 (Sonntag).
   
-Diese Spracheinstellung wirkt sich nur auf die Interpretation von Zeichenfolgen bei der Konvertierung in Datumswerte zum Speichern in der Datenbank sowie auf die Anzeige von Datumswerten aus, die in der Datenbank gespeichert sind. Das Speicherformat der Datumsdaten beeinflusst diese Einstellung nicht. Im folgenden Beispiel wird zunächst die Sprache auf `Italian` festgelegt. Die `SELECT @@DATEFIRST;`-Anweisung gibt `1` zurück. Danach wird die Sprache auf `us_english` festgelegt. Die `SELECT @@DATEFIRST;`-Anweisung gibt `7` zurück.
+Diese Spracheinstellung beeinflusst die Interpretierung von Zeichenfolgen, da SQL Server diese Zeichenfolgen in Datumswerte zum Speichern in der Datenbank konvertiert. Diese Einstellung beeinflusst außerdem die Anzeige von Datumswerten in der Datenbank. Diese Einstellung beeinflusst nicht das Speicherformat der Datumsdaten.
+
+In diesem Beispiel wird die Sprache zunächst auf `Italian` festgelegt. Die `SELECT @@DATEFIRST;`-Anweisung gibt `1` zurück. Die nächste Anweisung legt die Sprache auf `us_english` fest. Die letzte Anweisung, `SELECT @@DATEFIRST;`, gibt `7` zurück.
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +88,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>Beispiele  
-Dieses Beispiel legt den ersten Tag der Woche auf `5` (Freitag) fest und geht davon aus, dass der aktuelle Tag, `Today`, Samstag ist. Die `SELECT`-Anweisung gibt den `DATEFIRST`-Wert und die Zahl des aktuellen Tages der Woche zurück.
+In diesem Beispiel wird der erste Tag der Woche auf `5` (Freitag) festgelegt und davon ausgegangen, dass der aktuelle Tag (`Today`) Samstag ist. Die `SELECT`-Anweisung gibt den `DATEFIRST`-Wert und die Zahl des aktuellen Tages der Woche zurück.
   
 ```sql
 SET DATEFIRST 5;  

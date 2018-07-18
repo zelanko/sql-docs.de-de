@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539460"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Sperrverhalten in Parallel Data Warehouse
 Erfahren Sie, wie Parallel Data Warehouse verwendet sperren, um die Integrität von Transaktionen sicherzustellen und um die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen.  

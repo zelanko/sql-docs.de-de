@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: b8f1fad66e906b71ff5ea247ba4615e7be774f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aae3c88e1460304cf4b2bea7dbc529f31393bde
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307919"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP-Treiber für SQL Server-Supportmatrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 |Azure SQL Data Warehouse|J|J| | | | | |
 |SQL Server 2017   |J|J| | | | | |
 |SQL Server 2016   |J|J|J| | | | |
-|SQL Server 2014   |J|J|J|J|J| | |
+|SQLServer 2014   |J|J|J|J|J| | |
 |SQL Server 2012   |J|J|J|J|J|J| |
 |SQL Server 2008 R2|J|J|J|J|J|J|J|
 |SQL Server 2008   | | |J|J|J|J|J|
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
 |MacOS El Capitan (64-Bit)           |J  |J  |   |   |   |   |   |
 
 ## <a name="see-also"></a>Siehe auch  
-[Anmerkungen zu dieser Version](../../connect/php/release-notes-for-the-php-sql-driver.md)
+[Versionsanmerkungen](../../connect/php/release-notes-for-the-php-sql-driver.md)
 
 [Supportressourcen](../../connect/php/support-resources-for-the-php-sql-driver.md)
 

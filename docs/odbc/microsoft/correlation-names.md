@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897675"
 ---
 # <a name="correlation-names"></a>Abhängige Namen
 Abhängige Namen werden vollständig unterstützt, einschließlich der in der Liste ' Tabelle '. Beispielsweise ist in der folgenden Zeichenfolge E1 der abhängige Name für die Tabelle Emp auf:  

@@ -1,14 +1,12 @@
 ---
-title: Bcp_bind | Microsoft Docs
+title: Bcp_bind | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31f50aa8c094ba983a8382379fd0d833edb0f9dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d956dcbd51d9f62a79012071dd1b1935131edf8f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430259"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,9 +55,9 @@ RETCODE bcp_bind (
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *pData*  
- Ein Zeiger auf die kopierten Daten. Wenn *eDataType* SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR oder SQLIMAGE ist, wird *pData* kann NULL sein. Ein NULL-Wert *pData* gibt an, dass lange Datenwerte zu sendende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Segmenten mit [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). Der Benutzer sollte nur festgelegt *pData* auf NULL, wenn der Benutzer-gebundenen Feld entsprechende Spalte eine BLOB-Spalte, andernfalls ist **Bcp_bind** schlägt fehl.  
+ Ein Zeiger auf die kopierten Daten. Wenn *eDataType* ist SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR oder SQLIMAGE ist, *pData* kann NULL sein. Ein NULL-Wert *pData* gibt an, dass lange Datenwerte gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Blöcken mit [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). Der Benutzer sollte nur festgelegt *pData* auf NULL, wenn die Spalte, die Benutzer-gebundenen Feld entspricht einer BLOB-Spalte, andernfalls ist **Bcp_bind** schlägt fehl.  
   
- Falls Indikatoren in den Daten vorhanden sind, stehen sie im Speicher direkt vor den Daten. Die *pData* Parameter verweist auf die Indikatorvariable in diesem Fall und die Breite des Indikators, den *CbIndicator* Parameter durch Massenkopieren, um die Benutzerdaten ordnungsgemäß verwendet wird.  
+ Falls Indikatoren in den Daten vorhanden sind, stehen sie im Speicher direkt vor den Daten. Die *pData* Parameter verweist auf die Indikatorvariable in diesem Fall und die Breite des Indikators, den *CbIndicator* Parameter, wird durch Massenkopieren, um die Benutzerdaten ordnungsgemäß verwendet.  
   
  *cbIndicator*  
  Die Länge eines Längen- oder NULL-Indikators für die Spaltendaten in Byte. Gültige Indikatorlängenwerte sind 0 (wenn kein Indikator verwendet wird), 1, 2, 4 oder 8. Indikatoren stehen im Speicher direkt vor allen Daten. Beispielsweise könnte die folgende Strukturtypdefinition verwendet werden, um für einen Massenkopiervorgang Ganzzahlwerte in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle einzufügen:  
@@ -71,7 +70,7 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- In diesem Beispiel das *pData* Parametersatz würde an die Adresse einer deklarierten Instanz der Struktur, die die Adresse des dem IINDICATOR *iIndicator* Strukturmember. Die *CbIndicator* Parametersatz würde auf die Größe einer ganzen Zahl ((sizeof(int)), und die *CbData* Parameter würde erneut festgelegt werden, um die Größe einer ganzen Zahl ((sizeof(int)). Zum Massenkopieren eine Zeile mit dem Server, die eine NULL-Wert für die gebundene Spalte den Wert der Instanz *iIndicator* Element sollte auf SQL_NULL_DATA festgelegt werden.  
+ In diesem Beispiel das *pData* Parametersatz wird an die Adresse einer deklarierten Instanz der Struktur, die die Adresse der IINDICATOR *iIndicator* Strukturmember. Die *CbIndicator* -Parameter würde auf die Größe einer ganzen Zahl festgelegt werden ((sizeof(int)), und die *CbData* Parameter würde erneut festgelegt werden, auf die Größe einer ganzen Zahl ((sizeof(int)). Zum Massenkopieren eine Zeile mit dem Server, die eine NULL-Wert für die gebundene Spalte den Wert von der Instanz in *iIndicator* Member auf SQL_NULL_DATA festgelegt werden soll.  
   
  *cbData*  
  Die Anzahl der Datenbytes in der Programmvariablen ohne die Länge eventuell vorhandener Längenindikatoren, NULL-Indikatoren oder Abschlusszeichen.  
@@ -80,20 +79,20 @@ typedef struct tagBCPBOUNDINT
   
  Festlegen von *CbData* auf SQL_VARLEN_DATA an, dass das System ein zeichenfolgenabschlusszeichen verwenden die andere Methode, um zu bestimmen, die Länge der Daten kopiert.  
   
- Bei Datentypen mit fester Länge wie ganzen Zahlen gibt der Datentyp dem System die Länge der Daten an. Aus diesem Grund für Datentypen mit fester Länge *CbData* kann problemlos auf sql_varlen_data festgelegt ist oder die Länge der Daten.  
+ Bei Datentypen mit fester Länge wie ganzen Zahlen gibt der Datentyp dem System die Länge der Daten an. Aus diesem Grund für Datentypen fester Länge *CbData* kann problemlos auf sql_varlen_data festgelegt ist oder die Länge der Daten sein.  
   
- Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen *CbData* kann SQL_VARLEN_DATA, SQL_NULL_DATA, ein positiver Wert oder 0 sein. Wenn *CbData* auf sql_varlen_data festgelegt, verwendet das System ein Längen-/Null-Indikator (falls vorhanden) oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn beide Indikatoren bereitgestellt werden, verwendet das System beim Massenkopieren den Wert, der zu der kleineren zu kopierenden Datenmenge führt. Wenn *CbData* auf sql_varlen_data festgelegt, der Datentyp der Spalte ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen- oder Binärdatentyp ist und weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
+ Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen *CbData* kann SQL_VARLEN_DATA, SQL_NULL_DATA, ein positiver Wert oder 0 sein. Wenn *CbData* auf sql_varlen_data festgelegt, verwendet das System entweder einen Längen-/Null-Indikator (falls vorhanden) oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn beide Indikatoren bereitgestellt werden, verwendet das System beim Massenkopieren den Wert, der zu der kleineren zu kopierenden Datenmenge führt. Wenn *CbData* auf sql_varlen_data festgelegt, der Datentyp der Spalte ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen oder Binärtyp, und weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
   
- Wenn *CbData* 0 oder ein positiver Wert sein, das System verwendet *CbData* als Datenlänge. Allerdings If, zusätzlich zu einem positiven *CbData* Wert, eine Länge Längenindikator oder eine abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mithilfe der Methode, führt die geringste Menge an Daten, die kopiert werden.  
+ Wenn *CbData* 0 oder ein positiver Wert sein, das System verwendet *CbData* als Datenlänge. Allerdings If, zusätzlich zu einem positiven *CbData* Wert, eine Länge Längenindikator oder eine abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mithilfe der Methode, die sich ergibt die geringste Menge an Daten, die kopiert wird.  
   
- Die *CbData* Parameterwert stellt die Anzahl der Datenbytes dar. Zeichendaten durch Unicode-Zeichen, und klicken Sie dann auf einen positiven dargestellt *CbData* Parameterwert darstellt, die Anzahl der Zeichen multipliziert mit der Größe in Byte der einzelnen Zeichen.  
+ Die *CbData* Parameterwert stellt die Anzahl der Datenbytes dar. Wenn Zeichendaten durch Unicode-Zeichen, und klicken Sie dann auf ein positives Ergebnis dargestellt werden *CbData* Parameterwert die Anzahl der Zeichen multipliziert mit der Größe in Byte der einzelnen Zeichen darstellt.  
   
  *pTerm*  
  Ein Zeiger auf das Bytemuster, falls vorhanden, das das Ende dieser Programmvariablen markiert. Beispielsweise weisen ANSI- und MBCS-C-Zeichenfolgen normalerweise ein 1-Byte-Abschlusszeichen (\0) auf.  
   
  Wenn kein Abschlusszeichen für die Variable vorhanden ist, legen Sie *pTerm* auf NULL.  
   
- Sie können eine leere Zeichenfolge ("") verwenden, um das C-NULL-Abschlusszeichen als Programmvariablen-Abschlusszeichen festzulegen. Da die Null-terminierte leere Zeichenfolge ein einzelnes Byte (das abschlusszeichenbyte selbst) ausmachen, legen Sie *CbTerm* auf 1. Beispielsweise, um anzugeben, dass die Zeichenfolge in *SzName* Null-terminiert ist und dass das Abschlusszeichen verwendet werden soll, um die Länge anzugeben:  
+ Sie können eine leere Zeichenfolge ("") verwenden, um das C-NULL-Abschlusszeichen als Programmvariablen-Abschlusszeichen festzulegen. Da die Null-terminierte leere Zeichenfolge ein einzelnes Byte (das abschlusszeichenbyte selbst) ausmachen, legen Sie *CbTerm* auf 1. Um beispielsweise anzugeben, dass die Zeichenfolge in *SzName* Null-terminiert ist und dass das Abschlusszeichen verwendet werden soll, um die Länge anzugeben:  
   
 ```  
 bcp_bind(hdbc, szName, 0,  
@@ -101,14 +100,14 @@ bcp_bind(hdbc, szName, 0,
    SQLCHARACTER, 2)  
 ```  
   
- In einer abgewandelten Form dieses Beispiels kann hinweisen, dass 15 Zeichen kopiert werden die *SzName* Variable auf der zweiten Spalte der gebundenen Tabelle:  
+ In einer abgewandelten Form dieses Beispiels hinweisen, dass 15 Zeichen kopiert werden, aus der *SzName* Variablen in die zweite Spalte der gebundenen Tabelle:  
   
 ```  
 bcp_bind(hdbc, szName, 0, 15,   
    NULL, 0, SQLCHARACTER, 2)  
 ```  
   
- Die API für das Massenkopieren führt nach Bedarf eine Zeichenkonvertierung von Unicode in MBCS aus. Stellen Sie sicher, dass sowohl die Bytezeichenfolge des Abschlusszeichens als auch die Länge der Bytezeichenfolge richtig festgelegt sind. Angenommen, um anzugeben, dass die Zeichenfolge in *SzName* ist eine Unicode-Doppelbyte-Zeichenfolge von Unicode-null-abschlusszeichenwert beendet:  
+ Die API für das Massenkopieren führt nach Bedarf eine Zeichenkonvertierung von Unicode in MBCS aus. Stellen Sie sicher, dass sowohl die Bytezeichenfolge des Abschlusszeichens als auch die Länge der Bytezeichenfolge richtig festgelegt sind. Um beispielsweise anzugeben, dass die Zeichenfolge in *SzName* ist eine Unicode-Zeichenfolge mit Breitzeichen, durch den Unicode-Wert für null-Terminator beendet:  
   
 ```  
 bcp_bind(hdbc, szName, 0,   
@@ -116,7 +115,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Wenn die Grenze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte Breitzeichen ist, erfolgt keine Konvertierung auf [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte vom Typ MBCS-Zeichen ist, wird eine Konvertierung von Doppelbytezeichen in Multibytezeichen durchgeführt, wenn die Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet werden.  
+ Wenn die Grenze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte Breitzeichen ist, wird keine Konvertierung durchgeführt, auf [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte vom Typ MBCS-Zeichen ist, wird eine Konvertierung von Doppelbytezeichen in Multibytezeichen durchgeführt, wenn die Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet werden.  
   
  *cbTerm*  
  Anzahl von Bytes im Abschlusszeichen für die Programmvariable, falls vorhanden. Wenn kein Abschlusszeichen für die Variable vorhanden ist, legen Sie *CbTerm* auf 0.  
@@ -124,9 +123,9 @@ bcp_bind(hdbc, szName, 0,
  *eDataType*  
  Der C-Datentyp der Programmvariablen. Die Daten in der Programmvariablen werden in den Typ der Datenbankspalte konvertiert. Wenn dieser Parameter 0 ist, wird keine Konvertierung ausgeführt.  
   
- Die *eDataType* Parameter aufgelistet, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyptoken in sqlncli.h, nicht die ODBC C-datentypenumeratoren. Beispielsweise können Sie eine 2-Byte-Ganzzahl, ODBC-Typ SQL_C_SHORT, angeben, indem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Typ SQLINT2 verwenden.  
+ Die *eDataType* Parameter aufgelistet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyptoken in sqlncli.h, nicht die ODBC-C-datentypenumeratoren. Beispielsweise können Sie eine 2-Byte-Ganzzahl, ODBC-Typ SQL_C_SHORT, angeben, indem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Typ SQLINT2 verwenden.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führte die Unterstützung für SQLXML und SQLUDT Datentyptoken in der ***eDataType*** Sie diesen Parameter verwenden.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Unterstützung für SQLXML und SQLUDT Datentyptoken in die ***eDataType*** Sie diesen Parameter verwenden.  
  
  Die folgende Tabelle führt gültige enumerierte Datentypen und die entsprechenden ODBC-C-Datentypen auf.
   
@@ -148,11 +147,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|int|  
+|SQLINT4|ssNoversion|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|float|  
-|SQLFLT8|float|  
+|SQLFLT4|FLOAT|  
+|SQLFLT8|FLOAT|  
 |SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -181,23 +180,23 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Hinweise  
  Verwendung **Bcp_bind** für eine schnelle und effiziente Möglichkeit zum Kopieren von Daten aus einer Programmvariablen in eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Rufen Sie [Bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) bevor dies oder jede andere Funktion zum Massenkopieren aufrufen. Aufrufen von **Bcp_init** legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zieltabelle für das Massenkopieren. Beim Aufrufen von **Bcp_init** für die Verwendung mit **Bcp_bind** und [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **Bcp_init** *SzDataFile*-Parameter, der angibt, der Datendatei wird auf NULL; festgelegt. die **Bcp_init *** eDirection* -Parameter auf DB_IN festgelegt ist.  
+ Rufen Sie [Bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) vor diese oder jede andere Funktion zum Massenkopieren aufrufen. Aufrufen von **Bcp_init** legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zieltabelle für das Massenkopieren. Beim Aufrufen von **Bcp_init** für die Verwendung mit **Bcp_bind** und [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **Bcp_init** *SzDataFile*-Parameter, der angibt, der Datendatei wird auf NULL; festgelegt. die **Bcp_init *** eDirection* -Parameter auf DB_IN festgelegt ist.  
   
- Führen Sie einen separaten **Bcp_bind** rufen Sie für jede Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle in die Sie kopieren möchten. Wenn alle erforderlichen **Bcp_bind** Aufrufe vorgenommen wurden, und rufen dann **Bcp_sendrow** , senden eine Zeile mit Daten von Ihren Programmvariablen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das erneute Binden einer Spalte wird nicht unterstützt.  
+ Führen Sie einen separaten **Bcp_bind** rufen Sie für jede Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die in die Sie kopieren möchten. Wenn alle erforderlichen **Bcp_bind** Aufrufe vorgenommen wurden, und rufen Sie dann **Bcp_sendrow** senden Sie eine Zeile mit Daten von Ihren Programmvariablen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das erneute Binden einer Spalte wird nicht unterstützt.  
   
- Bei Bedarf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrufen, um die bereits empfangenen Zeilen zu speichern, [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Rufen Sie z. B. **Bcp_batch** einmal nach jeweils 1000 Zeilen eingefügt oder beliebiges anderes Intervall.  
+ Wann immer Sie möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrufen, um bereits empfangenen Zeilen zu committen, [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Rufen Sie z. B. **Bcp_batch** einmal nach jeweils 1000 Zeilen eingefügt oder beliebiges anderes Intervall.  
   
- Wenn es keine weiteren Zeilen mehr sind eingefügt werden, rufen Sie [Bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Andernfalls wird ein Fehler ausgelöst.  
+ Wenn es keine weiteren Zeilen mehr sind eingefügt werden soll, rufen Sie [Bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Andernfalls wird ein Fehler ausgelöst.  
   
- Steuerparametereinstellungen, die mit angegebenen [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), wirken sich nicht auf **Bcp_bind** zeilenübertragungen.  
+ Steuerparametereinstellungen, die mit angegebenen [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), haben keine Auswirkungen auf **Bcp_bind** zeilenübertragungen.  
   
- Wenn *pData* für eine Spalte auf NULL festgelegt wird, da sein Wert durch Aufrufe von bereitgestellt werden, [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), alle nachfolgenden Spalten mit *eDataType* SQLText, SQLNTEXT, festlegen SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR oder SQLIMAGE muss auch mit gebunden *pData* auf NULL festgelegt, und ihre Werte müssen auch angegeben werden, durch Aufrufe von **Bcp_moretext**.  
+ Wenn *pData* für eine Spalte auf NULL festgelegt wird, da sein Wert durch Aufrufe von angegeben [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), alle nachfolgenden Spalten mit *eDataType* SQLText, SQLNTEXT, festlegen SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR oder SQLIMAGE muss auch mit gebunden sein *pData* auf NULL festgelegt, und ihre Werte müssen auch angegeben werden, durch Aufrufe von **Bcp_moretext**.  
   
- Für neue große Werttypen wie z. B. **varchar(max)**, **varbinary(max)**, oder **nvarchar(max)**, können Sie SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY und SQLNCHAR als typindikatoren im die *eDataType* Parameter.  
+ Für neue Typen mit umfangreichen Werten wie z. B. **varchar(max)**, **'varbinary(max)'**, oder **nvarchar(max)**, können Sie SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, und SQLNCHAR als typindikatoren im der *eDataType* Parameter.  
   
- Wenn *CbTerm* ist nicht 0 ist, einen beliebigen Wert (1, 2, 4 oder 8) ist ungültig für das Präfix (*CbIndicator*). In diesem Fall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wird das Abschlusszeichen suchen, berechnet die Datenlänge in Bezug auf das Abschlusszeichen (*ich*), und legen Sie die *CbData* auf den kleineren Wert von i und den Wert des Präfix.  
+ Wenn *CbTerm* ist nicht 0 ist, einen beliebigen Wert (1, 2, 4 oder 8) ist gültig für das Präfix (*CbIndicator*). In diesem Fall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client werden Suchen Sie nach dem Abschlusszeichen, berechnet die Datenlänge in Bezug auf das Abschlusszeichen (*ich*), und legen Sie die *CbData* auf den kleineren Wert von i und den Wert des Präfix.  
   
- Wenn *CbTerm* ist 0 und *CbIndicator* (Präfix) ist nicht 0 (null) *CbIndicator* muss 8 sein. Das 8-Byte-Präfix kann die folgenden Werte annehmen:  
+ Wenn *CbTerm* ist 0 und *CbIndicator* (das Präfix) ist nicht 0 (null) *CbIndicator* muss 8 sein. Das 8-Byte-Präfix kann die folgenden Werte annehmen:  
   
 -   0xFFFFFFFFFFFFFFFF bedeutet einen NULL-Wert für das Feld.  
   
@@ -216,9 +215,9 @@ bcp_bind(hdbc, szName, 0,
  Aufrufen von [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) Verwendung **Bcp_bind** führt zu einem Fehler.  
   
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>bcp_bind-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Informationen zu den Arten der Verwendung der *eDataType* -Parameter für Datum/Uhrzeit-Typen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Informationen zu den Arten der Verwendung der *eDataType* -Parameter für Datum/Uhrzeit-Datentypen, finden Sie unter [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -302,6 +301,6 @@ printf_s("%ld rows copied.\n", nRowsProcessed);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen zum Massenkopieren](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gewähren von serverweiten Administratorrechten für Analysis Services-Instanz | Microsoft Docs
+title: Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760095"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/10/2018
  Nach der Installation können Sie die Rollenzugehörigkeiten ändern und alle weiteren Benutzer hinzufügen, die vollständige Rechte für den Dienst benötigen. Sie können Serverrollen auch mithilfe von Analysis Management Objects (AMOs) verwalten. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt verschiedene Optionen mit zunehmend präziseren Rollen für die Verarbeitung und die Abfrage auf Server-, Datenbank- und Objektebene bereit. Weitere Anweisungen zur Verwendung dieser Rollen finden Sie unter [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt verschiedene Optionen mit zunehmend präziseren Rollen für die Verarbeitung und Abfragen auf Server, Datenbank- und Objektebene bereit. Weitere Anweisungen zur Verwendung dieser Rollen finden Sie unter [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Ändern der Serverrollenmitgliedschaft  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  Klicken Sie im Bereich **Seite auswählen** auf **Sicherheit** , und klicken Sie anschließend unten auf der Seite auf **Hinzufügen** , um der Serverrolle einen oder mehrere Windows-Benutzer bzw. Windows-Benutzergruppen hinzuzufügen.  
   
-     ![Benutzer Dialogfelds "hinzufügen" in Management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "Benutzer Dialogfelds "hinzufügen" in Management Studio")  
+     ![Benutzer Dialogfelds "hinzufügen" in Management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "Benutzer Dialogfelds \"hinzufügen\" in Management Studio")  
   
 ### <a name="add-computer-accounts"></a>Hinzufügen von Computerkonten  
  Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie auch ein Computerkonto zur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorengruppe hinzufügen.  
@@ -52,10 +53,10 @@ ms.lasthandoff: 05/10/2018
 5.  Geben Sie im Textfeld **Geben Sie die Namen der auszuwählenden Objekte ein** den Namen des Computers ein, und klicken Sie auf **Namen überprüfen** , um zu überprüfen, ob sich das Computerkonto in den aktuellen Speicherorten befindet. Wenn das Computerkonto nicht gefunden wird, überprüfen Sie den Computernamen und die Domäne des Computers.  
   
 ## <a name="nt-servicessastelemetry-account"></a>Konto "NT Service\SSASTelemetry"  
- Das Konto**NT Service/SSASTelemetry** ist ein Computerkonto mit geringen Berechtigungen, das während des Setups erstellt wurde und ausschließlich zur Ausführung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Implementierung des Diensts Customer Experience Improvement Program (CEIP; Programm zur Verbesserung der Benutzerfreundlichkeit) verwendet wird. Für die Ausführung verschiedener Ermittlungsbefehle erfordert dieser Dienst Administratorrechte für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Weitere Informationen finden Sie unter [Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) und [Datenschutzbestimmungen für Microsoft SQL Server](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) .  
+ Das Konto**NT Service/SSASTelemetry** ist ein Computerkonto mit geringen Berechtigungen, das während des Setups erstellt wurde und ausschließlich zur Ausführung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Implementierung des Diensts Customer Experience Improvement Program (CEIP; Programm zur Verbesserung der Benutzerfreundlichkeit) verwendet wird. Für die Ausführung verschiedener Ermittlungsbefehle erfordert dieser Dienst Administratorrechte für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Weitere Informationen finden Sie unter [Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) und [Datenschutzbestimmungen für Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444) .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Sicherheitsrollen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Sicherheitsrollen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

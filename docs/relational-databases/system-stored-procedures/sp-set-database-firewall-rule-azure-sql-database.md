@@ -1,5 +1,5 @@
 ---
-title: Sp_set_database_firewall_rule (Azure SQL-Datenbank) | Microsoft Docs
+title: Sp_set_database_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: ''
@@ -28,15 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6fa2b1effae12bd8132c331d4e1ba33055c656e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984122"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für Ihre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Datenbank-Firewallregeln können so konfiguriert sein, für die **master** Datenbank, und für Benutzerdatenbanken auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Datenbank-Firewallregeln sind besonders nützlich, wenn Sie eigenständige Datenbankbenutzer verwenden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für Ihre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Datenbank-Firewall-Regeln konfiguriert werden können, für die **master** -Datenbank und für Benutzerdatenbanken in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwenden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,30 +50,30 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **[@name**  =] [N] "*Namen*"  
- Der verwendete Name, um die Firewalleinstellung auf Datenbankebene zu beschreiben und von anderen zu unterscheiden. *Namen* ist **vom Datentyp nvarchar(128)** verfügt über keinen Standardwert. Der Bezeichner für die Unicode- `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ **[@name**  =] [N]'*Namen*"  
+ Der verwendete Name, um die Firewalleinstellung auf Datenbankebene zu beschreiben und von anderen zu unterscheiden. *Namen* ist **vom Datentyp nvarchar(128)** hat keinen Standardwert. Der Unicode-Bezeichner `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
  **[@start_ip_address**  =] '*Start_ip_address*"  
- Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *Start_ip_address* ist **varchar(50)-Spalte** verfügt über keinen Standardwert.  
+ Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *Start_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
  [**@end_ip_address** =] '*End_ip_address*"  
- Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen gleich oder kleiner als dieser versuchen kann, für die Verbindung der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Instanz. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *End_ip_address* ist **varchar(50)-Spalte** verfügt über keinen Standardwert.  
+ Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen gleich oder kleiner als dieser versuchen kann, für die Verbindung der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Instanz. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *End_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
- Die folgende Tabelle enthält die unterstützten Argumente und Optionen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ In der folgende Tabelle veranschaulicht die unterstützten Argumente und Optionen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!NOTE]  
->  Verbindungsversuche von Azure sind zulässig, wenn sowohl dieses Feld und die *Start_ip_address* Feld gleich `0.0.0.0`.  
+>  Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld und die *Start_ip_address* Feld `0.0.0.0`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Namen der Firewalleinstellungen auf Datenbankebene für eine Datenbank müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Firewalleinstellung auf Datenbankebene bereits in der Tabelle mit den Firewalleinstellungen auf Datenbankebene vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Datenbankebene erstellt.  
   
- Beim Hinzufügen einer firewalleinstellung auf Datenbankebene, in dem die Anfangs- und die End-IP-Adressen gleich sind `0.0.0.0`, aktivieren Sie den Zugriff auf die Datenbank auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server von anderen Azure-Ressourcen. Geben Sie einen Wert für die *Namen* Parameter, mit denen Sie denken Sie daran, welchem Zweck die firewalleinstellung dient.  
+ Beim Hinzufügen einer firewalleinstellung auf Datenbankebene, in dem die erste und letzte IP-Adressen gleich sind `0.0.0.0`, Sie ermöglichen des Zugriffs auf Ihre Datenbank in der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server aus allen Azure-Ressourcen. Geben Sie einen Wert für die *Namen* Parameter, mit denen Sie denken Sie daran, welchem Zweck die firewalleinstellung dient.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **CONTROL**-Berechtigung für die Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Der folgende Code erstellt eine Datenbank firewalleinstellung auf Serverebene namens `Allow Azure` , die ermöglicht den Zugriff auf die Datenbank aus Azure.  
+ Der folgende Code erstellt eine Firewall auf Datenbankebene, die Einstellung `Allow Azure` ermöglicht, die Zugriff auf Ihre Datenbank von Azure.  
   
 ```  
 -- Enable Azure connections.  
@@ -80,7 +81,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Der folgende Code erstellt eine Datenbank firewalleinstellung auf Serverebene aufgerufene `Example DB Setting 1` exklusiv für die IP-Adresse `0.0.0.4`. Anschließend wird die `sp_set_database firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse aktualisieren `0.0.0.6`in dieser firewalleinstellung. Dies erstellt einen Bereich aus dem IP-Adressen kann `0.0.0.4`, `0.0.0.5`, und `0.0.0.6` für den Datenbankzugriff.
+ Der folgende Code erstellt eine Firewall auf Datenbankebene, die Einstellung `Example DB Setting 1` nur die IP-Adresse `0.0.0.4`. Anschließend wird die `sp_set_database firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse zu aktualisieren `0.0.0.6`, Firewall-Einstellungen. Erstellt einen Bereich der IP-Adressen ermöglichen `0.0.0.4`, `0.0.0.5`, und `0.0.0.6` Zugriff auf die Datenbank.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  
@@ -92,9 +93,9 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Azure SQL-Datenbank-Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- ["sp_set_firewall_rule" &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [Azure SQL-Datenbankfirewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Vorgehensweise: Konfigurieren der Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Sp_delete_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [Sys. database_firewall_rules &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   

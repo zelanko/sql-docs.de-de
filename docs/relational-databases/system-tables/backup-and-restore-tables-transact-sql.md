@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Tabellen (Transact-SQL) | Microsoft Docs
+title: Sichern und Wiederherstellen von Tabellen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09a35a516808c5330199cd60f1e9dbde9192d004
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003033"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Sichern und Wiederherstellen von Tabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/04/2018
  Enthält eine Zeile für jede markierte Transaktion, für die ein Commit ausgeführt wurde.  
   
  [restorefile](../../relational-databases/system-tables/restorefile-transact-sql.md)  
- Enthält eine Zeile für jede wiederhergestellte Datei. Dazu gehören die Dateien, die indirekt nach Dateigruppennamen wiederhergestellt.  
+ Enthält eine Zeile für jede wiederhergestellte Datei. Dazu gehören die Dateien, die indirekt nach Dateigruppennamen wiederhergestellt werden.  
   
  [restorefilegroup](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)  
  Enthält eine Zeile für jede wiederhergestellte Dateigruppe.  

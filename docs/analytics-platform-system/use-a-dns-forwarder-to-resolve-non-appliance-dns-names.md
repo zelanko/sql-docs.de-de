@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544942"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie nicht Appliance DNS-Namen in Analytics Platform System Auflösen einer DNS-Weiterleitungsservers
 DNS-Weiterleitung für die Active Directory-Domänendienste-Knoten konfiguriert werden kann (***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**) der Appliance Analytics Platform System zu ermöglichen Skripts und softwareanwendungen auf externe Servern zugreifen.  

@@ -1,5 +1,5 @@
 ---
-title: Statusberichte (Ereigniskategorie) | Microsoft Docs
+title: Progress Reports-Ereigniskategorie | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f3e48e34e5b85093793b0ea70786b106d72235a7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981304"
 ---
 # <a name="progress-reports-event-category"></a>Fortschrittsbericht (Ereigniskategorie)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

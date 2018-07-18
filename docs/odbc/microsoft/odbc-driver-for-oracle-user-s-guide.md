@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900805"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzer&#39;Entwicklerhandbuch
 > [!IMPORTANT]  

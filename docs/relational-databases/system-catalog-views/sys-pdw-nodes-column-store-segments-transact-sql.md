@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -13,16 +13,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: 9
 author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 92eee101d27c4483207ba1be9933b750aabdea3d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: ddc64da5a0c1d5dc3f383213f711cb0f1f849eb7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875228"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ Enthält eine Zeile für jede Spalte in einem columnstore-Index.
 | **partition_id**            | **bigint** | Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.     |
 | **hobt_id**                 | **bigint** | ID des Heaps oder B-Struktur-Indexes (hobt) für die Tabelle, die diesen columnstore-Index aufweist. |
 | **column_id**               | **int**    | ID der columnstore-Spalte.                                |
-| **segment_id**              | **int**    | Die ID des Spaltensegments. Aus Kompatibilitätsgründen weiterhin der Spaltenname Segment_id aufgerufen werden, obwohl dies die Rowgroup-ID ist Sie können ein Segment mit < Hobt_id, Partition_id, Column_id > Identifizierung < Segment_id >. |
+| **segment_id**              | **int**    | Die ID des Spaltensegments. Für die Abwärtskompatibilität weiterhin, dass der Spaltenname Segment_id aufgerufen werden, obwohl dies die Rowgroup-ID ist Sie können eindeutig identifizieren, ein Segment, das mit < Hobt_id Partition_id, Column_id >, < Segment_id >. |
 | **version**                 | **int**    | Die Version des Spaltensegmentformats.                        |
-| **encoding_type**           | **int**    | Der Typ für dieses Segment verwendete Codierungstyp:<br /><br /> 1 = VALUE_BASED - Zeichenfolge/Binärdaten mit kein Wörterbuch (vergleichbar mit 4 mit einige interne Varianten)<br /><br /> 2 = VALUE_HASH_BASED - Zeichenfolge/Binary-Spalte mit dem häufig verwendete Werte im Wörterbuch<br /><br /> 3 = STRING_HASH_BASED - Zeichenfolge/Binary-Spalte mit gemeinsamen Werten im Wörterbuch<br /><br /> 4 = STORE_BY_VALUE_BASED - Zeichenfolge/Binärdaten mit kein Wörterbuch<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - Zeichenfolge/binäre kein Wörterbuch<br /><br /> Alle Codierungen nutzen Bit-Verpackung und Ausführung Länge Codierung nach Möglichkeit. |
+| **encoding_type**           | **int**    | Der Typ für dieses Segment verwendete Codierungstyp:<br /><br /> 1 = VALUE_BASED - nicht-/ binäre Zeichenfolge mit kein Wörterbuch (vergleichbar mit 4 mit internen Varianten)<br /><br /> 2 = VALUE_HASH_BASED - Zeichenfolge/Binary-Spalte mit Werten im Wörterbuch<br /><br /> 3 = STRING_HASH_BASED - Zeichenfolge/Binary-Spalte mit Werten im Wörterbuch<br /><br /> 4 = STORE_BY_VALUE_BASED - nicht-/ binäre Zeichenfolge mit kein Wörterbuch<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - Zeichenfolge/Binary, kein Wörterbuch<br /><br /> Alle Codierungen nutzen Bit-Packen und führen Sie mit der Länge Codierung Wenn möglich. |
 | **row_count**               | **int**    | Die Anzahl der Zeilen in der Zeilengruppe.                             |
 | **has_nulls**               | **int**    | 1, wenn das Spaltensegment NULL-Werte enthält.                     |
 | **base_id**                 | **bigint** | Basiswert-ID, wenn der Codierungstyp 1 verwendet wird.  Wenn der Codierungstyp 1 nicht verwendet wird, wird Base_id auf 1 festgelegt. |
 | **magnitude**               | **float**  | Größe, wenn der Codierungstyp 1 verwendet wird.  Wenn der Codierungstyp 1 nicht verwendet wird, wird Magnitude auf 1 festgelegt. |
-| **primary__dictionary_id**  | **int**    | Die ID des primären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf die lokalen Wörterbuch für diese Spalte in das aktuelle Segment (d. h. die Zeilengruppe). Der Wert-1 gibt an, dass keine lokales Wörterbuch für dieses Segment vorhanden ist. |
-| **secondary_dictionary_id** | **int**    | Die ID des sekundären Wörterbuchs. Ein Wert ungleich 0 (null) verweist auf die lokalen Wörterbuch für diese Spalte in das aktuelle Segment (d. h. die Zeilengruppe). Der Wert-1 gibt an, dass keine lokales Wörterbuch für dieses Segment vorhanden ist. |
+| **primary__dictionary_id**  | **int**    | Die ID des primären Wörterbuchs. Ein Wert ungleich Null zeigt auf dem lokalen Verzeichnis für diese Spalte in das aktuelle Segment (d. h. die Zeilengruppe). Der Wert-1 gibt an, dass keine lokalen Verzeichnis für dieses Segment. |
+| **secondary_dictionary_id** | **int**    | Die ID des sekundären Wörterbuchs. Ein Wert ungleich Null zeigt auf dem lokalen Verzeichnis für diese Spalte in das aktuelle Segment (d. h. die Zeilengruppe). Der Wert-1 gibt an, dass keine lokalen Verzeichnis für dieses Segment. |
 | **min_data_id**             | **bigint** | Mindestdaten-ID im Spaltensegment.                       |
 | **max_data_id**             | **bigint** | Maximale Daten-ID im Spaltensegment.                       |
 | **null_value**              | **bigint** | Ein Wert, der zum Darstellen von NULL-Werten verwendet wird.                               |
 | **on_disk_size**            | **bigint** | Die Größe des Segments in Byte.                                    |
-| **pdw_node_id**             | **int**    | Der eindeutige Bezeichner einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten. |
+| **pdw_node_id**             | **int**    | Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten. |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
@@ -87,7 +87,7 @@ ORDER BY    table_nm
 
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Erstellen von columnstore-INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [Columnstore-INDEX erstellen &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 

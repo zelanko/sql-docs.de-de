@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902885"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (Desktop-Datenbanktreiber)
 Ein eindeutiger Index zurückgegeben (sofern vorhanden) für das Flag SQL_BEST_ROWID in *fColType*. Für das Flag SQL_ROWVER wird kein Resultset zurückgegeben werden.  

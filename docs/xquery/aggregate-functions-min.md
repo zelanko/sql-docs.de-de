@@ -1,5 +1,5 @@
 ---
-title: Min-Funktion (XQuery) | Microsoft Docs
+title: Min-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051708"
 ---
-# <a name="aggregate-functions---min"></a>Aggregatfunktionen - min
+# <a name="aggregate-functions---min"></a>Aggregatfunktionen – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt aus einer Sequenz aus atomaren Werten *$arg*, die ein Element, dessen Wert kleiner als alle anderen ist.  
+  Gibt aus einer Sequenz atomarer Werte *$arg*, das eine Element, dessen Wert kleiner als alle anderen Elemente ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,14 +47,14 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Sequenz der Elemente, aus denen der Mindestwert zurückgegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Typen der atomaren Werte, die übergeben werden **min()** müssen Untertypen des gleichen Basistyps sein. Basistypen, die akzeptiert werden, sind Typen, die die **Gt** Vorgang. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:double umgewandelt. Wenn eine Mischung dieser Typen ist, oder wenn andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
+ Alle Typen der atomaren Werte, die übergeben werden **min()** müssen Untertypen des gleichen Basistyps sein. Basistypen, die akzeptiert werden, sind die Typen, unterstützen die **Gt** Vorgang. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:double umgewandelt. Wenn eine Mischung dieser Typen ist, oder wenn andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
   
  Das Ergebnis des **min()** erhält den Basistyp der übergebenen Typen, z. B. xs: Double im Fall von xdt: UntypedAtomic. Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler zurückgegeben.  
   
- Die **min()** Funktion gibt einen Wert zurück, in der Sequenz, die kleiner als alle anderen Werte in der Eingabesequenz ist. Für xs:string-Werte wird die Unicode-Codepunkt-Standardsortierung verwendet. Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz ignoriert *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
+ Die **min()** Funktion gibt den Wert 1 zurück, in der Sequenz, die kleiner als alle anderen Werte in der Eingabesequenz ist. Für xs:string-Werte wird die Unicode-Codepunkt-Standardsortierung verwendet. Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz, ignoriert *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Verwenden der min()-Funktion von XQuery zum Bestimmen der Arbeitsplatzstandorte, die die wenigsten Arbeitsstunden aufweisen  
  Die folgende Abfrage ruft alle Arbeitsplatzstandorte im Fertigungsprozess für das Produktmodell (ProductModelID=7) ab, die die wenigsten Arbeitsstunden aufweisen. Im Allgemeinen wird, wie im folgenden Beispiel gezeigt, ein einziger Arbeitsplatzstandort zurückgegeben. Wenn mehrere Standorte eine gleiche Anzahl von Mindestarbeitsstunden aufweisen, werden alle diese Standorte zurückgegeben.  
@@ -77,7 +78,7 @@ WHERE ProductModelID=7
   
 -   Die **Namespace** -Schlüsselwort im XQuery-Prolog definiert ein Namespacepräfix. Dieses Präfix wird anschließend im XQuery-Abfragetext verwendet.  
   
- Hauptteil der XQuery erstellt das XML, in dem ein \<Speicherort >-Element mit wcid-ATTRIBUT und **LaborHrs** Attribute.  
+ Hauptteil der XQuery konstruiert die XML-Daten, die eine \<Location >-Element mit wcid-ATTRIBUT und **LaborHrs** Attribute.  
   
 -   Die Abfrage ruft außerdem die ProductModelID- und Namenswerte ab.  
   

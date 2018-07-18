@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912025"
 ---
 # <a name="catalog-functions-in-odbc"></a>In ODBC-Katalogfunktionen
 ODBC enthält die folgenden Katalogfunktionen:  

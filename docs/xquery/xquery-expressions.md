@@ -1,5 +1,5 @@
 ---
-title: XQuery-Ausdrücke | Microsoft Docs
+title: XQuery-Ausdrücke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,24 +23,25 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030358"
 ---
 # <a name="xquery-expressions"></a>XQuery-Ausdrücke
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Themen, in denen die XQuery-Ausdrücke beschrieben.  
+  Themen, die beschreiben, die XQuery-Ausdrücke.  
   
 
  [Primäre Ausdrücke &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
  Beschreibt XQuery-Primärausdrücke. Dazu gehören Literale, Variablenverweise, Kontextelementausdrücke, Konstruktoren und Funktionsaufrufe.  
   
- [Path-Ausdrücken &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ [Path-Ausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
  Beschreibt XQuery-Pfadausdrücke. Darüber werden in einem Dokument enthaltene Knoten gesucht, wie Element-, Attribut- und Textknoten.  
   
- [Sequenzieren Ausdrücke &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
+ [Sequence Expressions &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
  Beschreibt XQuery-Operatoren für die Arbeit mit Zahlensequenzen.  
   
  [Arithmetische Ausdrücke &#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
  Beschreibt die Iterationssyntax FLOWR. Diese steht für FOR, LET, WHERE, ORDER BY und RETURN. LET wird nicht unterstützt.  
   
  [Geordnete und ungeordnete Ausdrücke &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- Beschreibt den Reihenfolgemodus für XQuery-Operationen. Wird standardmäßig der reihenfolgemodus festgelegt ist, um **sortiert**.  
+ Beschreibt den Reihenfolgemodus für XQuery-Operationen. In der Standardeinstellung der reihenfolgemodus festgelegt ist, um **sortiert**.  
   
  [Bedingte Ausdrücke &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
  Beschreibt die XQuery-Unterstützung für die bedingte **If-Then-else** Anweisung.  

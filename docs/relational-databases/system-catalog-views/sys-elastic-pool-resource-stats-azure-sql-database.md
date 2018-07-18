@@ -1,5 +1,5 @@
 ---
-title: Sys.elastic_pool_resource_stats (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. elastic_pool_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -27,15 +27,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997982"
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Azure SQL-Datenbank)
+# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Gibt ressourcenauslastungsstatistiken für alle Pools für elastische Datenbanken in einem logischen Server zurück. Für jeden Pool für elastische Datenbanken wird eine Zeile für jedes Fenster (vier Zeilen pro Minute) reporting von 15 Sekunden. Dies umfasst CPU, e/a-, Log, Speicherverbrauch und gleichzeitige Anforderung/Sitzung Auslastung durch alle Datenbanken im Pool. Diese Daten werden 14 Tage lang beibehalten. 
+  Gibt ressourcenverwendungsstatistiken für alle Pools für elastische Datenbanken in einem logischen Server zurück. Ist für jeden Pool für elastische Datenbanken gibt es eine Zeile für jedes 15-sekündige berichtszeitfenster (vier Zeilen pro Minute). Dies umfasst CPU-, e/a-, Log, Speicherverbrauch und gleichzeitige Anforderungs-/sitzungsauslastung durch alle Datenbanken im Pool. Diese Daten werden 14 Tage lang beibehalten. 
   
 ||  
 |-|  
@@ -45,31 +46,31 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|UTC-Zeit, die den Anfang des Berichtsintervalls von 15 Sekunden.|  
 |**end_time**|**datetime2**|UTC-Zeit, die das Ende des Berichtsintervalls von 15 Sekunden.|  
-|**elastic_pool_name**|**nvarchar(128)**|Der Name des elastischen Pools.|  
-|**avg_cpu_percent**|**decimal(5,2) wird**|Durchschnittliche servernutzung als Prozentwert der maximalen Kapazität des Pools.|  
-|**avg_data_io_percent**|**decimal(5,2) wird**|Durchschnittliche e/a-Auslastung in Prozent basierend auf den Grenzwert des Pools.|  
-|**avg_log_write_percent**|**decimal(5,2) wird**|Durchschnittliche schreibressourcenauslastung in Prozent des Grenzwerts des Pools.|  
-|**avg_storage_percent**|**decimal(5,2) wird**|Durchschnittliche speicherauslastung in Prozent, der die Speicherkapazität des Pools an.|  
-|**max_worker_percent**|**decimal(5,2) wird**|Maximale gleichzeitige Arbeitsthreads (Anforderungen) als Prozentwert der maximalen Kapazität des Pools für.|  
-|**max_session_percent**|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools für.|  
-|**elastic_pool_dtu_limit**|**int**|Aktuelle max elastischen Pool-dtu-Einstellung für diesen elastischen Pool während dieses Intervalls.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle max elastischen Pool Speicherobergrenze für diesen elastischen Pool in Megabyte während dieses Intervalls festlegen.|  
+|**elastic_pool_name**|**nvarchar(128)**|Der Name des Pools für elastische Datenbanken.|  
+|**avg_cpu_percent**|**decimal(5,2) wird**|Durchschnittliche computeauslastung als Prozentwert der maximalen Kapazität des Pools an.|  
+|**avg_data_io_percent**|**decimal(5,2) wird**|Durchschnittliche e/a-Auslastung als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_log_write_percent**|**decimal(5,2) wird**|Durchschnittliche Schreibressourcen als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_storage_percent**|**decimal(5,2) wird**|Durchschnittliche speicherauslastung als Prozentwert der speicherbeschränkung des Pools.|  
+|**max_worker_percent**|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität des Pools.|  
+|**max_session_percent**|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools.|  
+|**elastic_pool_dtu_limit**|**int**|Aktuelle Höchstwerte für Pools für elastische Datenbanken DTU-Einstellung für diesen Pool für elastische Datenbanken während dieses Intervalls.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle Höchstwerte für Pools für elastische Datenbanken Speichergrenzwert für diesen elastischen Pool in MB während dieses Intervalls festlegen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Sicht ist in der master-Datenbank des logischen Servers vorhanden. Sie müssen verbunden sein, mit der Masterdatenbank abzufragende **sys.elastic_pool_resource_stats**.  
+ In dieser Ansicht vorhanden ist, in der Masterdatenbank des logischen Servers. Muss eine Verbindung mit der Masterdatenbank Abfrage **Sys. elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Dbmanager** Rolle.  
+ Erfordert die Mitgliedschaft in der **"DBManager"** Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel gibt die ressourcennutzungsdaten sortiert nach der letzten Zeit für die elastische datenbankpools auf dem aktuellen logischen Server zurück.  
+ Das folgende Beispiel gibt die ressourcennutzungsdaten sortiert nach der letzten Zeit für alle Pools für elastische Datenbanken auf dem aktuellen logischen Server zurück.  
   
 ```  
 SELECT * FROM sys.elastic_pool_resource_stats   
 ORDER BY end_time DESC;  
 ```  
   
- Im folgende Beispiel wird die durchschnittliche DTU-Verbrauch in Prozent für einen bestimmten Pool berechnet.  
+ Im folgende Beispiel wird die durchschnittliche prozentuale DTU-Verbrauch für einen bestimmten Pool berechnet.  
   
 ```  
 SELECT start_time, end_time,      
@@ -81,8 +82,8 @@ ORDER BY end_time DESC;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tame dramatisch für elastische Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Erstellen Sie und verwalten Sie einen Pool für elastische Datenbanken SQL-Datenbank (Vorschau)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Explosionsartig steigende Datenmengen mithilfe elastischer Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [Erstellen und Verwalten eines Pools für elastische SQL-Datenbank (Vorschau)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Sys. dm_db_resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

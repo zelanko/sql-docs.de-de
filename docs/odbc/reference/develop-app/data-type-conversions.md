@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911935"
 ---
 # <a name="data-type-conversions"></a>Datentypkonvertierungen
 Daten konvertiert werden können von einem Typ in einen anderen an einem der vier Mal: Wenn Daten übertragen aus einer Anwendungsvariablen in eine andere (C#, C) Sendens von Daten in einer Anwendungsvariablen an einen Anweisungsparameter (C zu SQL) zurückgegebenen Daten in einer Resultsetspalte eine Anwendungsvariable (SQL zu C), und wenn Daten aus einer Spalte für die Datenquelle an eine andere (SQL to SQL) übertragen wird.  

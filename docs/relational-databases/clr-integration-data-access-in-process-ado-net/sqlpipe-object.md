@@ -1,13 +1,12 @@
 ---
-title: SqlPipe-Objekt | Microsoft Docs
+title: SqlPipe-Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15786a3af4b6598f73c822a8196039ec3e335d2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27e9b16848cb214c0ba7502beb878ab9cde061c3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354312"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  Die **Send** -Methode sendet Daten direkt an den Client oder Aufrufer. Normalerweise verwendet der Client die Ausgabe der **SqlPipe**-Methode, im Fall von geschachtelten gespeicherten CLR-Prozeduren kann es sich beim Consumer der Ausgabe jedoch auch um eine gespeicherte Prozedur handeln. Beispiel: Procedure1 ruft SqlCommand.ExecuteReader() mit dem Befehlstext "EXEC Procedure2" auf. Bei Procedure2 handelt es sich ebenfalls um eine verwaltete gespeicherte Prozedur. Wenn Procedure2 jetzt SqlPipe.Send( SqlDataRecord ) aufruft, wird die Zeile an den Reader von Procedure1 und nicht an den Client gesendet.  
   
- Die **senden** Methode sendet eine zeichenfolgenmeldung, die auf dem Client angezeigt, als eine informationsmeldung ähnlich wie PRINT in wird [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
+ Die **senden** Methode sendet eine zeichenfolgenmeldung, die auf dem Client als informationsmeldung ähnlich wie PRINT in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
   
  Das **SqlPipe** -Objekt stellt außerdem eine **ExecuteAndSend** -Methode bereit. Mit dieser Methode kann ein Befehl (der als **SqlCommand** -Objekt übergeben wird) ausgeführt und Ergebnisse direkt zurück an den Aufrufer gesendet werden. Wenn im übermittelten Befehl Fehler vorhanden sind, werden Ausnahmen an die Pipe gesendet. Es wird jedoch auch eine Kopie an den aufrufenden verwalteten Code gesendet. Wenn der aufrufende Code die Ausnahme nicht abfängt, wird sie in der Liste aufwärts weitergeleitet an den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code und dann zweimal in der Ausgabe angezeigt. Wenn der aufrufende Code die Ausnahme abfängt, wird dem Client der Fehler angezeigt, es gibt jedoch keinen doppelten Fehler.  
   

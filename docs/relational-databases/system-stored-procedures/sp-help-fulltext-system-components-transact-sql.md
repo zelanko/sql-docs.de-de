@@ -1,5 +1,5 @@
 ---
-title: Sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
+title: Sp_help_fulltext_system_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019988"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_help_fulltext_system_components
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
  [ **@component_type=** ] *component_type*  
- Gibt den Komponententyp an. *Component_type* kann eines der folgenden sein:  
+ Gibt den Komponententyp an. *Component_type* kann einen der folgenden sein:  
   
 -   **wörtertrennung**  
   
@@ -88,7 +89,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|ID des Volltextkatalogs.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **öffentlichen** Rolle Benutzer sehen jedoch nur Informationen über Volltextkataloge, bei denen sie die VIEW DEFINITION-Berechtigung verfügen. Nur Mitglieder der der **Serveradmin** festen Serverrolle sehen Werte in der **Fullpath** Spalte.  
+ Erfordert die Mitgliedschaft in der **öffentliche** Rolle Benutzer sehen jedoch nur Informationen zu den Volltextkatalogen, die für die sie die VIEW DEFINITION-Berechtigung verfügen. Nur Mitglieder der der **Serveradmin** Serverrolle sehen Werte in der **Fullpath** Spalte.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode ist besonders beim Vorbereiten eines Upgrades wichtig. Führen Sie die gespeicherte Prozedur innerhalb einer bestimmten Datenbank aus, und ermitteln Sie mithilfe der Ausgabe, ob das Upgrade Auswirkungen auf einen bestimmten Katalog haben wird.  
@@ -112,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Bestimmen, ob eine bestimmte Wörtertrennung registriert ist  
- Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel wird die Parameternamen **@component_type** und **@param**.  
+ Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel gibt an, den Parameternamen, **@component_type** und **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

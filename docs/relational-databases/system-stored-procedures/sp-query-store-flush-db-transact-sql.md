@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_flush_db (Transact-SQL) | Microsoft Docs
+title: Sp_query_store_flush_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,15 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993630"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>Sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Den in-Memory-Teil der abfragespeicherdaten auf den Datenträger geleert.  
+  Die in-Memory-Teil der Abfrage von Store-Daten auf den Datenträger geleert.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +53,10 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **löschen** -Berechtigung für die Abfrage Katalogsichten des Abfragespeichers.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **löschen** -Berechtigung für der Katalogsichten des Abfragespeichers.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel werden die speicherinternen Anteils der abfragespeicherdaten auf den Datenträger geleert.  
+ Im folgende Beispiel werden die in-Memory-Teil der Abfrage von Store-Daten auf den Datenträger geleert.  
   
 ```  
 EXEC sp_query_store_flush_db;  

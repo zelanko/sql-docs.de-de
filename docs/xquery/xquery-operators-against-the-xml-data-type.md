@@ -1,5 +1,5 @@
 ---
-title: XQuery-Operatoren für den Xml-Datentyp | Microsoft Docs
+title: XQuery-Operatoren für den Xml-Datentyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988175"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +47,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-general-operators"></a>A. Verwenden von allgemeinen Operatoren  
- Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Rufnummern für jeden Kunden aus der **AdditionalContactInfo** Spalte die **Kontakt** Tabelle. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
+ Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Rufnummern für jeden Kunden aus der **AdditionalContactInfo** Spalte die **wenden Sie sich an** Tabelle. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
   
- Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf rechts neben der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen, der knotenvergleich **"true"**. Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
+ Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf der rechten Seite des der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen ergibt, der knotenvergleich **"true"**. Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -62,7 +63,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Es wird eine weitere Möglichkeit zum beobachten, wie die vorherige Abfrage funktioniert: jeder rufnummernwert entnommen der **AdditionalContactInfo** Spalte wird mit dem Satz von zwei Rufnummern verglichen. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
+ Besteht eine weitere Möglichkeit, beachten Sie, wie die vorherige Abfrage funktioniert: jeder rufnummernwert abgerufen, die von der **AdditionalContactInfo** Spalte mit dem Satz von zwei Rufnummern verglichen wird. Wenn der Wert im Satz enthalten ist, wird der betreffende Kunde im Ergebnis zurückgegeben.  
   
 ### <a name="b-using-a-numeric-operator"></a>B. Verwenden eines numerischen Operators  
  Der +-Operator in dieser Abfrage ist ein Wertoperator, weil er sich auf ein einzelnes Element bezieht. Der Wert 1 wird z. B. zu einer Chargengröße addiert, die von der Abfrage zurückgegeben wird:  
@@ -98,7 +99,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Da beide der Operanden den **Eq** Operator atomare Werte sind, wird der wertoperator in der Abfrage verwendet. Sie können die gleiche Abfrage mithilfe des allgemeinen Vergleichsoperators schreiben ( **=** ).  
+ Da beide der Operanden der **Eq** Operator atomare Werte, der Wert-Operator wird verwendet, in der Abfrage. Sie können die gleiche Abfrage schreiben, mithilfe des allgemeinen Vergleichsoperators ( **=** ).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,27 +27,28 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75ea1d3250c88ae40abcf34280a68c7384f6557e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997962"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>Sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erfasst Informationen zu externen PolyBase-Vorgänge.  
+  Erfasst Informationen über externe PolyBase-Vorgänge.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Eindeutige abfragebezeichners PolyBase Abfrage zugeordnet|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Der Index des Abfrage-Schritts|Finden Sie unter Step_index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|Operation_-Typ|**nvarchar(128)**|Beschreibt einen Hadoop-Vorgang oder einen anderen externen Vorgang|"Externe Hadoop Operation"|  
-|Operation_ name|**nvarchar(4000)**|Gibt an, wie der Status des Auftrags in Prozent (wie viel die Eingabe verwendet wird)|0-1 – multipliziert, um den Faktor 100 (abgeschlossen)|  
-|Map_-Status|**float**|Zeigt an wie der Status der reduzieren Sie einen Auftrag in Prozent, falls vorhanden|0-1 – multipliziert, um den Faktor 100 (abgeschlossen)|  
+|execution_id|**nvarchar(32)**|Eindeutiger Bezeichner der Abfrage zugeordneten PolyBase-Abfrage|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Der Index des abfrageschritts|Finden Sie unter Step_index in [dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|Operation_-Typ|**nvarchar(128)**|Beschreibt einen Hadoop-Vorgang oder andere externe Vorgänge|"Externen Hadoop-Operation"|  
+|Operation_-name|**nvarchar(4000)**|Gibt an, wie der Status des Auftrags in Prozent (wie viel die Eingabe verwendet wird)|0-1 – multipliziert, um den Faktor 100 (abgeschlossen)|  
+|Map_-Status|**float**|Gibt ggf. an der Status einer Reduce-Aufträge in Prozent|0-1 – multipliziert, um den Faktor 100 (abgeschlossen)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

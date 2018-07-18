@@ -1,5 +1,5 @@
 ---
-title: Sp_sequence_get_range (Transact-SQL) | Microsoft Docs
+title: Sp_sequence_get_range (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,17 +25,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015077"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Gibt einen Bereich von Sequenzwerten eines Sequenzobjekts zurück. Das Sequenzobjekt generiert die angeforderte Anzahl der Werte, gibt diese aus und stellt Metadaten bezüglich des Bereichs für die Anwendung bereit.  
   
- Weitere Informationen zu Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Eine weitere Informationen zu Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +60,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Der Name des Sequenzobjekts. Das Schema ist optional. *Sequence_name* ist **nvarchar(776)**.  
   
  [ **@range_size** = ] *range_size*  
- Die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **@range_size** ist **"bigint"**.  
+ Die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **@range_size** ist **Bigint**.  
   
  [ **@range_first_value** =] *Range_first_value*  
  Der Ausgabeparameter gibt den ersten Wert (Minimal- oder Maximalwert) des Sequenzobjekts zurück, mit dem der angeforderte Bereich berechnet wurde. **@range_first_value** ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
@@ -100,7 +101,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Erfordert die UPDATE-Berechtigung für das Sequenzobjekt oder das Schema des Sequenzobjekts.  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen verwenden ein Sequence-Objekt, das mit dem Namen Test.RangeSeq. Verwenden Sie die folgende Anweisung aus, um die Sequenz Test.RangeSeq zu erstellen.  
+ Die folgenden Beispiele verwenden eine Sequenzobjekt, das mit dem Namen Test.RangeSeq. Verwenden Sie die folgende Anweisung aus, um die Test.RangeSeq Sequenz zu erstellen.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -118,7 +119,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Abrufen eines Bereichs von Sequenzwerten  
- Die folgende Anweisung ruft vier Sequenznummern aus dem Test.RangeSeq Sequence-Objekt und die erste Nummer an den Benutzer zurückgegeben.  
+ Die folgende Anweisung werden vier Sequenznummern aus dem Test.RangeSeq Sequence-Objekt und die erste Nummer an den Benutzer zurückgibt.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -134,7 +135,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. Zurückgeben aller Ausgabeparameter  
- Im folgenden Beispiel werden alle Ausgabewerte von Sp_sequence_get_range-Prozedur zurückgegeben.  
+ Im folgenden Beispiel werden alle Ausgabewerte von der Sp_sequence_get_range-Prozedur zurückgegeben.  
   
 ```  
 DECLARE    
@@ -169,7 +170,7 @@ SELECT
  Eine Änderung des `@range_size`-Arguments in einen sehr großen Wert wie 75 führt dazu, dass das Sequenzobjekt Zyklen durchläuft. Überprüfen Sie das `@range_cycle_count`-Argument, um zu ermitteln, ob und in welchem Ausmaß Zyklen vom Sequenzobjekt durchlaufen wurden.  
   
 ### <a name="c-example-using-adonet"></a>C. Beispiel für die Verwendung von ADO.NET  
- Im folgenden Beispiel wird einen Bereich aus der Test.RangeSeq mithilfe von ADO.NET.  
+ Im folgenden Beispiel wird eine Reihe von der Test.RangeSeq mithilfe von ADO.NET.  
   
 ```  
 SqlCommand cmd = new SqlCommand();  

@@ -1,5 +1,5 @@
 ---
-title: Error-Element (XMLA) | Microsoft Docs
+title: Error-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576552"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036648"
 ---
 # <a name="error-element-xmla"></a>Error-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält Informationen zu einem Fehler, die von einer Instanz von Analysis Services zurückgegeben.  
+  Enthält Informationen zu den von einer Instanz von Analysis Services ein Fehler zurückgegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,11 +70,11 @@ ms.locfileid: "34576552"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|ErrorCode|Erforderliche **UnsignedInt** Attribut (nur wenn **Nachricht** ist das übergeordnete Element.) Enthält den numerischen Rückgabecode des Fehlers.|  
-|Schweregrad|Optionale **Zeichenfolge** Attribut (nur wenn **Nachricht** ist das übergeordnete Element.) Enthält das Ausmaß des Fehlers.|  
-|Description|Optionale **Zeichenfolge** Attribut (nur wenn **Nachricht** ist das übergeordnete Element.) Enthält den beschreibenden Text des Fehlers.|  
-|Quelle|Optionale **Zeichenfolge** Attribut (nur wenn **Nachricht** ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
-|HelpFile|Optionale **Zeichenfolge** Attribut (nur wenn **Nachricht** ist das übergeordnete Element.) Enthält den Pfad oder die URL zur Hilfedatei oder dem Thema, das den Fehler beschreibt.|  
+|ErrorCode|Erforderliche **UnsignedInt** Attribut (nur, wenn **Nachricht** ist das übergeordnete Element.) Enthält den numerischen Rückgabecode des Fehlers.|  
+|Schweregrad|Optionale **Zeichenfolge** Attribut (nur, wenn **Nachricht** ist das übergeordnete Element.) Enthält das Ausmaß des Fehlers.|  
+|Description|Optionale **Zeichenfolge** Attribut (nur, wenn **Nachricht** ist das übergeordnete Element.) Enthält den beschreibenden Text des Fehlers.|  
+|Quelle|Optionale **Zeichenfolge** Attribut (nur, wenn **Nachricht** ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
+|HelpFile|Optionale **Zeichenfolge** Attribut (nur, wenn **Nachricht** ist das übergeordnete Element.) Enthält den Pfad oder die URL zur Hilfedatei oder dem Thema, das den Fehler beschreibt.|  
   
 ## <a name="remarks"></a>Hinweise  
   

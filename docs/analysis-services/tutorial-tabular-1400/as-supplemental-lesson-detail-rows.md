@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services Tutorial ergänzenden Lektion: Detailzeilen | Microsoft Docs'
+title: 'Analysis Services Tutorial ergänzende Lektion: Detailzeilen | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,50 +10,51 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0518cdd7707c5973bfd055af997a75c9b67d7479
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017793"
 ---
-# <a name="supplemental-lesson---detail-rows"></a>Ergänzende Lektion - Detailzeilen
+# <a name="supplemental-lesson---detail-rows"></a>Ergänzende Lektion – Detailzeilen
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In dieser ergänzenden Lektion verwenden Sie die DAX-Editor definieren Sie einen benutzerdefinierten Ausdruck des Detail-Zeilen. Ein Detail-Zeilen-Ausdruck ist eine Eigenschaft für ein Measure Endbenutzer Weitere Informationen über die aggregierten Ergebnisse eines Measures bereitstellt. 
+In dieser ergänzenden Lektion verwenden Sie den DAX-Editor, um einen benutzerdefinierten Detailzeilenausdruck zu definieren. Ein Detailzeilenausdrucks ist es sich um eine Eigenschaft auf ein Measure, die Endbenutzer Weitere Informationen zu aggregierten Ergebnissen eines Measures. 
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
-In diesem Artikel ergänzende Lektion ist Teil eines Lernprogramms tabellarischer Modelle. Vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion, Sie sollten haben alle vorherigen Lektionen oder über eine abgeschlossene Adventure Works Internet Sales Model Beispielprojekt.  
+In diesem Artikel ergänzende Lektion ist Teil einer Tutorials zur tabellenmodellierung. Vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion an, Sie sollten abgeschlossen haben alle vorherige Lektionen oder über einen abgeschlossenen Adventure Works Internet Sales-Beispiel-Modellprojekt.  
   
 ## <a name="whats-the-issue"></a>Was ist das Problem?
 
-Betrachten Sie die Details des Measures InternetTotalSales, bevor Sie ein Detail Zeilen Ausdruck hinzufügen.
+Betrachten Sie die Details des Measure "internettotalsales" an, bevor Sie einen Detailzeilenausdruck hinzufügen.
 
-1.  Klicken Sie in SSDT, auf die **Modell** Menü > **in Excel analysieren** öffnen Excel und erstellen eine leere PivotTable.
+1.  Klicken Sie in SSDT auf das **Modell** Menü > **in Excel analysieren** öffnen Excel und erstellen eine leere PivotTable.
   
-2.  In **PivotTable Fields**, Hinzufügen der **InternetTotalSales** Measure aus der Tabelle FactInternetSales **Werte**, **"calendaryear"** aus der DimDate-Tabelle zu **Spalten**, und **EnglishCountryRegionName** auf **Zeilen**. Die PivotTable können Sie nun eine aggregierte Ergebnisse vom Measure InternetTotalSales nach Regionen und Jahr. 
+2.  In **PivotTable Fields**, Hinzufügen der **"internettotalsales" an** Measure aus der Tabelle "factinternetsales", um **Werte**, **"calendaryear"** aus der DimDate-Tabelle zu **Spalten**, und **EnglishCountryRegionName** zu **Zeilen**. Die PivotTable zeigt nun ein aggregiertes Ergebnis aus dem Measure "internettotalsales" nach Region und Jahr an. 
 
     ![als-Lektion-Detail-Zeilen-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
-3. Doppelklicken Sie auf ein aggregierter Wert für ein Jahr und einen Regionsnamen, in der PivotTable. Hier doppelgeklickt wird den Wert für Australien und das Jahr 2014. Ein neues Blatt wird geöffnet, die Daten jedoch nicht sinnvoll sind Daten enthält.
+3. Doppelklicken Sie auf einen aggregierten Wert für ein Jahr und einen Regionsnamen, in der PivotTable. Hier doppelklicken Sie den Wert für Australien und das Jahr 2014. Ein neues Blatt wird geöffnet, mit Daten, aber nicht wirklich hilfreich sind.
 
     ![als-Lektion-Detail-Zeilen-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
-Was ist die hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die auf das aggregierte Ergebnis des Measures InternetTotalSales beitragen. Zu diesem Zweck können Sie ein Detail Zeilen Ausdruck als Eigenschaft des Measures hinzufügen.
+Was wir hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die zum aggregierten Ergebnis des Measure "internettotalsales" an beitragen möchten. Zu diesem Zweck können Sie einen Detailzeilenausdruck als Eigenschaft des Measure hinzufügen.
 
-## <a name="add-a-detail-rows-expression"></a>Fügen Sie ein Detail Zeilen Ausdruck hinzu
+## <a name="add-a-detail-rows-expression"></a>Fügen Sie einen Detailzeilenausdruck
 
-#### <a name="to-create-a-detail-rows-expression"></a>So erstellen Sie ein Detail Zeilen Ausdruck 
+#### <a name="to-create-a-detail-rows-expression"></a>Erstellen Sie einen Detailzeilenausdruck 
   
-1. Klicken Sie im measureraster für die FactInternetSales-Tabelle, auf die **InternetTotalSales** Measure. 
+1. Klicken Sie im measureraster der Tabelle "factinternetsales" auf die **"internettotalsales" an** Measure. 
 
-2. In **Eigenschaften** > **Detail Zeilen Ausdruck**, klicken Sie auf die Schaltfläche "Editor" der DAX-Editor zu öffnen.
+2. In **Eigenschaften** > **Detailzeilenausdruck**, klicken Sie auf die Schaltfläche "Editor", um den DAX-Editor zu öffnen.
 
     ![als-Lektion-Detail-Zeilen-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
-3. Geben Sie in DAX-Editor den folgenden Ausdruck ein:
+3. Geben Sie im DAX-Editor den folgenden Ausdruck ein:
 
     ```
     SELECTCOLUMNS(
@@ -68,13 +69,13 @@ Was ist die hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die auf das 
 
     ```
 
-    Dieser Ausdruck gibt den Namen, Spalten, und Measures aus der FactInternetSales-Tabelle und verknüpfte Tabellen werden zurückgegeben, wenn ein Benutzer eine aggregierte Ergebnis in einer PivotTable oder eines Berichts doppelklickt.
+    Dieser Ausdruck gibt die Namen, Spalten und Berechnungsergebnisse aus der Tabelle "factinternetsales" und die verknüpfte Tabellen werden zurückgegeben, wenn ein Benutzer ein aggregiertes Ergebnis in einer PivotTable oder eines Berichts doppelklickt.
 
-4. Löschen Sie in Excel das Blatt, das in Schritt 3 erstellt, und doppelklicken Sie auf ein aggregierter Wert. Dieses Mal öffnet mit einer Detail Zeilen Expression-Eigenschaft für das Measure definiert, ein neues Arbeitsblatt, viel nützlicher Daten enthält.
+4. Löschen Sie in Excel das Blatt, das in Schritt 3 erstellt haben, und doppelklicken Sie dann einen aggregierten Wert. Dieses Mal öffnet mit einem detailzeilenausdruck für das Measure definiert, ein neues Blatt mit viel mehr hilfreichen Daten.
 
     ![als-Lektion-Detail-Zeilen-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
-5. Stellen Sie das Modell erneut bereit.
+5. Stellen Sie Ihr Modell erneut bereit.
 
   
 ## <a name="see-also"></a>Siehe auch  

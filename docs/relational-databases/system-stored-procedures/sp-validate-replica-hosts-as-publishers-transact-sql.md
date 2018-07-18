@@ -1,5 +1,5 @@
 ---
-title: Sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs
+title: Sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037748"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **Sp_validate_replica_hosts_as_publishers** ist eine Erweiterung der **Sp_validate_redirected_publisher** , mit der alle sekundären Replikate überprüft werden, statt nur das aktuelle primäre Replikat. **Sp_validate_replicat_hosts_as_publisher** eine gesamte AlwaysOn-Replikationstopologie überprüft. **Sp_validate_replica_hosts_as_publishers** muss direkt auf dem Verteiler ausgeführt werden, mithilfe einer Remotedesktopsitzung auf um einen Sicherheitsfehler Doppel-Hop-(21892) zu vermeiden.  
+  **Sp_validate_replica_hosts_as_publishers** ist eine Erweiterung der **Sp_validate_redirected_publisher** , mit der alle sekundären Replikate überprüft werden, statt nur das aktuelle primäre Replikat. **Sp_validate_replicat_hosts_as_publisher** eine gesamte AlwaysOn-Replikationstopologie überprüft. **Sp_validate_replica_hosts_as_publishers** muss direkt auf dem Verteiler ausgeführt werden, mithilfe einer Remotedesktopsitzung (21892) einen Doppel-Hop Sicherheitsfehler vermieden werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ sp_validate_replica_hosts_as_publishers
  Der Name der zu veröffentlichenden Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@redirected_publisher** =] **"***Redirected_publisher***"**  
- Das Ziel der Umleitung bei **Sp_redirect_publisher** für den ursprünglichen Verleger und veröffentlichter-Paar Datenbank aufgerufen wurde. *Redirected_publisher* ist **Sysname**, hat keinen Standardwert.  
+ Das Ziel der Umleitung beim **Sp_redirect_publisher** für den ursprünglichen Verleger und veröffentlichter-Paar Datenbank aufgerufen wurde. *Redirected_publisher* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -65,9 +66,9 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="remarks"></a>Hinweise  
  Wenn kein Eintrag für den Verleger und die Veröffentlichungsdatenbank vorhanden ist **Sp_validate_redirected_publisher** gibt null für den Ausgabeparameter *@redirected_publisher*. Andernfalls wird der zugeordnete umgeleitete Verleger zurückgegeben, sowohl bei Erfolg und als auch bei Fehler.  
   
- Bei erfolgreicher Validierung **Sp_validate_redirected_publisher** eine erfolgsanzeige zurück.  
+ Wenn die Überprüfung erfolgreich ist, **Sp_validate_redirected_publisher** eine erfolgsanzeige zurück.  
   
- Wenn die Überprüfung fehlschlägt, werden entsprechende Fehler ausgelöst.  **Sp_validate_redirected_publisher** bemüht sich, alle Probleme und nicht nur das erste auslösen aufgetreten ist.  
+ Wenn die Überprüfung fehlschlägt, werden entsprechende Fehler ausgelöst.  **Sp_validate_redirected_publisher** bemüht sich, lösen alle Probleme und nicht nur das erste auftreten wird.  
   
 > [!NOTE]  
 >  **sp_validate_replica_hosts_as_publishers** schlägt bei der Überprüfung sekundärer Replikathosts, die keinen Lesezugriff zulassen oder die Angabe der Leseabsicht erfordern, mit dem folgenden Fehler fehl.  
@@ -79,7 +80,7 @@ sp_validate_replica_hosts_as_publishers
 >  Es sind ein oder mehrere Verlegerüberprüfungsfehler für Replikathost 'MyReplicaHostName' aufgetreten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** festen Datenbankrolle "" für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung der Verlegerdatenbank zugeordnet.  
+ Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** -Datenbankrolle für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung die Publisher-Datenbank zugeordnet ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

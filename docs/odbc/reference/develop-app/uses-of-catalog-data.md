@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915245"
 ---
 # <a name="uses-of-catalog-data"></a>Der Katalogdaten verwendet
 Anwendungen verwenden die Katalogdaten in einer Vielzahl von Möglichkeiten. Es folgen einige häufige Verwendungsmöglichkeiten:  

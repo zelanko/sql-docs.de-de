@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Erstellen von berechneten Spalten | Microsoft Docs'
+title: 'Lektion 6: Erstellen von berechneten Spalten | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,26 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031588"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lektion 5: Erstellen von berechneten Spalten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Calculated Columns](../analysis-services/tabular-models/ssas-calculated-columns.md).  
+In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [berechnete Spalten](../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die Schritte sind für jede Aufgabe etwas anders. Damit sollen Ihnen verschiedene Methoden zum Erstellen neuer Spalten, zum Umbenennen der Spalten und zum Platzieren der Spalten an verschiedenen Positionen in einer Tabelle aufgezeigt werden.  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md). 
+Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion an, Sie sollten die vorherige Lektion abgeschlossen haben: [Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  
   
-#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>Erstellen Sie eine berechnete MonthCalendar-Spalte der DimDate-Tabelle  
+#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>Erstellen einer berechneten MonthCalendar-Spalteninhalts in der DimDate-Tabelle  
   
 1.  Klicken Sie auf die **Modell** Menü > **Modellansicht** > **Data Source View**.  
   
@@ -53,11 +54,11 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
 
     ![als-tabellarische-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
-Die MonthCalendar berechnete Spalte einen sortierbaren Namen für den Monat enthält.  
+Das MonthCalendar berechnete Spalte einen sortierbaren Namen für den Monat.  
   
-#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>Erstellen Sie eine berechnete DayOfWeek-Spalte der DimDate-Tabelle  
+#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>Erstellen Sie eine berechnete DayOfWeek-Spalte in der DimDate-Tabelle  
   
-1.  Mit der **DimDate** Tabelle weiterhin aktiv ist, klicken Sie auf die **Spalte** Menü, und klicken Sie dann auf **Add Column**.  
+1.  Mit der **DimDate** -Tabelle noch aktiv ist, klicken Sie auf die **Spalte** , und klicken Sie dann auf **Add Column**.  
   
 2.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
     
@@ -69,17 +70,17 @@ Die MonthCalendar berechnete Spalte einen sortierbaren Namen für den Monat enth
   
 3.  Benennen Sie die Spalte in **DayOfWeek**.  
   
-4.  Klicken Sie auf die Spaltenüberschrift, und ziehen Sie dann die Spalte zwischen die **EnglishDayNameOfWeek** Spalte und die **"daynumberofmonth"** Spalte.  
+4.  Klicken Sie auf die Spaltenüberschrift und ziehen Sie dann die Spalte zwischen die **EnglishDayNameOfWeek** Spalte und die **DayNumberOfMonth** Spalte.  
   
     > [!TIP]  
     > Durch das Verschieben von Spalten in der Tabelle wird die Navigation vereinfacht.  
   
-Die DayOfWeek berechnete Spalte einen sortierbaren Namen für den Tag der Woche enthält.  
+Die DayOfWeek berechnete Spalte einen sortierbaren Namen für den Tag der Woche.  
   
-#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Erstellen Sie eine berechnete Spalte von ProductSubcategoryName in der DimProduct-Tabelle  
+#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Erstellen einer berechneten ProductSubcategoryName-Spalte in der DimProduct-Tabelle  
   
   
-1.  In der **DimProduct** Tabelle einen Bildlauf ganz rechts in der Tabelle. Beachten Sie, dass die ganz rechts stehende Spalte **Spalte hinzufügen** heißt (in Kursivschrift). Klicken Sie auf die Spaltenüberschrift.  
+1.  In der **DimProduct** Tabelle einen Bildlauf zum rechten Rand der Tabelle. Beachten Sie, dass die ganz rechts stehende Spalte **Spalte hinzufügen** heißt (in Kursivschrift). Klicken Sie auf die Spaltenüberschrift.  
   
 2.  Geben Sie in der Bearbeitungsleiste folgende Formel ein.  
     
@@ -89,11 +90,11 @@ Die DayOfWeek berechnete Spalte einen sortierbaren Namen für den Tag der Woche 
   
 3.  Benennen Sie die Spalte in **ProductSubcategoryName**.  
   
-Die ProductSubcategoryName berechnete Spalte wird verwendet, um eine Hierarchie in der DimProduct-Tabelle zu erstellen, der Daten aus der EnglishProductSubcategoryName-Spalte in der Tabelle DimProductSubcategory enthalten. Hierarchien können maximal eine Tabelle umfassen. Sie erstellen Hierarchien später in Lektion 9.  
+Die berechnete Spalte "productsubcategoryname" wird verwendet, um eine Hierarchie in der DimProduct-Tabelle zu erstellen, die Daten aus der EnglishProductSubcategoryName-Spalte in der Tabelle "DimProductSubcategory" enthält. Hierarchien können maximal eine Tabelle umfassen. Sie erstellen Hierarchien später in Lektion 9.  
   
-#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>Erstellen Sie eine berechnete Spalte für "productcategoryname" in der DimProduct-Tabelle  
+#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>Erstellen einer berechneten ProductCategoryName-Spalte in der DimProduct-Tabelle  
   
-1.  Mit der **DimProduct** Tabelle weiterhin aktiv ist, klicken Sie auf die **Spalte** Menü, und klicken Sie dann auf **Add Column**.  
+1.  Mit der **DimProduct** Tabelle weiterhin aktiv ist, klicken Sie auf die **Spalte** , und klicken Sie dann auf **Add Column**.  
   
 2.  Geben Sie in der Bearbeitungsleiste folgende Formel ein:  
   
@@ -103,11 +104,11 @@ Die ProductSubcategoryName berechnete Spalte wird verwendet, um eine Hierarchie 
     
 3.  Benennen Sie die Spalte in **"productcategoryname"**.  
   
-Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie in der DimProduct-Tabelle erstellen, das Daten aus der EnglishProductCategoryName-Spalte in der Tabelle DimProductCategory enthält. Hierarchien können maximal eine Tabelle umfassen.  
+Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie in der DimProduct-Tabelle zu erstellen, die Daten aus der EnglishProductCategoryName-Spalte in der Tabelle "DimProductCategory" enthält. Hierarchien können maximal eine Tabelle umfassen.  
   
-#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>Erstellen Sie eine berechnete Spalte mit Rand in die FactInternetSales-Tabelle  
+#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>Erstellen einer berechneten Margin-Spalte in der Tabelle "factinternetsales"  
   
-1.  Wählen Sie im Modell-Designer die **FactInternetSales** Tabelle.  
+1.  Wählen Sie im Modell-Designer die **"factinternetsales"** Tabelle.  
   
 2.  Fügen Sie eine neue Spalte hinzu.  
   
@@ -119,11 +120,11 @@ Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie i
 
 4.  Benennen Sie die Spalte in **Margin**um.  
   
-5.  Ziehen Sie die Spalte zwischen die **"SalesAmount"** Spalte und die **TaxAmt** Spalte. 
+5.  Ziehen Sie die Spalte zwischen die **"SalesAmount"** Spalte und die **"taxamt"** Spalte. 
  
       ![als-tabellarische-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
-    Die Rand berechnete Spalte wird verwendet, um Gewinnspannen für jeden Verkauf zu analysieren.  
+    Die berechnete Margin-Spalte wird verwendet, um die Analyse von Gewinnspannen für jeden Verkauf.  
   
 ## <a name="whats-next"></a>Wie geht es weiter?
 Wechseln Sie zur nächsten Lektion: [Lektion 6: Erstellen von Measures](../analysis-services/lesson-6-create-measures.md).

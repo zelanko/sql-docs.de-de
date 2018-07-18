@@ -1,5 +1,5 @@
 ---
-title: Überprüfen von Ausdrücken (XQuery) | Microsoft Docs
+title: Überprüfen von Ausdrücken (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,18 +22,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036698"
 ---
 # <a name="validate-expressions-xquery"></a>Überprüfen von Ausdrücken (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In dieser Implementierung der **überprüfen** Ausdruck wird nicht unterstützt. Die Ergebnisse von Ausdrücken, die mit XQuery konstruiert wurden, sind niemals typisiert. Wenn das Ergebnis eines XQuery-Ausdrucks typisierte Daten erforderlich sind, verwenden Sie den SQL CAST-Ausdruck das Ergebnis, das Umwandeln einer **Xml** -Datentyp mit der bevorzugten schemaauflistung.  
+  In dieser Implementierung die **überprüfen** Ausdruck wird nicht unterstützt. Die Ergebnisse von Ausdrücken, die mit XQuery konstruiert wurden, sind niemals typisiert. Das Ergebnis ein XQuery-Ausdruck typisiert werden sollte, verwenden Sie den SQL CAST-Ausdruck das Ergebnis Umwandeln einer **Xml** -Datentyp mit der bevorzugten schemaauflistung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Path-Ausdrücken &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
+ [Path-Ausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
  [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
   
   

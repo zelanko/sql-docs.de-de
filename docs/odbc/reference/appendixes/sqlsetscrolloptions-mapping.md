@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911615"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions-Zuordnung
 Wenn eine Anwendung ruft **SQLSetScrollOptions** über einen ODBC 3.*.x* und den Treiber nicht unterstützt **SQLSetScrollOptions**, den Aufruf von  

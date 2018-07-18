@@ -9,11 +9,11 @@
 ## [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Programm zur Verbesserung der Benutzerfreundlichkeit](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configure SQL Server to send feedback to Microsoft (Konfigurieren von SQL Server zum Senden von Feedback an Microsoft)](sql-server-customer-feedback.md)
-### Partner
-#### [Überwachung](partner-monitor-sql-server.md)
-#### [Hochverfügbarkeit und Notfallwiederherstellung](partner-hadr-sql-server.md)
-#### [Verwaltung](partner-management-sql-server.md)
-#### [Entwicklung](partner-dev-sql-server.md)
+## Partner
+### [Überwachung](partner-monitor-sql-server.md)
+### [Hochverfügbarkeit und Notfallwiederherstellung](partner-hadr-sql-server.md)
+### [Verwaltung](partner-management-sql-server.md)
+### [Entwicklung](partner-dev-sql-server.md)
 
 # [Neue und aktualisierte Artikel](new-updated-sql-server.md)
 
@@ -28,7 +28,7 @@
 
 # [SQL Server unter Linux](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
-# [Datenbankmodul](../database-engine/sql-server-database-engine-overview.md)
+# [Datenbank-Engine](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Failovercluster](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Installation (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
@@ -46,7 +46,7 @@
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
-### [SQL Server-Datenbankmodul](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server-Sicherheit](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 

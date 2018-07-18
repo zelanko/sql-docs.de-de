@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911915"
 ---
 # <a name="retrieving-bookmarks"></a>Abrufen von Lesezeichen
 Wenn die Anwendung zu Lesezeichen verwenden, muss er das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE vor dem Vorbereiten oder Ausführen der Anweisung festgelegt. Dies ist erforderlich, da erstellen und Verwalten von Lesezeichen ein aufwendiger Vorgang sein können, damit Lesezeichen aktiviert werden soll, nur, wenn eine Anwendung gute vornehmen, kann diese verwenden.  

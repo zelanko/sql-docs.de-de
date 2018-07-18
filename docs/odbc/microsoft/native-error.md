@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901055"
 ---
 # <a name="native-error"></a>Systemeigener Fehler
 Positive systemeigenen Fehlercodes werden Datenbanktreiber Desktop generiert. Negativen Fehlercodes werden von Microsoft Jet generiert. Weitere Informationen finden Sie unter der *Microsoft Jet-Datenbank-Engine-Programmiererhandbuch*.

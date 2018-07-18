@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_trace_getinfo (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_getinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f709ba43a3dda3b219c083449869a6963da003f5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056194"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +63,9 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 ## <a name="remarks"></a>Hinweise  
  Wenn die ID einer bestimmten Ablaufverfolgung übergeben, gibt Fn_trace_getinfo Informationen zu dieser Ablaufverfolgung zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück.  
   
- Fn_trace_getinfo fügt die Erweiterung trc an den Namen jeder Ablaufverfolgungsdatei, die im Resultset enthalten. Informationen zum Definieren einer Ablaufverfolgung finden Sie unter [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Ähnliche Informationen zu Ablaufverfolgungsfiltern finden Sie unter [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ Fn_trace_getinfo Fügt eine TRC-Erweiterung auf den Namen jeder Ablaufverfolgungsdatei, die im Resultset enthalten. Informationen zum Definieren einer Ablaufverfolgung finden Sie unter [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Ähnliche Informationen zu Ablaufverfolgungsfiltern finden Sie [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
   
- Ein vollständiges Beispiel der Verwendung von Ablaufverfolgung-gespeicherte Prozeduren finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ Ein vollständiges Beispiel der Verwendung der Ablaufverfolgung, die gespeicherten Prozeduren finden Sie unter [erstellen Sie eine Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER TRACE-Berechtigung auf dem Server.  

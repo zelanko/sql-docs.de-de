@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029337"
 ---
 # <a name="document-outline"></a>Dokumentgliederung
   Verwenden Sie das Fenster Dokumentgliederung, um die Hierarchie von Berichtselementen in einem Bericht anzuzeigen. Tablixdatenbereiche zeigen alle Textfelder und anderen Berichtselemente an, die in Tablix-Zellen enthalten sind. Wenn Sie ein Berichtselement auf der Entwurfsoberfläche auswählen, wird auch das entsprechende Berichtselement im Fenster Dokumentgliederung ausgewählt. Verwenden Sie diese Sicht, um Berichtselemente in der Entwurfoberfläche zu suchen. Wenn Sie beispielsweise eine Vorschau eines Berichts mit Ausdrucksfehlern erstellen, zeigt das Ausgabefenster eine Meldung für jeden einzelnen Fehler an. Die Meldung enthält den Namen des Textfelds, das den Ausdruck mit dem Fehler enthält. Sie können auf den Namen des Textfelds im Fenster Dokumentgliederung klicken, es auf der Entwurfsoberfläche auswählen und den Ausdruck anzeigen, der den Fehler enthält.  

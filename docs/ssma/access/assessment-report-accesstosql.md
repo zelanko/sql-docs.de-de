@@ -1,8 +1,6 @@
 ---
-title: Bewertungsbericht (AccessToSQL) | Microsoft Docs
+title: Assessment Report (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,29 +19,30 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5d2d79c47dd1a819e602e55aad36844445e6c79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a268b123663b213f3702dde24eba905e38bf1ac
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980003"
 ---
-# <a name="assessment-report-accesstosql"></a>Bewertungsbericht (AccessToSQL)
-Assessment Berichtfenster zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten der Migrationsprojekte.  
+# <a name="assessment-report-accesstosql"></a>Assessment Report (AccessToSQL)
+Die Fenster "Assessment Report" zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten für Ihren Migrationsprojekten.  
   
-So erstellen Sie einen Assessment-Bericht ausgewählten Objekten, die für die Konvertierung in der Quelle Metadaten-Explorer Maustaste **Datenbanken**, und wählen Sie dann **Bericht erstellen**. Sie können in diesem Bericht auch automatisch angezeigt, nachdem Sie Schemas konvertieren. Allerdings wird der Berichtsname Konvertierungsbericht sein. Weitere Informationen finden Sie unter [Projekt Einstellungen (GUI) (SSMA häufigen Spalten)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+Erstellen Sie ein Bewertungsbericht, Objekte gleichzeitig auszuwählen, für die Konvertierung in der Quelle Metadaten-Explorer mit der rechten Maustaste **Datenbanken**, und wählen Sie dann **Bericht erstellen**. Sie können in diesem Bericht auch automatisch anzeigen, nachdem Sie Schemas konvertieren. Allerdings werden den Namen des Berichts Konvertierungsbericht. Weitere Informationen finden Sie unter [Project Settings (GUI) (häufig SSMA)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Explorer-Bereich**  
-Enthält eine Hierarchie von Objekten in den Bewertungsbericht. Erweitern Sie die Ordner, um die einzelnen Objekte und Unterkomponenten anzeigen. Wenn Sie eine Kategorie oder ein Objekt klicken, werden die Konvertierungsstatistiken für diese Kategorie oder ein Objekt im Detailbereich angezeigt.  
+Eine Hierarchie von Objekten in der Bewertungsbericht enthält. Erweitern Sie die Ordner, um die einzelnen Objekte und Unterkomponenten anzeigen. Wenn Sie eine Kategorie oder ein Objekt klicken, werden die Konvertierung von Statistiken für diese Kategorie oder das Objekt im Detailbereich angezeigt.  
   
 **Detailbereich**  
-Zeigt die Konvertierung Statistiken oder Fehler- und warnungsstatusmeldungen Nachrichten für das ausgewählte Objekt. Beispielsweise wenn der Ordner "Tabellen" ausgewählt ist, wird im Detailbereich angezeigt, die Nummern der Fremdschlüssel, Indizes, Primärschlüssel und Tabellen, die konvertiert wurden.  
+Zeigt die Konvertierung Statistiken oder Fehler und Warnungen-Nachrichten für das ausgewählte Objekt. Z. B. wenn der Ordner "Tabellen" ausgewählt ist, zeigt im Detailbereich die Anzahl der Fremdschlüssel, Indizes, Primärschlüssel und Tabellen, die konvertiert wurden.  
   
 **Meldungsbereich**  
-Zeigt die Fehler, Warnungen und informationsmeldungen, die generiert wurden, wenn der Assessment-Bericht erstellt wurde. Nachrichten werden nach Anzahl gruppiert.  
+Zeigt die Fehler, Warnungen und informationsmeldungen, die generiert wurden, bei der der Bewertungsbericht erstellt wurde. Nachrichten werden nach Anzahl gruppiert.  
   
-Klicken Sie zum Anzeigen von Nachrichtendetails auf **Fehler**, **Warnungen**, oder **Nachrichten**, und erweitern Sie dann eine Nachricht. SSMA wird die Liste der Objekte angezeigt, die diesem Fehler aufweisen. Klicken Sie auf ein Objekt, um alle Konvertierungsdetails für das Objekt anzuzeigen.  
+Um die Details anzuzeigen, klicken Sie entweder **Fehler**, **Warnungen**, oder **Nachrichten**, und erweitern Sie dann eine Nachricht. SSMA wird die Liste der Objekte angezeigt, die diesen Fehler aufweisen. Klicken Sie auf ein Objekt, um alle Konvertierungsdetails für das Objekt anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

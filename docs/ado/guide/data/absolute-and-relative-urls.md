@@ -2,7 +2,6 @@
 title: Absoluten und relativen URLs | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1ab2c9bdc1adbc063cd05e88cf9d0001efb15c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1af20bd6012b37ee798ad16cd0bf0456458c6083
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270539"
 ---
 # <a name="absolute-and-relative-urls"></a>Absoluten und relativen URLs
 Eine URL gibt den Speicherort der ein Ziel auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann eine Datei, Verzeichnis, HTML-Seite, Bild, Programm usw.*.*  

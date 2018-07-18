@@ -1,5 +1,5 @@
 ---
-title: Schema-Sicherheitsüberlegungen (SQLXML 4.0) versehen | Microsoft Docs
+title: Schema-Sicherheitsüberlegungen (SQLXML 4.0) versehen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7940c1288c6bd802750d6c0cb3b76db46d85d3c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032328"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Überlegungen zur Sicherheit von Schemas mit Anmerkungen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Die mithilfe von Anmerkungen angegebene explizite Zuordnung macht die Datenbankinformationen (wie Tabellennamen und Spaltennamen) verfügbar. Daher werden Sie es möglicherweise vorziehen, diese Schemas nicht öffentlich verfügbar zu machen.  
   
--   Bestimmte Abfragen wie solche mit Zuordnungsschema mit Rekursion angegeben (angegeben mit **Max-Depth** Anmerkung, die auf einen höheren Wert festgelegt) kann länger dauern. Sie können optional eine Timeoutgrenze angeben, durch den Befehlstimeout-Eigenschaft (in Sekunden) festlegen. Beispiel:  
+-   Bestimmte Abfragen wie jene, die für das Zuordnungsschema mit Rekursion angegeben (angegeben mithilfe von **Max-Depth-** Anmerkung, die auf einen höheren Wert festgelegt) möglicherweise mehr Zeit in Anspruch nehmen. Sie können optional eine Timeoutgrenze angeben, indem Sie die Befehlstimeout-Eigenschaft (in Sekunden). Zum Beispiel:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

@@ -1,26 +1,25 @@
 ---
 title: SSIS Scale Out-Master (SQL Server Integration Services) | Microsoft-Dokumentation
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: In diesem Artikel wird die Scale Out-Masterkomponente von SSIS Scale Out beschrieben.
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2f0e604ff66388d351cbb4cf7092c0b6fe5edfea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405552"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master für horizontales Hochskalieren von Integration Services (SSIS)
 Der Scale Out-Master verwaltet das Scale Out-System über den SSISDB-Katalog und den Scale Out-Masterdienst. 
@@ -50,7 +49,7 @@ Der Scale Out-Masterdienst ist ein Windows-Dienst, über den die Kommunikation m
 Konfigurieren Sie den Scale Out-Masterdienst mithilfe der `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`-Datei. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
 
-Konfiguration  |Description  |Standardwert  
+Konfiguration  |und Beschreibung  |Standardwert  
 ---------|---------|---------
 PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Worker für horizontales Hochskalieren verwendet wird|8391         
 SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Worker für horizontales Hochskalieren geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation von Worker für horizontales Hochskalieren angegeben wurde         

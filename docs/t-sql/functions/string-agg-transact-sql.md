@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36dad0a2333267793590f32fcf43ae8004d1741e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785861"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,16 +44,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>Argumente 
+*expression*  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs. Ausdrücke werden während der Verkettung in `NVARCHAR`- oder `VARCHAR`-Typen konvertiert. Typen, die keine Zeichenfolgen darstellen, werden in den `NVARCHAR`-Typ konvertiert.
 
 *Trennzeichen*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ `NVARCHAR` oder `VARCHAR`, der als Trennzeichen für verkettete Zeichenfolgen verwendet wird. Dieser kann ein Literal oder eine Variable sein. 
 
-*expression*  
-Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs. Ausdrücke werden während der Verkettung in `NVARCHAR`- oder `VARCHAR`-Typen konvertiert. Typen, die keine Zeichenfolgen darstellen, werden in den `NVARCHAR`-Typ konvertiert.
-
-
 <order_clause>   
 Geben Sie mithilfe der `WITHIN GROUP`-Klausel optional die Reihenfolge der verketteten Ergebnisse an:
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -76,7 +75,6 @@ Der Rückgabetyp hängt vom ersten Argument (Ausdruck) ab. Wenn das Eingabeargum
 
 
 ## <a name="remarks"></a>Remarks  
- 
 Bei `STRING_AGG` handelt es sich um eine Aggregatfunktion, die alle Ausdrücke aus Zeilen zu einer einzelnen Zeichenfolge verkettet. Ausdruckswerte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Wenn der Eingabeausdruck den Typ `VARCHAR` aufweist, kann das Trennzeichen nicht vom Typ `NVARCHAR` sein. 
@@ -84,7 +82,6 @@ Wenn der Eingabeausdruck den Typ `VARCHAR` aufweist, kann das Trennzeichen nicht
 NULL-Werte werden ignoriert, und das entsprechende Trennzeichen wird nicht hinzugefügt. Verwenden Sie wie in Beispiel B dargestellt die `ISNULL`-Funktion, um einen Platzhalter für NULL-Werte zurückzugeben.
 
 `STRING_AGG` ist in jedem Kompatibilitätsgrad verfügbar.
-
 
 ## <a name="examples"></a>Beispiele 
 
@@ -104,7 +101,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generieren einer Liste von Namen ohne NULL-Werte, die mit Trennzeichen getrennt ist   
 Im folgenden Beispiel werden NULL-Werte durch „N/A“ ersetzt. Weiterhin werden die Namen durch Trennzeichen getrennt in einer einzelnen Ergebniszelle zurückgegeben.  
 ```sql
@@ -113,15 +109,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |CSV | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>C. Generieren von durch Trennzeichen getrennten Werten 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -136,10 +129,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit zugehörigen Tags 
-
 Artikel und Tags werden in unterschiedliche Tabellen aufgeteilt. Der Entwickler möchte eine Zeile mit allen zugehörigen Tags pro Artikel zurückgeben. Dafür wird folgende Abfrage verwendet: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -158,7 +149,6 @@ GROUP BY a.articleId, title;
 |177 |Hunde sind weiterhin beliebter als Katzen |polls,animals| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Generieren einer Liste von E-Mails pro Stadt
-
 Die folgende Abfrage sucht die E-Mail-Adressen der Angestellten und gruppiert diese nach Städten: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -176,7 +166,6 @@ GROUP BY town;
 Die E-Mail-Adressen, die in der Spalte „E-Mail-Adresse“ zurückgegeben werden, können direkt verwendet werden, um E-Mails an mehrere Personen zu senden, die in bestimmten Städten arbeiten. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generieren einer sortierten Liste von E-Mails pro Stadt   
-   
 Ähnlich wie beim vorherigen Beispiel sucht die folgende Abfrage die E-Mail-Adressen der Angestellten, gruppiert diese nach Stadt und sortiert die E-Mail-Adressen alphabetisch:   
 ```sql
 SELECT town, 
@@ -191,7 +180,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

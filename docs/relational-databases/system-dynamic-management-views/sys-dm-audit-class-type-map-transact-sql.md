@@ -1,5 +1,5 @@
 ---
-title: dm_audit_class_type_map (Transact-SQL) | Microsoft Docs
+title: dm_audit_class_type_map (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,20 +22,21 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968944"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Gibt eine Tabelle zurück, die das Feld class_type im Überwachungsprotokoll dem Feld class_desc in sys.dm_audit_actions zuordnet. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Überwachung finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Gibt eine Tabelle zurück, die das Feld class_type im Überwachungsprotokoll dem Feld class_desc in sys.dm_audit_actions zuordnet. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Überwachung finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|Der Klassentyp der überwachten Entität. Ordnet die Class_type im Überwachungsprotokoll geschrieben und zurückgegeben, indem die **get_audit_file()** Funktion. Lässt keine NULL-Werte zu.|  
+|**class_type**|**char(2)**|Der Klassentyp der überwachten Entität. Ordnet die Class_type im Überwachungsprotokoll geschrieben und zurückgegeben, indem die **class_type** Funktion. Lässt keine NULL-Werte zu.|  
 |**class_type_desc**|**nvarchar(120)**|Der Name der überwachbaren Entität. Lässt keine NULL-Werte zu.|  
 |**securable_class_desc**|**nvarchar(120)**|Das sicherungsfähige Objekt, das dem überwachten class_type zugeordnet ist. Ist NULL, wenn class_type keinem sicherungsfähigen Objekt zugeordnet ist. Kann zu class_desc in sys.dm_audit_actions in Beziehung gesetzt werden.|  
   

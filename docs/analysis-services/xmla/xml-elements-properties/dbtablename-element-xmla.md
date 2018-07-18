@@ -1,5 +1,5 @@
 ---
-title: DbTableName-Element (XMLA) | Microsoft Docs
+title: DbTableName-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17e4604293f7ad57b51bfbfdb127e322f9df4eb4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34574382"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994863"
 ---
 # <a name="dbtablename-element-xmla"></a>DbTableName-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält den Namen der Tabelle verwendet wird, die die übergeordneten [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) Element.  
+  Enthält den Namen der Tabelle verwendet wird, durch das übergeordnete [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

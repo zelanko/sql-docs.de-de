@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920875"
 ---
 # <a name="what39s-new-in-odbc-38"></a>Was&#39;s in ODBC 3.8
 Windows 8 enthält eine aktualisierte Version des ODBC 3.8. ODBC 3.8 in Windows 8 umfasst die folgenden Funktionen:  

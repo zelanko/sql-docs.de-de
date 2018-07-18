@@ -2,7 +2,6 @@
 title: Append-Methode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275899"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
 Fügt ein Objekt für eine Sammlung an. Wenn die Auflistung [Felder](../../../ado/reference/ado-api/fields-collection-ado.md), ein neues [Feld](../../../ado/reference/ado-api/field-object.md) Objekt kann erstellt werden, bevor sie auf die Auflistung angefügt wird.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *fields*  
  Ein **Felder** Auflistung.  
   
- *Objekt*  
+ *object*  
  Ein Object-Variablen, die das-Objekt anzufügenden darstellt.  
   
  *Name*  

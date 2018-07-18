@@ -5,25 +5,25 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: d52568b59540ed5a3c4a1111ebf1759f5bdd77f8
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261975"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>Planen der Ausführung eines SSIS-Pakets in Azure mit SQL Server Management Studio (SSMS)
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen mit SSMS
 
-SQL Server Management Studio (SSMS) stellt eine Planungsfunktion für SSIS-Pakete bereit, die in Azure SQL-Datenbank bereitgestellt werden. Eine lokale SQL Server-Instanz und eine verwaltete Azure SQL-Datenbank-Instanz (Vorschau) haben den SQL Server-Agent bzw. den Agent für verwaltete Instanzen als erstklassigen SSIS-Auftragsplaner. SQL-Datenbank hat dagegen keinen integrierten erstklassigen SSIS-Auftragsplaner. Das in diesem Artikel beschriebene SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden.
+Sie können SSMS (SQL Server Management Studio) zum Planen von SSIS-Paketen verwenden, die in Azure SQL-Datenbank bereitgestellt sind. Eine lokale SQL Server-Instanz und eine verwaltete Azure SQL-Datenbank-Instanz (Vorschau) verfügen über den SQL Server-Agent bzw. den Agent für verwaltete Instanzen als erstklassigen SSIS-Auftragsplaner. SQL-Datenbank hat dagegen keinen integrierten erstklassigen SSIS-Auftragsplaner. Das in diesem Artikel beschriebene SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden.
 
-Wenn Sie die SSIS-Katalogdatenbank (`SSISDB`) mit SQL-Datenbank hosten, können Sie dieses SSMS-Feature verwenden, um die Data Factory-Pipelines, -Aktivitäten und -Trigger zu generieren, die zum Planen von SSIS-Paketen erforderlich sind. Sie können diese Objekte dann in Data Factory bearbeiten und erweitern.
+Wenn Sie den SSIS-Katalog (`SSISDB`) mit SQL-Datenbank hosten, können Sie dieses SSMS-Feature verwenden, um die Data Factory-Pipelines, -Aktivitäten und -Trigger zu generieren, die zum Planen von SSIS-Paketen erforderlich sind. Später können Sie diese Objekte optional in Data Factory bearbeiten und erweitern.
 
 Wenn Sie mit SSMS ein Paket planen, erstellt SSIS automatisch drei neue Data Factory-Objekte, deren Namen auf dem Namen des ausgewählten Pakets und dem Zeitstempel basieren. Hat das SSIS-Paket beispielsweise den Namen **MeinPaket**, erstellt SSMS neue Data Factory-Objekte, die den folgenden ähneln:
 

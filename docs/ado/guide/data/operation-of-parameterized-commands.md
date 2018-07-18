@@ -2,7 +2,6 @@
 title: Von parametrisierten Befehlen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272169"
 ---
 # <a name="operation-of-parameterized-commands"></a>Von parametrisierten Befehlen
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, aber nur ein paar untergeordnete Kapitel zugreifen müssen Sie finden es vielleicht eine effizientere Verwendung eine parametrisierte Befehle.  
@@ -78,7 +78,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Verwenden eine Hierarchie nicht parametrisiert, besteht keine Möglichkeit zum Verknüpfen der Tabellen Teams und Spiele so, das untergeordnete Element **Recordset** für jedes Team Abständen vollständige enthält. Sie können Kapitel erstellen, die den eigenen Zeitplan oder die Road-Zeitplan, aber nicht beides enthalten. Dies ist, da die RELATE-Klausel Sie über-und untergeordneten Beziehungen des Formulars schränkt (pc1 cc1 =) und (pc2 pc2 =). Daher würde der Befehl "RELATE Team_id TO Home_team, Team_id TO Visiting_team" enthalten, Sie nur Spiele abrufen, wobei wurde ein Team selbst wiedergeben. Was soll ist "(team_id=home_team) oder (Team_id = Visiting_team)", die Shape-Anbieter unterstützt jedoch nicht den OR-Klausel.  
   
- Um das gewünschte Ergebnis zu erhalten, können Sie einen parametrisierten Befehl verwenden. Beispiel:  
+ Um das gewünschte Ergebnis zu erhalten, können Sie einen parametrisierten Befehl verwenden. Zum Beispiel:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

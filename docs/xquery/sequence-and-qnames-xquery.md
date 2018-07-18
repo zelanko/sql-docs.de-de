@@ -1,5 +1,5 @@
 ---
-title: Sequenz und QNames (XQuery) | Microsoft Docs
+title: Sequenz und QNames (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990009"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenz und QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Jeder Bezeichner in einer XQuery-Abfrage ist ein QName. Ein QName besteht aus einem Namespacepräfix und einem lokalen Namen. In dieser Implementierung sind die XQuery-Variablennamen QNames, und sie können keine Präfixe besitzen.  
   
- Betrachten Sie das folgende Beispiel, in denen eine Abfrage angegeben wird, für eine nicht typisierte **Xml** Variablen:  
+ Das folgende Beispiel, in denen eine Abfrage angegeben wird, für eine nicht typisierte **Xml** Variable:  
   
 ```  
 DECLARE @x xml;  
@@ -153,7 +154,7 @@ WHERE ProductModelID=7;
  Jede Datenbank, die Sie erstellen, besitzt die **Sys** XML-schemaauflistung. Sie reserviert diese Schemas, sodass auf sie von jeder benutzererstellten XML-Schemaauflistung zugegriffen werden kann.  
   
 > [!NOTE]  
->  Diese Implementierung unterstützt nicht die `local` Präfix, das in der XQuery-Spezifikation in http://www.w3.org/2004/07/xquery-local-functions.  
+>  Diese Implementierung unterstützt nicht die `local` Präfix wie beschrieben in der XQuery-Spezifikation in http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  

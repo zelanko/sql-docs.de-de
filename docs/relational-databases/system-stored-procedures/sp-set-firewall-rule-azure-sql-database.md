@@ -1,5 +1,5 @@
 ---
-title: Sp_set_firewall_rule (Azure SQL-Datenbank) | Microsoft Docs
+title: Sp_set_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: ''
@@ -28,15 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: e9315c7ca138d352ee9f0cdffca9abe3a2242dc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056108"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Erstellt oder aktualisiert die Firewalleinstellungen auf Serverebene für den [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server. Diese gespeicherte Prozedur ist nur in der master-Datenbank auf den prinzipalanmeldung auf Serverebene oder Azure Active Directory-Dienstprinzipal zugewiesenen verfügbar.  
+  Erstellt oder aktualisiert die Firewalleinstellungen auf Serverebene für den [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server. Diese gespeicherte Prozedur ist nur verfügbar, in der master-Datenbank in die prinzipalanmeldung auf Serverebene oder die zugewiesene Azure Active Directory-Dienstprinzipal.  
   
   
 ## <a name="syntax"></a>Syntax  
@@ -49,26 +50,26 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Die folgende Tabelle enthält die unterstützten Argumente und Optionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ In der folgende Tabelle veranschaulicht die unterstützten Argumente und Optionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 |Name|Datatype|Description|  
 |----------|--------------|-----------------|  
 |[@name =] 'Name'|**VOM DATENTYP NVARCHAR(128)**|Der verwendete Name, um die Firewalleinstellung auf Serverebene zu beschreiben und von anderen zu unterscheiden.|  
 |[@start_ip_address =] "Start_ip_address"|**VARCHAR(50)-SPALTE**|Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`.|  
-|[@end_ip_address =] "End_ip_address"|**VARCHAR(50)-SPALTE**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Verbindungsversuche von Azure sind zulässig, wenn sowohl dieses Feld und die *Start_ip_address* Feld gleich `0.0.0.0`.|  
+|[@end_ip_address =] "End_ip_address"|**VARCHAR(50)-SPALTE**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld und die *Start_ip_address* Feld `0.0.0.0`.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Namen der Firewalleinstellungen auf Serverebene müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Einstellung bereits in der Tabelle mit den Firewalleinstellungen vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Serverebene erstellt.  
   
- Beim Hinzufügen, in dem die Anfangs- und die End-IP-Adressen gleich sind, einer firewalleinstellung auf Serverebene `0.0.0.0`, Aktivieren des Zugriffs auf Ihre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Server durch Azure. Geben Sie einen Wert für die *Namen* Parameter, mit denen Sie denken Sie daran, welchem Zweck die firewalleinstellung auf Serverebene dient.  
+ Beim Hinzufügen, in dem die erste und letzte IP-Adressen gleich sind, einer firewalleinstellung auf Serverebene `0.0.0.0`, aktivieren Sie den Zugriff auf Ihre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server von Azure. Geben Sie einen Wert für die *Namen* Parameter, mit denen Sie denken Sie daran, welchem Zweck die firewalleinstellung auf Serverebene dient.  
   
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um das Aktualisieren der Authentifizierungsdatenbank zu erzwingen und sicherzustellen, dass die Datenbank über die aktuelle Version der Anmeldungstabelle verfügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur der Server serverebenenprinzipal-Anmeldung von im Rahmen des Bereitstellungsprozesses erstellt oder ein Azure Active Directory-Dienstprinzipal als Administrator kann erstellen oder Ändern von Firewallregeln auf Serverebene zugewiesen. Der Benutzer muss mit der master-Datenbank, führen Sie "sp_set_firewall_rule" verbunden werden.  
+ Nur die Server serverebenenprinzipal-Anmeldung während des Bereitstellungsprozesses erstellt oder ein Azure Active Directory-Dienstprinzipal, der als Administrator erstellen oder Ändern von Firewallregeln auf Serverebene zugewiesen. Der Benutzer muss mit der master-Datenbank, führen Sie "Sp_set_firewall_rule" verbunden werden.  
   
 ## <a name="examples"></a>Beispiele  
- Der folgende Code erstellt eine Firewall auf Serverebene Einstellung `Allow Azure` , die Zugriff über Azure ermöglicht. Führen Sie Folgendes in der virtuellen Masterdatenbank ein.  
+ Der folgende Code erstellt eine Firewall auf Serverebene, die Einstellung `Allow Azure` , die Zugriff über Azure ermöglicht. Führen Sie die folgenden, in der virtuellen Masterdatenbank her.  
   
 ```  
 -- Enable Windows Azure connections.  
@@ -76,7 +77,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Der folgende Code erstellt eine Firewalleinstellung auf Serverebene namens `Example setting 1` nur für die IP-Adresse `0.0.0.2`. Anschließend wird die `sp_set_firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse aktualisieren `0.0.0.4`in dieser firewalleinstellung. Dies erstellt einen Bereich aus dem IP-Adressen kann `0.0.0.2`, `0.0.0.3`, und `0.0.0.4` auf den Server zuzugreifen.  
+ Der folgende Code erstellt eine Firewalleinstellung auf Serverebene namens `Example setting 1` nur für die IP-Adresse `0.0.0.2`. Anschließend wird die `sp_set_firewall_rule` gespeicherte Prozedur erneut aufgerufen, um die End-IP-Adresse zu aktualisieren `0.0.0.4`, Firewall-Einstellungen. Erstellt einen Bereich der IP-Adressen ermöglichen `0.0.0.2`, `0.0.0.3`, und `0.0.0.4` Zugriff auf den Server.  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  
@@ -88,6 +89,6 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Azure SQL-Datenbank-Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL-Datenbankfirewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Vorgehensweise: Konfigurieren der Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [Sys. firewall_rules &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

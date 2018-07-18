@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619517"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Binden von Parametern anhand des Namens (benannten Parametern)
 Bestimmte Datenbankmanagementsysteme ermöglichen eine Anwendung, die Parameter an eine gespeicherte Prozedur nach Namen anstelle von anhand der Position im Aufruf Prozedur anzugeben. Solche Parameter heißen *benannte Parameter*. ODBC unterstützt die Verwendung benannter Parameter. In ODBC benannte Parameter werden nur in Aufrufen von gespeicherten Prozeduren verwendet und können nicht in anderen SQL­Anweisungen verwendet werden.  
@@ -41,7 +42,7 @@ Bestimmte Datenbankmanagementsysteme ermöglichen eine Anwendung, die Parameter 
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In diesem Verfahren wird der erste Parameter @title_id, hat den Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, um diese Prozedur aufzurufen, dass es nur einen dynamischen Parameter gibt an. Dieser Parameter ist ein benannter Parameter mit dem Namen "@quote".  
+ In diesem Verfahren wird der erste Parameter @title_id, hat den Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, um diese Prozedur aufzurufen, dass es nur einen dynamischen Parameter gibt an. Dieser Parameter ist ein benannter Parameter mit dem Namen "\@Angebot".  
   
 ```  
 // Prepare the procedure invocation statement.  

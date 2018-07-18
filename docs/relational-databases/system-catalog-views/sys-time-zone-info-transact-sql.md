@@ -1,5 +1,5 @@
 ---
-title: Sys. time_zone_info (Transact-SQL) | Microsoft Docs
+title: Sys. time_zone_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -28,22 +28,23 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984922"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>Sys. time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu unterstützten Zeitzonen zurück. Alle Zeitzonen, die auf dem Computer installiert werden in der folgenden Registrierungsstruktur gespeichert:  
+  Gibt Informationen zu unterstützten Zeitzonen. Alle auf dem Computer installierten Zeitzonen sind in der folgenden Registrierungsstruktur gespeichert:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`installiert haben.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Der Name der Zeitzone im Windows-Standardformat. Beispielsweise **"CEN" Ostaustralische Normalzeit** oder **Mitteleuropäische Zeit**.|  
-|**current_utc_offset**|**nvarchar(12)**|Die aktuelle offset zur UTC. Beispielsweise **+ 01:00** oder **-07: 00**.|  
-|**is_currently_dst**|**bit**|"True", wenn die Sommerzeit derzeit zu beobachten.|  
+|**name**|**sysname**|Der Name der Zeitzone in Windows-Standardformat. Z. B. **beispielsweise "CEN" Ostaustralische Normalzeit** oder **Mitteleuropäische Zeit**.|  
+|**current_utc_offset**|**nvarchar(12)**|Der aktuelle offset zur UTC. Z. B. **+ 01:00** oder **-07: 00**.|  
+|**is_currently_dst**|**bit**|True, wenn die Sommerzeit derzeit beobachten.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   

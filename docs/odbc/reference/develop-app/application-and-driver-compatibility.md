@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906855"
 ---
 # <a name="application-and-driver-compatibility"></a>Anwendung und zur Kompatibilität der Gerätetreiber
 ODBC-Anwendungen und Treiber fallen in eine Anzahl von Kategorien, zusätzlich zu ihrer Version. Einige dieser Anwendungen sind nicht kompatibel mit einige Treiber; in anderen Fällen kann der Typ der Anwendung oder Treiber einen Einfluss auf die Abwärtskompatibilität zwischen ihnen auswirken.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897295"
 ---
 # <a name="aggregate-function-limitations"></a>Einschränkungen der Aggregate-Funktion
 Eine Aggregatfunktion und einem nicht-Aggregatspalte Verweis können nicht sowohl als Argumente für eine einzelne SQL-Anweisung verwendet werden.

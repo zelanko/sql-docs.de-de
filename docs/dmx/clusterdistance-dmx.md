@@ -1,36 +1,25 @@
 ---
-title: ClusterDistance (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
-ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
-author: Minewiskan
+title: ClusterDistance (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985396"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Die **ClusterDistance** -Funktion gibt den Abstand des eingabefalls von dem angegebenen Cluster, oder wenn kein Cluster, den Abstand des eingabefalls von dem wahrscheinlichsten Cluster angegeben wurde.  
+  Die **ClusterDistance** -Funktion gibt den Abstand des eingabefalls von dem angegebenen Cluster, oder wenn kein Cluster, den Abstand des eingabefalls von dem wahrscheinlichsten Cluster angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,11 +35,11 @@ ClusterDistance([<ClusterID expression>])
  Ein Skalarwert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **ClusterDistance** Funktion gibt den Abstand zwischen dem Eingabefall und dem Cluster, die für die höchste Wahrscheinlichkeit hat, den Eingabefall zurück.  
+ Die **ClusterDistance** Funktion gibt den Abstand zwischen dem Eingabefall und den mit der höchsten Wahrscheinlichkeit für Cluster, den Eingabefall zurück.  
   
  Im Fall von K-Means-Clustering, bei dem jeder Fall nur zu einem Cluster gehören kann und die Mitgliedschaftsgewichtung 1,0 beträgt, ist der Clusterabstand immer 0. In K-Means wird jedoch davon ausgegangen, dass jeder Cluster einen Schwerpunkt besitzt. Sie können den Wert des Schwerpunkts abrufen, indem Sie im Miningmodellinhalt die geschachtelte Tabelle NODE_DISTRIBUTION abfragen oder durchsuchen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
- Im Fall der standardmäßigen EM-Clusteringmethode werden alle Punkte innerhalb des Clusters als gleich wahrscheinlich betrachtet, daher ist programmbedingt kein Schwerpunkt für den Cluster vorhanden. Der Wert der **ClusterDistance** zwischen einem bestimmten Fall und einem bestimmten Cluster *N* wird wie folgt berechnet:  
+ Im Fall der standardmäßigen EM-Clusteringmethode werden alle Punkte innerhalb des Clusters als gleich wahrscheinlich betrachtet, daher ist programmbedingt kein Schwerpunkt für den Cluster vorhanden. Der Wert des **ClusterDistance** zwischen einem bestimmten Fall und einem bestimmten Cluster *N* wird wie folgt berechnet:  
   
  ClusterDistance(N) =1–(membershipWeight(N))  
   
@@ -61,13 +50,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Zugehörige Vorhersagefunktionen  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt folgende zusätzliche Funktionen für die Abfrage von Clusteringmodellen bereit:  
   
--   Verwenden der [Cluster &#40;DMX&#41; ](../dmx/cluster-dmx.md) Funktion, um die wahrscheinlichsten Cluster zurückzugeben.  
+-   Verwenden der [Cluster &#40;DMX&#41; ](../dmx/cluster-dmx.md) Funktion wahrscheinlichsten Clusters zurück.  
   
--   Verwenden der [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) Funktion zum Abrufen von der Wahrscheinlichkeit, dass ein Fall zu einem bestimmten Cluster gehört. Dieser Wert stellt die Umkehrung des Clusterabstands dar.  
+-   Verwenden der [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) Funktion, um die Wahrscheinlichkeit zu erhalten, dass ein Fall zu einem bestimmten Cluster gehört. Dieser Wert stellt die Umkehrung des Clusterabstands dar.  
   
--   Verwenden der ["PredictHistogram" &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion, um ein Histogramm, der die Wahrscheinlichkeit, dass der Eingabefall in jedem Cluster des Modells zurückzugeben.  
+-   Verwenden der [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion, um ein Histogramm der die Wahrscheinlichkeit, dass der Eingabefall in jedem Cluster des Modells zurückzugeben.  
   
--   Verwenden der [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) -Funktion zurückgibt, ein Measure von 0 bis 1, der gibt an, wie wahrscheinlich ein Eingabefall unter Berücksichtigung des Modells vorhanden ist, die vom Algorithmus erfassten.  
+-   Verwenden der [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) Funktion zurückgibt, ein Measure von 0 bis 1, wie wahrscheinlich ein Eingabefall angibt, unter Berücksichtigung des Modells vorhanden ist, die vom Algorithmus erfassten.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Beispiel 1: Abrufen des Clusterabstands zum wahrscheinlichsten Cluster  
  Im folgenden Beispiel wird der Abstand von dem angegebenen Fall zu dem Cluster angegeben, zu dem der Fall höchstwahrscheinlich gehört.  
@@ -100,7 +89,7 @@ NATURAL PREDICTION JOIN
 |Cluster 6|  
   
 ## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Beispiel 2: Abrufen des Abstands zu einem bestimmten Cluster  
- In der folgenden Syntax wird das Schemarowset für den Inhalt eines Miningmodells verwendet, um eine Liste mit Knoten-IDs und Knotenbeschriftungen für die Cluster zurückzugeben, die im Miningmodell vorhanden sind. Anschließend können Sie die knotenbeschriftung als clusterbezeichnerargument in der **ClusterDistance** Funktion.  
+ In der folgenden Syntax wird das Schemarowset für den Inhalt eines Miningmodells verwendet, um eine Liste mit Knoten-IDs und Knotenbeschriftungen für die Cluster zurückzugeben, die im Miningmodell vorhanden sind. Anschließend können Sie die knotenbeschriftung als clusterbezeichnerargument in die **ClusterDistance** Funktion.  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -138,8 +127,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Siehe auch  
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

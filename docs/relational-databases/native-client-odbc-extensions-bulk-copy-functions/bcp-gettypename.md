@@ -1,14 +1,12 @@
 ---
-title: Bcp_gettypename | Microsoft Docs
+title: Bcp_gettypename | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426222"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,10 +78,10 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Sowohl als auch|**text**|  
 |**SQLBIGBINARY**|nein|**binary**|  
 |**SQLBINARY**|nein|**Binär (Binary)**|  
-|**SQLBIGVARBINARY**|nein|**varbinary**|  
-|**SQLVARBINARY**|nein|**varbinary**|  
+|**SQLBIGVARBINARY**|nein|**Varbinary**|  
+|**SQLVARBINARY**|nein|**Varbinary**|  
 |**SQLIMAGE**|Sowohl als auch|**Bild**|  
-|**SQLINTN**|Sowohl als auch|**Int-null**|  
+|**SQLINTN**|Sowohl als auch|**Int null**|  
 |**SQLDATETIMN**|Sowohl als auch|**datetime-null**|  
 |**SQLMONEYN**|Sowohl als auch|**Money-null**|  
 |**SQLFLTN**|Sowohl als auch|**float-null**|  
@@ -92,8 +91,8 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Sowohl als auch|**Min**|  
 |**SQLAOPMAX**|Sowohl als auch|**Max**|  
 |**SQLDATETIM4**|Sowohl als auch|**smalldatetime**|  
-|**SQLMONEY4**|Sowohl als auch|**smallmoney**|  
-|**SQLFLT4**|Sowohl als auch|**echte**|  
+|**SQLMONEY4**|Sowohl als auch|**Smallmoney**|  
+|**SQLFLT4**|Sowohl als auch|**Real**|  
 |**SQLUNIQUEID**|Sowohl als auch|**uniqueidentifier**|  
 |**SQLNCHAR**|nein|**NCHAR**|  
 |**SQLNVARCHAR**|nein|**Nvarchar**|  
@@ -114,11 +113,11 @@ RETCODE bcp_gettypename (
 |**SQLUDT**|Sowohl als auch|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Die tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Typ in sqlncli.h" der Tabelle in beschrieben [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  
+ Die tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Typ in sqlncli.h" der Tabelle im beschrieben [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen zum Massenkopieren](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

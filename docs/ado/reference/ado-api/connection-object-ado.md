@@ -2,7 +2,6 @@
 title: Verbindungsobjekt (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba405d7993c5f9c327d5789cfa3bf3c9ccfba2b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08a8c8fd224d2405674b30969cf44f672831f1c5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276989"
 ---
 # <a name="connection-object-ado"></a>Verbindungsobjekt (ADO)
 Stellt eine offene Verbindung mit einer Datenquelle dar.  
@@ -67,7 +67,7 @@ Stellt eine offene Verbindung mit einer Datenquelle dar.
 >  Diese Funktion nicht verwenden (einen benannten Befehl oder gespeicherte Prozedur aufrufen, als wäre er einer nativen Methode auf die **Verbindung** Objekt) in einer Microsoft® .NET Framework-Anwendung, da die zugrunde liegende Implementierung der Funktion Konflikte ist das mit der Funktionsweise der .NET Framework mit COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Ausführen eines Befehls als systemeigene Methode eines Verbindungsobjekts  
- Benennen Sie zum Ausführen eines Befehls dem Befehl mit der **Befehl** Objekt [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft. Legen Sie die **ActiveConnection** Eigenschaft von der **Befehl** Objekt, das die Verbindung. Geben Sie eine Anweisung, in dem Namen des Befehls verwendet wird, als wäre er eine Methode auf, die **Verbindung** Objekts, gefolgt von beliebigen Parametern und einem **Recordset** Objekt, wenn keine Zeilen zurückgegeben werden. Legen Sie die **Recordset** Eigenschaften zum Anpassen der resultierende **Recordset**. Beispiel:  
+ Benennen Sie zum Ausführen eines Befehls dem Befehl mit der **Befehl** Objekt [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft. Legen Sie die **ActiveConnection** Eigenschaft von der **Befehl** Objekt, das die Verbindung. Geben Sie eine Anweisung, in dem Namen des Befehls verwendet wird, als wäre er eine Methode auf, die **Verbindung** Objekts, gefolgt von beliebigen Parametern und einem **Recordset** Objekt, wenn keine Zeilen zurückgegeben werden. Legen Sie die **Recordset** Eigenschaften zum Anpassen der resultierende **Recordset**. Zum Beispiel:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -83,7 +83,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Ausführen einer gespeicherten Prozedur als systemeigene Methode eines Verbindungsobjekts  
- Geben Sie zum Ausführen einer gespeicherten Prozedur eine Anweisung aus, in dem Namen der gespeicherten Prozedur verwendet wird, als wäre er eine Methode auf, die **Verbindung** Objekts, gefolgt von beliebigen Parametern. ADO stellen eine "Schätzung" der Parametertypen. Beispiel:  
+ Geben Sie zum Ausführen einer gespeicherten Prozedur eine Anweisung aus, in dem Namen der gespeicherten Prozedur verwendet wird, als wäre er eine Methode auf, die **Verbindung** Objekts, gefolgt von beliebigen Parametern. ADO stellen eine "Schätzung" der Parametertypen. Zum Beispiel:  
   
 ```  
 Dim cnn As New ADODB.Connection  

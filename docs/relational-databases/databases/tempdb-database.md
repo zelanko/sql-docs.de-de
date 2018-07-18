@@ -23,11 +23,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f01d67583604948c32968c90975bcfd184a11c38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582322"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +136,7 @@ Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Roll
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Tempdb-Größen für auf virtuellen Kern basierende Diensttarife
 
-Siehe auf virtuellen Kern basierende Ressourcenlimits](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
+Weitere Informationen finden Sie unter [V-Kern-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Restrictions  
  Die folgenden Operationen können mit der **tempdb** -Datenbank nicht ausgeführt werden:  

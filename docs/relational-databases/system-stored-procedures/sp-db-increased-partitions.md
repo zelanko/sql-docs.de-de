@@ -1,5 +1,5 @@
 ---
-title: Sp_db_increased_partitions | Microsoft Docs
+title: Sp_db_increased_partitions | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970412"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>Argumente  
  [ @dbname=] '*Database_name*"  
- Der Name der Datenbank. *Dbname* ist **Sysname** hat den Standardwert NULL. Wenn *Dbname* nicht angegeben wird, wird die aktuelle Datenbank verwendet.  
+ Der Name der Datenbank. *Dbname* ist **Sysname** hat den Standardwert NULL. Wenn *Dbname* nicht angegeben ist, wird die aktuelle Datenbank verwendet wird.  
   
  [ @increased_partitions=] '*Increased_partitions*"  
- Aktiviert oder deaktiviert die Unterstützung für bis zu 15.000 Partitionen in der angegebenen Datenbank. *Increased_partitions* ist **varchar(6)** hat den Standardwert NULL. Zulässige Werte sind 'ON' bzw. 'TRUE', um die Unterstützung zu aktivieren, und 'OFF' bzw. 'FALSE', um die Unterstützung zu deaktivieren. Wenn *Increased_partitions* nicht angegeben ist, wird die Prozedur zurückgibt, 1, um anzugeben, Unterstützung für die angegebene Datenbank aktiviert ist, oder 0, um Unterstützung anzugeben ist deaktiviert.  
+ Aktiviert oder deaktiviert die Unterstützung für bis zu 15.000 Partitionen in der angegebenen Datenbank. *Increased_partitions* ist **varchar(6)** hat den Standardwert NULL. Zulässige Werte sind 'ON' bzw. 'TRUE', um die Unterstützung zu aktivieren, und 'OFF' bzw. 'FALSE', um die Unterstützung zu deaktivieren. Wenn *Increased_partitions* nicht angegeben ist, wird die Prozedur zurückgibt, 1, um anzugeben, Unterstützung für die angegebene Datenbank aktiviert ist, oder 0, um die Unterstützung ist deaktiviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

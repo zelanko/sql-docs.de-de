@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908125"
 ---
 # <a name="conformance-levels"></a>Übereinstimmungsebenen
 ODBC-Treiber Anwendungszugriff gewähren, die auf verschiedene Datenquellen. Jeder Treiber können die Anwendung zur Laufzeit die ODBC-Funktionen und welche SQL-Grammatik der Treiber nicht ermittelt werden, und jede Datenquelle unterstützt. Dies ist nicht zwingend Anwendungen dienen zum Arbeiten mit einem einzelnen Treiber oder eine kleine, bekannte Gruppe von Treibern, da diese Anwendungen einfach in die Funktionen von diesem Treiber oder Treiber geschrieben werden können. Zur Unterstützung von Anwendungen, Treiber und Funktionen für die Datenquelle zu ermitteln sind zwei Bereiche Behebungen von Kompatibilitätsproblemen verfügbar: die ODBC-Schnittstelle und die SQL-Grammatik.  

@@ -1,0 +1,53 @@
+---
+title: Implementieren von Aufträgen | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- jobs [SQL Server Agent]
+- SQL Server Agent jobs
+- SQL Server Agent jobs, about jobs
+- jobs [SQL Server Agent], about jobs
+ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
+caps.latest.revision: 27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ba493e130a6aa6910df73526fb3e609326584aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244150"
+---
+# <a name="implement-jobs"></a>Implementieren von Aufträgen
+  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträge verwenden, um regelmäßig anfallende administrative Tasks zu automatisieren und periodisch ausführen, sodass die Effizienz der Verwaltung verbessert wird.  
+  
+ Ein Auftrag besteht aus einer festgelegten Folge von Operationen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent der Reihenfolge nach ausführt. Ein Auftrag kann eine Reihe von Aktivitäten ausführen, z. B. das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, Befehlszeilenanwendungen, Microsoft ActiveX-Skripts, Integration Services-Paketen, Analysis Services-Befehlen und -Abfragen sowie Replikationstasks. Aufträge können wiederkehrende oder planbare Tasks ausführen, und sie können Benutzer durch Generieren von Warnungen automatisch über den Auftragsstatus informieren, sodass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltung erheblich vereinfacht wird.  
+  
+ Sie können einen Auftrag manuell ausführen oder ihn so konfigurieren, dass er gemäß einem Zeitplan oder als Reaktion auf Warnungen ausgeführt wird.  
+  
+## <a name="related-tasks"></a>Related Tasks  
+  
+|||  
+|-|-|  
+|**Beschreibung**|**Thema**|  
+|Enthält Informationen zum Erstellen von Aufträgen und Zuweisen des Besitz.|[Erstellen von Aufträgen](create-jobs.md)|  
+|Enthält Informationen zum Organisieren von Aufträgen in Kategorien.|[Organisieren von Aufträgen](organize-jobs.md)|  
+|Enthält Informationen zu den verschiedenen Auftragsschritten, die Sie erstellen können, und beschreibt, wie Sie diese Auftragsschritte verwalten.|[Verwalten von Auftragsschritten](manage-job-steps.md)|  
+|Enthält Informationen zur Definition des Auftragsbeginns sowie der Häufigkeit der Ausführung.|[Anlegen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md)|  
+|Enthält Informationen zur manuellen Ausführung von Aufträgen (ohne Zeitplan).|[Ausführen von Aufträgen](run-jobs.md)|  
+|Enthält Informationen zur Konfiguration des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für die Reaktion auf Aufträge. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent z. B. so konfigurieren, dass Administratoren bei der Beendigung von Aufträgen benachrichtigt werden.|[Angeben von Auftragsantworten](specify-job-responses.md)|  
+|Enthält Informationen zum Anzeigen vorhandener Aufträge, zum Auftragsverlauf nach der Ausführung und zum Ändern von Aufträgen.|[Anzeigen oder Ändern von Aufträgen](view-or-modify-jobs.md)|  
+|Enthält Informationen zum Löschen von Aufträgen.|[Löschen von Aufträgen](delete-jobs.md)|  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md)  
+  
+  

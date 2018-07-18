@@ -1,34 +1,33 @@
 ---
-title: Verarbeiten von Ergebnissen (ODBC) | Microsoft Docs
+title: Verarbeiten von Ergebnissen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41cca358deb729fda5d9659b9b76040cf8c3cc50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 175b92969e9ce7515820a7aa3d9e4600e411bfb1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408233"
 ---
-# <a name="processing-results---process-results"></a>Verarbeitens von Ergebnissen - Verarbeiten von Ergebnissen
+# <a name="processing-results---process-results"></a>Verarbeiten von Ergebnissen: Prozessergebnisse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-Verarbeitung der Ergebnisse in einer ODBC-Anwendung besteht, die Merkmale des Resultsets bestimmen zunächst die Daten in Programmvariablen abgerufen, indem Sie entweder [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
+Verarbeitung der Ergebnisse in einer ODBC-Anwendung besteht, zuerst die Merkmale des Resultsets bestimmen und dann die Daten in Programmvariablen abrufen, indem Sie entweder [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
   
 ### <a name="to-process-results"></a>So verarbeiten Sie Ergebnisse  
   
@@ -67,6 +66,6 @@ Verarbeitung der Ergebnisse in einer ODBC-Anwendung besteht, die Merkmale des Re
 >  Um das Verarbeiten eines Resultsets abzubrechen, bevor [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) SQL_NO_DATA zurückgibt, rufen Sie [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) auf.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Abrufen von Resultsetinformationen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Abrufen von Resultsetinformationen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

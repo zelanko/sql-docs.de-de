@@ -1,13 +1,12 @@
 ---
-title: Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB) | Microsoft Docs
+title: Senden von Daten an eine FILESTREAM-Spalte, die mithilfe von IRowsetFastUpload (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
@@ -16,11 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 691c305f0634e42aa0ed960bf55eccd48c2ea19c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68f47843f6cb501400f164c8cb77555867b52baa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409219"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,10 +28,10 @@ ms.lasthandoff: 05/03/2018
 
   Dieses Beispiel verwendet die IRowsetFastUpload-Schnittstelle, um zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB-&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  Wenn Sie dieses Beispiel ausführen, müssen Sie den Namen eines Servers oder Server\Instanzname sowie einen Wert zwischen 4 MB (0x400001) und 4 GB (0xFFFFFFFF) übergeben, der die Menge der zu schreibenden Daten angibt.  
   
- Das vierte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting löscht, die von diesem Beispiel erstellte Datenbank.  
+ Der vierte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting löscht die Datenbank, die von diesem Beispiel erstellten.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

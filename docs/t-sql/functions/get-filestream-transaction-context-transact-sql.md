@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,14 +18,15 @@ helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de1709f83d00cf8afae0e6bedde156f3d9458889
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 2474d44597673a56f8744a9a77920034a049dea0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788021"
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Rückgabewert  
  NULL wird zurückgegeben, wenn die Transaktion nicht gestartet wurde, wenn sie abgebrochen wurde oder wenn ein Commit durchgeführt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Transaktion muss explizit sein. Verwenden Sie BEGIN TRANSACTION gefolgt von COMMIT TRANSACTION oder ROLLBACK TRANSACTION.  
   
  Wenn Sie GET_FILESTREAM_TRANSACTION_CONTEXT aufrufen, wird dem Aufrufer für die Dauer der Transaktion Zugriff auf das Dateisystem für die Transaktion gewährt. Um einem anderen Benutzer den Zugriff auf die Transaktion über das Dateisystem zu ermöglichen, verwenden Sie EXECUTE AS, um GET_FILESTREAM_TRANSACTION_CONTEXT als dieser andere Benzutzer auszuführen.  

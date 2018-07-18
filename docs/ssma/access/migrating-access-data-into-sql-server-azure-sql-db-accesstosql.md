@@ -1,8 +1,6 @@
 ---
-title: Migrieren von Access-Daten in SQLServer – Azure SQL-Datenbank (AccessToSQL) | Microsoft Docs
+title: Migrieren von Access-Daten in SQLServer – Azure SQL-Datenbank (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,22 +25,23 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 747ffdc89104deb4fcbe356065b9b81f383231ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cb790ec1b79827b7db578001633c75ef6e1b191
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979472"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migrieren von Access-Daten in SQLServer – Azure SQL-Datenbank (AccessToSQL)
-Nachdem Sie die Datenbankobjekte, die in erfolgreich erstellt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Migrieren von Daten aus den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.  
+Nachdem Sie die Datenbankobjekte in erstellt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie Daten aus den Zugriff auf migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.  
   
-## <a name="setting-migration-options"></a>Einstellungsoptionen für die Migration  
-Vor dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, überprüfen Sie die Migrationsoptionen Projekt in der **Projekteinstellungen** (Dialogfeld). In diesem Dialogfeld können Sie festlegen, die Batchgröße für die Migration, Tabellensperre, Einschränkung, die zur Überprüfung der Einfügung auslösen, Identität und null-Wert behandeln, und wie Daten behandelt, die außerhalb des dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Bereich. Weitere Informationen finden Sie unter [Projekteinstellungen (Migration)](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+## <a name="setting-migration-options"></a>Festlegen von Migrationsoptionen für die  
+Vor dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, überprüfen die Projektoptionen für die Migration in die **Projekteinstellungen** Dialogfeld. In diesem Dialogfeld können Sie festlegen, die Batchgröße für die Migration, Tabellensperre, einschränkungsüberprüfung, Einfügung auslösen, Identität und Behandlung von null-Wert und wie Sie Datumsangaben verarbeiten, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Bereich. Weitere Informationen finden Sie unter [Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## <a name="migrating-data"></a>Migrieren von Daten  
-Migrieren von Daten eines Massenladevorgangs, die Datenzeilen in Verschiebt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Transaktionen. Die Anzahl der Zeilen in geladen werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure in der jeweiligen Transaktion in den projekteinstellungen konfiguriert ist.  
+Migrieren von Daten ist ein Massenladen-Vorgang, der Zeilen von Daten in Verschiebt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Transaktionen. Die Anzahl der Zeilen in geladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure in jeder Transaktion in den projekteinstellungen konfiguriert ist.  
   
-Um die Migration der Meldungsansicht sicherstellen Sie, dass im Ausgabebereich angezeigt wird. Ist dies nicht der Fall, auf die **Ansicht** klicken Sie im Menü **Ausgabe**.  
+Migration Nachrichten sicher, dass im Ausgabebereich angezeigt wird. Ist dies nicht der Fall, in der **Ansicht** , wählen Sie im Menü **Ausgabe**.  
   
 **Zum Migrieren von Daten**  
   
@@ -50,18 +49,18 @@ Um die Migration der Meldungsansicht sicherstellen Sie, dass im Ausgabebereich a
   
 2.  Wählen Sie im Metadaten-Explorer für den Zugriff die Objekte, die die Daten enthalten, die Sie migrieren möchten:  
   
-    -   Wählen Sie das Kontrollkästchen neben dem Datenbanknamen zur Migration von Daten für eine gesamte Datenbank.  
+    -   Wählen Sie das Kontrollkästchen neben dem Datenbanknamen, zum Migrieren von Daten für eine gesamte Datenbank.  
   
-    -   Zum Migrieren von Daten aus einzelnen Tabellen die Datenbank, erweitern Sie dann **Tabellen**, und wählen Sie dann das Kontrollkästchen neben der Tabelle. Deaktivieren Sie das Kontrollkästchen, um Daten aus den einzelnen Tabellen zu unterdrücken.  
+    -   Zum Migrieren von Daten aus einzelnen Tabellen die Datenbank, erweitern Sie dann **Tabellen**, und wählen Sie dann das Kontrollkästchen neben der Tabelle. Um Daten aus den einzelnen Tabellen zu unterdrücken, deaktivieren Sie das Kontrollkästchen.  
   
 3.  Mit der rechten Maustaste **Datenbanken** und wählen Sie dann **Migrieren von Daten**.  
   
-Sie können auch außerhalb von SSMA mithilfe Migrieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Bcp** Befehlszeilen-Hilfsprogramm oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]. Weitere Informationen zu diesen Tools finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+Sie können auch Daten außerhalb von SSMA mithilfe Migrieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Bcp** Befehlszeilen-Hilfsprogramm oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]. Weitere Informationen zu diesen Tools finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Onlinedokumentation.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Haben Zugriff datenbankanwendungen, die Sie weiterhin nach der Migration verwenden möchten, verknüpfen Sie die Datenbanktabellen den Zugriff auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen. Weitere Informationen finden Sie unter [Verknüpfen von Microsoft Access-Anwendungen mit SQL Server](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4).  
+Wenn Sie eine Access-Datenbank-Anwendungen, die Sie nach der Migration weiterhin verwenden möchten verfügen, verknüpfen Sie die Tabellen der Access-Datenbank, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen. Weitere Informationen finden Sie unter [Verknüpfen von Access-Anwendungen mit SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Einstellung Konvertierung und Migrationsoptionen](http://msdn.microsoft.com/en-us/0a7304df-2f35-4453-96ef-7ac83dea1167)  
+[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Einstellung Konvertierung und Migrationsoptionen](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)  
   

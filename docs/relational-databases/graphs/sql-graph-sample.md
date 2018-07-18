@@ -1,6 +1,6 @@
 ---
-title: Beispieldatenbank für SQL-Diagramm | Microsoft Docs
-description: Ein Beispiel für die schnelle, die hilfreich bei beginnen Sie mit der neuen Syntax in SQL-Graph-Datenbank.
+title: SQL-Graph-Datenbankbeispiel | Microsoft-Dokumentation
+description: Ein Beispiel, mit denen Sie beginnen mit der neuen Syntax in SQL-Graph-Datenbank.
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,21 +22,22 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999642"
 ---
-# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen Sie eine Diagrammdatenbank, und führen Sie einige Abfragen, die mithilfe des T-SQL-Mustervergleich
+# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen einer graphdatenbank, und führen Sie einige Abfragen mit T-SQL-Mustervergleich
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Dieses Beispiel enthält eine [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript eine Graph-Datenbank mit Knoten und Kanten erstellen, und klicken Sie dann die neue MATCH-Klausel verwenden, um einige Muster übereinstimmen, und Durchsuchen Sie das Diagramm. Dieses Beispielskript funktioniert für beide Azure SQL-Datenbank und [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Dieses Beispiel enthält eine [!INCLUDE[tsql-md](../../includes/tsql-md.md)] -Skript zum Erstellen einer graphdatenbank mit Knoten und Edges, und klicken Sie dann die neue MATCH-Klausel verwenden, um einige Muster entsprechen, und durchlaufen über die Graph. Dieses Beispielskript funktioniert für beide Azure SQL-Datenbank und [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Beispielschema  
-Dieses Beispiel erstellt ein Schema Diagramm an, wie in Abbildung 1 für eine hypothetische sozialen Netzwerk wurde gezeigt, die Personen, Restaurant und City Knoten verfügt. Diese Knoten mit Freunden, miteinander verbunden sind schätzt, LivesIn und LocatedIn Kanten. 
+Dieses Beispiel erstellt ein Diagrammschema an, wie in Abbildung 1 für eine hypothetische soziales Netzwerk gezeigt, die Menschen "," Restaurant "und" City-Knoten verfügt. Diese Knoten sind mit Freunden, miteinander verbundene Likes, LivesIn und LocatedIn Ränder. 
 
-![Personen, Orte, Restaurants-Tabellen](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Beispieldatenbank für Sql-Diagramm")  
-Abbildung 1: Beispielschema mit Restaurant "," City "," Person-Knoten "und" LivesIn, LocatedIn, Nachrichtengrenzen Kanten.
+![Person-Städte-Restaurants-Tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Beispieldatenbank für Sql-Graph")  
+Abbildung 1: Beispielschema mit Restaurant "," City "," Person-Knoten "und" LivesIn, LocatedIn, Likes Ränder.
 
 
 ## <a name="sample-script"></a>Beispielskript
@@ -167,11 +168,11 @@ go
 
 ```
 
-## <a name="script-explanation"></a>Erklärung der Skripts  
-Dieses Skript verwendet die neue T-SQL-Syntax zum Erstellen von Knoten und Edge-Tabellen. Zeigt, wie das Einfügen von Daten in Knoten und Edge-Tabellen, die mit `INSERT` Anweisung sowie dargestellt, wie Sie `MATCH` -Klausel für einen Musterabgleich und Navigation.
+## <a name="script-explanation"></a>Erläuterung des Skripts  
+Dieses Skript verwendet die neue T-SQL-Syntax zum Erstellen von Knoten und Edge-Tabellen. Zeigt, wie zum Einfügen von Daten in und Rahmentabellen-Tabellen mit `INSERT` Anweisung und das auch veranschaulicht, wie `MATCH` -Klausel für den Musterabgleich sowie die Navigation.
 
 |Befehl    |Hinweise
 |---  |---  |
-|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Graph-Knoten oder Edge-Tabelle erstellen  |
-|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Fügen Sie einen Knoten oder Edge-Tabelle  |
-|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Verwenden von MATCH zum einem Muster entsprechen, oder Durchsuchen Sie das Diagramm  |
+|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Erstellen von Knoten- oder edgetabelle Graph-Tabelle  |
+|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Fügen Sie in eine Knoten- oder edgetabelle-Tabelle ein  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Verwenden von MATCH zum einem Muster entsprechen, oder über das Diagramm zu durchlaufen  |

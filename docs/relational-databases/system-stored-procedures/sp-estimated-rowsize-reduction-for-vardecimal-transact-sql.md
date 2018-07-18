@@ -1,5 +1,5 @@
 ---
-title: Sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs
+title: Sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1d699e62251f8f2c750795d2389f338e9bd1bf11
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999622"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   Schätzt die Verringerung der durchschnittlichen Zeilengröße ab, wenn Sie das vardecimal-Speicherformat für eine Tabelle aktivieren. Verwenden Sie diese Zahl, um die Gesamtverringerung der Tabellengröße abzuschätzen. Da zur Berechnung der durchschnittlichen Verringerung der Zeilengröße die Stichprobenuntersuchung verwendet wird, betrachten Sie dies nur als Schätzung. In seltenen Fällen kann sich die Zeilengröße erhöhen, nachdem Sie das vardecimal-Speicherformat aktiviert haben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die ROW-Komprimierung und die PAGE-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Auswirkung einer Komprimierung auf die Größe der Tabellen und Indizes, finden Sie unter [Sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die ROW-Komprimierung und die PAGE-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Auswirkung einer Komprimierung auf die Größe von Tabellen und Indizes, finden Sie unter [Sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,11 +67,11 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**row_count**|**int**|Anzahl der Zeilen in der Tabelle|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung **Sp_estimated_rowsize_reduction_for_vardecimal** können Sie die einsparungen abschätzen, die entstehen, wenn Sie eine Tabelle das Vardecimal-Speicherformat aktivieren. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 % verringert werden kann, können Sie die Größe der Tabelle potenziell um 40 % verringern. Möglicherweise erhalten Sie keine Platzeinsparung; dies hängt vom Füllfaktor und von der Zeilengröße ab. Wenn es sich beispielsweise um eine Zeile handelt, die 8000 Bytes lang ist, und Sie die Größe um 40 % verringern, passt weiterhin nur eine Zeile auf eine Datenseite, was zu keiner Einsparung führt.  
+ Verwendung **Sp_estimated_rowsize_reduction_for_vardecimal** können Sie die einsparungen abschätzen, die sich ergeben, wenn Sie eine Tabelle das Vardecimal-Speicherformat aktivieren. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 % verringert werden kann, können Sie die Größe der Tabelle potenziell um 40 % verringern. Möglicherweise erhalten Sie keine Platzeinsparung; dies hängt vom Füllfaktor und von der Zeilengröße ab. Wenn es sich beispielsweise um eine Zeile handelt, die 8000 Bytes lang ist, und Sie die Größe um 40 % verringern, passt weiterhin nur eine Zeile auf eine Datenseite, was zu keiner Einsparung führt.  
   
- Wenn die Ergebnisse der **Sp_estimated_rowsize_reduction_for_vardecimal** anzugeben, dass die Tabelle vergrößert, bedeutet dies, dass viele Zeilen in der Tabelle fast die gesamte Genauigkeit der dezimaldatentypen verwendet und die Addition des kleinen verwenden zusätzliche Verarbeitungsaufwand für das Vardecimal-Speicherformat ist größer als die einsparungen durch das Vardecimal-Speicherformat. Aktivieren Sie in diesem seltenen Fall das vardecimal-Speicherformat nicht.  
+ Wenn die Ergebnisse der **Sp_estimated_rowsize_reduction_for_vardecimal** anzugeben, dass die Tabelle vergrößert, dies bedeutet, dass viele Zeilen in der Tabelle fast die gesamte Genauigkeit der dezimaldatentypen verwendet und die Addition des kleinen verwenden. zusätzliche Verarbeitungsaufwand für das Vardecimal-Speicherformat ist größer als die einsparungen durch die vardecimal-Speicherformat. Aktivieren Sie in diesem seltenen Fall das vardecimal-Speicherformat nicht.  
   
- Wenn eine Tabelle das Vardecimal-Speicherformat aktiviert ist, verwenden Sie **Sp_estimated_rowsize_reduction_for_vardecimal** die durchschnittliche Größe der Zeile zu schätzen, wenn das Vardecimal-Speicherformat deaktiviert wird.  
+ Wenn eine Tabelle das Vardecimal-Speicherformat aktiviert ist, verwenden Sie **Sp_estimated_rowsize_reduction_for_vardecimal** um die durchschnittliche Größe der Zeile zu schätzen, wenn das Vardecimal-Speicherformat deaktiviert ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Tabelle.  

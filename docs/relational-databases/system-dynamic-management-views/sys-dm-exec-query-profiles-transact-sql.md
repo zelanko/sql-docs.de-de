@@ -1,5 +1,5 @@
 ---
-title: dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: dm_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046138"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/23/2018
 |lob_read_ahead_count|**bigint**|Anzahl der bisherigen Read-Ahead-LOB-Lesevorgänge.|  
 |segment_read_count|**int**|Anzahl der bisherigen Segment-Read-Ahead-Lesevorgänge.|  
 |segment_skip_count|**int**|Anzahl der bisher übersprungenen Segmente.| 
-|actual_read_row_count|**bigint**|Anzahl der Zeilen, die von einem Operator lesen, bevor das Residualprädikat angewendet wurde.| 
-|estimated_read_row_count|**bigint**|**Gilt für:** ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Anzahl der Zeilen geschätzt, von einem Operator gelesen werden sollen, bevor das Residualprädikat angewendet wurde.|  
+|actual_read_row_count|**bigint**|Anzahl der Zeilen, die durch den Operator zu lesen, bevor die residuale-Prädikat angewendet wurde.| 
+|estimated_read_row_count|**bigint**|**Gilt für:** ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Geschätzte Anzahl von Zeilen durch den Operator gelesen werden, bevor die residuale-Prädikat angewendet wurde.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Wenn der Abfrageplanknoten keine E/A-Vorgänge aufweist, werden alle E/A-Leistungsindikatoren auf NULL festgelegt.  
@@ -86,12 +87,12 @@ ms.lasthandoff: 05/23/2018
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 wird die Standardabfrageoperator-Ausführungsstatistik Infrastruktur profilerstellung Seite-an-Seite mit eine einfache abfrageausführungsstatistik Infrastruktur profilerstellung vorhanden. Die neue Abfrage Ausführung Profilerstellungsdaten statistikinfrastruktur kann erheblich Verarbeitungsaufwand erfassen pro Operator Statistiken zur abfrageausführung, z. B. die tatsächliche Anzahl von Zeilen reduziert. Diese Funktion kann aktiviert werden, entweder über globale Start [Ablaufverfolgungsflag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), oder Sie wird automatisch aktiviert, wenn Query_thread_profile erweiterte Ereignisse verwendet wird.
+ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den standard abfrageausführungsstatistik profilerstellungsinfrastruktur Seite-an-Seite mit einer einfachen abfrageausführungsstatistik profilerstellungsinfrastruktur vorhanden. Die neue Abfrage Ausführung profilerstellung statistikinfrastruktur verringert erheblich Performance-Overhead pro Operator Statistiken zur abfrageausführung, z. B. die tatsächliche Anzahl der Zeilen erfassen. Diese Funktion kann aktiviert werden, entweder über globale Start [Ablaufverfolgungsflags 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), oder Sie wird automatisch aktiviert, wenn Query_thread_profile erweiterten Ereignis verwendet wird.
 
 >[!NOTE]
-> CPU- und verstrichene Zeiten werden unter die einfache Abfrage Ausführung Profilerstellungsdaten statistikinfrastruktur zu Leistungseinbußen zu reduzieren nicht unterstützt.
+> CPU und der verstrichenen Zeit werden unter die einfache Ausführung profilerstellung statistikinfrastruktur Reduzieren der Auswirkungen auf die Leistung nicht unterstützt.
 
- Legen Sie die STATISTICS XML ON und SET STATISTICS PROFILE ON immer die ältere abfrageausführungsstatistik Infrastruktur profilerstellung verwenden.
+ Legen Sie die STATISTICS XML ON und SET STATISTICS PROFILE ON immer die ältere abfrageausführungsstatistik profilerstellungsinfrastruktur verwenden.
   
 ## <a name="permissions"></a>Berechtigungen  
 
@@ -99,7 +100,7 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
    
 ## <a name="examples"></a>Beispiele  
- Schritt 1: Melden Sie sich eine Sitzung, in der Sie die Abfrage ausführen möchten, Sie mit dm_exec_query_profiles analysiert. Verwenden zum Konfigurieren die Abfrage für die profilerstellung SET STATISTICS PROFILE auf. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
+ Schritt 1: Melden Sie sich eine Sitzung, in der die Abfrage, die Sie analysieren, werden mit dm_exec_query_profiles ausgeführt werden sollen. Verwenden zum Konfigurieren die Abfrage für die profilerstellung SET STATISTICS PROFILE auf. Führen Sie Ihre Abfrage in derselben Sitzung aus.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -131,7 +132,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

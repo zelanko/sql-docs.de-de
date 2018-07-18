@@ -2,7 +2,6 @@
 title: GetRowsOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b16eae5e67a3f04218a0e4c565ec93cc3fb6a700
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3008d37e09a35966764f0d5803090c790aeffdc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278809"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Gibt an, wie viele Datensätze zum Abrufen von aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|Ruft den Rest der Datensätze in der **Recordset**, von der aktuellen Position oder ein Lesezeichen, die gemäß der *starten* Parameter von der [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode.|  
   

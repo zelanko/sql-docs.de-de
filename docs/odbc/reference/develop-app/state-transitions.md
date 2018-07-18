@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914175"
 ---
 # <a name="state-transitions"></a>Statusübergänge
 ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede Anweisung. Die Umgebung verfügt beispielsweise über drei mögliche Zustände: verfügbaren (in dem keine Umgebung zugeordnet ist), zugewiesenem (in der eine Umgebung erhält jedoch keine Verbindungen zugeordnet sind) und die Verbindung (in der Umgebung und eine oder mehrere Verbindungen sind reserviert). Verbindungen werden sieben mögliche Zustände aufweisen; -Anweisungen verfügen über 13 mögliche Zustände.  

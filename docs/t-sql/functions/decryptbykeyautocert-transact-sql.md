@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bf53e51d3896953e66e3360aaa810a5c13c51ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790211"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Führt mithilfe eines symmetrischen Schlüssels, der mit einem Zertifikat automatisch entschlüsselt wird, eine Entschlüsselung durch.  
-  
+Diese Funktion entschlüsselt Daten mit einem symmetrischen Schlüssel. Dieser symmetrische Schlüssel wird automatisch mit einem Zertifikat entschlüsselt.  
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,40 +47,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Argumente  
  *CERT_ID*  
- Die ID des Zertifikats, das zum Schützen des symmetrischen Schlüssels verwendet wird. *Cert_ID* ist vom Datentyp **int**.  
+Die ID des Zertifikats, das zum Schützen des symmetrischen Schlüssels verwendet wird. *cert_ID* verfügt über den Datentyp **int**.  
   
- *cert_password*  
- Das Kennwort, mit dem der private Schlüssel des Zertifikats geschützt ist. Kann NULL sein, wenn der private Schlüssel durch den Hauptschlüssel für die Datenbank geschützt ist. *cert_password* ist vom Datentyp **nvarchar**.  
+*cert_password*  
+Das Kennwort, das zum Verschlüsseln des privaten Schlüssels des Zertifikats verwendet wurde. Kann den Wert `NULL` aufweisen, wenn der Datenbank-Hauptschlüssel den privaten Schlüssel schützt. *cert_password* verfügt über einen **nvarchar**-Datentyp.  
+
+'*ciphertext*'  
+Die Zeichenfolge der Daten, die mit dem Schlüssel verschlüsselt wurden. *ciphertext* verfügt über einen **varbinary**-Datentyp.  
+
+@ciphertext  
+Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem Schlüssel verschlüsselt wurden.  
+
+*add_authenticator*  
+Gibt an, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen und verschlüsselt wurde. Muss mit dem Wert übereinstimmen, der während der Datenverschlüsselung an [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) übergeben wurde. *add_authenticator* weist den Wert 1 auf, wenn im Verschlüsselungsprozess ein Authentifikator verwendet wurde. *add_authenticator* verfügt über einen **int**-Datentyp.  
   
- '*ciphertext*'  
- Die mit dem Schlüssel verschlüsselten Daten. *ciphertext* ist vom Datentyp **varbinary**.  
+@add_authenticator  
+Eine Variable, die angibt, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen, und verschlüsselt, wurde. Muss mit dem Wert übereinstimmen, der während der Datenverschlüsselung an [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) übergeben wurde. *@add_authenticator* verfügt über einen **int**-Datentyp.  
   
- @ciphertext  
- Eine Variable vom Datentyp **varbinary** , in der die mit dem Schlüssel verschlüsselten Daten enthalten sind.  
+*authenticator*  
+Die Daten, die als Grundlage für die Generierung des Authentifikators verwendet werden. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *authenticator* verfügt über einen **sysname**-Datentyp.  
   
- *add_authenticator*  
- Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Dies muss derselbe Wert sein, der beim Verschlüsseln der Daten an EncryptByKey übergeben wurde. Hat den Wert **1**, wenn ein Authentifikator verwendet wurde. *add_authenticator* ist vom Datentyp **int**.  
-  
- @add_authenticator  
- Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Dies muss derselbe Wert sein, der beim Verschlüsseln der Daten an EncryptByKey übergeben wurde.  
-  
- *authenticator*  
- Bezeichnet die Daten, aus denen ein Authentifikator generiert wird. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde. *authenticator* ist vom Datentyp **sysname**.  
-  
- @authenticator  
- Eine Variable, die Daten enthält, aus denen ein Authentifikator generiert werden soll. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde.  
+@authenticator  
+Eine Variable, die Daten für die Generierung durch den Authentifikator enthält. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *@authenticator* verfügt über einen **sysname**-Datentyp.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
+**varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
- In DecryptByKeyAutoCert ist die Funktionalität von OPEN SYMMETRIC KEY und von DecryptByKey kombiniert. In einem einzelnen Vorgang wird ein symmetrischer Schlüssel entschlüsselt und mit diesem Schlüssel der verschlüsselte Text entschlüsselt.  
+`DECRYPTBYKEYAUTOCERT` kombiniert die Funktionen von `OPEN SYMMETRIC KEY` und `DECRYPTBYKEY`. In einem einzelnen Vorgang wird zunächst ein symmetrischer Schlüssel entschlüsselt, und mit diesem Schlüssel wird dann der verschlüsselte Chiffretext entschlüsselt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die VIEW DEFINITION-Berechtigung für den symmetrischen Schlüssel und die CONTROL-Berechtigung für das Zertifikat.  
+Erfordert die `VIEW DEFINITION`-Berechtigung für den symmetrischen Schlüssel und die `CONTROL`-Berechtigung für das Zertifikat.   
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird gezeigt, wie Code, mit dem eine Entschlüsselung ausgeführt wird, mit `DecryptByKeyAutoCert` vereinfacht werden kann. Dieser Code sollte für eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank ausgeführt werden, die nicht bereits über einen Datenbank-Hauptschlüssel verfügt.  
+In diesem Beispiel wird dargestellt, wie `DECRYPTBYKEYAUTOCERT` den Entschlüsselungscode vereinfachen kann. Dieser Code sollte für eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank ausgeführt werden, die nicht bereits über einen Datenbank-Hauptschlüssel verfügt.  
   
 ```  
 --Create the keys and certificate.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915815"
 ---
 # <a name="unicode-data"></a>Unicode-Daten
 SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Unicode-Format, systemintern für das DBMS befindet. Ein C#-Unicode-Datentyp wird bereitgestellt, damit eine Anwendung zum Binden von Daten in einen Unicode-Puffer kann. Der Treiber-Manager können Daten aus einem Unicode-C-Typ (SQL_C_WCHAR) zu erleichtern konvertieren-Funktion mit einer ANSI-Treiber.  

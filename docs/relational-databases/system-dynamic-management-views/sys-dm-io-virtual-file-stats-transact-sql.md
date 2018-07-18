@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066831"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -62,7 +63,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  **GILT FÜR:** SQL Server (ab 2008), Azure SQL-Datenbank
 
- Die ID der Datenbank. *Database_id* ist "Int", hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datenbank oder NULL. Wenn Sie NULL angeben, werden alle Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
+ Die ID der Datenbank. *Database_id* ist "Int" hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datenbank oder NULL. Wenn Sie NULL angeben, werden alle Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
   
  Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden.  
   
@@ -70,7 +71,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 **GILT FÜR:** SQL Server (ab 2008), Azure SQL-Datenbank
  
-Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datei oder NULL. Wenn Sie NULL angeben, werden alle Dateien in der Datenbank zurückgegeben.  
+Die ID der Datei. *FILE_ID* ist "Int" hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datei oder NULL. Wenn Sie NULL angeben, werden alle Dateien in der Datenbank zurückgegeben.  
   
  Die integrierte Funktion [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) kann angegeben werden, und verweist auf eine Datei in der aktuellen Datenbank.  
   
@@ -78,10 +79,10 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Datenbankname.</br></br>Für SQL Data Warehouse ist dies der Name der Datenbank gespeichert, auf dem Knoten, der durch Pdw_node_id identifiziert wird. Jeder Knoten besitzt einen Tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungsdatenbank hat 5 Dateien. Jeder Knoten 4 Verteilungen enthält, zeigen die Ergebnisse z. B. 20 Dateien der Verteilungsdatenbank pro Pdw_node_id. 
+|**database_name**|**sysname**|Datenbankname.</br></br>Für SQL Data Warehouse ist dies der Name der Datenbank gespeichert, auf dem Knoten, der durch Pdw_node_id identifiziert wird. Jeder Knoten verfügt über einen Tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung aus, und jede Verteilungsdatenbank hat 5 Dateien. Wenn jeder Knoten 4 Verteilungen enthält, zeigen die Ergebnisse z. B. 20 Dateien der Verteilungsdatenbank pro Pdw_node_id. 
 |**database_id**|**smallint**|ID der Datenbank.|  
 |**file_id**|**smallint**|ID der Datei.|  
-|**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist **Int** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp **Int** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
 |**num_of_bytes_read**|**bigint**|Gesamtanzahl von Bytes, die aus dieser Datei gelesen wurden.|  
 |**io_stall_read_ms**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer auf Lesevorgänge gewartet haben, die für die Datei ausgegeben wurden.|  
@@ -91,7 +92,7 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
 |**io_stall**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Vorgänge für die Datei abgeschlossen werden.|  
 |**size_on_disk_bytes**|**bigint**|Anzahl von Bytes, die auf dem Datenträger für diese Datei verwendet werden. Für Sparsedateien ist dies die tatsächliche Anzahl von Bytes auf dem Datenträger, die für Datenbankmomentaufnahmen verwendet werden.|  
 |**file_handle**|**varbinary**|Windows-Dateihandle für diese Datei.|  
-|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
@@ -101,7 +102,7 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
   
 ## <a name="examples"></a>Beispiele  
 
-### <a name="a-return-statistics-for-a-log-file"></a>A. Zurückgeben der Statistiken für eine Protokolldatei.
+### <a name="a-return-statistics-for-a-log-file"></a>A. Zurückgeben der Statistiken für eine Protokolldatei
 
 **Gilt für:** SQL Server (ab 2008), Azure SQL-Datenbank
 
@@ -114,7 +115,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Zurückgeben der Statistiken für die Datei in ' tempdb '
 
-**Gilt für:** SQL Azure Datawarehouse
+**Gilt für:** Azure SQL Datawarehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
@@ -124,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ich O dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [E/A im Zusammenhang, dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404272"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>Business Intelligence-Transformationen  
  Die folgenden Transformationen führen Business Intelligence-Vorgänge aus, wie z. B. das Bereinigen von Daten, Text Mining und das Ausführen von Data Mining-Vorhersageabfragen.  
   
-|Transformation|Description|  
+|Transformation|und Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Diese Transformation konfiguriert das Aktualisieren einer langsam veränderlichen Dimension.|  
 |[Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Diese Transformation standardisiert Werte in Spaltendaten.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>Zeilentransformationen  
  Mit den folgenden Transformationen werden Spaltenwerte aktualisiert und neue Spalten erstellt. Die Transformation wird auf jede Zeile in der Transformationseingabe angewendet.  
   
-|Transformation|Description|  
+|Transformation|und Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation zum Zuordnen der Zeichen](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Diese Transformation wendet Zeichenfolgenfunktionen auf Zeichendaten an.|  
 |[Transformation für das Kopieren von Spalten](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Diese Transformation fügt der Transformationsausgabe Kopien von Eingabespalten hinzu.|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>Rowsettransformationen  
  Mit den folgenden Transformationen werden neue Rowsets erstellt. Rowsets schließen Aggregatwerte und sortierte Werte, Stichprobenrowsets oder pivotierte bzw. nicht pivotierte Rowsets ein.  
   
-|Transformation|Description|  
+|Transformation|und Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für das Aggregieren](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Diese Transformation führt Aggregationen aus, wie z. B. AVERAGE, SUM und COUNT.|  
 |[Transformation zum Sortieren](../../../integration-services/data-flow/transformations/sort-transformation.md)|Diese Transformation sortiert Daten.|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>Transformationen für Teilen und Verknüpfen  
  Mit den folgenden Transformationen werden Zeilen an verschiedene Ausgaben verteilt, Kopien der Transformationseingaben erstellt, mehrere Eingaben zu einer einzigen Ausgabe verknüpft sowie Suchvorgänge ausgeführt.  
   
-|Transformation|Description|  
+|Transformation|und Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für bedingtes Teilen](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Diese Transformation routet Datenzeilen an andere Ausgaben.|  
 |[Transformation für Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Diese Transformation verteilt Datasets an mehrere Ausgaben.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
   
-|Transformation|Description|  
+|Transformation|und Beschreibung|  
 |--------------------|-----------------|  
 |[Überwachungstransformation](../../../integration-services/data-flow/transformations/audit-transformation.md)|Diese Transformation stellt dem Datenfluss in einem Paket Informationen zur Umgebung zur Verfügung.|  
 |[Transformation für Zeilenanzahl](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Diese Transformation zählt die Zeilen in einem Datenfluss und speichert die endgültige Anzahl in einer Variablen.|  

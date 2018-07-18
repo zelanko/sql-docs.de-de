@@ -1,13 +1,12 @@
 ---
-title: Verarbeiten von Ergebnissen Gewusst-wie-Themen (OLE DB) | Microsoft Docs
+title: 'Verarbeiten von Ergebnissen: Themen zur Vorgehensweise (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8162c57738ee978289a90f2898198c9fd6c05d06
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 2f34853f4074eb8436200d6ce13f5666a2ee3434
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707268"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420569"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "34707268"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ausführen einer gespeicherten Prozedur &#40;mithilfe der ODBC CALL-Syntax&#41; und Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Ausführen einer gespeicherten Prozedur &#40;mithilfe von ODBC CALL-Syntax&#41; sowie Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Ausführen einer gespeicherten Prozedur &#40;mithilfe von RPC-Syntax&#41; und Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Ausführen einer gespeicherten Prozedur &#40;mithilfe von RPC-Syntax&#41; sowie Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Ausführen eine benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Ausführen einer benutzerdefinierten Funktion und verarbeiten Rückgabecodes &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Rufen Sie Zeilen aus einem Resultset &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [Abrufen von Zeilen aus einem Resultset &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

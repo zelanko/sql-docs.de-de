@@ -1,14 +1,11 @@
 ---
-title: Erstellen einer Assembly | Microsoft Docs
+title: Erstellen einer Assembly | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -18,19 +15,19 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b22443461b5bb11d4e4ca1933d4f1d1f931fda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018783af12eb63273b4fec17da3e6e31b2f80fdf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360192"
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Verwaltete Datenbankobjekte wie beispielsweise gespeicherte Prozeduren und Trigger werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen registriert werden, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bevor die von die Assembly bereitgestellte Funktion verwendet werden kann. So registrieren Sie eine Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank, verwenden Sie die CREATE ASSEMBLY-Anweisung. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
+  Verwaltete Datenbankobjekte wie beispielsweise gespeicherte Prozeduren und Trigger werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen registriert werden, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] damit die von die Assembly bereitgestellte Funktion verwendet werden kann. Zum Registrieren einer Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank, verwenden Sie die CREATE ASSEMBLY-Anweisung. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
   
 ## <a name="the-create-assembly-statement"></a>Die CREATE ASSEMBLY-Anweisung  
  Die CREATE ASSEMBLY-Anweisung dient zum Erstellen einer Assembly in einer Datenbank. Beispiel:  
@@ -44,7 +41,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist es nicht zulässig, verschiedene Versionen einer Assembly mit demselben Namen, derselben Kultur und demselben öffentlichen Schlüssel zu registrieren.  
   
- Es ist möglich, Assemblys zu erstellen, die auf andere Assemblys verweisen. Beim Erstellen einer Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt außerdem die Assemblys, auf die Assembly auf Stammebene verweist auf, wenn die referenzierten Assemblys nicht bereits in der Datenbank erstellt werden.  
+ Es ist möglich, Assemblys zu erstellen, die auf andere Assemblys verweisen. Wenn eine Assembly erstellt wird, im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt außerdem die Assemblys, auf die verwiesen wird durch die Assembly auf Stammebene aus, wenn die referenzierten Assemblys nicht bereits in der Datenbank erstellt werden.  
   
  Datenbankbenutzer oder Benutzerrollen erhalten Berechtigungen zum Erstellen von Assemblys in einer Datenbank, deren Besitzer sie dann sind. Um Assemblys zu erstellen, benötigt der Datenbankbenutzer oder die Rolle die CREATE ASSEMBLY-Berechtigung.  
   
@@ -55,7 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Die Assembly, die aufgerufen wird oder auf die verwiesen wird, wurde in derselben Datenbank erstellt.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Festlegen der Sicherheit beim Erstellen von Assemblys  
- Beim Erstellen einer Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank können angeben, eine der drei verschiedenen Sicherheitsstufen, die in dem der Code ausgeführt: **sichere**, **EXTERNAL_ACCESS**, oder **UNSAFE** . Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ Beim Erstellen einer Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank können Sie eine Festlegen von drei verschiedenen Sicherheitsstufen in der Ihr Code ausgeführt: **sicher**, **EXTERNAL_ACCESS**, oder **UNSAFE** . Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](http://msftengprodsamples.codeplex.com/).  
   
  **SAFE** ist der Standardberechtigungssatz und funktioniert für die meisten Szenarien. Um eine bestimmte Sicherheitsstufe anzugeben, ändern Sie die Syntax der CREATE ASSEMBLY-Anweisung wie folgt:  
   
@@ -77,19 +74,19 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ### <a name="creating-externalaccess-and-unsafe-assemblies"></a>Erstellen von EXTERNAL_ACCESS- und UNSAFE-Assemblys  
  **EXTERNAL_ACCESS** wird für Szenarien verwendet, in denen der Code auf Ressourcen außerhalb des Servers zugreift, z. B. Datei-, Netzwerk-, Registrierungs- und Umgebungsvariablen. Immer wenn der Server auf eine externe Ressource zugreift, verwendet er den Sicherheitskontext des Benutzers, der den verwalteten Code aufruft.  
   
- **Unsichere** wird für diese Situationen, in denen eine Assembly ist nicht überprüfbar sicher oder erfordert zusätzlichen Zugriff auf, Ressourcen, wie z. B. beschränkt die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32-API.  
+ **Unsichere** wird für Situationen, in denen eine Assembly ist nicht sicher eingestuft werden kann, oder erfordert zusätzlichen Zugriff auf, Ressourcen, z. B. beschränkt die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32-API.  
   
- Zum Erstellen einer **EXTERNAL_ACCESS** oder **UNSAFE** Assembly im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], eine der beiden folgenden Bedingungen muss erfüllt sein:  
+ Zum Erstellen einer **EXTERNAL_ACCESS** oder **UNSAFE** Assembly im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], eine der folgenden Bedingungen muss erfüllt sein:  
   
-1.  Die Assembly wurde mit einem starken Namen oder Authenticode mit Zertifikat signiert. Diese starken Namen (oder Zertifikat) wird erstellt, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als asymmetrischen Schlüssel (oder Zertifikat), und verfügt über einen entsprechenden Anmeldenamen mit **EXTERNAL ACCESS ASSEMBLY** -Berechtigung (für Assemblys mit externem Zugriff) oder  **UNSAFE-ASSEMBLY** -Berechtigung (für unsichere Assemblys).  
+1.  Die Assembly wurde mit einem starken Namen oder Authenticode mit Zertifikat signiert. Diese starken Namen (oder Zertifikat) wird in erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als ein asymmetrischer Schlüssel (oder Zertifikat), und verfügt über einen entsprechenden Anmeldenamen mit **EXTERNAL ACCESS ASSEMBLY** -Berechtigung (für Assemblys mit externem Zugriff) oder  **UNSAFE ASSEMBLY** -Berechtigung (für unsichere Assemblys).  
   
-2.  Der Datenbankbesitzer (DBO) hat **EXTERNAL ACCESS ASSEMBLY** (für **EXTERNAL ACCESS** Assemblys) oder **UNSAFE ASSEMBLY** (für **UNSAFE** Berechtigung Assemblys), und die Datenbank hat die [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md) festgelegt **ON**.  
+2.  Der Datenbankbesitzer (DBO) hat **EXTERNAL ACCESS ASSEMBLY** (für **EXTERNAL ACCESS** Assemblys) oder **UNSAFE ASSEMBLY** (für **UNSAFE** Berechtigungen für Assemblys), und die Datenbank hat die [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md) festgelegt **ON**.  
   
  Die beiden oben aufgeführten Bedingungen werden auch zur Assemblyladezeit (dazu gehört auch die Ausführung) überprüft. Mindestens eine der Bedingungen muss erfüllt sein, um die Assembly zu laden.  
   
- Es wird empfohlen, die die [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md) für eine Datenbank nicht festgelegt werden **ON** nur zum Ausführen der common Language Runtime (CLR)-Codes im Server-Prozess. Stattdessen empfiehlt es sich, dass ein asymmetrischer Schlüssel aus der Assemblydatei in der Masterdatenbank erstellt wird. Anschließend muss eine Anmeldung für diesen asymmetrischen Schlüssel erstellt werden, und die Anmeldung muss eine **EXTERNAL ACCESS ASSEMBLY** - oder **UNSAFE ASSEMBLY** -Berechtigung erhalten.  
+ Es wird empfohlen, die [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md) für eine Datenbank nicht festgelegt werden **ON** nur zum Ausführen der common Language Runtime (CLR)-code im Serverprozess. Stattdessen empfiehlt es sich, dass ein asymmetrischer Schlüssel aus der Assemblydatei in der Masterdatenbank erstellt wird. Anschließend muss eine Anmeldung für diesen asymmetrischen Schlüssel erstellt werden, und die Anmeldung muss eine **EXTERNAL ACCESS ASSEMBLY** - oder **UNSAFE ASSEMBLY** -Berechtigung erhalten.  
   
- Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen führen Sie die Schritte, die erforderlich sind, erstellen Sie einen asymmetrischen Schlüssel, der diesem Schlüssel eine Anmeldung zuzuweisen und erteilen Sie dann **EXTERNAL_ACCESS** -Berechtigung. Führen Sie die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen vor dem Ausführen der CREATE ASSEMBLY-Anweisung.  
+ Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen führen die Schritte aus, die erforderlich sind, um einen asymmetrischen Schlüssel erstellen und Zuordnen einer Anmeldung mit diesem Schlüssel gewähren **EXTERNAL_ACCESS** -Berechtigung. Führen Sie die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen vor dem Ausführen von CREATE ASSEMBLY-Anweisung.  
   
 ```  
 USE master;   
@@ -112,7 +109,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen führen Sie die Schritte, die erforderlich sind, erstellen Sie einen asymmetrischen Schlüssel, der diesem Schlüssel eine Anmeldung zuzuweisen und erteilen Sie dann **UNSAFE** -Berechtigung. Führen Sie die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen vor dem Ausführen der CREATE ASSEMBLY-Anweisung.  
+ Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen führen die Schritte aus, die erforderlich sind, um einen asymmetrischen Schlüssel erstellen und Zuordnen einer Anmeldung mit diesem Schlüssel gewähren **UNSAFE** -Berechtigung. Führen Sie die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen vor dem Ausführen von CREATE ASSEMBLY-Anweisung.  
   
 ```  
 USE master;   
@@ -132,13 +129,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- Weitere Informationen zu den Berechtigungen für jede der Einstellungen finden Sie unter [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
+ Weitere Informationen zu den Berechtigungen für jede der Einstellungen finden Sie unter [CLR-Integrationssicherheit](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von CLR-Integrationsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Ändern einer Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Durch Löschen einer Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Löschen von Assemblys](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Codezugriffssicherheit für CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md)   
  [Zulassen von teilweise vertrauenswürdigen Aufrufern](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

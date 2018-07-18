@@ -1,13 +1,12 @@
 ---
-title: SQLSetStmtAttr | Microsoft Docs
+title: SQLSetStmtAttr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7074fcf6c6616c878b0cd4021aabb4359c2a40dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4fe70fb3744aa8ae7bddebac7b640fad9bad989
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422279"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,12 +31,12 @@ ms.lasthandoff: 05/03/2018
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das gemischte Cursormodell (keysetgesteuert/dynamisch) nicht. Der Versuch, die Keysetgröße mit SQL_ATTR_KEYSET_SIZE festzulegen, schlägt fehl, wenn der festgelegte Wert ungleich 0 (null) ist.  
   
- Die Anwendung legt SQL_ATTR_ROW_ARRAY_SIZE für alle Anweisungen, um die Anzahl der zurückgegebenen Zeilen zu deklarieren einer **SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) Funktionsaufruf. Bei Anweisungen, die einen Servercursor angeben, verwendet der Treiber SQL_ATTR_ROW_ARRAY_SIZE, um die Größe des Zeilenblocks zu ermitteln, der vom Server als Reaktion auf eine Abrufanforderung des Cursors generiert wird. Innerhalb der Blockgröße eines dynamischen Cursors sind die Zeilenmitgliedschaft und -reihenfolge festgelegt, wenn die Isolationsstufe der Transaktion ausreichend ist, um wiederholbare Lesevorgänge von Transaktionen sicherzustellen, für die ein Commit ausgeführt wurde. Der Cursor ist außerhalb des von diesem Wert angegebenen Blocks vollkommen dynamisch. Die Blockgröße des Servercursors ist vollkommen dynamisch und kann zu jedem Zeitpunkt während der Abrufverarbeitung geändert werden.  
+ Die Anwendung legt SQL_ATTR_ROW_ARRAY_SIZE für alle Anweisungen, um die Anzahl der zurückgegebenen Zeilen zu deklarieren eine **SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) Funktionsaufruf. Bei Anweisungen, die einen Servercursor angeben, verwendet der Treiber SQL_ATTR_ROW_ARRAY_SIZE, um die Größe des Zeilenblocks zu ermitteln, der vom Server als Reaktion auf eine Abrufanforderung des Cursors generiert wird. Innerhalb der Blockgröße eines dynamischen Cursors sind die Zeilenmitgliedschaft und -reihenfolge festgelegt, wenn die Isolationsstufe der Transaktion ausreichend ist, um wiederholbare Lesevorgänge von Transaktionen sicherzustellen, für die ein Commit ausgeführt wurde. Der Cursor ist außerhalb des von diesem Wert angegebenen Blocks vollkommen dynamisch. Die Blockgröße des Servercursors ist vollkommen dynamisch und kann zu jedem Zeitpunkt während der Abrufverarbeitung geändert werden.  
   
 ## <a name="sqlsetstmtattr-and-table-valued-parameters"></a>'SQLSetStmtAttr' und Tabellenwertparameter  
  SQLSetStmtAttr kann verwendet werden, um SQL_SOPT_SS_PARAM_FOCUS im anwendungsparameterdeskriptor (APD) festzulegen, bevor auf deskriptorfelder für Tabellenwertparameter-Spalten.  
   
- Wenn versucht wird, legen Sie SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl für einen Parameter, d. h. ein nicht-Tabellenwertparameter, SQLSetStmtAttr gibt SQL_ERROR und ein Diagnosedatensatz mit SQLSTATE erstellt = HY024 und der Meldung "Ungültiger Attributwert". SQL_SOPT_SS_PARAM_FOCUS wird nicht geändert, wenn SQL_ERROR zurückgegeben wird.  
+ Wenn versucht wird, legen Sie SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl für einen Parameter, ein nicht-Tabellenwertparameter, SQLSetStmtAttr gibt SQL_ERROR und ein Diagnosedatensatz mit SQLSTATE erstellt = HY024 und der Meldung "Ungültiger Attributwert". SQL_SOPT_SS_PARAM_FOCUS wird nicht geändert, wenn SQL_ERROR zurückgegeben wird.  
   
  Durch das Festlegen von SQL_SOPT_SS_PARAM_FOCUS auf 0 (null) wird der Zugriff auf Deskriptordatensätze für Parameter wiederhergestellt.  
   
@@ -44,10 +44,10 @@ ms.lasthandoff: 05/03/2018
   
  Weitere Informationen finden Sie unter [Tabellenwertparameter Parametermetadaten für vorbereitete Anweisungen](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Unterstützung von 'SQLSetStmtAttr' für Spalten mit geringer Dichte  
- SQLSetStmtAttr kann zum Festlegen von SQL_SOPT_SS_NAME_SCOPE verwendet werden. Weitere Informationen finden Sie im Abschnitt SQL_SOPT_SS_NAME_SCOPE weiter unten in diesem Thema. Weitere Informationen zu Spalten mit geringer Dichte, finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ SQLSetStmtAttr kann zum Festlegen von SQL_SOPT_SS_NAME_SCOPE verwendet werden. Weitere Informationen finden Sie im Abschnitt zu SQL_SOPT_SS_NAME_SCOPE weiter unten in diesem Thema. Weitere Informationen zu sparsespalten finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="statement-attributes"></a>Anweisungsattribute  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt auch die folgenden treiberspezifischen Anweisungsattribute.  
@@ -57,14 +57,14 @@ ms.lasthandoff: 05/03/2018
   
 |*ValuePtr* Wert|Description|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Standard. Deaktiviert schnelle Vorwärtscursor, schreibgeschützte Cursor und den automatischen Abruf, aktiviert die **SQLGetData** für Vorwärtscursor und schreibgeschützte Cursor. Wenn SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_OFF festgelegt ist, ändert sich der Cursortyp nicht. Das heißt, ein schneller Vorwärtscursor bleibt ein schneller Vorwärtscursor. Um den Cursortyp zu ändern, die Anwendung muss jetzt Festlegen eines anderen Cursor Typs unter Verwendung **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Standard. Deaktiviert schnelle Vorwärtscursor, schreibgeschützte Cursor und den automatischen Abruf, aktiviert **SQLGetData** für Vorwärtscursor und schreibgeschützte Cursor. Wenn SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_OFF festgelegt ist, ändert sich der Cursortyp nicht. Das heißt, ein schneller Vorwärtscursor bleibt ein schneller Vorwärtscursor. Um den Cursortyp zu ändern, die Anwendung muss jetzt festgelegt mit einem anderen Cursor **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Aktiviert schnelle Vorwärtscursor, schreibgeschützte Cursor und deaktiviert **SQLGetData** für Vorwärtscursor und schreibgeschützte Cursor.|  
 |SQL_CO_AF|Aktiviert die automatische Abrufoption für jeden Cursortyp. Wenn diese Option, für ein Anweisungshandle festgelegt ist **SQLExecute** oder **SQLExecDirect** generiert einen impliziten **SQLFetchScroll** (SQL_FIRST). Der Cursor wird geöffnet, und der erste Batch Zeilen wird mit einem einzigen Roundtrip an den Server zurückgegeben.|  
 |SQL_CO_FFO_AF|Aktiviert schnelle Vorwärtscursor mit der automatischen Abrufoption. Das entspricht der gleichzeitigen Angabe von SQL_CO_AF und SQL_CO_FFO.|  
   
- Wenn diese Optionen festgelegt sind, schließt der Server den Cursor automatisch, wenn er erkennt, dass die letzte Zeile abgerufen wurde. Die Anwendung muss trotzdem aufrufen [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) oder [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), aber der Treiber muss sich nicht in der schließen-Benachrichtigung an den Server gesendet.  
+ Wenn diese Optionen festgelegt sind, schließt der Server den Cursor automatisch, wenn er erkennt, dass die letzte Zeile abgerufen wurde. Die Anwendung muss trotzdem aufrufen [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) oder [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), aber der Treiber muss nicht die close-Benachrichtigung an den Server gesendet.  
   
- Wenn die select-Liste enthält eine **Text**, **Ntext**, oder **Image** Spalte, die schnelle Vorwärtscursor in einen dynamischen Cursor konvertiert und **SQLGetData** ist zulässig.  
+ Wenn die select-Liste enthält eine **Text**, **Ntext**, oder **Image** Spalte, die schnelle Vorwärtscursor in einen dynamischen Cursor konvertiert wird und **SQLGetData** ist zulässig.  
   
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Das SQL_SOPT_SS_DEFER_PREPARE-Attribut bestimmt, ob die Anweisung sofort vorbereitet oder, bis verzögert **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) oder [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) ausgeführt wird. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 und früheren Versionen wird diese Eigenschaft ignoriert (die Vorbereitung nicht verzögert). Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/03/2018
  Regionale Konvertierungseinstellungen gelten für Währungs-, Zahlen-, Datums- und Uhrzeitdatentypen. Die Konvertierungseinstellungen gelten nur für Ausgabekonvertierungen, wenn Währungs-, Zahlen-, Datums- oder Uhrzeitwerte in Zeichenfolgen konvertiert werden.  
   
 > [!NOTE]  
->  Wenn die SQL_SOPT_SS_REGIONALIZE-Anweisungsoption aktiviert ist, verwendet der Treiber die lokalen Registrierungseinstellungen für den aktuellen Benutzer. Der Treiber berücksichtigt das Gebietsschema des aktuellen Threads nicht, wenn die Anwendung es an, indem z. B. festlegt Aufrufen **SetThreadLocale**.  
+>  Wenn die SQL_SOPT_SS_REGIONALIZE-Anweisungsoption aktiviert ist, verwendet der Treiber die lokalen Registrierungseinstellungen für den aktuellen Benutzer. Der Treiber berücksichtigt des aktuellen Threads nicht, wenn die Anwendung von, z. B. festgelegt Aufrufen **SetThreadLocale**.  
   
  Das Verändern des regionalen Verhaltens einer Datenquelle kann Anwendungsfehler verursachen. Eine Anwendung, die Datumszeichenfolgen analysiert und erwartet, dass sie der ODBC-Definition entsprechen, wird durch die Änderung dieses Werts möglicherweise beeinträchtigt.  
   
@@ -96,8 +96,8 @@ ms.lasthandoff: 05/03/2018
   
 |*ValuePtr* Wert|Description|  
 |----------------------|-----------------|  
-|SQL_TL_OFF|Deaktiviert die Protokollierung der durchgeführten Operationen für **Text** und **Image** Daten.|  
-|SQL_TL_ON|Standard. Aktiviert die Protokollierung der durchgeführten Operationen für **Text** und **Image** Daten.|  
+|SQL_TL_OFF|Deaktiviert die Protokollierung von Operationen auf **Text** und **Image** Daten.|  
+|SQL_TL_ON|Standard. Aktiviert die Protokollierung von Operationen auf **Text** und **Image** Daten.|  
   
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  Das SQL_SOPT_SS_HIDDEN_COLUMNS-Attribut macht Spalten im Resultset verfügbar, die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SELECT FOR BROWSE-Anweisung verborgen sind. Der Treiber macht diese Spalten standardmäßig nicht verfügbar. Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
@@ -113,11 +113,11 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sqlsoptssquerynotificationoptions"></a>SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS  
  Das SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS-Attribut gibt die Optionen an, die für die Abfragebenachrichtigungsanforderung verwendet werden. Diese werden in einer Zeichenfolge mit der Syntax `name=value` angegeben (siehe Code weiter unten). Die Anwendung ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.  
   
- Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:  
+ Die Syntax der Abfragezeichenfolge Benachrichtigungen Optionen lautet:  
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Beispiel:  
+ Zum Beispiel:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/03/2018
  Das SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT-Attribut gibt die Dauer (in Sekunden) an, für die die Abfragebenachrichtigung aktiv bleiben soll. Der Standardwert lautet 432.000 Sekunden (5 Tage). Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
 ### <a name="sqlsoptssparamfocus"></a>SQL_SOPT_SS_PARAM_FOCUS  
- Das SQL_SOPT_SS_PARAM_FOCUS-Attribut gibt den Fokus für nachfolgende SQLBindParameter, SQLGetDescField, SQLSetDescField, SQLGetDescRec und SQLSetDescRec aufruft.  
+ Das SQL_SOPT_SS_PARAM_FOCUS-Attribut gibt den Fokus für nachfolgende SQLBindParameter, SQLGetDescField, SQLSetDescField und SQLGetDescRec und SQLSetDescRec aufruft.  
   
  Der Typ für SQL_SOPT_SS_PARAM_FOCUS lautet SQLULEN.  
   
@@ -138,19 +138,19 @@ ms.lasthandoff: 05/03/2018
   
 |*ValuePtr* Wert|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Standard.<br /><br /> Gibt bei Verwendung von Tabellenwertparametern an, dass Metadaten für tatsächliche Tabellen zurückgegeben werden sollen.<br /><br /> Wenn Sie die Funktion für Spalten mit geringer Dichte verwenden, gibt SQLColumns nur Spalten, die nicht Mitglied mit geringer Dichte sind zurück **Column_set**.|  
+|SQL_SS_NAME_SCOPE_TABLE|Standard.<br /><br /> Gibt bei Verwendung von Tabellenwertparametern an, dass Metadaten für tatsächliche Tabellen zurückgegeben werden sollen.<br /><br /> Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns nur Spalten, die nicht Elemente des Sparse-sind **Column_set**.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Gibt an, dass die Anwendung Metadaten für einen Tabellentyp anstatt einer tatsächlichen Tabelle erfordert (Katalogfunktionen sollten Metadaten für Tabellentypen zurückgeben). Die Anwendung übergibt dann den TYPE_NAME des Tabellenwertparameters als die *TableName* Parameter.|  
-|SQL_SS_NAME_SCOPE_EXTENDED|Wenn Sie die Funktion für Spalten mit geringer Dichte verwenden, gibt SQLColumns alle Spalten, unabhängig von **Column_set** Mitgliedschaft.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Wenn Sie die Funktion für Spalten mit geringer Dichte verwenden, SQLColumns nur Spalten zurückgegeben, die Elemente mit geringer Dichte **Column_set**.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns alle Spalten, unabhängig von **Column_set** Mitgliedschaft.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns nur Spalten, die Elemente des Sparse- **Column_set**.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Identisch mit SQL_SS_NAME_SCOPE_TABLE|  
   
- SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME wird mit der *CatalogName* und *SchemaName* Parameter, um den Katalog und das Schema für den Tabellenwertparameter zu identifizieren. Wenn eine Anwendung das Abrufen von Metadaten für Tabellenwertparameter abgeschlossen hat, muss sie SQL_SOPT_SS_NAME_SCOPE wieder auf den Standardwert SQL_SS_NAME_SCOPE_TABLE festlegen.  
+ SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME werden verwendet, mit der *CatalogName* und *SchemaName* Parameter, um den Katalog und Schema für den Tabellenwertparameter zu identifizieren. Wenn eine Anwendung das Abrufen von Metadaten für Tabellenwertparameter abgeschlossen hat, muss sie SQL_SOPT_SS_NAME_SCOPE wieder auf den Standardwert SQL_SS_NAME_SCOPE_TABLE festlegen.  
   
  Wenn SQL_SOPT_SS_NAME_SCOPE auf SQL_SS_NAME_SCOPE_TABLE festgelegt ist, schlagen Abfragen von Verbindungsservern fehl. Aufrufen von SQLColumns oder SQLPrimaryKeys mit einem Katalog, der eine Serverkomponente enthält, schlägt fehl.  
   
  Wenn Sie versuchen, SQL_SOPT_SS_NAME_SCOPE auf einen ungültigen Wert festzulegen, wird SQL_ERROR zurückgegeben. Zudem wird ein Diagnosedatensatz mit SQLSTATE HY024 und der Meldung "Ungültiger Attributwert" generiert.  
   
- Wenn ein Katalog anderen Funktion dann SQLTables, SQLColumns oder SQLPrimaryKeys aufgerufen wird, wenn SQL_SOPT_SS_NAME_SCOPE einen Wert enthält, die andere als SQL_SS_NAME_SCOPE_TABLE, wird SQL_ERROR zurückgegeben. Ein Diagnosedatensatz mit SQLSTATE HY010 und der Meldung "Fehler in der Funktionsreihenfolge (SQL_SOPT_SS_NAME_SCOPE ist nicht auf SQL_SS_NAME_SCOPE_TABLE festgelegt)" wird generiert.  
+ Wenn Sie ein Katalog dann SQLTables SQLColumns oder SQLPrimaryKeys aufgerufen wird, wenn SQL_SOPT_SS_NAME_SCOPE einen Wert aufweist, die anders als andere funktionieren wird SQL_SS_NAME_SCOPE_TABLE, wird SQL_ERROR zurückgegeben. Ein Diagnosedatensatz mit SQLSTATE HY010 und der Meldung "Fehler in der Funktionsreihenfolge (SQL_SOPT_SS_NAME_SCOPE ist nicht auf SQL_SS_NAME_SCOPE_TABLE festgelegt)" wird generiert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLGetStmtAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59355)   

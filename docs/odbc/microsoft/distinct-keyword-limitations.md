@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897575"
 ---
 # <a name="distinct-keyword-limitations"></a>Einschränkungen der DISTINCT-Schlüsselwort
 Für langer Text (Microsoft Access) oder Memo-Felder (dBASE) unterstützt nicht.

@@ -1,24 +1,26 @@
 ---
-title: Lektion 6 operationalisieren von R-Modell | Microsoft Docs
+title: Lektion 6 Vorhersagen mögliche Ergebnissen mithilfe von R-Modelle (SQL Server-Machine Learning) | Microsoft Docs
+description: Lernprogramm zur Einbettung von R in SQL Server gespeicherte Prozeduren und Funktionen des T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249853"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Lektion 6: Operationalisieren von R-Modell
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lektion 6: Vorhersagen von möglichen Ergebnissen, die mit R-Modell in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
 
-In diesem Schritt erfahren Sie, wie *operationalisieren* das Modell mithilfe einer gespeicherten Prozedur. Diese gespeicherte Prozedur kann direkt von anderen Anwendungen aufgerufen werden, um Vorhersagen für neue Beobachtungen zu treffen. Die exemplarische Vorgehensweise veranschaulicht zwei Möglichkeiten zum Ausführen von Bewertungen eines R-Modells in einer gespeicherten Prozedur mit:
+In diesem Schritt erfahren Sie, um das Modell mit neuen Beobachtungen zu verwenden, um mögliche Ergebnisse vorherzusagen. Das Modell wird in einer gespeicherten Prozedur umgeben, die direkt von einer anderen Anwendung aufgerufen werden kann. Die exemplarische Vorgehensweise veranschaulicht mehrere Möglichkeiten zum Bewerten von durchführen:
 
 - **Batch scoring-Modus**: verwenden eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
 
@@ -28,7 +30,7 @@ Sehen wir uns zuerst einmal an, wie die Bewertung im Allgemeinen abläuft.
 
 ## <a name="basic-scoring"></a>Grundlegende Bewertung
 
-Die gespeicherte Prozedur _PredictTip_ beschreibt die grundlegende Syntax für das Umschließen eines Vorhersageaufrufs in einer gespeicherten Prozedur.
+Die gespeicherte Prozedur **PredictTip** beschreibt die grundlegende Syntax für das Umschließen eines Vorhersageaufrufs in einer gespeicherten Prozedur.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + Die SELECT-Anweisung ruft die serialisierten Modell aus der Datenbank ab und speichert das Modell in der R-Variable `mod` zur weiteren Verarbeitung mit r
 
-+ Die neue Fälle für die Bewertung erhalten Sie vom der [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage, die im angegebenen `@inquery`, der erste Parameter der gespeicherten Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird der `rxPredict` -Funktion in R übergeben, die die Bewertungen generiert.
++ Die neue Fälle für die Bewertung erhalten Sie vom der [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage, die im angegebenen `@inquery`, der erste Parameter der gespeicherten Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird zum Übergeben der [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) -Funktion in ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), die die Ergebnisse generiert.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ Jetzt sehen wir uns an, wie die Batchbewertung funktioniert.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Diese Abfrage dient als Eingabe für die gespeicherte Prozedur _PredictTipBatchMode_, der als Teil des Downloads.
+    Diese Abfrage dient als Eingabe für die gespeicherte Prozedur **PredictTipMode**, der als Teil des Downloads.
 
-2. Nehmen Sie sich an den Code der gespeicherten Prozedur überprüfen _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Nehmen Sie sich an den Code der gespeicherten Prozedur überprüfen **PredictTipMode** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ Gelegentlich möchten Sie einzelne Werte aus einer Anwendung übergeben und ein 
 
 In diesem Abschnitt erfahren Sie, wie einzelne Vorhersagen mit einer gespeicherten Prozedur zu erstellen.
 
-1. Überprüfen Sie kurz den Code der gespeicherten Prozedur _PredictTipSingleMode_, die als Teil des Downloads enthalten war.
+1. Nehmen Sie sich an den Code der gespeicherten Prozedur überprüfen **PredictTipSingleMode**, die als Teil des Downloads enthalten ist.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_errors (Transact-SQL) | Microsoft Docs
+title: Sys.dm_pdw_errors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,42 +7,42 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31f94e0424cbeafac484320adb86b0f5b6849b10
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: b2d30e75abee53998df535f227a6bcce228a9586
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037828"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>Sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu Fehlern während der Ausführung einer Anforderung oder einer Abfrage.  
+  Enthält Informationen über alle Fehler, die während der Ausführung einer Anforderung oder die Abfrage.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Der Schlüssel für diese Ansicht.<br /><br /> Eindeutige numerische Id des Fehlers.|Für alle Abfragefehlern im System eindeutig.|  
+|error_id|**nvarchar(36)**|Der Schlüssel für diese Sicht.<br /><br /> Eindeutige numerische Id des Fehlers.|Für alle Abfragefehler im System eindeutig.|  
 |Quelle|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |Typ|**nvarchar(4000)**|Fehlertyp, der aufgetreten ist.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|create_time|**datetime**|Der Zeitpunkt, an dem der Fehler aufgetreten ist.|Kleiner oder gleich der aktuellen Zeit.|  
-|pwd_node_id|**int**|Bezeichner, der den bestimmten Knoten erfolgt, sofern vorhanden. Weitere Informationen zu Knoten-Ids finden Sie unter [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
-|session_id|**nvarchar(32)**|Der Bezeichner der Sitzung beteiligt sind, sofern vorhanden. Weitere Informationen auf der Sitzungs-Ids finden Sie unter [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|request_id|**nvarchar(32)**|Der Bezeichner der Anforderung beteiligt sind, sofern vorhanden. Zusätzliche Informationen für Anforderung-Ids finden Sie unter [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
-|spid|**int**|SPID der SQL Server-Sitzung beteiligt sind, sofern vorhanden.||  
+|create_time|**datetime**|Zeitpunkt, an dem der Fehler aufgetreten ist.|Kleiner oder gleich der aktuellen Zeit.|  
+|pwd_node_id|**int**|Der Bezeichner des jeweiligen Knotens erfolgt, sofern vorhanden. Weitere Informationen zu Knoten-Ids, finden Sie unter [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
+|session_id|**nvarchar(32)**|Der Bezeichner der Sitzung beteiligt sind, sofern vorhanden. Weitere Informationen auf der Sitzungs-Ids finden Sie unter [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|request_id|**nvarchar(32)**|Der Bezeichner der Anforderung beteiligt sind, sofern vorhanden. Weitere Informationen zu Anforderungs-Ids, finden Sie unter [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
+|spid|**int**|Serverprozess-ID der SQL Server-Sitzung beteiligt sind, sofern vorhanden.||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|Details|**nvarchar(4000)**|Enthält den vollständigen Text fehlerbeschreibung.||  
+|Details|**nvarchar(4000)**|Enthält die Beschreibung des vollständigen Text.||  
   
- Informationen über die maximale Zeilenanzahl, die von dieser Ansicht beibehalten werden, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
+ Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

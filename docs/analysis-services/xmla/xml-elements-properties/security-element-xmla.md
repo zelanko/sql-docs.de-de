@@ -1,5 +1,5 @@
 ---
-title: Security-Element (XMLA) | Microsoft Docs
+title: Security-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576243"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968742"
 ---
 # <a name="security-element-xmla"></a>Security-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Gibt an, wie sichern oder Wiederherstellen von sicherheitsdefinitionen wie Rollen und Berechtigungen, während ein [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) Befehl.  
+  Gibt an, wie sichern oder Wiederherstellen von sicherheitsdefinitionen wie Rollen und Berechtigungen, während eine [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34576243"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*skipMembership*|  
+|Standardwert|*SkipMembership*|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -47,13 +47,13 @@ ms.locfileid: "34576243"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Sicherheit** Element bestimmt, ob die sicherheitsdefinitionen wie Rollen und Berechtigungen für definiert eine Analysis Services-Datenbank gesichert oder wiederhergestellt, bzw. eine **Sicherung** oder **Wiederherstellen** Befehl. Dieses Element bestimmt außerdem, ob Windows-Benutzerkonten und Gruppen, die als Mitglieder der Sicherheitsdefinitionen definiert sind, als Teil des **Backup** - oder **Restore** -Befehls einbezogen werden.  
+ Die **Sicherheit** Element bestimmt, ob die sicherheitsdefinitionen wie Rollen und Berechtigungen für definiert eine Analysis Services-Datenbank gesichert oder wiederhergestellt während bzw. sind eine **Sicherung** oder **Wiederherstellen** Befehl. Dieses Element bestimmt außerdem, ob Windows-Benutzerkonten und Gruppen, die als Mitglieder der Sicherheitsdefinitionen definiert sind, als Teil des **Backup** - oder **Restore** -Befehls einbezogen werden.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
 |value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft während **Backup** - oder **Restore** -Befehlen.|  
+|*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft während **Backup** - oder **Restore** -Befehlen.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft während **Backup** - oder **Restore** -Befehlen.|  
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen während **Backup** - oder **Restore** -Befehlen.|  
   

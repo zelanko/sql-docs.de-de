@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916915"
 ---
 # <a name="installer-dll-api-reference-function"></a>Installer DLL-API-Referenz-Funktion
 Dieser Abschnitt beschreibt die Syntax der Funktionen in der DLL-API-Installationsprogramm an. Der Installer DLL-API besteht aus 20 Funktionen. Drei dieser Funktionen **SQLGetTranslator**, **SQLRemoveDSNFromIni**, und **SQLWriteDSNToIni**, die nur von Setup DLLs aufgerufen werden. Die anderen Funktionen werden durch die Einrichtung und Verwaltung Programme aufgerufen.  

@@ -2,7 +2,6 @@
 title: Fields-Auflistung | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272869"
 ---
 # <a name="the-fields-collection"></a>Fields-Auflistung
 Die **Felder** Auflistung ist eine systeminterne Funktion der ADO-Auflistungen. Eine Auflistung ist eine geordnete Menge von Elementen, die auf die als Einheit verwiesen werden kann. Weitere Informationen zu Sammlungen ADO finden Sie unter [der ADO-Objektmodell](../../../ado/guide/data/ado-objects-and-collections.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020467"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Hinzufügen und Ändern einer Linie (Berichts-Generator und SSRS)
   Sie können einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Linie hinzufügen, wenn die einzelnen Abschnitte des Berichts durch ein grafisches Element getrennt werden sollen. Sie können die Darstellung der Linie anpassen, indem Sie die Linieneigenschaften wie Farbe oder Stil bearbeiten. So können Sie z. B. Unternehmensfarben in den Bericht integrieren.    

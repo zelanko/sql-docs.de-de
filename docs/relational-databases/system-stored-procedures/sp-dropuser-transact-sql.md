@@ -1,5 +1,5 @@
 ---
-title: Sp_dropuser (Transact-SQL) | Microsoft Docs
+title: Sp_dropuser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9af8a740ae349f748acc6c8385d95b97a0e2490d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036988"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
 ## <a name="arguments"></a>Argumente  
  [ **@name_in_db =**] **'***user***'**  
- Der Name des Benutzers, der entfernt werden soll. *Benutzer* ist ein **Sysname**, hat keinen Standardwert. *Benutzer* muss in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen angeben, verwenden Sie den Namen, mit dem der Anmeldename von der Datenbank identifiziert wird.  
+ Der Name des Benutzers, der entfernt werden soll. *Benutzer* ist eine **Sysname**, hat keinen Standardwert. *Benutzer* muss in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen angeben, verwenden Sie den Namen, mit dem der Anmeldename von der Datenbank identifiziert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -55,11 +56,11 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="remarks"></a>Hinweise  
  **Sp_dropuser** führt **Sp_revokedbaccess** beim Entfernen des Benutzers aus der aktuellen Datenbank.  
   
- Verwendung **Sp_helpuser** um eine Liste der Benutzernamen anzuzeigen, die aus der aktuellen Datenbank entfernt werden können.  
+ Verwendung **Sp_helpuser** um eine Liste der Namen der Benutzer anzuzeigen, die aus der aktuellen Datenbank entfernt werden kann.  
   
  Wenn ein Datenbankbenutzer entfernt wird, werden auch alle Aliase für diesen Benutzer entfernt. Wenn der Benutzer ein leeres Schema mit dem gleichen Namen wie der Benutzer besitzt, wird das Schema gelöscht. Wenn der Benutzer andere sicherungsfähige Elemente in der Datenbank besitzt, wird der Benutzer nicht gelöscht. Der Besitz der Objekte muss zuerst auf einen anderen Prinzipal übertragen werden. Weitere Informationen finden Sie unter [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). Beim Entfernen eines Datenbankbenutzers werden automatisch die Berechtigungen dieses Benutzers entfernt, und der Benutzer wird aus allen Datenbankrollen entfernt, in denen er Mitglied ist.  
   
- **Sp_dropuser** kann nicht verwendet werden, um das Entfernen des Datenbankbesitzers (**Dbo**) **INFORMATION_SCHEMA** Benutzer oder die **Gast** Benutzer aus der **master**  oder **Tempdb** Datenbanken. In anderen als Systemdatenbanken hebt `EXEC sp_dropuser 'guest'` CONNECT-Berechtigung von Benutzer **Gast**. Der Benutzer selbst wird jedoch nicht gelöscht.  
+ **Sp_dropuser** nicht verwendet werden, um der Besitzer der Datenbank zu entfernen (**Dbo**) **INFORMATION_SCHEMA** Benutzer oder die **Gast** Benutzer aus der **master**  oder **Tempdb** Datenbanken. In den Systemdatenbanken `EXEC sp_dropuser 'guest'` wird die CONNECT-Berechtigung von Benutzer widerrufen **Gast**. Der Benutzer selbst wird jedoch nicht gelöscht.  
   
  **Sp_dropuser** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
@@ -67,7 +68,7 @@ sp_dropuser [ @name_in_db = ] 'user'
  Erfordert die ALTER ANY USER-Berechtigung in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel entfernt den Benutzer `Albert` aus der aktuellen Datenbank.  
+ Im folgenden Beispiel wird den Benutzer `Albert` aus der aktuellen Datenbank.  
   
 ```  
 EXEC sp_dropuser 'Albert';  
@@ -77,7 +78,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [DROP USER & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

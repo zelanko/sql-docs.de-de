@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901166"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementieren von Desktop-Datenbanktreiber
 Anweisungen und technische Hinweise zum Implementieren und Einrichten von Microsoft ODBC-Desktop-Datenbanktreiber finden Sie in der Onlinehilfe des ODBC-Datenquellen-Administrator. Diese Datei kann während der Treiber Setuproutinen aus zugegriffen werden die [Microsoft ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md).  

@@ -1,5 +1,5 @@
 ---
-title: Datei-Element (XMLA) | Microsoft Docs
+title: File-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb80a091c9b9585a6efc29088d15139db7033efb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969998"
 ---
 # <a name="file-element-xmla"></a>File-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Identifiziert eine Datei, die vom übergeordneten Element verwendet werden [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) -Befehl oder vom übergeordneten [Speicherort](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) Element.  
+  Identifiziert eine Datei, die vom übergeordneten Element verwendet werden [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) -Befehl oder vom übergeordneten Element [Speicherort](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031687"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting-Eigenschaft: ConnectionPoolSize
   Die Größe des Verbindungspools, über den der Berichtsserver mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz kommuniziert, die die Berichtsserver-Datenbank hostet. Schreibgeschützt.  

@@ -3,8 +3,6 @@ title: Transaktionen (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -13,16 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 583e8146a43ea88066a5e0ac223ab2088c0c61ed
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3f9985fe10338c593425be74115152f250e16891
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789791"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 05/07/2018
   
 -   *Autocommit-Transaktionen* werden automatisch innerhalb einer Sitzung initiiert und beginnen nicht mit der BEGIN TRANSACTION-Anweisung. Wenn die AUTOCOMMIT-Einstellung auf ON festgelegt ist, wird jede Anweisung in einer Transaktion ausgeführt, und es ist kein explizites COMMIT oder ROLLBACK notwendig. Wenn die AUTOCOMMIT-Einstellung auf OFF festgelegt ist, ist eine COMMIT- oder ROLLBACK-Anweisung erforderlich, um das Ergebnis der Transaktion zu bestimmen. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] beginnen AUTOCOMMIT-Transaktionen sofort nach einer COMMIT- oder ROLLBACK-Anweisung oder nach einer SET AUTOCOMMIT OFF-Anweisung.  
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

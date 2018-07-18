@@ -2,7 +2,6 @@
 title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22b958066b681f70187dc5e49fcd36752f510b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fbf9db6b578bc886862069ddc31bc07f18d673b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279159"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Gibt die Ebene der Isolation jeder Transaktion für eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Gibt an, dass der Anbieter eine andere Isolationsstufe verwendet wird, als angegeben, aber die Ebene nicht bestimmt werden kann.|  
 |**adXactChaos**|16|Gibt an, dass die ausstehenden Änderungen durch Transaktionen mehr hoch isolierten nicht überschrieben werden kann.|  

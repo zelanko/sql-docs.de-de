@@ -1,5 +1,5 @@
 ---
-title: Sp_droprolemember (Transact-SQL) | Microsoft Docs
+title: Sp_droprolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974170"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,11 +67,11 @@ sp_droprolemember 'role' ,
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Sp_droprolemember entfernt ein Mitglied aus einer Datenbankrolle, durch das Löschen einer Zeile aus der Tabelle Sysmembers. Wenn ein Mitglied aus einer Rolle entfernt wird, verliert das Mitglied alle Berechtigungen, die es aufgrund seiner Mitgliedschaft in dieser Rolle hat.  
+ Sp_droprolemember entfernt ein Mitglied aus einer Datenbankrolle, durch das Löschen einer Zeile aus der Sysmembers-Tabelle. Wenn ein Mitglied aus einer Rolle entfernt wird, verliert das Mitglied alle Berechtigungen, die es aufgrund seiner Mitgliedschaft in dieser Rolle hat.  
   
- Um einen Benutzer aus einer festen Serverrolle zu entfernen, verwenden Sie Sp_dropsrvrolemember. Benutzer können nicht entfernt werden, von der public-Rolle und Dbo kann aus keiner Rolle entfernt werden.  
+ Um einen Benutzer aus einer festen Serverrolle zu entfernen, verwenden Sie Sp_dropsrvrolemember. Benutzer können nicht entfernt werden, von der öffentlichen Rolle und kann nicht Dbo aus keiner Rolle entfernt werden.  
   
- Sp_helpuser verwenden, um die Mitglieder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rolle, und verwenden Sie ALTER ROLE, ein Mitglied einer Rolle hinzuzufügen.  
+ Verwenden Sie Sp_helpuser, um die Mitglieder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rolle, und verwenden Sie ALTER ROLE, ein Mitglied einer Rolle hinzufügen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Rolle.  

@@ -12,17 +12,17 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698331"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +140,7 @@ Schritte für eine neue Bereitstellung:
 - Wählen Sie den TDE-Bereich für logische Server und für jeden logischen SQL Server aus:  
    - Wählen Sie den AKV in der gleichen Region aus 
    - Wählen Sie den als TDE Protector zu verwendenden Schlüssel aus – jeder Server verwendet die lokale Kopie von TDE Protector. 
-   - Dadurch wird im Portal eine [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) für den logischen SQL Server erstellt, die zum Zuweisen von logischen SQL Server-Berechtigungen dient. Somit kann auf den Schlüsseltresor zugegriffen werden – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. Dieser dient zum Zuweisen von logischen SQL Server-Berechtigungen für den Zugriff auf den Schlüsseltresor.
+   - Dadurch wird im Portal eine [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) für den logischen SQL Server erstellt, die zum Zuweisen von logischen SQL Server-Berechtigungen dient. Somit kann auf den Schlüsseltresor zugegriffen werden – löschen Sie diese Identität nicht. Der Zugriff kann widerrufen werden, indem die Berechtigungen in Azure Key Vault anstatt für den logischen SQL-Server entfernt werden, der zum Zuweisen von logischen SQL Server-Berechtigungen für den Zugriff auf den Schlüsseltresor dient.
 - Erstellen Sie die primäre Datenbank. 
 - Folgen Sie dem [Leitfaden für aktive Georeplikation](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) zum Abschließen dieses Szenarios. Mit diesem Schritt wird die sekundäre Datenbank erstellt.
 

@@ -1,8 +1,6 @@
 ---
-title: Zuordnen von Quelle und Ziel-Datentypen (AccessToSQL) | Microsoft Docs
+title: Zuordnen von Quell- und Ziel-Datentypen (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,38 +22,39 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af10741f0041525b058341f398b86c5e62f7a7e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979602"
 ---
-# <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnen von Quelle und Ziel-Datentypen (AccessToSQL)
-Access-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Wenn Sie den Zugriff auf Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, Zuordnen von Datentypen aus den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Verfahren gezeigt.  
+# <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnen von Quell- und Ziel-Datentypen (AccessToSQL)
+Access-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Wenn Sie den Zugriff auf Datenbankobjekte zu konvertieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, wie Sie Datentypen aus den Zugriff auf zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Verfahren dargestellt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
-SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen finden Sie [Projekteinstellungen (Type-Mapping)](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
 ## <a name="customizing-data-type-mappings"></a>Anpassen von Datentypzuordnungen  
-Mithilfe der **Projekteinstellungen** (Dialogfeld), können Sie anpassen, wie Typen für alle Datenbanken und Datenbankobjekte in einem Projekt zugeordnet werden. Die datentypzuordnungen für ein Projekt gelten für alle Datenbanken und Datenbankobjekte, die keine benutzerdefinierte Typmappings.  
+Mithilfe der **Projekteinstellungen** im Dialogfeld können Sie anpassen, wie Typen für alle Datenbanken und Datenbankobjekte in einem Projekt zugeordnet sind. Die datentypzuordnungen für ein Projekt gelten für alle Datenbanken und Datenbankobjekte, die nicht über benutzerdefinierte Zuordnungen verfügen.  
   
-Sie können auch die datentypzuordnung Ebene der Datenbank oder Tabelle anpassen.  
+Sie können auch die Zuordnung von Datentypen auf der Datenbank- oder Tabellenebene anpassen.  
   
-Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf Projekt, Datenbank- oder Datenbankebene-Objekt.  
+Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Datenbankebene-Objekt zugeordnet wird.  
   
 **Zuordnen von Datentypen**  
   
-1.  Datentypzuordnung für das gesamte Projekt anpassen möchten, öffnen Sie die **Projekteinstellungen** (Dialogfeld):  
+1.  Öffnen Sie zum Zuordnen von Datentypen für das gesamte Projekt anpassen, die **Projekteinstellungen** Dialogfeld:  
   
-    1.  Auf der **Tools** klicken Sie im Menü **Projekteinstellungen**.  
+    1.  Auf der **Tools** , wählen Sie im Menü **Projekteinstellungen**.  
   
     2.  Wählen Sie im linken Bereich **Type Mapping**.  
   
-        Der Typ Zuordnung Diagramm und Schaltflächen werden im rechten Bereich angezeigt.  
+        Das Diagramm für Typ-Zuordnung und die Schaltflächen werden im rechten Bereich angezeigt.  
   
-    Oder zum datentypzuordnung Ebene der Datenbank oder Tabelle anpassen, wählen Sie die Datenbank oder Tabelle in der Access-Metadaten-Explorer-Bereich:  
+    Oder wählen Sie zum Zuordnen von Datentypen auf der Datenbank oder Tabelle anpassen, die Datenbank oder Tabelle im Bereich Metadaten-Explorer für den Zugriff:  
   
-    1.  Erweitern Sie im Metadaten-Explorer Zugriff **Zugriff Metabasis**, und erweitern Sie dann **Datenbanken**.  
+    1.  Erweitern Sie im Bereich Metadaten-Explorer für den Zugriff **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
     2.  Wählen Sie die Datenbank oder Tabelle, für die Sie die datentypzuordnung anpassen möchten.  
   
@@ -65,39 +64,39 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf Projekt, 
   
     1.  Klicken Sie im Bereich Type Mapping auf **hinzufügen**.  
   
-    2.  In der **neue Type Mapping** Dialogfeld unter **Datenquellentyp**, wählen Sie die Access-Datentyp zugeordnet.  
+    2.  In der **neue Type Mapping** Dialogfeld **Quelltyp**, wählen Sie die Access-Datentyp zugeordnet.  
   
-    3.  Wenn der Typ eine Längenangabe erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **auf** Kontrollkästchen, und klicken Sie dann die Werte eingeben.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **zu** Kontrollkästchen und klicken Sie dann die Werte eingeben.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzen durch** Feld, und klicken Sie dann auf **OK**.  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
 3.  Führen Sie folgende Schritte aus, um eine datentypzuordnung zu bearbeiten:  
   
     1.  Klicken Sie im Bereich Type Mapping auf **bearbeiten**.  
   
-    2.  In der **Typliste Zuordnung** Dialogfeld unter **Datenquellentyp**, wählen Sie die Access-Datentyp zugeordnet.  
+    2.  In der **Typliste Zuordnung** Dialogfeld **Quelltyp**, wählen Sie die Access-Datentyp zugeordnet.  
   
-    3.  Wenn der Typ eine Längenangabe erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **auf** Kontrollkästchen, und klicken Sie dann die Werte eingeben.  
+    3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Länge für die Zuordnung durch Auswahl der **aus** und **zu** Kontrollkästchen und klicken Sie dann die Werte eingeben.  
   
-        Dies ermöglicht Ihnen das Anpassen von der datenzuordnung für kleinere und größere Werte denselben Datentyp aufweisen.  
+        Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
     4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
   
-        Einige Typen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in der **ersetzen durch** Feld, und klicken Sie dann auf **OK**.  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
 4.  Um eine datentypzuordnung zu entfernen, führen Sie folgende Schritte aus:  
   
-    1.  Wählen Sie die Zeile in der Liste ' datentypzuordnung ', die die datentypzuordnung enthält, die Sie entfernen möchten, klicken Sie im Bereich "Zuordnung".  
+    1.  Wählen Sie die Zeile in der Liste ' datentypzuordnung ', die die Zuordnung von Datentypen enthält, die Sie entfernen möchten, klicken Sie im Bereich "Zuordnung".  
   
     2.  Klicken Sie auf **Entfernen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt des Migrationsvorgangs besteht [den Zugriff auf Datenbankobjekte in SQL Server-Objekte zu konvertieren.](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Im nächsten Schritt des Migrationsvorgangs [konvertieren Sie den Zugriff auf Datenbankobjekte in SQL Server-Objekte](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

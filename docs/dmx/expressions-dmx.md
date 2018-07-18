@@ -1,41 +1,30 @@
 ---
-title: Ausdrücke (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], expressions
-- DMX [Analysis Services], expressions
-- expressions [DMX]
-ms.assetid: 00579552-19c8-4e9d-a790-f88df3e1aeea
-caps.latest.revision: 30
-author: Minewiskan
+title: Ausdrücke (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cec7b392ad3d1cf786d550cc17da16cb6767f83e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 952a99440dd866f794eca7fe04bd3c461eb1e3f1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992662"
 ---
 # <a name="expressions-dmx"></a>Ausdrücke (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  In Data Mining Extensions (DMX), ein Ausdruck ist eine Kombination aus Bezeichnern, Werten und Operatoren, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auswerten kann, um ein Ergebnis zu erzielen.  
+  Im Data Mining Extensions (DMX), ein Ausdruck ist eine Kombination aus Bezeichnern, Werten und Operatoren, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auswerten kann, um ein Ergebnis zu erzielen.  
   
- Ein DMX-Ausdruck kann einfach oder komplex sein. Ein einfacher Ausdruck kann einer der folgenden sein:  
+ Ein DMX-Ausdruck kann einfach oder komplex sein. Ein einfacher Ausdruck kann einen der folgenden sein:  
   
  Konstante  
- Eine Konstante ist Symbol, das einen bestimmten Datenwert darstellt. Eine Konstante kann eine Zeichenfolge, ein numerischer Wert oder ein Datumswert sein. Sie müssen Zeichenfolge- und Datumskonstanten in einfache Anführungszeichen (') setzen.  
+ Eine Konstante ist, Symbol, das einen bestimmten Datenwert darstellt. Eine Konstante kann eine Zeichenfolge, ein numerischer Wert oder ein Datumswert sein. Sie müssen Zeichenfolge- und Datumskonstanten in einfache Anführungszeichen (') setzen.  
   
  Skalarfunktion  
  Eine Skalarfunktion gibt genau einen Wert zurück.  
@@ -46,16 +35,16 @@ ms.lasthandoff: 05/03/2018
  Objekt-ID  
  Objektbezeichner werden in DMX als einfache Ausdrücke angesehen.  
   
- Zum Erstellen von komplexen Ausdrücken können Sie Operatoren verwenden, um diese Ausdrücke zu kombinieren. Weitere Informationen zu Operatoren finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; Operatorreferenz](../dmx/data-mining-extensions-dmx-operator-reference.md).  
+ Zum Erstellen von komplexen Ausdrücken können Sie Operatoren verwenden, um diese Ausdrücke zu kombinieren. Weitere Informationen zu Operatoren finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; -Operatorreferenz](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

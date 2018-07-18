@@ -1,31 +1,20 @@
 ---
-title: StructureColumn (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
-ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
-author: Minewiskan
+title: StructureColumn (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8dbf127092a2fc15e8c113f42249bc4fb0d49bdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992410"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +33,7 @@ StructureColumn('structure column name')
  Der Name einer Fallspalte oder der Spalte einer geschachtelten Miningstrukturtabelle.  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Der zurückgegebene Typ hängt vom Typ der Spalte, die in verwiesen wird die \<strukturspaltennamen >-Parameter. Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
+ Der Typ, der zurückgegeben wird, hängt der Typ der Spalte, die in verwiesen wird die \<strukturspaltennamen >-Parameter. Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
   
  Wenn die referenzierte Miningstrukturspalte eine geschachtelte Tabelle ist, gibt auch die Funktion einen Tabellenwert zurück. Der zurückgegebene Tabellenwert kann in der FROM-Klausel einer untergeordneten SELECT-Anweisung verwendet werden.  
   
@@ -53,7 +42,7 @@ StructureColumn('structure column name')
   
  Der Name der Spalte in der Miningstruktur ist ein Zeichenfolgenwert und muss daher in einfache Anführungszeichen eingeschlossen werden: z. B. `StructureColumn('` **Spalte 1**`')`. Wenn mehrere Spalten den gleichen Namen haben, wird der Name entsprechend dem Kontext der einschließenden SELECT-Anweisung aufgelöst.  
   
- Die Ergebnisse, die aus einer Abfrage mit zurückgegeben werden die **StructureColumn** Funktion betroffen sind, durch das Vorhandensein von Filtern im Modell. Das heißt, der Modellfilter kontrolliert die Fälle, die im Miningmodell enthalten sind. Daher gibt eine Abfrage auf der Strukturspalte nur die Fälle zurück, die im Miningmodell verwendet wurden. Im Abschnitt "Beispiele" zu diesem Thema finden Sie Codebeispiele, die die Auswirkung von Miningmodellfiltern auf Falltabellen und geschachtelte Tabellen zeigen.  
+ Die Ergebnisse, die aus einer Abfrage zurückgegeben werden die **StructureColumn** Funktion durch das Vorhandensein von Filtern für das Modell betroffen sind. Das heißt, der Modellfilter kontrolliert die Fälle, die im Miningmodell enthalten sind. Daher gibt eine Abfrage auf der Strukturspalte nur die Fälle zurück, die im Miningmodell verwendet wurden. Im Abschnitt "Beispiele" zu diesem Thema finden Sie Codebeispiele, die die Auswirkung von Miningmodellfiltern auf Falltabellen und geschachtelte Tabellen zeigen.  
   
  Weitere Informationen zur Verwendung dieser Funktion in einer DMX SELECT-Anweisung finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) oder [SELECT FROM &#60;Struktur&#62;. Fällen](../dmx/select-from-structure-cases.md).  
   
@@ -124,10 +113,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn(‘Occupation’) = ‘Architect’  
 ```  
   
- Beachten Sie, dass in diesem Beispiel wird ein Filter angewendet wird, um die Fälle auf Kunden beschränken mit dem Beruf 'Architect' der strukturspalte (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `(‘Occupation’)`-Fall angewendet.  
+ Beachten Sie, dass in diesem Beispiel ein Filter, auf die strukturspalte angewendet wird auf die Fälle auf Kunden beschränken, deren "Occupation" ist 'Architect' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Da das Anwenden der Modellfilterbedingung auf Fälle immer während der Erstellung des Modells stattfindet, werden nur die Fälle in die Modellfälle aufgenommen, die in der `Products`-Tabelle mindestens eine qualifizierende Zeile enthalten. Aus diesem Grund werden sowohl der Filter für die geschachtelte `Products`-Tabelle als auch der Filter für den `(‘Occupation’)`-Fall angewendet.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Beispielabfrage 3: Auswählen von Spalten einer geschachtelten Tabelle  
- Die folgende Beispielabfrage gibt die Namen der Kunden zurück, die als Trainingsfälle des Modells verwendet wurden. Für jeden Kunden gibt die Abfrage auch eine geschachtelte Tabelle zurück, die die Kaufdetails enthält. Obwohl das Modell enthält die `ProductName` Spalte des Modells verwendet nicht den Wert der `ProductName` Spalte. Das Modell überprüft nur, wenn das Produkt zum regulären erworben wurde (`NOT``OnSale`) Preis. Diese Abfrage gibt nicht nur den Produktnamen zurück, sondern auch die erworbene Menge, die nicht im Modell enthalten ist.  
+ Die folgende Beispielabfrage gibt die Namen der Kunden zurück, die als Trainingsfälle des Modells verwendet wurden. Für jeden Kunden gibt die Abfrage auch eine geschachtelte Tabelle zurück, die die Kaufdetails enthält. Obwohl das Modell enthält die `ProductName` Spalte des Modells verwendet nicht den Wert des der `ProductName` Spalte. Das Modell überprüft nur, wenn das Produkt zu den üblichen erworben wurde (`NOT``OnSale`) Preis. Diese Abfrage gibt nicht nur den Produktnamen zurück, sondern auch die erworbene Menge, die nicht im Modell enthalten ist.  
   
 ```  
 SELECT CustomerName,    
@@ -148,7 +137,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

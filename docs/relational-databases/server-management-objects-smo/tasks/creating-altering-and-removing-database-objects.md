@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Datenbankobjekten | Microsoft Docs
+title: Arbeiten mit Datenbankobjekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040198"
 ---
-# <a name="creating-altering-and-removing-database-objects"></a>Erstellen, ändern und Löschen von Datenbankobjekten
+# <a name="creating-altering-and-removing-database-objects"></a>Erstellen, ändern und Löschen von Datenbankenobjekten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Die Phasen der SMO-Objekterstellung sind:  

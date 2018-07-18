@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544932"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW zertifikatbereitstellung - Analyseplattformsystem
 Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System **Configuration Manager** importiert oder von der PDW-Region verwendeten Zertifikats entfernt. Verwenden, kann ein Zertifikat zum Verschlüsseln von Verbindungen sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server PDW-Treiber unterstützen die [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services.  

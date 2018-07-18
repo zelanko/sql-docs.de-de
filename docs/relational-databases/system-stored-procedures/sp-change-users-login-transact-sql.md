@@ -1,5 +1,5 @@
 ---
-title: Sp_change_users_login (Transact-SQL) | Microsoft Docs
+title: Sp_change_users_login (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/13/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f4a7b50619ecb4196b5c88ac0b237a5cff8ecb73
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990563"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +52,11 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action=] '*Aktion*"  
  Beschreibt die von der Prozedur durchzuführende Aktion. *Aktion* ist **varchar(10)**. *Aktion* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**Auto_fix**|Verknüpft einen Benutzereintrag in der sys.database_principals-Systemkatalogsicht in der aktuellen Datenbank mit einem gleichlautenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Ist kein gleichlautender Anmeldename vorhanden, wird er erstellt. Überprüfen Sie das Ergebnis der **Auto_Fix** Anweisung, um sicherzustellen, dass tatsächlich der richtige Link erstellt wurde. Vermeiden Sie die Verwendung **Auto_Fix** in sicherheitskritischen Situationen.<br /><br /> Bei Verwendung von **Auto_Fix**, müssen Sie angeben, *Benutzer* und *Kennwort* Wenn der Anmeldename nicht bereits vorhanden ist, andernfalls müssen Sie angeben *Benutzer*jedoch *Kennwort* werden ignoriert. *Anmeldung* muss NULL sein. *Benutzer* muss ein gültiger Benutzer in der aktuellen Datenbank sein. Dem Anmeldenamen kann kein anderer Benutzer zugeordnet werden.|  
-|**Bericht**|Listet die Benutzer und entsprechenden Sicherheits-IDs (SIDs) in der aktuellen Datenbank auf, die mit keinem Anmeldenamen verknüpft sind. *Benutzer*, *Anmeldung*, und *Kennwort* muss NULL oder nicht angegeben.<br /><br /> Um die Berichtsoption durch eine Abfrage mit Bezug auf die Systemtabellen zu ersetzen, vergleichen Sie die Einträge in **server_prinicpals** mit den Einträgen in **Sys. database_principals**.|  
-|**Update_One**|Verknüpft den angegebenen *Benutzer* in der aktuellen Datenbank zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Anmeldung*. *Benutzer* und *Anmeldung* muss angegeben werden. *Kennwort* muss NULL oder nicht angegeben.|  
+|**Auto_fix**|Verknüpft einen Benutzereintrag in der sys.database_principals-Systemkatalogsicht in der aktuellen Datenbank mit einem gleichlautenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Ist kein gleichlautender Anmeldename vorhanden, wird er erstellt. Überprüfen Sie das Ergebnis der **Auto_Fix** Anweisung, um sicherzustellen, dass tatsächlich der richtige Link erstellt wurde. Verwenden Sie **Auto_Fix** in sicherheitskritischen Situationen.<br /><br /> Bei Verwendung von **Auto_Fix**, Sie müssen angeben, *Benutzer* und *Kennwort* der Anmeldename nicht bereits vorhanden ist, andernfalls müssen Sie angeben *Benutzer*aber *Kennwort* ignoriert werden. *Anmeldung* muss NULL sein. *Benutzer* muss ein gültiger Benutzer in der aktuellen Datenbank sein. Dem Anmeldenamen kann kein anderer Benutzer zugeordnet werden.|  
+|**Bericht**|Listet die Benutzer und entsprechenden Sicherheits-IDs (SIDs) in der aktuellen Datenbank auf, die mit keinem Anmeldenamen verknüpft sind. *Benutzer*, *Anmeldung*, und *Kennwort* muss NULL sein oder nicht angegeben.<br /><br /> Um die Berichtsoption mit einer Abfrage, die Verwendung der Systemtabellen zu ersetzen, vergleichen Sie die Einträge in **server_prinicpals** mit den Einträgen in **Sys. database_principals**.|  
+|**Update_One**|Verknüpft den angegebenen *Benutzer* in der aktuellen Datenbank zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Anmeldung*. *Benutzer* und *Anmeldung* muss angegeben werden. *Kennwort* muss NULL sein oder nicht angegeben.|  
   
  [ @UserNamePattern=] '*Benutzer*"  
  Der Name eines Benutzers in der aktuellen Datenbank. *Benutzer* ist **Sysname**, hat den Standardwert NULL.  
@@ -64,7 +65,7 @@ sp_change_users_login [ @Action = ] 'action'
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [ @Password=] '*Kennwort*"  
- Zugewiesene Kennwort in ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung durch die Angabe erstellte **Auto_Fix**. Wenn kein entsprechender Anmeldename vorhanden ist, die Benutzer und Anmeldenamen zugeordnet sind und *Kennwort* wird ignoriert. Wenn kein entsprechender Anmeldename nicht existiert, erstellt Sp_change_users_login einen neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen und weist ihm *Kennwort* als Kennwort für den neuen Anmeldenamen. *Kennwort* ist **Sysname**, und darf nicht NULL sein.  
+ Zugewiesene Kennwort, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, durch Angabe erstellt wird **Auto_Fix**. Wenn kein entsprechender Anmeldename vorhanden ist, die Benutzer und Anmeldenamen zugeordnet sind und *Kennwort* wird ignoriert. Wenn kein entsprechender Anmeldename nicht existiert, erstellt Sp_change_users_login einen neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen und weist ihm *Kennwort* als Kennwort für den neuen Anmeldenamen. *Kennwort* ist **Sysname**, und darf nicht NULL sein.  
   
 > **WICHTIG!** Verwenden Sie immer eine [sicheres Kennwort!](../../relational-databases/security/strong-passwords.md)
   
@@ -79,7 +80,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|Sicherheits-ID des Benutzers.|  
   
 ## <a name="remarks"></a>Hinweise  
- Mithilfe von sp_change_users_login kann ein Datenbankbenutzer in der aktuellen Datenbank mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft werden. Wenn sich der Anmeldename für einen Benutzer geändert hat, verknüpfen Sie den Benutzer mithilfe von sp_change_users_login mit dem neuen Anmeldenamen, ohne die Benutzerberechtigungen zu verlieren. Die neue *Anmeldung* darf nicht sa sein, und die *Benutzer*darf nicht Dbo, Guest oder ein INFORMATION_SCHEMA-Benutzer.  
+ Mithilfe von sp_change_users_login kann ein Datenbankbenutzer in der aktuellen Datenbank mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft werden. Wenn sich der Anmeldename für einen Benutzer geändert hat, verknüpfen Sie den Benutzer mithilfe von sp_change_users_login mit dem neuen Anmeldenamen, ohne die Benutzerberechtigungen zu verlieren. Die neue *Anmeldung* darf nicht sa sein, und die *Benutzer*darf nicht Dbo, Guest oder ein INFORMATION_SCHEMA-Benutzer sein.  
   
  sp_change_users_login kann nicht zum Erstellen einer Zuordnung zwischen Datenbankbenutzern und Prinzipalen, Zertifikaten oder asymmetrischen Schlüsseln auf Windows-Ebene verwendet werden.  
   
@@ -88,7 +89,7 @@ sp_change_users_login [ @Action = ] 'action'
  sp_change_users_login kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner". Nur Mitglieder der festen Serverrolle Sysadmin können angeben, die **Auto_Fix** Option.  
+ Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner". Nur Mitglieder der festen Serverrolle "Sysadmin" können angeben, die **Auto_Fix** Option.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -1,1 +1,1 @@
-SQLServer-\-Memory OLTP
+SQLServer auf\-Memory-OLTP

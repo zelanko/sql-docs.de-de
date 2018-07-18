@@ -1,6 +1,6 @@
 ---
 title: Verwenden von gespeicherten Prozeduren (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed9232137bcfed47852086ab1b6b76bc2bc2cb69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2a0ba1b350e59406f04796924385059c323facd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582242"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743799"
 ---
 # <a name="using-stored-procedures-mdx"></a>Verwenden von gespeicherten Prozeduren (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Sie können die Funktionalität von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] und Multidimensional Expressions (MDX) erweitern, indem sie mit .NET gespeicherte Prozeduren oder benutzerdefinierte Funktionen erstellen. Weitere Informationen finden Sie unter [ADOMD.NET Server-Programmierung](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
@@ -33,7 +33,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *Gespeicherte Prozedur* in verwendete Terminologie ist [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für diese Arten von Funktionen. Frühere Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bezeichnet diese Arten von Funktionen als *von benutzerdefinierten Funktionen*.  
+>  *Gespeicherte Prozedur* in verwendete Terminologie ist [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für diese Arten von Funktionen. Frühere Versionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bezeichnet diese Arten von Funktionen als *von benutzerdefinierten Funktionen*.  
   
 ## <a name="types-of-stored-procedures"></a>Arten von gespeicherten Prozeduren  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt sowohl COM- als auch CLR-Assemblys. CLR-Assemblys empfehlen sich wegen der für sie verfügbaren verbesserten Sicherheit. Wenn Microsoft Office Excel auf dem Server installiert ist, sind auch die Excel-Funktionen verfügbar.  

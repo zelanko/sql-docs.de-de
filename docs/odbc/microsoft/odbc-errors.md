@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899885"
 ---
 # <a name="odbc-errors"></a>ODBC-Fehler
 Tritt ein Fehler auf, zurück der Microsoft ODBC-Desktop-Datenbanktreiber, die systemeigene Fehlernummer, die SQLSTATE (ODBC-Fehlercode) und eine Fehlermeldung angezeigt.  

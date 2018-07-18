@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771456"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612255"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server-Setup erstellt Protokolldateien standardmäßig in einem mit Zeitstempel verwalteten Protokollordner, der sich in „%ProgramFiles%\Microsoft SQL Server\\ *"nnn"* \Setup Bootstrap\Log“ befindet. Das Namensformat für mit einem Zeitstempel versehene Protokollordner ist JJJJMMTT_hhmmss. Wenn Setup im unbeaufsichtigten Modus ausgeführt wird, werden die Protokolle in „%temp%\sqlsetup*.log“ erstellt. Alle Dateien in den Protokollordnern werden in der Log\*.cab-Datei im jeweiligen Protokollordner archiviert.  
+Das SQL Server-Setup erstellt standardmäßig Protokolldateien in einem Ordner mit Datum und Zeitstempel in **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log**, wobei *nnn* Zahlen sind, die der installierten Version von SQL entsprechen. Das Namensformat für mit einem Zeitstempel versehene Protokollordner ist JJJJMMTT_hhmmss. Wenn Setup im unbeaufsichtigten Modus ausgeführt wird, werden die Protokolle in „%temp%\sqlsetup*.log“ erstellt. Alle Dateien im Protokollordner werden in der Log\*.cab-Datei im jeweiligen Protokollordner archiviert.  
+
+   | File           | Pfad |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI-Protokolldateien** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Für unbeaufsichtigte Installationen** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ SQL Server-Setup erstellt Protokolldateien standardmäßig in einem mit Zeitstem
 3.  Vom Benutzer angeforderte Aktion: Ermöglicht es dem Benutzer, Features auszuwählen und anzupassen.
   
 
-Für diesen Workflow werden ein einzelnes Zusammenfassungsprotokoll und entweder ein einzelnes Detailprotokoll für eine RTM-Installation oder zwei Detailprotokolle erstellt, wenn Medien als Slipstream bereitgestellt werden.
+Dieser Workflow erstellt ein einzelnes Zusammenfassungsprotokoll und entweder ein einzelnes Detailprotokoll für eine Basisinstallation von SQL Server oder zwei Detailprotokolle, wenn ein Update (z.B. ein Servicepack) zusammen mit der Basisinstallation installiert wird. 
   
-Datenspeicherdateien enthalten eine Momentaufnahme vom Zustand aller Konfigurationsobjekte, die vom Setupprozess nachverfolgt werden, und sind bei der Behebung von Konfigurationsfehlern nützlich. XML-Dumpdateien werden für jede Ausführungsphase erstellt und werden im Unterordner für Datenspeicherprotokolle unter dem mit Zeitstempel verwalteten Protokollordner gespeichert. 
+Darüber hinaus gibt es Datenspeicherdateien, die eine Momentaufnahme vom Zustand aller Konfigurationsobjekte enthalten, die vom Setupprozess nachverfolgt werden, und bei der Behebung von Konfigurationsfehlern nützlich sind. XML-Dumpdateien werden für jede Ausführungsphase erstellt und werden im Unterordner für Datenspeicherprotokolle unter dem mit Zeitstempel verwalteten Protokollordner gespeichert. 
 
 In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprotokolldateien beschrieben.  
   
@@ -130,6 +142,8 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
   
 ### <a name="location"></a>Speicherort  
 Die Datei „SystemConfigurationCheck_Report.htm“ befindet sich unter „%ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\\“.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

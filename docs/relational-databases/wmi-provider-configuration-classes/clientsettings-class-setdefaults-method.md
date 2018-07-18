@@ -1,5 +1,5 @@
 ---
-title: SetDefaults-Methode (ClientSettings-Klasse) | Microsoft Docs
+title: SetDefaults-Methode (ClientSettings-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989112"
 ---
-# <a name="clientsettings-class---setdefaults-method"></a>ClientSettings-Klasse - SetDefaults-Methode
+# <a name="clientsettings-class---setdefaults-method"></a>ClientSettings-Klasse – SetDefaults-Methode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Legt alle Standardwerte für die Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mit der Option zum Überschreiben vorhandener Daten besteht.  
   
@@ -40,9 +41,9 @@ ms.lasthandoff: 05/03/2018
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein **ClientSettings** -Objekt, das stellt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clientinstanz.  
+## <a name="parts"></a>Teile  
+ *object*  
+ Ein **ClientSettings** -Objekt, das stellt ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clientinstanz.  
   
 #### <a name="parameters"></a>Parameter  
   

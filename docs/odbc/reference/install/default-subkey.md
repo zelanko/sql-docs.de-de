@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917511"
 ---
 # <a name="default-subkey"></a>Standard-Unterschlüssel
 Die Registrierung möglicherweise eine Standard-Datenquelle mit den Standard-Unterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall des Data Source-Spezifikation Unterschlüssel und die gleichen Werte wie alle anderen Data Source-Spezifikation Unterschlüssel verfügt. Der einzige Unterschied ist, dass er nicht als einen Wert unter dem ODBC-Datenquellen-Unterschlüssel aufgeführt ist.

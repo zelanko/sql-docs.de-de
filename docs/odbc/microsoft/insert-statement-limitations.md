@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904455"
 ---
 # <a name="insert-statement-limitations"></a>INSERT-Anweisung
 Eingefügte Daten werden auf der rechten Seite ohne Warnung abgeschnitten, falls zu lang ist, um in der Spalte zu passen.  

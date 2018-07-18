@@ -1,5 +1,5 @@
 ---
-title: Restore-Element (XMLA) | Microsoft Docs
+title: Restore-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea1bd6b12c605309f9c6c78151bed08c37149372
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038038"
 ---
 # <a name="restore-element-xmla"></a>Restore-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34577013"
 |Untergeordnete Elemente|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [Datei](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [Speicherorte](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [Kennwort](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [Sicherheit](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **wiederherstellen** -Befehl wird eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **DatabaseName** Elements aus einer Sicherungsdatei und optional Wiederherstellungen Remotepartitionen aus remotesicherungsdateien.  
+ Die **wiederherstellen** -Befehl wird eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **DatabaseName** Element aus einer Sicherungsdatei und optional Remotepartitionen aus remotesicherungsdateien wiederhergestellt.  
   
  Je nach dem Speichermodus der in der Sicherungsdatei gespeicherten Objekte werden mit dem **Restore** -Befehl die in der folgenden Tabelle aufgelisteten Informationen wiederhergestellt.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34577013"
 |Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
 |Relationale OLAP (ROLAP)|Metadaten|  
   
- Während einer **wiederherstellen** Befehl, eine exklusive Sperre befindet sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **DatabaseName** Element. Die Sperre wird nach Abschluss des **Restore** -Befehls wieder aufgehoben.  
+ Während ein **wiederherstellen** Befehl, eine exklusive Sperre für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **DatabaseName** Element. Die Sperre wird nach Abschluss des **Restore** -Befehls wieder aufgehoben.  
   
  Weitere Informationen zum Sichern und Wiederherstellen von Datenbanken finden Sie unter [sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

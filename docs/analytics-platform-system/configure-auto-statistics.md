@@ -1,49 +1,51 @@
 ---
-title: Statistiken automatisch (Analytics Platform System)
-description: Beschreibt die automatische Statistikfunktion Analytics Platform System AU7 eingeführt.
+title: Automatische Statistiken (Analytics Platform System)
+description: Beschreibt Statistiken-Funktion automatisch in Analytics Platform System AU7 eingeführt.
 author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1c0f4623adad35ab874330b42aa54f6e1b91d961
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
+ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107138"
 ---
 # <a name="configure-auto-statistics"></a>Statistiken automatisch konfigurieren
 
-Informationen Sie zum Konfigurieren von Parallel Data Warehouse Verwendung Statistiken automatisch für das Erstellen und Aktualisieren von Statistiken automatisch.  Diese Funktion verwenden, um Abfragepläne zu verbessern, und aus diesem Grund die abfrageleistung.
+Informationen Sie zum Konfigurieren von Parallel Data Warehouse, um Statistiken automatisch für das Erstellen und Aktualisieren von Statistiken automatisch verwenden.  Verwenden Sie diese Funktion, um Abfragepläne zu verbessern, und aus diesem Grund die verbessern Sie abfrageleistung zu.
 
-**Gilt für:** APS (beginnend mit AU7)
+**Gilt für:** APS (beginnend mit 2016-AU7)
 
 ## <a name="what-are-statistics"></a>Was sind Statistiken?
-Statistiken zur abfrageoptimierung sind Objekte, die statistische Informationen über die Verteilung der Werte in einer oder mehreren Spalten einer Tabelle enthalten. Der Abfrageoptimierer verwendet diese Statistiken, die Kardinalität geschätzt, oder führen die Anzahl von Zeilen in der Abfrage. Diese kardinalitätsschätzungen aktivieren den Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise können in APS die abfrageleistung der MPP Abfrageoptimierer verwendet, die kardinalitätsschätzung um zufällige weitergeleitet oder repliziert die kleinere von zwei Tabellen in einer Join-Klausel und in diesem Fall verwendet werden sollen.  Weitere Informationen finden Sie unter [Statistiken](../relational-databases/statistics/statistics.md) und [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+Statistiken zur abfrageoptimierung sind Objekte, die statistische Informationen über die Verteilung der Werte in einer oder mehreren Spalten einer Tabelle enthalten. Die Abfrageoptimierer verwendet diese Statistiken, um die Kardinalität geschätzt, oder die Anzahl von Zeilen in der Abfrage führen. Diese kardinalitätsschätzungen ermöglichen den Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Als Beispiel, in der APS abfrageleistung die MPP Abfrage der Abfrageoptimierer verwendet, die Kardinalität geschätzt wird, um auszuwählen, die zufällige oder replizieren die kleinere von zwei Tabellen, die in einer Join-Klausel und auf diese Weise verwendet.  Weitere Informationen finden Sie unter [Statistiken](../relational-databases/statistics/statistics.md) und [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## <a name="what-are-auto-statistics"></a>Was sind Statistiken automatisch?
-Statistiken automatisch sind Statistiken, die der Abfrageoptimierer erstellt und automatisch aktualisiert, um den Abfrageplan zu verbessern. Statistiken können nicht aktualisiert werden, nach lädt, eingefügt, aktualisiert und Löschvorgänge. Ohne automatische Statistiken müssen Sie führen Sie eigene Analysen, um zu verstehen, welche Spalten Statistiken benötigen, und wenn die Statistiken aktualisiert werden müssen.
+Statistiken automatisch sind Statistiken, die die Abfrageoptimierer erstellt und wird automatisch aktualisiert, um den Abfrageplan zu verbessern. Statistiken können veralten nach Ladevorgängen, eingefügt, aktualisiert und Löschvorgänge. Ohne automatische Statistiken müssen Sie eine eigene Analyse, um zu verstehen, welche Spalten Statistiken benötigen, und wenn die Statistiken aktualisiert werden müssen.
 
 Statistiken automatisch umfasst die folgenden drei Einstellungen: 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-Wenn Statistikoption zum automatischen erstellen, AUTO_CREATE_STATISTICS auf ON festgelegt ist, erstellt der Abfrageoptimierer Statistiken für einzelne Spalten im Abfrageprädikat, nach Bedarf, um kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
+Wenn das automatische Erstellen der Statistik, AUTO_CREATE_STATISTICS ist ON, der Abfrageoptimierer erstellt Statistiken für einzelne Spalten im Abfrageprädikat, nach Bedarf, um kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
-Wenn die AUTO_UPDATE_STATISTICS-Option zur automatischen Aktualisierung von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Vorgänge insert, update, löschen oder zusammenführen, ändern die Verteilung der Daten in der Tabelle oder indizierten Sicht. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
+Wenn die AUTO_UPDATE_STATISTICS-Option zur automatischen Aktualisierung von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
 
 ### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC
-Mit der AUTO_UPDATE_STATISTICS_ASYNC-Option für die asynchrone Statistikaktualisierung wird festgelegt, ob der Abfrageoptimierer die synchrone oder asynchrone Statistikaktualisierung verwendet. Option für das asynchrone statistikupdate ist standardmäßig für APS, und der Abfrageoptimierer Statistiken asynchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und die Statistiken, die mit der CREATE STATISTICS-Anweisung erstellt.
+Mit der AUTO_UPDATE_STATISTICS_ASYNC-Option für die asynchrone Statistikaktualisierung wird festgelegt, ob der Abfrageoptimierer die synchrone oder asynchrone Statistikaktualisierung verwendet. Für Zugriffspunkte die Option für das asynchrone statistikupdate ist standardmäßig aus, und der Abfrageoptimierer Statistiken asynchron aktualisiert. Die Option AUTO_UPDATE_STATISTICS_ASYNC gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden.
 
 ## <a name="configuration-settings-for-system-administrators"></a>Konfigurationseinstellungen für Systemadministratoren
-Nach dem Upgrade auf APS AU7, ist die Statistiken automatisch standardmäßig aktiviert. Der Systemadministrator kann aktivieren oder deaktivieren Sie automatische Statistik mit der [Funktionsschalter](appliance-feature-switch.md) Option im Appliance Konfigurations-Manager.  Nach der Aktivierung können Benutzer die Einstellungen der Treiberstatistik pro Datenbank ändern.
-Ändern alle Werte der Feature-Switch erfordert einen Neustart des Diensts auf APS.
+Nach dem Upgrade der Zugriffspunkte AU7 – ist die Statistiken automatisch standardmäßig aktiviert. Der Systemadministrator kann aktivieren oder deaktivieren Sie automatische Statistiken mit der [Featureschalter](appliance-feature-switch.md) Option in der Appliance Configuration Manager.  Nach der Aktivierung können Benutzer die statistikeinstellungen pro Datenbank ändern.
+Ändern alle Werte der Feature-Switch erfordert einen Neustart des Diensts für Zugriffspunkte.
 
-## <a name="change-auto-statistics-settings-on-a-database"></a>Ändern der Einstellungen der automatischen Statistik für eine Datenbank
-Wenn Statistiken automatisch vom Systemadministrator aktiviert ist, können Sie [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) so ändern Sie die Einstellungen der Treiberstatistik in einer Datenbank. Wenn automatische Statistik Feature-Switch vom Systemadministrator aktiviert ist, müssen alle neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt Statistiken für automatisch aktiviert. Automatische Statistik deaktiviert haben alle Datenbanken, die vor dem Upgrade auf AU7 vorhanden waren. Im folgenden Beispiel wird die Statistiken auf der vorhandenen Datenbank MyPDW automatisch.
+## <a name="change-auto-statistics-settings-on-a-database"></a>Ändern der Einstellungen für automatische Statistiken für eine Datenbank
+Wenn Statistiken automatisch vom Systemadministrator aktiviert ist, können Sie [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) die statistikeinstellungen für eine Datenbank zu ändern. Wenn vom Systemadministrator automatische Statistiken featureschalter aktiviert ist, müssen alle neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt Statistiken für automatisch aktiviert. Haben alle Datenbanken, die vor dem Upgrade auf AU7 vorhanden waren automatische Statistik deaktiviert. Im folgenden Beispiel wird die Statistiken auf der vorhandenen Datenbank MyPDW automatisch.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -51,16 +53,16 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS ON
 ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 ```
  
-AUTO_UPDATE STATISTICS_ASYNC Option funktioniert nur, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.  Aus diesem Grund Statistiken werden nicht aktualisiert, wenn AUTO_UPDATE_STATISTICS auf OFF festgelegt ist und AUTO_UPDATE_STATISTICS_ASYNC ist ON. 
+AUTO_UPDATE STATISTICS_ASYNC Option funktioniert nur auf, wenn AUTO_UPDATE_STATISTICS auf ON festgelegt ist.  Aus diesem Grund Statistiken werden nicht aktualisiert, wenn AUTO_UPDATE_STATISTICS auf OFF festgelegt ist und AUTO_UPDATE_STATISTICS_ASYNC ist ON. 
 
 ### <a name="error-messages"></a>Fehlermeldungen
-Sie können die Fehlermeldung "Diese Option wird in PDW nicht unterstützt".  Dieser Fehler tritt auf, wenn der Systemadministrator hat keine Statistiken automatisch aktiviert, und Sie versuchen, eine von "Auto" die Optionen für Ausführungsstatistiken unter ALTER DATABASE festgelegt. 
+Sie können die Fehlermeldung "Diese Option wird in PDW nicht unterstützt".  Dieser Fehler tritt auf, wenn der Systemadministrator hat keine Statistiken automatisch aktiviert, und Sie versuchen, eine automatisch in der ALTER DATABASE-Optionen für Ausführungsstatistiken festlegen. 
 
 ### <a name="limitations-and-restrictions"></a>Einschränkungen
-Statistiken automatisch funktioniert nicht in externen Tabellen. 
+Statistiken automatisch funktioniert nicht für externe Tabellen. 
 
 ### <a name="check-the-current-values"></a>Überprüfen Sie die aktuellen Werte
-Die folgende Abfrage gibt die aktuellen Werte von den Einstellungen der automatischen Statistik für alle Datenbanken zurück.
+Die folgende Abfrage gibt die aktuellen Werte der Einstellungen für die automatische Statistiken für alle Datenbanken.
 
 ```sql
 SELECT NAME
@@ -71,7 +73,7 @@ FROM
     sys.databases;
 ```
 
-Ein Rückgabewert von 1 bedeutet, dass die Einstellung ist, und 0 bedeutet, dass die Einstellung deaktiviert ist. 
+Ein Rückgabewert 1 bedeutet, dass die Einstellung ist, und 0 bedeutet, dass diese Einstellung deaktiviert ist. 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wie Ihre Abfragen durchführen, finden Sie unter [aktive Abfragen Überwachung](monitoring-active-queries.md)
+Leistung von Abfragen finden Sie unter [überwachen aktiver Abfragen](monitoring-active-queries.md)

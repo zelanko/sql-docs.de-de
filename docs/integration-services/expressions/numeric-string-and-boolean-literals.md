@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408912"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Numerische, Zeichenfolgen- und boolesche Literale
  Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Die Ausdrucksauswertung unterstützt eine Reihe von numerischen Literalen, wie z. B. ganze Zahlen, Dezimalzeichen und Gleitkommakonstanten. Außerdem unterstützt die Ausdrucksauswertung die long- und float-Suffixe, die die Behandlung von Werten durch die Ausdrucksauswertung angeben, sowie die wissenschaftliche Schreibweise bei numerischen Literalen.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle sind Suffixe für numerische Literale aufgeführt.  
   
-|Suffix|Description|  
+|Suffix|und Beschreibung|  
 |------------|-----------------|  
 |L oder l|Ein langes numerisches Literal.|  
 |U oder u|Ein numerisches Literal ohne Vorzeichen.|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle sind numerische Ausdruckselemente und deren reguläre Ausdrücke aufgeführt.  
   
-|Ausdruckselement|Regulärer Ausdruck|Description|  
+|Ausdruckselement|Regulärer Ausdruck|und Beschreibung|  
 |------------------------|------------------------|-----------------|  
 |Ziffern, ausgedrückt als D.|[0-9]|Eine beliebige Ziffer.|  
 |Wissenschaftliche Schreibweise, ausgedrückt als E.|[Ee][+-]?{D}+|e (Groß- oder Kleinbuchstabe), optional + oder -, und mindestens eine Ziffer gemäß der Definition in D.|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle sind gültige numerische Literale mithilfe der regulären Ausdruckssprache beschrieben.  
   
-|Regulärer Ausdruck|Description|  
+|Regulärer Ausdruck|und Beschreibung|  
 |------------------------|-----------------|  
 |{D}+{IS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) und optional dem Suffix long und/oder unsigned (IS).  Beispiele: 457, 785u, 986L und 7945ul.|  
 |{D}+{E}{FS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) in wissenschaftlicher Schreibweise und dem Suffix long oder float.  Beispiele: 4E8l, 13e-2f und 5E+L.|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  Zeichenfolgen können andere Zeichen einschließen, die eine Escapesequenz erfordern. In der folgenden Tabelle sind Escapesequenzen für Zeichenfolgenliterale aufgeführt.  
   
-|Escapesequenz|Description|  
+|Escapesequenz|und Beschreibung|  
 |---------------------|-----------------|  
 |\a|Warnung|  
 |\b|Rücktaste|  

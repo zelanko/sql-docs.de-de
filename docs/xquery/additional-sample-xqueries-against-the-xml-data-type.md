@@ -1,5 +1,5 @@
 ---
-title: Zusätzliche Beispiel XQuery-Abfragen für den Xml-Datentyp | Microsoft Docs
+title: Weitere Beispiel XQuery-Abfragen für den Xml-Datentyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030368"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Zusätzliches Beispiel für XQuery-Abfragen für den XML-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Die Themen in diesem Abschnitt enthalten zusätzliche Beispiele für die Funktionsweisen der XQuery-Abfragen verwendet werden die **Xml** -Datentyp:  
+  Die Themen in diesem Abschnitt enthalten zusätzliche Beispiele, die zeigen, wie Sie mit der XQuery-Abfragen für die **Xml** -Datentyp:  
   
 -   [General XQuery Use Cases (Allgemeine Einsatzgebiete für XQuery)](../xquery/general-xquery-use-cases.md)  
   

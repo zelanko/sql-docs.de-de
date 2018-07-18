@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_trace_getfilterinfo (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_getfilterinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971875"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ fn_trace_getfilterinfo ( trace_id )
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**columnid**|**int**|Die ID der Spalte, auf die der Filter angewendet wird|  
+|**Spalten-ID**|**int**|Die ID der Spalte, auf die der Filter angewendet wird|  
 |**logical_operator**|**int**|Gibt an, ob der Operator AND oder OR angewendet wird|  
 |**comparison_operator**|**int**|Gibt die Art des Vergleichs an:<br /><br /> 0 = Gleich<br /><br /> 1 = Ungleich<br /><br /> 2 = Größer als<br /><br /> 3 = Kleiner als<br /><br /> 4 = Größer als oder gleich<br /><br /> 5 = Kleiner als oder gleich<br /><br /> 6 = Wie<br /><br /> 7 = Nicht wie|  
-|**value**|**sql_variant**|Gibt den Wert an, auf den der Filter angewendet wird|  
+|**Wert**|**sql_variant**|Gibt den Wert an, auf den der Filter angewendet wird|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Benutzer legt *Trace_id* Wert zum Identifizieren, ändern und Steuern der Ablaufverfolgung. Wenn die ID einer bestimmten Ablaufverfolgung übergeben **Fn_trace_getfilterinfo** gibt Informationen zu allen Filtern dieser Ablaufverfolgung zurück. Wenn die angegebene Ablaufverfolgung keinen Filter aufweist, gibt diese Funktion ein leeres Rowset zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück. Ähnliche Informationen zu ablaufverfolgungen finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ Der Benutzer legt *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung. Wenn die ID einer bestimmten Ablaufverfolgung übergeben **Fn_trace_getfilterinfo** gibt Informationen zu allen Filtern dieser Ablaufverfolgung zurück. Wenn die angegebene Ablaufverfolgung keinen Filter aufweist, gibt diese Funktion ein leeres Rowset zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück. Ähnliche Informationen zu ablaufverfolgungen finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER TRACE-Berechtigung auf dem Server.  

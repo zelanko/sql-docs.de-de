@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023357"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie Linien, Farben, Datenbereiche, Bilder und andere Berichtselemente formatieren.  

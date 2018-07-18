@@ -1,8 +1,6 @@
 ---
 title: Tastenkombinationen (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9ccc9328c278d88ba4fd5087174f4a328ce47915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19bc5765a47d28514403e895d693152cc2edec6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774646"
 ---
 # <a name="shortcut-keys-accesstosql"></a>Tastenkombinationen (AccessToSQL)
 Sie können Tastenkombinationen verwenden, zum Navigieren durch SSMA-Anwendung. Weitere Informationen finden Sie in den nachfolgenden Themen.  

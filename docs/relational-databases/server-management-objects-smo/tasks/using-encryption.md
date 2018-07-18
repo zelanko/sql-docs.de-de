@@ -1,5 +1,5 @@
 ---
-title: Verwenden der Verschlüsselung | Microsoft Docs
+title: Verwenden der Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -26,25 +26,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 36b39fc4a13e3236e569af2209c680e7cdb0d534
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995799"
 ---
 # <a name="using-encryption"></a>Verwenden der Verschlüsselung
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO wird der Diensthauptschlüssel durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> Objekt. Dies verweist auf die <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Es kann erneut generiert werden, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> Methode.  
+  In SMO wird der Diensthauptschlüssel durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> Objekt. Dies verweist auf die <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Sie können mithilfe von neu generiert werden die <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> Methode.  
   
- Datenbank-Hauptschlüssels wird dargestellt, indem die <xref:Microsoft.SqlServer.Management.Smo.MasterKey> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> Eigenschaft gibt an, und zwar unabhängig davon, ob die Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel verschlüsselt ist. Die verschlüsselte Kopie in der Hauptdatenbank wird immer dann automatisch aktualisiert, wenn der Datenbank-Hauptschlüssel geändert wird.  
+ Datenbank-Hauptschlüssels wird dargestellt, durch die <xref:Microsoft.SqlServer.Management.Smo.MasterKey> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> Eigenschaft gibt an, ob die Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel verschlüsselt ist. Die verschlüsselte Kopie in der Hauptdatenbank wird immer dann automatisch aktualisiert, wenn der Datenbank-Hauptschlüssel geändert wird.  
   
- Es ist möglich, drop Service Schlüsselverschlüsselung mithilfe der <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> Methode und die Datenbank-Hauptschlüssel mit einem Kennwort verschlüsseln. In diesem Fall müssen Sie den Datenbank-Hauptschlüssel explizit öffnen, bevor Sie auf die privaten Schlüssel zugreifen, die von diesem gesichert wurden.  
+ Es ist möglich, die Verschlüsselung mit Schlüsseln mit drop die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> Methode und die Datenbank-Hauptschlüssel mit einem Kennwort zu verschlüsseln. In diesem Fall müssen Sie den Datenbank-Hauptschlüssel explizit öffnen, bevor Sie auf die privaten Schlüssel zugreifen, die von diesem gesichert wurden.  
   
- Wenn eine Datenbank mit einer Instanz von angehängt wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], müssen Sie das Kennwort für den Datenbank-Hauptschlüssel bereitstellen oder Ausführen der <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> Methode, um eine unverschlüsselte Kopie des Datenbank-Hauptschlüssels für die Verschlüsselung mit dem Dienst verfügbar machen Hauptschlüssel. Dieser Schritt wird empfohlen, um zu vermeiden, dass der Datenbank-Hauptschlüssel explizit geöffnet werden muss.  
+ Wenn eine Datenbank mit einer Instanz von angehängt wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], müssen Sie das Kennwort für Datenbank-Hauptschlüssel bereitstellen oder Ausführen der <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> Methode, um eine unverschlüsselte Kopie des Datenbank-Hauptschlüssels für die Verschlüsselung mit dem Dienst verfügbar machen Hauptschlüssel. Dieser Schritt wird empfohlen, um zu vermeiden, dass der Datenbank-Hauptschlüssel explizit geöffnet werden muss.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> Methode generiert den Datenbank-Hauptschlüssel neu. Wenn der Datenbank-Hauptschlüssel neu generiert wird, werden alle Schlüssel, die durch den Datenbank-Hauptschlüssel verschlüsselt wurden, entschlüsselt. Daraufhin werden diese mit dem neuen Datenbank-Hauptschlüssel verschlüsselt. Die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> Methode entfernt die Verschlüsselung des Datenbank-Hauptschlüssels durch den Diensthauptschlüssel. Mit <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> wird eine Kopie des Hauptschlüssels mithilfe des Diensthauptschlüssels verschlüsselt und in der aktuellen Datenbank und in der Masterdatenbank gespeichert.  
   
- In SMO werden Zertifikate dargestellt werden, durch die <xref:Microsoft.SqlServer.Management.Smo.Certificate> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Certificate> Objekt verfügt über Eigenschaften, die den öffentlichen Schlüssel, der Name des Antragstellers, Zeitraum Gültigkeitsdauer und Informationen über den Aussteller festlegen. Die Berechtigung, auf das Zertifikat zuzugreifen, wird über die Methoden **Grant**, **Revoke** und **Deny** gesteuert.  
+ In SMO werden Zertifikate durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.Certificate> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Certificate> Objekt verfügt über Eigenschaften, die angeben, den öffentlichen Schlüssel, den Namen des Betreffs, Zeitraum Gültigkeitsdauer und Informationen über den Aussteller. Die Berechtigung, auf das Zertifikat zuzugreifen, wird über die Methoden **Grant**, **Revoke** und **Deny** gesteuert.  
   
 ## <a name="example"></a>Beispiel  
  Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -98,6 +99,6 @@ $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unter Verwendung von Verschlüsselungsschlüsseln](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
+ [Unter Verwendung eines Verschlüsselungsschlüssels](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

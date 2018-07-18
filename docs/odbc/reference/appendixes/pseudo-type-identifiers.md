@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906795"
 ---
 # <a name="pseudo-type-identifiers"></a>Pseudo-Typ-IDs
 Zur Vereinfachung der Programmierung Anwendung definiert ODBC eine Anzahl von Pseudo-Typ-IDs. Diese Bezeichner entsprechen nicht den tatsächlich tatsächlichen Datentypen, jedoch stattdessen abhängig von der Situation lösen an vorhandenen Datentypen.  

@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
+title: Sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4423664cd7cf7edcfa628a51c85653bf3745fef6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971812"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Aktiviert die Statistiksammlung für systemintern kompilierte gespeicherte Prozeduren für die Instanz.  
   
- Zum Aktivieren der Statistiksammlung auf der abfragenebene für systemintern kompilierte gespeicherte Prozeduren finden Sie unter [Sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
+ Zum Aktivieren der Statistiksammlung für systemintern kompilierte gespeicherte Prozeduren auf Abfrageebene finden Sie unter [Sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +46,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value = *Wert*  
  Bestimmt, ob die Statistiksammlung auf Prozedurebene aktiviert (1) oder deaktiviert (0) ist.  
   
- @new_collection_value wird auf 0 (null) festgelegt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder die Datenbank gestartet wird.  
+ @new_collection_value nastaven NA hodnotu NULL bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder die Datenbank gestartet wird.  
   
  @old_collection_value = *Wert*  
  Gibt den aktuellen Status zurück.  
@@ -57,7 +58,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Erfordert die Mitgliedschaft in der festen sysadmin-Rolle.  
   
 ## <a name="code-samples"></a>Codebeispiele  
- Festzulegende @new_collection_value und Fragen den Wert von @new_collection_value:  
+ Festzulegende @new_collection_value und die Abfrage den Wert des @new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

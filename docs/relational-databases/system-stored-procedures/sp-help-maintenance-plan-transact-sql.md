@@ -1,5 +1,5 @@
 ---
-title: Sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
+title: Sp_help_maintenance_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979052"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +50,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@plan_id =**] **'***plan_id***'**  
- Gibt die Plan-ID des Wartungsplans an. *"Plan_id"* ist **"uniqueidentifier"**. Die Standardeinstellung ist NULL.  
+ Gibt die Plan-ID des Wartungsplans an. *Plan_id* ist **UNIQUEIDENTIFIER**. Die Standardeinstellung ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn *"Plan_id"* angegeben wird, **Sp_help_maintenance_plan** drei Tabellen zurück: Plan, Datenbank und Auftrag.  
+ Wenn *Plan_id* angegeben wird, **Sp_help_maintenance_plan** drei Tabellen zurück: Plan, Datenbank und Auftrag.  
   
 ### <a name="plan-table"></a>Plan-Tabelle  
   
@@ -66,10 +67,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**date_created**|**datetime**|Erstellungsdatum des Wartungsplans.|  
 |**Besitzer**|**sysname**|Besitzer des Wartungsplans.|  
 |**max_history_rows**|**int**|Maximale Anzahl von Zeilen, die für das Aufzeichnen des Wartungsplanverlaufs in der Systemtabelle zugeordnet werden.|  
-|**remote_history_server**|**int**|Der Name des Remoteservers, auf die der Verlaufsbericht geschrieben werden konnte.|  
+|**remote_history_server**|**int**|Der Name des Remoteservers, zu dem der Verlaufsbericht geschrieben werden konnte.|  
 |**max_remote_history_rows**|**int**|Maximale Anzahl von Zeilen, die in der Systemtabelle auf einem Remoteserver zugeordnet wurden und in die der Verlaufsbericht geschrieben werden konnte.|  
 |**user_defined_1**|**int**|Der Standardwert ist NULL.|  
-|**user_defined_2**|**Nvarchar(100)**|Der Standardwert ist NULL.|  
+|**user_defined_2**|**nvarchar(100)**|Der Standardwert ist NULL.|  
 |**user_defined_3**|**datetime**|Der Standardwert ist NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Der Standardwert ist NULL.|  
   
@@ -83,13 +84,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|**job_id**|Die ID jedes Auftrags, der dem Wartungsplan zugeordnet ist. *Job_id* ist **"uniqueidentifier"**.|  
+|**job_id**|Die ID jedes Auftrags, der dem Wartungsplan zugeordnet ist. *Job_id* ist **Uniqueidentifier**.|  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_help_maintenance_plan** befindet sich in der **Msdb** Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_help_maintenance_plan**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel enthält beschreibende Informationen zum Wartungsplan FAD6F2AB-3571-11D3-9D4A-00C04FB925FC.  
@@ -101,6 +102,6 @@ EXECUTE   sp_help_maintenance_plan
   
 ## <a name="see-also"></a>Siehe auch  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Datenbank-Wartungsplan gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Datenbank-Wartungsplans gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

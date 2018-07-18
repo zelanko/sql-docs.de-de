@@ -1,41 +1,20 @@
 ---
-title: SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+title: SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989512"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +58,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird verwendet, um Spalten aus der Quellabfrage auf Spalten im Miningmodell zu richten, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Zuordnung Verknüpfungsliste*> stehen mit einem Gleichheitszeichen (=), wie im folgenden Beispiel gezeigt:  
+ Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird verwendet, um Spalten aus der Quellabfrage auf Spalten im Miningmodell zu richten, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Zuordnung joinliste*> durch den mit einem Gleichheitszeichen (=) verknüpft sind, wie im folgenden Beispiel gezeigt:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -91,9 +70,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Die Quellabfrage für den PREDICTION JOIN kann eine Tabellen- oder eine SINGLETON-Abfrage sein.  
   
- Sie können angeben, dass Vorhersagefunktionen, die einen Tabellenausdruck in keine Zurückgeben der \< *select-Ausdrucksliste*> und der \< *Bedingung Ausdruck*>.  
+ Sie können angeben, dass Vorhersagefunktionen, die einen Tabellenausdruck in keine Zurückgeben der \< *select-Ausdrucksliste*> und die \< *Bedingungsausdruck*>.  
   
- **NATÜRLICHE PREDICTION JOIN** ordnet automatisch zusammen Spaltennamen aus der Quellabfrage, die Spaltennamen im Modell entsprechen. Bei Verwendung von **natürliche PREDICTION**, können Sie die ON-Klausel auslassen.  
+ **NATURAL PREDICTION JOIN** ordnet automatisch zusammen Spaltennamen aus der Quellabfrage, die Spaltennamen im Modell entsprechen. Bei Verwendung von **natürliche PREDICTION**, können Sie die ON-Klausel auslassen.  
   
  Die WHERE-Bedingung kann nur auf vorhersagbare Spalten oder verknüpfte Spalten angewendet werden.  
   
@@ -110,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Hat zwei Kinder, die zu Hause leben  
   
- Das TM Decision Tree-Miningmodell und die bekannten Merkmalen über das Subjekt verwenden, die Abfrage gibt einen booleschen Wert, der angibt, ob die Person das Fahrrad und einen Satz von tabellarischen zurückgegebenen Werte gekauft haben die ["PredictHistogram" &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) Funktion, die beschreiben, wie die Vorhersage getroffen wurde.  
+ Verwenden das TM Decision Tree-Miningmodell und die bekannten Eigenschaften über das Subjekt, die Abfrage gibt einen booleschen Wert, der angibt, die Person das Fahrrad und einen Satz von tabellarischen ob, zurückgegeben wird gekauft haben die [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) Funktion, die beschreiben, wie die Vorhersage getroffen wurde.  
   
 ```  
 SELECT  
@@ -127,7 +106,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Beispiel 2: Verwenden von OPENQUERY  
- Im folgende Beispiel wird gezeigt, wie eine batchvorhersageabfrage erstellt wird, wird mit einer Liste potenzieller Kunden, die in einem externen Dataset gespeichert. Da die Tabelle einer Datenquellensicht gehört, die in einer Instanz von definiert wurde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten. Da die Namen der Spalten in der Tabelle von denen in das Miningmodell unterscheiden, sind die **ON** -Klausel verwendet werden muss, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
+ Das folgende Beispiel zeigt, wie Sie eine batchvorhersageabfrage zu erstellen, mit einer Liste potenzieller Kunden, die in einem externen Dataset gespeichert wird. Da die Tabelle Bestandteil einer Datenquellensicht ist, die auf einer Instanz von definiert wurde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten. Da sich die Namen der Spalten in der Tabelle aus dem Miningmodell unterscheiden die **ON** -Klausel verwendet werden muss, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
   
  Die Abfrage gibt Folgendes zurück: den Vor- und Nachnamen jeder Person in der Tabelle sowie eine boolesche Spalte, die angibt, ob die Personen voraussichtlich ein Fahrrad kauften, dabei bedeutet 0 „wird vermutlich kein Fahrrad kaufen“ und 1 „wird vermutlich ein Fahrrad kaufen“. Die letzte Spalte enthält die Wahrscheinlichkeit für das vorhergesagte Ergebnis.  
   
@@ -184,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Die [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **wählen** Liste, die die NATURAL PREDICTION JOIN-Klausel folgt bereitstellt, die Werte, die als Eingabe für die Vorhersage verwendet.  
+ Die [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) -Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **wählen** Liste, die die NATURAL PREDICTION JOIN-Klausel folgt, stellt die Werte als Eingabe für die Vorhersage verwendet.  
   
 ```  
 SELECT FLATTENED  
@@ -205,12 +184,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set – Mountain|  
   
- Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie mithilfe der **FLATTENED** Schlüsselwort, wie im folgenden Beispiel gezeigt, um die Ergebnisse übersichtlicher zu gestalten.  
+ Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie mithilfe der **FLATTENED** Schlüsselwort, wie im folgenden Beispiel gezeigt wird, um die Ergebnisse übersichtlicher zu gestalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: Sys. fn_check_object_signatures (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015152"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,9 +63,9 @@ fn_ check_object_signatures (
  SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. @*Fingerabdruck* ist **varbinary(20)**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
- Die folgende Tabelle enthält die Spalten, die **Fn_check_object_signatures** zurückgibt.  
+ Die folgende Tabelle listet die Spalten, die **Fn_check_object_signatures** zurückgibt.  
   
-|Column|Typ|Description|  
+|Spalte|Typ|Description|  
 |------------|----------|-----------------|  
 |Typ|**nvarchar(120)**|Gibt die Typbeschreibung oder -assembly zurück.|  
 |entity_id|**int**|Gibt die Objekt-ID des Objekts zurück, das ausgewertet wird.|  

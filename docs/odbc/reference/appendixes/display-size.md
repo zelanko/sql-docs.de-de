@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907035"
 ---
 # <a name="display-size"></a>Die Anzeigegröße
 Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen von Daten in Form von Zeichen erforderlich. In der folgenden Tabelle definiert die Anzeigegröße für jede ODBC-SQL-Datentyp.  

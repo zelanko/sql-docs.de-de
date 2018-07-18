@@ -2,7 +2,6 @@
 title: Shape-Befehle im Allgemeinen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6af36fbf7a3b60067c94f0d21aa6e7514df1a098
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c56148f0c94455ac96b926de050518d412098bab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272589"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Datenstrukturierung definiert die Spalten von einer geformten **Recordset**, die Beziehungen zwischen den Entitäten dargestellt durch die Spalten und die Art und Weise, in dem die **Recordset** mit Daten aufgefüllt wird.  

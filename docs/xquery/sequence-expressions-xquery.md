@@ -1,5 +1,5 @@
 ---
-title: Sequence-Ausdrücke (XQuery) | Microsoft Docs
+title: Sequence Expressions (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048738"
 ---
 # <a name="sequence-expressions-xquery"></a>Sequenzausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Beispiel C  
- Die folgende Abfrage wird angegeben, für die AdditionalContactInfo-Spalte von der **Xml** Typ in der Contact-Tabelle. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<"telephoneNumber" >, \<Pager >, und die anderen Knoten können an beliebiger Stelle im Dokument auftreten. Die Abfrage konstruiert eine Sequenz, die alle enthält die \<"telephoneNumber" > untergeordnete Elemente des Kontextknotens, gefolgt von den \<Pager > untergeordneten Elemente. Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
+ Die folgende Abfrage wird angegeben, für die AdditionalContactInfo-Spalte, der die **Xml** Typ in der Contact-Tabelle. Diese Spalte speichert zusätzliche Kontaktinformationen, z. B. eine oder mehrere zusätzliche Telefonnummern, Pagernummern und Adressen. Die \<TelephoneNumber >, \<Pager >, und die anderen Knoten können an beliebiger Stelle im Dokument. Die Abfrage konstruiert eine Sequenz, die alle enthält die \<"telephoneNumber" > untergeordnete Elemente des Kontextknotens aus, gefolgt von der \<Pager > untergeordnete Elemente. Beachten Sie die Verwendung des Kommasequenzoperators im zurückgegebenen Ausdruck `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -174,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- Weitere Informationen zum Angeben von Prädikaten in einem Pfadausdruck finden Sie unter [angeben von Prädikaten in einem Pfadausdrucksschritt](../xquery/path-expressions-specifying-predicates.md).  
+ Weitere Informationen zur Vorgehensweise beim Angeben von Prädikaten in einem Pfadausdruck finden Sie unter [angeben von Prädikaten in einem Schritt eines Pfadausdrucks](../xquery/path-expressions-specifying-predicates.md).  
   
  Das folgende Beispiel erstellt einen Sequenzausdruck aus Teilbäumen und wendet dann einen Filter auf die Sequenz an.  
   

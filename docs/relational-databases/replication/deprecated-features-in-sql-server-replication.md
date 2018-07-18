@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ef96334a4bf317bf54241d6b5ff0d129a77e58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c3395ce12f5a2d60c9c2472f6c4db39394e7d6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353442"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Als veraltet markierte Funktionen der SQL Server-Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Veraltete Elemente in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |-------------|-----------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Die Replikation wird unterstützt, wenn jeder Endpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb zweier Hauptversionen der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]liegt. Daher wird die Replikation zwischen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]nicht unterstützt.|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Die Replikation wird unterstützt, wenn jeder Endpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] innerhalb zweier Hauptversionen der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]liegt. Daher wird die Replikation zwischen [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssEW](../../includes/ssew-md.md)]nicht unterstützt.|  

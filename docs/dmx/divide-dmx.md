@@ -1,30 +1,20 @@
 ---
-title: (Division) (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- / (divide)
-- divide operator (/)
-ms.assetid: 7afc06cd-054b-48c3-9c3c-9a0c17d15e63
-caps.latest.revision: 14
-author: Minewiskan
+title: (Division) (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 00e4712dd44860c673f67d62d7eb1d6ff0bd5d5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972666"
 ---
 # <a name="divide-dmx"></a>(Division) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +47,7 @@ Dividend / Divisor
  [Arithmetische Operatoren &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Teilen Sie &#40;SSIS-Ausdruck&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;Teilen Sie&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [Unterteilen &#40;SSIS-Ausdruck&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;Unterteilen&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

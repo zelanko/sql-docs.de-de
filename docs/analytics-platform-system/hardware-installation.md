@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539090"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Hardwareinstallation Analytics Platform System-Einheit
 Dieser Artikel beschreibt, wie verschieben, entpacken und die Hardware für die SQL Server PDW Appliance zu installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Anwendung sollte entpackt, installiert werden, und überprüft, bevor sie Ihnen über aktiviert ist. Kunden die Teilnahme ist erforderlich, damit Elemente wie z. B. Daten zugreifen, Stromversorgung und Ethernet-Verbindungen zu zentrieren.  

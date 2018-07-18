@@ -1,39 +1,27 @@
 ---
-title: FORM (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SHAPE statement
-- multiple data sources
-ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
-author: Minewiskan
+title: FORM (DMX) | Microsoft-Dokumentation
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0c31d8d4725d90200f7f2811f974ffd9b98bcaa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985293"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;quelldatenabfrage&gt; -Form
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Kombiniert Abfragen aus mehreren Datenquellen in einer hierarchischen Tabelle (eine Tabelle mit geschachtelten Tabellen), die zur Falltabelle für das Miningmodell wird.  
   
- Die vollständige Syntax eines der **Form** Befehl finden Sie der [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
+ Die vollständige Syntax eines der **Form** Befehl finden Sie unter den [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +59,7 @@ APPEND ({ <child table query> }
  Sie müssen die Abfragen nach der Spalte sortieren, die die übergeordnete Tabelle und die untergeordnete Tabelle verknüpft.  
   
 ## <a name="examples"></a>Beispiele  
- Sie können das folgende Beispiel in einer [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) Anweisung zum Trainieren eines Modells, das eine geschachtelte Tabelle enthält. Die beiden Tabellen in der **Form** Anweisung beziehen sich über die **OrderNumber** Spalte.  
+ Können Sie das folgende Beispiel in einer [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) Anweisung zum Trainieren eines Modells, die eine geschachtelte Tabelle enthält. Die beiden Tabellen in der **Form** Anweisung beziehen sich über die **OrderNumber** Spalte.  
   
 ```  
 SHAPE {  
@@ -85,8 +73,8 @@ SHAPE {
   
 ## <a name="see-also"></a>Siehe auch  
  [&#60;quelldatenabfrage&#62;](../dmx/source-data-query.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

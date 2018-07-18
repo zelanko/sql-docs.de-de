@@ -1,13 +1,12 @@
 ---
-title: Konvertierungen von SQL-in C | Microsoft Docs
+title: Konvertierungen von SQL-in C | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425639"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>DateTime-Datentypkonvertierungen von SQL-in C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 |OK|Keine Konvertierungsprobleme|  
 |1|Es gelten die Regeln vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Führende und nachfolgende Leerzeichen werden ignoriert.|  
-|3|Die Zeichenfolge wird in Datum, Uhrzeit, Zeitzone oder Zeitunterschied der Zeitzone zerlegt und kann bis zu 9 Stellen für Sekundenbruchteile enthalten. Wenn die Angabe des Zeitunterschieds einer Zeitzone analysiert wird, wird die Zeitangabe in die Clientzeitzone konvertiert. Wenn während dieser Konvertierung ein Fehler auftritt, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Überlauf im DateTime-Wert Feld" generiert.|  
+|3|Die Zeichenfolge wird in Datum, Uhrzeit, Zeitzone oder Zeitunterschied der Zeitzone zerlegt und kann bis zu 9 Stellen für Sekundenbruchteile enthalten. Wenn die Angabe des Zeitunterschieds einer Zeitzone analysiert wird, wird die Zeitangabe in die Clientzeitzone konvertiert. Wenn während dieser Konvertierung ein Fehler auftritt, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Überlauf bei Datetime-Feld" generiert.|  
 |4|Wenn der Wert kein gültiger DATE-, timestamp- oder timestampoffset-Wert ist, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe" generiert.|  
 |5|Wenn die Zeitangabe ungleich Null ist, dann wird ein Diagnosedatensatz mit SQLSTATE 01S07 und der Meldung "Teilbereiche wurden abgeschnitten" generiert.|  
 |6|Wenn der Wert kein gültiger Time-, timestamp- oder timestampoffset-Wert ist, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe" generiert.|  
@@ -70,9 +70,9 @@ ms.lasthandoff: 05/03/2018
 |21|Wenn der Puffer groß genug ist, um einen SQL_SS_TIMESTAMPOFFSET_STRUCT-Wert aufzunehmen, wird der Wert als SQL_SS_TIMESTAMPOFFSET_STRUCT zurückgegeben. Andernfalls wird ein Diagnosedatensatz mit SQLSTATE 22003 und der Meldung "Numerischer Wert außerhalb des Gültigkeitsbereichs" generiert.|  
 |22|Der Wert wird in die Clientzeitzone konvertiert, bevor das Datum extrahiert wird. Dadurch wird für die Konsistenz mit anderen Konvertierungen mit timestampoffset-Typen gesorgt. Tritt während dieser Konvertierung ein Fehler auf, wird ein Diagnosedatensatz mit SQLSTATE 22008 und der Meldung "Überlauf im Datetime-Feld" generiert. Dies könnte in einem Datum resultieren, das sich von dem Wert unterscheidet, der sich durch einfaches Abschneiden ergibt.|  
   
- Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Für Output-Parameter Wenn der Servertyp in angegeben SQLBindParameter entspricht nicht dem tatsächlichen Typ auf dem Server, wird eine implizite Konvertierung vom Server ausgeführt werden und die an den Client zurückgegebene Typ entspricht des Typs über SQLBindParameter angegeben. Dies kann zu unerwarteten konvertierungsergebnissen führen, wenn Konvertierungsregeln des Servers aus, die in der obigen Tabelle aufgeführten unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
+ Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Für Output-Parameter Wenn der Servertyp in angegeben SQLBindParameter entspricht nicht des tatsächlichen Typs auf dem Server, eine implizite Konvertierung vom Server ausgeführt und die an den Client zurückgegebene Typ entspricht des Typs, der über SQLBindParameter angegeben. Dies kann zu unerwarteten konvertierungsergebnissen führen, wenn die Konvertierungsregeln des Servers in der obigen Tabelle aufgeführten unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

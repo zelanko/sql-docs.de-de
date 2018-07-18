@@ -1,5 +1,5 @@
 ---
-title: Sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs
+title: Sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -24,17 +24,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063748"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Erzwingt die Ausführung des FILESTREAM-Garbage Collectors und löscht alle nicht benötigten FILESTREAM-Dateien.  
   
- Ein FILESTREAM-Container kann erst entfernt werden, wenn alle gelöschten Dateien darin vom Garbage Collector bereinigt wurden. Der FILESTREAM Garbage Collector wird automatisch ausgeführt. Allerdings wird Wenn müssen Sie zum Entfernen eines Containers vor der Garbage Collector ausgeführt wurde, können Sie Sp_filestream_force_garbage_collection der Garbage Collector manuell ausführen.  
+ Ein FILESTREAM-Container kann erst entfernt werden, wenn alle gelöschten Dateien darin vom Garbage Collector bereinigt wurden. Der FILESTREAM Garbage Collector wird automatisch ausgeführt. Allerdings wird bei Bedarf so entfernen Sie einen Container, vor der Garbage Collector ausgeführt wurde, können Sie Sp_filestream_force_garbage_collection der Garbage Collector manuell ausführen.  
   
   
 ## <a name="syntax"></a>Syntax  
@@ -59,18 +60,18 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|Wert|Beschreibung|  
+|value|Description|  
 |0|Vorgang war erfolgreich.|  
 |1|Fehler beim Vorgang.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*file_name*|Gibt den Namen des FILESTREAM-Containers an|  
 |*num_collected_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die vom Garbage Collector in diesem Container erfasst (gelöscht) wurden.|  
-|*num_marked_for_collection_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die für den Garbage Collector in diesem Container markiert wurden. Diese Elemente wurden noch nicht gelöscht, aber möglicherweise für die Löschung nach der Garbage Collection-Phase geeignet.|  
-|*num_unprocessed_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien oder Verzeichnisse) an, die nicht von der Garbage Collection in diesem FILESTREAM-Container erfasst wurden. Elemente können aus unterschiedlichen Gründen nicht verarbeitet werden:<br /><br /> Dateien, die festgesetzt werden müssen, da noch keine Protokollsicherung oder CheckPoint ausgeführt wurden.<br /><br /> Dateien im FULL- oder BULK_LOGGED-Wiederherstellungsmodell.<br /><br /> Es liegt eine aktive Transaktion mit langer Ausführungszeit vor.<br /><br /> Der Replikationsprotokollleser-Auftrag wurde nicht ausgeführt. Finden Sie im Whitepaper [FILESTREAM-Speicherung in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) für Weitere Informationen.|  
+|*num_marked_for_collection_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die für den Garbage Collector in diesem Container markiert wurden. Diese Elemente wurden nicht gelöscht wurde, aber möglicherweise zum Löschen, befolgen die Garbage Collection-Phase.|  
+|*num_unprocessed_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien oder Verzeichnisse) an, die nicht von der Garbage Collection in diesem FILESTREAM-Container erfasst wurden. Elemente können aus unterschiedlichen Gründen nicht verarbeitet werden:<br /><br /> Dateien, die festgesetzt werden müssen, da noch keine Protokollsicherung oder CheckPoint ausgeführt wurden.<br /><br /> Dateien im FULL- oder BULK_LOGGED-Wiederherstellungsmodell.<br /><br /> Es liegt eine aktive Transaktion mit langer Ausführungszeit vor.<br /><br /> Der Replikationsprotokollleser-Auftrag wurde nicht ausgeführt. Finden Sie im Whitepaper [FILESTREAM-Speicher in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) für Weitere Informationen.|  
 |*last_collected_xact_seqno*|Gibt die letzte Sequenznummer (LSN) für den entsprechenden FILESTREAM-Container an, bis zu der die Dateien von der Garbage Collection erfasst wurden.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -81,9 +82,9 @@ sp_filestream_force_garbage_collection
   
 Mehrere Aufrufe dieser gespeicherten Prozedur können nur in separaten Containern oder separaten Datenbanken gleichzeitig ausgeführt werden.  
 
-Aufgrund von 2-Phasen-Vorgängen sollte die gespeicherte Prozedur ausgeführt werden, zweimal aus, um tatsächlich zugrunde liegende Filestream-Dateien zu löschen.  
+2-Phasen-Vorgängen ausgelöst wurden sollte die gespeicherte Prozedur ausgeführt werden, zweimal aus, um tatsächlich zugrunde liegenden Filestream-Dateien gelöscht.  
 
-Garbage Collection (GC) basiert auf kürzungen von Transaktionsprotokollen. Aus diesem Grund Dateien in einer Datenbank mithilfe des vollständigen Wiederherstellungsmodells vor kurzem gelöscht wurden, sind sie GC-Ed, nachdem eine protokollsicherung der Teile Protokoll Transaktion stammt und der Teil des Protokolls als inaktiv markiert. In einer Datenbank, das einfache Wiederherstellungsmodell verwenden, tritt ein Abschneiden des Protokolls nach einem `CHECKPOINT` für die Datenbank ausgegeben wurde.  
+Garbage Collection (GC) basiert auf Abschneiden des Protokolls. Wenn Dateien in einer Datenbank mithilfe des vollständigen Wiederherstellungsmodells vor kurzem gelöscht wurden, sind daher GC-Ed erst, nachdem eine protokollsicherung der die Transaktion Log Teile stammt, und der Log-Teil wird als inaktiv markiert. In einer Datenbank, das einfache Wiederherstellungsmodell verwendet, tritt ein Abschneiden des Protokolls nach einem `CHECKPOINT` für die Datenbank ausgegeben wurde.  
 
 
 ## <a name="permissions"></a>Berechtigungen  

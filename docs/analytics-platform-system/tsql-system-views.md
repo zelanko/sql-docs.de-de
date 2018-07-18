@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539610"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Systemsichten für Analytics Platform System Parallel Data Warehouse
 Systemsichten für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).

@@ -2,7 +2,7 @@
 # [Übersicht über SQL Server-Tools und -Dienstprogramme](../tools/overview-sql-tools.md)
 # [Neue und aktualisierte Artikel](new-updated-tools.md)
 
-# [SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -30,3 +30,8 @@
 ## [sqlps (Hilfsprogramm)](sqlps-utility.md)  
 ## [sqlservr](sqlservr-application.md)  
 ## [tablediff (Hilfsprogramm)](tablediff-utility.md)
+
+# sqlpackage
+## [Installieren von sqlpackage](sqlpackage-download.md)
+## [Versionsanmerkungen](sqlpackage-release-notes.md)
+## [Referenz zu sqlpackage](sqlpackage.md)

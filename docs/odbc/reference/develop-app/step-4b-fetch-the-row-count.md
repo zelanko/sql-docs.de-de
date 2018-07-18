@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915255"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Schritt 4 b: die Anzahl der Zeilen abrufen
 Der nächste Schritt ist beim Abrufen der Zeilenanzahl liegt, wie in der folgenden Abbildung dargestellt.  

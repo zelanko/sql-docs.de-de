@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204152"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Ein R-Modell zu erstellen und speichern in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -156,7 +157,7 @@ Nachdem Sie ein Modell erstellt und ermittelt, dass sie gut funktioniert haben, 
 
 Da [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] können Sie die aufrufen ein R-Modell mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur ist leicht mit R in einer Clientanwendung verwenden.
 
-Bevor Sie jedoch das Modell aus einer externen Anwendung aufrufen können, müssen Sie das Modell in der Datenbank speichern, die für Produktion verwendet wird. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]werden trainierte Modelle im Binärformat in einer einzelnen Spalte des Typs **varibnary(max)**gespeichert.
+Bevor Sie jedoch das Modell aus einer externen Anwendung aufrufen können, müssen Sie das Modell in der Datenbank speichern, die für Produktion verwendet wird. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]werden trainierte Modelle im Binärformat in einer einzelnen Spalte des Typs **varibnary(max)** gespeichert.
 
 Daher umfasst das Verschieben eines trainierten Modells aus R in SQL Server diese Schritte:
 

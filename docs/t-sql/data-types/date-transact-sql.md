@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 792774360e368f0cf950cacfd97a8c2d5355e8e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415439"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,11 +61,11 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## <a name="supported-string-literal-formats-for-date"></a>Unterstützte Formate der Zeichenfolgenliterale für date
 In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale für den **date**-Datentyp aufgeführt.
   
-|Numerisch|Description|  
+|Numerisch|und Beschreibung|  
 |-------------|-----------------|  
 |dmy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd und [yy]yy stellen den Monat, den Tag und das Jahr in einer Zeichenfolge mit Schrägstrichen (/), Bindestrichen (-) oder Punkten (.) als Trennzeichen dar.<br /><br /> Es werden nur vier- oder zweistellige Jahreszahlen unterstützt. Verwenden Sie nach Möglichkeit immer vierstellige Jahreszahlen. Verwenden Sie die Option [Konfigurieren des Umstellungsjahres für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md), um eine ganze Zahl zwischen 0001 und 9999 anzugeben, die das Umstellungsjahr für das Interpretieren zweistelliger Jahre als vierstellige Jahre darstellt.<br /><br /> **Hinweis!** Für Informatica ist JJJJ auf den Bereich 1582 bis 9999 beschränkt.<br /><br /> Ein zweistelliges Jahr, das kleiner als oder gleich den letzten zwei Ziffern des Umstellungsjahres ist, liegt im selben Jahrhundert wie das Umstellungsjahr. Ein zweistelliges Jahr, das größer als die letzten zwei Ziffern des Umstellungsjahres ist, liegt im Jahrhundert vor dem Umstellungsjahr. Wenn z. B. two-digit year cutoff den Standardwert 2049 annimmt, wird das zweistellige Jahr 49 als 2049 und das zweistellige Jahr 50 als 1950 interpretiert.<br /><br /> Das Standarddatumsformat wird von der aktuellen Spracheinstellung bestimmt. Sie können das Datumsformat ändern, indem Sie die Anweisungen [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) verwenden.<br /><br /> Das **ydm**-Format wird nicht für **date** unterstützt.|  
   
-|Alphabetisch|Description|  
+|Alphabetisch|und Beschreibung|  
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** stellt den vollständigen Monatsnamen oder die in der aktuellen Sprache angegebene Monatsabkürzung dar. Kommas sind optional, und die Großschreibung wird ignoriert.<br /><br /> Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.|  
   
@@ -73,15 +73,15 @@ In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dies ist das einzige Format, das als internationaler Standard definiert ist.|  
   
-|Unstrukturiert|Description|  
+|Unstrukturiert|und Beschreibung|  
 |-----------------|-----------------|  
 |[yy]yymmdd<br /><br /> yyyy[mm][dd]|Die **date**-Daten können mit vier, sechs oder acht Ziffern angegeben werden. Eine Zeichenfolge mit sechs oder acht Ziffern wird immer als **ymd** interpretiert. Monat und Tag müssen immer zweistellig sein. Eine vierstellige Zeichenfolge wird als Jahr interpretiert.|  
   
-|ODBC|Description|  
+|ODBC|und Beschreibung|  
 |----------|-----------------|  
 |{ d 'yyyy-mm-dd' }|ODBC-API-spezifisch|  
   
-|W3C XML-Format|Description|  
+|W3C XML-Format|und Beschreibung|  
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|Speziell unterstützt für die XML/SOAP-Verwendung.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder – (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
   

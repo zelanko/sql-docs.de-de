@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,15 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031338"
 ---
-# <a name="data-tier-application-views---dbosysdacinstances"></a>Data-Tier Application Ansichten - dbo.sysdac_instances
+# <a name="data-tier-application-views---dbosysdacinstances"></a>Sichten von datenebenenanwendungen - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt eine Zeile für jede Instanz der Datenebenenanwendung (DAC) an, die für eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt wird. Sysdac_instances gehört zum Dbo-Schema in der Msdb-Datenbank. Die folgende Tabelle beschreibt die Spalten in der Ansicht Sysdac_instances.  
+  Zeigt eine Zeile für jede Instanz der Datenebenenanwendung (DAC) an, die für eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt wird. Sysdac_instances gehört zum Dbo-Schema in der Msdb-Datenbank. In der folgende Tabelle werden die Spalten in der Ansicht Sysdac_instances beschrieben.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,6 +57,6 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Data-Tier Application Ansichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [Sichten von datenebenenanwendungen &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

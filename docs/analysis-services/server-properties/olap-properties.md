@@ -1,6 +1,6 @@
 ---
 title: OLAP-Eigenschaften | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239290"
 ---
 # <a name="olap-properties"></a>OLAP-Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten OLAP-Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** Nur mehrdimensionaler Servermodus  
@@ -44,7 +46,7 @@ ms.lasthandoff: 05/10/2018
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
 ## <a name="lazyprocessing"></a>LazyProcessing  
- **Aktiviert**  
+ **Enabled**  
  Eine boolesche Eigenschaft, die angibt, ob die verzögerte Aggregationsverarbeitung aktiviert ist.  
   
  **SleepIntervalSecs**  
@@ -201,7 +203,7 @@ ms.lasthandoff: 05/10/2018
  **ROLAPDimensionProcessingEffort**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="query"></a>Abfrage  
+## <a name="query"></a>Dataseteigenschaften  
  **AggregationsUseEnabled**  
  Eine boolesche Eigenschaft, die definiert, ob zur Laufzeit gespeicherte Aggregationen verwendet werden. Diese Eigenschaft lässt zu, dass Aggregationen für Informationszwecke oder Vergleichstests ohne Ändern des Aggregationsentwurfs oder erneutes Verarbeiten deaktiviert werden.  
   
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   Wirkt sich auf alle Datenbanken auf dem Server aus. **DimensionPropertyCachesize** ist eine serverweite Eigenschaft. Wenn Sie diese Eigenschaft ändern, wirkt sich dies auf alle Datenbanken aus, die auf der aktuellen Instanz ausgeführt werden.  
   
- Schätzen der Anforderungen für den Dimensionscache:  
+Schätzen der Anforderungen für den Dimensionscache:  
   
 1.  Beginnen Sie, indem Sie die Größe um einen sehr hohen Wert erhöhen. So stellen Sie fest, ob sich die Vergrößerung des Dimensionscaches vorteilhaft auswirkt. Beispielsweise können Sie den Standardwert in einem ersten Schritt verdoppeln.  
   
 2.  Wenn sich eine Leistungsverbesserung abzeichnet, verringern Sie den Wert schrittweise, bis Sie ein ausgewogenes Verhältnis zwischen Leistung und Arbeitsspeicherauslastung erreichen.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\MemoryModel\Tax**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="jobs"></a>Aufträge  
+## <a name="jobs"></a>Jobs  
  **ProcessAggregation\MemoryModel\Income**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   

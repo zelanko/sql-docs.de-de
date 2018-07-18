@@ -18,17 +18,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 655f5838456fd72566405c453cecfd8858d7d6dd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048828"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Gibt aktuelle e/a, Sperren auf Zeilenebene und Zugriff auf die Aktivität für komprimierte Zeilengruppen in einem columnstore-Index. Verwendung **sys.dm_db_column_store_row_group_operational_stats** zum Verfolgen der Zeitdauer eine Benutzerabfrage warten, bis die Lese- und Schreibvorgänge für eine komprimierte Zeilengruppe oder eine Partition eines columnstore-Indexes muss, und welche Zeilengruppen, die auftreten hohen e/a-Aktivitäten oder Hotspots.  
+  Gibt aktuelle e/a, Sperren auf Zeilenebene und Zugriff auf die Aktivität für Methode für die komprimierten Zeilengruppen in eine columnstore-Index. Verwendung **sys.dm_db_column_store_row_group_operational_stats** die Zeitspanne nachverfolgen eine Benutzerabfrage warten, bis die lesen oder Schreiben in eine komprimierte Zeilengruppe oder eine Partition eines columnstore-Indexes werden muss, und welche Zeilengruppen, die auftreten umfangreiche e/a-Aktivitäten oder Hotspots.  
   
- In-Memory-columnstore-Indizes werden in dieser DMV nicht angezeigt.  
+ In-Memory-Columnstore-Indizes werden in dieser DMV nicht angezeigt.  
  
  
 |Spaltenname|Datentyp|Description|  
@@ -37,23 +38,23 @@ ms.lasthandoff: 05/23/2018
 |**index_id**|**int**|ID des columnstore-Indexes.|  
 |**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
 |**row_group_id**|**int**|Die ID der Zeilengruppe im columnstore-Index. Dies ist eindeutig innerhalb einer Partition.|  
-|**scan_count**|**int**|Anzahl von Scanvorgängen durch die Zeilengruppe seit dem letzten Neustart der SQL.|  
-|**delete_buffer_scan_count**|**int**|Anzahl der Häufigkeit, mit die löschpuffers verwendet wurde, um gelöschte Zeilen in dieser Zeilengruppe zu bestimmen. Dies schließt den Zugriff auf die Hashtabelle im Arbeitsspeicher und der zugrunde liegenden Btree.|  
-|**index_scan_count**|**int**|Anzahl der Häufigkeit, mit der die Partition der columnstore-Index gescannt wurde. Dies gilt für alle Zeilengruppen in der Partition.|  
-|**rowgroup_lock_count**|**bigint**|Kumulierte Anzahl der sperranforderungen, für die dieser Zeilengruppe seit dem letzten Neustart der SQL.|  
-|**rowgroup_lock_wait_count**|**bigint**|Gesamthäufigkeit, mit auf Zeilensperre gewartet hat das Datenbankmodul dieser Zeilengruppe seit dem letzten Neustart der SQL.|  
-|**rowgroup_lock_wait_in_ms**|**bigint**|Die kumulative Anzahl der Millisekunden auf Zeilensperre gewartet hat das Datenbankmodul dieser Zeilengruppe seit dem letzten Neustart der SQL.|  
+|**scan_count**|**int**|Anzahl von Scanvorgängen durch die seit dem letzten Neustart der SQL-Zeilengruppe.|  
+|**delete_buffer_scan_count**|**int**|Anzahl von Wiederholungen des löschpuffers wurde verwendet, um zu bestimmen, gelöschte Zeilen in diese Zeilengruppe aufgenommen. Dies schließt den Zugriff auf die Hashtabelle im Arbeitsspeicher und der zugrunde liegenden BTree-Struktur.|  
+|**index_scan_count**|**int**|Wie oft der columnstore-index, Partition wurde überprüft. Dies ist für alle Zeilengruppen in der Partition identisch.|  
+|**rowgroup_lock_count**|**bigint**|Kumulierte Anzahl der sperranforderungen, für die dieser Zeilengruppe seit dem letzten Neustart von SQL.|  
+|**rowgroup_lock_wait_count**|**bigint**|Gesamthäufigkeit, mit die Datenbank-Engine wird auf diesem Rowgroup-Sperre gewartet hat, seit dem letzten Neustart von SQL.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Die kumulative Anzahl der Millisekunden die Datenbank-Engine wird auf diesem Rowgroup-Sperre gewartet hat, seit dem letzten Neustart von SQL.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Folgende Berechtigungen sind erforderlich:  
   
--   CONTROL-Berechtigung für die Tabelle von Object_id angegeben.  
+-   CONTROL-Berechtigung für die Tabelle, die innerhalb von Object_id.  
   
--   VIEW DATABASE STATE-Berechtigung zum Zurückgeben von Informationen zu allen Objekten innerhalb der Datenbank mithilfe des Objekt-Platzhalters @*Object_id* = NULL  
+-   VIEW DATABASE STATE-Berechtigung zum Zurückgeben von Informationen zu allen Objekten innerhalb der Datenbank, mit der Objekt-Platzhalter @*Object_id* = NULL  
   
  Wenn die VIEW DATABASE STATE-Berechtigung erteilt wurde, ist die Rückgabe für alle Objekte in der Datenbank zulässig, unabhängig davon, ob CONTROL-Berechtigungen für bestimmte Objekte verweigert wurden.  
   
- Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Auch wenn dem Datenbank-Platzhalter @*Database_id*= NULL angegeben wird, wird die Datenbank ausgelassen.  
+ Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Auch wenn der Datenbank-Platzhalter @*Database_id*= NULL angegeben wird, die Datenbank fehlt.  
   
  Weitere Informationen finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   

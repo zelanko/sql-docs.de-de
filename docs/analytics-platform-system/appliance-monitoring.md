@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538670"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Einheit für Analytics Platform System überwachen
 Dieses Überwachung Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der Appliance Analytics Platform System.  

@@ -1,5 +1,5 @@
 ---
-title: PDW-Topologie – Analytics Platform System | Microsoft Docs
+title: PDW-Topologie – Analytics Platform System | Microsoft-Dokumentation
 description: PDW-Topologie für Analytics Platform System.
 author: mzaman1
 manager: craigg
@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b68a0bfefab0cd299ec93722857a65caf8525393
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 0c0c16f331c81dd34fc5b7256805efc231a1c97c
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909700"
 ---
 # <a name="pdw-topology"></a>PDW-Topologie
-Zeigt an, und den Informationen zu den SQL Server PDW-Komponenten. Verwenden der **Appliance Topologie Netzwerkkonfiguration** Seite, um das Netzwerk-IP-Adressen zu ändern.  
-  
-Erweitern Sie die Elemente in diesem Abschnitt, um Informationen zu konfigurieren, die für die gesamte Anwendung gilt. Wählen Sie in den Abschnitten Parallel Data Warehouse-Topologie oder HDInsight Topology, um Informationen zu konfigurieren, die gilt nur für diese Region des Geräts.  
+Zeigt an, und den Informationen zu den SQL Server-PDW-Komponenten. Verwenden der **Appliance Topologie Netzwerkkonfiguration** Seite, um das Netzwerk-IP-Adressen zu ändern.  
   
 ![DWConfig PDW, oberstes Menü](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   
 ## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md)  
+[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

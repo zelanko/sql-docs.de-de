@@ -1,5 +1,5 @@
 ---
-title: Sequenztyps | Microsoft Docs
+title: Sequenztyps | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980022"
 ---
 # <a name="type-system---sequence-type-matching"></a>Geben Sie die System - Sequenztyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Der Wert eines XQuery-Ausdrucks ist immer eine Sequenz aus null oder mehreren Elementen. Ein Item kann entweder ein atomarer Wert oder ein Knoten sein. Der Sequenztyp bezieht sich auf die Möglichkeit, den von einem Abfrageausdruck zurückgegebenen Sequenztyp einem bestimmten Typ zuzuordnen. Beispiel:  
+  Der Wert eines XQuery-Ausdrucks ist immer eine Sequenz aus null oder mehreren Elementen. Ein Item kann entweder ein atomarer Wert oder ein Knoten sein. Der Sequenztyp bezieht sich auf die Möglichkeit, den von einem Abfrageausdruck zurückgegebenen Sequenztyp einem bestimmten Typ zuzuordnen. Zum Beispiel:  
   
 -   Wenn der Ausdruckswert atomar ist, möchten Sie vielleicht wissen, ob er vom Typ einer ganzen Zahl (integer), einem Dezimalwert (decimal) oder einer Zeichenfolge (string) entspricht.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
  Wenn ein Ausdruck eine Sequenz aus atomaren Werten zurückgibt, müssen Sie eventuell herausfinden, welchen Typ der Wert in der Sequenz aufweist. Die folgenden Beispiele zeigen, wie die Sequenztypsyntax verwendet werden kann, um den Typ des von einem Ausdruck zurückgegebenen atomaren Werts auszuwerten.  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Beispiel: Ermitteln, ob eine Sequenz leer ist  
- Die **empty()** Sequence-Typs kann in einem sequenztypausdruck verwendet werden, um festzustellen, ob die Sequenz, die zurückgegeben werden, durch den angegebenen Ausdruck eine leere Sequenz ist.  
+ Die **empty()** Sequenztyp kann in einem sequenztypausdruck verwendet werden, um festzustellen, ob die Sequenz, die zurückgegeben werden, durch den angegebenen Ausdruck eine leere Sequenz ist.  
   
  Im folgenden Beispiel ermöglicht das XML-Schema, dass für das <`root`>-Element NULL-Werte zulässig sind:  
   
@@ -100,7 +101,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Vor dem Verarbeiten einer typisierten XML-Instanz möchten Sie u. U. wissen, welchen Datentyp der Wert des Attributs `a` aufweist. Im folgenden Beispiel weist der Wert des Attributs `a` einen decimal-Datentyp auf. Aus diesem Grund`, instance of xs:decimal` gibt "true" zurück.  
+ Vor dem Verarbeiten einer typisierten XML-Instanz möchten Sie u. U. wissen, welchen Datentyp der Wert des Attributs `a` aufweist. Im folgenden Beispiel weist der Wert des Attributs `a` einen decimal-Datentyp auf. Aus diesem Grund`, instance of xs:decimal` gibt True zurück.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -167,7 +168,7 @@ GO
  Wenn beide Bedingungen erfüllt sind, gibt der `instance of`-Ausdruck den Wert True zurück.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>Beispiel: Abfragen einer Spalte vom Typ XML  
- Im folgenden Beispiel wird eine Abfrage angegeben, für eine Instructions-Spalte der **Xml** Geben Sie in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank. Dies ist eine typisierte XML-Spalte, da ihr ein Schema zugeordnet ist. Das XML-Schema definiert das `LocationID`-Attribut des ganzzahligen Datentyps (integer). Aus diesem Grund im Sequenzausdruck den `instance of xs:integer?` gibt "true" zurück.  
+ Im folgenden Beispiel wird eine Abfrage für eine Instructions-Spalte des angegeben **Xml** Geben Sie in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank. Dies ist eine typisierte XML-Spalte, da ihr ein Schema zugeordnet ist. Das XML-Schema definiert das `LocationID`-Attribut des ganzzahligen Datentyps (integer). Aus diesem Grund im Sequenzausdruck den `instance of xs:integer?` gibt True zurück.  
   
 ```  
 SELECT Instructions.query('   
@@ -235,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Es gelten die folgenden speziellen Einschränkungen:  
   
--   **Document-Node()** mit Inhaltstyp Syntax wird nicht unterstützt.  
+-   **Document-Node()** Inhaltstyp Syntax wird nicht unterstützt.  
   
 -   **Processing-Instruction(Name)** Syntax wird nicht unterstützt.  
   
@@ -313,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>Beispiel B  
- Das folgende Beispiel zeigt, wie ermittelt wird, ob der von einem Ausdruck zurückgegebene Knoten ein Elementknoten mit einem bestimmten Namen ist. Er verwendet die **element()** testen.  
+ Das folgende Beispiel zeigt, wie ermittelt wird, ob der von einem Ausdruck zurückgegebene Knoten ein Elementknoten mit einem bestimmten Namen ist. Er verwendet den **element()** testen.  
   
  Im folgenden Beispiel weisen die beiden abgefragten <`Customer`>-Elemente in der XML-Instanz zwei unterschiedliche Typen auf: `CustomerType` und `SpecialCustomerType`. Angenommen, Sie möchten den Typ des <`Customer`>-Elements ermitteln, das von dem Ausdruck zurückgegeben wird. Die folgende XML-Schemaauflistung definiert die Typen `CustomerType` und `SpecialCustomerType`.  
   
@@ -389,7 +390,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Die folgende Abfrage gibt den Wert True zurück, weil es in der abgefragten XML-Instanz einen Attributknoten mit dem Namen `Age` gibt. In diesem Ausdruck wird der `attribute(Age)`-Attributtest verwendet. Da Attribute keine Reihenfolge haben, verwendet die Abfrage den FLWOR-Ausdruck, um alle Attribute abzurufen, und testet dann jedes Attribut mit dem `instance of`-Ausdruck. Das Beispiel erstellt zuerst eine XML-schemaauflistung zum Erstellen einer typisierten **Xml** Variable.  
+ Die folgende Abfrage gibt den Wert True zurück, weil es in der abgefragten XML-Instanz einen Attributknoten mit dem Namen `Age` gibt. In diesem Ausdruck wird der `attribute(Age)`-Attributtest verwendet. Da Attribute keine Reihenfolge haben, verwendet die Abfrage den FLWOR-Ausdruck, um alle Attribute abzurufen, und testet dann jedes Attribut mit dem `instance of`-Ausdruck. Das Beispiel erstellt zuerst eine XML-schemaauflistung einer typisierten erstellen **Xml** Variable.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -427,11 +428,11 @@ RETURN
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Es gelten die folgenden speziellen Einschränkungen:  
   
--   Im elementtest muss der vollständigen Typnamen der auftrittsindikator folgen (**?**).  
+-   Im elementtest muss der Typnamen der auftrittsindikator folgen (**?**).  
   
 -   **Element (ElementName, TypeName)** wird nicht unterstützt.  
   
--   **Element (\*, TypeName)** wird nicht unterstützt.  
+-   **-Element (\*, TypeName)** wird nicht unterstützt.  
   
 -   **Schema-Element()** wird nicht unterstützt.  
   

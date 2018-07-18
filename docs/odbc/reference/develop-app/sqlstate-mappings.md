@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914385"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE-Zuordnungen
 Dieses Thema erläutert SQLSTATE-Werten für ODBC-2. *x* und ODBC-3. *X*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

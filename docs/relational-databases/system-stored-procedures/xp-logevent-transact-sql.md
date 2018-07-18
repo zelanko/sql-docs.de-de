@@ -1,5 +1,5 @@
 ---
-title: Xp_logevent (Transact-SQL) | Microsoft Docs
+title: Xp_logevent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582032"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854262"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Protokolliert eine benutzerdefinierte Nachricht in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolldatei und in der Windows-Ereignisanzeige. Xp_logevent kann eine Warnung gesendet, ohne das Senden einer Nachricht an den Client verwendet werden.  
+  Protokolliert eine benutzerdefinierte Nachricht in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolldatei und in der Windows-Ereignisanzeige. Xp_logevent kann verwendet werden, um eine Warnung zu senden, ohne eine Nachricht an den Client gesendet wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Senden von Nachrichten aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozeduren, Trigger, Batches und So weiter, verwenden Sie die RAISERROR-Anweisung statt Xp_logevent. Xp_logevent nicht Nachrichtenhandler eines Clients oder set @@ERROR. Führen Sie die RAISERROR-Anweisung aus, um Nachrichten in die Windows-Ereignisanzeige und in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokolldatei in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu schreiben.  
+ Beim Senden von Nachrichten von [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozeduren, Trigger, Batches und So weiter, verwenden Sie die RAISERROR-Anweisung statt Xp_logevent. Xp_logevent nicht Nachrichtenhandler eines Clients oder set @@ERROR. Führen Sie die RAISERROR-Anweisung aus, um Nachrichten in die Windows-Ereignisanzeige und in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokolldatei in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu schreiben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle db_owner in der master-Datenbank oder Mitgliedschaft in der festen Serverrolle sysadmin.  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Im folgenden Beispiel wird die Nachricht (mit den an sie übergebenen Variablen) in der Windows-Ereignisanzeige protokolliert.  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

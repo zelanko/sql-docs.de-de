@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902015"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (Desktop-Datenbanktreiber)
 **SQLGetCursorName** wird unterstützt, aber nur verwendet werden, wenn die Cursorbibliothek verwendet wird, da positionierte Operationen in der Treiber nicht unterstützt werden.

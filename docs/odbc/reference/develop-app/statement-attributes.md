@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912425"
 ---
 # <a name="statement-attributes"></a>Anweisungsattribute
 Anweisungsattribute sind Eigenschaften der Anweisung. Ob Sie Lesezeichen und welche Art von verwenden Cursor für die Verwendung mit der Anweisung Ergebnis festgelegt sind, z. B. Anweisungsattribute.  

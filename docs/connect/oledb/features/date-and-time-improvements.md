@@ -2,7 +2,7 @@
 title: Datum und Uhrzeit-Verbesserungen | Microsoft Docs
 description: Datum und Uhrzeit-Verbesserungen in OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d39d7862dc470dfaada9b01f3717662dc2c9c94b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 622df9211c29c60cfdb42034f6284164f8d9af3b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611605"
 ---
 # <a name="date-and-time-improvements"></a>Datum und Uhrzeit-Verbesserungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In diesem Thema wird beschrieben, die OLE DB-Treiber für SQL Server-Unterstützung für das Datum und Uhrzeit-Datentypen, die in hinzugefügt wurden [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

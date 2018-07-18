@@ -1,5 +1,5 @@
 ---
-title: Sys. resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: Sys. resource_governor_external_resource_pools (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,24 +24,25 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b5681bfb81bfc4b18a0052f5ce397973ae90688f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985153"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Gilt für :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] und [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Gibt den gespeicherten externen Konfiguration der Ressourcenpools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Jede Zeile der Sicht bestimmt die Konfiguration eines Pools.
+Gibt den gespeicherten externen Ressourcenpoolkonfiguration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Jede Zeile der Sicht bestimmt die Konfiguration eines Pools.
   
 |Spaltenname|Datentyp|Description|
 |-----------------|---------------|-----------------|
 |pool_id|**int**|Eindeutige ID des Ressourcenpools. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** kann in der Zukunft umbenannt werden.|
-|name|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
+|NAME|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
 |max_cpu_percent|**int**|Maximal zulässige durchschnittliche CPU-Bandbreite für alle Anforderungen im Ressourcenpool an, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu.|
 |max_memory_percent|**int**|Prozentsatz des gesamten Serverspeichers, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. Lässt keine NULL-Werte zu. Der geltende Höchstwert hängt von den Pool-Mindestwerten ab. So kann für max_memory_percent beispielsweise 100 festgelegt sein, aber der geltende Höchstwert ist niedriger.|
-|max_processes|**int**|Maximale Anzahl gleichzeitig ausgeführter externer Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
+|max_processes|**int**|Maximale Anzahl von gleichzeitigen externe Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
 |version|**bigint**|Interne Versionsnummer.|
   
 ## <a name="permissions"></a>Berechtigungen

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915035"
 ---
 # <a name="standard-database-access-architectures"></a>Standard-Datenbank Zugriff Architekturen
 Im Blick auf die Access-Datenbankkomponenten, die im vorherigen Abschnitt beschrieben, wie sich herausstellt, dass zwei von ihnen – Programmierschnittstellen und Daten zu streamen Protokolle – eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerkprotokolle – sowohl für das Netzwerk und Betriebssystem stark von sind jedoch nicht nur auf Niedrig einer Ebene befinden. Es ist auch eine dritte Ansatz – Gateways – Möglichkeiten für die Standardisierung bereitstellt.  

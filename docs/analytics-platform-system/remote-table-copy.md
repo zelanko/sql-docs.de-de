@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538720"
 ---
 # <a name="remote-table-copy"></a>Remotetabelle kopieren
 Beschreibt, wie die Remotetabelle Copy-Funktion verwenden, um Tabellen aus SQL Server PDW-Datenbanken auf entfernte (nicht-Appliance) – SMP – SQL Server-Datenbanken zu kopieren. Verwenden Sie für SQL Server PDW Remotetabelle Kopie auf Hub- und Spoke-Szenarien ermöglicht.  

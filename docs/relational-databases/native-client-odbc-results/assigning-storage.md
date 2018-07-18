@@ -1,13 +1,12 @@
 ---
-title: Zuweisen von Speicher | Microsoft Docs
+title: Zuweisen von Speicher | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1651df87ad3bcf0ac9e5d0f8c865e2d92f925dd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417839"
 ---
 # <a name="assigning-storage"></a>Zuweisen von Speicher
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 
   Eine Anwendung kann vor oder nach der Ausführung einer SQL-Anweisung Speicher für Ergebnisse zuweisen. Wenn eine Anwendung die SQL-Anweisung zum ersten Mal vorbereitet oder ausführt, kann sie Informationen zum Resultset einholen, bevor sie Speicher für die Ergebnisse zuweist. Wenn das Resultset beispielsweise unbekannt ist, muss die Anwendung die Anzahl der Spalten abrufen, bevor sie diesen Speicher zuweisen kann.  
   
- Um Speicher für eine Spalte mit Daten zuzuordnen, eine Anwendung ruft [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)und übergibt sie:  
+ Um Speicher für eine Spalte mit Daten zu verknüpfen, eine Anwendung ruft [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)und übergibt ihn:  
   
 -   Den Datentyp, in den die Daten konvertiert werden sollen.  
   
@@ -57,11 +56,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Die spaltenweise Bindung ist fertig gestellt, wenn jede Spalte an sein eigenes Array von Variablen gebunden wurde.  
   
-     Die spaltenweise Bindung wird angegeben, durch den Aufruf [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) mit *Attribut* auf SQL_ATTR_ROW_BIND_TYPE festgelegt und *ValuePtr* auf SQL_BIND_BY_COLUMN festgelegt wird. Alle Arrays müssen über die gleiche Anzahl von Elementen verfügen.  
+     Die spaltenweise Bindung wird angegeben, indem [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) mit *Attribut* festgelegt auf SQL_ATTR_ROW_BIND_TYPE und *ValuePtr* auf SQL_BIND_BY_COLUMN festgelegt wird. Alle Arrays müssen über die gleiche Anzahl von Elementen verfügen.  
   
 -   Die zeilenweise Bindung ist fertig gestellt, wenn alle Parameter in der SQL-Anweisung als Einheit an ein Array von Strukturen gebunden wurden, die die einzelnen Variablen für die Parameter enthalten.  
   
-     Zeilenweise Bindung wird angegeben, indem **SQLSetStmtAttr** mit *Attribut* auf SQL_ATTR_ROW_BIND_TYPE festgelegt und *ValuePtr* legen Sie auf die Größe des Betriebs Struktur der Variablen, die das Ergebnis zu erhalten, werden die Resultsetspalten an.  
+     Zeilenweise Bindung wird angegeben, indem **SQLSetStmtAttr** mit *Attribut* festgelegt auf SQL_ATTR_ROW_BIND_TYPE und *ValuePtr* legen Sie auf die Größe des Betriebs Struktur der Variablen, die das Ergebnis zu erhalten, werden die Ergebnisspalten an.  
   
  Die Anwendung legt zudem SQL_ATTR_ROW_ARRAY_SIZE auf die Anzahl der Elemente im Spalten- oder Zeilenarray sowie SQL_ATTR_ROW_STATUS_PTR und SQL_ATTR_ROWS_FETCHED_PTR fest.  
   

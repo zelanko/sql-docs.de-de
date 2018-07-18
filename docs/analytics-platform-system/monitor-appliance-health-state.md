@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539050"
 ---
 # <a name="monitor-appliance-health-state"></a>Integritätsstatus des Monitors Appliance
 In diesem Artikel erläutert, wie den Status eines Geräts Analytics Platform System mithilfe der Verwaltungskonsole oder durch direkte Abfrage der dynamischen Verwaltungssichten Parallel Data Warehouse überwachen. 

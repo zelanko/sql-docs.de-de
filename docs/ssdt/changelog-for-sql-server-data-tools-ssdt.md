@@ -1,7 +1,7 @@
 ---
 title: Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773576"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT für Visual Studio 2017 (15.7.0)
+Buildnummer: 14.0.16165.0  
+Veröffentlichungsdatum: 4. Juni 2018  
+  
+### <a name="whats-new"></a>Neues
+
+**SSIS:**
+
+- Korrigiert: Die Seite *Integration Services Designers* unter „Optionen“ kann nicht ordnungsgemäß angezeigt werden.  
+- Korrigiert: ein Problem bei den Helligkeitsverhältnissen von Text im *Transformationssortierungs-Editor*.  
+- Korrigiert: Das Dialogfeld *Verweise auflösen* verschwindet beim Versuch, ein Kombinationsfeld zu bearbeiten.  
+- Korrigiert: F1-Hilfelink im *Hadoop-Verbindungs-Manager* funktioniert nicht.  
+- Korrigiert: Skripttaskcode geht verloren, wenn er sich in einem Container mit SQL Server 2016 als Zielversion befindet.  
+
+
+**Installationsprogramm:**
+
+- Korrigiert: SSAS kann nicht installiert werden, wenn SSRS und SSIS noch nicht in Visual Studio 15.7.2 installiert wurden.
+
+### <a name="known-issues"></a>Bekannte Probleme:
+
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn *ExecuteOutOfProcess* auf *TRUE* festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT für Visual Studio 2017 (15.6.0)
@@ -38,24 +61,24 @@ Releasedatum: 10. April 2018
 
 **SSIS:**
 
-1.  Korrigiert: Die AS-Verarbeitungsaufgabe protokolliert keine Verarbeitungsschritte für SQL Server 2016 und SQL Server 2017.
-2.  Korrigiert: Zugriffsverletzung während des Öffnens von DTSX mit sehr langen, nicht englischsprachigen Aufgabennamen in SSDT.
-3.  Korrigiert: Variablenliste von ScriptTask verschwindet manchmal in der Benutzeroberfläche des Tasks.
-4.  Korrigiert: Das Hinzufügen einer Kopie vorhandener Pakete schlägt fehl, wenn das Paket in SQL Server gespeichert ist.
-5.  Korrigiert: Der Fokus bleibt beim Zugriff auf das Kombinationsfeld in einigen Dialogfeldern des Editors hängen.
-6.  Korrigiert: Der Hintergrund ändert sich beim Wechseln ins VS-Design nicht.
-7.  Korrigiert: Anmerkungs- und Ladebezeichnung sind im dunklen Design nicht sichtbar.
-8.  Korrigiert: Die Statuseigenschaft wird für deaktivierte Elemente der SSIS-Toolbox nicht ordnungsgemäß definiert.
-9.  Korrigiert: Fehler bei der Ausführung von WebServiceTask.
-10. Korrigiert: Die Paketbereitstellung schlägt fehl, wenn die Verbindungszeichenfolge auf eine Variable festgelegt wird, die über einen Ausdruck verfügt, der von den Projektparametern abhängig ist.
+- Korrigiert: Die AS-Verarbeitungsaufgabe protokolliert keine Verarbeitungsschritte für SQL Server 2016 und SQL Server 2017.
+- Korrigiert: Zugriffsverletzung während des Öffnens von DTSX mit sehr langen, nicht englischsprachigen Aufgabennamen in SSDT.
+- Korrigiert: Variablenliste von ScriptTask verschwindet manchmal in der Benutzeroberfläche des Tasks.
+- Korrigiert: Das Hinzufügen einer Kopie vorhandener Pakete schlägt fehl, wenn das Paket in SQL Server gespeichert ist.
+- Korrigiert: Der Fokus bleibt beim Zugriff auf das Kombinationsfeld in einigen Dialogfeldern des Editors hängen.
+- Korrigiert: Der Hintergrund ändert sich beim Wechseln ins VS-Design nicht.
+- Korrigiert: Anmerkungs- und Ladebezeichnung sind im dunklen Design nicht sichtbar.
+- Korrigiert: Die Statuseigenschaft wird für deaktivierte Elemente der SSIS-Toolbox nicht ordnungsgemäß definiert.
+- Korrigiert: Fehler bei der Ausführung von WebServiceTask.
+- Korrigiert: Die Paketbereitstellung schlägt fehl, wenn die Verbindungszeichenfolge auf eine Variable festgelegt wird, die über einen Ausdruck verfügt, der von den Projektparametern abhängig ist.
 
 **Installationsprogramm:**
 
-1.  Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ zu den Datenschutzbestimmungen hinzu.
-2.  Korrigiert: Das Visual Studio-Installer-Fenster erscheint bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“.
+- Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ zu den Datenschutzbestimmungen hinzu.
+- Korrigiert: Das Visual Studio-Installer-Fenster erscheint bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“.
 
 ### <a name="known-issues"></a>Bekannte Probleme:
-1.  Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 
 
 
@@ -65,14 +88,14 @@ Buildnummer: 14.0.16156.0
 ### <a name="whats-new"></a>Neues
 
 **SSIS**
-1.  Korrigiert: Bei der Migration von SSIS 2008-Projekten tritt ein Fehler auf, wenn SSAS und SSIS auf der gleichen VS 2017-Instanz installiert sind.
-2.  Korrigiert: RDLC-Projekte können nicht erstellt werden, wenn sowohl der RDLC-Bericht-Designer als auch SSIS auf der gleichen VS 2017-Instanz installiert sind.
-3.  Korrigiert: Die Anmerkungsfarbe kann nicht aktualisiert werden.
-4.  Korrigiert: Einige Zeichenfolgen im Hadoop-Verbindungs-Manager-Editor sind in anderen Sprachen abgeschnitten.
-5.  Korrigiert: Einige Zeichenfolgen im OData-Verbindungs-Manager-Editor sind abgeschnitten.
-6.  Korrigiert: Einige Zeichenfolgen im Fenster des Assistenten für den Import eines Integration Services-Projekts sind abgeschnitten.
-7.  Korrigiert: Problem mit dem Titel im Informationsfenster der SSIS-Toolbox.
-8.  Korrigiert: Einige Zeichenfolgen im Fenster des Bereitstellungs-Assistenten für Integration Services sind abgeschnitten. 
+- Korrigiert: Bei der Migration von SSIS 2008-Projekten tritt ein Fehler auf, wenn SSAS und SSIS auf der gleichen VS 2017-Instanz installiert sind.
+- Korrigiert: RDLC-Projekte können nicht erstellt werden, wenn sowohl der RDLC-Bericht-Designer als auch SSIS auf der gleichen VS 2017-Instanz installiert sind.
+- Korrigiert: Die Anmerkungsfarbe kann nicht aktualisiert werden.
+- Korrigiert: Einige Zeichenfolgen im Hadoop-Verbindungs-Manager-Editor sind in anderen Sprachen abgeschnitten.
+- Korrigiert: Einige Zeichenfolgen im OData-Verbindungs-Manager-Editor sind abgeschnitten.
+- Korrigiert: Einige Zeichenfolgen im Fenster des Assistenten für den Import eines Integration Services-Projekts sind abgeschnitten.
+- Korrigiert: Problem mit dem Titel im Informationsfenster der SSIS-Toolbox.
+- Korrigiert: Einige Zeichenfolgen im Fenster des Bereitstellungs-Assistenten für Integration Services sind abgeschnitten. 
 
 **Installationsprogramm**
 - Korrigiert: Beim Herunterladen einer Nutzlast tritt manchmal der Fehler „Die angegebene Datei wurde nicht gefunden (0x80070002)“ auf.  

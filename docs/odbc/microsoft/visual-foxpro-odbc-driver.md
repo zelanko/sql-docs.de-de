@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914475"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro-ODBC-Treiber
 Microsoft Visual FoxPro ist eine leistungsstarke objektorientierte Umgebung für die Entwicklung von Erstellung und Anwendung. Microsoft Visual FoxPro-ODBC-Treiber ermöglicht Anwendungen zu öffnen, Abfrage, und Aktualisieren von Daten in der Visual FoxPro- und früheren Versionen von FoxPro über die Benutzeroberfläche öffnen Database Connectivity (ODBC).  

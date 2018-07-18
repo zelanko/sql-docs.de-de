@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c1eae99587a1f447b809becee9509d5a04136e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8b98b10ee285c8e6be4e34214689eeaa7d7049f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309799"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Systemanforderungen für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +71,7 @@ Wenn Sie eine 64-Bit-Betriebssystem verwenden, installiert der ODBC-64-Bit-Insta
 
 Bei Verwendung des SQLSRV-Treibers [Sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) gibt Informationen über die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] wird von Microsoft ODBC Driver for SQL Server verwendet die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie [GetAttribute](../../connect/php/pdo-getattribute.md) zum Ermitteln der Version.  
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Azure SQL-Datenbanken werden unterstützt. Informationen finden Sie unter [Herstellen einer Verbindung mit Microsoft Azure SQL-Datenbank](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
 
@@ -81,7 +81,7 @@ Azure SQL-Datenbanken werden unterstützt. Informationen finden Sie unter [Herst
 |Azure SQL Data Warehouse|J|J| | | |
 |SQL Server 2017   |J|J| | | |
 |SQL Server 2016   |J|J|J| | |
-|SQL Server 2014   |J|J|J|J|J|
+|SQLServer 2014   |J|J|J|J|J|
 |SQL Server 2012   |J|J|J|J|J|
 |SQL Server 2008 R2|J|J|J|J|J|
 |SQL Server 2008   | | |J|J|J|

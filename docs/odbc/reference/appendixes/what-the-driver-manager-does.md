@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914235"
 ---
 # <a name="what-the-driver-manager-does"></a>Was bewirkt, dass der Treiber-Manager
 Die folgende Tabelle enthält wie die ODBC 3.*.x* Treibermanager ordnet Aufrufe an ODBC 2. *X* und ODBC 3.*.x* Treiber.  

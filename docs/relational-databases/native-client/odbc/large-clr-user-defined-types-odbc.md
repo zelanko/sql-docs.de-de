@@ -1,5 +1,5 @@
 ---
-title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft Docs
+title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414419"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
   In diesem Abschnitt werden Änderungen an ODBC in SQL Server Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
   
- Ein Beispiel, das ODBC-Unterstützung für große CLR-UDTs, finden Sie unter [Unterstützung für große UDTs](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Ein Beispiel, das dem ODBC-Unterstützung für große CLR-UDTs, finden Sie unter [Unterstützung für große UDTs](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
  Weitere Informationen zur Unterstützung großer CLR-UDTs in SQL Server Native Client finden Sie unter [Large CLR User-Defined Typen](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Resultsets gezeigt:  
   
-|SQL Server-Datentyp|SQL-Datentyp|Wert|  
+|SQL Server-Datentyp|SQL-Datentyp|value|  
 |--------------------------|-------------------|-----------|  
 |CLR-UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- In der folgenden Tabelle werden die entsprechenden Strukturen und ODBC C-Typen erläutert. CLR-UDT ist grundsätzlich ein **Varbinary** -Typ mit zusätzlichen Metadaten.  
+ In der folgenden Tabelle werden die entsprechenden Strukturen und ODBC C-Typen erläutert. Im Wesentlichen ist die CLR-UDT ein **Varbinary** -Typ mit zusätzlichen Metadaten.  
   
 |SQL-Datentyp|Speicherlayout|C-Datentyp|Wert (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -128,9 +129,9 @@ ms.lasthandoff: 05/03/2018
 |SS_UDT_SCHEMA_NAME|Der Name des Schemas, das den UDT enthält.|Der Name des Schemas, das den UDT enthält.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Der vollqualifizierte Name des UDT.|Der vollqualifizierte Name des UDT.|  
   
- Die letzten drei Spalten sind treiberspezifische Spalten. Sie werden nach ODBC-definierten Spalten, jedoch vor dem vorhandenen treiberspezifischen Spalten des Resultsets von SQLColumns oder SQLProcedureColumns hinzugefügt.  
+ Die letzten drei Spalten sind treiberspezifische Spalten. Sie werden nach ODBC-definierten Spalten, aber vor der vorhandenen treiberspezifischen Spalten des Resultsets von SQLColumns oder SQLProcedureColumns hinzugefügt.  
   
- Für einzelne UDTs oder für den generischen Typ "Udt" werden keine Zeilen von ' SQLGetTypeInfo ', zurückgegeben.  
+ Keine Zeilen von ' SQLGetTypeInfo ', für einzelne UDTs oder für den generischen Typ "Udt" zurückgegeben.  
   
 ## <a name="bindings-and-conversions"></a>Bindungen und Konvertierungen  
  Die unterstützten Konvertierungen von SQL- zu C-Datentypen sind wie folgt:  
@@ -185,7 +186,7 @@ ms.lasthandoff: 05/03/2018
  Die für UDTs zurückgegebenen Werte sind im Abschnitt "Deskriptorfelder für Ergebnisse" oben erläutert.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Für UDTs zurückgegebenen Werte werden wie im Abschnitt "Spalte Metadaten Zurückgeben von SQLColumns und SQLProcedureColumns (Katalogmetadaten)" weiter oben in diesem Thema beschrieben.  
+ Für UDTs zurückgegebenen Werte sind wie im Abschnitt "Spalte Metadaten Zurückgeben von SQLColumns und SQLProcedureColumns (Katalogmetadaten)" weiter oben in diesem Thema beschrieben.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Für UDTs werden folgende Werte zurückgegeben:  
@@ -233,7 +234,7 @@ ms.lasthandoff: 05/03/2018
  UDT-Parameterwerte werden von C- in SQL-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
- Die neuen Datentypen verfügbaren Deskriptorfeld werden in der "Deskriptorfelder für Parameter" und den Abschnitten "Deskriptorfelder für Ergebnisse" oben in diesem Thema beschrieben.  
+ Deskriptorfeld zur Verfügung, mit den neuen Typen werden in der "Deskriptorfelder für Parameter" und den Abschnitten "Deskriptorfelder für Ergebnisse" oben in diesem Thema beschrieben.  
   
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  

@@ -1,1 +1,1 @@
-SQL Server 2014 Integrationsservices \(SSIS\)
+SQL Server 2014 Integration Services \(SSIS\)

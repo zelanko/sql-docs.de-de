@@ -2,7 +2,7 @@
 title: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen | Microsoft Docs
 description: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612325"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Beginnend mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], Unterstützung für Dienstprinzipalnamen (SPNs) wurde erweitert, damit die um gegenseitigen Authentifizierung über alle Protokolle hinweg zu ermöglichen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs wurden nur für Kerberos statt TCP unterstützt bei der Standardeinstellung SPN für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz in Active Directory registriert wurde.  
   

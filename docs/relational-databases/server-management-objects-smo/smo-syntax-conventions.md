@@ -1,5 +1,5 @@
 ---
-title: SMO-Syntaxkonventionen | Microsoft Docs
+title: SMO-Syntaxkonventionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062101"
 ---
 # <a name="smo-syntax-conventions"></a>SMO-Syntaxkonventionen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) typographischen Konventionen basieren auf Codesignatur- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Referenzmaterial für Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) geltenden typographischen Konventionen basieren auf jenen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Referenzmaterial für Visual Studio .NET.  
   
 |Konvention|Syntaxelemente|  
 |----------------|--------------|  

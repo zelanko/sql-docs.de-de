@@ -1,6 +1,6 @@
 ---
-title: Servereigenschaften in Analysis Services | Microsoft Docs
-ms.date: 05/03/2018
+title: Servereigenschaften in Analysis Services | Microsoft-Dokumentation
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975098"
 ---
 # <a name="server-properties-in-analysis-services"></a>Servereigenschaften in Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administrator kann die Standard-Serverkonfigurationseigenschaften einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden.  
   
- Zum Konfigurieren des Servers können Sie SQL Server Management Studio verwenden oder die Datei „msmdsrv.ini“ einer bestimmten Instanz bearbeiten.  
+ Konfigurieren Sie den Server, SQL Server Management Studio verwenden, oder bearbeiten Sie die Datei "Msmdsrv.ini" einer bestimmten SQL Server Analysis Services-Instanz.  
  
 Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Eigenschaften, die wahrscheinlich geändert werden sollen. Den vollständigen Eigenschaftensatz finden Sie in der Datei „msmdsrv.ini“.   
   
 > [!NOTE]  
->  Bei einer Standardinstallation befindet sich „msmdsrv.ini“ im Ordner „\Programme\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config“.
+>  In einer Standardinstallation von SQL Server Analysis Services können die Datei "Msmdsrv.ini" im \Programme\Microsoft SQL Server\MSAS13 gefunden werden. MSSQLSERVER\OLAP\Config-Ordner.
 > 
 > Zu anderen Eigenschaften, die die Serverkonfiguration beeinflussen, gehören Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen zu diesen Eigenschaften finden Sie unter [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
@@ -64,12 +66,12 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
 |Thema|Description|  
 |-----------|-----------------|  
 |[Allgemeine Eigenschaften](../../analysis-services/server-properties/general-properties.md)|Bei den allgemeinen Eigenschaften handelt es sich sowohl um grundlegende als auch um erweiterte Eigenschaften. Hierzu zählen Eigenschaften zum Definieren des Datenverzeichnisses, Sicherungsverzeichnisses und anderem Serververhalten.|  
-|[Datamining-Eigenschaften](../../analysis-services/server-properties/data-mining-properties.md)|Die Data Mining-Eigenschaften steuern, welche Data Mining-Algorithmen aktiviert und welche deaktiviert sind. Standardmäßig sind alle Algorithmen aktiviert.| 
+|[Data Mining-Eigenschaften](../../analysis-services/server-properties/data-mining-properties.md)|Die Data Mining-Eigenschaften steuern, welche Data Mining-Algorithmen aktiviert und welche deaktiviert sind. Standardmäßig sind alle Algorithmen aktiviert.| 
 |[DAX-Eigenschaften](../../analysis-services/server-properties/dax-properties.md)|Definiert Eigenschaften, die im Zusammenhang mit DAX-Abfragen stehen.|
 |DSO|DSO wird nicht mehr unterstützt. DSO-Eigenschaften werden ignoriert.|  
 |[Funktionseigenschaften](../../analysis-services/server-properties/feature-properties.md)|Die Funktionseigenschaften beziehen sich auf Produktfunktionen. Bei dem größten Teil dieser Eigenschaften handelt es sich um erweiterte Eigenschaften sowie um Eigenschaften zum Steuern der Verbindungen zwischen Serverinstanzen.|  
-|[Filestore (Eigenschaften)](../../analysis-services/server-properties/filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
-|[Sperren-Manager-Eigenschaften](../../analysis-services/server-properties/lock-manager-properties.md)|Die Sperren-Manager-Eigenschaften definieren das Serververhalten in Bezug auf Sperrvorgänge und Timeouts. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
+|[Dateispeichereigenschaften](../../analysis-services/server-properties/filestore-properties.md)|Die Dateispeichereigenschaften sind nur für fortgeschrittene Benutzer gedacht. Hierzu zählen erweiterte Einstellungen für die Speicherverwaltung.|  
+|[Eigenschaften des Sperren-Managers](../../analysis-services/server-properties/lock-manager-properties.md)|Die Sperren-Manager-Eigenschaften definieren das Serververhalten in Bezug auf Sperrvorgänge und Timeouts. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
 |[Protokolleigenschaften](../../analysis-services/server-properties/log-properties.md)|Die Protokolleigenschaften steuern, ob, wann und wie Ereignisse auf dem Server protokolliert werden. Hierzu zählen die Fehlerprotokollierung, die Ausnahmeprotokollierung, der Flight Recorder, die Abfrageprotokollierung und Ablaufverfolgungen.|  
 |[Speichereigenschaften](../../analysis-services/server-properties/memory-properties.md)|Die Speichereigenschaften steuern die Speicherverwendung durch den Server. Sie sind in erster Linie für fortgeschrittene Benutzer gedacht.|  
 |[Netzwerkeigenschaften](../../analysis-services/server-properties/network-properties.md)|Die Netzwerkeigenschaften steuern das Serververhalten in Bezug auf die Vernetzung und beinhalten Eigenschaften zum Steuern der Komprimierung und binärem XML. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  

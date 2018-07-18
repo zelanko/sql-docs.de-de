@@ -12,7 +12,7 @@ ms.openlocfilehash: 7a5a0c394e9a26244661a4ae712d20583c1f1c99
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585482"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>Verwenden Sie T-SQL (Erstellen einer EXTERNEN Bibliothek), um R-Pakete auf SQL Server 2017 Machine Learning Services installieren

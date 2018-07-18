@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538970"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen Sie einen Skripttask, der SSIS-Parallel Data Warehouse-Zieladapter verwendet.
 Diese Skriptcode der SSIS-Paket ist ein Codebeispiel für den SSIS-PDW-Zieladapter verwenden.  Integration Services-Skripttask können Sie praktisch jeder Vorgang, der durchgeführt werden können in einer .NET-Anwendung innerhalb des Kontexts, der eine ablaufsteuerung des SSIS-ausführen. 

@@ -2,7 +2,6 @@
 title: ADO-Glossar | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271599"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.
@@ -56,7 +56,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
 
  Die Geschäftsregel die Kombination von Überprüfung Bearbeitungen, Anmeldung Überprüfungen DatenbankSuchen, Richtlinien und algorithmische Transformationen, die Möglichkeit, ein Unternehmen Geschäftsaktivitäten zu bilden. Auch bekannt als *Geschäftslogik*.
 
-## <a name="c"></a>C
+## <a name="c"></a>c
  berechnete Ausdruck einen Ausdruck, der nicht konstant ist allerdings, dessen Wert hängt von anderen Werten. Um ausgewertet werden, muss ein berechneter Ausdruck abrufen und Werte aus anderen Quellen, in der Regel in anderen Feldern oder Zeilen zu berechnen.
 
  Kapitel ein Verweis auf einen Bereich von Zeilen aus einer Datenquelle. In ADO ist ein Kapitel in der Regel einen Verweis auf eine andere **Recordset**.

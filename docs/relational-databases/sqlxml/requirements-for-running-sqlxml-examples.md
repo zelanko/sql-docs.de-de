@@ -1,5 +1,5 @@
 ---
-title: Anforderungen zum Ausführen von SQLXML-Beispielen | Microsoft Docs
+title: Anforderungen zum Ausführen von SQLXML-Beispielen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708718"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049898"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Anforderungen zum Ausführen von SQLXML-Beispielen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "34708718"
   
 -   MDAC 2.6 oder höher  
   
- In vielen Beispielen werden mithilfe der Vorlagen XPath-Abfragen für das XSD-Zuordnungsschema angegeben. Weitere Informationen finden Sie unter [Annotated XSD-Schemas in Abfragen verwenden &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ In vielen Beispielen werden mithilfe der Vorlagen XPath-Abfragen für das XSD-Zuordnungsschema angegeben. Weitere Informationen finden Sie unter [Verwendung Annotated XSD-Schemas in Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   
   

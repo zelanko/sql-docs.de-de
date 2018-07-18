@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910725"
 ---
 # <a name="data-types-in-odbc"></a>Datentypen in ODBC
 ODBC verwendet zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen werden in der Datenquelle verwendet, und C-Datentypen werden in C-Code in der Anwendung verwendet.  

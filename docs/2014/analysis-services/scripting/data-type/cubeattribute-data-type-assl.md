@@ -1,0 +1,81 @@
+---
+title: CubeAttribute-Datentyp (ASSL) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- CubeAttribute Data Type
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- CubeAttribute
+helpviewer_keywords:
+- CubeAttribute data type
+ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
+caps.latest.revision: 44
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319350"
+---
+# <a name="cubeattribute-data-type-assl"></a>CubeAttribute-Datentyp (ASSL)
+  Definiert einen Grunddatentyp, der ein Attribut mit verknüpften darstellt eine [Cube](../objects/cube-element-assl.md) Element.  
+  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+  
+<CubeAttribute>  
+   <AttributeID>...</AttributeID>  
+   <AggregationUsage>...</AggregationUsage>  
+   <AttributeHierarchyOptimizedState>...</AttributeHierarchyOptimizedState>  
+   <AttributeHierarchyEnabled>...</AttributeHierarchyEnabled>  
+   <AttributeHierarchyVisible>...</AttributeHierarchyVisible>  
+   <Annotations>...</Annotations>  
+</CubeAttribute>  
+```  
+  
+## <a name="data-type-characteristics"></a>Datentypmerkmale  
+  
+|Merkmal|Description|  
+|--------------------|-----------------|  
+|Basisdatentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
+  
+## <a name="data-type-relationships"></a>Datentypbeziehungen  
+  
+|Beziehung|Element|  
+|------------------|-------------|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|[AggregationUsage](../properties/aggregationusage-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [AttributeHierarchyEnabled](../properties/enabled-element-assl.md), [AttributeHierarchyOptimizedState](../properties/state-element-assl.md), [ AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md)|  
+|Abgeleitete Elemente|[Attribut](../objects/attribute-element-assl.md) ([Attribute](../collections/attributes-element-assl.md) Auflistung von [CubeDimension](dimension-data-type-assl.md))|  
+  
+## <a name="remarks"></a>Hinweise  
+ Die *AttributeHierarchyOptimizedState* Element wird nicht unterstützt, wenn der Dienst in der Konfiguration der DeploymentMode Eigenschaftswerte von 1 oder 2 (SharePoint- oder tabellarischer Modus zum Ausführen von PowerPivot- und tabellarischen modelldatenbanken) ausgeführt.  
+  
+ Ein Attribut kann nicht als Ebene einer Hierarchie hinzugefügt werden bei der Eigenschaft *AtttributeHierarchyEnabled*, auf "false" festgelegt ist und die Instanz im DeploymentMode 1 oder 2 (SharePoint- oder tabellarischer Servermodus) ausgeführt wird.  
+  
+ Attribute in der [CubeDimension](dimension-data-type-assl.md) -Element, das nicht explizit in enthalten sind die [Attribute](../collections/attributes-element-assl.md) Sammlung werden in der Auflistung mit den Standardwerten, die zugewiesen werden. Nachdem die Attribute der Auflistung hinzugefügt werden, können die Attribute zurückgegeben werden, indem die [Discover](../../xmla/xml-elements-methods-discover.md) Methode.  
+  
+ Die [AggregationUsage](../properties/aggregationusage-element-assl.md) Element Steuerelemente wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automatisch Entwerfen von Aggregationen für das Attribut. Das `AggregationUsage`-Element schränkt keine Aggregationen ein, die manuell für den Cube erstellt werden.  
+  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CubeAttribute>.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+  
+  

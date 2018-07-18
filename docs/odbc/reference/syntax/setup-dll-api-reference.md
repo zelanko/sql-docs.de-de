@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916505"
 ---
 # <a name="setup-dll-api-reference"></a>Setup-DLL-API-Referenz
 Dieser Abschnitt beschreibt die Syntax der Setup-Treiber-DLL-API besteht aus zwei Funktionen (**ConfigDriver** und **ConfigDSN**). **ConfigDriver** und **ConfigDSN** können entweder im Treiber-DLL oder richten Sie in einer separaten DLL.  

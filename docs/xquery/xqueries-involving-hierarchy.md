@@ -1,5 +1,5 @@
 ---
-title: XQuery-Abfragen im Zusammenhang mit Hierarchie | Microsoft Docs
+title: XQueries Einbeziehung von Hierarchien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,20 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048290"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQuery-Abfragen unter Einbeziehung von Hierarchien
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die meisten **Xml** in Spalten vom Typ der **AdventureWorks** -Datenbank sind halbstrukturierte Dokumente. Deshalb können die in jeder Zeile gespeicherten Dokumente unterschiedlich aussehen. Die in diesem Thema gezeigten Abfragebeispiele veranschaulichen, wie Informationen aus diesen unterschiedlichen Dokumenten extrahiert werden können.  
+  Die meisten **Xml** -Typspalten in der **AdventureWorks** -Datenbank sind halbstrukturierte Dokumente. Deshalb können die in jeder Zeile gespeicherten Dokumente unterschiedlich aussehen. Die in diesem Thema gezeigten Abfragebeispiele veranschaulichen, wie Informationen aus diesen unterschiedlichen Dokumenten extrahiert werden können.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Abrufen von Arbeitsplatzstandorten mit dem zugehörigen ersten Fertigungsschritt aus Dokumenten mit Produktionsanweisungen  
- Für Produktmodell 7, die Abfrage erstellt XML mit der <`ManuInstr`>-Element mit **ProductModelID** und **ProductModelName** Attribute, und eine oder mehrere <`Location`> untergeordnete Elemente.  
+ Für Produktmodell 7, die Abfrage erstellt XML mit der <`ManuInstr`>-Element mit **ProductModelID** und **ProductModelName** Attribute, und einen oder mehrere <`Location`> untergeordnete Elemente.  
   
  Jedes <`Location`>-Element verfügt über einen eigenen Satz von Attributen sowie ein untergeordnetes <`step`>-Element. Das untergeordnete <`step`>-Element stellt den ersten Fertigungsschritt am Arbeitsplatzstandort dar.  
   
@@ -66,13 +67,13 @@ WHERE ProductModelID=7
   
 -   Die Tokens zum Kontextwechsel, {) und (}, bewirken das Wechseln der Abfrage von der XML-Konstruktion zur Abfrageauswertung.  
   
--   Die **SQL:Column()** wird verwendet, um einen relationalen Wert in der XML einzuschließen, das erstellt wird.  
+-   Die **'sql:Column()'** wird verwendet, um einen relationalen Wert in der XML einzuschließen, das erstellt wird.  
   
 -   Beim Erstellen des <`Location`>-Elements werden alle Attribute für den Arbeitsplatzstandort von $wc/@* abgerufen.  
   
--   Die **string()** Funktion gibt den String-Wert aus der <`step`> Element.  
+-   Die **string()** Funktion gibt den Zeichenfolgenwert von der <`step`> Element.  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  

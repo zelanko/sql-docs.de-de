@@ -1,14 +1,12 @@
 ---
 title: Aufträge des SQL Server-Agents für Pakete | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +19,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405152"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Aufträge des SQL Server-Agents für Pakete
   Sie können die Ausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen automatisieren und planen, indem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden. Sie können Pakete planen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem gespeichert werden.  
-  
+ 
+> [!NOTE]
+> In diesem Artikel wird beschrieben, wie Sie einen Zeitplan für SSIS-Pakete allgemein und für Pakete lokal erstellen. Sie können SSIS-Pakete auch auf folgenden Plattformen ausführen und für diese Zeitpläne erstellen:
+> - **Die Microsoft Azure-Cloud**. Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) und [Planen der Ausführung eines SSIS-Pakets in Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. Weitere Informationen finden Sie unter [Extract, transform, and load data on Linux with SSIS (Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS)](../../linux/sql-server-linux-migrate-ssis.md) und [Schedule SQL Server Integration Services package execution on Linux with cron (Zeitliches Planen der Ausführung von SSIS-Paketen mit Cron)](../../linux/sql-server-linux-schedule-ssis-packages.md).
+
 ## <a name="sections-in-this-topic"></a>Kapitel in diesem Thema  
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -129,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
      **In der folgenden Tabelle sind die möglichen Paketquellen beschrieben.**  
   
-    |Paketquelle|Description|  
+    |Paketquelle|und Beschreibung|  
     |--------------------|-----------------|  
     |**SSIS-Katalog**|Pakete, die in der SSISDB-Datenbank gespeichert sind. Die Pakete sind in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten enthalten, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt werden.|  
     |**SQL Server**|Pakete, die in der MSDB-Datenbank gespeichert sind. Sie verwenden den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, um diese Pakete zu verwalten.|  

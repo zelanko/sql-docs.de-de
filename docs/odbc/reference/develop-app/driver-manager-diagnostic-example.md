@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909205"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Treiber-Manager-Diagnose-Beispiel
 Der Treiber-Manager können auch diagnosemeldungen generieren. Angenommen, eine Anwendung eine ungültige Richtungsoption zum übergeben **SQLDataSources**, der Treiber-Manager möglicherweise formatieren und die folgenden Rückgabewerte von **SQLGetDiagRec**:  

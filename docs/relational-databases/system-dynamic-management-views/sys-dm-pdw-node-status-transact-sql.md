@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs
+title: Sys.dm_pdw_node_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,31 +18,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 423bae3ce66e21721e328a23d51a8356be40ea2a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000802"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>Sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Enthält zusätzliche Informationen (über [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) über die Leistung und Status aller Appliance-Knoten. Sie enthält eine Zeile pro Knoten in der Einheit.  
+  Enthält zusätzliche Informationen (über [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) über die Leistung und Status von allen applianceknoten. Sie enthält eine Zeile pro Knoten in der Appliance.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.<br /><br /> Der Schlüssel für diese Ansicht.|Für die Appliance, unabhängig vom Typ eindeutig.|  
+|pdw_node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.<br /><br /> Der Schlüssel für diese Sicht.|Auf der gesamten Appliance, unabhängig vom Typ eindeutig.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |allocated_memory|**bigint**|Insgesamt zugeordneter Arbeitsspeicher auf diesem Knoten.||  
-|available_memory|**bigint**|Insgesamt verfügbare Arbeitsspeicher auf diesem Knoten.||  
-|process_cpu_usage|**bigint**|Insgesamt Prozess CPU-Auslastung in Ticks.||  
-|total_cpu_usage|**bigint**|Gesamter CPU-Auslastung in Ticks.||  
-|Thread_Count|**bigint**|Gesamtanzahl der Threads auf diesem Knoten verwendet.||  
-|handle_count|**bigint**|Die Gesamtanzahl der Handles auf diesem Knoten verwendet.||  
-|total_elapsed_time|**bigint**|Insgesamt verstrichene Zeit seit System gestartet oder neu gestartet.|Insgesamt verstrichene Zeit seit System gestartet oder neu gestartet. Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl (24.8 Tage in Millisekunden) überschreitet, führt es Materialisierung Fehler aufgrund einer dazu, dass "Überlauf".<br /><br /> Der maximale Wert in Millisekunden entspricht 24.8 Tage.|  
-|is_available|**bit**|Ein Flag, der angibt, ob dieser Knoten verfügbar ist.||  
-|sent_time|**datetime**|Zuletzt ein Netzwerk-Paket wurde von diesem Knoten gesendet werden.||  
-|received_time|**datetime**|Zuletzt ein Netzwerk-Paket wurde von diesem Knoten empfangen werden.||  
+|available_memory|**bigint**|Gesamten verfügbaren Arbeitsspeichers auf diesem Knoten.||  
+|process_cpu_usage|**bigint**|Gesamt-Prozess-CPU-Nutzung in Ticks.||  
+|total_cpu_usage|**bigint**|Gesamte CPU-Auslastung in Ticks.||  
+|Thread_Count|**bigint**|Die Gesamtanzahl der Threads auf diesem Knoten.||  
+|handle_count|**bigint**|Gesamtanzahl der Handles in Verwendung auf diesem Knoten.||  
+|total_elapsed_time|**bigint**|Insgesamt verstrichene Zeit seit System starten oder neu starten.|Insgesamt verstrichene Zeit seit System starten oder neu starten. Überschreitet Total_elapsed_time den maximalen Wert für eine ganze Zahl (rund 24,8 Tage in Millisekunden), wird es Materialisierung Fehler aufgrund einer zu einem Überlauf führen.<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
+|is_available|**bit**|Flag, der angibt, ob dieser Knoten verfügbar ist.||  
+|sent_time|**datetime**|Zeitpunkt der letzten ein das Paket wurde von diesem Knoten gesendet werden.||  
+|received_time|**datetime**|Zeitpunkt der letzten ein das Paket wurde von diesem Knoten empfangen werden.||  
 |error_id|**nvarchar(36)**|Eindeutiger Bezeichner des letzten Fehlers, der auf diesem Knoten aufgetreten ist.||  
   
 ## <a name="see-also"></a>Siehe auch  

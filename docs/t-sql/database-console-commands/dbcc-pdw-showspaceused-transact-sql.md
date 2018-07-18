@@ -7,29 +7,29 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b372a5cb516dbbeaa2732dfbfa676921d63708f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915031"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt die Anzahl von Reihen, den reservierten Speicherplatz und den durch eine bestimmte Tabelle oder durch alle Tabellen in einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank belegten Speicherplatz an.
   
-![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,23 +53,23 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Spalte|Datentyp|Beschreibung|  
+|Spalte|Datentyp|und Beschreibung|  
 |------------|---------------|-----------------|  
-|reserved_space|bigint|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
-|data_space|bigint|Durch die Daten belegter Speicherplatz in KB.|  
-|index_space|bigint|Durch die Daten belegter Speicherplatz in KB.|  
-|unused_space|bigint|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
+|reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
+|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
+|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
+|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
 |pdw_node_id|ssNoversion|Computeknoten, der für die Daten verwendet wird.|  
   
 Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Spalte|Datentyp|Beschreibung|Bereich|  
+|Spalte|Datentyp|und Beschreibung|Bereich|  
 |------------|---------------|-----------------|-----------|  
-|rows|bigint|Anzahl von Zeilen.||  
-|reserved_space|bigint|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
-|data_space|bigint|Durch die Daten belegter Speicherplatz in KB.||  
-|index_space|bigint|Durch die Daten belegter Speicherplatz in KB.||  
-|unused_space|bigint|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
+|rows|BIGINT|Anzahl von Zeilen.||  
+|reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
+|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
+|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
+|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
 |pdw_node_id|ssNoversion|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
 |distribution_id|ssNoversion|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
   

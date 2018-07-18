@@ -1,14 +1,11 @@
 ---
-title: sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
+title: sp_rda_set_query_mode (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45137bc8d734bb6594284d23b05f42b295e65f64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4741ef6ac09d81da5054200363f12753130c2e5f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410439"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Gibt an, ob Abfragen an der aktuellen Stretch-aktivierte Datenbank und zugehörigen Tabellen sowohl lokale als auch Daten (Standard) oder nur lokale Daten zurückgeben.  
+  Gibt an, ob Abfragen an der aktuellen aktivierter Funktion Stretch-Datenbank und die Tabellen sowohl lokale als auch Daten (Standard) oder nur lokale Daten zurückgeben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,33 +47,33 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **Deaktivierte** alle Abfragen für Stretch-aktivierte Tabellen fehl.  
   
--   **LOCAL_ONLY** Abfragen für Stretch-aktivierte Tabellen nur lokale Daten zurückgeben.  
+-   **LOCAL_ONLY** Abfragen für Stretch-aktivierte Tabellen geben nur lokale Daten zurück.  
   
--   **LOCAL_AND_REMOTE** Abfragen für Stretch-aktivierte Tabellen zurückgegeben, lokale und Remotedaten. Dies ist das Standardverhalten.  
+-   **LOCAL_AND_REMOTE** Abfragen für Stretch-aktivierte Tabellen geben sowohl lokale als auch Daten zurück. Dies ist das Standardverhalten.  
   
  [ @force = ]  *@force*  
- Ist ein optionale Bitwert, den auf 1 festlegen können, wenn Sie den Abfragemodus ohne Überprüfung ändern möchten.  
+ Ist ein optionaler Bitwert, den Sie auf 1 festlegen können, wenn Sie Abfragemodus ohne Überprüfung ändern möchten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert Db_owner-Berechtigungen.  
+ Benötigen Sie Db_owner-Berechtigungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden erweiterten gespeicherten Prozeduren legen auch den Abfragemodus für eine Stretch-aktivierte Datenbank.  
+ Die folgenden erweiterten gespeicherten Prozeduren legen auch den Abfragemodus für eine Stretch-aktivierten Datenbank.  
   
 -   **sp_rda_deauthorize_db**  
   
-     Nach dem Ausführen **Sp_rda_deauthorize_db** , alle Abfragen für Stretch aktivierte Datenbanken und Tabellen fehl. D. h., ist der Abfragemodus auf deaktiviert festgelegt. Um diesen Modus beenden, führen Sie einen der folgenden Schritte.  
+     Nach der Ausführung **Sp_rda_deauthorize_db** , alle Abfragen für Stretch-fähigen Datenbanken und Tabellen fehl. Die Query-Modus festgelegt ist, also deaktiviert. Um diesen Modus beenden, gehen Sie die folgenden Schritte.  
   
-    -   Führen Sie [sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) eine Verbindung mit der Azure-Remotedatenbank herstellen. Dieser Vorgang setzt automatisch den Abfragemodus zu LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch-Datenbank. D. h. zurückgeben Abfragen Ergebnisse lokale und Remotedaten.  
+    -   Führen Sie [Sys. sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) eine Verbindung mit Azure-Remotedatenbank herzustellen. Dieser Vorgang wird automatisch zurückgesetzt, den Abfragemodus zu LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch Database. D.h., geben Abfragen Ergebnisse aus lokalen und Remotedaten zurück.  
   
-    -   Führen Sie [sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) und dem LOCAL_ONLY-Argument können Abfragen weiterhin nur lokale Daten ausführen können.  
+    -   Führen Sie [sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) mit dem Argument "LOCAL_ONLY" Abfragen, die weiterhin für nur lokale Daten ausführen können.  
   
 -   **sp_rda_reauthorize_db**  
   
-     Bei der Ausführung [sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) zum Wiederherstellen der Verbindung mit der Azure-Remotedatenbank setzt diesen Vorgang automatisch den Abfragemodus auf LOCAL_AND_REMOTE, also das Standardverhalten für Stretch-Datenbank. D. h. zurückgeben Abfragen Ergebnisse lokale und Remotedaten.  
+     Beim Ausführen von [Sys. sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) um erneut eine Verbindung mit der Azure-Remotedatenbank herzustellen, setzt diesen Vorgang automatisch den Abfragemodus auf LOCAL_AND_REMOTE, die das Standardverhalten ist für Stretch Database. D.h., geben Abfragen Ergebnisse aus lokalen und Remotedaten zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   

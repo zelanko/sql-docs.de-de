@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919145"
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC 3.x-Anwendungen
 Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3. *X*, sodass Funktionsweise mit ODBC-2 geschrieben werden soll. *X* und 3. *X* Treiber. Die Anwendung soll bedingten Code aus, um die ODBC 3. voll ausnützen integrieren. *x* Funktionen.  

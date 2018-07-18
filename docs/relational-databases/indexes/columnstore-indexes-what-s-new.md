@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812154"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   Zusammenfassung der Columnstore-Funktionen, die für die einzelnen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die aktuellen Releases von [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfügbar sind.  
 
  > [!NOTE]
- > Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sind Columnstore-Indizes in den Tarifen SQL-Datenbank Premium und Standard (S3 und höher) sowie in allen vCore-Tarifen verfügbar. Für SQL Server (2016 SP1 und höher) sind Columnstore-Indizes in allen Editionen verfügbar. Für SQL Server (2016 und niedriger) sind Columnstore-Indizes nur in der Enterprise Edition verfügbar.
+ > Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sind Columnstore-Indizes in den [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Tarifen Premium und Standard (S3 und höher) sowie in allen V-Kern-Tarifen verfügbar. Für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höher sind Columnstore-Indizes in allen Editionen verfügbar. Für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (vor SP1) und frühere Versionen sind Columnstore-Indizes nur in der Enterprise Edition verfügbar.
  
 ## <a name="feature-summary-for-product-releases"></a>Zusammenfassung der Funktionen für Produktversionen  
  In dieser Tabelle sind die wichtigsten Funktionen für Columnstore-Indizes sowie die Produkte zusammengefasst, in denen sie verfügbar sind.  
 
 |Columnstore-Index-Funktion|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Batchausführung für Multithread-Abfragen|ja|ja|ja|ja|ja|ja| 
-|Batchausführung für Singlethread-Abfragen|||ja|ja|ja|ja|  
+|Batchmodusausführung für Multithread-Abfragen|ja|ja|ja|ja|ja|ja| 
+|Batchmodusausführung für Singlethread-Abfragen|||ja|ja|ja|ja|  
 |Option für die Archivierungskomprimierung||ja|ja|ja|ja|ja|  
 |Momentaufnahmeisolation und Read Commited-Momentaufnahmeisolation|||ja|ja|ja|ja| 
 |Geben Sie den Columnstore-Index bei der Erstellung einer Tabelle an.|||ja|ja|ja|ja|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: Sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/02/2018
 ms.suite: sql
@@ -22,10 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028838"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>Sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +35,21 @@ Gibt Informationen zu den aktuellen Status der externen Ressource Pool, der die 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Colmn name      |Datentyp      |Description|  
+|Colmn-name      |Datentyp      |Description|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu. |
-| name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
-| pool_version|**int**|nterne Versionsnummer.|
+| NAME|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
+| pool_version|**int**|nterne-Versionsnummer.|
 | max_cpu_percent|**int**|Die aktuelle Konfiguration für die maximale durchschnittliche CPU-Bandbreite, die für alle Anforderungen im Ressourcenpool zulässig ist, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu. |
-| max_processes|**int**|Maximale Anzahl gleichzeitig ausgeführter externer Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
+| max_processes|**int**|Maximale Anzahl von gleichzeitigen externe Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
 | max_memory_percent|**int**|Die aktuelle Konfiguration des Prozentsatzes des gesamten Serverspeichers, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. Lässt keine NULL-Werte zu. |
 | statistics_start_time|**datetime**|Der Zeitpunkt, zu dem Statistiken für diesen Pool zurückgesetzt wurden. Lässt keine NULL-Werte zu. 
-| peak_memory_kb|**bigint**|HE Höchstmenge an Arbeitsspeicher in KB, der für den Ressourcenpool verwendet. Lässt keine NULL-Werte zu. |
+| peak_memory_kb|**bigint**|seine maximale Arbeitsspeichermenge in Kilobyte, der für den Ressourcenpool verwendet. Lässt keine NULL-Werte zu. |
 | write_io_count|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu. |
 | read_io_count|**int**|Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu. |
 | total_cpu_kernel_ms|**bigint**|Die kumulierte CPU-Benutzerzeit in Millisekunden, seitdem die ressourcenkontrollstatistiken zurückgesetzt wurden. Lässt keine NULL-Werte zu. |
 | total_cpu_user_ms|**bigint**|Die kumulierte CPU-Benutzerzeit in Millisekunden, seitdem die ressourcenkontrollstatistiken zurückgesetzt wurden. Lässt keine NULL-Werte zu. |
-| active_processes_count|**int**|Die Anzahl der externen Prozessen, die zum Zeitpunkt der Anforderung ausgeführt wird. Lässt keine NULL-Werte zu. |
+| active_processes_count|**int**|Die Anzahl von externen Prozessen, die zum Zeitpunkt der Anforderung ausgeführt wird. Lässt keine NULL-Werte zu. |
 
  
 ## <a name="permissions"></a>Berechtigungen

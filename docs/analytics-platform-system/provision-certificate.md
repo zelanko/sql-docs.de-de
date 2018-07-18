@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539490"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Zertifikatbereitstellung in Analyseplattformsystem
 Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System**Configuration Manager** importiert oder von PDW verwendeten Zertifikats entfernt. 

@@ -1,5 +1,5 @@
 ---
-title: Sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
+title: Sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a2eadfd9864c3d595d9d93078cd028a66b5d22ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019788"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +51,20 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Tabname* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@colname =** ] **"***Columnname***"**  
- Dies ist der Namen der angegebenen räumlichen Spalte. *ColumnName* ist ein **Sysname**, hat keinen Standardwert.  
+ Dies ist der Namen der angegebenen räumlichen Spalte. *ColumnName* ist eine **Sysname**, hat keinen Standardwert.  
   
  [  **@resolution =** ] **"***Auflösung***"**  
- Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist ein **"tinyint"**, hat keinen Standardwert.  
+ Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
  [  **@sample =** ] **"***Beispiel***"**  
- Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist ein **"float"**. Standardwert ist 100.  
+ Ist der verwendete Prozentsatz der Tabelle. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist eine **"float"**. Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**int**|Stellt die eindeutige ID jeder Zelle mit der Anzahl 1 ab.|  
+|**cellid**|**int**|Stellt die eindeutige ID jeder Zelle, mit der Anzahl von 1 ab.|  
 |**Zelle**|**geography**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
 |**row_count**|**bigint**|Gibt die Anzahl räumlicher Objekte an, die die Zelle berühren oder enthalten.|  
   

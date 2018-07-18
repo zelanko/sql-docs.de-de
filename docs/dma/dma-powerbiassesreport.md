@@ -1,5 +1,6 @@
 ---
-title: Bericht über die konsolidierten Bewertungen mithilfe von Power BI (SQL Server Data Migration Assistant) | Microsoft Docs
+title: Analysieren Sie konsolidierte Data Migration Assistant-Bewertung-Berichte mit Power BI (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Power BI zu verwenden, um Data Migration-Bewertungsberichte zu analysieren, die Sie importiert haben, und konsolidiert, die in SQL Server
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -17,53 +18,54 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 0c7479a1e55d90d59fbcc289978b943a8cd3c195
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd2280fbc15ffe515cc8fc6b020a6ec3e2cf1647
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787631"
 ---
-# <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>Bericht über die konsolidierten Bewertungen mithilfe von Power BI (Data Migration Assistant)
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analysieren Sie konsolidierte Bewertungsberichte erstellt, die von Data Migration Assistant mit Power BI
 
-Dieser Artikel beschreibt, wie Power BI-Berichten für konsolidierte Migrations-Bewertungen zu erstellen.
+Dieser Artikel beschreibt, wie eine Power BI-Berichts zum Analysieren von konsolidierten Migration Bewertungen zu erstellen.
 
-Informationen zum Konsolidieren von Bewertungen Migration mithilfe des Migrations-Assistenten für Daten, finden Sie unter [Bewertungsberichte konsolidieren](../dma/dma-consolidatereports.md).
+Informationen zum Konsolidieren von Migration Bewertungen, die von den Data Migration Assistant erstellt, finden Sie unter [Bewertungsberichte konsolidieren](../dma/dma-consolidatereports.md).
 
 ## <a name="sample-power-bi-reports"></a>Beispiel-Power BI-Berichten
 
-Sie können Beispiele für Power BI-Berichten für konsolidierte Migrations-Bewertungen aus diesem [Github-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
+Sie können Beispiele für Power BI-Berichte für konsolidierte Migration Bewertungen aus diesem [Github-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
 Die folgenden Berichte sind enthalten: 
 
 - [Dashboard](#dashboard--details)
 
-  Enthält Statistiken Momentaufnahme und einen Drilldown-Bericht.
+  Enthält Statistiken der Momentaufnahme und einen Drilldown-Bericht.
 
-- [Lokaler upgrade Bereitschaft](#on-premises-upgrade-readiness--details)
+- [Lokale Upgradebereitschaft](#on-premises-upgrade-readiness--details)
 
-  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Erfolg der Prozentsatz Upgrade für Ihre Datenbanken bewerteten.
+  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade erfolgreich für Ihre Datenbanken bewerteten.
 
-- [Lokaler Funktionsparität](#on-premise-feature-parity--details)
+- [Lokale Featureparität](#on-premise-feature-parity--details)
 
-  Zeigt die Funktion Empfehlungen für die SQL Server-Zielversion.
+  Zeigt die Vorschläge zu Features für die SQL Server-Zielversion.
 
-- [Upgradebereitschaft der Azure SQL-Datenbank](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL-Datenbank mit Upgrade readiness](#azure-sql-db-upgrade-readiness--details)
 
-  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade Erfolg für Datenbanken, die für Azure SQL-Datenbank-Migrationen bewertet.
+  Die Datenquelle ist die UpgradeSuccessRanking-Ansicht in der Datenbank DMAReporting.  Dieser Bericht zeigt den Prozentsatz Upgrade Erfolg für Datenbanken, die für Migrationen von Azure SQL-Datenbank bewertet.
 
 - [Azure SQL-Datenbank nicht unterstützte Funktionen](#azure-sql-db-unsupported-features--details)
 
   Zeigt Funktionen in Ihre vorhandenen Datenbanken, die in Azure SQL-Datenbank (V12) nicht unterstützt werden.
 
-Sie können diese Berichte sind durch Ändern der Datenquelle in Power BI mit Ihrer Umgebung arbeiten. 
+Sie können diese Berichte in Ihrer Umgebung funktioniert, ändern Sie die Datenquelle in Power BI ändern. 
 
-1. Wählen Sie den Pfeil nach unten neben **Abfragen bearbeiten**, und wählen Sie **datenquelleneinstellungen**.
+1. Aktivieren Sie den Pfeil nach unten neben **Abfragen bearbeiten**, und wählen Sie **datenquelleneinstellungen**.
 
-   ![Bearbeiten von Abfragen im Menü datenquelleneinstellungen](../dma/media/DataSourceSettings.png)
+   ![Bearbeiten von Abfragen im Menü Einstellungen für die Datenquelle](../dma/media/DataSourceSettings.png)
 
-1. Wählen Sie **Datenquelle ändern...** , und geben Sie die Server- und -Werte.
+1. Wählen Sie **Quelle ändern...** , und geben Sie die Werte für Server und Datenbank.
 
-   ![Ändern der Quelle, Server und Datenbank](../dma/media/ChangeSource.png)
+   ![Quelle ändern, Server und Datenbank](../dma/media/ChangeSource.png)
 
 1. Wählen Sie **OK**, und wählen Sie dann **schließen**.
 
@@ -75,64 +77,64 @@ Sie können diese Berichte sind durch Ändern der Datenquelle in Power BI mit Ih
 
 ![Dashboardbericht](../dma/media/DashboardReport.png)
 
-Das Dashboard zeigt Details aller Ihrer Einschätzung. Sie können die Slicer auf der linken Seite verwenden, um von Instanz oder Datenbank zu filtern. Sie können das Balkendiagramm verwenden, um einen Drilldown in bestimmte Kategorien, um festzustellen, wo die Probleme liegen.
+Das Dashboard zeigt Details aller Ihre Bewertungen. Sie können die Slicer auf der linken Seite verwenden, zum Filtern nach Instanz oder Datenbank. Sie können das Balkendiagramm verwenden, um einen Drilldown in bestimmte Kategorien, um festzustellen, wo die Probleme liegen.
 
-Um einen Drilldown ausführen möchten, wählen Sie den Kreis mit dem Pfeil nach unten der oberen rechten Ecke des Balkendiagramms.
+Um einen Drilldown ausführen möchten, wählen Sie den Kreis mit den Pfeil nach unten in der oberen rechten Ecke des Balkendiagramms.
 
-![Kategorie Drilldownaktion](../dma/media/CategoryDrillDown.png)
+![Drilldown für Kategorie](../dma/media/CategoryDrillDown.png)
 
-Die Drilldown-Sequenz wird festgelegt, wie in der folgenden Abbildung gezeigt (unter **Achse**). Um die Reihenfolge zu ändern, ziehen Sie Spalten in die gewünschte Reihenfolge.
+Die Drilldown-Sequenz wird festgelegt, wie in der folgenden Abbildung dargestellt (unter **Achse**). Um die Reihenfolge zu ändern, ziehen Sie die Spalten in der gewünschten Reihenfolge.
 
-![Visualisierungen Balkendiagramm Achse](../dma/media/VisualizationsAxis.png)
+![Visualisierungen, Balkendiagramm-Achse](../dma/media/VisualizationsAxis.png)
 
-In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern und dann einen zum bestimmten Kategorie Probleme Drilldown. Im folgenden Beispiel ist die HR-Datenbank für die Instanz ausgewählt **SQL01** zur Anzeige aller Objekte, die Migrationen (wichtige Änderungen) verhindern.
+In dieser Ansicht wird noch leistungsfähiger, wenn Sie zuerst nach einer bestimmten Datenbank filtern, und klicken Sie dann einen Drilldown für die bestimmte Kategorie Probleme. Im folgenden Beispiel wird die HR-Datenbank für die Instanz ausgewählt **SQL01** , alle Objekte anzuzeigen, die Migrationen (wichtige Änderungen) verhindern.
 
-![Wichtige Änderungen für Personaldatenbank](../dma/media/BreakingChanges.png)
+![Grundlegende Änderungen für die HR-Datenbank](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>Lokaler upgrade Bericht "Testfallbereitschaft"
+### <a name="on-premises-upgrade-readiness-report"></a>Lokales aktualisieren Bericht "Testfallbereitschaft"
 
-![Lokaler upgrade Bericht "Testfallbereitschaft"](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![Lokales aktualisieren Bericht "Testfallbereitschaft"](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Dieser Bericht enthält eine Momentaufnahme Ihrer Datenbanken wie bereit sind, um auf eine höhere Version von SQL Server zu migrieren. Die Daten in diesem Bericht stammen aus das "Dbo". UpgradeSuccessFactor\_lokale Ansicht in der Datenbank DMAReporting.
+Dieser Bericht zeigt eine Momentaufnahme kann die Datenbanken sind auf eine neuere Version von SQL Server zu migrieren. Die Daten in diesem Bericht stammen aus das "Dbo". UpgradeSuccessFactor\_OnPrem-Sicht in der DMAReporting-Datenbank.
 
-Filtern nach Instanz und Datenbankname und die Bewertung Karten oben verwenden, können Sie feststellen, welcher Version die Datenbank zu migriert werden konnte. Z. B. Wenn Sie von der Datenbank AdventureWorks 2012 filtern, können Sie sehen, dass die Datenbank bereit, um für alle SQL Server-Versionen, die im Bericht aufgeführten wechseln. Dies wird bestimmt, indem Sie sicherstellen, dass es sind keine aktuellen Änderungen für diese Datenbank und die Kompatibilität Hierarchieebene.
+Filtern nach Instanz- und Datenbanknamen und die Bewertung Karten oben verwenden, sehen Sie die Version die Datenbank zu migriert werden kann. Z. B. Wenn Sie von der AdventureWorks 2012-Datenbank filtern, sehen Sie, dass die Datenbank bereit für alle SQL Server-Versionen, die im Bericht aufgeführt ist. Dies wird bestimmt, indem Sie sicherstellen, dass es sind keine aktuellen Änderungen für diese Datenbank und die Kompatibilität.
 
-![Upgrade Erfolgsfaktor für AdventureWorks-Datenbank](../dma/media/UpgradeSuccessFactor.png)
+![Aktualisieren von Erfolgsfaktor für AdventureWorks-Datenbank](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>Lokaler feature Parität-Bericht
+### <a name="on-premises-feature-parity-report"></a>Lokale feature Parity-Bericht
 
-![Lokaler feature Parität-Bericht](../dma/media/OnPremisesFeatureParityReport.png)
+![Lokale feature Parity-Bericht](../dma/media/OnPremisesFeatureParityReport.png)
 
-Verwenden Sie diesen Bericht, um neue Funktionen zu markieren, die für die Datenbank in SQL Server-Zielversion verwendet werden kann.
+Verwenden Sie diesen Bericht, um neue Features hervorzuheben, die für die Datenbank in der SQL Server-Zielversion verwendet werden kann.
 
-Bei Auswahl eine Funktion in das Trichterdiagramm werden die Daten im unteren Bereich hervorgehoben, welche Objekte von der Funktion betroffen sind. Im folgenden Beispiel die **Stretch-Datenbank für speichereinsparungen** Funktion ausgewählt ist, und eine Tabelle ist aufgeführt, die von dieser Funktion profitieren könnten.
+Wenn Sie eine Funktion in das Trichterdiagramm auswählen, werden die Daten im unteren Bereich hervorgehoben, welche Objekte von der Funktion betroffen sind. Im folgenden Beispiel die **Stretch-Datenbank zum Einsparen von Speicherkosten** Feature aktiviert ist, und eine Tabelle ist aufgeführt, die von dieser Funktion profitieren könnten.
 
-![Feature-Empfehlung für Stretch-Datenbank](../dma/media/FeatureRecommend_StretchDatabase.png)
+![Feature-Empfehlung für Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### <a name="azure-sql-db-upgrade-readiness-report"></a>Upgrade bereitschaftsbericht für Azure SQL-Datenbank
+### <a name="azure-sql-db-upgrade-readiness-report"></a>Azure SQL-Datenbank mit Upgrade Readiness-Bericht
 
-![Upgrade bereitschaftsbericht für Azure SQL-Datenbank](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
+![Azure SQL-Datenbank mit Upgrade Readiness-Bericht](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Datenbank V12. Die Daten aus diesem Bericht stammen aus das "Dbo". In der Datenbank DMAReporting UpgradeSuccessRanking-Sicht.
+Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Datenbank V12. Die Daten aus diesem Bericht stammen aus das "Dbo". In der Datenbank DMAReporting UpgradeSuccessRanking-Ansicht.
 
-### <a name="azure-features-parity-report"></a>Azure-Funktionen Parität Bericht
+### <a name="azure-features-parity-report"></a>Azure-Features Parität Bericht
 
-![Azure-Funktionen Parität Bericht](../dma/media/AzureFeaturesParityReport.png)
+![Azure-Features Parität Bericht](../dma/media/AzureFeaturesParityReport.png)
 
-Verwenden Sie diesen Bericht zum Hervorheben der *Ebene Instanzfunktionen* , werden von Azure SQL-Datenbank V12 nicht unterstützt.
+Mithilfe dieses Berichts, markieren Sie die *Ebene Instanzfunktionen* , werden von Azure SQL-Datenbank V12 nicht unterstützt.
 
-Bei Auswahl eine Funktion in das Trichterdiagramm enthält die Daten im unteren Bereich der Instanzen und Funktionen, die nicht unterstützt werden. Im folgenden Beispiel wird diese Funktion aktiviert: **Always on-verfügbarkeitsgruppenkonfiguration in Azure SQL-Datenbank nicht unterstützt**.  
+Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die nicht unterstützt werden. Im folgenden Beispiel ist dieses Feature ist aktiviert: **Always on-verfügbarkeitsgruppenkonfiguration ist nicht in Azure SQL-Datenbank unterstützt**.  
 
-![AlwaysOn Availability Group-Funktion](../dma/media/Feature_AlwaysOnAvailability.png)
+![Always on-Verfügbarkeitsgruppen-Funktion](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
 ### <a name="azure-sql-db-unsupported-features-report"></a>Bericht zur Azure SQL-Datenbank nicht unterstützte Funktionen
 
 ![Bericht zur Azure SQL-Datenbank nicht unterstützte Funktionen](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-Dieser Bericht hebt hervor, welche Funktionen nicht unterstützt werden, für einen bestimmten **Datenbank** das Ziel ist bei Azure SQL-Datenbank (V12).
+Dieser Bericht hebt hervor, welche Funktionen nicht unterstützt werden, für einen bestimmten **Datenbank** Wenn das Ziel ist Azure SQL-Datenbank (V12).
 
-Durch das Filtern von der Datenbank produktmodellname und Funktion den Wert in das Trichterdiagramm, sehen Sie die Details auf die nicht unterstützte Funktion. Details enthalten, welches Objekt betroffen ist und Empfehlungen für das Problem.
+Mithilfe der Filterung durch den Datenbank-Namen und Feature-Wert, in das Trichterdiagramm können Sie Details für die nicht unterstützten Funktionen anzeigen. Details enthalten, welches Objekt betroffen ist und Empfehlungen zur Behandlung des Problems.
 
 Z. B. das Filtern nach der DTC-Datenbank und **schreibgeschützte Datenbanken können nicht aktualisiert werden**, sehen Sie eine Liste von Objekten, die betroffen sind.
 
@@ -140,8 +142,8 @@ Z. B. das Filtern nach der DTC-Datenbank und **schreibgeschützte Datenbanken k�
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über Data-Migrations-Assistenten](../dma/dma-overview.md)
+[Übersicht über Data Migration Assistant](../dma/dma-overview.md)
 
-[Migration Assistant herunterladen von Daten](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant herunterladen](https://www.microsoft.com/download/details.aspx?id=53595)
 
 [Power BI-download](https://powerbi.microsoft.com/)

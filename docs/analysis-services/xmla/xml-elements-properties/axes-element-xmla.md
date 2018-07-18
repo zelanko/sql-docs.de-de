@@ -1,5 +1,5 @@
 ---
-title: Axes-Element (XMLA) | Microsoft Docs
+title: Axes-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34574912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038018"
 ---
 # <a name="axes-element-xmla"></a>Axes-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält eine Auflistung von [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Elemente Achsendaten enthalten sind, eine [Root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) -Datentyp.  
+  Enthält eine Auflistung von [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Elemente Daten enthalten sind, eine [Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) -Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34574912"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Übergeordnete Elemente|[Stammverzeichnis](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Untergeordnete Elemente|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Unter den **Achsen** Element, das **Achse** Elemente in der Reihenfolge im Dataset, beginnend mit NULL Auftretens aufgeführt sind. Die **AxisFormat** XMLA-eigenschafteneinstellung bestimmt wie **Achse** -Elemente formatiert werden. Weitere Informationen zu den **AxisFormat** Eigenschaft finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ Unter den **Achsen** -Element, das **Achse** Elemente werden in der Reihenfolge aufgelistet, die sie in das Dataset, beginnend mit 0 (null) auftreten. Die **AxisFormat** XMLA-eigenschafteneinstellung bestimmt wie **Achse** -Elemente formatiert werden. Weitere Informationen zu den **AxisFormat** -Eigenschaft finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Eine Achse stellt eine Menge von Tupeln dar, in der alle Tupel die gleiche Dimensionalität aufweisen. Eine Menge kann auf verschiedene Weisen dargestellt werden, die unterschiedliche Vorteile bieten. Beispielsweise kann die folgende Menge aus vier Tupeln als Auflistung zweidimensionaler Tupel oder als kartesisches Produkt zweidimensionaler Mengen dargestellt werden.  
   
@@ -102,7 +102,7 @@ CrossProduct (
    Members( Member(Actual), Member(Budget) )  
 ```  
   
- Kann ein Client verwenden die **AxisFormat** Eigenschaft, um eine bestimmte Darstellung anzufordern.  
+ Ein Client kann verwenden die **AxisFormat** Eigenschaft, um eine bestimmte Darstellung anzufordern.  
   
 ## <a name="see-also"></a>Siehe auch
  [MDDataSet-Datentyp &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   

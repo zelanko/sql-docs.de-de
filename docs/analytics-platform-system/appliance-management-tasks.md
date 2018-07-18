@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538830"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Appliance-Verwaltungstasks für Analytics Platform System
 Dieses Handbuch beschreibt die Appliance Verwaltungsaufgaben für Analytics Platform System (APS) ausführen.  

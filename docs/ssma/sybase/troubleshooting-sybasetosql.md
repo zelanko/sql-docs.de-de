@@ -3,8 +3,6 @@ title: Problembehandlung (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0a7870ca60e9ddd0ff8870745f85f82af0f8a996
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779426"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Problembehandlung (SybaseToSQL)
 Es ist nicht ungewöhnlich, führen Sie in der Migration Probleme in der Mitte der Konsole Skripts oder Befehle ausführen.  
@@ -35,7 +34,7 @@ Die behebbaren Fehler betreffen können:
   
 2.  Verfahren  
   
-3.  Sicht  
+3.  Anzeigen  
   
 4.  Trigger  
   

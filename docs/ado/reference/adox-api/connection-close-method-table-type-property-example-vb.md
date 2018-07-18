@@ -2,7 +2,6 @@
 title: Verbindung Close-Methode, Beispiel für die Tabelle Type-Eigenschaft (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98e7ba7600ddcb19487d604f2f62f520770a6543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285329"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection-Methode schließen, Beispiel für die Tabelle Type-Eigenschaft (VB)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollten die Verbindung mit dem Katalog schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber ein Versuch zum Lesen von Eigenschaften, der einen Aufruf an den Anbieter erfordert, schlägt fehl.  

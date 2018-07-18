@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914325"
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Spalte (oder Parameter) Größe des numerischen Datentypen wird als die maximale Anzahl von Ziffern nach dem Datentyp der Spalte oder Parameter oder die Genauigkeit der Daten definiert. Für Zeichentypen entspricht ist dies die Länge in Zeichen der Daten. für binäre Datentypen wird die Spaltengröße als die Länge in Bytes der Daten definiert. Für die Zeit, Timestamp und alle Intervalldatentypen ist dies die Anzahl der Zeichen in die zeichendarstellung dieser Daten. Die Größe der Spalte für jeden präzise SQL-Datentyp definiert ist in der folgenden Tabelle gezeigt.  

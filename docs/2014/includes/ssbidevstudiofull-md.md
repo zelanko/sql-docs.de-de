@@ -1,1 +1,1 @@
-SQL Server Datatools \(SSDT\)
+SQL Server-Datentools \(SSDT\)

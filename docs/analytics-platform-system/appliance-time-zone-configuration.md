@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544658"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Appliance Zeitzonenkonfiguration - Analyseplattformsystem
 Die **Zeitzone** auf der Seite können Sie die Zeitzone für alle Knoten auf Ihrer Anwendung Analytics Platform System (APS) festlegen.  

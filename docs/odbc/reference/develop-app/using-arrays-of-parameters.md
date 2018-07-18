@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919295"
 ---
 # <a name="using-arrays-of-parameters"></a>Verwenden von Arrays von Parametern
 Verwenden von Arrays von Parametern, die Anwendung ruft **SQLSetStmtAttr** mit einer *Attribut* Argument SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Parametersätzen angeben. Ruft **SQLSetStmtAttr** mit einem *Attribut* Argument SQL_ATTR_PARAMS_PROCESSED_PTR zum Angeben der Adresse einer Variablen, in dem der Treiber kann die Anzahl von Parametersätzen verarbeitet, zurückgeben, Legt fest, einschließlich Fehler. Sie ruft **SQLSetStmtAttr** mit einer *Attribut* Argument des SQL_ATTR_PARAM_STATUS_PTR, zeigen Sie auf ein Array, in dem Statusinformationen für jede Zeile von Parameterwerten zurückgegeben. Der Treiber speichert diese Adressen in der Struktur, die es für die Anweisung enthält.  

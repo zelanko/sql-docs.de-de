@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019147"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten
   Der Bericht kann automatisch generierte Datasets enthalten (die auch als ausgeblendete Datasets bezeichnet werden), die nicht standardmäßig im Berichtsdatenbereich angezeigt werden. Diese Datasets werden folgendermaßen erstellt:  

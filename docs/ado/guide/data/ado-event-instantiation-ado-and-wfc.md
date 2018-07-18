@@ -2,7 +2,6 @@
 title: 'ADO-Ereignis-Instanziierung: ADO und WFC | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89fefc8d733f515ef6f085e39b69268a808cefd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa227f5ca6b6246d61e183c03d6217ebaa70bac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270809"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignis-Instanziierung: ADO- und WFC
 ADO für Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell und stellt eine vereinfachte Application programming Interface. Im allgemeinen ADO/WFC fängt ADO Ereignisse konsolidiert die Ereignisparameter in einer einzelnen Ereignisklasse und ruft dann den Ereignishandler.  
@@ -44,7 +44,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell un
   
      Das erste Argument der **ConnectionEventHandler** Konstruktor ist ein Verweis auf die Klasse, die den Ereignishandler mit dem Namen in das zweite Argument enthält.  
   
-3.  Fügen Sie einen Ereignishandler auf eine Liste der Handler vorgesehen, um eine bestimmte Art von Ereignis zu verarbeiten. Verwenden Sie die Methode mit einem Namen, z. B. **AddOn *** EventName*(*Handler*).  
+3.  Fügen Sie einen Ereignishandler auf eine Liste der Handler vorgesehen, um eine bestimmte Art von Ereignis zu verarbeiten. Verwenden Sie die Methode mit einem Namen, z. B. **AddOn** *EventName*(*Handler*).  
   
 4.  ADO/WFC implementiert intern die ADO-Ereignishandler. Aus diesem Grund, ein Ereignis ausgelöst wurde, indem eine **Verbindung** oder **Recordset** Vorgang von einem ADO/WFC-Ereignishandler abgefangen wird.  
   
@@ -62,7 +62,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell un
   
 6.  Zurückgeben von Ihrem Ereignishandler an den ADO/WFC-Handler für das ADO-Ereignis. ADO/WFC kopiert relevante ADO/WFC-Ereignis-Datenmember zurück an den ADO-Ereignisparameter, und klicken Sie dann der ADO-Ereignishandler zurückgegeben.  
   
-7.  Wenn Sie fertig sind verarbeiten, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die Methode mit einem Namen, z. B. **RemoveOn *** EventName*(*Handler*).  
+7.  Wenn Sie fertig sind verarbeiten, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die Methode mit einem Namen, z. B. **RemoveOn** *EventName*(*Handler*).  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_addapprole (Transact-SQL) | Microsoft Docs
+title: Sp_addapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3de15b3d1f02f3acf8dd5809dce7ec01ad74e65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035268"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 ## <a name="arguments"></a>Argumente  
  [  **@rolename =** ] **"***Rolle***"**  
- Der Name der neuen Anwendungsrolle. *Rolle* ist **Sysname**, hat keinen Standardwert. *Rolle* muss ein gültiger Bezeichner sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
+ Der Name der neuen Anwendungsrolle. *Rolle* ist **Sysname**, hat keinen Standardwert. *Rolle* muss ein gültiger Bezeichner sein und kann nicht in der aktuellen Datenbank bereits vorhanden.  
   
- Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen können einen umgekehrten Schrägstrich enthalten (\\) noch NULL oder eine leere Zeichenfolge (").  
+ Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen können nicht keinen umgekehrten Schrägstrich enthalten (\\) noch NULL oder eine leere Zeichenfolge (").  
   
  [  **@password =** ] **"***Kennwort***"**  
  Das für die Aktivierung der Anwendungsrolle erforderliche Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. *Kennwort* darf nicht NULL sein.  
@@ -60,13 +61,13 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>Hinweise  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich Benutzer (und Rollen) nicht vollständig von Schemas. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheiden sich Schemas und Rollen vollständig. Diese neue Architektur spiegelt sich im Verhalten von CREATE APPLICATION ROLE wider. Diese Anweisung hat Vorrang vor **Sp_addapprole**.  
   
- Um die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Sp_addapprole** wird Folgendes:  
+ Um Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Sp_addapprole** gehen Sie folgendermaßen vor:  
   
 -   Wenn nicht bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, wird ein solches Schema erstellt. Das neue Schema ist im Besitz der Anwendungsrolle und wird als Standardschema der Anwendungsrolle verwendet.  
   
 -   Wenn bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, erzeugt die Prozedur einen Fehler.  
   
--   Kennwortkomplexität wird nicht durch überprüft **Sp_addapprole**. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
+-   Kennwortkomplexität wird nicht überprüft, indem **Sp_addapprole**. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
   
  Der Parameter *Kennwort* wird als unidirektionaler Hash gespeichert.  
   

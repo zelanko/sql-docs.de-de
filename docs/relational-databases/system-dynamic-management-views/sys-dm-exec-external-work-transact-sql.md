@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_external_work (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,38 +27,39 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8500beb0be1e231e2beae4cd56e719ad8951c72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048848"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>Sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Informationen über die Arbeitslast pro-Worker auf jedem Computeknoten zurückgegeben.  
+  Informationen über die arbeitsauslastung pro Worker, auf jedem Computeknoten zurück.  
   
- Fragen Sie sys.dm_exec_external_work, um die Arbeit erstellt, für die Kommunikation mit der externen Datenquelle (z. B. Hadoop oder externe SQL Server) zu identifizieren.  
+ Für die Kommunikation mit der externen Datenquelle (z. B. Hadoop oder externen SQL Server) hochgefahren sys.dm_exec_external_work Abfrage, um die Arbeit zu identifizieren.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Eindeutiger Bezeichner für die PolyBase-Abfrage zugeordnet.|Finden Sie unter *Request_ID* in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**int**|Dieser Worker die Anforderung ausführt.|Finden Sie unter *Step_index* in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**int**|Der Schritt in der DMS-Plan, den dieser Arbeitsthread ausgeführt wird.|Finden Sie unter [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**int**|Der Knoten der Arbeitsthread ausgeführt wird.|Finden Sie unter [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|Typ|**nvarchar(60)**|Der Typ des externen Ressourcen.|'Datei teilen'|  
-|work_id|**int**|Die ID der tatsächlichen Aufteilung.|Größer als oder gleich 0.|  
+|execution_id|**nvarchar(32)**|Eindeutiger Bezeichner für den zugeordneten PolyBase-Abfrage.|Finden Sie unter *Request_ID* in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|**int**|Die Anforderung, die dieser Arbeitsthread ausgeführt wird.|Finden Sie unter *Step_index* in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|**int**|Schritt in den DMS-Plan, den dieser Arbeitsthread ausgeführt wird.|Finden Sie unter [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|Der Knoten der Worker ausgeführt wird.|Finden Sie unter [dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Typ|**nvarchar(60)**|Der Typ der externen Ressourcen.|"File Split"|  
+|work_id|**int**|Die ID der tatsächlichen Teilung.|Größer als oder gleich 0.|  
 |input_name|**nvarchar(4000)**|Name der Eingabe gelesen werden|Name der Datei bei Verwendung von Hadoop.|  
-|read_location|**bigint**|Offset oder Speicherort lesen.|Offset der die zu lesende Datei.|  
+|read_location|**bigint**|Offset oder Speicherort gelesen.|Der Offset des zu lesenden Datei.|  
 |bytes_processed|**bigint**|Gesamtzahl der Bytes von diesem Arbeitsthread verarbeitet werden.|Größer als oder gleich 0.|  
-|length|**bigint**|Länge der Teilung oder HDFS-Block bei Hadoop|Benutzerdefinierbare. Der Standardwert ist 64M|  
-|status|**nvarchar(32)**|Status des Arbeitsthreads|Wartet auf und Verarbeiten von Arbeit, Fehler, abgebrochen|  
+|length|**bigint**|Länge der knotenspezifischen Teilung bzw. bei Hadoop HDFS-block|Benutzerdefinierbaren. Der Standardwert ist 64M|  
+|status|**nvarchar(32)**|Status des Arbeitsthreads|Ausstehende, Verarbeitung, ausgeführt, Fehler, wurde abgebrochen|  
 |start_time|**datetime**|Beginn der Arbeit||  
 |end_time|**datetime**|Ende der Arbeit||  
 |total_elapsed_time|**int**|Gesamtzeit in Millisekunden||  
   
 ## <a name="see-also"></a>Siehe auch  
- [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

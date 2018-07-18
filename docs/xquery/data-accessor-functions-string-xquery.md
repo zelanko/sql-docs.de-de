@@ -1,5 +1,5 @@
 ---
-title: String-Funktion (XQuery) | Microsoft Docs
+title: String-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968872"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>Data Accessor-Funktionen - Zeichenfolge (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>Data Accessor-Funktionen – String (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt den Wert der *$arg* als Zeichenfolge dargestellt.  
@@ -48,18 +49,18 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>Hinweise  
   
--   Wenn *$arg* ist die leere Sequenz ist, wird die leere Zeichenfolge zurückgegeben.  
+-   Wenn *$arg* ist die leere Sequenz ist, wird die Zeichenfolge der Länge 0 (null) zurückgegeben.  
   
 -   Wenn *$arg* ist ein Knoten, die Funktion gibt den Zeichenfolgenwert des Knotens, der mit dem Zeichenfolgenwert-Accessors abgerufen wird. Dies wurde in der W3C XQuery 1.0- und XPath 2.0-Datenmodellspezifikation definiert.  
   
--   Wenn *$arg* ein atomarer Wert ist die Funktion gibt die gleiche Zeichenfolge, die durch den Ausdruck umgewandelte zurückgegeben wird **xs: String**, *$arg*, außer wenn nichts anderes vermerkt ist.  
+-   Wenn *$arg* ein atomarer Wert ist, wird die Funktion gibt zurück, die gleiche Zeichenfolge, die durch den Ausdruck, der umgewandelte zurückgegeben wird **xs: String**, *$arg*, außer wenn nichts anderes angegeben ist.  
   
 -   Wenn der Typ des *$arg* ist **xs: anyURI**, der URI ohne Escapezeichen für Sonderzeichen in eine Zeichenfolge konvertiert wird.  
   
--   In dieser Implementierung **Fn:String()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden.  
+-   In dieser Implementierung kann **Fn:String()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-string-function"></a>A. Verwenden der Zeichenfolgenfunktion  
  Die folgende Abfrage ruft den untergeordneten <`Features`>-Elementknoten des <`ProductDescription`>-Elements ab.  
@@ -86,7 +87,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Bei Angabe der **string()** Funktion erhalten Sie den Zeichenfolgenwert des angegebenen Knotens.  
+ Bei Angabe der **string()** -Funktion erhalten Sie den Zeichenfolgenwert des angegebenen Knotens.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -105,7 +106,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. Verwenden der Zeichenfolgenfunktion für verschiedene Knoten  
- Im folgenden Beispiel wird eine XML-Instanz einer Variablen des Typs xml zugewiesen. Abfragen werden angegeben, um das Ergebnis des Anwendens veranschaulichen **string()** auf verschiedene Knoten.  
+ Im folgenden Beispiel wird eine XML-Instanz einer Variablen des Typs xml zugewiesen. Abfragen werden angegeben, um das Ergebnis der Anwendung veranschaulichen **string()** auf verschiedenen Knoten.  
   
 ```  
 declare @x xml  

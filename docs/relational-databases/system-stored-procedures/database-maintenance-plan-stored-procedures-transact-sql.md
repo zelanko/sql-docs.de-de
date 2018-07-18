@@ -1,5 +1,5 @@
 ---
-title: Datenbank-Wartungsplan gespeicherte Prozeduren (Transact-SQL) | Microsoft Docs
+title: Datenbank-Wartungsplans gespeicherte Prozeduren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ba326369983800065b6ae23cfa83e35ad034f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023838"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für Datenbank-Wartungspläne (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die zum Einrichten von Wartungstasks verwendet werden. Diese gespeicherten Prozeduren werden mit Datenbank-Wartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherten Prozeduren verwenden. Verwenden Sie diese Verfahren, um Datenbankwartungspläne für Installationen zu verwalten, der von einer früheren Version aktualisiert wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die zum Einrichten von Wartungstasks verwendet werden. Diese gespeicherten Prozeduren werden mit Datenbank-Wartungsplänen verwendet. Diese Funktion wurde durch Wartungspläne ersetzt, die nicht diese gespeicherten Prozeduren verwenden. Verwenden Sie diese Verfahren, um Datenbankwartungspläne für Installationen zu verwalten, die von einer früheren Version von aktualisiert wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   

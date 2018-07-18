@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904195"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (Desktop-Datenbanktreiber)
 Eine Anweisung vorbereitet, mit der eine falsche Anzahl von Spalten wird ein Fehler bei der Ausführung nicht bei der Vorbereitung der Anweisung zurückgegeben.

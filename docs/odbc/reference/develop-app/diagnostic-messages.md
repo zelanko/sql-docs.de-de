@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911305"
 ---
 # <a name="diagnostic-messages"></a>Diagnosemeldungen
 Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTATE wird häufig mit einer Anzahl verschiedener Nachrichten zurückgegeben. Beispielsweise ist SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) für die meisten Fehler in SQL-Syntax zurückgegeben. Jede Syntaxfehler ist jedoch wahrscheinlich durch eine andere Meldung beschrieben werden.  

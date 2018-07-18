@@ -1,24 +1,24 @@
 ---
-title: SQLServer Shared Management Objects (SMO) - Lizenzbedingungen | Microsoft Docs
+title: SQLServer Shared Management Objects (SMO) – Lizenzbedingungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040428"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQLServer Shared Management Objects (SMO)-Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **1. INSTALLATION UND NUTZUNGSRECHTE.**
 
-&nbsp;&nbsp;Sie können installieren und verwenden eine beliebige Anzahl von Kopien der Software auf Ihren Geräten zu entwerfen, entwickeln und Testen Ihrer Programme.
+&nbsp;&nbsp;Sie können installieren und verwenden eine beliebige Anzahl von Kopien der Software auf Ihren Geräten entwerfen, entwickeln und Testen Ihrer Programme.
 
 **2.    ZUSÄTZLICHE LIZENZANFORDERUNGEN UND/ODER NUTZUNGSRECHTE.**
 
@@ -54,7 +54,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Verteilungsanforderungen. Für jeden verteilbaren Code, den Sie verteilen, müssen Sie**
 * ihm in Ihren Programmen wesentliche primäre Funktionalität hinzufügen;
-* Verteilen Sie für jeden verteilbaren Code dateinamenserweiterung der DLL die nur die Ergebnisse des Ausführens von derartigen verteilbaren Codes über eine Verknüpfung mit Ihrem Programm;
+* für jeden verteilbaren Code, der dateinamenserweiterung von DLL-Datei können verteilen Sie nur die Ergebnisse der Ausführung eines derartigen verteilbaren Codes über eine Verknüpfung mit Ihrem Programm;
 * von den Verteilern und externen Endbenutzern fordern, dass sie den Bedingungen zustimmen, die zumindest diesen Vertrag schützen; 
 * Ihren gültigen Urheberrechtshinweis in Ihren Programmen anzeigen und
 * Microsoft vor sämtlichen Forderungen, einschließlich Anwaltsgebühren, die im Zusammenhang mit der Verteilung oder Nutzung Ihrer Programme stehen, freistellen, verteidigen und schadlos halten.

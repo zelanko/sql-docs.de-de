@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999896"
 ---
 # <a name="page-compression-implementation"></a>Implementierung von Seitenkomprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ ms.lasthandoff: 05/19/2018
   
  Die folgende Abbildung zeigt eine Beispielseite einer Tabelle vor der Präfixkomprimierung.  
   
- ![Seite vor der Präfixkomprimierung](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Seite vor der Präfixkomprimierung")  
+ ![Seite vor der Präfixkomprimierung](media/skt-tblcompression1c.gif "Seite vor der Präfixkomprimierung")  
   
  Die folgende Abbildung zeigt dieselbe Seite nach der Präfixkomprimierung. Das Präfix wird in die Kopfzeile verschoben, und die Spaltenwerte werden in Verweise auf das Präfix geändert.  
   
- ![Seite nach der Präfixkomprimierung](../../relational-databases/data-compression/media/tblcompression2.gif "Seite nach der Präfixkomprimierung")  
+ ![Seite nach der Präfixkomprimierung](media/tblcompression2.gif "Seite nach der Präfixkomprimierung")  
   
  Der Wert 4b in der ersten Spalte der ersten Zeile zeigt an, dass die ersten vier Zeichen des Präfixes (aaab) sowie das Zeichen b für diese Zeile vorhanden sind. Daraus resultiert der Wert aaabb, welcher der ursprüngliche Wert ist.  
   
 ## <a name="dictionary-compression"></a>Wörterbuchkomprimierung  
  Nach dem Abschluss der Präfixkomprimierung wird die Wörterbuchkomprimierung angewendet. Die Wörterbuchkomprimierung sucht nach wiederholten Werten auf der Seite und speichert diese im CI-Bereich. Im Gegensatz zur Präfixkomprimierung ist die Wörterbuchkomprimierung nicht auf eine Spalte beschränkt. Die Wörterbuchkomprimierung kann wiederholte Werte ersetzen, die an einer beliebigen Stelle auf einer Seite auftreten. Die folgende Abbildung zeigt dieselbe Seite nach der Wörterbuchkomprimierung.  
   
- ![Seite nach der Wörterbuchkomprimierung](../../relational-databases/data-compression/media/tblcompression3.gif "Seite nach der Wörterbuchkomprimierung")  
+ ![Seite nach der Wörterbuchkomprimierung](media/tblcompression3.gif "Seite nach der Wörterbuchkomprimierung")  
   
  Beachten Sie, dass auf den Wert 4b von anderen Spalten der Seite verwiesen wurde.  
   

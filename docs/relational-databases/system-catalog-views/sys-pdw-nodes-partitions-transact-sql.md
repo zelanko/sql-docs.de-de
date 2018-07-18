@@ -1,29 +1,28 @@
 ---
-title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_partitions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: 11
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f05d5ce80bf7ca286050a160d5cfbc41a689e67e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 697c602b41c1225202f12cae52297009ae1e99dc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993898"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,20 +39,20 @@ ms.lasthandoff: 05/04/2018
 |rows|`bigint`|Die ungefähre Anzahl der Zeilen in dieser Partition. |  
 |data_compression|`int`|Gibt den Status der Komprimierung für jede Partition an:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
 |data_compression_desc|`nvarchar(60)`|Gibt den Status der Komprimierung für jede Partition an. Mögliche Werte sind NONE, ROW und PAGE.|  
-|pdw_node_id|`int`|Der eindeutige Bezeichner einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|  
+|pdw_node_id|`int`|Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL SERVER-Berechtigung.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Beispiel A: Anzeige Zeilen in jeder Partition innerhalb jedes Verteilungspunkts 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Beispiel A: Anzeige Zeilen in jeder Partition in den einzelnen Verteilungen 
 
 Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-Verwenden Sie zum Anzeigen der Anzahl der Zeilen in jeder Partition innerhalb jedes Verteilungspunkts [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
+Verwenden Sie zum Anzeigen der Anzahl der Zeilen in jeder Partition in den einzelnen Verteilungen [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Beispiel B: verwendet-Systemsichten auf Zeilen in jeder Partition der einzelnen Verteilungspunkte in einer Tabelle anzuzeigen.
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Beispiel B: verwendet Systemsichten auf Zeilen in jeder Partition der einzelnen Verteilungspunkte in einer Tabelle anzuzeigen.
 
 Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

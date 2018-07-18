@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,14 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789695"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE-Anweisungen - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  Gibt an, dass das Band automatisch zurückgespult und ausgeworfen wird, wenn der RESTORE-Vorgang vollständig ausgeführt ist. UNLOAD wird standardmäßig festgelegt, wenn eine neue Benutzersitzung gestartet wird. Diese Option bleibt festgelegt, bis NOUNLOAD angegeben wird. Diese Option wird nur für Bandmedien verwendet. Die Option wird ignoriert, wenn ein anderes Medium als ein Bandlaufwerk für RESTORE verwendet wird.  
   
  NOUNLOAD  
- Gibt an, dass das Band nach einem RESTORE-Vorgang nicht automatisch aus dem Bandlaufwerk ausgeworfen wird. NOUNLOAD bleibt festgelegt, bis UNLOAD angegeben wird.  
-  
  Gibt an, dass das Band nach einem RESTORE-Vorgang nicht automatisch aus dem Bandlaufwerk ausgeworfen wird. NOUNLOAD bleibt festgelegt, bis UNLOAD angegeben wird.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  

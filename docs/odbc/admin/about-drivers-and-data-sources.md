@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904965"
 ---
 # <a name="about-drivers-and-data-sources"></a>Informationen zu Treibern und Datenquellen
 *Treiber* sind die Komponenten, die ODBC-Anforderungen zu verarbeiten und Daten an die Anwendung zurückgegeben. Ggf. ändern, Treiber die Anforderung einer Anwendung in ein Formular, das von der Datenquelle im Klaren sind. Sie müssen den Treiber-Setup-Programm verwenden, hinzufügen oder Löschen einen Treiber von Ihrem Computer.  

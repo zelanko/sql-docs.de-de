@@ -2,27 +2,27 @@
 title: Datenverbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft Docs
 description: Bietet Downloadlinks für Module, die Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank aus einer Vielzahl von Programmiersprachen Client zu aktivieren.
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
-ms.date: 04/10/2018
+ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246842"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindung von Modulen für Microsoft SQL-Datenbanken
 
 Dieser Artikel bietet Downloadlinks für Verbindung Module oder *Treiber* , die Ihre Clientprogramme können für die Interaktion mit [Microsoft SQL Server](../relational-databases/database-features.md), und mit seiner und in der Cloud [Azure SQL-Datenbank](http://docs.microsoft.com/azure/sql-database/). Treiber sind verfügbar für eine Vielzahl von Programmiersprachen, auf die folgenden Betriebssysteme ausgeführt wird:
 
 - Linux (Ubuntu)
-- MacOS
+- macOS
 - Windows
 
 #### <a name="oop-to-relational-mismatch"></a>OOP-relationale Konflikt
@@ -52,7 +52,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Sprache | Herunterladen des SQL-Treibers |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, für Linux – Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, für Mac OS](https://www.microsoft.com/net/core#macos)<br />[.NET Core für Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js-Treiber installationsanweisungen](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,11 +24,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638e0029db80a695a1f5a09d84473070369f1ba4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36257032"
 ---
 # <a name="comparison-operators-transact-sql"></a>Vergleichsoperatoren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Ein **Boolean**-Datentyp kann nicht wie die anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
   
- Wenn SET ANSI_NULLS auf ON festgelegt ist, gibt ein Operator mit einem oder zwei NULL-Ausdrücken UNKNOWN zurück. Wenn SET ANSI_NULLS auf OFF festgelegt ist, gelten die gleichen Regeln; allerdings gibt der Gleichheitsoperator (=) TRUE zurück, wenn beide Ausdrücke NULL sind. So gibt beispielsweise NULL = NULL den Wert TRUE zurück, wenn SET ANSI_NULLS auf OFF festgelegt ist.  
+ Wenn SET ANSI_NULLS auf ON festgelegt ist, gibt ein Operator mit einem oder zwei NULL-Ausdrücken UNKNOWN zurück. Wenn SET ANSI_NULLS auf OFF festgelegt ist, gelten die gleichen Regeln mit Ausnahme der Operatoren gleich (=) und ungleich (<>). Wenn SET ANSI_NULLS auf OFF festgelegt ist, behandeln diese Operatoren NULL als bekannten Wert, der jedem anderen NULL entspricht, und geben entweder TRUE oder FALSE zurück (aber nie UNKNOWN).  
   
  Ausdrücke mit **Boolean**-Datentypen werden in drt WHERE-Klausel zum Filtern von Zeilen verwendet, die bestimmten Suchbedingungen entsprechen. Außerdem werden sie in den Sprachkonstrukten zur Ablaufsteuerung, wie IF und WHILE, verwendet. Beispiel:  
   

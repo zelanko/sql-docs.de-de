@@ -1,14 +1,11 @@
 ---
-title: ConnectionValidSharedMemory-Funktion in dbmslpcn.dll Shared Memory | Microsoft Docs
+title: Funktion "ConnectionValidSharedMemory" in dbmslpcn.dll von Shared Memory-Protokoll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
@@ -17,13 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8431da78ff750e84feb170c1d50f639adb6c9d1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43131a256781e3f2be9c0884abe87ce3b0a5db80
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422161"
 ---
-# <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>ConnectionValidSharedMemory-Funktion in dbmslpcn.dll Shared Memory
+# <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Funktion "ConnectionValidSharedMemory" in dbmslpcn.dll von Shared Memory-Protokoll
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -40,11 +38,11 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
   
 -   Typ: **Char\***  
   
--   Der Name des SQL-Servers.  
+-   Der Name der SqlServer.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Typ: **BOOL**  
+ Typ: **"bool"**  
   
- Gibt 0, wenn er nicht gültig ist; Gibt andernfalls ungleich NULL zurück.  
+ Gibt 0, wenn nicht gültig Gibt andernfalls ungleich NULL zurück.  
   
   

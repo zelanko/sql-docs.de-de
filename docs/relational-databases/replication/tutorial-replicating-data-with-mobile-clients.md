@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -21,17 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8598505eaf65bb3748df87f14e52a5c7477a58ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353962"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
-In diesem Tutorial wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Tutorial werden mithilfe einer Mergereplikation Daten aus einer zentralen Datenbank für mindestens einen mobilen Benutzer veröffentlicht, sodass jeder Benutzer eine eindeutig gefilterte Teilmenge von Daten erhält. 
@@ -49,8 +49,8 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
   
 - Installieren Sie auf dem Verlegerserver (Quelle) Folgendes:  
   
-   - Eine beliebige Version von SQL Server mit Ausnahme von SQL Server Express und SQL Server Compact. Diese Editionen können nicht als Replikationsverleger fungieren.   
-   - Die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert.  
+   - Eine beliebige Version von SQL Server (SQL Server Express und SQL Server Compact ausgeschlossen) Diese Editionen können nicht als Replikationsverleger fungieren.   
+   - Die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert.  
   
 - Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von SQL Server mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Die in diesem Tutorial erstellte Veröffentlichung bietet keine Unterstützung für [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
@@ -61,7 +61,7 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
   
 >[!NOTE]
 > - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL Server-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie eine Anmeldung, die Mitglied der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Geschätzte Dauer dieses Tutorials: 60 Minuten**  
@@ -116,7 +116,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
   
 10. Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)**, dann auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
-    A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Joinanweisung manuell schreiben**, und schließen Sie den Vorgang wie folgt ab:  
+    A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Write the join statement manually** (Joinanweisung manuell schreiben), und schließen Sie den Vorgang wie folgt ab:  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 

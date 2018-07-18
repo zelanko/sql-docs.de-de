@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von PowerPivot-Lösungen in SharePoint | Microsoft Docs
+title: Bereitstellen von PowerPivot-Lösungen in SharePoint | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984762"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Bereitstellen von Power Pivot-Lösungen in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
  [Informationen zu den Power Pivot-Lösungen](#intro)  
   
 ##  <a name="bkmk_classic"></a> Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, führen Sie das folgende PowerShell-Cmdlet über die **SharePoint 2010-Verwaltungsshell**, und Ersetzen **http://\<Stammwebsite-Name >** mit der Name der SharePoint-Website:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, die **SharePoint 2010-Verwaltungsshell**und ersetzt dabei **http://\<Standort auf oberster Ebene Name >** mit der Name der SharePoint-Website:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  Der Rückgabewert sollte **FALSE**sein. Wenn der Wert **TRUE**ist, kann über diese Webanwendung nicht auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten zugegriffen werden.  
   
 ##  <a name="bkmk_farm"></a> Schritt 1: Bereitstellen der Farmlösung  
- In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Diese Aufgabe muss nur einmal ausgeführt werden, nachdem Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint installiert haben.  
   
@@ -118,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Klicken Sie auf **Lösung zurückziehen**.  
   
- Falls Serverbereitstellungsprobleme auftreten, die Sie bis zur Farmlösung zurückverfolgen, können Sie sie über die Option **Reparieren** im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool erneut bereitstellen. Es empfiehlt sich, Reparaturvorgänge über das Tool auszuführen, da Sie sich dadurch ein paar Schritte ersparen. Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Falls Serverbereitstellungsprobleme auftreten, die Sie bis zur Farmlösung zurückverfolgen, können Sie sie über die Option **Reparieren** im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool erneut bereitstellen. Es empfiehlt sich, Reparaturvorgänge über das Tool auszuführen, da Sie sich dadurch ein paar Schritte ersparen. Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Wenn Sie immer noch alle Lösungen erneut bereitstellen möchten, gehen Sie dabei in folgender Reihenfolge vor:  
   

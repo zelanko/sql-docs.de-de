@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c59f13b67d8594610a8d7b764f5f42aed8733203
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790011"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erkennt unvollständige E/A-Vorgänge, die durch Stromausfälle oder andere Systemunterbrechungen verursacht wurden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
 |IsVerifiedClone|Die Datenbank ist nur eine Kopie der Schemas und Statistiken einer Benutzerdatenbank, die mit der DBBC CLONEDATABASE-Option WITH VERIFY_CLONEDB erstellt wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/help/3177838).|**Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
 |IsXTPSupported|Gibt an, ob die Datenbank In-Memory-OLTP unterstützt, d.h. das Erstellen und Verwenden von speicheroptimierten Tabellen und nativ kompilierten Modulen.<br /><br /> Spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported ist unabhängig von der Existenz von MEMORY_OPTIMIZED_DATA-Dateigruppen, die für die Erstellung von In-Memory-OLTP-Objekten benötigt werden.|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe, ein Fehler oder nicht anwendbar<br /><br /> Basisdatentyp: **int**|  
-|LastGoodCheckDbTime|Datum und Uhrzeit der letzten erfolgreichen Ausführung von DBCC CHECKDB für die angegebene Datenbank.|**Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2<br /><br /> Ein datetime-Wert<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **datetime**| 
+|LastGoodCheckDbTime|Datum und Uhrzeit der letzten Ausführung von DBCC CHECKDB in der angegebenen Datenbank. <sup>1</sup> Wenn DBCC CHECKDB in einer Datenbank noch nicht ausgeführt wurde, wird 1900-01-01 00:00:00.000 zurückgegeben.|**Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2<br /><br /> Ein datetime-Wert<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **datetime**| 
 |LCID|Der zur Sortierung verwendete Windows-Gebietsschemabezeichner (LCID, Locale Identifier).|LCID-Wert (im Dezimalformat).<br /><br /> Basisdatentyp: **int**|  
 |MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **bigint**|  
 |Wiederherstellung|Datenbank-Wiederherstellungsmodell|FULL: Vollständiges Wiederherstellungsmodell<br /><br /> BULK_LOGGED: Massenprotokolliertes Modell<br /><br /> SIMPLE: Einfaches Wiederherstellungsmodell<br /><br /> Basisdatentyp: **nvarchar(128)**|  
@@ -99,8 +99,12 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 |Status|Der Status der Datenbank.|ONLINE: Die Datenbank ist für Abfragen verfügbar.<br /><br /> **Hinweis:** Der ONLINE-Status kann zurückgegeben werden, während die Datenbank geöffnet wird und noch nicht wiederhergestellt wurde. Um zu ermitteln, wann eine Datenbank Verbindungen akzeptieren kann, fragen Sie die Collation-Eigenschaft von **DATABASEPROPERTYEX** ab. Die Datenbank kann Verbindungen akzeptieren, wenn die Datenbanksortierung einen Wert ungleich NULL zurückgibt. Fragen Sie bei Always On-Datenbanken die „database_state“- oder die „database_state_desc“-Spalte von `sys.dm_hadr_database_replica_states` ab.<br /><br /> OFFLINE: Die Datenbank wurde explizit offline geschaltet.<br /><br /> RESTORING: Die Wiederherstellung der Datenbank wurde gestartet.<br /><br /> RECOVERING: Die Wiederherstellung der Datenbank wurde gestartet, aber die Datenbank ist noch nicht für Abfragen bereit.<br /><br /> SUSPECT: Die Datenbank wurde nicht wiederhergestellt.<br /><br /> EMERGENCY: Die Datenbank befindet sich im schreibgeschützten Notfallmodus. Der Zugriff ist auf sysadmin-Mitglieder beschränkt.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |Updateability|Zeigt an, ob Daten geändert werden können.|READ_ONLY: Für die Datenbank werden Datenlese-, aber keine Datenänderungsvorgänge unterstützt.<br /><br /> READ_WRITE: Für die Datenbank werden Datenlese- und Datenänderungsvorgänge unterstützt.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |UserAccess|Zeigt an, welche Benutzer auf die Datenbank zugreifen können.|SINGLE_USER: Immer nur jeweils ein „db_owner“-, „dbcreator“- oder „sysadmin“-Benutzer<br /><br /> RESTRICTED_USER: Nur Mitglieder aus einer der Rollen „db_owner“, „dbcreator“ oder „sysadmin“<br /><br /> MULTI_USER: Alle Benutzer<br /><br /> Basisdatentyp: **nvarchar(128)**|  
-|Versionsoptionen|Die interne Versionsnummer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codes, mit dem die Datenbank erstellt wurde. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Versionsnummer: Die Datenbank ist geöffnet.<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **int**|  
-  
+|Versionsoptionen|Die interne Versionsnummer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codes, mit dem die Datenbank erstellt wurde. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Versionsnummer: Die Datenbank ist geöffnet.<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, gibt `LastGoodCheckDbTime` das Datum und die Uhrzeit der letzten erfolgreichen Ausführung von DBCC CHECKDB auf dem primären Replikat zurück, egal von welchem Replikat Sie den Befehl ausführen. 
+
 ## <a name="return-types"></a>Rückgabetypen
 **sql_variant**
   

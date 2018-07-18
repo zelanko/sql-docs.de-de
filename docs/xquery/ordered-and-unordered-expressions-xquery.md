@@ -1,5 +1,5 @@
 ---
-title: Geordnete und ungeordnete Ausdrücke (XQuery) | Microsoft Docs
+title: Geordnete und ungeordnete Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,21 +26,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f36e7adf5334ce9ef343b6d518d762a2b4f4c0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974010"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Geordnete und nicht geordnete Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Standardmäßig wird der sortierungsmodus für alle Vorgänge im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist **sortiert**. Aus diesem Grund die Sequenzen zurückgegebenes Path- und FLWOR-Ausdrücken, ohne die **sortiert nach dem** -Klausel, in der Dokumentreihenfolge angeordnet sind.  
+  Standardmäßig wird der sortierungsmodus für alle Vorgänge im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist **sortiert**. Aus diesem Grund zurückgegebenen von Path- und FLWOR-Ausdrücken, ohne die **order by-** -Klausel in Dokumentreihenfolge angeordnet sind.  
   
- Die zusätzlichen **sortiert** und **ungeordnete** in der XQuery-Spezifikation beschriebene Syntax wird nicht unterstützt.  
+ Die zusätzlichen **sortiert** und **ungeordnete** Syntax, die in der XQuery-Spezifikation beschrieben wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery-Ausdrücke](../xquery/xquery-expressions.md)   
  [FLWOR-Anweisung und-Iteration &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
- [Path-Ausdrücken &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ [Path-Ausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

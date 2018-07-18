@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_database_session_object_columns (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_xe_database_session_object_columns (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,27 +17,28 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029406"
 ---
-# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>Sys.dm_xe_database_session_object_columns (Azure SQL-Datenbank)
+# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>Sys. dm_xe_database_session_object_columns (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Zeigt die Konfigurationswerte für Objekte an, die an eine Sitzung gebunden sind.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|Die Speicheradresse der Ereignissitzung. Verfügt über eine viele-zu-eins-Beziehung mit sys.dm_xe_database_sessions.address aus. Lässt keine NULL-Werte zu.|  
+|event_session_address|**varbinary(8)**|Die Speicheradresse der Ereignissitzung. Verfügt über eine n: 1 Beziehung mit sys.dm_xe_database_sessions.address aus. Lässt keine NULL-Werte zu.|  
 |column_name|**nvarchar(60)**|Der Name des Konfigurationswerts. Lässt keine NULL-Werte zu.|  
 |column_id|**int**|Die ID der Spalte. Ist eindeutig innerhalb des Objekts. Lässt keine NULL-Werte zu.|  
 |column_value|**nvarchar(2048)**|Der konfigurierte Wert der Spalte. Lässt NULL-Werte zu.|  
-|object_type|**nvarchar(60)**|Der Typ des Objekts.  Ist keine nullable.object_type eines:<br /><br /> Ereignis<br /><br /> target|  
+|object_type|**nvarchar(60)**|Der Typ des Objekts.  Ist kein nullable.object_type eines:<br /><br /> Ereignis<br /><br /> target|  
 |object_name|**nvarchar(60)**|Der Name des Objekts, zu dem diese Spalte gehört. Lässt keine NULL-Werte zu.|  
 |object_package_guid|**uniqueidentifier**|Die GUID des Pakets, das das Objekt enthält. Lässt keine NULL-Werte zu.|  
   

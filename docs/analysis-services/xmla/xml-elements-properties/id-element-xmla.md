@@ -1,5 +1,5 @@
 ---
-title: ID-Element (XMLA) | Microsoft Docs
+title: ID-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037028"
 ---
 # <a name="id-element-xmla"></a>ID-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Identifiziert eine Sperre für den das übergeordnete Element ausgeführt [Sperre](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) oder [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) Element.  
+  Identifiziert eine Sperre auf dem das übergeordnete [Sperre](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) oder [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34575502"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Sperre](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [entsperren](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
+|Übergeordnete Elemente|[Sperre](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [nicht entsperren](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  

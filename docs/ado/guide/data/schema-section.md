@@ -1,11 +1,8 @@
 ---
 title: Schema-Abschnitt | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7614a2c23d21d88652c32fef480367df4db65be8
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ae6bf8cf6fed293864ccebc6a9e7c80e48d23184
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272499"
 ---
 # <a name="schema-section"></a>Schema-Abschnitt
 Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, schreibt ADO detaillierter Metadaten zu jeder Spalte auf die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beibehalten. Um in der XML-Code zu laden, erfordert ADO jedoch nur die Namen der Spalten und das Rowset, zu dem sie gehören. Hier ist ein Beispiel für ein minimales Schema:  

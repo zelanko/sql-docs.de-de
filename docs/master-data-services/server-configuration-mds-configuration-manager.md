@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f1da805d3a40a37501fdcb89f126d148c38df341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13a9965e7b56bf5bf3aec58f38d3e90fda387bed
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335064"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Serverkonfiguration (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="server-configuration"></a>Serverkonfiguration  
   
-|Steuerelementname|Description|  
+|Steuerelementname|und Beschreibung|  
 |------------------|-----------------|  
 |**Internetinformationsdienste (IIS)**|Zeigt die Version der Internetinformationsdienste (IIS) an, die auf dem lokalen Computer installiert ist. IIS, Version 7.0 oder höher, ist erforderlich, um den Konfigurations-Manager für Master Data Services zu verwenden.|  
 |**Die MDS-Produktversion**|Zeigt die Produktversion von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]an.|  

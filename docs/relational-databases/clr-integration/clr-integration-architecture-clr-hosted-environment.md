@@ -1,14 +1,11 @@
 ---
-title: CLR-gehosteten Umgebung | Microsoft Docs
+title: CLR-gehosteten Umgebung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,13 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352812"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architektur der CLR-Integration - gehostete CLR-Umgebung
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR - Integrationsarchitektur: CLR gehostete Umgebung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die Integration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die .NET Framework-CLR (Common Language Runtime) ermöglicht Datenbankprogrammierern die Verwendung von Sprachen wie Visual C#, Visual Basic .NET und Visual C++. Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und Aggregate gehören zu den Arten von Geschäftslogik, die Programmierer in diesen Sprachen schreiben können.  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  .NET Framework unterstützt benutzerdefinierte Attribute zum Hinzufügen von Anmerkungen zu Klassen, Eigenschaften, Funktionen und Methoden in Form von zusätzlichen Informationen, die von der Anwendung in Metadaten erfasst werden können. Alle .NET Framework-Compiler verwenden diese Anmerkungen ohne Auslegung und speichern sie als Assemblymetadaten. Diese Anmerkungen können auf die gleiche Weise wie beliebige andere Metadaten untersucht werden.  
   
- Verwalteter Code ist MSIL-Code, der in der CLR anstatt direkt vom Betriebssystem ausgeführt wird. Anwendungen mit verwaltetem Code verfügen über CLR-Dienste, z. B. automatische Garbage Collection, Typüberprüfung zur Laufzeit, Sicherheitsunterstützung usw. Diese Dienste stellen eine einheitliche Webplattform und sprachunabhängiges Verhalten von Anwendungen mit verwaltetem Code bereit.  
+ Verwalteter Code ist MSIL-Code, der in der CLR anstatt direkt vom Betriebssystem ausgeführt wird. Anwendungen mit verwaltetem Code verfügen über CLR-Dienste, z. B. automatische Garbage Collection, Typüberprüfung zur Laufzeit, Sicherheitsunterstützung usw. Diese Dienste stellen ein einheitliches Plattform- und sprachunabhängigen Verhalten von Anwendungen mit verwaltetem Code bereitzustellen.  
   
 ## <a name="design-goals-of-clr-integration"></a>Entwurfsziele der CLR-Integration  
  Bei der Ausführung von Benutzercode in der CLR-gehosteten Umgebung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (CLR-Integration genannt), gelten die folgenden Entwurfsziele:  
@@ -69,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  Die unterschiedlichen Modelle für Threading, Planung und Arbeitsspeicherverwaltung stellen eine Integrationsherausforderung für ein relationales Datenbankverwaltungssystem (RDBMS) dar, das durch Skalierung Tausende von gleichzeitigen Benutzersitzungen unterstützt. Durch die Architektur sollte sichergestellt werden, dass die Skalierbarkeit des Systems nicht durch Benutzercode beeinträchtigt wird, der APIs (Application Programming Interfaces, Schnittstellen zur Anwendungsprogrammierung) für Threading-, Arbeitsspeicher- und Synchronisierungsgrundelemente direkt aufruft.  
   
-###### <a name="security"></a>Sicherheit  
+###### <a name="security"></a>Security  
  In der Datenbank ausgeführter Benutzercode muss beim Zugreifen auf Datenbankobjekte, wie Tabellen und Spalten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierungs- und Autorisierungsregeln folgen. Darüber hinaus sollten Datenbankadministratoren in der Lage sein, den Zugriff auf Ressourcen des Betriebssystems, wie Dateien und Netzwerkzugriff, vom Benutzercode aus zu steuern, der in der Datenbank ausgeführt wird. Dies ist wichtig, da verwaltete Programmiersprachen (im Gegensatz zu nicht verwalteten Sprachen wie Transact-SQL) APIs zum Zugreifen auf diese Ressourcen bereitstellen. Das System muss eine sichere Methode bereitstellen, damit über Benutzercode außerhalb des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozesses auf Computerressourcen zugegriffen werden kann. Weitere Informationen finden Sie unter [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>Leistung  
@@ -130,9 +128,9 @@ ms.lasthandoff: 05/03/2018
 |-|-|-|-|  
 |Berechtigungssatz|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Codezugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt|  
-|Beschränkungen des Programmiermodells|ja|Ja|Keine Einschränkungen|  
+|Beschränkungen des Programmiermodells|ja|ja|Keine Einschränkungen|  
 |Überprüfbarkeit erforderlich|ja|ja|nein|  
-|Aufrufbarkeit von systemeigenem Code|nein|Nein|ja|  
+|Aufrufbarkeit von systemeigenem Code|nein|nein|ja|  
   
  SAFE ist der zuverlässigste und sicherste Modus, der mit Einschränkungen hinsichtlich des zulässigen Programmiermodells einhergeht. Assemblys der Stufe SAFE verfügen über ausreichende Berechtigungen für die Ausführung, die Durchführung von Berechnungen und den Zugriff auf die lokale Datenbank. Assemblys der Stufe SAFE müssen nachweislich typsicher sein und dürfen keinen nicht verwalteten Code aufrufen.  
   
@@ -147,10 +145,10 @@ ms.lasthandoff: 05/03/2018
   
  Aus diesen Gründen raten wir von der Verwendung von statischen Variablen und Datenelementen von Klassen ab, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Bei Assemblys vom Typ SAFE und EXTERNAL_ACCESS untersucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Ausführung von CREATE ASSEMBLY die Metadaten der Assembly. Wenn die Verwendung statischer Datenelemente oder Variablen ermittelt wird, wird die Assembly nicht erstellt.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Außerdem lässt keine Aufrufe von .NET Framework-APIs, die mit versehen sind die **SharedState**, **Synchronisierung** und **ExternalProcessMgmt** Hostschutzattribute. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [CLR Integration Programming Model Einschränkungen](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Außerdem lässt keine Aufrufe von .NET Framework-APIs, die mit kommentiert werden die **SharedState**, **Synchronisierung** und **ExternalProcessMgmt** Hostschutzattribute. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [CLR-Integration Programmierung Einschränkungen](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)   
- [Leistung der CLR-Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
+ [Leistungsfähigkeit der CLR-Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

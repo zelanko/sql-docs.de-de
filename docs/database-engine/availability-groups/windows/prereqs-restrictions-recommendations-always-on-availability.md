@@ -1,7 +1,7 @@
 ---
 title: Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen | Microsoft-Dokument
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769736"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934902"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769736"
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Stellen Sie sicher, dass es sich bei diesem System nicht um einen Domänencontroller handelt.|Verfügbarkeitsgruppen werden nicht auf Domänencontrollern unterstützt.|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Stellen Sie sicher, dass auf jedem Computer Windows Server 2012 oder höhere Versionen ausgeführt werden.|[Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Stellen Sie sicher, das jeder Computer ein Knoten in WSFC ist.|[Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Stellen Sie sicher, dass WSFC ausreichend Knoten enthält, um die Verfügbarkeitsgruppenkonfigurationen zu unterstützen.|Ein Clusterknoten kann nur ein Verfügbarkeitsreplikat für eine bestimmte Verfügbarkeitsgruppe hosten. In einem angegebenen Clusterknoten kann mindestens eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verfügbarkeitsreplikate für viele Verfügbarkeitsgruppen hosten.<br /><br /> Fragen Sie die Datenbankadministratoren, wie viele Clusterknoten erforderlich sind, um die Verfügbarkeitsreplikate der geplanten Verfügbarkeitsgruppen zu unterstützen.<br /><br /> [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Stellen Sie sicher, dass WSFC ausreichend Knoten enthält, um die Verfügbarkeitsgruppenkonfigurationen zu unterstützen.|Ein Clusterknoten kann ein Replikat für eine Verfügbarkeitsgruppe hosten. Es können nicht zwei Replikate aus der gleichen Verfügbarkeitsgruppe auf ein und demselben Knoten gehostet werden. Der Clusterknoten kann zu mehreren Verfügbarkeitsgruppen gehören und ein Replikat jeder Gruppe hosten. <br /><br /> Fragen Sie die Datenbankadministratoren, wie viele Clusterknoten erforderlich sind, um die Verfügbarkeitsreplikate der geplanten Verfügbarkeitsgruppen zu unterstützen.<br /><br /> [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+
   
 > [!IMPORTANT]  
 >  Stellen Sie zudem sicher, dass Ihre Umgebung ordnungsgemäß zum Herstellen einer Verbindung mit einer Verfügbarkeitsgruppe konfiguriert wird. Weitere Informationen finden Sie unter [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -170,8 +171,10 @@ ms.locfileid: "34769736"
   
     -   Wenn ein bestimmter Thread eine Zeit lang im Leerlauf ist, wird er wieder im allgemeinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Threadpool freigegeben. Normalerweise wird ein inaktiver Thread nach ~ 15 Sekunden Inaktivität freigegeben. Abhängig von der letzten Aktivität kann ein Thread jedoch länger im Leerlauf gehalten werden.  
 
-    - Eine SQL Server-Instanz verwendet bis zu 100 Threads für parallele Wiederholung für sekundäre Replikate. Für jede Datenbank wird bis zur Hälfte der Gesamtzahl von CPU-Kernen, jedoch nicht mehr als 16 Threads pro Datenbank verwendet. Überschreitet die Gesamtzahl von erforderlichen Threads für eine einzelne Instanz den Wert 100, verwendet SQL Server einen einzelnes Wiederholungsthread für jede verbleibende Datenbank. Wiederholungsthreads werden nach ~ 15 Sekunden Inaktivität freigegeben. 
-
+    -   Eine SQL Server-Instanz verwendet bis zu 100 Threads für parallele Wiederholung für sekundäre Replikate. Für jede Datenbank wird bis zur Hälfte der Gesamtzahl von CPU-Kernen, jedoch nicht mehr als 16 Threads pro Datenbank verwendet. Überschreitet die Gesamtzahl von erforderlichen Threads für eine einzelne Instanz den Wert 100, verwendet SQL Server einen einzelnes Wiederholungsthread für jede verbleibende Datenbank. Serielle Wiederholungsthreads werden nach ca. 15 Sekunden Inaktivität freigegeben. 
+    
+    > [!NOTE]
+    > Datenbanken werden anhand ihrer Datenbank-ID in aufsteigender Reihenfolge für das Singlethreading ausgewählt. Daher sollte die Erstellungsreihenfolge von Datenbanken bei SQL Server-Instanzen berücksichtigt werden, die mehr Verfügbarkeitsgruppen hosten, als Workerthreads verfügbar sind. Ein Beispiel: In einem System mit 32 oder mehr CPU-Kernen befinden sich alle Datenbanken ab der 7. Datenbank, die der Verfügbarkeitsgruppe beigetreten ist, im seriellen Wiederholungsmodus, unabhängig von der tatsächlichen Wiederholungsworkload für jede Datenbank. Datenbanken, die eine parallele Wiederholung erfordern, sollten der Verfügbarkeitsgruppe zuerst hinzugefügt werden.    
   
 -   Darüber hinaus verwenden Verfügbarkeitsgruppen nicht freigegebene Threads wie folgt:  
   

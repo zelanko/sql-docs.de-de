@@ -1,5 +1,5 @@
 ---
-title: Bedingte Ausdrücke (XQuery) | Microsoft Docs
+title: Bedingte Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979012"
 ---
 # <a name="conditional-expressions-xquery"></a>Bedingte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ else
   <expression3>  
 ```  
   
- Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Beispiel:  
+ Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Zum Beispiel:  
   
 -   Wenn der Testausdruck `expression1` eine leere Sequenz ergibt, ist das Ergebnis "False".  
   
@@ -60,7 +61,7 @@ else
   
 -   Die **else** -Ausdruck erforderlich ist. Falls Sie ihn nicht benötigen, können Sie " ( ) " zurückgeben, wie dies in den Beispielen der Fall ist.  
   
- Die folgende Abfrage wird z. B. angegeben, für die **Xml** Typvariablen. Die **Wenn** Bedingung testet den Wert der SQL-Variablen (@v) innerhalb des XQuery-Ausdrucks mithilfe der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md) -Erweiterungsfunktion. Wenn der Variablenwert "FirstName" ist, wird das <`FirstName`>-Element zurückgegeben. Andernfalls wird das <`LastName`>-Element zurückgegeben.  
+ Die folgende Abfrage wird beispielsweise angegeben, für die **Xml** Variablen vom Typ. Die **Wenn** -Bedingung testet den Wert der SQL-Variablen (@v) innerhalb des XQuery-Ausdrucks mit der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md) -Erweiterungsfunktion. Wenn der Variablenwert "FirstName" ist, wird das <`FirstName`>-Element zurückgegeben. Andernfalls wird das <`LastName`>-Element zurückgegeben.  
   
 ```  
 declare @x xml  

@@ -1,11 +1,8 @@
 ---
 title: ADOX-Objektmodell | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea7a304795e312168580ca3a7f7fd3a6dcd28ef1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284749"
 ---
 # <a name="adox-object-model"></a>ADOX-Objektmodell
 Das folgende Diagramm veranschaulicht, wie Objekte dargestellt und ADOX miteinander verknüpft sind. Weitere Informationen zu einem bestimmten Objekt bzw. die Sammlung, finden Sie unter den bestimmten Referenzthema oder [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md) und [ADOX Sammlungen](../../../ado/reference/adox-api/adox-collections.md).  

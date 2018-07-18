@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Dienstkonten konfigurieren | Microsoft Docs
+title: PowerPivot-Dienstkonten konfigurieren | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed619d7a0a4e593193f0ac3f736f059d9826512d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984842"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Konfigurieren von Power Pivot-Dienstkonten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/10/2018
 |-----------------|-----------------|  
 |Bereitstellungsanforderung|Dieses Konto muss beim SQL Server-Setup auf der Seite **Analysis Services - Konfiguration** des Installationsassistenten (oder bei einem Befehlszeilensetup im Installationsparameter **ASSVCACCOUNT** ) angegeben werden.<br /><br /> Sie können den Benutzernamen oder das Kennwort über die Zentraladministration, PowerShell oder das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ändern. Die Verwendung anderer Tools zum Ändern von Konten und Kennwörtern wird nicht unterstützt.|  
 |Domänenbenutzerkonto-Anforderung|Bei diesem Konto muss es sich um ein Windows-Domänenbenutzerkonto handeln. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig. SQL Server-Setup erzwingt die Domänenbenutzerkonto-Anforderung, indem die Installation blockiert wird, sobald ein Computerkonto angegeben wird.|  
-|Berechtigungsanforderungen|Dieses Konto muss ein Mitglied der SQLServerMSASUser$\<Server > $PowerPivot Sicherheitsgruppe und der WSS_WPG-Sicherheitsgruppen auf dem lokalen Computer. Diese Berechtigungen sollten automatisch gewährt werden. Weitere Informationen zur Überprüfung oder zum Gewähren von Berechtigungen finden Sie unter [Manuelle Gewährung von Kontoverwaltungsberechtigungen für den PowerPivot-Service](#updatemanually) in diesem Thema und unter [Anfängliche Konfiguration (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
+|Berechtigungsanforderungen|Dieses Konto muss Mitglied der SQLServerMSASUser$\<Server > $PowerPivot-Sicherheitsgruppe und der WSS_WPG-Sicherheitsgruppen auf dem lokalen Computer. Diese Berechtigungen sollten automatisch gewährt werden. Weitere Informationen zur Überprüfung oder zum Gewähren von Berechtigungen finden Sie unter [Manuelle Gewährung von Kontoverwaltungsberechtigungen für den PowerPivot-Service](#updatemanually) in diesem Thema und unter [Anfängliche Konfiguration (PowerPivot für SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
 |Anforderungen für horizontales Skalieren|Falls Sie mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Serverinstanzen in einer Farm installieren, müssen alle Analysis Services-Serverinstanzen unter dem gleichen Domänenbenutzerkonto ausgeführt werden. Wenn Sie z.B. die erste [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanz für die Ausführung als Contoso\ssas-srv01 konfigurieren, müssen alle zusätzlichen [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanzen, die Sie danach in der gleichen Farm bereitstellen, auch als Contoso\ssas-srv01 (bzw. unter dem entsprechenden aktuellen Konto) ausgeführt werden.<br /><br /> Durch das Konfigurieren aller Dienstinstanzen für die Ausführung unter dem gleichen Konto hat der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst die Möglichkeit, Abfrageverarbeitungs- oder Datenaktualisierungsaufträge jeder beliebigen Analysis Services-Dienstinstanz in der Farm zuzuordnen. Außerdem wird die Verwendung des Features Verwaltetes Konto in der Zentraladministration für Analysis Services-Serverinstanzen ermöglicht. Indem Sie das gleiche Konto für alle [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanzen verwenden, müssen Sie das Konto oder Kennwort nur einmal ändern, dann werden alle Dienstinstanzen, die die Anmeldeinformationen verwenden, automatisch aktualisiert.<br /><br /> In SQL Server-Setup wird die Verwendung eines identischen Kontos erzwungen. In einer Bereitstellung für horizontales Skalieren, in der bereits eine Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint in einer SharePoint-Farm installiert ist, blockiert Setup die Neuinstallation, wenn sich das angegebene [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Konto von dem bereits in der Farm verwendeten Konto unterscheidet.|  
   
 #### <a name="power-pivot-service-application-pool"></a>Power Pivot-Dienstanwendungspool  
@@ -123,7 +124,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  Klicken Sie auf **Jetzt ausführen**.  
   
- Als letzten Ausweg können Sie die richtige Berechtigungen sicherstellen, durch das Erteilen von Analysis Services systemverwaltungsberechtigungen für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -dienstanwendung, und dann ausdrücklich hinzufügen die dienstanwendungsidentität SQLServerMSASUser$\<Servername > $PowerPivot Windows-Sicherheitsgruppe. Sie müssen diese Schritte für jede Analysis Services-Instanz wiederholen, die mit der SharePoint-Farm integriert ist.  
+ Als letzten Ausweg können Sie die richtige Berechtigungen sicherstellen, durch das Erteilen von Analysis Services systemverwaltungsberechtigungen für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -dienstanwendung, und klicken Sie dann speziell hinzufügen die dienstanwendungsidentität SQLServerMSASUser$\<Servername > $PowerPivot Windows-Sicherheitsgruppe. Sie müssen diese Schritte für jede Analysis Services-Instanz wiederholen, die mit der SharePoint-Farm integriert ist.  
   
  Sie müssen lokaler Administrator sein, um Windows-Sicherheitsgruppen zu aktualisieren.  
   
@@ -180,6 +181,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten oder Beenden eines Power Pivot für SharePoint-Servers](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Konfigurieren des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Konfigurieren des PowerPivot für die unbeaufsichtigte Datenaktualisierung (PowerPivot für SharePoint)-Konto](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

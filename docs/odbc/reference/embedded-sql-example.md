@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916355"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL-Beispiel
 Der folgende Code ist eine einfache embedded SQL, geschriebenes Programm in c Das Programm zeigt viele, aber nicht in allen eingebetteten SQL-Techniken. Das Programm fordert den Benutzer für eine Auftragsnummer ein, die Kundennummer, Vertriebsmitarbeiter und Status der Bestellung abgerufen und die abgerufene Informationen auf dem Bildschirm angezeigt.  

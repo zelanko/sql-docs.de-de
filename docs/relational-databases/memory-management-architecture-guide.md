@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Speicherverwaltung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239370"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 > Ältere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können unter einem 32-Bit-Betriebssystem ausgeführt. Für den Zugriff auf mehr als 4 GB (Gigabyte) Arbeitsspeicher auf einem 32-Bit-Betriebssystem ist Address Windowing Extensions (AWE) erforderlich, um den Speicher zu verwalten. Dies ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter 64-Bit-Betriebssystemen ausgeführt wird. Weitere Informationen zu AWE finden Sie unter [Prozessadressraum](http://msdn.microsoft.com/library/ms189334.aspx) und [Verwalten von Arbeitsspeicher für große Datenbanken](http://msdn.microsoft.com/library/ms191481.aspx) in der Dokumentation zu [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
-In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
+In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
 -  **Einzelseitenbelegung (Single-page Allocator, SPA)**, die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
 -  **Mehrseitenbelegung (Multi-Page Allocator, MPA)**, für Speicherbelegungen, die mehr als 8 KB erfordern.
 -  **CLR-Belegung**, einschließlich des SQL CLR-Heaps und dessen globaler Belegungen, die während der CLR-Initialisierung erstellt werden.
@@ -109,7 +109,6 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 -  Ablaufverfolgungsvorgänge, die große Eingabeparameter speichern müssen.
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
 Der virtuelle Adressbereich, der für diese Belegungen reserviert ist, wird durch die Konfigurationsoption ***memory_to_reserve*** festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
@@ -127,12 +126,11 @@ Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbeleg
 |Direkte Belegungen von Windows|ja|ja|
 
 ## <a name="dynamic-memory-management"></a> Dynamische Arbeitsspeicherverwaltung
-
-Die Arbeitsspeicherverwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ruft standardmäßig so viel Arbeitsspeicher wie nötig ab, ohne dass es dabei zu einem Speicherengpass auf dem System kommt. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet dazu die für Arbeitsspeicherbenachrichtigungen verfügbaren APIs in Microsoft Windows.
+Die Arbeitsspeicherverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ruft standardmäßig so viel Arbeitsspeicher wie nötig ab, ohne dass es dabei zu einem Speicherengpass auf dem System kommt. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet dazu die für Arbeitsspeicherbenachrichtigungen verfügbaren APIs in Microsoft Windows.
 
 Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
   
-**[Max. Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)** steuert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherbelegung, die Arbeitsspeicherkompilierung, alle Caches (einschließlich Pufferpool), Arbeitsspeicherzuweisungen für die Abfrageausführung, Sperren-Manager-Speicher und CLR-<sup>1</sup>-Speicher (im Wesentlichen alle Arbeitsspeicherclerks in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+**[Max. Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)** steuert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherbelegung, die Arbeitsspeicherkompilierung, alle Caches (einschließlich des Pufferpools), [Arbeitsspeicherzuweisungen für die Abfrageausführung](#effects-of-min-memory-per-query), den [Arbeitsspeicher für den Sperren-Manager](#memory-used-by-sql-server-objects-specifications) und den CLR-Arbeitsspeicher <sup>1</sup> (im Wesentlichen alle Arbeitsspeicherclerks in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup>-CLR-Speicher wird seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unter max_server-memory-Belegungen verwaltet.
 
@@ -170,13 +168,12 @@ FROM sys.dm_os_process_memory;
 
 Beim Starten berechnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Größe des virtuellen Adressraumes für den Pufferpool auf Grundlage verschiedener Parameter, z. B. der Größe des physischen Arbeitsspeichers des Systems, der Anzahl der Serverthreads und verschiedener Startparameter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert die berechnete Größe des virtuellen Adressraumes für den Pufferpool, verwendet jedoch nur die für die aktuelle Last erforderliche Größe an physischem Arbeitsspeicher.
 
-Die Instanz greift dann je nach Arbeitsauslastung auf weiteren Arbeitsspeicher zu. Wenn weitere Benutzer eine Verbindung herstellen und Abfragen ausführen, ruft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dem Bedarf entsprechend zusätzlichen physischen Arbeitsspeicher ab. Eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ordnet so lange zusätzlichen physischen Arbeitsspeicher zu, bis entweder die Zielvorgabe „Max. Serverarbeitsspeicher“ erreicht ist oder Windows anzeigt, dass kein weiterer freier Arbeitsspeicher zur Verfügung steht. Die Instanz gibt Arbeitsspeicher frei, wenn die Einstellung für „Min. Serverarbeitsspeicher“ überschritten wird oder Windows anzeigt, dass zu wenig freier Arbeitsspeicher vorhanden ist.
+Die Instanz greift dann je nach Arbeitsauslastung auf weiteren Arbeitsspeicher zu. Wenn weitere Benutzer eine Verbindung herstellen und Abfragen ausführen, ruft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dem Bedarf entsprechend zusätzlichen physischen Arbeitsspeicher ab. Eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ordnet so lange zusätzlichen physischen Arbeitsspeicher zu, bis entweder die Zielvorgabe „Max. Serverarbeitsspeicher“ erreicht ist oder das Betriebssystem anzeigt, dass kein weiterer freier Arbeitsspeicher zur Verfügung steht. Die Instanz gibt Arbeitsspeicher frei, wenn die Einstellung für „Min. Serverarbeitsspeicher“ überschritten wird oder das Betriebssystem anzeigt, dass zu wenig freier Arbeitsspeicher vorhanden ist. 
 
 Sobald weitere Anwendungen auf einem Computer gestartet werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird, benötigen sie Arbeitsspeicher, sodass der Umfang des freien physischen Arbeitsspeichers auf einen Wert unter dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ziel fällt. Die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] passt ihren Arbeitsspeicherverbrauch an. Wenn eine andere Anwendung beendet wird und mehr Arbeitsspeicher verfügbar wird, vergrößert die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Speicherbelegung. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann mehrere MB Arbeitsspeicher pro Sekunde freigeben und reservieren, um schnell auf Änderungen der Speicherbelegung zu reagieren.
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Auswirkungen der Konfigurationsoptionen Min. Serverarbeitsspeicher und Max. Serverarbeitsspeicher
-
-Durch die Konfigurationsoptionen „Min. Serverarbeitsspeicher“ und „Max. Serverarbeitsspeicher“ werden die obere und untere Grenze für den Umfang des Speichers festgelegt, der vom Pufferpool und anderen Caches der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet wird. Der Pufferpool reserviert nicht sofort die Menge an Speicher, die durch „Min. Serverarbeitsspeicher“ angegeben wurde. Der Pufferpool reserviert zuerst nur so viel Speicher, wie für die Initialisierung erforderlich ist. Mit ansteigender Arbeitsauslastung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wird weiterer Speicher reserviert, um die Arbeitsauslastung zu unterstützen. Der Pufferpool gibt erst dann einen Teil des reservierten Speichers wieder frei, wenn der unter „Min. Serverarbeitsspeicher“ angegebene Wert erreicht wurde. Sobald „Min. Serverarbeitsspeicher“ erreicht ist, verwendet der Pufferpool den Standardalgorithmus, um Speicher nach Bedarf zu reservieren und freizugeben. Der einzige Unterschied besteht darin, dass der Pufferpool bei der Speicherbelegung nie unter die Ebene absinkt, die durch „Min. Serverarbeitsspeicher“ angegeben ist, und nie mehr Speicher reserviert, als durch die unter „Max. Serverarbeitsspeicher“ angegebene Ebene angegeben ist.
+Durch die Konfigurationsoptionen *Min. Serverarbeitsspeicher* und *Max. Serverarbeitsspeicher* werden die obere und untere Grenze für den Umfang des Speichers festgelegt, der vom Pufferpool und anderen Caches der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet wird. Der Pufferpool reserviert nicht sofort die Menge an Speicher, die durch „Min. Serverarbeitsspeicher“ angegeben wurde. Der Pufferpool reserviert zuerst nur so viel Speicher, wie für die Initialisierung erforderlich ist. Mit ansteigender Arbeitsauslastung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wird weiterer Speicher reserviert, um die Arbeitsauslastung zu unterstützen. Der Pufferpool gibt erst dann einen Teil des reservierten Speichers wieder frei, wenn der unter „Min. Serverarbeitsspeicher“ angegebene Wert erreicht wurde. Sobald „Min. Serverarbeitsspeicher“ erreicht ist, verwendet der Pufferpool den Standardalgorithmus, um Speicher nach Bedarf zu reservieren und freizugeben. Der einzige Unterschied besteht darin, dass der Pufferpool bei der Speicherbelegung nie unter die Ebene absinkt, die durch „Min. Serverarbeitsspeicher“ angegeben ist, und nie mehr Speicher reserviert, als durch die unter „Max. Serverarbeitsspeicher“ angegebene Ebene angegeben ist.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert als Prozess mehr Speicher als durch die Option „Max. Serverarbeitsspeicher“ angegeben wird. Sowohl interne als auch externe Komponenten können Speicher außerhalb des Pufferpools belegen; dies führt zur Beanspruchung zusätzlicher Speicherkapazitäten, der dem Pufferpool zugeordnete Speicher stellt jedoch normalerweise trotzdem den größten Teil des von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] belegten Speichers dar.
@@ -187,8 +184,7 @@ Wenn für „Min. Serverarbeitsspeicher“ und „Max. Serverarbeitsspeicher“ 
 
 Wenn eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Computer ausgeführt wird, auf dem häufig andere Anwendungen gestartet oder beendet werden, kann das Starten anderer Anwendungen durch die Belegung und Freigabe von Speicher, die durch die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgenommen wird, verlangsamt werden. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine von mehreren Serveranwendungen ist, die auf einem einzelnen Computer ausgeführt werden, kann es darüber hinaus erforderlich sein, dass der Umfang des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zugeordneten Speichers von Systemadministratoren gesteuert wird. In solchen Fällen können Sie mithilfe der Optionen „Min. Serverarbeitsspeicher“ und „Max. Serverarbeitsspeicher“ steuern, wie viel Speicher von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden kann. Die Optionen **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** werden in Megabyte angegeben. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Spezifikationen für den von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten verwendeten Arbeitsspeicher
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>Spezifikationen für den von SQL Server-Objekten verwendeten Arbeitsspeicher
 In der folgenden Liste werden die Richtwerte für den Arbeitsspeicher beschrieben, den die einzelnen Objekte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]belegen. Die aufgeführten Angaben sind Schätzwerte und können je nach Umgebung und Erstellung der Objekte variieren:
 
 * Sperre (durch den Sperren-Manager verwaltet): 64 Byte + 32 Byte pro Besitzer   
@@ -198,12 +194,33 @@ Die **Netzwerkpaketgröße** entspricht der Größe der TDS-Pakete (Tabular Data
 
 Wenn mehrere aktive Resultsets (Multiple Active Result Sets, MARS) aktiviert sind, benötigt die Benutzerverbindung ca. (3 + 3 \* numerische_logische_Verbindungen) \* Netzwerkpaketgröße + 94 KB.
 
-## <a name="buffer-management"></a>Pufferverwaltung
+## <a name="effects-of-min-memory-per-query"></a>Auswirkungen von „Min. Arbeitsspeicher pro Abfrage“
+Sie können mithilfe der Konfigurationsoption *Min. Arbeitsspeicher pro Abfrage* die Mindestmenge an Arbeitsspeicher (in KB) festlegen, die für das Ausführen einer Abfrage zugeordnet wird. Dies ist auch als minimale Arbeitsspeicherzuweisung bekannt. Alle Abfragen müssen warten, bis der mindestens erforderliche Arbeitsspeicher zugesichert werden kann oder bis der Wert überschritten wird, der in der Serverkonfigurationsoption „Abfragewartezeit“ angegeben ist, bevor die Ausführung gestartet wird. Der Wartetyp, der in diesem Szenario gesammelt wird, ist RESOURCE_SEMAPHORE.
 
+> [!IMPORTANT]
+> Legen Sie die Konfigurationsoption „Min. Arbeitsspeicher pro Abfrage“ nicht auf einen zu hohen Wert fest, insbesondere nicht auf stark ausgelasteten Systemen, da dadurch Folgendes verursacht werden kann:         
+> - Stärkerer Wettbewerb um Arbeitsspeicherressourcen.         
+> - Verringerte Parallelität durch den erhöhten Bedarf an Arbeitsspeicher für jede einzelne Abfrage, auch wenn zur Laufzeit weniger Arbeitsspeicher als in dieser Konfiguration erforderlich ist.    
+>    
+> Empfehlungen zur Verwendung dieser Konfiguration finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Min. Arbeitsspeicher pro Abfrage“](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+
+### <a name="memory-grant-considerations"></a>Überlegungen zur Arbeitsspeicherzuweisung
+Für die **Zeilenmodusausführung** kann die ursprüngliche Arbeitsspeicherzuweisung nicht überschritten werden. Wenn mehr Arbeitsspeicher als ursprünglich zugewiesen erforderlich ist, um **Hash-** oder **Sortiervorgänge** durchzuführen, laufen diese auf den Datenträger über. Ein überlaufender Hashvorgang wird von einer Arbeitsdatei in tempDB unterstützt, während ein überlaufender Sortiervorgang von einer [Arbeitstabelle](../relational-databases/query-processing-architecture-guide.md#worktables) unterstützt wird.   
+
+Ein Überlauf, der während eines Sortiervorgangs auftritt, wird als [Sortierwarnung](../relational-databases/event-classes/sort-warnings-event-class.md) bezeichnet. Sortierwarnungen zeigen an, dass der Arbeitsspeicher für Sortiervorgänge nicht ausreicht. Darin sind keine Sortiervorgänge eingeschlossen, die die Indexerstellung beinhalten, sondern nur Sortiervorgänge innerhalb einer Abfrage (z.B. eine `ORDER BY`-Klausel in einer `SELECT`-Anweisung).
+
+Ein Überlauf, der während eines Hashvorgangs auftritt, wird als [Hashwarnung](../relational-databases/event-classes/hash-warning-event-class.md) bezeichnet. Hashwarnungen treten auf, wenn während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) auftritt.
+-  Die Hashrekursion tritt auf, wenn die Eingabe für den verfügbaren Arbeitsspeicher zu groß ist und deshalb auf mehrere Partitionen verteilt wird, die separat verarbeitet werden. Sollten diese Partitionen für den Arbeitsspeicher immer noch zu groß sein, werden sie in Unterpartitionen aufgeteilt, die dann ebenfalls separat verarbeitet werden. Dieser Vorgang wird so lange fortgesetzt, bis jede Partition in den verfügbaren Arbeitsspeicher passt oder die maximale Rekursionsebene erreicht ist.
+-  Ein Hashabbruch tritt auf, wenn ein Hashvorgang die maximale Rekursionsebene erreicht hat und ein alternativer Plan verwendet wird, um die restlichen Partitionsdaten zu verarbeiten. Diese Ereignisse können zu verringerter Leistung auf Ihrem Server führen.
+
+Für die **Batchmodusausführung** kann die ursprüngliche Arbeitsspeicherzuweisung standardmäßig bis zu einem bestimmten internen Schwellenwert dynamisch erhöht werden. Dieser Mechanismus der dynamischen Arbeitsspeicherzuweisung wurde dafür entwickelt, die speicherresidente Ausführung von **Hash-** und **Sortiervorgängen** im Batchmodus zu ermöglichen. Wenn diese Vorgänge immer noch zu viel Arbeitsspeicher erfordern, laufen diese auf den Datenträger über.
+
+Weitere Informationen zu den Ausführungsmodi finden Sie unter [Handbuch zur Architektur der Abfrageverarbeitung](../relational-databases/query-processing-architecture-guide.md#execution-modes).
+
+## <a name="buffer-management"></a>Pufferverwaltung
 Der Hauptzweck einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal der Datenbank-Engine dar. Datenträger-E/A-Vorgänge beanspruchen viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den **Puffer-Manager**, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den **Puffercache** (auch als **Pufferpool** bezeichnet), mit dem Datenbankdatei-E/A-Vorgänge reduziert werden. 
 
 ### <a name="how-buffer-management-works"></a>Funktionsweise der Pufferverwaltung
-
 Ein Puffer ist eine 8-KB-Seite im Arbeitsspeicher. Dies entspricht der Größe einer Datenseite oder Indexseite. Der Puffercache ist ebenfalls in Seiten von je 8 KB unterteilt. Mit dem Puffer-Manager werden die Funktionen verwaltet, mit denen Daten- oder Indexseiten aus Datenbankdatenträgerdateien in den Puffercache geladen und geänderte Seiten zurück auf den Datenträger geschrieben werden. Eine Seite verbleibt im Puffercache, bis der Pufferbereich vom Puffer-Manager zum Laden weiterer Daten benötigt wird. Daten werden nur dann zurück auf den Datenträger geschrieben, wenn sie geändert wurden. Daten im Puffercache können mehrfach geändert werden, bevor sie zurück auf den Datenträger geschrieben werden. Weitere Informationen finden Sie unter [Lesen von Seiten](../relational-databases/reading-pages.md) und [Schreiben von Seiten](../relational-databases/writing-pages.md).
 
 Beim Starten berechnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Größe des virtuellen Adressraums für den Puffercache auf Grundlage verschiedener Parameter, z.B. der Größe des physischen Arbeitsspeichers des Systems, der konfigurierten Anzahl maximaler Serverthreads und verschiedener Startparameter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert die berechnete Größe des virtuellen Adressraums (das Arbeitsspeicherziel) für den Puffercache, verwendet jedoch nur die für die aktuelle Last erforderliche Größe an physischem Arbeitsspeicher. Sie können die Spalten **bpool_commit_target** und **bpool_committed** in der Katalogsicht [der sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) abfragen, um die Anzahl der als Arbeitsspeicherziel reservierten Seiten bzw. die Anzahl der Seiten zurückzugeben, für die im Puffercache ein Commit ausgeführt wird.
@@ -217,7 +234,6 @@ Ein Großteil seines Arbeitsspeichers verwendet der Puffer-Manager im [!INCLUDE[
 * Protokoll-Manager für Write-Ahead-Protokollierung.  
 
 ### <a name="supported-features"></a>Unterstützte Funktionen
-
 Der Puffer-Manager unterstützt die folgenden Funktionen:
 
 * Der Puffer-Manager ist NUMA-fähig **(Non-Uniform Memory Access)**. Außerdem werden Puffercacheseiten auf NUMA-Hardwareknoten verteilt, sodass ein Thread auf eine Pufferseite zugreifen kann, die dem lokalen NUMA-Knoten zugewiesen ist, statt den Zugriff über einen fremden Speicher vorzunehmen. 
@@ -257,6 +273,30 @@ Lange E/A-Vorgänge können auch durch eine Komponente im E/A-Pfad verursacht we
 
 Isolierte lange E/A-Anforderungen, die nicht mit einer der vorherigen Bedingungen verknüft sind, können durch einen Hardware- oder Treiberfehler verursacht werden. Das Systemereignisprotokoll enthält möglicherweise ein ähnliches Ereignis, mit dem eine Problemdiagnose vorgenommen werden kann.
 
+### <a name="memory-pressure-detection"></a>Ermittlung hoher Arbeitsspeicherauslastung
+Die hohe Arbeitsspeicherauslastung ist ein Zustand, der sich aus einem Speicherengpass ergibt und zu Folgendem führen kann:
+- Zusätzliche E/A-Vorgänge (z.B. sehr aktive LAZY WRITER-Hintergrundthreads)
+- Höheres Neukompilierungsverhältnis
+- Länger ausgeführte Abfragen (wenn Wartevorgänge für die Arbeitsspeicherzuweisung vorhanden sind)
+- Zusätzliche CPU-Zyklen
+
+Diese Situation kann durch externe oder interne Ursachen hervorgerufen werden. Folgende externe Ursachen sind möglich:
+- Wenig physischer Speicher (RAM) ist verfügbar. Dadurch kürzt das System die Workingsets der derzeit ausgeführten Prozesse, wodurch das gesamte System verlangsamt werden kann. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann das Commit-Ziel des Pufferpools verringern und interne Caches häufiger kürzen. 
+- Es ist insgesamt wenig Systemspeicher (einschließlich der Auslagerungsdatei des Betriebssystems) verfügbar. Dadurch schlagen Speicherbelegungen durch das System möglicherweise fehl, da der derzeit zugewiesene Arbeitsspeicher nicht ausgelagert werden kann.
+Folgende interne Ursachen sind möglich:
+- Eine Reaktion auf die externe hohe Arbeitsspeicherauslastung, wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] niedrigere Obergrenzen für die Arbeitsspeicherauslastung festlegt.
+- Die Arbeitsspeichereinstellungen wurden manuell gesenkt, indem die Konfiguration *Max. Serverarbeitsspeicher* reduziert wurde. 
+- Änderungen an der Arbeitsspeicherverteilung der internen Komponenten zwischen den verschiedenen Caches.
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementiert ein Framework, das als Teil seiner dynamischen Speicherverwaltung für die Ermittlung und das Behandeln von hoher Arbeitsspeicherauslastung vorgesehen ist. Dieses Framework umfasst den Hintergrundtask namens **Ressourcenmonitor**. Der Task „Ressourcenmonitor“ überwacht den Status von externen und internen Arbeitsspeicherindikatoren. Sobald sich der Status einer dieser Indikatoren ändert, berechnet dieser die entsprechende Benachrichtigung und zeigt diese an. Bei diesen Benachrichtigungen handelt es sich um interne Meldungen für jede der Engine-Komponenten. Sie werden in Ringpuffern gespeichert. 
+
+Zwei Ringpuffer enthalten Informationen, die für die dynamische Speicherverwaltung relevant sind: 
+- Der Ringpuffer „Ressourcenmonitor“, der die Aktivitäten des Ressourcenmonitor nachverfolgt, z.B. ob eine hohe Arbeitsspeicherauslastung signalisiert wurde oder nicht. Dieser Ringpuffer enthält Statusinformationen, die vom aktuellen Zustand von *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* oder *RESOURCE_MEMVIRTUAL_LOW* abhängen.
+- Der Ringpuffer „Speicherbroker“, der Datensätze von Arbeitsspeicherbenachrichtigungen für jeden Resource Governor-Ressourcenpool enthält. Wenn eine interne hohe Arbeitsspeicherauslastung ermittelt wird, wird eine Benachrichtigung, dass wenig Arbeitsspeicher vorhanden ist, für Komponenten aktiviert, denen Arbeitsspeicher zugewiesen ist. Dadurch sollen Aktionen ausgelöst werden, die den Arbeitsspeicher zwischen Caches ausgleichen. 
+
+Speicherbroker überwachen den von jeder Komponente angeforderten Arbeitsspeicherverbrauch und berechnen dann auf Basis der gesammelten Informationen den optimalen Arbeitsspeicher für jede dieser Komponenten. Es gibt mehrere Broker für jeden Resource Governor-Ressourcenpool. Diese Information wird dann an jede der Komponenten übermittelt, und die Arbeitsspeichernutzung wird entsprechend erhöht oder gesenkt.
+Weitere Informationen zu Speicherbrokern finden Sie unter [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
+
 ### <a name="error-detection"></a>Fehlererkennung  
 Von Datenbankseiten kann einer von zwei möglichen optionalen Mechanismen verwendet werden, mit dem die Integrität der Seite ab dem Zeitpunkt sichergestellt werden kann, an dem die Datei auf den Datenträger geschrieben wird, bis zu dem Zeitpunkt, wenn sie erneut gelesen wird: Schutz vor zerrissenen Seiten und Prüfsummenschutz. Anhand dieser Mechanismen kann die richtige Funktionsweise des Datenspeichers, der Hardwarekomponenten (Controller, Treiber, Kabel) und des Betriebssystems unabhängig geprüft werden. Der Schutz wird der Seite hinzugefügt, bevor sie auf den Datenträger geschrieben wird, und überprüft, wenn die Seite vom Datenträger gelesen wird.
 
@@ -278,7 +318,6 @@ Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005
 > TORN_PAGE_DETECTION verwendet zwar weniger Ressourcen, bietet jedoch einen minimalen Teil des Schutzes von CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Grundlegendes zu NUMA (Non-Uniform Memory Access)
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter

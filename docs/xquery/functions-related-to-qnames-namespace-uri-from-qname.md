@@ -1,5 +1,5 @@
 ---
-title: Namespace-Uri-aus-QName (XQuery) | Microsoft Docs
+title: Namespace-Uri-aus-QName (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999802"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funktionen im Zusammenhang mit QNames - Namespace-Uri von QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Functions Related to QNames - Namespace-Uri-aus-QName sich
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeichenfolge, die den Namespace-Uri, der vom angegebenen QName darstellt *$arg*. Das Ergebnis ist die leere Sequenz, wenn *$arg* die leere Sequenz.  
+  Gibt eine Zeichenfolge mit den Namespace-Uri, der vom angegebenen QName *$arg*. Das Ergebnis ist die leere Sequenz ist, wenn *$arg* die leere Sequenz.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,17 +46,17 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  Ist der QName, dessen Namespace-URI zurückgegeben wurde.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Abrufen der Namespace-URI von einem QName  
- Ein funktionierendes Beispiel finden Sie unter [lokale Namen von QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ Ein Arbeitsbeispiel finden Sie unter [Local-Name-aus-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **namespace-uri-from-QName()** -Funktion gibt Instanzen von xs: String, statt xs: anyURI zurück.  
+-   Die **namespace-uri-from-QName()** Funktion gibt Instanzen von xs: String anstelle von xs: anyURI zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen, die sich auf QNames beziehen &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Functions Related to QNames sich &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux | Microsoft Docs
-description: Dieser Artikel beschreibt, wie DB E-Mails und e-Mail-Benachrichtigungen mit SQL Server on Linux
+title: DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux | Microsoft-Dokumentation
+description: In diesem Artikel wird beschrieben, wie Sie DB E-Mails und e-Mail-Benachrichtigungen mit SQL Server unter Linux verwenden
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,19 +13,19 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984262"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Die folgenden Schritte veranschaulichen, wie DB Mail einrichten und verwenden es mit SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. 
+Die folgenden Schritte zeigen das Einrichten von Datenbank-e-Mails und Ihre Verwendung mit SQL Server-Agent (**Mssql-Server-Agent**) unter Linux. 
 
-## <a name="1-enable-db-mail"></a>1. DB-Mail aktivieren
+## <a name="1-enable-db-mail"></a>1. Aktivieren von Datenbank-e-Mails
 
 ```sql
 USE master 
@@ -56,7 +56,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 GO
 ```
 
-## <a name="3-create-a-default-profile"></a>3. Erstellen Sie ein Standardprofil
+## <a name="3-create-a-default-profile"></a>3. Erstellen eines Standardprofils
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profile_sp 
@@ -65,7 +65,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Fügen Sie das Database Mail-Konto zu einem Database Mail-Profil
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Fügen Sie die Database Mail-Konto ein Mailprofil für Datenbank
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6. -E-Testmail senden
 > [!NOTE]
-> Möglicherweise müssen Sie Ihre e-Mail-Client werden, und aktivieren, die "erlauben unsicherer Clients zum Senden von e-Mails". Nicht alle Clients erkennen DB E-Mail als eine e-Mail-Daemon.
+> Möglicherweise müssen Sie wechseln zu Ihren e-Mail-Client, und aktivieren Sie die "zulassen unsicherer Clients zum Senden von e-Mails". Nicht alle Clients erkennen Datenbank-e-Mails als ein Daemon-e-Mail.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -94,8 +94,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Festlegen Sie DB-Mailprofil mithilfe von Mssql-Conf oder Umgebungsvariable
-Sie können der Mssql-Conf-Hilfsprogramm oder Umgebungsvariablen verwenden, um Ihre DB-Mailprofil zu registrieren. In diesem Fall nennen wir unsere Profil-Standard.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Datenbank-Mailprofil mithilfe von Mssql-Conf oder die Umgebungsvariable festgelegt
+Sie können die Mssql-Conf-Hilfsprogramm oder Umgebungsvariablen verwenden, um Ihre Datenbank-Mailprofil zu registrieren. In diesem Fall Wir nennen unseren standardmäßigen Profil.
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Richten Sie einen Operator für SQLAgent-auftragsbenachrichtigungen 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Richten Sie einen Operator für Benachrichtigungen zu Aufträgen für SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Nach der erfolgreichen "Agentauftrag Test" Senden Sie e-Mail 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Senden Sie e-Mail, wenn "Agent-Test-Auftrag" erfolgreich abgeschlossen wurde 
 
 ```
 EXEC msdb.dbo.sp_update_job 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908695"
 ---
 # <a name="general-error-checks"></a>Überprüfungen auf allgemeine Fehler
 Der Treiber-Manager überprüft ein allgemeinen Fehler. Wird immer SQL_ERROR zurückgegeben, wenn den folgenden Fehler gefunden wird: die Funktion, die vom Treiber unterstützt werden muss.

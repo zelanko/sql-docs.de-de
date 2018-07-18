@@ -2,7 +2,6 @@
 title: ADOX-Eigenschaften | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284591"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 |||  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt die Spaltenmerkmale.|  
 |[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt eine ADO **Befehl** -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, an das Objekt erstellt wurde.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum, an das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die festgelegte maximale Größe der Spalte an.|  

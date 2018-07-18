@@ -2,7 +2,6 @@
 title: ADOX-Methoden | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284799"
 ---
 # <a name="adox-methods"></a>ADOX-Methoden
 |||  
@@ -36,8 +36,8 @@ ms.lasthandoff: 05/03/2018
 |[Append (Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)|Fügt ein neues **Benutzer** -Objekt an die **Benutzer** Auflistung.|  
 |[Append (Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)|Fügt ein neues **Ansicht** -Objekt an die **Ansichten** Auflistung.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Ändert das Kennwort für ein Benutzerkonto an.|  
-|[Create](../../../ado/reference/adox-api/create-method-adox.md)|Wird einen neuen Katalog erstellt.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
+|[Erstellen](../../../ado/reference/adox-api/create-method-adox.md)|Wird einen neuen Katalog erstellt.|  
+|[Löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Gibt den Besitzer eines Objekts in einem Katalog zurück.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Gibt die Berechtigungen für Benutzer oder eine Gruppe für ein Objekt zurück.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Gibt den Besitzer eines Objekts in einem Katalog an.|  

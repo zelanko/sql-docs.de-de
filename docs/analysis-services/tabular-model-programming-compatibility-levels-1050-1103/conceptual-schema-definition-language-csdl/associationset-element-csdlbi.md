@@ -1,5 +1,5 @@
 ---
-title: AssociationSet-Element (CSDLBI) | Microsoft Docs
+title: AssociationSet-Element (CSDLBI) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968980"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +25,10 @@ ms.lasthandoff: 05/10/2018
 ## <a name="applicable-attributes"></a>Anwendbare Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, durch die das **AssociationSet** -Element definiert wird.  
   
-|Name|Ist erforderlich|Beschreibung|  
+|Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
 |Status|ja|Eine Zeichenfolge, die angibt, ob die Zuordnung aktiv ist. Der Wert wird durch das State-Element definiert.|  
-|Hidden|Nein|Ein boolescher Wert der angibt, ob die Beziehung sichtbar ist. Standardmäßig weist Hidden den Wert **false**auf; dies bedeutet, dass alle Beziehungen im Modell sichtbar sind.|  
+|Ausgeblendet|nein|Ein boolescher Wert der angibt, ob die Beziehung sichtbar ist. Standardmäßig weist Hidden den Wert **false**auf; dies bedeutet, dass alle Beziehungen im Modell sichtbar sind.|  
   
 ## <a name="state-element"></a>State-Element  
  Das **State** -Element ist ein einfacher Typ, der angibt, ob eine Zuordnung aktiv oder inaktiv ist. Aktive Zuordnungen sollten in Berechnungen verwendet werden, auf inaktive Zuordnungen muss in Berechungen explizit verwiesen werden.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/10/2018
   
  In der folgenden Tabelle sind die Werte des **State** -Elements aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Active|Die Zuordnung ist aktiv.|  
 |Inaktiv|Die Zuordnung ist aktiv.|  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarische**  
+ **Tabellarisch**  
   
  Im folgenden Beispiel wird eine Beziehung im tabellarischen AdventureWorks-Modell (in CSDLBI 1.1) veranschaulicht. Die Zuordnung ist als inaktiv gekennzeichnet, weil bereits eine Beziehung (zwischen OrderKey und Date) besteht.  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Mehrdimensionale**  
+ **Multidimensional**  
   
  Im folgenden Beispiel wird die Beziehung zwischen der Tabelle Sales und der Tabelle Currency im Contoso-Vorgangscube veranschaulicht.  
   

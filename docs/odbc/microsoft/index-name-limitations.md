@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901300"
 ---
 # <a name="index-name-limitations"></a>Einschränkungen der Index von Clientnamen
 Wenn der Paradox-Treiber verwendet wird, benötigen ein primärer Index den gleichen Namen wie die Tabelle, für die er definiert ist. Nicht eindeutige oder nicht eindeutige Indizes benötigen den gleichen Namen wie die Tabelle, auf denen sie definiert sind.

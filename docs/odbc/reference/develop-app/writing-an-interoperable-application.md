@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915885"
 ---
 # <a name="writing-an-interoperable-application"></a>Schreiben einer interoperablen Anwendung
 Wenn eine Anwendung den gleichen Code für mehr als einen Treiber verwendet, muss diesen Code zwischen Treiber interoperabel sein. In den meisten Fällen ist dies eine einfache Aufgabe. Beispielsweise ist der Code zum Abrufen von Zeilen mit einem Vorwärtscursor für alle Treiber identisch. In einigen Fällen kann dies schwieriger sein. Beispielsweise muss der Code zum Konstruieren der Bezeichner für die Verwendung in SQL-Anweisungen Bezeichner Groß-/Kleinschreibung, zitieren und einteiliger, mit dem zweiteiligen und dreiteiligen Benennungskonventionen berücksichtigen.  

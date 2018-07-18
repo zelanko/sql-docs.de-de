@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_force_plan (Transact-SQL) | Microsoft Docs
+title: Sp_query_store_force_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,17 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036118"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>Sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Ermöglicht das Erzwingen eines bestimmten Plans für eine bestimmte Abfrage.  
   
- Wenn ein Plan erzwungen wird für eine bestimmte Abfrage jedes Mal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] findet die Abfrage versucht, den Plan in der Optimierer zu erzwingen. Wenn das Erzwingen eines Plans fehlschlägt, eine XEvent wird ausgelöst, und der Optimierer angewiesen, die auf die übliche Weise optimieren.  
+ Wenn ein Plan erzwungen wird für eine bestimmte Abfrage jedes Mal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] findet die Abfrage, wird versucht, den Plan in der Abfrageoptimierer zu erzwingen. Wenn das Erzwingen eines Plans ein Fehler auftritt, ein XEvent wird ausgelöst, und der Optimierer angewiesen, auf die übliche Weise zu optimieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,11 +50,11 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@query_id =** ] *"query_id"*  
- Ist die Id der Abfrage. *"query_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@query_id =** ] *Query_id*  
+ Ist die Id der Abfrage. *Query_id* ist eine **Bigint**, hat keinen Standardwert.  
   
- [  **@plan_id =** ] *"Plan_id"*  
- Ist die Id des Abfrageplans erzwungen werden. *"Plan_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@plan_id =** ] *' plan_id '*  
+ Ist die Id des Abfrageplans erzwungen werden. *Plan_id* ist eine **Bigint**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -61,7 +62,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **einfügen**, **UPDATE**, und **löschen** -Berechtigung für das Query Store-Katalog Ansichten.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **einfügen**, **UPDATE**, und **löschen** -Berechtigung für den Abfrage-Store-Katalog Ansichten.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
@@ -75,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie identifiziert die "query_id" und "Plan_id", die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um die Abfrage zum Verwenden eines Plans erzwingen.  
+ Nachdem Sie identifiziert die Query_id und ' plan_id ', die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um der Abfrage verwendet einen Plan zu erzwingen.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  
