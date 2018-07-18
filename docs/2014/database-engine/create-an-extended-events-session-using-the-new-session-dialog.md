@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Sitzung für erweiterte Ereignisse mit dem Dialogfeld "neue Sitzung" | Microsoft Docs
+title: Erstellen Sie eine Sitzung für erweiterte Ereignisse mithilfe des Dialogfelds für die neue Sitzung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SSMS.XEDISPLAY.GROUPING.F1
 - SQL12.SSMS.XEDISPLAY.AGGREGATION.F1
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - Extended Events Dialog Box
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 52b40b5fe3a43565acacfdc0b85f3404f9c10a88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 92fc98d32c8fe021af008dcd1058f6e43fc2fdd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306250"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Erstellen einer Sitzung für erweiterte Ereignisse im Dialogfeld für neue Sitzungen
   Mit dem Dialogfeld "Neue Sitzung" können Sie eine Sitzung für erweiterte Ereignisse definieren, die Ihre Daten erfasst, anzeigt und analysiert. Mit dem Dialogfeld "Neue Sitzung" werden alle Funktionen erweiterter Ereignisse angezeigt.  
   
- Mit dem Assistenten für neue Sitzungen [](../ssms/object/object-explorer.md) können Sie zudem eine Sitzung für erweiterte Ereignisse definieren, mit der die meisten Funktionen erweiterter Ereignisse unterstützt werden.  
+ Mit dem [Assistenten für neue Sitzungen](../ssms/object/object-explorer.md) können Sie zudem eine Sitzung für erweiterte Ereignisse definieren, mit der die meisten Funktionen erweiterter Ereignisse unterstützt werden.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Um das Dialogfeld für eine neue Sitzung im Objekt-Explorer zu öffnen, erweitern Sie den Knoten **Verwaltung** , und erweitern Sie dann **Erweiterte Ereignisse**. Klicken Sie mit der rechten Maustaste auf **Sitzungen**, und klicken Sie dann auf **Neue Sitzung**.  
@@ -168,7 +168,7 @@ ms.locfileid: "36056109"
     |**etw_classic_sync_target**|**Name der Sitzungsprotokolldatei auf Server**. Geben Sie den Protokolldateinamen und das Verzeichnis auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Protokolldatei zu suchen und auszuwählen.<br /><br /> **Maximale Protokolldateigröße**. Geben Sie die maximale Protokolldateigröße für das ETW-Ereignis (Ereignisablaufverfolgung für Windows) ein. Der Standardwert ist 20 MB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Puffergröße**. Geben Sie die Puffergröße im Arbeitsspeicher für die Ereignissitzung ein. Der Standardwert ist 128 KB. Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Sitzungsname**. Geben Sie einen aussagekräftigen Namen für die ETW-Sitzung ein.<br /><br /> **Bei Schreibfehler in ETW wiederholen**. Aktivieren Sie dieses Kontrollkästchen, um die Veröffentlichung des Ereignisses im ETW-Subsystem erneut zu versuchen.<br /><br /> **Maximale Anzahl von Wiederholungen**. Geben Sie die maximale Anzahl von erneuten Versuchen für die Veröffentlichung des Ereignisses im ETW-Subsystem an, bevor das Ereignis gelöscht wird. Die Standardanzahl von Wiederholungen beträgt 0 (null). Für diese Zieleigenschaft bedeuten 0 (null) keine Wiederholungen.|  
     |**event_counter**|Es gibt keine Zieleigenschaften für den Ereigniszähler.|  
     |**event_file**|**Dateiname auf Server**. Geben Sie das Verzeichnis und den Zieldateinamen auf dem Server ein, oder klicken Sie auf **Durchsuchen** , um die Zieldatei zu suchen und auszuwählen.<br /><br /> **Maximale Dateigröße**. Geben Sie die maximale Dateigröße für das Dateiziel an. Wenn Sie keine maximale Dateigröße angeben, wird die Datei immer größer, bis der Speicherplatz auf dem Datenträger erschöpft ist. Die Standarddateigröße beträgt 1 Gigabyte (GB). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Dateirollover aktivieren**. Aktivieren Sie dieses Kontrollkästchen, um einen Dateirollover für das Dateiziel zu aktivieren.<br /><br /> **Maximale Anzahl von Rolloverdateien**. Geben Sie die maximale Anzahl der Dateien an, die Sie im Dateisystem beibehalten möchten.|  
-    |**Histogramm**|**Ereignis, nach dem gefiltert werden soll**. Wählen Sie das Ereignis, nach dem gefiltert werden soll aus der Dropdownliste aus. Sie können nach einen beliebigen Ereignis filtern, das in der Ereignissitzung vorhanden ist. Sie können auch auswählen  **\<None >** aus der Dropdownliste aus, um alle Ereignisse und die basisbuckets für die Aktion einzuschließen.<br /><br /> **Buckets basieren auf: Aktion**. Aktivieren Sie diese Option, um die Buckets auf dem Aktionsnamen zu basieren, der als Datenquelle verwendet wird, und wählen Sie dann die Aktion aus der Dropdownliste aus.<br /><br /> **Buckets basieren auf: Feld**. Aktivieren Sie diese Option, um die Buckets auf dem Ereignisfeld zu basieren, das als Datenquelle verwendet wird, und wählen Sie dann das Feld aus der Dropdownliste aus.<br /><br /> **Maximale Bucketanzahl**. Geben Sie die maximale Anzahl von Buckets ein, die Sie beibehalten möchten. Wenn dieser Wert erreicht wird, ignoriert die Ereignissitzung alle neuen Ereignisse, die nicht zu den vorhandenen Buckets gehören.|  
+    |**Histogramm**|**Ereignis, nach dem gefiltert werden soll**. Wählen Sie das Ereignis, nach dem gefiltert werden soll aus der Dropdownliste aus. Sie können nach einen beliebigen Ereignis filtern, das in der Ereignissitzung vorhanden ist. Sie können auch auswählen,  **\<None >** aus der Dropdown-Liste alle Ereignisse und die basisbuckets für die Aktion einzuschließen.<br /><br /> **Buckets basieren auf: Aktion**. Aktivieren Sie diese Option, um die Buckets auf dem Aktionsnamen zu basieren, der als Datenquelle verwendet wird, und wählen Sie dann die Aktion aus der Dropdownliste aus.<br /><br /> **Buckets basieren auf: Feld**. Aktivieren Sie diese Option, um die Buckets auf dem Ereignisfeld zu basieren, das als Datenquelle verwendet wird, und wählen Sie dann das Feld aus der Dropdownliste aus.<br /><br /> **Maximale Bucketanzahl**. Geben Sie die maximale Anzahl von Buckets ein, die Sie beibehalten möchten. Wenn dieser Wert erreicht wird, ignoriert die Ereignissitzung alle neuen Ereignisse, die nicht zu den vorhandenen Buckets gehören.|  
     |**pair_matching**|**Ereignisse: Beginnen mit**. Wählen Sie den Ereignisnamen, der das Anfangsereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Ereignisse: Enden mit**. Wählen Sie den Ereignisnamen, der das Endereignis in einer paarweise zugeordneten Sequenz angibt, aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: Beginnen mit**. Wählen Sie das Anfangsfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Felder und Aktionen: Enden mit**. Wählen Sie das Endfeld und/oder eine Aktion in einer paarweise zugeordneten Sequenz aus der Dropdownliste aus.<br /><br /> **Neue nicht gepaarte Ereignisse bei ungenügendem Arbeitsspeicher verwerfen**. Aktivieren Sie dieses Kontrollkästchen, um die Sammlung von Ereignissen für das pair_matching-Ziel zu beenden, wenn nicht genügend Arbeitsspeicher vorhanden ist. Wenn wieder mehr Arbeitsspeicher vorhanden ist, wird die Sammlung von Ereignissen fortgesetzt.<br /><br /> **Maximale verwaiste Ereignisse**. Geben Sie die maximale Anzahl verwaister Ereignisse an, die Sie im Arbeitsspeicher beibehalten möchten.|  
     |**ring_buffer**|**Anzahl beizubehaltender Ereignisse**. Geben Sie mithilfe der NACH-OBEN-TASTE und der NACH-UNTEN-TASTE die Anzahl von Ereignissen an, die Sie beibehalten möchten. Der Standardwert lautet 1000.<br /><br /> **Maximale Pufferspeichergröße**. Geben Sie die Höchstmenge des verfügbaren Arbeitsspeichers ein. Vorhandene Ereignisse werden gelöscht, wenn dieser Wert erreicht wird. Die Standardspeichergröße beträgt 0 Megabyte (MB) (bedeutet unbeschränkt). Sie können aus der Dropdownliste eine andere Speichereinheit auswählen.<br /><br /> **Angegebene Anzahl von Ereignissen (pro Typ) bei vollem Puffer beibehalten**. Aktivieren Sie diese Option, um eine angegebene Anzahl von Ereignissen jedes Typs im Puffer beizubehalten.<br /><br /> **Anzahl beizubehaltender Ereignisse (pro Typ)**. Geben Sie die gewünschte Anzahl von Ereignissen jedes Typs ein, die im Puffer gespeichert werden soll.|  
   

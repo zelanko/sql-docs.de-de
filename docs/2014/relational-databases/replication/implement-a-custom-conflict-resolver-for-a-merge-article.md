@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6d3692d6fc83af166a16aa628747078f60cb663a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0a94b6e958626e429711bb643cecc7bb87592c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292291"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
-  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einem COM-basierten benutzerdefinierten Konfliktlöser [!INCLUDE[tsql](../../includes/tsql-md.md)] in [](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)implementiert wird.  
+  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]mit[!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in implementiert wird.  
   
  **In diesem Thema**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36159134"
   
 8.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, um zu prüfen, ob die Bibliothek noch nicht als benutzerdefinierter Konfliktlöser registriert wurde.  
   
-9. Um die Bibliothek als benutzerdefinierten Konfliktlöser zu registrieren, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) aus. Geben Sie den Anzeigenamen des COM-Objekts für **@article_resolver**, die Bibliotheks ID (CLSID) für **@resolver_clsid**, und der Wert `false` für **@is_dotnet_assembly**.  
+9. Um die Bibliothek als benutzerdefinierten Konfliktlöser zu registrieren, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) aus. Geben Sie den Anzeigenamen des COM-Objekts für **@article_resolver**, die Bibliotheks ID (CLSID) für **@resolver_clsid**, und den Wert `false` für **@is_dotnet_assembly**.  
   
     > [!NOTE]  
     >  Wenn er nicht mehr benötigt wird, kann die Registrierung eines benutzerdefinierten Konfliktlösers mit [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) aufgehoben werden.  

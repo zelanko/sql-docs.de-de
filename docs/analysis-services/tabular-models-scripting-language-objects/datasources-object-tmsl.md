@@ -1,5 +1,5 @@
 ---
-title: DataSources-Objekt (TMSL) | Microsoft Docs
+title: DataSources-Objekt (TMSL) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1dd73918ca2d52cf38dba74455cf225a8c15ac3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045374"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981332"
 ---
 # <a name="datasources-object-tmsl"></a>DataSources-Objekt (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Definiert eine Verbindung mit einer Datenquelle, die vom Modell entweder während des Imports zum Hinzufügen von Daten für das Modell oder in Pass-through-Abfragen über DirectQuery-Modus verwendet werden.  Modelle im DirectQuery-Modus können nur einen haben **DataSource** Objekt.  
+  Definiert eine Verbindung mit einer Datenquelle, die vom Modell entweder während des Imports zum Hinzufügen von Daten für das Modell oder im Pass-through-Abfragen über DirectQuery-Modus verwendet werden.  Modelle im DirectQuery-Modus nur möglich, eine **DataSource** Objekt.  
   
- Es sei denn, Sie erstellen, und Ersetzen Sie dabei, oder ändern das Datenquellenobjekt selbst, einer beliebigen Datenquelle verwiesen wird, in Ihrem Skript (z. B. in der Partition Skript) muss eine vorhandene **DataSource** Objekt in Ihrem Modell.  
+ Es sei denn, Sie erstellen, und Ersetzen Sie dabei, oder ändern das Objekt selbst, alle Datenquellen in Ihrem Skript (z. B. in der Partition Skripts) auf die verwiesen wird. muss einer vorhandenen **DataSource** Objekt in Ihrem Modell.  
   
 ## <a name="object-definition"></a>Objektdefinition  
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **DataSource** Objekte verfügen außerdem über die folgenden Eigenschaften.  
@@ -29,28 +29,28 @@ ms.locfileid: "34045374"
  Der DataSource-Typ. Derzeit ist der einzige gültige Wert Provider (1) - normale Verbindungszeichenfolge.  
   
  connectionString  
- Die Verbindungszeichenfolge, die minimal gibt den Server und die Datenbank, jedoch kann auch andere Eigenschaften, die von der externen RDBMS, z. B. eine Daten-Anbieter oder ein Benutzerkonto unterstützt einschließen. Dieser Wert ist erforderlich. Finden Sie unter ["SqlConnectionStringBuilder"-Klasse](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) ausführliche Informationen zu SQL Server-Datenbank-Verbindungszeichenfolgen-Eigenschaften.  
+ Die Verbindungszeichenfolge, die minimal gibt den Server und die Datenbank, jedoch kann auch andere Eigenschaften, die von der externen RDBMS, z. B. eine Daten-Anbieter oder ein Benutzerkonto unterstützt werden. Dieser Wert ist erforderlich. Finden Sie unter [SqlConnectionStringBuilder-Klasse](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) ausführliche Informationen zu SQL Server-Datenbank-Verbindungszeichenfolgen-Eigenschaften.  
   
  impersonationMode  
  Gibt an, ob Analysis Services die Identität des Benutzers, der die Abfrage anfordert Identitätswechsel verwenden soll. Diese Eigenschaft ist ein numerischer Wert, der angibt, die Anmeldeinformationen für den Identitätswechsel verwenden. Folgende Enumerationswerte sind möglich:  
   
--   Standard (1) - Server verwendet die identitätswechselmethode, die es hält für den Kontext geeignet sein, in dem der Identitätswechsel verwendet wird.  
+-   Standard (1) - Server verwendet die identitätswechselmethode, die er hält, für den Kontext geeignet zu sein, die in der Identitätswechsel verwendet wird.  
   
--   ImpersonateAccount (2) - Server verwendet das angegebene Benutzerkonto.  
+-   ImpersonateAccount (2): verwendet der Server das angegebene Benutzerkonto an.  
   
--   ImpersonateAnonymous (3) - verwendet der Server das anonyme Benutzerkonto an.  Diese Option wird nicht empfohlen, aber manchmal in HTTP-Szenarien verwendet, durch benutzerdefinierte Anwendungen, die die Authentifizierung ausführen.  
+-   ImpersonateAnonymous (3): verwendet der Server das anonyme Benutzerkonto.  Diese Option wird nicht empfohlen, aber Sie wird manchmal in HTTP-Szenarien durch benutzerdefinierte Anwendungen, die Authentifizierung verwendet.  
   
--   ImpersonateCurrentUser (4) - Server verwendet das Benutzerkonto, dem der Client als eine Verbindung herstellt.  
+-   ImpersonateCurrentUser (4) - verwendet der Server das Benutzerkonto, dem der Client als eine Verbindung herstellt.  
   
--   Konfiguriert (5) - ImpersonateServiceAccount verwendet der Server das Benutzerkonto, dem als der Server ausgeführt wird.  
+-   ImpersonateServiceAccount (5) – verwendet der Server das Benutzerkonto, dem als der Server ausgeführt wird.  
   
--   ImpersonateUnattendedAccount (6) – wird verwendet, auf der Server ein unbeaufsichtigtes Benutzerkonto. Dies wird für Power Pivot und tabellarischen Modellen verwendet, die in einer SharePoint-Umgebung ausgeführt.  
+-   ImpersonateUnattendedAccount (6) – verwendet der Server ein unbeaufsichtigtes Benutzerkonto an. Dies wird für Power Pivot oder tabellarische Modelle verwendet, die in einer SharePoint-Umgebung ausgeführt.  
   
  DirectQuery-Modus kann ImpersonateCurrentuser verwenden, wenn Analysis Services für die vertrauenswürdige Delegierung konfiguriert ist oder  
-                      konfiguriert ImpersonateServiceAccount, wenn die abfrageanforderung im Sicherheitskontext des Analysis Services-Dienstkontos ausgeführt wird. Finden Sie unter [Configure Analysis Services for Kerberos constrained Delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
+                      ImpersonateServiceAccount, wenn die abfrageanforderung im Sicherheitskontext des Analysis Services-Dienstkontos ausgeführt wird. Finden Sie unter [Configure Analysis Services for Kerberos eingeschränkte Delegierung](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
  account  
- Für den Identitätswechsel verwendet. Ein Windows- oder Datenbank Konto mit einem gültigen Anmeldenamen mit Leseberechtigungen für die externe Datenbank an.  
+ Für den Identitätswechsel verwendet. Eine Windows oder das Datenbankkonto, die einen gültigen Anmeldenamen mit Leseberechtigungen für die externe Datenbank an.  
   
  Kennwort  
  Eine verschlüsselte Zeichenfolge, die das Kennwort des Kontos.  
@@ -59,23 +59,23 @@ ms.locfileid: "34045374"
  Die maximale Anzahl von gleichzeitig mit der Datenquelle zu öffnenden Verbindungen.  
   
  isolation  
- Die Art der Isolation, die beim Ausführen von Befehlen für die Datenquelle verwendet wird. Gültige Werte sind ReadCommitted (1) oder Momentaufnahme (2).  
+ Die Art der Isolation, die beim Ausführen von Befehlen für die Datenquelle verwendet wird. Gültige Werte sind "ReadCommitted" (1) oder Momentaufnahme (2).  
   
  timeout  
- Eine ganze Zahl, die angibt, das Timeout in Sekunden für Befehle in der Datenquelle ausgeführt werden.  
+ Eine ganze Zahl, die angibt, das Timeout in Sekunden für Befehle, die für die Datenquelle ausgeführt.  
   
  Provider  
- Eine optionale Zeichenfolge, die den Namen des verwalteten Anbieters identifiziert für die Verbindung mit der relationalen Datenbank verwendet, wenn nicht anders angegeben, in der Verbindungszeichenfolge.  
+ Eine optionale Zeichenfolge, die den Namen des verwalteten Datenanbieters für die Verbindung mit der relationalen Datenbank verwendet, wenn nicht anders angegeben, für die Verbindungszeichenfolge identifiziert.  
   
 ## <a name="usage"></a>Verwendung  
- **DataSource** Objekte dienen [Alter-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Create-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace-Befehl &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Delete-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Refresh-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), und [MergePartitions-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **DataSource** Objekte dienen in [Alter-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Erstellungsbefehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace-Befehl &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Löschbefehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Refresh-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), und [MergePartitions-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
- Ein **DataSource** Objekt ist eine Eigenschaft eines Modells, aber es kann auch als Eigenschaft eines Datenbankobjekts ausgehend von der 1: 1-Zuordnung zwischen Modell und Datenbank angegeben werden.  Geben Sie die Partitionen auf Grundlage der SQL-Abfragen auch eine **DataSource**, nur für einen reduzierten Satz von Eigenschaften.  
+ Ein **DataSource** Objekt ist eine Eigenschaft eines Modells, aber es kann auch als Eigenschaft eines Datenbankobjekts, erhält die 1: 1-Zuordnung zwischen Modell und Datenbank angegeben werden.  Geben Sie die Partitionen basierend auf der SQL-Abfragen auch eine **DataSource**, nur für einen reduzierten Satz von Eigenschaften.  
   
- Beim Erstellen, ersetzen oder ändern ein Datenquellenobjekt, geben Sie alle Lese-/ Schreibzugriff Eigenschaften der Objektdefinition. Eine Lese-/ Schreibzugriff-Eigenschaft nicht angegeben, gilt einen Löschvorgang.  
+ Beim Erstellen, ersetzen oder ändern ein Datenquellenobjekt, geben Sie alle Lese-/ Schreibeigenschaften der Objektdefinition. Unterdrücken einer Lese-/ Schreibzugriff-Eigenschaft wird einen Löschvorgang betrachtet.  
   
 ## <a name="examples"></a>Beispiele  
- **Beispiel 1** -eine Verbindung mit einem *FoodMart* Datenbank auf einer benannten Instanz von *Sales* auf einem Netzwerkserver mit dem Namen *"SERVER01"*.  
+ **Beispiel 1** -eine Verbindung mit einem *FoodMart* Datenbank auf einer benannten Instanz von *Sales* auf einem Netzwerkserver, die mit dem Namen *"SERVER01"*.  
   
 ```  
 "dataSources": [  
@@ -88,7 +88,7 @@ ms.locfileid: "34045374"
 ```  
   
 ## <a name="full-syntax"></a>Vollständige Syntax  
- Im folgenden ist die schemendarstellung des ein Datenquellenobjekt eines Modells.  
+ Im folgenden finden Sie die Zeichenfolgendarstellung von Schema für ein Datenquellenobjekt eines Modells.  
   
 ```  
 "dataSources": {  
@@ -182,6 +182,6 @@ ms.locfileid: "34045374"
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Konfigurieren der HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

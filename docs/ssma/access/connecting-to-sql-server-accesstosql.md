@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit SQLServer (AccessToSQL) | Microsoft Docs
+title: Herstellen einer Verbindung mit SQLServer (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,82 +28,82 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 085d42cc6401f665269610c18f44516f5afe7a83
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773366"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981622"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Herstellen einer Verbindung mit SQLServer (AccessToSQL)
-Zum Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen die Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu den Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und zeigt Sie Datenbank-Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer. SSMA speichert Informationen zu welcher Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  
+Migrieren von Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen mit der Zielinstanz von verbinden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie eine Verbindung herstellen, erhält der SSMA Metadaten zu den Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und zeigt Sie Datenbank-Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer. SSMA speichert Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sie verbunden sind, jedoch werden keine Kennwörter gespeichert.  
   
-Die Verbindung mit SQL Server bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie ggf. eine aktive Verbindung mit dem Server mit SQL Server herstellen. Sie können offline arbeiten, bis Sie Datenbankobjekte in SQL Server laden und Migrieren von Daten.  
+Die Verbindung mit SQL Server bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie mit SQL Server herstellen, wenn Sie möchten, dass eine aktive Verbindung mit dem Server. Sie können offline arbeiten, bis Sie die Datenbankobjekte in SQL Server laden und Migrieren von Daten.  
   
-Metadaten zur Instanz von SQL Server werden nicht automatisch synchronisiert. Um die Metadaten in SQL Server-Metadaten-Explorer zu aktualisieren, müssen Sie stattdessen manuell die SQL Server-Metadaten aktualisieren. Weitere Informationen finden Sie im Abschnitt "Synchronisieren von SQL Server-Metadaten" weiter unten in diesem Thema.  
+Metadaten zur Instanz von SQL Server wird nicht automatisch synchronisiert. Um die Metadaten in SQL Server-Metadaten-Explorer zu aktualisieren, müssen Sie stattdessen manuell SQL Server-Metadaten aktualisieren. Weitere Informationen finden Sie unter "Synchronisieren von SQL Server-Metadaten" im Abschnitt weiter unten in diesem Thema.  
   
 ## <a name="required-sql-server-permissions"></a>Erforderliche SQL Server-Berechtigungen  
-Das Konto, das verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] erfordert unterschiedliche Berechtigungen abhängig von den Aktionen, die von diesem Konto ausgeführt werden.  
+Das Konto, das verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] benötigen unterschiedliche Berechtigungen abhängig von den Aktionen, die von diesem Konto ausgeführt werden.  
   
--   Zugreifen auf Objekte zu konvertieren [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, um Metadaten aus zu aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], oder um konvertierte Syntax auf Skripts speichern zu können, muss das Konto über die Berechtigung zum Anmelden bei der Instanzstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   So konvertieren Sie Objekte der Zugriff auf [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, um Metadaten aus aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], oder um konvertierte Syntax auf Skripts speichern zu können, muss das Konto über die Berechtigung für die Anmeldung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
--   Beim Laden von Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und zum Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], die minimal erforderliche Berechtigungen-Anforderung ist die Mitgliedschaft in der **Db_owner** Datenbankrolle in der Zieldatenbank.  
+-   Zum Laden von Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Datenmigration [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], ist die Anforderung mindestens die Mitgliedschaft in der **Db_owner** Datenbankrolle in der Zieldatenbank.  
   
 ## <a name="establishing-a-sql-server-connection"></a>Herstellen einer SQL Server-Verbindung  
 Bevor Sie den Zugriff auf Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax müssen Sie eine Verbindung mit der Instanz von herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , wo Sie die Access-Datenbanken migrieren möchten.  
   
-Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in denen Objekte und Daten migriert werden sollen. Sie können diese Zuordnung auf Datenbankebene Zugriff anpassen, nach dem Herstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Zieldatenbanken](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in dem Objekte und Daten migriert werden. Sie können diese Zuordnung auf der Access-Datenbank-Ebene anpassen, nach dem Herstellen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Zieldatenbanken](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
-> Vor dem Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeführt wird und Verbindungen akzeptieren können. Weitere Informationen finden Sie unter "Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankmodul" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+> Vor dem Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeführt wird und Verbindungen akzeptieren. Weitere Informationen finden Sie unter "Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Engine" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Onlinedokumentation.  
   
 **Verbindung mit SQL Server**  
   
-1.  Auf der **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit SQL Server**.  
+1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit SQL Server**.  
   
-    Wenn Sie zuvor verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], den Namen des Befehls werden **eine erneute Verbindung mit SQL Server**.  
+    Wenn Sie zuvor mit verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], der Namen des Befehls werden **Wiederherstellen der Verbindung mit SQL Server**.  
   
 2.  In der **Servernamen** Feld, geben Sie ein oder wählen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-    -   Wenn Sie eine Verbindung mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt (**.**).  
+    -   Wenn Sie mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt (**.**).  
   
-    -   Wenn Sie eine Verbindung mit der Standardinstanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers aus.  
+    -   Wenn Sie mit der Standardinstanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers ein.  
   
-    -   Wenn Sie eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Computernamen, einen umgekehrten Schrägstrich und den Instanznamen. Zum Beispiel: MyServer\MyInstance.  
+    -   Wenn Sie die zu einer benannten Instanz herstellen, geben Sie den Namen des Computers, einen umgekehrten Schrägstrich und den Namen der Instanz. Zum Beispiel: MyServer\MyInstance.  
   
-    -   Zur Verbindung mit einer aktiven Benutzerinstanz von [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], eine Verbindung herstellen über named Pipes-Protokoll und den Pipenamen an, wie z. B. angeben \\ \\.\pipe\sql\query. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Verbindung mit einer aktiven Benutzerinstanz von [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], eine Verbindung herstellen über named Pipes-Protokoll und Angeben des Pipenamens, z. B. \\ \\.\pipe\sql\query. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
-3.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] konfiguriert ist auf einen nicht standardmäßigen Port Clientverbindungen akzeptiert werden, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA wird versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst.  
+3.  Wenn Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] konfiguriert ist annehmen von Verbindungen über einen nicht-Standardport, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst.  
   
 4.  In der **Datenbank** Geben Sie den Namen der Zieldatenbank für die Migration von Objekt und Daten.  
   
-    Diese Option ist nicht verfügbar, wenn es sich bei einer erneuten Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    Diese Option ist nicht verfügbar, wenn Sie zum Wiederherstellen der Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-    Der Name der Zieldatenbank darf keine Leerzeichen oder Sonderzeichen enthalten. Sie können z. B. Access-Datenbanken zum Migrieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen "Abc". Access-Datenbanken, können nicht migriert werden, aber eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen "eine b-c".  
+    Der Name der Zieldatenbank darf keine Leerzeichen oder Sonderzeichen enthalten. Sie können z. B. Access-Datenbanken Migrieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen "Abc". Access-Datenbanken können nicht migriert werden, aber eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mit dem Namen "a b-c".  
   
-    Sie können diese Zuordnung pro Datenbank anpassen, nachdem Sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Zieldatenbanken](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+    Sie können diese Zuordnung pro Datenbank anpassen, nachdem Sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Zieldatenbanken](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
-5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie den Authentifizierungstyp, der für die Verbindung verwendet. Um die aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie dann einen Benutzernamen und ein Kennwort.  
+5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie im Menü, Authentifizierungstyp, der für die Verbindung verwendet. Um das aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie einen Benutzernamen und Kennwort.  
   
-6.  Für sichere Verbindung zwei Steuerelemente hinzugefügt werden, **Verbindung verschlüsseln** Kontrollkästchen und **"TrustServerCertificate"** Kontrollkästchen. Nur wenn **Verbindung verschlüsseln** aktiviert ist **"TrustServerCertificate"** Kontrollkästchen wird angezeigt. Wenn **Verbindung verschlüsseln** ist checked(true) und **"TrustServerCertificate"** unchecked(false) ist, wird das SQL Server-SSL-Zertifikat zu überprüfen. Das Überprüfen des Serverzertifikats ist Teil des SSL-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Um dies sicherzustellen, muss sowohl auf Clientseite als auch auf dem Server ein Zertifikat installiert sein.  
+6.  Für sichere Verbindung zwei Steuerelemente hinzugefügt werden, **Verbindung verschlüsseln** Kontrollkästchen und **TrustServerCertificate** Kontrollkästchen. Nur wenn **Verbindung verschlüsseln** aktiviert ist **TrustServerCertificate** Kontrollkästchen wird angezeigt. Wenn **Verbindung verschlüsseln** ist checked(true) und **TrustServerCertificate** unchecked(false) ist, überprüft das SQL Server-SSL-Zertifikat. Das Überprüfen des Serverzertifikats ist Teil des SSL-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Um dies zu gewährleisten, muss ein Zertifikat auf dem Client als auch auf dem Server installiert sein.  
   
 7.  Klicken Sie auf **Verbinden**.  
   
-**Höhere Versionskompatibilität**  
+**Kompatibilität mit höheren Versionen**  
   
 Es ist zulässig, eine Verbindung herstellen/sich auf höhere Versionen von SQL Server herzustellen.  
   
-1.  Sie werden auf SQL Server 2008 oder SQL Server 2012 herstellen, wenn das Projekt erstellt haben, SQL Server 2005 ist.  
+1.  Sie werden für die Verbindung mit SQL Server 2008 oder SQL Server 2012, wenn das Projekt erstellt wurde, SQL Server 2005 ist.  
   
-2.  Sie werden für die Verbindung mit SQL Server 2012, wenn das Projekt erstellt haben, SQL Server 2008 ist, aber es nicht zulässig ist, mit niedrigeren Versionen d. h. SQL Server 2005 verwendet werden können.  
+2.  Sie werden für die Verbindung mit SQL Server 2012, wenn das Projekt erstellt wurde, SQL Server 2008 ist, aber es nicht zulässig ist für frühere Versionen, d. h. SQL Server 2005 die Verbindung.  
   
-3.  Sie werden nur SQL Server 2012 herstellen, wenn das Projekt erstellt haben, SQL Server 2012 ist.  
+3.  Sie werden nur SQL Server 2012 Verbindung, wenn das Projekt erstellt wurde, SQL Server 2012 ist.  
   
-4.  Höhere Versionskompatibilität gilt nicht für SQL Azure.  
+4.  Kompatibilität für höhere Versionen gilt nicht für SQL Azure.  
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**Projekt Typ Vs-SERVER-ZIELVERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (Version: mit "10.x")|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
+|**Projekt-Typ und VERSION des ZIELSERVERS**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|ja|ja|ja|ja|ja||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||ja|ja|ja|ja||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||ja|ja|ja||
@@ -112,23 +112,23 @@ Es ist zulässig, eine Verbindung herstellen/sich auf höhere Versionen von SQL 
 |SQL Azure||||||ja|
   
 > [!IMPORTANT]  
-> Konvertierung der Datenbankobjekte ist gemäß den Projekttyp, aber nicht gemäß der Version von SQL Server verbunden durchgeführt. Im Falle von SQL Server 2005-Projekt wird Konvertierung gemäß SQL Server 2005 ausgeführt, obwohl Sie mit einer höheren Version von SQL Server (SQL Server 2008 oder SQL Server 2012 oder SQL Server 2014/SQL Server 2016) verbunden sind.  
+> Konvertierung der Datenbankobjekte wird gemäß den Projekttyp, aber nicht gemäß der Version von SQL Server verbunden durchgeführt. Bei SQL Server 2005-Projekt wird Konvertierung gemäß SQL Server 2005 durchgeführt, obwohl Sie mit einer höheren Version von SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) verbunden sind.  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Synchronisieren von SQL Server-Metadaten  
 Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Schemas ändern, nachdem Sie eine Verbindung herstellen, können Sie die Metadaten mit dem Server synchronisieren.  
   
 **Zum Synchronisieren von SQL Server-Metadaten**  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer mit der rechten Maustaste **Datenbanken**, und wählen Sie dann **mit Datenbank synchronisieren**.  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer, Rechtsklick **Datenbanken**, und wählen Sie dann **synchronisieren mit der Datenbank**.  
   
-## <a name="reconnecting-to-sql-server"></a>Erneutes Herstellen einer Verbindung mit SQLServer  
-Die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, muss die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gegebenenfalls eine aktive Verbindung mit dem Server. Sie können offline arbeiten, bis Sie Datenbankobjekte in laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Daten migrieren.  
+## <a name="reconnecting-to-sql-server"></a>Wiederherstellen der Verbindung mit SQLServer  
+Die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie zum Wiederherstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ggf. eine aktive Verbindung mit dem Server. Sie können offline arbeiten, bis Sie die Datenbankobjekte in laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Daten migrieren.  
   
 Das Verfahren zum Wiederherstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ist identisch mit dem Verfahren zum Herstellen einer Verbindung.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Wenn Sie die Zuordnung zwischen den Quell-und Zieldatenbanken anpassen möchten, finden Sie unter [Zuordnung Quell- und Zieldatenbanken](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) , andernfalls ist der nächste Schritt zu Datenbankobjekte, die zu konvertierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax mit [konvertieren Datenbankobjekte](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Wenn Sie die Zuordnung zwischen Quell-und Zieldatenbanken anpassen möchten, finden Sie unter [Zuordnung Quell- und Zieldatenbank](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4) , andernfalls der nächste Schritt besteht, um Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe von Syntax [konvertieren Datenbankobjekte](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

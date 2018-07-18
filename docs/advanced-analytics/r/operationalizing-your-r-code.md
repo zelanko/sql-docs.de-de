@@ -1,5 +1,5 @@
 ---
-title: Operationalisieren von R-Code in SQL Server-Machine Learning-Services | Microsoft Docs
+title: Operationalisieren von R-Code in SQL Server Machine Learning Services | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,36 +7,36 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
+ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203652"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952463"
 ---
-# <a name="operationalize-r-code-machine-learning-services"></a>Operationalisieren von R-Code (Machine Learning-Services)
+# <a name="operationalize-r-code-machine-learning-services"></a>Operationalisieren von R-Code (Machine Learning-Dienste)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Datenbankentwickler stehen vor der Aufgabe, zahlreiche Technologien integrieren und die Ergebnisse zusammenführen zu müssen, sodass diese im gesamten Unternehmen gemeinsam genutzt werden können. Ein Datenbankentwickler arbeitet zusammen mit Anwendungsentwicklern, SQL-Entwickler und Datenanalysten entwerfen und Bereitstellen von Lösungen.
+Datenbankentwickler stehen vor der Aufgabe, zahlreiche Technologien integrieren und die Ergebnisse zusammenführen zu müssen, sodass diese im gesamten Unternehmen gemeinsam genutzt werden können. Der Datenbankentwickler arbeitet zusammen mit Anwendungsentwicklern, SQL-Entwickler und Data scientists bis zum Entwerfen und Bereitstellen von Lösungen.
 
-Dieser Artikel beschreibt die wichtigsten Punkte für die Datenbankentwickler beim operationalisieren von R-Code mithilfe von SQL Server berücksichtigt werden.
+Dieser Artikel beschreibt die wichtigsten Punkte für Datenbankentwickler beim operationalisieren von R-Code mithilfe von SQL Server zu berücksichtigen.
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Erste Schritte mit R-Code in SQL Server
 
-Bisher hat die Integration von Machine Learning-Lösungen bedeutet eine umfangreiche kann zur Unterstützung von Leistung und Integration. Allerdings-Prozeduren Verschieben von R und Python-Code in einer produktionsumgebung ist viel einfacher, in SQL Server Machine Learning-Services, da der Code in SQL Server ausgeführt werden kann und mithilfe von aufgerufen. Sie können weiterhin Zugriff auf vertraute Tools zu verwenden und müssen keine R-Entwicklungsumgebung installieren. 
+In der Vergangenheit hat die Integration von Machine Learning-Lösungen bedeutet umfangreiche neuprogrammierung, um Leistung und Integration zu unterstützen. Verschieben von R und Python-Code in einer produktionsumgebung ist viel einfacher, in SQL Server Machine Learning-Diensten, da der Code in SQL Server ausgeführt werden kann und mit aufgerufen werden jedoch Prozeduren gespeichert. Sie können weiterhin vertraute Tools nutzen und müssen keine R-Entwicklungsumgebung installieren. 
 
 Weitere Informationen zur grundlegenden Syntax finden Sie unter:
 
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 + [Verwenden von R-Code in SQL](../../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 
-Ein Beispiel dafür, wie Sie R-Code in die Produktion bereitstellen können, mithilfe von gespeicherten Prozeduren finden Sie unter:
+Ein Beispiel dafür, wie Sie R-Code in der Produktion mithilfe von gespeicherten Prozeduren bereitstellen können finden Sie unter:
 
-+ [In der Datenbank Analytics für SQL-Entwickler](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md).
++ [Datenbankinterne Analysen für SQL-Entwickler](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md).
 
-## <a name="optimize-your-r-code"></a>Optimieren Sie Ihre R-code
+## <a name="optimize-your-r-code"></a>Optimieren Sie Ihren R-code
 
-Konvertieren von R-Code in SQL ist natürlich einfacher, wenn einige Optimierungen in R oder Python-Code im Vorfeld durchgeführt werden. Dazu gehören das Vermeiden von Datentypen, die Probleme verursachen, Eliminierung unnötiger datenkonvertierungen vermeiden und den R-Code umschreiben, als einen einzigen Funktionsaufruf, der leicht parametrisiert werden können. Weitere Informationen finden Sie in den folgenden Themen:
+Konvertieren von R-Code in SQL ist natürlich einfacher, wenn einige Optimierungen im Voraus in den R oder Python-Code fertig sind. Dazu gehören das Vermeiden von Datentypen, die Probleme verursachen, vermeiden Eliminierung unnötiger datenkonvertierungen und umschreiben des R-Codes als einen einzigen Funktionsaufruf, der einfach parametrisiert werden kann. Weitere Informationen finden Sie in den folgenden Themen:
 
 + [R-Bibliotheken und -Datentypen](r-libraries-and-data-types.md)
 
@@ -44,54 +44,54 @@ Konvertieren von R-Code in SQL ist natürlich einfacher, wenn einige Optimierung
 
 + [Generieren eine R gespeicherte Prozedur mithilfe von sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 
-## <a name="integrate-r-and-python-with-applications"></a>Integration von R und Python mit Anwendungen
+## <a name="integrate-r-and-python-with-applications"></a>Integrieren von R und Python in Anwendungen
 
-Da Sie von einer gespeicherten Prozedur Machine Learning-Dienste beginnen können, können Sie R oder Python-Skripts aus einer beliebigen Anwendung ausführen, die Senden einer T-SQL-Anweisung und die Ergebnisse verarbeiten können.
+Da Sie Machine Learning-Dienste aus einer gespeicherten Prozedur beginnen können, können Sie R- oder Python-Skripts aus einer beliebigen Anwendung ausführen, die eine T-SQL-Anweisung zu senden und Verarbeiten der Ergebnisse können.
 
-Beispielsweise könnten Sie erneutes Trainieren eines Modells nach einem Zeitplan mit dem Task T-SQL-Task in Integration Services oder mit einem anderen Auftragsplaner, die eine gespeicherte Prozedur ausgeführt werden kann.
+Beispielsweise können Sie erneutes Trainieren eines Modells nach einem Zeitplan mit dem Task T-SQL-Task in Integration Services oder mithilfe einer anderen Auftragsplaner, die eine gespeicherte Prozedur ausführen können.
 
-Bewerten ist eine wichtige Aufgabe, die kann einfach automatisierte oder aus externen Anwendungen gestartet. Sie trainieren das Modell im Vorfeld mithilfe des R, Python oder einer gespeicherten Prozedur, und speichern Sie das Modell im Binärformat zu einer Tabelle. Das Modell kann dann in eine Variable im Rahmen der Aufruf einer gespeicherten Prozedur, verwenden eine der folgenden Optionen für die Bewertung von T-SQL geladen werden:
+Bewerten ist eine wichtige Aufgabe, die kann leicht automatisiert oder aus externen Anwendungen gestartet werden. Sie im Vorfeld Trainieren des Modells mithilfe von R oder Python oder eine gespeicherte Prozedur, und speichern Sie das Modell im binären Format in eine Tabelle. Das Modell kann dann in eine Variable als Teil des Aufrufs einer gespeicherten Prozedur, eine der folgenden Optionen für die Bewertung von T-SQL mit geladen werden:
 
-+ [Echtzeit](../real-time-scoring.md) Bewertung, optimiert für kleine Batches
-+ Einzeiliges Bewertung, für das Aufrufen von einer Anwendung
-+ [Bewerten von systemeigenen](../sql-native-scoring.md), für die schnelle Batch Vorhersage von SQL Server ohne Aufruf von R
++ [In Echtzeit](../real-time-scoring.md) Bewertungen, optimiert für kleine Batches
++ Einzeiliges Bewertungen, für den Aufruf aus einer Anwendung
++ [Native Bewertung](../sql-native-scoring.md), für die schnelle batchvorhersage von SQL Server ohne Aufruf von R
 
-Diese exemplarische Vorgehensweise enthält Beispiele für bewerteten mithilfe einer gespeicherten Prozedur in Batches und einzeiliges Modi:
+Diese exemplarische Vorgehensweise enthält Beispiele für die Bewertung mithilfe einer gespeicherten Prozedur im Batch und einzeiligen Modus:
 
-+ [End-to-end Data sience-Vorgehensweise für R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [End-to-end von Exemplarische Data Science-Vorgehensweise für die R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-Finden Sie unter dieser Projektmappenvorlagen für Beispiele zur Bewertung in einer Anwendung zu integrieren:
+Finden Sie diese Vorlagen für die Beispiele für die Bewertung in einer Anwendung zu integrieren:
 
-+ [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Unterbindung](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
++ [Prognosenerstellung](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
++ [Betrugserkennung](https://github.com/Microsoft/r-server-fraud-detection)
 + [Kunden, die clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
-## <a name="boost-performance-and-scale"></a>Hoher Leistung und Skalierung
+## <a name="boost-performance-and-scale"></a>Leistung und Skalierung
 
-Obwohl die open Source-R-Sprache Einschränkungen aufweist bekanntermaßen, die "revoscaler"-Paket APIs können großen Datasets ausgeführt werden und davon profitieren mit mehreren Threads, Kernen und Prozessen datenbankinternen Berechnungen.
+Obwohl die open Source-R-Sprache bekannte Einschränkungen aufweist, das RevoScaleR-Paket APIs können großen Datasets ausgeführt werden und in der Datenbank-Berechnungen mit mehreren Threads, Kernen und Prozessen profitieren.
 
-Wenn Ihre R-Lösung komplexe Aggregationen verwendet oder große Datasets, können Sie SQL-Server möglichst effizient in-Memory Aggregationen und columnstore-Indizes nutzen und lassen Sie die R-Code behandeln die statistischen Berechnungen und Bewertungen.
+Wenn Ihre R-Lösung komplexe Aggregationen verwendet oder große Datasets, können Sie SQL Server hocheffizientes in-Memory Aggregationen und columnstore-Indizes nutzen, und können Sie den R-Code verarbeiten die statistischen Berechnungen und Bewertungen.
 
-Weitere Informationen zum Verbessern der Leistung in SQL Server-Machine Learning finden Sie unter:
+Weitere Informationen zur Verbesserung der Leistung in SQL Server-Machine Learning finden Sie unter:
 
-+ [Optimieren der Leistung für SQL Server R Services](../../advanced-analytics/r/sql-server-r-services-performance-tuning.md)
-+ [Tipps zur Optimierung der Leistung und tricks](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
++ [Leistungsoptimierung für SQL Server R Services](../../advanced-analytics/r/sql-server-r-services-performance-tuning.md)
++ [Performance Optimization Tipps und tricks](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
-## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>R-Code für andere Plattformen anpassen oder remotecomputekontexten
+## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Anpassen von R-Code für andere Plattformen oder compute-Kontexten
 
-Derselbe R-Code, die Sie für ausgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten mit anderen Datenquellen wie z.B. Hadoop, verwendet werden können und in anderen Kontexten zu berechnen.
+Derselbe R-Code, die Sie vor Ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten für andere Datenquellen wie Hadoop verwendet werden können und in anderen Kontexten zu berechnen.
 
 Weitere Informationen zu den von Microsoft R unterstützten Plattformen finden Sie unter:
 
 + [Einführung in Microsoft R](https://docs.microsoft.com/r-server/)
 
-+ [Untersuchen von "revoscaler"](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
++ [Untersuchen von RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-Weitere Informationen dazu, wie Sie die Microsoft-R-Lösungen auf große Datenmengen oder mehrere Plattformen ausgeführt optimieren können finden Sie unter:
+Weitere Informationen dazu, wie Sie Ihre Microsoft R-Lösungen auf große Datenmengen oder mehreren Plattformen ausgeführt optimieren können finden Sie unter:
 
-+ [Schreiben Sie die Aufteilung Algorithmen](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ [Bestimmen von Blöcken Algorithmen schreiben](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ [Berechnen mit umfangreichen Daten in R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
++ [Computing mit big Data in R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
 
-+ [Entwickeln Sie eine eigene parallele Algorithmen](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
++ [Entwickeln Sie Ihrer eigenen parallelen Algorithmus](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
 

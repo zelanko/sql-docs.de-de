@@ -1,5 +1,5 @@
 ---
-title: Power Pivot-Availability and Disaster Recovery | Microsoft Docs
+title: Power Pivot-Verfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026537"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979582"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Verfügbarkeit und Notfallwiederherstellung in PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34026537"
   
  ![PowerPivot-Verfügbarkeit in 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "Powerpivot-Verfügbarkeit in 2013")  
   
--   **(1)** Die Web-Front-End-Server. Verwenden Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Add-In, um die Datenanbieter auf jedem Server zu installieren. Weitere Informationen zur Installation finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Die Web-Front-End-Server. Verwenden Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Add-In, um die Datenanbieter auf jedem Server zu installieren. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** Der gemeinsame [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Dienst wird **auf jedem** Anwendungsserver ausgeführt, sodass die Dienstanwendung **auf mehreren** Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleibt die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Anwendung weiterhin verfügbar.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34026537"
   
  ![PowerPivot-Verfügbarkeit in Sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "Powerpivot-Verfügbarkeit in Sharepoint 2010")  
   
--   **(1)** Die Web-Front-End-Server. Installieren Sie die Datenanbieter auf jedem Server. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+-   **(1)** Die Web-Front-End-Server. Installieren Sie die Datenanbieter auf jedem Server. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 -   **(2)** Die zwei gemeinsamen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Dienste und **(4)** der Windows-Dienst **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** werden auf den SharePoint-Anwendungsservern installiert.  
   

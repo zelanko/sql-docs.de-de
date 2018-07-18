@@ -1,5 +1,5 @@
 ---
-title: Beurteilen den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL) | Microsoft Docs
+title: Bewerten den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,47 +25,47 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf85577996a6dc1e4d3e4f3f1f353b0952aece54
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d2d804734432cfd396acb017d6358310debeec1f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773256"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979422"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Beurteilen den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL)
-Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, Sie sollten bestimmen, wie viel kann die Migration erfolgreich sein, und wie lange die Konvertierung dauern. SSMA kann einen Assessment-Bericht, der den Prozentsatz der Objekte, die in erfolgreich konvertiert wurden erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax und die Uhrzeit für die Migration durchführen schätzt. SSMA können auch die spezifischen Probleme anzeigen, die Konvertierungsfehler verursacht hat.  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Bewerten den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL)
+Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, sollten Sie ermitteln, wie viel der Migration erfolgreich sein wird und wie lange die Konvertierung werden kann. SSMA kann ein Bewertungsbericht enthält, die den Prozentsatz von Objekten, der in konvertiert wurden erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax und die Uhrzeit schätzt, für die Migration durchführen. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die Konvertierungsfehler verursacht hat.  
   
-## <a name="creating-assessment-reports"></a>Erstellen von Berichten Assessment  
-Beim Erstellen eines Berichts Assessment konvertiert SSMA der ausgewählten den Zugriff auf Datenbankobjekte zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax, und klicken Sie dann die Ergebnisse werden angezeigt.  
+## <a name="creating-assessment-reports"></a>Erstellen Berichte zur Bewertung  
+Wenn es sich um ein Bewertungsbericht erstellt, konvertiert SSMA der ausgewählten den Zugriff auf Datenbankobjekte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax, und klicken Sie dann die Ergebnisse werden angezeigt.  
   
 **So erstellen Sie einen Assessment-Bericht**  
   
-1.  Wählen Sie in Access-Metadaten-Explorer mindestens eine Datenbank, die Sie bewerten möchten.  
+1.  Wählen Sie in der Access-Metadaten-Explorer Datenbanken, die Sie bewerten möchten.  
   
-2.  Einzelne Objekte auslassen möchten, deaktivieren Sie die Kontrollkästchen neben den Objekten, die Sie nicht bewerten möchten.  
+2.  Um einzelne Objekte zu unterdrücken, deaktivieren Sie die Kontrollkästchen neben den Objekten, die Sie nicht, um zu bewerten möchten.  
   
 3.  Mit der rechten Maustaste **Datenbanken**, und wählen Sie dann **Bericht erstellen**.  
   
-    Sie können auch einzelne Objekte analysieren, indem ein Objekt mit der rechten Maustaste, und wählen Sie dann **Bericht erstellen**.  
+    Sie können auch einzelne Objekte analysieren, indem Sie mit der rechten Maustaste ein Objekt, und wählen Sie dann **Bericht erstellen**.  
   
-    SSMA wird Fortschritt in der Statusleiste am unteren Rand des Fensters. Wenn im Ausgabebereich angezeigt wird, wird auch Nachrichten aus dem Ausgabebereich angezeigt.  
+    SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters. Wenn im Ausgabebereich angezeigt wird, werden auch Meldungen im Ausgabebereich angezeigt.  
   
-Wenn die Analyse abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant für Access: Bewertungsbericht Fenster wird angezeigt.  
+Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant für Access: Bewertungsbericht-Fenster wird angezeigt.  
   
 ## <a name="using-assessment-reports"></a>Verwenden von Assessment-Berichten  
-Das Assessment Berichtsfenster enthält drei Bereiche: einen Explorer, ein Detailbereich und einen Meldungsbereich.  
+Das Fenster Bewertungsbericht enthält drei Bereiche: einen Explorer, ein Detailbereich und ein Bereich "Meldung".  
   
--   Explorerbereich können Sie die Objekte zu durchsuchen, die bewertet wurden. Sie können Elemente in diesem Bereich Drilldown auf einzelne Tabellen, Indizes und Schlüssel klicken.  
+-   Explorer-Bereich können Sie die Objekte zu durchsuchen, die bewertet wurden. Sie können Elemente in diesem Bereich in einzelne Tabellen, Indizes und Schlüssel Drilldown klicken.  
   
--   Im Detailbereich werden die Konvertierungsstatistiken für das ausgewählte Objekt.  
+-   Im Detailbereich werden die Konvertierungsstatistiken für das ausgewählte Objekt angezeigt.  
   
--   Im Meldung angezeigt wird, die Fehler, Warnungen und informationsmeldungen für die Konvertierung, und die geschätzte Dauer, für die Migration und die einzelnen Fehler Korrektur Schritte ausführen.  
+-   Der Bereich "Meldung" zeigt die Fehler, Warnungen und informationsmeldungen für die Konvertierung, und die geschätzte Dauer für die Durchführung der Migration und die einzelnen Fehler Korrektur Schritte.  
   
-Fehler sollten korrigiert werden, bevor Sie den Assessment-Bericht erneut ausführen, oder Konvertieren von Schemas. Um Fehler zu finden, klicken Sie auf die **Fehler** im Meldungsbereich Schaltfläche, und erweitern Sie dann die einzelnen Fehler um eine Liste von Objekten anzuzeigen, in dem der Fehler aufgetreten ist. Wenn Sie ein Objekt im Meldungsbereich, klicken Sie auf alle Fehler und Warnungen für dieses Objekt werden im Detailbereich angezeigt.  
+Sie sollten die Fehler beheben, bevor Sie den Bewertungsbericht erneut ausführen, oder Konvertieren von Schemas. Um Fehler zu finden, klicken Sie auf die **Fehler** im Meldungsbereich Schaltfläche, und erweitern Sie dann die einzelnen Fehler um eine Liste der Objekte anzuzeigen, in dem der Fehler aufgetreten ist. Wenn Sie ein Objekt im Meldungsbereich klicken, werden alle Fehler und Warnungen für dieses Objekt im Detailbereich angezeigt.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Converting Access Database Objects (Konvertieren von Access-Datenbankobjekten)](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Converting Access Database Objects (Konvertieren von Access-Datenbankobjekten)](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

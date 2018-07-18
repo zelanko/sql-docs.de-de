@@ -1,5 +1,6 @@
 # [Instanzverwaltung](analysis-services-instance-management.md)  
 # [Installieren](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [Überprüfen der Buildversion für kumulierte Updates für Analysis Services](analysis-services-component-version.md)
 # [Konfiguration nach der Installation](post-install-configuration-analysis-services.md)  
 ## [Konfigurieren der Windows-Firewall](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [Konfigurieren des Dienstkontos](configure-service-accounts-analysis-services.md)  

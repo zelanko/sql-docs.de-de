@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 820dbb8998665eacef12417ada67222b967acd17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010117"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789291"
 ---
 # <a name="create-primary-keys"></a>Erstellen von Primärschlüsseln
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -111,8 +111,10 @@ ms.locfileid: "33010117"
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird eine Tabelle erstellt sowie ein Primärschlüssel für die Spalte `CustomerID` und ein gruppierter Index für `TransactionID` definiert.  
   
     ```sql  
+    -- Select appropriate database
     USE AdventureWorks2012;  
     GO  
+    -- Create table to add the clustered index
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
