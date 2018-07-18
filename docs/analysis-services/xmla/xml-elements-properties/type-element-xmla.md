@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (XMLA) | Microsoft Docs
+title: Type-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051598"
 ---
 # <a name="type-element-xmla"></a>Type-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "34576712"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu Verarbeitungsoptionen verfügbar, um Objekte auf einer Instanz von Analysis Services finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Weitere Informationen über Verarbeitungsoptionen, die für Objekte in einer Instanz von Analysis Services finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Der Wert des **Type** -Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
 |value|Description|  
 |-----------|-----------------|  
-|*"ProcessFull"*|Löscht alle Daten im betroffenen Objekt und verarbeitet dann das betroffene Objekt.|  
-|*"Processadd"*|Fügt dem betroffenen Objekt neue Daten hinzu.|  
+|*ProcessFull*|Löscht alle Daten im betroffenen Objekt und verarbeitet dann das betroffene Objekt.|  
+|*ProcessAdd*|Fügt dem betroffenen Objekt neue Daten hinzu.|  
 |*ProcessUpdate*|Aktualisiert die Daten im betroffenen Objekt.|  
 |*ProcessIndexes*|Erstellt Indizes und Aggregationen im betroffenen Objekt oder erstellt diese neu.|  
 |*ProcessScriptCache*|Wenn der Cube verarbeitet wird, erstellt der Server den MDX-Skriptcache neu. Wenn nicht, wird ein Fehler ausgelöst.<br /><br /> **Hinweis** Gilt nur für Cube.|  

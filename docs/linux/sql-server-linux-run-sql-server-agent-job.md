@@ -1,6 +1,6 @@
 ---
-title: Erstellen und Ausführen von Aufträgen für SQL Server on Linux | Microsoft Docs
-description: In diesem Lernprogramm wird gezeigt, wie SQL Server-Agent-Auftrag auf dem Linux ausgeführt wird.
+title: Erstellen und Ausführen von Aufträgen für SQL Server unter Linux | Microsoft-Dokumentation
+description: In diesem Tutorial veranschaulicht, wie SQL Server-Agent-Auftrag unter Linux ausgeführt wird.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,60 +13,60 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001802"
 ---
-# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
+# <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträgen unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server-Aufträge werden verwendet, um regelmäßig die gleiche Sequenz von Befehlen in der SQL Server-Datenbank ausführen. Dieses Lernprogramm enthält ein Beispiel zum Erstellen eines SQL Server-Agent-Auftrags unter Linux mit Transact-SQL und SQL Server Management Studio (SSMS).
+SQL Server-Aufträge werden verwendet, um regelmäßig die gleiche Sequenz von Befehlen in der SQL Server-Datenbank ausführen. Dieses Tutorial enthält ein Beispiel zum Erstellen eines SQL Server-Agent-Auftrags unter Linux mithilfe von Transact-SQL und SQL Server Management Studio (SSMS).
 
 > [!div class="checklist"]
-> * Installieren von SQL Server-Agent für Linux
-> * Erstellen Sie zum Durchführen von täglichen datenbanksicherungen einen neuen Auftrag
+> * Installieren von SQL Server-Agent unter Linux
+> * Erstellen eines neuen Auftrags zum Ausführen von täglichen datenbanksicherungen
 > * Planen und Ausführen des Auftrags
 > * Führen Sie die gleichen Schritte aus, in SSMS (optional)
 
-Bekannte Probleme mit SQL Server-Agent für Linux finden Sie unter der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+Bekannte Probleme mit SQL Server-Agent für Linux finden Sie unter den [– Anmerkungen zu dieser](sql-server-linux-release-notes.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Die folgenden Voraussetzungen sind erforderlich, um dieses Lernprogramm abzuschließen:
 
 * Linux-Computer mit den folgenden Voraussetzungen:
-  * SQL Server-2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md)) mit den Befehlszeilentools.
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md)) mit Befehlszeilentools.
 
-Die folgenden erforderlichen Komponenten sind optional:
+Die folgenden Voraussetzungen sind optional:
 
 * Windows-Computer mit SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für optionale SSMS Schritte.
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für optionale Schritte von SSMS.
 
-## <a name="enable-sql-server-agent"></a>Aktivieren Sie SQL Server-Agent
+## <a name="enable-sql-server-agent"></a>SQL Server-Agent aktivieren
 
-Um SQL Server-Agent für Linux verwenden zu können, müssen Sie zuerst SQL Server-Agent auf einem Computer aktivieren, die bereits von SQL Server-2017 installiert.
+Um SQL Server-Agent für Linux zu verwenden, müssen Sie zuerst SQL Server-Agent auf einem Computer aktivieren, die bereits von SQL Server 2017 installiert.
 
-1. Um SQL Server-Agent zu aktivieren, führen Sie den folgenden Schritt aus.
+1. Um SQL Server-Agent zu aktivieren, führen Sie in den folgenden Schritt aus.
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   ```
 
-1. Starten Sie SQL Server mit dem folgenden Befehl ein:
+1. Starten Sie SQL Server mit dem folgenden Befehl neu:
   ```bash
   sudo systemctl restart mssql-server
   ```
 
 > [!NOTE]
-> Beginnend mit SQL Server 2017 CU4, SQL Server-Agent ist im Lieferumfang der **Mssql Server** Packen und ist standardmäßig deaktiviert. Für-Agent vor dem CU4 Besuch eingerichtet [Installieren von SQL Server-Agent für Linux](sql-server-linux-setup-sql-agent.md).
+> Ab SQL Server 2017 CU4, SQL Server-Agent ist im Lieferumfang der **Mssql-Server** Packen und ist standardmäßig deaktiviert. Für Agent vor dem CU4 finden Sie unter eingerichtet [Installieren von SQL Server-Agent für Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Erstellen einer Beispieldatenbank
 
-Verwenden Sie die folgenden Schritte zum Erstellen einer Beispieldatenbank mit dem Namen **SampleDB**. Diese Datenbank ist für den täglichen Sicherungsauftrag verwendet.
+Verwenden Sie die folgenden Schritte aus, um das Erstellen einer Beispieldatenbank mit dem Namen **SampleDB**. Diese Datenbank wird für den täglichen Sicherungsauftrag verwendet.
 
-1. Öffnen Sie eine terminal Bash-Sitzung, auf dem Linux-Computer.
+1. Öffnen Sie auf Ihren Linux-Computer eine Bash-terminal-Sitzung ein.
 
 1. Verwendung **Sqlcmd** zum Ausführen einer Transact-SQL **CREATE DATABASE** Befehl.
 
@@ -82,12 +82,12 @@ Verwenden Sie die folgenden Schritte zum Erstellen einer Beispieldatenbank mit d
 
 ## <a name="create-a-job-with-transact-sql"></a>Erstellen eines Auftrags mit Transact-SQL
 
-Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit Transact-SQL-Befehlen. Der Auftrag ausgeführt wird, tägliche eine Sicherung der-Beispieldatenbank, **SampleDB**.
+Die folgenden Schritte erstellen ein SQL Server-Agent-Auftrags unter Linux mit Transact-SQL-Befehlen. Der Auftrag ausgeführt wird, eine tägliche Sicherung der-Beispieldatenbank, **SampleDB**.
 
 > [!TIP]
-> Alle T-SQL-Client können Sie diese Befehle werden ausgeführt. Beispielsweise unter Linux können Sie [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Von einem Remoteserver mit Windows können Sie auch Ausführen von Abfragen in SQL Server Management Studio (SSMS) oder mithilfe der UI-Schnittstelle für die auftragsverwaltung, die im nächsten Abschnitt beschrieben wird.
+> Sie können alle T-SQL-Client verwenden, die Befehle ausführen. Zum Beispiel unter Linux können Sie [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Sie können von einem Remotecomputer Windows Server auch Abfragen in SQL Server Management Studio (SSMS) ausführen oder verwenden die Benutzeroberfläche für die auftragsverwaltung, die im nächsten Abschnitt beschrieben wird.
 
-1. Verwendung [Sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) beim Erstellen eines Auftrags mit dem Namen `Daily SampleDB Backup`.
+1. Verwendung [Sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) zum Erstellen eines Auftrags mit dem Namen `Daily SampleDB Backup`.
 
    ```sql
    -- Adds a new job executed by the SQLServerAgent service
@@ -115,7 +115,7 @@ Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit 
    GO
    ```
 
-1. Erstellen Sie einen täglichen Zeitplan für den Auftrag mit [Sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
+1. Erstellen Sie dann einen täglichen Zeitplan für den Auftrag mit [Sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
 
    ```sql
    -- Creates a schedule called 'Daily'
@@ -128,7 +128,7 @@ Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit 
    GO
    ```
 
-1. Fügen Sie dem Auftrag mit den Auftragszeitplan [Sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
+1. Fügen Sie den Zeitplan für Aufträge an den Auftrag mit [Sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
 
    ```sql
    -- Sets the 'Daily' schedule to the 'Daily SampleDB Backup' Job
@@ -146,7 +146,7 @@ Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit 
       @server_name = N'(LOCAL)';
    GO
    ```
-1. Starten des Auftrags mit der [Sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
+1. Starten Sie den Auftrag mit [Sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
 
    ```sql
    EXEC dbo.sp_start_job N' Daily SampleDB Backup' ;
@@ -155,31 +155,31 @@ Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit 
 
 ## <a name="create-a-job-with-ssms"></a>Erstellen eines Auftrags mit SSMS
 
-Sie können auch erstellen und verwalten Aufträge mehr Remote mit SQL Server Management Studio (SSMS) unter Windows.
+Sie können auch erstellen und Verwalten von Aufträgen mithilfe von SQL Server Management Studio (SSMS) für Windows.
 
-1. Starten Sie SSMS unter Windows, und Verbinden mit Ihrer Linux SQL Server-Instanz. Weitere Informationen finden Sie unter [Verwalten von SQL Server unter Linux mit SSMS](sql-server-linux-manage-ssms.md).
+1. Starten Sie SSMS auf Windows, und eine Verbindung mit Ihrem virtuellen SQL Server-Instanz. Weitere Informationen finden Sie unter [Verwalten von SQL Server unter Linux mit SSMS](sql-server-linux-manage-ssms.md).
 
 1. Stellen Sie sicher, dass Sie eine Beispieldatenbank mit dem Namen erstellt haben **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
-1. Stellen Sie sicher, dass die SQL-Agent war [installiert](sql-server-linux-setup-sql-agent.md) und ordnungsgemäß konfiguriert. Suchen Sie auf das Pluszeichen neben SQL Server-Agent im Objekt-Explorer. Wenn SQL Server-Agent nicht aktiviert ist, starten Sie den **Mssql Server** -Dienst unter Linux.
+1. Stellen Sie sicher, dass die SQL-Agent wurde [installiert](sql-server-linux-setup-sql-agent.md) und ordnungsgemäß konfiguriert sind. Suchen Sie das Pluszeichen neben SQL Server-Agent im Objekt-Explorer. Wenn SQL Server-Agent nicht aktiviert ist, starten Sie den **Mssql-Server** Service unter Linux.
 
    ![Stellen Sie sicher, dass SQL Server-Agent installiert wurde](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
 
 1. Erstellen Sie einen neuen Auftrag.
 
-   ![Einen neuen Auftrag erstellen](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
+   ![Erstellen eines neuen Auftrags](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
 
-1. Benennen Sie Ihre Arbeit und erstellen Sie Ihre Auftragsschritt zu.
+1. Benennen Sie dem Auftrag, und erstellen Sie Ihre Auftragsschritt.
 
    ![Erstellen eines Auftragsschritts](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
 
-1. Geben Sie, welche Subsystem, das Sie verwenden möchten und welche Aktion der Auftragsschritt ausführen soll.
+1. Geben Sie welchem Subsystem, das Sie verwenden möchten und welche Aktion der Auftragsschritt ausführen soll.
 
    ![Auftrags-subsystem](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
 
-   ![Schritt Auftragsaktion](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
+   ![Auftrags-Aktion](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
 
 1. Erstellen Sie einen neuen Auftragszeitplan.
 
@@ -187,21 +187,21 @@ Sie können auch erstellen und verwalten Aufträge mehr Remote mit SQL Server Ma
 
    ![Auftragszeitplan](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
-1. Starten Sie Ihren Auftrag ein.
+1. Starten des Auftrags an.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Lernprogramm haben Sie gelernt, wie:
+In diesem Tutorial haben Sie gelernt, wie Sie:
 
 > [!div class="checklist"]
-> * Installieren von SQL Server-Agent für Linux
-> * Verwenden von Transact-SQL und gespeicherte Systemprozeduren zur Erstellung von Aufträgen
-> * Erstellen eines Auftrags, das tägliche datenbanksicherungen ausführt.
+> * Installieren von SQL Server-Agent unter Linux
+> * Verwenden Sie Transact-SQL und gespeicherte Systemprozeduren, um Aufträge zu erstellen.
+> * Erstellen Sie einen Auftrag, der täglichen Sicherungen der Datenbank ausführt.
 > * Verwenden von SSMS UI erstellen und Verwalten von Aufträgen
 
-Als Nächstes lernen Sie andere Funktionen zum Erstellen und Verwalten von Aufträgen:
+Als Nächstes untersuchen Sie andere Funktionen für das Erstellen und Verwalten von Aufträgen:
 
 > [!div class="nextstepaction"]
 >[SQL Server-Agent-Dokumentation](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)

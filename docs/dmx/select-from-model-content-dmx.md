@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;Modell&gt;. INHALT (DMX) | Microsoft Docs
+title: SELECT FROM &lt;Modell&gt;. INHALT (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842663"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040348"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;Modell&gt;. INHALT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *n*  
  Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Liste der Ausdrücke*  
+ *Liste mit Ausdrücken*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
   
  *model*  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
->  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung für jeden Algorithmus und Tipps zum Interpretieren und Abfragen von Miningmodellinhalt für jeden Modelltyp Inhalt des Miningmodells, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung der für jeden Algorithmus und Tipps zur Interpretation und Abfrage für jeden Modelltyp Inhalt des Miningmodells Inhalt des Miningmodells, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 |CONTENT-Rowsetspalte|Description|  
 |---------------------------|-----------------|  
@@ -92,7 +92,7 @@ WHERE NODE_TYPE = 1
  Die folgende Abfrage verwendet die **IsDescendant** Funktion, um die unmittelbar untergeordneten Elemente des Knotens zurückzugeben, die in der vorherigen Abfrage zurückgegeben wurde.  
   
 > [!NOTE]  
->  Da der Wert von NODE_NAME eine Zeichenfolge ist, können keine untergeordneten select-Anweisung zurückzugebenden "node_id" als Argument an die **IsDescendant** Funktion.  
+>  Da der Wert von NODE_NAME eine Zeichenfolge ist, können keine untergeordneten select-Anweisung zurückzugebenden die NODE_ID als Argument an die **IsDescendant** Funktion.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

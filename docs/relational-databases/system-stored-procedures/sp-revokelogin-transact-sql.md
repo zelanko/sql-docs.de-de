@@ -1,5 +1,5 @@
 ---
-title: Sp_revokelogin (Transact-SQL) | Microsoft Docs
+title: Sp_revokelogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0d59e993563b340b7016887720fb8f3638dca247
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005463"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt die anmeldenameneinträge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Windows-Benutzer oder Gruppe, die mit CREATE LOGIN erstellt **Sp_grantlogin**, oder **Sp_denylogin**.  
+  Entfernt die anmeldenameneinträge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Windows-Benutzer oder Gruppe, die mit CREATE LOGIN auf, erstellt **Sp_grantlogin**, oder **Sp_denylogin**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) stattdessen.  
@@ -48,23 +48,23 @@ sp_revokelogin [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [  **@loginame=**] **"***Anmeldung***"**  
- Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* möglich, alle vorhandenen Windows-Benutzernamen oder-Gruppe im Format *Computernamen*\\*Benutzer- oder Domänenkonto*\\*Benutzer*.  
+ Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* möglich, alle vorhandenen Windows-Benutzernamen oder die Gruppe im Format *Computername*\\*Benutzer- oder Domänenkonto*\\*Benutzer*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_revokelogin** deaktiviert Verbindungen mithilfe des Kontos, das gemäß der *Anmeldung* Parameter. Windows-Benutzer, denen der Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Mitgliedschaft in einer Windows-Gruppe erteilt wurde, können jedoch weiterhin als Gruppe eine Verbindung herstellen, nachdem ihr individueller Zugriff aufgehoben wurde. Auf ähnliche Weise, wenn die *Anmeldung* Parameter gibt den Namen einer Windows-Gruppe, Zugriff auf die Instanz von Mitgliedern dieser Gruppe, die getrennt wurden gewährt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird weiterhin in der Lage, eine Verbindung herstellen.  
+ **Sp_revokelogin** deaktiviert Verbindungen mithilfe des Kontos, das gemäß der *Anmeldung* Parameter. Windows-Benutzer, denen der Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Mitgliedschaft in einer Windows-Gruppe erteilt wurde, können jedoch weiterhin als Gruppe eine Verbindung herstellen, nachdem ihr individueller Zugriff aufgehoben wurde. Auf ähnliche Weise, wenn die *Anmeldung* Parameter gibt den Namen einer Windows-Gruppe, Mitglieder dieser Gruppe, die getrennt wurden gewährt Zugriff auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden weiterhin eine Verbindung herstellen können.  
   
- Beispielsweise, wenn Windows-Benutzer **ADVWORKS\john** ist ein Mitglied der Windows-Gruppe **ADVWORKS\Admins**, und **Sp_revokelogin** hebt den Zugriff von `ADVWORKS\john`:  
+ Zum Beispiel wenn Windows-Benutzer **ADVWORKS\john** ist ein Mitglied der Gruppe "Windows" **ADVWORKS\Admins**, und **Sp_revokelogin** hebt den Zugriff von `ADVWORKS\john`:  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- Benutzer **ADVWORKS\john** können immer noch verbinden, wenn **ADVWORKS\Admins** wurde erteilt Zugriff auf eine Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Auf ähnliche Weise, wenn Windows-Gruppe **ADVWORKS\Admins** der Zugriff aufgehoben, aber **ADVWORKS\john** ist Zugriff erteilt wurde, **ADVWORKS\john** kann weiterhin eine Verbindung herstellen.  
+ Benutzer **ADVWORKS\john** lässt dennoch verbinden, wenn **ADVWORKS\Admins** hat Zugriff gewährt wurde mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Auf ähnliche Weise, wenn Windows-Gruppe **ADVWORKS\Admins** der Zugriff aufgehoben, aber **ADVWORKS\john** wird Zugriff erteilt wurde, **ADVWORKS\john** können weiterhin eine Verbindung herstellen.  
   
- Verwendung **Sp_denylogin** explizit verhindern Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unabhängig von ihrer Windows-Gruppenmitgliedschaft.  
+ Verwendung **Sp_denylogin** explizit verhindern Benutzer Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unabhängig von ihrer Windows-Gruppenmitgliedschaft.  
   
  **Sp_revokelogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
@@ -86,7 +86,7 @@ EXEC sp_revokelogin [Corporate\MollyA];
   
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP LOGIN & #40; Transact-SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   

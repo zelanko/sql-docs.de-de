@@ -1,5 +1,5 @@
 ---
-title: Xp_loginconfig (Transact-SQL) | Microsoft Docs
+title: Xp_loginconfig (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003172"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ xp_loginconfig ['config_name']
   
 ## <a name="arguments"></a>Argumente  
  **"** *Config_name* **"**  
- Der anzuzeigende Konfigurationswert. Wenn *Config_name* ist nicht angegeben ist, werden alle Konfigurationswerte ausgegeben. *Config_name* ist **Sysname**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+ Der anzuzeigende Konfigurationswert. Wenn *Config_name* ist nicht angegeben ist, werden alle Konfigurationswerte gemeldet. *Config_name* ist **Sysname**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Anmeldemodus**|Der Anmeldungssicherheitsmodus. Mögliche Werte sind **gemischt** und **Windows-Authentifizierung**.<br /><br /> Ersetzt durch:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
-|**Standard-Anmeldung**|Der Name der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmelde-ID für autorisierte Benutzer vertrauenswürdiger Verbindungen (für Benutzer ohne entsprechenden Anmeldenamen). Der Standardanmeldename ist **Gast**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**Anmeldung**|Der Name der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmelde-ID für autorisierte Benutzer vertrauenswürdiger Verbindungen (für Benutzer ohne entsprechenden Anmeldenamen). Der Standardanmeldename ist **Gast**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**Standarddomäne**|Der Name der standardmäßigen Windows-Domäne für Netzwerkbenutzer vertrauenswürdiger Verbindungen. Die Standarddomäne ist die Domäne des Computers, auf dem Windows und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**Überwachungsebene**|Die Überwachungsebene. Mögliche Werte sind **keine**, **Erfolg**, **Fehler**, und **alle**. Überwachungen werden in das Fehlerprotokoll und in die Windows-Ereignisanzeige geschrieben.|  
 |**Set-hostname**|Gibt an, ob der Hostname aus dem Clientanmeldedatensatz durch den Windows-Netzwerk-Benutzernamen ersetzt wird. Mögliche Werte sind **"true"** oder **"false"**. Wenn dies festgelegt ist, der Netzwerknamen für den Benutzer angezeigt wird, in der Ausgabe von **Sp_who**.|  
-|**Zuordnen von _**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Unterstrich (_) zugeordnet sind. Mögliche Werte sind **Domäne Trennzeichen** (Standard), **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
-|**Zuordnen von $**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dollarzeichen ($) zugeordnet sind. Mögliche Werte sind **Domäne Trennzeichen**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Die Standardeinstellung ist **Speicherplatz**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
-|**# zuordnen**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Nummernzeichen (#) zugeordnet sind. Mögliche Werte sind **Domäne Trennzeichen**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standard ist der Bindestrich. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**Zuordnen von _**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Unterstrich (_) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne** (Standard), **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**Zuordnen von $**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dollarzeichen ($) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standardwert ist **Speicherplatz**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**# zuordnen**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Nummernzeichen (#) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standard ist der Bindestrich. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

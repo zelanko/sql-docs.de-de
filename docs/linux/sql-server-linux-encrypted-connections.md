@@ -1,5 +1,5 @@
 ---
-title: Verschlüsseln von Verbindungen zu SQLServer on Linux | Microsoft Docs
+title: Verschlüsseln von Verbindungen zu SQLServer unter Linux | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt Verschlüsseln von Verbindungen zu SQL Server unter Linux.
 author: tmullaney
 ms.date: 01/30/2018
@@ -15,31 +15,31 @@ ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: f7b1dd57af300fc3e3fa61e469646211536b4653
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323831"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001822"
 ---
-# <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer on Linux
+# <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux können Transport Layer Security (TLS) zum Verschlüsseln von Daten, die in einem Netzwerk zwischen einer Clientanwendung und einer Instanz von übertragenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die gleichen TLS-Protokolle unter Windows und Linux: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch speziell für das Betriebssystem auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux können Transport Layer Security (TLS) zum Verschlüsseln von Daten, die über ein Netzwerk zwischen einer Clientanwendung und einer Instanz von übertragen werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die gleichen TLS-Protokolle unter Windows und Linux: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch spezifisch für das Betriebssystem auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
 
 ## <a name="requirements-for-certificates"></a>Anforderungen für Zertifikate 
 Bevor Sie beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate die folgenden Voraussetzungen erfüllen:
-- Die aktuelle Systemzeit muss hinter der gültig von-Eigenschaft des Zertifikats und vor gültig bis-Eigenschaft des Zertifikats sein.
-- Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dies erfordert die Enhanced Key Usage-Eigenschaft des Zertifikats Serverauthentifizierung (1.3.6.1.5.5.7.3.1) angeben.
-- Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. In der Regel enthält das Zertifikat schlüsselverwendungseigenschaft (KEY_USAGE) auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- Der Subject-Eigenschaft des Zertifikats muss angeben, dass der allgemeine Name (CN) als den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt. Hinweis: Zertifikate mit Platzhalter werden unterstützt. 
+- Die aktuelle Systemzeit muss nach der gültig von-Eigenschaft des Zertifikats und vor der gültig bis-Eigenschaft des Zertifikats liegen.
+- Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dies erfordert die Enhanced Key Usage-Eigenschaft des Zertifikats, das Serverauthentifizierung (1.3.6.1.5.5.7.3.1) angeben.
+- Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. Das Zertifikat des Key Usage-Eigenschaft (KEY_USAGE) enthält in der Regel auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- Dass der allgemeine Name (CN) den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt, muss die Eigenschaft Subject des Zertifikats angeben. Hinweis: Platzhalterzertifikate werden unterstützt. 
 
 ## <a name="overview"></a>Übersicht
-TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Bei ordnungsgemäßer Konfiguration bietet TLS Vertraulichkeit und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können entweder vom Client initiiert oder Server initiiert werden. 
+TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn ordnungsgemäß konfiguriert ist, bietet TLS sowohl Datenschutz und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können es sich entweder um Client initiiert oder Server initiierten sein. 
 
 
-## <a name="client-initiated-encryption"></a>Vom Client initiierte Verschlüsselung 
-- **Generieren Sie ein Zertifikat** (CN übereinstimmen, den vollqualifizierten Domänennamen der SQL Server-Hostname)
+## <a name="client-initiated-encryption"></a>Vom Client initiierten Verschlüsselung 
+- **Zertifikat generieren** (/ CN sollte mit Ihrem SQL Server-Host des vollständig qualifizierten Domänennamen überein)
 
 > [!NOTE]
 > Für dieses Beispiel, dass wir ein selbstsigniertes Zertifikat verwenden sollte dies nicht für Produktionsszenarien verwendet werden. Sie sollten ZS-Zertifikate verwenden. 
@@ -59,18 +59,18 @@ TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCL
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
-- **Registrieren des Zertifikats auf dem Clientcomputer (Windows, Linux oder MacOS)**
+- **Registrieren des Zertifikats auf dem Client (Windows, Linux oder MacOS)**
 
-    -   Bei Verwendung von Zertifizierungsstelle signiertes Zertifikat müssen Sie das Zertifikat (Certificate Authority, CA), anstatt das Zertifikat auf den Clientcomputer kopiert. 
-    -   Wenn Sie das selbstsignierte Zertifikat verwenden, kopieren Sie die PEM-Datei in die folgenden Ordner je nach Verteilung, und führen Sie die Befehle aktivieren 
-        - **Ubuntu**: Copy-Zertifikat- ```/usr/share/ca-certificates/``` umbenennen Erweiterung .crt verwenden Dpkg Reconfigure Zertifizierungsstellenzertifikate, um ihn als System CA-Zertifikat zu aktivieren. 
-        - **RHEL**: Copy-Zertifikat- ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` um ihn als System CA-Zertifikat zu aktivieren.
-        - **SUSE**: Copy-Zertifikat- ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` um ihn als System CA-Zertifikat zu aktivieren.
-        - **Windows**: importieren, die die PEM-Datei als ein Zertifikat unter "aktuelle Benutzer" -> vertrauenswürdiger Stammzertifizierungsstellen-Zertifikate >
+    -   Wenn Sie mit der Zertifizierungsstelle signiertes Zertifikat arbeiten, müssen Sie das Zertifikat der Zertifizierungsstelle (Certificate Authority, CA) anstelle des Benutzerzertifikats auf den Clientcomputer kopieren. 
+    -   Wenn Sie das selbstsignierte Zertifikat verwenden, kopieren Sie die PEM-Datei in die folgenden Ordner, die je nach Verteilung und führen Sie die Befehle, um sie zu aktivieren 
+        - **Ubuntu**: Copy-Zertifikats in den ```/usr/share/ca-certificates/``` CRT-Erweiterung umbenennen Dpkg-Reconfigure ZS-Zertifikate verwenden, um es als System-CA-Zertifikat zu aktivieren. 
+        - **RHEL**: Copy-Zertifikats in den ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` als System-CA-Zertifikat aktivieren.
+        - **SUSE**: Copy-Zertifikats in den ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` als System-CA-Zertifikat aktivieren.
+        - **Windows**: importieren die PEM-Datei als ein Zertifikat unter dem aktuellen Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen-Zertifikate >.
         - **macOS**: 
-           - Kopieren Sie das Zertifikat an ```/usr/local/etc/openssl/certs```
-           - Führen Sie den folgenden Befehl aus, um den Hashwert abzurufen: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Benennen Sie das Zertifikat in Wert. Beispiel: ```mv mssql.pem dc2dd900.0``` Stellen Sie sicher, dass dc2dd900.0 wird ```/usr/local/etc/openssl/certs```
+           - Kopieren Sie das Zertifikat zu ```/usr/local/etc/openssl/certs```
+           - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Benennen Sie das Zertifikat in Wert ein. Beispiel: ```mv mssql.pem dc2dd900.0```. Stellen Sie sicher, dass dc2dd900.0 ```/usr/local/etc/openssl/certs```
     
 -   **Exemplarische Verbindungszeichenfolgen** 
 
@@ -92,7 +92,7 @@ TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCL
 
 ## <a name="server-initiated-encryption"></a>Vom Server initiierte Verschlüsselung 
 
-- **Generieren Sie ein Zertifikat** (CN übereinstimmen, vollqualifizierten Domänennamen der SQL Server-Hostname)
+- **Zertifikat generieren** (/ CN sollte mit Ihren SQL Server-Host den vollqualifizierten Domänennamen überein)
         
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -125,13 +125,13 @@ TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCL
             "encrypt=false; trustServerCertificate=false;" 
             
 > [!NOTE]
-> Legen Sie **"TrustServerCertificate"** auf "true", wenn der Client überprüft die Echtheit des Zertifikats der Zertifizierungsstelle hergestellt werden kann
+> Legen Sie **TrustServerCertificate** auf "true", wenn der Client an Zertifizierungsstelle, um die Authentizität des Zertifikats überprüft keine Verbindung herstellen kann
 
-## <a name="common-connection-errors"></a>Allgemeine Verbindungsfehler  
+## <a name="common-connection-errors"></a>Häufigen Verbindungsproblemen  
 
 |Fehlermeldung |Fix |
 |--- |--- |
-|Die Zertifikatkette wurde von einer Zertifizierungsstelle ausgestellt, die nicht vertrauenswürdig ist.  |Dieser Fehler tritt auf, wenn von Clients kann nicht zum Überprüfen der Signatur des Zertifikats durch SQL Server während der TLS-Handshake dargestellt wird. Stellen Sie sicher, dass der Client vertraut wird entweder die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] direkt Zertifikat oder der Zertifizierungsstelle, die das SQL Server-Zertifikat signiert. |
-|Der Zielprinzipalname ist falsch.  |Stellen Sie sicher, dass allgemeine Namensfeld für SQL Server Zertifikat in der Client-Verbindungszeichenfolge angegebene Servername entspricht. |  
-|Eine vorhandene Verbindung wurde vom Remotehost geschlossen. |Dieser Fehler kann auftreten, wenn der Client die TLS-Protokollversion, die erforderlich sind, von SQL Server nicht unterstützt. Z. B. wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS 1.2 erfordern, stellen Sie sicher, dass Ihre Clients unterstützen auch das TLS 1.2-Protokoll konfiguriert ist. |
+|Die Zertifikatkette wurde von einer Zertifizierungsstelle ausgestellt, die nicht vertrauenswürdig ist.  |Dieser Fehler tritt auf, wenn Clients nicht zum Überprüfen der Signatur auf das von SQL Server während des TLS-Handshakes bereitgestellte Zertifikat können. Stellen Sie sicher, dass der Client vertraut wird entweder die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] direkt Zertifikat oder der Zertifizierungsstelle, die das SQL Server-Zertifikat signiert. |
+|Der Zielprinzipalname ist falsch.  |Stellen Sie sicher, dass das Feld "Common Name" für SQL Server Zertifikat in der Clientverbindungszeichenfolge angegebene Servername entspricht. |  
+|Eine vorhandene Verbindung wurde erzwungenermaßen vom Remotehost geschlossen. |Dieser Fehler kann auftreten, wenn der Client die TLS-Protokollversion, die erforderlich sind, von SQL Server nicht unterstützt. Z. B. wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS 1.2 erfordern, stellen Sie sicher, dass Ihre Clients unterstützen auch das TLS 1.2-Protokoll konfiguriert ist. |
 | | |   

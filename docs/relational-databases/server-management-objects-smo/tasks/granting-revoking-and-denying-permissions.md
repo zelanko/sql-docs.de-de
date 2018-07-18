@@ -1,5 +1,5 @@
 ---
-title: Gewährung, widerrufen und Verweigern von Berechtigungen | Microsoft Docs
+title: Gewährung, widerrufen und Verweigern von Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77c9bb9b74b4d0b7dee5ec09724db144852dc73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990639"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Bei der Ausführung dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
+  Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Beim Ausführen dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
   
  Datenbankberechtigungen und Datenbankobjektberechtigungen können zugewiesen werden auf ähnliche Weise mithilfe der <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> Objekt.  
   
@@ -260,6 +260,7 @@ foreach ( $spi in $spis)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ 
+  [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

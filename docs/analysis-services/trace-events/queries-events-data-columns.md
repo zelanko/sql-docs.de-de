@@ -1,5 +1,5 @@
 ---
-title: Fragt Events Data Columns | Microsoft Docs
+title: Abfragen von Datenspalten | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56a945a1130753fc2feb08a89bd4f6e2676f1bd0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042498"
 ---
 # <a name="queries-events-data-columns"></a>Datenspalten der Abfrageereignisse
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "34045634"
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Ereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die abgelaufene Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Enthält die abgelaufene Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Enthält die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|Severity|22|1|Enthält den Schweregrad einer mit dem Abfrageereignis verbundenen Ausnahme. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
+|Schweregrad|22|1|Enthält den Schweregrad einer mit dem Abfrageereignis verbundenen Ausnahme. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
 |Success|23|1|Enthält den Erfolg oder Fehler des Abfrageereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
-|Error|24|1|Enthält die Fehlernummer aller mit dem Abfrageereignis verbundenen Fehler.|  
+|Fehler|24|1|Enthält die Fehlernummer aller mit dem Abfrageereignis verbundenen Fehler.|  
 |ConnectionID|25|1|Enthält die mit dem Abfrageereignis verbundene eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Enthält den Namen der Datenbank, in der die Abfrage ausgeführt wird.|  
 |NTUserName|32|8|Enthält den mit dem Abfrageereignis verbundenen Windows-Benutzernamen.|  

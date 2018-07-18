@@ -1,5 +1,5 @@
 ---
-title: Datenspalten für Ermittlungsereignisse | Microsoft Docs
+title: Datenspalten für Ermittlungsereignisse | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042548"
 ---
 # <a name="discover-events-data-columns"></a>Datenspalten für Ermittlungsereignisse
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,11 +58,11 @@ ms.locfileid: "34044954"
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Ermittlungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält die Zeit (falls verfügbar), zu der das Ermittlungsendereignis begonnen hat. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die ungefähre Zeit (in Millisekunden), die für das Ermittlungsereignis benötigt wurde.|  
+|Duration|5|2|Enthält die ungefähre Zeit (in Millisekunden), die für das Ermittlungsereignis benötigt wurde.|  
 |CPUTime|6|2|Enthält die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|Severity|22|1|Enthält den Schweregrad einer Ausnahme.|  
+|Schweregrad|22|1|Enthält den Schweregrad einer Ausnahme.|  
 |Success|23|1|Enthält den Erfolg oder Fehler des Ermittlungsereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
-|Error|24|1|Enthält die Fehlernummer aller mit dem Ermittlungsereignis verbundenen Fehler.|  
+|Fehler|24|1|Enthält die Fehlernummer aller mit dem Ermittlungsereignis verbundenen Fehler.|  
 |ConnectionID|25|1|Enthält die mit dem Ermittlungsereignis verbundene eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Enthält den Namen der Datenbank, in der das Ermittlungsereignis aufgetreten ist.|  
 |NTUserName|32|8|Enthält den Windows-Benutzernamen, der dem Objektberechtigungsereignis zugeordnet ist.|  
@@ -77,6 +77,6 @@ ms.locfileid: "34044954"
 |RequestProperties|45|9|Enthält die Eigenschaften in der XMLA-Anforderung.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ermittlungsereignisse (Ereigniskategorie)](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

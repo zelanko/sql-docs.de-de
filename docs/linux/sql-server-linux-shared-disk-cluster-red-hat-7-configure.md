@@ -1,6 +1,6 @@
 ---
-title: Red Hat Enterprise Linux freigegebenen Clusterdatenträger für SQL Server konfigurieren | Microsoft Docs
-description: Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server konfigurieren, um hohe Verfügbarkeit zu implementieren.
+title: Konfigurieren Sie freigegebenen Cluster Red Hat Enterprise Linux für SQL Server | Microsoft-Dokumentation
+description: Implementieren Sie hohen Verfügbarkeit durch Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,49 +13,49 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001632"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
+# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Handbuch enthält Anweisungen zum Erstellen eines freigegebenen Datenträgers zwei Knoten-Clusters für SQL Server unter Red Hat Enterprise Linux. Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Schrittmacher](http://clusterlabs.org/). SQL Server-Instanz ist auf einem "Node" oder anderen aktiv.
+Dieses Handbuch enthält Anweisungen, um einen Cluster mit zwei Knoten freigegebenen Datenträgern für SQL Server unter Red Hat Enterprise Linux zu erstellen. Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](http://clusterlabs.org/). SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
 
 > [!NOTE] 
 > Zugriff auf Red Hat-HA-Add-On und Dokumentation erfordert ein Abonnement. 
 
-Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Komponenten - Corosync "und" Schrittmacher - Kommunikation und ressourcenverwaltung koordiniert werden. Einer der Server hat die aktive Verbindung mit der Speicherressourcen und SQL Server. Wenn Schrittmacher einen Fehler erkennt verwalten die Clusterkomponenten, die Ressourcen auf den anderen Knoten verschoben.  
+Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Clustering Komponenten - Corosync und Pacemaker - Kommunikation und ressourcenverwaltung zu koordinieren. Einer der Server hat die aktive Verbindung mit dem Storage-Ressourcen und der SQL Server. Wenn Pacemaker ein Fehler erkannt wird verwalten die Clusterkomponenten an, die Ressourcen auf dem anderen Knoten verschieben.  
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
-> SQL Server Integration in Schrittmacher ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Aus SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem ist z. B. Cluster Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze.
-Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist, und die IP-Adresse verwenden, müssen sie in ihrer DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert wird) mit dem ausgewählten Server registrieren.
+> SQL Server Integration mit Pacemaker ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. Von in SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich außerhalb im und der Dienst wird als eigenständige Instanz von Pacemaker gesteuert. Außerdem werden z. B. Cluster Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze.
+Eine Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist und nicht die IP-Adresse verwenden, müssen sie in ihren DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert wird) mit dem ausgewählten Server registrieren.
 
-In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
+Die folgenden Abschnitte führen die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Server bereitstellen. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
+Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie den NFS-Server bereitstellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie des Betriebssystems auf allen Clusterknoten
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie das Betriebssystem auf jedem Clusterknoten
 
-Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterknoten. Verwenden Sie für diese Gang durch RHEL mit einem gültigen Abonnement für das Add-on für hohe Verfügbarkeit. 
+Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren. Verwenden Sie für diese exemplarische Vorgehensweise RHEL mit einem gültigen Abonnement, für die HA-Add-On. 
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installieren und Konfigurieren von SQL Server auf jedem Clusterknoten
 
-1. Installieren und Einrichten von SQL Server auf beiden Knoten.  Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server on Linux](sql-server-linux-setup.md).
+1. Installieren und Einrichten von SQL Server auf beiden Knoten.  Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server unter Linux](sql-server-linux-setup.md).
 
-1. Festlegen Sie ein Knoten als primärer und der andere als sekundärer, zum Zweck der Konfiguration. Verwenden Sie diese Begriffe für die folgenden dieses Handbuchs.  
+1. Festlegen Sie ein Knoten als primärer und der andere wird als sekundäre Datenbank, für die Zwecke der Konfiguration. Verwenden Sie diese Bedingungen für die folgenden dieses Handbuchs.  
 
-1. Beenden und Deaktivieren von SQL Server, auf dem sekundären Knoten.
+1. Klicken Sie auf dem sekundären Knoten beenden, und Deaktivieren von SQL Server.
 
    Im folgenden Beispiel wird beendet und deaktiviert SQL Server: 
 
@@ -64,15 +64,15 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> Beim Setup eine Server-Hauptschlüssel für die SQL Server-Instanz generiert und an platziert `/var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, wird nicht seine Identität Knoten gemeinsam verwendet. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokale Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann. 
+> Beim Setup ein Server-Hauptschlüssel für die SQL Server-Instanz generiert und an platziert `/var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, ist nicht die Identität über Knoten hinweg gemeinsam genutzt werden. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel aus dem primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokalen Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann. 
 
-1. Klicken Sie auf dem primären Knoten, erstellen Sie eine SQL Server-Anmeldung für Schrittmacher, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Dieses Konto wird von Schrittmacher verwendet, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird. 
+1. Klicken Sie auf dem Primärknoten, erstellen Sie eine SQL Server-Anmeldung für Pacemaker, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Pacemaker verwendet dieses Konto, um zu überprüfen, welcher Knoten die SQL Server ausgeführt wird. 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   Herstellen einer Verbindung mit SQL Server `master` Datenbank mit der sa-Konto, und führen Sie Folgendes aus:
+   Verbinden mit dem SQL Server `master` -Datenbank mit der sa-Konto, und führen Sie Folgendes:
 
    ```bashsql
    USE [master]
@@ -81,24 +81,24 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
-   Alternativ können Sie die Berechtigungen detaillierter festlegen. Die Anmeldung Schrittmacher benötigt `VIEW SERVER STATE` zum Abfrage-Integritätsstatus mit Sp_server_diagnostics, `setupadmin` und `ALTER ANY LINKED SERVER` den Namen der FCI-Instanz mit dem Ressourcennamen zu aktualisieren, indem Sp_dropserver und Sp_addserver ausführen. 
+   Alternativ können Sie die Berechtigungen detaillierter festlegen. Die Pacemaker-Anmeldung erfordert `VIEW SERVER STATE` zum Abfrage-Integritätsstatus mit Sp_server_diagnostics, `setupadmin` und `ALTER ANY LINKED SERVER` auf den Namen der FCI-Instanz mit den Namen der Ressource zu aktualisieren, indem Sie Ausführung Sp_dropserver und Sp_addserver. 
 
-1. Beenden und Deaktivieren von SQL Server, auf dem primären Knoten. 
+1. Klicken Sie auf dem primären Knoten beenden, und Deaktivieren von SQL Server. 
 
-1. Konfigurieren Sie die Hosts-Datei für jeden Clusterknoten. Die Hosts-Datei muss die IP-Adresse und die Namen aller Clusterknoten enthalten. 
+1. Konfigurieren der Hosts-Datei für jeden Clusterknoten. Die Hosts-Datei muss es sich um den IP-Adresse und den Namen der einzelnen Clusterknoten enthalten. 
 
-    Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse von Ihrem aktuellen Knoten. 
+    Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse Ihres aktuellen Knotens. 
 
    ```bash
    sudo ip addr show
    ```
 
-   Legen Sie den Computernamen auf jedem Knoten ein. Geben Sie jeden Knoten einen eindeutigen Namen, der 15 Zeichen oder weniger. Legen Sie die Computernamen durch Hinzufügen zu `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
+   Legen Sie den Namen des Computers, auf den einzelnen Knoten. Weisen Sie jedem Knoten einen eindeutigen Namen, die 15 Zeichen lang ist oder weniger. Den Namen des Computers festlegen, indem Sie es `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten mit dem Namen `sqlfcivm1` und `sqlfcivm2`.
+   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten, die mit dem Namen `sqlfcivm1` und `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -107,23 +107,23 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
    10.128.16.77 sqlfcivm2
    ```
 
-Im nächsten Abschnitt Konfigurieren freigegebenen Speicher und die Datenbankdateien an, dass Speicher verschieben. 
+Im nächsten Abschnitt Konfigurieren freigegebenen Speicher und die Datenbankdateien auf den Speicher zu verschieben. 
 
-## <a name="configure-shared-storage-and-move-database-files"></a>Konfigurieren von freigegebenen Speicher und Verschieben von Datenbankdateien 
+## <a name="configure-shared-storage-and-move-database-files"></a>Konfigurieren von freigegebenem Speicher, und Verschieben von Datenbankdateien 
 
-Es gibt eine Vielzahl von Lösungen für das Bereitstellen von freigegebenen Speichers. Diese exemplarische Vorgehensweise wird das Konfigurieren von freigegebenen Speicher mit NFS. Es wird empfohlen, bewährte Methoden befolgen und Kerberos verwenden, um NFS zu sichern (finden Sie hier ein Beispiel: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+Es gibt eine Vielzahl von Lösungen zum Bereitstellen von freigegebenen Speichers. In dieser exemplarischen Vorgehensweise veranschaulicht das Konfigurieren von freigegebenen Speichers mit NFS. Es wird empfohlen, bewährte Methoden befolgen und Verwenden von Kerberos zum Sichern von NFS (finden Sie hier ein Beispiel: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
 
 >[!Warning]
->Wenn Sie NFS nicht sichern, dann werden jeder, der Zugriff auf Ihr Netzwerk und die IP-Adresse eines SQL-Knotens zu spoofen können auf die Datendateien zugreifen. Wie immer, stellen Sie sicher, dass Sie Bedrohungsmodells für Ihr System vor der Verwendung in der Produktion. Eine andere Speicheroption ist die Verwendung von SMB-Dateifreigabe.
+>Wenn Sie NFS nicht sichern, klicken Sie dann werden jede Person, die Zugriff auf Ihr Netzwerk und die IP-Adresse eines SQL-Knotens zu spoofen können auf die Datendateien zugreifen. Wie immer, stellen Sie sicher, dass Sie Bedrohungsmodells für Ihr System vor der Verwendung in der Produktion. Eine weitere Option für Storage ist die Verwendung von SMB-Dateifreigabe.
 
-### <a name="configure-shared-storage-with-nfs"></a>Konfigurieren von freigegebenen Speicher mit NFS
+### <a name="configure-shared-storage-with-nfs"></a>Konfigurieren von freigegebenem Speicher mit NFS
 
 > [!IMPORTANT] 
-> Hosten der Datenbankdateien auf einer NFS-Server mit Version < 4 wird in dieser Version nicht unterstützt. Dazu gehören, verwenden Sie stattdessen NFS für freigegebene Datenträger Failoverclustering sowie Datenbanken für nicht gruppierte Instanzen. Wir arbeiten zur Aktivierung von anderen NFS-Server-Versionen in zukünftigen Releases. 
+> Hosten der Datenbankdateien auf einer NFS-Server mit Version < 4 wird in dieser Version nicht unterstützt. Dies schließt die Verwendung von NFS für freigegebene Datenträger Failovercluster sowie Datenbanken auf nicht gruppierte Instanzen. Wir arbeiten daran, dass andere NFS-Server-Versionen in zukünftigen Releases. 
 
 Führen Sie folgende Schritte aus, auf dem NFS-Server:
 
-1. Installieren `nfs-utils`
+1. Installieren Sie `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -141,7 +141,7 @@ Führen Sie folgende Schritte aus, auf dem NFS-Server:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Bearbeiten Sie `/etc/exports` auf das Verzeichnis exportieren Sie freigeben möchten. Sie benötigen 1 Zeile für jede gewünschte Freigabe. Beispiel: 
+1.  Bearbeiten Sie `/etc/exports` um das Verzeichnis zu exportieren, Sie freigeben möchten. 1 Zeile erforderlich für jede Freigabe. Zum Beispiel: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -153,7 +153,7 @@ Führen Sie folgende Schritte aus, auf dem NFS-Server:
    sudo exportfs -rav
    ```
 
-1. Stellen Sie sicher, dass die Pfade/freigegebene exportiert werden, von den NFS-Server ausführen sind
+1. Stellen Sie sicher, dass die Pfade/freigegebene exportiert werden, führen Sie aus der NFS-server
 
    ```bash
    sudo showmount -e
@@ -165,7 +165,7 @@ Führen Sie folgende Schritte aus, auf dem NFS-Server:
    sudo setsebool -P nfs_export_all_rw 1
    ```
    
-1. Öffnen Sie die Firewall den Server an.
+1. Öffnen Sie die Firewall den Server.
 
    ```bash 
    sudo firewall-cmd --permanent --add-service=nfs
@@ -176,9 +176,9 @@ Führen Sie folgende Schritte aus, auf dem NFS-Server:
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Konfigurieren Sie alle Knoten des Clusters für die Verbindung mit dem freigegebenen NFS-Speicher
 
-Führen Sie die folgenden Schritte auf allen Knoten im Cluster.
+Führen Sie die folgenden Schritte aus, auf allen Clusterknoten.
 
-1.  Installieren `nfs-utils`
+1.  Installieren Sie `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -193,23 +193,23 @@ Führen Sie die folgenden Schritte auf allen Knoten im Cluster.
    sudo firewall-cmd --reload
    ```
 
-1. Stellen Sie sicher, dass die NFS-Freigaben auf Clientcomputern angezeigt werden können
+1. Stellen Sie sicher, dass Sie die NFS-Freigaben auf Clientcomputern sehen
 
    ```bash
    sudo showmount -e <IP OF NFS SERVER>
    ```
 
-1. Wiederholen Sie diese Schritte auf allen Clusterknoten.
+1. Wiederholen Sie diese Schritte auf allen Clusterknoten aus.
 
-Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Ressourcen:
+Weitere Informationen zur Verwendung von NFS finden Sie unter den folgenden Ressourcen:
 
-* [NFS-Servern und Firewalld | Stapel Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Bereitstellen von einem NFS-Volume | Linux-Netzwerkadministratoren geführt.](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS-Servern und Firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Bereitstellen von einem NFS-Volume | Linux-Netzwerk – Administratorhandbuch](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS-Serverkonfiguration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Bereitstellen von Datenbank-Dateiverzeichnis auf dem freigegebenen Speicher
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Bereitstellen der Datenbank-Dateiverzeichnis auf dem freigegebenen Speicher verweisen
 
-1.  **Auf dem primären Knoten nur**, die Datenbankdateien an einem temporären Speicherort speichern. Das folgende Skript erstellt ein neues temporäres Verzeichnis, die Datenbankdateien in das neue Verzeichnis kopiert und die alten Datenbankdateien entfernt. Wie SQL Server als lokaler Benutzer Mssql ausgeführt wird, müssen Sie sicherstellen, dass nach der Datenübertragung an den bereitgestellten Freigabe lokaler Benutzer Lese-/ Schreibzugriff auf die Freigabe verfügt. 
+1.  **Auf dem primären Knoten nur**, speichern Sie die Datenbankdateien an einem temporären Speicherort. Das folgende Skript erstellt ein neues temporäres Verzeichnis, die die Datenbankdateien in das neue Verzeichnis kopiert und entfernt die alten Datenbankdateien. Wie SQL Server als lokaler Benutzer Mssql ausgeführt wird, müssen Sie sicherstellen, dass nach dem Übertragen von Daten in der eingebundenen Freigabe, lokaler Benutzer Lese-/ Schreibzugriff auf die Freigabe verfügt. 
 
    ``` 
    $ sudo su mssql
@@ -219,7 +219,7 @@ Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Resso
    $ exit
    ``` 
 
-1.  Bearbeiten Sie auf allen Knoten im Cluster `/etc/fstab` Datei Mount-Befehl einschließen.  
+1.  Bearbeiten Sie auf allen Clusterknoten `/etc/fstab` hinzu, um den Bereitstellungsbefehl einzubeziehen.  
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
@@ -231,11 +231,11 @@ Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Resso
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Wenn eine Datei System (FS) Ressource wie empfohlen hier verwenden, besteht keine Notwendigkeit, den Befehl bereitstellen in/etc/fstab beizubehalten. Schrittmacher übernimmt das Einbinden des Ordners beim Starten der FS gruppierte Ressource. Mithilfe von Fencing wird es sichergestellt, dass das FS nie zweimal bereitgestellt wird. 
+>Wenn eine Ressource für die Datei System (FS) mit einer wie empfohlen, ist es nicht erforderlich, um den Befehl bereitstellen in/etc/fstab zu erhalten. Pacemaker übernimmt den Ordner einbinden, beim Starten der FS gruppierte Ressource. Mithilfe des umgrenzungs wird es stellen Sie sicher, dass das FS nie zweimal bereitgestellt wird. 
 
-1.  Führen Sie `mount -a` Befehl für das System zum Aktualisieren der bereitgestellten Pfade.  
+1.  Führen Sie `mount -a` Befehl für das System die bereitgestellten Pfade zu aktualisieren.  
 
-1.  Kopieren der Datenbank und Protokolldateien, die Sie gespeichert `/var/opt/mssql/tmp` auf die neu bereitgestellte Freigabe `/var/opt/mssql/data`. Dies muss nur erfolgen **auf dem primären Knoten**. Stellen Sie sicher, dass Sie schreibgeschützte Schreibberechtigungen "Mssql" Lokale Benutzer zur Verfügung stellen.
+1.  Kopieren der Datenbank und Protokolldateien, die Sie in gespeichert `/var/opt/mssql/tmp` auf die neu eingebundenen Freigabe `/var/opt/mssql/data`. Dies ist nur erforderlich, werden **auf dem primären Knoten**. Stellen Sie sicher, dass Sie Berechtigungen für Lese-/ "Mssql" Lokale Benutzer erteilen.
 
    ``` 
    $ sudo chown mssql /var/opt/mssql/data
@@ -246,7 +246,7 @@ Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Resso
    $ exit
    ``` 
  
-1.  Überprüfen Sie, dass SQL Server erfolgreich mit dem neuen Dateipfad gestartet wird. Hierzu auf jedem Knoten. An diesem Punkt sollte nur ein Knoten SQL Server zu einem Zeitpunkt ausführen. Sie können nicht beide zur gleichen Zeit ausgeführt werden, da sie beide versucht, Zugriff auf die Datendateien gleichzeitig (aus, um zu vermeiden, versehentlich Starten von SQL Server auf beiden Knoten, eine Dateisystem-Clusterressource verwenden, um sicherzustellen, dass die Freigabe nicht zweimal von der verschiedenen Knoten bereitgestellt ist). Die folgenden Befehle Starten von SQL Server, überprüfen Sie den Status und beenden Sie SQL Server.
+1.  Überprüfen Sie, dass SQL Server erfolgreich mit dem neuen Dateipfad gestartet wird. Hierzu auf jedem Knoten. An diesem Punkt sollte nur ein Knoten, über SQL Server zu einem Zeitpunkt ausführen. Sie können nicht beide gleichzeitig ausgeführt, da sie beide versuchen werden, auf die Datendateien gleichzeitig (um zu vermeiden, versehentlich Starten von SQL Server auf beiden Knoten eine Dateisystem-Clusterressource verwenden, um sicherzustellen, dass die Dateifreigabe nicht zweimal von den anderen Knoten bereitgestellt ist). Die folgenden Befehle Starten von SQL Server, den Status überprüfen und beenden Sie SQL Server.
  
    ```bash
    sudo systemctl start mssql-server
@@ -254,9 +254,9 @@ Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Resso
    sudo systemctl stop mssql-server
    ```
  
-Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den freigegebenen Speicher Ausführung konfiguriert. Der nächste Schritt ist so konfigurieren Sie SQL Server für Schrittmacher. 
+An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den Datenbankdateien auf dem freigegebenen Speicher konfiguriert. Der nächste Schritt ist so konfigurieren Sie SQL Server für Pacemaker. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten Schrittmacher
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
 
 
 2. Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. Der folgende Befehl erstellt und füllt diese Datei:
@@ -313,7 +313,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
 
 ## <a name="create-the-cluster"></a>Erstellen des Clusters 
 
-1. Erstellen Sie auf einem Knoten des Clusters ein.
+1. Erstellen Sie auf einem der Knoten den Cluster ein.
 
    ```bash
    sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
@@ -321,26 +321,26 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA-Add-On wurde Zauns Agents für VMWare und KVM. Fencing muss für alle anderen Hypervisoren deaktiviert werden. Deaktivierung Zäune Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der Zeitrahmen befinden sich keine Fencing-Agents, für Hyper-v- oder Cloud-Umgebungen. Wenn Sie eine der folgenden Konfigurationen ausführen, müssen Sie Fencing deaktivieren. \**Dies empfiehlt sich nicht in einem Produktionssystem!**
+   > RHEL-HA-Add-On wurde für das umgrenzen der Agents für VMWare und KVM. Umgrenzung muss für alle anderen Hypervisoren deaktiviert werden. Deaktivieren des umgrenzungs-Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der Zeitrahmen gibt es keine Umgrenzung-Agents für Hyper-v oder in der Cloud-Umgebungen. Wenn Sie eine dieser Konfigurationen ausführen, müssen Sie Umgrenzung zu deaktivieren. \**Dies wird nicht in einem Produktionssystem empfohlen.**
 
-   Der folgende Befehl deaktiviert die Fencing-Agents.
+   Der folgende Befehl deaktiviert die umgrenzungs-Agents.
 
    ```bash
    sudo pcs property set stonith-enabled=false
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Konfigurieren Sie die Clusterressourcen für SQL Server, Dateisystem und virtuellen IP-Ressourcen, und drücken Sie die Konfiguration für den Cluster. Sie benötigen die folgenden Informationen:
+2. Konfigurieren Sie die Clusterressourcen für SQL Server, Dateisystem und virtuellen IP-Ressourcen aus, und drücken Sie die Konfiguration mit dem Cluster. Sie benötigen die folgenden Informationen:
 
    - **SQL Server-Ressourcenname**: einen Namen für die SQL Server-Clusterressource. 
-   - **Floating IP-Ressourcenname**: einen Namen für die virtuelle IP-Adressressource.
-   - **IP-Adresse**: die IP-Adresse, den Client für die Verbindung an der gruppierten Instanz von SQL Server verwenden. 
-   - **System-Ressource Dateiname**: einen Namen für die Dateisystem-Ressource.
+   - **Floating-IP-Ressourcennamen**: einen Namen für die virtuelle IP-Adressressource.
+   - **IP-Adresse**: die IP-Adresse, die Clients verwenden, um an der gruppierten Instanz von SQL Server eine Verbindung herstellen. 
+   - **File System-Ressourcenname**: einen Namen für die Dateisystem-Ressource.
    - **Gerät**: Pfad für die NFS-Freigabe
-   - **Gerät**: der lokale Pfad, dass er auf die Freigabe bereitgestellt wurde
-   - **FsType**: Freigabe Dateityp (d. h. Nfs)
+   - **Gerät**: der lokale Pfad, dass sie auf die Freigabe eingebunden ist
+   - **FsType**: Freigabe Dateityp (z. B. Nfs)
 
-   Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zu konfigurieren und starten Sie den Clusterdienst.  
+   Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zum Konfigurieren und starten den Clusterdienst.  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -352,7 +352,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs cluster cib-push cfg
    ```
 
-   Das folgende Skript erstellt z. B. eine gruppierten SQL Server-Ressource mit dem Namen `mssqlha`, und eine floating IP-Adressressourcen mit IP-Adresse `10.0.0.99`. Erstellt eine Ressource Filesystem außerdem Einschränkungen hinzugefügt, damit alle Ressourcen auf demselben Knoten wie SQL-Ressource zusammengestellt werden. 
+   Das folgende Skript erstellt z. B. eine gruppierten SQL Server-Ressource, die mit dem Namen `mssqlha`, und eine floating IP-Adressressourcen mit IP-Adresse `10.0.0.99`. Außerdem erstellt eine Dateisystem-Ressource und Einschränkungen hinzugefügt, damit alle Ressourcen, die auf demselben Knoten wie SQL-Ressource zusammengestellt werden. 
 
    ```bash
    sudo pcs cluster cib cfg
@@ -364,7 +364,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs cluster cib-push cfg
    ```
 
-   Nachdem die Konfiguration wird per Push übertragen wird, wird SQL Server auf einem Knoten gestartet. 
+   Nachdem die Konfiguration per Push übertragen wird, wird SQL Server auf einem Knoten gestartet. 
 
 3. Stellen Sie sicher, dass SQL Server gestartet wurde. 
 
@@ -372,7 +372,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs status 
    ```
 
-   Die folgenden Beispiele zeigen, wie die Ergebnisse Schrittmacher erfolgreich wurde gestartet, eine Clusterinstanz von SQL Server. 
+   Die folgenden Beispiele zeigen, wie die Ergebnisse beim Pacemaker erfolgreich wurde gestartet, eine Clusterinstanz von SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -391,8 +391,8 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-* [Clustern von Grund auf Neu](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Schrittmacher
+* [Clustern von Grund auf Neu](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Arbeiten Sie mit SQL Server freigegebene Datenträgercluster für Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Arbeiten Sie SQL Server mit Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

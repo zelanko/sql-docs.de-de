@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen ein neuen Tabellenmodellprojekts | Microsoft Docs'
+title: 'Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts | Microsoft-Dokumentation'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,31 +10,31 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040858"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lektion 1: Erstellen eines neuen Tabellenmodellprojekts
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In dieser Lektion erstellen Sie ein neues leeres Tabellenmodellprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Sobald das neue Projekt erstellt wird, können Sie mithilfe des Tabellenimport-Assistenten Daten hinzufügen. In dieser Lektion werden Ihnen auch eine kurze Einführung in das tabellarische Modell in SSDT erstellungsumgebung.  
+In dieser Lektion erstellen Sie ein neues leeres Tabellenmodellprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Sobald das neue Projekt erstellt wird, können Sie mithilfe des Tabellenimport-Assistenten Daten hinzufügen. In dieser Lektion erhalten Sie eine kurze Einführung in die tabellarische modellerstellungsumgebung in SSDT.  
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Dieses Thema stellt die erste Lektion in einem Lernprogramm zur Tabellenmodellerstellung dar. Um diese Lektion abzuschließen, müssen Sie die AdventureWorksDW-Beispieldatenbank auf einer SQL Server-Instanz installiert haben. Weitere Informationen finden Sie unter [Tabellenmodellierung &#40;Adventure Works-Lernprogramm&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
+Dieses Thema stellt die erste Lektion in einem Lernprogramm zur Tabellenmodellerstellung dar. Um diese Lektion abschließen zu können, müssen Sie auf einer SQL Server-Instanz installierte AdventureWorksDW-Beispieldatenbank. Weitere Informationen finden Sie unter [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Erstellen eines neuen Tabellenmodellprojekts  
   
 #### <a name="to-create-a-new-tabular-model-project"></a>So erstellen Sie ein neues Tabellenmodellprojekt  
   
-1.  In SSDT auf dem **Datei** Menü klicken Sie auf **neu** > **Projekt**.  
+1.  In SSDT auf das **Datei** Menü klicken Sie auf **neu** > **Projekt**.  
   
 2.  In der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Business Intelligence** > **Analysis Services**, und klicken Sie dann auf **tabellarischen Analysis Services-Projekts**.  
   
-3.  In **Namen**, Typ **AW Internet Sales**, und geben Sie einen Speicherort für die Projektdateien.  
+3.  In **Namen**, Typ **AW-Internetverkäufe**, und geben Sie dann einen Speicherort für die Projektdateien.  
   
     Standardmäßig entspricht der **Projektmappenname** dem Projektnamen. Sie können jedoch auch einen anderen Projektmappennamen eingeben.  
   
@@ -42,38 +42,38 @@ Dieses Thema stellt die erste Lektion in einem Lernprogramm zur Tabellenmodeller
   
 5.  In der **Designer für tabellarische Modelle** wählen Sie im Dialogfeld **integrierten Arbeitsbereich**.  
   
-    Der Arbeitsbereich wird eine Datenbank für tabellarische Modelle mit dem gleichen Namen wie das Projekt während der Modellerstellung gehostet werden. Arbeitsbereich "integrierte" bedeutet, dass es sich bei SSDT eine integrierte Instanz verwenden, wird dadurch entfällt die Notwendigkeit eine separaten Analysis Services-Serverinstanz für die Modellerstellung zu installieren. Weitere Informationen finden Sie unter [Arbeitsbereichsdatenbank](../analysis-services/tabular-models/workspace-database-ssas-tabular.md).
+    Der Arbeitsbereich wird eine Datenbank für tabellarische Modelle mit dem gleichen Namen wie das Projekt während der Modellerstellung gehostet werden. Integrierter Arbeitsbereich bedeutet, dass SSDT eine eingebaute Instanz verwendet wird, und Sie müssen eine separate Instanz der Analysis Services-Server nur für die Modellerstellung zu installieren. Weitere Informationen finden Sie unter [Arbeitsbereichsdatenbank](../analysis-services/tabular-models/workspace-database-ssas-tabular.md).
       
 6.  Überprüfen Sie im Listenfeld **Kompatibilitätsgrad**, ob **SQL Server 2016 (1200)** ausgewählt ist, und klicken Sie anschließend auf **OK**.   
  
-    ![als-tabellarische-Lektion 1 zu-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![als-tabellarische – Lektion 1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
-    Wenn Sie SQL Server 2016 RTM (1200) im Compatibility Level Listenfeld nicht angezeigt wird, verwenden Sie nicht die neueste Version von SQL Server Data Tools. Sie können die neueste Version unter [Installieren von SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)herunterladen.  
+    Wenn Sie SQL Server 2016 RTM (1200) im Kompatibilitätsgrad-Listenfeld nicht angezeigt wird, verwenden Sie nicht die neueste Version von SQL Server Data Tools. Sie können die neueste Version unter [Installieren von SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)herunterladen.  
 
-    Wenn Sie die neueste Version von SSDT verwenden, können Sie auch auswählen, auf SQL Server-2017 (1400). Allerdings für Lektion 13: bereitstellen, benötigen Sie einen 2017 von SQL Server oder Azure-Server bereitstellen.
+    Wenn Sie die neueste Version von SSDT verwenden, können Sie auch auswählen, auf SQL Server 2017 (1400). Allerdings für Lektion 13: bereitstellen, benötigen Sie einen SQL Server 2017 oder Azure-Server für die Bereitstellung.
       
-    Auswählen einer früheren Kompatibilitätsgrad wird nur empfohlen, wenn Sie das abgeschlossene tabellarische Modell in einer anderen Analysis Services-Instanz einer früheren Version von SQL Server bereitstellen möchten. Arbeitsbereich "integrierte" wird bei niedrigeren Kompatibilitätsgraden nicht unterstützt. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
+    Auswählen eines früheren Kompatibilitätsgrads wird nur empfohlen, wenn Sie Ihr abgeschlossene tabellarische Modell in einer anderen Analysis Services-Instanz, die eine frühere Version von SQL Server bereitstellen möchten. Integrierter Arbeitsbereich wird bei niedrigeren Kompatibilitätsgraden nicht unterstützt. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
-## <a name="understanding-the-ssdt-tabular-model-authoring-environment"></a>Grundlegendes zu SSDT tabellenmodellerstellung Umgebung  
-Nun, dass Sie ein neues tabellarisches Modellprojekt erstellt haben, werfen wir einen Moment Zeit, die Umgebung in SSDT Erstellung tabellarischen Modelle zu untersuchen.  
+## <a name="understanding-the-ssdt-tabular-model-authoring-environment"></a>Grundlegendes zu den tabellarische SSDT modellerstellungsumgebung  
+Nun, dass Sie ein neues tabellarisches Modellprojekt erstellt haben, werfen wir kurz die tabellarische modellerstellungsumgebung in SSDT ansehen.  
   
-Nachdem das Projekt erstellt wurde, wird er in SSDT geöffnet. Auf der rechten Seite in **tabellarische Modell-Explorer**, sehen Sie eine Strukturansicht der Objekte in Ihrem Modell. Da Sie Daten noch nicht geschehen importiert haben, werden der Ordner leer sein. Sie können einen Ordner Objekt zum Ausführen von Aktionen, ähnlich wie auf der Menüleiste auf rechtsklicken. Während Sie in diesem Lernprogramm durchlaufen, verwenden Sie das tabellarische Modell-Explorer, um verschiedene Objekte in Ihrem Modellprojekt zu navigieren.
+Nachdem das Projekt erstellt wurde, werden sie in SSDT geöffnet. Klicken Sie auf der rechten Seite in **tabellarischer Modell-Explorer**, sehen Sie eine Strukturansicht der Objekte in Ihrem Modell. Da Sie noch Daten importiert haben, werden der Ordner leer sein. Sie können einen Objekt-Ordner, um Aktionen ausführen, auf der Menüleiste ähnlich wie mit der Maustaste. Während Sie in diesem Tutorial durchlaufen, verwenden Sie das tabellarische Modell-Explorer, um die verschiedenen Objekte in Ihrem Modellprojekt zu navigieren.
 
-![als-tabellarische-Lektion 1 zu-Zeit](../analysis-services/media/as-tabular-lesson1-tme.png)
+![als-tabellarische – Lektion 1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
-Klicken Sie auf die **Projektmappen-Explorer** Registerkarte. Hier sehen Sie Ihre **Model.bim** Datei. Wenn Sie das Designer-Fenster auf der linken Seite (das leere Fenster mit der Registerkarte Model.bim) im sehen **Projektmappen-Explorer**unter **AW Internet Sales Projekt**, doppelklicken Sie auf die **Model.bim** Datei. Die Model.bim-Datei enthält alle Metadaten für das Modellprojekt erstellen. 
+Klicken Sie auf die **Projektmappen-Explorer** Registerkarte. Hier sehen Sie Ihre **Model.bim** Datei. Wenn Sie nicht in das Designer-Fenster auf der linken Seite (das leere Fenster mit der Registerkarte Model.bim), sehen **Projektmappen-Explorer**unter **AW Internet-Verkaufsprojekt**, doppelklicken Sie auf die **Model.bim** Datei. Die Datei "Model.bim" enthält alle Metadaten für Ihr Modellprojekt. 
 
-![als-tabellarische-Lektion 1 zu-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![als-tabellarische – Lektion 1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
-Sehen wir uns die Modelleigenschaften an. Klicken Sie auf **Model.bim**. In der **Eigenschaften** Fenster sehen Sie die [Modelleigenschaften](../analysis-services/tabular-models/model-properties-ssas-tabular.md), am wichtigsten, wobei die **DirectQuery-Modus** Eigenschaft. Diese Eigenschaft gibt an, ob das Modell im InMemory-Modus (Aus) oder im DirectQuery-Modus (Ein) bereitgestellt wird. In diesem Lernprogramm wird das Modell im InMemory-Modus erstellt und bereitgestellt.
+Wir sehen uns die Modelleigenschaften. Klicken Sie auf **Model.bim**. In der **Eigenschaften** Fenster sehen Sie die [Modelleigenschaften](../analysis-services/tabular-models/model-properties-ssas-tabular.md)wichtigste davon ist die **DirectQuery-Modus** Eigenschaft. Diese Eigenschaft gibt an, ob das Modell im InMemory-Modus (Aus) oder im DirectQuery-Modus (Ein) bereitgestellt wird. In diesem Lernprogramm wird das Modell im InMemory-Modus erstellt und bereitgestellt.
 
-![als tabellarische-Lektion 1 zu-Eigenschaften.](../analysis-services/media/as-tabular-lesson1-properties.png)
+![als tabellarische – Lektion 1-Eigenschaften](../analysis-services/media/as-tabular-lesson1-properties.png)
   
-Wenn Sie ein neues Modell erstellen, bestimmte Modelleigenschaften werden automatisch festgelegt gemäß den datenmodellierungseinstellungen, die in angegeben werden, können die **Tools** > **Optionen** (Dialogfeld). Die Eigenschaften für die Datensicherung, Beibehaltung des Arbeitsbereichs und den Arbeitsbereichsserver geben an, wie und wo die Arbeitsbereichsdatenbank (Datenbank zur Modellerstellung) gesichert, speicherintern beibehalten und erstellt wird. Sie können diese Einstellungen ggf. später ändern. Lassen Sie sie jedoch vorerst unverändert.  
+Wenn Sie ein neues Modell erstellen, bestimmte Modelleigenschaften gemäß den datenmodellierungseinstellungen, die in angegeben werden können automatisch festgelegt sind das **Tools** > **Optionen** Dialogfeld. Die Eigenschaften für die Datensicherung, Beibehaltung des Arbeitsbereichs und den Arbeitsbereichsserver geben an, wie und wo die Arbeitsbereichsdatenbank (Datenbank zur Modellerstellung) gesichert, speicherintern beibehalten und erstellt wird. Sie können diese Einstellungen ggf. später ändern. Lassen Sie sie jedoch vorerst unverändert.  
 
-In **Projektmappen-Explorer**, mit der rechten Maustaste **AW Internet Sales** (Projekt), und klicken Sie dann auf **Eigenschaften**. Die **Eigenschaftenseiten des AW Internet Sales** Dialogfeld wird angezeigt. Hierbei handelt es sich um den erweiterten [Projekteigenschaften](../analysis-services/tabular-models/project-properties-ssas-tabular.md). Sie werden später einige dieser Eigenschaften festlegen, wenn Sie für die Bereitstellung des Modells bereit sind.  
+In **Projektmappen-Explorer**, mit der rechten Maustaste **AW-Internetverkäufe** (Projekt), und klicken Sie dann auf **Eigenschaften**. Die **Eigenschaftenseiten des AW Internet Sales** Dialogfeld wird angezeigt. Hierbei handelt es sich um den erweiterten [Projekteigenschaften](../analysis-services/tabular-models/project-properties-ssas-tabular.md). Sie werden später einige dieser Eigenschaften festlegen, wenn Sie für die Bereitstellung des Modells bereit sind.  
   
-Wenn Sie SSDT installiert haben, wurden der Visual Studio-Umgebung mehrere neue Menüelemente hinzugefügt. Betrachten wir nun die speziell zur Erstellung von tabellarischer Models. Klicken Sie auf das Menü **Modell** . Dort können können Sie den Tabellenimport-Assistenten zu starten, anzeigen und Bearbeiten vorhandener Verbindungen, Arbeitsbereichsdaten aktualisieren, Durchsuchen des Modells in Excel mit der Funktion in Excel analysieren, Perspektiven und Rollen erstellen, die modellsicht auswählen und Berechnungsoptionen festlegen.  
+Wenn Sie SSDT installiert haben, wurden der Visual Studio-Umgebung mehrere neue Menüelemente hinzugefügt. Betrachten wir nun, die nur für die Erstellung tabellarischer Modelle. Klicken Sie auf das Menü **Modell** . Von hier aus können Sie den Tabellenimport-Assistenten zu starten, anzeigen und Bearbeiten vorhandener Verbindungen, Arbeitsbereichsdaten aktualisieren, Durchsuchen des Modells in Excel mit der Funktion in Excel analysieren, Perspektiven und Rollen erstellen, die Modellansicht auswählen und Berechnungsoptionen festlegen.  
   
 Klicken Sie auf das Menü **Tabelle** . Hier können Sie Beziehungen zwischen Tabellen erstellen und verwalten, Datumstabelleneigenschaften festlegen, Partitionen erstellen und Tabelleneigenschaften bearbeiten.  
   
@@ -83,7 +83,7 @@ Erkunden Sie einige der Dialogfelder und Positionen für verschiedene Funktionen
 
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
-Um weitere Informationen über die verschiedenen Typen von Projekten für tabellarische Modelle finden Sie unter [tabellarischen Modellprojekten](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung zur tabellenmodellerstellung finden Sie unter [Tabellenmodelldesigners ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Mehr über die verschiedenen Typen von tabellenmodellprojekten finden Sie unter [Projekte für tabellarische Modelle](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung für die tabellenmodellerstellung finden Sie unter [Designer für tabellarische Modelle ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Wie geht es weiter?

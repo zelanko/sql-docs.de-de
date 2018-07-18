@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokolle | Microsoft Docs
+title: Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokolle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4cc609f6325f46e7e34a2806cbdc897a71ef6507
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707468"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001313"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine spezifische Sicherungstask an, die anstelle von erforderlich ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekt auf der Serverinstanz.  
+  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine spezifische Sicherungstask an, die nicht erforderlich ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekt auf der Serverinstanz.  
   
  Wenn Datenverlust oder -beschädigung auftritt, muss die Sicherung entweder vollständig oder teilweise wiederhergestellt werden. Die partielle Wiederherstellung verwendet die <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Auflistung, um die zu wiederherstellenden Daten zu unterteilen. Bei der Sicherung eines Transaktionsprotokolls erfolgt die Datenwiederherstellung bis zu einem gewissen Zeitpunkt mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekts. Die Daten können auch mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>-Methode validiert werden. Der empfohlene Sicherungsvorgang besteht aus der Prüfung der Sicherung auf Integrität durch die Vornahme eines Wiederherstellungsvorgangs und durch die regelmäßige Prüfung der Daten in der Datenbank.  
   

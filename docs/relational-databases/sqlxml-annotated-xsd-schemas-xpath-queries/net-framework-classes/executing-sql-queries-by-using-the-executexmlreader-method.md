@@ -1,5 +1,5 @@
 ---
-title: Ausführen von SQL-Abfragen mithilfe der ExecuteXMLReader-Methode | Microsoft Docs
+title: Ausführen von SQL-Abfragen mithilfe der "ExecuteXMLReader"-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a219162953134810976461ba682359193246ad8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053758"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ausführen von SQL-Abfragen mithilfe der 'ExecuteXMLReader'-Methode
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Anstatt ExecuteToStream-Methode, können Sie ExecuteXmlReader-Methode des SqlXmlCommand-Objekt verwenden, um Befehle auszuführen. Diese Methode gibt ein XmlReader-Objekt, das für die weitere Verarbeitung des Ergebnisses (die in diesem Beispiel den Namen der Element- oder Attributnamen und die Werte druckt) verwendet werden kann.  
+  Anstatt die ExecuteToStream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode der SqlXmlCommand-Objekt zum Ausführen von Befehlen. Diese Methode gibt ein XmlReader-Objekt, das für die weitere Verarbeitung des Ergebnisses (das in diesem Beispiel den Namen der Element- oder Attributnamen und die Werte druckt) verwendet werden kann.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  

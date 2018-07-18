@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SMO-Programmen | Microsoft Docs
+title: Erstellen von SMO-Programmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 036f5fa2b276d5cb078fdf6e9528b1877280f94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992002"
 ---
 # <a name="creating-smo-programs"></a>Erstellen von SMO-Programmen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "32968125"
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Herstellen einer Verbindung mit einer Instanz von SQLServer](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|Das grundlegendste SMO-Programm, das eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Veranschaulicht die Windows-Authentifizierung und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung. Enthält zudem Beispiele, die das Herstellen einer Verbindung mit einer lokalen und einer Remoteinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zeigen.|  
-|[Trennen von einer Instanz von SQLServer](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|Ein Programm, das veranschaulicht, wie die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] getrennt wird.|  
-|[Aufrufen von Methoden](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|In diesem Abschnitt wird die allgemeine Vorgehensweise zum Aufrufen von Methoden beschrieben. Zeigt die Verwendung von Parametern und die Handhabung von Tabellen mit Daten, die in einem <xref:System.Data.DataTable>-Objekt zurückgegeben wurden. Enthält zudem ein Beispiel, wie einen Objektkonstruktor aufgerufen und zum Aufrufen der **Klon** Methode.|  
+|[Herstellen einer Verbindung zu einer Instanz von SQL Server](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|Das grundlegendste SMO-Programm, das eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Veranschaulicht die Windows-Authentifizierung und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung. Enthält zudem Beispiele, die das Herstellen einer Verbindung mit einer lokalen und einer Remoteinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zeigen.|  
+|[Trennen der Verbindung zu einer Instanz von SQL Server](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|Ein Programm, das veranschaulicht, wie die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] getrennt wird.|  
+|[Aufrufen von Methoden](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|In diesem Abschnitt wird die allgemeine Vorgehensweise zum Aufrufen von Methoden beschrieben. Zeigt die Verwendung von Parametern und die Handhabung von Tabellen mit Daten, die in einem <xref:System.Data.DataTable>-Objekt zurückgegeben wurden. Enthält zudem ein Beispiel, wie ein Objektkonstruktor und das Aufrufen der **Klon** Methode.|  
 |[Einstellen von Eigenschaften – SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|In diesem Abschnitt wird beschrieben, wie verschiedene Eigenschaftentypen festgelegt werden. Es wird gezeigt, wie Objekteigenschaften festgelegt und abgerufen werden. Zudem werden Beispiele für das Festlegen von Objekteigenschaften bei Erstellung des Objekts gegeben, und es wird erläutert, wie alle Eigenschaften eines Objekts durchlaufen werden.|  
 |[Verwenden von Auflistungen](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|Verschiedene Programme, mit denen die für Objektauflistungen verwendeten Techniken erläutert werden. Zeigt, wie mit Auflistungen auf ein Objekt verwiesen wird. Beinhaltet auch ein Beispiel, das verdeutlicht, wie die Elemente einer Auflistung durchlaufen werden.|  
 |[Behandeln von SMO-Ereignissen](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|In diesem Abschnitt wird beschrieben, wie Ereignisse in SMO eingerichtet und behandelt werden. Anhand eines Beispiels wird gezeigt, wie ein Ereignishandler und das Ereignisabonnement eingerichtet werden.|  

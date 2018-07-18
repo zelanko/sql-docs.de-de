@@ -1,5 +1,5 @@
 ---
-title: Sp_grantlogin (Transact-SQL) | Microsoft Docs
+title: Sp_grantlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054218"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_grantlogin [@loginame=] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ **@loginame =** ] **'***login***'**  
- Der Name eines Windows-Benutzers oder einer Windows-Gruppe. Der Windows-Benutzer oder die Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*, z. B. **London\Joeb**. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ Der Name eines Windows-Benutzers oder einer Windows-Gruppe. Windows-Benutzers oder der Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*, z. B. **London\Joeb**. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

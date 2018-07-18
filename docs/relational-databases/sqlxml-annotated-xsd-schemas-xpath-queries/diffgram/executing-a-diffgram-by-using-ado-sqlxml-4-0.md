@@ -1,5 +1,5 @@
 ---
-title: Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0) | Microsoft Docs
+title: Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053718"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ausführen eines DiffGram-Objekts mit ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen, und führt dann ein DiffGram-Objekt aus. In dieser Anwendung werden das DiffGram-Objekt und das XSD-Schema in einer Datei gespeichert. Die Anwendung lädt das DiffGram-Objekt aus der angegebenen Datei. Verwenden Sie eines der DiffGram-Objekte (und das zugehörige XSD-Schema) in der beschriebenen [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen, und führt dann ein DiffGram-Objekt aus. In dieser Anwendung werden das DiffGram-Objekt und das XSD-Schema in einer Datei gespeichert. Die Anwendung lädt das DiffGram-Objekt aus der angegebenen Datei. Sie können eines der DiffGram-Objekte (und die zugeordneten XSD-Schema) beschriebenen [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  Das ist der Ablauf bei der Beispielanwendung:  
   
--   Die **Conn** Objekt (**ADODB. Verbindung**) stellt eine Verbindung mit einer ausgeführten Instanz von SQL Server auf einem bestimmten Server her.  
+-   Die **Conn** Objekt (**ADODB. Verbindung**) wird eine Verbindung mit einer ausgeführten Instanz von SQL Server auf einem bestimmten Server.  
   
 -   Die **Cmd** Objekt (**ADODB.Command**) für die hergestellte Verbindung ausgeführt wird.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "32969107"
   
 -   Das DiffGram-Objekt wird in den befehlsdatenstrom kopiert (**StrmIn**) aus einer Datei.  
   
--   Ausgabedatenstrom des Befehls wird festgelegt, um die **StrmOut** Objekt (**ADODB. Streamen**) auf den Empfang hat Daten zurückgegeben.  
+-   Die Befehls Ausgabestream nastaven NA hodnotu der **StrmOut** Objekt (**ADODB. Stream**) auf den Empfang hat Daten zurückgegeben.  
   
--   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Um Sqlxml4.dll mit SQLOLEDB-Anbieter verwenden die **SQLXML Version** Eigenschaft muss festgelegt werden, um **SQLXML.4.0** für den SQLOLEDB-Anbieter **Verbindung** Objekt.  
+-   Wenn Sie den SQLOLEDB-Anbieter verwenden, wird die Microsoft SQLXML-Funktionalität standardmäßig von Sqlxmlx.dll bereitgestellt. Verwenden Sie Sqlxml4.dll mit dem SQLOLEDB-Anbieter die **SQLXML Version** Eigenschaft muss festgelegt werden, um **SQLXML.4.0** für den SQLOLEDB-Anbieter **Verbindung** Objekt.  
   
 -   Der Befehl (DiffGram) wird ausgeführt.  
   
@@ -91,7 +91,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Kopieren Sie auf den Ordner auf dem Computer eines DiffGram-Objekte und die entsprechenden XSD-Schema aus einem der in den Beispielen in [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+1.  Kopieren Sie in einen Ordner auf Ihrem Computer, eines DiffGram-Objekte und die entsprechenden XSD-Schema aus einem der in den Beispielen in [DiffGram-Beispiele](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
 2.  Öffnen Sie Visual Basic, und erstellen Sie ein Standard-EXE-Projekt.  
   

@@ -1,5 +1,5 @@
 ---
-title: dm_os_workers (Transact-SQL) | Microsoft Docs
+title: dm_os_workers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467706"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052379"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,26 +54,26 @@ ms.locfileid: "34467706"
 |pending_io_count|**int**|Anzahl der physischen E/A-Vorgänge, die dieser Arbeitsthread ausgeführt hat.|  
 |pending_io_byte_count|**bigint**|Gesamtanzahl von Bytes aller ausstehenden physischen E/A-Vorgänge für diesen Arbeitsthread.|  
 |pending_io_byte_average|**int**|Durchschnittliche Anzahl von Bytes aller physischen E/A-Vorgänge für diesen Arbeitsthread.|  
-|wait_started_ms_ticks|**bigint**|Zeitpunkt [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn dieser Arbeitsthread in den Status SUSPENDED übergegangen. Durch Subtrahieren dieses Werts von Ms_ticks in [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) gibt die Anzahl der Millisekunden, die der Arbeitsthread gewartet hat.|  
-|wait_resumed_ms_ticks|**bigint**|Zeitpunkt [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn dieser Arbeitsthread in den Status RUNNABLE übergegangen. Durch Subtrahieren dieses Werts von Ms_ticks in [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) gibt die Anzahl der Millisekunden, die der Arbeitsthread in der ausführbaren Warteschlange befand.|  
-|task_bound_ms_ticks|**bigint**|Zeitpunkt [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn ein Task an diesen Arbeitsthread gebunden ist.|  
-|worker_created_ms_ticks|**bigint**|Zeitpunkt [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn ein Arbeitsthread erstellt wird.|  
+|wait_started_ms_ticks|**bigint**|Point-in in-Time [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn dieser Arbeitsthread in den Status SUSPENDED übergegangen. Durch Subtrahieren dieses Werts von Ms_ticks in [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) gibt die Anzahl der Millisekunden, die der Arbeitsthread gewartet hat.|  
+|wait_resumed_ms_ticks|**bigint**|Point-in in-Time [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn dieser Arbeitsthread in den Status RUNNABLE übergegangen. Durch Subtrahieren dieses Werts von Ms_ticks in [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) gibt die Anzahl der Millisekunden, die der Arbeitsthread in der ausführbaren Warteschlange befand.|  
+|task_bound_ms_ticks|**bigint**|Point-in in-Time [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn ein Task an diesen Arbeitsthread gebunden wird.|  
+|worker_created_ms_ticks|**bigint**|Point-in in-Time [Ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), wenn ein Arbeitsthread erstellt wird.|  
 |exception_num|**int**|Die Fehlernummer der letzten Ausnahme, die bei diesem Arbeitsthread aufgetreten ist.|  
 |exception_severity|**int**|Der Schweregrad der letzten Ausnahme, die bei diesem Arbeitsthread aufgetreten ist.|  
 |exception_address|**varbinary(8)**|Die Codeadresse, von der die Ausnahme ausgelöst wurde.|  
-|affinity|**bigint**|Die Threadaffinität des Arbeitsthreads. Entspricht die Affinität des Threads im [dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|Die Threadaffinität des Arbeitsthreads. Entspricht die Affinität des Threads in [dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Der Status des Arbeitsthreads. Folgende Werte sind möglich:<br /><br /> INIT = Der Arbeitsthread wird zurzeit initialisiert.<br /><br /> RUNNING = Arbeitsthread wird derzeit nicht präemptiv oder präemptiv ausgeführt.<br /><br /> RUNNABLE = Arbeitsthread kann im Zeitplanungsmodul ausgeführt werden.<br /><br /> SUSPENDED = Arbeitsthread wurde angehalten und wartet darauf, dass ein Ereignis ein Signal sendet.|  
 |start_quantum|**bigint**|Zeit in Millisekunden zu Beginn der aktuellen Ausführung dieses Arbeitsthreads.|  
 |end_quantum|**bigint**|Zeit in Millisekunden am Ende der aktuellen Ausführung dieses Arbeitsthreads.|  
-|last_wait_type|**nvarchar(60)**|Typ des letzten Wartevorgangs. Eine Liste der Wartetypen, finden Sie unter [dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Typ des letzten Wartevorgangs. Eine Liste der Wartetypen, finden Sie unter [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Rückgabewert des letzten Wartevorgangs. Folgende Werte sind möglich:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Nur interne Verwendung.|  
 |max_quantum|**bigint**|Nur interne Verwendung.|  
 |boost_count|**int**|Nur interne Verwendung.|  
 |tasks_processed_count|**int**|Anzahl der von diesem Arbeitsthread verarbeiteten Tasks.|  
 |fiber_address|**varbinary(8)**|Speicheradresse der Fiber, der dieser Arbeitsthread zugeordnet ist.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht konfiguriert für Lightweightpooling.|  
-|task_address|**varbinary(8)**|Speicheradresse des aktuellen Tasks. Weitere Informationen finden Sie unter [dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary(8)**|Speicheradresse des Arbeitsthread-Speicherobjekts. Weitere Informationen finden Sie unter [dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_address|**varbinary(8)**|Speicheradresse des aktuellen Tasks. Weitere Informationen finden Sie unter [Sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Speicheradresse des Arbeitsthread-Speicherobjekts. Weitere Informationen finden Sie unter [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |thread_address|**varbinary(8)**|Speicheradresse des Threads, der diesem Arbeitsthread zugeordnet ist. Weitere Informationen finden Sie unter [dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |signal_worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads, der dieses Objekt zuletzt signalisiert hat. Weitere Informationen finden Sie unter [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Weitere Informationen finden Sie unter [DM_OS_SCHEDULERS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
@@ -141,7 +141,7 @@ SELECT
  Wenn `w_runnable` und `w_suspended` gleich sind, stellt dies in der Ausgabe die Zeit dar, die sich der Arbeitsthread im Status SUSPENDED befindet. Andernfalls stellt `w_runnable` die Zeit dar, die der Arbeitsthread im Status RUNNABLE verbringt. In der Ausgabe befindet sich die Sitzung `52` `SUSPENDED` Millisekunden lang im Status `35,094`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

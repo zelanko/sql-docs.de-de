@@ -1,5 +1,5 @@
 ---
-title: Sp_addsrvrolemember (Transact-SQL) | Microsoft Docs
+title: Sp_addsrvrolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056098"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ @loginame **=** ] **"***Anmeldung***"**  
- Der Name der Anmeldung, die der festen Serverrolle hinzugefügt wird. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder eine Windows-Anmeldung. Sollte der Windows-Anmeldename noch nicht die Zugriffsrechte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzen, so werden diese automatisch erteilt.  
+ Der Name der Anmeldung, die der festen Serverrolle hinzugefügt wird. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Anmeldung* kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder ein Windows-Anmeldename. Sollte der Windows-Anmeldename noch nicht die Zugriffsrechte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzen, so werden diese automatisch erteilt.  
   
  [ @rolename **=** ] **"***Rolle***"**  
- Der Name der festen Serverrolle, der der Anmeldename hinzugefügt wird. *Rolle* ist **Sysname**, hat den Standardwert NULL und muss einen der folgenden Werte:  
+ Der Name der festen Serverrolle, der der Anmeldename hinzugefügt wird. *Rolle* ist **Sysname**, hat den Standardwert NULL und muss eine der folgenden Werte sein:  
   
 -   sysadmin  
   

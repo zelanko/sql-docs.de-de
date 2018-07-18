@@ -1,5 +1,5 @@
 ---
-title: TopCount (DMX) | Microsoft Docs
+title: TopCount (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989851"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,20 +29,20 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, wie z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellenausdruck >  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert, der durch die \<rank Expression > Argument bestimmt die absteigende Rangreihenfolge für die Zeilen, die in bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von obersten Zeilen, die im angegebenen der \<Anzahl > zurückgegeben.  
+ Der Wert, der vom bereitgestellt wird die \<rank Expression > Argument bestimmt die absteigende Rangreihenfolge für die Zeilen, die im bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von obersten Zeilen, die in der angegebenist\<Count >-Argument zurückgegeben wird.  
   
- Die TopCount-Funktion wurde ursprünglich eingeführt werden, um assoziative Vorhersagen zu ermöglichen und die gleichen Ergebnisse wie eine Anweisung, im Allgemeinen erzeugt **SELECT TOP** und **ORDER BY** Klauseln. Sie erhalten eine bessere Leistung bei assoziativen Vorhersagen bei Verwendung der **Vorhersagen (DMX)** -Funktion, die eine Anzahl von zurückzugebenden Vorhersagen spezifiziert.  
+ Die TopCount-Funktion wurde ursprünglich eingeführt, um assoziative Vorhersagen zu ermöglichen und im Allgemeinen erzeugt die gleichen Ergebnisse wie eine Anweisung, enthält **SELECT TOP** und **ORDER BY** Klauseln. Sie erhalten eine bessere Leistung bei assoziativen Vorhersagen, bei der Verwendung der **Vorhersagen (DMX)** -Funktion, die Anzahl der zurückzugebenden Vorhersagen an-Spezifikation unterstützt.  
   
- Es gibt jedoch Situationen, in denen Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** Qualifizierer in einer untergeordneten select-Anweisung. Die ["PredictHistogram" &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
+ Es gibt jedoch Situationen, in dem Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** -Qualifizierer in untergeordneten select-Anweisung. Die [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, die Sie erstellen, mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen geben die gleichen Ergebnisse zurück, aber im ersten Beispiel wird die TopCount und im zweiten Beispiel wird die Vorhersagefunktion.  
+ In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen zurück, die gleichen Ergebnisse, aber im ersten Beispiel wird die TopCount, und im zweiten Beispiel wird der Predict-Funktion.  
   
  Um zu verstehen, wie TopCount funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Beispielergebnisse:  
   
@@ -72,7 +72,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- Die TopCount-Funktion verwendet die Ergebnisse dieser Abfrage und gibt die angegebene Anzahl von Zeilen mit kleinsten Werten zurück.  
+ Die TopCount-Funktion verwendet die Ergebnisse dieser Abfrage und gibt die angegebene Anzahl der Zeilen mit kleinsten Werten zurück.  
   
 ```  
 SELECT   
@@ -87,11 +87,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die TopCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, durch die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument verwenden.  
+ Das erste Argument für die TopCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
   
- Das zweite Argument an die TopCount-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel werden die Ergebnisse mithilfe von $SUPPORT sortiert.  
+ Das zweite Argument für die TopCount-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel werden die Ergebnisse mithilfe von $SUPPORT sortiert.  
   
- Das dritte Argument die TopCount-Funktion gibt die Anzahl der Zeilen, die als ganze Zahl zurück. Für die obersten drei Produkte, sortiert nach $ SUPPORT, geben Sie 3 ein.  
+ Das dritte Argument für die TopCount-Funktion gibt die Anzahl der Zeilen, die als ganze Zahl zurück. Für die obersten drei Produkte, sortiert nach $ SUPPORT, geben Sie 3 ein.  
   
  Beispielergebnisse:  
   
@@ -103,7 +103,7 @@ NATURAL PREDICTION JOIN
   
  Dieser Abfragetyp kann jedoch die Leistung in einer Produktionseinstellung beeinträchtigen. Das liegt daran, dass die Abfrage einen Satz aller Vorhersagen für den Algorithmus zurückgibt, diese Vorhersagen sortiert und die obersten 3 Vorhersagen zurückgibt.  
   
- Das folgende Beispiel enthält eine alternative Anweisung, die die gleichen Ergebnisse zurückgibt, aber bedeutend schneller ausgeführt wird. Dieses Beispiel ersetzt die TopCount mit der Predict-Funktion, die eine Anzahl von Vorhersagen als Argument akzeptiert. Dieses Beispiel verwendet außerdem die **$SUPPORT** Schlüsselwort direkt Spalte der geschachtelten Tabelle abgerufen.  
+ Das folgende Beispiel enthält eine alternative Anweisung, die die gleichen Ergebnisse zurückgibt, aber bedeutend schneller ausgeführt wird. In diesem Beispiel ersetzt die TopCount mit der Predict-Funktion, die eine Anzahl von Vorhersagen als Argument akzeptiert. Dieses Beispiel verwendet auch die **$SUPPORT** Schlüsselwort, um direkt auf die geschachtelte Tabellenspalte abrufen.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  

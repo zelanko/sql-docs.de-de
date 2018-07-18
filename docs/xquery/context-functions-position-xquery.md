@@ -1,5 +1,5 @@
 ---
-title: Position-Funktion (XQuery) | Microsoft Docs
+title: Position-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0afc659ea30da13a520c04c3d9f7efbdfaf8681
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052408"
 ---
-# <a name="context-functions---position-xquery"></a>Kontextfunktionen - Position (XQuery)
+# <a name="context-functions---position-xquery"></a>Kontextfunktionen – Position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt einen ganzzahligen Wert zurück, der die Position des Kontextelements in der Sequenz der Elemente angibt, die derzeit verarbeitet werden.  
@@ -44,7 +44,7 @@ fn:position() as xs:integer
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **Fn:Position()** kann nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** in Spalten vom Typ der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Abrufen der ersten beiden Produktfunktionen mit der XQuery-Funktion position()  
  Die folgende Abfrage ruft die beiden ersten Funktionen, die ersten beiden untergeordneten Elemente des <`Features`>-Elements, aus der Produktmodell-Katalogbeschreibung ab. Wenn mehr Funktionen vorhanden sind, wird dem Ergebnis ein <`there-is-more/`>-Element hinzugefügt.  
@@ -75,15 +75,15 @@ WHERE CatalogDescription is not null
   
 -   Die **Namespace** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespacepräfix, das verwendet wird, im Hauptteil Abfrage.  
   
--   Der abfragehauptteil konstruiert XML, in dem ein \<Product >-Element mit **ProductModelID** und **ProductModelName** Attribute und dessen Produktfunktionen als untergeordnete Elemente zurückgegeben.  
+-   Der abfragehauptteil konstruiert XML, in dem eine \<Product >-Element mit **ProductModelID** und **ProductModelName** -Attribut enthält und dessen Produktfunktionen als untergeordnete Elemente zurückgegeben.  
   
 -   Die **position()** Funktion wird im Prädikat verwendet, um zu bestimmen, der die Position des der \<Features > untergeordnetes Element im Kontext. Wenn es sich dabei um die erste oder zweite Funktion handelt, wird diese zurückgegeben.  
   
--   Die IF-Anweisung fügt eine \<dort-is-More / >-Element auf das Ergebnis, wenn mehr als zwei Funktionen im Produktkatalog vorhanden sind.  
+-   Die IF-Anweisung fügt eine \<dort-is-More / >-Element auf das Ergebnis, wenn mehr als zwei Funktionen vorhanden, im Produktkatalog sind.  
   
 -   Da nicht für alle Produktmodelle Katalogbeschreibungen in der Tabelle gespeichert sind, wird die WHERE-Klausel zum Verwerfen von Zeilen verwendet, in denen CatalogDescriptions den Wert NULL besitzt.  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  

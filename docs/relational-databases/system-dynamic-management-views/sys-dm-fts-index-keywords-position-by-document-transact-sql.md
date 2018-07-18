@@ -1,5 +1,5 @@
 ---
-title: dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
+title: dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b02615dbc260c951a08d3bfa5279b20464653203
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000892"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt mit Feldern fester Breite Schlüsselwortinformationen in den indizierten Dokumenten zurück.  
+  Gibt die Positionsinformationen Schlüsselwort in den indizierten Dokumenten zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,14 +46,14 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Argumente  
  Db_id ("*Database_name*")  
- Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, welche dm_fts_index_keywords_position_by_document verwendet, um die angegebene Datenbank zu suchen.  
+ Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die die dm_fts_index_keywords_position_by_document verwendet, um die angegebene Datenbank zu suchen.  
   
  Object_id ("*Table_name*")  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |Schlüsselwort (keyword)|**varbinary(128)**|Binäre Zeichenfolge, die das Schlüsselwort darstellt.|  
 |display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.|  
@@ -62,13 +62,13 @@ OBJECT_ID('table_name')
 |position|**int**|Die Position des Schlüsselworts im Dokument.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die DMV zur Identifizierung des Speicherorts der indizierte Wörter in indizierten Dokumenten. Diese DMV kann verwendet werden, um die Problembehandlung für Probleme bei **dm_fts_index_keywords_by_document** gibt an, die Wörter werden in den Volltextindex jedoch beim Ausführen einer Abfrage, die mit diesen Wörtern wird das Dokument nicht zurückgegeben.  
+ Verwenden Sie die DMV zur Identifizierung des Speicherorts der indizierte Wörter in indizierten Dokumenten. Diese DMV kann verwendet werden, um die Problembehandlung für Probleme bei **dm_fts_index_keywords_by_document** gibt an, die Wörter in den Volltextindex, aber wenn Sie eine Abfrage mit die Wörter ausführen, wird das Dokument wird nicht zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert CREATE FULLTEXT CATALOG-Berechtigungen und die SELECT-Berechtigung für die vom Volltextindex abgedeckten Spalten.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Schlüsselwörter aus dem Volltextindex, der die `Production.Document` Tabelle mit der `AdventureWorks` -Beispieldatenbank.  
+ Das folgende Beispiel gibt die Schlüsselwörter aus dem Volltextindex, der die `Production.Document` Tabelle mit den `AdventureWorks` -Beispieldatenbank.  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 GO  
 ```  
   
- Sie können ein Prädikat hinzuzufügen, auf die anderen Columns_id wie die folgende Beispielabfrage, die Speicherorte weiter zu isolieren.  
+ Sie können ein Prädikat auf den anderen Columns_id wie die folgende Beispielabfrage, weiter isolieren, die Standorte hinzufügen.  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_position_by_document  
@@ -97,7 +97,7 @@ WHERE document_id = 7 AND display_term = 'performance';
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [Verbessern der Leistung von Volltextindizes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Volltextsuche und semantischen Suchfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
- [Volltextsuche und semantische Suche dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  

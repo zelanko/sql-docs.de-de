@@ -1,5 +1,5 @@
 ---
-title: Sp_revokedbaccess (Transact-SQL) | Microsoft Docs
+title: Sp_revokedbaccess (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3cd5e5b13d8451ffa064783fdb27dd7cb42b0406
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005390"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@name_in_db =** ] **'***name***'**  
- Der Name des zu entfernenden Datenbankbenutzers. *Namen* ist ein **Sysname** hat keinen Standardwert. *Namen* kann der Namen des Server-Anmeldung, ein Windows-Anmeldename oder eine Windows-Gruppe sein und muss in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen oder eine Windows-Gruppe angeben, verwenden Sie den in der Datenbank bekannten Namen.  
+ Der Name des zu entfernenden Datenbankbenutzers. *Namen* ist eine **Sysname** hat keinen Standardwert. *Namen* kann der Name einer serveranmeldung, einer Windows-Anmeldung oder eine Windows-Gruppe sein, und in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen oder eine Windows-Gruppe angeben, verwenden Sie den in der Datenbank bekannten Namen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [DROP USER & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

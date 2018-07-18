@@ -1,5 +1,5 @@
 ---
-title: BottomPercent (DMX) | Microsoft Docs
+title: BottomPercent (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002112"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,19 +35,19 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  *\<Rank Expression >*  
  Eine Spalte in der geschachtelten Tabelle oder ein Ausdruck, der eine Spalte auswertet.  
   
- *\<% >*  
+ *\<Prozent >*  
  Ein doppelter Wert, der den gesamten Zielprozentsatz angibt.  
   
 ## <a name="result-type"></a>Ergebnistyp  
  Tabelle  
   
 ## <a name="remarks"></a>Hinweise  
- Die **BottomPercent** Funktion gibt die untersten Zeilen in aufsteigender Rangreihenfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile so, dass die Summe aus der \<rank Expression > Werte ist mit mindestens der Prozentsatz sein muss, die von angegeben wird die \<Prozent > Argument. **BottomPercent** die kleinste Anzahl von Elementen gibt mögliche zurück, denen der angegebene Prozentwert erreicht.  
+ Die **BottomPercent** Funktion gibt die untersten Zeilen in aufsteigender Rangreihenfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile, so, dass die Summe der der \<rank Expression > ist mindestens die Prozentsatz sein muss, die angegeben wird die \<% > Argument. **BottomPercent** die kleinste Anzahl von Elementen gibt mögliche zurück, denen den angegebenen Prozentwert erreicht.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, die Sie, in erstellt der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, das Sie, in erstellt der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Um zu verstehen, wie die BottomPercent funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
+ Um zu verstehen, wie die BottomPercent funktioniert, kann es hilfreich sein, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Beispielergebnisse:  
   
@@ -90,11 +90,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die BottomPercent-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, durch die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument verwenden.  
+ Das erste Argument für die BottomPercent-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
   
- Die BottomPercent-Funktion das zweite Argument ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
+ Das zweite Argument für die BottomPercent-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
   
- Das dritte Argument die BottomPercent-Funktion gibt den Prozentsatz als Double-Wert. Geben Sie 50 ein, um die Zeilen zu erhalten, die die unteren 50 Prozent der Unterstützungswerte darstellen.  
+ Das dritte Argument für die BottomPercent-Funktion gibt den Prozentsatz als Double-Wert. Geben Sie 50 ein, um die Zeilen zu erhalten, die die unteren 50 Prozent der Unterstützungswerte darstellen.  
   
  Beispielergebnisse:  
   
@@ -108,13 +108,13 @@ NATURAL PREDICTION JOIN
 |Mountain-200|1755|0.117951475|0.111260823|  
 |Mountain Tire Tube|1992|0.133879965|0.125304948|  
   
- **Hinweis** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von BottomPercent veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
+ **Beachten Sie** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von BottomPercent veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
 > [!WARNING]  
 >  Die MDX-Funktionen für TOPPERCENT und BOTTOMPERCENT können unerwartete Ergebnisse generieren, wenn die Werte zur Berechnung des Prozentsatzes negative Zahlen enthalten. Dieses Verhalten wirkt sich nicht auf die DMX-Funktionen aus. Weitere Informationen finden Sie unter [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   
