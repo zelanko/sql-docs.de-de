@@ -1,5 +1,5 @@
 ---
-title: Location-Element (XMLA) | Microsoft Docs
+title: Location-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004492"
 ---
 # <a name="location-element-xmla"></a>Location-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Enthält Informationen über einen Remoteserver für den übergeordneten [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), oder [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) Befehl.  
+  Enthält Informationen über einen Remoteserver für das übergeordnete Element [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [wiederherstellen](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), oder [synchronisieren](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,9 +67,9 @@ ms.locfileid: "34575602"
 |[Synchronisieren](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|["ConnectionString"](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [Ordner](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Für **Backup** Befehle, die **Speicherort** -Element stellt Informationen zum Erstellen einer remotesicherungsdatei für eine Remoteinstanz von Analysis Services bereit.  
+ Für **Backup** Befehle, die **Speicherort** -Element stellt Informationen zur Erstellung einer remotesicherungsdatei für eine Remoteinstanz von Analysis Services bereit.  
   
- Für **wiederherstellen** Befehle, die **Speicherort** Element enthält Informationen über die Identifizierung und Verbindung mit einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz sowie die remotesicherungsdatei, remote wiederherstellen Partitionen, die auf dieser Remoteinstanz.  
+ Für **wiederherstellen** Befehle, die **Speicherort** Element enthält Informationen über die Identifizierung und Verbindung mit einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz sowie die remotesicherungsdatei verwendet, um remote wiederherzustellen Partitionen auf dieser Remoteinstanz.  
   
  Bei **Synchronize** -Befehlen beschreibt das **Location** -Element entweder eine Datenquelle, die von der Zielinstanz verwendet wird, oder eine Remoteinstanz, die auf der Zielinstanz definiert wird und mit der Zielinstanz synchronisiert werden muss. Letzteres ist abhängig vom Wert des **DataSourceType** -Elements des übergeordneten **Synchronize** -Befehls.  
   

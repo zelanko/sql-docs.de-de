@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie Sample Data and Projects | Microsoft Docs
+title: Installieren von Beispieldaten und-Projekten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,30 +10,30 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018887"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057968"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installieren von Beispieldaten und mehrdimensionale Projekte 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Verwenden Sie die Anweisungen und Links in diesem Artikel, um die Daten- und Projektdateien-Dateien, die in der Analysis Services-Lernprogrammen verwendet installieren. 
+Verwenden Sie die Anweisungen und Links in diesem Artikel, um die in der Analysis Services-Tutorials verwendeten Daten- und Projektdateien-Dateien zu installieren. 
   
-## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren Sie erforderliche Komponenten 
-In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sie können alle Funktionen auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus.  
+## <a name="step-1-install-prerequisites"></a>Schritt 1: Installieren der Voraussetzungen 
+In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sie können alle Features auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus.  
   
--   SQL Server-Datenbankmodul  
+-   SQL Server-Datenbank-Engine  
   
 -   SQL Server Analysis Services (SSAS) 
   
     Analysis Services ist nur in der Evaluation, Enterprise, Business Intelligence und Standard Edition verfügbar. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt.
   
-    Standardmäßig wird der Analysis Services 2016 und höher als tabellarische Instanz, die Sie überschreiben können, durch Auswählen von mehrdimensionalen Servermodus auf dem Server Konfigurationsseite des Installations-Assistenten installiert.
+    Standardmäßig wird der Analysis Services 2016 und höher als tabellarische Instanz, die Sie überschreiben können, durch Auswählen von mehrdimensionalen Servermodus auf dem Server Configuration-Seite des Installations-Assistenten installiert.
   
 ## <a name="step-2-download-and-install-developer-and-management-tools"></a>Schritt 2: Herunterladen Sie und installieren Sie, Entwickler und Verwaltungstools
-SQL Server Data Tools (SSDT) für Visual Studio heruntergeladen und getrennt von anderen SQL Server-Funktionen installiert. Der Designer und Projektvorlagen zum Erstellen von BI-Modelle und Berichte sind in enthalten SSDT für Visual Studio 2015 oder als [NuGet-Pakete](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) für Visual Studio-2017.  
+SQL Server Data Tools (SSDT) für Visual Studio ist heruntergeladen und getrennt von anderen SQL Server-Funktionen installiert. Der Designer und Projektvorlagen zum Erstellen von BI-Modelle und Berichte befinden sich im SSDT für Visual Studio 2015 oder als [Nuget-Pakete](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) für Visual Studio 2017.  
   
 [Laden Sie SQL Server Data Tools (SSDT) herunter](http://go.microsoft.com/fwlink/?LinkID=827542).   
 
@@ -45,25 +45,25 @@ Sie können Excel optional installieren, um mehrdimensionale Daten zu durchsuche
   
 Alternativ können Sie Daten mithilfe des integrierten MDX-Abfrage-Designers durchsuchen, der in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]integriert ist. Der Abfrage-Designer gibt die gleichen Daten zurück, jedoch werden die Daten als flaches Rowset dargestellt.  
   
-## <a name="step-3-install-databases"></a>Schritt 3: Installieren Sie Datenbanken  
-In einem mehrdimensionalen Analysis Services-Modell werden Transaktionsdaten verwendet, die Sie aus einem Managementsystem für relationale Datenbanken importieren. Für den Rahmen dieses Lernprogramms verwenden Sie die folgende relationale Datenbank als Datenquelle.  
+## <a name="step-3-install-databases"></a>Schritt 3: Installieren von Datenbanken  
+In einem mehrdimensionalen Analysis Services-Modell werden Transaktionsdaten verwendet, die Sie aus einem Managementsystem für relationale Datenbanken importieren. Für die Zwecke dieses Tutorials verwenden Sie die folgende relationale Datenbank als Datenquelle aus.  
   
--   **AdventureWorksDW2012 oder höher** – Dies ist ein relationales Datawarehouse, die auf eine Datenbankmodulinstanz ausgeführt wird. Es enthält die ursprünglichen Daten, die von Analysis Services-Datenbanken und Projekte, die Sie erstellen und bereitstellen, die während des gesamten Lernprogramms verwendet. Das Lernprogramm setzt voraus, AdventureWorksDW2012 verwenden, jedoch höher funktionieren.
+-   **AdventureWorksDW2012 oder höher** – Dies ist ein relationales Datawarehouse, die in einer-Engine-Datenbankmodulinstanz ausgeführt wird. Es enthält die ursprünglichen Daten, die von der Analysis Services-Datenbanken und -Projekte, die Sie erstellen und bereitstellen, die im Lernprogramm verwendet werden. Dieses Tutorial setzt voraus, AdventureWorksDW2012 kann, jedoch höher funktionieren.
   
     Sie können diese Beispieldatenbank mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher. Im Allgemeinen sollten Sie die Beispiel-Datenbankversion Abgleich Ihrer Datenbank-Engine-Version verwenden.
   
-Um die Datenbank zu installieren, führen Sie folgende Schritte aus:  
+Führen Sie folgende Schritte aus, um die Datenbank zu installieren:  
   
-1.  Herunterladen einer [AdventureWorkDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) datenbanksicherung von GitHub.  
+1.  Herunterladen einer [AdventureWorkDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) datenbanksicherung aus GitHub.  
   
-2.  Kopieren Sie die Sicherungsdatei in das Datenverzeichnis der lokalen SQL Server-Datenbankmodul-Instanz.
+2.  Kopieren Sie die backup-Datei in das Datenverzeichnis der lokalen SQL Server-Datenbank-Engine-Instanz.
   
 3.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Datenbank-Engine-Instanz her.  
   
 4.  Stellen Sie die Datenbank wieder her.  
   
 ## <a name="step-4-grant-database-permissions"></a>Schritt 4: Erteilen von Datenbankberechtigungen  
-In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswechsel verwendet, die den Sicherheitskontext angeben, unter dem Daten importiert oder verarbeitet werden. Standardmäßig geben die Identitätswechseleinstellungen das Analysis Services-Dienstkonto für den Zugriff auf die Daten an. Um diese Standardeinstellung zu verwenden, müssen Sie sicherstellen, dass das Dienstkonto, unter dem Analysis Services ausgeführt wird, datenleserberechtigungen verfügt, auf die **AdventureWorksDW** Datenbank.  
+In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswechsel verwendet, die den Sicherheitskontext angeben, unter dem Daten importiert oder verarbeitet werden. Standardmäßig geben die Identitätswechseleinstellungen das Analysis Services-Dienstkonto für den Zugriff auf die Daten an. Um diese Standardeinstellung zu verwenden, müssen Sie sicherstellen, dass das Dienstkonto, unter denen Analysis Services ausgeführt wird, über datenleserberechtigungen hat, auf die **"AdventureWorksDW"** Datenbank.  
   
 > [!NOTE]  
 > Um den Lerneffekt zu verbessern, wird empfohlen, die standardmäßige Identitätswechseloption für das Dienstkonto zu verwenden und dem Dienstkonto in SQL Server Datenleserberechtigungen zu erteilen. Es sind zwar weitere Identitätswechseloptionen verfügbar, jedoch sind nicht alle von ihnen für Verarbeitungsvorgänge geeignet. Insbesondere wird die Option zum Verwenden der Anmeldeinformationen des aktuellen Benutzers nicht für Verarbeitungsvorgänge unterstützt.  
@@ -78,27 +78,27 @@ In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswe
   
 5.  Klicken Sie auf **Benutzerzuordnung**.  
   
-6.  Aktivieren Sie das Kontrollkästchen neben den **AdventureWorksDW** Datenbank. Zu den Mitgliedern der Rolle sollten automatisch **db_datareader** und **public**gehören. Klicken Sie auf **OK** , um die Standardeinstellungen zu übernehmen.  
+6.  Aktivieren Sie das Kontrollkästchen neben den **"AdventureWorksDW"** Datenbank. Zu den Mitgliedern der Rolle sollten automatisch **db_datareader** und **public**gehören. Klicken Sie auf **OK** , um die Standardeinstellungen zu übernehmen.  
   
-## <a name="step-5-install-projects"></a>Schritt 5: Install-Projekte  
+## <a name="step-5-install-projects"></a>Schritt 5: Installieren Sie-Projekte  
 
 Das Lernprogramm enthält Beispielprojekte, damit Sie Ihre Ergebnisse mit einem fertigen Projekt vergleichen oder eine fortgeschrittenere Lektion beginnen können.  
   
-1.  Herunterladen der [Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) aus der Adventure Works für Analysis Services-Beispielseite auf GitHub.  
+1.  Herunterladen der [Adventure-Works-MDX-Tutorial – projects.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) aus der Adventure Works für Analysis Services-Beispielseite auf GitHub.  
   
     Die Lernprogrammprojekte funktionieren für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher.  
   
 2.  Verschieben Sie die ZIP-Datei in einen Ordner direkt unterhalb des Stammlaufwerks (beispielsweise C:\Tutorial). Dieser Schritt bewirkt, dass weniger Fehler der Art "Pfad zu lang" auftreten; diese werden manchmal ausgegeben, wenn Sie versuchen, die Dateien in den Ordner Downloads zu entzippen.  
   
-3.  Entzippen der Beispielprojekte: Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus. Nach dem Entpacken der Dateien, müssen Sie Ordner Lektion 1, 2, 3, 5, 6, 7, 8, 9, 10 fertig zu stellen und Lesson 4 Start. 
+3.  Entzippen der Beispielprojekte: Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus. Nach dem Entpacken der Dateien, müssen Sie die Ordner Lektion 1, 2, 3, 5, 6, 7, 8, 9, 10 abschließen und Lesson 4 Start. 
   
 4.  Entfernen Sie den Schreibschutz dieser Dateien. Mit der rechten Maustaste in des übergeordneten Ordners, wählen Sie **Eigenschaften**, und deaktivieren Sie das Kontrollkästchen **schreibgeschützte**. Klicken Sie auf **OK**. Wenden Sie die Änderungen auf diesen Ordner sowie Unterordner und Dateien an.  
 
-5.  Öffnen Sie die Projektmappendatei (.sln), die, die Sie in der Lektion entspricht. Im Ordner mit der Bezeichnung Lesson 1 Complete würden Sie z. B. die Datei Analysis Services Tutorial.sln öffnen.  
+5.  Öffnen Sie die Projektmappendatei (.sln), die der Lektion, die Sie entspricht sich befinden. Im Ordner mit der Bezeichnung Lesson 1 Complete würden Sie z. B. die Datei Analysis Services Tutorial.sln öffnen.  
   
-6.  Bereitstellen der Lösung, um sicherzustellen, dass die Datenbankberechtigungen und Informationen zum Serverstandort ordnungsgemäß eingerichtet sind.  
+6.  Bereitstellen der Lösung, um sicherzustellen, dass die Berechtigungen für die Datenbank und Informationen zum Serverstandort ordnungsgemäß eingerichtet sind.  
   
-    Wenn Analysis Services und die Datenbank-Engine als Standardinstanz (MSSQLServer) installiert sind und sämtliche Software auf demselben Computer ausgeführt wird, können Sie im Menü Erstellen auf **Projektmappe bereitstellen** klicken, um das Beispielprojekt zu erstellen und auf der lokalen Instanz von Analysis Services bereitzustellen. Während der Bereitstellung Daten verarbeitet (oder importiert) aus der **AdventureWorksDW** Datenbank auf dem lokalen Datenbankmodulinstanz her. Eine neue Analysis Services-Datenbank wird auf der Analysis Services-Instanz erstellt, die vom Datenbankmodul abgerufenen Daten enthält.  
+    Wenn Analysis Services und die Datenbank-Engine als Standardinstanz (MSSQLServer) installiert sind und sämtliche Software auf demselben Computer ausgeführt wird, können Sie im Menü Erstellen auf **Projektmappe bereitstellen** klicken, um das Beispielprojekt zu erstellen und auf der lokalen Instanz von Analysis Services bereitzustellen. Während der Bereitstellung Daten verarbeitet (oder nicht importiert) aus der **"AdventureWorksDW"** Datenbank in der lokalen Datenbank-Engine-Instanz. Auf der Analysis Services-Instanz, die von der Datenbank-Engine abgerufenen Daten enthält, wird eine neue Analysis Services-Datenbank erstellt.  
   
     Wenn Fehler auftreten, überprüfen Sie die vorherigen Schritte zum Einrichten von Datenbankberechtigungen. Zusätzlich müssen u. U. auch Servernamen geändert werden. Der Standardservername lautet "localhost". Wenn die Server auf Remotecomputern oder als benannte Instanzen installiert werden, müssen Sie den Standardnamen mit einem für Ihre Installation gültigen Servernamen überschreiben. Wenn sich die Server auf Remotecomputern befinden, müssen Sie möglicherweise außerdem die Windows-Firewall so konfigurieren, dass sie den Zugriff auf die Server zulässt.  
   

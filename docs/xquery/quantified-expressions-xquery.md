@@ -1,5 +1,5 @@
 ---
-title: Quantifizierte Ausdrücke (XQuery) | Microsoft Docs
+title: Quantifizierte Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,11 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076691"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004632"
 ---
 # <a name="quantified-expressions-xquery"></a>Quantifizierte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "33076691"
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- Sie können diese Ausdrücke in einer Abfrage verwenden, um entweder die existenzielle oder die universelle Quantifizierung über eine oder mehrere Sequenzen auf einen Ausdruck anzuwenden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss der Ausdruck in der `satisfies`-Klausel entweder eine Knotensequenz oder eine leere Sequenz oder einen booleschen Wert ergeben. Der effektive boolesche Wert des Ergebnisses dieses Ausdrucks wird dann in der Quantifizierung verwendet. Existenzielle Quantifizierung **einige** gibt "true" zurück, wenn mindestens eine der durch den Quantifizierer gebundenen Werte True ergibt Ausdrucks ist. Universelle Quantifizierung **jeder** muss "true" für alle durch den Quantifizierer gebundenen Werte aufweisen.  
+ Sie können diese Ausdrücke in einer Abfrage verwenden, um entweder die existenzielle oder die universelle Quantifizierung über eine oder mehrere Sequenzen auf einen Ausdruck anzuwenden. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss der Ausdruck in der `satisfies`-Klausel entweder eine Knotensequenz oder eine leere Sequenz oder einen booleschen Wert ergeben. Der effektive boolesche Wert des Ergebnisses dieses Ausdrucks wird dann in der Quantifizierung verwendet. Verwendete existenzielle Quantifizierung, die verwendet **einige** gibt "true" zurück, wenn für mindestens einen der durch den Quantifizierer gebundenen Werte True ergibt in des Satisfy-Ausdrucks ist. Die universelle Quantifizierung, die verwendet **jeder** muss "true" für alle durch den Quantifizierer gebundenen Werte verfügen.  
   
- Die folgende Abfrage beispielsweise überprüft jede \<Speicherort > Element, um festzustellen, ob es ein LocationID-Attribut aufweist.  
+ Z. B. die folgende Abfrage überprüft jede \<Speicherort > Element, um festzustellen, ob er ein LocationID-Attribut enthält.  
   
 ```  
 SELECT Instructions.query('  
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Da LocationID ein erforderliches Attribut des ist die \<Speicherort >-Element, erhalten Sie das erwartete Ergebnis:  
+ Da LocationID ein erforderliches Attribut des ist der \<Location >-Element erhalten Sie das erwartete Ergebnis:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Anstatt die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md), können Sie die [Value()-Methode](../t-sql/xml/value-method-xml-data-type.md) um das Ergebnis an die relationale Umgebung zurückzugeben, wie in der folgenden Abfrage gezeigt. Die Abfrage gibt True zurück, wenn alle Arbeitsplatzstandorte LocationID-Attribute besitzen. Anderenfalls gibt die Abfrage False zurück.  
+ Anstatt die [Query()-Methode](../t-sql/xml/query-method-xml-data-type.md), können Sie die [Value()-Methode](../t-sql/xml/value-method-xml-data-type.md) um das Ergebnis auf die relationale Umgebung zurückzugeben, wie in der folgenden Abfrage gezeigt. Die Abfrage gibt True zurück, wenn alle Arbeitsplatzstandorte LocationID-Attribute besitzen. Anderenfalls gibt die Abfrage False zurück.  
   
 ```  
 SELECT Instructions.value('  
@@ -101,7 +101,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 ProductModelID SmallPicturesStored   

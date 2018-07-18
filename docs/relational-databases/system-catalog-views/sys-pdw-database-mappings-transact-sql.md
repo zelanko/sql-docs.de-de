@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_database_mappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f1455d25c0a3ea344c5104053358b2d4fed0c65b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33699413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058068"
 ---
 # <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Zuordnungen der **Database_id**s der Datenbanken auf dem physischen Namen für Serverknoten verwendet und stellt die **Prinzipal-Id** des Datenbankbesitzers auf dem System. Join **sys.pdw_database_mappings** auf **sys.databases** und **sys.pdw_nodes_pdw_physical_databases**.  
+  Zuordnungen der **Database_id**s von Datenbanken auf dem physischen Namen auf Compute-Knoten verwendet, und bietet die **Prinzipal-Id** der Besitzer der Datenbank, auf dem System. Join **sys.pdw_database_mappings** zu **sys.databases** und **sys.pdw_nodes_pdw_physical_databases**.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|Der physische Name für die Datenbank auf den Serverknoten.<br /><br /> **Physical_name** und **Database_id** bilden den Schlüssel für diese Ansicht.||  
-|database_id|**int**|Die Objekt-ID für die Datenbank. Finden Sie unter [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **Physical_name** und **Database_id** bilden den Schlüssel für diese Ansicht.||  
+|physical_name|**nvarchar(36)**|Der physische Name für die Datenbank auf den Computeknoten.<br /><br /> **Physical_name** und **Database_id** bilden den Schlüssel für diese Sicht.||  
+|database_id|**int**|Die Objekt-ID für die Datenbank. Finden Sie unter [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **Physical_name** und **Database_id** bilden den Schlüssel für diese Sicht.||  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel verknüpft sys.pdw_database_mappings mit anderen Systemtabellen, um anzuzeigen, wie Datenbanken zugeordnet werden.  
