@@ -1,5 +1,5 @@
 ---
-title: Diagramm, die Verarbeitung mit SQL Server und Azure SQL-Datenbank | Microsoft Docs
+title: Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -21,49 +21,49 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015676"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Diagramm, die Verarbeitung mit SQL Server und Azure SQL-Datenbank
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Graph Funktionen zur Modellierung von m: n-Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und empfangen Sie die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Datenbankmanagementsystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet graphdatenbank-Funktionen zum Modellieren von m: n Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Database Managementsystem.
 
 
-## <a name="what-is-a-graph-database"></a>Was ist eine Graph-Datenbank?  
-Eine Graph-Datenbank ist eine Auflistung von Knoten (oder Scheitelpunkte) und Ränder (oder Beziehungen). Ein Knoten eine Entität (z. B. eine Person oder Organisation) und eine Kante darstellt eine Beziehung zwischen zwei Knoten, die es (z. B. Nachrichtengrenzen oder Freunde) eine Verbindung herstellt. Knoten und Kanten möglicherweise ihnen zugeordnete Eigenschaften. Hier sind einige Funktionen, die eine Datenbank Graph eindeutig zu machen:  
--   Ränder oder Beziehungen sind erstklassige Entitäten in einer Datenbank Graph und können Attribute oder Eigenschaften zugeordnet werden. 
--   Eine einzelne Kante kann mehrere Knoten in einer Datenbank Graph flexibel verbinden.
--   Sie können Mustervergleich und Navigation der Multi-Hop-Abfragen problemlos Ausdrücken.
+## <a name="what-is-a-graph-database"></a>Was ist eine graphdatenbank verwendet?  
+Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Scheitelpunkte) und Ränder (oder Beziehungen). Ein Knoten stellt eine Entität (z. B. eine Person oder Organisation), und eine Kante repräsentiert eine Beziehung zwischen den beiden Knoten, die Verbindung (z. B. "," Likes "oder" Friends "). Sowohl Knoten und Edges können Eigenschaften zugeordnet haben. Hier sind einige Funktionen, die eine graphdatenbank eindeutig zu machen:  
+-   Ränder oder Beziehungen sind erstklassige Entitäten in einer Diagrammdatenbank und können haben Attribute oder Eigenschaften zugeordnet. 
+-   Eine einzelne Kante kann flexibel auf mehrere Knoten in einer Diagrammdatenbank verbinden.
+-   Sie können Musterabgleich und Multi-Hop-Navigation-Abfragen problemlos Ausdrücken.
 -   Sie können transitiver und polymorphe Abfragen problemlos Ausdrücken.
 
-## <a name="when-to-use-a-graph-database"></a>Wenn eine Graph-Datenbank verwenden
+## <a name="when-to-use-a-graph-database"></a>Bei Verwendung einer Diagrammdatenbank
 
-Es ist kein, eine Graph-Datenbank erreichen kann, die nicht mithilfe einer relationalen Datenbank erreicht werden können. Allerdings kann eine Datenbank Graph express bestimmte Art von Abfragen erleichtern. Darüber hinaus können mit bestimmten Optimierungen, bestimmte Abfragen eine bessere Leistung. Ihre Entscheidung, einen anderen auswählen kann auf folgenden Faktoren basieren:  
--   Die Anwendung verfügt über hierarchische Daten. HierarchyID-Datentyp kann verwendet werden, um Hierarchien zu implementieren, aber es gelten einige Einschränkungen. Beispielsweise können dabei nicht mehrere übergeordnete Elemente für einen Knoten zu speichern.
--   Die Anwendung verfügt über komplexe viele-zu-viele-Beziehungen; Wenn sich Anwendung weiterentwickelt, werden neue Beziehungen hinzugefügt.
+Es gibt nichts, was eine Diagrammdatenbank erreichen kann, die Verwendung einer relationalen Datenbank erreicht werden kann. Allerdings kann eine Diagrammdatenbank express bestimmte Art von Abfragen erleichtern. Darüber hinaus können mit bestimmten Optimierungen, bestimmte Abfragen eine bessere Leistung. Basiert die Entscheidung, wann auswählen kann auf folgenden Faktoren:  
+-   Ihre Anwendung verfügt über hierarchische Daten. Der HierarchyID-Datentyp kann verwendet werden, um Hierarchien zu implementieren, aber es gelten einige Einschränkungen. Beispielsweise können dabei nicht mehrere übergeordnete Elemente für einen Knoten zu speichern.
+-   Ihre Anwendung verfügt über komplexe m: n Beziehungen; Anwendung weiterentwickelt, werden neue Beziehungen hinzugefügt.
 -   Sie müssen miteinander verbundener Daten und Beziehungen zu analysieren.
 
 ## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Graph-Funktionen in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-Wir beginnen, Hinzufügen von Graph-Erweiterungen zu SQL Server, um das Speichern von und Abfragen von Graph-Daten zu vereinfachen. Folgende Funktionen sind in der ersten Version eingeführt. 
+Wir beginnen damit, Hinzufügen von Graph-Erweiterungen mit SQL Server, um das Speichern und Abfragen von Diagrammdaten zu erleichtern. Folgende Features werden in der ersten Version eingeführt. 
 
 
-### <a name="create-graph-objects"></a>Graph-Objekte erstellen
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Benutzern das Erstellen von Knoten oder Edge Tabellen ermöglicht. Knoten und Kanten haben Eigenschaften, die ihnen zugeordnet sind. Seit Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden für Knoten oder Edge-Tabelle unterstützt. Beispiel:  
+### <a name="create-graph-objects"></a>Erstellen von Graph-Objekte
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen können Benutzer Knoten-oder edgetabellen zu erstellen. Sowohl Knoten und Edges können Eigenschaften, die ihnen zugewiesene verfügen. Da Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden auf Knoten-oder edgetabelle unterstützt. Beispiel:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![Person Freunde Tabellen](../../relational-databases/graphs/media/person-friends-tables.png "Person-Knoten und Freunde edge-Tabellen")  
+![Person-Freunde-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Person-Knoten und Freunde edge-Tabellen")  
 Knoten und Kanten werden als Tabellen gespeichert.  
 
 ### <a name="query-language-extensions"></a>Abfrage-spracherweiterungen  
-Neue `MATCH` Klausel wurde eingeführt, um einen Musterabgleich und Multi-Hop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` Funktion verwendet die Syntax lautet: ASCII-Grafiken für den Mustervergleich. Zum Beispiel:  
+Neue `MATCH` Klausel eingeführt, um die Unterstützung von Musterabgleich und Multi-Hop-Navigation durch das Diagramm. Die `MATCH` Funktion verwendet die Syntax im ASCII-Grafik Format für den Musterabgleich. Zum Beispiel:  
 
 ```   
 -- Find friends of John
@@ -73,13 +73,13 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig integrierte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modul 
-Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modul. Wir verwenden die gleichen Speichermodul, Metadaten, Abfrageprozessor usw. zum Speichern und Abfragen von Daten im Diagramm anzeigen. Dadurch kann Benutzer ihre Graph und relationale Daten in einer einzelnen Abfrage abzufragen. Benutzer können auch aus der Kombination von Graph-Funktionen mit anderen profitieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R-Services, usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Compliance Funktionen zur Verfügung, mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig integrierte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine 
+Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Wir verwenden den gleichen Speicher-Engine, Metadaten, Abfrageprozessor usw., speichern und Abfragen von Diagrammdaten. Dadurch können Benutzer ihre Graph und die relationalen Daten in einer einzelnen Abfrage Abfragen. Benutzer können auch aus der Kombination von Graph-Funktionen mit anderen nutzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R Services usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Complianceanforderungen Funktionen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 ### <a name="tooling-and-ecosystem"></a>Tools und das Ökosystem  
-Der Benutzer profitiert von vorhandenen Tools und das Ökosystem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP nur Arbeit ausgegeben. Andere Tools oder Dienste wie SSIS, SSRS oder PowerBI funktionieren bei Diagramm Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.
+Benutzer profitieren von vorhandenen Tools und -Ökosystem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP praktisch von selbst standardmäßig. Andere Tools und Dienste wie SSIS, SSRS oder Power BI funktioniert mit der Graph-Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.
  
  ## <a name="next-steps"></a>Nächste Schritte  
-Lesen der [SQL-Datenbank Graph - Architektur](./sql-graph-architecture.md)
+Lesen der [SQL-Graph-Datenbank – Architektur](./sql-graph-architecture.md)
    
 

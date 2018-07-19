@@ -1,6 +1,6 @@
 ---
-title: Wiederherstellen einer SQL Server-Datenbank in Docker | Microsoft Docs
-description: In diesem Lernprogramm werden wiederherstellen wie einer SQL Server-datenbanksicherung in einem neuen Linux-Docker-Container.
+title: Wiederherstellen einer SQL Server-Datenbank in Docker | Microsoft-Dokumentation
+description: In diesem Lernprogramm erfahren wiederherstellen wie SQL Server-Datenbank-Sicherung in einem neuen Linux-Docker-Container.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,22 +12,22 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842813"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041208"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer SQL Server-Sicherungsdatei in einem SQL Server 2017 Linux-containerimage in Docker ausgeführt wird.
+In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstellen einer SQL Server-backup-Datei in einem SQL Server 2017 unter Linux-containerimage in Docker ausgeführt wird.
 
 > [!div class="checklist"]
-> * Pull übertragen Sie, und führen Sie das neueste SQL Server 2017 Linux-Container-Bild.
-> * Kopieren Sie die World Wide Importers-Datenbankdatei in den Container.
-> * Wiederherstellen der Datenbank im Container.
+> * Ziehen Sie aus, und führen Sie das neueste containerimage von SQL Server 2017 unter Linux.
+> * Kopieren Sie die World Wide Importers-Datenbank-Datei in den Container.
+> * Wiederherstellen der Datenbank in den Container an.
 > * Führen Sie Transact-SQL-Anweisungen zum Anzeigen und ändern die Datenbank an.
 > * Sichern Sie die geänderte Datenbank.
 
@@ -40,7 +40,7 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 
 ## <a name="pull-and-run-the-container-image"></a>Übertragen mithilfe von Pull und Ausführen von Containerimages
 
-1. Öffnen Sie ein Terminal Bash auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
+1. Öffnen Sie ein Bash-Terminal auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
 
 1. Übertragen Sie das Linux-Containerimage von SQL Server 2017 mithilfe von Pull aus dem Docker-Hub.
 
@@ -53,9 +53,9 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
     ```
 
     > [!TIP]
-    > In diesem Lernprogramm werden Beispiele für Docker-Befehle für die Bash-Shell (Linux/Mac) und der PowerShell (Windows) angegeben.
+    > In diesem Tutorial sind Beispiele für die Docker-Befehle für die Bash-Shell (Linux/Mac) und PowerShell (Windows) angegeben.
 
-1. Um die Container-Image mit Docker auszuführen, können Sie den folgenden Befehl aus:
+1. Zum Ausführen von containerimages mit Docker können Sie den folgenden Befehl aus:
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -71,10 +71,10 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Dieser Befehl erstellt einen 2017 von SQL Server-Container mit der Developer Edition (Standard). SQL Server-Port **1433** wird verfügbar gemacht werden, auf dem Host als Port **1401**. Das optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Dient zur persistenten Speicherung der Daten, die von SQL Server erstellt.
+    Dieser Befehl erstellt einen SQL Server 2017-Container mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
 
    > [!NOTE]
-   > Der Prozess zum Ausführen von SQL Server-Editionen Produktion in Containern ist etwas anders. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und Ports verwenden, funktioniert die restliche in dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
+   > Der Prozess zum Ausführen von SQL Server-produktionseditionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und die Ports verwenden, funktioniert der Rest dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
 
 1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
@@ -101,9 +101,9 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Kopieren einer Sicherungsdatei in den container
 
-Dieses Lernprogramm verwendet den [Beispieldatenbank von Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Verwenden Sie die folgenden Schritte aus, um herunterladen und kopieren Sie die Datenbanksicherungsdatei Wide World Importers in Ihrer SQL Server-Container.
+Dieses Tutorial verwendet die [Wide World Importers-Beispieldatenbank](../sample/world-wide-importers/wide-world-importers-documentation.md). Verwenden Sie die folgenden Schritte aus, um das Herunterladen und kopieren die Sicherungsdatei der Wide World Importers-Datenbank mit Ihrem SQL Server-Container.
 
-1. Verwenden Sie zuerst **Docker Exec** zum Erstellen eines Sicherungsordners. Der folgende Befehl erstellt eine **/var/opt/mssql/backup** innerhalb der SQL Server-Container.
+1. Verwenden Sie zunächst **Docker Exec** einen Sicherungsordner zu erstellen. Der folgende Befehl erstellt eine **/var/opt/mssql/backup** Verzeichnis, in der SQL Server-Container.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -113,7 +113,7 @@ Dieses Lernprogramm verwendet den [Beispieldatenbank von Wide World Importers](.
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Als Nächstes Herunterladen der [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) Datei auf dem Hostcomputer. Die folgenden Befehle, navigieren Sie zu Hause/Benutzerverzeichnis und lädt die Sicherungsdatei als **wwi.bak**.
+1. Laden Sie als Nächstes die [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) Datei auf Ihren Hostcomputer. Die folgenden Befehle, navigieren Sie zum Verzeichnis Home/User und lädt die Sicherungsdatei als **wwi.bak**.
 
    ```bash
    cd ~
@@ -134,14 +134,14 @@ Dieses Lernprogramm verwendet den [Beispieldatenbank von Wide World Importers](.
    docker cp wwi.bak sql1:/var/opt/mssql/backup
    ```
 
-## <a name="restore-the-database"></a>Stellen Sie die Datenbank wieder her.
+## <a name="restore-the-database"></a>Wiederherstellen der Datenbank
 
-Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die Sicherung wiederherstellt, ist es wichtig zu wissen, logische Dateinamen und Dateitypen in der Sicherung. Die folgenden Transact-SQL-Befehle überprüfen Sie die Sicherung und die Ausführung der Wiederherstellung mit **Sqlcmd** im Container.
+Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Vor dem Wiederherstellen der sicherungs, ist es wichtig zu wissen, die logischen Dateinamen und die Dateitypen in der Sicherung. Die folgenden Transact-SQL-Befehle, überprüfen Sie die Sicherung, und führen Sie die Wiederherstellung mit **Sqlcmd** im Container.
 
 > [!TIP]
-> Dieses Lernprogramm verwendet **Sqlcmd** innerhalb des Containers, da der Container mit diesem Tool vorinstallierte Version stammt. Sie können jedoch auch ausführen Transact-SQL-Anweisungen mit anderen Client Tools außerhalb der Container, z. B. [Visual Studio Code](sql-server-linux-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Um eine Verbindung herzustellen, verwenden Sie den hostPort, der Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist das **"localhost", "1401** auf dem Hostcomputer und **Host_IP_Address 1401** Remote.
+> Dieses Tutorial verwendet **Sqlcmd** innerhalb des Containers, da der Container mit diesem Tool bereits installiert sind. Aber Sie können auch Transact-SQL-Anweisungen mit einem anderen Client Tools ausführen außerhalb des Containers, z. B. [Visual Studio Code](sql-server-linux-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Um eine Verbindung herzustellen, verwenden Sie den hostPort, der an Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist **"localhost" 1401** auf dem Hostcomputer und **Host_IP_Address, 1401** Remote.
 
-1. Führen Sie **Sqlcmd** im Container aufzulisten logischen Dateinamen und Pfade innerhalb der Sicherung. Dies erfolgt mit der **RESTORE FILELISTONLY** Transact-SQL-Anweisung.
+1. Führen Sie **Sqlcmd** innerhalb des Containers zum Auflisten logischen Dateinamen und Pfade innerhalb der Sicherung. Dies erfolgt mit der **RESTORE FILELISTONLY** Transact-SQL-Anweisung.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -156,7 +156,7 @@ Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die 
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   Ausgabe ähnlich der folgenden sollte angezeigt werden:
+   Eine Ausgabe ähnlich der folgenden sollte angezeigt werden:
 
    ```
    LogicalName   PhysicalName
@@ -167,7 +167,7 @@ Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die 
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. Rufen Sie die **RESTORE DATABASE** Befehl zum Wiederherstellen der Datenbank innerhalb des Containers. Geben Sie neue Pfade für die einzelnen Dateien im vorherigen Schritt.
+1. Rufen Sie die **RESTORE DATABASE** Befehl aus, um die Wiederherstellung der Datenbank innerhalb des Containers. Geben Sie neue Pfade für alle Dateien im vorherigen Schritt.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -181,7 +181,7 @@ Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die 
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   Ausgabe ähnlich der folgenden sollte angezeigt werden:
+   Eine Ausgabe ähnlich der folgenden sollte angezeigt werden:
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -211,7 +211,7 @@ Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die 
 
 ## <a name="verify-the-restored-database"></a>Überprüfen Sie die wiederhergestellte Datenbank
 
-Führen Sie die folgende Abfrage aus, um eine Liste von Datenbanknamen im Container anzuzeigen:
+Führen Sie die folgende Abfrage aus, um eine Liste von Datenbanknamen in Ihrem Container anzuzeigen:
 
 ```bash
 sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -231,7 +231,7 @@ Daraufhin sollte **"wideworldimporters"** in der Liste der Datenbanken.
 
 Die folgenden Schritte stellen eine Änderung in der Datenbank.
 
-1. Führen Sie eine Abfrage zum Anzeigen der obersten 10 Elemente in der **Warehouse.StockItems** Tabelle.
+1. Ausführen einer Abfrage zum Anzeigen der ersten 10 Elemente in der **Warehouse.StockItems** Tabelle.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -245,7 +245,7 @@ Die folgenden Schritte stellen eine Änderung in der Datenbank.
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   Eine Liste der Element-IDs und Namen sollte angezeigt werden:
+   Daraufhin sollte eine Liste der Element-IDs und Namen:
 
    ```
    StockItemID StockItemName
@@ -276,7 +276,7 @@ Die folgenden Schritte stellen eine Änderung in der Datenbank.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   Ähnliche Informationen wie in den folgenden Text sollte angezeigt werden:
+   Daraufhin sollte eine Ausgabe ähnlich dem folgenden Text:
 
    ```
    (1 rows affected)
@@ -287,9 +287,9 @@ Die folgenden Schritte stellen eine Änderung in der Datenbank.
 
 ## <a name="create-a-new-backup"></a>Erstellen Sie eine neue Sicherung
 
-Nachdem Sie Ihre Datenbank in einen Container wiederhergestellt haben, möchten Sie möglicherweise auch regelmäßig datenbanksicherungen im ausgeführten Container zu erstellen. Die Schritte eines ähnlichen Musters mit den vorherigen Schritten jedoch in umgekehrter Reihenfolge.
+Nachdem Sie Ihre Datenbank in einem Container wiederhergestellt haben, können Sie auch regelmäßig datenbanksicherungen im ausgeführten Container erstellen möchten. Die Schritte folgen einem ähnlichen Muster, um die vorherigen Schritte jedoch in umgekehrter Reihenfolge.
 
-1. Verwenden der **SICHERUNGSDATENBANK** Transact-SQL-Befehl aus, um eine Sicherung im Container zu erstellen. In diesem Lernprogramm erstellt eine neue Sicherungsdatei **wwi_2.bak**, in dem zuvor erstellten **/var/opt/mssql/backup** Verzeichnis.
+1. Verwenden der **SICHERUNGSDATENBANK** Transact-SQL-Befehl aus, um eine datenbanksicherung in den Container zu erstellen. In diesem Tutorial erstellt eine neue Sicherungsdatei **wwi_2.bak**, in dem zuvor erstellten **/var/opt/mssql/backup** Verzeichnis.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -303,7 +303,7 @@ Nachdem Sie Ihre Datenbank in einen Container wiederhergestellt haben, möchten 
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   Ausgabe ähnlich der folgenden sollte angezeigt werden:
+   Eine Ausgabe ähnlich der folgenden sollte angezeigt werden:
 
    ```
    10 percent processed.
@@ -338,7 +338,7 @@ Nachdem Sie Ihre Datenbank in einen Container wiederhergestellt haben, möchten 
 
 ## <a name="use-the-persisted-data"></a>Verwenden Sie die beibehaltenen Daten
 
-Zusätzlich zum Einbinden von datenbanksicherungen für Ihre Daten zu schützen, können Sie auch datenvolumecontainer verwenden. Anfang des Lernprogramms erstellt die **sql1** Container mit der `-v sql1data:/var/opt/mssql` Parameter. Die **sql1data** volumecontainer Daten weiterhin die **/var/opt/mssql** Daten, nachdem der Container entfernt wurde. Entfernen Sie die folgenden Schritte aus der **sql1** Container, und erstellen Sie einen neuen Container **sql2**, mit der persistenten Daten.
+Zusätzlich zum Entnehmen von datenbanksicherungen zum Schutz Ihrer Daten, können Sie auch datenvolumecontainer verwenden. Der Beginn des Tutorials erstellt die **sql1** Container mit dem `-v sql1data:/var/opt/mssql` Parameter. Die **sql1data** datenvolumecontainer weiterhin besteht die **/var/opt/mssql** Daten auch nach der Container entfernt wird. Entfernen Sie die folgenden Schritte aus der **sql1** Container, und klicken Sie dann erstellen Sie einen neuen Container, **sql2**, mit persistenten Daten.
 
 1. Beenden der **sql1** Container.
 
@@ -350,7 +350,7 @@ Zusätzlich zum Einbinden von datenbanksicherungen für Ihre Daten zu schützen,
    docker stop sql1
    ```
 
-1. Entfernen des Containers an. Dadurch wird nicht das zuvor erstellte gelöscht **sql1data** Data-Volume-Container und die persistenten Daten.
+1. Entfernen des Containers. Dies löscht nicht in das zuvor erstellte **sql1data** datenvolumecontainer und die persistenten Daten darin.
 
    ```bash
    sudo docker rm sql1
@@ -360,7 +360,7 @@ Zusätzlich zum Einbinden von datenbanksicherungen für Ihre Daten zu schützen,
    docker rm sql1
    ```
 
-1. Erstellen Sie einen neuen Container **sql2**, und Wiederverwenden der **sql1data** Data-Volume-Container.
+1. Erstellen Sie einen neuen Container, **sql2**, und Wiederverwenden der **sql1data** datenvolumecontainer.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -374,7 +374,7 @@ Zusätzlich zum Einbinden von datenbanksicherungen für Ihre Daten zu schützen,
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. Die Wide World Importers-Datenbank ist jetzt in den neuen Container. Führen Sie eine Abfrage, um die vorangegangene Änderung zu überprüfen, die Sie vorgenommen.
+1. Die Wide World Importers-Datenbank ist jetzt in den neuen Container. Führen Sie eine Abfrage, um die vorherige Änderung zu überprüfen, die Sie vorgenommen.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -389,19 +389,19 @@ Zusätzlich zum Einbinden von datenbanksicherungen für Ihre Daten zu schützen,
    ```
 
    > [!NOTE]
-   > Das SA-Kennwort ist nicht das Kennwort für die Angabe der **sql2** Container `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Alle SQL Server-Daten aus wiederhergestellt wurde **sql1**, z. B. das geänderte Kennwort aus zuvor im Lernprogramm. Aktiviert ist, sind einige Optionen wie folgt wegen Wiederherstellen der Daten in /var/opt/mssql ignoriert. Aus diesem Grund ist das Kennwort `<YourNewStrong!Passw0rd>` wie hier gezeigt.
+   > Das SA-Kennwort ist nicht das Kennwort für die Angabe der **sql2** Container `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Alle SQL Server-Daten aus wiederhergestellt wurde **sql1**, einschließlich der zuvor in diesem Tutorial das geänderte Kennwort aus. Aktiviert ist, werden einige Optionen wie folgt ignoriert, aufgrund der Wiederherstellung der Daten in /var/opt/mssql. Aus diesem Grund ist das Kennwort `<YourNewStrong!Passw0rd>` wie hier gezeigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Lernprogramm haben Sie gelernt, wie Sichern einer Datenbank auf Windows und verschieben Sie sie für einen Linux-Server, die mit SQL Server 2017 RC2. Sie haben gelernt, wie auf:
+In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Windows und verschieben Sie es auf einem Linux-Server, SQL Server 2017 RC2 ausgeführt wird. Sie haben gelernt, wie auf:
 > [!div class="checklist"]
-> * SQL Server 2017 Linux-Container-Images zu erstellen.
-> * Kopieren Sie Sicherungen für SQL Server-Datenbank in einen Container.
+> * Erstellen von SQL Server 2017 unter Linux-containerimages.
+> * Kopieren Sie SQL Server-Datenbank-Sicherungen in einem Container.
 > * Ausführen von Transact-SQL-Anweisungen innerhalb des Containers mit **Sqlcmd**.
 > * Erstellen und Sichern von Dateien aus einem Container zu extrahieren.
-> * Verwenden Sie datenvolumecontainer in Docker, um SQL Server-Daten beizubehalten.
+> * Verwenden Sie volumecontainer für die Daten in Docker, um SQL Server-Daten beizubehalten.
 
 Überprüfen Sie dann die anderen Docker-Konfiguration und Problembehandlung von Szenarien:
 
 > [!div class="nextstepaction"]
->[Für die Basiskonfiguration für SQL Server-2017 für Docker](sql-server-linux-configure-docker.md)
+>[Konfigurationshandbuch für SQL Server 2017 unter Docker](sql-server-linux-configure-docker.md)

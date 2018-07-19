@@ -1,6 +1,6 @@
 ---
-title: Anzeigen von Ausnutzung der Speicherkapazität im Analytics Platform System | Microsoft Docs
-description: Ansicht die Kapazitätsauslastung in Analytics Platform System.
+title: Anzeigen von Ausnutzung der Speicherkapazität in Analytics Platform System | Microsoft-Dokumentation
+description: Ansicht der kapazitätsnutzung in Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539220"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909730"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Ansicht die Kapazitätsauslastung in Analyseplattformsystem
-In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Server PDW-Anwendung anzeigen.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Anzeigen der Kapazitätsauslastung in Analytics Platform System
+In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Server-PDW-Appliance an.  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Die Kapazitätsauslastung mithilfe der Verwaltungskonsole anzeigen  
-Zum Anzeigen des Speicherplatzes verwendet die Admin-Konsole zu öffnen, und klicken Sie auf die **Speicher** Registerkarte. Es ist ein **Speicher** Registerkarte für die PDW-Region und die HDI-Region.  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Kapazitätsauslastung mithilfe der Verwaltungskonsole anzeigen  
+Um den belegten Speicherplatz anzuzeigen, öffnen Sie die Verwaltungskonsole, und klicken Sie auf die **Storage** Registerkarte. Es gibt eine **Storage** Registerkarte für die PDW-Region.  
   
 ![PDW-Verwaltungskonsole, Speicher](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>So zeigen Sie mithilfe von Abfragen zur Kapazitätsauslastung  
-Informationen darüber, ob ein Knoten Speicherplatz knapp wird, überwacht die SQL Server PDW-Integrität-Überwachungssystem bereits den freien Speicherplatz für alle Volumes innerhalb eines jeden Knotens.  
+Um zu verstehen, ob ein Knoten auf dem Speicherplatz knapp wird, überwacht der SQL Server-PDW-Health-Überwachungssystem bereits den freien Speicherplatz für alle Volumes innerhalb eines jeden Knotens.  
   
-Wenn der freie Speicherplatz auf einem Volume unter 30 % fällt, wird SQL Server PDW generiert eine **Warnung** in alert [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  Die Warnung bleibt bis freier Speicherplatz verfügbar gemacht wird.  
+Wenn der freie Speicherplatz auf einem Volume unter 30 % fällt, wird SQL Server PDW generiert eine **Warnung** alert in [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  Die Warnung bleibt, bis der Speicherplatz zur Verfügung gestellt wird.  
   
-Wenn der freie Speicherplatz auf einem Volume unter 10 % fällt, wird SQL Server PDW generiert eine **kritische** Warnung. Dies wird in den kritischen angesehen, da Abfragen ausgeführt wurde, wenn sie bewirken, die Datenbank dass zu erweitern.  
+Wenn der freie Speicherplatz auf einem Volume unter 10 % fällt, wird SQL Server PDW generiert eine **kritische** Warnung. Dies wird wichtig angesehen werden, da Abfragen ausfallen, wenn sie die Erweiterung der Datenbank verursachen.  
   
 Zum Abrufen von Volumenutzung finden Sie im folgende Beispiel aus.  
   
@@ -68,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-Zum Abrufen der belegte Datenbanken knotenübergreifend Appliance finden Sie im folgende Beispiel aus.  
+Zum Abrufen des Speicherplatzes von Datenbanken, auf die applianceknoten finden Sie im folgende Beispiel aus.  
   
 ```sql  
 SELECT   
@@ -105,5 +105,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>Siehe auch  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
+[Applianceüberwachung &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

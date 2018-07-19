@@ -1,2 +1,2 @@
-<Token>**Dieses Thema gilt für:** ![Ja](media/yes.png)SQL Server![Ja](media/yes.png)Azure SQL-Datenbank![keine](media/no.png)Azure SQL Data Warehouse ![keine](media/no.png) Parallel Datawarehouse</Token>
+<Token>**DIESES THEMA GILT FÜR:** ![Ja](media/yes.png)SQL Server![Ja](media/yes.png)Azure SQL-Datenbank ![Nein](media/no.png)Azure SQL Data Warehouse ![Nein](media/no.png)Parallel Data Warehouse</Token>
 

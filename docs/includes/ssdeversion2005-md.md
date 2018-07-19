@@ -1,1 +1,1 @@
- SQL Server 2005-Datenbankmodul 
+ SQL Server 2005-Datenbank-Engine 

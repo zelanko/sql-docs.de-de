@@ -1,5 +1,5 @@
 ---
-title: Sp_execute (Transact-SQL) | Microsoft Docs
+title: Sp_execute (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041168"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,13 +48,13 @@ sp_execute handle OUTPUT
   
 ## <a name="arguments"></a>Argumente  
  *Handle*  
- Ist die *behandeln* von Sp_prepare zurückgegebene Wert. *behandeln* ist ein erforderlicher Parameter, der erfordert **Int** Eingabewert.  
+ Ist die *behandeln* von Sp_prepare zurückgegebene Wert. *behandeln* ist ein erforderlicher Parameter, die bei Aufrufen **Int** Eingabewert.  
   
  *bound_param*  
  Gibt die Verwendung zusätzlicher Parameter an. *Bound_param* ist ein erforderlicher Parameter, der Eingabewerte eines beliebigen Datentyps, um zusätzliche Parameter für die Prozedur anzugeben.  
   
 > [!NOTE]  
->  *Bound_param* übereinstimmen die Deklarationen von Sp_prepare*Params* Wert und kann in der Form  *@name = Value* oder *Wert*.  
+>  *Bound_param* den Deklarationen, die vom Sp_prepare entsprechen*Params* Wert und kann in der Form  *@name = Value* oder *Wert*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

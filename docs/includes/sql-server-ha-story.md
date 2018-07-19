@@ -68,7 +68,7 @@ Aufgrund der Unterschiede im Clusterstapel müssen einige Änderungen für Verf�
 
 * WSFC 
 * External
-* Keine
+* InclusionThresholdSetting
 
 Alle Verfügbarkeitsgruppen, die Verfügbarkeit erfordern, müssen einen zugrunde liegenden Cluster verwenden. Dies ist im Fall von SQL Server 2017 ein WSFC oder Pacemaker. Für Windows Server-basierte Verfügbarkeitsgruppen, die einen zugrunde liegenden WSFC verwenden, ist der Standardclustertyp WSFC und muss nicht festgelegt werden. Für Linux-basierte Verfügbarkeitsgruppen muss der Clustertyp beim Erstellen der Verfügbarkeitsgruppe auf „Extern“ festgelegt werden. Die Integration mit Pacemaker wird nach der Erstellung der Verfügbarkeitsgruppe konfiguriert, während dies bei einem WSFC während der Erstellungszeit geschieht.
 

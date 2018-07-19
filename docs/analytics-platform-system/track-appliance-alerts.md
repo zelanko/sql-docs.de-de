@@ -1,6 +1,6 @@
 ---
-title: Nachverfolgen der Appliance Warnungen – Analytics Platform System | Microsoft Docs
-description: Verfolgen Sie die Appliance-Warnungen in Analytics Platform System.
+title: Nachverfolgen von appliancewarnungen - Analytics Platform System | Microsoft-Dokumentation
+description: Nachverfolgen von appliancewarnungen in Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,36 +9,36 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539270"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909790"
 ---
-# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Appliance-Warnungen in Analytics Platform System nachverfolgen
-In diesem Thema wird erläutert, wie mit der Admin-Konsole und Systemsichten Warnungen in einer SQL Server PDW Appliance nachverfolgt wird.  
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Nachverfolgen von appliancewarnungen in Analytics Platform System
+In diesem Thema wird erläutert, wie Sie mit der Verwaltungskonsole und Systemsichten zum Nachverfolgen von Warnungen in einer SQL Server-PDW-Appliance.  
   
-## <a name="to-track-appliance-alerts"></a>Zum Nachverfolgen von Appliance-Warnungen  
-SQL Server PDW erstellt Warnungen für Hardware und Software-Probleme, die ein Eingreifen erforderlich machen. Jede Warnung enthält einen Titel und eine Beschreibung des Problems.  
+## <a name="to-track-appliance-alerts"></a>Zum Nachverfolgen von Appliancewarnungen  
+SQL Server PDW erstellt Warnungen für Hardware und Software-Probleme, die Ihre Aufmerksamkeit erfordern. Jede Warnung enthält einen Titel und eine Beschreibung des Problems.  
   
-SQL Server PDW protokolliert Warnungen in der [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. Das System behält maximal 10.000 Benachrichtigungen und löscht zuerst die älteste Warnung, wenn die Grenze überschritten wird.  
+SQL Server PDW protokolliert Warnungen in der [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. Das System behält maximal 10.000 Benachrichtigungen und löscht zuerst die älteste Warnung, wenn das Limit überschritten wird.  
   
 ### <a name="view-alerts-by-using-the-admin-console"></a>Anzeigen von Warnungen mithilfe der Verwaltungskonsole  
-Es ist ein **Warnungen** Registerkarte für die PDW-Region, HDI-Region und für den Bereich "Fabric" der Anwendung. Nach dem Failover auftritt, ist das failoverereignis in die Anzahl der Warnungen auf der Seite enthalten. Es wird eine Seite für die PDW-Region, HDI-Region und für den Bereich "Fabric" der Anwendung. Jede Seite "Integrität" verfügt über eine Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf die **Integrität** Seite der **Warnungen** Registerkarte, und klicken Sie dann auf eine Warnung.  
+Es gibt eine **Warnungen** Registerkarte für die PDW-Region und für den Fabric-Bereich des Geräts. Nach dem Failover auftritt, ist das failoverereignis in die Anzahl der Warnungen auf der Seite enthalten. Eine Seite, die für die PDW-Region und für den Fabric-Bereich des Geräts ist vorhanden. Jede Seite "Integrität" verfügt über eine Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf die **Integrität** Seite die **Warnungen** Registerkarte, und klicken Sie dann auf eine Warnung.  
   
 ![PDW-Verwaltungskonsole, Warnungen](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Auf der **Warnungen** Seite:  
   
--   Um der Warnung dem Verlauf anzuzeigen, klicken Sie auf die **Überprüfung Warnungsverlauf** Link.  
+-   Um der Warnung dem Verlauf anzuzeigen, klicken Sie auf die **Warnung Überprüfungsverlauf** Link.  
   
--   Um die Warnung Komponente und ihre aktuellen Eigenschaftswerte anzuzeigen, klicken Sie auf der abrufalgorithmen auf.  
+-   Um die Warnung Komponente und die aktuellen Eigenschaftswerte anzuzeigen, klicken Sie auf die Warnung Zeile.  
   
--   Zum Anzeigen von Details über den Knoten, die die Warnung ausgelöst hat, klicken Sie auf den Knotennamen.  
+-   Zum Anzeigen von Details über den Knoten, der die Warnung ausgelöst hat, klicken Sie auf den Knotennamen.  
   
 ### <a name="view-alerts-by-using-the-system-views"></a>Anzeigen von Warnungen mithilfe von Systemsichten  
-Fragen Sie zum Anzeigen von Warnungen mithilfe von Systemsichten [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Diese DMV zeigt Warnungen, die nicht korrigiert wurden. Verwenden Sie die Hilfe zu selektieren Warnungen und Fehler, die [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
+Zum Anzeigen von Warnungen mithilfe von Systemsichten Abfragen [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Diese dynamische Verwaltungssicht zeigt die Warnungen, die nicht behoben wurden. Verwenden Sie für Hilfe beim Selektieren von Warnungen und Fehler, die [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
   
 Im folgende Beispiel wird eine allgemeine Abfrage für die aktuellen Warnungen anzeigen.  
   
@@ -72,5 +72,5 @@ ORDER BY
   
 ## <a name="see-also"></a>Siehe auch  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
+[Applianceüberwachung &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   
