@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401262"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262304"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lektion 1-2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
 In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
@@ -95,7 +95,7 @@ Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Dat
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    Der für die Spalte **CurrencyID** vorgeschlagene Datentyp ist inkompatibel mit dem Datentyp des Felds in der Zieltabelle. Weil `DimCurrency.CurrencyAlternateKey` den Datentyp nchar (3) hat, muss **CurrencyID** von string [DT_STR] in string [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` als Date-Datentyp definiert. Deshalb muss **CurrencyDate** von date [DT_Date] in database date [DT_DBDATE] geändert werden.  
+    Der für die Spalte **CurrencyID** vorgeschlagene Datentyp ist inkompatibel mit dem Datentyp des Felds in der Zieltabelle. Weil `DimCurrency.CurrencyAlternateKey` vom Datentyp „nchar (3)“ ist, muss **CurrencyID** von „string [DT_STR]“ in „Unicode string [DT_WSTR]“ geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` als Date-Datentyp definiert. Deshalb muss **CurrencyDate** von date [DT_Date] in database date [DT_DBDATE] geändert werden.  
   
 2.  Wählen Sie aus der Liste die CurrencyID-Spalte. Ändern Sie im Eigenschaftenbereich den Datentyp der Spalte **CurrencyID** von string [DT_STR] in Unicode string [DT_WSTR].  
   

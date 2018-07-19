@@ -15,17 +15,17 @@ caps.latest.revision: 2
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc1edeb74cced8b18275b57deca6b078c13a56d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d41ac350e03dfbecc53041b2bbfa2570ede717c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013757"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926851"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Datensammlung
 Standardmäßig erfasst das ReportViewer-Steuerelement anonyme Nutzungsinformationen, damit Microsoft besser nachvollziehen kann, wie die Steuerelemente von den Kunden verwendet werden. Durch ein besseres Verständnis darüber, wie die Kunden Bereitstellungen durchführen und das Viewer-Steuerelement verwenden, können zukünftige Entwicklungen so verbessert werden, dass für den Kunden der größtmögliche Nutzen erzielt wird.
 
-Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen von Microsoft](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx).
+Eine Erklärung der Datensammlungs- und Datennutzungsverfahren der Microsoft SQL Server 2016-Releases sowie anderer Produkte und Dienste finden Sie in diesen [Datenschutzbestimmungen]((http://go.microsoft.com/fwlink/?LinkID=868444)).
 
 ## <a name="opting-out-of-telemetry"></a>Deaktivieren der Telemetrie
 

@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771496"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080128"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -68,7 +68,10 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
   
      Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
 
-4.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie das Kontrollkästchen **Ich akzeptiere die Lizenzbedingungen** , wenn Sie diesen zustimmen. Klicken Sie anschließend auf **Weiter**. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
+4.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie das Kontrollkästchen **Ich akzeptiere die Lizenzbedingungen** , wenn Sie diesen zustimmen. Klicken Sie anschließend auf **Weiter**.  
+
+  >[!NOTE]
+  > SQL Server übermittelt Informationen zu Ihrer Installationserfahrung und andere Nutzungs- sowie Leistungsdaten, die Microsoft bei der Produktoptimierung unterstützen. Weitere Informationen zur Datenverarbeitung und zu Datenschutzmaßnahmen in SQL Server finden Sie in den [Datenschutzbestimmungen](https://privacy.microsoft.com/en-us/privacystatement) und unter [Konfigurieren von SQL Server zum Senden von Feedback an Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Im Fenster Globale Regeln wechselt Setup automatisch weiter zum Fenster Produktupdates, sofern keine Regelfehler auftreten.  
   
@@ -80,9 +83,9 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
   
 9. Unter **Installationsregeln** überprüft SQL Server-Setup auf potenzielle Probleme, die beim Ausführen des Setups auftreten können. Wenn Fehler auftreten, klicken Sie für weitere Informationen auf die Spalte **Status**. Klicken Sie andernfalls auf **Weiter**. 
 
-10. Wählen Sie unter **Installationstyp** entweder das Ausführen einer neuen Installation oder das Hinzufügen von Funktionen zu einer bestehenden Installation aus. Klicken Sie auf **Weiter**. 
+10. Ist dies die erste SQL Server-Installation auf dem Computer, wird die Seite **Installationstyp** übersprungen, und die Installation wechselt direkt zur Seite **Funktionsauswahl**. Wenn SQL Server bereits auf dem System installiert ist, legen Sie für den **Installationstyp** entweder fest, dass eine Neuinstallation durchgeführt werden soll oder dass Funktionen zu einer vorhandenen Installation hinzugefügt werden sollen. Klicken Sie auf **Weiter**. 
   
-11. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Um eine neue Instanz der Datenbank-Engine von SQL Server zu installieren, überprüfen Sie die **Datenbank-Engine-Dienste**.
+11. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus. Um eine neue Instanz der Datenbank-Engine von SQL Server zu installieren, überprüfen Sie die **Datenbank-Engine-Dienste**.
 
     Nach Auswahl des Funktionsnamens wird im Abschnitt **Funktionsbeschreibung** eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) und unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

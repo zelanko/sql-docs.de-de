@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,15 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075177"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790401"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,10 @@ ms.locfileid: "33075177"
 -   Zum Verwenden einer Inlinefunktion als Filterprädikat für eine Sicherheitsrichtlinie  
   
 > [!NOTE]  
->  In diesem Thema wird die Integration der .NET Framework-CLR in SQL Server erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.  
+>  In diesem Thema wird die Integration der .NET Framework-CLR in SQL Server erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.
+
+> [!NOTE]  
+>  Informationen zu Azure SQL Data Warehouse finden Sie im Artikel [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>Interoperabilität bei berechneten Spalten  
  Funktionen verfügen über die folgenden Eigenschaften. Die Werte dieser Eigenschaften bestimmen, ob Funktionen in permanent berechneten oder indizierten berechneten Spalten verwendet werden können.  
   
-|Eigenschaft|Description|Hinweise|  
+|Eigenschaft|und Beschreibung|Hinweise|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|Die Funktion ist deterministisch oder nicht deterministisch.|Lokaler Datenzugriff ist in deterministischen Funktionen zulässig. Funktionen, die immer dasselbe Ergebnis zurückgeben, wenn sie mit bestimmten Eingabewerten und mit demselben Datenbankstatus aufgerufen werden, werden beispielsweise als deterministisch bezeichnet.|  
 |**IsPrecise**|Die Funktion ist präzise oder unpräzise.|Unpräzise Funktionen enthalten Vorgänge wie Gleitkommatransaktionen.|  
@@ -649,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
-|Systemsicht|Description|  
+|Systemsicht|und Beschreibung|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Zeigt Informationen zu benutzerdefinierten CLR-Funktionen an.|  

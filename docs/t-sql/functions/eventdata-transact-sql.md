@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055197"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790831"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu Server- oder Datenbankereignissen zurück. EVENTDATA wird beim Auslösen einer Ereignisbenachrichtigung aufgerufen, und die Ergebnisse werden an den angegebenen Service Broker zurückgegeben. EVENTDATA kann auch innerhalb des Texts eines DDL- oder LOGON-Triggers verwendet werden.  
+Diese Funktion gibt Informationen zu Server- oder Datenbankereignissen zurück. Beim Auslösen einer Ereignisbenachrichtigung und, wenn der angegebene Service Broker die Ergebnisse empfängt, wird `EVENTDATA` aufgerufen. Ein DDL- oder LOGON-Trigger unterstützt auch die interne Verwendung von `EVENTDATA`.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- EVENTDATA gibt nur Daten zurück, wenn ein direkter Verweis innerhalb eines DDL- oder LOGON-Triggers vorliegt. Wenn EVENTDATA von anderen Routinen aufgerufen wird, wird auch dann NULL zurückgegeben, wenn diese Routinen von einem DDL- oder LOGON-Trigger aufgerufen wurden.  
+`EVENTDATA` gibt nur Daten zurück, wenn ein direkter Verweis innerhalb eines DDL- oder LOGON-Triggers vorliegt. `EVENTDATA` gibt beim Aufruf durch andere Routinen NULL zurück, selbst wenn diese Routinen durch einen DDL- oder LOGON-Trigger aufgerufen werden.
   
- Von EVENTDATA zurückgegebene Daten sind nicht gültig, nachdem für eine Transaktion, die EVENTDATA implizit oder explizit aufgerufen hat, ein Commit oder ein Rollback ausgeführt wurde.  
+Von `EVENTDATA` zurückgegebene Daten sind ungültig, nachdem eine Transaktion
+
++ `EVENTDATA` explizit aufruft
++ `EVENTDATA` implizit aufruft
++ einen Commit ausführt
++ durch ein Rollback rückgängig gemacht wurde  
   
 > [!CAUTION]  
->  EVENTDATA gibt XML-Daten zurück. Diese Daten werden als Unicode an den Client gesendet; dabei werden 2 Bytes für jedes Zeichen verwendet. Die folgenden Unicode-Codeelemente können in den von EVENTDATA zurückgegebenen XML-Daten dargestellt werden:  
+>  `EVENTDATA` gibt XML-Daten zurück, die als Unicode an den Client gesendet werden; dabei werden 2 Bytes für jedes Zeichen verwendet. `EVENTDATA` gibt XML-Daten zurück, die diese Unicode-Codeendpunkte darstellen können:  
 >   
 >  `0x0009`  
 >   
@@ -68,24 +72,24 @@ EVENTDATA( )
 >   
 >  `>= 0xE000 && <= 0xFFFD`  
 >   
->  Einige Zeichen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern und -Daten enthalten sein können, sind in XML nicht zulässig oder können nicht als XML ausgedrückt werden. Zeichen oder Daten mit Codeelementen, die in der vorhergehenden Liste nicht enthalten sind, weisen ein Fragezeichen auf (?).  
+>  In XML können und werden einige Zeichen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern und -Daten vorkommen können, nicht ausgedrückt bzw. zugelassen. Zeichen oder Daten mit Codeelementen, die in der vorhergehenden Liste nicht enthalten sind, weisen ein Fragezeichen auf (?).  
   
- Zum Schutz der Anmeldedaten werden beim Ausführen einer CREATE LOGIN-Anweisung oder ALTER LOGIN-Anweisung keine Kennwörter angezeigt.  
+Kennwörter werden nicht angezeigt, wenn `CREATE LOGIN`- oder `ALTER LOGIN`-Anweisungen ausgeführt werden. Dies dient dem Schutz der Anmeldeinformationen.  
   
 ## <a name="schemas-returned"></a>Zurückgegebene Schemas  
- EVENTDATA gibt einen Wert vom Typ **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse im folgenden Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA gibt einen Wert vom Datentyp **xml** zurück. Standardmäßig wird die Schemadefinition für alle Ereignisse in diesem Verzeichnis installiert: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Alternativ wird das Ereignisschema auf der Webseite [Microsoft SQL Server: XML-Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) veröffentlicht.  
+Auf der Webseite [Microsoft SQL Server: XML-Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) ist ebenfalls das Ereignisschema veröffentlicht.  
   
- Um das Schema für ein besonderes Ereignis zu extrahieren, durchsuchen Sie das Schema nach dem komplexen Typ `EVENT_INSTANCE_\<event_type>`. Um beispielsweise das Schema für das DROP_TABLE-Ereignis zu extrahieren, durchsuchen Sie das Schema nach `EVENT_INSTANCE_DROP_TABLE`.  
+Um das Schema für ein besonderes Ereignis zu extrahieren, durchsuchen Sie das Schema nach dem komplexen Typ `EVENT_INSTANCE_<event_type>`. Zum Beispiel können Sie das Schema für das `DROP_TABLE`-Ereignis extrahieren, indem Sie das Schema nach `EVENT_INSTANCE_DROP_TABLE` durchsuchen.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Abfragen von Ereignisdaten in einem DDL-Trigger  
- Im folgenden Beispiel wird ein DDL-Trigger erstellt, der verhindern soll, dass neue Tabellen in der Datenbank erstellt werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die den Trigger auslöst, wird durch Verwenden eines XQuery-Ausdrucks für die von EVENTDATA generierten XML-Daten erfasst. Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
+In diesem Beispiel wird ein DDL-Trigger erstellt, der die Erstellung neuer Datenbanktabellen verhindert. Durch die Verwendung von XQuery für die von `EVENTDATA` generierten XML-Daten wird die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erfasst, die den Trigger auslöst. Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  
->  Wenn Sie das `\<TSQLCommand>`-Element mithilfe von **Ergebnisse in Raster** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abfragen, werden keine Zeilenumbrüche im Befehlstext angezeigt. Verwenden Sie stattdessen **Ergebnisse in Text**.  
+>  Wenn Sie mithilfe von **Ergebnisse in Raster** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] das `<TSQLCommand>`-Element abfragen, werden keine Zeilenumbrüche im Befehlstext angezeigt. Verwenden Sie stattdessen **Ergebnisse in Text**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  Wenn Sie Ereignisdaten zurückgeben möchten, wird die Verwendung der XQuery-**value()**-Methode anstelle der **query()**-Methode empfohlen. Bei der **query()**-Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()**-Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
+>  Zum Zurückgeben von Ereignisdaten verwenden Sie die XQuery-Methode **value()** anstelle der Methode **query()**. Bei der **query()**-Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()**-Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Erstellen einer Protokolltabelle mit Ereignisdaten in einem DDL-Trigger  
- Im folgenden Beispiel wird eine Tabelle zum Speichern von Informationen zu Ereignissen auf allen Datenbankebenen erstellt und die Tabelle mit einem DDL-Trigger aufgefüllt. Der Ereignistyp und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung werden mithilfe eines XQuery-Ausdrucks für alle von `EVENTDATA` generierten XML-Daten erfasst.  
+In diesem Beispiel wird eine Tabelle zum Speichern von Informationen zu Ereignissen auf allen Datenbankebenen erstellt und die Tabelle mit einem DDL-Trigger aufgefüllt. Durch die Verwendung von XQuery für die von `EVENTDATA` generierten XML-Daten wird der Ereignistyp und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erfasst.  
   
 ```  
 USE AdventureWorks2012;  

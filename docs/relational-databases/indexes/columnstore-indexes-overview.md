@@ -1,7 +1,7 @@
 ---
 title: 'Columnstore-Indizes: Übersicht | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,6 +13,7 @@ helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
 - columnstore index
+- batch mode execution
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
@@ -21,19 +22,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1987c099ba787f36dac77eb08a8e88b1e7c71869
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6647b4e87a1ea3e83bd76eacde73a93c7b6fe57
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941015"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791437"
 ---
 # <a name="columnstore-indexes---overview"></a>Columnstore-Indizes: Übersicht
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 *Columnstore-Indizes* stellen den Standard für das Speichern und Abfragen großer Faktentabellen im Data Warehousing dar. Er verwendet spaltenbasierte Datenspeicherung und Abfrageverarbeitung, um bis zu **zehnfach höhere Abfrageleistung** im Data Warehouse im Vergleich mit herkömmlicher zeilenorientierter Speicherung und bis zu **zehnfache Datenkomprimierung** gemessen am unkomprimierten Datenvolumen zu erreichen. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ermöglichen Columnstore-Indizes die operative Analyse und bieten damit die Möglichkeit, leistungsfähige Echtzeitanalysen einer Translationsarbeitsauslastung durchzuführen.  
   
- Zu den Szenarien wechseln:  
+Zu den Szenarien wechseln:  
   
 -   [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
@@ -42,61 +43,60 @@ ms.locfileid: "32941015"
  Ein *columnstore index* ist eine Technologie zum Speichern, Abrufen und Verwalten von Daten mithilfe eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird.  
   
 ### <a name="key-terms-and-concepts"></a>Hauptbegriffe und -Konzepte  
- Die folgenden Hauptbegriffe und -konzepte werden im Zusammenhang mit Columnstore-Indizes verwendet.  
+Die folgenden Hauptbegriffe und -konzepte werden im Zusammenhang mit Columnstore-Indizes verwendet.  
   
- columnstore  
- Ein *Columnstore* enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und physisch in einem Spaltendatenformat gespeichert sind.  
+**Columnstore**  
+Ein *Columnstore* enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und physisch in einem Spaltendatenformat gespeichert sind.  
   
- Rowstore  
- Ein *Rowstore* enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und anschließend physisch in einem Zeilendatenformat gespeichert sind. Dies war die traditionelle Vorgehensweise beim Speichern von Daten aus relationalen Tabellen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht Rowstore sich auf die Tabelle, deren zugrunde liegendes Datenspeicherformat ein Heap, ein gruppierter Index oder eine speicheroptimierte Tabelle ist.  
+**Rowstore**  
+Ein *Rowstore* enthält Daten, die logisch als Tabelle mit Zeilen und Spalten organisiert und anschließend physisch in einem Zeilendatenformat gespeichert sind. Dies war die traditionelle Vorgehensweise beim Speichern von Daten aus relationalen Tabellen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht Rowstore sich auf die Tabelle, deren zugrunde liegendes Datenspeicherformat ein Heap, ein gruppierter Index oder eine speicheroptimierte Tabelle ist.  
   
 > [!NOTE]  
 > In Diskussionen zu Columnstore-Indizes verwenden wir die Begriffe *Rowstore* und *Columnstore* , um das Format der Datenspeicherung zu bezeichnen.  
   
- Zeilengruppe  
- Eine *Zeilengruppe* ist eine Gruppe von Zeilen, die gleichzeitig in das Columnstore-Format komprimiert werden. Eine Zeilengruppe enthält normalerweise die maximale Anzahl von Zeilen pro Zeilengruppe, die 1.048.576 Zeilen beträgt.  
+**Zeilengruppe**  
+Eine *Zeilengruppe* ist eine Gruppe von Zeilen, die gleichzeitig in das Columnstore-Format komprimiert werden. Eine Zeilengruppe enthält normalerweise die maximale Anzahl von Zeilen pro Zeilengruppe, die 1.048.576 Zeilen beträgt.  
   
- Um eine hohe Leistung und hohe Komprimierungsraten zu erzielen, unterteilt der Columnstore-Index die Tabelle in Gruppen von Zeilen, die als Zeilengruppen bezeichnet werden, und komprimiert dann jede Zeilengruppe nach Spalten. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.  
- Spaltensegment  
- Ein *Spaltensegment* ist eine Spalte mit Daten aus der Zeilengruppe.  
+Um eine hohe Leistung und hohe Komprimierungsraten zu erzielen, unterteilt der Columnstore-Index die Tabelle in Gruppen von Zeilen, die als Zeilengruppen bezeichnet werden, und komprimiert dann jede Zeilengruppe nach Spalten. Die Anzahl der Zeilen in der Zeilengruppe muss groß genug sein, um die Komprimierungsraten zu verbessern, und klein genug, um von In-Memory-Vorgängen profitieren zu können.    
+
+**Spaltensegment**  
+Ein *Spaltensegment* ist eine Spalte mit Daten aus der Zeilengruppe.  
   
 -   Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle.  
 -   Jedes Spaltensegment wird zusammenhängend komprimiert und auf physischen Medien gespeichert.  
   
- ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
- Gruppierter Columnstore-Index  
- Ein *gruppierter Columnstore-Index* ist der physische Speicher für die gesamte Tabelle.  
+**Gruppierter Columnstore-Index**  
+Ein *gruppierter Columnstore-Index* ist der physische Speicher für die gesamte Tabelle.    
   
- ![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
- Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einem gruppierten Index, der als Deltastore bezeichnet wird, sowie in einer B-Struktur mit IDs der gelöschten Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
+Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einem gruppierten Index, der als Deltastore bezeichnet wird, sowie in einer B-Struktur mit IDs der gelöschten Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
   
- Delta-Zeilengruppe  
- Eine *Delta-Zeilengruppe* wird nur in Kombination mit Columnstore-Indizes verwendet und stellt seinerseits einen gruppierten Index dar, der die Komprimierung und Leistung für Columnstore verbessert, indem er Zeilen speichert, bis die Anzahl der gespeicherten Zeilen einen Schwellenwert erreicht, bei dem die Zeilen dann in den Columnstore verschoben werden.  
+**Delta-Zeilengruppe**  
+Eine *Delta-Zeilengruppe* wird nur in Kombination mit Columnstore-Indizes verwendet und stellt seinerseits einen gruppierten Index dar, der die Komprimierung und Leistung für Columnstore verbessert, indem er Zeilen speichert, bis die Anzahl der gespeicherten Zeilen einen Schwellenwert erreicht, bei dem die Zeilen dann in den Columnstore verschoben werden.  
 
- Wenn eine Delta-Zeilengruppe die maximale Zeilenanzahl erreicht, wird sie geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn die geschlossene Zeilengruppe gefunden wird, wird sie komprimiert und im Columnstore-Index gespeichert.  
+Wenn eine Delta-Zeilengruppe die maximale Zeilenanzahl erreicht, wird sie geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn die geschlossene Zeilengruppe gefunden wird, wird sie komprimiert und im Columnstore-Index gespeichert.  
   
-Deltastore: Ein Columnstore-Index kann über mehr als eine Delta-Zeilengruppe verfügen.  Alle Delta-Zeilengruppen werden gemeinsam als *Deltastore* bezeichnet.   
+**Deltastore**: Ein Columnstore-Index kann über mehr als eine Delta-Zeilengruppe verfügen.  Alle Delta-Zeilengruppen werden gemeinsam als *Deltastore* bezeichnet.   
 
 Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umweg über den Deltastore direkt in den Columnstore verschoben. Einige Zeilen am Ende des Massenladevorgangs erreichen möglicherweise nicht die notwendige Anzahl für die minimale Größe einer Zeilengruppe von 102.400 Zeilen. Wenn dieser Fall auftritt, werden die letzten Zeilen in den Deltastore und nicht in den Columnstore aufgenommen. Bei kleinen Massenladevorgängen mit weniger als 102.400 Zeilen werden alle Zeilen direkt in den Deltastore verschoben.  
   
-
+**Nicht gruppierter Columnstore-Index**  
+Ein *nicht gruppierter Columnstore-Index* und ein gruppierter Columnstore-Index sind funktional gleich. Der Unterschied besteht darin, dass ein nicht gruppierter Index ein sekundärer Index ist, der für eine Rowstore-Tabelle erstellt wird, während einer gruppierter Columnstore-Index den primären Speicher für die gesamte Tabelle darstellt.  
   
- Nicht gruppierter Columnstore-Index  
- Ein *nicht gruppierter Columnstore-Index* und ein gruppierter Columnstore-Index sind funktional gleich. Der Unterschied besteht darin, dass ein nicht gruppierter Index ein sekundärer Index ist, der für eine Rowstore-Tabelle erstellt wird, während einer gruppierter Columnstore-Index den primären Speicher für die gesamte Tabelle darstellt.  
+Der nicht gruppierte Index enthält eine Kopie eines Teils oder aller Zeilen und Spalten der zugrundeliegenden Tabelle. Der Index ist als eine oder mehrere Spalte(n) der Tabelle definiert und weist eine optionale Bedingung auf, die zum Filtern der Zeilen dient.  
   
- Der nicht gruppierte Index enthält eine Kopie eines Teils oder aller Zeilen und Spalten der zugrundeliegenden Tabelle. Der Index ist als eine oder mehrere Spalte(n) der Tabelle definiert und weist eine optionale Bedingung auf, die zum Filtern der Zeilen dient.  
+Ein nicht gruppierter Columnstore-Index ermöglicht operative Echtzeitanalyse, bei der die OLTP-Arbeitsauslastung den zugrundeliegenden gruppierten Index verwendet, während die Analyse parallel auf dem Columnstore-Index ausgeführt wird. Weitere Informationen finden Sie unter [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
- Ein nicht gruppierter Columnstore-Index ermöglicht operative Echtzeitanalyse, bei der die OLTP-Arbeitsauslastung den zugrundeliegenden gruppierten Index verwendet, während die Analyse parallel auf dem Columnstore-Index ausgeführt wird. Weitere Informationen finden Sie unter [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
-  
- Batchausführung  
- Die*Batchausführung* ist eine Methode zur Abfrageverarbeitung, bei der Abfragen mehrere Zeilen zugleich verarbeiten. Abfragen von Columnstore-Indizes verwenden die Batchmodusausführung, mit der sich die Abfrageleistung normalerweise um das Zwei- bis Vierfache steigern lässt. Die Batchausführung ist eng in das Columnstore-Speicherformat integriert und für dieses optimiert. Die Batchmodusausführung wird auch als vektorbasierte oder vektorisierte Ausführung bezeichnet.  
+**Batchmodusausführung**  
+Die *Batchmodusausführung* ist eine Methode zur Abfrageverarbeitung, die zum gleichzeitigen Abfragen mehrerer Zeilen verwendet wird. Die Batchmodusausführung ist eng in das Columnstore-Speicherformat integriert und für dieses optimiert. Die Batchmodusausführung wird auch als vektorbasierte oder vektorisierte Ausführung bezeichnet. Abfragen von Columnstore-Indizes verwenden die Batchmodusausführung, mit der sich die Abfrageleistung normalerweise um das Zwei- bis Vierfache steigern lässt. Weitere Informationen zu den Ausführungsmodi finden Sie unter [Handbuch zur Architektur der Abfrageverarbeitung](../query-processing-architecture-guide.md#execution-modes). 
   
 ##  <a name="benefits"></a> Warum sollte ich einen Columnstore-Index verwenden?  
- Ein Columnstore-Index kann eine sehr hohe Datenkomprimierung bieten, normalerweise etwa zehnfach, und reduziert so die Speicherkosten für ein Data Warehouse erheblich. In der Analyse ist die Leistung um eine Größenordnung besser als bei einem B-Strukturindex. Er stellt daher das bevorzugte Format der Datenspeicherung für Data Warehouse- und Analysearbeitsauslastungen dar. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie Columnstore-Indizes für Echtzeitanalysen Ihrer Betriebsarbeitsauslastung verwenden.  
+Ein Columnstore-Index kann eine sehr hohe Datenkomprimierung bieten, normalerweise etwa zehnfach, und reduziert so die Speicherkosten für ein Data Warehouse erheblich. In der Analyse ist die Leistung um eine Größenordnung besser als bei einem B-Strukturindex. Er stellt daher das bevorzugte Format der Datenspeicherung für Data Warehouse- und Analysearbeitsauslastungen dar. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie Columnstore-Indizes für Echtzeitanalysen Ihrer Betriebsarbeitsauslastung verwenden.  
   
- Gründe für die hohe Geschwindigkeit von Columnstore-Indizes:  
+Gründe für die hohe Geschwindigkeit von Columnstore-Indizes:  
   
 -   In Spalten werden Werte aus dem gleichen Bereich gespeichert, die oftmals ähnliche Werte aufweisen, wodurch sich hohe Komprimierungsraten ergeben. Dadurch wird der E/A-Engpass im System minimiert oder beseitigt, während zugleich der Arbeitsspeicherbedarf deutlich sinkt.  
   
@@ -107,24 +107,24 @@ Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umw
 -   Bei Abfragen werden häufig nur wenige Spalten aus einer Tabelle ausgewählt, wodurch das Gesamtaufkommen der E/A-Vorgänge für das physische Medium reduziert wird.  
   
 ## <a name="when-should-i-use-a-columnstore-index"></a>Wann sollte ein Columnstore-Index verwendet werden?  
- Empfohlene Einsatzgebiete:  
+Empfohlene Einsatzgebiete:  
   
 -   Verwenden Sie einen gruppierten Columnstore-Index zum Speichern von Faktentabellen und umfangreichen Dimensionstabellen für Data Warehouse-Arbeitsauslastungen. Dadurch lassen sich Abfrageleistung und Datenkomprimierung bis zum Zehnfachen steigern. Siehe [Columnstore-Indizes für Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md).  
   
 -   Verwenden Sie einen nicht gruppierten Columnstore-Index, um Echtzeitanalysen für OLTP-Arbeitsauslastungen auszuführen. Siehe [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### <a name="how-do-i-choose-between-a-rowstore-index-and-a-columnstore-index"></a>Wie treffe ich die Entscheidung zwischen einem Rowstore-Index und einem Columnstore-Index?  
- Rowstore-Indizes zeigen die beste Leistung bei Abfragen, die in den Daten suchen, nach einem bestimmten Wert suchen oder einen kleinen Bereich von Werten abfragen. Verwenden Sie Rowstore-Indizes für Transaktionsarbeitsauslastungen, da sie tendenziell eher Suchvorgänge in Tabellen als Scans gesamter Tabellen erfordern.  
+Rowstore-Indizes zeigen die beste Leistung bei Abfragen, die in den Daten suchen, nach einem bestimmten Wert suchen oder einen kleinen Bereich von Werten abfragen. Verwenden Sie Rowstore-Indizes für Transaktionsarbeitsauslastungen, da sie tendenziell eher Suchvorgänge in Tabellen als Scans gesamter Tabellen erfordern.  
   
- Columnstore-Indizes ermöglichen große Leistungsvorteile bei Analyseabfragen, die große Mengen von Daten durchsuchen, insbesondere bei umfangreichen Tabellen.  Verwenden Sie Columnstore-Indizes für Data Warehouse- und Analysearbeitsauslastungen, insbesondere für Faktentabellen, da für diese eher Scans der gesamten Tabellen als Suchvorgänge in Tabellen erforderlich sind.  
+Columnstore-Indizes ermöglichen große Leistungsvorteile bei Analyseabfragen, die große Mengen von Daten durchsuchen, insbesondere bei umfangreichen Tabellen.  Verwenden Sie Columnstore-Indizes für Data Warehouse- und Analysearbeitsauslastungen, insbesondere für Faktentabellen, da für diese eher Scans der gesamten Tabellen als Suchvorgänge in Tabellen erforderlich sind.  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Können Rowstore und Columnstore in der gleichen Tabelle kombiniert werden?  
- Ja. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie einen aktualisierbaren, nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle erstellen. Der Columnstore-Index speichert eine Kopie der gewählten Spalten, daher ist hier zusätzlicher Speicherplatz erforderlich, diese Kopie wird jedoch im Schnitt um dem Faktor 10 komprimiert. Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.  
+Ja. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie einen aktualisierbaren, nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle erstellen. Der Columnstore-Index speichert eine Kopie der gewählten Spalten, daher ist hier zusätzlicher Speicherplatz erforderlich, diese Kopie wird jedoch im Schnitt um dem Faktor 10 komprimiert. Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.  
   
- Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können nicht gruppierte Rowstore-Indizes für einen Columnstore-Index erstellt werden. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Wert nicht in den Columnstore einfügen.  
+Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können nicht gruppierte Rowstore-Indizes für einen Columnstore-Index erstellt werden. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Wert nicht in den Columnstore einfügen.  
   
 ## <a name="metadata"></a>Metadaten  
- Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschlossene Spalten gespeichert. Der Columnstore-Index weist keine Schlüsselspalten auf.  
+Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschlossene Spalten gespeichert. Der Columnstore-Index weist keine Schlüsselspalten auf.  
 
 |||
 |-|-|  
@@ -137,9 +137,9 @@ Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umw
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Alle relationalen Tabellen, sofern Sie sie nicht als gruppierten Columnstore-Index festlegen, verwenden Rowstore als zugrundeliegendes Datenformat. `CREATE TABLE` erstellt eine Rowstore-Tabelle, es sei denn, Sie geben die Option `WITH CLUSTERED COLUMNSTORE INDEX` an.  
+Alle relationalen Tabellen, sofern Sie sie nicht als gruppierten Columnstore-Index festlegen, verwenden Rowstore als zugrundeliegendes Datenformat. `CREATE TABLE` erstellt eine Rowstore-Tabelle, es sei denn, Sie geben die Option `WITH CLUSTERED COLUMNSTORE INDEX` an.  
   
- Beim Erstellen einer Tabelle mit der `CREATE TABLE`-Anweisung können Sie die Tabelle als Columnstore erstellen, indem Sie die Option `WITH CLUSTERED COLUMNSTORE INDEX` angeben. Wenn Sie bereits über eine Rowstore-Tabelle verfügen, die Sie in einen Columnstore konvertieren möchten, können Sie die Anweisung `CREATE COLUMNSTORE INDEX` verwenden.  
+Beim Erstellen einer Tabelle mit der `CREATE TABLE`-Anweisung können Sie die Tabelle als Columnstore erstellen, indem Sie die Option `WITH CLUSTERED COLUMNSTORE INDEX` angeben. Wenn Sie bereits über eine Rowstore-Tabelle verfügen, die Sie in einen Columnstore konvertieren möchten, können Sie die Anweisung `CREATE COLUMNSTORE INDEX` verwenden.  
   
 |Task|Referenzthemen|Hinweise|  
 |----------|----------------------|-----------|  
@@ -170,8 +170,3 @@ Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umw
  [Columnstore Index Architecture (Columnstore-Indizes: Architektur)](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
-
-
-
-
-

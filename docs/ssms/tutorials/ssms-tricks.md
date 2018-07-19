@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455254"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080098"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -201,7 +204,7 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
 
 6. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
 
-## <a name="determine-sql-server-name"></a>Ermitteln des Namens Ihres SQL-Servers
+## <a name="determine-sql-server-name"></a>Suchen des Namens der SQL Server-Instanz
 Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Vor dem Herstellen einer Verbindung mit SQL Server

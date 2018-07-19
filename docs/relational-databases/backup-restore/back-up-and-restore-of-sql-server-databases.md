@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708028"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324484"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708028"
   
 ##  <a name="glossary-of-backup-terms"></a>Glossarbegriffe für die Sicherung
  **Sichern** [Verb]  
- Kopiert die Daten oder Protokolldatensätze aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank oder aus deren Transaktionsprotokoll auf ein Sicherungsmedium, z. B. einen Datenträger, um eine Datensicherung oder Protokollsicherung zu erstellen.  
+ Der Prozess zum Erstellen einer **Sicherung [Substantiv]** durch Kopieren von Datensätzen aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank oder Protokolldatensätzen aus dem jeweiligen Transaktionsprotokoll.  
   
  **Sicherung** [Substantiv]  
  Eine Datenkopie, die zum Wiederherstellen der Daten nach einem Fehler verwendet werden kann. Sicherungen einer Datenbank können auch verwendet werden, um eine Kopie der Datenbank an einem neuen Speicherort wiederherzustellen.  

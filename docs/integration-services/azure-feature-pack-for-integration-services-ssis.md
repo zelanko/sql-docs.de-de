@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack für Integration Services (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405052"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934862"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erweiterung, die die auf dieser Seite für SSIS aufgelisteten Komponenten für Verbindungen mit Azure-Diensten, für die Übertragung von Daten zwischen Azure und lokalen Datenquellen und für die Verarbeitung der in Azure gespeicherten Daten bereitstellt.
@@ -39,33 +39,37 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
 ## <a name="components-in-the-feature-pack"></a>Komponenten im Feature Pack
 -   Verbindungs-Manager
 
+    -   [Azure Data Lake Analytics-Verbindungs-Manager](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store Connection Manager (Azure Data Lake Store-Verbindungs-Manager)](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight-Verbindungs-Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure Resource Manager-Verbindungs-Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure Storage-Verbindungs-Manager](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure-Abonnementverbindungs-Manager](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store Connection Manager (Azure Data Lake Store-Verbindungs-Manager)](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure Resource Manager-Verbindungs-Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight-Verbindungs-Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   Aufgaben
-
-    -   [Azure-Blob-Uploadtask](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure Blob-Download-Task](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight Hive-Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure-Blob-Uploadtask](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig-Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics-Task](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store-Dateisystemtask](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight Create Cluster-Task](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight-Delete Cluster-Task](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure SQL DW-Uploadtask](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure HDInsight Hive-Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Azure Data Lake Store-Dateisystemtask](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Azure HDInsight Pig-Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Azure SQL DW-Uploadtask](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   Datenflusskomponenten
 
@@ -77,7 +81,7 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure-Blob- und ADLS-Dateienumerator. Siehe [Foreach Loop Container](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296) (Foreach-Schleifencontainer).
+-   Azure Blob und Azure Data Lake Store-Datei-Enumerator. Siehe [Foreach Loop Container](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296) (Foreach-Schleifencontainer).
 
 ## <a name="scenario-processing-big-data"></a>Szenario: Verarbeitung großer Datenmengen
  Verwenden Sie den Azure Connector zum Ausführen der folgenden Big Data-Verarbeitungsaufgaben:

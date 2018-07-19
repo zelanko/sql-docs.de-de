@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239310"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786811"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,6 +53,9 @@ Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn
   
 ## <a name="return-types"></a>Rückgabetypen
 **int**
+
+## <a name="remarks"></a>Remarks
+`DB_ID` wird möglicherweise nur verwendet, um die Datenbank-ID der aktuellen Datenbank in Azure SQL-Datenbank zurückzugeben. NULL wird zurückgegeben, wenn der angegebene Datenbankname von dem der aktuellen Datenbank abweicht.
   
 ## <a name="permissions"></a>Berechtigungen  
 Wenn der Aufrufer von `DB_ID` keine spezifische Nicht-**Master**- oder Nicht-**tempdb**-Datenbank besitzt, sind mindestens die Berechtigungen `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` auf Serverebene erforderlich, um die entsprechende `DB_ID`-Zeile anzuzeigen. `DB_ID` benötigt zumindest die Berechtigung `CREATE DATABASE` für die **Master**-Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung herstellt, wird immer in **sys.databases** angezeigt.

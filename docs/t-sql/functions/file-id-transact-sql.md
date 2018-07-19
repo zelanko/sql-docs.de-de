@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,20 +23,20 @@ helpviewer_keywords:
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0857a8982fe64d2e2461f5420588ea4a9c527556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f7d7a1a8e585370353050abb508464ce0f1c0ed
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054007"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788471"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die Datei-ID für den angegebenen logischen Dateinamen in der aktuellen Datenbank zurück.  
+Für den angegebenen logischen Namen für eine Komponentendatei der aktuellen Datenbank gibt diese Funktion die Datei-ID zurück.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
@@ -47,25 +46,26 @@ ms.locfileid: "33054007"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 FILE_ID ( file_name )  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *file_name*  
- Ein Ausdruck vom Typ **sysname** für den Namen der Datei, für die die Datei-ID zurückgegeben werden soll.  
+*file_name*  
+Ein Ausdruck vom Typ **sysname**, der den logischen Namen der Datei darstellt, deren Datei-ID-Wert `FILE_ID` zurückgegeben wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **smallint**  
+**smallint**  
   
 ## <a name="remarks"></a>Remarks  
- *file_name* entspricht dem logischen Dateinamen, der in der Spalte „Name“ in den Katalogsichten „sys.master_files“ oder „sys.database_files“ angezeigt wird.  
+*file_name* entspricht dem logischen Dateinamen, der in der Namensspalte in den Katalogsichten „sys.master_files“ oder „sys.database_files“ angezeigt wird.  
+
+`FILE_ID` gibt `NULL` zurück, wenn *file_name* nicht mit dem logischen Namen einer Komponentendatei der aktuellen Datenbank übereinstimmt.
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Volltextkatalogen zugewiesene Dateikennzeichnungsnummer größer als 32767. Da der Rückgabetyp der FILE_ID-Funktion **smallint** ist, kann diese Funktion nicht für Volltextdateien verwendet werden. Verwenden Sie stattdessen [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Volltextkatalogen zugewiesene Datei-ID größer als 32767. Da die `FILE_ID`-Funktion den Rückgabetyp **smallint** aufweist, wird `FILE_ID` keine Volltextdateien unterstützen. Verwenden Sie stattdessen [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Datei-ID für die Datei `AdventureWorks_Data` zurückgegeben.  
-  
+Dieses Beispiel gibt den Datei-ID-Wert für die `AdventureWorks_Data`-Datei zurück, bei der es sich um eine Komponentendatei der `ADVENTUREWORKS2012`-Datenbank handelt.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  

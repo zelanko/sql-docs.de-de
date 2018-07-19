@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698331"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107238"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 
 ### <a name="general-guidelines"></a>Allgemeine Richtlinien
 - Vergewissern Sie sich, dass Azure Key Vault und Azure SQL-Datenbank in demselben Mandanten gespeichert werden.  Mandantenübergreifende Interaktionen von Key Vaults und Servern **werden nicht unterstützt**.
-- Legen Sie fest, welche Abonnements für die erforderlichen Ressourcen verwendet werden sollen. Wenn Sie dem Server später anderen Abonnements zuweisen, ist ein erneutes Setup von TDE mit BYOK erforderlich.
+- Legen Sie fest, welche Abonnements für die erforderlichen Ressourcen verwendet werden sollen. Wenn Sie dem Server später anderen Abonnements zuweisen, ist ein erneutes Setup von TDE mit BYOK erforderlich. Weitere Informationen über das [Verschieben von Ressourcen](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - Beim Konfigurieren von TDE mit BYOK müssen Sie die Last berücksichtigen, die durch wiederholte wrap-/unwrap-Vorgänge im Schlüsseltresor entsteht. Ein Beispiel: Da alle Datenbanken, die einem logischen Server zugeordnet sind, den gleichen TDE Protector verwenden, löst ein Failover dieses Servers so viele Schlüsselvorgänge im Tresor aus, wie Datenbanken auf dem Server vorhanden sind. Basierend auf unseren Erfahrungen und den dokumentierten [Grenzwerten des Key Vault-Diensts](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) empfehlen wir, einer Azure Key Vault-Instanz in einem einzelnen Abonnement höchstens 500 Datenbanken mit dem Tarif „Standard“ oder der SKU „Universell“ oder 200 Datenbanken mit dem Tarif „Premium“ oder der SKU „Unternehmenskritisch“ zuzuordnen, um beim Zugriff auf den TDE Protector im Tresor eine konsistente Hochverfügbarkeit sicherzustellen. 
 - Empfehlung: Speichern Sie lokal eine Kopie des TDE Protectors.  Dafür benötigen Sie ein HSM-Gerät, um einen TDE Protector lokal zu erstellen, und ein Schlüsselhinterlegungssystem zum Speichern der lokalen Kopie des TDE Protectors.
 
@@ -68,6 +68,7 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 - Erstellen Sie einen Schlüsseltresor, für den [vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) aktiviert ist, um sich vor Datenverlusten zu schützen, falls der Schlüssel bzw. der Schlüsseltresor aus Versehen gelöscht wird.  Sie müssen [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren verwenden (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert):  
   - Vorläufig gelöschte Ressourcen bleiben für einen Zeitraum von 90 Tagen weiter gespeichert. In diesem Zeitraum können sie wiederhergestellt oder endgültig gelöscht werden.
   - Den Aktionen **Wiederherstellen** und **Endgültig löschen** sind über Zugriffsrichtlinien für den Schlüsseltresor eigene Berechtigungen zugewiesen. 
+- Legen Sie eine Ressourcensperre für den Schlüsseltresor fest, um zu steuern, wer diese wichtige Ressource löschen darf, und, um ein versehentliches oder nicht autorisiertes Löschen zu verhindern.  [Weitere Informationen zu Ressourcensperren](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Erteilen Sie dem logischen Server über dessen Azure AD-Identität (Azure Active Directory) Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure AD-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen für den Schlüsseltresor erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure AD-Identität erstellt werden. Außerdem sollte der Abschluss des Vorgangs überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 

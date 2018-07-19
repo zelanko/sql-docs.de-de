@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744129"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909580"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  Unter folgenden Umständen kann eine Spalte nicht gelöscht werden:  
   
--   Wenn sie in einem Index verwendet wird.  
+-   Wenn sie in einem Index als Schlüsselspalte oder als INCLUDE-Element verwendet wird.
   
 -   Wenn sie in einer CHECK-, FOREIGN KEY-, UNIQUE- oder PRIMARY KEY-Einschränkung verwendet wird.  
   
@@ -645,7 +644,7 @@ Informationen zu **SWITCH**-Einschränkungen beim Verwenden von Replikaten finde
   
  Wenn *partition_scheme_name* angegeben wurde, gelten die Regeln für [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Die Tabelle sollte bereits für Zeilendaten partitioniert sein, und das Partitionsschema muss die gleiche Partitionsfunktion und die gleichen Partitionsspalten wie das FILESTREAM-Partitionsschema verwenden.  
   
- *filestream_filegroup_name* gibt den Namen einer FILESTREAM-Dateigruppe an. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
+ *filestream_filegroup_name* gibt den Namen einer FILESTREAM-Dateigruppe an. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
   
  **"** default **"** gibt die FILESTREAM-Dateigruppe mit dem DEFAULT-Eigenschaftensatz an. Wenn keine FILESTREAM-Dateigruppe vorhanden ist, wird ein Fehler ausgelöst.  
   

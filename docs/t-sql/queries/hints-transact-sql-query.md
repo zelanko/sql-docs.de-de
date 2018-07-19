@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470291"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854342"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470291"
  Mit SIMPLE wird der Abfrageoptimierer angewiesen, einfache Parametrisierung auszuführen. Mit FORCED wird der Abfrageoptimierer angewiesen, eine erzwungene Parametrisierung auszuführen. Weitere Informationen finden Sie unter [„Erzwungene Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) und unter [„Einfache Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
- Weist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an, den für die Abfrage generierten Abfrageplan nach der Ausführung zu verwerfen. Dadurch wird der Abfrageoptimierer gezwungen, erneut einen Abfrageplan zu kompilieren, wenn dieselbe Abfrage das nächste Mal ausgeführt wird. Ohne die Angabe von RECOMPILE werden Abfragepläne von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zwischengespeichert und wiederverwendet. Beim Kompilieren von Abfrageplänen verwendet der RECOMPILE-Abfragehinweis die aktuellen Werte von lokalen Variablen in der Abfrage und, falls sich die Abfrage innerhalb einer gespeicherten Prozedur befindet, die an Parameter übergebenen aktuellen Werte.  
+ Weist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an, einen neuen, temporären Plan für die Abfrage zu erstellen und diesen Plan sofort nach Ausführung der Abfrage zu verwerfen. Der generierte Abfrageplan ersetzt keinen im Cache gespeicherten Plan, wenn dieselbe Abfrage ohne den Hinweis RECOMPILE ausgeführt wird. Ohne die Angabe von RECOMPILE werden Abfragepläne von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zwischengespeichert und wiederverwendet. Beim Kompilieren von Abfrageplänen verwendet der RECOMPILE-Abfragehinweis die aktuellen Werte von lokalen Variablen in der Abfrage und, falls sich die Abfrage innerhalb einer gespeicherten Prozedur befindet, die an Parameter übergebenen aktuellen Werte.  
   
  RECOMPILE ist eine hilfreiche Alternative zum Erstellen einer gespeicherten Prozedur, die die WITH RECOMPILE-Klausel verwendet, wenn nicht die gesamte gespeicherte Prozedur, sondern nur eine Teilmenge davon erneut kompiliert werden muss. Weitere Informationen finden Sie unter [Erneutes Kompilieren einer gespeicherten Prozedur](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE ist auch beim Erstellen von Planhinweislisten hilfreich.  
   

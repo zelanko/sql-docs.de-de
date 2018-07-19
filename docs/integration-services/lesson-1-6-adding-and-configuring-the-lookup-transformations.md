@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332734"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297406"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lektion 1-6: Hinzufügen und Konfigurieren von Suchtransformationen
 Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei besteht die nächste Aufgabe darin, die Suchtransformationen zu definieren, die zum Abrufen der Werte für **CurrencyKey** und **DateKey**erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Lernprogramm stellt die Transformation für Suche stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Daten enthält, die als Quelle des Verweisdatasets dienen.  
@@ -41,7 +41,7 @@ In beiden Fällen verwendet die Suchtransformation den OLE DB-Verbindungs-Manage
   
 1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie anschließend **Suche** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie „Suche“ direkt unterhalb der **Extract Sample Currency Data**-Quelle ab.  
   
-2.  Klicken Sie auf die **Extract Sample Currency Data** -Flatfilequelle, und ziehen Sie den grünen Pfeil auf die neu hinzugefügte Transformation **Suche** , um die zwei Komponenten zu verbinden.  
+2.  Klicken Sie auf die Flatfilequelle **Extract Sample Currency Data**, und ziehen Sie den blauen Pfeil auf die neu hinzugefügte Transformation **Suche**, um die zwei Komponenten zu verbinden.  
   
 3.  Klicken Sie auf der **Datenfluss** -Entwurfsoberfläche auf **Suche** in der Transformation **Suche** , und ändern Sie den Namen in **Lookup Currency Key**.  
   

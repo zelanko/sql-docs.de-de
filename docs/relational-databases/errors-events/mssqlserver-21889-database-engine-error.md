@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8241192ce757574e301baed8e8a694ab02656514
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 3a42d6959fcf743ea17f582a7aa1c9bf752bd423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332210"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "34321301"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|SQLErrorNum21889|  
-|Meldungstext|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz '%s' ist kein Replikationsverleger. Führen Sie **sp_adddistributor** auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz '%s' mit dem Verteiler '%s' aus, um die Instanz als Host der Veröffentlichungsdatenbank '%s' zu aktivieren. Stellen Sie sicher, dass Sie die gleiche Anmeldung und das gleiche Kennwort angeben, die für den ursprünglichen Verleger verwendet worden sind.|  
+|Meldungstext|Die SQL Server-Instanz „%s“ ist kein Replikationsverleger. Führen Sie **sp_adddistributor** auf der SQL Server-Instanz „%s“ mit dem Verteiler „%s“ aus, um die Instanz als Host der Veröffentlichungsdatenbank „%s“ zu aktivieren. Stellen Sie sicher, dass Sie die gleiche Anmeldung und das gleiche Kennwort angeben, die für den ursprünglichen Verleger verwendet worden sind.|  
   
 ## <a name="explanation"></a>Erklärung  
-Um die Verlegerdatenbank hosten zu können, muss die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Replikationsverleger sein. **sp_validate_redirected_publisher** ruft **sp_helpdistributor** auf dem Remoteserver auf, um zu bestimmen, ob es sich beim Server um einen Replikationsverleger handelt. Dieser Fehler wird zurückgegeben, wenn die Ausführung der gespeicherten Prozedur **sp_helpdistributor** ergibt, dass die Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kein Replikationsverleger ist.  
+Um die Verlegerdatenbank hosten zu können, muss die Instanz von SQL Server ein Replikationsverleger sein. **sp_validate_redirected_publisher** ruft **sp_helpdistributor** auf dem Remoteserver auf, um zu bestimmen, ob es sich beim Server um einen Replikationsverleger handelt. Dieser Fehler weist darauf hin, dass die Zielinstanz von SQL Server kein Replikationsverleger ist.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-Führen Sie **sp_adddistributor** bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die als Host der Verlegerdatenbank fungiert. Wenn Sie **sp_adddistributor** ausführen, geben Sie den richtigen Verteiler an. Verwenden Sie den Wert für den *@password*-Parameter, der verwendet wurde, als **sp_adddistributor** zum ersten Mal beim Verteiler ausgeführt wurde.  
+Führen Sie **sp_adddistributor** bei der Instanz von SQL Server aus, die als Host der Verlegerdatenbank fungiert. Wenn Sie **sp_adddistributor** ausführen, geben Sie den richtigen Verteiler an. Verwenden Sie den Wert für den *@password*-Parameter, der verwendet wurde, als **sp_adddistributor** zum ersten Mal beim Verteiler ausgeführt wurde.  
   

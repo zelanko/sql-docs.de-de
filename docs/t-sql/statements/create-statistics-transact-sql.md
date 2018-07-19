@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd4a3a77041a5c6cf1bb83f518791548dbc4b1c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fb9483e518da120f83d635dc3acc8de02435557
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075317"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787811"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -203,7 +202,7 @@ CREATE STATISTICS statistics_name
 MAXDOP = *max_degree_of_parallelism*  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
   
- Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+ Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
  *max_degree_of_parallelism* kann folgende Werte haben:  
   
@@ -244,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Das Aktualisieren von Statistiken bei externen Tabellen wird nicht unterstützt. Zum Aktualisieren einer Statistik müssen Sie die Statistik löschen und neu erstellen.  
 * Sie können bis zu 64 Spalten pro Statistikobjekt auflisten.
 * Die Option MAXDOP ist nicht mit den Optionen STATS_STREAM, ROWCOUNT und PAGECOUNT kompatibel.
+* Die Option MAXDOP ist, falls verwendet, durch die Einstellung „MAX_DOP“ der Resource Governor-Arbeitsauslastungsgruppe eingeschränkt.
   
 ## <a name="examples"></a>Beispiele  
 

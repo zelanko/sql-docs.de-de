@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054222"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432239"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ Für **table**-Variablen wird automatisch am Ende der Funktion, der gespeicherte
   
 Abfragen, die **table**-Variablen ändern, generieren keine Pläne für die parallele Abfrageausführung. Die Leistung kann beeinträchtigt sein, wenn sehr große **table**-Variablen oder **table**-Variablen in komplexen Abfragen geändert werden. Erwägen Sie in vergleichbaren Situationen stattdessen die Verwendung temporärer Tabellen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Abfragen, die **table**-Variablen lesen, ohne sie zu ändern, können weiterhin parallelisiert werden.
   
-Die explizite Erstellung von Indizes für **table**-Variablen ist nicht möglich, zudem werden für **table**-Variablen keine Statistiken geführt. In einigen Fällen kann die Leistung möglicherweise verbessert werden, indem stattdessen temporäre Tabellen verwendet werden, die Indizes und Statistiken unterstützen. Weitere Informationen zu temporären Tabellen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
-  
+Die explizite Erstellung von Indizes für **table**-Variablen ist nicht möglich, zudem werden für **table**-Variablen keine Statistiken geführt. Mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] wurde eine neue Syntax eingeführt, die es erlaubt, bestimmte Indextypen inline mit der Tabellendefinition zu erstellen.  Mit dieser neuen Syntax können Sie Indizes für **table**-Variablen als Teil der Tabellendefinition erstellen. In einigen Fällen kann die Leistung verbessert werden, indem stattdessen temporäre Tabellen verwendet werden, die eine vollständige Unterstützung für Indizes und Statistiken bieten. Weitere Informationen zu temporären Tabellen und der Inlineerstellung von Indizes finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
+
+
 CHECK-Einschränkungen, DEFAULT-Werte und berechnete Spalten in der **table**-Typdeklaration können keine benutzerdefinierten Funktionen aufrufen.
   
 Zuweisungsvorgänge zwischen **table**-Variablen werden nicht unterstützt.

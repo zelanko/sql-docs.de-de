@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582302"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782711"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Gibt die Platzierung der FILESTREAM-Daten für die Tabelle an, wenn ein gruppierter Index erstellt wird. Die FILESTREAM_ON-Klausel lässt zu, dass FILESTREAM-Daten in eine andere FILESTREAM-Dateigruppe oder ein anderes Partitionsschema verschoben werden.  
   
- *filestream_filegroup_name* ist der Name einer FILESTREAM-Dateigruppe. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
+ *filestream_filegroup_name* ist der Name einer FILESTREAM-Dateigruppe. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
   
  Wenn die Tabelle partitioniert ist, muss die FILESTREAM_ON-Klausel eingeschlossen werden und ein Partitionsschema von FILESTREAM-Dateigruppen angeben, das die gleiche Partitionsfunktion und die gleichen Partitionsspalten wie das Partitionsschema der Tabelle enthält. Andernfalls wird ein Fehler ausgelöst.  
   
@@ -461,7 +462,26 @@ Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfrag
  Die Tabellensperren werden für die Dauer des Indexvorgangs angewendet. Ein Offlineindexvorgang, bei dem ein gruppierter Index erstellt, neu erstellt oder gelöscht bzw. ein nicht gruppierter Index neu erstellt oder gelöscht wird, aktiviert eine Schemaänderungssperre (SCH-M) für die Tabelle. Dadurch wird verhindert, dass Benutzer für die Dauer des Vorgangs auf die zugrunde liegende Tabelle zugreifen können. Ein Offlineindexvorgang, bei dem ein nicht gruppierter Index erstellt wird, aktiviert eine freigegebene Sperre (S) für die Tabelle. Dadurch werden Updates der zugrunde liegenden Tabelle verhindert. Lesevorgänge, wie SELECT-Anweisungen, sind jedoch zulässig.  
   
  Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+ Gibt an, ob ein Onlineindexvorgang fortsetzbar ist.
+
+ Der Indexvorgang ON ist fortsetzbar.
+
+ Der Indexvorgang OFF ist nicht fortsetzbar.
+
+MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).
+ 
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau) 
+
+Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird. 
+
+> [!WARNING]
+>  Ausführlichere Informationen zu Indexvorgängen, die online ausgeführt werden können, finden Sie unter [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  Indizes, einschließlich Indizes für globale temporäre Tabellen, können mit den folgenden Ausnahmen online erstellt werden:  
   
 -   XML-Index  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** abgeleitet wurden, können entweder als Schlüssel oder eingefügte Spalte indiziert werden, bei der es sich nicht um eine Schlüsselspalte handelt, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte oder Nichtschlüsselspalte zulässig ist. Sie können beispielsweise keinen primären XML-Index für eine berechnete **xml**-Spalte erstellen. Wenn der Indexschlüssel die zulässige Größe von 900 Byte überschreitet, wird eine Warnmeldung angezeigt.  
   
- Das Erstellen eines Indexes für eine berechnete Spalte kann bei einem Einfüge- oder Updatevorgang einen Fehler erzeugen, wenn der Einfüge- oder Updatevorgang zuvor funktioniert hat. Ein solcher Fehler tritt möglicherweise auf, wenn die berechnete Spalte einen arithmetischen Fehler zur Folge hat. In der folgenden Tabelle wird zum Beispiel die `c`-Anweisung erfolgreich ausgeführt, obwohl die berechnete Spalte `INSERT` einen arithmetischen Fehler zur Folge hat.  
+ Das Erstellen eines Indexes für eine berechnete Spalte kann bei einem Einfüge- oder Updatevorgang einen Fehler erzeugen, wenn der Einfüge- oder Updatevorgang zuvor funktioniert hat. Ein solcher Fehler tritt möglicherweise auf, wenn die berechnete Spalte einen arithmetischen Fehler zur Folge hat. In der folgenden Tabelle wird zum Beispiel die INSERT-Anweisung erfolgreich ausgeführt, obwohl die berechnete Spalte `c` einen arithmetischen Fehler zur Folge hat.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   Onlinevorgänge können für partitionierte Indizes und Indizes durchgeführt werden, die persistente berechnete Spalten oder eingeschlossene Spalten enthalten.  
   
  Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
+
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
+
+- Das Erstellen eines Onlineindex wird als fortsetzbar angegeben, wenn die Option RESUMABLE=ON verwendet wird. 
+- Die RESUMABLE-Option wird in den Metadaten nicht für einen bestimmten Index beibehalten und gilt nur für die Dauer der aktuellen DDL-Anweisung. Zum Aktivieren der Fortsetzungsmöglichkeit muss die Klausel RESUMABLE = ON daher explizit angegeben werden.
+- Die MAX_DURATION-Option wird nur für die RESUMABLE = ON-Option unterstützt. 
+-  MAX_DURATION gibt bei der RESUMABLE-Option das Zeitintervall an, in dem ein Index erstellt wird. Sobald dieses Zeitintervall beendet ist, wird die Indexerstellung entweder angehalten oder in ihrer Ausführung beendet. Der Benutzer entscheidet, wann die Erstellung eines angehaltenen Index fortgesetzt werden kann. Die **Zeitspanne** für MAX_DURATION in Minuten muss größer als 0 Minuten und kleiner oder gleich einer Woche (7 * 24 * 60 = 10.080 Minuten) sein. Das lange Anhalten eines Indexvorgangs kann Auswirkungen auf die DML-Leistung für eine bestimmte Tabelle sowie die Datenträgerkapazität der Datenbank haben, da sowohl der ursprüngliche Index als auch der neu erstellte Index Speicherplatz benötigen und während der DML-Vorgänge aktualisiert werden müssen. Wird die MAX_DURATION-Option ausgelassen, dann wird der Indexvorgang bis zum vollständigen Abschluss oder bis ein Fehler auftritt fortgeführt. 
+- Wenn Sie den Indexvorgang sofort anhalten möchten, können Sie den laufenden Befehl beenden (STRG+C) oder die Befehle [ALTER INDEX](alter-index-transact-sql.md) PAUSE oder KILL `<session_id>` ausführen. Ein angehaltener Befehl kann mit dem Befehl [ALTER INDEX](alter-index-transact-sql.md) fortgesetzt werden. 
+- Das erneute Ausführen der ursprünglichen CREATE INDEX-Anweisung für den fortsetzbaren Index führt dazu, dass ein angehaltener Indexvorgang automatisch fortgesetzt wird.
+- Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
+- Der DDL-Befehl kann mit RESUMABLE = ON nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „Begin TRAN... COMMIT“ sein).
+- Zum Fortsetzen bzw. Abbrechen einer Indexerstellung bzw. -neuerstellung verwenden Sie die [ALTER INDEX](alter-index-transact-sql.md)-T-SQL-Syntax.
+
+> [!NOTE]
+> Der DDL-Befehl wird so lange ausgeführt, bis er entweder abgeschlossen ist, angehalten wird oder ein Fehler auftritt. Wenn der Befehl angehalten wird, wird ein Fehler ausgelöst, der meldet, dass der Vorgang angehalten wurde und dass die Indexerstellung nicht abgeschlossen wurde. Weitere Informationen zum aktuellen Indexstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Tritt ein Fehler auf, wird auch hier eine Fehlermeldung ausgegeben. 
+
+Informationen zur Anzeige, dass eine Indexerstellung als fortsetzbarer Vorgang ausgeführt wird, und zur Überprüfung des aktuellen Ausführungsstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Für die öffentliche Vorschauversion werden die folgenden Spalten in dieser Ansicht auf 0 gesetzt:
+- total_execution_time
+- percent_complete and page_count
+
+**Ressourcen**: Die folgenden Ressourcen sind für die Onlineerstellung des fortsetzbaren Indexes erforderlich:
+- Zusätzlicher Speicherplatz, damit der Index weiter erstellt wird, einschließlich der Zeit, wann der Index angehalten wird.
+- Zusätzlicher Protokolldurchsatz während der Sortierungsphase Der insgesamt durch Protokolle belegte Speicherplatz für den fortsetzbaren Index ist geringer als bei der Erstellung eines regulären Onlineindexes. Zudem ist eine Protokollkürzung während dieses Vorgangs möglich.
+- DDL-Status zur Verhinderung von DDL-Änderungen
+  - Ein Cleanup inaktiver Datensätze wird für den Index innerhalb des Builds für die Dauer des Vorgangs blockiert, während dieser angehalten und auch während der Vorgang ausgeführt wird.
+
+**Aktuelle funktionale Einschränkungen**
+
+> [!IMPORTANT]
+> **Die Erstellung fortsetzbarer Onlineindizes** wird derzeit nur für nicht gruppierte Indizes unterstützt.
+
+Die folgenden Funktionen sind für Vorgänge zur Erstellung fortsetzbarer Indizes deaktiviert:
+- Die Erstellung fortsetzbarer Indizes wird für einen gruppierten Index für die öffentliche Vorschauversion nicht unterstützt.
+- Nachdem der Vorgang zum Erstellen eines fortsetzbaren Onlineindexes angehalten wurde, kann der ursprüngliche Wert von MAXDOP nicht mehr geändert werden.
+- Die DROP EXISTING-Klausel wird nicht unterstützt.
+- Die Erstellung eines Indexes, der Folgendes enthält: 
+ - Berechnete Spalte oder TIMESTAMP-Spalte als Schlüsselspalte
+ - LOB-Spalte als enthaltene Spalte für die Erstellung des fortsetzbaren Indexes
+- Gefilterter Index
+ 
 ## <a name="row-and-page-locks-options"></a>Zeilen- und Seitensperren (Optionen)  
  Wenn ALLOW_ROW_LOCKS = ON und ALLOW_PAGE_LOCK = ON ist, sind beim Zugreifen auf den Index Sperren auf Zeilen-, Seiten- und Tabellenebene zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="m-basic-syntax"></a>M. Grundlegende Syntax  
-  
+### <a name="n-basic-syntax"></a>N. Grundlegende Syntax  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. Erstellen eines nicht gruppierten Index für eine Tabelle in der aktuellen Datenbank  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Erstellen eines nicht gruppierten Index für eine Tabelle in der aktuellen Datenbank  
  Im folgenden Beispiel wird ein nicht gruppierter Index für die Spalte `VendorID` der Tabelle `ProductVendor` erstellt.  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. Erstellen eines nicht gruppierten Index für eine Tabelle in einer anderen Datenbank  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Erstellen eines nicht gruppierten Index für eine Tabelle in einer anderen Datenbank  
  Im folgenden Beispiel wird ein nicht gruppierter Index für die `VendorID`-Spalte der `ProductVendor`-Tabelle in der `Purchasing`-Datenbank erstellt.  
   
 ```sql  

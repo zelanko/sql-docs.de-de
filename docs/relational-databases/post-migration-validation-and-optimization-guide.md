@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956425"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297366"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Im Folgenden sind einige der häufigsten Leistungsszenarios aufgelistet, die nac
 
 **Gilt für:** Migration von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-Wenn Sie von einer älteren Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder neuer migrieren und den [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) auf den neuesten upgraden, kann womöglich eine Arbeitsauslastung einer Leistungsregression ausgesetzt sein.
+Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Arbeitsauslastung womöglich zu einem Leistungsrückgang kommen.
 
 Seit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sind daher alle Änderungen des Abfrageoptimierers an den neuesten [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) gebunden, sodass Pläne nicht sofort im Moment des Upgrades geändert werden, sondern erst, wenn ein Benutzer die Datenbankoption `COMPATIBILITY_LEVEL` auf die neuste aktualisiert. Diese Möglichkeit gibt Ihnen in Kombination mit dem Abfragespeicher ein großes Maß an Kontrolle über die Abfrageleistung im Upgradeprozess. 
 

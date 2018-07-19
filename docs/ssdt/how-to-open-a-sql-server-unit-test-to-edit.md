@@ -1,0 +1,57 @@
+---
+title: 'Gewusst wie: Öffnen eines SQL Server-Komponententests zur Bearbeitung | Microsoft-Dokumentation'
+ms.custom:
+- SSDT
+ms.date: 02/09/2017
+ms.prod: sql
+ms.technology: ssdt
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
+caps.latest.revision: 8
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b4aefcc75b1013cbb4c0c10723b4fb5b18313f71
+ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37094246"
+---
+# <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Vorgehensweise: Öffnen eines SQL Server-Komponententests zur Bearbeitung
+Nachdem Sie einen SQL Server-Komponententest erstellt haben, verwenden Sie den **SQL Server-Komponententest-Designer**, um Transact\-SQL-Anweisungen und -Testbedingungen hinzuzufügen. Durch die vom Designer erstellten Tests wird Visual C#- oder Visual Basic-Code generiert. Dieser Code wird zusammen mit dem Test ausgeführt.  
+  
+Wenn der Test zu Ihrer Zufriedenheit verläuft, können Sie ihn in dieser Form ausführen. Wenn Sie dem Komponententest weitere Funktionen hinzufügen möchten, können Sie den zugehörigen Code bearbeiten. Der Code ist im Testprojekt in der Datei mit der Endung .cs oder .vb enthalten. Weitere Informationen finden Sie unter [SQL Server-Komponententestdateien](../ssdt/sql-server-unit-test-files.md). Sie können die Tests auch anpassen, indem Sie neue Testbedingungen erstellen. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von Testbedingungen für den Datenbankkomponententest-Designer (Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
+  
+> [!NOTE]  
+> Wenn Sie eine Testmethode durch Bearbeiten der CS- oder VB-Datei löschen, wird die Testmethode weiterhin im **SQL Server-Komponententest-Designer** angezeigt. Diese Situation tritt ein, weil die InitializeComponent-Methode der Testklasse immer noch die Membervariablen für diesen Test enthält. Obwohl der Test im Designer angezeigt wird, können Sie ihn nicht ausführen, weil der Code nicht mehr vorhanden ist. Um die Testmethode für diesen Test erneut zu generieren, bearbeiten Sie Transact\-SQL im Editor und speichern dann die CS- oder VB-Testdatei bzw. erstellen das Testprojekt neu.  
+  
+### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-solution-explorer"></a>So öffnen Sie die Quellcodedatei eines SQL Server-Komponententests vom Projektmappen-Explorer aus  
+  
+-   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Quellcodedatei, in der der SQL Server-Komponententest enthalten ist, und klicken Sie dann auf **Code anzeigen**.  
+  
+    Die Testmethode des Komponententests wird beim Öffnen der Datei im Hauptbearbeitungsfenster von Visual Studio angezeigt.  
+  
+### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2010"></a>So öffnen Sie die Quellcodedatei eines SQL Server-Komponententests vom Fenster „Testansicht“ aus (Visual Studio 2010)  
+  
+1.  Führen Sie einen Komponententest aus. Weitere Informationen finden Sie im Abschnitt „Ausführen von SQL Server-Komponententests“ im Artikel [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+  
+2.  Klicken Sie im Fenster „Testansicht“ mit der rechten Maustaste auf den Test, und klicken Sie auf **Test öffnen**.  
+  
+    Die Testmethode des Komponententests wird beim Öffnen der Datei im Hauptbearbeitungsfenster von Visual Studio angezeigt.  
+  
+### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2012"></a>So öffnen Sie die Quellcodedatei eines SQL Server-Komponententests vom Fenster „Testansicht“ aus (Visual Studio 2012)  
+  
+1.  Führen Sie einen Komponententest aus. Weitere Informationen finden Sie im Abschnitt „Ausführen von SQL Server-Komponententests“ im Artikel [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+  
+2.  Klicken Sie im Fenster "Test-Explorer" auf den Namen der Quellcodedatei des Komponententests.  
+  
+    Die Testmethode des Komponententests wird beim Öffnen der Datei im Hauptbearbeitungsfenster von Visual Studio angezeigt.  
+  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
+[Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
+  

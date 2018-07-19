@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235794"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262144"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34235794"
   
  Ein Onlinevorgang kann nicht ausgeführt werden, wenn ein Index eine Spalte des Datentyps für große Objekte enthält und wenn dieselbe Transaktion vor diesem Onlinevorgang Updatevorgänge enthält. Um dieses Problem zu umgehen, platzieren Sie den Onlinevorgang außerhalb der Transaktion oder vor den Updates in der Transaktion.  
   
-## <a name="disk-space-considerations"></a>Überlegungen zum Speicherplatz  
+## <a name="disk-space-considerations"></a>Überlegungen zum Speicherplatz auf dem Datenträger  
  Onlineindexvorgänge erfordern mehr Speicherplatz als Offlineindexvorgänge. 
  - Beim Erstellen und Wiederherstellen von Indizes ist zusätzlicher Speicherplatz erforderlich, damit der Index erstellt (oder wiederhergestellt) werden kann. 
  - Darüber hinaus ist Speicherplatz für den temporären Zuordnungsindex erforderlich. Dieser temporäre Index wird in Onlineindexvorgängen verwendet, die einen gruppierten Index erstellen, neu erstellen oder löschen.
@@ -91,29 +91,31 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 ## <a name="transaction-log-considerations"></a>Überlegungen zum Transaktionsprotokoll  
  Umfangreiche Indexvorgänge, die offline oder online ausgeführt werden, können große Datenlasten generieren, die das Transaktionsprotokoll schnell füllen können. Damit sichergestellt wird, dass für den Indexvorgang ein Rollback ausgeführt werden kann, kann das Transaktionsprotokoll erst abgeschnitten werden, nachdem der Indexvorgang abgeschlossen wurde; das Protokoll kann jedoch während des Indexvorgangs gesichert werden. Aus diesem Grund muss das Transaktionsprotokoll für die Dauer des Indexvorgangs genügend Speicherplatz zum Speichern der Transaktionen des Indexvorgangs sowie ggf. der gleichzeitigen Benutzertransaktionen aufweisen. Weitere Informationen finden Sie unter [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Überlegungen zur fortsetzbaren Neuerstellung von Indizes
+## <a name="resumable-index-considerations"></a>Überlegungen zu fortsetzbaren Indizes
 
 > [!NOTE]
-> Die fortsetzbare Indexoption kann für SQL Server (ab SQL Server 2017) und SQL-Datenbank angewendet werden. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
+> Die Option für fortsetzbare Indizes gilt für SQL Server (ab SQL Server 2017) (nur die Indexneuerstellung) und SQL-Datenbank (Erstellung von nicht gruppierten Indizes und Indexneuerstellung). Weitere Informationen finden Sie unter [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) (derzeit nur in der Public Preview für SQL-Datenbank) und [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md). 
 
-Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten die folgenden Richtlinien:
--   Verwalten, Planen und Erweitern von Indexwartungsfenstern. Sie können einen Vorgang zur Neuerstellung eines Index mehrmals anhalten und neu starten, um Ihr Wartungsfenster anzupassen.
-- Wiederherstellen nach Fehlern bei der Indexneuerstellung (z.B. Datenbank-Failover oder wenn kein Speicherplatz mehr verfügbar war).
+Für die Erstellung oder Neuerstellung von fortsetzbaren Onlineindizes gelten die folgenden Richtlinien:
+-   Verwalten, Planen und Erweitern von Indexwartungsfenstern. Sie können einen Vorgang zur Indexerstellung oder -neuerstellung mehrmals anhalten und neu starten, um Ihre Wartungsfenster anzupassen.
+- Wiederherstellen nach Fehlern bei der Indexerstellung oder -neuerstellung (z.B. Datenbankfailover oder wenn kein Speicherplatz auf dem Datenträger mehr verfügbar war).
 - Wenn ein Indexvorgang angehalten wird, wird sowohl für den ursprünglichen Index als auch für den neu erstellten Index Speicherplatz benötigt, und beide müssen während des DML-Vorgangs aktualisiert werden.
 
-- Ermöglicht das Abschneiden von Transaktionsprotokollen während einer Indexneuerstellung (dieser Vorgang kann nicht für einen regulären Onlineindexvorgang durchgeführt werden).
+- Ermöglicht das Abschneiden von Transaktionsprotokollen während des Vorgangs einer Indexerstellung oder -neuerstellung.
 - Die Option SORT_IN_TEMPDB=ON wird nicht unterstützt.
 
 > [!IMPORTANT]
-> Für die fortsetzbare Neuerstellung muss keine Transaktion mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
+> Für die Erstellung oder Neuerstellung fortsetzbarer Indizes muss keine Transaktion mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs abgeschnitten werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
 
-Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Vorgang zur Indexneuerstellung unterbrochen ist:
+Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Für die Erstellung von fortsetzbaren Indizes fällt fortwährend Mehraufwand an, weshalb ein geringfügiger Leistungsunterschied zwischen der Erstellung von fortsetzbaren und nicht fortsetzbaren Indizes besteht. Dieser Unterschied ist in erster Linie nur bei kleineren Tabellen spürbar.
+
+Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Indexvorgang angehalten ist, gilt Folgendes:
 - Bei Arbeitsauslastungen, die meistens nur gelesen werden, ist die Leistungsauswirkung unbedeutend. 
 - Bei Arbeitsauslastungen, die oft aktualisiert werden, tritt möglicherweise eine Minderung des Durchsatzes auf (bei unseren Tests ergab sich eine Minderung von unter 10%).
 
-Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwischen fortsetzbaren und nicht fortsetzbaren Onlineindexneuerstellungen.
+Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwischen der Erstellung oder Neuerstellung von fortsetzbaren und nicht fortsetzbaren Onlineindizes.
 
-## <a name="online-default-options"></a>Standardoptionen für Online 
+## <a name="online-default-options"></a>Standardonlineoptionen 
 
 > [!IMPORTANT]
 > Diese Optionen befinden sich in der öffentlichen Vorschau.

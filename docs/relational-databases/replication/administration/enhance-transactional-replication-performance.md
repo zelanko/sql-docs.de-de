@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c586823c0ad4b270ba03283e4ce75b9f2f9c022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955728"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356052"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,8 @@ ms.locfileid: "32955728"
   
 -   Minimieren Sie den Transaktionsumfang in Ihrem Datenbankentwurf.  
   
-     Standardmäßig werden bei der Transaktionsreplikation Änderungen gemäß den Transaktionsgrenzen weitergegeben. Bei Transaktionen geringeren Umfangs ist die Wahrscheinlichkeit geringer, dass der Verteilungs-Agent Transaktionen aufgrund von Netzwerkproblemen erneut übermitteln muss. Wenn der Agent eine Transaktion erneut übermitteln muss, ist der Umfang der gesendeten Daten geringer.  
+     Standardmäßig werden bei der Transaktionsreplikation Änderungen gemäß den Transaktionsgrenzen weitergegeben. Bei Transaktionen geringeren Umfangs ist die Wahrscheinlichkeit geringer, dass der Verteilungs-Agent Transaktionen aufgrund von Netzwerkproblemen erneut übermitteln muss. Wenn der Agent eine Transaktion erneut übermitteln muss, ist der Umfang der gesendeten Daten geringer. 
+
   
 ## <a name="distributor-configuration"></a>Konfiguration des Verteilers  
   
@@ -62,7 +62,7 @@ ms.locfileid: "32955728"
   
 -   Verteilen Sie Artikel auf mehrere Veröffentlichungen.  
   
-     Wenn die Verwendung des weiter unten erläuterten **-SubscriptionStreams** -Parameters nicht möglich ist, ziehen Sie die Erstellung mehrerer Veröffentlichungen in Betracht. Durch das Verteilen von Artikeln auf diese Veröffentlichungen können bei der Replikation Änderungen parallel auf Abonnenten angewendet werden.  
+     Wenn die Verwendung des [**-SubscriptionStreams**-Parameters](#subscriptionstreams) nicht möglich ist, ziehen Sie die Erstellung mehrerer Veröffentlichungen in Betracht. Durch das Verteilen von Artikeln auf diese Veröffentlichungen können bei der Replikation Änderungen parallel auf Abonnenten angewendet werden.  
   
 ## <a name="subscription-considerations"></a>Überlegungen zu Abonnements  
   
@@ -75,38 +75,65 @@ ms.locfileid: "32955728"
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben von Synchronisierungszeitplänen](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parameter für den Verteilungs-Agent und Protokolllese-Agent  
+Die Parameter des Agent-Profils werden häufig angepasst, um den Durchsatz des Protokolllese- und Verteilungs-Agents bei OLTP-Systemen mit hohem Datenverkehr zu steigern. 
+
+Mithilfe des Tests wurden die besten Werte zur Verbesserung der Leistung des Protokolllese- und Verteilungs-Agents ermittelt. Dieser Test ergab, dass die Workload ein entscheidender Faktor dafür war, welche Werte in welcher Situation funktionierten. Aus diesem Grund gibt es nicht eine einzige Wertanpassung, die die Leistung für jede Situation verbessert. 
+
+Die Ergebnisse: 
+- Für einen *Protokolllese-Agent* mit Workloads kleinerer Transaktionen (weniger als 500 Befehle) kann ein höherer Wert von **ReadBatchSize** den Durchsatz erhöhen. Bei Workloads großer Transaktionen führt eine Änderung dieses Werts jedoch nicht zu einer Leistungssteigerung. 
+    - Wenn mehrere Protokolllese-Agents und mehrere Verteilungs-Agents parallel auf demselben Server ausgeführt werden, führt ein höherer Wert von **ReadBatchSize** zu Konflikten in der Verteilungsdatenbank. 
+- Für den *Verteilungs-Agent*
+    - Die Erhöhung von **CommitBatchSize** kann den Durchsatz verbessern. Der Kompromiss hierbei besteht darin, dass der Verteilungs-Agent im Falle eines Fehlers einen Rollback ausführen und eine größere Anzahl von Transaktionen erneut anwenden muss. 
+    - Die Erhöhung des Werts **SubscriptionStreams** trägt zu einem höheren Gesamtdurchsatz des Verteilungs-Agents bei, da mehrere Verbindungen zum Abonnenten mehrere Änderungsbatches parallel anwenden. Abhängig von der Anzahl der Prozessoren und anderen Metadatenbedingungen (wie Primärschlüssel, Fremdschlüssel, einzigartige Einschränkungen und Indizes) kann sich der höhere Wert von „SubscriptionStreams“ jedoch nachteilig auswirken. Kann zudem ein Datenstrom nicht ausgeführt oder committet werden, greift der Verteilungs-Agent auf einen einzelnen Datenstrom zurück, um die nicht erfolgreichen Batches erneut zu verarbeiten.
+
+
+Weitere Informationen zu diesem Test finden Sie im Blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Optimierung der Profilparameter des Replikations-Agents für eine bessere Leistung).
+
+
+### <a name="log-reader-agent"></a>Protokolllese-Agent
+
+#### <a name="readbatchsize"></a>ReadBatchSize
+- Erhöhen Sie den Wert des **-ReadBatchSize** -Parameters für den Protokolllese-Agent.  
   
--   Um unbeabsichtigte, einmalige Engpässe zu vermeiden, verwenden Sie den **–MaxCmdsInTran** -Parameter für den Protokolllese-Agent.  
+Der Protokolllese- und der Verteilungs-Agent unterstützen Batchgrößen für Transaktionslese- und Commitoperationen. Die Batchgrößen werden standardmäßig auf 500 Transaktionen festgelegt. Der Protokolllese-Agent liest die angegebene Anzahl von Transaktionen aus dem Protokoll, unabhängig davon, ob sie für die Replikation markiert wurden. Wenn eine große Anzahl von Transaktionen in eine Veröffentlichungsdatenbank geschrieben wird, aber nur ein kleiner Teil dieser Transaktionen für die Replikation markiert wurde, sollten Sie mit dem **-ReadBatchSize**-Parameter die Lesebatchgröße des Protokolllese-Agents steigern. Dieser Parameter gilt nicht für Oracle-Verleger.  
+
+   - Bei Workloads kleinerer Transaktionen (weniger als 500 Befehle) gibt es eine Steigerung bezüglich der Anzahl der pro Sekunde verarbeiteten Befehle, wenn **ReadBatchSize** auf 5000 erhöht wird. 
+   - Bei umfangreicheren Workloads (Transaktionen mit 500 bis 1000 Befehlen) hat die Erhöhung von **ReadBatchSize** nur eine geringe Leistungssteigerung zur Folge. Die Erhöhung von **ReadBatchSize** führt bei einer größeren Anzahl der in die Verteilungsdatenbank geschriebenen Transaktionen zu einem Roundtrip. Hierdurch sind die Transaktionen und Befehle für den Verteilungs-Agent länger sichtbar, und es kommt zu einer Wartezeit bis zum Replikationsvorgang.  
+
+#### <a name="pollinginterval"></a>PollingInterval
+- Verringern Sie den Wert des **-PollingInterval** -Parameters für den Protokolllese-Agent.  
   
-     Mit dem **–MaxCmdsInTran** -Parameter wird die maximale Anzahl von Anweisungen angegeben, die in einer Transaktion zusammengefasst werden, wenn der Protokollleser Befehle in die Verteilungsdatenbank schreibt. Mithilfe dieses Parameters können der Protokolllese-Agent und der Verteilungs-Agent beim Anwenden von Befehlen auf dem Abonnenten umfangreiche Transaktionen (die aus zahlreichen Befehlen bestehen) auf dem Verleger in mehrere kleinere Transaktionen aufteilen. Durch die Angabe dieses Parameters kommt es auf dem Verteiler möglicherweise zu weniger Konflikten, und die Latenzzeit zwischen Verleger und Abonnent kann reduziert werden. Da die ursprüngliche Transaktion in kleineren Einheiten angewendet wird, kann der Abonnent vor Ende der ursprünglichen Transaktion auf Zeilen einer umfangreichen logischen Verleger-Transaktion zugreifen; dies widerspricht der strikten Unteilbarkeit von Transaktionen. **0**ist der Standardwert, durch den die Transaktionsgrenzen des Verlegers beibehalten werden. Dieser Parameter gilt nicht für Oracle-Verleger.  
+Über den **-PollingInterval** -Parameter wird angegeben, wie oft das Transaktionsprotokoll einer veröffentlichten Datenbank hinsichtlich Transaktionen für die Replikation abgefragt wird. Die Standardeinstellung ist 5 Sekunden. Wenn Sie diesen Wert verringern, wird das Protokoll häufiger abgefragt. Dies kann zu einer geringeren Latenzzeit bei der Übermittlung von Transaktionen von der Veröffentlichungsdatenbank an die Verteilungsdatenbank führen. Sie sollten jedoch um ein Gleichgewicht zwischen einer geringeren Latenzzeit und der erhöhten Last auf dem Server durch häufigeres Abfragen bemüht sein.   
   
-    > [!WARNING]  
-    >  **MaxCmdsInTran** ist nicht auf die dauerhafte Aktivierung ausgelegt. Der Parameter ist als Umgehungslösung für den Fall konzipiert, dass versehentlich eine große Anzahl von DML-Vorgängen in einer einzelnen Transaktion ausgeführt wird (was zu einer verzögerten Verteilung der Befehle führen kann, bis sich die gesamte Transaktion in der Verteilungsdatenbank befindet, Sperren aufrecht erhalten werden usw.). Wenn diese Situation häufiger auftritt, sollten Sie Ihre Anwendungen überarbeiten und nach Möglichkeiten suchen, die Transaktionsgröße zu verringern.  
+#### <a name="maxcmdsintran"></a>MaxCmdsInTran
+- Um unbeabsichtigte, einmalige Engpässe zu vermeiden, verwenden Sie den **–MaxCmdsInTran** -Parameter für den Protokolllese-Agent.  
   
--   Verwenden Sie den **–SubscriptionStreams** -Parameter für den Verteilungs-Agent.  
+Mit dem **–MaxCmdsInTran** -Parameter wird die maximale Anzahl von Anweisungen angegeben, die in einer Transaktion zusammengefasst werden, wenn der Protokollleser Befehle in die Verteilungsdatenbank schreibt. Mithilfe dieses Parameters können der Protokolllese-Agent und der Verteilungs-Agent beim Anwenden von Befehlen auf dem Abonnenten umfangreiche Transaktionen (die aus zahlreichen Befehlen bestehen) auf dem Verleger in mehrere kleinere Transaktionen aufteilen. Durch die Angabe dieses Parameters kommt es auf dem Verteiler möglicherweise zu weniger Konflikten, und die Latenzzeit zwischen Verleger und Abonnent kann reduziert werden. Da die ursprüngliche Transaktion in kleineren Einheiten angewendet wird, kann der Abonnent vor Ende der ursprünglichen Transaktion auf Zeilen einer umfangreichen logischen Verleger-Transaktion zugreifen; dies widerspricht der strikten Unteilbarkeit von Transaktionen. **0**ist der Standardwert, durch den die Transaktionsgrenzen des Verlegers beibehalten werden. Dieser Parameter gilt nicht für Oracle-Verleger.  
   
-     Durch den **–SubscriptionStreams** -Parameter kann es zu einer deutlichen Steigerung des Replikationsgesamtdurchsatzes kommen. Er ermöglicht es mehreren Verbindungen mit dem Abonnenten, Batches für Änderungen parallel anzuwenden und eine Vielzahl der Transaktionseigenschaften beizubehalten, die bei Verwendung eines Singlethreads vorhanden waren. Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
+   > [!WARNING]  
+   >  **MaxCmdsInTran** ist nicht auf die dauerhafte Aktivierung ausgelegt. Der Parameter ist als Umgehungslösung für den Fall konzipiert, dass versehentlich eine große Anzahl von DML-Vorgängen in einer einzelnen Transaktion ausgeführt wird (was zu einer verzögerten Verteilung der Befehle führen kann, bis sich die gesamte Transaktion in der Verteilungsdatenbank befindet, Sperren aufrecht erhalten werden usw.). Wenn diese Situation häufiger auftritt, überarbeiten Sie Ihre Anwendungen, und suchen Sie nach Möglichkeiten, die Transaktionsgröße zu verringern.  
   
-     Ein Wert für diesen Agentparameter kann angegeben werden, mit der **@subscriptionstreams** von [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+### <a name="distribution-agent"></a>Verteilungs-Agent
+
+#### <a name="subscriptionstreams"></a>SubscriptionStreams
+- Erhöhen Sie den **-SubscriptionStreams**-Parameter für den Verteilungs-Agent.  
   
--   Erhöhen Sie den Wert des **-ReadBatchSize** -Parameters für den Protokolllese-Agent.  
+Durch den **–SubscriptionStreams** -Parameter kann es zu einer deutlichen Steigerung des Replikationsgesamtdurchsatzes kommen. Er ermöglicht es mehreren Verbindungen mit dem Abonnenten, Batches für Änderungen parallel anzuwenden und eine Vielzahl der Transaktionseigenschaften beizubehalten, die bei Verwendung eines Singlethreads vorhanden waren. Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen. Vor dem Abschluss dieser Wiederholungsphase kann es auf dem Abonnenten vorübergehend zur Transaktionsinkonsistenzen kommen. Nach dem erfolgreichen Ausführen (Commit) der fehlgeschlagenen Batches wird der Abonnent wieder in einen Zustand der Transaktionskonsistenz versetzt.  
   
-     Der Protokolllese- und der Verteilungs-Agent unterstützen Batchgrößen für Transaktionslese- und Commitoperationen. Die Batchgrößen werden standardmäßig auf 500 Transaktionen festgelegt. Der Protokolllese-Agent liest die angegebene Anzahl von Transaktionen aus dem Protokoll, unabhängig davon, ob sie für die Replikation markiert wurden. Wenn eine große Anzahl von Transaktionen in eine Veröffentlichungsdatenbank geschrieben werden, aber nur ein kleiner Teil dieser Transaktionen für die Replikation markiert wurde, sollten Sie mit dem **-ReadBatchSize** -Parameter die Lesebatchgröße des Protokolllese-Agents steigern. Dieser Parameter gilt nicht für Oracle-Verleger.  
+Ein Wert für diesen Agentparameter kann angegeben werden, mit der **@subscriptionstreams** von [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+
+Weitere Informationen zum Implementieren von Abonnementdatenströmen finden Sie unter [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) (Navigieren in der subscriptionStream-Einstellung für die SQL-Replikation).
   
--   Erhöhen Sie den Wert des **-CommitBatchSize** -Parameters für den Verteilungs-Agent.  
+#### <a name="commitbatchsize"></a>CommitBatchSize
+- Erhöhen Sie den Wert des **-CommitBatchSize** -Parameters für den Verteilungs-Agent.  
   
-     Das Ausführen (Commit) eines Satzes an Transaktionen führt zu einem bestimmten Verwaltungsaufwand; wenn eine größere Anzahl an Transaktionen mit größerem Zeitabstand ausgeführt werden (Commit), verteilt sich der Verwaltungsaufwand auf einen größeren Datenumfang. Der Vorteil des Verringerns dieses Parameters wird geringer, wenn die Kosten der Anwendung von Änderungen durch andere Faktoren beeinträchtigt werden, beispielsweise der maximalen E/A des Datenträgers, auf dem das Protokoll enthalten ist. Zudem muss folgende Austauschbeziehung beachtet werden: Durch jeden Fehler, der dazu führt, dass der Verteilungs-Agent von vorn beginnt, muss für eine größere Anzahl an Transaktionen ein Rollback ausgeführt sowie die erneute Anwendung vorgenommen werden. Bei unzuverlässigen Netzwerken kann ein geringerer Wert zu weniger Fehler führen, und im Falle eines Fehlers muss das Rollback bzw. die erneute Anwendung für eine geringere Anzahl an Transaktionen ausgeführt werden.  
+Das Ausführen (Commit) eines Satzes an Transaktionen führt zu einem bestimmten Verwaltungsaufwand; wenn eine größere Anzahl an Transaktionen mit größerem Zeitabstand ausgeführt werden (Commit), verteilt sich der Verwaltungsaufwand auf einen größeren Datenumfang.  Die Erhöhung von „CommitBatchSize“ (auf bis zu 200) kann die Leistung verbessern, da mehr Transaktionen an den Abonnenten committet werden. Der Vorteil des Verringerns dieses Parameters wird geringer, wenn die Kosten der Anwendung von Änderungen durch andere Faktoren beeinträchtigt werden, beispielsweise der maximalen E/A des Datenträgers, auf dem das Protokoll enthalten ist. Zudem muss folgender Kompromiss beachtet werden: Durch jeden Fehler, der dazu führt, dass der Verteilungs-Agent von vorn beginnt, muss für eine größere Anzahl von Transaktionen ein Rollback ausgeführt sowie die erneute Anwendung vorgenommen werden. Bei unzuverlässigen Netzwerken kann ein geringerer Wert zu weniger Fehler führen, und im Falle eines Fehlers muss das Rollback bzw. die erneute Anwendung für eine geringere Anzahl an Transaktionen ausgeführt werden.  
   
--   Verringern Sie den Wert des **-PollingInterval** -Parameters für den Protokolllese-Agent.  
+
+##<a name="see-more"></a>Weitere Informationen
   
-     Über den **-PollingInterval** -Parameter wird angegeben, wie oft das Transaktionsprotokoll einer veröffentlichten Datenbank hinsichtlich Transaktionen für die Replikation abgefragt wird. Die Standardeinstellung ist 5 Sekunden. Wenn Sie diesen Wert verringern, wird das Protokoll häufiger abgefragt. Dies kann zu einer geringeren Latenzzeit bei der Übermittlung von Transaktionen von der Veröffentlichungsdatenbank an die Verteilungsdatenbank führen. Sie sollten jedoch um ein Gleichgewicht zwischen einer geringeren Latenzzeit und der erhöhten Last auf dem Server durch häufigeres Abfragen bemüht sein.  
-  
- Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
-  
--   [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-  
--   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-  
--   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+[Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+[Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

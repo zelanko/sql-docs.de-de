@@ -1,10 +1,9 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/12/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b478026b549078601540322e8f249cc718146425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9890f1f127b20cb857822df66b30b165f0862ab
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065067"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781841"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Ändert den privaten Schlüssel, mit dem ein Zertifikat verschlüsselt wird, oder fügt einen privaten Schlüssel hinzu, falls keiner vorhanden ist. Ändert die Verfügbarkeit eines Zertifikats für [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -59,7 +58,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -96,7 +95,7 @@ ALTER CERTIFICATE certificate_name
   
  Wenn der private Schlüssel eines Zertifikats, das bereits in der Datenbank vorhanden ist, aus einer Datei importiert wird, wird der private Schlüssel automatisch mit dem Datenbank-Hauptschlüssel geschützt. Verwenden Sie die ENCRYPTION BY PASSWORD-Klausel, um den privaten Schlüssel mit einem Kennwort zu schützen.  
   
- Mit der Option REMOVE PRIVATE KEY wird der private Schlüssel des Zertifikats aus der Datenbank gelöscht. Dies ist möglich, wenn das Zertifikat zum Überprüfen von Signaturen oder für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Szenarien, die keinen privaten Schlüssel erfordern, verwendet wird. Den privaten Schlüssel eines Zertifikats, das einen symmetrischen Schlüssel schützt, dürfen Sie nicht entfernen.  
+ Mit der Option REMOVE PRIVATE KEY wird der private Schlüssel des Zertifikats aus der Datenbank gelöscht. Sie können den privaten Schlüssel entfernen, wenn das Zertifikat zum Überprüfen von Signaturen oder für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Szenarien, die keinen privaten Schlüssel erfordern, verwendet wird. Den privaten Schlüssel eines Zertifikats, das einen symmetrischen Schlüssel schützt, dürfen Sie nicht entfernen.  
   
  Sie müssen kein Entschlüsselungskennwort angeben, wenn der private Schlüssel mithilfe des Datenbank-Hauptschlüssels verschlüsselt wird.  
   

@@ -1,7 +1,7 @@
 ---
 title: Importieren aus Excel oder Exportieren nach Excel mit SSIS | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Excel-Daten mit SSIS (SQL Server Integration Services) importieren und exportieren können. Außerdem erhalten Sie Informationen zu erforderlichen Komponenten, bekannten Problemen und Einschränkungen.
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403392"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137929"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
-Dieser Artikel beschreibt, wie mit SQL Server Integration Services (SSIS) Daten aus Excel importiert oder in Excel exportiert werden können. Außerdem werden Voraussetzungen, Einschränkungen und bekannte Probleme erläutert.
+Dieser Artikel beschreibt die Verbindungsinformationen, die Sie angeben müssen, und die zu konfigurierenden Einstellungen, um Daten von Excel zu importieren oder Daten mit SQL Server Integration Services (SSIS) nach Excel zu exportieren.
 
-Sie können Daten aus Excel importieren oder in Excel exportieren, indem Sie ein SSIS-Paket erstellen und den Excel-Verbindungs-Manager und die Excel-Quelle oder das Excel-Ziel verwenden. Sie können auch den SQL Server-Import/ Export-Assistenten in SSIS verwenden.
+Die folgenden Abschnitte enthalten Informationen, die Sie benötigen, um Excel erfolgreich mit SSIS zu verwenden sowie um häufige Probleme nachzuvollziehen und zu behandeln:
 
-Dieser Artikel enthält Informationen, die Sie benötigen, um Excel erfolgreich über SSIS zu verwenden oder um häufige Probleme nachzuvollziehen und zu behandeln:
-1.  [Die erforderlichen Dateien:](#files-you-need)
-2.  Diese Informationen müssen Sie bereitstellen, wenn Sie Daten in oder aus Excel laden.
+1.  Die verfügbaren [Tools](#tools)
+
+2.  Die erforderlichen [Dateien](#files-you-need)
+
+3.  Die von Ihnen anzugebenden Verbindungsinformationen und die zu konfigurierenden Einstellungen zum Laden von Daten aus oder nach Excel.
     -   Geben Sie [Excel](#specify-excel) als Datenquelle an.
     -   Geben Sie den [Namen und den Pfad der Excel-Datei](#excel-file) an.
     -   Wählen Sie die [Excel-Version](#excel-version) aus.
     -   Geben Sie an, ob [die erste Zeile Spaltennamen enthält](#first-row).
     -   Stellen Sie das [Arbeitsblatt oder den Bereich mit den Daten](#sheets-ranges) an.
-3.  Einschränkungen und bekannte Probleme:
+
+4.  Einschränkungen und bekannte Probleme:
     -   Probleme mit [Datentypen](#issues-types)
     -   Probleme beim [Import](#issues-importing)
     -   Probleme beim [Export](#issues-exporting)
+
+## <a name="tools"></a> Die verfügbaren Tools
+
+Mit den folgenden Tools können Sie Daten von Excel importieren oder nach Excel exportieren:
+
+-   **SQL Server Integration Services (SSIS)**. Erstellen Sie mit dem Excel-Verbindungs-Manager ein SSIS-Paket, das die Excel-Quelle oder das Excel-Ziel verwendet. (Dieser Artikel beschreibt nicht das Entwerfen der SSIS-Pakete.)
+
+-   Der **SQL Server-Import/ Export-Assistent**, der auf SSIS aufbaut. Weitere Informationen finden Sie unter [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) und [Herstellen einer Verbindung mit einer Excel-Datenquelle (SQL Server-Import/Export-Assistent)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="files-you-need"></a> Herunterladen von Dateien zum Herstellen einer Verbindung mit Excel
 
 Bevor Sie Daten aus Excel importieren oder in Excel exportieren können, müssen Sie möglicherweise die Konnektivitätskomponenten für Excel herunterladen, sofern diese nicht bereits installiert sind. Die Konnektivitätskomponenten für Excel sind nicht standardmäßig installiert.
 
-Die neueste Version der Konnektivitätskomponenten für Excel stehen unter [Microsoft Access Database Engine 2016 Redistributable (Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=54920) zum Download bereit.
-  
-Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
+Die neueste Version der Konnektivitätskomponenten für Excel stehen unter [Microsoft Access Database Engine 2016 Redistributable (Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=54920) zum Download bereit. Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Excel erstellt wurden.
 
-Stellen Sie sicher, dass Sie die *weitervertreibbare Komponente* von Access Database Engine 2016 und nicht Microsoft Access 2016 *Runtime* herunterladen.
+### <a name="notes-about-the-download-and-installation"></a>Hinweise zu Downloads und Installationen
 
-Wenn der Computer bereits über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Versionen der Komponenten installieren. Sie müssen auch sicherstellen, dass das SSIS-Paket im 32-Bit-Modus ausgeführt wird, oder führen Sie die 32-Bit-Version des Import/Export-Assistenten aus.
+-   Stellen Sie sicher, dass Sie die *weitervertreibbare Komponente* von Access Database Engine 2016 und nicht Microsoft Access 2016 *Runtime* herunterladen.
 
-Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Zum Beispiel:
+-   Wenn der Computer bereits über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Versionen der Komponenten installieren. Sie müssen auch sicherstellen, dass das SSIS-Paket im 32-Bit-Modus ausgeführt wird, oder führen Sie die 32-Bit-Version des Import/Export-Assistenten aus.
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   Wenn Sie über ein Office 365-Abonnement verfügen, wird möglicherweise eine Fehlermeldung angezeigt, wenn Sie das Installationsprogramm ausführen. Dieser Fehler gibt an, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Zum Beispiel:
 
-Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie die weitervertreibbare Komponente 2010: [Microsoft Access Database Engine 2010 Redistributable (Microsoft Access Database Engine 2010 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> Angeben von Excel
+    Wenn Sie Probleme beim Installieren der weitervertreibbaren Komponente 2016 haben, installieren Sie die weitervertreibbare Komponente 2010: [Microsoft Access Database Engine 2010 Redistributable (Microsoft Access Database Engine 2010 – Weitervertreibbare Komponente)](https://www.microsoft.com/download/details.aspx?id=13255). (Es gibt keine weitervertreibbare Komponente für Excel 2013.)
+
+## <a name="specify-excel"></a> Festlegen von Excel als Datenquelle
 
 Der erste Schritt ist die Angabe, dass Sie eine Verbindung mit Excel herstellen möchten.
 

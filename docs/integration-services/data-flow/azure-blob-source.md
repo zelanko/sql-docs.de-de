@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334704"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964352"
 ---
 # <a name="azure-blob-source"></a>Azure-Blob-Quelle
   Die **Azure-Blobquelle** ermöglicht es einem SSIS-Paket, Daten aus einem Azure-Blob zu lesen. Die unterstützten Dateiformate sind CSV und AVRO.
@@ -37,10 +37,14 @@ ms.locfileid: "35334704"
   
 3.  Geben Sie im Feld **Blobname** den Pfad für das Blob an.  
   
-4.  Geben Sie im Feld **Blobdateiformat** das gewünschte Blobformat an.  
+4.  Wählen Sie im Feld **Blobdateiformat** das gewünschte Blobformat aus: **Text** oder **Avro**.  
   
-5.  Wenn es sich um das CSV-Dateiformat handelt, geben Sie den Wert für das **Spaltentrennzeichen** ein. Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.  
+5.  Wenn Sie das Dateiformat **Text** auswählen, geben Sie den Wert für das **Spaltentrennzeichen** an. Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.
+
+6.  Wenn die Datei komprimiert ist, klicken Sie auf **Datei dekomprimieren**.
+
+7.  Wenn die Datei komprimiert ist, wählen Sie den **Komprimierungstyp** aus: **GZIP**, **DEFLATE** oder **BZIP2**. Beachten Sie, dass das ZIP-Format nicht unterstützt wird.
   
-6.  Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite **Spalten** , um Quellspalten zu den Zielspalten für den SSIS-Datenfluss zuzuordnen.  
+8.  Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite **Spalten**, um den Zielspalten für den SSIS-Datenfluss Quellspalten zuzuordnen.  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,50 +22,47 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 872d45d523869d1260e2d69ec62b99434439020e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ce9b0d41ae0d1acf097999cd274c76e8e0571df
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052667"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781631"
 ---
 # <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die Dateigruppen-ID für einen angegebenen Dateigruppennamen zurück.  
+Diese Funktion gibt die Dateigruppen-ID für einen angegebenen Dateigruppennamen zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **'***filegroup_name***'**  
- Ein Ausdruck vom Typ **sysname** für den Namen der Dateigruppe, für die die Dateigruppen-ID zurückgegeben werden soll.  
+*filegroup_name* ist ein Ausdruck vom Typ **sysname**, der die Dateigruppe darstellt, deren Dateigruppen-ID `FILEGROUP_ID` zurückgegeben wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
+*filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Dateigruppen-ID für die Dateigruppe mit dem Namen `PRIMARY` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
+In diesem Beispiel wird die Dateigruppen-ID für die Dateigruppe mit dem Namen `PRIMARY` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
 ```  
-  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Filegroup ID  

@@ -1,7 +1,7 @@
 ---
 title: Leitfaden zur Architektur und zum Design von SQL Server-Indizes | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: 15c3db3784c056946a8ec047360691515c1c12be
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812164"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909590"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,13 +108,20 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
 ### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Abfragerichtlinien:  
   
--   Erstellen Sie nicht gruppierte Indizes für die Spalten, die häufig in Prädikaten und Joinbedingungen in Abfragen verwendet werden. Sie sollten jedoch keine unnötigen Spalten hinzufügen. Wenn Sie zu viele Indexspalten hinzufügen, kann sich dies negativ auf den Speicherplatz und die Indexverwaltungsleistung auswirken.  
+-   Erstellen Sie nicht gruppierte Indizes für die Spalten, die häufig in Prädikaten und Joinbedingungen in Abfragen verwendet werden. Dies sind Ihre SARGable<sup>1</sup>-Spalten. Sie sollten jedoch keine unnötigen Spalten hinzufügen. Wenn Sie zu viele Indexspalten hinzufügen, kann sich dies negativ auf den Speicherplatz und die Indexverwaltungsleistung auswirken.  
   
 -   Abdeckende Indizes können die Abfrageleistung steigern, weil alle Daten im Index selbst enthalten sind, die die Anforderungen der Abfrage erfüllen. Auf diese Weise muss nur auf die Indexseiten und nicht auf die Datenseiten der Tabelle oder des gruppierten Indexes verwiesen werden, um die abgefragten Daten abzurufen, wodurch der Umfang der E/A-Operationen des Datenträgers verringert wird. Eine Abfrage der Spalten **a** und **b** für eine Tabelle, die einen zusammengesetzten Index besitzt, der für die Spalten **a**, **b**und **c** erstellt wurde, kann die angegebenen Daten ausschließlich aus dem Index abrufen.  
-  
+
+    > [!IMPORTANT]
+    > Abdeckende Indizes sind die Bezeichnung für einen [nicht gruppierten Index](#nonclustered-index-architecture), der ein oder mehrere ähnliche Abfrageergebnisse direkt ohne Zugriff auf seine Basistabelle auflöst, und ohne dass Suchen erforderlich sind.
+    > Derartige Indizes verfügen über alle erforderlichen Nicht-[SARGable](#sargable)-Spalten auf Blattebene. Das bedeutet, dass die von der SELECT-Klausel zurückgegebenen Spalten und alle WHERE- und JOIN-Argumente durch den Index abgedeckt werden.
+    > Es gibt potenziell viel weniger eingehenden und ausgehenden Datenverkehr, um die Abfrage auszuführen, wenn der Index im Vergleich zu den Zeilen und Spalten in der Tabelle selbst nah genug gefasst ist, was bedeutet, dass es sich um eine echte Teilmenge der gesamten Spalten handelt. Ziehen Sie abdeckende Indizes in Betracht, wenn Sie einen kleinen Teil einer großen Tabelle auswählen, und wenn dieser kleine Teil durch ein festes Prädikat definiert ist. Ein Beispiel hierfür sind [Sparsespalten](../relational-databases/tables/use-sparse-columns.md), die nur wenige Werte enthalten, die nicht NULL sind.
+    
 -   Schreiben Sie Abfragen, die möglichst viele Zeilen in einer einzigen Anweisung einfügen oder ändern, anstatt mehrere Abfragen zum Aktualisieren der gleichen Zeilen zu verwenden. Wenn nur eine Anweisung verwendet wird, kann der Index optimal verwaltet werden.  
   
 -   Werten Sie den Abfragetyp sowie die Art der Verwendung von Spalten in der Abfrage aus. Eine Spalte, die in einem Abfragetyp für genaue Übereinstimmung verwendet wird, ist z. B. ein guter Kandidat für einen nicht gruppierten oder gruppierten Index.
+
+<a name="sargable"></a><sup>1</sup> Der Begriff „SARGable“ in relationalen Datenbanken bezieht sich auf ein suchargumentfähiges Prädikat (**S**earch **ARG**ument-**able**), das mithilfe eines Indexes die Ausführung der Abfrage beschleunigen kann.
   
 ### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Spaltenrichtlinien:  
@@ -148,7 +155,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
 -   Vergleich von Columnstore und Rowstore
 -   Vergleich von Hashindizes und nicht gruppierten Indizes für speicheroptimierte Tabellen
   
- Um die Indexleistung- oder -wartung zu optimieren, können Sie durch das Festlegen einer Option wie z. B. FILLFACTOR auch die Ausgangsspeichermerkmale des Indexes anpassen. Zudem können Sie den Speicherort des Indexes mithilfe von Dateigruppen oder Partitionsschemas festlegen, um die Leistung zu optimieren.  
+Um die Indexleistung- oder -wartung zu optimieren, können Sie durch das Festlegen einer Option wie z. B. FILLFACTOR auch die Ausgangsspeichermerkmale des Indexes anpassen. Zudem können Sie den Speicherort des Indexes mithilfe von Dateigruppen oder Partitionsschemas festlegen, um die Leistung zu optimieren.  
   
 ###  <a name="Index_placement"></a> Indexplatzierung in Dateigruppen oder Partitionsschemas  
  Bei der Entwicklung einer Indexentwurfsstrategie sollten Sie die Platzierung der Indizes in den Dateigruppen berücksichtigen, die der Datenbank zugeordnet sind. Das sorgfältige Auswählen der Dateigruppe oder des Partitionsschemas kann die Abfrageleistung verbessern.  
@@ -159,9 +166,9 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
 -   Partitionieren von gruppierten und nicht gruppierten Indizes, damit diese mehrere Dateigruppen umfassen.  
 -   Verschieben einer Tabelle aus einer Dateigruppe in eine andere durch Löschen des gruppierten Index und Angeben einer neuen Dateigruppe oder eines Partitionsschemas in der MOVE TO-Klausel der DROP INDEX-Anweisung oder durch Verwenden der CREATE INDEX-Anweisung mit der DROP_EXISTIN-Klausel.  
   
- Wird der nicht gruppierte Index in einer anderen Dateigruppe erstellt, können Leistungsvorteile erzielt werden, wenn die Dateigruppen verschiedene physische Laufwerke mit eigenen Controllern verwenden. Daten und Indexinformationen können dann parallel von mehreren Leseköpfen gelesen werden. Werden beispielsweise `Table_A` in Dateigruppe `f1` und `Index_A` in Dateigruppe `f2` von derselben Abfrage verwendet, können Leistungsvorteile erzielt werden, da beide Dateigruppen konfliktfrei vollständig verwendet werden können. Wenn `Table_A` von der Abfrage durchsucht wird, ohne dass auf `Index_A` verwiesen wird, wird jedoch nur Dateigruppe `f1` verwendet. In diesem Fall ist kein Leistungsgewinn zu verzeichnen.  
+Wird der nicht gruppierte Index in einer anderen Dateigruppe erstellt, können Leistungsvorteile erzielt werden, wenn die Dateigruppen verschiedene physische Laufwerke mit eigenen Controllern verwenden. Daten und Indexinformationen können dann parallel von mehreren Leseköpfen gelesen werden. Werden beispielsweise `Table_A` in Dateigruppe `f1` und `Index_A` in Dateigruppe `f2` von derselben Abfrage verwendet, können Leistungsvorteile erzielt werden, da beide Dateigruppen konfliktfrei vollständig verwendet werden können. Wenn `Table_A` von der Abfrage durchsucht wird, ohne dass auf `Index_A` verwiesen wird, wird jedoch nur Dateigruppe `f1` verwendet. In diesem Fall ist kein Leistungsgewinn zu verzeichnen.  
   
- Da jedoch nicht vorhersehbar ist, welche Zugriffsart wann erfolgt, ist die Entscheidung für das Verteilen der Tabellen und Indizes auf alle Dateigruppen häufig die bessere Lösung. So ist sichergestellt, dass unabhängig von der Art des Datenzugriffs auf alle Datenträger zugegriffen wird, da alle Daten und Indizes gleichmäßig auf alle Datenträger verteilt sind. Diese Lösung ist auch aus Systemadministratorensicht einfacher.  
+Da jedoch nicht vorhersehbar ist, welche Zugriffsart wann erfolgt, ist die Entscheidung für das Verteilen der Tabellen und Indizes auf alle Dateigruppen häufig die bessere Lösung. So ist sichergestellt, dass unabhängig von der Art des Datenzugriffs auf alle Datenträger zugegriffen wird, da alle Daten und Indizes gleichmäßig auf alle Datenträger verteilt sind. Diese Lösung ist auch aus Systemadministratorensicht einfacher.  
   
 #### <a name="partitions-across-multiple-filegroups"></a>Partitionen über mehrere Dateigruppen  
  Sie können auch das Partitionieren von gruppierten und nicht gruppierten Indizes über mehrere Dateigruppen hinweg in Betracht ziehen. Partitionierte Indizes werden horizontal oder nach Zeile basierend auf einer Partitionsfunktion partitioniert. Die Partitionsfunktion definiert, wie jede einzelne Zeile einer Gruppe von Partitionen auf der Grundlage der Werte bestimmter Spalten zugeordnet wird, die als Partitionierungsspalten bezeichnet werden. Ein Partitionsschema gibt die Zuordnung dieser Partitionen zu einer Sammlung von Dateigruppen an.  
@@ -172,7 +179,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
   
 -   Schnellere und effizientere Ausführung von Abfragen. Wenn Abfragen auf mehrere Partitionen eines Indexes zugreifen, kann der Abfrageoptimierer einzelne Partitionen gleichzeitig verarbeiten und Partitionen ausschließen, die nicht von der Abfrage betroffen sind.  
   
- Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Entwurfsrichtlinien zur Sortierreihenfolge von Indizes  
  Beim Definieren von Indizes sollten Sie berücksichtigen, ob die Daten für die Indexschlüsselspalte in aufsteigender oder absteigender Reihenfolge gespeichert werden sollen. Die Standardreihenfolge ist aufsteigend. Hierbei wird auch die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beibehalten. Die Syntax der CREATE INDEX-, CREATE TABLE- und ALTER TABLE-Anweisungen unterstützt die Schüsselwörter ASC (aufsteigend) und DESC (absteigend) für einzelne Spalten in Indizes und Einschränkungen:  
@@ -237,7 +244,7 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
   
 -   Sie kann in Bereichsabfragen verwendet werden.  
   
- Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, fügt die [!INCLUDE[ssDE](../includes/ssde-md.md)] der Tabelle automatisch eine 4 Byte große Uniqueifier-Spalte hinzu. Falls erforderlich, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] einer Zeile automatisch einen uniqueifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
+Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, fügt die [!INCLUDE[ssDE](../includes/ssde-md.md)] der Tabelle automatisch eine 4 Byte große Uniqueifier-Spalte hinzu. Falls erforderlich, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] einer Zeile automatisch einen uniqueifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
   
 ### <a name="clustered-index-architecture"></a>Architektur gruppierter Indizes  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind Indizes in Form von B-Strukturen aufgebaut. Jede Seite in der B-Struktur eines Indexes wird als Indexknoten bezeichnet. Der oberste Knoten der B-Struktur wird als Stammknoten bezeichnet. Die unteren Knoten im Index werden als Blattknoten bezeichnet. Alle anderen Indexebenen zwischen dem Stamm- und den Blattknoten werden zusammenfassend als Zwischenebenen bezeichnet. In einem gruppierten Index enthalten die Blattknoten die Datenseiten der zugrunde liegenden Tabelle. Die Stamm- und Zwischenebenenknoten enthalten Indexseiten, in denen Indexzeilen enthalten sind. Jede Indexzeile enthält einen Schlüsselwert und einen Zeiger auf eine Seite einer Zwischenebene in der B-Struktur oder auf eine Datenzeile in der Blattebene des Indexes. Die Seiten auf jeder Ebene des Indexes sind durch eine doppelt verknüpfte Liste miteinander verknüpft.  
@@ -272,32 +279,32 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
   
 -   Sie sind eindeutig oder enthalten zahlreiche unterschiedliche Werte.  
   
-     Eine Mitarbeiter-ID identifiziert einen Mitarbeiter z. B. eindeutig. Ein gruppierter Index oder eine [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung für die `EmployeeID`-Spalte verbessert die Leistung von Abfragen, durch die Mitarbeiterinformationen anhand der Mitarbeiter-ID gesucht werden. Alternativ kann ein gruppierter Index für `LastName`, `FirstName`und `MiddleName` erstellt werden, weil Mitarbeiterdatensätze häufig auf diese Weise gruppiert und abgefragt werden und die Kombination dieser Spalten jedoch trotzdem einen hohen Differenzierungsgrad bietet. 
+    Eine Mitarbeiter-ID identifiziert einen Mitarbeiter z. B. eindeutig. Ein gruppierter Index oder eine [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung für die `EmployeeID`-Spalte verbessert die Leistung von Abfragen, durch die Mitarbeiterinformationen anhand der Mitarbeiter-ID gesucht werden. Alternativ kann ein gruppierter Index für `LastName`, `FirstName`und `MiddleName` erstellt werden, weil Mitarbeiterdatensätze häufig auf diese Weise gruppiert und abgefragt werden und die Kombination dieser Spalten jedoch trotzdem einen hohen Differenzierungsgrad bietet. 
 
-     > [!TIP]
-     > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#clustered_index), um diese Einschränkung zu unterstützen.
-     > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*-Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
-     > Wenn Sie einen *uniqueidentifier*-Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
+    > [!TIP]
+    > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#clustered_index), um diese Einschränkung zu unterstützen.
+    > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*-Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
+    > Wenn Sie einen *uniqueidentifier*-Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
   
 -   Der Zugriff auf sie erfolgt sequenziell.  
   
-     Durch eine Produkt-ID werden Produkte in der `Production.Product` -Tabelle der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank beispielsweise eindeutig identifiziert. Abfragen, in denen eine sequenzielle Suche angegeben wird, z. B. `WHERE ProductID BETWEEN 980 and 999`, profitieren von einem gruppierten Index für `ProductID`. Die Ursache liegt darin, dass die Zeilen für diese Schlüsselspalte in sortierter Reihenfolge gespeichert werden.  
+    Durch eine Produkt-ID werden Produkte in der `Production.Product` -Tabelle der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank beispielsweise eindeutig identifiziert. Abfragen, in denen eine sequenzielle Suche angegeben wird, z. B. `WHERE ProductID BETWEEN 980 and 999`, profitieren von einem gruppierten Index für `ProductID`. Die Ursache liegt darin, dass die Zeilen für diese Schlüsselspalte in sortierter Reihenfolge gespeichert werden.  
   
 -   Sie sind als `IDENTITY` definiert.  
   
 -   Sie wird häufig verwendet, um die aus einer Tabelle abgerufenen Daten zu sortieren.  
   
-     Es kann sinnvoll sein, die Tabelle für die betreffende Spalte zu gruppieren (d. h., physisch zu sortieren), damit nicht bei jeder Abfrage der Spalte Kosten für einen Sortiervorgang entstehen.  
+    Es kann sinnvoll sein, die Tabelle für die betreffende Spalte zu gruppieren (d. h., physisch zu sortieren), damit nicht bei jeder Abfrage der Spalte Kosten für einen Sortiervorgang entstehen.  
   
  Die Verwendung eines gruppierten Indexes ist nicht empfehlenswert, wenn die Spalten die folgenden Merkmale aufweisen:  
   
 -   Spalten, die häufig geändert werden.  
   
-     In diesem Fall würde die gesamte Zeile verschoben, weil [!INCLUDE[ssDE](../includes/ssde-md.md)] die physische Reihenfolge der Datenwerte der Zeile aufrechterhalten muss. Dieser Aspekt sollte insbesondere bei Systemen berücksichtigt werden, in denen Transaktionsverarbeitung in großem Umfang erfolgt und Daten nur selten von Dauer sind.  
+    In diesem Fall würde die gesamte Zeile verschoben, weil [!INCLUDE[ssDE](../includes/ssde-md.md)] die physische Reihenfolge der Datenwerte der Zeile aufrechterhalten muss. Dieser Aspekt sollte insbesondere bei Systemen berücksichtigt werden, in denen Transaktionsverarbeitung in großem Umfang erfolgt und Daten nur selten von Dauer sind.  
   
 -   Ausführliche Schlüssel.  
   
-     Ausführliche Schlüssel sind aus mehreren Spalten oder mehreren großen Spalten zusammengesetzt. Die Schlüsselwerte aus dem gruppierten Index werden von allen nicht gruppierten Indizes als Suchschlüssel verwendet. Alle nicht gruppierten Indizes, die für dieselbe Tabelle definiert werden, sind erheblich größer, da die Einträge des nicht gruppierten Indexes den Gruppierungsschlüssel sowie die Schlüsselspalten enthalten, die für diesen nicht gruppierten Index definiert wurden.  
+    Ausführliche Schlüssel sind aus mehreren Spalten oder mehreren großen Spalten zusammengesetzt. Die Schlüsselwerte aus dem gruppierten Index werden von allen nicht gruppierten Indizes als Suchschlüssel verwendet. Alle nicht gruppierten Indizes, die für dieselbe Tabelle definiert werden, sind erheblich größer, da die Einträge des nicht gruppierten Indexes den Gruppierungsschlüssel sowie die Schlüsselspalten enthalten, die für diesen nicht gruppierten Index definiert wurden.  
   
 ##  <a name="Nonclustered"></a> Entwurfsrichtlinien für einen nicht gruppierten Index  
  Ein nicht gruppierter Index enthält Indexschlüsselwerte sowie Zeilenlokatoren, die auf den Speicherort der Tabellendaten verweisen. Sie können mehrere nicht gruppierte Indizes für eine Tabelle oder eine indizierte Sicht erstellen. Im Allgemeinen sollten nicht gruppierte Indizes so entworfen werden, dass sich die Leistung häufig verwendeter Abfragen verbessert, die nicht vom gruppierten Index abgedeckt werden.  
@@ -309,19 +316,19 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
   
 -   Die Datenzeilen der zugrunde liegenden Tabelle werden nicht auf der Grundlage ihrer nicht gruppierten Schlüssel sortiert und gespeichert.  
   
--   Die Blattebene eines nicht gruppierten Indexes besteht aus Indexseiten, nicht aus Datenseiten.  
+-   Die Blattebene eines nicht gruppierten Indexes besteht aus Indexseiten anstelle von Datenseiten.  
   
- Zeilenlokatoren in nicht gruppierten Indexzeilen bestehen entweder aus Zeigern, die auf jeweils eine Zeile zeigen, oder aus einem Schlüssel eines gruppierten Indexes für eine Zeile, wie im Folgenden erläutert:  
+Zeilenlokatoren in nicht gruppierten Indexzeilen bestehen entweder aus Zeigern, die auf jeweils eine Zeile zeigen, oder aus einem Schlüssel eines gruppierten Indexes für eine Zeile, wie im Folgenden erläutert:  
   
 -   Wenn es sich bei der Tabelle um einen Heap handelt (d. h. sie hat keinen gruppierten Index), entspricht der Zeilenlokator einem Zeiger auf die Zeile. Der Zeiger setzt sich aus dem Dateibezeichner (ID), der Seitennummer und der Nummer der Zeile auf der Seite zusammen. Der ganze Zeiger wird als Zeilen-ID (RID) bezeichnet.  
   
 -   Wenn die Tabelle einen gruppierten Index besitzt oder der Index für eine indizierte Sicht erstellt wurde, ist der Zeilenlokator der Schlüssel des gruppierten Indexes für die Zeile.  
   
- Nicht gruppierte Indizes verfügen in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) für jede vom Index verwendete Partition über eine Zeile, deren **index_id** >1 ist. Standardmäßig besitzen nicht gruppierte Indizes nur eine Partition. Wenn ein nicht gruppierter Index mehrere Partitionen besitzt, weist jede Partition eine B-Baumstruktur auf, die die Indexzeilen der entsprechenden Partition enthält. Wenn ein nicht gruppierter Index beispielsweise vier Partitionen besitzt, gibt es vier B-Baumstrukturen – jeweils eine in jeder Partition.  
+Nicht gruppierte Indizes verfügen in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) für jede vom Index verwendete Partition über eine Zeile, deren **index_id** >1 ist. Standardmäßig besitzen nicht gruppierte Indizes nur eine Partition. Wenn ein nicht gruppierter Index mehrere Partitionen besitzt, weist jede Partition eine B-Baumstruktur auf, die die Indexzeilen der entsprechenden Partition enthält. Wenn ein nicht gruppierter Index beispielsweise vier Partitionen besitzt, gibt es vier B-Baumstrukturen – jeweils eine in jeder Partition.  
   
- Abhängig von den Datentypen des nicht gruppierten Indexes erhält jede Struktur mindestens eine Zuordnungseinheit, in der die Daten einer bestimmten Partition gespeichert und verwaltet werden. Jeder nicht gruppierte Index besitzt also eine *IN_ROW_DATA*-Zuordnungseinheit pro Partition, die die B-Strukturseiten des Indexes speichert. Außerdem besitzt der nicht gruppierte Index eine *LOB_DATA*-Zuordnungseinheit, wenn er LOB-Spalten (Large Object) enthält. Darüber hinaus besitzt er eine *ROW_OVERFLOW_DATA*-Zuordnungseinheit pro Partition, wenn er Spalten variabler Länge enthält, die die Zeilengrößenbeschränkung von 8.060 Byte überschreiten.  
+Abhängig von den Datentypen des nicht gruppierten Indexes erhält jede Struktur mindestens eine Zuordnungseinheit, in der die Daten einer bestimmten Partition gespeichert und verwaltet werden. Jeder nicht gruppierte Index besitzt also eine *IN_ROW_DATA*-Zuordnungseinheit pro Partition, die die B-Strukturseiten des Indexes speichert. Außerdem besitzt der nicht gruppierte Index eine *LOB_DATA*-Zuordnungseinheit, wenn er LOB-Spalten (Large Object) enthält. Darüber hinaus besitzt er eine *ROW_OVERFLOW_DATA*-Zuordnungseinheit pro Partition, wenn er Spalten variabler Länge enthält, die die Zeilengrößenbeschränkung von 8.060 Byte überschreiten.  
   
- Die folgende Abbildung veranschaulicht die Struktur eines gruppierten Indexes einer einzigen Partition.  
+Die folgende Abbildung veranschaulicht die Struktur eines gruppierten Indexes einer einzigen Partition.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -332,7 +339,7 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
   
      Entscheidungsunterstützungssystem-Anwendungen und -Datenbanken, die hauptsächlich schreibgeschützte Daten enthalten, können von zahlreichen nicht gruppierten Indizes profitieren. Der Abfrageoptimierer hat hinsichtlich des Ermittelns der schnellsten Zugriffsmethode eine größere Auswahl an Indizes, und da die Datenbankmerkmale auf einen geringen Updateaufwand schließen lassen, wird die Leistung durch die Indexwartung nicht beeinträchtigt.  
   
--   Bei Anwendungen und Datenbanken zur Onlinetransaktionsverarbeitung mit Tabellen, die umfassend aktualisiert werden, sollte ein Übermaß an Indizierung vermieden werden. Zusätzlich sollten die Indizes schmal sein, also so wenig Spalten wie möglich enthalten.  
+-   Bei Anwendungen und Datenbanken zur Onlinetransaktionsverarbeitung (OLTP) mit Tabellen, die umfassend aktualisiert werden, sollte ein Übermaß an Indizierung vermieden werden. Zusätzlich sollten die Indizes schmal sein, also so wenig Spalten wie möglich enthalten.  
   
      Eine große Anzahl an Indizes für eine Tabelle beeinträchtigt die Leistung von INSERT-, UPDATE-, DELETE- und MERGE-Anweisungen, da alle Indizes entsprechend angepasst werden müssen, sobald Daten in der Tabelle geändert werden.  
   
@@ -345,19 +352,25 @@ Verwenden Sie diese Metadatenansichten, um die Attribute des Indizes anzuzeigen.
   
 -   Kein Zurückgeben großer Resultsets.  
   
-     Erstellen Sie gefilterte Indizes für Abfragen, die eine klar definierte Zeilenteilmenge aus einer großen Tabelle zurückgeben.  
-  
+     Erstellen Sie gefilterte Indizes für Abfragen, die eine klar definierte Zeilenteilmenge aus einer großen Tabelle zurückgeben. 
+     
+     > [!TIP] 
+     > In der Regel stimmt die WHERE-Klausel der CREATE INDEX-Anweisung mit der WHERE-Klausel einer Abfrage überein, die gerade abgedeckt wird.  
+
 -   Enthalten von Spalten, die häufig an Suchbedingungen einer Abfrage beteiligt sind (z. B. WHERE-Klausel), die genaue Übereinstimmungen zurückgeben.  
-  
+
+    > [!TIP]
+    > Bedenken Sie die Kosten gegenüber dem Nutzen beim Hinzufügen neuer Indizes. Es kann besser sein, zusätzliche Abfrageanforderungen in einen bestehenden Index zu konsolidieren. Erwägen Sie beispielsweise, eine oder zwei zusätzliche Spalten auf Blattebene zu einem bestehenden Index hinzuzufügen, wenn er die Abdeckung mehrerer kritischer Abfragen erlaubt, anstatt einen genau abdeckenden Index pro kritischer Abfrage zu haben.
+    
 ### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Ziehen Sie Spalten mit einem oder mehrerer dieser Attribute in Betracht:  
   
 -   Abdecken der Abfrage.  
   
-     Leistungsgewinne werden erzielt, wenn der Index alle Spalten in der Abfrage enthält. Der Abfrageoptimierer kann alle Spaltenwerte im Index finden; da auf Daten der Tabelle oder des gruppierten Indexes nicht zugegriffen wird, kommt es zu weniger Datenträger-E/A-Vorgängen. Verwenden Sie einen Index mit eingeschlossenen Spalten, um mehrere Spalten abzudecken, anstatt einen breiten Indexschlüssel zu erstellen.  
+     Leistungsgewinne werden erzielt, wenn der Index alle Spalten in der Abfrage enthält. Der Abfrageoptimierer kann alle Spaltenwerte im Index finden; da auf Daten der Tabelle oder des gruppierten Indexes nicht zugegriffen wird, kommt es zu weniger Datenträger-E/A-Vorgängen. Verwenden Sie einen Index mit [eingeschlossenen Spalten](#Included_Columns), um mehrere Spalten abzudecken, anstatt einen breiten Indexschlüssel zu erstellen.  
   
      Wenn die Tabelle einen gruppierten Index aufweist, werden die im gruppierten Index definierten Spalten automatisch an das Ende sämtlicher nicht gruppierter Indizes für die Tabelle angefügt. Auf diese Weise kann eine abgedeckte Abfrage erstellt werden, ohne dass die Spalten des gruppierten Indexes in der Definition des nicht gruppierten Indexes angegeben werden. Wenn eine Tabelle beispielsweise einen gruppierten Index für Spalte `C`besitzt, weist ein nicht gruppierter Index für die Spalten `B` und `A` die Schlüsselwertspalten `B`, `A`und `C`auf.  
-  
+      
 -   Große Anzahl unterschiedlicher Werte, beispielsweise eine Kombination aus Nachname und Vorname, wenn für andere Spalten ein gruppierter Index verwendet wird.  
   
      Wenn nur sehr wenige unterschiedliche Werte vorhanden sind, beispielsweise nur 1 und 0, verwenden die meisten Abfragen den Index nicht, da ein Tabellenscan im Allgemeinen effizienter ist. Für diesen Datentyp sollten Sie einen gefilterten Index anhand eines anderen Werts erstellen, der in weniger Zeilen vorkommt. Beispiel: Wenn die meisten Werte 0 sind, kann der Abfrageoptimierer einen gefilterten Index für die Zeilen verwenden, die den Wert 1 enthalten.  
@@ -392,7 +405,7 @@ INCLUDE (FileName);
 ```  
   
 ##### <a name="index-with-included-columns-guidelines"></a>Richtlinien für Indizes mit eingeschlossenen Spalten  
- Wenn Sie nicht gruppierte Indizes mit eingeschlossenen Spalten entwerfen, sollten Sie die folgenden Richtlinien beachten:  
+Wenn Sie nicht gruppierte Indizes mit eingeschlossenen Spalten entwerfen, sollten Sie die folgenden Richtlinien beachten:  
   
 -   Nichtschlüsselspalten werden in der INCLUDE-Klausel der CREATE INDEX-Anweisung definiert.  
   
@@ -407,7 +420,7 @@ INCLUDE (FileName);
 -   Spaltennamen dürfen nicht sowohl in der INCLUDE-Liste als auch in der Schlüsselspaltenliste angegeben werden.  
   
 -   Spaltennamen können nicht in der INCLUDE-Liste wiederholt werden.  
-  
+
 ##### <a name="column-size-guidelines"></a>Richtlinien für die Spaltengröße  
   
 -   Es muss mindestens eine Schlüsselspalte definiert werden. Die maximal zulässige Anzahl der Nichtschlüsselspalten beträgt 1023 Spalten. Dies ist die maximale Anzahl der Tabellenspalten minus 1.  

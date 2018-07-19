@@ -1,7 +1,8 @@
 ---
 title: SQL Server Integration Services | Microsoft-Dokumentation
+description: Erfahren Sie mehr zu SQL Server Integration Services, eine Microsoft-Plattform zum Erstellen von Datenintegrations- und Datentransformationslösungen auf Unternehmensebene.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -19,28 +20,31 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d8c9c27e4650d89a1e02ebc2a8812370380fd16
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329094"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909860"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
  > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx).
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform zum Erstellen von Datenintegrations- und Datentransformationslösungen auf Unternehmensebene. Sie verwenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um komplexe Unternehmensprobleme durch Kopieren oder Herunterladen von Dateien, Senden von E-Mail-Nachrichten als Antwort auf Ereignisse, Aktualisieren von Data Warehouses, Bereinigen von Daten und Data Mining sowie Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten und -Daten zu lösen. Die Pakete können alleine oder zusammen mit anderen Paketen verwendet werden, um komplexe geschäftliche Anforderungen zu erfüllen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] kann Daten aus einer Vielzahl von Quellen, z. B. XML-Datendateien, Flatfiles und relationale Datenquellen, extrahieren und transformieren und die Daten dann in ein oder mehrere Ziele laden.<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Vielzahl integrierter Tasks und Transformationen; Tools zum Erstellen von Paketen und den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Ausführen und Verwalten von Paketen. Sie können die grafischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tools verwenden, um Lösungen zu erstellen, ohne eine einzige Codezeile schreiben zu müssen. Oder Sie können das umfangreiche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodell programmieren, um Pakete programmgesteuert zu erstellen und benutzerdefinierte Tasks sowie andere Paketobjekte zu codieren.
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform zum Erstellen von Datenintegrations- und Datentransformationslösungen auf Unternehmensebene. Verwenden Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], um komplexe Unternehmensprobleme durch Kopieren oder Herunterladen von Dateien, Laden von Data Warehouses, Bereinigen von Daten und Data Mining sowie Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten und -Daten zu lösen.
 
-## <a name="try-sql-server-and-sql-server-integration-services"></a>SQL Server und SQL Server Integration Services testen
-- [![Aus dem Evaluierungscenter herunterladen](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 oder 2016 herunterladen](https://www.microsoft.com/evalcenter/evaluate-sql-server)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [ SQL Server Data Tools (SSDT) herunterladen](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [ SQL Server Management Studio (SSMS) herunterladen](../ssms/download-sql-server-management-studio-ssms.md)
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] kann Daten aus einer Vielzahl von Quellen, z. B. XML-Datendateien, Flatfiles und relationale Datenquellen, extrahieren und transformieren und die Daten dann in ein oder mehrere Ziele laden.
+
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält einen umfangreichen Satz integrierter Tasks und Transformationen, grafische Tools zum Erstellen von Paketen und die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Katalogdatenbank, in der Sie Pakete speichern, ausführen und verwalten.
+
+Mithilfe der grafischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Tools können Sie Lösungen erstellen, ohne eine einzige Zeile Code zu schreiben. Sie können auch das umfangreiche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objektmodell programmieren, um Pakete programmgesteuert zu erstellen und benutzerdefinierte Tasks und andere Paketobjekte zu programmieren.
+
+## <a name="get-sql-server-integration-services"></a>Herunterladen von SQL Server Integration Services
+
+Weitere Informationen zum Installieren von SQL Server Integration Services mit SQL Server und weitere Downloads, die Sie möglicherweise wünschen oder benötigen, finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressourcen
 -   [Erhalten Sie Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)

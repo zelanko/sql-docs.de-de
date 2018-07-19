@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769676"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066000"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769676"
 >  Vor dem Erstellen des ersten Listeners empfiehlt es sich, den Artikel [Always On-Clientkonnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) zu lesen.  
   
 ###  <a name="DNSnameReqs"></a> Anforderungen für den DNS-Namen eines Verfügbarkeitsgruppenlisteners  
- Für jeden Verfügbarkeitsgruppenlistener ist ein DNS-Hostname erforderlich, der in der Domäne und in NetBIOS eindeutig ist. Der DNS-Name ist ein Zeichenfolgenwert. Dieser Name darf nur alphanumerische Zeichen, Bindestriche (-) und Unterstriche (_) enthalten (in beliebiger Reihenfolge). Bei DNS-Hostnamen muss die Groß-/Kleinschreibung beachtet werden. Die maximale Länge beträgt 63 Zeichen, die maximale Länge, die in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]angegeben werden kann, ist jedoch 15 Zeichen.  
+ Für jeden Verfügbarkeitsgruppenlistener ist ein DNS-Hostname erforderlich, der in der Domäne und in NetBIOS eindeutig ist. Der DNS-Name ist ein Zeichenfolgenwert. Dieser Name darf nur alphanumerische Zeichen, Gedanken-/Bindestriche (-) und Unterstriche (_) in beliebiger Reihenfolge enthalten. Bei DNS-Hostnamen muss die Groß-/Kleinschreibung beachtet werden. Die maximale Länge beträgt 63 Zeichen, die maximale Länge, die in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]angegeben werden kann, ist jedoch 15 Zeichen.  
   
  Wir empfehlen, dass Sie eine sinnvolle Zeichenfolge angeben. Für eine Verfügbarkeitsgruppe mit dem Namen `AG1`wäre ein sinnvoller DNS-Hostname z. B. `ag1-listener`.  
   

@@ -1,10 +1,9 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689138"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791511"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Legt für bestimmte Verhalten der Datenbank fest, dass sie mit der angegebenen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  Der Name der Datenbank, die geändert werden soll.  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden:  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):  
   
 |Product|Version der Datenbank-Engine|Bestimmung des Kompatibilitätsgrads|Unterstützte Kompatibilitätsgradwerte|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|Logischer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server|12|130|140, 130, 120, 110, 100|  
+|Verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -136,8 +135,14 @@ Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Up
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität  
 Die Einstellung für *Datenbank-Kompatibilitätsgrad* wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Der Datenbank-Kompatibilitätsgrad bietet nur partielle Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+
+> [!TIP]
+> Da *Datenbank-Kompatibilitätsgrad* eine Einstellung auf Datenbankebene ist, kann eine Anwendung, die auf einer neueren [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz ausgeführt wird und einen älteren Datenbank-Kompatibilitätsgrad verwendet, immer noch Verbesserungen auf Serverebene nutzen, ohne dass Änderungen an der Anwendung erforderlich sind.
+>
+> Dazu gehören umfassende Verbesserungen bei der Überwachung und Problembehandlung mit neuen [dynamischen Systemverwaltungssichten](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) und [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md). Zudem wurde die Skalierbarkeit z.B. mit [automatischer Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) verbessert.
+
 Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf einen Abfrageplan haben, ausdrücklich nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind.   
-Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendeinem Zeitpunkt auf den neuesten Kompatibilitätsgrad zu aktualisieren, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den niedrigeren Kompatibilitätsgrad als sichere Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden. Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren des Datenbank-Kompatibilitätsgrads, finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](#best-practices-for-upgrading-database-compatibility-evel) weiter unten in diesem Artikel.  
+Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendeinem Zeitpunkt auf den neuesten Kompatibilitätsgrad zu aktualisieren, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den niedrigeren Kompatibilitätsgrad als sichere Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden. Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren des Datenbank-Kompatibilitätsgrads, finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](#best-practices-for-upgrading-database-compatibility-level) weiter unten in diesem Artikel.  
   
 > [!IMPORTANT]
 > Nicht mehr unterstützte Funktionalitäten, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden durch den Kompatibilitätsgrad nicht geschützt. Dies bezieht sich auf Funktionalität, die aus der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entfernt wurde.
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

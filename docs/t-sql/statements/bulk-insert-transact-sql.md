@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075237"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782671"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -132,7 +131,7 @@ Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Spe
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, für jede Spalte einen Sortierungsnamen in einer [Formatdatei](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md) anzugeben.  
   
-|CODEPAGE-Wert|Description|  
+|CODEPAGE-Wert|und Beschreibung|  
 |--------------------|-----------------|  
 |ACP|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|  
 |OEM (Standard)|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|  
@@ -425,6 +424,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importieren von Daten aus einer Datei im Azure Blob Storage und Festlegen einer Fehlerdatei   
+Das folgende Beispiel zeigt, wie man Daten aus einer CSV-Datei in einen Azure Blob Storage-Verzeichnis lädt, das als externe Datenquelle konfiguriert wurde und auch eine Fehlerdatei angibt. Dies erfordert datenbankweit gültige Anmeldeinformationen, die SAS verwenden. Beachten Sie, dass die Option ERRORFILE, wenn sie auf Azure SQL-Datenbank ausgeführt wird, von ERRORFILE_DATA_SOURCE begleitet werden sollte, da sonst beim Import ein Berechtigungsfehler auftreten könnte. Die in ERRORFILE angegebene Datei darf nicht im Container vorhanden sein.
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 Vollständige `BULK INSERT`-Beispiele einschließlich der Konfiguration der Anmeldeinformation und externen Datenquelle finden Sie unter [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).

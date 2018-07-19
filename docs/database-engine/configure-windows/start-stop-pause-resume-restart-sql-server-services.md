@@ -44,12 +44,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e0ca8a8db9121cb224f84ef38e4f03b0f8239f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c8e3ca0f21c336ecde6bfb5e9fb6a1e54414b7a
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870565"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324474"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "32870565"
     |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>So wird eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>So wird eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz gestartet, beendet, angehalten, fortgesetzt oder neu gestartet  
   
 1.  Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager mithilfe der oben genannten Anweisungen.  
   

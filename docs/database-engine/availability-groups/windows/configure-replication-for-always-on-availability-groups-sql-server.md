@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/17/2016
+ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ea2fb342bc881d79f8e3184535bbe888e939068
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac96fc19852fa45b972308fc48b55687f0885ea6
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770466"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934872"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen (SQL Server)
 
@@ -128,6 +128,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  Weitere Informationen finden Sie unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
+ 
+> [!NOTE]  
+>  Die Replikation kann nicht für Datenbanken aktiviert werden, die sich in einer Verfügbarkeitsgruppe mit über die „Per_DB“-Option aktiviertem DTC_Support befinden.  
   
 ##  <a name="step3"></a> 3. Stellen Sie sicher, dass alle sekundären Replikathosts für die Replikation konfiguriert werden.  
  Überprüfen Sie bei jedem sekundären Replikathost, ob [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] so konfiguriert wurde, dass die Replikation unterstützt wird. Die folgende Abfrage kann auf jedem sekundären Replikathost ausgeführt werden, um zu bestimmen, ob die Replikation installiert wurde:  

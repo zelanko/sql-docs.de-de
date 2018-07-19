@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405672"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798265"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure
 
@@ -26,7 +27,7 @@ Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mi
 - Anmeldeinformationen 
 
 > [!IMPORTANT]
-> Derzeit können Sie die SSISDB-Katalogdatenbank in Azure SQL-Datenbank nicht erstellen, ohne auch Integration Runtime für Azure-SSIS in Azure Data Factory Version 2 zu erstellen. Die Azure SSIS IR ist die Laufzeitumgebung, die SSIS-Pakete auf Azure ausführt. Einen exemplarischen Prozess finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> Zurzeit kann die SSISDB-Katalogdatenbank in Azure SQL-Datenbank nur zusammen mit der Azure SSIS Integration Runtime in Azure Data Factory erstellt werden. Die Azure SSIS IR ist die Laufzeitumgebung, die SSIS-Pakete auf Azure ausführt. Einen exemplarischen Prozess finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wenn die SSISDB-Katalogdatenbank auf einer verwalteten SQL-Datenbank-Instanz (Vorschauversion) gehostet wird, stellen Sie sicher, dass Sie die Version 17.6 oder höher von SSMS verwenden. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
