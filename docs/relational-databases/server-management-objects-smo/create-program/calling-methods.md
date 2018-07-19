@@ -1,5 +1,5 @@
 ---
-title: Aufrufen von Methoden | Microsoft Docs
+title: Aufrufen von Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3629f2f5d5905ce17df7a5aa15936edaa876ef4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005830"
 ---
 # <a name="calling-methods"></a>Aufrufen von Methoden
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Methoden führen bestimmte Tasks im Zusammenhang mit dem Objekt, z. B. die Ausgabe einer **Prüfpunkt** auf einer Datenbank oder die Anforderung einer Aufzählungsliste mit Anmeldungen für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Methoden führen bestimmte Tasks im Zusammenhang mit der das Objekt, z. B. die Ausgabe einer **Prüfpunkt** für eine Datenbank oder die Anforderung einer Aufzählungsliste mit Anmeldungen für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Methoden führen Vorgänge an Objekten aus. Methoden können Parameter enthalten, und sie verfügen häufig über einen Rückgabewert. Bei dem Rückgabewert kann es sich um einen einfachen Datentyp, ein komplexes Objekt oder eine Struktur handeln, die mehrere Elemente enthält.  
   
@@ -123,7 +123,7 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Verwenden einer Enumerationsmethode in Visual C#, die ein "DataTable"-Objekt zurückgibt  
  In diesem Abschnitt wird beschrieben, wie eine Enumerationsmethode aufgerufen und wie die Daten in der zurückgegebenen behandelt <xref:System.Data.DataTable> Objekt.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> Methodenrückgabe ein System <xref:System.Data.DataTable> Objekt. Die <xref:System.Data.DataTable> -Objekt ist Weitere Navigation auf alle verfügbaren Sortierungsinformationen zu der Instanz von erforderlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> Methodenrückgabe ein Systems <xref:System.Data.DataTable> Objekt. Die <xref:System.Data.DataTable> Objekt erfordert weitere Navigation auf alle verfügbaren Sortierungsinformationen zu der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -184,7 +184,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Kopieren eines SMO-Objekts in Visual Basic  
- Dieses Codebeispiel verwendet die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> Methode zum Erstellen einer Kopie der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Dieses Codebeispiel verwendet die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> Methode zum Erstellen einer Kopie der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Server> -Objekt stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -200,7 +200,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Kopieren eines SMO-Objekts in Visual C#  
- Dieses Codebeispiel verwendet die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> Methode zum Erstellen einer Kopie der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Dieses Codebeispiel verwendet die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> Methode zum Erstellen einer Kopie der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Server> -Objekt stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 {   
@@ -218,7 +218,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Überwachen von Serverprozessen in Visual Basic  
- Sie erhalten die aktuellen Informationen zu der Instanz von Statustyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über Enumerationsmethoden. Im Beispielcode wird die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A>-Methode zum Ermitteln von Informationen zu den aktuellen Prozessen verwendet. Dieses Beispiel zeigt auch, wie mit den Spalten und Zeilen im zurückgegebenen <xref:System.Data.DataTable>-Objekt gearbeitet wird.  
+ Sie erhalten den aktuellen Status Typinformationen über die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über Enumerationsmethoden. Im Beispielcode wird die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A>-Methode zum Ermitteln von Informationen zu den aktuellen Prozessen verwendet. Dieses Beispiel zeigt auch, wie mit den Spalten und Zeilen im zurückgegebenen <xref:System.Data.DataTable>-Objekt gearbeitet wird.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -240,7 +240,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Überwachen von Serverprozessen in Visual C#  
- Sie erhalten die aktuellen Informationen zu der Instanz von Statustyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über Enumerationsmethoden. Im Beispielcode wird die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A>-Methode zum Ermitteln von Informationen zu den aktuellen Prozessen verwendet. Dieses Beispiel zeigt auch, wie mit den Spalten und Zeilen im zurückgegebenen <xref:System.Data.DataTable>-Objekt gearbeitet wird.  
+ Sie erhalten den aktuellen Status Typinformationen über die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über Enumerationsmethoden. Im Beispielcode wird die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A>-Methode zum Ermitteln von Informationen zu den aktuellen Prozessen verwendet. Dieses Beispiel zeigt auch, wie mit den Spalten und Zeilen im zurückgegebenen <xref:System.Data.DataTable>-Objekt gearbeitet wird.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

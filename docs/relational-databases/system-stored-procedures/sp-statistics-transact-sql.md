@@ -1,5 +1,5 @@
 ---
-title: Sp_statistics (Transact-SQL) | Microsoft Docs
+title: Sp_statistics (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0b4a24cce24a94fdd6c4f901974d0f4accf7ff1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005662"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,31 +55,31 @@ sp_statistics [ @table_name = ] 'table_name'
  Gibt die Tabelle zum Zurückgeben von Kataloginformationen an. *TABLE_NAME* ist **Sysname**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
   
  [  **@table_owner=** ] **"***Besitzer***"**  
- Der Name des Tabellenbesitzers für die Tabelle zum Zurückgeben von Kataloginformationen. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Besitzer* nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
+ Der Name des Tabellenbesitzers für die Tabelle zum Zurückgeben von Kataloginformationen. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Besitzer* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Indizes einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Besitzer* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen*, sucht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Namen* im Besitz der der Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Indizes dieser Tabelle zurückgegeben.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Indizes einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Besitzer* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Namen*, sieht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Namen* im Besitz der Besitzer der Datenbank. Sofern eine solche Tabelle vorhanden ist, werden die Indizes dieser Tabelle zurückgegeben.  
   
  [  **@table_qualifier=** ] **"***Qualifizierer***"**  
  Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [  **@index_name=** ] **"***Index_name***"**  
- Ist der Indexname. *Index_name* ist **Sysname**, hat den Standardwert %. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+ Ist der Name des Indexes an. *Index_name* ist **Sysname**, hat den Standardwert %. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
  [  **@is_unique=** ] **"***Is_unique***"**  
  Ist, ob nur eindeutige Indizes (Wenn **Y**) zurückgegeben werden sollen. *Is_unique* ist **char(1)**, hat den Standardwert **N**.  
   
  [  **@accuracy=** ] **"***Genauigkeit***"**  
- Die Ebene der Kardinalität und Seitengenauigkeit für Statistiken. *Genauigkeit* ist **char(1)**, hat den Standardwert **Q**. Geben Sie **E** um sicherzustellen, dass die Statistiken aktualisiert werden, sodass Kardinalität und Seiten richtig sind.  
+ Die Ebene der Kardinalität und Seitengenauigkeit für Statistiken. *Genauigkeit* ist **char(1)**, hat den Standardwert **Q**. Geben Sie **E** um sicherzustellen, dass die Statistiken aktualisiert werden, sodass Kardinalität und Seiten stimmen.  
   
  Der Wert **E** (SQL_ENSURE) weist den Treiber zum unbedingten Abrufen der Statistiken.  
   
- Der Wert **Q** (SQL_QUICK) weist den Treiber zum Abrufen der Kardinalität und Seiten nur dann, wenn sie ohne weiteres auf dem Server verfügbar sind. In diesem Fall wird vom Treiber nicht sichergestellt, dass die Werte aktuell sind. Anwendungen, die nach dem "Open Group"-Standard geschrieben wurden, rufen immer das SQL_QUICK-Verhalten von Treibern ab, die mit ODBC 3.x kompatibel sind.  
+ Der Wert **Q** (SQL_QUICK) weist den Treiber zum Abrufen der Kardinalität und Seiten nur dann, wenn sie direkt auf dem Server verfügbar sind. In diesem Fall wird vom Treiber nicht sichergestellt, dass die Werte aktuell sind. Anwendungen, die nach dem "Open Group"-Standard geschrieben wurden, rufen immer das SQL_QUICK-Verhalten von Treibern ab, die mit ODBC 3.x kompatibel sind.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|Tabelle der Name des Prozedurqualifizierers. Diese Spalte kann NULL enthalten.|  
+|**TABLE_QUALIFIER**|**sysname**|Name des Qualifizierers Tabelle. Diese Spalte kann NULL enthalten.|  
 |**TABLE_OWNER**|**sysname**|Name des Tabellenbesitzers. Diese Spalte gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Diese Spalte gibt immer einen Wert zurück.|  
 |**NON_UNIQUE**|**smallint**|NICHT NULL IST.<br /><br /> 0 = Eindeutig<br /><br /> 1 = Nicht eindeutig|  
@@ -87,14 +87,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**INDEX_NAME**|**sysname**|Der Name des Indexes. Diese Spalte gibt immer einen Wert zurück.|  
 |**TYPE**|**smallint**|Diese Spalte gibt immer einen Wert zurück:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = nicht gruppiert|  
 |**SEQ_IN_INDEX**|**smallint**|Position der Spalte im Index|  
-|**COLUMN_NAME**|**sysname**|Spaltenname für jede Spalte von der **TABLE_NAME** zurückgegeben. Diese Spalte gibt immer einen Wert zurück.|  
+|**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Diese Spalte gibt immer einen Wert zurück.|  
 |**COLLATION**|**char(1)**|Die in der Sortierung verwendete Reihenfolge. Mögliche Werte sind:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend|  
 |**KARDINALITÄT**|**int**|Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
 |**SEITEN**|**int**|Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle benötigt werden|  
-|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
+|**FILTERBEDINGUNG**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt keinen Wert zurück.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  Die Indizes im Resultset angezeigt werden, in aufsteigender Reihenfolge nach den Spalten **NON_UNIQUE**, **Typ**, **INDEX_NAME**, und **SEQ_IN_INDEX**.  
@@ -103,13 +103,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  Beim Indextyp Hash ist die Suche nach genauen Übereinstimmungen oder Wertebereichen zwar zulässig, bei Mustervergleichen wird der Index jedoch nicht verwendet.  
   
- **Sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse sind sortiert, indem **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **INDEX_NAME**, und **SEQ_IN_ INDEX**. Weitere Informationen finden Sie unter der [ODBC API Reference](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **Sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse sind sortiert nach **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **INDEX_NAME**, und **SEQ_IN_ INDEX**. Weitere Informationen finden Sie unter den [ODBC-API-Referenz](http://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiel: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel gibt Informationen zu den `DimEmployee` Tabelle.  
+ Das folgende Beispiel gibt Informationen über die `DimEmployee` Tabelle.  
   
 ```  
 -- Uses AdventureWorks  

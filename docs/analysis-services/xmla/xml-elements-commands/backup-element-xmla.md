@@ -1,5 +1,5 @@
 ---
-title: Backup-Element (XMLA) | Microsoft Docs
+title: Backup-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007150"
 ---
 # <a name="backup-element-xmla"></a>Backup-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34574212"
 |Untergeordnete Elemente|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md), [Datei](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [Speicherorte](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ Objekt](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [Kennwort](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [Sicherheit](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Backup** Befehl sichert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der [Objekt](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) Element, um eine Sicherungsdatei und optional sichert der Remotepartitionen in remotesicherungsdateien. Wenn die **Objekt** Element verweist auf ein Objekt als eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank, ein Fehler auftritt.  
+ Die **Backup** Befehl sichert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der [Objekt](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) Element auf eine Sicherungsdatei und optional Remotepartitionen in remotesicherungsdateien sichert. Wenn die **Objekt** Element verweist auf ein Objekt als eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank, ein Fehler auftritt.  
   
  Welche Informationen mithilfe des **Backup** -Befehls gesichert werden, hängt vom von Objekten in der Datenbank verwendeten Speichermodus ab. In der folgenden Tabelle werden die Informationen dargestellt, die basierend auf dem verwendeten Speichermodus gesichert werden.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34574212"
 |Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
 |Relationale OLAP (ROLAP)|Metadaten|  
   
- Während einer **Sicherung** Befehl, eine gemeinsame Sperre befindet sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **Objekt** Element. Die freigegebene Sperre wird nach Abschluss des **Backup** -Befehls wieder aufgehoben.  
+ Während ein **Sicherung** -Befehls wird eine freigegebene Sperre für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der **Objekt** Element. Die freigegebene Sperre wird nach Abschluss des **Backup** -Befehls wieder aufgehoben.  
   
  Mehrere **Sicherung** -Befehle können gleichzeitig ausgeführt werden, wenn die Befehle, in enthalten sind der [parallele](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) Auflistung von einer [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) Befehl. Mihilfe der **Parallel** -Auflistung kann eine Datenbank in mehreren Sicherungsdateien gleichzeitig gesichert werden.  
   

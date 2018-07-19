@@ -1,5 +1,5 @@
 ---
-title: Overflow-Feld (SQLXML 4.0) | Microsoft Docs
+title: 'SQL: Overflow-Feld (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970225"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005813"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretation von Anmerkungen - Overflow-Feld
+# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretation von Anmerkungen – SQL: Overflow-Feld
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In einem Schema können Sie eine Spalte als Überlaufspalte festlegen, die alle nicht verbrauchten Daten aus dem XML-Dokument aufnimmt. Diese Spalte wird im Schema mithilfe der **sql:overflow-field** -Anmerkung angegeben. Sie können mit mehreren Überlaufspalten arbeiten.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "32970225"
   
  Bei der Speicherung der Daten in der Überlaufspalte speichert der XML-Massenladevorgang ebenfalls die Start- und Endtags des übergeordneten Elements, für das **sql:overflow-field** definiert ist.  
   
- Das folgende Schema beschreibt z. B. die  **\<Kunden >** und  **\<CustOrder >** Elemente. Beide Elemente geben eine Überlaufspalte an:  
+ Das folgende Schema beschreibt zum Beispiel die  **\<Kunden >** und  **\<CustOrder >** Elemente. Beide Elemente geben eine Überlaufspalte an:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -80,9 +80,9 @@ ms.locfileid: "32970225"
 </xsd:schema>  
 ```  
   
- Im Schema der  **\<Kunden >** -Element ordnet die Cust-Tabelle und die  **\<Reihenfolge >** Element wird in die CustOrder-Tabelle zugeordnet.  
+ Im Schema die  **\<Kunden >** -Element ordnet die Cust-Tabelle und die  **\<Reihenfolge >** -Element der CustOrder-Tabelle zugeordnet.  
   
- Sowohl die  **\<Kunden >** und  **\<Reihenfolge >** Elemente geben eine Überlaufspalte. Daher speichert XML-Massenladen alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Kunden >** Element in der Überlaufspalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Reihenfolge >** Element in der Überlaufspalte der CustOrder-Tabelle.  
+ Sowohl die  **\<Kunden >** und  **\<Reihenfolge >** Elemente geben eine Überlaufspalte. Daher speichert XML-Massenladen alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Kunden >** -Element in der Überlaufspalte der Cust-Tabelle, und alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Reihenfolge >** Element in der Überlaufspalte der CustOrder-Tabelle.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

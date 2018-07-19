@@ -1,5 +1,5 @@
 ---
-title: BackupRemotePartitions-Element (XMLA) | Microsoft Docs
+title: BackupRemotePartitions-Element (XMLA) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33e81bd76e7f900a396b1f9bfbae808092a2877e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007113"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Bestimmt, ob das übergeordnete Element [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) Befehl auf dem Objekt zugeordneten Remotepartitionen sichert.  
+  Bestimmt, ob das übergeordnete Element [Sicherung](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) -Befehl die dem Objekt zugeordneten Remotepartitionen sichert.  
   
 ## <a name="syntax"></a>Syntax  
   

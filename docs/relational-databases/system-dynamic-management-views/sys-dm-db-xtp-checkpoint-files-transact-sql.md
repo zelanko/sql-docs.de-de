@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,22 +26,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467736"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005742"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Zeigt Informationen zu Prüfpunktdateien, einschließlich Dateigröße, physischem Speicherort und der Transaktions-ID an.  
   
-> **Hinweis:** für den aktuellen Prüfpunkt, der nicht die Spalte State s geschlossen hat`ys.dm_db_xtp_checkpoint_files` werden für neue Dateien UNDER CONSTRUCTION. Ein Prüfpunkt wird automatisch geschlossen, wenn ausreichend Wachstumsrate des Transaktionsprotokolls seit dem letzten Prüfpunkt vorhanden ist oder wenn Sie ausgeben der `CHECKPOINT` Befehl ([PRÜFPUNKT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Hinweis:** für den aktuellen Prüfpunkt, der nicht die Zustandsspalte von s geschlossen, verfügt über`ys.dm_db_xtp_checkpoint_files` werden für neue Dateien UNDER CONSTRUCTION. Ein Prüfpunkt wird automatisch geschlossen, wenn ausreichend Wachstumsrate des Transaktionsprotokolls seit dem letzten Prüfpunkt vorhanden ist oder Sie geben die `CHECKPOINT` Befehl ([PRÜFPUNKT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
- Eine Speicheroptimierte Dateigruppe verwendet intern nur Anhängen-Dateien um eingefügten und gelöschten Zeilen für speicherinterne Tabellen zu speichern. Es gibt zwei Typen von Dateien. Eine Datendatei enthält eingefügte Zeilen an, während eine Änderungsdatei Verweise auf gelöschte Zeilen enthält. 
+ Eine Speicheroptimierte Dateigruppe verwendet intern nur-Anhängen-Dateien zum eingefügte und gelöschte Zeilen für speicherinterne Tabellen zu speichern. Es gibt zwei Typen von Dateien. Eine Datendatei enthält eingefügte Zeilen an, während eine Änderungsdatei Verweise auf gelöschte Zeilen enthält. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich deutlich von neueren Versionen und wird unten im Thema zur erläutert [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich deutlich von neueren Versionen und wird im Thema zur niedriger erläutert [SQL Server 2014](#bkmk_2014).  
   
  Weitere Informationen finden Sie unter [erstellen und Verwalten von Speicher für arbeitsspeicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
@@ -51,28 +51,28 @@ ms.locfileid: "34467736"
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit File_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
-|container_guid|**uniqueidentifier**|Die GUID des Containers, der den Stamm, Daten- oder Änderungsdatei angehört. Joins mit File_guid in der Sys. database_files-Tabelle.|  
+|container_guid|**uniqueidentifier**|GUID des Containers, in dem das Stammverzeichnis, Daten- oder Änderungsdatei angehört. Joins mit File_guid in der Sys. database_files-Tabelle.|  
 |checkpoint_file_id|**uniqueidentifier**|Die GUID der Prüfpunktdatei.|  
-|relative_file_path|**nvarchar(256)**|Pfad der Datei relativ zum Container, der er zugeordnet ist.|  
-|file_type|**smallint**|-1 für frei<br /><br /> 0 für die Datendatei.<br /><br /> 1 für Änderungsdatei.<br /><br /> 2 für Stammdatei<br /><br /> 3 für große Datendatei|  
-|file_type_desc|**nvarchar(60)**|FREE - All-Dateien, die als frei verwaltet stehen für die Zuordnung zur Verfügung. Kostenlose Dateien können vom System Größe sich je nach Voraussichtlicher Anforderungen variieren. Die maximale Größe beträgt 1GB.<br /><br /> Daten per Push – Datendateien enthalten Zeilen, die in speicheroptimierten Tabellen eingefügt wurden.<br /><br /> DELTA - Änderungsdateien enthalten Verweise auf die Zeilen in den Datendateien, die gelöscht wurden.<br /><br /> ROOT - Stammdateien enthalten Systemmetadaten für Speicheroptimierte und systemintern kompilierten Objekte.<br /><br /> UMFANGREICHE Daten – von großen Datendateien enthalten Werte eingefügt ((n)varchar(max) und 'varbinary(max)' Spalten sowie die spaltensegmente, die Teil des columnstore-Indizes für Speicheroptimierte Tabellen sind.|  
-|internal_storage_slot|**int**|Der Index der Datei im internen Speicherarray. NULL für den Stamm oder für den Status als 1.|  
+|relative_file_path|**nvarchar(256)**|Pfad der Datei relativ zum Container, den er zugeordnet ist.|  
+|file_type|**smallint**|-1 für FREE<br /><br /> 0 für die Datendatei.<br /><br /> 1 für die Änderungsdatei.<br /><br /> 2 für Stammdatei<br /><br /> 3 für große Datendatei|  
+|file_type_desc|**nvarchar(60)**|FREE - All-Dateien, die verwaltet werden, als frei sind für die Zuordnung verfügbar. Kostenlose Dateien können vom System Größe sich je nach Voraussichtlicher Anforderungen variieren. Die maximale Größe beträgt 1GB.<br /><br /> Daten per Push –-Datendateien enthalten Zeilen, die in speicheroptimierten Tabellen eingefügt wurden.<br /><br /> DELTA - Delta-Dateien enthalten Verweise auf Zeilen in Dateien, die gelöscht wurden.<br /><br /> ROOT - Stammdateien enthalten die Metadaten des Dateisystems für den speicheroptimierten und systemintern kompilierten Objekte.<br /><br /> GROßE - Videodaten große Datendateien Werte eingefügt ((n)varchar(max) und varbinary(max) Spalten, sowie die spaltensegmente, die Teil des columnstore-Indizes für Speicheroptimierte Tabellen sind.|  
+|internal_storage_slot|**int**|Der Index der Datei im internen Speicherarray. NULL für Stamm- oder anderen Zustand als 1.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Datei der entsprechenden Daten- oder ÄNDERUNGSDATEI. NULL für den Stamm.|  
 |file_size_in_bytes|**bigint**|Die Größe der Datei auf dem Datenträger.|  
 |file_size_used_in_bytes|**bigint**|Bei Prüfpunktdateipaaren, die noch mit Daten aufgefüllt werden, wird diese Spalte nach dem nächsten Prüfpunkt aktualisiert.|  
-|logical_row_count|**bigint**|Für Daten, die Anzahl der eingefügten Zeilen.<br /><br /> Delta Anzahl der Zeilen nach Berücksichtigung tabellenlöschung gelöscht.<br /><br /> Für den Stamm NULL zurück.|  
-|state|**smallint**|0 – PRECREATED<br /><br /> 1 – IN BEARBEITUNG<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8 – AUF PROTOKOLLKÜRZUNG WARTENDE|  
-|state_desc|**nvarchar(60)**|PRECREATED – sind eine Reihe von Prüfpunktdateien vorab zugeordnete minimieren oder eliminieren Wartezeiten bei der Zuordnung neuer Dateien während der Ausführung von Transaktionen. Diese vorab erstellten Dateien können variieren, je nach den geschätzten Teil der arbeitsauslastung die Größe, aber keine Daten enthalten. Dies ist eine speichermehraufwand in Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe.<br /><br /> UNDER CONSTRUCTION – diese Prüfpunktdateien sind noch nicht abgeschlossen, was bedeutet, dass sie basierend auf der Protokolldatensätze, die von der Datenbank erzeugte aufgefüllt werden und sind noch nicht Teil eines Prüfpunkts.<br /><br /> ACTIVE – diese eingefügten/gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten enthalten. Sie enthalten den Inhalt der Tabellen, die Bereich in den Speicher eingelesen wird, vor dem Anwenden des aktiven Teils des Transaktionsprotokolls beim Neustart Datenbank. Wir erwarten, dass diese Größe dieser Dateien Prüfpunkt sein, dass der in-Memory-Größe der speicheroptimierten Tabellen verwendet werden, vorausgesetzt die Merge-Vorgang etwa 2 X mit der transaktionsarbeitslast Schritt halten kann.<br /><br /> MERGE TARGET – das Ziel des Merge-Operationen - diese Prüfpunktdateien speichern Sie die konsolidierten Datenzeilen aus der Quelldateien, die von der Zusammenführungsrichtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> Auf PROTOKOLLKÜRZUNG WARTENDE – sobald die Zusammenführung installiert wurde und das Ziel-CFP ZUSAMMENFÜHREN Teil dauerhaften Prüfpunkt, den Übergang Merge Source Prüfpunkt Dateien in diesen Zustand. Dateien in diesem Status werden für einen korrekten Betrieb der Datenbank mit einer speicheroptimierten Tabelle benötigt.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren.|  
-|lower_bound_tsn|**bigint**|Untere Grenze der Transaktion in der Datei; NULL, wenn Sie nicht im Status (1, 3).|  
-|upper_bound_tsn|**bigint**|Obergrenze für die Transaktion in der Datei; NULL, wenn Sie nicht im Status (1, 3).|  
-|begin_checkpoint_id|**bigint**|Die ID des Prüfpunkts beginnen.|  
+|logical_row_count|**bigint**|Für Daten, die Anzahl der eingefügten Zeilen.<br /><br /> Delta Anzahl der Zeilen nach Berücksichtigung Drop Table gelöscht.<br /><br /> Für den Stamm, NULL-Wert.|  
+|state|**smallint**|0 – PRECREATED<br /><br /> 1 – IN BEARBEITUNG<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8: AUF PROTOKOLLKÜRZUNG WARTENDE|  
+|state_desc|**nvarchar(60)**|PRECREATED – werden eine Reihe von Prüfpunktdateien vorab zugeordnet ist, zu minimieren oder eliminieren Wartezeiten bei der Zuordnung neue Dateien während der Ausführung von Transaktionen. Diese im Voraus erstellten Dateien können variieren, je nach den geschätzten Anforderungen der Workload, die Größe, aber sie enthalten keine Daten. Dies ist eine speichermehraufwand in Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe.<br /><br /> IN Bearbeitung – diese Prüfpunktdateien befinden sich in Bearbeitung, was bedeutet, dass sie basierend auf den Protokolldatensätzen, die von der Datenbank generiert aufgefüllt werden und sind noch nicht Bestandteil eines Prüfpunkts.<br /><br /> ACTIVE – diese enthalten, dass die eingefügten/gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten. Sie enthalten den Inhalt der Tabellen, die Bereich in den Arbeitsspeicher gelesen werden, bevor der aktive Teil des Transaktionsprotokolls beim Neustart Datenbank angewendet. Wir erwarten, dass dieser Größe diese Prüfpunktdateien sein, dass etwa 2 X, der in-Memory-Größe der speicheroptimierten Tabellen verwendet werden, vorausgesetzt des Zusammenführungsvorgangs mit der transaktionsarbeitslast Schritt halten kann.<br /><br /> MERGE TARGET – das Ziel von zusammenführungsvorgängen: Diese Prüfpunktdateien speichern die konsolidierten Datenzeilen aus den Quelldateien, die von der Zusammenführungsrichtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> Auf PROTOKOLLKÜRZUNG WARTENDE – sobald die Zusammenführung installiert wurde und das MERGE TARGET-CFP Bestandteil eines dauerhaften Prüfpunkts, Merge Source-Prüfpunktdateien in diesen Zustand. Dateien in diesem Zustand werden für den ordnungsgemäßen Betrieb der Datenbank mit einer speicheroptimierten Tabelle benötigt.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren.|  
+|lower_bound_tsn|**bigint**|Untere Grenze der Transaktion in der Datei; NULL, wenn nicht im Status (1, 3).|  
+|upper_bound_tsn|**bigint**|Obere Grenze der Transaktion in der Datei; NULL, wenn nicht im Status (1, 3).|  
+|begin_checkpoint_id|**bigint**|Die ID des Prüfpunkts Begin.|  
 |end_checkpoint_id|**bigint**|Die ID des Prüfpunkts End.|  
-|last_updated_checkpoint_id|**bigint**|Die ID des letzten Prüfpunkts, der die Datei aktualisiert.|  
+|last_updated_checkpoint_id|**bigint**|Die ID des letzten Prüfpunkts, die diese Datei aktualisiert.|  
 |encryption_status|**smallint**|0, 1, 2|  
 |encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; VERSCHLÜSSELT MIT SCHLÜSSEL 1<br /><br /> 2 = &GT; MIT SCHLÜSSEL 2 VERSCHLÜSSELT. Dies gilt nur für aktive Dateien.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`, für **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`, für die **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "34467736"
  Erfordert die `VIEW DATABASE STATE`-Berechtigung auf dem Server.  
   
 ## <a name="use-cases"></a>Einsatzgebiete  
- Sie können den Speicher von In-Memory OLTP verwendet wird wie folgt schätzen:  
+ Sie können die speichernutzung In-Memory OLTP wie folgt schätzen:  
   
 ```  
 -- total storage used by In-Memory OLTP  
@@ -112,7 +112,7 @@ FROM sys.dm_db_xtp_checkpoint_files
 ```  
   
   
-Um eine Aufschlüsselung der speicherauslastung von Status und dem Dateityp entspricht, führen Sie die folgende Abfrage finden Sie unter:
+So zeigen eine Aufschlüsselung der speicherauslastung nach Status und die Datei die folgende Abfrage ausführen:
   
 ```  
 SELECT state_desc  

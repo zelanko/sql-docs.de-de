@@ -1,5 +1,5 @@
 ---
-title: Behandeln von SMO-Ausnahmen | Microsoft Docs
+title: Behandeln von SMO-Ausnahmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967275"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005732"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "32967275"
   
  In SMO sind verschiedene Ausnahmeklassen vorhanden. Informationen über die Ausnahme können aus den Ausnahmeeigenschaften wie der **Message** -Eigenschaft, die eine Textmeldung über die Ausnahme angibt, extrahiert werden.  
   
- Die Ausnahmebehandlungsanweisungen sind für die Programmiersprache spezifisch. Beispielsweise ist in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic gibt es die **Catch** Anweisung.  
+ Die Ausnahmebehandlungsanweisungen sind für die Programmiersprache spezifisch. Z. B. in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic gibt es die **Catch** Anweisung.  
   
 ## <a name="inner-exceptions"></a>Interne Ausnahmen  
  Ausnahmen können entweder allgemein oder spezifisch sein. Allgemeine Ausnahmen enthalten einen Satz spezifischer Ausnahmen. Einige **Catch** -Anweisungen können dazu verwendet werden, erwartete Fehler zu behandeln und die übrigen Fehler an den allgemeinen Ausnahmebehandlungscode weiterzugeben. Ausnahmen treten oft in einer überlappenden Sequenz auf. Häufig wird eine SMO-Ausnahme von einer SQL-Ausnahme verursacht. Um dies zu ermitteln, wird die **InnerException** -Eigenschaft nacheinander verwendet. So wird die ursprüngliche Ausnahme bestimmt, die die letzte Ausnahme auf oberster Ebene ausgelöst hat.  
   
 > [!NOTE]  
->  Die **SQLException** Ausnahme wird deklariert, der **System.Data.SqlClient** Namespace.  
+>  Die **SQLException** Ausnahme deklariert ist, der **"System.Data.SqlClient"** Namespace.  
   
  ![Ein Diagramm, das zeigt, die Ebenen aus dem ausnahmeflussebenen](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "ein Diagramm, das zeigt, die Ebenen aus dem ausnahmeflussebenen")  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32967275"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Abfangen einer Ausnahme in Visual Basic  
- Dieses Codebeispiel zeigt, wie Sie die **versuchen... Catch... Schließlich** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ Dieses Codebeispiel zeigt, wie Sie mit der **testen... Catch... Zum Schluss** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Anweisung um eine SMO-Ausnahme abzufangen. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie unter den [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Dokumentation zu .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

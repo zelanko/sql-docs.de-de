@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von SQL Server mit Umgebungsvariablen | Microsoft Docs
-description: Dieser Artikel beschreibt die Umgebungsvariablen zu verwenden, um bestimmte 2017 von SQL Server-Einstellungen unter Linux konfigurieren.
+title: Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen | Microsoft-Dokumentation
+description: Dieser Artikel beschreibt, wie Sie Umgebungsvariablen verwenden, um bestimmte Einstellungen für SQL Server 2017 unter Linux konfigurieren.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,55 +13,55 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 602ec7d9beca11e2baa963bdf5b8e59df2f194d5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006762"
 ---
-# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server mit Umgebungsvariablen unter Linux
+# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux konfigurieren. Diese Variablen werden in zwei Szenarien verwendet:
+Sie können mehrere verschiedene Umgebungsvariablen verwenden, so konfigurieren Sie SQL Server 2017 unter Linux. Diese Variablen werden in zwei Szenarien verwendet:
 
-- Zum Konfigurieren von anfänglichen Setup mit der `mssql-conf setup` Befehl.
-- So konfigurieren Sie ein neues [SQL Server-Container in Docker](quickstart-install-connect-docker.md).
+- So konfigurieren Sie die anfängliche Einrichtung mit dem `mssql-conf setup` Befehl.
+- Zum Konfigurieren einer neuen [SQL Server-Container in Docker](quickstart-install-connect-docker.md).
 
 > [!TIP]
-> Wenn Sie SQL Server nach diesen setupszenarien konfigurieren müssen, finden Sie unter [konfigurieren Sie SQL Server unter Linux mit dem Tool Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
+> Wenn Sie SQL Server nach der folgenden setupszenarien konfigurieren müssen, finden Sie unter [Konfigurieren von SQL Server unter Linux mit der Mssql-Conf-Tool](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="environment-variables"></a>Umgebungsvariablen
 
 | Umgebungsvariable | Description |
 |-----|-----|
-| **ACCEPT_EULA** | Akzeptieren Sie den SQL Server-Lizenzvertrag bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
-| **MSSQL_SA_PASSWORD** | Konfigurieren Sie das SA-Kennwort ein. |
-| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Einen Product key**</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder ein Buchstabe ist.|
-| **MSSQL_LCID** | Legt die Sprach-ID für SQL Server verwendet. 1036 befindet sich z. B. Französisch. |
-| **MSSQL_COLLATION** | Legt die standardsortierung für SQL Server fest. Dies überschreibt die standardzuordnung der Sprach-Id (LCID), Sortierung. |
-| **MSSQL_MEMORY_LIMIT_MB** | Legt die Höchstmenge an Arbeitsspeicher (in MB), die SQL Server verwenden können. Es ist standardmäßig 80 % des gesamten physischen Arbeitsspeichers. |
+| **ACCEPT_EULA** | Akzeptieren Sie die SQL Server-Lizenzbedingungen, die bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
+| **MSSQL_SA_PASSWORD** | Konfigurieren Sie das Kennwort des SA-Benutzers ein. |
+| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Einen Product key**</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder einem Buchstaben.|
+| **MSSQL_LCID** | Legt fest, die Sprach-ID, die für SQL Server verwendet. 1036 ist z. B. Französisch. |
+| **MSSQL_COLLATION** | Legt fest, die standardsortierung für SQL Server. Dies überschreibt die standardzuordnung der Sprach-Id (LCID), Sortierung. |
+| **MSSQL_MEMORY_LIMIT_MB** | Legt fest, die Höchstmenge an Arbeitsspeicher (in MB), die SQL Server verwenden kann. Standardmäßig ist 80 % des gesamten physischen Arbeitsspeichers. |
 | **MSSQL_TCP_PORT** | Konfigurieren Sie den TCP-Port, den SQL Server (Standardport: 1433) überwacht. |
 | **MSSQL_IP_ADDRESS** | Legen Sie die IP-Adresse ein. Derzeit muss die IP-Adresse IPv4-Format (0.0.0.0) sein. |
 | **MSSQL_BACKUP_DIR** | Legen Sie den Standardspeicherort für das Sicherungsverzeichnis. |
 | **MSSQL_DATA_DIR** | Ändern Sie das Verzeichnis, in dem die neuen SQL Server-Datenbank-Datendateien (MDF) erstellt werden. |
-| **MSSQL_LOG_DIR** | Ändern Sie das Verzeichnis, in dem die neue SQL Server-Protokolldateien (LDF) Datenbankdateien erstellt werden. |
-| **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere Dateien zur Problembehandlung in der Standardeinstellung ablegt. |
-| **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" aktiviert ist, und "0" ist deaktiviert. |
-| **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Beispielsweise "true" aktiviert ist, und 'false' ist deaktiviert. Agent ist standardmäßig deaktiviert.  |
-| **MSSQL_MASTER_DATA_FILE** | Legt den Speicherort der master-Datenbank-Datendatei an. |
-| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der master-Datenbank-Protokolldatei fest. |
-| **MSSQL_ERROR_LOG_FILE** | Legt den Speicherort der Dateien im Fehlerprotokoll. |
+| **MSSQL_LOG_DIR** | Ändern Sie das Verzeichnis, in dem die neuen SQL Server-Datenbank-Protokolldatei (.ldf)-Dateien erstellt werden. |
+| **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere bei der Problembehandlung Dateien standardmäßig ablegt. |
+| **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" ist aktiviert, und "0" ist deaktiviert. |
+| **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Z. B. "true" aktiviert ist, und "false" ist deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
+| **MSSQL_MASTER_DATA_FILE** | Wird der Speicherort der master-Datenbank-Datendatei. |
+| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der Protokolldatei der master-Datenbank fest. |
+| **MSSQL_ERROR_LOG_FILE** | Wird der Speicherort der Dateien im Fehlerprotokoll. |
 
 
-## <a name="example-initial-setup"></a>Beispiel: Anfangssetup
+## <a name="example-initial-setup"></a>Beispiel: anfängliche Einrichtung
 
-In diesem Beispiel wird `mssql-conf setup` Umgebungsvariablen konfiguriert. Die folgenden Umgebungsvariablen werden angegeben:
+In diesem Beispiel führt `mssql-conf setup` Umgebungsvariablen konfiguriert. Die folgenden Umgebungsvariablen werden angegeben:
 
-- **ACCEPT_EULA** den Endbenutzer-Lizenzvertrag akzeptiert.
-- **MSSSQL_PID** gibt an, die kostenlos lizenzierte Developer Edition von SQL Server für die nicht produktive Verwendung.
-- **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort.
-- **MSSQL_TCP_PORT** legt den TCP-Port, der SQL Server bei 1234 überwacht.
+- **ACCEPT_EULA** akzeptiert den Endbenutzer-Lizenzvertrag.
+- **MSSSQL_PID** gibt an, der frei lizenzierten Developer Edition von SQL Server für die Verwendung der nicht für die Produktion.
+- **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort ein.
+- **MSSQL_TCP_PORT** legt den TCP-Port, der sich bei 1234 von SQL Server überwacht.
 
 ```bash
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
@@ -69,20 +69,20 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 
 ## <a name="example-docker"></a>Beispiel: Docker
 
-Diese Beispiel-Befehl "Docker" verwendet die folgenden Umgebungsvariablen, um einen neuen 2017 von SQL Server-Container erstellen:
+Diese Beispiel-Docker-Befehl verwendet die folgenden Umgebungsvariablen, um einen neuen SQL Server 2017-Container zu erstellen:
 
-- **ACCEPT_EULA** den Endbenutzer-Lizenzvertrag akzeptiert.
-- **MSSSQL_PID** gibt an, die kostenlos lizenzierte Developer Edition von SQL Server für die nicht produktive Verwendung.
-- **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort.
-- **MSSQL_TCP_PORT** legt den TCP-Port, der SQL Server bei 1234 überwacht. Dies bedeutet, dass anstelle von Mapping-Port 1433 (Standard) an einen hostPort, der benutzerdefinierte TCP-Port zugeordnet werden muss, mit der `-p 1234:1234` in diesem Beispiel den Befehl.
+- **ACCEPT_EULA** akzeptiert den Endbenutzer-Lizenzvertrag.
+- **MSSSQL_PID** gibt an, der frei lizenzierten Developer Edition von SQL Server für die Verwendung der nicht für die Produktion.
+- **MSSQL_SA_PASSWORD** legt ein sicheres Kennwort ein.
+- **MSSQL_TCP_PORT** legt den TCP-Port, der sich bei 1234 von SQL Server überwacht. Dies bedeutet, dass anstelle von Mapping-Port 1433 (Standard) mit einem hostPort, der benutzerdefinierte TCP-Port zugeordnet werden muss, mit der `-p 1234:1234` in diesem Beispiel den Befehl.
 
-Wenn Sie Docker auf Linux/MacOS ausführen, verwenden Sie die folgende Syntax in einfache Anführungszeichen eingeschlossen:
+Wenn Sie Docker unter Linux/MacOS ausführen, verwenden Sie die folgende Syntax mit einfachen Anführungszeichen versehen:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-Wenn Sie Docker unter Windows ausgeführt werden, verwenden Sie die folgende Syntax mit doppelten Anführungszeichen an:
+Wenn Sie Docker für Windows ausführen, verwenden Sie die folgende Syntax mit doppelten Anführungszeichen an:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
@@ -93,6 +93,6 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Andere SQL Server-Einstellungen, die hier nicht aufgelistet sind, finden Sie unter [konfigurieren Sie SQL Server unter Linux mit dem Tool Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
+Andere SQL Server-Einstellungen hier nicht aufgeführt wird, finden Sie unter [Konfigurieren von SQL Server unter Linux mit der Mssql-Conf-Tool](sql-server-linux-configure-mssql-conf.md).
 
-Weitere Informationen zum Installieren und Ausführen von SQL Server unter Linux finden Sie unter [Installieren von SQL Server on Linux](sql-server-linux-setup.md).
+Weitere Informationen zum Installieren und Ausführen von SQL Server unter Linux finden Sie unter [Installieren von SQL Server unter Linux](sql-server-linux-setup.md).

@@ -1,6 +1,6 @@
 ---
-title: VDI-Spezifikation Backup - SQLServer on Linux | Microsoft Docs
-description: SQL Server Backup Virtual Device Interface Specification.
+title: VDI-Spezifikation Backup - SQLServer unter Linux | Microsoft-Dokumentation
+description: SQL Server Virtual Interface Sicherungsmediumspezifikation.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,34 +13,34 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: 1dab0dcc403a7e0f85cd78e69e9461ef0d566b0c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006788"
 ---
-# <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server auf Linux VDI-Client-SDK-Spezifikation
+# <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server unter Linux VDI-Client-SDK-Spezifikation
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Dokument behandelt die Schnittstellen, die von SQL Server auf Linux virtual Device Interface (VDI) Client-SDK bereitgestellt wird. Unabhängige Softwarehersteller (ISVs) können die virtuellen Sicherung Gerät Application Programming Interface (API), SQL Server in ihre Produkte integrieren. Im Allgemeinen verhält sich VDI unter Linux auf ähnliche Weise zu VDI unter Windows mit folgenden Änderungen:
+Dieses Dokument behandelt die Schnittstellen, die von den SQL Server auf Linux virtual Device Interface (VDI)-Client-SDK bereitgestellt. Unabhängige Softwarehersteller (ISVs) können, dass der Virtual Backup Device Schnittstelle API (Application Programming) SQL Server in ihre Produkte integrieren können. Im Allgemeinen verhält sich VDI für Linux auf ähnliche Weise zu VDI unter Windows mit den folgenden Änderungen:
 
 - Windows-Shared Memory wird POSIX freigegebenen Speicher.
-- Windows-Semaphoren sind POSIX Semaphoren.
-- Windows-Datentypen wie HRESULT und DWORD ganzzahligen Entsprechungen geändert werden.
-- Die COM-Schnittstellen werden entfernt und durch ein Paar von C++-Klassen ersetzt.
+- Windows-Semaphoren sind POSIX-Semaphoren.
+- Windows-Typen wie HRESULT und DWORD-Entsprechungen für ganze Zahl geändert werden.
+- Die COM-Schnittstellen werden entfernt und ersetzt, die mit einem Paar von C++-Klassen.
 - SQL Server unter Linux unterstützt benannte Instanzen nicht, damit Verweise auf die Instanznamen entfernt wurden. 
-- Die freigegebene Bibliothek wird in libsqlvdi.so am /opt/mssql/lib/libsqlvdi.so installiert implementiert.
+- Die freigegebene Bibliothek ist in libsqlvdi.so /opt/mssql/lib/libsqlvdi.so installiert implementiert.
 
-Dieses Dokument ist eine Ergänzung zu **vbackup.chm** mit Informationen zu den Windows-VDI-Spezifikation. Herunterladen der [Windows VDI-Spezifikation](http://www.microsoft.com/download/details.aspx?id=17282).
+Dieses Dokument ist ein Nachtrag zu **vbackup.chm** mit Informationen zu den Windows-VDI-Spezifikation. Herunterladen der [Windows VDI-Spezifikation](http://www.microsoft.com/download/details.aspx?id=17282).
 
-Überprüfen Sie auch die beispiellösung für VDI-Sicherung auf die [SQL Server Samples GitHub-Repository](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Überprüfen Sie auch die beispiellösung für VDI-Sicherung auf die [SQL Server Samples-GitHub-Repository](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## <a name="user-permissions-setup"></a>Benutzereinrichtung-Berechtigungen
 
-Unter Linux werden POSIX primitive Besitz des Benutzers erstellen sie und ihre Standardgruppe. Für Objekte, die von SQL Server erstellt werden werden diese standardmäßig der Mssql-Benutzer und der Gruppe "Mssql" Besitz sein. Um die gemeinsame Nutzung der SQL Server und die VDI-Clients zu ermöglichen, eine der folgenden beiden Methoden werden empfohlen:
+Unter Linux sind POSIX-primitive Besitz des Benutzers erstellen sie und ihre Standardgruppe. Für Objekte, die von SQL Server erstellt werden werden diese standardmäßig der Mssql-Benutzer und der Mssql-Gruppe gehören. Damit können die gemeinsame Datennutzung von SQL Server und die VDI-Clients, eine der beiden folgenden Methoden werden empfohlen:
 
-1. Führen Sie die VDI-Client als dem Mssql-Benutzer
+1. Führen Sie den VDI-Client als dem Mssql-Benutzer
    
    Führen Sie den folgenden Befehl zum Wechseln zu Mssql-Benutzer:
    
@@ -48,7 +48,7 @@ Unter Linux werden POSIX primitive Besitz des Benutzers erstellen sie und ihre S
    sudo su mssql
    ```
 
-2. Der Mssql-Benutzer die Vdiuser Gruppe und die Vdiuser der Mssql-Gruppe hinzufügen.
+2. Der Mssql-Benutzer zu der Vdiuser Gruppe und die Vdiuser der Mssql-Gruppe hinzufügen.
    
    Führen Sie die folgenden Befehle ein:
 
@@ -58,11 +58,11 @@ Unter Linux werden POSIX primitive Besitz des Benutzers erstellen sie und ihre S
    sudo usermod -a -G vdiuser mssql
    ```
 
-   Starten Sie den Server aus, um neue Gruppen für SQL Server und Vdiuser übernehmen
+   Starten Sie den Server, um neue Gruppen für SQL Server und Vdiuser zu übernehmen.
 
 ## <a name="client-functions"></a>Clientfunktionen
 
-Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschreibungen enthalten die folgende Informationen an:
+Dieses Kapitel enthält eine Beschreibung der einzelnen Clientfunktionen. Die Beschreibungen enthalten die folgende Informationen an:
 
 - Zweck der Funktion
 - Funktionssyntax
@@ -72,9 +72,9 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
-**Zweck** diese Funktion erstellt das virtuelle Gerät festlegen.
+**Zweck** diese Funktion erstellt den virtuelle Gerät Satz.
 
-**Syntax**
+**Die Syntax**
    ```
    int ClientVirtualDeviceSet::Create (
    char *   name,       // name for the set
@@ -84,21 +84,21 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| | **name** | Dies identifiziert die virtuelles Gerät. Die Regeln für Namen von CreateFileMapping() verwendeten müssen folgen. Alle Zeichen außer dem umgekehrten Schrägstrich (\) verwendet werden kann. Dies ist eine Zeichenfolge. Die Zeichenfolge mit des Benutzers Produktwissen oder firmeninternem und Datenbankname vorangestellt wird empfohlen. |
-| |**cfg** | Dies ist die Konfiguration für das virtuelle Gerät festlegen. Weitere Informationen finden Sie unter "Konfiguration" weiter unten in diesem Dokument.
+| | **name** | Dies identifiziert die virtuelle Gerät. Die Regeln für Namen von CreateFileMapping() verwendet, müssen ausgeführt werden. Jedem Zeichen außer dem umgekehrten Schrägstrich (\) kann verwendet werden. Dies ist eine Zeichenfolge. Die Zeichenfolge des Benutzers Produktwissen oder firmeninternem und Datenbanknamen vorangestellt wird empfohlen. |
+| |**cfg** | Dies ist die Konfiguration für das virtuelle Gerät Satz. Weitere Informationen finden Sie weiter unten in diesem Dokument unter "Konfiguration".
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** | Die Funktion wurde erfolgreich ausgeführt. |
-| |**VD_E_NOTSUPPORTED** |Mindestens eines der Felder in der Konfiguration ist ungültig oder andernfalls nicht unterstützt. |
-| |**VD_E_PROTOCOL** | Das virtuelle Gerät bereits vorhanden ist.
+| |**"NOERROR" ZURÜCKGEGEBEN** | Die Funktion wurde erfolgreich ausgeführt. |
+| |**VD_E_NOTSUPPORTED** |Eine oder mehrere der Felder in der Konfiguration ist ungültig oder andernfalls nicht unterstützt. |
+| |**VD_E_PROTOCOL** | Das virtuelle Gerät wurde bereits festgelegt ist vorhanden.
 
-**"Hinweise"** erstellen Sie die Methode sollte nur einmal pro Backup- oder RESTORE-Vorgang aufgerufen werden. Nach dem Aufrufen der Close-Methode, kann der Client die Schnittstelle, um ein anderes virtuelles Gerät erstellen wiederverwenden.
+**"Hinweise"** erstellen-Methode nur einmal pro Backup- oder RESTORE-Vorgang aufgerufen werden soll. Nach dem Aufruf der Close-Methode, kann der Client die Schnittstelle, um ein anderes virtuelles Gerät erstellen wiederverwenden.
 
 ## <a name="clientvirtualdevicesetgetconfiguration"></a>ClientVirtualDeviceSet::GetConfiguration
 
-**Zweck** diese Funktion dient zum Warten, bis des Servers so konfigurieren Sie das virtuelle Gerät festlegen.
-**Syntax**
+**Zweck** diese Funktion wird verwendet, auf den Server so konfigurieren Sie den virtuelle Gerät Satz warten.
+**Die Syntax**
    ```
    int ClientVirtualDeviceSet::GetConfiguration (
    time_t       timeout,    // in milliseconds
@@ -108,21 +108,21 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| | **timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie INFINITE oder eine negative ganze Zahl, um Timeouts zu verhindern.
-| | **cfg** | Nach erfolgreicher Ausführung enthält diese Spalte die Konfiguration vom Server ausgewählt. Weitere Informationen finden Sie unter "Konfiguration" weiter unten in diesem Dokument.
+| | **timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie UNBEGRENZT oder eine negative ganze Zahl, um Timeouts zu verhindern.
+| | **cfg** | Nach erfolgreicher Ausführung enthält die Konfiguration, die vom Server ausgewählt. Weitere Informationen finden Sie weiter unten in diesem Dokument unter "Konfiguration".
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** | Die Konfiguration wurde zurückgegeben.
+| |**"NOERROR" ZURÜCKGEGEBEN** | Die Konfiguration wurde zurückgegeben.
 | |**VD_E_ABORT** |SignalAbort wurde aufgerufen.
 | |**VD_E_TIMEOUT** |Die Funktion ist ein Timeout aufgetreten.
 
-**"Hinweise"** dieser Funktion in einem Warnbare Status blockiert. Nach dem erfolgreichen Aufruf können die Geräte in der Menge virtuelles Gerät geöffnet sein.
+**"Hinweise"** dieser Funktion in einem Alertable Zustand blockiert. Nach dem erfolgreichen Aufruf können die Geräte in der Menge des virtuellen Geräts geöffnet sein.
 
 
 ## <a name="clientvirtualdevicesetopendevice"></a>ClientVirtualDeviceSet::OpenDevice
-**Zweck** diese Funktion wird eines der Geräte in der Menge virtuelles Gerät geöffnet.
-**Syntax**
+**Zweck** dieser Funktion wird ein Gerät geöffnet, in der Menge des virtuellen Geräts.
+**Die Syntax**
    ```
    int ClientVirtualDeviceSet::OpenDevice (
    char *           name,       // name for the set
@@ -132,28 +132,28 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| | **name** |Dies identifiziert die virtuelles Gerät.
-| | **ppVirtualDevice** |Wenn die Funktion erfolgreich ausgeführt wird, wird ein Zeiger auf das virtuelle Gerät zurückgegeben. Dieses Gerät ist für GetCommand und CompleteCommand verwendet.
+| | **name** |Dies identifiziert die virtuelle Gerät.
+| | **ppVirtualDevice** |Wenn die Funktion erfolgreich ist, wird ein Zeiger auf das virtuelle Gerät zurückgegeben. Dieses Gerät wird für GetCommand-Aufruf und CompleteCommand verwendet.
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Die Funktion wurde erfolgreich ausgeführt.
-| |**VD_E_ABORT** | Abbruch angefordert wurde.
-| |**VD_E_OPEN** |  Alle Geräte sind geöffnet.
-| |**VD_E_PROTOCOL** |  Die Gruppe ist nicht im Status "Initialisieren", oder dieses Gerät ist bereits geöffnet.
-| |**VD_E_INVALID** |Der Gerätename ist ungültig. Es ist nicht mit den Namen bekannt, dass die Gruppe bilden.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Die Funktion wurde erfolgreich ausgeführt.
+| |**VD_E_ABORT** | Abbruch wurde angefordert.
+| |**VD_E_OPEN** |  Alle Geräte, die geöffnet sind.
+| |**VD_E_PROTOCOL** |  Die Gruppe ist nicht im Zustand "Initialisieren" aus, oder dieses Gerät ist bereits geöffnet.
+| |**VD_E_INVALID** |Der Gerätename ist ungültig. Es ist nicht mit den Namen, die bekannt, dass die Gruppe zu bilden.
 
-**"Hinweise"** VD_E_OPEN ohne Problem zurückgegeben werden. Der Client möglicherweise OpenDevice mittels einer Schleife aufrufen, bis dieser Code zurückgegeben wird.
-Wenn mehrere Geräte, z. B. konfiguriert ist *n* Geräte das virtuelle Gerät zurück *n* eindeutige Geräte-Schnittstellen.
+**"Hinweise"** VD_E_OPEN kann zurückgegeben werden, ohne Problem. Der Client möglicherweise OpenDevice mithilfe einer Schleife aufrufen, bis dieser Code zurückgegeben wird.
+Wenn mehr als ein Gerät so, z. B. konfiguriert ist *n* Geräte das virtuelle Gerät zurück *n* eindeutige Geräte-Schnittstellen.
 
-Die `GetConfiguration` -Funktion kann verwendet werden, warten, bis die Geräte geöffnet werden können.
-Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert durch die PpVirtualDevice zurückgegeben.
+Die `GetConfiguration` Funktion kann verwendet werden, warten, bis die Geräte geöffnet werden können.
+Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert über die PpVirtualDevice zurückgegeben.
  
 ## <a name="clientvirtualdevicegetcommand"></a>ClientVirtualDevice::GetCommand
 
-**Zweck** diese Funktion dient zum Abrufen des Nächstes Befehl in der Warteschlange auf einem Gerät. Wenn angefordert, wartet dieser Funktion für den nächsten Befehl.
+**Zweck** diese Funktion dient zum Abrufen des Nächstes Befehl in der Warteschlange auf einem Gerät. Wenn angefordert, wartet diese Funktion für den nächsten Befehl.
 
-**Syntax**
+**Die Syntax**
    ```
    int ClientVirtualDevice::GetCommand (
    time_t       timeout,    // time-out in milliseconds
@@ -163,25 +163,25 @@ Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert durch die PpVirtua
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
-| |**Timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite oder einen negativen Wert, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl verfügbar ist, bevor das Timeout abläuft. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
-| |**ppCmd** |Wenn ein Befehl wurde erfolgreich zurückgegeben wird, wird die Adresse eines Befehls zum Ausführen von Parameters zurückgegeben. Der zurückgegebene Arbeitsspeicher ist schreibgeschützt. Wenn der Befehl abgeschlossen ist, wird dieser Zeiger an die Routine CompleteCommand übergeben. Weitere Informationen zu jedem Befehl finden Sie unter "Befehle" weiter unten in diesem Dokument.
+| |**timeout** |Dies ist die Zeit, die Wartezeit in Millisekunden. Verwenden Sie UNENDLICHE, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion.
+| |**Timeout** |Dies ist die Zeit, die Wartezeit in Millisekunden. Verwenden Sie UNENDLICHE oder ein negativer Wert, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl verfügbar ist, bevor das Timeout abläuft. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion.
+| |**ppCmd** |Wenn ein Befehl wurde erfolgreich zurückgegeben wird, wird die Adresse eines Befehls zum Ausführen von der-Parameter zurückgegeben. Der zurückgegebene Arbeitsspeicher ist schreibgeschützt. Wenn der Befehl abgeschlossen ist, wird die this-Zeiger an die Routine CompleteCommand übergeben. Weitere Informationen zu jedem Befehl finden Sie unter "Befehle" weiter unten in diesem Dokument.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Ein Befehl wurde abgerufen.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Ein Befehl wurde abgerufen.
 | |**VD_E_CLOSE** |Das Gerät wurde vom Server geschlossen.
 | |**VD_E_TIMEOUT** |Es wurde kein Befehl verfügbar, und vor dem abgelaufenen Timeoutintervall.
-| |**VD_E_ABORT** |Der Client oder der Server hat die SignalAbort verwendet, um ein Herunterfahren erzwungen.
+| |**VD_E_ABORT** |Dem Client oder dem Server wurde die SignalAbort verwendet zum Herunterfahren.
 
-**"Hinweise"** Wenn VD_E_CLOSE zurückgegeben wird zurückgegeben, SQL Server hat das Gerät geschlossen. Dies ist Teil der normalen Herunterfahren. Nachdem alle Geräte geschlossen wurden, ruft der Client ClientVirtualDeviceSet::Close, um den Satz virtuelles Gerät zu schließen.
-Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in einen Warnbare Zustand belassen.
+**"Hinweise"** beim VD_E_CLOSE zurückgegeben wird zurückgegeben, die SQL Server wurde geschlossen, dass das Gerät. Dies ist Teil der normal heruntergefahren wurde. Nachdem alle Geräte geschlossen wurden, ruft der Client ClientVirtualDeviceSet::Close, um den Satz virtuelles Gerät zu schließen.
+Wenn diese Routine eines Befehls warten, blockiert werden muss, bleibt der Thread in einer Alertable-Bedingung.
 
 ## <a name="clientvirtualdevicecompletecommand"></a>ClientVirtualDevice::CompleteCommand
 
-**Zweck** diese Funktion wird verwendet, um SQL Server zu informieren, die ein Befehl abgeschlossen ist. Informationen über den Abschluss des Befehls entsprechende sollte zurückgegeben werden. Weitere Informationen finden Sie unter "Befehle" weiter unten in diesem Dokument.
+**Zweck** diese Funktion wird verwendet, um SQL Server zu informieren, die ein Befehl abgeschlossen ist. Informationen über den Abschluss des Befehls entsprechende zurückgegeben werden soll. Weitere Informationen finden Sie unter "Befehle" weiter unten in diesem Dokument.
 
-**Syntax** 
+**Die Syntax** 
 
    ```
    int ClientVirtualDevice::CompleteCommand (
@@ -195,24 +195,24 @@ Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
 | |**pCmd** |Dies ist die Adresse eines Befehls, der zuvor von ClientVirtualDevice::GetCommand zurückgegeben wird.
-| |**completionCode** |Dies ist ein Statuscode "", der den Abschlussstatus angibt. Dieser Parameter muss für alle Befehle zurückgegeben werden. Der zurückgegebene Code sollte an den ausgeführten Befehl geeignet sein. ERROR_SUCCESS wird in allen Fällen verwendet, um einem erfolgreich ausgeführten Befehl zu kennzeichnen. Die vollständige Liste der möglichen Fehlercodes, finden Sie in der Datei vdierror.h. Eine Liste der typische Statuscodes für jeden Befehl wird in "Befehle" weiter unten in diesem Dokument.
+| |**completionCode** |Dies ist eine Statuscode, der den Abschlussstatus angibt. Dieser Parameter muss für alle Befehle zurückgegeben werden. Der Code zurückgegeben sollte für den Befehl ausgeführt wird. ERROR_SUCCESS wird in allen Fällen verwendet, um einer erfolgreich ausgeführten Befehl anzugeben. Die vollständige Liste der möglichen Fehlercodes, finden Sie in der Datei vdierror.h. Eine Liste der typischen Statuscodes für jeden Befehl wird im "Befehle" weiter unten in diesem Dokument.
 | |**bytesTransferred** |Dies ist die Anzahl der erfolgreich übertragenen Bytes. Dies wird nur für die Datenübertragung zurückgegeben, Befehle lesen und schreiben.
-| |**position** |Dies ist eine Antwort auf die GetPosition-Befehl.
+| |**Position** |Dies ist eine Antwort auf den GetPosition-Befehl.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Der Abschluss wurde korrekt hingewiesen.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Die Vervollständigung wurde ordnungsgemäß angegeben.
 | |**VD_E_INVALID** |pCmd war es sich nicht um einen aktiven Befehl.
 | |**VD_E_ABORT** |Abbruch signalisiert wurde.
 | |**VD_E_PROTOCOL** |Das Gerät ist nicht geöffnet werden.
 
-**"Hinweise"** None
+**"Hinweise"** keine
 
 ## <a name="clientvirtualdevicesetsignalabort"></a>ClientVirtualDeviceSet::SignalAbort
 
 **Zweck** diese Funktion wird verwendet, um zu signalisieren, dass eine nicht ordnungsgemäße Beendigung erfolgen soll.
 
-**Syntax** 
+**Die Syntax** 
 
    ```
    int ClientVirtualDeviceSet::SignalAbort ();
@@ -220,19 +220,19 @@ Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in 
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |Keine | Nicht verfügbar
+| |InclusionThresholdSetting | Nicht verfügbar
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK**|Die Abort-Benachrichtigung wurde erfolgreich bereitgestellt.
+| |**"NOERROR" ZURÜCKGEGEBEN**|Die Abort-Benachrichtigung wurde erfolgreich bereitgestellt.
 
-**"Hinweise"** zu jedem Zeitpunkt kann der Client den Backup- oder RESTORE-Vorgang abgebrochen auswählen. Diese Routine signalisiert, dass alle Vorgänge beenden soll. Der Zustand des virtuellen Geräts Satzes wechselt Zustand fehlerbedingt beendet. Keine weiteren Befehle, die für alle Geräte zurückgegeben werden. Alle nicht abgeschlossenen Befehle werden automatisch vervollständigt, ERROR_OPERATION_ABORTED als ein Beendigungscode zurückgeben. Der Client sollte ClientVirtualDeviceSet::Close aufrufen, nachdem er alle ausstehenden Verwendung von Puffern, die an den Client bereitgestellten sicher beendet wurde. Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weiter oben in diesem Dokument.
+**"Hinweise"** zu jedem Zeitpunkt des Clients können die Backup- oder RESTORE-Vorgang abgebrochen. Diese Routine wird signalisiert, dass alle Vorgänge beenden soll. Der Status des virtuellen Geräts Satzes gibt einen Status fehlerbedingt beendet. Keine weiteren Befehle, die für alle Geräte zurückgegeben werden. Alle nicht abgeschlossenen Befehle werden automatisch ausgefüllt, ERROR_OPERATION_ABORTED als Ergebniscode zurückgegeben wird. Nachdem sie alle ausstehenden Verwendung von Puffern, die an den Client bereitgestellten sicher beendet wurde, sollte der Client ClientVirtualDeviceSet::Close aufrufen. Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weiter oben in diesem Dokument.
 
 ## <a name="clientvirtualdevicesetclose"></a>ClientVirtualDeviceSet::Close
 
-**Zweck** diese Funktion schließt die ClientVirtualDeviceSet::Create erstellte virtuelle Gerät Menge. Dies führt in der Version aller Ressourcen, die den Satz von virtuellen Gerät zugeordnet.
+**Zweck** diese Funktion schließt den virtuelle Gerät Satz ClientVirtualDeviceSet::Create erstellt. Dies führt in der Version aller Ressourcen, die mit dem virtuellen Gerät verknüpft ist.
 
-**Syntax** 
+**Die Syntax** 
 
    ```
    int ClientVirtualDeviceSet::Close ();
@@ -240,24 +240,24 @@ Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in 
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |Keine |Nicht verfügbar
+| |InclusionThresholdSetting |Nicht verfügbar
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Dies wird zurückgegeben, wenn der Satz virtuelles Gerät erfolgreich geschlossen wurde.
-| |**VD_E_PROTOCOL** |Es wurde keine Aktion ausgeführt, da das virtuelle Gerät Satz nicht offen war.
-| |**VD_E_OPEN** |Geräte wurden noch geöffnet.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Dies wird zurückgegeben, wenn die virtuellen Gerätegruppe erfolgreich geschlossen wurde.
+| |**VD_E_PROTOCOL** |Da der virtuelle Gerät Satz nicht offen war, wurde keine Aktion ausgeführt.
+| |**VD_E_OPEN** |Geräte waren noch geöffnet.
 
-**"Hinweise"** Schließen des Aufrufs ist eine Client-Deklaration, dass alle durch die Menge des virtuellen Geräts verwendete Ressourcen freigegeben werden sollen. Der Client muss sicherstellen, dass alle Aktivitäten im Zusammenhang mit Datenpuffer und virtuellen Geräte vor dem Aufrufen von Schließen beendet wird. Durch Schließen werden alle virtuellen Geräteschnittstellen OpenDevice zurückgegebenes ungültig.
-Der Client ist zulässig, einen Aufruf erstellen, auf das virtuelle Gerät festgelegte Schnittstelle ausgeben, nachdem der schließen-Aufruf zurückgegeben wird. Solch ein Aufruf würde ein neues virtuelles Gerät legen Sie für ein nachfolgender BACKUP oder RESTORE-Vorgang erstellen.
-Wenn schließen aufgerufen wird, wenn ein oder mehrere virtuelle Geräte noch geöffnet sind, wird VD_E_OPEN zurückgegeben. In diesem Fall wird SignalAbort intern ausgelöst, um eine ordnungsgemäße Herunterfahren nach Möglichkeit sicherzustellen. VDI-Ressourcen werden freigegeben. Ein Hinweis VD_E_CLOSE zurückgegeben auf jedem Gerät vor dem Aufrufen von ClientVirtualDeviceSet::Close sollte der Client wartet. Wenn der Client weiß, dass die virtuelles Gerät ist bereits in einem Zustand fehlerbedingt beendet, und er sollte nicht erwarten, dass einen Hinweis VD_E_CLOSE zurückgegeben von GetCommand und ClientVirtualDeviceSet::Close kann aufgerufen werden, sobald die Aktivität auf die freigegebenen Puffer beendet wird.
+**"Hinweise"** des Aufrufs geschlossen ist, eine Client-Deklaration, dass alle durch die Menge des virtuellen Geräts verwendete Ressourcen freigegeben werden sollen. Der Client muss sicherstellen, dass alle Aktivitäten im Zusammenhang mit Datenpuffer und virtuelle Geräte vor dem Aufrufen von Schließen beendet wurde. Durch Schließen werden alle virtuellen Geräts-Schnittstellen, die zurückgegeben werden, indem Sie OpenDevice ungültig.
+Der Client ist zulässig, einen Aufruf zum Erstellen für das virtuelle Gerät festgelegte Schnittstelle ausgeben, nachdem der Close-Aufruf zurückgegeben wurde. Solch ein Aufruf wird ein neues virtuelles Gerät, legen Sie für ein nachfolgender BACKUP oder RESTORE-Vorgang erstellen.
+Wenn der Close aufgerufen wird, wenn ein oder mehrere virtuelle Geräte noch geöffnet sind, wird die VD_E_OPEN zurückgegeben. In diesem Fall wird SignalAbort intern ausgelöst, um eine ordnungsgemäße Herunterfahren nach Möglichkeit sicherzustellen. VDI-Ressourcen werden freigegeben. Der Client sollte eine Angabe VD_E_CLOSE zurückgegeben auf jedem Gerät vor dem Aufrufen von ClientVirtualDeviceSet::Close warten. Wenn der Client weiß, dass festgelegtem virtuelles Gerät ist bereits in einem Zustand fehlerbedingt beendet, und es erwarten nicht, dass eine Angabe VD_E_CLOSE zurückgegeben von GetCommand-Aufruf, und rufen möglicherweise ClientVirtualDeviceSet::Close, sobald die Aktivität auf die freigegebenen Puffer beendet wird.
 Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weiter oben in diesem Dokument.
 
 ## <a name="clientvirtualdevicesetopeninsecondary"></a>ClientVirtualDeviceSet::OpenInSecondary
 
-**Zweck** diese Funktion wird geöffnet, das virtuelle Gerät in einem sekundären Client festgelegt. Die primäre Client muss bereits Create "und" GetConfiguration verwendet haben, zum Einrichten der virtuellen Geräts festgelegt wird.
+**Zweck** dieser Funktion wird geöffnet, das virtuelle Gerät in einem sekundären Client festgelegt. Die primäre Client muss erstellen und GetConfiguration haben bereits verwendet, um den Satz virtuelles Gerät einzurichten.
 
-**Syntax** 
+**Die Syntax** 
    
    ```
    int ClientVirtualDeviceSet::OpenInSecondary (
@@ -267,21 +267,21 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**setName** |Hierdurch wird die Gruppe. Dieser Name wird Groß-/Kleinschreibung beachtet und muss mit dem Namen übereinstimmen vom primären Client verwendet werden, wenn er ClientVirtualDeviceSet::Create aufgerufen.
+| |**setName** |Damit wird den Satz identifiziert. Dieser Name wird Groß-/Kleinschreibung berücksichtigt und muss dem Namen, die vom primären Client verwendet wird, wenn sie ClientVirtualDeviceSet::Create aufgerufen entsprechen.
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Die Funktion wurde erfolgreich ausgeführt.
-| |**VD_E_PROTOCOL** |Welche virtuellen Geräts nicht erstellt wurde, wurde bereits auf diesem Client oder das virtuelle Gerät geöffnet festgelegte ist nicht zum Annehmen von geöffneten Anfragen von sekundären Clients bereit.
-| |**VD_E_ABORT** |Der Vorgang wird abgebrochen wird.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Die Funktion wurde erfolgreich ausgeführt.
+| |**VD_E_PROTOCOL** |Der virtuelle Gerät Satz nicht erstellt wurde, ist bereits auf diesem Client oder das virtuelle Gerät geöffnet Satz ist nicht bereit für die offene Anforderungen von sekundären Clients akzeptiert.
+| |**VD_E_ABORT** |Der Vorgang abgebrochen wird.
 
-**"Hinweise"** primäre Client ist dafür verantwortlich, normales und ungewöhnliches Beendigung der sekundären Clients erkennen, wenn Sie ein Prozessmodell mit mehreren verwenden zu können,.
+**"Hinweise"** der primäre Client ist dafür verantwortlich, normale und ungewöhnliche Beenden der sekundären Clients erkennen, wenn Sie ein Prozessmodell mit mehreren verwenden zu können,.
 
 ## <a name="clientvirtualdevicesetgetbufferhandle"></a>ClientVirtualDeviceSet::GetBufferHandle
 
-**Zweck** einige Anwendungen erfordern mehrere Prozesse mit ClientVirtualDevice::GetCommand zurückgegebene Puffer zu arbeiten. In solchen Fällen wird können der Prozess, der den Befehl empfängt GetBufferHandle Sie eine unabhängige Prozesshandle abrufen, die den Puffer angibt. Dieses Handle kann dann zu einem anderen Prozess übermittelt werden, die auch dieselbe geöffnete virtuellen Gerät festgelegt hat. Dieser Prozess würde dann ClientVirtualDeviceSet::MapBufferHandle verwenden, die Adresse des Puffers beziehen. Die Adresse wird wahrscheinlich eine andere Adresse als in seinem Partner sein, da jeder Prozess Puffer unter verschiedenen Adressen zugeordnet werden kann.
+**Zweck** einige Anwendungen erfordern möglicherweise mehr als einen Prozess für von ClientVirtualDevice::GetCommand zurückgegebene Puffer ausgeführt werden. In solchen Fällen kann der Prozess, der den Befehl empfängt GetBufferHandle verwenden, um eine unabhängige Prozesshandle zu erhalten, die den Puffer angibt. Dieses Handle kann dann an einen anderen Prozess übermittelt werden, die das gleiche virtuelle Gerät festlegen öffnen verfügt auch über. Dieser Prozess würden ClientVirtualDeviceSet::MapBufferHandle klicken Sie dann verwenden, um die Adresse des Puffers abzurufen. Die Adresse wird wahrscheinlich eine andere Adresse als seine Partner sein, da jeder Prozess Puffer an verschiedenen Adressen zugeordnet werden kann.
 
-**Syntax** 
+**Die Syntax** 
 
    ```
    int ClientVirtualDeviceSet::GetBufferHandle (
@@ -292,21 +292,21 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**pBuffer** |Dies ist die Adresse eines Puffers, der von einem Befehl Lese- oder Schreibzugriff abgerufen.
+| |**pBuffer** |Dies ist die Adresse eines Puffers, der über eine Lese- oder Schreibvorgang abgerufen.
 | |**BufferHandle** |Ein eindeutiger Bezeichner für den Puffer wird zurückgegeben.
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Die Funktion wurde erfolgreich ausgeführt.
-| |**VD_E_PROTOCOL** |Das virtuelle Gerät festgelegte ist nicht aktuell geöffneten.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Die Funktion wurde erfolgreich ausgeführt.
+| |**VD_E_PROTOCOL** |Der virtuelle festgelegte ist gerade nicht geöffnet.
 | |**VD_E_INVALID** |Die pBuffer ist keine gültige Adresse.
-"Hinweise", dass der Prozess, der die GetBufferHandle-Funktion aufruft, ist verantwortlich für ClientVirtualDevice::CompleteCommand aufrufen, wenn die Datenübertragung abgeschlossen ist.
+Hinweise, dass der Prozess, der die GetBufferHandle-Funktion aufruft, ist verantwortlich für das ClientVirtualDevice::CompleteCommand aufrufen, wenn die Datenübertragung abgeschlossen ist.
 
 ## <a name="clientvirtualdevicesetmapbufferhandle"></a>ClientVirtualDeviceSet::MapBufferHandle
 
-**Zweck** diese Funktion wird verwendet, um eine gültige Pufferadresse aus einem Pufferhandle abgerufen, die von einem anderen Prozess zu erhalten. 
+**Zweck** diese Funktion wird verwendet, um eine Adresse gültigen Puffer aus einem Pufferhandle abgerufen, die aus einem anderen Prozess zu erhalten. 
 
-**Syntax** 
+**Die Syntax** 
 
    ```
    int ClientVirtualDeviceSet::MapBufferHandle (
@@ -317,15 +317,15 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**dwBuffer** |Dies ist das ClientVirtualDeviceSet::GetBufferHandle zurückgegebene Handle.
+| |**dwBuffer** |Dies ist das Handle von ClientVirtualDeviceSet::GetBufferHandle zurückgegeben.
 | |**ppBuffer** |Dies ist die Adresse des Puffers, der im aktuellen Prozess gültig ist.
 
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**NOERROR ZURÜCK** |Die Funktion wurde erfolgreich ausgeführt.
-| |**VD_E_PROTOCOL** |Das virtuelle Gerät festgelegte ist nicht aktuell geöffneten.
+| |**"NOERROR" ZURÜCKGEGEBEN** |Die Funktion wurde erfolgreich ausgeführt.
+| |**VD_E_PROTOCOL** |Der virtuelle festgelegte ist gerade nicht geöffnet.
 | |**VD_E_INVALID** |Die PpBuffer ist ein ungültiges Handle.
 
-**"Hinweise"** muss darauf geachtet werden auf die Handles ordnungsgemäß zu kommunizieren. Ziehpunkte werden für einen einzelnen virtuellen Gerät Satz lokal. Die Partner-Prozesse, die Freigabe ein Handle müssen diesen Puffer sicherstellen, dass die Handles, nur innerhalb des Bereichs des virtuellen Geräts verwendet werden aus dem Puffer ursprünglich abgerufen wurde festgelegt.
+**"Hinweise"** Vorsicht Handles richtig zu kommunizieren. Handles sind lokal auf ein einzelnes virtuelles Gerät. Die Partner-Prozesse, die ein Handle freigeben müssen sicherzustellen, dass Handles, nur innerhalb des Bereichs des virtuellen Geräts verwendet werden aus dem Puffer ursprünglich abgerufen wurde festgelegt.
 
 

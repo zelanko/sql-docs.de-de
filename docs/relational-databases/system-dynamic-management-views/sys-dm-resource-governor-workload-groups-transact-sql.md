@@ -1,5 +1,5 @@
 ---
-title: dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
+title: Sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 023dc1559ade2a14be43750acd783fefd000e7b0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005802"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34468022"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
+|NAME|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
 |pool_id|**int**|Die ID des Ressourcenpools an. Lässt keine NULL-Werte zu.|  
 |external_pool_id|**int**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die ID des externen Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |statistics_start_time|**datetime**|Uhrzeit, zu der die Statistikauflistung für die Arbeitsauslastungsgruppe zurückgesetzt wurde. Lässt keine NULL-Werte zu.|  
@@ -61,7 +61,7 @@ ms.locfileid: "34468022"
 |total_reduced_memgrant_count|**bigint**|Kumulierte Anzahl von Arbeitsspeicherzuweisungen, die die maximale Abfragegrößenbeschränkung erreicht haben. Lässt keine NULL-Werte zu.|  
 |max_request_grant_memory_kb|**bigint**|Maximale Arbeitsspeicherzuweisungsgröße einer einzelnen Anforderung, seit die Statistik zurückgesetzt wurde, in Kilobyte. Lässt keine NULL-Werte zu.|  
 |active_parallel_thread_count|**bigint**|Aktuelle Anzahl der parallelen Thread-Auslastung. Lässt keine NULL-Werte zu.|  
-|importance|**sysname**|Aktueller Konfigurationswert für die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Die Wichtigkeit kann einen der folgenden, wobei Medium die Standardeinstellung: niedrig, Mittel oder hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
+|importance|**sysname**|Aktueller Konfigurationswert für die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Ist eine der folgenden, wobei Medium wird der Standardwert: niedrig, Mittel oder hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
 |request_max_memory_grant_percent|**int**|Aktuelle Einstellung der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Lässt keine NULL-Werte zu.|  
 |request_max_cpu_time_sec|**int**|Aktuelle Einstellung für den maximalen CPU-Nutzungsgrenzwert für eine einzelne Anforderung in Sekunden. Lässt keine NULL-Werte zu.|  
 |request_memory_grant_timeout_sec|**int**|Aktuelle Einstellung für das Timeout der Arbeitsspeicherzuweisung für eine einzelne Anforderung in Sekunden. Lässt keine NULL-Werte zu.|  
@@ -79,7 +79,7 @@ ms.locfileid: "34468022"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   

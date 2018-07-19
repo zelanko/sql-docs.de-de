@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -26,45 +26,46 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005693"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Gibt Sie Verbrauch von CPU, e/a und Arbeitsspeicher für eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbank. Jede Zeile wird für 15 Sekunden beibehalten, auch wenn keine Aktivität in der Datenbank vorhanden ist. Verlaufsdaten werden eine Stunde lang aufbewahrt.  
+  Gibt die CPU, Arbeitsspeicher und e/a-Verbrauch für eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbank. Jede Zeile wird für 15 Sekunden beibehalten, auch wenn keine Aktivität in der Datenbank vorhanden ist. Verlaufsdaten werden eine Stunde lang aufbewahrt.  
   
-|Spalten|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Decimal (5,2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
-|avg_data_io_percent|**Decimal (5,2)**|Durchschnittliche Daten e/a-Auslastung in Prozent des Grenzwerts der Dienstebene.|  
+|avg_data_io_percent|**Decimal (5,2)**|Durchschnittliche Daten-e/a-Auslastung in Prozent des Grenzwerts der Dienstebene.|  
 |avg_log_write_percent|**Decimal (5,2)**|Die durchschnittliche Nutzung von Schreibressourcen als Prozentwert der maximalen Kapazität für die Dienstebene.|  
-|avg_memory_usage_percent|**Decimal (5,2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt Arbeitsspeicher für die Speicherung von In-Memory OLTP-Objekten verwendet.|  
-|xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichterstellungsintervalls). Dies schließt Arbeitsspeicher für die Speicherung von folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher zum Verarbeiten von ALTER TABLE-Vorgänge.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
-|max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Arbeitsthreads (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
+|avg_memory_usage_percent|**Decimal (5,2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt die Speicher für die Speicherung von In-Memory-OLTP-Objekten verwendet.|  
+|xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichtsintervalls). Dies umfasst auch Arbeitsspeicher, die für die Speicherung der folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher für die Verarbeitung von ALTER TABLE-Vorgänge verwendet.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
+|max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Worker (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
 |max_session_percent|**Decimal (5,2)**|Maximaler gleichzeitiger Sitzungen in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
-|dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. |
+|dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. Bei Datenbanken mit dem virtuellen Kernen basierende Modell ist diese Spalte NULL.|
+|cpu_limit|**Decimal (5,2)**|Anzahl von virtuellen Kernen für diese Datenbank während dieses Intervalls. Für Datenbanken, die mit dem DTU-basierte Modell ist diese Spalte NULL.|
 |||
   
 > [!TIP]  
->  Mehr Kontext zu diesen Grenzwerten und Dienstebenen finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [-Service-Tier-Funktionen und Beschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+>  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [Service Tier-Funktionen und Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Die zurückgegebene Daten **dm_db_resource_stats** wird angegeben als Prozentsatz des maximal zulässigen Grenzwerte für den Dienst/Leistungsebene, die Sie ausgeführt werden.
+ Vom zurückgegebenen Daten **Sys. dm_db_resource_stats** wird ausgedrückt als Prozentsatz der zulässigen Grenzwerte für die Dienstebene/Leistungsstufe, die Sie ausgeführt werden.
  
  Wenn innerhalb der letzten 60 Minuten ein Failover auf einem anderen Server für die Datenbank durchgeführt wurde, gibt die Ansicht nur die Daten für die Zeit zurück, die diese die primäre Datenbank seit dem Failover darstellt.  
   
  Verwenden Sie für eine weniger präzise Ansicht dieser Daten, **Sys. resource_stats** -Katalogsicht in der **master** Datenbank. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Wenn eine Datenbank einem elastischen Pool angehört, Ressourcenstatistiken als Prozentangaben, dargestellt als der prozentuale Anteil der maximale Grenzwert für die Datenbanken als Gruppe in der Konfiguration des elastischen Pools ausgedrückt.  
+ Wenn eine Datenbank ein Mitglied der Pools für elastische Datenbanken ist, werden Ressourcenstatistiken als Prozentwerte, dargestellt als den Prozentsatz des Höchstwerts für die Datenbanken als in der Konfiguration der Pools für elastische Datenbanken ausgedrückt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -105,6 +106,6 @@ FROM sys.dm_db_resource_stats;
 ## <a name="see-also"></a>Siehe auch  
  [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Dienst-Tier-Funktionen und Beschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Service Tier-Funktionen und Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

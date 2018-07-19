@@ -1,5 +1,5 @@
 ---
-title: Die clientseitige und serverseitige Formatierung (SQLXML 4.0) | Microsoft Docs
+title: Die clientseitige und serverseitige Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003383"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Client- und serverseitige Formatierung (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "34708458"
   
 -   Clientseitige Formatierung  
   
- Dieser Abschnitt enthält Informationen zum Formatieren von XML-Dokumenten auf der Clientseite oder der Serverseite aus den Rowsets, die von Abfragen für eine Datenbank im generierten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Dieser Abschnitt enthält Informationen zum Formatieren von XML-Dokumenten auf der Clientseite oder die Serverseite aus den Rowsets, die von Abfragen für eine Datenbank in generiert werden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Architektur des clientseitigen und serverseitigen XML-Formatierung &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
+ [Architektur der Client- und serverseitigen XML-Formatierung &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
  Stellt Architekturdiagramme bereit und beschreibt die Grundlagen der client- und serverseitigen Formatierungsarchitektur in SQLXML.  
   
  [Serverseitige XML-Formatierung &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  

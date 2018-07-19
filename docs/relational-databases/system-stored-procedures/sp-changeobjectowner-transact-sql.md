@@ -1,5 +1,5 @@
 ---
-title: Sp_changeobjectowner (Transact-SQL) | Microsoft Docs
+title: Sp_changeobjectowner (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238537"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005722"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changeobjectowner** entfernt alle vorhandene Berechtigungen aus dem Objekt. Sie müssen sämtliche Berechtigungen erneut zuweisen, die Sie nach der Ausführung beibehalten möchten **Sp_changeobjectowner**. Deshalb wird empfohlen, dass Sie bestehende Berechtigungen vor ihrer Ausführung Skript **Sp_changeobjectowner**. Nachdem der Besitz des Objekts geändert wurde, können Sie das Skript verwenden, um die Berechtigungen erneut zuzuweisen. Sie müssen den Objektbesitzer im Berechtigungsskript vor dem Ausführen ändern.  
+ **Sp_changeobjectowner** entfernt alle vorhandene Berechtigungen aus dem Objekt. Sie müssen sämtliche Berechtigungen erneut, die Sie nach der Ausführung beibehalten möchten **Sp_changeobjectowner**. Daher wird empfohlen, dass Sie bestehende Berechtigungen vor der Ausführung ein Skript **Sp_changeobjectowner**. Nachdem der Besitz des Objekts geändert wurde, können Sie das Skript verwenden, um die Berechtigungen erneut zuzuweisen. Sie müssen den Objektbesitzer im Berechtigungsskript vor dem Ausführen ändern.  
   
  Wenn Sie den Besitzer eines sicherungsfähigen Elements ändern möchten, verwenden Sie ALTER AUTHORIZATION. Zum Ändern eines Schemas verwenden Sie ALTER SCHEMA.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in den beiden die **Db_ddladmin** festen Datenbankrolle "" und die **Db_securityadmin** feste Datenbankrolle und auch über die CONTROL-Berechtigung für das Objekt.  
+ Erfordert die Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in beiden die **Db_ddladmin** festen Datenbankrolle und **Db_securityadmin** feste Datenbankrolle und auch über die CONTROL-Berechtigung für das Objekt.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Besitzer der `authors`-Tabelle zu `Corporate\GeorgeW` geändert.  
