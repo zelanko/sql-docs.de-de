@@ -137,7 +137,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. NACH OBEN  
+11. TOP  
 
 > [!WARNING]
 > Die oben dargestellte Reihenfolge ist in der Regel zutreffend. Es gibt jedoch Ausnahmefälle, in denen die Reihenfolge abweichen kann.
