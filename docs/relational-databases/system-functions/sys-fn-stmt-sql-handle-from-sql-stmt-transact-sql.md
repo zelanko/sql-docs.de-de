@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060368"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Ruft die **Stmt_sql_handle** für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung unter angegebenen Parametrisierung (einfache oder erzwungene). Dadurch können Sie zum Verweisen auf Abfragen im Abfragespeicher gespeichert sind, mit deren **Stmt_sql_handle** kennen, deren Text.  
+  Ruft die **Stmt_sql_handle** für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung unter Parametrisierung-Typ (einfache oder erzwungene). Dadurch können Sie zum Verweisen auf Abfragen, die in der Abfrage-Store gespeichert sind, mit deren **Stmt_sql_handle** Wenn Sie wissen, dass ihrem Text.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,14 +44,14 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Argumente  
  *query_sql_text*  
- Ist der Text der Abfrage im Abfragespeicher, dem das Handle des werden sollen. *Query_sql_text* ist ein **nvarchar(max)**, hat keinen Standardwert.  
+ Ist der Text der Abfrage im Abfragespeicher, dem das Handle des soll. *Query_sql_text* ist eine **nvarchar(max)**, hat keinen Standardwert.  
   
  *query_param_type*  
- Ist der Parametertyp der Abfrage. *Query_param_type* ist ein **"tinyint"**. Folgende Werte sind möglich:  
+ Ist der Parametertyp der Abfrage. *Query_param_type* ist eine **Tinyint**. Folgende Werte sind möglich:  
   
--   NULL – der Standardwert ist 0  
+-   NULL-Standardwert ist 0  
   
--   0 – keine  
+-   0 – none  
   
 -   1 – Benutzer  
   
@@ -60,11 +60,11 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3 – erzwungen  
   
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
- Die folgende Tabelle enthält die Spalten dieser sys.fn_stmt_sql_handle_from_sql_stmt zurückgibt.  
+ Die folgende Tabelle listet die Spalten dieser sys.fn_stmt_sql_handle_from_sql_stmt zurückgibt.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary(64)**|Das SQL-Handle.|  
+|**statement_sql_handle**|**varbinary(64)**|Die SQL-Handle.|  
 |**query_sql_text**|**nvarchar(max)**|Der Text, der die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
 |**query_parameterization_type**|**tinyint**|Der Typ des Abfrage-Parametrisierung.|  
   
@@ -74,17 +74,17 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **löschen** -Berechtigung für die Abfrage Katalogsichten des Abfragespeichers.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **löschen** -Berechtigung für der Katalogsichten des Abfragespeichers.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel führt eine Anweisung aus und verwendet dann `sys.fn_stmt_sql_handle_from_sql_stmt` das SQL-Handle der Anweisung zurückgegeben.  
+ Im folgenden Beispiel führt eine Anweisung aus, und verwendet dann `sys.fn_stmt_sql_handle_from_sql_stmt` der SQL-Handle für diese Anweisung zurückgegeben.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Verwenden Sie die Funktion zum Korrelieren der abfragespeicherdaten mit anderen dynamischen Verwaltungssichten. Im folgenden Beispiel:  
+ Verwenden Sie die Funktion, um die Abfrage von Store-Daten mit anderen dynamischen Verwaltungssichten zu korrelieren. Im folgenden Beispiel:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

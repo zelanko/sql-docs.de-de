@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
+title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058828"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ EXEC managed_backup.sp_set_parameter
  Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_name ist vom Datentyp NVARCHAR(128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, und **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Der Wert des Parameters, der festgelegt werden soll. @parameter ist vom Datentyp NVARCHAR(128).  Im Folgenden sind die zulässigen Parametername/Parameterwert-Paare aufgeführt:  
+ Der Wert des Parameters, der festgelegt werden soll. @parameter der Wert ist vom Datentyp NVARCHAR(128).  Im Folgenden sind die zulässigen Parametername/Parameterwert-Paare aufgeführt:  
   
--   @parameter_name = "SSMBackup2WANotificationEmailIds": @parameter_value = "Email"  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = "Email"  
   
--   @parameter_name = "SSMBackup2WAEnableUserDefinedPolicy": @parameter_value = {'true' | 'false'}  
+-   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' | 'false'}  
   
--   @parameter_name = "SSMBackup2WADebugXevent": @parameter_value = {'true' | 'false'}  
+-   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' | 'false'}  
   
 -   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' | 'false'}  
   
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>Bewährte Methoden  
  Optionaler Abschnitt, der bewährte Methoden beschreibt, die der Benutzer beim Ausführen der Anweisung oder Routine befolgen sollte.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **EXECUTE** Berechtigungen für **managed_backup.sp_set_parameter** gespeicherte Prozedur.  

@@ -1,5 +1,5 @@
 ---
-title: String-Length-Funktion (XQuery) | Microsoft Docs
+title: String-Length-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078197"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059774"
 ---
-# <a name="functions-on-string-values---string-length"></a>Funktionen für Zeichenfolgenwerte - String-length-Funktion
+# <a name="functions-on-string-values---string-length"></a>Funktionen für Zeichenfolgenwerte – Länge der Zeichenfolge
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Länge der Zeichenfolge in Zeichen zurück.  
@@ -48,13 +48,13 @@ fn:string-length($arg as xs:string?) as xs:integer
  Quellzeichenfolge, deren Länge berechnet werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert der *$arg* ist eine leere Sequenz ein **xs: Integer** wird der Wert 0 zurückgegeben.  
+ Wenn der Wert des *$arg* ist eine leere Sequenz ist, eine **xs: Integer** wird der Wert 0 zurückgegeben.  
   
- Das Verhalten von Ersatzpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab. Beim Kompatibilitätsgrad 110 oder höher wird jedes Ersatzpaar als einzelnes Zeichen gezählt. Bei niedrigeren Kompatibilitätsgraden werden Ersatzpaare als zwei Zeichen betrachtet. Weitere Informationen finden Sie unter [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Das Verhalten von Ersatzpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab. Beim Kompatibilitätsgrad 110 oder höher wird jedes Ersatzpaar als einzelnes Zeichen gezählt. Bei niedrigeren Kompatibilitätsgraden werden Ersatzpaare als zwei Zeichen betrachtet. Weitere Informationen finden Sie unter [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Wenn der Wert ein 4-Byte-Unicode-Zeichen enthält, das durch zwei Ersatzzeichen dargestellt wird, zählt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Ersatzzeichen einzeln.  
   
- Die **string-length()** ohne ein Parameter nur in einem Prädikat verwendet werden kann. Beispielsweise gibt die folgende Abfrage das <`ROOT`>-Element zurück:  
+ Die **string-length()** ohne Parameter nur innerhalb eines Prädikats verwendet werden kann. Beispielsweise gibt die folgende Abfrage das <`ROOT`>-Element zurück:  
   
 ```  
 DECLARE @x xml;  
@@ -63,10 +63,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatzzeichenabhängig" im Thema [fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatzzeichenabhängig" im Thema [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Verwenden der string-length()-Funktion von XQuery zum Abrufen von Produkten mit langen Zusammenfassungsbeschreibungen  
  Für Produkte, deren Zusammenfassungsbeschreibung größer als 50 Zeichen ist, ruft die folgende Abfrage die Produkt-ID, die Länge der Zusammenfassungsbeschreibung sowie die Zusammenfassung selbst (das <`Summary`>-Element) ab.  
@@ -87,11 +87,11 @@ WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/p
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die Bedingung in der WHERE-Klausel ruft nur die Zeilen ab, für die die im XML-Dokument gespeicherte Zusammenfassung länger als 200 Zeichen ist. Er verwendet die [Value()-Methode (XML-Datentyp)](../t-sql/xml/value-method-xml-data-type.md).  
+-   Die Bedingung in der WHERE-Klausel ruft nur die Zeilen ab, für die die im XML-Dokument gespeicherte Zusammenfassung länger als 200 Zeichen ist. Er verwendet den [Value()-Methode (XML-Datentyp)](../t-sql/xml/value-method-xml-data-type.md).  
   
--   Die SELECT-Klausel erstellt nur das von Ihnen gewünschte XML. Er verwendet die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) zum Erstellen des XMLS, und geben Sie die erforderlichen XQuery-Ausdrucks zum Abrufen von Daten aus dem XML-Dokument.  
+-   Die SELECT-Klausel erstellt nur das von Ihnen gewünschte XML. Er verwendet den [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) zum Konstruieren des XML-Codes, und geben Sie den erforderlichen XQuery-Ausdruck zum Abrufen von Daten aus dem XML-Dokument.  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 Result  
@@ -135,7 +135,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   **pD** und **Wm** die Namespacepräfixe in dieser Abfrage verwendet werden. Sie geben den gleichen Namespace an, der in dem Dokument verwendet wird, das abgefragt wird.  
+-   **pD** und **Wm** die Namespace-Präfixe, die in dieser Abfrage verwendet werden. Sie geben den gleichen Namespace an, der in dem Dokument verwendet wird, das abgefragt wird.  
   
 -   Die XQuery gibt eine geschachtelte FOR-Schleife an. Die äußere FOR-Schleife ist erforderlich, da Sie abrufen möchten die **ProductModelID** Attribute von der <`ProductDescription`> Element. Die innere FOR-Schleife ist erforderlich, weil Sie nur die Produkte abrufen möchten, die Garantiefunktionsbeschreibungen besitzen, die kürzer als 20 Zeichen sind.  
   

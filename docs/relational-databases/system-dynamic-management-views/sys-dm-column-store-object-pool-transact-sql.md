@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs
+title: Sys.dm_column_store_object_pool (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,30 +18,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 18faadc4dbcd4b2966c8e922aed01127b13c8baa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465696"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061408"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>Sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Gibt die Anzahl verschiedener Typen Objekt Pool der Auslastung des Speichers für columnstore-Index-Objekte.  
+ Gibt die Anzahl verschiedener Arten von Objekt Pool arbeitsspeichernutzung für columnstore-Index-Objekten.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|`database_id`|`int`|Die ID der Datenbank. Dies ist eindeutig innerhalb einer Instanz von SQL Server-Datenbank oder einer Azure SQL-Datenbankserver. |  
+|`database_id`|`int`|Die ID der Datenbank. Dies ist eindeutig innerhalb einer Instanz von SQL Server-Datenbank oder eine Azure SQL-Datenbank-Server. |  
 |`object_id`|`int`|ID des Objekts. Das Objekt ist eines der object_types auf. | 
 |`index_id`|`int`|ID des columnstore-Indexes.|  
-|`partition_number`|`bigint`|Auf 1 basierende Partitionsnummer im Index oder Heap. Jede Tabelle oder Sicht verfügt über mindestens eine Partition.| 
+|`partition_number`|`bigint`|Auf 1 basierende Partitionsnummer im Index oder Heap. Jede Tabelle oder Sicht verfügt über mindestens eine Partition aus.| 
 |`column_id`|`int`|ID der columnstore-Spalte. Dies ist NULL für DELETE_BITMAP.| 
 |`row_group_id`|`int`|Die ID der Zeilengruppe.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – ein Spaltensegment. `object_id` die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Beispielsweise, wenn eine Tabelle 10 Spalten verfügt, sind 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen zur Suche aller spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – eine andere Darstellung der globalen Wörterbuch. Dies bietet eine umgekehrte Nachschlagen von Werten an Dictionary_id. Zum Erstellen von komprimierten Segmente als Teil der Tupelverschiebungsvorgang oder Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – Löscht eine Bitmap, die Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – ein Spaltensegment. `object_id` ist die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Wenn eine Tabelle 10 Spalten haben, stehen beispielsweise 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen für alle spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – eine andere Darstellung der globalen Wörterbuch. Dies stellt eine umgekehrte Nachschlagen des Werts an Dictionary_id bereit. Zum Erstellen von komprimierte Segmente als Teil der Tuple Mover "oder" Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – Löscht eine Bitmap, die Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
 |`access_count`|`int`|Anzahl der lesen oder Schreiben greift auf dieses Objekt.|  
-|`memory_used_in_bytes`|`bigint`|Von diesem Objekt im Objektpool verwendete Arbeitsspeicher.|  
-|`object_load_time`|`datetime`|Uhrzeit für Wenn Object_id im Objektpool geschaltet wurde.|  
+|`memory_used_in_bytes`|`bigint`|Arbeitsspeicher, die von diesem Objekt im-Objektpool verwendet werden.|  
+|`object_load_time`|`datetime`|Uhrzeit für die beim Object_id in den-Objektpool eingebunden wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 

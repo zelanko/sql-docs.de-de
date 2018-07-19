@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_log_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061518"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>Sys.dm_db_log_info (Transact-SQL)
+# <a name="sysdmdbloginfo-transact-sql"></a>Sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Gibt [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Informationen des Transaktionsprotokolls. Beachten Sie, dass es sich bei allen Transaktionsprotokolldateien in der Tabellenausgabe kombiniert werden. Jede Zeile in der Ausgabe eine VLF im Transaktionsprotokoll darstellt und bietet Informationen zu diesem VLF im Protokoll.
+Gibt [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Informationen des Transaktionsprotokolls. Beachten Sie, dass es sich bei allen Transaktionsprotokolldateien in der Tabellenausgabe kombiniert werden. Jede Zeile in der Ausgabe stellt eine VLF in das Transaktionsprotokoll und stellt Informationen zu diesem VLF im Protokoll.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="arguments"></a>Argumente  
  *Database_id* | NULL | STANDARDWERT  
- Ist die ID der Datenbank. *database_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID einer Datenbank, NULL oder DEFAULT. Die Standardeinstellung ist NULL. NULL und DEFAULT sind gleichwertig im Kontext der aktuellen Datenbank.
+ Ist die ID der Datenbank. *database_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID-Nummer, der eine Datenbank, NULL oder DEFAULT. Die Standardeinstellung ist NULL. NULL und DEFAULT sind gleichwertig im Kontext der aktuellen Datenbank.
  
- Geben Sie NULL an, wenn VLF-Informationen der aktuellen Datenbank zurückgegeben.
+ Geben Sie NULL an, wenn Sie VLF-Informationen der aktuellen Datenbank zurückgegeben werden sollen.
 
  Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden. Bei Verwendung `DB_ID` ohne Angabe eines Datenbanknamens, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
 
@@ -56,13 +56,13 @@ sys.dm_db_log_info ( database_id )
 |database_id|**int**|Datenbank-ID|
 |file_id|**smallint**|Datei-Id des Transaktionsprotokolls.|  
 |vlf_begin_offset|**bigint** |Speicherort der Offset der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) vom Anfang der Transaktionsprotokolldatei.|
-|vlf_size_mb |**float** |[virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Größe in MB "," auf 2 Dezimalstellen gerundet.|     
-|vlf_sequence_number|**bigint** |[virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Sequenznummer in der Reihenfolge erstellt. Zur eindeutigen Identifizierung der VLFs in Protokolldatei verwendet.|
-|vlf_active|**bit** |Gibt an, ob [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) verwendet wird, oder nicht. <br />0 – wird VLF nicht verwendet.<br />1 - VLF ist aktiv.|
-|vlf_status|**int** |Status der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Mögliche Werte sind: <br />0 – VLF ist inaktiv <br />1 - VLF wird initialisiert, aber nicht verwendete <br /> 2 – VLF ist aktiv.|
-|vlf_parity|**tinyint** |Parität [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Wird intern verwendet, um das Ende des Protokolls in eine VLF zu bestimmen.|
+|vlf_size_mb |**float** |[virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Größe in MB, die auf 2 Dezimalstellen gerundet.|     
+|vlf_sequence_number|**bigint** |[virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Sequenznummer in der Reihenfolge erstellt. Verwendet, um VLFs erstellt, in die Protokolldatei eindeutig identifiziert.|
+|vlf_active|**bit** |Gibt an, ob [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) wird oder nicht. <br />0 – wird VLF nicht verwendet.<br />1 – VLF ist aktiv.|
+|vlf_status|**int** |Status der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Zulässige Werte: <br />0 – VLF ist inaktiv <br />1 – VLF wird initialisiert, aber nicht verwendete <br /> 2 – VLF ist aktiv.|
+|vlf_parity|**tinyint** |Parität des [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Wird intern verwendet, um zu bestimmen, das Ende des Protokolls in eine VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des ersten Protokolldatensatzes in der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_create_lsn|**nvarchar(48)** |[Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des Protokolls zu zeichnen, erstellt der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_create_lsn|**nvarchar(48)** |[Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des Protokolls zu zeichnen, erstellt die [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
 ## <a name="remarks"></a>Hinweise
 Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die `DBCC LOGINFO` Anweisung.    
@@ -72,8 +72,8 @@ Erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Ermittlung von Datenbanken in einer SQL Server-Instanz mit hohen Anzahl von VLFs
-Die folgende Abfrage ermittelt die Datenbanken mit mehr als 100 VLFs in den Protokolldateien, die Zeit für die Datenbank starten und Wiederherstellung, beeinträchtigen können.
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Ermittlung von Datenbanken in einer SQL Server-Instanz mit hohen Zahl von VLFs
+Die folgende Abfrage bestimmt die Datenbanken mit mehr als 100 VLFs erstellt, in den Protokolldateien, die die Datenbank beim Start und Wiederherstellung, die Zeit auswirken können.
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -83,9 +83,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Die Position des letzten feststellen `VLF` im Transaktionsprotokoll vor dem Verkleinern der Protokolldatei.
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Sehen die Position des letzten `VLF` im Transaktionsprotokoll vor dem Verkleinern der Protokolldatei.
 
-Die folgende Abfrage kann verwendet werden, um zu bestimmen die Position von der letzten aktiven VLF vor dem Ausführen von Shrinkfile auf Transaktionsprotokoll, um zu bestimmen, ob das Transaktionsprotokoll verkleinert werden kann.
+Die folgende Abfrage kann verwendet werden, um zu bestimmen die Position der letzten VLF des aktiven vor dem Ausführen von Shrinkfile Transaktionsprotokoll, um festzustellen, ob das Transaktionsprotokoll verkleinert werden kann.
 
 ```sql
 USE AdventureWorks2016
@@ -113,7 +113,7 @@ GO
 
 ## <a name="see-also"></a>Siehe auch  
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

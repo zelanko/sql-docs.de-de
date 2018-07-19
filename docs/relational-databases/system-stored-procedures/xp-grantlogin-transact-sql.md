@@ -1,5 +1,5 @@
 ---
-title: Xp_grantlogin (Transact-SQL) | Microsoft Docs
+title: Xp_grantlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058788"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
   
 ## <a name="arguments"></a>Argumente  
  [ **@loginame =** ] **'***login***'**  
- Der Name des Windows-Benutzers oder der Windows-Gruppe, der bzw. die hinzugefügt werden soll. Der Windows-Benutzer oder die Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ Der Name des Windows-Benutzers oder der Windows-Gruppe, der bzw. die hinzugefügt werden soll. Windows-Benutzers oder der Gruppe muss mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Benutzer*. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [  **@logintype =** ] **"***Logintype***"**  
- Der Sicherheitsstufe der Anmeldung, der Zugriff gewährt wird. *LoginType* ist **varchar(5)**, hat den Standardwert NULL. Nur **Admin** kann angegeben werden. Wenn **Admin** angegeben wird, *Anmeldung* erhält Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und als Mitglied hinzugefügt, die **Sysadmin** festen Serverrolle "".  
+ Der Sicherheitsstufe der Anmeldung, der Zugriff gewährt wird. *LoginType* ist **varchar(5)**, hat den Standardwert NULL. Nur **Admin** kann angegeben werden. Wenn **Admin** angegeben wird, *Anmeldung* erhält Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und als Mitglied hinzugefügt der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -60,7 +60,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  **Xp_grantlogin** ist jetzt eine Systemprozedur statt einer erweiterten gespeicherten Prozedur gespeicherte. **Xp_grantlogin** Aufrufe **Sp_grantlogin** und **Sp_addsrvrolemember**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **securityadmin** . Beim Ändern der *Logintype*, erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **securityadmin** . Beim Ändern der *Logintype*, erfordert die Mitgliedschaft in der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

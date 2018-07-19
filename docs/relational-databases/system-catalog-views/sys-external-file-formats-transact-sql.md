@@ -1,5 +1,5 @@
 ---
-title: Sys.external_file_formats (Transact-SQL) | Microsoft Docs
+title: external_file_formats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,32 +19,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f834434e2e03bad82df9221b1d66db6f4f1e300a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059127"
 ---
-# <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
+# <a name="sysexternalfileformats-transact-sql"></a>external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jeden externen Dateiformats in der aktuellen Datenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
- Enthält eine Zeile für jeden externen Dateiformats auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Enthält eine Zeile für jede externe Dateiformat auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Objekt-ID für das externe Dateiformat.||  
-|name|**sysname**|Der Name des Dateiformats ab. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], dies ist für die Datenbank eindeutig. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dies ist für den Server eindeutig.||  
-|format_type|**tinyint**|Der Typ des Datei-Format.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
+|NAME|**sysname**|Der Name des Dateiformats. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], dies ist für die Datenbank eindeutig. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dies ist für den Server eindeutig.||  
+|format_type|**tinyint**|Der Typ des Datei-Format.|DELIMITEDTEXT, RCFILE, ORC, PARQUET-DATEIEN|  
 |Feldabschlusszeichen|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist das Feldabschlusszeichen.||  
-|string_delimiter|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist das Trennzeichen für Zeichenfolgen.||  
+|string_delimiter|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist das Zeichenfolgen-Trennzeichen.||  
 |date_format|**nvarchar(50)**|Für die Format_type = DELIMITEDTEXT, dies ist das benutzerdefinierte Datums- und Zeitformat.||  
-|use_type_default|**bit**|Für die Format_type = TEXT als TRENNZEICHEN, gibt an, wie fehlende Werte behandelt wird, wenn PolyBase Daten aus Textdateien in HDFS importiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – speichern fehlende Werte als die Zeichenfolge 'NULL'.<br /><br /> 1 – Speichern von fehlenden Werten als der Standardwert der Spalte.|  
-|serde_method|**nvarchar(255)**|Für die Format_type = RCFILE, dies ist die Methode für die Serialisierung/Deserialisierung.||  
-|Zeilenabschlusszeichen|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Zeichenfolge, die jede Zeile in der externen Hadoop-Datei wird beendet.|Immer "\n".|  
-|Codierung|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Codierungsmethode für die externe Hadoop-Datei.|Immer 'UTF8'.|  
-|data_compression|**nvarchar(255)**|Die datenkomprimierungsmethode für die externen Daten.|Für die Format_type = DELIMITEDTEXT:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br />-"org.apache.hadoop.io.compress.GzipCodec"<br /><br /> Für die Format_type = RCFILE:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br /><br /> Für die Format_type = ORC:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br />-"org.apache.hadoop.io.compress.SnappyCodec"<br /><br /> Für die Format_type = PARQUET:<br /><br /> -"org.apache.hadoop.io.compress.GzipCodec"<br />-"org.apache.hadoop.io.compress.SnappyCodec"|  
+|use_type_default|**bit**|Für die Format_type = TEXT als TRENNZEICHEN, gibt an, wie fehlende Werte behandelt werden, wenn PolyBase Daten aus HDFS-Textdateien in importiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – speichern Sie fehlende Werte als die Zeichenfolge 'NULL'.<br /><br /> 1 – Speichern von fehlenden Werten als der Standardwert der Spalte.|  
+|serde_method|**nvarchar(255)**|Für die Format_type = RCFILE-, dies ist die Serialisierung/Deserialisierung-Methode.||  
+|Zeilenabschlusszeichen|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Zeichenfolge, die jede Zeile in der externen Hadoop-Datei beendet.|Immer '\n'.|  
+|Codierung|**nvarchar(10)**|Für die Format_type = DELIMITEDTEXT, dies ist die Codierung Methode für die externen Hadoop-Datei.|Immer "UTF8".|  
+|data_compression|**nvarchar(255)**|Die datenkomprimierungsmethode für die externen Daten.|Für die Format_type = DELIMITEDTEXT:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br />-"org.apache.Hadoop.IO.Compress.gzipcodec" angewendet.<br /><br /> Für die Format_type = RCFILE:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br /><br /> Für die Format_type = ORC:<br /><br /> -"org.apache.hadoop.io.compress.DefaultCodec"<br />-"org.apache.hadoop.io.compress.SnappyCodec"<br /><br /> Für die Format_type = parquet-Dateien:<br /><br /> -"org.apache.Hadoop.IO.Compress.gzipcodec" angewendet.<br />-"org.apache.hadoop.io.compress.SnappyCodec"|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

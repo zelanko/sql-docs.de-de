@@ -1,5 +1,5 @@
 ---
-title: SLES Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs
+title: SLES-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft-Dokumentation
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,60 +13,60 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: dc6298c55104aeabcf2da799be4ed1977ea39620
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057328"
 ---
-# <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SLES Cluster für SQL Server-Verfügbarkeitsgruppe zu konfigurieren.
+# <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Handbuch enthält Anweisungen, um einen Cluster mit drei Knoten für SQL Server auf SUSE Linux Enterprise Server 12 SP2 (SLES) zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf SUSE [hohe Verfügbarkeit Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Schrittmacher](http://clusterlabs.org/). 
+Dieses Handbuch enthält Anweisungen, um einen Cluster mit drei Knoten für SQL Server unter SUSE Linux Enterprise Server (SLES) 12 SP2 zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert darauf, dass SUSE [hohe Verfügbarkeit-Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Pacemaker](http://clusterlabs.org/). 
 
-Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. SQL Server-Dienst unter Linux ist nicht clusterfähig. Schrittmacher steuert alle Clusterressourcen, die verfügbarkeitsgruppenressource einschließlich Orchestrierung. Unter Linux sollten Sie nicht immer auf Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs) abhängig, die Clusterinformationen z. B. sys. dm_hadr_cluster bereitstellen. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert) registrieren.
+>SQL Server Integration mit Pacemaker unter Linux ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. SQL Server Service unter Linux ist nicht clusterabhängig. Pacemaker steuert alle von der Orchestrierung der Clusterressourcen, einschließlich der Verfügbarkeitsgruppen-Ressource. Unter Linux sollten Sie nicht für immer auf Verfügbarkeit Gruppe Dynamic Management Views (DMVs) verlassen, die Clusterinformationen, z. B. sys. dm_hadr_cluster bereitstellen. Darüber hinaus Name des virtuellen Netzwerks ist spezifisch für die WSFC, es gibt keine Entsprechung desselben in Pacemaker. Sie können einen Listener für die Verwendung für transparente erneute Verbindung nach einem Failover weiterhin erstellen, aber müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server registrieren, mit der IP-Adresse verwendet, um die virtuelle IP-Ressource (wie in den folgenden Abschnitten erläutert wird) zu erstellen.
 
 
 ## <a name="roadmap"></a>Roadmap für die
 
-Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hohe Verfügbarkeit unterscheidet sich zwischen Linux-Servern und einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
+Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hochverfügbarkeit unterscheidet sich zwischen Linux-Servern und einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
 1. [Konfigurieren von SQL Server auf den Clusterknoten](sql-server-linux-setup.md).
 
 2. [Erstellen der verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md). 
 
-3. Konfigurieren eines Cluster-Ressourcen-Managers wie Schrittmacher an. Diese Anweisungen sind in diesem Dokument.
+3. Konfigurieren Sie eine Clusterressourcen-Manager, z.B. Pacemaker. Diese Anweisungen sind in diesem Dokument.
    
-   Die Möglichkeit zum Konfigurieren eines Cluster-Ressourcen-Managers, hängt von der bestimmten Linux-Distribution ab. 
+   Die Möglichkeit, einen Cluster-Ressourcen-Manager zu konfigurieren, hängt von der jeweilige Linux-Distribution. 
 
    >[!IMPORTANT]
-   >Produktionsumgebungen sind einen Fencing-Agent, wie STONITH für hohe Verfügbarkeit erforderlich. Zäune Agents verwenden Sie in den Beispielen in diesem Artikel. Sie sind für das Testen und nur die Überprüfung. 
+   >Produktionsumgebungen sind erforderlich, einen umgrenzungs-Agent, wie STONITH für hohe Verfügbarkeit. In die Beispielen in diesem Artikel verwenden Sie umgrenzungs-Agents nicht. Sie sind für Tests und nur die Überprüfung. 
    
-   >Ein Cluster Schrittmacher werden mit Fencing Cluster in einen bekannten Zustand zurückgegeben. Die Methode zum Konfigurieren von Fencing hängt davon ab, die Verteilung und der Umgebung. Zu diesem Zeitpunkt ist die Fencing nicht in einige Cloud-Umgebungen verfügbar. Finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+   >Ein Pacemaker-Cluster verwendet Umgrenzung, um den Cluster in einen bekannten Zustand zurückzugeben. Die Möglichkeit zum Konfigurieren der Umgrenzung hängt davon ab, die Verteilung und der Umgebung. Zu diesem Zeitpunkt ist die Umgrenzung nicht in eine Cloud-Umgebungen verfügbar. Finden Sie unter [SUSE Linux Enterprise-Erweiterung für hohe Verfügbarkeit](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
 5. [Fügen Sie die verfügbarkeitsgruppe als Ressource im Cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie drei Computer zum Bereitstellen des Clusters drei Knoten. Die folgenden Schritte beschreiben, wie diese Server zu konfigurieren.
+Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie drei Computer, die den drei Knoten-Cluster bereitzustellen. Die folgenden Schritte beschreiben, wie Sie diese Server zu konfigurieren.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie des Betriebssystems auf allen Clusterknoten 
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie das Betriebssystem auf jedem Clusterknoten 
 
-Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterknoten. Verwenden Sie für diese Gang durch SLES 12 SP2 mit einem gültigen Abonnement für das Add-on für hohe Verfügbarkeit.
+Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren. Verwenden Sie für diese exemplarische Vorgehensweise SLES 12 SP2 mit einem gültigen Abonnement, für die HA-Add-On.
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>Installieren und Konfigurieren von SQL Server-Dienst auf jedem Clusterknoten
 
-1. Installieren und Einrichten von SQL Server-Dienst auf allen Knoten. Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server on Linux](sql-server-linux-setup.md).
+1. Installieren und Einrichten von SQL Server-Dienst auf allen Knoten. Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server unter Linux](sql-server-linux-setup.md).
 
-1. Legen Sie einen Knoten als primären und anderen Knoten als sekundäre Replikate. Verwenden Sie diese Begriffe in diesem Leitfaden.
+1. Legen Sie einen Knoten als primären als auch andere Knoten als sekundäre Datenbanken ein. Verwenden Sie diese Begriffe in diesem Handbuch.
 
 1. Stellen Sie sicher, dass der Knoten, die Teil des Clusters sein werden, die miteinander kommunizieren können.
 
-   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für drei Knoten mit dem Namen SLES1 SLES2 und SLES3.
+   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für drei Knoten, die mit dem Namen, SLES1, SLES2 und SLES3.
 
    ```
    127.0.0.1   localhost
@@ -75,30 +75,30 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
    10.128.16.22 SLES3
    ```
 
-   Alle Clusterknoten müssen über SSH, aufeinander zugreifen können. Tools wie `hb_report` oder `crm_report` (zwecks Problembehandlung) und Hawk Verlauf Explorer passwordless SSH-Zugriff zwischen Knoten erfordern, andernfalls können sie nur Daten sammeln, aus dem aktuellen Knoten. Für den Fall, dass Sie einen nicht standardmäßigen SSH-Port verwenden, verwenden Sie die Option-X (siehe `man` Seite "). Angenommen, Ihre SSH-Port 3479 ist, rufen Sie eine `crm_report` mit:
+   Alle Clusterknoten müssen über SSH, aufeinander zugreifen können. Tools wie `hb_report` oder `crm_report` (zur Problembehandlung) und Hawk's History Explorer erfordern kennwortlosen SSH-Zugriff zwischen den Knoten, andernfalls können sie nur Daten sammeln, aus dem aktuellen Knoten. Für den Fall, dass Sie einen nicht standardmäßigen SSH-Port verwenden, verwenden Sie die Option-X (finden Sie unter `man` Seite). Wenn Ihr SSH-Port 3479 ist, z. B. Rufen Sie eine `crm_report` mit:
 
    ```bash
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Weitere Informationen finden Sie unter der [SLES Administratorhandbuch - sonstige Abschnitt](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Weitere Informationen finden Sie unter den [SLES-Administratorhandbuch - Abschnitt Sonstiges](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
-## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen Sie eine SQL Server-Anmeldung für Schrittmacher
+## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen Sie eine SQL Server-Anmeldung für Pacemaker
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## <a name="configure-an-always-on-availability-group"></a>Konfigurieren einer Always On-Verfügbarkeitsgruppe
+## <a name="configure-an-always-on-availability-group"></a>Konfigurieren einer AlwaysOn-Verfügbarkeitsgruppe
 
-Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren Sie die Clusterressourcen. Um die verfügbarkeitsgruppe zu konfigurieren, finden Sie unter [Konfigurieren von Always On-Verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren Sie die Clusterressourcen. Um die verfügbarkeitsgruppe zu konfigurieren, finden Sie unter [Konfigurieren von AlwaysOn-Verfügbarkeitsgruppe für SQL Server unter Linux](sql-server-linux-availability-group-configure-ha.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten Schrittmacher
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
 
-1. Installieren Sie die Erweiterung für hohe Verfügbarkeit
+1. Installieren der Erweiterung für hohe Verfügbarkeit
 
-   Weitere Informationen finden Sie [Installieren von SUSE Linux Enterprise Server und die hohe Verfügbarkeit-Erweiterung](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
+   Finden Sie unter [Installieren von SUSE Linux Enterprise Server und die hohe Verfügbarkeit-Erweiterung](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
 
-1. Installieren Sie SQL Server-Agent ressourcenpaket auf beiden Knoten.
+1. Installieren Sie SQL Server-Ressourcen-Agent-Paket auf beiden Knoten.
 
    ```bash
    sudo zypper install mssql-server-ha
@@ -106,38 +106,38 @@ Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren
 
 ## <a name="set-up-the-first-node"></a>Richten Sie den ersten Knoten
 
-   Verweisen auf [SLES installationsanweisungen](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Finden Sie unter [SLES-installationsanweisungen](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Melden Sie sich als `root` auf dem physischen oder virtuellen Computer, die Sie als Clusterknoten verwenden möchten.
-2. Starten Sie das bootstrap-Skript, durch das ausführen:
+2. Starten Sie das bootstrap-Skript, indem Sie Ausführung:
    ```bash
    sudo ha-cluster-init
    ```
 
-   Wenn NTP nicht beim Systemstart starten konfiguriert wurde, wird eine Meldung angezeigt. 
+   Wenn NTP nicht so konfiguriert wurde, dass beim Booten startet, wird eine Meldung angezeigt. 
 
-   Wenn Sie trotzdem fortfahren möchten, wird das Skript automatisch generiert Schlüssel für den SSH-Zugriff und für das verzeichnissynchronisierungstool Csync2, und starten Sie die Dienste für beide erforderlich. 
+   Wenn Sie den Vorgang trotzdem fortsetzen möchten, wird das Skript automatisch für SSH-Zugriff und das Synchronisierungstool Csync2-Schlüssel generiert, und starten Sie die Dienste, die für beide erforderlich sind. 
 
 3. So konfigurieren Sie die clusterkommunikationsebene (Corosync): 
 
-   A. Geben Sie eine Netzwerkadresse zum Binden an. Standardmäßig schlägt das Skript die Netzwerkadresse des eth0. Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 ein. 
+   A. Geben Sie eine Netzwerkadresse zum Binden an. In der Standardeinstellung schlägt das Skript die Netzwerkadresse des "eth0". Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 aus. 
 
-   B. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die als Standard verwendet werden können. 
+   B. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die Sie als Standard verwenden können. 
 
-   c. Geben Sie einen multicast-Port. Das Skript schlägt 5405 als Standard. 
+   c. Geben Sie einen multicast-Port ein. Das Skript schlägt 5405 als Standard. 
 
-   d. So konfigurieren Sie `SBD ()`, eingeben ein persistenten Pfads für die Partition des Geräts blockieren, die Sie für SBD verwenden möchten. Der Pfad muss in allen Knoten im Cluster konsistent sein. 
-   Schließlich wird das Skript starten Sie den Dienst Schrittmacher zum Onlineschalten des Clusters einem Knoten und zum Aktivieren der Webverwaltungsoberfläche Hawk2. Die URL für Hawk2 wird auf dem Bildschirm angezeigt. 
+   d. So konfigurieren Sie `SBD ()`, geben Sie einen persistenten Pfads auf die Partition des Geräts blockieren, die Sie für die SBD verwenden möchten. Der Pfad muss in allen Knoten im Cluster konsistent sein. 
+   Schließlich wird das Skript den Pacemaker-Dienst zum Onlineschalten des Clusters einem Knoten, und aktivieren die Web-Verwaltungsschnittstelle Hawk2 gestartet. Die URL für Hawk2 verwenden, wird auf dem Bildschirm angezeigt. 
 
-4. Überprüfen Sie alle Details des Setupvorgangs `/var/log/sleha-bootstrap.log`. Sie verfügen jetzt über einen laufenden Einzelknotencluster. Überprüfen Sie das Cluster den Status mit dem Crm-Status:
+4. Überprüfen Sie alle Details des Setupvorgangs, `/var/log/sleha-bootstrap.log`. Sie haben nun eine Ausführung Einzelknotencluster. Überprüfen Sie den Status des Clusters mit Crm-Status:
 
    ```bash
    sudo crm status
    ```
 
-   Sie sehen auch Clusterkonfiguration mit `crm configure show xml` oder `crm configure show`.
+   Sie sehen auch die Konfiguration eines Clusters mit `crm configure show xml` oder `crm configure show`.
 
-5. Das bootstrapverfahren erstellt einen Linux-Benutzer mit dem Namen Hacluster mit dem Kennwort Linux. Ersetzen Sie das Standardkennwort durch eine sichere so bald wie möglich: 
+5. Das bootstrapverfahren erstellt einen Linux-Benutzer, die mit dem Namen "hacluster" mit dem Kennwort-Linux. Ersetzen Sie das Standardkennwort durch eine sichere so bald wie möglich: 
 
    ```bash
    sudo passwd hacluster
@@ -145,32 +145,32 @@ Konfigurieren Sie auf Linux-Servern die verfügbarkeitsgruppe, und konfigurieren
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Hinzufügen von Knoten zum vorhandenen cluster
 
-Wenn Sie einen Cluster mit einem oder mehreren Knoten ausgeführt haben, fügen Sie weitere Clusterknoten mit dem bootstrap-ha-Cluster-Join-Skript hinzu. Das Skript wird nur benötigt Zugriff auf einen vorhandenen Clusterknoten und der grundlegenden Setup auf dem aktuellen Computer wird automatisch abgeschlossen. Verwenden Sie die folgenden Schritte aus:
+Wenn Sie einen Cluster mit einem oder mehreren Knoten ausgeführt haben, fügen Sie mehrere Clusterknoten mit dem bootstrap-ha-Cluster-Join-Skript hinzu. Das Skript nur den Zugriff auf einen vorhandenen Clusterknoten und die grundlegende Einrichtung auf dem aktuellen Computer werden automatisch vervollständigt wird. Verwenden Sie die folgenden Schritte aus:
 
-Wenn Sie die vorhandenen Clusterknoten mit konfiguriert haben die `YaST` cluster-Modul, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, vor dem Ausführen `ha-cluster-join`:
-- Der Root-Benutzer auf den vorhandenen Knoten hat SSH-Schlüssel für passwordless Anmeldung eingerichtet. 
-- `Csync2` wird auf den vorhandenen Knoten konfiguriert. Weitere Informationen finden Sie in konfigurieren Csync2 mit YaST. 
+Wenn Sie die vorhandenen Clusterknoten konfiguriert haben die `YaST` cluster-Modul, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, vor dem Ausführen von `ha-cluster-join`:
+- Der Root-Benutzer auf den vorhandenen Knoten über SSH-Schlüssel für die Anmeldung ohne Kennwort verfügt. 
+- `Csync2` wird auf den vorhandenen Knoten konfiguriert. Weitere Informationen finden Sie unter Konfigurieren von Csync2 mit YaST. 
 
-1. Melden Sie sich als Root auf dem physischen oder virtuellen Computer, die dem Cluster beitreten soll. 
-2. Starten Sie das bootstrap-Skript, durch das ausführen: 
+1. Melden Sie sich als Root-Benutzer auf dem physischen oder virtuellen Computer, die dem Cluster beitreten soll. 
+2. Starten Sie das bootstrap-Skript, indem Sie Ausführung: 
 
    ```bash
    sudo ha-cluster-join
    ```
 
-   Wenn NTP nicht beim Systemstart starten konfiguriert wurde, wird eine Meldung angezeigt. 
+   Wenn NTP nicht so konfiguriert wurde, dass beim Booten startet, wird eine Meldung angezeigt. 
 
-3. Wenn Sie trotzdem fortfahren möchten, werden Sie aufgefordert, die IP-Adresse von einem vorhandenen Knoten anzugeben. Geben Sie die IP-Adresse ein. 
+3. Wenn Sie den Vorgang trotzdem fortsetzen möchten, werden Sie aufgefordert, die IP-Adresse von einem vorhandenen Knoten anzugeben. Geben Sie die IP-Adresse ein. 
 
-4. Wenn Sie eine passwordless SSH-Zugriffs zwischen den beiden Computern nicht bereits konfiguriert haben, werden Sie auch für das Stammkennwort für den vorhandenen Knoten aufgefordert. 
+4. Wenn Sie einer kennwortlosen SSH-Zugriff zwischen den beiden Computern nicht bereits konfiguriert haben, werden Sie auch das Stammkennwort für den vorhandenen Knoten aufgefordert werden. 
 
-   Nach der Anmeldung mit dem angegebenen Knoten das Skript kopiert die Konfiguration Corosync, konfiguriert Sie SSH und `Csync2`, aus und schaltet den aktuellen Computer online als neuen Clusterknoten. Wird gestartet außer, dass den Dienst für Hawk erforderlich sind. Wenn Sie mit freigegebenen Speicher konfiguriert haben `OCFS2`, wird auch automatisch erstellt, das Bereitstellungspunkt-Verzeichnis für die `OCFS2` Dateisystem. 
+   Nach der Anmeldung mit dem angegebenen Knoten das Skript kopiert die Corosync-Konfiguration, SSH konfiguriert und `Csync2`, und den aktuelle Computer online als neuen Clusterknoten aus. Abgesehen von der, dass wird den Dienst nach der Hawk gestartet. Wenn Sie freigegebenen Speicher mit konfiguriert haben `OCFS2`, erstellt es automatisch auch das Verzeichnis Bereitstellungspunkt für das `OCFS2` -Dateisystem. 
 
 5. Wiederholen Sie die vorherigen Schritte für alle Computer, die Sie dem Cluster hinzufügen möchten. 
 
-6. Überprüfen Sie die Details des Prozesses `/var/log/ha-cluster-bootstrap.log`. 
+6. Überprüfen Sie die Einzelheiten des Prozesses `/var/log/ha-cluster-bootstrap.log`. 
 
-1. Überprüfen Sie den Clusterstatus `sudo crm status`. Wenn Sie einen zweiten Knoten erfolgreich hinzugefügt haben, sieht die Ausgabe ähnlich der folgenden aus:
+1. Überprüfen Sie den Status des Clusters mit `sudo crm status`. Wenn Sie einen zweiten Knoten erfolgreich hinzugefügt haben, sieht die Ausgabe ähnlich der folgenden aus:
 
    ```bash
    sudo crm status
@@ -183,13 +183,13 @@ Wenn Sie die vorhandenen Clusterknoten mit konfiguriert haben die `YaST` cluster
    ```
 
    >[!NOTE]
-   >`admin_addr` ist die virtuelle IP-Clusterressource, die während des Setups der anfänglichen Einzelknotencluster konfiguriert ist.
+   >`admin_addr` ist die virtuelle IP-Clusterressource, die während der Installation des ersten Einzelknotencluster konfiguriert ist.
 
-Überprüfen Sie nachdem alle Knoten hinzugefügt wurde, ob Sie keine-Quorum-Richtlinie in der globalen Clusteroptionen anpassen müssen. Dies ist besonders wichtig für Cluster mit zwei Knoten. Weitere Informationen finden Sie in Abschnitt 4.1.2 Option ohne-Quorum-Richtlinie. 
+Überprüfen Sie nachdem alle Knoten hinzugefügt haben, ob Sie keine-Quorum-Richtlinie in den Optionen für die globale clusteraktion anpassen müssen. Dies ist besonders wichtig für Cluster mit zwei Knoten. Weitere Informationen finden Sie in Abschnitt 4.1.2 Option keine-Quorum-Richtlinie. 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie Cluster Eigenschaft Cluster-erneut prüfen-Intervall
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie die Cluster-Cluster-erneute zugriffsprüfung während-Interval-Eigenschaft
 
-`cluster-recheck-interval` Gibt an, das Abrufintervall für Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen in dem Cluster abfragt. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die durch gebunden ist die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden wird versucht, der Neustart in einem Intervall, das größer als 60 Sekunden, aber weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie Fehler-Timeout auf 60 s und Cluster erneut prüfen Wiederherstellungsintervall auf einen Wert, der größer als 60 Sekunden festgelegt. Cluster-erneut prüfen-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
+`cluster-recheck-interval` Gibt an, das Abrufintervall auf Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen an dem der Cluster überprüft. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die gebunden wird, indem die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden, wird versucht, der Neustart in einem Intervall, das mehr als 60 Sekunden, jedoch weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie die Fehler-Timeout 60er-Bereich und die Cluster-erneute zugriffsprüfung während--Intervall auf einen Wert, der größer als 60 Sekunden festlegen. Cluster-erneute zugriffsprüfung während-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
 
 Aktualisieren Sie den Eigenschaftswert an `2 minutes` ausführen:
 
@@ -198,7 +198,7 @@ crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Wenn Sie bereits eine verfügbarkeitsgruppenressource, die von einem Cluster Schrittmacher verwaltet haben, beachten Sie, dass alle Verteilungen, die die neuesten verfügbaren Schrittmacher Paket 1.1.18-11.el7 verwenden eine verhaltensänderung für den Start-Fehler-ist--Schwerwiegender-Einstellung, wenn Cluster einführen seiner Wert ist "false". Diese Änderung wirkt sich auf den Failover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, muss der Cluster Failover auf eines der sekundären Replikate verfügbar. Stattdessen werden Benutzer feststellen, dass der Cluster immer wieder versucht, um das primäre Replikat mit fehlgeschlagenem zu starten. Wenn dieser primären nie (aufgrund einer dauerhaften Ausfall) online geschaltet wird, ein Cluster nie Failover an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegend ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource auf Einbeziehung aktualisiert werden die `failover-timeout` Eigenschaft. 
+> Wenn Sie bereits eine Ressource durch einen Pacemaker-Cluster verwaltet haben, beachten Sie, dass alle Verteilungen, die die neuesten verfügbaren Pacemaker Paket 1.1.18-11.el7 verwenden eine verhaltensänderung für den Start-Fehler-ist--Schwerwiegender-Einstellung, wenn Cluster stellen Sie vor der Wert ist "false". Diese Änderung wirkt sich auf die testfailover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, wird der Cluster für ein Failover auf eines der sekundären Replikate verfügbar erwartet. Stattdessen sehen Benutzer, dass der Cluster immer wieder versucht, das fehlerhafte primäre Replikat zu starten. Wenn dieser primären (aufgrund von einem dauerhaften Ausfall) nicht online ist, ein Failover des Clusters nicht an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegender ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource aktualisiert werden, enthält die `failover-timeout` Eigenschaft. 
 >
 >Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
 >
@@ -206,42 +206,42 @@ crm configure property cluster-recheck-interval=2min
 >crm configure property start-failure-is-fatal=true
 >```
 >
->Aktualisieren Ihrer vorhandenen AG Ressourceneigenschaft `failure-timeout` auf `60s` ausführen (ersetzen Sie `ag1` durch den Namen des Ihre verfügbarkeitsgruppenressource): 
+>Aktualisieren Sie Ihre vorhandenen Verfügbarkeitsgruppe Ressourceneigenschaft `failure-timeout` zu `60s` ausführen (ersetzen Sie `ag1` durch den Namen des Ihre Verfügbarkeitsgruppen-Ressource): 
 >
 >```bash
 >crm configure edit ag1
 ># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
 >```
 
-Weitere Informationen zu Schrittmacher Clustereigenschaften, finden Sie unter [Clusterressourcen konfigurieren](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+Weitere Informationen zu den Eigenschaften der Pacemaker-Cluster, finden Sie unter [Konfigurieren von Clusterressourcen](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# <a name="configure-fencing-stonith"></a>Konfigurieren von Fencing (STONITH)
-Schrittmacher Cluster Lieferanten erfordern STONITH aktiviert werden und ein Fencing Gerät für ein unterstütztes Clustersetup konfiguriert. Wenn der Cluster-Ressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, wird Fencing verwendet, auf den Cluster erneut in einen bekannten Zustand zu versetzen.
+# <a name="configure-fencing-stonith"></a>Konfigurieren von Umgrenzung (STONITH)
+Pacemaker-Clusters Anbieter erfordern STONITH aktiviert werden und ein umgrenzungs-Gerät, das für einen unterstützten Cluster-Setup konfiguriert. Wenn der Clusterressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, Umgrenzung dient zum Cluster erneut in einen bekannten Zustand zu bringen.
 
-Ressource Ebene Zäune hauptsächlich wird sichergestellt, dass es keine beschädigte Daten bei einem Stromausfall durch Konfigurieren einer Ressource. Können Sie Ressourcen Ebene Zäune, z. B. mit DRBD (Distributed repliziert Blockgerät), um den Datenträger auf einem Knoten, wie wenn veraltet zu markieren der kommunikationsverbindung ausfällt.
+Ressource Ebene Umgrenzung hauptsächlich wird sichergestellt, dass es keine datenbeschädigung bei einem Ausfall durch Konfigurieren einer Ressource. Können Sie Ressourcen auf Umgrenzung, z. B. mit DRBD (Distributed repliziert Blockgerät), um den Datenträger auf einem Knoten, wie wenn veraltet zu markieren die kommunikationsverbindung ausfällt.
 
-Knoten Ebene Zäune wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung Schrittmacher davon STONITH (Dies steht für "den andere Knoten im Kopf Schießen") aufgerufen. Schrittmacher unterstützt eine große Anzahl von Geräten, z. B. eine unterbrechungsfreie Stromversorgung oder Management-Netzwerkschnittstellenkarten für Server Zauns.
+Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung dieser Pacemaker STONITH (das steht für "den anderen Knoten im Kopf dafür") aufgerufen. Pacemaker unterstützt eine Vielzahl von Geräten, z. B. eine unterbrechungsfreie bereitstellen oder die Verwaltung Netzwerkschnittstellenkarten für Server für das umgrenzen.
 
-Weitere Informationen finden Sie unter [Schrittmacher Clustern von Grund auf Neu](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing und Stonith](http://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Fencing und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Umgrenzung und Stonith](http://clusterlabs.org/doc/crm_fencing.html) und [SUSE-HA-Dokumentation: Umgrenzung und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
-Während der Initialisierung des Clusters ist die STONITH deaktiviert, wenn keine Konfiguration erkannt wird. Sie kann später durch Ausführen des folgenden Befehls aktiviert werden:
+STONITH wird zum Zeitpunkt der Initialisierung deaktiviert, wenn keine Konfiguration erkannt wird. Es kann mit dem folgenden Befehl später aktiviert werden:
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->Deaktivieren von STONITH ist nur für Testzwecke verwenden. Wenn Sie Schrittmacher in einer produktiven Umgebung verwenden möchten, sollten Sie eine Implementierung STONITH je nach Umgebung planen und bewahren Sie ihn der aktiviert. SUSE bietet keine Fencing-Agents für alle Cloud-Umgebungen (einschließlich Azure) oder Hyper-V. Die Cluster-Hersteller bietet Unterstützung für die Ausführung von produktionsclustern in diesen Umgebungen, nicht. Wir arbeiten an einer Lösung für diese Lücke, die in zukünftigen Versionen verfügbar sein wird.
+>Deaktivieren die STONITH ist nur für Testzwecke verwenden. Wenn Sie Pacemaker in einer produktionsumgebung verwenden möchten, sollten Sie eine STONITH-Implementierung planen, je nach Umgebung und behalten sie die Einstellung aktiviert. SUSE stellt keine Umgrenzung-Agents für alle Cloud-Umgebungen (einschließlich Azure) oder Hyper-V bereit. Nichts enthält, bietet der Hersteller der Cluster keine Unterstützung für Produktionscluster in diesen Umgebungen ausgeführt. Wir arbeiten an einer Lösung für diese Lücke zu schließen, die in zukünftigen Versionen zur Verfügung stehen.
 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Konfigurieren Sie die Clusterressourcen für SQL Server
 
-Verweisen auf [SLES Verwaltung Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+Finden Sie unter [SLES-Verwaltung-Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
 
-### <a name="create-availability-group-resource"></a>Erstellen Sie die Verfügbarkeit der Ressource "Group"
+### <a name="create-availability-group-resource"></a>Verfügbarkeitsgruppen-Ressource erstellen
 
-Der folgende Befehl erstellt und konfiguriert die verfügbarkeitsgruppenressource für drei Replikate der verfügbarkeitsgruppe [ag1]. Das Überwachen von Vorgängen und Timeouts müssen explizit in SLES angegeben werden, beruht auf der Tatsache, dass Timeouts mit hoher Arbeitslast abhängig sind und für jede Bereitstellung sorgfältig angepasst werden müssen.
-Führen Sie den Befehl auf einem der Knoten im Cluster:
+Der folgende Befehl erstellt und konfiguriert die verfügbarkeitsgruppenressource für drei Replikate der verfügbarkeitsgruppe [ag1]. Das Überwachen von Vorgängen und Timeouts müssen explizit in SLES angegeben werden, beruht auf der Tatsache, dass Timeouts hoher arbeitsauslastung abhängig werden und müssen sorgfältig für jede Bereitstellung angepasst werden.
+Führen Sie den Befehl auf einem der Knoten im Cluster aus:
 
 1. Führen Sie `crm configure` auf die Crm-Eingabeaufforderung öffnen:
 
@@ -249,7 +249,7 @@ Führen Sie den Befehl auf einem der Knoten im Cluster:
    sudo crm configure 
    ```
 
-1. Führen Sie in der Crm-Eingabeaufforderung den folgenden Befehl so konfigurieren Sie die Ressourceneigenschaften.
+1. Führen Sie in der Crm-Eingabeaufforderung den folgenden Befehl so konfigurieren Sie die Ressourceneigenschaften aus.
 
    ```bash
    primitive ag_cluster \
@@ -272,9 +272,9 @@ Führen Sie den Befehl auf einem der Knoten im Cluster:
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
-### <a name="create-virtual-ip-resource"></a>Erstellen der virtuellen IP-Adressressource
+### <a name="create-virtual-ip-resource"></a>Erstellen Sie virtuelle IP-Ressource
 
-Wenn Sie nicht die virtuelle IP-Adressressource erstellt haben, bei der Ausführung `ha-cluster-init` diese Ressource kann nun erstellt. Der folgende Befehl erstellt eine virtuelle IP-Adressressource. Ersetzen Sie `<**0.0.0.0**>` mit einer verfügbaren Adresse aus dem Netzwerk und `<**24**>` mit der Anzahl von Bits in der CIDR-Subnetzmaske. Führen Sie auf einem Knoten.
+Wenn Sie nicht die virtuelle IP-Ressource erstellt haben, bei der Ausführung `ha-cluster-init` Erstellen dieser Ressource können Sie jetzt. Der folgende Befehl erstellt eine virtuelle IP-Ressource. Ersetzen Sie dies `<**0.0.0.0**>` mit eine verfügbare Adresse aus dem Netzwerk und `<**24**>` mit der Anzahl von Bits in der CIDR-Subnetzmaske. Führen Sie auf einem Knoten.
 
 ```bash
 crm configure \
@@ -285,9 +285,9 @@ primitive admin_addr \
 ```
 
 ### <a name="add-colocation-constraint"></a>Zusammenstellung-Einschränkung hinzufügen
-Fast jeder Entscheidung in einem Cluster Schrittmacher ähnelt dem auswählen, in dem eine Ressource ausgeführt werden soll, erfolgt durch Vergleichen der Ergebnisse. Ergebnisse pro Ressource berechnet werden und der Clusterressourcen-Manager wählt die Knoten mit der höchsten Bewertung für eine bestimmte Ressource. (Wenn ein Knoten ein negatives Ergebnis für eine Ressource besitzt, kann nicht die Ressource auf diesem Knoten ausgeführt.) Wir können die Entscheidungen, die den Cluster mit Einschränkungen bearbeiten. Eine Bewertung eine Beschränkung vorliegt. Wenn eine Einschränkung, ein Ergebnis kleiner als UNENDLICH ist, ist es nur eine Empfehlung. Eine Bewertung von UNENDLICH bedeutet, dass es ein muss. Wir möchten sicherstellen, dass primäre der verfügbarkeitsgruppe und die virtuelle IP-Ressource werden ausgeführt auf demselben Host, sodass definieren wir eine Zusammenstellung-Einschränkung mit einem Faktor von UNENDLICH. 
+Fast jeder Entscheidung im eines Pacemaker-Clusters, z. B. auswählen, in dem eine Ressource ausgeführt werden soll, erfolgt durch Vergleichen der Ergebnisse. Pro Ressource Bewertungen berechnet werden, und der Clusterressourcen-Manager wählt den Knoten mit der höchsten Bewertung für eine bestimmte Ressource. (Wenn ein Knoten ein negatives Ergebnis für eine Ressource verfügt, kann nicht die Ressourcen auf diesem Knoten ausgeführt.) Wir können die Entscheidungen des Clusters mit Einschränkungen ändern. Eine Bewertung eine Beschränkung vorliegt. Wenn eine Einschränkung auf einen Wert kleiner als UNENDLICH ist, ist es nur eine Empfehlung aus. Eine Bewertung von UNENDLICH bedeutet, dass es sich um ein muss ist. Wir möchten, um sicherzustellen, dass primäre der verfügbarkeitsgruppe und virtuellen IP-Ressource werden auf demselben Host, damit wir eine Zusammenstellung-Einschränkung mit einer Bewertung von UNENDLICH definieren. 
 
-Um Zusammenstellung-Einschränkung für die virtuelle IP-Adresse zur Ausführung auf demselben Knoten wie Master festzulegen, führen Sie den folgenden Befehl auf einem Knoten aus:
+Um mithilfe der Zusammenstellung-Einschränkung für die virtuelle IP-Adresse zur Ausführung auf demselben Knoten wie der Masterknoten festzulegen, führen Sie den folgenden Befehl auf einem Knoten ein:
 
 ```bash
 crm configure
@@ -296,16 +296,16 @@ colocation vip_on_master inf: \
 commit
 ```
 
-### <a name="add-ordering-constraint"></a>Sortierung-Einschränkung hinzufügen
-Die Zusammenstellung-Einschränkung verfügt über eine implizite Reihenfolge Einschränkung. Er verschiebt die virtuelle IP-Adressressource, bevor sie die verfügbarkeitsgruppenressource verschoben wird. Standardmäßig lautet die Abfolge von Ereignissen. 
+### <a name="add-ordering-constraint"></a>Sortieren-Einschränkung hinzufügen
+Die Zusammenstellung-Einschränkung verfügt über eine implizite Sortierung Einschränkung. Die virtuelle IP-Adressressource verschoben wird, bevor sie die verfügbarkeitsgruppenressource verschoben. Standardmäßig ist die Abfolge der Ereignisse: 
 
-1. Probleme-Ressource "User", mit dem Availability Group-Master von Knoten1 auf Knoten2 migrieren.
-2. Die virtuelle IP-Adressressource wird auf Knoten 1 beendet.
-3. Die virtuelle IP-Adressressource, die auf Knoten 2 wird gestartet. An diesem Punkt die IP-Adresse vorübergehend verweist auf Knoten 2 während Knoten 2 noch ein Pre-Failover ist sekundären. 
-4. Der Verfügbarkeit Master auf Knoten 1 wird herabgestuft, um slave.
-5. Die Verfügbarkeit Gruppe Slave auf Knoten 2 höher gestuft wird Master. 
+1. Benutzerressource für Probleme, mit dem Availability Group-Master von Knoten1 auf Knoten2 migrieren.
+2. Die virtuelle IP-Adressressource, die auf Knoten 1 beendet werden.
+3. Die virtuelle IP-Adressressource, die auf Knoten 2 wird gestartet. An diesem Punkt die IP-Adresse temporär verweist auf Knoten 2 während Knoten 2 immer noch ein vor dem Failover ist sekundären. 
+4. Der Verfügbarkeit auf Knoten 1 Master wird herabgestuft, um sekundärgerät.
+5. Der Availability-Gruppe untergeordnete Knoten auf Knoten 2 höher gestuft wird zum Master. 
 
-Um zu verhindern, dass die IP-Adresse vorübergehend auf den Knoten mit der vor dem Failover sekundären Datenbank verweist, fügen Sie eine Sortierung Einschränkung hinzu. Um eine Sortierung Einschränkung hinzuzufügen, führen Sie den folgenden Befehl auf einem Knoten aus: 
+Um zu verhindern, dass die IP-Adresse vorübergehend auf den Knoten mit der vor dem Failover sekundären Datenbank verweist, fügen Sie eine Sortierung Einschränkung hinzu. Um eine Sortierung Einschränkung hinzuzufügen, führen Sie den folgenden Befehl auf einem Knoten ein: 
 
 ```bash
 crm crm configure \
@@ -314,18 +314,18 @@ crm crm configure \
 
 
 >[!IMPORTANT]
->Nachdem Sie den Cluster konfigurieren und als Clusterressource der verfügbarkeitsgruppe hinzufügen, können nicht Sie Transact-SQL verwenden, um die verfügbarkeitsgruppenressourcen Failover. SQL Server-Cluster-Ressourcen unter Linux werden mit dem Betriebssystem nicht als eng verbunden, da es sich auf einem Windows Server Failover Cluster (WSFC) handelt. SQL Server-Dienst ist nicht über das Vorhandensein des Clusters. Alle Orchestrierung erfolgt über die Verwaltungstools. Verwenden Sie SLES `crm`. 
+>Nachdem Sie den Cluster konfigurieren, und fügen Sie als Clusterressource der verfügbarkeitsgruppe hinzu, können Sie Transact-SQL keine für das Failover der verfügbarkeitsgruppenressourcen. Ressourcen für SQL Server-Clusters unter Linux sind nicht so eng mit dem Betriebssystem verknüpft, wie sie auf einem Windows Server Failover Cluster (WSFC) sind. SQL Server-Dienst ist nicht über das Vorhandensein des Clusters. Alle Orchestrierung erfolgt über die Verwaltungstools. Verwenden Sie SLES `crm`. 
 
-Ausführen des manuellen Failovers der verfügbarkeitsgruppe mit `crm`. Lösen Sie keine Failover mit Transact-SQL. Weitere Informationen finden Sie unter [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
+Ausführen des manuellen Failovers der verfügbarkeitsgruppe mit `crm`. Initiieren Sie nicht Failover mit Transact-SQL. Weitere Informationen finden Sie unter [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
 Weitere Informationen finden Sie in den folgenden Themen:
 - [Verwalten von Clusterressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
-- [Virtuelle Maschinen mit hoher Konzepte](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
-- [Kurzübersicht Schrittmacher](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
+- [HA Konzepte](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
+- [Pacemaker-Kurzübersicht](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Betreiben HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
+[Betreiben von HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)

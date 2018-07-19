@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_describe_first_result_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467886"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059168"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
  *@params*  
- @params Stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch analog zu sp_executesql bereit. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
+ @params Stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch analog zu Sp_executesql. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
   
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Stmt angegebene Parameter muss definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches in der Anweisung keine Parameter, @params ist nicht erforderlich. NULL wird der Standardwert für diesen Parameter an.  
+ Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Stmt angegebene Parameter muss definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, @params ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
  *@include_browse_information*  
  Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
@@ -67,11 +67,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**column_ordinal**|**int**|Enthält die Ordnungsposition der Spalte im Resultset. Position der ersten Spalte wird mit 1 angegeben werden.|  
 |**name**|**sysname**|Enthält den Namen der Spalte, wenn ein Name bestimmt werden kann. Enthält andernfalls NULL.|  
 |**is_nullable**|**bit**|Enthält die folgenden Werte:<br /><br /> Wert 1, wenn die Spalte NULL-Werte zulässt.<br /><br /> Wert 0, wenn die Spalte keine NULL-Werte zulässt.<br /><br /> Wert 1, wenn nicht bestimmt werden kann, ob die Spalte NULL-Werte zulässt.|  
-|**system_type_id**|**int**|Enthält die System_type_id des Datentyps Spalte wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
+|**system_type_id**|**int**|Enthält die System_type_id des Datentyps für die Spalte wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256)**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden.<br /><br /> Wenn es sich bei dem Datentyp um einen benutzerdefinierten Aliastyp handelt, wird hier der zugrunde liegende Systemtyp angegeben.<br /><br /> Wenn es sich bei dem Datentyp um einen benutzerdefinierten CLR-Typ handelt, wird in dieser Spalte NULL zurückgegeben.|  
-|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert ist 16 oder festlegen, indem **Sp_tableoption 'Text in Row'**.|  
-|**precision**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
-|**scale**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'**.|  
+|**mit einfacher Genauigkeit**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**Skalieren**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
 |**user_type_id**|**int**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
 |**user_type_database**|**sysname**|Enthält bei CLR- und Aliastypen den Namen der Datenbank, in der der Typ definiert wurde. Andernfalls NULL.|  
@@ -85,7 +85,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_xml_document**|**bit**|Gibt 1 zurück, wenn der zurückgegebene Datentyp XML ist und für diesen Typ garantiert ist, dass es sich um ein vollständiges XML-Dokument (einschließlich eines Stammknotens) handelt, nicht um ein XML-Fragment. Andernfalls wird 0 zurückgegeben.|  
 |**is_case_sensitive**|**bit**|Gibt 1 zurück, wenn die Spalte von einem string-Typ ist, bei dem die Groß-/Kleinschreibung beachtet wird. Andernfalls wird 0 zurückgegeben.|  
 |**is_fixed_length_clr_type**|**bit**|Gibt 1 zurück, wenn die Spalte von einem CLR-Typ mit fester Länge ist. Andernfalls wird 0 zurückgegeben.|  
-|**source_server**|**sysname**|Name des ursprünglichen Servers (bei Ursprung auf einem Remoteserver). Der Name wird angegeben, wie er in "sys.servers" angezeigt wird. Gibt NULL zurück, wenn die Spalte vom lokalen Server stammt oder der ursprüngliche Server nicht ermittelt werden konnte. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
+|**source_server**|**sysname**|Name des ursprünglichen Servers (bei Ursprung auf einem Remoteserver). Der Name angegeben wird, wie er in der sys.servers angezeigt wird. Gibt NULL zurück, wenn die Spalte vom lokalen Server stammt oder der ursprüngliche Server nicht ermittelt werden konnte. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_database**|**sysname**|Der Name der ursprünglichen Datenbank, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Datenbank nicht ermittelt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_schema**|**sysname**|Der Name des ursprünglichen Schemas, das von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn das Schema nicht bestimmt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_table**|**sysname**|Der Name der ursprünglichen Tabelle, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Tabelle nicht bestimmt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
@@ -97,7 +97,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_sparse_column_set**|**bit**|Gibt 1 zurück, wenn die Spalte eine Sparsespalte ist, andernfalls 0. Gibt NULL zurück, wenn nicht ermittelt werden kann, ob die Spalte Teil eines Sparsespaltensatzes ist.|  
 |**ordinal_in_order_by_list**|**smallint**|Die Position dieser Spalte ist in der ORDER BY-Liste. Gibt NULL zurück, wenn die Spalte nicht in der ORDER BY-Liste angezeigt wird oder die ORDER BY-Liste nicht eindeutig bestimmt werden kann.|  
 |**order_by_list_length**|**smallint**|Die Länge der ORDER BY-Liste. NULL wird zurückgegeben, wenn keine ORDER BY-Liste vorhanden ist die ORDER BY-Liste nicht eindeutig bestimmt werden kann. Beachten Sie, dass dieser Wert für alle von sp_describe_first_result_set zurückgegebenen Zeilen gleich ist.|  
-|**order_by_is_descending**|**"smallint" NULL**|Wenn Ordinal_in_order_by_list nicht NULL, ist die **Order_by_is_descending** Spalte meldet die Richtung der ORDER BY-Klausel für diese Spalte. Andernfalls wird NULL gemeldet.|  
+|**order_by_is_descending**|**Smallint NULL**|Wenn Ordinal_in_order_by_list nicht NULL ist, ist die **Order_by_is_descending** -Spalte meldet die Richtung der ORDER BY-Klausel für diese Spalte. Andernfalls wird NULL gemeldet.|  
 |**error_number**|**int**|Enthält die von der Funktion zurückgegebene Fehlernummer. Wenn kein Fehler aufgetreten ist, enthält die Spalte NULL.|  
 |**error_severity**|**int**|Enthält den von der Funktion zurückgegebenen Schweregrad. Wenn kein Fehler aufgetreten ist, enthält die Spalte NULL.|  
 |**error_state**|**int**|Enthält die Statusmeldung, die von der Funktion zurückgegeben wird. Wenn kein Fehler aufgetreten ist, enthält die Spalte NULL.|  
@@ -122,15 +122,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |8|UNDECLARED_PARAMETER|Das Ergebnis konnte nicht ermittelt werden, da der Datentyp einer oder mehrerer Resultsetspalten potenziell von einem nicht deklarierten Parameter abhängt.|  
 |9|RECURSION|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine rekursive Anweisung enthält.|  
 |10|TEMPORARY_TABLE|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine temporäre Tabelle enthält, und wird nicht von **Sp_describe_first_result_set** .|  
-|11|UNSUPPORTED_STATEMENT|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine Anweisung enthält, die von nicht unterstützt wird **Sp_describe_first_result_set** (z. B., FETCH, REVERT usw.).|  
+|11|UNSUPPORTED_STATEMENT|Das Ergebnis konnte nicht ermittelt werden, da der Batch eine Anweisung enthält, die von nicht unterstützt wird **Sp_describe_first_result_set** (z. B., FETCH, REVERT usw..).|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|Die @object_id an die Funktion übergeben wird nicht unterstützt (d. h. keine gespeicherte Prozedur)|  
-|13|OBJECT_DOES_NOT_EXIST|Die @object_id übergeben, um die Funktion wurde im Systemkatalog nicht gefunden.|  
+|13|OBJECT_DOES_NOT_EXIST|Die @object_id , die an die Funktion wurde im Systemkatalog nicht gefunden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung zum Ausführen der @tsql Argument.  
   
 ## <a name="examples"></a>Beispiele  
- Weitere Beispiele im Thema [Sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) können angepasst werden **dm_exec_describe_first_result_set**.  
+ Weitere Beispiele im Thema [Sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) können angepasst werden **Sys. dm_exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Zurückgeben von Informationen zu einer einzelnen Transact-SQL-Anweisung  
  Im folgenden Code werden Informationen zu den Ergebnissen einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung zurückgegeben.  
@@ -143,7 +143,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 ```  
   
 ### <a name="b-returning-information-about-a-procedure"></a>B. Zurückgeben von Informationen zu einer Prozedur  
- Das folgende Beispiel erstellt eine gespeicherte Prozedur namens Pr_TestProc, die zwei Resultsets zurückgibt. Dann im Beispiel wird, dass veranschaulicht **dm_exec_describe_first_result_set** gibt Informationen über das erste Resultset in der Prozedur zurück.  
+ Das folgende Beispiel erstellt eine gespeicherte Prozedur namens Pr_TestProc, die zwei Resultsets zurückgibt. Und dann das Beispiel, dass veranschaulicht **Sys. dm_exec_describe_first_result_set** gibt Informationen über das erste Resultset in der Prozedur zurück.  
   
 ```  
 USE AdventureWorks2012;  

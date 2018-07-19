@@ -1,5 +1,5 @@
 ---
-title: Angeben eines Knotentests in einem Pfadausdrucksschritt | Microsoft Docs
+title: Angeben von Knotentests in einem Schritt eines Pfadausdrucks | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058300"
 ---
-# <a name="path-expressions---specifying-node-test"></a>Path-Ausdrücken - angeben eines Knotentests
+# <a name="path-expressions---specifying-node-test"></a>Path Expressions-Specifying Knotentest Pfadausdrücke
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ein Achsenschritt in einem Pfadausdruck besteht aus den folgenden Komponenten:  
@@ -37,7 +37,7 @@ ms.locfileid: "33077667"
   
 -   Einem Knotentest  
   
--   [0 (null) oder mehr schrittqualifizierern (optional)](../xquery/path-expressions-specifying-predicates.md)  
+-   [NULL oder mehr schrittqualifizierern (optional)](../xquery/path-expressions-specifying-predicates.md)  
   
  Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33077667"
 >  Für Knotennamen, die in XQuery Pfadausdrücken angegeben werden, gelten nicht die gleichen sortierungsabhängigen Regeln, die für Transact-SQL-Abfragen gelten. Außerdem wird immer Groß- und Kleinschreibung unterschieden.  
   
 ## <a name="node-name-as-node-test"></a>Knotenname als Knotentest  
- Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Beispiel:  
+ Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Zum Beispiel:  
   
 -   Eine attribute-Achse kann nur Attribute enthalten. Daher ist der attribute-Knoten die Hauptknotenart der attribute-Achse.  
   
@@ -75,9 +75,9 @@ child::ProductDescription
   
  Der Pfadausdruck `/child::PD:ProductDescription/child::PD:Features/descendant::*,` weist drei Schritte auf. Diese Schritte geben child- und descendant-Achsen an. In jedem Schritt wird der Knotenname als Knotentest angegeben. Das Platzhalterzeichen (`*`) im dritten Schritt gibt alle Knoten von der Hauptknotenart für die descendant-Achse an. Die Hauptknotenart der Achse bestimmt den Typ der ausgewählten Knoten sowie die Knotennamenfilter, die die Knoten ausgewählt haben.  
   
- Daher, wenn dieser Ausdruck für Product Catalog XML-Dokumenten in ausgeführt wird die **ProductModel** Tabelle ruft alle untergeordneten-Elemente Knoten des ab der \<Funktionen >-Elementknotens des der \< ProductDescription > Element.  
+ Daher, wenn dieser Ausdruck für Product Catalog XML-Dokumenten in ausgeführt wird die **ProductModel** Tabelle abgerufen, alle untergeordneten-Elemente Knoten von der \<Funktionen >-Elementknotens des der \< ProductDescription > Element.  
   
- Der Pfadausdruck `/child::PD:ProductDescription/attribute::ProductModelID`, setzt sich aus zwei Schritten. Beide Schritte geben einen Knotennamen als Knotentest an. Der zweite Schritt verwendet außerdem die attribute-Achse. Daher wählt jeder Schritt Knoten der Hauptknotenart seiner Achse aus, die den Namen als Knotentest angegeben hat. Daher gibt der Ausdruck zurück **ProductModelID** Attributknoten die \<ProductDescription > Elementknoten.  
+ Der Pfadausdruck `/child::PD:ProductDescription/attribute::ProductModelID`, besteht aus zwei Schritten. Beide Schritte geben einen Knotennamen als Knotentest an. Der zweite Schritt verwendet außerdem die attribute-Achse. Daher wählt jeder Schritt Knoten der Hauptknotenart seiner Achse aus, die den Namen als Knotentest angegeben hat. Daher gibt der Ausdruck **ProductModelID** Attributknoten die \<ProductDescription > Elementknoten.  
   
  Wenn Sie die Namen von Knoten für Knotentests angeben, können Sie auch das Platzhalterzeichen (*) zum Angeben des lokalen Namens eines Knotens oder seines Namespacepräfixes verwenden, wie im folgenden Beispiel gezeigt wird:  
   
@@ -117,7 +117,7 @@ child::comment()
  Die folgenden Beispiele vergleichen den Knotennamen und die Knotenart.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Ergebnisse der Angabe des Knotennamens und des Knotentyps als Knotentests in einem Pfadausdruck  
- Im folgenden Beispiel wird ein einfaches XML-Dokument zugewiesen, um eine **Xml** Typvariablen. Das Dokument wird mithilfe verschiedener Pfadausdrücke abgefragt. Anschließend werden die Ergebnisse verglichen.  
+ Im folgenden Beispiel wird ein einfaches XML-Dokument zugewiesen, um eine **Xml** Variablen vom Typ. Das Dokument wird mithilfe verschiedener Pfadausdrücke abgefragt. Anschließend werden die Ergebnisse verglichen.  
   
 ```  
 declare @x xml  
@@ -175,7 +175,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Da `node()` als Knotentyp, erhalten Sie alle Knoten der descendant-Achse. Dies ist das Ergebnis:  
+ Da `node()` ein Knotentyp, erhalten Sie alle Knoten der descendant-Achse. Dies ist das Ergebnis:  
   
 ```  
 text1  

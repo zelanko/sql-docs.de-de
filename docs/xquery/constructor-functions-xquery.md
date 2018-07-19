@@ -1,5 +1,5 @@
 ---
-title: Konstruktorfunktionen (XQuery) | Microsoft Docs
+title: Konstruktorfunktionen (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077724"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059732"
 ---
 # <a name="constructor-functions-xquery"></a>Konstruktorfunktionen (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Ein beliebiger integrierter XSD-Typ.  
   
 ## <a name="remarks"></a>Hinweise  
- Konstruktoren werden von atomaren XSD-Basistypen sowie abgeleiteten Typen unterstützt. Allerdings die Untertypen von **xs: Duration**, darunter **xdt: yearmonthduration und xdt: dayTimeDuration**, und **xs: QName**, **xs: NMTOKEN**, und **xs** werden nicht unterstützt. Die benutzerdefinierten atomaren Typen, die in den damit verbundenen Schemaauflistungen verfügbar sind, stehen auch hier zur Verfügung, unter der Voraussetzung, dass sie direkt oder indirekt aus den folgenden Typen abgeleitet sind.  
+ Konstruktoren werden von atomaren XSD-Basistypen sowie abgeleiteten Typen unterstützt. Allerdings die Untertypen von **xs: Duration**, wozu **xdt: yearmonthduration und xdt: dayTimeDuration**, und **xs: QName**, **xs: NMTOKEN**, und **xs: Notation** werden nicht unterstützt. Die benutzerdefinierten atomaren Typen, die in den damit verbundenen Schemaauflistungen verfügbar sind, stehen auch hier zur Verfügung, unter der Voraussetzung, dass sie direkt oder indirekt aus den folgenden Typen abgeleitet sind.  
   
 #### <a name="supported-base-types"></a>Unterstützte Basistypen  
  Es folgen die unterstützten Basistypen:  
@@ -143,10 +143,10 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   Wenn das Argument ein Literal eines anderen Typs ist, wird der Ausdruck zur Kompilierzeit ausgewertet. Wenn der Wert die Typeinschränkungen nicht erfüllt, wird die leere Sequenz zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Abrufen älterer Produktbeschreibungen mit der dateTime()-Funktion von XQuery  
- In diesem Beispiel wird ein XML-Beispieldokument zunächst auf zugewiesen ein **Xml** Typvariablen. Dieses Dokument enthält drei <`ProductDescription`>-Beispielelemente, die jeweils ein untergeordnetes <`DateCreated`>-Element enthalten.  
+ In diesem Beispiel ist ein XML-Beispieldokument zunächst zugewiesen wird ein **Xml** Variablen vom Typ. Dieses Dokument enthält drei <`ProductDescription`>-Beispielelemente, die jeweils ein untergeordnetes <`DateCreated`>-Element enthalten.  
   
  Die Variable wird dann abgefragt, um nur diejenigen Produktbeschreibungen abzurufen, die vor einem bestimmten Datum erstellt worden sind. Für Vergleichszwecke verwendet die Abfrage die **xs:DateTime()** Konstruktorfunktion, um die Datumsangaben eingeben.  
   
@@ -181,7 +181,7 @@ select @x.query('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die FOR ... WHERE-Schleifenstruktur zum Abrufen der \<ProductDescription >-Element in der WHERE-Klausel angegebene Bedingung erfüllt.  
+-   Die FOR ... WHERE-Schleifenstruktur verwendet wird, zum Abrufen der \<ProductDescription >-Element in der WHERE-Klausel angegebene Bedingung erfüllt.  
   
 -   Die **dateTime()** Konstruktorfunktion wird verwendet, um erstellen **"DateTime"** Geben Sie Werte aus, damit diese ordnungsgemäß verglichen werden können.  
   

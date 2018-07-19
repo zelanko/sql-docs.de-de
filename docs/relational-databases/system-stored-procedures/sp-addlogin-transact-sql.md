@@ -1,5 +1,5 @@
 ---
-title: Sp_addlogin (Transact-SQL) | Microsoft Docs
+title: Sp_addlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5f9458c1459aef35bcf9d6e47963025f87000c32
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239920"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060155"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ sp_addlogin [ @loginame = ] 'login'
  Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* nicht angegeben ist, der Standardwert *Sprache* für den neuen Anmeldenamen auf die aktuelle Standardsprache des Servers festgelegt ist.  
   
  [ @sid=] '*Sid*"  
- Die Sicherheits-ID (SID). *SID* ist **varbinary(16)**, hat den Standardwert NULL. Wenn *Sid* NULL ist, der vom System generiert einer SID für den neuen Anmeldenamen. Trotz der Verwendung von einem **Varbinary** Datentyp, andere Werte als NULL muss genau 16 Byte lang sein und darf nicht bereits vorhanden sein. Angeben von *Sid* ist nützlich, z. B. Wenn Sie Skripts oder Verschieben von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen von einem Server in eine andere und Sie möchten die Anmeldungen auf verschiedenen Servern die gleiche SID haben.  
+ Die Sicherheits-ID (SID). *SID* ist **varbinary(16)**, hat den Standardwert NULL. Wenn *Sid* NULL ist, generiert das System eine SID für den neuen Anmeldenamen. Trotz der Verwendung des eine **Varbinary** -Datentyp, Werte ungleich NULL genau 16 Byte lang sein und darf nicht bereits vorhanden sein. Angeben von *Sid* ist nützlich, z. B. Wenn Sie Skripts oder verschoben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen von einem Server in eine andere und Sie möchten die Benutzernamen auf die gleiche SID auf verschiedenen Servern haben.  
   
  [ @encryptopt=] '*Encryption_option*"  
  Gibt an, ob das Kennwort als Klartext oder als Hash des Klartextkennworts weitergegeben wird. Dabei ist zu beachten, dass keine Verschlüsselung stattfindet. Der Begriff "verschlüsseln" wird in diesem Zusammenhang aus Gründen der Abwärtskompatibilität verwendet. Wenn ein Klartextkennwort übergeben wird, geschieht dies in Form eines Hashs. Der Hash wird gespeichert. *Encryption_option* ist **varchar(20)**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |NULL|Das Kennwort wird als Klartext übergeben. Dies ist die Standardeinstellung.|  
 |**skip_encryption**|Es wurde bereits ein Hashwert aus dem Kennwort erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern.|  
@@ -87,15 +87,15 @@ sp_addlogin [ @loginame = ] 'login'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen können zwischen 1 und 128 Zeichen (einschließlich Buchstaben, Sonderzeichen und Ziffern) enthalten. Anmeldungen können einen umgekehrten Schrägstrich enthalten (\\); werden keine reservierten Anmeldenamen, z. B. sa oder Public, bereits vorhanden ist; oder nicht NULL oder eine leere Zeichenfolge (`''`).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen können zwischen 1 und 128 Zeichen (einschließlich Buchstaben, Sonderzeichen und Ziffern) enthalten. Anmeldungen können keinen umgekehrten Schrägstrich enthalten (\\), dürfen keine reservierten Anmeldenamen, z. B. sa oder Public, bereits vorhanden sind oder nicht NULL oder eine leere Zeichenfolge (`''`).  
   
  Wenn der Name einer Standarddatenbank angegeben wird, ist die Verbindung mit dieser Datenbank ohne das Ausführen der USE-Anweisung möglich. Sie können nicht jedoch die Standarddatenbank verwenden, bis Sie Zugriff auf diese Datenbank vom Datenbankbesitzer erteilt werden (mit [Sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) oder [Sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) oder [Sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
  Die SID ist ein GUID, die den Anmeldenamen auf dem Server eindeutig identifiziert.  
   
- Wird die Standardsprache des Servers geändert, ändert sich dadurch nicht die Standardsprache der bestehenden Anmeldenamen. Um die Standardsprache des Servers zu ändern, verwenden Sie [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Wird die Standardsprache des Servers geändert, ändert sich dadurch nicht die Standardsprache der bestehenden Anmeldenamen. Verwenden Sie zum Ändern der Standardsprache des Servers [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Mit **Skip_encryption** zum Unterdrücken kennworthashings ist dann nützlich, wenn das Kennwort bereits einen Hashwert darstellt, wenn der Anmeldename hinzugefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn das Kennwort von einer früheren Version von ein Hash erzeugt wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie **Skip_encryption_old**.  
+ Mithilfe von **Skip_encryption** zum Unterdrücken kennworthashings ist dann nützlich, wenn das Kennwort bereits einen Hashwert darstellt, wenn der Anmeldename hinzugefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn das Kennwort von einer früheren Version ein Hash erzeugt wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie **Skip_encryption_old**.  
   
  sp_addlogin kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

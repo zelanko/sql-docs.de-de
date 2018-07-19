@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs
+title: dm_db_log_space_usage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061438"
 ---
-# <a name="sysdmdblogspaceusage-transact-sql"></a>Sys.dm_db_log_space_usage (Transact-SQL)
+# <a name="sysdmdblogspaceusage-transact-sql"></a>dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Gibt Speicherplatz Nutzungsinformationen für das Transaktionsprotokoll. 
@@ -45,7 +45,7 @@ Gibt Speicherplatz Nutzungsinformationen für das Transaktionsprotokoll.
 |total_log_size_in_bytes |**bigint** |Die Größe des Protokolls  |
 |used_log_space_in_bytes |**bigint** |Die belegten Größe des Protokolls  |     
 |used_log_space_in_percent |**real** |Die belegten Größe des Protokolls als Prozentsatz der Größe des gesamten |
-|log_space_in_bytes_since_last_backup |**bigint** |Die Menge des Speicherplatzes, die seit der letzten protokollsicherung verwendet <br />**Gilt für:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] über [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|log_space_in_bytes_since_last_backup |**bigint** |Die Menge des Speicherplatzes, die seit der letzten protokollsicherung <br />**Gilt für:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] über [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -55,8 +55,8 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Bestimmen Sie die Menge des freien Protokollspeicherplatzes in tempdb   
-Die folgende Abfrage gibt den insgesamt freien Speicherplatz in Megabyte (MB) in Tempdb verfügbar.
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Bestimmt die Menge des freien Protokollspeicherplatzes in tempdb   
+Die folgende Abfrage gibt den insgesamt freien Speicherplatz in Megabyte (MB), die in Tempdb verfügbar.
 
 ```sql
 USE tempdb;  
@@ -68,7 +68,7 @@ FROM sys.dm_db_log_space_usage;
   
 ## <a name="see-also"></a>Siehe auch  
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
 [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

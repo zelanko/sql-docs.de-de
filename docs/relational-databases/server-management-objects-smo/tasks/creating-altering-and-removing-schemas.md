@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Schemas | Microsoft Docs
+title: Erstellen, ändern und Löschen von Schemas | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2990ccbfd28e16d71aba887e814805e9af50bca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060258"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Erstellen, Ändern und Löschen von Schemas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Die <xref:Microsoft.SqlServer.Management.Smo.Schema> Objekt stellt einen besitzkontext für ein Datenbankobjekt dar. Die <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts stellt eine Auflistung der <xref:Microsoft.SqlServer.Management.Smo.Schema>-Objekte dar.  
+  Die <xref:Microsoft.SqlServer.Management.Smo.Schema> Objekt stellt einen besitzkontext für Datenbankobjekt dar. Die <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts stellt eine Auflistung der <xref:Microsoft.SqlServer.Management.Smo.Schema>-Objekte dar.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
