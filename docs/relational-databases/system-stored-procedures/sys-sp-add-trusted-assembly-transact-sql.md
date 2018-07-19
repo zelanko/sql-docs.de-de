@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
+title: sp_add_trusted_assembly (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055775"
 ---
-# <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
+# <a name="sysspaddtrustedassembly-transact-sql"></a>sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Fügt eine Assembly zur Liste der vertrauenswürdigen Assemblys für den Server an.
@@ -54,18 +54,18 @@ Diese Prozedur fügt eine Assembly [sys.trusted_assemblies](../../relational-dat
 ## <a name="arguments"></a>Argumente
 
 [ @hash =] '*Wert*"  
-Der Hashwert des SHA2_512 der Assembly in der Liste der vertrauenswürdigen Assemblys für den Server hinzuzufügen. Vertrauenswürdige Assemblys können beim Laden [strikte Sicherheit der CLR](../../database-engine/configure-windows/clr-strict-security.md) aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank ist nicht als vertrauenswürdig gekennzeichnet.
+Der Hashwert des SHA2_512 der Assembly, die die Liste der vertrauenswürdigen Assemblys für den Server hinzu. Vertrauenswürdige können Assemblys laden, wenn [CLR strict Security](../../database-engine/configure-windows/clr-strict-security.md) aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank ist nicht als vertrauenswürdig gekennzeichnet.
 
 [ @description =] '*Beschreibung*"  
-Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlicher Schlüssel und Architektur der Assembly, vertrauen codiert. Dieser Wert eindeutig kennzeichnet die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. 
+Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlichen Schlüssel und Architektur der Assembly, die vertrauen codiert. Dieser Wert eindeutig identifiziert die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. 
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die Mitgliedschaft in der `sysadmin` feste Serverrolle oder `CONTROL SERVER` Berechtigung.
+Erfordert die Mitgliedschaft in der `sysadmin` -Serverrolle sein oder `CONTROL SERVER` Berechtigung.
 
 ## <a name="examples"></a>Beispiele  
 
-Im folgenden Beispiel wird eine Assembly mit dem Namen `pointudt` zur Liste der vertrauenswürdigen Assemblys für den Server. Diese Werte stehen über [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+Im folgenden Beispiel wird eine Assembly namens `pointudt` zur Liste der vertrauenswürdigen Assemblys für den Server. Diese Werte stehen über [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
@@ -76,7 +76,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [Strikte Sicherheit der CLR](../../database-engine/configure-windows/clr-strict-security.md)  
+  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

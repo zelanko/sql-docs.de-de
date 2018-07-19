@@ -1,5 +1,5 @@
 ---
-title: In SQL Server Analysis Services Tabellenmodelle 1400 unterstützte Datenquellen | Microsoft Docs
+title: In tabellarischen 1400-Modellen von SQL Server Analysis Services unterstützte Datenquellen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,56 +10,56 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041658"
 ---
-# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Datenquellen unterstützt in SQL Server Analysis Services-Tabellenmodelle 1400
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Unterstützten Datenquellen in SQL Server Analysis Services tabellarischen 1400-Modellen
 
 [!INCLUDE[ssas-appliesto-sql2017](../../includes/ssas-appliesto-sql2017.md)]
 
 Dieser Artikel beschreibt die Typen von Datenquellen, die mit tabellarischen Modellen von SQL Server Analysis Services (SSAS) mit dem Kompatibilitätsgrad 1400 verwendet werden können. 
 
-SSAS-Tabellenmodelle bei den 1200 und niedrigeren Kompatibilitätsgraden, finden Sie unter [in tabellarischen 1200-Modelle von SQL Server Analysis Services unterstützte Datenquellen](data-sources-supported-ssas-tabular.md).
+Für tabellarische SSAS-Modelle mit den 1200 und niedrigeren Kompatibilitätsgraden finden Sie unter [in tabellarischen 1200-Modellen von SQL Server Analysis Services unterstützte Datenquellen](data-sources-supported-ssas-tabular.md).
 
-Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+Azure Analysis Services finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
 
 ## <a name="cloud-data-sources"></a>Cloud-Datenquellen
 
 |Azure-Datenquelle  |In-memory  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   ja      |    ja      |
+|Azure SQL-Datenbank     |   ja      |    ja      |
 |Azure SQL Data Warehouse     |   ja      |   ja       |
 |Azure BLOB-Speicher     |   ja       |    nein      |
 |Azure-Tabellenspeicher    |   ja       |    nein      |
-|Azure-Cosmos-DB      |  ja        |  nein        |
-|Azure Data Lake-Speicher     |   ja       |    nein      |
-|Azure HDInsight HDFS     |     ja     |   nein       |
+|Azure Cosmosdb      |  ja        |  nein        |
+|Azure Data Lake Store     |   ja       |    nein      |
+|Azure HDInsight-HDFS     |     ja     |   nein       |
 |Azure HDInsight Spark (Beta)     |   ja       |   nein       |
 ||||
 
 **Anbieter**   
-Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit Azure-Datenquellen verwenden .NET Framework-Datenanbieter für SQL Server.
+In-Memory und DirectQuery-Modelle, die eine Verbindung mit Azure-Datenquellen verwenden .NET Framework-Datenanbieter für SQL Server.
 
 ## <a name="on-premises-data-sources"></a>Auf lokale Datenquellen
 
-### <a name="supported-by-in-memory-and-directquery-models"></a>Von speicherinternen und DirectQuery-Modelle unterstützt werden
+### <a name="supported-by-in-memory-and-directquery-models"></a>Von in-Memory und DirectQuery-Modelle unterstützt werden
 
-|Datenquelle | In-Memory-Anbieter | DirectQuery-Anbieter |
+|DataSource | In-Memory-Anbieter | DirectQuery-Anbieter |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
+| SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
 | SQL Server Datawarehouse |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
 | Oracle |Microsoft OLE DB-Anbieter von Oracle, Oracle-Datenanbieter für .NET |Oracle-Datenanbieter für .NET | |
-| Teradata |OLE DB-Anbieter für Teradata von Teradata-Datenanbieter für .NET |Teradata-Datenanbieter für .NET | |
+| Teradata |OLE DB-Anbieter für Teradata, Teradata-Datenanbieter für .NET |Teradata-Datenanbieter für .NET | |
 | | | |
 
 > [!NOTE]
-> Bei speicherinternen Modellen können OLE DB-Anbieter eine bessere Leistung für umfangreiche Daten bereitstellen. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle zuerst den OLE DB-Anbieter.  
+> Bei speicherinternen Modellen können OLE DB-Anbieter eine bessere Leistung für umfangreiche Daten bereitstellen. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle müssen Sie zuerst den OLE DB-Anbieter versucht.  
 
-### <a name="supported-by-in-memory-models-only"></a>Unterstützt von speicherinternen Modellen nur
+### <a name="supported-by-in-memory-models-only"></a>Von nur Modelle im Arbeitsspeicher unterstützt werden
 
 |Datenbank  |
 |---------|---------|---------|
@@ -67,7 +67,7 @@ Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit 
 |SQL Server Analysis Services     | 
 |IBM Informix (Beta) | 
 |JSON-Dokument     | 
-|Zeilen aus der Binärdatei     | 
+|Zeilen aus Binärdatei     | 
 |MySQL-Datenbank     | 
 |PostgreSQL-Datenbank    | ja | nein
 |SAP HANA   | ja | nein
@@ -88,7 +88,7 @@ Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit 
 |---------|---------|
 |Dynamics 365      |
 |Exchange Online     |
-|Saleforce-Objekte    | 
+|Salesforce-Objekte    | 
 |Salesforce-Berichte     |
 |SharePoint Online-Liste     |
 |||
@@ -105,6 +105,6 @@ Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datenquellen unterstützt in SQL Server Analysis Services tabular 1200-Modelle](data-sources-supported-ssas-tabular.md)
+[Unterstützten Datenquellen in SQL Server Analysis Services tabular 1200-Modelle](data-sources-supported-ssas-tabular.md)
 
 [In Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

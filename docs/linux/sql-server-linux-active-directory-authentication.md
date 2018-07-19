@@ -1,6 +1,6 @@
 ---
-title: Active Directory-Authentifizierung-Lernprogramm für SQL Server on Linux | Microsoft Docs
-description: Dieses Lernprogramm bietet die Konfigurationsschritte für AAD-Authentifizierung für SQL Server on Linux.
+title: Active Directory-authentifizierungstutorial für SQL Server unter Linux | Microsoft-Dokumentation
+description: Dieses Tutorial enthält die Konfigurationsschritte für die AAD-Authentifizierung für SQL Server unter Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
@@ -13,43 +13,43 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 31c8d15941956e4476156718404159deabac9776
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 7f5f7a4840582afda25551161c4702a40c4977c8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611435"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980382"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Lernprogramm: Verwenden Sie Active Directory-Authentifizierung mit SQL Server on Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden von Active Directory-Authentifizierung mit SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Lernprogramm wird erläutert, wie konfigurieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux, um Active Directory (AD)-Authentifizierung, auch bekannt als integrierte Authentifizierung zu unterstützen. Eine Übersicht finden Sie unter [Active Directory-Authentifizierung für SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
+In diesem Tutorial wird erläutert, wie so konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux zur Unterstützung der Active Directory (AD)-Authentifizierung, auch bekannt als integrierte Authentifizierung. Eine Übersicht finden Sie unter [Active Directory-Authentifizierung für SQL Server unter Linux](sql-server-linux-active-directory-auth-overview.md).
 
-Dieses Lernprogramm umfasst die folgenden Aufgaben:
+In diesem Tutorial umfasst die folgenden Aufgaben:
 
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host mit AD-Domäne
 > * Erstellen Sie AD-Benutzer für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen des SPN
-> * Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dienst Keytab-Datei
+> * Konfigurieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Keytab-Datei
 > * Erstellen von AD-basierte Anmeldungen in Transact-SQL
-> * Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe der AD-Authentifizierung
+> * Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD-Authentifizierung
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Bevor Sie AD-Authentifizierung konfigurieren, müssen Sie:
 
-* Einrichten eines AD-Domänencontrollers (Windows) in Ihrem Netzwerk  
-* Installieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Richten Sie eine AD-Domänencontroller (Windows) in Ihrem Netzwerk  
+* Installieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host mit AD-Domäne
 
-Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host Active Directory-Domäne:
+Verwenden Sie die folgenden Schritte aus, um das Verknüpfen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host zu Active Directory-Domäne:
 
-1. Verwendung **[Realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** des Host-Computers mit AD-Domäne zu verknüpfen. Wenn Sie nicht bereits geschehen, installieren die Realmd und die Kerberos-Client-Pakete auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer mit Ihrem Linux-Distribution-Paket-Manager:
+1. Verwendung **[Realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** auf den Hostcomputer aus Ihrer AD-Domäne beitreten. Wenn noch nicht geschehen, installieren Sie das Realmd und die Kerberos-Client-Pakete auf den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer, die mit Ihrer Linux-Distribution-Paket-Manager:
 
    ```bash
    # RHEL
@@ -62,16 +62,16 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-1. Wenn die Installation des Kerberos-Client-Pakets für einen Bereichsnamen aufgefordert werden, geben Sie Ihren Domänennamen in Großbuchstaben ein.
+1. Wenn die Installation des Kerberos-Client-Pakets für den ein Bereichsname aufgefordert werden, geben Sie Ihren Domänennamen in Großbuchstaben.
 
    > [!NOTE]
-   > In dieser exemplarischen Vorgehensweise verwendet "contoso.com" und "CONTOSO.COM" als Beispiel Domäne und Bereich Namen. Sie sollten diese durch Ihre eigenen Werte ersetzen. Diese Befehle werden Groß-/Kleinschreibung beachtet, achten Sie darauf, dass Sie verwenden, Großbuchstaben, wo sie in dieser exemplarischen Vorgehensweise verwendet wird.
+   > In dieser exemplarischen Vorgehensweise verwendet "contoso.com" und "CONTOSO.COM" als Beispielnamen Domäne und dem Bereich, bzw. Ersetzen Sie dies durch Ihre eigenen Werte. Mit diesen Befehlen werden Groß-/Kleinschreibung beachtet, also stellen Sie sicher, dass Sie verwenden in Großbuchstaben egal wo sie in dieser exemplarischen Vorgehensweise verwendet wird.
 
-1. Konfigurieren Sie Ihre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer Ihrer AD-Domänencontroller IP-Adresse als eine DNS-Namenserver verwenden. 
+1. Konfigurieren Ihrer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer Ihrer Active Directory-Domänencontroller-IP-Adresse als eine DNS-Namenserver zu verwenden. 
 
    - **Ubuntu**:
 
-      Bearbeiten der `/etc/network/interfaces` Datei, sodass Ihre AD-Domänencontroller IP-Adresse als eine Dns-Namenserver aufgeführt wird. Beispiel: 
+      Bearbeiten der `/etc/network/interfaces` Datei, damit Ihre AD-Domänencontroller-IP-Adresse als eine Dns-Namenserver aufgeführt ist. Beispiel: 
 
       ```/etc/network/interfaces
       <...>
@@ -83,7 +83,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
       ```
 
       > [!NOTE]
-      > Die Netzwerkschnittstelle (eth0) unterscheiden sich für die verschiedenen Computern. Um herauszufinden, welcher Schlüssel, die Sie verwenden, führen Sie Ifconfig, und kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
+      > Die Netzwerkschnittstelle ("eth0") kann für verschiedene Computer abweichen. Um herauszufinden, welche, die Sie verwenden, führen Sie "ifconfig" aus, und kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
 
       Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
 
@@ -99,7 +99,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
 
    - **RHEL**:
 
-     Bearbeiten der `/etc/sysconfig/network-scripts/ifcfg-eth0` -Datei (oder andere Schnittstelle Config-Datei nach Bedarf), damit die IP-Adresse Ihrer AD-Domänencontroller als DNS-Server aufgeführt wird:
+     Bearbeiten der `/etc/sysconfig/network-scripts/ifcfg-eth0` Datei (oder andere Schnittstelle Config-Datei nach Bedarf), damit die IP-Adresse Ihrer Active Directory-Domänencontroller als DNS-Server aufgeführt ist:
 
      ```/etc/sysconfig/network-scripts/ifcfg-eth0
      <...>
@@ -121,7 +121,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
 
 1. Treten Sie zur Domäne bei
 
-   Nachdem Sie bestätigt haben, dass DNS ordnungsgemäß konfiguriert ist, treten Sie der Domäne, indem Sie den folgenden Befehl ausführen. Sie müssen zur Authentifizierung, verwenden ein AD-Konto, das über ausreichende Berechtigungen in AD, um das Hinzufügen eines neuen Computers zur Domäne verfügt.
+   Nachdem Sie bestätigt haben, dass DNS ordnungsgemäß konfiguriert ist, treten Sie der Domäne, indem Sie den folgenden Befehl ausführen. Sie müssen zur Authentifizierung verwenden ein AD-Konto, das über ausreichende Berechtigungen in AD, um das Hinzufügen eines neuen Computers zur Domäne verfügt.
 
    Insbesondere dieser Befehl erstellt ein neues Computerkonto in Active Directory, erstellen Sie die `/etc/krb5.keytab` hosten Keytab-Datei, und konfigurieren Sie die Domäne in `/etc/sssd/sssd.conf`:
 
@@ -132,20 +132,20 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
    ```
 
    > [!NOTE]
-   > Wenn Sie eine Fehlermeldung angezeigt, "erforderlichen Pakete nicht installiert sind", und installieren Sie diese Pakete mit Ihrem Linux-Distribution-Paket-Manager vor dem Ausführen der `realm join` erneut aus.
+   > Wenn Sie eine Fehlermeldung angezeigt, "die erforderlichen Pakete nicht installiert werden", und installieren Sie diese Pakete, die mit Ihrer Linux-Distribution-Paket-Manager vor dem Ausführen der `realm join` -Befehl erneut aus.
    >
-   > Erhalten Sie eine Fehlermeldung, "Unzureichende Berechtigungen für den Domänenbeitritt" müssen Sie mit Domänenadministrator überprüfen Sie, ob Sie über ausreichende Berechtigungen zum Linux-Computer mit Ihrer Domäne zu verknüpfen.
+   > Wenn Sie einen Fehler "Nicht genügend Berechtigungen für den Domänenbeitritt" erhalten, müssen Sie einen Domänenadministrator überprüfen Sie, ob Sie über ausreichende Berechtigungen zum Linux-Computer in Ihrer Domäne einbinden.
    >
-   > Wenn Sie eine Fehlermeldung, "KDC Antwort entsprach nicht Erwartungen," dann Sie möglicherweise nicht den richtigen Bereichsnamen für den Benutzer angegeben. Bereichsnamen Groß-/Kleinschreibung beachtet werden, in der Regel in Großbuchstaben und identifiziert werden können, mit dem Befehl `realm discover contoso.com`.
+   > Wenn Sie eine Fehlermeldung, "KDC Antwort entsprach nicht Erwartungen," klicken Sie dann Sie möglicherweise nicht den richtigen Bereichsnamen für den Benutzer angegeben. Bereichsnamen Groß-/Kleinschreibung beachtet werden, in der Regel in Großbuchstaben und identifiziert werden können, mit dem Befehl `realm discover contoso.com`.
    
-   > SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SID). SSSD muss konfiguriert und wird ausgeführt, damit SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen. Realmd normalerweise der Fall ist dies automatisch als Teil einer Domäne beizutreten, aber in einigen Fällen müssen hierzu Sie separat.
+   > SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SIDS). SSSD muss konfiguriert und wird ausgeführt, damit SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen. Realmd in der Regel wird automatisch als Teil der Domäne beizutreten, aber in einigen Fällen müssen Sie diese separat.
    >
-   > Sehen Sie sich die folgenden so konfigurieren Sie [SSSD manuell](https://access.redhat.com/articles/3023951), und [NSS SSSD portzuweisung konfigurieren](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > Sehen Sie sich die folgende Einstellung [SSSD manuell](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS mit SSSD arbeiten](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
   
-5. Stellen Sie sicher, dass Sie nun Informationen zu einem Benutzer aus der Domäne sammeln können, und ein Kerberos-Ticket als dieser Benutzer erhalten werden können.
+5. Stellen Sie sicher, dass Sie jetzt Informationen zu einem Benutzer in der Domäne erfasst werden können und Sie ein Kerberos-Ticket als dieser Benutzer abrufen können.
 
-   Im folgenden Beispiel wird **Id**,  **[Kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, und **[Klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** für diese Befehle.
+   Im folgenden Beispiel wird **Id**,  **[Kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, und **[Klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** Befehle für diese.
 
    ```bash
    id user@contoso.com
@@ -161,18 +161,18 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
    ```
 
    > [!NOTE]
-   > Wenn `id user@contoso.com` zurückgegeben wird, "Keine solche Benutzer," Stellen Sie sicher, dass der SSSD-Dienst erfolgreich gestartet werden, mithilfe des Befehls `sudo systemctl status sssd`. Wenn der Dienst ausgeführt wird und weiterhin den Fehler "Keine solche Benutzer" angezeigt, versuchen Sie die ausführlichen Protokollierung für SSSD zu aktivieren. Weitere Informationen finden Sie unter Red Hat-Dokumentation für [SSSD Problembehandlung](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > Wenn `id user@contoso.com` zurückgegeben wird, "Keine solche Benutzer," Stellen Sie sicher, dass der SSSD-Dienst erfolgreich gestartet werden, mithilfe des Befehls `sudo systemctl status sssd`. Wenn der Dienst ausgeführt wird und immer noch den Fehler "Keine solche Benutzer" angezeigt wird, versuchen Sie es Aktivieren der ausführlichen Protokollierung für SSSD. Weitere Informationen finden Sie auf die Red Hat-Dokumentation für [Problembehandlung SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > Wenn `kinit user@CONTOSO.COM` zurückgegeben wird, "KDC Antwort Erwartungen entsprach nicht beim anfänglichen Anmeldeinformationen abrufen" Stellen Sie sicher, dass Sie den Bereich in Großbuchstaben angegeben haben.
+   > Wenn `kinit user@CONTOSO.COM` zurückgegeben wird, "KDC Antwort Erwartungen entsprach nicht beim Abrufen der anfänglichen Anmeldeinformationen" Stellen Sie sicher, dass Sie den Bereich in Großbuchstaben angegeben haben.
 
-Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von und Verknüpfen von Identität Domänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
+Weitere Informationen finden Sie auf die Red Hat-Dokumentation für [Ermitteln von und Identität beitreten zu Domänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
 ## <a id="createuser"></a> Erstellen Sie AD-Benutzer für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen des SPN
 
   > [!NOTE]
-  > Die nächsten Schritte verwenden Ihre [vollständig qualifizierten Domänennamen](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Bei **Azure**, müssen Sie **[erstellen Sie eine](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** bevor Sie fortfahren.
+  > Den nächsten Schritten verwenden Ihre [vollständig qualifizierten Domänennamen](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Bei **Azure**, müssen Sie **[erstellen Sie eine](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** bevor Sie fortfahren.
 
-1. Führen Sie auf dem Domänencontroller die [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell-Befehl, um einen neuen AD-Benutzer mit einem Kennwort zu erstellen, das nicht abläuft. In diesem Beispiel den Namen des Kontos "Mssql", aber der Kontoname kann alles gewünschte sein. Sie werden aufgefordert, ein neues Kennwort für das Konto einzugeben:
+1. Führen Sie auf dem Domänencontroller die [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell-Befehl, um einen neuen AD-Benutzer mit einem Kennwort zu erstellen, das nicht abläuft. In diesem Beispiel gibt das Konto "Mssql", aber der Kontoname kann beliebig sein. Sie werden aufgefordert, ein neues Kennwort für das Konto einzugeben:
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -181,24 +181,24 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    ```
 
    > [!NOTE]
-   > Es ist eine bewährte Sicherheitsmethode, ein dediziertes AD-Konto für SQL Server zu verwenden, sodass SQL Server Anmeldeinformationen sind nicht mit anderen Diensten, die mit dem gleichen Konto gemeinsam verwendet. Jedoch können Sie ein vorhandenes AD-Konto wiederverwenden, wenn Sie dies bevorzugen, wenn Sie wissen, dass das Kennwort des Kontos (erforderlich, um eine Keytab-Datei im nächsten Schritt generieren).
+   > Es ist eine bewährte Sicherheitsmethode, ein dediziertes AD-Konto für SQL Server, zu verwenden, damit SQL Server Anmeldeinformationen mit anderen Diensten, die mit dem gleichen Konto freigegeben werden. Allerdings können Sie ein vorhandenes AD-Konto wiederverwenden, wenn Sie es vorziehen, wenn Sie wissen, dass das Kennwort des Kontos (generiert eine Keytab-Datei im nächsten Schritt erforderlich).
 
-2. Legen Sie den ServicePrincipalName (SPN) für dieses Konto verwendet die `setspn.exe` Tool. Der SPN muss genau wie im folgenden Beispiel angegeben formatiert werden. Finden Sie den vollqualifizierten Domänennamen des der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer Treiberdienst `hostname --all-fqdns` auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host und den TCP-Port muss 1433, sofern Sie konfiguriert haben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf eine andere Portnummer zu verwenden.
+2. Legen Sie den ServicePrincipalName (SPN) für dieses Konto verwenden die `setspn.exe` Tool. Der SPN muss genau wie im folgenden Beispiel angegeben formatiert sein. Finden Sie den vollqualifizierten Domänennamen des der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer mit `hostname --all-fqdns` auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host und den TCP-Port muss 1433, sofern Sie konfiguriert haben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine andere Portnummer zu verwenden.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
    ```
 
    > [!NOTE]
-   > Wenn Sie einen Fehler "nicht über ausreichende Zugriffsrechte," erhalten müssen Sie mit Domänenadministrator überprüfen Sie, ob Sie über ausreichende Berechtigungen, um einen SPN für dieses Konto festlegen.
+   > Wenn Sie einen Fehler "nicht genügend Zugriffsrechte," erhalten, müssen Sie einen Domänenadministrator überprüfen Sie, dass Sie über ausreichende Berechtigungen zum Festlegen eines SPN für dieses Konto verfügen.
    >
-   > Wenn Sie den TCP-Port in der Zukunft ändern, müssen Sie den Befehls "Setspn" erneut ausführen, mit die neue Portnummer. Sie müssen auch die neuen SPN die Keytab-Datei für SQL Server-Dienst hinzufügen, indem Sie die Schritte im nächsten Abschnitt.
+   > Wenn Sie den TCP-Port in der Zukunft ändern, müssen Sie den Befehl "Setspn", die mit die neue Portnummer erneut ausgeführt. Sie müssen auch die Keytab-Datei für SQL Server-Dienst den neuen SPN hinzufügen, indem Sie die Schritte im nächsten Abschnitt.
 
 3. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a id="configurekeytab"></a> Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dienst Keytab-Datei
+## <a id="configurekeytab"></a> Konfigurieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Keytab-Datei
 
-1. Überprüfen Sie die Versionsnummer des Schlüssels (Kvno) für das AD-Konto, das im vorherigen Schritt erstellt haben. Ist in der Regel 2, aber er kann eine andere ganze Zahl sein, wenn Sie das Kennwort des Kontos mehrmals geändert haben. Auf der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer, führen Sie Folgendes aus:
+1. Überprüfen Sie die Schlüssel-Versionsnummer (Kvno) für die AD-Konto, das im vorherigen Schritt erstellt haben. Es ist in der Regel 2, aber es konnte eine andere ganze Zahl sein, wenn Sie das Kennwort des Kontos mehrfach geändert haben. Auf der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer, führen Sie Folgendes:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -206,7 +206,7 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Erstellen Sie eine Keytab-Datei mit **[Ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** für AD-Benutzer, die Sie im vorherigen Schritt erstellt haben. Wenn Sie aufgefordert werden, geben Sie das Kennwort für das AD-Konto ein.
+2. Erstellen Sie eine Keytab-Datei mit **[Ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** für den AD-Benutzer, die Sie im vorherigen Schritt erstellt haben. Wenn Sie aufgefordert werden, geben Sie das Kennwort für das AD-Konto ein.
 
    ```bash
    sudo ktutil
@@ -221,16 +221,16 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    ```
 
    > [!NOTE]
-   > Das Tool Ktutil überprüft das Kennwort nicht, achten Sie darauf, dass Sie die eingeben.
+   > Das Tool Ktutil überprüft das Kennwort nicht, also stellen Sie sicher, dass Sie ordnungsgemäß eingegeben werden.
 
-3. Jede Person mit Zugriff auf diese `keytab` Datei kann die Identität [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in der Domäne, weshalb Sie sicherstellen müssen Sie den Zugriff auf die Datei, nur die `mssql` Konto über Lesezugriff verfügt:
+3. Jede Person mit Zugriff auf diese `keytab` Datei kann die Identität annehmen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf die Domäne, stellen Sie daher Sie sicher, dass Sie den Zugriff auf die Datei, z. B., dass nur die `mssql` Konto Lesezugriff besitzt:
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dieses `keytab` Datei für die Kerberos-Authentifizierung:
+4. Konfigurieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dieses `keytab` -Datei für die Kerberos-Authentifizierung:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
@@ -239,59 +239,59 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
 
 ## <a id="createsqllogins"></a> Erstellen von AD-basierte Anmeldungen in Transact-SQL
 
-1. Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und erstellen Sie eine neue, auf AD basierende Anmeldung:
+1. Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und erstellen Sie eine neue, AD-basierte Anmeldung:
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. Stellen Sie sicher, dass die Anmeldung jetzt im aufgeführt ist die [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) Systemkatalogsicht:
+2. Stellen Sie sicher, dass die Anmeldung jetzt, in aufgeführt ist der [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) Systemkatalogsicht:
 
    ```sql
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe der AD-Authentifizierung
+## <a id="connect"></a> Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD-Authentifizierung
 
-Melden Sie sich auf einen Clientcomputer über Ihre Domänenanmeldeinformationen an. Nachdem Sie eine Verbindung herstellen können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ohne Ihr Kennwort mithilfe der AD-Authentifizierung her. Wenn Sie eine Anmeldung für eine AD-Gruppe erstellen, kann alle AD-Benutzer, die Mitglied dieser Gruppe ist auf die gleiche Weise verbinden.
+Melden Sie sich bei einem Clientcomputer, die über Ihre Domänenanmeldeinformationen an. Nun können Sie mit verbinden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ohne Neustart Ihr Kennwort mithilfe von AD-Authentifizierung. Wenn Sie eine Anmeldung für eine AD-Gruppe erstellen, kann alle AD-Benutzer, die Mitglied dieser Gruppe ist auf die gleiche Weise verbinden.
 
-Die spezifische Verbindungszeichenfolgenparameter für Clients, die AD-Authentifizierung verwenden hängt ab, auf welcher Treiber verwenden. Betrachten Sie die folgenden Beispiele:
+Spezifischen Verbindungszeichenfolgen-Parameter für die Clients die Verwendung von AD-Authentifizierung abhängig ist, welcher Treiber Sie verwenden. Betrachten Sie die folgenden Beispiele:
 
-* `sqlcmd` auf einem Linux-Client Domäne
+* `sqlcmd` auf eine Domäne eingebundenen Linux-client
 
-   Melden Sie sich einer Domäne Linux-Client mit `ssh` und Anmeldeinformationen für die Domäne:
+   Melden Sie sich in eine Domäne eingebundenen Linux-Clientcomputer mit `ssh` und Anmeldeinformationen für die Domäne:
 
    ```bash
    ssh -l user@contoso.com client.contoso.com
    ```
 
-   Stellen Sie sicher, dass Sie installiert haben die [Mssql-Tools](sql-server-linux-setup-tools.md) Verpacken und dann eine Verbindung über `sqlcmd` ohne Angabe von Anmeldeinformationen:
+   Stellen Sie sicher, dass Sie installiert haben die [Mssql-Tools](sql-server-linux-setup-tools.md) Paket und das Herstellen einer Verbindung mit `sqlcmd` ohne Angabe von Anmeldeinformationen:
 
    ```bash
    sqlcmd -S mssql.contoso.com
    ```
 
-* SSMS auf eine Domäne eingebundenen Windows-client
+* SSMS auf einem Client für die Domäne eingebundenen Windows
 
-   Melden Sie sich eine Domäne eingebundenen Windows-Client über Ihre Domänenanmeldeinformationen an. Stellen Sie sicher, dass [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] installiert ist, wird eine Verbindung herstellen, um Ihre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz durch Angabe **Windows-Authentifizierung** in der **Verbindung mit Server herstellen** Dialogfeld.
+   Melden Sie sich eine Domäne eingebundenen Windows-Client über Ihre Domänenanmeldeinformationen an. Stellen Sie sicher, dass [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] installiert ist, wird die Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz durch Angabe **Windows-Authentifizierung** in die **Herstellen einer Verbindung mit Server** Dialogfeld.
 
-* AD-Authentifizierung, die mit anderen Clienttreibern
+* AD-Authentifizierung mit anderen Clienttreibern
 
-  * JDBC: [mithilfe von Kerberos die integrierte Authentifizierung, um SQLServer herstellen](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * JDBC: [mithilfe von Kerberos, integrierte-Authentifizierung, SqlServer zu verbinden](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [mithilfe der integrierten Authentifizierung](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Verbindungszeichenfolgensyntax](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
   
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Lernprogramm durchlaufen, wird durch die Schritte zum Einrichten der Active Directory-Authentifizierung mit SQL Server on Linux. Sie haben gelernt, wie auf:
+In diesem Tutorial wurde erläutert, wie wir durch die Schritte zum Einrichten von Active Directory-Authentifizierung mit SQL Server unter Linux. Sie haben gelernt, wie auf:
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host mit AD-Domäne
 > * Erstellen Sie AD-Benutzer für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen des SPN
-> * Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dienst Keytab-Datei
+> * Konfigurieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Keytab-Datei
 > * Erstellen von AD-basierte Anmeldungen in Transact-SQL
-> * Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe der AD-Authentifizierung
+> * Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD-Authentifizierung
 
-Untersuchen Sie anschließend andere Sicherheitsszenarien für SQL Server unter Linux.
+Als Nächstes untersuchen Sie andere Szenarien für SQL Server unter Linux.
 
 > [!div class="nextstepaction"]
->[Verschlüsseln von Verbindungen zu SQLServer on Linux](sql-server-linux-encrypted-connections.md)
+>[Verschlüsseln von Verbindungen zu SQLServer unter Linux](sql-server-linux-encrypted-connections.md)

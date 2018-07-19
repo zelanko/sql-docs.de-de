@@ -1,1 +1,1 @@
- SQLServer 2000 (8.x) 
+ SQL Server 2000 (8.x) 

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs
+title: managed_backup.fn_get_health_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041968"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Die Anzahl von Verbindungsfehlern, die auftreten, wenn das Programm eine Verbindung mit dem Windows Azure-Speicherkonto herstellt.|  
-|number_of_sql_errors|int|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
-|number_of_invalid_credential_errors|int|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm versucht, sich mit den SQL-Anmeldeinformationen zu authentifizieren.|  
-|number_of_other_errors|int|Die Anzahl der Fehler aus anderen Kategorien außer Konnektivität, SQL oder Anmeldeinformationen.|  
-|number_of_corrupted_or_deleted_backups|int|Die Anzahl der gelöschten oder beschädigte Sicherungsdateien.|  
-|number_of_backup_loops|int|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
-|number_of_retention_loops|int|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
+|number_of_storage_connectivity_errors|ssNoversion|Die Anzahl von Verbindungsfehlern, die auftreten, wenn das Programm eine Verbindung mit dem Windows Azure-Speicherkonto herstellt.|  
+|number_of_sql_errors|ssNoversion|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
+|number_of_invalid_credential_errors|ssNoversion|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm versucht, sich mit den SQL-Anmeldeinformationen zu authentifizieren.|  
+|number_of_other_errors|ssNoversion|Die Anzahl der Fehler aus anderen Kategorien außer Konnektivität, SQL oder Anmeldeinformationen.|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|Die Anzahl der gelöschten oder beschädigte Sicherungsdateien.|  
+|number_of_backup_loops|ssNoversion|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
+|number_of_retention_loops|ssNoversion|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn die Spalte number_ of_retention_loops nach 30 Minuten beispielsweise 0 ist, dauert die Überwachung der Beibehaltungsdauer entweder sehr lange oder funktioniert nicht ordnungsgemäß. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem einzugrenzen. Alternativ können Sie mithilfe der gespeicherten Prozedur **managed_backup.sp_get_backup_diagnostics** zum Abrufen einer Liste der erweiterten Ereignisse, um die Details des Fehlers zu finden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für die Funktion.  

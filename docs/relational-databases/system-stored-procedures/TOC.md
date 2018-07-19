@@ -84,7 +84,7 @@
 ## [sp_syscollector_update_collector_type](sp-syscollector-update-collector-type-transact-sql.md)  
 ## [sp_syscollector_upload_collection_set](sp-syscollector-upload-collection-set-transact-sql.md)  
 
-# [Datenbankmodul](database-engine-stored-procedures-transact-sql.md)  
+# [Datenbank-Engine](database-engine-stored-procedures-transact-sql.md)  
 ## [sp_add_data_file_recover_suspect_db](sp-add-data-file-recover-suspect-db-transact-sql.md)  
 ## [sp_addextendedproc](sp-addextendedproc-transact-sql.md)  
 ## [sp_addextendedproperty](sp-addextendedproperty-transact-sql.md)  
@@ -102,7 +102,8 @@
 ## [sp_bindsession](sp-bindsession-transact-sql.md)  
 ## [sp_certify_removable](sp-certify-removable-transact-sql.md)  
 ## [sp_clean_db_free_space](sp-clean-db-free-space-transact-sql.md)  
-## [sp_clean_db_file_free_space](sp-clean-db-file-free-space-transact-sql.md)## [sp_configure](sp-configure-transact-sql.md)  
+## [sp_clean_db_file_free_space](sp-clean-db-file-free-space-transact-sql.md)
+## [sp_configure](sp-configure-transact-sql.md)  
 ## [sp_control_plan_guide](sp-control-plan-guide-transact-sql.md)  
 ## [sp_create_plan_guide](sp-create-plan-guide-transact-sql.md)  
 ## [sp_create_plan_guide_from_handle](sp-create-plan-guide-from-handle-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Round-Funktion (XQuery) | Microsoft Docs
+title: Round-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69c9e11d9cb6dda3aa50a2d49e3eb9c55b99a57b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055128"
 ---
-# <a name="numeric-values-functions---round"></a>Numerische Werte Funktionen - round
+# <a name="numeric-values-functions---round"></a>Funktionen für numerische Werte – round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die Zahl (ohne Stellen hinter dem Dezimalpunkt) zurück, die dem Argument am nächsten kommt. Wenn es mehr als eine solche Zahl gibt, wird diejenige zurückgegeben, die am nächsten an der positiv unendlichen Zahl liegt. Beispiel:  
+  Gibt die Zahl (ohne Stellen hinter dem Dezimalpunkt) zurück, die dem Argument am nächsten kommt. Wenn es mehr als eine solche Zahl gibt, wird diejenige zurückgegeben, die am nächsten an der positiv unendlichen Zahl liegt. Zum Beispiel:  
   
  Wenn das Argument 2.5 ist **round()** gibt 3 zurück.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33078127"
   
  Wenn das Argument-2.5 ist **round()** -2 zurück.  
   
- Wenn das Argument eine leere Sequenz ist **round()** die leere Sequenz zurückgibt.  
+ Wenn das Argument eine leere Sequenz ist **round()** gibt die leere Sequenz zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,23 +55,23 @@ fn:round ( $arg as numeric?) as numeric?
  Anzahl, auf die die Funktion angewendet wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Typ des *$arg* ist einer der drei numerischen Basistypen **xs: float**, **xs: double**, oder **xs: decimal**, der Rückgabetyp ist identisch mit der *$arg* Typ. Wenn der Typ des *$arg* ist ein Typ, der einen der numerischen Typen abgeleitet ist der Rückgabetyp ist der numerische Basistyp.  
+ Wenn der Typ des *$arg* ist einer der drei numerischen Basistypen **xs: float**, **xs: double**, oder **xs: decimal**, der Rückgabetyp ist identisch mit der *$arg* Typ. Wenn der Typ des *$arg* ist ein Typ, der von einem der numerischen Typen abgeleitet ist der Rückgabetyp ist der numerische Basistyp.  
   
- Wenn die Eingabe in die **Fn: Floor**, **Fn: CEILING**, oder **Fn: Round** Funktionen **xdt: UntypedAtomic**, nicht typisierte Daten, er wird implizit umgewandelt in **xs: double**.  
+ Wenn Eingabe für die **Fn: Floor**, **Fn: CEILING**, oder **Fn: Round** Functions **xdt: UntypedAtomic**, nicht typisierte Daten, es wird implizit umgewandelt in **xs: double**.  
   
  Alle anderen Typen führen zum Generieren eines statischen Fehlers.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** -Typspalten in der AdventureWorks-Datenbank.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
- Sie können das Arbeitsbeispiel in der [Ceiling-Funktion (XQuery)](../xquery/numeric-values-functions-ceiling.md) für die **round()** XQuery-Funktion. Alle erfordern wird, ersetzen die **ceiling()** Funktion in der Abfrage durch die **round()** Funktion.  
+ Sie können das Arbeitsbeispiel im Verwenden der [Ceiling-Funktion (XQuery)](../xquery/numeric-values-functions-ceiling.md) für die **round()** XQuery-Funktion. Alles, was Sie tun wird, ersetzen Sie die **ceiling()** Funktion in der Abfrage durch die **round()** Funktion.  
   
 ## <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
 -   Die **round()** -Funktion ordnet ganzzahligen Werte xs: Decimal.  
   
--   Die **round()** -Funktion von xs: Double und xs: float-Werten zwischen - 0.5e0 und -0e0 werden 0e0 zugeordnet statt - 0e0 zugeordnet.  
+-   Die **round()** Funktion der xs: Double "und" xs: float-Werte zwischen - 0.5e0 und -0e0 werden 0e0 zugeordnet statt - 0e0 zugeordnet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Floor-Funktion &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   

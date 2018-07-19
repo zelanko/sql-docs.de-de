@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu DMX Select-Anweisung | Microsoft Docs
+title: Verstehen die DMX Select-Anweisung | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042048"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Grundlegendes zur SELECT-Anweisung (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Die [wählen](../dmx/select-dmx.md) Anweisung bildet die Grundlage für die meisten Abfragen, die Sie mit Data Mining Extensions (DMX) in erstellen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Mit dieser Anweisung können Sie viele unterschiedliche Aufgaben ausführen, so z. B. Durchsuchen von Data Mining-Modellen und Erstellen von Vorhersagen für Data Mining-Modelle.  
   
- Folgendes sind die Aufgaben, die Sie mithilfe von abschließen können die **wählen** Anweisung:  
+ Es folgen die Aufgaben, die Sie abschließen können die **wählen** Anweisung:  
   
 -   Durchsuchen eines Data Mining-Modells. Das Schemarowset definiert die Struktur eines Modells.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34842603"
   
 -   Kopieren von Miningmodellen.  
   
- Jede dieser Aufgaben verwendet einen anderen Satz von Daten, d. h. nennen wir müssen einen *Datendomäne*. Sie definieren die Datendomäne in der **FROM** -Klausel der Anweisung.  
+ Jede dieser Aufgaben verwendet einen anderen Satz von Daten, die wir den Namen einer *Datendomäne*. Sie definieren die Datendomäne in der **FROM** -Klausel der Anweisung.  
   
 -   Sie möchten Objekte im Data Mining-Modell selbst suchen, z. B. die Regel, durch die ein Dataset definiert wird, oder eine Formel für Vorhersagen.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "34842603"
   
      In diesem Fall müssen Sie einen Drillthrough zur Miningstruktur, d. h. Ihrer Datendomäne, durchführen und die einzelnen Zeilen in den Spalten (Gender, Bike Buyer usw.) untersuchen.  
   
- **Wichtig:** Elemente, die in die Ausdrucksliste oder in der **, in denen** Klausel muss seinen Ursprung der Datendomäne, die von definiert ist die **FROM** Klausel. Datendomänen können nicht gemischt werden.  
+ **Wichtig:** alles, was in der Liste mit Ausdrücken oder in enthalten ist das **, in denen** Klausel muss stammen aus der Datendomäne, die von definiert ist die **FROM** Klausel. Datendomänen können nicht gemischt werden.  
   
-##  <a name="Select_Types"></a> Wählen Sie Objekttypen aus  
+##  <a name="Select_Types"></a> Wählen Sie die Typen  
  Die Syntax der **wählen** -Anweisung unterstützt viele verschiedene Aufgaben. Diese Aufgaben führen Sie mithilfe der folgenden Muster aus:  
   
--   [Vorhersagen](#Predicting)  
+-   [Vorhersagen von](#Predicting)  
   
 -   [Durchsuchen](#Browsing)  
   
--   [Kopieren](#Copying)  
+-   [Kopieren von](#Copying)  
   
 -   [Drillthrough](#Drillthrough)  
   
-###  <a name="Predicting"></a> Vorhersagen  
+###  <a name="Predicting"></a> Vorhersagen von  
  Mit folgenden Abfragetypen können Sie Vorhersagen ausführen, die auf einem Miningmodell basieren.  
   
- Sie können eine der zum Durchsuchen oder Vorhersagen einschließen **auswählen** Anweisungen innerhalb der **FROM** und **, in dem** einen Prediction Join-Klauseln **wählen Sie** Anweisung.  
+ Können Sie eines der zum Durchsuchen oder Vorhersagen einschließen **wählen** Anweisungen innerhalb der **FROM** und **, in denen** einen Prediction Join-Klauseln **wählen** Anweisung.  
   
 |Abfragetyp|Description|  
 |----------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "34842603"
   
  [Zurück zu Select-Typen](#Select_Types)  
   
-###  <a name="Copying"></a> Kopieren  
+###  <a name="Copying"></a> Kopieren von  
  Sie können ein Miningmodell sowie dessen zugeordnete Miningstruktur in ein neues Modell kopieren und das Modell anschließend innerhalb der Anweisung umbenennen.  
   
 |Abfragetyp|Description|  
@@ -94,9 +94,9 @@ ms.locfileid: "34842603"
   
 |Abfragetyp|Description|  
 |----------------|-----------------|  
-|SELECT FROM  *\<Modell >*. FÄLLE|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit der DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM  *\<Modell >*. FÄLLEN|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit der DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<Modell >*. SAMPLE_CASES|Gibt einen Beispielfall zurück, der repräsentativ für die Fälle ist, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [SELECT FROM &#60;Modell&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM  *\<Struktur >*. FÄLLE|Gibt die detaillierten Datenzeilen aus der zugrunde liegenden Miningstruktur zurück, auch wenn einige Details nicht zum Trainieren des Miningmodells verwendet wurden.<br /><br /> [SELECT FROM &#60;Struktur&#62;. FÄLLE](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthroughabfragen &#40;Datamining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM  *\<Struktur >*. FÄLLEN|Gibt die detaillierten Datenzeilen aus der zugrunde liegenden Miningstruktur zurück, auch wenn einige Details nicht zum Trainieren des Miningmodells verwendet wurden.<br /><br /> [SELECT FROM &#60;Struktur&#62;. FÄLLEN](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthroughabfragen &#40;Datamining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Zurück zu Select-Typen](#Select_Types)  
   

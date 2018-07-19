@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_stats_histogram (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464236"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042768"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys. dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Gibt das statistikhistogramm für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Ähnlich wie `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Diese DMF steht ab [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Dieser DMF steht ab [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
 
 ## <a name="syntax"></a>Syntax  
   
@@ -67,9 +67,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  ## <a name="remarks"></a>Hinweise  
  
- Das Resultset für `sys.dm_db_stats_histogram` gibt Informationen ähnlich `DBCC SHOW_STATISTICS WITH HISTOGRAM` und weist daneben `object_id`, `stats_id`, und `step_number`.
+ Das Resultset für `sys.dm_db_stats_histogram` sieht etwa so `DBCC SHOW_STATISTICS WITH HISTOGRAM` sowie `object_id`, `stats_id`, und `step_number`.
 
- Da die Spalte `range_high_key` ist eine Sql_variant-Daten geben, müssen Sie möglicherweise verwenden `CAST` oder `CONVERT` , wenn ein Prädikat Vergleich mit eine Zeichenfolgenkonstante ist.
+ Da die Spalte `range_high_key` ist eine Sql_variant-Daten geben, müssen Sie möglicherweise verwenden `CAST` oder `CONVERT` ist ein Prädikat Vergleich mit einer Zeichenfolgenkonstante der Fall.
 
 ### <a name="histogram"></a>Histogramm
   
@@ -109,7 +109,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-Der Primärschlüssel belegt `stat_id` Nummer 1, daher rufen `sys.dm_db_stats_histogram` für `stat_id` Nummer 2, für das statistikhistogramm Zurückgeben der `Country` Tabelle.    
+Der primäre Schlüssel belegt `stat_id` Zahl (1), weshalb `sys.dm_db_stats_histogram` für `stat_id` Nummer 2, um das statistikhistogramm für zurückzugeben der `Country` Tabelle.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -131,7 +131,7 @@ SELECT * FROM Country
 WHERE Country_Name = 'Canada';
 ```
 
-Im folgenden Beispiel wird die zuvor erstellte Statistik für Tabelle prüft `Country` und `Country_Name` für den Abgleich des Prädikats in der obigen Abfrage Histogrammschritt.
+Im folgenden Beispiel wird die zuvor erstellte Statistik für Tabelle untersucht `Country` und `Country_Name` für den das Prädikat in der obigen Abfrage übereinstimmende Histogrammschritt.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

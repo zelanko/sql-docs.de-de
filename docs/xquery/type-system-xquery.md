@@ -1,5 +1,5 @@
 ---
-title: Typsystem (XQuery) | Microsoft Docs
+title: Typsystem (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -32,20 +32,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dcdaf7607d425dec01a9f2cf8c87ff55e5441aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061468"
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery ist eine stark typisierte Sprache für Schematypen und eine schwach typisierte Sprache für nicht typisierte Daten. Zu den vordefinierten Typen von XQuery zählen folgende Typen:  
   
--   Integrierte Typen des XML-Schemas in der **http://www.w3.org/2001/XMLSchema** Namespace.  
+-   Integrierte Typen des XML-Schema in der **http://www.w3.org/2001/XMLSchema** Namespace.  
   
--   Typen, die definiert, der **http://www.w3.org/2004/07/xpath-datatypes** Namespace.  
+-   In definierten Typen der **http://www.w3.org/2004/07/xpath-datatypes** Namespace.  
   
  In diesem Thema wird auch Folgendes beschrieben:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33077541"
 -   Zuordnen des von einem Ausdruck zurückgegebenen Sequenztyps  
   
 ## <a name="built-in-types-of-xml-schema"></a>Integrierte Typen des XML-Schemas  
- Die integrierten Typen des XML-Schemas besitzen das vordefinierte Namespacepräfix xs. Zu diesen Typen zählen **xs: Integer** und **xs: String**. Alle diese integrierten Typen werden unterstützt. Sie können diese Typen verwenden, wenn Sie eine XML-Schemaauflistung erstellen.  
+ Die integrierten Typen des XML-Schemas besitzen das vordefinierte Namespacepräfix xs. Einige dieser Typen enthalten **xs: Integer** und **xs: String**. Alle diese integrierten Typen werden unterstützt. Sie können diese Typen verwenden, wenn Sie eine XML-Schemaauflistung erstellen.  
   
  Beim Abfragen von typisiertem XML-Code wird der statische und dynamische Typ der Knoten durch die XML-Schemaauflistung bestimmt, die der abgefragten Spalte oder Variablen zugeordnet ist. Weitere Informationen zu statischen und dynamischen Typen finden Sie unter [Ausdruckskontext und Ausdrucksauswertung &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Die folgende Abfrage wird angegeben, z. B. für eine typisierte **Xml** Spalte (`Instructions`). Der Ausdruck verwendet `instance of`, um zu überprüfen, ob der typisierte Wert des zurückgegebenen `LotSize`-Attributs den `xs:decimal`-Typ aufweist.  
   
@@ -74,11 +74,11 @@ WHERE ProductModelID=7
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Im Namespace für XPath-Datentypen definierte Typen  
  Die in definierten Typen der **http://www.w3.org/2004/07/xpath-datatypes** Namespace besitzen das vordefinierte Präfix des **Xdt**. Für diese Typen gilt Folgendes:  
   
--   Sie können diese Typen nicht verwenden, wenn Sie eine XML-Schemaauflistung erstellen. Diese Typen werden in der XQuery-Typsystem verwendet und dienen zur [XQuery and Static Typing](../xquery/xquery-and-static-typing.md). Sie können eine Umwandlung in die atomaren Typen, z. B. **xdt: UntypedAtomic**in der **Xdt** Namespace.  
+-   Sie können diese Typen nicht verwenden, wenn Sie eine XML-Schemaauflistung erstellen. Diese Typen werden in der XQuery-Typsystem verwendet und dienen zur [XQuery and statische Typisierung](../xquery/xquery-and-static-typing.md). Sie können eine Umwandlung in die atomaren Typen, z. B. **xdt: UntypedAtomic**in die **Xdt** Namespace.  
   
--   Wenn Sie nicht typisiertes XML Abfragen, die statische und dynamische Typ der Elementknoten ist **Xdt: nicht typisierte**, und der Typ der Attributwerte ist **xdt: UntypedAtomic**. Das Ergebnis einer **query()** -Methode generiert nicht typisierten XML-Code. Dies bedeutet, dass die XML-Knoten, als zurückgegeben werden **Xdt: nicht typisierte** und **xdt: UntypedAtomic**zugeordnet.  
+-   Bei der Abfrage nicht typisierten XML wird der statische und dynamische Typ der Elementknoten **Xdt: nicht typisierte**, und der Typ der Attributwerte **xdt: UntypedAtomic**. Das Ergebnis einer **query()** Methode generiert nicht typisierten XML-Code. Dies bedeutet, dass die XML-Knoten als zurückgegeben werden **Xdt: nicht typisierte** und **xdt: UntypedAtomic**bzw.  
   
--   Die **dayTimeDuration** und **xdt: yearmonthduration** Typen werden nicht unterstützt.  
+-   Die **xdt: dayTimeDuration** und **xdt: yearmonthduration** Typen werden nicht unterstützt.  
   
  Im folgenden Beispiel wird die Abfrage für eine nicht typisierte XML-Variable angegeben. Der Ausdruck `data(/a[1]`) gibt eine Sequenz eines atomaren Werts zurück. Die `data()`-Funktion gibt den typisierten Wert des `<a>`-Elements zurück. Da der abgefragte XML-Code nicht typisiert ist, ist der Typ des zurückgegebenen Werts `xdt:untypedAtomic`. Deshalb gibt `instance of` den Wert True zurück.  
   
@@ -105,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
 >  Wenn Sie eine typisierte XML-Instanz abfragen und der Abfrageausdruck schließt die übergeordnete Achse ein, sind die Informationen zum statischen Typ der resultierenden Knoten nicht weiter verfügbar. Der dynamische Typ ist jedoch weiterhin den Knoten zugeordnet.  
   
 ## <a name="typed-value-vs-string-value"></a>Typisierter Wert und Zeichenfolgenwert  
- Jeder Knoten besitzt einen typisierten Wert und einen Zeichenfolgenwert. Für typisierte XML-Daten wird der Typ des typisierten Werts durch die XML-Schemaauflistung bereitgestellt, die der abgefragten Spalte oder Variablen zugeordnet ist. Für nicht typisierte XML-Daten ist der Typ des typisierten Werts **xdt: UntypedAtomic**.  
+ Jeder Knoten besitzt einen typisierten Wert und einen Zeichenfolgenwert. Für typisierte XML-Daten wird der Typ des typisierten Werts durch die XML-Schemaauflistung bereitgestellt, die der abgefragten Spalte oder Variablen zugeordnet ist. Für nicht typisierte XML-Daten, die der Typ des typisierten Werts ist **xdt: UntypedAtomic**.  
   
  Sie können die **data()** oder **string()** Funktion zum Abrufen des Werts eines Knotens:  
   
@@ -140,7 +140,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- Im folgenden Beispiel wird der Gesamtwert der `LaborHours`-Attribute berechnet. Die `data()` Funktion ruft die typisierten Werte der `LaborHours` Attribute sämtlicher der <`Location`>-Elemente für ein Produktmodell. Gemäß dem XML-Schema zugeordneten der `Instruction` Spalte `LaborHours` vom **xs: decimal** Typ.  
+ Im folgenden Beispiel wird der Gesamtwert der `LaborHours`-Attribute berechnet. Die `data()` Funktion ruft ab die typisierten Werte der `LaborHours` Attribute, die von allen die <`Location`>-Elemente für ein Produktmodell. Gemäß dem XML-Schema zugeordnet der `Instruction` Spalte `LaborHours` vom **xs: decimal** Typ.  
   
 ```  
 SELECT Instructions.query('   

@@ -1,5 +1,5 @@
 ---
-title: Verzögerung (DMX) | Microsoft Docs
+title: Verzögerung (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842493"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042828"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ Lag()
  Ein Skalarwert mit dem Typ integer.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die **Lag** Funktion dient für ein Modell, in denen die KEY TIME-Spalte in einer geschachtelten Tabelle befindet, kann die Funktion muss in der untergeordneten Select-Anweisung die gefunden werden.  
+ Wenn die **Lag** Funktion wird verwendet, auf ein Modell, in denen die KEY TIME-Spalte in einer geschachtelten Tabelle befindet, kann die Funktion muss sich in der untergeordneten Select-Anweisung die sein.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Fälle zurückgegeben, die in den letzten 12 Monaten der Daten liegen, die zum Trainieren des Modells verwendet wurden.  
@@ -43,7 +43,7 @@ WHERE Lag() < 12
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
