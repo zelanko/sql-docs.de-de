@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren und Anzeigen von SharePoint-Protokolldateien und-diagnoseprotokollierung (PowerPivot für SharePoint) | Microsoft Docs
+title: Konfigurieren und Anzeigen der SharePoint-Protokolldateien und-diagnoseprotokollierung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255842"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung (PowerPivot für SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servervorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server-Vorgänge, Ereignisse und Meldungen werden in der SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [konfigurieren Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  In diesem Thema:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36057366"
   
 4.  Erweitern Sie die Kategorie, und wählen Sie einzelne Kategorien aus:  
   
-     **Anwendungsseitenanforderung** gibt Ereignisse, die von der dienstanwendung ausgelöst werden, beim Suchen einer [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] für das Laden einer PowerPivot-Datenquelle und kommunizieren mit anderen Servern in der Farm.  
+     **Anwendung Seitenanforderung** gibt Ereignisse, die von der dienstanwendung ausgelöst werden, wenn eine [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] zum Laden einer PowerPivot-Datenquelle und kommunizieren mit anderen Servern in der Farm.  
   
      Unter**Anforderungsverarbeitung** werden Ereignisse angegeben, die durch Abfrageanforderungen für eine auf einem Server in der Farm geladene PowerPivot-Datenbank ausgelöst wurden.  
   
@@ -123,10 +123,10 @@ ms.locfileid: "36057366"
 |Verarbeiten|Bereich|Kategorie|Ebene|MessageBox|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|PowerPivot-Dienst|Verwendung|Ausführlich|Es gibt keine aktuellen Anforderungsstatistiken, nichts ist zu protokollieren.|Die Serviceberichte fragen in vordefinierten Intervallen Reaktionsstatistiken als Verwendungsereignis für das Verwendungsdatensammlungssystem ab. Diese Meldung gibt an, dass es keine Abfragestatistiken für einen Bericht gibt.|  
-|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Beginnt mit der Suche nach einem Anwendungsserver für Datenquelle =\<*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
+|w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Starten auf der Suche nach einem Anwendungsserver für Datenquelle =\<*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
 |w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Die Suche nach dem Anwendungsserver war erfolgreich.|Die Anfrage wurde einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dienstanwendung zugeordnet.|  
 |w3wp.exe|PowerPivot-Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für die \< *PowerPivotdata-Quelle*> auf die [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
-|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für username-\<*SharePoint-Benutzer*> in der Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
+|w3wp.exe|PowerPivot-Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für username-\<*SharePoint-Benutzers*> in der Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlung von PowerPivot-Verwendungsdaten](power-pivot-usage-data-collection.md)   

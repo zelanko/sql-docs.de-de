@@ -1,5 +1,5 @@
 ---
-title: Datenquellensicht (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenquellensicht (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185307"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die dem ausgewählten Cube zugeordnet ist. In diesem Bereich können Sie Measuregruppen und Measures erstellen, indem Sie Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Measures** ziehen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36059036"
  **Nur verwendete Tabellen anzeigen**  
  Zeigt in dem Bereich nur die Tabellen aus der zugeordneten Datenquellensicht an, die vom Cube verwendet werden.  
   
- **Anzeigen von Anzeigenamen**  
+ **Anzeigenamen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
  **Alles auswählen**  

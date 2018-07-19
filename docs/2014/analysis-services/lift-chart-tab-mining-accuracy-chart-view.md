@@ -1,5 +1,5 @@
 ---
-title: Prognosegütediagrammtyp (Registerkarte) (Mininggenauigkeitsdiagramm-Sicht) | Microsoft Docs
+title: Prognosegütediagrammtyp (Registerkarte) (Mininggenauigkeitsdiagramm-Sicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224650"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Prognosegütediagramm (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe des Bereichs **Prognosegütediagramm** zeigen Sie ein Diagramm an, in dem alle ausgewählten Miningmodelle in der ausgewählten Miningstruktur verglichen werden.  
@@ -48,7 +48,7 @@ ms.locfileid: "36060843"
   
 ## <a name="see-also"></a>Siehe auch  
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Tests und Überprüfung miningmodelltasks und &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

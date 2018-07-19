@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201500"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionscommits können entweder vollständig dauerhaft sein, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Standardeinstellung entspricht, oder sie können verzögert dauerhaft sein (auch bekannt als verzögerter Commit).  
@@ -66,13 +65,13 @@ ms.locfileid: "36057575"
   
  In folgenden Situationen ist die verzögerte Transaktionsdauerhaftigkeit u. U. von Vorteil:  
   
- **Sie können einige Datenverlust tolerieren.**  
+ **Sie können es sich um gewisser Datenverlust tolerieren.**  
  Sofern Datenverluste vertretbar sind, also einzelne Datensätze z. B. nicht ins Gewicht fallen, solange der Großteil der Daten erhalten bleibt, könnten verzögert dauerhafte Transaktionen für Sie in Betracht kommen. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Transaktionsdauerhaftigkeit verzichten.  
   
- **Sie treten Engpässe auf Schreibvorgänge in das Transaktionsprotokoll.**  
+ **Sie treten Engpässe auf Schreibzugriffen auf Transaktionsprotokolle.**  
  Wenn die Leistungsprobleme auf Latenzen beim Schreiben in das Transaktionsprotokoll zurückzuführen sind, wird Ihre Anwendung u. U. von der Verwendung verzögerter Transaktionsdauerhaftigkeit profitieren.  
   
- **Arbeitsauslastungen weisen eine hohe Konfliktrate.**  
+ **Arbeitsauslastungen weisen eine hohe Konfliktrate auf.**  
  Wenn Ihr System Arbeitsauslastungen mit einer hohen Konfliktrate aufweist, wird viel Zeit mit dem Warten auf die Freigabe von Sperren vergeudet. Da die Commitzeit durch die verzögerte Transaktionsdauerhaftigkeit verkürzt wird, können Sperren schneller freigegeben und der Durchsatz erhöht werden.  
   
  **Zusicherungen bei verzögerter Transaktionsdauerhaftigkeit**  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
 - SSIS, upgrading
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 caps.latest.revision: 49
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6d37dffdbacba7315b48192d08f3b18f631d7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b4e28772b88dbcf13a510931846972684499f45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201680"
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] aktualisieren.  
@@ -49,14 +49,14 @@ ms.locfileid: "36057597"
 > -   DTS 2000-Paket ausführen (Task)  
 > -   Scannen von DTS-Paketen durch den Upgrade Advisor  
 >   
->  Informationen zu anderen eingestellten Funktionen finden Sie unter [nicht mehr unterstützte Integration Services-Funktionalität in SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
+>  Weitere Informationen zu anderen eingestellten Funktionen finden Sie unter [nicht mehr unterstützte Integration Services-Funktionalität in SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>Aktualisieren von Integration Services  
  Verwenden Sie für das Upgrade eine der folgenden Methoden:  
   
--   Führen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup, und wählen Sie die Option **Upgrade von SQL Server 2005, SQL Server 2008 oder SQL Server 2008 R2**, oder **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+-   Führen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup, und wählen Sie die Option zum **ein Upgrade von SQL Server 2005, SQL Server 2008 oder SQL Server 2008 R2**, oder **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
   
--   Führen Sie **setup.exe** an der Eingabeaufforderung, und geben Sie die `/ACTION=upgrade` Option. Weitere Informationen finden Sie im Abschnitt "Installationsskripts für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," in [Installieren von SQL Server 2014 von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+-   Führen Sie **setup.exe** an der Eingabeaufforderung, und geben Sie die `/ACTION=upgrade` Option. Weitere Informationen finden Sie im Abschnitt "Installationsskripts für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," in [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  Mit der Upgradefunktion können Sie folgende Aktionen nicht ausführen:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "36057597"
   
 -   Zum Steuern des Paketzugriffs werden drei neue feste Rollen auf Datenbankebene erstellt: db_ssisadmin, db_ssisltduser und db_ssisoperator. Die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen von db_dtsadmin, db_dtsltduser und db_dtsoperator werden nicht entfernt, sondern werden Member der entsprechenden neuen Rollen.  
   
--   Wenn die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paketspeicher (d. h. den Speicherort im Dateisystem verwaltet werden, indem Sie die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service) ist der Standardspeicherort unter **\SQL Server\90**, **\SQL Server\100**, oder **\SQL Server\110** werden diese Pakete an den neuen Standardspeicherort unter **\SQL Server\120**.  
+-   Wenn die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paketspeicher (d. h. die verwaltete Dateisystem-Speicherort von der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service) ist der Standardspeicherort unter **\SQL Server\90**, **\SQL Server\100**, oder **\SQL Server\110** verschiebt diese Pakete an den neuen Standardspeicherort unter **\SQL Server\120**.  
   
 -   Aktualisiert die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienstkonfigurationsdatei so, dass sie auf die aktualisierte [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz verweist.  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>Nicht im Umfang des Upgradevorgangs enthaltene Aufgaben  
  Der Upgradevorgang führt folgende Aufgaben nicht aus:  
   
--   **Nicht** Entfernen der [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Dienst.  
+-   **Keine** Entfernen der [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Service.  
   
 -   Vorhandene [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete werden nicht auf das neue Paketformat migriert, das von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet wird. Informationen zum Migrieren von Paketen finden Sie unter [Aktualisieren von Integration Services-Paketen](upgrade-integration-services-packages.md).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36057597"
   
 -   Führen Sie Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents aus, die Pakete ausführen.  
   
--   Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in einer Instanz von gespeicherte Pakete [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sie müssen jedoch die Dienstkonfigurationsdatei ändern, um die Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] der Liste der von dem Dienst verwalteten Speicherorte hinzuzufügen.  
+-   Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum Verwalten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete, die in einer Instanz von gespeichert sind [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sie müssen jedoch die Dienstkonfigurationsdatei ändern, um die Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] der Liste der von dem Dienst verwalteten Speicherorte hinzuzufügen.  
   
     > [!NOTE]  
     >  Frühere Versionen von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] können keine Verbindung mit dem [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] -Dienst herstellen.  
@@ -136,7 +136,7 @@ ms.locfileid: "36057597"
 -   Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz befindet sich auf einem Computer und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und die Clienttools befinden sich auf einem anderen Computer.  
   
 ### <a name="what-you-can-do-after-upgrading"></a>Optionen nach dem Upgrade  
- Die Systemtabellen, in denen Pakete in der aktualisierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz gespeichert werden, sind nicht mit den in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwendeten Systemtabellen identisch. Aus diesem Grund die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Versionen von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] können keine Pakete in den Systemtabellen der aktualisierten Instanz von ermittelt die [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Da diese Pakete nicht ermittelt werden können, bestehen Einschränkungen hinsichtlich der Verwendung dieser Pakete:  
+ Die Systemtabellen, in denen Pakete in der aktualisierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz gespeichert werden, sind nicht mit den in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwendeten Systemtabellen identisch. Aus diesem Grund die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Versionen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht ermitteln Sie die Pakete in den Systemtabellen der aktualisierten Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Da diese Pakete nicht ermittelt werden können, bestehen Einschränkungen hinsichtlich der Verwendung dieser Pakete:  
   
 -   Sie können die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]- bzw. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Tools, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht auf anderen Computern zum Laden oder Verwalten von Paketen aus der aktualisierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz verwenden.  
   

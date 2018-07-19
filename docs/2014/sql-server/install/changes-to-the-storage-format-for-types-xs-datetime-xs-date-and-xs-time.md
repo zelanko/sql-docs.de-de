@@ -1,5 +1,5 @@
 ---
-title: 'Änderungen am Speicherformat für die Typen xs: DateTime, xs: Date und xs: Time | Microsoft Docs'
+title: 'Änderungen am Speicherformat für Typen xs: DateTime, xs: Date und xs: Time | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222520"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Änderungen am Speicherformat für die Typen 'xs:dateTime', 'xs:date' und 'xs:time'
   Die XMLDATETIME-Regel gibt an, ob Ihre Datenbanken typisierte XML-Daten enthalten, die nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ungültig werden.  
@@ -33,7 +33,7 @@ ms.locfileid: "36060434"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Das Speicherformat in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für Typen xs: DateTime, xs: Date und xs: Time wurde geändert zur Unterstützung von Werten mit oder ohne Zeitzoneninformationen und zur Beibehaltung der Zeitzone zu ermöglichen.  
+ Das Speicherformat in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für Typen xs: DateTime, xs: Date und xs: Time wurde geändert Werte mit oder ohne Zeitzoneninformationen unterstützt und können für die Beibehaltung der Zeitzone.  
   
  Wenn eine XML-Schemaauflistung auf einen dieser Typen verweist, werden die XML-Indizes aller Spalten, die der Auflistung zugeordnet sind, nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deaktiviert. Sie können sie mit SELECT und/oder XQUERIES abfragen, der XML-Index wird jedoch nicht verwendet. Bei einem negativen Wert für das Jahr kommt es zu einem Laufzeitfehler.  
   
@@ -190,6 +190,6 @@ EXECUTE DateTimeInvestigation 1;
  Um XML-Indizes nach dem Upgrade in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwenden zu können, müssen Sie die XML-Indizes erneut erstellen oder XML-Spalten für alle Spalten erneut eingeben, die xs:date, xs:time oder xs:dateTime verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Probleme beim Upgrade der Datenbank-Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

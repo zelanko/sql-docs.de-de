@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften eines Pfads mithilfe der Daten Datenflusspfad-Editor | Microsoft Docs
+title: Legen Sie die Eigenschaften eines Pfads mithilfe der Daten Datenflusspfad-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9b8b60299840327060bfc192ac4fced2773029f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08d774cb9163f7c047a7333f4ff04e06939e2cf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322630"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors
   Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaften festlegen möchten, muss der Datenfluss mindestens zwei verbundene Datenflusskomponenten enthalten. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Komponente im Datenfluss](data-flow/add-or-delete-a-component-in-a-data-flow.md) und [Verbinden von Komponenten in einem Datenfluss](data-flow/connect-components-in-a-data-flow.md).  

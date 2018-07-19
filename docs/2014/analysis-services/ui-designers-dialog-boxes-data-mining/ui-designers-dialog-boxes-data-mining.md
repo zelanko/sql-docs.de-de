@@ -1,5 +1,5 @@
 ---
-title: UI-Designer und Dialogfelder für Data Mining-tabellarischen Analysis | Microsoft Docs
+title: Benutzeroberflächen-Designer und Dialogfelder für Data Mining-tabellarische Analysis | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da1a4f4c45f11f10d9465bd5232cb04da51d78d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2d19d44d230e41f9f1dcbbf0033bdaa1e46a7c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202190"
 ---
-# <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>UI-Designer und Dialogfelder für Datamining-Analyse
+# <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>Benutzeroberflächen-Designer und Dialogfelder für Datamining-Analyse
 
-Dieser Abschnitt enthält die Dokumentation über Benutzeroberflächen (UI)-Designer und Dialogfelder für Datamining-Analysen.
+Dieser Abschnitt enthält die Dokumentation zur Benutzeroberfläche (UI)-Designer und Dialogfelder für Datamining-Analyse.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

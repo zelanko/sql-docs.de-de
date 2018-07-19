@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-Serverfunktionalität | Microsoft Docs
+title: ADOMD.NET-Serverfunktionalität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 622a7c51bfd6c2a8a9defba70a412967a48dee50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269916"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET-Serverfunktionalität
   Alle ADOMD.NET-Serverobjekte ermöglichen schreibgeschützten Zugriff auf die Daten und Metadaten auf dem Server. Verwenden Sie das ADOMD.NET-Serverobjektmodell, um Daten und Metadaten abzurufen, da das Serverobjektmodell keine Schemarowsets unterstützt.  
   
- Mit ADOMD.NET-Serverobjekten können Sie eine benutzerdefinierte Funktion (UDF) oder eine gespeicherte Prozedur zum Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Diese prozessinternen Methoden werden durch Abfrageanweisungen aufgerufen, die in Sprachen wie Multidimensional Expressions (MDX), Data Mining Extensions (DMX) oder SQL erstellt wurden. Diese prozessinternen Methoden stellen zudem zusätzliche Funktionen bereit, die nicht den Wartezeiten eines Netzwerks unterworfen sind.  
+ Mit ADOMD.NET-Serverobjekten können Sie erstellen eine benutzerdefinierte Funktion (UDF) oder eine gespeicherte Prozedur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Diese prozessinternen Methoden werden durch Abfrageanweisungen aufgerufen, die in Sprachen wie Multidimensional Expressions (MDX), Data Mining Extensions (DMX) oder SQL erstellt wurden. Diese prozessinternen Methoden stellen zudem zusätzliche Funktionen bereit, die nicht den Wartezeiten eines Netzwerks unterworfen sind.  
   
 > [!NOTE]  
 >  Das <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand>-Objekt unterstützt nur DMX.  
   
 ## <a name="what-is-a-udf"></a>Was ist eine UDF?  
- Ein *UDF* ist eine Methode, die über die folgenden Eigenschaften verfügt:  
+ Ein *UDF* ist eine Methode, die die folgenden Merkmale aufweist:  
   
 -   Sie können die UDF im Kontext einer Abfrage aufrufen.  
   
@@ -51,9 +51,9 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>Was ist eine gespeichert Prozedur?  
- Ein *gespeicherte Prozedur* ist eine Methode, die über die folgenden Eigenschaften verfügt:  
+ Ein *gespeicherte Prozedur* ist eine Methode, die die folgenden Merkmale aufweist:  
   
--   Sie rufen Sie eine gespeicherte Prozedur auf eigene mit MDX [Aufrufen](/sql/mdx/mdx-data-manipulation-call) Anweisung.  
+-   Sie rufen Sie eine gespeicherte Prozedur für eigene mit MDX [Aufrufen](/sql/mdx/mdx-data-manipulation-call) Anweisung.  
   
 -   Eine gespeicherte Prozedur unterstützt eine beliebige Anzahl von Parametern.  
   

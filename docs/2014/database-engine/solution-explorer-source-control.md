@@ -1,5 +1,5 @@
 ---
-title: Quellcodeverwaltung des Projektmappen-Explorer | Microsoft Docs
+title: Quellcodeverwaltung des Projektmappen-Explorer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
 - SQL Server Management Studio [SQL Server], source control services
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7165143ad238bbbeda14ac91f214f1410082beb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3975c43263e8ad7dc19c5bd8b01c1f32badea35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213700"
 ---
 # <a name="solution-explorer-source-control"></a>Quellcodeverwaltung des Projektmappen-Explorers
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Projektmappen-Explorer kann in ein separates Quellcodeverwaltungssystem integriert werden. Wenn eine Projektmappe oder ein Projekt in ein Quellcodeverwaltungssystem integriert wird, können Sie Dateizugriff und Versionsverwaltung für die Skripts und Abfragen in Ihren Projekten steuern.  
@@ -47,7 +47,7 @@ ms.locfileid: "36057870"
   
 3.  In der **Optionen** Dialogfeld erweitern Sie **Quellcodeverwaltung**, und klicken Sie dann auf die **Plug-in-Auswahl** Seite.  
   
-4.  In der **aktuelles Quellcodeverwaltungs-Plug-in** wählen die Datenquellen-Steuerelement-Plug-in.  
+4.  In der **aktuelles Quellcodeverwaltungs-Plug-in** wählen das Quellcodeverwaltungs-Plug-in.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

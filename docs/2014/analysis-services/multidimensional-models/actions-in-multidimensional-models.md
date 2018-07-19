@@ -1,5 +1,5 @@
 ---
-title: Aktionen in mehrdimensionalen Modellen | Microsoft Docs
+title: Aktionen in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196540"
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
   Eine Aktion ist ein vom Endbenutzer initiierter Vorgang, der auf einem ausgewählten Cube oder Teil eines Cubes ausgeführt wird. Der Vorgang kann eine Anwendung mit dem ausgewählten Element als Parameter starten, oder er kann Informationen zum ausgewählten Element abrufen. Weitere Informationen zu Aktionstypen finden Sie unter [Aktionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36058805"
  Nachdem Sie den Zielobjekttyp ausgewählt haben, wählen Sie unter **Zielobjekt**das Cubeobjekt vom entsprechenden Typ aus.  
   
  **Bedingung (Optional)**  
- Geben Sie einen optionalen MDX-Ausdruck (Multidimensional Expressions) an, der zu einem Booleschen Wert aufgelöst wird. Wenn der Wert `True`, die Aktion für das angegebene Ziel durchgeführt. Wenn der Wert `False`, die Aktion nicht durchgeführt.  
+ Geben Sie einen optionalen MDX-Ausdruck (Multidimensional Expressions) an, der zu einem Booleschen Wert aufgelöst wird. Wenn der Wert ist `True`, die Aktion für das angegebene Ziel durchgeführt. Wenn der Wert ist `False`, die Aktion wird nicht ausgeführt.  
   
  **Aktionsinhalt**  
  Wählen Sie den Typ der Aktion aus. In der folgenden Tabelle werden die verfügbaren Aktionstypen zusammengefasst.  
@@ -79,8 +79,8 @@ ms.locfileid: "36058805"
 |**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interaktiv<br /><br /> Beim Öffnen|  
 |**Application**|Beschreibt die Anwendung der Aktion.|  
 |**Beschreibung**|Beschreibt die Aktion.|  
-|**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn der Beschriftung um MDX handelt, geben Sie `True` für **Beschriftung ist MDX**.|  
-|**Beschriftung ist MDX**|Geben Sie `True` die Beschriftung ist MDX oder `False` wird jedoch nicht.|  
+|**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn die Beschriftung MDX entspricht, geben Sie `True` für **Beschriftung ist MDX**.|  
+|**Beschriftung ist MDX**|Geben Sie `True` , wenn die Beschriftung MDX entspricht oder `False` ist dies nicht.|  
   
 > [!NOTE]  
 >  Sie müssen Analysis Services Scripting Language (ASSL) oder Analysis Management Objects (AMO) verwenden, um HTML- und Befehlszeilen-Aktionstypen zu definieren. Weitere Informationen finden Sie unter [Action-Element &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Type-Element &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) und [Programmieren von erweiterten AMO OLAP-Objekten](analysis-management-objects/programming-amo-olap-advanced-objects.md).  

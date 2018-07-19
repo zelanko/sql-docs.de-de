@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: afee43abcadea62f4b1a925a3546693f28919e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cea6ddb8e6a7d29d5dffeb43648dd5c08267261d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236200"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Ausdrucksverweis (Berichts-Generator und SSRS)
   Berichtsausdrücke unterstützen eine Vielzahl von Verweisen auf integrierte Funktionen und integrierte Auflistungen. Ausdrücke müssen über eine gültige [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Syntax verfügen, bevor ein Bericht veröffentlicht oder verarbeitet werden kann.  
@@ -42,15 +42,15 @@ ms.locfileid: "36058015"
   
  [Integrierte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Verweise auf Parameters-Auflistung &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Verweise auf Parameterauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
  [Datasetfeldauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [Verweisen auf DataSource- und DataSets-Auflistung &#40;Berichts-Generator und SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [DataSource- und DataSets-Auflistungsverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [Melden und gruppieren Sie Variablen Sammlungen Verweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Melden und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Verweise auf ReportItems-Auflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
+ [Verweise auf ReportItems-Auflistung &#40;Berichts-Generator und SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)  

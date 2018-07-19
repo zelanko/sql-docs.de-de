@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7aa25d7a3d09fbf3d85b64a43e8caf04759a4336
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238470"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
   Ein Messgerätzeiger gibt den aktuellen Wert des Messgeräts an. Standardmäßig werden beim Hinzufügen eines Felds die darin enthaltenen Werte zu einem Wert aggregiert, der vom Zeiger auf dem Messgerät angezeigt wird. Sie können dem Messgerät mehrere Zeiger hinzufügen, die auf unterschiedliche Werte auf der gleichen Skala zeigen, oder Sie können mehrere Skalen und einen Zeiger für jede hinzugefügte Skala hinzufügen. Nachdem Sie einem Messgerät ein Feld hinzugefügt haben, müssen Sie den maximalen und den minimalen Wert für die entsprechende Skala festlegen, um einen Kontext zum Zeigerwert anzugeben. Sie haben auch die Möglichkeit, den minimalen und den maximalen Wert für einen Bereich festzulegen, wodurch auf der Skala ein kritischer Bereich angegeben wird.  
@@ -36,7 +36,7 @@ ms.locfileid: "36058649"
 ##  <a name="HowPointer"></a> Verbinden des Zeigers mit Daten  
  Standardmäßig enthält ein hinzugefügtes Messgerät einen Zeiger ohne zugeordnetes Feld. Dieser wird als leerer Zeiger bezeichnet. Er zeigt 0 (null) an, bis dem Datenbereich ein Feld hinzugefügt wird. Wenn Sie dem Datenbereich ein Feld hinzufügen, wird der Zeiger mit diesem Feld verbunden. Wenn Sie ein Feld aus dem Datenbereich löschen, wird auch der Zeiger gelöscht, der dem betreffenden Feld zugeordnet ist.  
   
- Wenn Sie nach dem Hinzufügen von Daten mit der rechten Maustaste auf den Zeiger klicken, werden die Optionen **Zeigerwert löschen** und **Zeiger löschen** angezeigt. Mit der Option **Zeigerwert löschen** wird das an das Messgerät angefügte Feld entfernt, der Zeiger wird jedoch für das Messgerät weiterhin angezeigt. Mit der Option **Zeiger löschen** wird das Feld aus dem Messgerät entfernt, und der angezeigte Zeiger wird ebenfalls gelöscht. Wenn Sie dem Messgerät wieder ein Feld hinzufügen, wird der Standardzeiger erneut angezeigt werden. Beim Festlegen des Zeigers **Hidden** Eigenschaft `True`, der Zeiger ist nicht auf der Entwurfsoberfläche, sondern zur Laufzeit ausgeblendet.  
+ Wenn Sie nach dem Hinzufügen von Daten mit der rechten Maustaste auf den Zeiger klicken, werden die Optionen **Zeigerwert löschen** und **Zeiger löschen** angezeigt. Mit der Option **Zeigerwert löschen** wird das an das Messgerät angefügte Feld entfernt, der Zeiger wird jedoch für das Messgerät weiterhin angezeigt. Mit der Option **Zeiger löschen** wird das Feld aus dem Messgerät entfernt, und der angezeigte Zeiger wird ebenfalls gelöscht. Wenn Sie dem Messgerät wieder ein Feld hinzufügen, wird der Standardzeiger erneut angezeigt werden. Beim Festlegen des Zeigers **Hidden** Eigenschaft `True`, der Zeiger wird nicht auf der Entwurfsoberfläche, sondern zur Laufzeit ausgeblendet.  
   
   
 ##  <a name="DisplayingMultiple"></a> Anzeigen von mehreren Zeigern auf dem Messgerät  

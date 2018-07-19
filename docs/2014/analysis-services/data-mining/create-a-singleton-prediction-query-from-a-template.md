@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Singleton-Abfrage aus einer Vorlage | Microsoft Docs
+title: Erstellen eine Singleton-Vorhersageabfrage aus einer Vorlage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224590"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
   Eine SINGLETON-Abfrage ist für Modelle hilfreich, die Sie für Vorhersagen verwenden möchten, ohne sie jedoch einem externen Eingabedataset zuzuordnen oder sie für Massenvorhersagen zu verwenden. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
@@ -73,7 +73,7 @@ AS [t]
   
 5.  Geben Sie in der Zeile **Miningmodell** den Namen eines Miningmodells aus der Liste der Miningmodelle im **Objekt-Explorer**ein.  
   
-     Für den Beispielcode am Beginn dieses Themas die **Miningmodell** Zeile festgelegt wurde, auf den Namen `TM_Decision_Tree`.  
+     Für den Beispielcode am Beginn dieses Themas die **Miningmodell** Zeile wurde festgelegt, an den Namen des `TM_Decision_Tree`.  
   
 6.  Geben Sie in der Zeile **Wert** den neuen Datenwert ein, für den Sie eine Vorhersage machen möchten.  
   
@@ -92,11 +92,11 @@ AS [t]
   
 10. Suchen Sie im Abfragetextbereich nach einer roten Wellenlinie unter dem Komma und den Auslassungspunkten, die Syntaxfehler anzeigt. Löschen Sie die Auslassungspunkte, und fügen Sie alle weiteren gewünschten Abfragebedingungen hinzu. Wenn Sie keine weiteren Bedingungen hinzufügen, löschen Sie das Komma.  
   
-     Für den Beispielcode am Beginn dieses Themas angezeigt, die zusätzliche abfragebedingung festgelegt wurde, um `'45' as [Age]`.  
+     Für den Beispielcode am Beginn dieses Themas, die zusätzliche abfragebedingung festgelegt wurde, um `'45' as [Age]`.  
   
 11. Klicken Sie auf **Ausführen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

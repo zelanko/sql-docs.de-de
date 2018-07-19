@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33509006a58d65cb87c106572b6e68ba3621cca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1c8ab80ff9c697ac3f7a9a7eaa466e11d003adfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162211"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
   Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.  
@@ -37,7 +37,7 @@ ms.locfileid: "36059335"
 ## <a name="starting-and-stopping-the-debugger"></a>Starten und Beenden des Debuggers  
  Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen folgende Anforderungen erfüllt sein:  
   
--   Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren des Transact-SQL-Debuggers](configure-firewall-rules-before-running-the-tsql-debugger.md).  
+-   Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [konfigurieren Sie den Transact-SQL-Debugger](configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.  
   

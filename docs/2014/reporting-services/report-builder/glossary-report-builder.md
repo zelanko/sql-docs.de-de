@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 20a5c8a50749e1b7133df76bedb7b3ba2d7c4879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9841b18565b6c07f88ed075a298cbe87275b5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197060"
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -374,6 +374,6 @@ ms.locfileid: "36058898"
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konzepte zum Erstellen von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

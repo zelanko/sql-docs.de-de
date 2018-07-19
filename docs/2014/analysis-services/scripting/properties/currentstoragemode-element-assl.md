@@ -1,5 +1,5 @@
 ---
-title: CurrentStorageMode-Element (ASSL) | Microsoft Docs
+title: CurrentStorageMode-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233820"
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode-Element (ASSL)
   Bestimmt den aktuellen Speichermodus für das übergeordnete Element.  
@@ -60,7 +60,7 @@ ms.locfileid: "36058581"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CurrentStorageMode` Element gibt die derzeit für proaktives Zwischenspeichern verwendet Speichermodus an und gilt für alle Attribute des übergeordneten Elements.  
+ Die `CurrentStorageMode` Element gibt die derzeit für proaktives Zwischenspeichern verwendet Speichermodus an, und gilt für alle Attribute des übergeordneten Elements.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36058581"
 |*ROLAP*|Das übergeordnete Element verwendet die relationale OLAP (ROLAP)-Speicherung.|  
 |*HOLAP*|Das übergeordnete Element verwendet die hybride OLAP (HOLAP)-Speicherung. **Hinweis:** dieser Wert gilt nur für [Partition](../objects/partition-element-assl.md) übergeordneten Elementen.|  
   
- Die Enumeration, die den zulässigen Werten entspricht `CurrentStorageMode` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.StorageMode>.  
+ Die Enumeration, die den zulässigen Werten für `CurrentStorageMode` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.StorageMode>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

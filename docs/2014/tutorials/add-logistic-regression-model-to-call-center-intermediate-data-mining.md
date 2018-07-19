@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines logistischen Regressionsmodells zur Callcenter-Struktur (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Hinzufügen eines logistischen Regressionsmodells zur Callcenter-Struktur (Datamining-Lernprogramm für fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ccadf7665b112b6ba1055fdcf69aeb99609c3ab3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: deeb55b64b8053aefd130891fb114ea174e2b7cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261836"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Hinzufügen eines logistischen Regressionsmodells zur Callcenterstruktur (Data Mining-Lernprogramm für Fortgeschrittene)
-  Zusätzlich zur Analyse der Faktoren, die Call Center Vorgänge auswirken, wurden Sie auch aufgefordert, einige spezifischen Empfehlungen bereitstellen, wie die Mitarbeiter die Dienstqualität verbessern können. Für diese Aufgabe verwenden Sie dieselbe Miningstruktur wie beim Erstellen des explorativen Modells. Sie fügen jedoch ein Miningmodell hinzu, das zum Erstellen von Vorhersagen verwendet wird.  
+  Zusätzlich zur Analyse der Faktoren, die auswirken können, wurden Sie auch aufgefordert, einige spezifischen Empfehlungen bereitstellen, wie das Personal die Dienstqualität verbessern können. Für diese Aufgabe verwenden Sie dieselbe Miningstruktur wie beim Erstellen des explorativen Modells. Sie fügen jedoch ein Miningmodell hinzu, das zum Erstellen von Vorhersagen verwendet wird.  
   
  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] basiert ein logistisches Regressionsmodell auf dem neuronalen Netzwerke-Algorithmus und hat daher dieselbe Flexibilität und Leistungsstärke wie ein neuronales Netzwerkmodell. Die logistische Regression ist jedoch besonders gut dafür geeignet, binäre Ergebnisse vorherzusagen.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36312428"
     > [!NOTE]  
     >  Welchen Wert Sie als Ausgangswert auswählen, ist gleichgültig, solange für alle verwandten Modelle der gleiche Ausgangswert verwendet wird.  
   
-3.  In der **Miningmodelle** klicken Sie im Menü **Miningstruktur verarbeiten und alle Modelle**. Klicken Sie auf **Ja** , um das aktualisierte Data Mining-Projekt auf dem Server bereitzustellen.  
+3.  In der **Miningmodelle** , wählen Sie im Menü **Miningstruktur verarbeiten und alle Modelle**. Klicken Sie auf **Ja** , um das aktualisierte Data Mining-Projekt auf dem Server bereitzustellen.  
   
 4.  Klicken Sie im Dialogfeld **Miningmodell verarbeiten** auf **Ausführen**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten mittels XmlReader | Microsoft Docs
+title: Abrufen von Daten mittels XmlReader | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267566"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Abrufen von Daten mittels XmlReader
   Die `XmlReader`-Klasse, die Bestandteil des `System.Xml`-Namespace für die Microsoft .NET Framework-Klassenbibliothek ist, ähnelt der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Klasse insofern, als die `XmlReader`-Klasse ebenfalls einen schnellen Vorwärtszugriff auf die Daten ohne Zwischenspeicherung ermöglicht. Wenn keine analytische Ansicht der Daten im Arbeitsspeicher mithilfe des <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekts erforderlich ist, eignet sich das `XmlReader`-Objekt perfekt für das Abrufen von XML-Daten, insbesondere wenn es sich um große Datenmengen handelt. Da `XmlReader` Daten streamt, ist es nicht erforderlich, dass `XmlReader` alle Daten abruft und zwischenspeichert, bevor sie für den Aufrufer verfügbar gemacht werden. Dies wäre der Fall, wenn ein <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt zum Konvertieren der XML for Analysis-Antwort in eine analytische Objektmodelldarstellung verwendet würde.  
@@ -42,7 +42,7 @@ ms.locfileid: "36056816"
   
      Nachdem der Befehl die Abfrage ausgeführt hat und ein `XmlReader`-Objekt zurückgibt, müssen Sie die Daten und die Metadaten analysieren. Die XML-Daten und -Metadaten werden im systemeigenen Format angegeben, das vom XML for Analysis-Anbieter verwendet wird. Für die meisten XML for Analysis-Anbieter ist das systemeigene Format das `MDDataSet`-Format. Das `MDDataSet`-Format stellt sowohl Daten als auch Metadaten für Cellsets in einem gut strukturierten Format bereit. Weitere Informationen zum `MDDataSet`-Format finden Sie in der Spezifikation für XML for Analysis.  
   
-3.  **Schließen des Readers an.**  
+3.  **Schließen Sie den Leser ein.**  
   
      Sie sollten immer die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A>-Methode aufrufen, wenn Sie die Verwendung des `XmlReader`-Objekts abgeschlossen haben. Solange ein `XmlReader`-Objekt geöffnet ist, ist dieses `XmlReader`-Objekt zur ausschließlichen Verwendung des <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekts berechtigt, das zum Ausführen des Befehls verwendet wurde. Sie sind in diesem Fall nicht in der Lage, Befehle mithilfe dieses <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> auszuführen, einschließlich der Erstellung eines weiteren `XmlReader` oder <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, bis Sie das ursprüngliche `XmlReader`-Objekt schließen.  
   

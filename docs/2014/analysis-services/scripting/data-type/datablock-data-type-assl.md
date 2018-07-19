@@ -1,5 +1,5 @@
 ---
-title: DataBlock-Datentyp (ASSL) | Microsoft Docs
+title: DataBlock-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cbd6c1a2723cfc0d9e5b68ff4a484878c82a74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211960"
 ---
 # <a name="datablock-data-type-assl"></a>DataBlock-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der eine Auflistung von Datenblöcken, die zum Speichern des binären Inhalts darstellt, ein [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) Element.  
+  Definiert einen Grunddatentyp, der eine von Datenblöcken verwendet Auflistung, um die binären Inhalte speichern eine [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36058387"
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Blöcke](../collections/blocks-element-assl.md)|  
-|Abgeleitete Elemente|[Daten](../objects/data-element-assl.md) Element des [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) Typ ([Dateien](../collections/files-element-assl.md) Auflistung von [ClrAssembly](assembly-data-type-assl.md) Typ)|  
+|Abgeleitete Elemente|[Daten](../objects/data-element-assl.md) Element [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) Typ ([Dateien](../collections/files-element-assl.md) Auflistung von [ClrAssembly](assembly-data-type-assl.md) Typ)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Assembly-Element &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
- [Datei Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
+ [File Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Element sperren &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

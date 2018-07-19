@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7a0f936daca1683c4aeb54e01c8b8cb567d145c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb7c5270dba5a624ec843d2c4f90019e777b462f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327780"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
   Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../includes/ssde-md.md)] -Anbieterpfad können Sie mit den Methoden und Eigenschaften des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Verwaltungsobjekts, das dem Knoten zugeordnet ist, Arbeiten ausführen oder Informationen abrufen.  
@@ -80,7 +80,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | where {$_.Schema -eq "Sales"}  
 ```  
   
- In diesem Beispiel wird die SMO **Skript** Methode, um ein Skript zu generieren, enthält die `CREATE VIEW` Anweisungen, die Sie zur erneuten Erstellung der Sichten in AdventureWorks2012 benötigen:  
+ In diesem Beispiel wird die SMO- **Skript** Methode, um ein Skript zu generieren, enthält die `CREATE VIEW` Anweisungen, die Sie zur erneuten Erstellung der Sichten in AdventureWorks2012 benötigen:  
   
 ```  
 Remove-Item C:\PowerShell\CreateViews.sql  

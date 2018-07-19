@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177827"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
   Mit In-Memory OLTP werden speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eingeführt. Dieser Artikel gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-2.gif "Query plan for join of disk-based tables.")  
 Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.  
   
- In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Die `Hash Match` physischer Operator ist jetzt für verwendet die `Inner Join`. Der gruppierte Index für Order wird nicht nach CustomerID sortiert, weshalb eine `Merge Join` einen Sort-Operator, was die Leistung beeinträchtigen würde, müsste. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer ausgedehnte haben die `Hash Match` -Operator auch im vorherigen Beispiel, jedoch hat ergeben, dass die `Merge Join` Operator hat eine bessere Leistung.  
+ In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Die `Hash Match` der physische Operator ist jetzt für verwendet die `Inner Join`. Der gruppierte Index für Order wird nicht nach CustomerID sortiert, weshalb eine `Merge Join` würde einen Sortieroperator erfordern, was die Leistung beeinträchtigen würde. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer berücksichtigt haben würde die `Hash Match` -Operator auch im vorherigen Beispiel, jedoch hat festgestellt, dass die `Merge Join` -Operator eine bessere Leistung bietet.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
@@ -174,7 +174,7 @@ Abfrageplan für den Join speicheroptimierter Tabellen.
   
     -   Gruppierte Indizes werden nicht bei speicheroptimierten Tabellen unterstützt. Stattdessen muss jede speicheroptimierte Tabelle mindestens über einen nicht gruppierten Index verfügen, und alle Indizes für speicheroptimierte Tabellen können effizient auf alle Spalten in der Tabelle zugreifen, ohne dass sie im Index gespeichert werden müssen oder dass auf einen gruppierten Index zurückgegriffen werden muss.  
   
--   Dieser Plan enthält ein `Hash Match` anstelle eines `Merge Join`. Die Indizes der Order- und Customer-Tabelle sind Hashindizes und werden daher nicht sortiert. Ein `Merge Join` würde, die die Leistung verringern würde sortieroperatoren erfordern.  
+-   Dieser Plan enthält ein `Hash Match` anstelle eines `Merge Join`. Die Indizes der Order- und Customer-Tabelle sind Hashindizes und werden daher nicht sortiert. Ein `Merge Join` würde sortieroperatoren, die Leistung verringern würden erfordern.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
  Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch die Abfrageausführungs-Engine interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
@@ -226,7 +226,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine `EXEC` *Usp_myproc* Anweisung.  
+1.  Der Benutzer gibt eine `EXEC` *USP MyProc* Anweisung.  
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   
@@ -304,7 +304,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiken und Kardinalität für speicheroptimierte Tabellen  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statistiken auf Spaltenebene für Speicheroptimierte Tabellen beibehalten. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden auf Spaltenebene Statistiken für Speicheroptimierte Tabellen beibehalten. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicheroptimierte Tabellen](memory-optimized-tables.md)  

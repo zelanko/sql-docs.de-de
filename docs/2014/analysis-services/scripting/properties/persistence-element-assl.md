@@ -1,5 +1,5 @@
 ---
-title: Persistence-Element (ASSL) | Microsoft Docs
+title: Persistence-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330290"
 ---
 # <a name="persistence-element-assl"></a>Persistence-Element (ASSL)
-  Bestimmt, welche Teile der gebundenen Quelldaten dynamisch sind und mithilfe von angegebene Häufigkeit auf Updates geprüft werden die [RefreshPolicy](refreshpolicy-element-assl.md) Element.  
+  Bestimmt, welche Teile der gebundenen Quelldaten dynamisch sind und mithilfe der vom angegebenen Häufigkeit auf Updates überprüft werden die [RefreshPolicy](refreshpolicy-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

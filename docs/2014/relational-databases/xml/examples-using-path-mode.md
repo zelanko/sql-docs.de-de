@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274626"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
   Diese Beispiele veranschaulichen die Verwendung des PATH-Modus beim Generieren von XML-Code aus einer SELECT-Abfrage. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradfertigungsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle gespeichert sind.  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- Außer der ID und dem Namen des Produktmodells ruft die folgende Abfrage die Speicherorte der Fertigungsanweisungen dieses Produktmodells ab. Da die Instructions-Spalte ist `xml` Typ, der `query()` Methode `xml` -Datentyp angegeben ist, um den Speicherort abzurufen.  
+ Außer der ID und dem Namen des Produktmodells ruft die folgende Abfrage die Speicherorte der Fertigungsanweisungen dieses Produktmodells ab. Da die Instructions-Spalte ist `xml` Typ, der `query()` -Methode der `xml` -Datentyp angegeben ist, um den Speicherort abzurufen.  
   
 ```  
 SELECT ProductModelID AS "@id",  

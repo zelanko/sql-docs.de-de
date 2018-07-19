@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266836"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
-  Verwenden der **wählen Sie eine Datenquelle** Seite, um die Quelle der Daten anzugeben, die Sie kopieren möchten.  
+  Verwenden der **Auswählen einer Datenquelle** Seite Geben Sie an der Quelle der Daten, die Sie kopieren möchten.  
   
- Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
- Der Zweck der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistenten zum Kopieren von Daten aus einer Quelle in ein Ziel ist. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Der Zweck der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten Daten aus einer Quelle in ein Ziel kopiert werden. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Tastatur  
  **Data Source**  
@@ -47,10 +47,10 @@ ms.locfileid: "36324614"
  Gibt an, ob das Paket die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung verwenden soll, um sich bei der Datenbank anzumelden. Im Sinne einer größeren Sicherheit wird die Windows-Authentifizierung empfohlen.  
   
  **SQL Server-Authentifizierung verwenden**  
- Gibt an, ob das Paket verwenden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung für die Anmeldung an der Datenbank. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
+ Gibt an, ob das Paket zu verwendende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung für die Anmeldung an der Datenbank. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
   
  **Benutzername**  
- Geben Sie einen Benutzernamen für die Verbindung mit der Datenbank, bei der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+ Geben Sie einen Benutzernamen für die Verbindung mit der bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
   
  **Kennwort**  
  Geben Sie das Kennwort für die Datenbankverbindung ein, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
@@ -71,10 +71,10 @@ ms.locfileid: "36324614"
  Geben Sie den Namen der Quelldatenbank ein.  
   
  **Integrierte Sicherheit**  
- Geben Sie `True` zum Herstellen einer Verbindung mithilfe der integrierten Windows-Authentifizierung, was empfohlen wird, oder `False` für die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Der Standardwert lautet `False`.  
+ Geben Sie `True` mithilfe der integrierten Windows-Authentifizierung, die empfohlen wird, eine Verbindung herstellen oder `False` für die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Der Standardwert lautet `False`.  
   
  **Benutzer-ID**  
- Geben Sie einen Benutzernamen für die Verbindung mit der Datenbank, bei der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
+ Geben Sie einen Benutzernamen für die Verbindung mit der bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.  
   
  **Kennwort**  
  Geben Sie das Kennwort für die Datenbankverbindung ein, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
@@ -84,10 +84,10 @@ ms.locfileid: "36324614"
 ### <a name="data-source--microsoft-excel"></a>Datenquelle = Microsoft Excel  
   
 > [!NOTE]  
->  Wählen Sie **Microsoft Excel** nur, wenn eine Verbindung mit einer Datenquelle herstellen, die Excel 2003 verwendet werden sollen oder früher. Um eine Verbindung mit einer Datenquelle herzustellen, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, klicken Sie auf **Eigenschaften**, und klicken Sie dann auf die **alle** auf der Registerkarte die **Datenlinkeigenschaften** Dialogfeld Geben Sie `Excel 12.0` als Wert für **erweiterte Eigenschaften**.  
+>  Wählen Sie **Microsoft Excel** nur dann, wenn die Verbindung mit einer Datenquelle, die Excel 2003 verwendet werden sollen oder früher. Um eine Verbindung mit einer Datenquelle herzustellen, die Excel 2007 verwendet, wählen Sie **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, klicken Sie auf **Eigenschaften**, und klicken Sie dann auf die **alle** Registerkarte die **Datenlinkeigenschaften** Dialogfeld Geben Sie `Excel 12.0` als Wert für **erweiterte Eigenschaften**.  
   
  **Excel-Dateipfad**  
- Geben Sie den Pfad und den Dateinamen für die Kalkulationstabelle an, aus der die Daten importiert werden sollen. Beispielsweise **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. Oder klicken Sie auf **Durchsuchen**.  
+ Geben Sie den Pfad und den Dateinamen für die Kalkulationstabelle an, aus der die Daten importiert werden sollen. Z. B. **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. Oder klicken Sie auf **Durchsuchen**.  
   
  **Durchsuchen**  
  Suchen Sie die Kalkulationstabelle mithilfe des Dialogfelds **Öffnen**.  
@@ -101,7 +101,7 @@ ms.locfileid: "36324614"
 ### <a name="data-source--microsoft-access"></a>Datenquelle = Microsoft Access  
   
 > [!NOTE]  
->  Wählen Sie **Microsoft Access** nur, wenn eine Datenbank herstellen, für die Access 2003 verwendet werden sollen oder früher. Wählen Sie zum Herstellen einer Datenbank, die Access 2007 verwendet, **Microsoft Office 12.0 Access Database Engine OLE DB Provider** stattdessen.  
+>  Wählen Sie **Microsoft Access** nur dann, wenn die Verbindung mit einer Datenbank, die Access 2003 verwendet werden sollen oder früher. Wählen Sie zum Herstellen einer datenbankverbindung, die Access 2007 verwendet, **Microsoft Office 12.0 Access Database Engine OLE DB Provider** stattdessen.  
   
  **Dateiname**  
  Geben Sie den Pfad und den Dateinamen für die Datenbankdatei an, aus der die Daten importiert werden sollen. Beispiel: **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**. Oder klicken Sie auf **Durchsuchen**.  
@@ -113,10 +113,10 @@ ms.locfileid: "36324614"
  Geben Sie einen gültigen Benutzernamen für die Datenbankverbindung an, wenn der Datenbank eine Informationsdatei für die Arbeitsgruppe zugeordnet ist.  
   
  **Kennwort**  
- Geben Sie das Kennwort des Benutzers für die Datenbankverbindung an, wenn der Datenbank eine Informationsdatei für die Arbeitsgruppe zugeordnet ist. Wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, Sie müssen jedoch bereitstellen diesen Wert in der **Datenlinkeigenschaften** (Dialogfeld), indem Sie auf zugreifen **erweitert**.  
+ Geben Sie das Kennwort des Benutzers für die Datenbankverbindung an, wenn der Datenbank eine Informationsdatei für die Arbeitsgruppe zugeordnet ist. Jedoch, wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, müssen Sie angeben dieses Werts in der **Datenlinkeigenschaften** Dialogfeld durch Klicken auf erfolgt **erweitert**.  
   
  **Erweitert:**  
- Sie möchten mit erweiterte Optionen, z. B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei angeben der **Datenlinkeigenschaften** (Dialogfeld). Weitere Informationen zu OLE DB-Anbietereigenschaften, suchen Sie im Abschnitt "Datenzugriff" des der [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei mithilfe angeben möchten die **Datenlinkeigenschaften** Dialogfeld. Weitere Informationen zu OLE DB-Anbieter-Eigenschaften, suchen Sie im Abschnitt "Datenzugriff" des der [MSDN-Bibliothek](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Datenquelle = Flatfilequelle  
  Unter den folgenden Themen finden Sie Informationen zu den Optionen für eine Flatfile-Datenquelle.  

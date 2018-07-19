@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272336"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen sind eine datengesteuerte Warnungslösung, mit der Sie sich leichter und zu einem relevanten Zeitpunkt über für Sie interessante oder wichtige Berichtsdaten informieren können. Mithilfe von Datenwarnungen müssen Sie nicht mehr nach Informationen suchen – diese werden Ihnen bereitgestellt.  
@@ -116,14 +116,14 @@ ms.locfileid: "36057537"
 ##  <a name="InstallAlerting"></a> Installieren von Datenwarnungen  
  Die Datenwarnungsfunktion ist nur verfügbar, wenn [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, erstellt das Setup automatisch die Warnungsdatenbank, in der Datenwarnungsdefinitionen und Warnungsmetadaten gespeichert werden, sowie zwei SharePoint-Seiten zum Verwalten von Warnungen. Zudem wird der SharePoint-Website der Datenwarnungs-Designer hinzugefügt. Für Warnungen während der Installation müssen keine besonderen Schritte ausgeführt oder Optionen festgelegt werden.  
   
- Wenn Sie weitere Informationen zum installieren möchten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gemeinsamer Dienst die neuen [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung, die Sie erstellen und konfigurieren, bevor Sie verwenden können, müssen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Features, finden Sie unter [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in der MSDN Library.  
+ Wenn Sie weitere Informationen zum installieren möchten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gemeinsamer Dienst die neuen [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung, die Sie erstellen und konfigurieren, bevor Sie verwenden können, müssen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Funktionen, finden Sie unter [installieren Sie Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in MSDN-Bibliothek.  
   
- Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Agent](../ssms/agent/configure-sql-server-agent.md) und [starten, beenden, anhalten, fortsetzen, Database Engine, SQL Server-Agent oder SQL Server-Browser-Dienst neu starten,](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Agent](../ssms/agent/configure-sql-server-agent.md) und [starten, beenden, anhalten, fortsetzen und Neustart der Datenbank-Engine, SQL Server-Agent und SQL Server-Browserdienst](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Sie können in der SharePoint-Zentraladministration mithilfe der Seite **Abonnements und Warnungen bereitstellen** herausfinden, ob der SQL Server-Agent ausgeführt wird, und benutzerdefinierte [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts erstellen und herunterladen, die Sie dann ausführen, um dem SQL Server-Agent Berechtigungen zu gewähren. Erstellen Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts alternativ mithilfe von PowerShell. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Konfigurieren von Datenwarnungen  
- Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] werden die Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen, einschließlich Datenwarnungen, zwischen der Konfigurationsdatei des Berichtsservers (rsreportserver.config) und einer SharePoint-Konfigurationsdatenbank verteilt, wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren. Wenn Sie die Dienstanwendung als Schritt der Installation und Konfiguration von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]erstellen, wird die SharePoint-Konfigurationsdatenbank automatisch erstellt. Weitere Informationen finden Sie unter [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md) und [Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md).  
+ Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] werden die Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen, einschließlich Datenwarnungen, zwischen der Konfigurationsdatei des Berichtsservers (rsreportserver.config) und einer SharePoint-Konfigurationsdatenbank verteilt, wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren. Wenn Sie die Dienstanwendung als Schritt der Installation und Konfiguration von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]erstellen, wird die SharePoint-Konfigurationsdatenbank automatisch erstellt. Weitere Informationen finden Sie unter [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md) und [Reporting Services-Konfigurationsdateien](report-server/reporting-services-configuration-files.md).  
   
  Die Einstellungen für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungen beinhalten die Intervalle zum Bereinigen von Warndaten und -metadaten sowie die Anzahl an erneuten Versuchen beim Senden von Datenwarnmeldungen per E-Mail. Sie können die Konfigurationsdatei und Konfigurationsdatenbank aktualisieren, um andere Werte für Datenwarneinstellungen zu verwenden.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36057537"
   
 -   [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarndienst unterstützt zwei Berechtigungsstufen: Information Worker und Warnungsadministrator. In der folgenden Tabelle sind die verwandten SharePoint-Berechtigungen und die Benutzeraufgaben aufgeführt.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36057537"
 ### <a name="logs"></a>Protokolle  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Protokollen, mit denen Sie einen besseren Einblick in die bei der Verarbeitung von Datenwarnungsdefinitionen ausgeführten Berichte, in die erstellten Datenwarnungsinstanzen usw. erhalten. Drei Protokolle sind besonders nützlich: das Warnungsausführungsprotokoll sowie das Ausführungsprotokoll und das Ablaufverfolgungsprotokoll des Berichtsservers.  
   
- Weitere Informationen zu anderen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Protokolle, finden Sie unter [Reporting Services-Protokolldateien und Quellen](report-server/reporting-services-log-files-and-sources.md).  
+ Weitere Informationen zu anderen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Protokolle finden Sie unter [Reporting Services-Protokolldateien und Quellen](report-server/reporting-services-log-files-and-sources.md).  
   
 #### <a name="alerting-execution-log"></a>Warnungsausführungsprotokoll  
  Der Warnungslaufzeitdienst schreibt Einträge in die Tabelle ExecutionLogView in der Warnungsdatenbank. Sie können die Tabelle abfragen oder die folgenden gespeicherten Prozeduren ausführen, um umfangreichere Diagnoseinformationen zu den in der Warnungsdatenbank gespeicherten Datenwarnungen abzurufen.  
@@ -268,7 +268,7 @@ ms.locfileid: "36057537"
 |GenerateAlert|Warnung: verarbeitete Ereignisse - GenerateAlert|  
 |DeliverAlert|Warnung: verarbeitete Ereignisse - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt Leistungsindikatoren für weitere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen bereit. Weitere Informationen finden Sie unter [Leistungsindikatoren für die ReportServer: Service und die Leistungsobjekte für "reportserversharepoint: Service"](report-server/performance-counters-reportserver-service-performance-objects.md), [Leistungsindikatoren für den MSRS 2014 Webdienst und den MSRS 2014 Windows Leistungsobjekte Service &#40;im einheitlichen Modus&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), und [Leistungsindikatoren für den MSRS 2014 Web Service SharePoint Mode und den MSRS 2014 Windows Service SharePoint-Modus, Leistungsobjekte &#40;SharePoint Modus&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt Leistungsindikatoren für weitere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen bereit. Weitere Informationen finden Sie unter [Leistungsindikatoren für die ReportServer: Service und reportserversharepoint: Service Performance Objects](report-server/performance-counters-reportserver-service-performance-objects.md), [Leistungsindikatoren für den MSRS 2014 Webdienst und den MSRS 2014 Windows Leistungsobjekte Service &#40;im einheitlichen Modus&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), und [Leistungsindikatoren für den MSRS 2014 Web Service SharePoint Mode und den MSRS 2014 Windows Service SharePoint-Modus, Leistungsobjekte &#40;SharePoint Modus&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Unterstützung für SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] kann den HTTP-SSL-Dienst (Secure Sockets Layer) verwenden, um verschlüsselte Verbindungen zu einem Berichtsserver oder einer SharePoint-Website herzustellen.  
@@ -284,9 +284,9 @@ ms.locfileid: "36057537"
   
 -   **Datenwarnungs-Manager** , mit dem Sie Listen der Datenwarnungen anzeigen, Warnungen löschen und Warnungen zur Bearbeitung öffnen. Der Datenwarnungs-Manager steht in zwei Versionen zur Verfügung: eine für Benutzer zur Verwaltung der Warnungen, die sie erstellt haben, und eine für Administratoren zur Verwaltung der Warnungen, die zu Websitebenutzern gehören.  
   
-     Weitere Informationen zum Verwalten von datenwarnungen, die Sie erstellt haben, finden Sie unter [Datenwarnungs-Manager für SharePoint-Benutzer](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) und [Meine Datenwarnungen im Datenwarnungs-Manager verwalten](manage-my-data-alerts-in-data-alert-manager.md).  
+     Weitere Informationen zum Verwalten von datenwarnungen, die Sie erstellt haben, finden Sie unter [Datenwarnungs-Manager für SharePoint-Benutzer](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) und [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     Weitere Informationen zum Verwalten aller datenwarnungen auf einer Website finden Sie unter [Datenwarnungs-Manager für Administratoren Warnungen](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     Weitere Informationen zum Verwalten aller datenwarnungen auf einer Website finden Sie unter [Datenwarnungs-Manager für Warnungsadministratoren](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) und [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   Stellen Sie**Abonnements und Datenwarnungen** bereit, mit denen Sie herausfinden, ob Reporting Services den SQL Server-Agent für Datenwarnungen verwenden und Skripts herunterladen kann, die den Zugriff auf den SQL Server-Agent ermöglichen. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   

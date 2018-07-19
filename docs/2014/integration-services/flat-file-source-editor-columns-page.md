@@ -1,5 +1,5 @@
 ---
-title: Quellen-Editor (Spaltenseite) für Flatfiles | Microsoft Docs
+title: Quellen-Editor (Spaltenseite) für Flatfiles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be667dc6fe7dcaefdc183a831f762a566a56c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d0007a98a02da095887aa0faedb12ba629f5e01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171021"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Quellen-Editor für Flatfiles (Seite Spalten)
   Mithilfe des Knotens **Spalten** des Dialogfelds **Quellen-Editor für Flatfiles** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
 > [!NOTE]  
->  Die `FileNameColumnName` -Eigenschaft der Flatfilequelle und die `FastParse` -Eigenschaft ihrer Ausgabespalten sind nicht verfügbar in der **Quelleneditor für Flatfiles**, jedoch kann festgelegt werden, mithilfe der **Erweiterter Editor** . Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Flatfilequelle von [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  Die `FileNameColumnName` -Eigenschaft der Flatfilequelle und die `FastParse` -Eigenschaft ihrer Ausgabespalten sind nicht verfügbar, in der **Quellen-Editor für Flatfiles**, aber kann festgelegt werden, mithilfe der **Erweiterter Editor** . Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Flatfilequelle von [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Weitere Informationen zur Flatfilequelle finden Sie unter [Flat File Source](data-flow/flat-file-source.md).  
   

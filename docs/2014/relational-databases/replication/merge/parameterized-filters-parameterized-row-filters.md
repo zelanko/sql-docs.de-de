@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 74cb3cd9631e0b709b7eb5cf0cb0856bc3b830af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225416"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Mit parametrisierten Zeilenfiltern können verschiedene Datenpartitionen an verschiedene Abonnenten gesendet werden, ohne dass hierfür mehrere Veröffentlichungen erstellt werden müssen (parametrisierte Filter wurden in früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]als dynamische Filter bezeichnet). Der Begriff Partition bezeichnet nichts weiter als eine Teilmenge der Zeilen in einer Tabelle. Abhängig von den Einstellungen für den parametrisierten Zeilenfilter, die im Zuge der Erstellung des Filters festgelegt werden, kann jede Zeile in einer veröffentlichten Tabelle entweder nur zu einer Partition (nicht überlappende Partitionen) oder aber zu mehreren Partitionen (überlappende Partitionen) gehören.  
@@ -98,7 +98,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Der Mitarbeiterin Pamela Ansman-Wolfe wurde z. B. eine Mitarbeiter-ID von 280 zugewiesen. Geben Sie bei der Erstellung eines Abonnements für diese Mitarbeiterin als Wert für HOST-NAME() die Mitarbeiternummer (hier: 280) an. Wenn der Merge-Agent eine Verbindung mit dem Verleger hergestellt hat, vergleicht er den von HOST_NAME() zurückgegebenen Wert mit den Werten in der Tabelle und lädt nur die Zeile herunter, bei der der Wert 280 in der **EmployeeID** -Spalte enthalten ist.  
   
 > [!IMPORTANT]  
->  Die HOST_NAME()-Funktion gibt einen `nchar` Wert, sodass Sie CONVERT verwenden müssen, wenn die Spalte in der Filterklausel mit einem numerischen Datentyp ist im obigen Beispiel entspricht. Zur Verbesserung der Leistung sollten Funktionen nicht auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter (wie `CONVERT(nchar,EmployeeID) = HOST_NAME()`) angewendet werden. Gehen Sie stattdessen wie im folgenden Beispiel vor: `EmployeeID = CONVERT(int,HOST_NAME())`. Diese Klausel kann verwendet werden, für die **@subset_filterclause** Parameter [Sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), aber in der Regel nicht verwendet werden im Assistenten für neue Veröffentlichung (der Assistent führt die Filterklausel, um zu überprüfen, die schlägt fehl, da der Computername in konvertiert werden kann ein `int`). Wenn Sie mit dem Assistenten für neue Veröffentlichung arbeiten, sollten Sie vor dem Erstellen einer Momentaufnahme für die Veröffentlichung `CONVERT(nchar,EmployeeID) = HOST_NAME()` im Assistenten angeben und dann [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) verwenden, um die Klausel in `EmployeeID = CONVERT(int,HOST_NAME())` zu ändern.  
+>  Die HOST_NAME()-Funktion gibt einen `nchar` Wert, sodass Sie CONVERT verwenden müssen, wenn die Spalte in der Filterklausel mit einem numerischen Datentyp, wie im obigen Beispiel. Zur Verbesserung der Leistung sollten Funktionen nicht auf Spaltennamen in Klauseln für parametrisierte Zeilenfilter (wie `CONVERT(nchar,EmployeeID) = HOST_NAME()`) angewendet werden. Gehen Sie stattdessen wie im folgenden Beispiel vor: `EmployeeID = CONVERT(int,HOST_NAME())`. Diese Klausel kann verwendet werden, für die **@subset_filterclause** Parameter [Sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), aber in der Regel nicht verwendet werden im Assistenten für neue Veröffentlichung (der Assistent führt die Filterklausel aus, um zu überprüfen, die schlägt fehl, da der Computername in konvertiert werden kann ein `int`). Wenn Sie mit dem Assistenten für neue Veröffentlichung arbeiten, sollten Sie vor dem Erstellen einer Momentaufnahme für die Veröffentlichung `CONVERT(nchar,EmployeeID) = HOST_NAME()` im Assistenten angeben und dann [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) verwenden, um die Klausel in `EmployeeID = CONVERT(int,HOST_NAME())` zu ändern.  
   
  **So überschreiben Sie den HOST_NAME()-Wert**  
   
@@ -123,7 +123,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Informationen zum Festlegen von Filteroptionen finden Sie unter [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>Festlegen von 'use partition groups' und 'keep partition changes'  
- Die Optionen **use partition groups** und **keep partition changes** verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Da die Option **use partition groups** auf vorausberechnete Partitionen zurückgreift, bietet sie das größere Potenzial für eine Leistungserhöhung. Diese Option wird festgelegt, um `true` standardmäßig, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](parameterized-filters-optimize-for-precomputed-partitions.md). Wenn die Anforderungen für die Verwendung vorausberechneter Partitionen von Ihren Artikeln nicht erfüllt werden die **behalten partitionsänderungen** Option aus, um auf festgelegt ist `true`.  
+ Die Optionen **use partition groups** und **keep partition changes** verbessern bei Veröffentlichungen mit gefilterten Artikeln die Synchronisierungsleistung, da in der Veröffentlichungsdatenbank zusätzliche Metadaten gespeichert werden. Da die Option **use partition groups** auf vorausberechnete Partitionen zurückgreift, bietet sie das größere Potenzial für eine Leistungserhöhung. Diese Option wird festgelegt, um `true` standardmäßig, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](parameterized-filters-optimize-for-precomputed-partitions.md). Wenn die Anforderungen für die Verwendung vorausberechneter Partitionen von Ihren Artikeln nicht erfüllt werden die **partitionsänderungen beibehalten** Option festgelegt ist, um `true`.  
   
 ### <a name="setting-partition-options"></a>Festlegen von 'partition options'  
  Der Wert für die **partition options** -Eigenschaft wird angegeben, wenn Sie einen Artikel erstellen. Ausschlaggebend für den Wert ist dabei die Art und Weise, wie die Daten in der gefilterten Tabelle für mehrere Abonnenten freigegeben werden. Die Eigenschaft kann mithilfe von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)und dem Dialogfeld **Artikeleigenschaften** auf einen von vier Werten festgelegt werden. Wird das Dialogfeld **Filter hinzufügen** oder **Filter bearbeiten** verwendet, kann aus zwei Werten ausgewählt werden. Diese beiden Dialogfelder stehen über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Die folgende Tabelle gibt einen Überblick über die verfügbaren Werte für diese Eigenschaft:  
@@ -133,11 +133,11 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die im parametrisierten Filter verwiesen wird, aktualisieren.|**Eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**|**Überlappend**|**0**|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die in parametrisierten Filtern verwiesen wird, nicht aktualisieren.|N/V<sup>1</sup>|**Überlappend, Datenänderungen außerhalb der Partition nicht zulassen**|**1**|  
 |Daten in den Partitionen überlappen sich nicht. Die Daten werden für die Abonnements freigegeben. Der Abonnent kann Spalten, auf die in einem parametrisierten Filter verwiesen wird, nicht aktualisieren.|N/V<sup>1</sup>|**Nicht überlappend, für mehrere Abonnements freigegeben**|**2**|  
-|Daten in den Partitionen überlappen sich nicht. Jeder Partition ist genau ein Abonnement zugewiesen. Der Abonnent kann Spalten in einem parametrisierten Filter verwiesen wird nicht aktualisieren. <sup>2</sup>|**Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**|**Nicht überlappend, ein Abonnement**|**3**|  
+|Daten in den Partitionen überlappen sich nicht. Jeder Partition ist genau ein Abonnement zugewiesen. Spalten, die in einem parametrisierten Filter verwiesen wird kann nicht der Abonnent aktualisiert werden. <sup>2</sup>|**Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**|**Nicht überlappend, ein Abonnement**|**3**|  
   
- <sup>1</sup> , wenn die zugrunde liegende Filteroption, um festgelegt ist **0**, oder **1**, oder **2**, **Filter hinzufügen** und **bearbeiten Filter** werden die Anzeige von Dialogfeldern **eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**.  
+ <sup>1</sup> Wenn die zugrunde liegende Filteroption auf ist **0**, oder **1**, oder **2**, **Filter hinzufügen** und **bearbeiten Filter** Dialogfelder zeigt **eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**.  
   
- <sup>2</sup> Wenn Sie diese Option angeben, es ist nur möglich ein Abonnement für jede Partition der Daten in diesem Artikel. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.  
+ <sup>2</sup> Wenn Sie diese Option angeben, gibt es nur möglich ein einzelnes Abonnement für jede Partition der Daten in diesem Artikel. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.  
   
 > [!IMPORTANT]  
 >  Der Wert für **partition options** muss sich danach richten, wie die Daten für mehrere Abonnenten freigegeben werden. Wenn Sie beispielsweise für eine Partition angeben, dass sie nicht überlappend und nur einem spezifischen Abonnenten zugewiesen sein soll, die Daten dann aber von einem anderen Abonnenten aktualisiert werden, kann dies zu einem Fehlschlagen der Synchronisierung des Merge-Agents und zu einer Nichtkonvergenz führen.  

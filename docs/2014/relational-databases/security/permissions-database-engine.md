@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f4be5133cc17aef8c24bea72c214039debffb34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331470"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
   Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. Dieses Thema enthält die folgenden Informationen:  
@@ -108,21 +107,21 @@ ms.locfileid: "36056694"
 |SELECT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen, [!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR (Common Language Runtime) sowie Spalten<br /><br /> Sichten und Spalten|  
 |VIEW CHANGE TRACKING|Tabellen<br /><br /> Schemas|  
 |UPDATE|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
-|REFERENCES|Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), und Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
+|REFERENCES|Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), und Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
 |INSERT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
 |Delete|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
 |Führen Sie|Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Synonyme<br /><br /> CLR-Typen|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
-|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
-|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten|  
-|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
-|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten|  
+|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar-und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Table-valued Function ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
   
 > [!CAUTION]  
 >  Die Standardberechtigungen, die Systemobjekten zum Zeitpunkt der Installation erteilt wurden, werden sorgfältig bezüglich möglicher Bedrohungen ausgewertet und müssen nicht im Rahmen der Härtung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation geändert werden. Alle Änderungen an den Berechtigungen für Systemobjekte können die Funktionalität einschränken oder unterbrechen und potenziell dazu führen, dass Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation einen nicht unterstützten Zustand aufweist.  
   
-##  <a name="_permissions"></a> SQLServer und SQL-Datenbankberechtigungen  
+##  <a name="_permissions"></a> SQLServer und SQL Database-Berechtigungen  
  Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
   
 |Sicherungsfähiges Basiselement|Spezifische Berechtigungen für sicherungsfähiges Basiselement|Berechtigungstypcode|Sicherungsfähiges Element, das sicherungsfähiges Basiselement enthält|Berechtigung für sicherungsfähiges Containerelement mit spezifischer Berechtigung für sicherungsfähiges Basiselement|  

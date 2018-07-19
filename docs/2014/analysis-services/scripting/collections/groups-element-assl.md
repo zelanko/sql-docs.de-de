@@ -1,5 +1,5 @@
 ---
-title: Groups-Element (ASSL) | Microsoft Docs
+title: Element (ASSL) für Gruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf89c9f0f5970bcc00d82cab42c0f759e5acb6c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79062d6ef250c6c5d90d5a4ed147a309556d03a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167541"
 ---
 # <a name="groups-element-assl"></a>Groups-Element (ASSL)
   Enthält die Auflistung der Gruppen von Elementen, die an ein Attribut gebunden sind.  
@@ -64,7 +64,7 @@ ms.locfileid: "36057707"
 |Untergeordnete Elemente|[Gruppe](../objects/group-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.GroupCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.GroupCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellen und-Bindungen &#40;SSAS – mehrdimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   

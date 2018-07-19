@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - ConnectionPoolSize
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0d534e8fd5435cd26b72a37649afed12411362d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 86d9f0b2e863e74126101c988f0883aad77b172c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166221"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Die Größe des Verbindungspools, über den der Berichtsserver mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz kommuniziert, die die Berichtsserver-Datenbank hostet. Schreibgeschützt.  
@@ -43,7 +43,7 @@ public UInt32 ConnectionPoolSize;
 ```  
   
 ## <a name="property-values"></a>Eigenschaftswerte  
- Ein schreibgeschützter **Ganzzahl** -Objekt, das einen Wert zurückgibt `768`.  
+ Ein schreibgeschütztes **Ganzzahl** -Objekt, das den Wert zurückgibt `768`.  
   
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  

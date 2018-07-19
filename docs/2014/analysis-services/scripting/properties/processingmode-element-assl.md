@@ -1,5 +1,5 @@
 ---
-title: ProcessingMode-Element (ASSL) | Microsoft Docs
+title: ProcessingMode-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273786"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode-Element (ASSL)
   Gibt an, ob die Instanz während oder nach der Verarbeitung indizieren und aggregieren soll.  
@@ -62,7 +62,7 @@ ms.locfileid: "36057268"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert der `ProcessingMode` auf die `Cube` bietet den Standardwert für den Cube und kann überschrieben werden, indem `ProcessingMode` für jede Partition.  
+ Der Wert des `ProcessingMode` auf die `Cube` ist die Standardeinstellung für den Cube und kann überschrieben werden, indem `ProcessingMode` für jede Partition.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   

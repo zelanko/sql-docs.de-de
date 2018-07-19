@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - principals [SQL Server], credentials
 - schemas [SQL Server], credentials
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9de71af86c410658ab37aa1959ab2c9962b30a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 579b9d6f9847652ab2088eeb5111372fc4377c02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198780"
 ---
 # <a name="credentials-database-engine"></a>Anmeldeinformationen (Datenbank-Engine)
   Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen (Anmeldeinformationen) enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erforderlich sind. Diese Informationen werden intern von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet. Die meisten Anmeldeinformationen enthalten einen Windows-Benutzernamen und ein Kennwort.  
@@ -39,7 +38,7 @@ ms.locfileid: "36059333"
   
  Systemanmeldeinformationen werden automatisch erstellt und mit bestimmten Endpunkten verbunden. Namen für Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  
   
- Weitere Informationen zu Anmeldeinformationen finden Sie unter der [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) -Katalogsicht angezeigt.  
+ Weitere Informationen zu Anmeldeinformationen finden Sie unter den [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) -Katalogsicht angezeigt.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Erstellen von Anmeldeinformationen](../authentication-access/create-a-credential.md) [Erstellung von Anmeldeinformationen &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  

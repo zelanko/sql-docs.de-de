@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50b8ca15207eaa89726ed2abe90bb8d862b2f266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ecc113b3ed38461a277996497f73bca7cd83a4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267236"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
-  In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind `datetime` -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert werden.  
+  In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte werden `datetime` -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert werden.  
   
 > [!NOTE]  
 >  Eine Beschreibung des Gesamtprozesses zum Entwurf der Ablaufsteuerung finden Sie unter [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -42,14 +42,14 @@ ms.locfileid: "36057868"
   
          In diesem Beispiel wird der Variablenname "ExtractStartTime" verwendet.  
   
-    2.  Erstellen Sie eine andere Variable mit dem `datetime` -Datentyp, um den Endpunkt für das Intervall zu speichern.  
+    2.  Erstellen Sie eine weitere Variable mit dem `datetime` -Datentyp, um den Endpunkt für das Intervall zu speichern.  
   
          In diesem Beispiel wird der Variablenname "ExtractEndTime" verwendet.  
   
  Wenn Sie die Endpunkte in einem Masterpaket berechnen, das mehrere untergeordnete Pakete ausführt, können Sie die Variablenkonfiguration für übergeordnete Pakete verwenden, um die Werte dieser Variablen an jedes untergeordnete Paket weiterzuleiten. Weitere Informationen finden Sie unter [Paket ausführen (Task)](../control-flow/execute-package-task.md) und [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Berechnen eines Anfangspunkts und eines Endpunkts für Änderungsdaten  
- Nachdem Sie die Paketvariablen für die Intervallendpunkte eingerichtet haben, können Sie die Ist-Werte für diese Endpunkte berechnen und diese Werte den entsprechenden Paketvariablen zuordnen. Da diese Endpunkte `datetime`-Werte sind, müssen Sie Funktionen verwenden, die `datetime`-Werte berechnen oder mit diesen funktionieren können. Sowohl die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache und Transact-SQL haben Funktionen, die mit arbeiten `datetime` Werte:  
+ Nachdem Sie die Paketvariablen für die Intervallendpunkte eingerichtet haben, können Sie die Ist-Werte für diese Endpunkte berechnen und diese Werte den entsprechenden Paketvariablen zuordnen. Da diese Endpunkte `datetime`-Werte sind, müssen Sie Funktionen verwenden, die `datetime`-Werte berechnen oder mit diesen funktionieren können. Sowohl die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache und Transact-SQL verfügen über Funktionen, die Arbeit mit `datetime` Werte:  
   
  Funktionen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache, die mit arbeiten `datetime` Werte  
  -   [DATEADD &#40;SSIS-Ausdruck&#41;](../expressions/dateadd-ssis-expression.md)  
@@ -75,9 +75,9 @@ ms.locfileid: "36057868"
   
  Nachdem Sie sich darüber im Klaren sind, ob Ihr Änderungsintervall unveränderlich oder eher zufällig ist, können Sie die Endpunkte berechnen.  
   
--   **Berechnen des Startdatums und der Startzeit**. Sie verwenden das Enddatum und die Endzeit des vorherigen Ladens als aktuelles Startdatum und aktuelle Startzeit. Wenn Sie kein festes Intervall für das inkrementelle Laden verwenden, können Sie diesen Wert berechnen, mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache. Andernfalls müssen Sie möglicherweise die Endpunkte zwischen den Ausführungen persistent speichern und einen Task "SQL ausführen" oder einen Skripttask verwenden, um den vorherigen Endpunkt zu laden.  
+-   **Berechnen des Startdatums und der Startzeit**. Sie verwenden das Enddatum und die Endzeit des vorherigen Ladens als aktuelles Startdatum und aktuelle Startzeit. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, können Sie diesen Wert berechnen, indem Sie mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache. Andernfalls müssen Sie möglicherweise die Endpunkte zwischen den Ausführungen persistent speichern und einen Task "SQL ausführen" oder einen Skripttask verwenden, um den vorherigen Endpunkt zu laden.  
   
--   **Berechnen des Enddatums und der Endzeit**. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, berechnen Sie das aktuelle Enddatum und die aktuelle Endzeit als Offset des Startdatums und der Startzeit. Berechnen, erneut, diesen Wert mithilfe der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache.  
+-   **Berechnen des Enddatums und der Endzeit**. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, berechnen Sie das aktuelle Enddatum und die aktuelle Endzeit als Offset des Startdatums und der Startzeit. In diesem Fall können Sie diesen Wert berechnen, mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache.  
   
  In der folgenden Prozedur verwendet das Änderungsintervall ein unveränderliches Intervall und setzt voraus, dass das Paket für inkrementelles Laden ohne Ausnahme täglich ausgeführt wird. Andernfalls würden Änderungsdaten für verpasste Intervalle verloren gehen. Der Startpunkt für das Intervall ist vorgestern Mitternacht, d. h. vor 24 bis 48 Stunden. Der Endpunkt für das Intervall ist gestern Mitternacht, d. h. in der vorherigen Nacht vor 0 bis 24 Stunden.  
   

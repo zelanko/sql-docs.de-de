@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192120"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche). Diese Beispiele können leicht geändert werden, um mit einer der anderen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB-Anbieter unterstützten dateibasierten Datenquellen zu arbeiten.  
@@ -84,7 +84,7 @@ ms.locfileid: "36060751"
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
-1.  Das Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in `ExcelFileExists`.  
+1.  Das Paket einen neuen Skripttask hinzu, und ändern Sie den Namen `ExcelFileExists`.  
   
 2.  Klicken Sie im **Skripttask-Editor** auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
@@ -154,7 +154,7 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
-1.  Das Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in `ExcelTableExists`.  
+1.  Das Paket einen neuen Skripttask hinzu, und ändern Sie den Namen `ExcelTableExists`.  
   
 2.  Klicken Sie im **Skripttask-Editor** auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
 2.  Öffnen Sie den **Skripttask-Editor**, klicken Sie auf der Registerkarte **Skript** auf **ReadOnlyVariables**, und geben Sie den Eigenschaftswert mit einer der folgenden Methoden ein:  
   
-    -   Datentyp `ExcelFolder`  
+    -   Typ `ExcelFolder`  
   
          -oder-  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Excel-Verbindungs-Manager](../connection-manager/excel-connection-manager.md)   

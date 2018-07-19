@@ -1,5 +1,5 @@
 ---
-title: Erstellen und konfigurieren eine PowerPivot-Dienstanwendung in der Zentraladministration | Microsoft Docs
+title: Erstellen und konfigurieren eine PowerPivot-Dienstanwendung in der Zentraladministration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f4ca893af9665d1c8862b35361f1ed23d60dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 13e41850c466a62c2e4e7ae07821e3ff96692cd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263706"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendungen in der Zentraladministration
   Eine PowerPivot-Dienstanwendung ist eine freigegebene Dienstinstanz des PowerPivot-Systemdiensts. Jede Dienstanwendung verfügt über eine eigene Anwendungsidentität, Konfigurationseinstellungen, Eigenschaften und einen internen Datenspeicher.  
@@ -67,13 +67,13 @@ ms.locfileid: "36056814"
   
 6.  Der Standardwert unter **Datenbankserver**entspricht der SQL Server-Datenbank-Engine-Instanz, die die Konfigurationsdatenbanken der Farm hostet. Sie können diesen Server verwenden oder einen anderen SQL Server auswählen.  
   
-7.  In **Datenbankname**, der Standardwert ist PowerPivotServiceApplication1_\<Guid >. Sie müssen eine eindeutige Datenbank für jede PowerPivot-Dienstanwendung erstellen. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
+7.  In **Datenbanknamen**, der Standardwert ist PowerPivotServiceApplication1_\<Guid >. Sie müssen eine eindeutige Datenbank für jede PowerPivot-Dienstanwendung erstellen. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   
 8.  Der Standardwert unter **Datenbankauthentifizierung**lautet Windows-Authentifizierung. Wenn Sie **SQL-Authentifizierung**auswählen, finden Sie im SharePoint-Administratorhandbuch bewährte Methoden zur Verwendung dieses Authentifizierungstyps in einer SharePoint-Bereitstellung.  
   
 9. Wählen Sie optional das Kontrollkästchen für **Proxy für diese PowerPivot-Dienstanwendung zur Standardproxygruppe der Farm hinzufügen.** . Dadurch wird der Standard-Dienstverbindungsgruppe die Dienstanwendungsverbindung hinzugefügt.  
   
-     Sie müssen dieses Kontrollkästchen aktivieren, wenn Sie die erste PowerPivot-Dienstanwendung erstellen. Es muss eine PowerPivot-dienstanwendung in der standardverbindungsgruppe nacheinander für PowerPivot-Management-Dashboard ordnungsgemäß funktioniert.  
+     Sie müssen dieses Kontrollkästchen aktivieren, wenn Sie die erste PowerPivot-Dienstanwendung erstellen. Es muss eine PowerPivot-dienstanwendung in der standardverbindungsgruppe in der Reihenfolge für PowerPivot-Management-Dashboard ordnungsgemäß funktioniert.  
   
      Fügen Sie der Standardverbindungsgruppe die PowerPivot-Dienstanwendung nicht hinzu, wenn bereits eine vorhanden ist. Das Hinzufügen mehrerer Einträge des gleichen Dienstanwendungstyps ist keine unterstützte Konfiguration und könnte Fehler verursachen. Wenn Sie zusätzliche Dienstanwendungen erstellen, nehmen Sie sie nicht in die Standardverbindungsgruppe auf. Fügen Sie sie stattdessen benutzerdefinierten Listen hinzu.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "36056814"
   
 3.  Klicken Sie in der Liste **Aktionen** oben rechts im Dashboard auf **Einstellungen für Dienstanwendung konfigurieren**.  
   
-4.  In **Datenbanktimeout laden**, erhöhen oder verringern Sie den Wert zum Ändern, wie lange der PowerPivot-Dienst auf eine Antwort von der Instanz von SQL Server Analysis Services (PowerPivot) wartet auf die Anforderung zum Laden von Daten weitergeleitet. Da die Übertragung sehr großer Datasets einige Zeit dauern kann, müssen Sie genügend Zeit vorsehen, damit die PowerPivot-Dienstinstanz die Excel-Arbeitsmappe abrufen und die PowerPivot-Daten zur Abfrageverarbeitung in eine Analysis Services-Instanz verschieben kann. Da PowerPivot-Daten ungewöhnlich umfangreich sein können, ist der Standardwert 30 Minuten.  
+4.  In **Datenbanktimeout laden**, erhöhen oder verringern Sie den Wert ändern, wie lange der PowerPivot-Dienst auf eine Antwort aus der SQL Server Analysis Services (PowerPivot)-Instanz wartet, eine Anforderung zum Laden von Daten weitergeleitet. Da die Übertragung sehr großer Datasets einige Zeit dauern kann, müssen Sie genügend Zeit vorsehen, damit die PowerPivot-Dienstinstanz die Excel-Arbeitsmappe abrufen und die PowerPivot-Daten zur Abfrageverarbeitung in eine Analysis Services-Instanz verschieben kann. Da PowerPivot-Daten ungewöhnlich umfangreich sein können, ist der Standardwert 30 Minuten.  
   
-5.  Erhöhen oder verringern Sie den Wert unter **Timeout für Verbindungspool**, um die Dauer in Minuten zu ändern, die eine Datenverbindung im Leerlauf geöffnet gehalten wird. Der Standardwert ist 30 Minuten. Während dieses Zeitraums wird der PowerPivot-Dienst eine Datenverbindung im Leerlauf für schreibgeschützte Anforderungen vom gleichen SharePoint-Benutzer für dieselben PowerPivot-Daten wiederverwendet. Wenn im angegebenen Zeitraum keine weiteren Anforderungen für diese Daten empfangen werden, wird die Verbindung aus dem Pool entfernt. Gültige Werte reichen von 1 bis 3600 Sekunden. Weitere Informationen zu Verbindungspools finden Sie unter [Konfigurationseinstellungsverweis &#40;PowerPivot für SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  Erhöhen oder verringern Sie den Wert unter **Timeout für Verbindungspool**, um die Dauer in Minuten zu ändern, die eine Datenverbindung im Leerlauf geöffnet gehalten wird. Der Standardwert ist 30 Minuten. Während dieses Zeitraums wird der PowerPivot-Dienst über eine Datenverbindung im Leerlauf für schreibgeschützte Anforderungen vom gleichen SharePoint-Benutzer für dieselben PowerPivot-Daten wiederverwenden. Wenn im angegebenen Zeitraum keine weiteren Anforderungen für diese Daten empfangen werden, wird die Verbindung aus dem Pool entfernt. Gültige Werte reichen von 1 bis 3600 Sekunden. Weitere Informationen zu Verbindungspools finden Sie unter [Konfigurationseinstellungsverweis &#40;PowerPivot für SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
-6.  In **Maximalgröße für den Benutzerverbindungspool**, erhöhen oder verringern Sie den Wert aus, um die maximale Anzahl von Verbindungen im Leerlauf zu ändern, wird der PowerPivot-Dienst in einzelnen Verbindungspools für jeden SharePoint-Benutzer, PowerPivot-Datasets erstellen, und versionskombinationen.  
+6.  In **Maximalgröße für den Benutzerverbindungspool**, erhöhen oder verringern Sie den Wert aus, um die maximale Anzahl von Verbindungen im Leerlauf zu ändern, wird der PowerPivot-Dienst in einzelnen Verbindungspools für jeden SharePoint-Benutzer, PowerPivot-Datasets, erstellen, und versionskombinationen.  
   
      Der Standardwert ist 1.000 Verbindungen im Leerlauf. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert das Pooling von Benutzerverbindungen) oder 1 bis 10.000.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "36056814"
   
      Beachten Sie, dass Änderungen am Grenzwert der Verbindungspoolgröße (auch die Festlegung auf 0) nicht dazu führen, dass Verbindungen getrennt werden. Verbindungspools sind vorhanden, um Wartezeiten beim Herstellen einer Datenverbindung zu reduzieren. Der PowerPivot-Dienst wird nie eine Verbindung aufgrund von Verbindungspooleinstellungen ablehnen.  
   
-7.  In **maximale Administrative Größe des Serververbindungspools**, erhöhen oder verringern Sie den Wert zum Ändern der Anzahl der geöffneten Verbindungen in einem Verbindungspool für eine PowerPivot-dienstverbindung mit Analysis Services erstellt. Jede PowerPivot-Dienstinstanz öffnet eine separate Administratorverbindung zur Analysis Services-Instanz auf demselben Computer. Der PowerPivot-Dienst erstellt einen separaten Pool, damit Administratorverbindungen wiederverwendet werden können, um Verbindungen im Leerlauf zu suchen und den Serverzustand zu überwachen. Der Standardwert ist 200 Verbindungen. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert die Verwendung des Verwaltungsverbindungspools) oder 1 bis 10000. Wenn Sie 0 auswählen, wird jede Verbindung neu erstellt.  
+7.  In **maximale Administrative Größe des Serververbindungspools**, erhöhen oder verringern Sie den Wert zum Ändern der Anzahl der geöffneten Verbindungen in einem Verbindungspool, der für eine PowerPivot-dienstverbindung mit Analysis Services erstellt wurde. Jede PowerPivot-Dienstinstanz öffnet eine separate Administratorverbindung zur Analysis Services-Instanz auf demselben Computer. Der PowerPivot-Dienst erstellt einen separaten Pool, damit Administratorverbindungen wiederverwendet werden können, um Verbindungen im Leerlauf zu suchen und den Serverzustand zu überwachen. Der Standardwert ist 200 Verbindungen. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert die Verwendung des Verwaltungsverbindungspools) oder 1 bis 10000. Wenn Sie 0 auswählen, wird jede Verbindung neu erstellt.  
   
-8.  In **Zuordnungsmethode**, können Sie angeben, das Lastenausgleichsschema, die der PowerPivot-Systemdienst verwendet, um eine bestimmte PowerPivot-dienstanwendung, für den Lastenausgleich einer ersten Anforderung auszuwählen. Die Standardeinstellung ist **Zustandsbasiert**, mit der Anforderungen auf Grundlage des Serverzustands zugeordnet werden, wie anhand des verfügbaren Arbeitsspeichers und der Prozessorauslastung ermittelt. Alternativ können Sie **Roundrobin** auswählen, um Anforderungen den Servern in der gleichen wiederholten Reihenfolge zuzuordnen, unabhängig davon, ob ein Server ausgelastet oder im Leerlauf ist.  
+8.  In **Zuordnungsmethode**, können Sie angeben, das Lastenausgleichsschema, die PowerPivot-Systemdienst verwendet, um eine bestimmte PowerPivot-dienstanwendung, für den Lastenausgleich einer ersten Anforderung auszuwählen. Die Standardeinstellung ist **Zustandsbasiert**, mit der Anforderungen auf Grundlage des Serverzustands zugeordnet werden, wie anhand des verfügbaren Arbeitsspeichers und der Prozessorauslastung ermittelt. Alternativ können Sie **Roundrobin** auswählen, um Anforderungen den Servern in der gleichen wiederholten Reihenfolge zuzuordnen, unabhängig davon, ob ein Server ausgelastet oder im Leerlauf ist.  
   
 9. Unter Datenaktualisierung in **Geschäftszeiten**können Sie den Zeitraum angeben, der einen Geschäftstag definiert. Zeitpläne zur Datenaktualisierung können am Ende eines Geschäftstags ausgeführt werden, um die während der regulären Geschäftszeiten generierten Transaktionsdaten zu sammeln.  
   
-10. In **PowerPivot-datenaktualisierungskonto**, Sie können angeben, dass eine vordefinierte Secure Store Service-Zielanwendung, die ein vordefiniertes Konto zum Ausführen von PowerPivot-datenaktualisierungsaufträgen speichert. Stellen Sie sicher, dass Sie den Namen der Zielanwendung und nicht die ID angeben. Die Zielanwendung für die unbeaufsichtigte Datenaktualisierung wird automatisch erstellt, wenn Sie die Option "Neuer Server" im SQL Server-Setup verwendet haben, um PowerPivot für SharePoint zu installieren. Andernfalls müssen Sie die Zielanwendung manuell erstellen. Informationen zum Konfigurieren des Kontos finden Sie unter [Konfigurieren der PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+10. In **unbeaufsichtigte Datenaktualisierungskonto PowerPivot**, Sie können angeben, dass eine vordefinierte Secure Store Service-Zielanwendung, die ein vordefiniertes Konto zum Ausführen von PowerPivot-datenaktualisierungsaufträgen speichert. Stellen Sie sicher, dass Sie den Namen der Zielanwendung und nicht die ID angeben. Die Zielanwendung für die unbeaufsichtigte Datenaktualisierung wird automatisch erstellt, wenn Sie die Option "Neuer Server" im SQL Server-Setup verwendet haben, um PowerPivot für SharePoint zu installieren. Andernfalls müssen Sie die Zielanwendung manuell erstellen. Anweisungen zum Konfigurieren des Kontos, finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 11. Unter **Benutzer dürfen benutzerdefinierte Windows-Anmeldeinformationen eingeben**können Sie das Kontrollkästchen aktivieren oder deaktivieren, um anzugeben, ob Zeitplanbesitzer beliebige Windows-Anmeldeinformationen für die Ausführung eines Datenaktualisierungszeitplans eingeben können. Wenn Sie dieses Kontrollkästchen aktivieren, erstellt und verwaltet die PowerPivot-Dienstanwendung eine Zielanwendung für jeden Satz gespeicherter Anmeldeinformationen. Weitere Informationen finden Sie unter [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36056814"
   
 4.  Wählen Sie unter **Folgende Zuordnungsgruppe bearbeiten**entweder **default** oder **[custom]** aus.  
   
-5.  Aktivieren Sie für **[custom]** das Kontrollkästchen neben jeder Dienstanwendungsverbindung, die Sie verwenden möchten. Wenn Sie mehrere PowerPivot-dienstanwendungen verfügen (angegeben durch den Typ `PowerPivot Service Application Proxy`), achten Sie darauf, dass Sie nur eine davon auszuwählen.  
+5.  Aktivieren Sie für **[custom]** das Kontrollkästchen neben jeder Dienstanwendungsverbindung, die Sie verwenden möchten. Wenn Sie mehrere PowerPivot-dienstanwendungen verfügen (angegeben durch den Typ `PowerPivot Service Application Proxy`), achten Sie darauf, nur eine auszuwählen.  
   
 6.  Klicken Sie auf **OK**.  
   

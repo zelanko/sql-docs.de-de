@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs
+title: Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176987"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
   Wenn Sie ein `data source`-Objekt in einem Analysis Services-Modell erstellen, müssen Sie unter den verschiedenen Einstellungen eine Option für den Identitätswechsel konfigurieren. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
@@ -53,7 +53,7 @@ ms.locfileid: "36059008"
  Alle Optionen sind im Dialogfeld verfügbar, aber nicht alle Optionen sind für jedes Szenario geeignet. Bestimmen Sie anhand folgender Informationen die beste Option für das Szenario.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Wählen Sie diese Option aus, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Anmeldeinformationen des Windows-Benutzerkontos in folgendem Format angegeben:  *\<Domänenname >***\\***\<Benutzer Kontoname >*.  
+ Wählen Sie diese Option, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Sicherheitsanmeldeinformationen eines Windows-Benutzerkontos in folgendem Format angegeben:  *\<Domänenname >***\\***\<Benutzer Kontoname >*.  
   
  Wählen Sie diese Option aus, um eine dedizierte Windows-Benutzeridentität mit den niedrigsten Privilegien zu verwenden, die Sie speziell für Datenzugriffszwecke erstellt haben. Wenn Sie z. B. routinemäßig ein allgemeines Konto zum Abrufen von Daten für Berichte erstellen, können Sie dieses Konto hier angeben.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36059008"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Datenquelle (SSAS: mehrdimensional)](create-a-data-source-ssas-multidimensional.md)   
- [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
+ [Festlegen der Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
  [DirectQuery-Bereitstellungsszenarien &#40;SSAS – tabellarisch&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

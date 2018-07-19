@@ -1,5 +1,5 @@
 ---
-title: AttributeTranslation-Datentyp (ASSL) | Microsoft Docs
+title: AttributeTranslation-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267656"
 ---
 # <a name="attributetranslation-data-type-assl"></a>AttributeTranslation-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine zugeordnete Übersetzung darstellt, der eine [Attribut](../objects/attribute-element-assl.md) Element  
@@ -62,7 +62,7 @@ ms.locfileid: "36056794"
 |Abgeleitete Elemente|Finden Sie unter [Übersetzung](../objects/translation-element-assl.md) ([Übersetzungen](../collections/translations-element-assl.md) Auflistung von [DimensionAttribute](dimensionattribute-data-type-assl.md) oder [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AttributeTranslation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

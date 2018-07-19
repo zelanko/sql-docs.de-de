@@ -1,5 +1,5 @@
 ---
-title: Richtlinien für die Verwendung von Indizes für Speicheroptimierte Tabellen | Microsoft Docs
+title: Richtlinien für die Verwendung von Indizes für Speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e047c19deb12d67b23a4627410b998e8c2465107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263386"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
   Indizes werden für den effizienten Datenzugriff in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabellen verwendet. Die Auswahl der richtigen Indizes kann die Abfrageleistung deutlich verbessern. Stellen Sie sich beispielsweise die folgende Abfrage vor:  
@@ -32,7 +32,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Wenn kein Index für Spalte c1 enthalten ist, muss [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die gesamte Tabelle t überprüfen und dann nach den Zeilen filtern, die die Bedingung „c1=1“ erfüllen. Wenn jedoch t über einen Index für die Spalte c1 verfügt, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] direkt auf Wert 1 suchen und die gewünschten Zeilen abrufen.  
   
- Bei der Suche nach Datensätzen, die einen bestimmten Wert oder Wertebereich in einer oder mehreren Tabellenspalten aufweisen, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für diese Spalten einen Index nutzen, um die entsprechenden Datensätze schnell zu finden. Sowohl datenträgerbasierte als auch speicheroptimierte Tabellen profitieren von Indizes. Es gibt jedoch bestimmte Unterschiede zwischen den Indexstrukturen, die bei der Verwendung von speicheroptimierten Tabellen berücksichtigt werden müssen. (Indizes für speicheroptimierte Tabellen werden als speicheroptimierte Indizes bezeichnet.) Einige der Hauptunterschiede sind:  
+ Bei der Suche nach Datensätzen, die einen bestimmten Wert oder Wertebereich in einer oder mehreren Tabellenspalten aufweisen, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für diese Spalten einen Index nutzen, um die entsprechenden Datensätze schnell zu finden. Sowohl datenträgerbasierte als auch speicheroptimierte Tabellen profitieren von Indizes. Es gibt jedoch bestimmte Unterschiede zwischen den Indexstrukturen, die bei der Verwendung speicheroptimierter Tabellen berücksichtigt werden müssen. (Indizes für speicheroptimierte Tabellen werden als speicheroptimierte Indizes bezeichnet.) Einige der Hauptunterschiede sind:  
   
 -   Speicheroptimierte Indizes müssen mit erstellt [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Datenträgerbasierte Indizes können mit `CREATE TABLE` und `CREATE INDEX` erstellt werden.  
   
@@ -54,7 +54,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Jeder Index belegt Arbeitsspeicher. Hashindizes belegen einen festen Speicherplatz, dessen Größe eine Funktion der Bucketanzahl ist. Bei nicht gruppierten Indizes basiert die Arbeitsspeichernutzung auf der Zeilenanzahl und Größe der Indexschlüsselspalten. Je nach Arbeitsauslastung ist dies mit etwas zusätzlichem Aufwand verbunden. Arbeitsspeicher für speicheroptimierte Indizes erfolgt zusätzlich und getrennt von dem Arbeitsspeicher, der verwendet wird, um Zeilen in den speicheroptimierten Tabellen zu speichern.  
   
- Doppelte Schlüsselwerte sind immer dem gleichen Bucket im Hashindex zugeordnet. Wenn der Hashindex viele doppelte Schlüsselwerte enthält, können die entstehenden langen Hashzeichenketten die Leistung beeinträchtigen. Hashkonflikte, die in jedem Hashindex auftreten, reduzieren die Leistung in diesem Szenario noch weiter. Aus diesem Grund ist die Anzahl der eindeutigen Indexschlüssel mindestens 100 Mal kleiner als der Zeilenanzahl liegt, Sie können zu reduzieren das Risiko von hashkonflikten die Bucketanzahl deutlich erhöhen (mindestens das Achtfache der Anzahl der eindeutigen Indexschlüssel; Siehe [bestimmen die Korrekten Bucketanzahl für Hashindizes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) für Weitere Informationen) oder Sie können hashkonflikte ganz mithilfe eines nicht gruppierten Indexes zunichte gemacht werden.  
+ Doppelte Schlüsselwerte sind immer dem gleichen Bucket im Hashindex zugeordnet. Wenn der Hashindex viele doppelte Schlüsselwerte enthält, können die entstehenden langen Hashzeichenketten die Leistung beeinträchtigen. Hashkonflikte, die in jedem Hashindex auftreten, reduzieren die Leistung in diesem Szenario noch weiter. Aus diesem Grund ist die Anzahl der eindeutigen Indexschlüssel mindestens 100 Mal kleiner als der Zeilenanzahl liegt, können Sie verringern das Risiko von hashkonflikten machen die Bucketanzahl deutlich erhöhen (mindestens das Achtfache der Anzahl der eindeutigen Indexschlüssel; Siehe [bestimmen die Korrekten Bucketanzahl für Hashindizes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) Informationen) oder Sie können hashkonflikte vollständig mithilfe eines nicht gruppierten Indexes ausschließen.  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>Bestimmen der richtigen Indizes für speicheroptimierte Tabellen  
  Jede speicheroptimierte Tabelle muss mindestens einen Index haben. Beachten Sie, dass jede PRIMARY KEY-Einschränkung implizit einen Index erstellt. Wenn eine Tabelle über einen Primärschlüssel verfügt, hat sie also einen Index. Ein Primärschlüssel ist eine Voraussetzung für dauerhafte speicheroptimierte Tabellen.  
@@ -81,7 +81,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  In dieser Tabelle bedeutet "Ja", dass der Index die Anforderung adäquat bedienen kann, und "Nein" bedeutet, dass der Index nicht erfolgreich zum Erfüllen der Anforderung verwendet werden kann.  
   
- <sup>1</sup> für einen nicht gruppierten speicheroptimierten Index ist der vollständige Schlüssel muss nicht um eine Indexsuche auszuführen. Obwohl bei Angabe der die Spaltenreihenfolge des Indexschlüssels ein Scan auftritt, wenn ein Wert für eine Spalte nach einer fehlenden Spalte kommt.  
+ <sup>1</sup> für einen nicht gruppierten speicheroptimierten Index ist der vollständige Schlüssel ist nicht erforderlich, um eine Indexsuche auszuführen. Obwohl bei Angabe der die Spaltenreihenfolge des Indexschlüssels ein Scan auftritt, wenn ein Wert für eine Spalte nach einer fehlenden Spalte kommt.  
   
 ## <a name="index-count"></a>Indexanzahl  
  Eine speicheroptimierte Tabelle kann über bis zu 8 Indizes verfügen, darunter den mit dem Primärschlüssel erstellten Index.  

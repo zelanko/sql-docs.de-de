@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld ' freigegebene Datenquelle, Anmeldeinformationen | Microsoft Docs
+title: Freigegebene Eigenschaften im Dialogfeld Datenquelle, Anmeldeinformationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4956317c08b1f48e6504122e30392426e3dbcfcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e70c54de0c3d43d68753780b1b4cde5084ad64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192590"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Eigenschaften der freigegebenen Datenquelle (Dialogfeld), Anmeldeinformationen
   Wählen Sie im Dialogfeld **Eigenschaften der freigegebenen Datenquelle** die Option **Anmeldeinformationen** aus, um die Anmeldeinformationen für eine freigegebene Datenquelle im Bericht anzuzeigen und zu ändern. Die von Ihnen bereitgestellten Anmeldeinformationen werden für den Zugriff auf die Datenquelle und zum Zwischenspeichern einer Kopie der Daten für die Berichtsvorschau verwendet. Weitere Informationen dazu, wie Vorschaudaten zwischengespeichert werden, finden Sie unter [Ausführen einer Vorschau für Berichte](reports/previewing-reports.md). Weitere Anmeldeinformationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="options"></a>Tastatur  
- **Verwenden Sie die Windows-Authentifizierung (integrierte Sicherheit)**  
+ **Verwenden Sie Windows-Authentifizierung (integrierte Sicherheit)**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden.  
   
- **Dieser Benutzername und bestimmtes Kennwort verwenden**  
+ **Verwenden Sie diesen Benutzernamen und Kennwort**  
  Wählen Sie diese Option aus, um einen bestimmten Benutzernamen und ein bestimmtes Kennwort bereitzustellen. Für freigegebene Datenquellen gilt Folgendes: Wenn Sie das Berichtsserverprojekt auf dem Zielserver veröffentlichen, werden der Benutzername und das Kennwort als gespeicherte Anmeldeinformationen für die Datenbank gesichert. Wenn Sie den Benutzernamen und das Kennwort als Windows-Anmeldeinformationen verwenden möchten, können Sie die Eigenschaften für die veröffentlichte freigegebene Datenquelle auf dem Zielserver bearbeiten. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
  **Benutzername**  
@@ -39,7 +39,7 @@ ms.locfileid: "36059957"
  **Kennwort**  
  Geben Sie ein Kennwort ein, das beim Anmelden an der Datenquelle verwendet werden soll.  
   
- **Anmeldeinformationen anfordern**  
+ **Eingabeaufforderung für Anmeldeinformationen**  
  Wählen Sie diese Option aus, um beim Ausführen des Berichts Anmeldeinformationen anzufordern.  
   
  **Eingabeaufforderungs-Zeichenfolge eingeben**  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322220"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lektion 3: Konfigurieren der Verteilung
   In dieser Lektion konfigurieren Sie die Verteilung auf dem Verleger und legen die erforderlichen Berechtigungen für die Verteilungs- und Veröffentlichungsdatenbanken fest. Wenn der Verteiler bereits konfiguriert wurde, müssen die Veröffentlichung und die Verteilung erst deaktiviert werden, bevor Sie mit dieser Lektion beginnen. Führen Sie diese Lektion nicht aus, wenn Sie eine vorhandene Replikationstopologie beibehalten müssen.  
@@ -39,7 +39,7 @@ ms.locfileid: "36057833"
   
      Der Verteilungskonfigurations-Assistent wird gestartet.  
   
-3.  Auf der **Verteiler** Seite **"***\<ServerName >***" fungiert als sein eigener Verteiler; SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**, und klicken Sie dann auf **Weiter**.  
+3.  Auf der **Verteiler** Seite **"***\<ServerName >***' als seinen eigenen Verteiler verwenden; fungiert SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**, und klicken Sie dann auf **Weiter**.  
   
 4.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht ausgeführt wird, wählen Sie auf der Seite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent-Start** die Option **Ja**, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum automatischen Starten konfigurieren. Klicken Sie auf **Weiter**.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36057833"
   
 3.  Wählen Sie auf der Seite **Benutzerzuordnung** in der Liste **Benutzer, die dieser Anmeldung zugeordnet sind** sowohl die **Verteilungs** - als auch die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aus.  
   
-     In der **Mitgliedschaft in Datenbankrolle** Liste Wählen Sie die `db_owner` Rolle für die Anmeldung für beide Datenbanken.  
+     In der **Mitgliedschaft in Datenbankrolle** Liste Wählen Sie die `db_owner` Rolle für die Anmeldung bei beiden Datenbanken.  
   
 4.  Klicken Sie auf **OK** , um die Anmeldung zu erstellen.  
   
-5.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_logreader zu erstellen. Diese Anmeldung muss auch für Benutzer, die Elemente zugeordnet werden die `db_owner` festen Datenbankrolle "" in der **Verteilung** und **AdventureWorks** Datenbanken.  
+5.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_logreader zu erstellen. Diese Anmeldung muss auch für Benutzer, die Elemente zugeordnet werden die `db_owner` -Datenbankrolle in der **Verteilung** und **AdventureWorks** Datenbanken.  
   
-6.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_distribution zu erstellen. Diese Anmeldung muss ein Benutzer, der ein Mitglied ist zugeordnet werden die `db_owner` festen Datenbankrolle "" in der **Verteilung** Datenbank.  
+6.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_distribution zu erstellen. Diese Anmeldung muss zugeordnet werden, zu einem Benutzer, die ein Mitglied der `db_owner` -Datenbankrolle in der **Verteilung** Datenbank.  
   
 7.  Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für das lokale Konto repl_merge zu erstellen. Diese Anmeldung muss Benutzerzuordnungen in den Datenbanken **distribution** und **AdventureWorks** haben.  
   

@@ -1,5 +1,5 @@
 ---
-title: CalculationType-Element (ASSL) | Microsoft Docs
+title: CalculationType-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 434d0151009119a5e05d49180c6a9d1eb9519d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24e8f95af2ab7eb8be754eb2d1c7de96fee91ea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275936"
 ---
 # <a name="calculationtype-element-assl"></a>CalculationType-Element (ASSL)
-  Beschreibt den Typ der Berechnung, die in der zugeordneten definiert [CalculationProperty](../objects/calculationproperty-element-assl.md) Element.  
+  Beschreibt den Typ der Berechnung, die definiert, in der zugeordneten [CalculationProperty](../objects/calculationproperty-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36057280"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
+|Übergeordnete Elemente|[Calculationproperty-Objekt](../objects/calculationproperty-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -66,11 +66,11 @@ ms.locfileid: "36057280"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Datenmember*|Die Berechnungseigenschaft gilt für eine berechnete Elementdefinition.|  
-|*Festlegen*|Die Berechnungseigenschaft gilt für eine benannte Satzdefinition.|  
+|*Member*|Die Berechnungseigenschaft gilt für eine berechnete Elementdefinition.|  
+|*Legen Sie*|Die Berechnungseigenschaft gilt für eine benannte Satzdefinition.|  
 |*Zellen*|Die Berechnungseigenschaft gilt für eine berechnete Zelldefinition.|  
   
- Die Enumeration, die den zulässigen Werten für die entsprechende `CalculationType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationType>.  
+ Die Enumeration, der den zulässigen Werten für `CalculationType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationType>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

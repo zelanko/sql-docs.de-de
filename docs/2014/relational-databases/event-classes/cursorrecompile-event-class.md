@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2b0cbd43a0ceb21f7e7ac518450cba5c75e654d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d59c35129a5b032c29b549efbdcdeb95215dcfab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190450"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile-Ereignisklasse
   Die **CursorRecompile** -Ereignisklasse beschreibt Cursorneukompilierungs-Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Cursorneukompilierungs-Ereignisse treten auf, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Transact-SQL-Cursor aufgrund einer Schemaänderung erneut kompiliert.  

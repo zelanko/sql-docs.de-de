@@ -1,5 +1,5 @@
 ---
-title: Caption-Element (ASSL) | Microsoft Docs
+title: Caption-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a773a4a601ecd4a6a7a98ccc7273fed0d4e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167701"
 ---
 # <a name="caption-element-assl"></a>Caption-Element (ASSL)
   Enthält die Beschriftung für das zugeordnete übergeordnete Element.  
@@ -62,7 +62,7 @@ ms.locfileid: "36058171"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `Caption` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.Action> und <xref:Microsoft.AnalysisServices.Translation>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Caption` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.Action> und <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

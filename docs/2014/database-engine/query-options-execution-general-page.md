@@ -1,5 +1,5 @@
 ---
-title: Abfrageoptionen, Ausführung (Seite Allgemein) | Microsoft Docs
+title: Abfrageoptionen Ausführung (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 63ce901d2b1e0bd91cdfedd54880c386abcfbe68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269806"
 ---
 # <a name="query-options-execution-general-page"></a>Abfrageausführung (Seite 'Allgemein')
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angeben. Um auf dieses Dialogfeld zuzugreifen, klicken Sie mit der rechten Maustaste auf den Hauptteil des Abfrage-Editor-Fensters, und klicken Sie anschließend auf **Abfrageoptionen**.  
@@ -50,7 +50,7 @@ ms.locfileid: "36057252"
   
 -   Da der Abfrage-Editor nicht auf Anforderungen des Betriebssystems reagieren kann, müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

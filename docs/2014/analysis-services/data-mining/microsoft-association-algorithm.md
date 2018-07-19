@@ -1,5 +1,5 @@
 ---
-title: Microsoft Association-Algorithmus | Microsoft Docs
+title: Microsoft Association-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165671"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellter Association-Algorithmus, der für Recommendation Engines von Nutzen ist. Eine Recommendation Engine empfiehlt Kunden Produkte auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument. Ein Beispiel für eine Warenkorbanalyse, finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Mining-Lernprogramm für fortgeschrittene Data&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) in Data Mining-Lernprogramm.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellter Association-Algorithmus, der für Recommendation Engines von Nutzen ist. Eine Recommendation Engine empfiehlt Kunden Produkte auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument. Ein Beispiel für eine Warenkorbanalyse, finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining Tutorial für fortgeschrittene&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) im Data Mining-Lernprogramm.  
   
  Association-Modelle basieren auf Datasets, die Bezeichner enthalten, die sich sowohl auf einzelne Fälle als auch auf die Elemente beziehen, die in dem Fall enthalten sind. Eine Gruppe von Elementen in einem Fall wird als *Itemset*bezeichnet. Ein Association-Modell besteht aus einer Reihe von Itemsets und Regeln, die beschreiben, wie diese Elemente in den Fällen gruppiert sind. Mit den Regeln, die der Algorithmus identifiziert, lassen sich wahrscheinliche Kaufentscheidungen von Kunden vorhersagen. Grundlage für diese Prognose sind die Artikel, die sich bereits im Einkaufswagen des Kunden befinden. Die folgende Abbildung zeigt eine Reihe von Regeln in einem Itemset.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36059032"
  Allgemeine Informationen zur Erstellung von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md).  
   
 ## <a name="performance"></a>Leistung  
- Der Prozess, Itemsets zu erstellen und Korrelationen zu zählen, kann zeitaufwendig sein. Obwohl die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus Optimierungstechniken nutzt, um Platz zu sparen und die Verarbeitung zu beschleunigen, sollten Sie wissen, dass unter Bedingungen wie den folgenden Leistungsprobleme auftreten können:  
+ Der Prozess, Itemsets zu erstellen und Korrelationen zu zählen, kann zeitaufwendig sein. Obwohl die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus Optimierungstechniken nutzt, Speicherplatz freizugeben und Verarbeitung zu beschleunigen, Sie sollten wissen, dass unter Bedingungen wie den folgenden Leistungsprobleme auftreten können:  
   
 -   Das Dataset ist groß und umfasst viele einzelne Elemente.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36059032"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Miningmodellinhalt für Zuordnungsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Technische Referenz für die Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
  [Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)  
   

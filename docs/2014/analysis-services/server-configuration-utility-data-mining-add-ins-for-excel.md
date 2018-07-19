@@ -1,5 +1,5 @@
 ---
-title: Serverkonfigurations-Hilfsprogramm (Data Mining-Add-ins für Excel) | Microsoft Docs
+title: Serverkonfigurations-Hilfsprogramm (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178927"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Serverkonfigurations-Hilfsprogramm (Data Mining-Add-Ins für Excel)
   Beim Installieren der Data Mining-Add-Ins für Excel wird auch ein Serverkonfigurations-Hilfsprogramm installiert. Dieses wird beim erstmaligen Öffnen der Add-Ins ausgeführt. In diesem Thema wird beschrieben, wie Sie mit dem Hilfsprogramm eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen und eine Datenbank für das Verwenden von Data Mining-Modellen einrichten.  
   
 
   
-##  <a name="bkmk_step1"></a> Schritt 1: Herstellen der Verbindung mit Analysis Services  
+##  <a name="bkmk_step1"></a> Schritt 1: Verbinden Sie mit Analysis Services  
  Wählen Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server aus, der die Data Mining-Algorithmen bereitstellt und auf dem die Data Mining-Modelle gespeichert werden.  
   
  Beim Erstellen einer Verbindung zum Ermöglichen des Data Mining sollten Sie einen Server auswählen, auf dem Sie mit Data Mining-Modellen experimentieren können. Es empfiehlt sich, dass Sie eine neue Datenbank auf dem Server erstellen und die neue Datenbank für das Data Mining reservieren. Sie können sich auch an Ihren Administrator wenden, damit dieser einen Data Mining-Server für Sie vorbereitet. Auf diese Weise können Sie Modelle erstellen, ohne dass die Leistung anderer Dienste beeinträchtigt wird.  
@@ -79,12 +79,12 @@ ms.locfileid: "36058782"
  Wählen Sie diese Option aus, um den aufgeführten Benutzern administrativen Zugriff auf die Datenbank zu gewähren.  
   
 > [!NOTE]  
->  Diese Berechtigungen gelten nur für die Datenbank aufgelistet, die der **Datenbankname** Feld.  
+>  Diese Berechtigungen gelten nur für die Datenbank aufgeführt, die der **Datenbanknamen** Feld.  
   
  **Datenbankname**  
  Zeigt den Namen der ausgewählten Datenbank an.  
   
- **Geben Sie Benutzer oder Gruppen hinzufügen**  
+ **Geben Sie Benutzern oder Gruppen hinzufügen**  
  Wählen Sie die Anmeldenamen aus, die über Zugriff auf die für Data Mining verwendete Datenbank verfügen sollen.  
   
  **Hinzufügen**  

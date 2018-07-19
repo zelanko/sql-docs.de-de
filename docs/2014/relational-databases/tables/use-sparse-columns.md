@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204970"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
   Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden. Spalten mit geringer Dichte und Spaltensätze werden mit der [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) -Anweisung oder der [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) -Anweisung definiert.  
@@ -124,7 +124,7 @@ ms.locfileid: "36058672"
 ## <a name="restrictions-for-using-sparse-columns"></a>Einschränkungen für die Verwendung von Spalten mit geringer Dichte  
  Spalten mit geringer Dichte können jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp annehmen und verhalten sich mit den folgenden Einschränkungen wie andere Spalten:  
   
--   Eine Sparsespalte muss auf NULL festlegbar sein und darf nicht über die ROWGUIDCOL-Eigenschaft oder die IDENTITY-Eigenschaft verfügen. Eine Spalte mit geringer Dichte nicht mit der folgenden Datentypen: `text`, `ntext`, `image`, `timestamp`, benutzerdefinierten Datentyp `geometry`, oder `geography`; über das FILESTREAM-Attribut verfügen.  
+-   Eine Sparsespalte muss auf NULL festlegbar sein und darf nicht über die ROWGUIDCOL-Eigenschaft oder die IDENTITY-Eigenschaft verfügen. Eine sparsespalte darf nicht sein, der die folgenden Datentypen: `text`, `ntext`, `image`, `timestamp`, den benutzerdefinierten Datentyp `geometry`, oder `geography`; über das FILESTREAM-Attribut verfügen.  
   
 -   Eine Sparsespalte kann keinen Standardwert haben.  
   
