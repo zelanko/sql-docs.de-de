@@ -1,5 +1,5 @@
 ---
-title: MSsubscriber_info (Transact-SQL) | Microsoft Docs
+title: MSsubscriber_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSsubscriber_info system table
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc98999a7f284124b022df56342169ec08008d93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8057a5bb1f9e6d6c59402005ea6e19e3f0e89d1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005547"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101358"
 ---
 # <a name="mssubscriberinfo-transact-sql"></a>MSsubscriber_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSsubscriber_info** Tabelle enthält eine Zeile für jedes Verleger/Abonnent-Paar, die Abonnements aus dem lokalen Verteiler wird per Push übertragen wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSsubscriber_info** -Tabelle enthält eine Zeile für jedes Verleger/Abonnent-Paar, die Abonnements aus dem lokalen Verteiler abgelegt wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
- **Hinweis** diese Systemtabelle wurde als veraltet markiert und ist weiterhin für die Unterstützung von früheren Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Beachten Sie** diese Systemtabelle wurde als veraltet markiert und ist weiterhin für die Unterstützung früherer Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="definition"></a>Definition  
   

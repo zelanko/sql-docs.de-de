@@ -1,5 +1,5 @@
 ---
-title: Replikationstabellen (Transact-SQL) | Microsoft Docs
+title: Replikationstabellen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012827"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103438"
 ---
 # <a name="replication-tables-transact-sql"></a>Replikationstabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Eine Replikationstopologie wird von Replikationssystemtabellen unterstützt. Wird eine Benutzerdatenbank als Verleger oder Abonnent konfiguriert, fügt die Replikation der Datenbank Systemtabellen hinzu. Diese Tabellen werden beim Entfernen einer Benutzerdatenbank aus einer Replikationstopologie ebenfalls entfernt. Allgemeine Regeln zur Verwendung von Systemtabellen finden Sie unter [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+  Eine Replikationstopologie wird von Replikationssystemtabellen unterstützt. Wird eine Benutzerdatenbank als Verleger oder Abonnent konfiguriert, fügt die Replikation der Datenbank Systemtabellen hinzu. Diese Tabellen werden beim Entfernen einer Benutzerdatenbank aus einer Replikationstopologie ebenfalls entfernt. Allgemeine Regeln zur Verwendung von Systemtabellen finden Sie [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Replikationstabellen  
  Es folgt eine Liste der bei der Replikation verwendeten Systemtabellen, nach Datenbank gruppiert.  
@@ -111,7 +111,7 @@ ms.locfileid: "33012827"
 |[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)|[syspublications](../../relational-databases/system-tables/syspublications-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)|[sysschemaarticles](../../relational-databases/system-tables/sysschemaarticles-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md)|[syssubscriptions](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)|  
-|[MSpeer_lsns](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[MSpeer_lsns](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|[' systranschemas '](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
 ### <a name="replication-tables-in-the-subscription-database"></a>Replikationstabellen in der Abonnementdatenbank  
   
@@ -131,7 +131,7 @@ ms.locfileid: "33012827"
 |[MSmerge_metadataaction_request](../../relational-databases/system-tables/msmerge-metadataaction-request-transact-sql.md)|[sysmergeschemachange](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)|  
 |[MSmerge_partition_groups](../../relational-databases/system-tables/msmerge-partition-groups-transact-sql.md)|[sysmergesubscriptions](../../relational-databases/system-tables/sysmergesubscriptions-transact-sql.md)|  
 |[MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubsetfilters](../../relational-databases/system-tables/sysmergesubsetfilters-transact-sql.md)|  
-|[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[' systranschemas '](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   

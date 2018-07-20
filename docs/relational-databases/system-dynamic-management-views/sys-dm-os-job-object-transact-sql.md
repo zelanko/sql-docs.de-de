@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968762"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164211"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968762"
 Gibt eine einzelne Zeile, beschreibt die Konfiguration des Auftragsobjekts, die SQL Server-Prozess als auch bestimmte Ressourcenstatistiken für die Nutzung auf Objektebene Auftrag verwaltet. Gibt ein leeres Resultset zurück, wenn SQL Server nicht in ein Job-Objekt ausgeführt wird. 
 
 Ein Job-Objekt ist ein Windows-Konstrukt, die CPU, Arbeitsspeicher und e/a-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftragsobjekte, finden Sie unter [Auftragsobjekte](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
-
-> [!NOTE]
-> Die sys.dm_os_job_object DMV derzeit möglicherweise als sys.dm_job_object angezeigt werden. Dies ist temporärer: `sys.dm_os_job_object` der permanente Name dieser DMV. 
   
 |Spalte|Datentyp|Description|  
 |-------------|---------------|-----------------|  

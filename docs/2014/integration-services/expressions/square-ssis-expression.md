@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4203b4e904161a3acf36b6422bc29d41307a6d77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db690f1b8ffd3b011ef5a39f442ca44d32b50f33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243120"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083323"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS-Ausdruck)
   Gibt das Quadrat eines numerischen Ausdrucks zurück.  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  In Ausdrücken schließen Variablennamen stets das @-Präfix ein.  
+>  In Ausdrücken schließen Variablennamen stets das \@ Präfix.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  

@@ -1,5 +1,5 @@
 ---
-title: IHcolumns (Transact-SQL) | Microsoft Docs
+title: IHcolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d713dbd76921955aab6066b51d163a17ca7cba9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f0235a7c4e1b13d6e85e59afd7bf0ffd57ba705
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001587"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103728"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **IHcolumns** -Systemtabelle enthält eine Zeile für jede Spalte veröffentlichte. Diese Tabelle dient zum definieren, wie Spaltendatentypen von nicht - SQL Server-Verlegers dargestellt werden, wenn veröffentlicht, wodurch eine Zuordnung im Prinzip werden Datentypen zwischen einer SQL Server - Datenbank-Managementsysteme (DBMS) und SQL Server. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **IHcolumns** -Systemtabelle enthält eine Zeile für jede Spalte veröffentlichte. Diese Tabelle dient zum definieren, wie Spaltendatentypen von nicht - SQL Server-Verlegers dargestellt werden, wenn veröffentlicht, das entspricht im Wesentlichen Datentypen zwischen einer nicht - SQL Server-Datenbank-Managementsysteme (DBMS) und SQL Server. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 ## <a name="definition"></a>Definition  
   

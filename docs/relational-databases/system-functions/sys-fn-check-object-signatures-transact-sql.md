@@ -25,12 +25,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1473ca4fd7f29992c74c035c9ce649dfc96c5d0b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015152"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088092"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,17 +50,17 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- {' @*Klasse*'}  
+ {'\@*Klasse*'}  
  Identifiziert den Typ des Fingerabdrucks, der bereitgestellt wird:  
   
 -   ‚Zertifikat’  
   
 -   ‚asymmetrischer Schlüssel’  
   
- @*Klasse* ist **Sysname**.  
+ \@*Klasse* ist **Sysname**.  
   
- {@*Fingerabdruck* }  
- SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. @*Fingerabdruck* ist **varbinary(20)**.  
+ { \@ *Fingerabdruck* }  
+ SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. \@*Fingerabdruck* ist **varbinary(20)**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  Die folgende Tabelle listet die Spalten, die **Fn_check_object_signatures** zurückgibt.  

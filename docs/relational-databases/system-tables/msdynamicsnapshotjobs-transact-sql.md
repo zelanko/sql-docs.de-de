@@ -1,5 +1,5 @@
 ---
-title: MSdynamicsnapshotjobs (Transact-SQL) | Microsoft Docs
+title: MSdynamicsnapshotjobs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSdynamicsnapshotjobs system table
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cdfc74bad45bcb3e77bfdf8b438df45e1491633
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73100b05902605f5fb017db077066f8cdc793a27
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004227"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101888"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "33004227"
 |**id**|**int**|Die ID des gefilterten Datenmomentaufnahmeauftrags.|  
 |**name**|**sysname**|Der Name des gefilterten Datenmomentaufnahmeauftrags.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung.|  
-|**job_id**|**uniqueidentifier**|Die ID des SQL Server-Agent-Auftrags auf dem Verteiler.|  
+|**job_id**|**uniqueidentifier**|Die ID der SQL Server-Agent-Auftrags auf dem Verteiler.|  
 |**agent_id**|**int**|Die ID der SQL Server-Agent.|  
-|**dynamic_filter_login**|**sysname**|Der Wert für die Bewertung der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in parametrisierten Zeilenfiltern für die Veröffentlichung.|  
-|**dynamic_filter_hostname**|**sysname**|Der Wert für die Bewertung der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Zeilenfiltern für die Veröffentlichung.|  
+|**dynamic_filter_login**|**sysname**|Der Wert, der zum Auswerten von der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in parametrisierten Zeilenfiltern für die Veröffentlichung.|  
+|**dynamic_filter_hostname**|**sysname**|Der Wert, der zum Auswerten von der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Zeilenfiltern für die Veröffentlichung.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Der Pfad zu dem Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn eine gefilterte Datenmomentaufnahme verwendet wird.|  
 |**partition_id**|**int**|Die ID der Datenpartition, der der Auftrag angehört.|  
   

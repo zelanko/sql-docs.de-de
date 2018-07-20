@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (Transact-SQL) | Microsoft Docs
+title: MSdistributiondbs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a616111951170d264e61bc40ff0691806ca2ebaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92666ee39278f5305130579150aa36757a28fb0b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004157"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103288"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33004157"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Verteilungsdatenbank.|  
-|**min_distretention**|**int**|Die Mindestbeibehaltungsdauer in Stunden, bevor Transaktionen gelöscht werden.|  
+|**min_distretention**|**int**|Die minimale Beibehaltungsdauer in Stunden, bevor Transaktionen gelöscht werden.|  
 |**max_distretention**|**int**|Die maximale Beibehaltungsdauer in Stunden, bevor Transaktionen gelöscht werden.|  
 |**history_retention**|**int**|Die Anzahl der Stunden, für die der Verlauf erhalten bleibt.|  
   

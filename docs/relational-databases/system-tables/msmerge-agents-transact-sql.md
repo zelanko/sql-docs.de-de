@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (Transact-SQL) | Microsoft Docs
+title: MSmerge_agents (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,37 +22,37 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005897"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102309"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_agents** Tabelle enthält eine Zeile für jeden Merge-Agent auf dem Abonnenten ausgeführt wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSmerge_agents** -Tabelle enthält eine Zeile für jeden Merge-Agent auf dem Abonnenten ausgeführt wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Merge-Agents|  
-|**name**|**Nvarchar(100)**|Der Name des Merge-Agents.|  
+|**name**|**nvarchar(100)**|Der Name des Merge-Agents.|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
 |**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
 |**subscriber_id**|**smallint**|Die ID des Abonnenten.|  
 |**subscriber_db**|**sysname**|Der Name der Abonnementdatenbank.|  
 |**local_job**|**bit**|Gibt an, ob sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag auf dem lokalen Verteiler befindet.|  
-|**job_id**|**Binary(16)**|Die Auftrags-ID|  
+|**job_id**|**'binary(16)'**|Die Auftrags-ID|  
 |**profile_id**|**int**|Der Konfigurations-ID aus der **MSagent_profiles** Tabelle.|  
 |**anonymous_subid**|**uniqueidentifier**|Die ID eines anonymen Agents.|  
 |**subscriber_name**|**sysname**|Den Namen des Abonnenten.|  
 |**creation_date**|**datetime**|Das Datum und die Uhrzeit der Erstellung des Verteilungs- oder Merge-Agents.|  
-|**offload_enabled**|**bit**|Gibt an, dass eine Remoteaktivierung der Momentaufnahme möglich ist.<br /><br /> **0** gibt an, der Agent nicht remote aktiviert werden.<br /><br /> **1** gibt an, die aktiviert wird, Remote und auf dem Remotecomputer, der in der Offload_server-Eigenschaft angegeben.|  
+|**offload_enabled**|**bit**|Gibt an, dass eine Remoteaktivierung der Momentaufnahme möglich ist.<br /><br /> **0** gibt an, der Agent nicht remote aktiviert werden.<br /><br /> **1** gibt an, die aktiviert wird, Remote und auf dem Remotecomputer, die in der Offload_server-Eigenschaft angegeben.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, auf dem die Remoteaktivierung der Momentaufnahme erfolgt.|  
 |**SID**|**varbinary(85)**|Die Sicherheits-ID (SID) für den Verteilungs-Agent oder Merge-Agent, während er das erste Mal ausgeführt wird.|  
 |**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, wobei die folgenden Werte möglich sind:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  

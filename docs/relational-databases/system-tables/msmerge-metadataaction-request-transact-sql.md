@@ -1,5 +1,5 @@
 ---
-title: MSmerge_metadataaction_request (Transact-SQL) | Microsoft Docs
+title: MSmerge_metadataaction_request (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a26726d6fb6bc38a79ab50f958f071301a841f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 951b42bb78d2b15d2d107e6a4de0291aa16c7693
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004167"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103228"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33004167"
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
 |**action**|**tinyint**|Bezeichnet die erforderliche kompensierende Aktion.|  
 |**generation**|**bigint**|Der Wert der Generierung, für die die kompensierende Aktion benötigt wird.|  
-|**Geändert**|**int**|Intern-nur zur Verwendung.|  
+|**geändert**|**int**|Intern-nur zur Verwendung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227166"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083012"
 ---
 # <a name="strong-passwords"></a>Sichere Kennwörter
   Kennwörter sind möglicherweise das schwächste Glied bei der Bereitstellung von Serversicherheit. Bei der Auswahl eines Kennworts ist immer größte Vorsicht geboten. Ein sicheres Kennwort weist die folgenden Merkmale auf:  
@@ -53,9 +53,9 @@ ms.locfileid: "37227166"
   
 -   Das Element enthält oder beginnt mit einem Leerzeichen.  
   
--   Das Element beginnt mit dem Zeichen $ oder @.  
+-   Beginnt mit der $ oder \@ Zeichen.  
   
- Bei Verwendung in einer OLE DB- oder ODBC-Verbindungszeichenfolge dürfen die folgenden Zeichen nicht in einem Anmeldenamen oder Kennwort enthalten sein: [] {}() , ; ? * ! @installiert haben. Mithilfe dieser Zeichen wird entweder eine Verbindung initialisiert oder Verbindungswerte werden getrennt.  
+ Bei Verwendung in einer OLE DB- oder ODBC-Verbindungszeichenfolge dürfen die folgenden Zeichen nicht in einem Anmeldenamen oder Kennwort enthalten sein: [] {}() , ; ? * ! \@installiert haben. Mithilfe dieser Zeichen wird entweder eine Verbindung initialisiert oder Verbindungswerte werden getrennt.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Kennwortrichtlinie](password-policy.md)  

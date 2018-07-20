@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnconstraints (Transact-SQL) | Microsoft Docs
+title: IHpublishercolumnconstraints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b764ec9638f207d504052598f6867a9123f945
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b5e927ce418b1f556a9529823a389f8d2cce54c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000343"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101698"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33000343"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Identifiziert die Spalte aus [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) mit einer zugeordneten Beschränkung.|  
-|**publisherconstraint_id**|**int**|Identifiziert eine Beschränkung aus [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) der Spalte zugeordnet.|  
+|**publisherconstraint_id**|**int**|Identifiziert eine Beschränkung von [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) der Spalte zugeordnet.|  
 |**indid**|**int**|Gibt die Position einer Spalte innerhalb der veröffentlichten Tabelle an.|  
   
 ## <a name="see-also"></a>Siehe auch  

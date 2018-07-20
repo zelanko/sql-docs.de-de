@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (Transact-SQL) | Microsoft Docs
+title: MSpeer_lsns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006827"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101998"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33006827"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifiziert eine Peer-zu-Peer-LSN.|  
-|**last_updated**|**datetime**|Die **"DateTime"** an dem die letzte zeilenaktualisierung vorgenommen wurde.|  
+|**last_updated**|**datetime**|Die **"DateTime"** an die die letzte zeilenaktualisierung festgelegt wurde.|  
 |**originator**|**sysname**|Der Name des Verlegers, von dem die Transaktion stammt|  
 |**originator_db**|**sysname**|Der Name der Datenbank, aus der die Transaktion stammt|  
 |**originator_publication**|**sysname**|Der Name der Veröffentlichung, aus der die Transaktion stammt|  

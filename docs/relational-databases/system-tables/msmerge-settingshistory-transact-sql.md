@@ -1,5 +1,5 @@
 ---
-title: MSmerge_settingshistory (Transact-SQL) | Microsoft Docs
+title: MSmerge_settingshistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8007d97619b3cbe7302fbf00bcfd98584539e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61d69b6a6c6c965e5737d185c0e4b936fea797fc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005152"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102128"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_settingshistory** Tabelle wird verwendet, um die Verwaltung eines Verlaufs der Änderungen an Artikel- und Veröffentlichungseigenschaften bei der Mergereplikation mit einer Zeile für jede Änderung an einer mergereplikationstopologie. In dieser Tabelle werden auch Informationen zu dem Zeitpunkt gespeichert, zu dem die ursprünglichen Eigenschaftseinstellungen vorgenommen wurden. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
+  Die **MSmerge_settingshistory** Tabelle dient zur Verwaltung eines Verlaufs der Änderungen an Artikel- und Veröffentlichungseigenschaften Eigenschaften für die Mergereplikation mit einer Zeile für jede Änderung an einer mergereplikationstopologie. In dieser Tabelle werden auch Informationen zu dem Zeitpunkt gespeichert, zu dem die ursprünglichen Eigenschaftseinstellungen vorgenommen wurden. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**EventTime**|**datetime**|Die Uhrzeit, zu der das Ereignis aufgetreten ist|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für eine bestimmte Veröffentlichung|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**EventType**|**tinyint**|Gibt den Ereignistyp an, der aufgezeichnet wird. Es kann einer der folgenden Typen sein:<br /><br /> **1** – ursprüngliche veröffentlichungsebenen-eigenschaftseinstellung.<br /><br /> **2** -veröffentlichungseigenschaft ändern.<br /><br /> **101** -ursprüngliche.<br /><br /> **102** -Artikeleigenschaft ändern.|  
+|**EventType**|**tinyint**|Gibt den Ereignistyp an, der aufgezeichnet wird. Es kann einer der folgenden Typen sein:<br /><br /> **1** -ursprüngliche veröffentlichungsebenen-eigenschaftseinstellung.<br /><br /> **2** -veröffentlichungseigenschaft ändern.<br /><br /> **101** -ursprüngliche.<br /><br /> **102** -Artikeleigenschaft ändern.|  
 |**propertyname**|**sysname**|Der Name der festgelegten oder geänderten Eigenschaft|  
 |**previousvalue**|**sysname**|Der vorhergehende Eigenschaftswert, falls eine Eigenschaft geändert wurde|  
 |**newValue**|**sysname**|Der Wert, zu dem die Eigenschaft geändert oder mit dem die Eigenschaft erstellt wurde|  

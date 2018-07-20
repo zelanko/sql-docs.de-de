@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnindexes (Transact-SQL) | Microsoft Docs
+title: IHpublishercolumnindexes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHpublishercolumnindexes system table
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d54f286215d34974f1ca10ecd08d3eb7413c95c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38b21617981b7db9bde8ded481b1d403ba628e31
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000787"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103247"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **IHpublishercolumnindexes** -Systemtabelle ordnet Spalten einer nicht - SQL Server-Veröffentlichung in der [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) Systemtabelle Indizes in der [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)-Systemtabelle. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **IHpublishercolumnindexes** -Systemtabelle ordnet Spalten einer nicht - SQL Server-Veröffentlichung in der [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) Systemtabelle den Indizes in der [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)-Systemtabelle. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 ## <a name="definition"></a>Definition  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Identifiziert die Spalte aus [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) mit einem zugeordneten Index.|  
-|**publisherindex_id**|**int**|Identifiziert einen Index aus der [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) Tabelle der Spalte zugeordnet.|  
+|**publisherindex_id**|**int**|Identifiziert einen Index aus der [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) Tabelle, die der Spalte zugeordnet.|  
 |**indid**|**int**|Gibt die Position einer Spalte innerhalb der veröffentlichten Tabelle an.|  
   
 ## <a name="see-also"></a>Siehe auch  

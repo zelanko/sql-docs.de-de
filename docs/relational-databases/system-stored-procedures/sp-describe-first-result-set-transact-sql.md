@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970716"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087272"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ [  **\@Tsql =** ] **"***Transact-SQL_batch***"**  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
- [  **@params =** ] **N'***Parameter***"**  
- @params Stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
+ [  **\@Params =** ] **N'***Parameter***"**  
+ \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
   
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, @params ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
+ Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden, \@Params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, \@"Params" ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
- [  **@browse_information_mode =** ] *Tinyint*  
+ [  **\@Browse_information_mode =** ] *Tinyint*  
  Gibt an, ob zusätzliche Schlüsselspalten und Quelltabelleninformationen zurückgegeben werden. Wenn der Wert gleich 1, jede Abfrage analysiert, als ob es sich um eine FOR BROWSE-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
   
 -   Bei 0 werden keine Informationen zurückgegeben.  
@@ -79,7 +79,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**Int nicht NULL**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256) NULL**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden. Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
 |**max_length**|**Smallint nicht NULL**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'**.|  
-|**mit einfacher Genauigkeit**|**Tinyint nicht NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**Mit einfacher Genauigkeit**|**Tinyint nicht NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**Skalieren**|**Tinyint nicht NULL**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**Sysname NULL**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
 |**user_type_id**|**Int NULL**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **Sp_describe_first_result_set** gibt Sie in den folgenden Fällen einen Fehler zurück.  
   
--   Wenn die Eingabe @tsql ist kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Gültigkeit wird bestimmt durch Analysieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Alle Fehler, die durch den Batch verursacht während der abfrageoptimierung oder-Ausführung werden nicht berücksichtigt, wenn bestimmt wird, ob die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch gültig ist.  
+-   Wenn die Eingabe \@Tsql ist kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Gültigkeit wird bestimmt durch Analysieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Alle Fehler, die durch den Batch verursacht während der abfrageoptimierung oder-Ausführung werden nicht berücksichtigt, wenn bestimmt wird, ob die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch gültig ist.  
   
--   Wenn @params ist nicht NULL und enthält eine Zeichenfolge, die keinem syntaktisch gültige deklarationszeichenfolge für Parameter, oder wenn es sich um eine Zeichenfolge enthält, deklariert einen beliebigen Parameter mehr als einmal.  
+-   Wenn \@Params ist nicht NULL und enthält eine Zeichenfolge, die nicht auf einen syntaktisch gültige deklarationszeichenfolge für Parameter ist, oder wenn es sich um eine Zeichenfolge enthält, deklariert einen beliebigen Parameter mehr als einmal.  
   
--   Wenn die Eingabe [!INCLUDE[tsql](../../includes/tsql-md.md)] eingabebatch deklariert eine lokale Variable mit dem gleichen Namen wie ein Parameter in deklariert @params.  
+-   Wenn die Eingabe [!INCLUDE[tsql](../../includes/tsql-md.md)] eingabebatch deklariert eine lokale Variable mit dem gleichen Namen wie ein Parameter in deklariert \@Params.  
   
 -   Die Anweisung verwendet eine temporäre Tabelle.  
   
@@ -160,7 +160,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **Sp_describe_first_result_set** unterstützt keine Indirekte Rekursion.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung zum Ausführen der @tsql Argument.  
+ Erfordert die Berechtigung zum Ausführen der \@Tsql-Argument.  
   
 ## <a name="examples"></a>Beispiele  
   

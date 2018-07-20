@@ -1,29 +1,34 @@
 ---
-title: Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart) | Microsoft Docs
+title: In dieser Schnellstartanleitung R-Funktionen mit SQL Server-Daten (SQL Server-Machine Learning) | Microsoft-Dokumentation
+description: Erfahren Sie in dieser schnellstartanleitung, wie Sie eine R-Funktion zu schreiben, die SQL Server-Daten verwendet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585742"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086672"
 ---
-# <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart)
+# <a name="quickstart-using-r-functions-with-sql-server-data"></a>Schnellstart: Verwenden von R-Funktionen mit SQL Server-Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Da Sie nun mit grundlegenden Vorgängen vertraut sind, ist es an der Zeit, R richtig zu nutzen. Zum Beispiel sind viele erweiterte statistische Funktionen mit T-SQL möglicherweise schwierig zu implementieren, erfordern jedoch nur eine einzige Zeile R-Code.  Mit R Services ist es einfach, Skripts für R-Hilfsprogramme in eine gespeicherte Prozedur einzubetten.
+Wenn Sie die vorherigen Schnellstarts abgeschlossen haben, können Sie mit grundlegenden Vorgängen vertraut sind und etwas komplexer, z. B. statistische Funktionen bereit. Erweiterte statistische Funktionen, die in T-SQL implementiert kompliziert sind in R mit nur eine einzige Zeile Code möglich.
 
-In diesen Beispielen werden Sie mathematische R-Funktionen und R-Hilfsfunktionen in eine gespeicherte SQL Server-Prozedur einbetten.
+Klicken Sie in dieser schnellstartanleitung betten Sie mathematische R, und Hilfsfunktionen, die in einer SQL Server gespeicherten Prozedur.
+
+## <a name="prerequisites"></a>Erforderliche Komponenten
+
+Einen vorherigen schnellstartanleitung [Hello World in R und SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Erstellen einer gespeicherten Prozedur zum Generieren von Zufallszahlen
 
-Der Einfachheit halber verwenden wir die R `stats` Paket, das installiert wird und standardmäßig mit R-Services geladen werden. Das Paket enthält Hunderte von Funktionen für allgemeine statistische Aufgaben, darunter die `rnorm`-Funktion, die eine bestimmte Anzahl von Zufallszahlen mithilfe der normalen Verteilung bei angegebener Standardabweichung und Mittelwert generiert.
+Der Einfachheit halber verwenden wir den R `stats` Paket, das installiert wird und das standardmäßig geladen, wenn Sie Unterstützung von R-Funktionen in SQL Server installieren. Das Paket enthält Hunderte von Funktionen für allgemeine statistische Aufgaben, darunter die `rnorm`-Funktion, die eine bestimmte Anzahl von Zufallszahlen mithilfe der normalen Verteilung bei angegebener Standardabweichung und Mittelwert generiert.
 
 Bei einer Standardabweichung von 3 gibt dieser R-Code beispielsweise 100 Zahlen mit einem Mittelwert von 50 zurück.
 
@@ -44,7 +49,7 @@ EXEC sp_execute_external_script
 
 Sie möchten es vereinfachen, einen anderen Satz von Zufallszahlen zu generieren?
 
-Das ist ganz einfach in Kombination mit SQL Server: Definieren Sie eine gespeicherte Prozedur, die die Argumente des Benutzers abruft. Übergeben Sie dann diese Argumente als Variablen an das R-Skript.
+Das ist ganz einfach in Kombination mit SQL Server: definieren eine gespeicherte Prozedur, die die Argumente des Benutzers abruft. Übergeben Sie dann diese Argumente als Variablen an das R-Skript.
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -75,7 +80,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Verwenden von R-Hilfsfunktionen für die Problembehandlung
 
-Eine Installation von R enthält standardmäßig den `utils` Paket, das eine Vielzahl von Hilfsfunktionen zum Untersuchen der aktuellen R-Umgebung bereitstellt. Dies kann nützlich sein, wenn Sie bei der Ausführung Ihres R-Codes in SQL Server und externen Umgebungen Diskrepanzen feststellen.
+Standardmäßig enthält eine Installation von R die `utils` -Paket, das eine Vielzahl von Hilfsfunktionen für die Untersuchung der aktuellen R-Umgebung enthält. Dies kann nützlich sein, wenn Sie bei der Ausführung Ihres R-Codes in SQL Server und externen Umgebungen Diskrepanzen feststellen.
 
 Sie können zum Beispiel die R-`memory.limit()`-Funktion verwenden, um Arbeitsspeicher für die aktuelle R-Umgebung abzurufen. Da das `utils`-Paket standardmäßig installiert, aber nicht geladen wird, müssen Sie es zuerst mit der `library()`-Funktion laden.
 
@@ -90,12 +95,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-Viele Benutzer in der zeitlichen Steuerung Systemfunktionen in R, z. B. wie `system.time` und `proc.time`, zum Erfassen der Zeit, die von R-Prozessen verwendet wird und Leistungsprobleme analysieren.
+Viele Benutzer haben Lust sich die Systemfunktionen für die zeitliche Steuerung in R verwenden, z. B. `system.time` und `proc.time`, um die vom R-Prozessen verwendete Zeit zu erfassen und Leistungsprobleme analysieren.
 
 Ein Beispiel finden Sie im Tutorial [Erstellen von Datenfunktionen](../tutorials/walkthrough-create-data-features.md). In dieser exemplarischen Vorgehensweise werden R-Funktionen zur zeitlichen Steuerung in die Lösung eingebettet, um die Leistung von zwei Methoden zum Erstellen von Funktionen aus Daten zu vergleichen: R-Funktionen und T-SQL-Funktionen.
 
-## <a name="next-lesson"></a>Nächste Lektion
+## <a name="next-steps"></a>Nächste Schritte
 
 Als Nächstes erstellen Sie mithilfe von R in SQL Server ein Vorhersagemodell.
 
-[Erstellen eines Vorhersagemodells](../tutorials/rtsql-create-a-predictive-model-r.md)
+> [!div class="nextstepaction"]
+> [Schnellstart: Erstellen eines Vorhersagemodells](rtsql-create-a-predictive-model-r.md)

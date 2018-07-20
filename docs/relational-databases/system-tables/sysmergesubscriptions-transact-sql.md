@@ -1,5 +1,5 @@
 ---
-title: Sysmergesubscriptions (Transact-SQL) | Microsoft Docs
+title: Sysmergesubscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2af51b3b46c9e4a939106ed32ed378d0d5e6cee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcbe175a186b42c7bfb8e49290c7594e7b9e67d1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013107"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102498"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ ms.locfileid: "33013107"
 |schemaversion|**int**|Die Nummer des zuletzt empfangenen Schemas.|  
 |schemaguid|**uniqueidentifier**|Die eindeutige ID des zuletzt empfangenen Schemas.|  
 |last_validated|**datetime**|Die **"DateTime"** der letzten erfolgreichen Überprüfung der Abonnentendaten.|  
-|attempted_validate|**datetime**|Der letzte **"DateTime"** , dass die Überprüfung des Abonnements versucht wurde.|  
+|attempted_validate|**datetime**|Die letzte **"DateTime"** , dass die Überprüfung des Abonnements versucht wurde.|  
 |last_sync_date|**datetime**|Die **"DateTime"** der Synchronisierung.|  
-|last_sync_status|**int**|Der Abonnementstatus:<br /><br /> **0** = alle Aufträge sind zu starten.<br /><br /> **1** = ein oder mehrere Aufträge werden gestartet.<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt.<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf befindet.<br /><br /> **5** = mindestens ein Auftrag versucht, führen Sie nach einem vorherigen Fehler.<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt.|  
+|last_sync_status|**int**|Der Abonnementstatus:<br /><br /> **0** = alle Aufträge sind bereit, um zu starten.<br /><br /> **1** = ein oder mehrere Aufträge werden gestartet.<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag ausgeführt wird.<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf befindet.<br /><br /> **5** = mindestens ein Auftrag nach einem vorherigen Fehler ausführen soll.<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt.|  
 |last_sync_summary|**sysname**|Die Beschreibung der letzten Synchronisierungsergebnisse.|  
-|metadatacleanuptime|**datetime**|Der letzte **"DateTime"** , dass abgelaufene Metadaten aus Systemtabellen der Mergereplikation entfernt wurde.|  
+|metadatacleanuptime|**datetime**|Die letzte **"DateTime"** , zu dem abgelaufene Metadaten aus Systemtabellen der Mergereplikation entfernt wurde.|  
 |partition_id|**int**|Identifiziert die vorausberechnete Partition, zu der das Abonnement gehört.|  
 |cleanedup_unsent_changes|**bit**|Gibt an, dass Metadaten für nicht gesendete Änderungen auf dem Abonnenten bereinigt wurden.|  
 |replica_version|**int**|Identifiziert die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Abonnenten, zu dem das Abonnement gehört. Die folgenden Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|Nur interne Verwendung.|  
 |application_name|**nvarchar(128)**|Nur interne Verwendung.|  
 |subscriber_number|**int**|Nur interne Verwendung.|  
-|last_makegeneration_datetime|**datetime**|Der letzte **"DateTime"** , die der Makegeneration-Prozess für den Verleger ausgeführt wurden. Weitere Informationen finden Sie unter den - MakeGenerationInterval-Parameter im [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
+|last_makegeneration_datetime|**datetime**|Die letzte **"DateTime"** , die der Makegeneration-Prozess, die für den Verleger ausgeführt wurde. Weitere Informationen finden Sie unter den - MakeGenerationInterval-Parameter im [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

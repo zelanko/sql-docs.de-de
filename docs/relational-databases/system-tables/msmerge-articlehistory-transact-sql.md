@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (Transact-SQL) | Microsoft Docs
+title: MSmerge_articlehistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006347"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101968"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "33006347"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Die ID einer Sitzung des Merge-Agent-Auftrag in der [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) -Systemtabelle.|  
-|**phase_id**|**int**|Die Phase der Synchronisierungssitzung, die einen der folgenden Werte haben kann:<br /><br /> **1** = hochladen.<br /><br /> **2** = herunterladen.<br /><br /> **4** = Cleanup.<br /><br /> **5** = Herunterfahren.<br /><br /> **6** = Schema geändert wird.<br /><br /> **7** = BCP.|  
-|**article_name**|**sysname**|Der Name des Artikels, an dem Änderungen vorgenommen wurden.|  
+|**phase_id**|**int**|Die Phase der Synchronisierungssitzung, die einen der folgenden Werte haben kann:<br /><br /> **1** = Upload.<br /><br /> **2** = herunterladen.<br /><br /> **4** = Cleanup.<br /><br /> **5** = Herunterfahren.<br /><br /> **6** = Schema geändert wird.<br /><br /> **7** = BCP.|  
+|**Artikelname**|**sysname**|Der Name des Artikels, an dem Änderungen vorgenommen wurden.|  
 |**start_time**|**datetime**|Der Zeitpunkt, an dem der Agent mit der Verarbeitung des Artikels begonnen hat.|  
 |**duration**|**int**|Angabe der Dauer (in Sekunden) der Verarbeitung eines Artikels durch den Agent.|  
 |**Fügt ein**|**int**|Die Anzahl von Einfügevorgängen, die für einen bestimmten Artikel bei der Synchronisierung durchgeführt wurden. Dieser Wert wird während der Synchronisierung inkrementiert, die Gesamtzahl wird im Endwert angegeben.|  

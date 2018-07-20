@@ -1,7 +1,7 @@
 ---
 title: Sp_execute_external_script (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974092"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086172"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>Sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Führt das Skript, das als Argument an einen externen Speicherort bereitgestellt. Das Skript muss in einer unterstützten und registrierten Sprache geschrieben werden. Auszuführende **Sp_execute_external_script**, müssen Sie zunächst aktivieren externer Skripts, die mithilfe der Anweisung `sp_configure 'external scripts enabled', 1;`.  
+  Führt das Skript, das als Argument an einen externen Speicherort bereitgestellt. Das Skript muss in einer unterstützten und registrierten Sprache (R oder Python) geschrieben werden. Auszuführende **Sp_execute_external_script**, müssen Sie zunächst aktivieren externer Skripts, die mithilfe der Anweisung `sp_configure 'external scripts enabled', 1;`.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>Argumente
- @language = N'*Sprache*"  
+ \@Language = N'*Sprache*"  
  Gibt die Skriptsprache an. *Sprache* ist **Sysname**.  
 
  Gültige Werte sind `Python` oder `R`. 
   
- @script = N'*Skript*"  
+ \@Skript = N'*Skript*"  
  Externe Language-Skript, die als Eingabe Zeichenfolgenliteral oder eine Variable angegeben. *Skript* ist **nvarchar(max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- Gibt den Namen der Variablen verwendet, um die Abfrage von definiert darzustellen @input_data_1. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ Gibt den Namen der Variablen verwendet, um die Abfrage von definiert darzustellen \@input_data_1. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  
   
  Standardwert ist `InputDataSet`.  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  Gibt an, die Eingabedaten, die von externen Skripts in Form von verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)**.
   
- [ @output_data_1_name = N'*output_data_1_name*']  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  Gibt den Namen der Variablen in externen Skripts mit den Daten zu zurückzugebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Abschluss des Aufrufs der gespeicherten Prozedur. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Für R muss die Ausgabe einen Datenrahmen. Für Python muss die Ausgabe ein Pandas-dataframe. *output_data_1_name* ist **Sysname**.  
   
  Standardwert ist "OutputDataSet".  
   
- [ @parallel = 0 | 1] Aktivieren der parallelen Ausführung von R-Skripts durch Festlegen der `@parallel` Parameter auf 1. Der Standardwert für diesen Parameter ist 0 (keine Parallelität).  
+ [ \@parallel = 0 | 1]
+
+ Aktivieren der parallelen Ausführung von R-Skripts durch Festlegen der `@parallel` Parameter auf 1. Der Standardwert für diesen Parameter ist 0 (keine Parallelität).  
   
  Für R-Skripts, die nicht mithilfe von RevoScaleR-Funktionen verwenden die `@parallel` Parameter kann sein, nützlich für die Verarbeitung großer Datasets, wenn das Skript einfach parallelisiert werden kann. Beispielsweise bei Verwendung von R `predict` Funktion mit einem Modell aus, um neue Vorhersagen generieren, legen Sie `@parallel = 1` als Hinweis für die Abfrage-Engine. Wenn die Abfrage parallelisiert werden kann, werden Zeilen gemäß verteilt die **MAXDOP** festlegen.  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  Für R-Skripts, die RevoScaleR-Funktionen verwenden, die parallelverarbeitung erfolgt automatisch und sollte nicht angegeben werden `@parallel = 1` auf die **Sp_execute_external_script** aufrufen.  
   
- [ @params = N' *@parameter_name Data_type* [| Ausgabe] [,.. ...n] "]  
+ [ \@Params = N'*\@Parameter_name, Data_type* [| Ausgabe] [,.. ...n] "]  
  Eine Liste der Eingabeparameter-Deklarationen, die in externen Skripts verwendet werden.  
   
- [ @parameter1 = '*value1*' [| Ausgabe] [,.. ...n]]  
+ [ \@parameter1 = '*value1*' [| Ausgabe] [,.. ...n]]  
+
  Eine Liste von Werten für die Eingabeparameter, die von externen Skripts verwendet werden soll.  
 
 ## <a name="remarks"></a>Hinweise
@@ -119,7 +122,7 @@ Sowohl die `@r_rowsPerRead` Parameter für das streaming und die `@parallel` Arg
 
 ### <a name="data-types"></a>Datentypen
 
-Die folgenden Datentypen werden nicht unterstützt, bei der Verwendung in der Eingabeabfrage oder Parameter des `sp_execute_external_script` Prozedur und die Rückgabe-Fehler nicht unterstützter Typ.  
+Die folgenden Datentypen werden nicht unterstützt, bei der Verwendung in der Eingabeabfrage oder Parameter des **Sp_execute_external_script** Prozedur und die Rückgabe-Fehler nicht unterstützter Typ.  
 
 Dieses Problem zu umgehen **Umwandlung** der Spalte oder den Wert in einen unterstützten Typ in [!INCLUDE[tsql](../../includes/tsql-md.md)] vor dem Senden an das externe Skript.  
   

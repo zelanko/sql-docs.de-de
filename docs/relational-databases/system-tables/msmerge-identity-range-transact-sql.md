@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact-SQL) | Microsoft Docs
+title: "' MSmerge_identity_range ' (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005127"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101228"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_identity_range** Tabelle wird verwendet, um numerische Bereiche, die Identitätsspalten zur Abonnierung von Veröffentlichungen zugewiesen nachverfolgen auf dem die Replikation automatisch diese bereichszuweisungen verwaltet wird. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
+  Die **' MSmerge_identity_range '** Tabelle wird verwendet, um die numerischen Bereiche, die Identitätsspalten zur Abonnierung von Veröffentlichungen zugewiesen nachverfolgen auf dem die Replikation automatisch diese bereichszuweisungen verwaltet wird. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Die eindeutige ID für ein bestimmtes Abonnement.|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**"range_begin"**|**numeric(38)**|Der Identitätswert am Anfang des aktuellen Bereichs.|  
-|**"range_end"**|**numeric(38)**|Der Identitätswert am Ende des aktuellen Bereichs.|  
-|**"next_range_begin"**|**numeric(38)**|Der Identitätswert am Anfang des neuen Bereichs, der zugewiesen werden soll.|  
-|**"next_range_end"**|**numeric(38)**|Der Identitätswert am Ende des neuen Bereichs, der zugewiesen werden soll.|  
+|**' range_begin '**|**numeric(38)**|Der Identitätswert am Anfang des aktuellen Bereichs.|  
+|**' range_end '**|**numeric(38)**|Der Identitätswert am Ende des aktuellen Bereichs.|  
+|**' next_range_begin '**|**numeric(38)**|Der Identitätswert am Anfang des neuen Bereichs, der zugewiesen werden soll.|  
+|**' next_range_end '**|**numeric(38)**|Der Identitätswert am Ende des neuen Bereichs, der zugewiesen werden soll.|  
 |**is_pub_range**|**bit**|Der Wert **1** , wenn die Veröffentlichung der Identitätsbereich zugewiesen wird.|  
 |**max_used**|**numeric(38)**|Der maximale Identitätswert, der zugewiesen werden kann.|  
   

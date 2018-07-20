@@ -4,19 +4,19 @@ description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001792"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102228"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQLServer unter Linux: häufig gestellte Fragen (FAQ)
 
@@ -89,6 +89,9 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 1. **Welche Tools stehen zur Überwachung der Leistung von SQL Server unter Linux zur Verfügung?**
 
    Sie können [dynamische Verwaltungssichten (DMVs) für System](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) zum Sammeln von verschiedenen Arten von Informationen über SQL Server, einschließlich der Informationen für Linux-Prozesses. Sie können [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) abfrageleistung zu verbessern. Andere Tools, z. B. der integrierte [Leistungsdashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)Remote in SQL Server Management Studio (SSMS) von Windows funktionieren.
+
+   > [!TIP]
+   > Eine Möglichkeit zur Verbesserung der Leistung ist Ihrer Linux-Betriebssystem und die SQL Server-Insance richtig konfiguriert. Weitere Informationen finden Sie unter [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Verwaltung
 

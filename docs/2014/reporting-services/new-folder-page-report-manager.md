@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
-ms.translationtype: HT
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162291"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083402"
 ---
 # <a name="new-folder-page-report-manager"></a>Neuer Ordner (Seite) (Berichts-Manager)
   Auf der Seite Neuer Ordner können Sie einen neuen Ordner in der Ordnerhierarchie des Berichtsservers erstellen. Der erstellte Ordner ist ein virtueller Ordner, der in einer Berichtsserver-Datenbank gespeichert wird. Der Ordner wird nicht im Dateisystem des Computers erstellt.  
@@ -39,7 +39,7 @@ ms.locfileid: "37162291"
   
 ## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie den Namen des Ordners an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : @ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
+ Geben Sie den Namen des Ordners an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung des Ordnerinhalts ein. Diese Beschreibung wird für Benutzer, die über die Berechtigung zum Zugreifen auf den Ordner verfügen, auf der Seite Inhalt angezeigt.  

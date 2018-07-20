@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974495"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085472"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>"sp_describe_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @tsql =] "Transact SQL_batch"  
+ [ \@Tsql =] "Transact-SQL_batch"  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Transact-SQL_batch kann nvarchar (n) oder nvarchar(max) sein.  
   
- [ @params =] 'N'parameters  
- *@params* Stellt eine deklarationszeichenfolge für Parameter für den Transact-SQL-Batch, handelt es sich analog zu Sp_executesql bereit. Parameter können nvarchar (n) oder nvarchar(max) sein.  
+ [ \@Params =] 'N'parameters  
+ *\@Params* stellt eine deklarationszeichenfolge für Parameter für den Transact-SQL-Batch, handelt es sich analog zu Sp_executesql bereit. Parameter können nvarchar (n) oder nvarchar(max) sein.  
   
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden, *@params*. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, *@params* ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
+ Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden,  *\@Params*. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter,  *\@Params* ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
 ## <a name="return-value"></a>Rückgabewert  
  0 steht für Erfolg. Sonstige geben Fehler an.  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Die ID der Zeile im Resultset.|  
-|**parameter_name**|**sysname**|Name eines der die angegebenen Parameter die *@params* Argument.|  
+|**parameter_name**|**sysname**|Name eines der die angegebenen Parameter die  *\@Params* Argument.|  
 |**column_encryption_algorithm**|**tinyint**|Code, der angibt, der des Verschlüsselungsalgorithmus für die Spalte, die den Parameter konfiguriert entspricht. Die derzeit unterstützten Werte sind: 2 für **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Code, der angibt, des Verschlüsselungstyp für die Spalte, die den Parameter konfiguriert entspricht. Die unterstützten Werte sind:<br /><br /> 0 – nur-Text (die Spalte ist nicht verschlüsselt)<br /><br /> 1 – die zufällige Verschlüsselung<br /><br /> 2 – die deterministische Verschlüsselung.|  
 |**column_encryption_key_ordinal**|**int**|Code, der Zeile in der das erste Ergebnis festgelegt. Die Zeile, auf die verwiesen werden, des spaltenverschlüsselungsschlüssels, die für die Spalte konfiguriert, die der Parameter entspricht.|  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@C1|1|1|  
   
  (Ergebnisse weiterhin.)  
   

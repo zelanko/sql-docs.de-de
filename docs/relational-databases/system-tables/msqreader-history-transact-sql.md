@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (Transact-SQL) | Microsoft Docs
+title: MSqreader_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006017"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101858"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSqreader_history** -Tabelle enthält Verlaufszeilen für den Warteschlangenlese-Agents mit dem lokalen Verteiler zugeordneten. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSqreader_history** -Tabelle enthält Verlaufszeilen für den Warteschlangenlese-Agents mit dem lokalen Verteiler verknüpft ist. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "33006017"
 |**transaction_rate**|**float(53)**|Rate der verarbeiteten Transaktionen.|  
 |**subscriber**|**sysname**|Den Namen des Abonnenten.|  
 |**subscriberdb**|**sysname**|Der Name der Abonnementdatenbank.|  
-|**Fehler-ID**|**int**|Wenn dieser nicht 0 (null), Zahl stellt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlermeldung.|  
+|**Fehler-ID**|**int**|Wenn Sie nicht 0 (null), der Wert gibt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlermeldung angezeigt.|  
 |**timestamp**|**timestamp**|Timestampspalte der Tabelle.|  
   
 ## <a name="see-also"></a>Siehe auch  

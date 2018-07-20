@@ -1,5 +1,5 @@
 ---
-title: End-to-End Data sience-Vorgehensweise für R und SQL Server | Microsoft Docs
+title: End-to-End-Data Science Walkthrough für R und SQL Server | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,57 +7,72 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3cba2c8deeec356b4d169960c76d65f2c6a02df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3d4f38fd424c881392d48b0a6a24feb7f7e27ee0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203522"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086502"
 ---
-# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>End-to-End Data sience-Vorgehensweise für R und SQL Server
+# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>End-to-End-Data Science Walkthrough für R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser exemplarischen Vorgehensweise entwickeln Sie eine End-to-End-Lösung für die vorhersagemodellierung basierend auf Microsoft R mit SQL Server 2016 oder SQL Server-2017.
+In dieser exemplarischen Vorgehensweise entwickeln Sie eine End-to-End-Lösung für die vorhersagemodellierung basierend auf der Unterstützung von R-Funktionen in SQL Server 2016 oder SQL Server 2017.
 
-Diese exemplarische Vorgehensweise basiert auf einem bekannten öffentlichen Dataset, dem Dataset New York City-Taxi. Sie verwenden eine Kombination von R-Code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten und benutzerdefinierte SQL-Funktionen, die ein klassifizierungsmodell zu erstellen, der die Wahrscheinlichkeit angibt, dass der Treiber einen Hinweis für einen bestimmten Taxi Reise auftreten kann. Bereitstellung auch das R-Modell, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Verwenden von Server-Daten zum Generieren von Bewertungen, die basierend auf dem Modell.
+Diese exemplarische Vorgehensweise basiert auf einem bekannten öffentlichen Dataset, dem Dataset New York City-Taxi. Sie verwenden eine Kombination aus R-Code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten und benutzerdefinierten SQL-Funktionen ein klassifizierungsmodells des Typs zu erstellen, der die Wahrscheinlichkeit angibt, dass der Treiber ein Trinkgeld für eine bestimmte taxifahrt erhalten kann. Sie wird auch Ihr R-Modell zum Bereitstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Server-Daten zum Generieren von Bewertungen auf Grundlage des Modells verwenden.
 
-In diesem Beispiel kann für alle Arten von realen Probleme, z. B. Vorhersagen Kundenantworten zu Marketingkampagnen oder Vorhersagen Ausgaben oder die Teilnahme an Ereignisse erweitert werden. Da das Modell aus einer gespeicherten Prozedur aufgerufen werden kann, können Sie problemlos in eine Anwendung einbetten.
+In diesem Beispiel kann auf alle möglichen realen Probleme, z. B. Vorhersagen der Kundenreaktionen auf Verkaufsaktionen oder die Vorhersage der Ausgaben oder die Teilnahme an Ereignisse erweitert werden. Da das Modell aus einer gespeicherten Prozedur aufgerufen werden kann, können Sie einfach in eine Anwendung einbetten.
 
-Die exemplarische Vorgehensweise ist darauf ausgelegt, Entwickler R einführen [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R wird verwendet, wenn möglich. Allerdings bedeutet dies nicht, dass R unbedingt das beste Tool für jede Aufgabe ist. In vielen Fällen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine bessere Leistung bereit, besonders für Aufgaben wie Datenaggregation und Featureentwicklung.  Solche Aufgaben profitieren besonders von neuen Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], wie z.B. von speicheroptimierten Columnstore-Indizes. Wir versuchen, Stelle sei darauf hingewiesen mögliche Optimierung Erweiterungsklassen.
+Die exemplarische Vorgehensweise ist darauf ausgelegt, R-Entwicklern eine Einführung [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R wird verwendet, wo immer dies möglich. Dies bedeutet jedoch nicht, dass R unbedingt das beste Tool für jede Aufgabe ist. In vielen Fällen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine bessere Leistung bereit, besonders für Aufgaben wie Datenaggregation und Featureentwicklung.  Solche Aufgaben profitieren besonders von neuen Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], wie z.B. von speicheroptimierten Columnstore-Indizes. Wir versuchen, nebenbei auf mögliche Optimierungen hinweisen.
 
-> [!NOTE]
-> Die exemplarische Vorgehensweise wurde ursprünglich für SQL Server 2016 entwickelt und darauf getestet. Allerdings haben Screenshots und Prozeduren aktualisiert, um die neueste Version von SQL Server Management Studio verwenden, die mit SQL Server-2017 funktioniert.
+## <a name="target-audience"></a>Zielgruppe
 
-## <a name="overview"></a>Übersicht
+Diese exemplarische Vorgehensweise ist für R- oder SQL-Entwickler vorgesehen. Sie bietet eine Einführung in die Integration von R in Unternehmensworkflows mithilfe von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  Sie sollten mit der Datenbankvorgänge, z. B. das Erstellen von Datenbanken und Tabellen, Importieren von Daten und Ausführen von Abfragen vertraut sein.
 
-Die geschätzte Zeiten beinhalten keine Setup. Weitere Informationen finden Sie unter [Voraussetzungen für die exemplarische Vorgehensweise](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
++ Alle SQL und R-Skripts sind enthalten.
++ Sie müssen möglicherweise Zeichenfolgen in den Skripts zum Ausführen in Ihrer Umgebung zu ändern. Hierzu können Sie mit einem beliebigen Codeeditor, z. B. [Visual Studio Code](https://code.visualstudio.com/Download).
 
-|Themenliste|Geschätzte Zeit|
-|-|------------------------------|
-|[Vorbereiten der exemplarischen Vorgehensweise R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Erhalten Sie die Daten, die zum Erstellen eines Modells verwendet werden. Laden Sie ein öffentliches Dataset herunter, und laden Sie es in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|30 Minuten|
-|[Durchsuchen der Daten mithilfe von SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Verstehen Sie Ihre Daten mithilfe von SQL-Tools und Zusammenfassungen.|10 Minuten|
-|[Zusammenfassen der Daten mithilfe von R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Verwenden Sie R, um die Daten untersuchen und Zusammenfassungen zu generieren.|10 Minuten|
-|[Erstellen von Darstellungen, die Verwendung von R in SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Erstellen von Darstellungen in lokalen und remoterechenkontexte durch das Mischen von R und SQL.|10 Minuten|
-|[Erstellen Sie Data-Funktionen, die mittels R und T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Entwickeln Sie Features mithilfe von benutzerdefinierten Funktionen in R und [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vergleichen Sie die Leistung von R und T-SQL im Hinblick auf Featurebereitstellung. |10 Minuten|
-|[Erstellen Sie ein R-Modell zu und speichern Sie sie in SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Trainieren und optimieren Sie ein Vorhersagemodell. Bewerten Sie die Leistung des Modells. In dieser exemplarischen Vorgehensweise wird ein Klassifizierungsmodell erstellt. Stellen Sie die Genauigkeit des Modells mithilfe von R dar.|15 Minuten|
-|[Bereitstellen des R-Modells mithilfe von SQL Server](../tutorials/walkthrough-deploy-and-use-the-model.md) <br /><br />Stellen Sie das Modell in der Produktion bereit, indem Sie es in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank speichern. Rufen Sie das Modell aus einer gespeicherten Prozedur ab, um Vorhersagen zu generieren.|10 Minuten|
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-### <a name="intended-audience"></a>Beabsichtigte Zielgruppe
+Es wird empfohlen, dass Sie in dieser exemplarischen Vorgehensweise auf einem Laptop oder einem anderen Computer, die die Microsoft R-Bibliotheken, die installiert werden. Sie müssen möglicherweise, sich im selben Netzwerk, eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer mit SQL Server und die R-Sprache aktiviert.
 
-Diese exemplarische Vorgehensweise ist für R- oder SQL-Entwickler vorgesehen. Sie bietet eine Einführung in die Integration von R in Unternehmensworkflows mithilfe von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  Sie sollten mit Datenbankvorgänge, z. B. Datenbanken und Tabellen erstellen, Importieren von Daten und Ausführen von Abfragen vertraut sein.
+Sie können die exemplarische Vorgehensweise ausführen, auf einem Computer, die beides aufweist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ein R-Entwicklungsumgebung, aber es wird nicht empfohlen, diese Konfiguration für eine produktionsumgebung.
 
-+ Alle SQL- und R-Skripte sind enthalten.
-+ Sie müssen möglicherweise Zeichenfolgen in das Ausführen von Skripts, in Ihrer Umgebung zu ändern. Hierzu können Sie mit einem beliebigen Codeeditor, z. B. [Visual Studio Code](https://code.visualstudio.com/Download).
+Wenn Sie R-Befehle von einem Remotecomputer, z.B. einem Laptop oder einem anderen Computer im Netzwerk ausführen möchten, müssen Sie die Microsoft R Open-Bibliotheken installieren. Sie können entweder Microsoft R Client oder Microsoft R Server installieren. Der Remotecomputer muss in der Lage, Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+Wenn Sie Client und Server auf demselben Computer platzieren möchten, achten Sie darauf, dass Sie einen separaten Satz von Microsoft R-Bibliotheken für die Verwendung beim Senden von R-Skript von einem "remote" Client installieren. Verwenden Sie nicht die R-Bibliotheken, die installiert werden für die Verwendung von SQL Server-Instanz für diesen Zweck.
 
-+ Sie benötigen Zugriff auf eine Instanz von SQL Server 2016 oder eine Evaluierungsversion von SQL Server-2017.
-+ Auf mindestens einer Instanz des SQL Server-Computers muss [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] installiert sein.
-+ Wenn Sie R-Befehle von einem Remotecomputer befindet, z. B. einen Laptop oder einem anderen Computer im Netzwerk ausführen möchten, müssen Sie die Microsoft R Open-Bibliotheken installieren. Sie können Microsoft R-Client oder Microsoft R Server installieren. Der Remotecomputer muss in der Lage, Herstellen von Verbindungen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.
-+ Wenn Sie Client und Server auf demselben Computer platzieren möchten, achten Sie darauf, dass Sie einen separaten Satz von Microsoft R-Bibliotheken für die Verwendung beim Senden von R-Skript von einem "remote" Client installieren. Verwenden Sie die R-Bibliotheken, die installiert sind für die Verwendung von SQL Server-Instanz für diesen Zweck.
+## <a name="add-r-to-sql-server"></a>Hinzufügen von R mit SQLServer
 
-Weitere Informationen dazu, wie Sie diese Server und Client-Umgebungen einrichten, finden Sie unter [Voraussetzungen für die R und SQL Server Data sience-Vorgehensweise](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
+Sie benötigen Zugriff auf eine Instanz von SQL Server mit Unterstützung für R installiert. In dieser exemplarischen Vorgehensweise wurde ursprünglich für SQL Server 2016 entwickelt und auf 2017 getestet werden, damit Sie eine der folgenden SQL Server-Versionen verwenden können sollen. (Es gibt einige geringfügige Unterschiede in der RevoScaleR-Funktionen zwischen den Versionen.)
 
-## <a name="next-lesson"></a>Nächste Lektion
++ [Installieren von SQL Server 2017-Machine-Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
++ [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
-[Vorbereiten der exemplarischen Vorgehensweise R](../tutorials/walkthrough-prepare-the-data.md)
+## <a name="install-an-r-development-environment"></a>Installieren einer R-Entwicklungsumgebung
+
+In dieser exemplarischen Vorgehensweise wird empfohlen, dass Sie eine R-Entwicklungsumgebung verwenden. Hier sind einige Vorschläge:
+
+- **R Tools für Visual Studio** (RTVS) ist ein kostenloses plug-in, bietet Intellisense, debugging und die Unterstützung für Microsoft r Sie es mit R Server und SQL Server-Machine Learning-Dienste verwenden können. Gehen Sie unter [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)(R-Tools für Visual Studio), um es herunterzuladen.
+
+- **Microsoft R Client** ist ein schlankes Entwicklungstool, die Entwicklung in R mithilfe der RevoScaleR-Paket unterstützt. Unter [Erste Schritte mit Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)können Sie es herunterladen.
+
+- **RStudio** ist eine der beliebtesten Umgebungen für die Entwicklung von R. Weitere Informationen finden Sie unter [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
+
+    Sie können nicht in diesem Tutorial mit einer generischen Installation von RStudio oder einer anderen Umgebung abschließen; Sie müssen auch die R-Pakete und verbindungsbibliotheken für Microsoft R Open installieren. Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients](../r/set-up-a-data-science-client.md).
+
+- Grundlegende R-Tools (R.exe, RTerm.exe, RScripts.exe) werden auch standardmäßig installiert, bei der Installation von R in SQL Server oder R Client. Wenn Sie keine IDE installieren möchten, können Sie diese Tools verwenden.
+
+## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>Abrufen von Berechtigungen für die SQL Server-Instanz und Datenbank
+
+Für die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Ausführen von Skripts und Daten hochzuladen, müssen Sie einen gültigen Anmeldenamen haben, auf dem Datenbankserver.  Sie können entweder einen SQL-Anmeldenamen oder die integrierte Windows-Authentifizierung verwenden. Bitten Sie den Datenbankadministrator so konfigurieren Sie die folgenden Berechtigungen für das Konto in der Datenbank, in dem Sie r verwenden
+
+- Erstellen von Datenbanken, Tabellen, Funktionen und gespeicherten Prozeduren
+- Schreiben von Daten in Tabellen
+- Möglichkeit zum Ausführen von R-Skript (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+
+In dieser exemplarischen Vorgehensweise haben wir die SQL-Anmeldung verwendet **RTestUser**. Im Allgemeinen wird empfohlen, dass Sie die integrierte Windows-Authentifizierung verwenden, mit der SQL-Anmeldung ist jedoch einfacher für einige Demozwecke zu nutzen.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+[Vorbereiten der Daten mithilfe von PowerShell](walkthrough-prepare-the-data.md)

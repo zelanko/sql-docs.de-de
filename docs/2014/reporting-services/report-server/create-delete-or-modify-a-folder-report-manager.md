@@ -21,12 +21,12 @@ caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccfded2316c40eaede10cfcc366025c55dec589c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177267"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084717"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  
@@ -39,7 +39,7 @@ ms.locfileid: "37177267"
   
      Die Seite **Neuer Ordner** wird geöffnet.  
   
-3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : @ & = +, $ / * \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
+3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = +, $ / * \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
   
 4.  Geben Sie optional eine Beschreibung ein.  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227410"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084062"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
@@ -35,7 +35,7 @@ ms.locfileid: "37227410"
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie dies durch `SELECT column_list FROM`  *\< Funktionsname >*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
-|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner|Ein Bezeichner wurde gefunden, der mit @ oder @@ beginnt. @ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
+|\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen Sp_addumpdevice'`tape`' wurde gefunden. Verwenden Sie Sp_addumpdevice'`disk`"stattdessen. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227410"
 |sp_defaultlanguage|Die Prozedur sp_defaultlanguage wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN. Tritt einmal pro Kompilierung auf.|  
 |sp_denylogin|Die Prozedur sp_denylogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE. Tritt einmal pro Abfrage auf.|  
 |sp_depends|Die Prozedur sp_depends wurde gefunden. Verwenden Sie stattdessen sys.dm_sql_referencing_entities und sys.dm_sql_referenced_entities. Tritt einmal pro Abfrage auf.|  
-|sp_detach_db @keepfulltextindexfile|Das @keepfulltextindexfile-Argument wurde in einer sp_detach_db-Anweisung gefunden. Verwenden Sie dieses Argument nicht.|  
+|sp_detach_db \@keepfulltextindexfile|In einer sp_detach_db-Anweisung wurde das \@keepfulltextindexfile-Argument gefunden. Verwenden Sie dieses Argument nicht.|  
 |sp_dropalias|Die Prozedur sp_dropalias wurde gefunden. Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwenden Sie sp_dropalias, um Aliase in aktualisierten Datenbanken zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |sp_dropapprole|Die Prozedur sp_dropapprole wurde gefunden. Verwenden Sie stattdessen DROP APPLICATION ROLE. Tritt einmal pro Abfrage auf.|  
 |sp_dropextendedproc|Die Prozedur sp_dropextendedproc wurde gefunden. Verwenden Sie stattdessen CLR. Tritt einmal pro Kompilierung auf.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227410"
 |sp_fulltext_catalog|Die Prozedur sp_fulltext_catalog wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT CATALOG. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_column|Die Prozedur sp_fulltext_column wurde gefunden. Verwenden Sie stattdessen ALTER FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_database|Die Prozedur sp_fulltext_database wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE. Tritt einmal pro Kompilierung auf.|  
-|Sp_fulltext_service @action= Clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=connect_timeout|Die Option connect_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=data_timeout|Die Option data_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=connect_timeout|Die Option connect_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=data_timeout|Die Option data_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
 |sp_fulltext_table|Die Prozedur sp_fulltext_table wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_getbindtoken|Die Prozedur sp_getbindtoken wurde gefunden. Verwenden Sie stattdessen MARS (Multiple Active Results Sets) oder verteilte Transaktionen. Tritt einmal pro Kompilierung auf.|  
 |sp_grantdbaccess|Die Prozedur sp_grantdbaccess wurde gefunden. Verwenden Sie stattdessen CREATE USER. Tritt einmal pro Abfrage auf.|  

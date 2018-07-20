@@ -4,20 +4,20 @@ description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 77dd13139eba88a40cbf20094b880c5046ebfb05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7534ea052c5c277edb195c2a6a2a12ead1661e33
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057629"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102588"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank unter SUSE Linux Enterprise Server
 
@@ -117,13 +117,5 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Ausführen von Aufgaben für Verwaltungs- und Entwicklungstools. Andere Tools sind:
->
-> * [SQL Server Operations Studio (Vorschauversion)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio-Code](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (Vorschauversion)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

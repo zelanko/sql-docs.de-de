@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280666"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082722"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Allgemein (Eigenschaftenseite) (Modelle, Berichts-Manager)
   Auf der Seite Allgemeine Eigenschaften für Berichtsmodelle können Sie die Modelldefinitionsdatei (Dateinamenerweiterung SMDL) umbenennen, löschen, verschieben oder ersetzen. Einzelheiten zu dem Benutzer, der das Modell erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  
@@ -41,7 +41,7 @@ ms.locfileid: "37280666"
  **Name**  
  Gibt den Namen des Modells an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können beim Angeben eines Namens nicht verwendet werden:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung des Modells ein. Diese Beschreibung wird für Benutzer, die über die Zugriffsberechtigung auf das Modell verfügen, auf der Seite Inhalt angezeigt.  

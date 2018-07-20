@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit SQL Server-Daten mithilfe von R (SQL und R deep Dive) | Microsoft Docs
+title: Arbeiten mit SQL Server-Daten mithilfe von R (SQL und R tieferer) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e57e94d1d7856bfc9082c1a73a13a5c0a620b5ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202993"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084182"
 ---
-# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>Arbeiten Sie mit SQL Server-Daten mithilfe von R (SQL und R deep Dive)
+# <a name="lesson-1-create-a-database-and-permissions"></a>Lektion 1: Erstellen einer Datenbank und Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+In diesem Artikel ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion Einrichten der Umgebung und Hinzufügen von Daten, die Sie benötigen für das Trainieren der Modelle und einige schnellen Zusammenfassungen der Daten ausgeführt werden. Im Rahmen des Prozesses müssen Sie diese Aufgaben ausführen:
+In dieser Lektion richten Sie die Umgebung Sie und fügen Sie die Daten zum Trainieren der Modelle und führen einige schnelle Zusammenfassungen der Daten. Als Teil des Prozesses müssen Sie diese Aufgaben durchführen:
   
 - Erstellen einer neuen Datenbank zum Speichern der Daten für das Training und die Bewertung von zwei R-Modellen.
   
@@ -33,16 +33,16 @@ In dieser Lektion Einrichten der Umgebung und Hinzufügen von Daten, die Sie ben
   
 - Erstellen eines Computekontexts zum Aktivieren von Remoteausführungen von R-Code.
   
-- (Optional) Aktivieren der Ablaufverfolgung für die remote-computekontext.
+- (Optional) Aktivieren der Ablaufverfolgung auf dem entfernten computekontext.
   
-## <a name="create-the-database-and-user"></a>Erstellen Sie die Datenbank und die Benutzer
+## <a name="create-the-database-and-user"></a>Erstellen der Datenbank und die Benutzer
 
-In dieser exemplarischen Vorgehensweise erstellen Sie eine neue Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], und fügen Sie einen SQL-Anmeldenamen mit Berechtigungen zum Schreiben und Lesen von Daten sowie zum Ausführen von R-Skripts hinzu.
+In dieser exemplarischen Vorgehensweise erstellen Sie eine neue Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], und fügen Sie eine SQL-Anmeldung mit Berechtigungen zum Schreiben und Lesen von Daten und zum Ausführen von R-Skripts hinzu.
 
 > [!NOTE]
-> Wenn Sie Daten nur lesen, muss das Konto, das R-Skripts ausgeführt, SELECT-Berechtigungen (**"db_datareader"** Rolle "") für die angegebene Datenbank. In diesem Lernprogramm müssen Sie allerdings DDL-Administratorrechte vorbereiten die Datenbank und zum Erstellen von Tabellen zum Speichern der bewerteten Ergebnisse verfügen.
+> Wenn Sie Daten nur lesen, benötigt das Konto, das die R-Skripts ausführt SELECT-Berechtigungen (**"db_datareader"** Rolle) für die angegebene Datenbank. In diesem Tutorial müssen Sie jedoch DDL-Administratorberechtigungen vorbereiten die Datenbank, und klicken Sie zum Erstellen von Tabellen zum Speichern der Bewertungsergebnisse verfügen.
 > 
-> Wenn Sie nicht der Datenbankbesitzer sind, benötigen Sie die Berechtigung EXECUTE ANY EXTERNAL SCRIPT, um R-Skripts ausführen.
+> Wenn Sie nicht der Besitzer der Datenbank sind, benötigen Sie außerdem die Berechtigung EXECUTE ANY EXTERNAL SCRIPT, um R-Skripts ausführen.
 
 1. Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Instanz aus, bei der [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] aktiviert ist. Führen Sie einen Rechtsklick auf **Datenbanken**aus, und wählen Sie **Neue Datenbank**aus.
   
@@ -95,25 +95,25 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
     Wenn Sie zusätzliche Datenbankverwaltungstools installieren möchten, können Sie eine Testverbindung zur SQL Server-Instanz erstellen, indem Sie den [ODBC-Datenquellen-Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in der Systemsteuerung verwenden. Wenn die Datenbank ordnungsgemäß konfiguriert ist und Sie den richtigen Benutzernamen und das richtige Kennwort eingeben, sollten Sie die zuvor von Ihnen erstellte Datenbank sehen und diese als Ihre Standarddatenbank auswählen.
   
-    Wenn Sie keine Verbindung mit der Datenbank herstellen können, überprüfen Sie ob die Remoteverbindungen für den Server aktiviert sind und ob das Named Pipes-Protokoll aktiviert ist. Weitere Tipps zur Problembehandlung finden Sie in diesem Artikel: [Problembehandlung beim Verbinden mit SQL Server-Datenbankmoduls](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Wenn Sie keine Verbindung mit der Datenbank herstellen können, überprüfen Sie ob die Remoteverbindungen für den Server aktiviert sind und ob das Named Pipes-Protokoll aktiviert ist. Weitere Tipps zur Problembehandlung finden Sie in diesem Artikel: [Problembehandlung beim Herstellen einer Verbindung mit der SQL Server-Datenbank-Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Mein Tabellenname wurde mit dem Präfix DataReader versehen – warum?**
   
-    Wenn Sie angeben, das Standardschema für diesen Benutzer als **"db_datareader"**, alle Tabellen und andere neue Objekte, die von diesem Benutzer erstellte vorangestellt werden die *Schema* Name. Ein Schema ist wie ein Ordner, den Sie einer Datenbank hinzufügen können, um Objekte zu organisieren. Das Schema definiert außerdem die Berechtigungen eines Benutzers in der Datenbank.
+    Wenn Sie angeben, das Standardschema für diesen Benutzer als **"db_datareader"**, alle Tabellen und andere neue Objekte, die von diesem Benutzer erstellte haben das Präfix der *Schema* Name. Ein Schema ist wie ein Ordner, den Sie einer Datenbank hinzufügen können, um Objekte zu organisieren. Das Schema definiert außerdem die Berechtigungen eines Benutzers in der Datenbank.
   
-    Wenn das Schema einen bestimmten Benutzernamen zugeordnet ist, wird der Benutzer die _schemabesitzer_. Wenn Sie ein Objekt erstellen, müssen Sie immer es immer in Ihrem eigenen Schema erstellen, außer Sie geben ausdrücklich an, dass es in einem anderen Schema erstellt werden soll.
+    Wenn das Schema mit einem bestimmten Benutzernamen verknüpft ist, wird der Benutzer die _schemabesitzer_. Wenn Sie ein Objekt erstellen, müssen Sie immer es immer in Ihrem eigenen Schema erstellen, außer Sie geben ausdrücklich an, dass es in einem anderen Schema erstellt werden soll.
   
-    Angenommen, Sie erstellen eine Tabelle mit dem Namen `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < Datenbankname >. TestData ".
+    Beispielsweise wird bei der Erstellung einer Tabelle mit dem Namen `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< Database_name > .db_datareader. TestData ".
   
     Aus diesem Grund kann eine Datenbank mehrere Tabellen mit dem gleichen Namen enthalten, solange die Tabellen zu unterschiedlichen Schemas gehören.
    
-    Wenn Sie eine Tabelle suchen und ein Schema nicht angeben, sucht der Datenbankserver für ein Schema, das Ihnen gehört. Daher müssen Sie keinen Schemanamen angeben, wenn Sie auf Tabellen in einem Schema zugreifen, das mit Ihrem Login verknüpft sind.
+    Wenn Sie eine Tabelle suchen und führen Sie kein Schema angeben, sucht der Datenbankserver, für ein Schema, das Sie besitzen. Daher müssen Sie keinen Schemanamen angeben, wenn Sie auf Tabellen in einem Schema zugreifen, das mit Ihrem Login verknüpft sind.
   
 - **Ich verfüge über keine DDL-Berechtigungen. Kann ich weiterhin das Tutorial ausführen?**
   
-    Ja. Sie müssen jedoch jemanden bitten, die Daten vorab in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen zu laden und die Abschnitte zu überspringen, in denen Sie neue Tabellen erstellen sollen. Die Funktionen, die DDL-Administratorrechte erfordern werden im Lernprogramm möglichst hingewiesen.
+    Ja. Sie müssen jedoch jemanden bitten, die Daten vorab in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen zu laden und die Abschnitte zu überspringen, in denen Sie neue Tabellen erstellen sollen. Die Funktionen, die DDL-Berechtigungen erforderlich sind in diesem Tutorial nach Möglichkeit hingewiesen.
 
-    Darüber hinaus bitten Sie Ihren Administrator um die Berechtigung EXECUTE ANY EXTERNAL SCRIPT zu gewähren. Erforderlich für die Ausführung des R-Skripts, ob remote oder mithilfe von `sp_execute_external_script`.
+    Darüber hinaus bitten Sie Ihren Administrator, um Sie über die Berechtigung EXECUTE ANY EXTERNAL SCRIPT gewähren. Es wird für R-skriptausführung benötigt, ob remote oder mithilfe von `sp_execute_external_script`.
 
 ## <a name="next-step"></a>Nächster Schritt
 

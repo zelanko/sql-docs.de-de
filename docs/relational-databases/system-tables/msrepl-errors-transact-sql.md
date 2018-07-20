@@ -1,5 +1,5 @@
 ---
-title: MSrepl_errors (Transact-SQL) | Microsoft Docs
+title: MSrepl_errors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48346fe7e8beb4c1885507de48d14889bd6ffee6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 992e5594f208cd64ef48d90f2b29e7018719a6da
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005397"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103718"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSrepl_errors** -Tabelle enthält Zeilen mit erweiterten Fehlerinformationen Verteilungs-Agent und Merge-Agent. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSrepl_errors** -Tabelle enthält Zeilen mit erweiterten Fehlerinformationen für Verteilungs-Agent und Merge-Agent. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "33005397"
 |**Uhrzeit**|**datetime**|Zeitpunkt des Auftretens des Fehlers.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Die Typ-ID der Fehlerquelle.|  
-|**source_name**|**Nvarchar(100)**|Der Name der Fehlerquelle.|  
+|**source_name**|**nvarchar(100)**|Der Name der Fehlerquelle.|  
 |**error_code**|**sysname**|Der Fehlercode.|  
 |**Fehlertext**|**ntext**|Die Fehlermeldung.|  
 |**xact_seqno**|**varbinary(16)**|Die Protokollsequenznummer der ersten Transaktion des Batches, der bei der Ausführung einen Fehler erzeugt hat. Wird nur von Verteilungs-Agents verwendet und ist die Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches.|  

@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272316"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083029"
 ---
 # <a name="upload-file-page-report-manager"></a>Datei hochladen (Seite) (Berichts-Manager)
   Mithilfe der Seite Datei hochladen können Sie eine Datei aus dem Dateisystem in der Berichtsserver-Datenbank veröffentlichen. Hochgeladene Dateien werden als Elemente in der Ordnerhierarchie des Berichtsservers dargestellt.  
@@ -54,7 +54,7 @@ ms.locfileid: "37272316"
  Klicken Sie auf diese Schaltfläche, um eine Datei aus dem Dateisystem auszuwählen.  
   
  **Name**  
- Geben Sie den Namen der Datei ein, der im Namespace des Berichtsservers angezeigt wird. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : @ & = +, $ * \< > | "oder / wenn Sie einen Elementnamen angeben.  
+ Geben Sie den Namen der Datei ein, der im Namespace des Berichtsservers angezeigt wird. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder / wenn Sie einen Elementnamen angeben.  
   
  **Vorhandenes Element überschreiben Sie, falls vorhanden**  
  Aktivieren Sie dieses Kontrollkästchen, wenn Sie ein vorhandenes Element durch eine neuere Version ersetzen möchten. Um eine vorhandene Version zu überschreiben, muss der Name des neuen Elements genau mit dem Namen des vorhandenen Elements übereinstimmen.  

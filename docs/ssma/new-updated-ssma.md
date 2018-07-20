@@ -1,24 +1,23 @@
 ---
-title: Aktualisiert - SSMA für die SQL Server-Dokumentation | Microsoft Docs
-description: Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänderten Dokumentation für SQL Server Migration Assistant (SSMA) for Microsoft SQL Server.
+title: 'Aktualisiert: SSMA für die SQL Server-Dokumentation | Microsoft-Dokumentation'
+description: Anzeigen von Codeausschnitten für aktualisierten Inhalt für kürzliche Änderungen in der Dokumentation für SQL Server Migration Assistant (SSMA) für Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776966"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085462"
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>Neue und kürzlich aktualisierte: SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>Neu und kürzlich aktualisiert: SQL Server Migration Assistant (SSMA)
 
 
 
@@ -31,7 +30,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 - *Datumsbereich des Updates:* &nbsp; **03.02.2018** &nbsp; bis &nbsp; **28.04.2018**
-- *Bereich für die Themenbereichsdatenbank:* &nbsp; **SQL Server Migration Assistant**.
+- *Themenbereich:* &nbsp; **SQL Server Migration Assistant**.
 
 
 

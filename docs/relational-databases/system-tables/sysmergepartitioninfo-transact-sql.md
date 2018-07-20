@@ -1,5 +1,5 @@
 ---
-title: Sysmergepartitioninfo (Transact-SQL) | Microsoft Docs
+title: Sysmergepartitioninfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysmergepartitioninfo system table
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d0c9ed5edb8f143a0e3742a7c49d23d95266640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fe90d2f31d8c5530c6385804ef161bd46bc4527
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010267"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102358"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "33010267"
 |**logical_record_parent_nickname**|**int**|Der Spitzname des übergeordneten Elements der obersten Ebene eines Artikels in einem logischen Datensatz.|  
 |**logical_record_view**|**int**|Eine Sicht, die den rowguid-Wert des übergeordneten Artikels der obersten Ebene ausgibt, der jedem untergeordneten rowguid-Wert entspricht.|  
 |**logical_record_deleted_view_rule**|**nvarchar(4000)**|Ähnlich wie **Logical_record_view**, außer dass damit untergeordnete Zeilen in der "gelöschten" Tabelle in Update- und delete-Trigger.|  
-|**logical_record_level_conflict_detection**|**bit**|Gibt an, ob Konflikte auf der logischen Datensatzebene oder auf der Zeilen- oder Spaltenebene erkannt werden sollen.<br /><br /> **0** = konflikterkennung verwendet wird, mit Zeilen- oder Spaltenebene.<br /><br /> **1** = logischer Datensatz konflikterkennung verwendet wird, wenn eine Änderung in einer Zeile auf dem Verleger und die Änderung in einer separaten Zeile desselben logischen Datensatzes auf dem Abonnenten als Konflikt behandelt.<br /><br /> Wenn dieser Wert ist **1**, nur Auflösung des Konflikts Ebene zwischen logischen Datensatz verwendet werden kann.|  
-|**logical_record_level_conflict_resolution**|**bit**|Gibt an, ob Konflikte auf der logischen Datensatzebene oder auf der Zeilen- oder Spaltenebene aufgelöst werden sollen.<br /><br /> **0** = Auflösung verwendet mit Zeilen- oder Spaltenebene.<br /><br /> **1** = bei einem Konflikt der gesamte logische Datensatz des Gewinners den gesamten logischen Datensatz des verlierers überschreibt.<br /><br /> Der Wert **1** kann mit beiden Erkennung der logischen Datensatzebene und für die Zeilen- oder Spaltenebene Erkennung verwendet werden.|  
-|**partition_options**|**tinyint**|Definiert die Art und Weise, wie Daten im Artikel partitioniert werden. Dies ermöglicht Leistungsoptimierungen, wenn alle Zeilen nur zu einer einzigen Partition oder zu einem einzigen Abonnement gehören. *Partition_options* kann einen der folgenden Werte sein.<br /><br /> **0** = das Filtern für den Artikel ist entweder statisch oder keine eindeutige Teilmenge von Daten für jede Partition, d. h. eine "überlappende" Partition ergibt.<br /><br /> **1** = die Partitionen überlappen, und auf dem Abonnenten vorgenommene DML-Updates können nicht ändern, die Partition, zu der eine Zeile gehört.<br /><br /> **2** = das Filtern für den Artikel nicht überlappende Partitionen ergibt, aber mehrere Abonnenten können die gleiche Partition erhalten.<br /><br /> **3** = das Filtern für den Artikel nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind.|  
+|**logical_record_level_conflict_detection**|**bit**|Gibt an, ob Konflikte auf der logischen Datensatzebene oder auf der Zeilen- oder Spaltenebene erkannt werden sollen.<br /><br /> **0** = die konflikterkennung verwendet wird, mit Zeilen- oder Spaltenebene.<br /><br /> **1** = logischer Datensatz konflikterkennung verwendet wird, wenn eine Änderung in einer Zeile auf dem Verleger und die Änderung in einer separaten Zeile desselben logischen Datensatzes auf dem Abonnenten als Konflikt behandelt.<br /><br /> Wenn dieser Wert ist **1**, nur logischen Datensatzes auf die konfliktauflösung kann verwendet werden.|  
+|**logical_record_level_conflict_resolution**|**bit**|Gibt an, ob Konflikte auf der logischen Datensatzebene oder auf der Zeilen- oder Spaltenebene aufgelöst werden sollen.<br /><br /> **0** = Auflösung verwendet mit Zeilen- oder Spaltenebene.<br /><br /> **1** = bei einem Konflikt der gesamte logische Datensatz des Gewinners den gesamten logischen Datensatz des verlierers überschreibt.<br /><br /> Der Wert **1** kann mit beiden Erkennung der logischen Datensatzebene und für die Zeilen- oder Spaltenebene-Erkennung verwendet werden.|  
+|**partition_options**|**tinyint**|Definiert die Art und Weise, wie Daten im Artikel partitioniert werden. Dies ermöglicht Leistungsoptimierungen, wenn alle Zeilen nur zu einer einzigen Partition oder zu einem einzigen Abonnement gehören. *Partition_options* kann einer der folgenden Werte sein.<br /><br /> **0** = das Filtern für den Artikel ist entweder statisch oder keine eindeutige Teilmenge von Daten für jede Partition, d. h. eine "überlappende" Partition ergibt.<br /><br /> **1** = die Partitionen überlappen, und auf dem Abonnenten vorgenommene DML-Updates können nicht die Partition ändern, der eine Zeile gehört.<br /><br /> **2** = das Filtern für den Artikel nicht überlappende Partitionen ergibt, aber mehrere Abonnenten können die gleiche Partition erhalten.<br /><br /> **3** = das Filtern für den Artikel nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

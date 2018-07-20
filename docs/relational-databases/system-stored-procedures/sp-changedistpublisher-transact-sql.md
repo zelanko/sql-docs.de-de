@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistpublisher (Transact-SQL) | Microsoft Docs
+title: Sp_changedistpublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 1c1676fe8f270fc5c054c8a9f2c3b9b7a0c3a519
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce38cf053b16ae43ab9a9c5cd617bace6d78e4db
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989775"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085952"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,11 @@ ms.locfileid: "32989775"
 sp_changedistpublisher [ @publisher = ] 'publisher'  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
+    [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@property=** ] **"***Eigenschaft***"**  
@@ -56,11 +57,17 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  [ **@value=** ] **'***Wert***'**  
  Der Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
+ [  **@storage_connection_string =**] **"***Storage_connection_string***"**  
+ Erforderlich für die verwaltete SQL-Datenbank-Instanz ist, sollte den Zugriffsschlüssel für das Speichervolume für Azure SQL-Datenbank übereinstimmen. 
+
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+ 
  Diese Tabelle beschreibt die Eigenschaften von Verlegern und die Werte für diese Eigenschaften.  
   
 |Eigenschaft|Werte|Description|  
 |--------------|------------|-----------------|  
-|**Aktive**|**true**|Aktiviert den Verleger|  
+|**aktiv**|**true**|Aktiviert den Verleger|  
 ||**false**|Deaktiviert den Verleger|  
 |**distribution_db**||Der Name der Verteilungsdatenbank.|  
 |**login**||Benutzername|  
@@ -68,16 +75,17 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**security_mode**|**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann nicht geändert werden, für einen nicht-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*|  
 ||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger. *Dies kann nicht geändert werden, für einen nicht-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*|  
 |**working_directory**||Das zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendete Arbeitsverzeichnis|  
-|NULL (Standard)||Alle verfügbaren *Eigenschaft* -Optionen werden ausgegeben.|  
+|NULL (Standard)||Alle verfügbaren *Eigenschaft* -Optionen werden ausgegeben.| 
+|**storage_connection_string**| Zugriffsschlüssel | Der Zugriffsschlüssel für das Arbeitsverzeichnis, wenn die Datenbank über Azure verwaltete SQL-Datenbankinstanz ist. 
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistpublisher** wird für alle Replikationstypen verwendet.  
+ **Sp_changedistpublisher** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changedistpublisher**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_conflict_&lt;Veröffentlichung&gt;_&lt;Artikel&gt; (Transact-SQL) | Microsoft Docs
+title: MSmerge_conflict_&lt;Veröffentlichung&gt;_&lt;Artikel&gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e873cf77753c4d3e210cd1238a1cfc6bd7aaca1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b5ec935f352e64678b98136953dfbb5041430a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004857"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101198"
 ---
 # <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>MSmerge_conflict_&lt;Veröffentlichung&gt;_&lt;Artikel&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

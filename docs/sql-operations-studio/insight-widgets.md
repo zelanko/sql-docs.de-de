@@ -1,61 +1,60 @@
 ---
-title: Verwenden Sie Einblicke Widgets zum Überwachen von Servern und Datenbanken in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
-description: Erfahren Sie, einen Einblick in Gadgets in SQL-Vorgänge Studio (Vorschau).
+title: Verwenden Sie einblickwidgets zum Überwachen von Servern und Datenbanken in SQL Operations Studio (Vorschau) | Microsoft-Dokumentation
+description: Informationen Sie zu einblickwidgets in SQL Operations Studio (Vorschau).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
+ms.technology: ssops
 ms.reviewer: alayu; sstein
 ms.suite: sql
-ms.prod_service: sql-tools
-ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article"
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77f34ceebb4f02c829b2df3efcae5e64c2eaa1bf
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 79918d899fa978404dde63bf9257ffb9fc52d185
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235929"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082852"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Verwalten von Servern und Datenbanken mit Einblicke in Gadgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Verwalten von Servern und Datenbanken mit einblickwidgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Insight Widgets dauern die Transact-SQL (T-SQL) Abfragen, die Sie zum Überwachen von Servern und Datenbanken verwenden, und wandelt sie in aufschlussreiche Visualisierungen. 
+Einblickwidgets nutzen, die Transact-SQL (T-SQL) Abfragen, die Sie zum Überwachen von Servern und-Datenbanken verwenden und wandelt sie in aussagekräftige Visualisierungen. 
 
-Einblicke sind anpassbare Diagramme und Grafiken, die Server- und Überwachung von Dashboards hinzugefügt. Zeigen Sie auf einen Blick Einblicke von Servern und Datenbanken, und klicken Sie dann Drillvorgang auf Weitere Details, und starten Sie Verwaltungsaktionen, die Sie definieren. 
+Einblicke sind anpassbare Diagramme und Grafiken, die Server- und datenbanküberwachung Dashboards hinzugefügt. Zeigen Sie auf einen Blick Erkenntnisse von Ihren Servern und Datenbanken, und klicken Sie dann weitere Details anzuzeigen Sie, und starten Sie Verwaltungsaktionen, die Sie definieren. 
 
-Sie können awesome Server- und Management-Dashboards ähnlich wie im folgenden Beispiel erstellen:
+Sie können die awesome Server- und Management-Dashboards wie im folgenden Beispiel erstellen:
 
 ![Datenbank-dashboard](media/insight-widgets/database-dashboard.png)
 
 
-Springen aus, und starten die verschiedene Typen von Insight-Widgets erstellen, überprüfen Sie die folgenden Lernprogramme ausführen:
+Um Sie richtig einsteigen und verschiedene Arten von einblickwidgets erstellen, finden Sie in den folgenden Tutorials:
 
-- [Erstellen Sie eine benutzerdefinierte Insight-widget](tutorial-build-custom-insight-sql-server.md)
-- *Aktivieren der integrierten Insight widgets*
-   - [Aktivieren der anwendungsleistungsüberwachung Einblicke](tutorial-qds-sql-server.md)
+- [Erstellen eines benutzerdefinierten Einblicks-Widgets](tutorial-build-custom-insight-sql-server.md)
+- *Aktivieren Sie integrierte einblickwidgets*
+   - [Aktivieren der Einblicke für die Leistungsüberwachung](tutorial-qds-sql-server.md)
    - [Aktivieren Sie die Tabelle Speicherplatz Nutzung Einblicke](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>SQL-Abfragen 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] versucht, vermeiden Sie unnötigen noch eine andere Sprache oder Extreme Benutzer Schnittstelle, damit er versucht, T-SQL-so weit wie möglich mit Minimalkonfiguration JSON zu verwenden. Konfigurieren von Widgets Einblicke mit T-SQL nutzt die zahllose Anzahl der vorhandenen Datenquellen hilfreich, T-SQL-Abfragen, die in Widgets aufschlussreiche umgewandelt werden können.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] versucht, zu vermeiden, aber einer anderen Sprache oder hohem Benutzeroberfläche damit versucht wird, verwenden Sie T-SQL so weit wie möglich mit Minimalkonfiguration JSON. Konfigurieren von einblickwidgets mit T-SQL nutzt die zahllosen Anzahl der vorhandenen Quellen nützliche T-SQL-Abfragen, die in aussagekräftige Widgets umgewandelt werden können.
 
-Insight Widgets bestehen aus einem oder zwei T-SQL-Abfragen:
-* *Insight Widget Abfrage* ist obligatorisch, und die Abfrage, die die angezeigten Daten im Widget "" zurückgegeben wird.
-* *Insight Details Abfrage* ist nur erforderlich, wenn Sie eine Detailseite Insight erstellen.
+Einblickwidgets bestehen aus einem oder zwei T-SQL-Abfragen:
+* *Insights-Widget-Abfrage* ist obligatorisch, und ist die Abfrage, die angezeigten Daten im daraufhin angezeigten Widget zurückgibt.
+* *Insights-Details-Abfrage* ist nur erforderlich, wenn Sie eine Detailseite Insight erstellen.
 
-Eine Abfrage der Insight-Widget definiert ein Dataset, das eine Anzahl, oder Diagramm gerendert wird. Insight Details Abfrage wird verwendet, um relevante Einblick von Detailinformationen in einem tabellarischen Format in der Insight-Bereich "Details" aufzulisten. 
+Eine Insight-Widget-Abfrage definiert ein Dataset, das eine Anzahl, oder Diagramm gerendert wird. Insights-Details-Abfrage werden relevante Einblicke Detailinformationen in einem Tabellenformat in der Insight-Bereich "Details" aufgelistet. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] Insight Widget Abfragen ausgeführt und ein Diagramm Dataset Resultset der Abfrage zugeordnet, und klicken Sie dann rendert ihn. Wenn Benutzer einen Einblick Details zu öffnen, führt die Abfrage der Insight-Details und druckt das Ergebnis in einer Rasteransicht innerhalb des Dialogfelds.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Insight-Widget-Abfragen ausgeführt, Resultset der Abfrage des Diagramms Dataset zugeordnet, und rendert ihn. Wenn Benutzer einen Einblick in die Details öffnen, führt die Abfrage der Insight-Details, und gibt das Ergebnis in einer Rasteransicht in das Dialogfeld.
 
-Die Grundidee ist, eine T-SQL-Abfrage auf eine Weise zu schreiben, damit es als ein Dataset mit einer Count, Diagramm- und Graph-Widget verwendet werden kann. 
+Die grundlegende Idee ist, eine T-SQL-Abfrage auf eine Weise zu schreiben, damit es als ein Dataset mit einer Anzahl, Diagramm- und Graph-Widget verwendet werden kann. 
 
 ## <a name="summary"></a>Zusammenfassung
 
-Bestimmen das Verhalten bei Widget Einblicke, die T-SQL-Abfrage und Resultset. Das Schreiben einer Abfrage für ein Diagramm oder die Zuordnung eines richtigen Diagrammtyps für vorhandene Abfrage ist die wichtige Überlegung eine effektive Insight Widgets erstellen.
+Bestimmen das Verhalten der Insight-Widgets, die T-SQL-Abfrage und Resultset. Das Schreiben einer Abfrage für ein Diagramm oder die Zuordnung eines richtigen Diagrammtyps für vorhandene Abfrage ist die wichtige Überlegung zum Erstellen einer effektiven Insight-Widget.
 
 
 

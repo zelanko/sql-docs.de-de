@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152781"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082952"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor für den Task 'SQL ausführen' (Seite Parameterzuordnung)
   Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
@@ -45,7 +45,7 @@ ms.locfileid: "37152781"
  **Parametername**  
  Geben Sie einen Parameternamen an.  
   
- Je nachdem, welchen Verbindungs-Manager-Typ der Task verwendet, müssen Sie Zahlen oder Parameternamen verwenden. Bei einigen Verbindungs-Manager-Typen wird vorausgesetzt, dass Parameternamen mit dem @-Zeichen beginnen oder bestimmte Namen (z.B. @Param1) oder Spaltennamen als Parameternamen verwendet werden.  
+ Je nachdem, welchen Verbindungs-Manager-Typ der Task verwendet, müssen Sie Zahlen oder Parameternamen verwenden. Einige Verbindungs-Manager-Typen wird vorausgesetzt, dass das erste Zeichen des Parameternamens ist die \@ anmelden, bestimmte Namen wie \@Param1 oder -Spalte verweist, als Parameternamen.  
   
  **Verwandte Themen:** [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

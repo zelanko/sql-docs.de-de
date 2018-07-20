@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200830"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084042"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200830"
   
 1.  Erweitern Sie im Berichtsdatenbereich den Eintrag **Parameter**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf @ProductProductCategoryNameund anschließend auf **Parametereigenschaften**heruntergeladen werden.  
+2.  Mit der rechten Maustaste \@ProductProductCategoryName, und klicken Sie dann auf **Parametereigenschaften**.  
   
     > [!NOTE]  
-    >  Das @ neben dem Namen zeigt an, dass es sich hierbei um einen Parameter handelt.  
+    >  Die \@ Zeichen neben dem Namen der gibt an, dass dies ein Parameter ist.  
   
 3.  Klicken Sie auf der Registerkarte **Allgemein** auf **Ausgeblendet**.  
   

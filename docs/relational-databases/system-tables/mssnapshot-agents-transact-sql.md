@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_agents (Transact-SQL) | Microsoft Docs
+title: MSsnapshot_agents (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,38 +22,40 @@ helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ef7538fa8b7066397804b1b58521f090a44a3d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb9d1fd6367762ca6cb8472d964568bd207f83a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006437"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102538"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSsnapshot_agents** -Tabelle enthält eine Zeile für jede Momentaufnahme-Agent mit dem lokalen Verteiler zugeordneten. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSsnapshot_agents** -Tabelle enthält eine Zeile für jede Momentaufnahme-Agent mit dem lokalen Verteiler verknüpft ist. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Momentaufnahme-Agents.|  
-|**name**|**Nvarchar(100)**|Der Name des Momentaufnahme-Agents|  
+|**name**|**nvarchar(100)**|Der Name des Momentaufnahme-Agents|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
 |**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
-|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **1** = Snapshot.<br /><br /> **2** = befindet.|  
+|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
 |**local_job**|**bit**|Gibt an, ob sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag auf dem lokalen Verteiler befindet.|  
-|**job_id**|**Binary(16)**|Die Auftrags-ID|  
+|**job_id**|**'binary(16)'**|Die Auftrags-ID|  
 |**profile_id**|**int**|Der Konfigurations-ID aus der [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle.|  
-|**dynamic_filter_login**|**sysname**|Der Wert für die Bewertung der [SUSER_SNAME &#40;Transact-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
-|**dynamic_filter_hostname**|**sysname**|Der Wert für die Bewertung der [HOST_NAME &#40;Transact-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
+|**dynamic_filter_login**|**sysname**|Der Wert, der zum Auswerten von der [SUSER_SNAME &#40;Transact-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
+|**dynamic_filter_hostname**|**sysname**|Der Wert, der zum Auswerten von der [HOST_NAME &#40;Transact-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
 |**publisher_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. Dies kann einer der folgenden Modi sein:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
 |**publisher_login**|**sysname**|Der Anmeldename, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird|  
 |**publisher_password**|**nvarchar(524)**|Der verschlüsselte Wert des Kennworts, das verwendet wird, um eine Verbindung mit dem Verleger herzustellen.|  
 |**job_step_uid**|**uniqueidentifier**|Die eindeutige ID des Auftragsschritts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, in dem der Agent gestartet wird.|  
+|**job_login-Wert**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

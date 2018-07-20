@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352752"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085872"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Container-Images in Docker
 
@@ -40,7 +40,7 @@ In diesem Artikel für die Konfiguration enthält Szenarien für die weitere Ver
 
 Der schnellstartanleitung im vorherigen Abschnitt wird die kostenlose Developer-Edition von SQL Server ausgeführt, von Docker Hub. Die meisten Informationen weiterhin gilt, wenn es sich bei produktionsumgebungen containerimages, z. B. Web, Standard oder Enterprise Edition ausgeführt werden soll. Es gibt jedoch einige Unterschiede, die im folgenden beschrieben werden.
 
-- Sie können nur SQL Server in einer produktionsumgebung verwenden, wenn Sie eine gültige Lizenz haben. Sie erhalten eine kostenlose Lizenz für SQL Server Express Produktion [hier](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard und Enterprise Edition-Lizenzen stehen über [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+- Sie können nur SQL Server in einer produktionsumgebung verwenden, wenn Sie eine gültige Lizenz haben. Sie erhalten eine kostenlose Lizenz für SQL Server Express Produktion [hier](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard und Enterprise Edition-Lizenzen stehen über [Microsoft Volume Licensing](https://www.microsoft.com/en-us/licensing/default.aspx).
 
 - Produktions-SQL Server-Container-Images müssen von abgerufen werden [Docker Store](https://store.docker.com). Wenn Sie noch nicht haben, erstellen Sie ein Konto auf Docker-Store.
 

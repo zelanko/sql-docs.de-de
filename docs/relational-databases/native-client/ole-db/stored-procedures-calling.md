@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a9be038053825a62153babc5480db8d4d451716
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 610717618c11fba23199f2e967217f7f50dce88a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408669"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083592"
 ---
-# <a name="stored-procedures---calling"></a>Gespeicherte Prozeduren: Aufrufen
+# <a name="stored-procedures---calling"></a>Aufrufen von gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -42,17 +42,17 @@ ms.locfileid: "37408669"
 -   Durch Verwendung einer Parametermarkierung (?) zum Angeben von Parametern, Binden einer Programmvariablen an die Parametermarkierung und Einfügen des Datenwerts in die Programmvariable  
   
 > [!NOTE]  
->  Wenn gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren, die benannte Parameter verwenden, mit OLE DB aufgerufen werden, müssen die Parameternamen mit dem Zeichen ‘\@‘ beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erzwingt diese Einschränkung strenger als MDAC.  
+>  Wenn gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren mit benannten Parametern mit OLE DB aufgerufen werden, müssen die Parameternamen mit dem Zeichen „\@“ beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erzwingt diese Einschränkung strenger als MDAC.  
   
- Um Parameter zu unterstützen die **ICommandWithParameters** Schnittstelle ist für das Command-Objekt verfügbar gemacht werden. Um Parameter zu verwenden, beschreibt der Consumer die Parameter an den Anbieter zunächst durch Aufrufen der **ICommandWithParameters:: SetParameterInfo** Methode (oder optional eine aufrufanweisung an, die aufruft vorbereitet der  **GetParameterInfo** Methode). Der Consumer erstellt dann einen Accessor, der die Struktur eines Puffers angibt und Parameterwerte in diesen Puffer einfügt. Schließlich übergibt er das Handle des Accessors und einen Zeiger auf den Puffer **Execute**. Bei späteren Aufrufen von **Execute**, fügt der Consumer neue Parameterwerte in den Puffer ein und ruft **Execute** mit dem Accessor und Pufferzeiger auf.  
+ Damit Parameter unterstützt werden, wird die **ICommandWithParameters**-Schnittstelle auf dem Befehlsobjekt verfügbar gemacht. Wenn die Parameter verwendet werden sollen, beschreibt der Consumer die Parameter zunächst dem Anbieter, indem er die **ICommandWithParameters::SetParameterInfo**-Methode aufruft (oder optional eine Aufrufanweisung vorbereitet, die die **GetParameterInfo**-Methode aufruft). Der Consumer erstellt dann einen Accessor, der die Struktur eines Puffers angibt und Parameterwerte in diesen Puffer einfügt. Schließlich übergibt er das Handle des Accessors und einen Zeiger auf den Puffer an **Execute**. Bei späteren Aufrufen von **Execute** fügt der Consumer neue Parameterwerte in den Puffer ein und ruft **Execute** mit dem Accessorhandle und Pufferzeiger auf.  
   
- Ein Befehl, der eine temporäre gespeicherte Prozedur mit Parametern aufruft, muss zuerst Aufrufen **ICommandWithParameters:: SetParameterInfo** die Parameterinformationen zu definieren, bevor der Befehl erfolgreich vorbereitet werden kann. Der Grund dafür ist, dass der interne Name für eine temporär gespeicherte Prozedur anders lautet als der externe Name, der von einem Client verwendet wird. Zudem kann SQLOLEDB die Systemtabellen nicht abfragen, um die Parameterinformationen für eine temporär gespeicherte Prozedur zu ermitteln.  
+ Ein Befehl, der eine temporär gespeicherte Prozedur mit Parametern aufruft, muss zunächst **ICommandWithParameters::SetParameterInfo** aufrufen, um die Parameterinformationen zu definieren, bevor der Befehl erfolgreich vorbereitet werden kann. Der Grund dafür ist, dass der interne Name für eine temporär gespeicherte Prozedur anders lautet als der externe Name, der von einem Client verwendet wird. Zudem kann SQLOLEDB die Systemtabellen nicht abfragen, um die Parameterinformationen für eine temporär gespeicherte Prozedur zu ermitteln.  
   
  Der Parameterbindungsprozess umfasst folgende Schritte:  
   
-1.  Geben Sie die Parameterinformationen in ein Array aus DBPARAMBINDINFO-Strukturen ein, also den Parameternamen, den anbieterspezifischen Namen für den Datentyp des Parameters oder einen standardmäßigen Datentypennamen usw. Jede Struktur im Array beschreibt einen Parameter. Dieses Array wird anschließend zum Übergeben der **SetParameterInfo** Methode.  
+1.  Geben Sie die Parameterinformationen in ein Array aus DBPARAMBINDINFO-Strukturen ein, also den Parameternamen, den anbieterspezifischen Namen für den Datentyp des Parameters oder einen standardmäßigen Datentypennamen usw. Jede Struktur im Array beschreibt einen Parameter. Dieses Array wird dann an die **SetParameterInfo**-Methode übergeben.  
   
-2.  Rufen Sie die **ICommandWithParameters:: SetParameterInfo** Methode, um Parameter an den Anbieter zu beschreiben. **SetParameterInfo** gibt den systemeigenen Datentyp jedes Parameters. **SetParameterInfo** Argumente sind:  
+2.  Rufen Sie die **ICommandWithParameters::SetParameterInfo**-Methode auf, um dem Anbieter Parameter zu beschreiben. **SetParameterInfo** gibt den nativen Datentyp jedes Parameters an. **SetParameterInfo**-Argumente sind:  
   
     -   Die Anzahl von Parametern, für die Typinformationen festzulegen sind  
   
@@ -60,7 +60,7 @@ ms.locfileid: "37408669"
   
     -   Ein Array aus DBPARAMBINDINFO-Strukturen  
   
-3.  Erstellen Sie einen mithilfe der **IAccessor:: CreateAccessor** Befehl. Der Accessor gibt die Struktur eines Puffers an und fügt Parameterwerte in den Puffer ein. Die **CreateAccessor** -Befehl erstellt einen Accessor aus einem Satz von Bindungen. Diese Bindungen werden vom Consumer mithilfe eines Arrays aus DBBINDING-Strukturen beschrieben. Jede Bindung ordnet dem Puffer des Consumers einen einzelnen Parameter zu und enthält Informationen wie z. B.:  
+3.  Erstellen Sie mit dem Befehl **IAccessor::CreateAccessor** einen Parameteraccessor. Der Accessor gibt die Struktur eines Puffers an und fügt Parameterwerte in den Puffer ein. Der Befehl **CreateAccessor** erstellt aus mehreren Bindungen einen Accessor. Diese Bindungen werden vom Consumer mithilfe eines Arrays aus DBBINDING-Strukturen beschrieben. Jede Bindung ordnet dem Puffer des Consumers einen einzelnen Parameter zu und enthält Informationen wie z. B.:  
   
     -   Die Ordnungszahl des Parameters, auf den sich die Bindung bezieht  
   
@@ -70,11 +70,11 @@ ms.locfileid: "37408669"
   
     -   Die Länge und den Typ des Datenwerts, wie er im Puffer des Consumers vorhanden ist  
   
-     Ein Accessor wird von seinem Handle identifiziert, das den Typ HACCESSOR aufweist. Dieses Handle wird zurückgegeben, durch die **CreateAccessor** Methode. Der Consumer muss aufrufen, sobald der Consumer einen Accessor, der **ReleaseAccessor** Methode zum Freigeben des Speichers enthält.  
+     Ein Accessor wird von seinem Handle identifiziert, das den Typ HACCESSOR aufweist. Dieses Handle wird von der **CreateAccessor**-Methode zurückgegeben. Sobald der Consumer einen Accessor nicht mehr benötigt, muss er die **ReleaseAccessor**-Methode aufrufen, um den belegten Arbeitsspeicher freizugeben.  
   
-     Wenn der Consumer eine Methode aufruft, z. B. **ICommand:: Execute**, übergibt er das Handle an einen Accessor und einen Zeiger auf den Puffer selbst. Der Anbieter verwendet diesen Accessor, um zu bestimmen, wie die im Puffer enthaltenen Daten übertragen werden.  
+     Wenn der Consumer eine Methode wie z.B. **ICommand::Execute** aufruft, übergibt er das Handle an einen Accessor und einen Zeiger auf den Puffer selbst. Der Anbieter verwendet diesen Accessor, um zu bestimmen, wie die im Puffer enthaltenen Daten übertragen werden.  
   
-4.  Geben Sie die DBPARAMS-Struktur ein. Die consumervariablen, von der Eingabeparameter Eingabeparameterwerte übernommen und in der Output-Parameter Werte geschrieben werden, werden zur Laufzeit übergeben **ICommand:: Execute** in der DBPARAMS-Struktur. Die DBPARAMS-Struktur beinhaltet drei Elemente:  
+4.  Geben Sie die DBPARAMS-Struktur ein. Die Consumervariablen, von denen Eingabeparameterwerte übernommen und in die Ausgabeparameterwerte geschrieben werden, werden zur Laufzeit an **ICommand::Execute** in der DBPARAMS-Struktur übergeben. Die DBPARAMS-Struktur beinhaltet drei Elemente:  
   
     -   Einen Zeiger auf den Puffer, aus dem der Anbieter Eingabeparameterdaten abruft und in den der Anbieter Ausgabeparameterdaten zurückgibt, gemäß den vom Accessorhandle angegebenen Bindungen  
   
@@ -82,19 +82,19 @@ ms.locfileid: "37408669"
   
     -   Das in Schritt 3 erstellte Accessorhandle  
   
-5.  Führen Sie den Befehl mit **ICommand:: Execute**.  
+5.  Führen Sie den Befehl mit **ICommand::Execute** aus.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Methoden zum Aufrufen einer gespeicherten Prozedur  
  Beim Ausführen einer gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die:  
   
--   ODBC CALL-Escapesequenz.  
+-   ODBC CALL-Escapesequenz  
   
 -   RPC-Escapesequenz (Remote Procedure Call, Remoteprozeduraufruf)  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE-Anweisung  
   
 ### <a name="odbc-call-escape-sequence"></a>ODBC CALL-Escapesequenz  
- Wenn Sie die Parameterinformationen kennen, rufen **ICommandWithParameters:: SetParameterInfo** Methode, um die Parameter an den Anbieter zu beschreiben. Wenn hingegen die ODBC CALL-Syntax zum Aufrufen einer gespeicherten Prozedur verwendet wird, ruft der Anbieter eine Hilfsfunktion auf, um die Parameterinformationen der gespeicherten Prozedur zu ermitteln.  
+ Wenn Sie die Parameterinformationen kennen, rufen Sie die **ICommandWithParameters::SetParameterInfo**-Methode auf, um dem Anbieter die Parameter zu beschreiben. Wenn hingegen die ODBC CALL-Syntax zum Aufrufen einer gespeicherten Prozedur verwendet wird, ruft der Anbieter eine Hilfsfunktion auf, um die Parameterinformationen der gespeicherten Prozedur zu ermitteln.  
   
  Wenn Sie nicht sicher sind, was die Parameterinformationen (Parametermetadaten) betrifft, empfiehlt sich die Verwendung der ODBC CALL-Syntax.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "37408669"
 ### <a name="rpc-escape-sequence"></a>RPC-Escapesequenz  
  Die RPC-Escapesequenz ist der ODBC CALL-Syntax für den Aufruf einer gespeicherten Prozedur ähnlich. Wenn Sie die Prozedur mehrmals aufrufen müssen, ist die RPC-Escapesequenz von den drei Methoden zum Aufrufen einer gespeicherten Prozedur die leistungsfähigste.  
   
- Wenn die RPC-Escapesequenz zur Ausführung einer gespeicherten Prozedur verwendet wird, ruft der Anbieter keine Hilfsfunktion auf, um die Parameterinformationen zu ermitteln (wie dies bei der ODBC CALL-Syntax der Fall ist). Die RPC-Syntax ist einfacher als die ODBC CALL-Syntax, weshalb der Befehl schneller verarbeitet und die Leistung gesteigert wird. Sie müssen in diesem Fall geben Sie die Parameterinformationen durch Ausführen von **ICommandWithParameters:: SetParameterInfo**.  
+ Wenn die RPC-Escapesequenz zur Ausführung einer gespeicherten Prozedur verwendet wird, ruft der Anbieter keine Hilfsfunktion auf, um die Parameterinformationen zu ermitteln (wie dies bei der ODBC CALL-Syntax der Fall ist). Die RPC-Syntax ist einfacher als die ODBC CALL-Syntax, weshalb der Befehl schneller verarbeitet und die Leistung gesteigert wird. In diesem Fall müssen Sie die Parameterinformationen durch Ausführen von **ICommandWithParameters::SetParameterInfo** bereitstellen.  
   
- Bei der RPC-Escapesequenz ist es erforderlich, einen Rückgabewert zu erhalten. Wenn die gespeicherte Prozedur keinen Wert zurückgibt, gibt der Server standardmäßig 0 (null) zurück. Außerdem können Sie keinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor für die gespeicherte Prozedur öffnen. Die gespeicherte Prozedur wird implizit vorbereitet und der Aufruf von **ICommandPrepare:: Prepare** schlägt fehl. Aufgrund von nicht um ein RPC-Aufruf vorzubereiten können Sie keine Spaltenmetadaten Abfragen; IColumnsInfo:: GetColumnInfo und IColumnsRowset:: GetColumnsRowset geben db_e_notprepared zurück zurück.  
+ Bei der RPC-Escapesequenz ist es erforderlich, einen Rückgabewert zu erhalten. Wenn die gespeicherte Prozedur keinen Wert zurückgibt, gibt der Server standardmäßig 0 (null) zurück. Außerdem können Sie keinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor für die gespeicherte Prozedur öffnen. Die gespeicherte Prozedur wird implizit vorbereitet, und beim Aufruf von **ICommandPrepare::Prepare** tritt ein Fehler auf. Aufgrund von nicht um ein RPC-Aufruf vorzubereiten können Sie keine Spaltenmetadaten Abfragen; IColumnsInfo:: GetColumnInfo und IColumnsRowset:: GetColumnsRowset geben db_e_notprepared zurück zurück.  
   
  Wenn Sie alle Parametermetadaten kennen, ist die RPC-Escapesequenz die empfohlene Methode für die Ausführung gespeicherter Prozeduren.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "37408669"
  Eine beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur &#40;mithilfe der RPC-Syntax&#41; und Prozess-Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
- Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz sind die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur anstelle der [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) Anweisung. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet den RPC-Mechanismus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] befehlsverarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
+ Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet den RPC-Mechanismus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] befehlsverarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
- Dies ist ein Beispiel für die [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** Anweisung:  
+ Das folgende Beispiel zeigt die **EXECUTE**-Anweisung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]):  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

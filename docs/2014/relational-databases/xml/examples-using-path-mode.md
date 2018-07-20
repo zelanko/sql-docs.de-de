@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
-ms.translationtype: HT
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274626"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084012"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
   Diese Beispiele veranschaulichen die Verwendung des PATH-Modus beim Generieren von XML-Code aus einer SELECT-Abfrage. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradfertigungsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle gespeichert sind.  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Angeben von XPath-ähnlichen Spaltennamen  
- In der folgenden Abfrage beginnt der für `ProductModelID` angegebene Spaltenname mit dem @-Zeichen und enthält keinen Schrägstrich (/). Daher wird im XML-Ergebnis für das <`row`>-Element mit dem entsprechenden Spaltenwert ein Attribut erstellt.  
+ In der folgenden Abfrage die `ProductModelID` angegebene Spaltenname beginnt mit "\@" und keinen Schrägstrich ('/'). Daher wird im XML-Ergebnis für das <`row`>-Element mit dem entsprechenden Spaltenwert ein Attribut erstellt.  
   
 ```  
 USE AdventureWorks2012;  

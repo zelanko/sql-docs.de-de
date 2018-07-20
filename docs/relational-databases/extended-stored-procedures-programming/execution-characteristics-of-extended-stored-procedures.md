@@ -1,5 +1,5 @@
 ---
-title: Ausführungsmerkmale erweiterter gespeicherter Prozeduren | Microsoft Docs
+title: Ausführungsmerkmale erweiterter gespeicherter Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936465"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087892"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Ausführungsmerkmale erweiterter gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32936465"
   
  Die Ausführung einer erweiterten gespeicherten Prozedur weist folgende Merkmale auf:  
   
--   Die Funktion erweiterte gespeicherte Prozedur ausgeführt wird, im Sicherheitskontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Die Funktion erweiterte gespeicherte Prozedur ausgeführt wird, unter dem Sicherheitskontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Die Funktion der erweiterten gespeicherten Prozedur wird im Prozessraum von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32936465"
   
 -  
   
- Nachdem die erweiterte Prozedur DLL geladen gespeicherte wird, die DLL bleibt so lange im Adressraum des Servers erst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet wird oder der Administrator explizit entlädt die DLL mithilfe von DBCC *DLL-Name* (kostenlos).  
+ Nachdem Sie die erweiterte gespeicherte Prozedur DLL wird geladen, die DLL bleibt so lange im Adressraum des Servers bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde beendet oder der Administrator explizit entlädt die DLL mithilfe von DBCC *DLL_name* (kostenlos).  
   
  Die erweiterte gespeicherte Prozedur kann in [!INCLUDE[tsql](../../includes/tsql-md.md)] mithilfe der EXECUTE-Anweisung als gespeicherte Prozedur ausgeführt werden:  
   
@@ -53,13 +53,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parameter  
- @ *retval*  
+ \@ *retval*  
  Ein Rückgabewert.  
   
- @ *param1*  
+ \@ *über Param1.*  
  Ein Eingabeparameter.  
   
- @ *param2*  
+ \@ *Param2*  
  Ein Eingabe-/Ausgabeparameter.  
   
 > [!CAUTION]  

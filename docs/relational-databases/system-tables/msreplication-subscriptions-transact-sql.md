@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (Transact-SQL) | Microsoft Docs
+title: MSreplication_subscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005467"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103378"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "33005467"
 |**description**|**nvarchar(255)**|Die Beschreibung des Abonnements.|  
 |**transaction_timestamp**|**varbinary(16)**|Intern-nur zur Verwendung.|  
 |**update_mode**|**tinyint**|Der Typ des Updates.|  
-|**agent_id**|**Binary(16)**|Die ID der Momentaufnahme.|  
-|**subscription_guid**|**Binary(16)**|Der globale Bezeichner für die Version des Abonnements für die Veröffentlichung.|  
-|**subid**|**Binary(16)**|Der globale Bezeichner für ein anonymes Abonnement.|  
+|**agent_id**|**'binary(16)'**|Die ID der Momentaufnahme.|  
+|**subscription_guid**|**'binary(16)'**|Der globale Bezeichner für die Version des Abonnements für die Veröffentlichung.|  
+|**subid**|**'binary(16)'**|Der globale Bezeichner für ein anonymes Abonnement.|  
 |**immediate_sync**|**bit**|Zeigt an, ob bei jeder Ausführung des Momentaufnahme-Agents Synchronisierungsdateien erstellt oder neu erstellt werden.|  
   
 ## <a name="see-also"></a>Siehe auch  

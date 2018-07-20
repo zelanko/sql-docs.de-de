@@ -1,5 +1,5 @@
 ---
-title: Sp_create_plan_guide (Transact-SQL) | Microsoft Docs
+title: Sp_create_plan_guide (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 79e07848de5827f172e298f96d2ec55d30422eb5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdb1806a7f3c7cb53f595da422741e53ced1b0ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240440"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085822"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,45 +56,45 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name =] N'*Plan_guide_name*"  
- Der Name der Planhinweisliste. Die Gültigkeit der Namen von Planhinweislisten beschränkt sich auf die aktuelle Datenbank. *Plan_guide_name* muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und kann nicht gestartet werden mit dem Nummernzeichen (#). Die maximale Länge des *Plan_guide_name* beträgt 124 Zeichen.  
+ [ \@Name =] N'*Plan_guide_name*"  
+ Der Name der Planhinweisliste. Die Gültigkeit der Namen von Planhinweislisten beschränkt sich auf die aktuelle Datenbank. *Plan_guide_name* müssen entsprechen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) und kann nicht gestartet, mit dem Nummernzeichen (#). Die maximale Länge des *Plan_guide_name* Zeichenanzahl von 124 ist.  
   
- [ @stmt =] N'*Statement_text*"  
- Ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, für die eine Planhinweisliste erstellt werden soll. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrageoptimierer erkennt eine Abfrage, die entspricht *Statement_text*, *Plan_guide_name* tritt in Kraft. Für die Erstellung einer Planhinweisliste erfolgreich ausgeführt werden kann *Statement_text* muss angezeigt werden, in dem durch angegebenen Kontext den @type, @module_or_batch, und @params Parameter.  
+ [ \@Stmt =] N'*Statement_text*"  
+ Ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, für die eine Planhinweisliste erstellt werden soll. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrageoptimierer erkennt eine Abfrage, die entspricht *Statement_text*, *Plan_guide_name* wirksam. Für die Erstellung einer Planhinweisliste erfolgreich ausgeführt werden kann *Statement_text* muss angezeigt werden, in dem vom angegebenen Kontext den \@Typ \@Module_or_batch, und \@Params-Parameter.  
   
- *Statement_text* muss angegeben werden, auf eine Weise, die für die Übereinstimmung mit der entsprechenden Anweisung im Batch oder Modul, das durch den Abfrageoptimierer ermöglicht @module_or_batch und @params. Weitere Informationen finden Sie unter dem Abschnitt "Hinweise". Die Größe des *Statement_text* wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  
+ *Statement_text* muss angegeben werden, auf eine Weise, die der Abfrageoptimierer in Übereinstimmung mit der entsprechenden Anweisung im Batch oder Modul, das durch ermöglicht \@Module_or_batch und \@Params. Weitere Informationen finden Sie im Abschnitt "Hinweise". Die Größe des *Statement_text* wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  
   
- [@type =] N'{OBJECT | SQL | VORLAGE} "  
- Ist der Typ der Entität, in der *Statement_text* angezeigt wird. Dies gibt den Kontext für den Abgleich *Statement_text* auf *Plan_guide_name*.  
+ [\@Typ =] N'{OBJECT | SQL | VORLAGE} "  
+ Ist der Typ der Entität, in der *Statement_text* angezeigt wird. Dies gibt den Kontext für den Abgleich *Statement_text* zu *Plan_guide_name*.  
   
  OBJECT  
- Gibt an, *Statement_text* angezeigt wird, im Rahmen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger in der aktuellen Datenbank.  
+ Gibt an *Statement_text* angezeigt wird, im Rahmen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger in der aktuellen Datenbank.  
   
  SQL  
- Gibt an, *Statement_text* wird im Kontext einer eigenständigen Anweisung oder eines Batches, die an gesendet werden kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf beliebige Weise. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die durch die common Language Runtime (CLR)-Objekte oder erweiterte gespeicherte Prozeduren oder mithilfe von EXEC N vorgelegt "*Sql_string*", werden als Batches auf dem Server verarbeitet und aus diesem Grund sollte identifiziert werden, als @type **=** 'SQL'. Wenn SQL angegeben, der Abfragehinweis PARAMETERIZATION {FORCED | EINFACHE} kann nicht angegeben werden, der @hints Parameter.  
+ Gibt an *Statement_text* angezeigt wird, im Kontext einer eigenständigen Anweisung oder der Batch, die an gesendet werden kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf beliebige Weise. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die gesendet werden, durch die common Language Runtime (CLR)-Objekte oder erweiterte gespeicherte Prozeduren oder mithilfe von EXEC N'*Sql_string*", werden als Batches auf dem Server verarbeitet und sollte daher angegeben werden, als \@Typ **=** 'SQL'. Wenn SQL angegeben kann, der Abfragehinweis PARAMETERIZATION {FORCED | EINFACHE} kann nicht angegeben werden, der \@Hinweise Parameter.  
   
  TEMPLATE  
- Gibt an, die Planhinweisliste angewendet wird, um jede Abfrage, die auf die im angegebenen Format parametrisiert *Statement_text*. Wenn TEMPLATE angegeben ist, nur der PARAMETERIZATION {FORCED | EINFACHE}-Abfragehinweis kann angegeben werden, der @hints Parameter. Weitere Informationen zu TEMPLATE-Planhinweislisten finden Sie unter [angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ Gibt an, die Planhinweisliste angewendet wird, um jede Abfrage, die auf die im angegebenen Format parametrisiert *Statement_text*. Wenn TEMPLATE angegeben ist, nur der PARAMETERIZATION {FORCED | EINFACHE}-Abfragehinweis kann angegeben werden, der \@Hinweise Parameter. Weitere Informationen zu TEMPLATE-Planhinweislisten, finden Sie unter [angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [@module_or_batch =]{ N'[ *schema_name*. ] *Object_name*"| N'*Batch_text*"| NULL}  
- Gibt entweder den Namen des Objekts in der *Statement_text* angezeigt wird, oder den Batchtext ein, in dem *Statement_text* angezeigt wird. Der Batchtext kann nicht umfassen eine Verwendung*Datenbank* Anweisung.  
+ [\@Module_or_batch =] {N'[ *Schema_name*. ] *Object_name*"| N'*Batch_text*"| NULL}  
+ Gibt entweder den Namen des Objekts an, in dem *Statement_text* angezeigt wird, oder den Batchtext, in dem *Statement_text* angezeigt wird. Der Batchtext darf keine Verwendung enthalten*Datenbank* Anweisung.  
   
- Damit eine Planhinweisliste entsprechend einen Batch zugeordnet, die von einer Anwendung übermittelt *Batch_tex*t muss angegeben werden, im gleichen Format, Zeichen für Zeichen, wie beim Übermitteln an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
+ Damit eine Planhinweisliste entsprechend einen Batch zugeordnet, die aus einer Anwendung übermittelt *Batch_tex*t muss angegeben werden, im gleichen Format, Zeichen für Zeichen, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- [*Schema_name*.] *Object_name* gibt den Namen des eine [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* verwendet das Schema des aktuellen Benutzers. Wenn NULL angegeben wird und @type = 'SQL', den Wert der @module_or_batch festgelegt ist, auf den Wert des @stmt. Wenn @type = "Vorlage **"**, @module_or_batch muss NULL sein.  
+ [*Schema_name*.] *Object_name* gibt den Namen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* wird das Schema des aktuellen Benutzers verwendet. Wenn NULL angegeben wird und \@Type = 'SQL', den Wert der \@Module_or_batch festgelegt ist, auf den Wert der \@Stmt. Wenn \@Type = "Vorlage **"**, \@Module_or_batch muss NULL sein.  
   
- [ @params =] {N' *@parameter_name Data_type* [,*.. ...n* ] "| NULL}  
- Gibt an, die Definitionen aller Parameter, die in eingebetteten *Statement_text*. @params gilt nur, wenn eines der folgenden Aussagen zutrifft:  
+ [ \@Params =] {N "*\@Parameter_name, Data_type* [,*.. ...n* ]' | NULL}  
+ Gibt an, die Definitionen aller Parameter, die in eingebetteten *Statement_text*. \@Params gilt nur wenn eine der folgenden Aussagen zutrifft:  
   
--   @type = 'SQL' oder 'TEMPLATE'. Wenn 'TEMPLATE' @params darf nicht NULL sein.  
+-   \@Type = 'SQL' oder 'TEMPLATE'. Wenn 'TEMPLATE' \@Params darf nicht NULL sein.  
   
--   *Statement_text* übermittelt wird, mithilfe von Sp_executesql und einen Wert für die @params Parameter angegeben wird, oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intern übermittelt eine Anweisung, nachdem Sie parametrisiert wurde. Die Übermittlung parametrisierter Abfragen von Datenbank-APIs (einschließlich ODBC, OLE DB und ADO.NET) werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Aufrufe von sp_executesql oder von API-Servercursorroutinen angezeigt; deshalb können Übereinstimmungen auch von SQL- oder TEMPLATE-Planhinweislisten festgestellt werden.  
+-   *Statement_text* gesendet wird, mithilfe von Sp_executesql und einen Wert für die \@Params-Parameter angegeben wird, oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intern übermittelt eine Anweisung, nachdem Sie parametrisiert wurde. Die Übermittlung parametrisierter Abfragen von Datenbank-APIs (einschließlich ODBC, OLE DB und ADO.NET) werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Aufrufe von sp_executesql oder von API-Servercursorroutinen angezeigt; deshalb können Übereinstimmungen auch von SQL- oder TEMPLATE-Planhinweislisten festgestellt werden.  
   
- *@parameter_name Data_type* muss im exakt gleichen Format angegeben werden, wie beim Übermitteln an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entweder mithilfe von Sp_executesql oder durch interne Übermittelung nach der Parametrisierung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen. Wenn der Batch keine Parameter enthält, muss NULL angegeben werden. Die Größe des @params wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  
+ *\@Parameter_name, Data_type* muss im exakt gleichen Format angegeben werden, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entweder mithilfe von Sp_executesql oder durch internes übermitteln nach der Parametrisierung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen. Wenn der Batch keine Parameter enthält, muss NULL angegeben werden. Die Größe des \@Params wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  
   
- [@hints =] {N ' Option (*Query_hint* [,*.. ...n* ]) "| N'*XML_showplan*"| NULL}  
+ [\@Hinweise =] {n ' Option (*Query_hint* [,*.. ...n* ]) "| N'*XML_showplan*"| NULL}  
  N ' Option (*Query_hint* [,*.. ...n* ])  
- Gibt eine OPTION-Klausel einer Abfrage an, die entspricht @stmt. @hints muss syntaktisch identisch sein als eine OPTION-Klausel in einer SELECT-Anweisung, und kann eine beliebige gültige Sequenz von Abfragehinweisen enthalten.  
+ Gibt an, eine Verbindung mit einer Abfrage, die entspricht OPTION-Klausel \@Stmt. \@Hinweise muss syntaktisch identisch mit einer OPTION-Klausel in einer SELECT-Anweisung, und kann eine beliebige gültige Sequenz von Abfragehinweisen enthalten.  
   
  N'*XML_showplan*'  
  Dies ist der Abfrageplan im XML-Format, der als Hinweis angewendet werden soll.  
@@ -105,11 +105,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Gibt an, dass ein vorhandener Hinweis, der in der OPTION-Klausel angegeben ist, nicht auf die Abfrage angewendet wird. Weitere Informationen finden Sie unter [OPTION-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide**angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wird z.B. **@name =** angegeben, müssen auch **@stmt =** , **@type =** usw. angegeben werden. Ebenso dürfen, wenn **@name =** nicht angegeben und nur der Parameterwert bereitgestellt wird, die übrigen Parameterwerte ebenfalls nicht angegeben und nur ihre Werte bereitgestellt werden. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
+ Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide**angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Z. B. wenn  **\@Name =** angegeben ist, klicken Sie dann  **\@Stmt =** ,  **\@Typ =** usw., muss auch angegeben werden. Auch wenn  **\@Name =** nicht angegeben und nur der Parameterwert bereitgestellt wird, die verbleibenden Parameternamen müssen ebenfalls angegeben und nur ihre Werte bereitgestellt. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
  Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
   
- Planhinweislisten vom Typ OBJECT können nicht für einen @module_or_batch-Wert erstellt werden, der auf eine gespeicherte Prozedur, Funktion oder einen DML-Trigger verweist, in der bzw. dem die WITH ENCRYPTION-Klausel angegeben wird oder die bzw. der temporär ist.  
+ Planhinweislisten vom Typ Objekt nicht werden, für erstellt kann eine \@Module_or_batch-Wert, der verweist auf eine gespeicherte Prozedur, Funktion oder DML-Trigger, der angibt, die WITH ENCRYPTION-Klausel oder besteht nur vorübergehend.  
   
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler. Auch der Versuch, eine Tabelle mit einem Trigger zu löschen, auf den eine Planhinweisliste verweist, führt zu einem Fehler.  
   
@@ -117,19 +117,19 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Planhinweislisten können nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Planhinweislisten sind in jeder Edition sichtbar. Sie können auch in allen Versionen eine Datenbank anfügen, die Planhinweislisten enthält. Planhinweislisten bleiben beim Wiederherstellen oder Anfügen einer Datenbank in einer aktualisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten. Nach dem Serverupgrade sollten Sie in jeder Datenbank prüfen, ob die Planhinweislisten wirklich erwünscht sind.  
   
 ## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  
- Für Planhinweislisten, die angeben, @type = 'SQL' oder @type = 'TEMPLATE', um erfolgreich eine Abfrage, die Werte für entsprechen *Batch_text* und  *@parameter_name Data_type* [,*.. ...n* ] müssen in genau das gleiche Format wie von der Anwendung übermittelten Gegenstücke bereitgestellt werden. Das bedeutet, dass Sie den Batchtext genau so bereitstellen müssen, wie er vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Compiler empfangen wird. Mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie den eigentlichen Batch- und Parametertext erfassen. Weitere Informationen finden Sie unter [Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Für Planhinweislisten, die angeben, \@Type = 'SQL' oder \@Type = 'TEMPLATE' entsprechend, dass erfolgreich eine Abfrage, die Werte für *Batch_text* und  *\@Parameter_name, Data_type*[,*.. ...n* ] müssen in genau das gleiche Format wie die von der Anwendung übermittelten Gegenstücke bereitgestellt werden. Das bedeutet, dass Sie den Batchtext genau so bereitstellen müssen, wie er vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Compiler empfangen wird. Mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie den eigentlichen Batch- und Parametertext erfassen. Weitere Informationen finden Sie unter [verwenden SQL Server Profiler zum Erstellen und Test-Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
- Wenn @type = 'SQL' und @module_or_batch auf NULL gesetzt wird, wird der Wert von @module_or_batch auf den Wert von @stmt festgelegt. Dies bedeutet, dass den Wert für *Statement_text* muss angegeben werden, in genau demselben Format, Zeichen für Zeichen, wie beim Übermitteln an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
+ Wenn \@Typ = 'SQL' und \@Module_or_batch ist auf NULL gesetzt, den Wert der \@Module_or_batch festgelegt ist, auf den Wert der \@Stmt. Dies bedeutet, dass den Wert für *Statement_text* muss angegeben werden, in dem genau gleichen Format, Zeichen für Zeichen, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* auf *Batch_text* und  *@parameter_name Data_type* [,*.. ...n* ], oder Wenn @type = **"** Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* zu *Batch_text* und  *\@Parameter_name, Data_type* [,*.. ...n* ], oder wenn \@Typ = **"** Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
   
 -   Leerzeichen (Tabstopps, Leerzeichen, Wagenrücklauf oder Zeilenvorschub) innerhalb der Zeichenfolge.  
   
--   Kommentare (**--** oder **/ \* \* /**).  
+-   Kommentare (**--** oder **/ \* \* /**).     
   
 -   Nachfolgende Semikolons  
   
- Beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann entsprechen den *Statement_text* Zeichenfolge `N'SELECT * FROM T WHERE a = 10'` , der dem folgenden *Batch_text*:  
+ Z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die *Statement_text* Zeichenfolge `N'SELECT * FROM T WHERE a = 10'` folgt *Batch_text*:  
   
  `N'SELECT *`  
   
@@ -137,7 +137,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  `WHERE a=10'`  
   
- Allerdings die gleiche Zeichenfolge nicht zu diesem abgeglichen werden würden *Batch_text*:  
+ Jedoch dieselbe Zeichenfolge würde nicht zugeordnet werden diese *Batch_text*:  
   
  `N'SELECT * FROM T WHERE b = 10'`  
   
@@ -334,7 +334,7 @@ GO
  [Planhinweislisten](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

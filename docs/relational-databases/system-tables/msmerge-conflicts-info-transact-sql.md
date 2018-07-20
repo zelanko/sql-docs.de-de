@@ -1,5 +1,5 @@
 ---
-title: MSmerge_conflicts_info (Transact-SQL) | Microsoft Docs
+title: MSmerge_conflicts_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_conflicts_info system table
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5990e8dc08545597e18832e6f6b44bfbfce6514
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41388cd1cc2d7a33f0b976ad62eca5e7f55aeade
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006667"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103638"
 ---
 # <a name="msmergeconflictsinfo-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "33006667"
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Bezeichner für die Konfliktzeile.|  
 |**origin_datasource**|**nvarchar(255)**|Der Name der Datenbank, aus der die konfliktverursachende Änderung stammt.|  
-|**conflict_type**|**int**|Der Typ des Konflikts, der aufgetreten ist. Die folgenden Werte sind möglich.<br /><br /> **1** = Update-Konflikt: der Konflikt wird erkannt, auf der Zeilenebene.<br /><br /> **2** = Spalte Update-Konflikt: der Konflikt auf Spaltenebene erkannt.<br /><br /> **3** = Update-Delete gewinnt: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = Update gewinnt Delete-Konflikt: die gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = Fehler beim Einfügen hochladen: der Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = Fehler beim Einfügen herunterladen: der Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = Fehler beim Löschen hochladen: der Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = Fehler beim Löschen herunterladen: der Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = Fehler beim Update hochladen: der Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = Fehler beim Update herunterladen: der Updatevorgang des Verlegers konnte nicht auf den Abonnenten angewendet werden.<br /><br /> **11** = Lösung<br /><br /> **12** = logischer Datensatz Delete, Update gewinnt: der gelöschte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **13** = logischer Datensatz Konflikt Insert/Update: Insert in einen logischen Datensatz steht in Konflikt mit einem Update.<br /><br /> **14** = logischer Datensatz löschen WINS-Update-Konflikt: der aktualisierte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.|  
-|**reason_code**|**int**|Der Fehlercode, der kontextbezogen sein kann. Im Fall von Update / Update und Update / Delete-Konflikte für diese Spalte verwendete Wert ist identisch mit der **Conflict_type**. Bei Konflikten, bei denen Fehler beim Ändern aufgetreten sind, wird als Ursachencode der bei der Änderung im Merge-Agent aufgetretene Fehler verwendet. Wenn der Merge-Agent aufgrund einer Verletzung eines Primärschlüssels eine Insert auf dem Abonnenten angewendet werden können, z. B. protokolliert eine **Conflict_type** 6 ("Download Insert Fehler") und ein **Reason_code** 2627, also die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interne Fehlermeldung für eine primärschlüsselverletzung: "Verletzung der %ls-Einschränkung ' %. * ls'. Doppelten Schlüssel kann nicht eingefügt werden, in Objekt ' %. \*ls'. "|  
+|**conflict_type**|**int**|Der Typ des Konflikts, der aufgetreten ist. Die folgenden Werte sind möglich.<br /><br /> **1** = Update-Konflikt: der Konflikt wird erkannt, auf der Zeilenebene.<br /><br /> **2** = Spalte Update-Konflikt: der Konflikt auf Spaltenebene erkannt.<br /><br /> **3** = Update-Delete-WINS-Konflikt: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = Update gewinnt Delete-Konflikt: der gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = Fehler beim Hochladen Anweisung einfügen: der Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = Fehler beim Einfügen herunterladen: der Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = hochladen konnte nicht gelöscht: der Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = Fehler beim Löschen von herunterladen: der Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = hochladen konnte nicht aktualisiert: der Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = Fehler beim Aktualisieren herunterladen: der Updatevorgang des Verlegers konnte nicht auf den Abonnenten angewendet werden.<br /><br /> **11** = Lösung<br /><br /> **12** = logischer Datensatz Delete, Update gewinnt: der gelöschte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **13** = logischer Datensatz Konflikt Insert/Update: Einfügung in einen logischen Datensatz steht in Konflikt mit einem Update.<br /><br /> **14** = logischer Datensatz löschen Wins-Update-Konflikt: der aktualisierte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.|  
+|**reason_code**|**int**|Der Fehlercode, der kontextbezogen sein kann. Bei Update / Update "und" Update / Delete-Konflikten, der Wert für diese Spalte entspricht der **Conflict_type**. Bei Konflikten, bei denen Fehler beim Ändern aufgetreten sind, wird als Ursachencode der bei der Änderung im Merge-Agent aufgetretene Fehler verwendet. Wenn der Merge-Agent eine Einfügung, auf dem Abonnenten aufgrund einer Verletzung eines Primärschlüssels anwenden können, z. B. protokolliert eine **Conflict_type** 6 ("Download Insert ist fehlgeschlagen") und ein **Reason_code** 2627, handelt es sich die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interne Fehlermeldung für eine primärschlüsselverletzung: "Verletzung der %ls-Einschränkung ' %. * ls'. Doppelten Schlüssel kann nicht eingefügt werden, in Objekt ' %. \*ls'. "|  
 |**reason_text**|**nvarchar(720)**|Die Fehlerbeschreibung, die kontextbezogen sein kann.|  
 |**pubid**|**uniqueidentifier**|Der Bezeichner für die Veröffentlichung.|  
 |**MSrepl_create_time**|**datetime**|Die Uhrzeit, zu der der Konflikt aufgetreten ist.|  

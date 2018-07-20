@@ -1,5 +1,5 @@
 ---
-title: MSagentparameterlist (Transact-SQL) | Microsoft Docs
+title: MSagentparameterlist (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - Msagentparameterlist system table
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b74f4e4f5359f0fc0068b0847899585bc2b0ee9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf4ba519e2fef4a297e7406689aa33f489c01805
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005037"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101258"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSagentparameterlist** Tabelle enthält Parameterinformationen für Replikations-Agent und wird verwendet, um die Parameter angeben, die für einen bestimmten Agenttyp festgelegt werden können. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+  Die **MSagentparameterlist** Tabelle enthält Parameterinformationen für Replikations-Agent und wird verwendet, um die Parameter angeben, die für einen bestimmten Agenttyp festgelegt werden kann. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

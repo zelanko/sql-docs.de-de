@@ -1,5 +1,5 @@
 ---
-title: Xp_msver (Transact-SQL) | Microsoft Docs
+title: Xp_msver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb4961a51a7a4104fd47b64544727eb609618da4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d35365cc3c1891521635b463d795c98af97f1ea
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261166"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103648"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Versionsinformationen zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Xp_msver** gibt auch Informationen zur Buildnummer des Servers und Informationen zur serverumgebung zurück. Die Informationen, die **Xp_msver** gibt können verwendet werden, in [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Batches, gespeicherten Prozeduren und So weiter, um Logik für plattformunabhängigen Code zu verbessern.  
+  Gibt Versionsinformationen zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Xp_msver** gibt auch Informationen zur Buildnummer des Servers und Informationen zur serverumgebung zurück. Die Informationen, die **Xp_msver** gibt können verwendet werden, in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Batches, gespeicherten Prozeduren und So weiter, um die Logik für die plattformunabhängigen Code zu verbessern.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +48,12 @@ xp_msver [ optname ]
   
 |Options-/Spaltenname|Description|  
 |-------------------------|-----------------|  
-|**ProductName**|Produktname; beispielsweise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**ProductName**|Der Produktname; z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Die Produktversion.|  
 |**Sprache**|Die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Platform**|Der Name des Betriebssystems, des Herstellers und der Chipfamilie für den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
 |**Kommentare**|Verschiedene Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Firmenname**|Der Name der Firma, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt. Beispiel: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
+|**CompanyName**|Der Name der Firma, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt. Beispiel: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Das Betriebssystem.|  
 |**FileVersion**|Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**InternalName**|Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendeter interner Name für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beispiel: SQLSERVR.|  
@@ -63,8 +62,8 @@ xp_msver [ optname ]
 |**Originaldateiname**|Der Name der Datei, die beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Beispiel: Sqlservr.exe.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**SpecialBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**"WindowsVersion"**|Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, die auf dem Computer installiert ist, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
-|**ProcessorCount**|Die Anzahl der Prozessoren in dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
+|**WindowsVersion**|Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, die auf dem Computer installiert ist, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
+|**Zur Prozessoranzahl ProcessorCount**|Die Anzahl der Prozessoren in dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
 |**ProcessorActiveMask**|Gibt die Prozessoren in dem Computer an, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, die gestartet werden und von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows verwendet werden können.|  
 |**ProcessorType**|Der Prozessortyp. Ähnlich wie **Plattform**.|  
 |**PhysicalMemory**|Die Menge an Arbeitsspeicher (RAM) in Megabyte (MB), die auf dem Computer installiert ist, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  

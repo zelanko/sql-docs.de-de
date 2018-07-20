@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164176"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082904"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Ressourcen können Sie eine Ressource umbenennen, löschen, verschieben oder ersetzen. Informationen zum Benutzer, der die Ressource hinzugefügt oder ihre Eigenschaften geändert hat, werden oben auf der Seite angezeigt.  
@@ -39,7 +39,7 @@ ms.locfileid: "37164176"
   
 ## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie einen Namen für die Ressource an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : @ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
+ Geben Sie einen Namen für die Ressource an. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ / * \< > | "oder / beim Angeben eines Namens.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung der Ressource ein. Diese Beschreibung wird für Benutzer, die über die Berechtigung zum Zugreifen auf die Ressource verfügen, auf der Seite Inhalt angezeigt.  

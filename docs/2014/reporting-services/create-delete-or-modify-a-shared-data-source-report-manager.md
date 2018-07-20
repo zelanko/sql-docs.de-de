@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202690"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085082"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle (Berichts-Manager)
   Mit einer freigegebenen Datenquelle werden Verbindungseigenschaften für eine Datenquelle angegeben. Falls Sie über eine Datenquelle verfügen, die von einer großen Anzahl Berichte, Modelle oder datengesteuerter Abonnements verwendet wird, sollten Sie die Erstellung einer freigegebenen Datenquelle in Erwägung ziehen, um den Aufwand für die Pflege der Verbindungsinformationen an mehreren Stellen zu verringern.  
@@ -43,7 +43,7 @@ Symbol für freigegebene Datenquelle
   
 3.  Klicken Sie auf **Neue Datenquelle**. Die Seite **Neue Datenquelle** wird geöffnet.  
   
-4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : @ & = +, $ / * \< > | " /.  
+4.  Geben Sie einen Namen für das Element ein. Ein Name muss mindestens ein Zeichen enthalten und muss mit einem Buchstaben beginnen. Er kann auch Sonderzeichen enthalten, er darf jedoch keine Leerzeichen und folgende Zeichen nicht enthalten: ; ? : \@ & = +, $ / * \< > | " /.  
   
 5.  Optional können Sie auch eine Beschreibung eingeben, um Benutzern Informationen zur Verbindung bereitzustellen. Diese Beschreibung wird auf der Seite **Inhalt** im Berichts-Manager angezeigt.  
   

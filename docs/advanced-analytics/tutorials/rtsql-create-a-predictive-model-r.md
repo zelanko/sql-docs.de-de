@@ -1,23 +1,28 @@
 ---
-title: Erstellen ein Vorhersagemodells (R in SQL-Schnellstart) | Microsoft Docs
+title: 'Schnellstart: erstellen ein Vorhersagemodells mit R in SQL Server-Machine Learning | Microsoft-Dokumentation'
+description: Erfahren Sie in dieser schnellstartanleitung, wie zum Erstellen eines Modells in R mit SQL Server-Daten, um vorhersagen zu zeichnen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202642"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086822"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Erstellen eines Vorhersagemodells (R in SQL-Schnellstart)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Schnellstart: Erstellen eines Vorhersagemodells mit R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Schritt erfahren Sie, wie Sie ein Modell mithilfe von R trainieren und das Modell später in einer Tabelle in SQL Server speichern. Beim Modell handelt es sich um ein einfaches Regressionsmodell, das den Bremsweg eines Autos basierend auf dessen Geschwindigkeit vorhersagt. Verwenden Sie die `cars` Dataset mit R, eingeschlossen werden, da sie klein und einfach zu verstehen ist.
+In dieser schnellstartanleitung haben Sie erfahren, wie Sie das Trainieren eines Modells mit R, und klicken Sie dann das Modell in einer Tabelle in SQL Server speichern. Beim Modell handelt es sich um ein einfaches Regressionsmodell, das den Bremsweg eines Autos basierend auf dessen Geschwindigkeit vorhersagt. Verwenden Sie die `cars` Dataset mit R, eingeschlossen werden, da sie klein und leicht verständlich ist.
+
+## <a name="prerequisites"></a>Erforderliche Komponenten
+
+Einen vorherigen schnellstartanleitung [Hello World in R und SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
 ## <a name="create-the-source-data"></a>Erstellen der Quelldaten
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ Einige Benutzer möchten gern temporäre Tabellen verwenden, aber beachten Sie, dass einige Clients R Sitzungen zwischen Batches getrennt werden.
++ Einige Benutzer möchten gern temporäre Tabellen verwenden, aber beachten Sie, dass einige R Clients Sitzungen zwischen Batches trennen.
 
 + Viele kleine und große Datasets sind in der R-Laufzeit enthalten. Geben Sie aus einer R-Eingabeaufforderung heraus `library(help="datasets")` ein, um eine Liste der mit R installierten Datasets anzuzeigen.
 
@@ -48,7 +53,7 @@ Die Anforderungen eines linearen Modells sind einfach:
 + Bereitstellen von Eingabedaten zur Verwendung während des Trainings des Modells
 
 > [!TIP]
-> Wenn Sie auf der linearen Modellen aufzufrischen benötigen, sollten Sie dieses Lernprogramm, das beschreibt den Prozess der Anpassen eines Modells mit RxLinMod: [Linear Models anpassen](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> Wenn Sie über lineare Modelle auffrischen möchten, sollten Sie dieses Tutorial, das beschreibt den Prozess des Anpassens ein Modell mithilfe von RxLinMod: [anpassen linearer Modelle](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 Sie müssen zum tatsächlichen Erstellen des Modells die Formel in Ihrem R-Code definieren und die Daten als Eingabeparameter weitergeben.
 
@@ -75,7 +80,7 @@ GO
 
 ## <a name="create-a-table-for-storing-the-model"></a>Erstellen einer Tabelle zum Speichern des Modells
 
-Als Nächstes speichern Sie das Modell, damit Sie erneut trainieren können oder für Vorhersagen verwenden können. Die Ausgabe eines R-Pakets, das ein Modell erstellt, ist normalerweise ein **binäres Objekt**. Daher muss die Tabelle, in der Sie das Modell erstellen, eine Spalte vom Typ **varbinary** bereitstellen.
+Speichern Sie als Nächstes das Modell auf, damit Sie erneut zu trainieren oder für Vorhersagen verwenden können. Die Ausgabe eines R-Pakets, das ein Modell erstellt, ist normalerweise ein **binäres Objekt**. Daher muss die Tabelle, in der Sie das Modell erstellen, eine Spalte vom Typ **varbinary** bereitstellen.
 
 ```sql
 CREATE TABLE stopping_distance_models (
@@ -92,7 +97,7 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-Beachten Sie, dass wenn Sie diesen Code ein zweites Mal ausführen, Sie diesen Fehler erhalten:
+Beachten Sie, wenn Sie diesen Code ein zweites Mal ausführen, erhalten Sie diesen Fehler:
 
 ```
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -112,7 +117,7 @@ Generell ist die Ausgabe von R aus der gespeicherten Prozedur [sp_execute_extern
 
 Sie können allerdings zusätzlich zum Datenrahmen Ausgaben für andere Typen, z.B. Skalare, zurückgeben.
 
-Angenommen, Sie möchten ein Modell trainieren, aber sofort eine Tabelle von Koeffizienten des Models anzeigen. Sie können die Tabelle der Koeffizienten als Hauptresultset erstellen, und das trainierte Modell in einer SQL-Variable ausgeben. Sofort erneut können Sie das Modell durch Aufrufen der Variablen, oder Sie können das Modell in einer Tabelle speichern, wie hier gezeigt.
+Angenommen, Sie möchten ein Modell trainieren, aber sofort eine Tabelle von Koeffizienten des Models anzeigen. Sie können die Tabelle der Koeffizienten als Hauptresultset erstellen, und das trainierte Modell in einer SQL-Variable ausgeben. Sie können sofort erneut das Modell durch Aufrufen der Variablen verwenden, oder können Sie das Modell in einer Tabelle speichern, wie hier gezeigt.
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -139,16 +144,15 @@ VALUES ('latest model', @model)
 
 ### <a name="summary"></a>Zusammenfassung
 
-Beachten Sie diese Regeln für die Arbeit mit SQL-Parametern und Variablen von R in `sp_execute_external_script`:
+Beachten Sie diese Regeln für die Arbeit mit SQL-Parametern und R-Variablen in `sp_execute_external_script`:
 
-+ Alle R-Skript zugeordnete SQL-Parameter müssen aufgelistet sein, namentlich in der _@params_ Argument.
-+ Fügen Sie zur Ausgabe eines dieser Parameter das OUTPUT-Schlüsselwort in die Liste _@params_ ein.
-+ Stellen Sie nach Auflistung der zugeordneten Parameter die Zuordnung bereit: zeilenweise, von SQL-Parametern zu R-Variablen und sofort nach der Liste _@params_.
++ Alle SQL-Parametern zugeordnet, die R-Skript müssen aufgelistet sein, anhand des Namens in der  _\@Params_ Argument.
++ Fügen Sie in der Ausgabe einer der folgenden Parameter, das OUTPUT-Schlüsselwort in der  _\@Params_ Liste.
++ Nach der Auflistung der zugeordneten Parameter an, die Zuordnung zeilenweise, von SQL-Parametern, die R-Variablen und sofort nach dem bereit die  _\@Params_ Liste.
 
-## <a name="next-lesson"></a>Nächste Lektion
+## <a name="next-steps"></a>Nächste Schritte
 
-Da Sie nun über ein Modell verfügen, lernen Sie im letzten Schritt, wie man darauf basierende Vorhersagen trifft und die Ergebnisse darstellt.
+Nun, da Sie ein Modell, in die letzte Schnellstart verfügen, erfahren Sie wie Sie darauf basierende Vorhersagen trifft und die Ergebnisse darstellt.
 
-[Vorhersagen und Zeichnen ausgehend vom Modell](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [Schnellstart: Vorhersagen und zeichnen ausgehend vom Modell](../tutorials/rtsql-predict-and-plot-from-model.md)

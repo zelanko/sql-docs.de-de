@@ -1,5 +1,5 @@
 ---
-title: MSmerge_contents (Transact-SQL) | Microsoft Docs
+title: MSmerge_contents (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad83b251629b87a85da723a0d7db2875c8c45462
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4643b0ba6bdfd9eea4405be02ca481133f0db096
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005217"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101558"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "33005217"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
-|**generation**|**bigint**|Die Generierung der identifizierten Zeile die **Tablenick** und **Rowguid**.|  
+|**generation**|**bigint**|Die Generierung der Zeile durch identifiziert die **Tablenick** und **Rowguid**.|  
 |**partchangegen**|**bigint**|Die Generierung, die der letzten Datenänderung zugeordnet ist, bei der die Zugehörigkeit der Zeile zu einer gefilterten Veröffentlichung geändert worden sein könnte|  
 |**Datenherkunft**|**varbinary(501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an dieser Zeile verwendet werden.|  
 |**colvl**|**varbinary(7489)**|Die Versionsinformationen für die Spalte.|  
 |**Marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifiziert die übergeordnete Zeile in **MSmerge_contents** (durch **Rowguid**) für jede entsprechende untergeordnete Zeile in einem logischen Datensatz.|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|Gibt die obersten übergeordneten Zeile im **MSmerge_contents** (von **Rowguid**) für jede entsprechende untergeordnete Zeile in einem logischen Datensatz.|  
 |**logical_record_lineage**|**varbinary(501)**|Die Paare aus Spitzname des Abonnenten und Versionsnummer, die zur Verwaltung eines Verlaufs der Änderungen an der übergeordneten Zeile der obersten Ebene in einem logischen Datensatz verwendet werden. Für alle untergeordneten Zeilen in einem logischen Datensatz lautet dieser Wert NULL.|  
 |**logical_relation_change_gen**|**bigint**|Der Generierungswert, der mit der letzten Änderung verbunden ist, die zur Neuausrichtung des logischen Datensatzes führte. Die Neuausrichtung wurde erforderlich, da eine vorhandene Zeile in den logischen Datensatz hinein oder aus diesem heraus verschoben wurde.|  
   

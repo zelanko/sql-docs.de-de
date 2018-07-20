@@ -1,5 +1,5 @@
 ---
-title: MSreplication_monitordata (Transact-SQL) | Microsoft Docs
+title: MSreplication_monitordata (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44e7914937378e7a33c30ba4bc635c972c0c7848
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc66db7f28a55eddb403fbe9b0cc48df5398d820
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013117"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103698"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "33013117"
 |**agent_name**|**sysname**|Name des Replikations-Agent-Auftrags|  
 |**job_id**|**uniqueidentifier**|GUID des Replikations-Agent-Auftrags|  
 |**status**|**int**|Der Status des Replikations-Agents. Die folgenden Werte sind möglich:<br /><br /> **1** = gestartet<br /><br /> **2** = war erfolgreich<br /><br /> **3** = wird ausgeführt<br /><br /> **4** = im Leerlauf<br /><br /> **5** = wird wiederholt<br /><br /> **6** = Fehler|  
-|**isagentrunningnow**|**bit**|Ein Flag, das angibt, ob der Agentauftrag derzeit ein Wert von ausgeführt wird, **1** bedeutet, dass der Auftrag ausgeführt wird.|  
-|**Warnung**|**int**|Schwellenwertwarnung, die von einem Abonnement generiert wird. Sie kann das Ergebnis des logischen OR von mindestens einem der folgenden Werte sein.<br /><br /> **1** = Expiration ein Abonnement für eine transaktionsveröffentlichung hat die Beibehaltungsdauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentanteil der Beibehaltungsdauer.<br /><br /> **2** = Latency - die Zeitdauer für die Replikation von Daten von einem Transaktionsverleger auf den Abonnenten überschreitet den Schwellenwert in Sekunden.<br /><br /> **4** = Mergeexpiration - ein Abonnement für eine Mergeveröffentlichung hat die Beibehaltungsdauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentanteil der Beibehaltungsdauer. 8 = mergefastrunduration - die Zeit zum Synchronisieren eines Mergeabonnements über eine schnelle Netzwerkverbindung überschreitet den Schwellenwert (in Sekunden).<br /><br /> **16** = Mergeslowrunduration – die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine langsame oder DFÜ Netzwerkverbindung.<br /><br /> **32** = Mergefastrunspeed-die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Schwellenwert-Rate in Zeilen pro Sekunde, über eine schnelle Netzwerkverbindung zu verwalten.<br /><br /> **64** = Mergeslowrunspeed-die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Schwellenwert-Rate in Zeilen pro Sekunde, über eine langsame oder DFÜ Netzwerkverbindung zu verwalten.|  
+|**isagentrunningnow**|**bit**|Ein Flag, das angibt, ob der Agentauftrag derzeit ein Wert, der ausgeführt wird, **1** bedeutet, dass der Auftrag ausgeführt wird.|  
+|**Warnung**|**int**|Schwellenwertwarnung, die von einem Abonnement generiert wird. Sie kann das Ergebnis des logischen OR von mindestens einem der folgenden Werte sein.<br /><br /> **1** = Expiration-ein Abonnement für eine transaktionsveröffentlichung hat die Beibehaltungsdauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentwert der Beibehaltungsdauer.<br /><br /> **2** = Latency - die Zeitdauer für die Replikation von Daten von einem Transaktionsverleger auf den Abonnenten überschreitet den Schwellenwert in Sekunden.<br /><br /> **4** = Mergeexpiration - ein Abonnement für eine Mergeveröffentlichung hat die Beibehaltungsdauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentwert der Beibehaltungsdauer. 8 = mergefastrunduration - die Zeit zum Synchronisieren eines Mergeabonnements über eine schnelle Netzwerkverbindung überschreitet den Schwellenwert (in Sekunden).<br /><br /> **16** = Mergeslowrunduration – die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine langsame oder DFÜ Netzwerkverbindung.<br /><br /> **32** = Mergefastrunspeed-die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine schnelle Netzwerkverbindung zu verwalten.<br /><br /> **64** = Mergeslowrunspeed-die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine langsame oder DFÜ Netzwerkverbindung zu verwalten.|  
 |**last_distsync**|**datetime**|Datum und die Uhrzeit, wann der Verteilungs-Agent zuletzt ausgeführt wurde|  
 |**agentstoptime**|**datetime**|Datum und die Uhrzeit der Beendigung der Momentaufnahme|  
 |**distdb**|**sysname**|Name der Verteilungsdatenbank für das Abonnement|  
@@ -69,7 +69,7 @@ ms.locfileid: "33013117"
 |**mergePerformance**|**int**|Die Leistung der letzten Synchronisierung im Vergleich zu allen Synchronisierungen des Abonnements. Sie ergibt sich aus der Übermittlungsrate der letzten Synchronisierung dividiert durch den Durchschnitt aller vorhergegangenen Übermittlungsraten.|  
 |**mergelatestsessionrunduration**|**int**|Dauer der letzten Ausführung des Merge-Agents|  
 |**mergelatestsessionrunspeed**|**float(53)**|Übermittlungsrate der letzten Ausführung des Merge-Agents|  
-|**mergelatestsessionconnectiontype**|**int**|Die für die letzte Merge-Agent-Sitzung verwendete Verbindung. Die folgenden Werte sind möglich:<br /><br /> **1** = lokale Netzwerk (LAN)<br /><br /> **2** = DFÜ-Netzwerkverbindung|  
+|**mergelatestsessionconnectiontype**|**int**|Die für die letzte Merge-Agent-Sitzung verwendete Verbindung. Die folgenden Werte sind möglich:<br /><br /> **1** = des lokalen Netzwerks (LAN)<br /><br /> **2** = DFÜ-Netzwerkverbindung|  
 |**retention_period_unit**|**tinyint**|Gibt die zum Definieren der Beibehaltungsdauer verwendete Einheit an. Die folgenden Werte sind möglich.<br /><br /> **1** = Woche<br /><br /> **2** = Monat<br /><br /> **3** = Jahr|  
   
 ## <a name="see-also"></a>Siehe auch  

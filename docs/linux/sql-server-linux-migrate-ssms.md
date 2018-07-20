@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020128"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085092"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren und Importieren einer Datenbank unter Linux mit SSMS oder SqlPackage.exe auf Windows
 
@@ -34,7 +34,7 @@ Sollten Sie immer installieren und verwenden Sie die neueste Version von SQL Ser
 
 1. Starten Sie SSMS, indem Sie eingeben **Microsoft SQL Server Management Studio** in der Windows-Suchfeld ein, und klicken Sie dann auf die desktop-app.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Verbinden Sie mit Ihrer Quelldatenbank im Objekt-Explorer. Die Quelldatenbank kann in Microsoft SQL Server lokal oder in der Cloud unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse sein.
 
@@ -52,7 +52,7 @@ Die *. Bacpac-Datei wurde erfolgreich erstellt, an der Position, die Sie ausgew�
 
 1. Starten Sie SSMS, indem Sie eingeben **Microsoft SQL Server Management Studio** in der Windows-Suchfeld ein, und klicken Sie dann auf die desktop-app.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Verbinden Sie mit Ihrem Ziel-Server im Objekt-Explorer. Der Zielserver kann Microsoft SQL Server, die lokal ausgeführt werden oder in der Cloud unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse.
 

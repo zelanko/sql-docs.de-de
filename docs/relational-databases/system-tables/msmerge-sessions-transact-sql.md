@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (Transact-SQL) | Microsoft Docs
+title: MSmerge_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010727"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103328"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_sessions** -Tabelle enthält Verlaufszeilen mit den Ergebnissen des vorheriger auftragssitzungen des Merge-Agent. Bei jedem Ausführen des Merge-Agents wird der Tabelle eine neue Zeile hinzugefügt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSmerge_sessions** -Tabelle enthält Verlaufszeilen mit den Ergebnissen vorheriger auftragssitzungen des Merge-Agent des. Bei jedem Ausführen des Merge-Agents wird der Tabelle eine neue Zeile hinzugefügt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "33010727"
 |**RunStatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
 |**estimated_upload_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Verleger angewendet werden mussten|  
 |**estimated_download_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Abonnenten angewendet werden mussten|  
-|**connection_type**|**int**|Die während des Hochladens verwendete Verbindung:<br /><br /> **1** = lokale Netzwerk (LAN).<br /><br /> **2** = DFÜ-Netzwerkverbindung.<br /><br /> **3** = websynchronisierung.|  
+|**connection_type**|**int**|Die während des Hochladens verwendete Verbindung:<br /><br /> **1** = des lokalen Netzwerks (LAN).<br /><br /> **2** = DFÜ-Netzwerkverbindung.<br /><br /> **3** = websynchronisierung.|  
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
   
 ## <a name="see-also"></a>Siehe auch  

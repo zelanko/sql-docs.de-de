@@ -1,5 +1,5 @@
 ---
-title: Systembasistabellen | Microsoft Docs
+title: Systembasistabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c15a0e42091cffb8010cae36ad43322d361f91fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6804649b60a1617def415ce35113685ef43902f5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263033"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102208"
 ---
 # <a name="system-base-tables"></a>Systembasistabellen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33263033"
 >  Die Systembasistabellen werden nur in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet und dienen nicht der allgemeinen Verwendung durch Kunden. Sie können geändert werden, und ihre Kompatibilität wird nicht garantiert.  
   
 ## <a name="system-base-table-metadata"></a>Metadaten-Systembasistabelle  
- Hat ein Benutzer die Control-, Alter- oder VIEW DEFINITION-Berechtigung für eine Datenbank hat sehen Basistabelle Systemmetadaten auf die **sys.objects** -Katalogsicht angezeigt. Der Empfänger kann auch den Namen aufzulösen und Objekt-IDs der systembasistabellen mithilfe von integrierten Funktionen wie z. B. [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) und [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
+ Hat ein Benutzer die CONTROL, ALTER oder VIEW DEFINITION-Berechtigung für eine Datenbank verfügt über sehen Basistabelle Systemmetadaten auf die **sys.objects** -Katalogsicht angezeigt. Der Empfänger kann auch die Namen auflösen und Objekt-IDs der systembasistabellen mithilfe von integrierten Funktionen wie z. B. [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) und [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
   
  Um eine Bindung zu einer Systembasistabelle herzustellen, muss ein Benutzer eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbauen. Der Versuch, eine SELECT-Abfrage aus einer Systembasistabelle auszuführen, ohne dass mithilfe von DAC eine Verbindung hergestellt wurde, löst einen Fehler aus.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33263033"
 |**Sys.sysnsobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Namespace-bezogene Entität. Diese Tabelle wird zum Speichern von XML-Auflistungsentitäten verwendet.|  
 |**Sys.syscolpars**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Spalte in einer Tabelle, Sicht oder Tabellenwertfunktion. Sie enthält auch Zeilen für jeden Parameter einer Prozedur oder einer Funktion.|  
 |**Sys.systypedsubobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede typisierte untergeordnete Entität. Nur Parameter für Partitionsfunktionen fallen in diese Kategorie.|  
-|**Sys.sysidxstats**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden Index oder Statistiken für Tabellen und indizierte Sichten<br /><br /> Hinweis: Jeder Index (Heap ausgenommen) eine Statistik, die den gleichen Namen wie der Index zugeordnet ist.|  
+|**Sys.sysidxstats**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden Index oder Statistiken für Tabellen und indizierte Sichten<br /><br /> Hinweis: Jeder Index (Heap ausgenommen) ist eine Statistik, die den gleichen Namen wie der Index zugeordnet.|  
 |**Sys.sysiscols**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden permanenten Index und jede Statistikspalte.|  
 |**Sys.sysscalartypes**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden benutzerdefinierten oder Systemtyp.|  
 |**Sys.sysdbreg**|Vorhanden ist, der **master** nur Datenbank. Enthält eine Zeile für jede registrierte Datenbank.|  
@@ -63,9 +63,9 @@ ms.locfileid: "33263033"
 |**Sys.sysrmtlgns**|Diese systembasistabelle ist vorhanden, der **master** nur Datenbank. Enthält eine Zeile für jede Remoteanmeldungszuordnung. Sie wird für die Zuordnung von eingehenden lokalen Anmeldungen, die vorgeben, von einem entsprechenden Server zu stammen, an eine tatsächliche lokale Anmeldung verwendet.|  
 |**Sys.syslnklgns**|Vorhanden ist, der **master** nur Datenbank. Enthält eine Zeile für jede verknüpfte Anmeldungszuordnung. Verknüpfte Anmeldungszuordnungen werden von Remoteprozeduraufrufen und verteilten Abfragen vom lokalen Server zum entsprechenden Verbindungsserver verwendet.|  
 |**Sys.sysxlgns**|Vorhanden ist, der **master** nur Datenbank. Enthält eine Zeile für jeden Serverprinzipal.|  
-|**Sys.sysdbfiles**|Ist in jeder Datenbank vorhanden. Wenn die Spalte **Dbid** NULL ist, steht die Zeile für eine Datei, die zu dieser Datenbank gehört. In der **master** Datenbank, die Spalte **Dbid** kann nicht NULL sein. Wenn dies der Fall ist, steht die Zeile für eine Masterdatei.|  
+|**Sys.sysdbfiles**|Ist in jeder Datenbank vorhanden. Wenn die Spalte **Dbid** NULL ist, steht die Zeile für eine Datei, die auf diese Datenbank gehört. In der **master** -Datenbank, die Spalte **Dbid** ungleich NULL sein kann. Wenn dies der Fall ist, steht die Zeile für eine Masterdatei.|  
 |**Sys.sysusermsg**|Vorhanden ist, der **master** nur Datenbank. Jede Zeile stellt eine benutzerdefinierte Fehlermeldung dar.|  
-|**Sys.sysprivs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Berechtigung auf Datenbank- oder Serverebene.<br /><br /> Hinweis: Der Berechtigungen auf Serverebene sind gespeichert der **master** Datenbank.|  
+|**Sys.sysprivs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Berechtigung auf Datenbank- oder Serverebene.<br /><br /> Hinweis: Auf Serverebene Berechtigungen werden gespeichert, der **master** Datenbank.|  
 |**Sys.sysowners**|Ist in jeder Datenbank vorhanden. Jede Zeile stellt einen Datenbankprinzipal dar.|  
 |**Sys.sysobjkeycrypts**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jeden symmetrischen Schlüssel, jede Verschlüsselung oder kryptografische Eigenschaft, die einem Objekt zugeordnet ist.|  
 |**Sys.syscerts**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jedes Zertifikat in einer Datenbank.|  

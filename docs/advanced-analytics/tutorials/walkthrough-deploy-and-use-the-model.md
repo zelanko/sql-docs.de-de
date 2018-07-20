@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983012"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085352"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Bereitstellen Sie das R-Modell und verwenden Sie es in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zun�
     END
     ```
 
-    + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird aufgerufen, aus der Tabelle als **'varbinary(max)'** Daten, die in der SQL-Variablen gespeicherten _@lmodel2_, und als Parameter übergeben *mod* an das System gespeichert Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird aufgerufen, aus der Tabelle als **'varbinary(max)'** Daten, die in der SQL-Variablen gespeicherten  _\@lmodel2_, und als Parameter übergeben *mod* an das System gespeicherte Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeichert _@input_. Wie Daten aus der Datenbank abgerufen werden, es befindet sich in einem Datenrahmen namens *"inputdataset"*, dies ist der voreingestellte Name für die Eingabedaten der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur; Sie können definieren, einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters *_@input_data_1_name_*.
+    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeichert  _\@Eingabe_. Wie Daten aus der Datenbank abgerufen werden, es befindet sich in einem Datenrahmen namens *"inputdataset"*, dies ist der voreingestellte Name für die Eingabedaten der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur; Sie können definieren, einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters   *_\@input_data_1_name_*.
 
     + Die gespeicherte Prozedur ruft die `rxPredict` -Funktion aus der **RevoScaleR** -Bibliothek auf, um die Bewertung zu generieren.
 
