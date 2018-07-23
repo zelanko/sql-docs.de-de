@@ -181,7 +181,7 @@ ORDER BY order_by_expression
 -   TOP kann nicht mit OFFSET und FETCH im gleichen Abfrageausdruck (im gleichen Abfragebereich) kombiniert werden.  
   
 ## <a name="using-offset-and-fetch-to-limit-the-rows-returned"></a>Verwenden von OFFSET und FETCH zum Einschränken der zurückgegebenen Zeilen  
- Es wird empfohlen, die OFFSET-Klausel und die FETCH-Klausel statt der TOP-Klausel verwenden, um eine Abfrageauslagerung zu implementieren und die Anzahl der an eine Clientanwendung gesendeten Zeilen einzuschränken.  
+ Es wird empfohlen, die OFFSET-Klausel und die FETCH-Klausel statt der TOP-Klausel zu verwenden, um eine Abfrageauslagerung zu implementieren und die Anzahl der an eine Clientanwendung gesendeten Zeilen einzuschränken.  
   
  Wenn Sie OFFSET und FETCH als Auslagerungslösung verwenden, muss die Abfrage einmal für jede "Seite" der Daten ausgeführt werden, die an die Clientanwendung zurückgegebenen werden. Um beispielsweise die Ergebnisse der Abfrage in Schritten von 10 Zeilen zurückzugeben, müssen Sie die Abfrage einmal ausführen, damit die Zeilen 1 bis 10 zurückgegeben werden. Wenn Sie die Abfrage erneut ausführen, werden die Zeilen 11 bis 20 zurückgegeben usw. Jede Abfrage ist unabhängig und weist keinen Bezug zur anderen auf. Dies bedeutet, dass im Gegensatz zur Verwendung eines Cursors, bei dem die Abfrage einmal ausgeführt und der Status auf dem Server beibehalten wird, die Clientanwendung für das Nachverfolgen des Status zuständig ist. Um stabile Ergebnisse zwischen Abfrageanforderungen mit OFFSET und FETCH zu erreichen, müssen die folgenden Bedingungen erfüllt werden:  
   
