@@ -95,7 +95,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
   
  Die Angabe einer `ORDER BY`-Klausel gewährleistet nicht, dass die Zeilen in der angegebenen Reihenfolge eingefügt werden.  
   
- Wenn eine Sparsespalte in die Auswahlliste eingeschlossen ist, wird die Eigenschaft der Sparsespalte nicht an die neue Tabelle übertragen. Wenn diese Eigenschaft in der neuen Tabelle erforderlich ist, ändern Sie die Spaltendefinition, nachdem Sie die INTO SELECT...INTO-Anweisung ausgeführt haben, um diese Eigenschaft einzuschließen.  
+ Wenn eine Sparsespalte in die Auswahlliste eingeschlossen ist, wird die Eigenschaft der Sparsespalte nicht an die neue Tabelle übertragen. Wenn diese Eigenschaft in der neuen Tabelle erforderlich ist, ändern Sie die Spaltendefinition, nachdem Sie die SELECT...INTO-Anweisung ausgeführt haben, um diese Eigenschaft einzuschließen.  
   
  Wenn eine berechnete Spalte in die Auswahlliste eingeschlossen ist, ist die entsprechende Spalte in der neuen Tabelle keine berechnete Spalte. Die Werte in der neuen Spalte entsprechen den Werten, die zum Zeitpunkt der Ausführung der `SELECT...INTO`-Anweisung berechnet wurden.  
   
@@ -213,7 +213,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importieren aus einer externen mit PolyBase erstellten Tabelle  
- Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie `SELECT INTO`, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index am oberen Rand der Tabelle.  
+ Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie `SELECT INTO`, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index über die Tabelle.  
   
  **Gilt für:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
