@@ -1,8 +1,8 @@
 ---
-title: Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
-description: Versionshinweise für Microsoft SQL Operations Studio (Vorschau)
+title: Anmerkungen zur Version von Microsoft SQL Operations Studio (Vorschau) | Microsoft-Dokumentation
+description: Anmerkungen zur Version von Microsoft SQL Operations Studio (Vorschau)
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,157 +13,196 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271011"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188956"
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
+# <a name="sql-operations-studio-preview-release-notes"></a>Anmerkungen zur Version von SQL Operations Studio (Vorschau)
 
-**[Der Juni-öffentliche Vorschau herunterladen](download.md)**
+**[Laden Sie die öffentliche Vorschau des Monats Juli](download.md)**
+
+## <a name="july-2018-july-public-preview"></a>Juli 2018 (Juli öffentliche Vorschau)
+
+Veröffentlichungsdatum: 19. Juli 2018  
+Version: 0.31.4
+
+Die *Public Preview von Juli* liegt der Schwerpunkt auf dem ersten Release der Konfigurationsszenarien für den SQL Server-Agent, SQL Server Profiler-Sitzung und Ansicht-Vorlage Erweiterungen und weiteren Fehlerbehebungen für Kunden mit GitHub-Probleme gemeldet. Diese Version enthält die folgenden Highlights:  
+
+- [SQL Server-Agent für SQL Operations Studio-Erweiterung](sql-server-agent-extension.md) Verbesserungen
+ - Hinzugefügte Anzeigen von Warnungen, Operatoren und Proxys und Symbole auf der linken Seite
+ - Hinzugefügte Dialogfelder zum neuen Auftrag, Neuer Auftragsschritt, neue Warnung und New-Operator
+ - Hinzugefügte Auftrag löschen, Warnungen löschen und Delete-Operator (Rechtsklick)
+ - Hinzugefügte vorherigen Ausführungen-Visualisierung
+ - Zusätzliche Filter für jeden Spaltennamen
+- [SQL Server Profiler für SQL Operations Studio-Erweiterung](sql-server-profiler-extension.md) Verbesserungen
+ - Hinzugefügte Hotkeys schnell starten und Starten/Beenden von Profiler
+ - 5 Standard Vorlagen zum Anzeigen von erweiterten Ereignissen hinzugefügt
+ - Name der hinzugefügten Server-Datenbank-Verbindung
+ - Unterstützung für Azure SQL-Datenbank-Instanzen
+ - Hinzugefügte Vorschlag zu Profiler beenden, wenn die Registerkarte geschlossen wird, wenn der Profiler noch ausgeführt wird
+- Version der Erweiterung für Skripts kombinieren
+- Assistent "und" Dialogfeld-Erweiterungspunkte behandelt, die für Ersteller von Erweiterungen hinzugefügt
+- Beheben Sie die GitHub-Probleme:
+ - Beheben Sie [ausgeben 728](https://github.com/Microsoft/sqlopsstudio/issues/728): keine Antwort auf Verbindung hinzufügen unter MacOS
+ - Beheben Sie [ausgeben 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Ergebnisse-Raster Textanzeige bemerke ist, durch internationale Zeichen
+ - Beheben Sie [1693 ausgeben](https://github.com/Microsoft/sqlopsstudio/issues/1693): Backup-Dialogfeld: Benutzeroberfläche Dateibrowsers ist fehlerhaft
+ - Beheben Sie [ausgeben 1713](https://github.com/Microsoft/sqlopsstudio/issues/1713): Anzahl der betroffenen Zeilen
+ - Beheben Sie [1718 ausgeben](https://github.com/Microsoft/sqlopsstudio/issues/1718): Es konnte keine Verbindung mit jeder Datenquelle
+ - Beheben Sie [ausgeben 1719](https://github.com/Microsoft/sqlopsstudio/issues/1719): TypeError Herstellen der Verbindung mit Server
+ - Beheben Sie [ausgeben 1724](https://github.com/Microsoft/sqlopsstudio/issues/1724): Erweiterung Dialogfelder beendet haben
+ - Beheben Sie [ausgeben 1749](https://github.com/Microsoft/sqlopsstudio/issues/1749): Fehler: HTML-Daten in einer Spalte ruft interpretiert.
+ - Beheben Sie [ausgeben 1789](https://github.com/Microsoft/sqlopsstudio/issues/1789): Erweiterbarkeit: Wenn Sie über einen Verbindungsanbieter hinzufügen deinstallieren niemals entfernt sie aus der Liste
+ - Beheben Sie [ausgeben 1791](https://github.com/Microsoft/sqlopsstudio/issues/1791): Sqlops Extensions: queryeditor.connect() stellt eine Verbindung her in die Zieldatenbank, aber die Benutzeroberfläche zeigt keine Editor verbunden ist
+ - Beheben Sie [1799 ausgeben](https://github.com/Microsoft/sqlopsstudio/issues/1799): Diagramm der Datenbankgröße für Top-10 funktioniert nicht auf Groß-/ Kleinschreibung-Instanzen
+ - Beheben Sie [ausgeben 1814](https://github.com/Microsoft/sqlopsstudio/issues/1814): sqlops.d.ts Tippfehler verursacht implizite 'any'-Typdefinition
+ - Beheben Sie [ausgeben 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Fehler de Ortografia
+ - Beheben Sie [ausgeben 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): IconPath in ButtonComponent festlegen, wenn component() aufgerufen wurde, ändert sich nicht auf das Symbol
+ - Beheben Sie [ausgeben 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): bessere tabellenorganisation
 
 
-## <a name="june-2018-june-public-preview"></a>Juni 2018 (Juni öffentliche Vorschau)
+Weitere Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/sqlopsstudio/releases).
 
-Veröffentlichungsdatum: 20 Juni 2018  
+
+
+## <a name="june-2018-june-public-preview"></a>Juni 2018 (Juni-öffentliche Vorschau)
+
+Veröffentlichungsdatum: 20. Juni 2018  
 Version: 0.30.6
 
-Die *öffentliche Vorschau Juni* enthält die folgenden Merkmale:  
+Die *öffentliche Vorschauversion von Juni* enthält die folgenden Highlights:  
 
-- **SQL Server Profiler für die SQL-Vorgänge Studio *Vorschau***  erste Version der Erweiterung.
-- Die neue **SQL Data Warehouse** Erweiterung enthält umfangreiche anpassbares dashboardwidgets einbringen Einblicke in Ihr Datawarehouse. Dies entsperrt Schlüsselszenarien zu verwalten und optimieren Ihr Datawarehouse, um sicherzustellen, dass es für die konsistente Leistung optimiert ist.
-- **Bearbeiten von Daten "Filtern und sortieren"** unterstützen.
-- **SQL Server-Agent für SQL-Vorgänge Studio *Vorschau***  Erweiterung Erweiterungen für Aufträge und Auftragsverlauf auf Sichten.
-- Verbesserte **-Assistenten & Dialogfeld Generator Benutzeroberflächenframework** -Erweiterbarkeits-APIs.
-- Aktualisieren Sie die Integration von Visual Studio Code-Plattform Quelle-Code [März 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) und [April 2018 ("1,23")](https://code.visualstudio.com/updates/v1_23) frei.
-- Beheben von Problemen von GitHub:
-  - Anforderung zur ([ausstellen 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Bitte nehmen Sie die Ergebnisse AutoAnpassen-Spalte Rasterbreite an Daten und/oder manuelle Änderungen beachten, wenn dieselbe Abfrage erneut ausgeführt wird.
-  - Beheben Sie [ausstellen 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): sollten anzeigen und hinzufügen, message Konto Konto Schaltfläche hinzufügen, wenn verknüpften Kontos leer ist.
-  - Beheben Sie [ausstellen 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Registerkarte "verknüpfte Konto" ist unterbrochen, wenn die Sicht reduziert wird.
-  - Beheben Sie [ausstellen 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools-Dienst stürzt ab, wenn es sich bei SQL-Datei vom Datenträger zu öffnen.
-  - Beheben Sie [ausstellen 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): fehlende SQL-Schlüsselwort "BETWEEN".
-  - Beheben Sie [ausstellen 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH'-Schlüsselwort stürzt SQL Tools-Dienst ab.
-  - Beheben Sie [ausstellen 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New-Profiler" Kontextmenüoption im Objekt-Explorer wird keine Aktion ausgeführt.
-  - Beheben Sie [ausstellen 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Abfrage-Editor "Erklärung" Abfrageplan ist unterbrochen.
-
-
-Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/sqlopsstudio/releases).
+- **SQL Server Profiler für SQL Operations Studio *Vorschau***  erste Version der Erweiterung.
+- Die neue **SQL Data Warehouse** Erweiterung enthält umfangreiche anpassbar dashboardwidgets stellt Einblicke in Ihr Datawarehouse. Dies hebt die Sperre wichtige Szenarien zu verwalten und optimieren Ihr Datawarehouse, um sicherzustellen, dass sie für eine gleichbleibende Leistung optimiert ist.
+- **Bearbeiten von Daten, die "Filtern und sortieren"** unterstützen.
+- **SQL Server-Agent für SQL Operations Studio *Vorschau***  Erweiterung Verbesserungen für die Aufträge und Auftragsverlauf Ansichten.
+- Verbesserte **-Assistent & Dialogfeld-Framework für UI-Builder** Erweiterbarkeits-APIs.
+- Aktualisieren Sie die Integration von VS Code-Plattform Source Code [März 2018 (Version 1.22)](https://code.visualstudio.com/updates/v1_22) und [April 2018 (1,23)](https://code.visualstudio.com/updates/v1_23) frei.
+- Beheben Sie die GitHub-Probleme:
+  - Die Anforderung zur ([ausgeben 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Bitte stellen Sie die Ergebnisse Breite des Rasters AutoAnpassen-Spalte mit Daten, und/oder manuelle Änderungen speichern, wenn dieselbe Abfrage erneut ausgeführt wird.
+  - Beheben Sie [ausgeben 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): sollten anzeigen hinzufügen, Nachricht, und fügen Sie der Schaltfläche "Konto-Konto" hinzu, wenn verknüpftes Konto leer ist.
+  - Beheben Sie [ausgeben 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Registerkarte "verknüpfte Konto" wird unterbrochen, wenn die Ansicht reduziert wird.
+  - Beheben Sie [ausgeben 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools-Dienst stürzt ab, wenn Sie SQL-Datei vom Datenträger zu öffnen.
+  - Beheben Sie [ausgeben 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): fehlende SQL-Schlüsselwort "BETWEEN".
+  - Beheben Sie [ausgeben 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): "MATCH"-Schlüsselwort stürzt ab, SQL-Tools-Dienst.
+  - Beheben Sie [ausgeben 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "Neuer Profiler" Kontextmenüoption im Objekt-Explorer hat keine Auswirkungen.
+  - Beheben Sie [ausgeben 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Abfrage-Editor "Explain" Abfrageplan ist fehlerhaft.
 
 
-## <a name="may-2018-may-public-preview"></a>Mai 2018 (kann öffentliche Vorschau)
+## <a name="may-2018-may-public-preview"></a>Mai 2018 (öffentlichen Vorschau Mai)
 
-Veröffentlichungsdatum: 7 Mai 2018  
+Veröffentlichungsdatum: 7. Mai 2018  
 Version: 0.29.3
 
-Die *öffentliche Vorschau möglicherweise* konzentriert sich auf die Stabilisierung und Programmfehlerbehebungen. Dieser Build enthält die folgenden Merkmale:  
+Die *Public Preview kann* konzentriert sich auf die Stabilität und Fehlerbehebungen. Dieser Build enthält die folgenden Highlights:  
 
-- Ankündigung Redgate SQL Search-Erweiterung im Erweiterungs-Manager verfügbar.
-- Community-Lokalisierung für 10 Sprachen verfügbar: Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch, Russisch, vereinfachtes Chinesisch und traditionelles Chinesisch.
+- Jetzt Redgate SQL Search-Erweiterung, die im Erweiterungs-Manager verfügbar.
+- Community-Lokalisierung für 10 Sprachen verfügbar: Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch, Russisch, Chinesisch (vereinfacht) und Chinesisch (traditionell).
 - Reduzierte Telemetrie-Erfassung, verbesserter teilnehmen und produktinterne Links zu Datenschutzbestimmungen.
-- Erweiterungs-Manager verfügt über verbesserte Marketplace, um mühelos ermitteln, Communityerweiterungen auftreten.
-- Zeigen zur Verbesserung der SQL Agentaufträge mit Erweiterung und Auftragsverlauf auf.
-- Updates für Whoisactive und Serverberichten-Erweiterungen.
-- Verbessern Sie die Dashboardeigenschaften verwalten Durchführen eines Bildlaufs.
-- Beheben von Problemen von GitHub:
-   - Beheben Sie [ausstellen 703](https://github.com/Microsoft/sqlopsstudio/issues/703): HTML-ähnlichen Text eingeben, Bearbeiten von Daten führt dazu, dass Wert, bis die Aktualisierung nicht ordnungsgemäß angezeigt
-   - Beheben Sie [ausstellen 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb paketabhängigkeit
-   - Beheben Sie [ausstellen 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): Schlüsselwort 'distinct' nicht hervorgehoben
-   - Beheben Sie [ausstellen 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): Bearbeitungsdaten wiederherstellen Zeile funktioniert nicht
-   - Beheben Sie [ausstellen 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent-Erweiterung und die Statusleiste
-   - Beheben Sie [ausstellen 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL-Agent nicht Größe nach Windows kann Größe ändern
+- Erweiterungs-Manager verfügt über verbesserte Marketplace benutzerumgebung zur Community Extensions leicht zu erkennen.
+- SQL Agent-Erweiterung Aufträge und Auftragsverlauf anzeigen, zur Verbesserung der.
+- Updates für Whoisactive und Erweiterungen von Server-Berichte.
+- Verbessern Sie die Dashboardeigenschaften verwalten scrollen.
+- Beheben Sie die GitHub-Probleme:
+   - Beheben Sie [ausgeben 703](https://github.com/Microsoft/sqlopsstudio/issues/703): ähnlich wie HTML-Text eingeben, in das Bearbeiten von Daten wird Wert nicht ordnungsgemäß angezeigt wurde, bis die Aktualisierung
+   - Beheben Sie [ausgeben 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb paketabhängigkeit
+   - Beheben Sie [ausgeben 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): Schlüsselwort nicht 'distinct' hervorgehoben
+   - Beheben Sie [ausgeben 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): Bearbeiten von Daten wiederherstellen Zeile funktioniert nicht
+   - Beheben Sie [ausgeben 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL-Agent-Erweiterung und der Statusleiste
+   - Beheben Sie [ausgeben 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL-Agent nicht ändern der Größe nach Windows-Größe ändern
 
 
 
 
-## <a name="april-2018-april-public-preview"></a>April 2018 (April öffentliche Vorschau)
+## <a name="april-2018-april-public-preview"></a>April 2018 (April-öffentliche Vorschau)
 
 Veröffentlichungsdatum: 25 April 2018  
 Version: 0.28.6
 
-Die *April Public Preview* enthält Fehlerbehebungen und Verbesserungen. 
+Die *Public Preview-Version April* enthält Fehlerbehebungen und Verbesserungen. 
 
-- Verbesserungen an der Erweiterung SQL Agent-Vorschau.
-- Verbesserte dateiunterstützung für große und geschützte zum Speichern von Admin geschützt und > 256 MB-Dateien in Studio für SQL-Vorgänge.
-- Integrierte Terminaldienste aufteilen, um gleichzeitig mit mehreren open Terminals arbeiten.
+- Verbesserungen an der Vorschau von SQL-Agent-Erweiterung.
+- Verbesserte dateiunterstützung für große und geschützte für das Speichern geschützter Administrator und > 256M-Dateien in SQL Operations Studio.
+- Integriertes Terminal aufteilen, um mit mehreren open Terminals auf einmal zu arbeiten.
 - Reduzierte Installation Datei auf dem Datenträger Anzahl Foot für schnellere Installationen und Startzeiten drucken.
-- Den Vorgang fortzusetzen Sie, GitHub-Probleme zu beheben:
-   - Beheben Sie [ausstellen 37](https://github.com/Microsoft/sqlopsstudio/issues/37): unerwartetes Verhalten tritt auf, wenn Benutzer einen Fehler auslöst,.
-   - Beheben Sie [ausstellen 462](https://github.com/Microsoft/sqlopsstudio/issues/462): anfordern Funktion: Option für Servergruppen standardmäßig erweitert wird.
-   - Beheben Sie [ausstellen 606](https://github.com/Microsoft/sqlopsstudio/issues/606): Intellisense - ungültige Vorschlag für den Befehl 'update'.
-   - Beheben Sie [ausstellen 967](https://github.com/Microsoft/sqlopsstudio/issues/967): erwarten Abfrageplan Wenn XML-Showplan im Ergebnisraster auswählen.
-   - Beheben Sie [ausstellen 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): eckige Klammern für Ms_foreachdb Aufruf aus Flyfishingdba hinzufügen.
-   - Beheben Sie [ausstellen 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): vor der Anmeldung SSL/TLS-Handshake-Fehler.
-   - Beheben Sie [1050 ausstellen](https://github.com/Microsoft/sqlopsstudio/issues/1050): Clear Einblicke anzuzeigen, vor dem Fehler anzeigen.
-   - Beheben Sie [ausstellen 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): Wiederherstellen und neue Abfrageaktionen im Explorer-Widget werden unterbrochen.
-   - Beheben Sie [ausstellen 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): Dashboard Ausgabe Windows Pop--Up mit Fehlermeldung für Azure SQL-Datenbank.
-   - Beheben Sie [ausstellen 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): Verbindungsdialogfeld zeigt Server erforderlich, Fehler beim ersten anzeigen.
-   - Beheben Sie [ausstellen 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): Server-Gruppen erfordern jetzt ein Doppelklick zu erweitern.
-   - Beheben Sie [ausstellen 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): Auswahlsteuerelement Hintergrund ist halb transparent.
-   - Beheben Sie [ausstellen 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): Beheben Sie alle hoher Kontrast Probleme mit dem Zugriff auf SQL-Vorgänge Studio.
-   - Beheben Sie [ausstellen 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): Erweiterung kann keine Aktualisierung "herunterladen Manually" Link beginnt am falschen Ort.
-   - Beheben Sie [ausstellen 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): V Scroll funktioniert nicht auf Registerkarte "Home".
-   - Beheben Sie [ausstellen 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL-Erweiterung Registerkarten hat die Arbeit.
+- Weiter mit GitHub-Probleme zu beheben:
+   - Beheben [ausgeben 37](https://github.com/Microsoft/sqlopsstudio/issues/37): bei der Diagramm-Viewer auf einen Fehler ausgibt, unerwartetes Verhalten auftritt.
+   - Beheben Sie [ausgeben 462](https://github.com/Microsoft/sqlopsstudio/issues/462): Feature wünschen: Option für Server-Gruppen werden standardmäßig erweitert werden.
+   - Beheben Sie [ausgeben 606](https://github.com/Microsoft/sqlopsstudio/issues/606): Intellisense - ungültige Vorschlag für Befehl 'update'.
+   - Beheben Sie [ausgeben 967](https://github.com/Microsoft/sqlopsstudio/issues/967): erwarten, dass der Abfrageplan Wenn XML-Showplan im Ergebnisraster auswählen.
+   - Beheben Sie [ausgeben 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): Hinzufügen von eckigen Klammern für Ms_foreachdb Aufruf aus Flyfishingdba.
+   - Beheben Sie [ausgeben 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): vor der Anmeldung SSL/TLS-Handshake-Fehler.
+   - Beheben Sie [ausgeben 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): klar Einblicke vor dem Fehler anzeigen.
+   - Beheben Sie [1057 ausgeben](https://github.com/Microsoft/sqlopsstudio/issues/1057): Restore "und" neue Abfrageaktionen in der Explorer-Widget werden unterbrochen.
+   - Beheben Sie [1068 ausgegeben](https://github.com/Microsoft/sqlopsstudio/issues/1068): Dashboard Ausgabe Windows Pops oben mit Fehlermeldung zur Azure SQL-Datenbank.
+   - Beheben Sie [ausgeben 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): Dialogfeld "Verbindung" zeigt Server erforderlich, Fehler bei der ersten Anzeige.
+   - Beheben Sie [ausgeben 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): Server-Gruppen erfordern jetzt ein Doppelklick zu erweitern.
+   - Beheben Sie [ausgeben 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): Auswahlsteuerelement Hintergrund ist teilweise transparent.
+   - Beheben Sie [ausgeben 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): Beheben von Probleme mit der Barrierefreiheit in SQL Operations Studio für alle hohen Kontrast.
+   - Beheben Sie [ausgeben 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): Erweiterung ein Fehler auftritt, Upgrade "herunterladen Manually" Link wird am falschen Ort.
+   - Beheben Sie [ausgeben 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): V Scrollen funktioniert nicht auf der Registerkarte Home.
+   - Beheben Sie [ausgeben 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): Registerkarten für die Erweiterung von SQL nicht mehr funktioniert.
 
 
-Eine erhebliche Hervorhebung der öffentlichen Vorschau von April ist der Visual Studio Code 1.21 Plattform Source Code aktualisieren. Daraufhin wird in mehrere Updates für die Core-Editor und den workbenchcomputer aus der vorherigen 1.19 Synchronisierungspunkt. Die folgenden: Beispiele
+Eine erhebliche Hervorhebung für die öffentliche Vorschau von April ist der Visual Studio Code 1.21 Plattform Quelle Code aktualisieren. Dadurch erhalten Sie mehrere Updates für die Kern-Editor und die Workbench aus der vorherigen 1.19 verfügt über Synchronisierungspunkt. Die folgenden: Beispiele
 
-- [Benutzeroberfläche für neue Benachrichtigungen](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) - leichter zu verwalten und überprüfen Sie die SQL-Vorgänge Studio-Benachrichtigungen.
-- [Integrierte Terminal teilen](https://code.visualstudio.com/updates/v1_21#_split-terminals) -arbeiten mit mehreren open Terminals gleichzeitig.
-- [Speichern von großen und geschützte Dateien](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) – speichert Admin geschützt und > 256 MB-Dateien in Studio für SQL-Vorgänge.
-- [Verbesserte Unterstützung für große Datei](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) -Text-Puffer Optimierungen bei großen Dateien.
-- [Verbesserte Einstellungen Suchvorgänge](https://code.visualstudio.com/updates/v1_20#_settings-search) - leichter finden Sie die richtige Einstellung mit der Suche in natürlicher Sprache.
-- [Globale Ausschnitte](https://code.visualstudio.com/updates/v1_20#_global-snippets) -Codeausschnitten Sie über alle Dateitypen können zu erstellen.
-- [Explorer-Mehrfachauswahl](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer) -Aktionen für mehrere Dateien gleichzeitig ausführen.
+- [Benutzeroberfläche für neue Benachrichtigungen](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) – leicht zu verwalten und überprüfen Sie SQL Operations Studio-Benachrichtigungen.
+- [Integrierte Terminal aufteilen](https://code.visualstudio.com/updates/v1_21#_split-terminals) -arbeiten mit mehreren open Terminals gleichzeitig.
+- [Speichern von großen und geschützte Dateien](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) – speichert Admin geschützt und > 256 M-Dateien in SQL Operations Studio.
+- [Verbesserte Unterstützung für große Datei](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) -Text-Puffer-Optimierungen für große Dateien.
+- [Verbesserte Suche der Einstellungen](https://code.visualstudio.com/updates/v1_20#_settings-search) - leichter finden Sie die richtige Einstellung mit der Suche in natürlicher Sprache.
+- [Globale Codeausschnitte](https://code.visualstudio.com/updates/v1_20#_global-snippets) -Ausschnitte, die für alle Dateitypen können erstellen.
+- [Mehrfachauswahl Explorer](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer) -Aktionen für mehrere Dateien gleichzeitig ausführen.
 - [Fehler und Warnungen im Explorer](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) – schnell zu Fehlern in Ihrer Codebasis navigieren.
-- [Ziehen Sie drop kopieren &, fügen Sie über Windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -Dateien über SQL Operations Studio-Fenstern zu verschieben.
-- [Unterstützung für Git Untermodul](https://code.visualstudio.com/updates/v1_20#_git-submodules) -Git führen Vorgänge für geschachtelte Git-Repositorys.
-- [Terminalfenster Reader Unterstützung](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) -integrierten Terminaldienste weist jetzt "Bildschirm Reader optimiert" Modus.
-- [Zentriert Editor Layout](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) -Codes anzeigen Bildschirmfläche zu maximieren.
-- [Horizontale Suchergebnisse (Vorschau)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) – Sie können jetzt Anzeigen der Suchergebnisse in einem horizontalen Bereich.
+- [Ziehen und ablegen, kopieren und fügen Sie in Windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) : Verschieben von Dateien zwischen geöffneten SQL Operations Studio-Fenster.
+- [Unterstützung für Git-submodul](https://code.visualstudio.com/updates/v1_20#_git-submodules) -Ausführen von Git-Vorgänge für geschachtelte Git-Repositorys.
+- [Unterstützung für die Terminaldienste Sprachausgabe](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) -integriertes Terminal verfügt jetzt über Modus "Bildschirm Reader optimiert".
+- [Zentriert Editor Layout](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) – codeänderungen anzeigen Bildschirmfläche zu maximieren.
+- [Horizontale Suchergebnisse (Vorschau)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) – Sie können jetzt Anzeigen der Suchergebnisse in einem horizontalen Bereich angezeigt.
 
-Weitere Informationen Checkout der [Visual Studio Code-Version von Februar Release Notes](https://code.visualstudio.com/updates/v1_21), und die [Visual Studio Code Januar Versionshinweise](https://code.visualstudio.com/updates/v1_20).
+Weitere Informationen: Auschecken der [Visual Studio Code Februar-Release Notes](https://code.visualstudio.com/updates/v1_21), und die [Visual Studio Code Januar – Versionsanmerkungen](https://code.visualstudio.com/updates/v1_20).
 
-Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+Weitere Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 ## <a name="march-2018-march-public-preview"></a>März 2018 (März öffentliche Vorschau)
 
-Veröffentlichungsdatum: 28 März 2018  
+Veröffentlichungsdatum: 28. März 2018  
 Version: 0.27.3
 
-Die *März Public Preview* weiterhin die wichtigsten GitHub-Probleme zu beheben und konzentriert sich auf die Verbesserung unserer Story Erweiterbarkeit. Insbesondere Erweiterungs-Manager aktivieren, Verbessern der Dashboard-Management und Bereitstellen von SQL-Agent und Erweiterungen Einblicke. Diese Version umfasst die folgenden Verbesserungen:
+Die *öffentliche Vorschau März* weiterhin die wichtigsten GitHub-Probleme zu beheben und konzentriert sich auf die Verbesserung unserer Geschichte Erweiterbarkeit. Insbesondere Erweiterungs-Manager aktivieren, Verbessern der dashboardverwaltung und Bereitstellen von SQL-Agent "und" Insights-Erweiterungen. Dieses Release enthält die folgenden Verbesserungen:
 
-- Erweitern Sie das Dashboard-Erweiterbarkeitsmodell zur Unterstützung von im Registerkartenformat Einblicke und Konfiguration Bereiche.
+- Erweitern Sie das Dashboard-Erweiterbarkeitsmodell Unterstützung im Registerkartenformat Einblicke und Bereiche der Konfiguration.
    - Erweiterungs-Manager ermöglicht die einfache Übernahme von Erweiterungen.
    - Dashboard-Erweiterungen für Sp_whoisactive aus [whoisactive.com](http://www.whoisactive.com).
-   - Weitere Informationen finden Sie unter [Erweitern der Funktionalität von SQL-Vorgänge Studio](extensions.md).
-- Hinzufügen zusätzlicher [-Erweiterbarkeits-APIs für die Verbindung und Objekt-Explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) Management.
-- Weiterhin wichtige Auswirkungen auf Kunden beheben [GitHub Probleme](https://github.com/Microsoft/sqlopsstudio/issues).
+   - Weitere Informationen finden Sie unter [erweitern die Funktionalität von SQL Operations Studio](extensions.md).
+- Hinzufügen zusätzlicher [Erweiterbarkeits-APIs für die Verbindung und Objekt-Explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) Management.
+- Beheben Sie wichtige Auswirkungen auf Kunden weiterhin [GitHub-Problemen](https://github.com/Microsoft/sqlopsstudio/issues).
 
 
 ## <a name="february-2018-february-public-preview"></a>Februar 2018 (Februar öffentliche Vorschau)
 
-Veröffentlichungsdatum: 15-Version von Februar 2018  
+Veröffentlichungsdatum: 15. Februar 2018  
 Version: 0.26.7
 
-Die *Public Preview-Version von Februar* enthält einige neue Features vorschlagen und hoher Priorität Fehlerkorrekturen. Diese Version umfasst die folgenden Verbesserungen:
+Die *Public Preview-Version vom Februar* enthält einige Vorschläge für Features und Fehlerkorrekturen hoher Priorität. Dieses Release enthält die folgenden Verbesserungen:
 
-- Einführung in die Installation automatisch aktualisiert, bereitstellt, der eine Benachrichtigung bei eine neue Version zum Herunterladen verfügbar ist 
-- Das Verbindungsdialogfeld "Database"-Feld ist jetzt eine dynamisch aufgefüllt Dropdown-Liste, die eine Liste der Datenbanken, die vom angegebenen Server aufgefüllt enthalten soll.
-- Beheben Sie [ausstellen 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Verbindung und die ausgewählte Datenbank beibehalten, beim Öffnen der neuen abfrageregisterkarten.
-- Beheben Sie [ausstellen 22](https://github.com/Microsoft/sqlopsstudio/issues/22): "Servername" und "Datenbankname" – können Sie diese Dropdownfelder anstelle von Textfeldern werden?
-- Beheben Sie [ausstellen 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Silent/sehr automatische Installation führt zur Anwendung, die nach der Installation öffnet.
-- Beheben Sie [ausstellen 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Fügen Sie die Option "Nach Updates suchen".
-- SQL-Editor farbliche Kennzeichnung und automatische Vervollständigung Problembehebungen:
-   - Beheben Sie [ausstellen 584](https://github.com/Microsoft/sqlopsstudio/issues/584): Schlüsselwort "FULL", nicht hervorgehoben von IntelliSense.
-   - Beheben Sie [ausstellen 345](https://github.com/Microsoft/sqlopsstudio/issues/345): zur farblichen Kennzeichnung der SQL-Funktionen innerhalb des Editors.
-   - Beheben Sie [ausstellen 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] neuesten "]" wird grün angezeigt.
-   - Beheben Sie [ausstellen 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Schlüsselwort Farben stimmen nicht überein.
-   - Beheben Sie [ausstellen 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Ungültige Sql Farbe syntaxhervorhebung bei Verwendung der temporären Tabelle in from-Klausel.
-- Führen Sie die Verbindung-Erweiterbarkeits-API.
-- Visual Studio Code-Editor 1.19 Integration.
-- Aktualisieren Sie JustinPealing/html-Abfrageplan Komponente übernommen Abfrageplan Viewer verbessert.
+- Einführung in die automatische Update-Installation, die stellt eine Benachrichtigung bereit, wenn eine neue Version als download verfügbar ist. 
+- Das Dialogfeld "Verbindung" 'Datenbank'-Feld ist jetzt eine dynamisch aufgefüllt Dropdown-Liste, die eine Liste der Datenbanken aufgefüllt, die vom angegebenen Server enthält.
+- Beheben Sie [Problem 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Verbindung und der ausgewählten Datenbank beibehalten, wenn Sie neue Registerkarten der Abfrage zu öffnen.
+- Beheben Sie [ausgeben 22](https://github.com/Microsoft/sqlopsstudio/issues/22): "Server Name" und "Database Name" – können Sie diese Dropdownlisten anstelle von Textfeldern werden?
+- Beheben Sie [ausgeben 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Silent/sehr automatische Installation führt Anwendung nach der Installation öffnen.
+- Beheben Sie [ausgeben 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Fügen Sie die Option "Nach Updates suchen".
+- Farbliche Kennzeichnung von SQL-Editor und automatische Vervollständigung Fixes:
+   - Beheben Sie [ausgeben 584](https://github.com/Microsoft/sqlopsstudio/issues/584): Schlüsselwort "FULL", nicht hervorgehoben von IntelliSense.
+   - Beheben Sie [ausgeben 345](https://github.com/Microsoft/sqlopsstudio/issues/345): farbigen Anzeigen von SQL-Funktionen im Editor.
+   - Beheben Sie [ausgeben 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] letzte "]" wird grün angezeigt.
+   - Beheben Sie [ausgeben 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Schlüsselwort Farben stimmen nicht überein.
+   - Beheben Sie [ausgeben 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Ungültige Sql Farbe syntaxhervorhebung bei Verwendung der temporären Tabelle in from-Klausel.
+- Führen Sie die Verbindung Erweiterbarkeits-API.
+- VS Code-Editor 1.19-Integration.
+- Aktualisieren Sie JustinPealing/html-Abfrageplan Komponente einfachere Installation mehrere Verbesserungen der Abfrageplan-Viewer.
 
 
 ## <a name="january-2018-january-public-preview"></a>Januar 2018 (Januar öffentliche Vorschau)
@@ -171,38 +210,38 @@ Die *Public Preview-Version von Februar* enthält einige neue Features vorschlag
 Veröffentlichungsdatum: 17 Januar 2018  
 Version: 0.25.4
 
-Die *Public Preview Januar* enthält einige neue Features vorschlagen und hoher Priorität Fehlerkorrekturen. Diese Version umfasst die folgenden Verbesserungen:
+Die *Public Preview Januar* enthält einige Vorschläge für Features und Fehlerkorrekturen hoher Priorität. Dieses Release enthält die folgenden Verbesserungen:
 
-- Gespeicherten serververbindungen stehen im Verbindungsdialogfeld.
-- Aktivieren Sie im laufenden Systembetrieb beenden. Im laufenden Systembetrieb beenden ist deaktiviert, so aktivieren Sie ausführliche Informationen finden Sie in der Standardeinstellung [Hot beenden Einstellung](settings.md#hot-exit).
-- Registerkartenfärbung basierend auf der Gruppe "Server". Registerkartenfärbung ist deaktiviert, so aktivieren Sie ausführliche Informationen finden Sie in der Standardeinstellung [Registerkarte Farbe Einstellung](settings.md#tab-color).
-- Änderung *Servernamen* auf *Server* im Verbindungsdialogfeld.
-- Fehlerhafte Fix *aktuelle Abfrage ausführen* Befehl.
-- Korrigieren Sie die Drag-and-Drop-wichtige scripting Fehler.
-- Korrigieren Sie falsche angeheftete Startmenü-Symbol.
-- Beheben Sie fehlende branding Symbol Azure-Konto.
+- Gespeicherten serververbindungen finden im Verbindungsdialogfeld.
+- Aktivieren von "Hot" beenden. Beenden von "Hot" ist standardmäßig deaktiviert, finden Sie unter aktivieren ["Hot" Exit-Einstellung](settings.md#hot-exit).
+- Registerkartenfärbung basierend auf Gruppe "Server". Registerkartenfärbung ist standardmäßig deaktiviert, finden Sie unter aktivieren [Registerkarte die Einstellung für die](settings.md#tab-color).
+- Änderung *Servernamen* zu *Server* im Verbindungsdialogfeld.
+- Korrektur unterteilt *aktuelle Abfrage ausführen* Befehl.
+- Beheben Sie die Drag & Drop-wichtige Fehler Skripterstellung.
+- Korrigieren Sie falsche angeheftete Menü "Start"-Symbol.
+- Beheben Sie fehlende branding Symbol "Azure-Konto an.
 
 
 ## <a name="december-2017-december-public-preview"></a>Dezember 2017 (Dezember öffentliche Vorschau)
 
-Veröffentlichungsdatum: 19 Dezember 2017  
+Veröffentlichungsdatum: 19. Dezember 2017  
 Version: 0.24.1
 
-Die *öffentliche Vorschau Dezember* behebt mehrere Fehler für alle Funktionsbereiche sowie die folgenden Verbesserungen:
+Die *Public Preview-Version Dezember* umfasst verschiedene Fehlerkorrekturen für alle Featurebereiche sowie die folgenden Verbesserungen:
 
-- Erstellen Sie Firewall-Regel Dialogfeld steht zum Herstellen einer Verbindung mit Azure SQL-Datenbank und Azure SQL Data Warehouse unterstützen.
-- Hinzugefügte Windows Setup, und Linux-DEB und RPM-Installationspakete.
+- Erstellen Sie Dialogfeld Firewallregeln ist jetzt bei der verbindungsherstellung mit Azure SQL-Datenbank und Azure SQL Data Warehouse verfügbar.
+- Zusätzliche Windows-Setup und Linux DEB und RPM-Pakete für die Installation.
 - Verwalten Sie Dashboard visuelle Layout-Editor.
 - *Alter-Skript als* und *Ausführen von Skripts als* Befehle.
 - *Führen Sie die aktuelle Abfrage mit Istplan* Befehl.
-- Visual Studio Code 1.18.1-Editor-Plattform zu integrieren.
-- Aktivieren Sie die Sideload-VSIX-Erweiterung Dateien.
-- "N wechseln" Batch-Iterationssyntax zu unterstützen.
+- Integrieren Sie Visual Studio Code 1.18.1-Editor-Plattform.
+- Aktivieren Sie Sideload-VSIX-Erweiterung-Dateien.
+- "GO-N" Batch-Iterationssyntax zu unterstützen.
 
 
 ## <a name="november-2017"></a>November 2017
 
-Veröffentlichungsdatum: 15 November 2017  
+Veröffentlichungsdatum: 15. November 2017  
 Version: 0.23.6
 
 - Erste Version des [!INCLUDE[name-sos](../includes/name-sos-short.md)].
@@ -210,10 +249,10 @@ Version: 0.23.6
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie in der folgenden Schnellstarts für den Einstieg:
-- [Eine Verbindung herstellen und Abfragen von SQLServer](quickstart-sql-server.md)
-- [Eine Verbindung herstellen und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
-- [Eine Verbindung herstellen und Abfragen von Azure Datawarehouse](quickstart-sql-dw.md)
+Finden Sie in der folgenden schnellstartanleitungen für den Einstieg:
+- [Verbinden und Abfragen von SQLServer](quickstart-sql-server.md)
+- [Verbinden und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
+- [Verbinden und Abfragen von Azure Datawarehouse](quickstart-sql-dw.md)
 
-Tragen zu [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Mitwirken an [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio)
