@@ -11,11 +11,11 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995421"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
