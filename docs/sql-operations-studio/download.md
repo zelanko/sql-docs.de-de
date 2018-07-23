@@ -82,7 +82,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    sqlops
    ```
 
-   **weswegen Installation:**
+   **.tar.gz Installation:**
    ```bash 
    cd ~ 
    cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
