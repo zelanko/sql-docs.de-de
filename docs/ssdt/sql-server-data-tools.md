@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
@@ -16,14 +16,14 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2efa5ef66c489365099c6d0190ea3b08cffbe671
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 51d357bb7fdb953f279a196723dd72ad713b127f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137949"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083382"
 ---
-# <a name="sql-server-data-tools"></a>SQL Server Data Tools
+# <a name="sql-server-data-tools"></a>SQL Server Datatools
 SQL Server Data Tools (SSDT) ermöglichen durch die Einführung eines universellen deklarativen Modells, das sämtliche Phasen der Datenbankentwicklung in Visual Studio umfasst, eine neue Art der Datenbankentwicklung. Mit den Transact\-SQL-Entwurfsfunktionen von SSDT können Sie Datenbanken erstellen, debuggen, verwalten und umgestalten. Dies gilt unabhängig davon, ob Sie mit einem Datenbankprojekt oder direkt mit einer verbundenen lokalen oder nicht lokalen Datenbankinstanz arbeiten.  
   
 Entwickler haben Zugriff auf vertraute Visual Studio-Tools für die Datenbankentwicklung. Die Tools umfassen: Codenavigation, IntelliSense, Sprachunterstützung entsprechend den verfügbaren Funktionen für C# und Visual Basic, plattformspezifische Überprüfung, Debugging und deklaratives Bearbeiten im Transact\-SQL-Editor. SSDT bietet außerdem einen visuellen Tabellen-Designer zum Erstellen und Bearbeiten von Tabellen in Datenbankprojekten oder verbundene Datenbankinstanzen. Während Sie in einer teambasierten Umgebung an den Datenbankprojekten arbeiten, können Sie die Versionskontrolle für alle Dateien nutzen. Sie können das Projekt auf allen unterstützten SQL-Plattformen veröffentlichen, einschließlich der SQL-Datenbank und SQL Server. Die Plattformüberprüfungsfunktion von SSDT stellt sicher, dass die Skripts ordnungsgemäß auf dem von Ihnen festgelegten Ziel ausgeführt werden.  

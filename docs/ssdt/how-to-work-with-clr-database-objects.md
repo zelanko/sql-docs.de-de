@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57cfde8ec32945b61e46e2b1b6763d4707d97f4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094315"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083812"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Vorgehensweise: Arbeiten mit CLR-Datenbankobjekten
 Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  

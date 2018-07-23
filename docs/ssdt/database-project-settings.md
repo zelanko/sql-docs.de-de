@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
 - sql.data.tools.dacsettings.dialog
@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf95f469cd5a94514d0e91d13ef7b9125c1531f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094324"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087192"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buildkonfigurationen gesteuert. Diese Einstellungen werden in die folgenden Kategorien eingeteilt.  
@@ -213,8 +213,8 @@ Mit dieser Einstellung können Sie eine Befehlszeile angeben, die vor der Ausfü
   
 |Feld|Standardwert|und Beschreibung|  
 |---------|-----------------|---------------|  
-|Befehlszeile für Präbuildereignis|InclusionThresholdSetting|Gibt die vor der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Präbuild bearbeiten**, um die Befehlszeile zu ändern.|  
-|Befehlszeile für Postbuildereignis|InclusionThresholdSetting|Gibt die nach der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Postbuild bearbeiten**, um die Befehlszeile zu ändern.|  
+|Befehlszeile für Präbuildereignis|None|Gibt die vor der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Präbuild bearbeiten**, um die Befehlszeile zu ändern.|  
+|Befehlszeile für Postbuildereignis|None|Gibt die nach der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Postbuild bearbeiten**, um die Befehlszeile zu ändern.|  
 |Postbuildereignis ausführen|Bei erfolgreichem Erstellen|Gibt an, ob die Postbuildbefehlszeile immer, nur bei erfolgreicher Erstellung oder nur dann ausgeführt werden soll, wenn die Projektausgabe (das Buildskript) durch die Erstellung aktualisiert wurde.|  
   
 ## <a name="bkmk_debug"></a>Debuggen  
@@ -222,11 +222,11 @@ Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.
   
 |Feld|Standardwert|und Beschreibung|  
 |---------|-----------------|---------------|  
-|Startvorgang|InclusionThresholdSetting|Gibt ein Skript oder externes Programm an, das beim Debuggen des Projekts ausgeführt werden soll.|  
+|Startvorgang|None|Gibt ein Skript oder externes Programm an, das beim Debuggen des Projekts ausgeführt werden soll.|  
 |Zielverbindungszeichenfolge|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Gibt die Verbindungsinformationen für den Datenbankserver an, der für die angegebene Buildkonfiguration verwendet werden soll. Die Standardverbindungszeichenfolge bezieht sich auf eine dynamisch erstellte SQL Server LocalDB-Instanz und -Datenbank.|  
-|Datenbankeigenschaften bereitstellen|ja|Gibt an, ob die Einstellungen in DatabaseProperties.DatabaseProperties bereitgestellt oder aktualisiert werden, wenn Sie das Datenbankprojekt bereitstellen.|  
+|Datenbankeigenschaften bereitstellen|Benutzerkontensteuerung|Gibt an, ob die Einstellungen in DatabaseProperties.DatabaseProperties bereitgestellt oder aktualisiert werden, wenn Sie das Datenbankprojekt bereitstellen.|  
 |Datenbank immer neu erstellen|nein|Gibt an, ob die Datenbank gelöscht und neu erstellt wird, anstatt ein inkrementelles Upgrade durchzuführen. Dieses Kontrollkästchen können Sie beispielsweise aktivieren, wenn Sie Datenbankkomponententests für eine neue Bereitstellung der Datenbank ausführen möchten. Wenn dieses Kontrollkästchen deaktiviert wird, wird die vorhandene Datenbank nicht gelöscht und neu erstellt, sondern aktualisiert.|  
-|Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|ja|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS**: Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen kann, Daten enthalten können. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
+|Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|Benutzerkontensteuerung|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS**: Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen kann, Daten enthalten können. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
 |DROP-Objekte im Ziel, aber nicht im Projekt|nein|Gibt an, ob Objekte, die sich in der Zieldatenbank, aber nicht im Datenbankprojekt befinden, im Rahmen des Bereitstellungsskripts gelöscht werden sollen. Sie können einige Dateien im Projekt ausschließen, um sie vorübergehend aus dem Buildskript zu entfernen. Sie können jedoch die vorhandenen Versionen solcher Objekte in der Zieldatenbank belassen. Dieses Kontrollkästchen hat keine Auswirkung, wenn das Kontrollkästchen **Datenbank immer neu erstellen** aktiviert ist, da die Datenbank gelöscht wird.|  
 |CLR-Typen nicht mit ALTER ASSEMBLY-Anweisungen aktualisieren|nein|Gibt an, ob CLR (Common Language Runtime)-Typen mit ALTER ASSEMBLY-Anweisungen aktualisiert werden oder ob stattdessen das Objekt, das den CLR-Typ instanziiert, gelöscht und beim Bereitstellen von Änderungen neu erstellt wird.|  
 |Erweitert…|nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  

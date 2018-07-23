@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5ef4c7f272cc66003051a395b93e119f153640a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094195"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087172"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  

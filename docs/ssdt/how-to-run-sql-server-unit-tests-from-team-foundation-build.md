@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094318"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087142"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  

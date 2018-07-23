@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ba025ae882c1779cc4022b4cb75d323384a2708
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d795f709f37772c22cfcffb2b9f0d98c77a7501e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044497"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980032"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie im Abfragefenster die folgenden Anweisungen ein, bei denen die gespeicherte Systemprozedur [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) verwendet wird. Im folgenden Beispiel erfolgt eine Neuzuweisung aller Aufträge von `danw` an `françoisa`.  
+3.  Geben Sie im Abfragefenster die folgenden Anweisungen ein, bei denen die gespeicherte Systemprozedur [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) verwendet wird. Im folgenden Beispiel erfolgt eine Neuzuweisung aller Aufträge von `danw` an `françoisa`.  
   
     ```  
     USE msdb ;  
@@ -97,7 +97,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
 ## <a name="SMOProc2"></a>Verwendung von SQL Server Management Objects  
 **So ändern Sie den Besitz eines Auftrags**  
   
-1.  Rufen Sie die **Job** -Klasse auf, indem Sie eine von Ihnen ausgewählte Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell verwenden. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
+1.  Rufen Sie die **Job** -Klasse auf, indem Sie eine von Ihnen ausgewählte Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell verwenden. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  

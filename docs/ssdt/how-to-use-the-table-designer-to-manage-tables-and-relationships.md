@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
@@ -18,12 +18,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ffd1c415ab2ae463a539adc0dbbdb719764efb7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094141"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085172"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Vorgehensweise: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
 Der Tabellen-Designer bietet gemeinsam mit dem Transact\-SQL-Editor eine visuelle Oberfläche zum Erstellen und Bearbeiten von Tabellenstrukturen, einschließlich tabellenspezifischer Programmierobjekte, für SQL Server-Datenbanken.  Er wird gestartet, wenn Sie eine neue Tabelle für eine verbundene Datenbank oder ein Projekt erstellen oder wenn Sie im SQL Server-Objekt-Explorer oder Projektmappen-Explorer auf eine Tabelle doppelklicken, um sie zu bearbeiten.  

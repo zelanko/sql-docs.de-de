@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e16b3aa3fb5010c23248dc16a5554bc9ff5cf6b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094336"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085832"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
 In dieser exemplarischen Vorgehensweise zu Funktionserweiterungen erstellen Sie eine Testbedingung und überprüfen deren Funktionsfähigkeit, indem Sie einen SQL Server-Komponententest erstellen. In diesem Verfahren wird ein Klassenbibliotheksprojekt für die Testbedingung erstellt und die Testbedingung signiert und installiert. Wenn Sie bereits eine Testbedingung haben, die aktualisiert werden soll, lesen Sie [Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  

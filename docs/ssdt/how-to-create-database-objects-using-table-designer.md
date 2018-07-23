@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddd5f0cb14b3216e8b6acc4eb18d35d70fca149e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4575c8883de401b058cfde52efcead659c3d46d1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094276"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086372"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
 Der neue Knoten **SQL Server** im **SQL Server-Objekt-Explorer** ähnelt dem in SSMS nicht nur visuell. Sie können neue Objekte auch mit Kontextmenüs erstellen, die wie ihre Äquivalente in SSMS funktionieren.  

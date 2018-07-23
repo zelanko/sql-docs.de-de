@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c43f3a3e6c717947859e9cbfc1b2de0197129c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97950c37c5cff52f049253bbd85a60d5373d724
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039957"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980052"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Geben Sie die folgenden Informationen zum Windows Azure-Konto an, und klicken Si
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
 
    >[!NOTE]
-   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/en-us/azure/storage/storage-introduction#introducing-the-azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
+   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
    >
    >  The value for one of the HTTP headers is not in the correct format. (Das Format von einem der Werte des HTTP-Headers ist nicht korrekt.) (Microsoft.SqlServer.StorageClient).
    >

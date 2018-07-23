@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02bb00f5a9edc2a0dcf00a489a1471fa06ba181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043477"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979868"
 ---
 # <a name="external-tools-dialog-box"></a>Externe Tools (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Gibt den Pfad zu der Datei an, die gestartet werden soll.
 Gibt die Variablen an, die an das Tool übergeben werden, wenn es im Menü aufgerufen wird. Argumente können Werte festlegen, die beim Starten an das Tool oder den Befehl übergeben werden. Ein Wert kann beispielsweise einen Dateinamen oder ein Verzeichnis angeben. Mit der Schaltfläche mit dem Pfeil können Sie aus einer Liste mit vordefinierten Argumenten auswählen. Sie können mehrere Argumente hinzufügen. Eine vollständige Liste vordefinierter Argumente und ihrer Definitionen finden Sie unter [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). Abhängig vom verwendeten Befehl oder Tool können Sie auch benutzerdefinierte Argumente eingeben, (wie z. B. Befehlszeilenoptionen).  
   
 **Ausgabefenster verwenden**  
-Öffnet das Ausgabefenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] , in dem die Ausgabe des derzeit ausgeführten Befehls angezeigt wird. Nicht alle Tools zeigen ihre Ausgabe in einem Format an, das im Ausgabefenster dargestellt werden kann. Weitere Informationen finden Sie unter [Ausgabefenster](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Öffnet das Ausgabefenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] , in dem die Ausgabe des derzeit ausgeführten Befehls angezeigt wird. Nicht alle Tools zeigen ihre Ausgabe in einem Format an, das im Ausgabefenster dargestellt werden kann. Weitere Informationen finden Sie unter [Ausgabefenster](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
   
 **Ausgabe als Unicode behandeln**  
 Interpretiert die Ausgabe als Unicode.  

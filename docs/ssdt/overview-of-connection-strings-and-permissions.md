@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094120"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087082"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Übersicht über Verbindungszeichenfolgen und Berechtigungen
 Zum Ausführen von SQL Server-Komponententests muss eine Verbindung mit einem Datenbankserver hergestellt werden, indem eine oder zwei spezifische Verbindungszeichenfolgen verwendet werden. Jede Verbindungszeichenfolge stellt ein Konto dar. Das Konto muss über spezifische Berechtigungen zum Ausführen einer oder mehrerer Aufgaben in einem bestimmten Skript im Rahmen des Tests verfügen. Sie können diese Zeichenfolgen im Dialogfeld **SQL Server-Testkonfiguration** angeben oder die Datei „app.config“ für das Testprojekt manuell bearbeiten.  

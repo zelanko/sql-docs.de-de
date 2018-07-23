@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4b3c71366b42a204a44a7ca804ffeff09870eed
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ce5ff3926693961069b089284baf2bd9ce34c460
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094351"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088082"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu bearbeiten
 Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) oder [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) erstellen. Verwenden Sie [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), um den Plan zu ändern, bevor er ausgeführt wird, und [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) mit der Bezeichnung „SqlRestartableScriptContributor“, der den Batches im Bereitstellungsskript IF-Anweisungen hinzufügt, um ein erneutes Ausführen des Skripts zu ermöglichen, bis es fertig gestellt ist, falls während der Ausführung ein Fehler auftritt.  
@@ -793,7 +793,7 @@ Sie können mit anderen Änderungen an Bereitstellungsplänen experimentieren, b
 -   Hinzufügen oder Entfernen weiterer Diagnosedruckanweisungen oder Kommentare zu/aus Bereitstellungsskripts.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Anpassen des Datenbankbuilds und Bereitstellung durch Verwendung von Erstellungs- und Bereitstellungs-Contributor](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
+[Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Exemplarische Vorgehensweise: Datenbankprojekt erweitern, um Modellstatistiken zu generieren](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

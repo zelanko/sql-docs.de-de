@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c6ca69968791ecda89274851bd8c6284f68ee8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ba3c41e2366643e07f07307537e735ec8d259d0e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094174"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086032"
 ---
 # <a name="analyze-script-performance"></a>Analysieren der Skriptleistung
 Sie können mit den von SQL Server Data Tools bereitgestellten Tools bestimmen, ob die Leistung von Abfragen, gespeicherten Prozeduren oder Skripts verbessert werden kann. Indem Sie beispielsweise Clientstatistiken wie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind. Solche Statistiken können die Clientausführungszeit, das Abfrageprofil sowie gesendete und empfangene Pakete/Bytes enthalten.  
@@ -53,7 +53,7 @@ Ausführungspläne können gespeichert und für eine spätere Untersuchung erneu
 ## <a name="using-code-analysis"></a>Verwenden der Codeanalyse  
 Mithilfe der Codeanalyse können Sie potenzielle Probleme in den Skripts ermitteln, z. B. Entwurfs-, Benennungs- und Leistungsprobleme.  Regeln für Datenbankprojekte sind in vordefinierten Regelsätzen organisiert, die auf bestimmte Bereiche abzielen. Sie können die einzelnen Regeln auf der Registerkarte **Codeanalyse** der Eigenschaftenseite **Projekteigenschaften** aktivieren oder deaktivieren. Auf derselben Registerkarte können Sie festlegen, dass die Codeanalyse bei jedem Erstellen eines Projekts automatisch ausgeführt werden soll. Zudem können Sie angeben, ob Warnungen als Fehler behandelt werden sollen.  
   
-Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen**. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen.  
+Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen** aus. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen.  
   
 Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](http://msdn.microsoft.com/en-us/library/dd172133.aspx).  
   

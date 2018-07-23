@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9135ca3588c968a236e3928ebb9bde78149eec74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eeb7e8830abb3de97bad35de63b75a5c63914e0e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041567"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980812"
 ---
 # <a name="delete-a-job-step-log"></a>Löschen eines Auftragsschrittprotokolls
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
     GO  
     ```  
   
-Weitere Informationen finden Sie unter [sp_delete_jobsteplog (Transact-SQL)](http://msdn.microsoft.com/en-us/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
+Weitere Informationen finden Sie unter [sp_delete_jobsteplog (Transact-SQL)](http://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
 ## <a name="SMO"></a>Verwendung von SQL Server Management Objects  
 Verwenden Sie die **DeleteJobStepLogs** -Methode der **Job** -Klasse in einer Programmiersprache Ihrer Wahl, z. B. Visual Basic, Visual C# oder PowerShell. Weitere Informationen finden Sie unter[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  

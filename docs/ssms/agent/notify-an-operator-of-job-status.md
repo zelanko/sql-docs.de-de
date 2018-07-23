@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d996ead12634fd51a7f642bdeaccf09530be6e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 547d7a4a380e371dadb1f05398ebce66508c158d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044181"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978982"
 ---
-# <a name="notify-an-operator-of-job-status"></a>Benachrichtigen eines Operators über den Auftragsstatus
+# <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
     GO  
     ```  
   
-Weitere Informationen finden Sie unter [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
+Weitere Informationen finden Sie unter [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
   
 ## <a name="SMO"></a>Verwendung von SQL Server Management Objects  
 **So benachrichtigen Sie einen Operator über einen Auftragsstatus**  

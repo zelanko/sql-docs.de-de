@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 807b718aaf84ed3760ba6b4bcece880ca73e6bc6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8f42e25023a989489000b124a653beb69c1afb33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094153"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082562"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Benutzerdefinierte Testbedingungen für SQL Server-Komponententests
 Sie können benutzerdefinierte Testbedingungen für SQL Server-Komponententests hinzufügen. Bevor die Testbedingung verwendet werden kann, muss sie jedoch installiert werden, unabhängig davon, ob die zu installierende Erweiterung von Ihnen oder einer anderen Person erstellt wurde.  

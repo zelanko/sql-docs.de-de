@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eddebb20455be6cf257cb40b6568c8cad3994882
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ea94d533714f17cd251805c5c33ec886ebbfb989
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094228"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083782"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Datenbank-Build und -Bereitstellung anpassen durch Verwendung von Erstellungs- und Bereitstellungs-Contributors
 Visual Studio bietet Erweiterungspunkte, mit deren Hilfe Sie das Verhalten der Erstellungs- und Bereitstellungsaktionen für Datenbankprojekte ändern können.  
@@ -51,7 +51,7 @@ Darüber hinaus können Sie angepasste Name/Wert-Argumentpaare aus Ihrem Contrib
 |**Allgemeine Aufgaben**|**Hilfreiche Themen**|  
 |--------------------|--------------------------|  
 |**Weitere Informationen zu den Erweiterbarkeitspunkten**: Informieren Sie sich über die Basisklassen für die Implementierung von Erstellungs- und Bereitstellungs-Contributors.|[BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Erstellen von Beispiel-Contributors**: Lernen Sie die erforderlichen Schritte zum Erstellen eines Erstellungs- oder Bereitstellungs-Contributors kennen. In diesen exemplarischen Vorgehensweisen lernen Sie Folgendes:<br /><br />–   Erstellen eines Erstellungs-Contributors zum Generieren eines Berichts mit einer Liste aller im Modell enthaltenen Elemente<br />–   Erstellen eines Bereitstellungs-Contributors zum Ändern des Bereitstellungsplans vor dessen Ausführung<br />–   Erstellen eines Bereitstellungs-Contributors zum Generieren eines Bereitstellungsberichts beim Bereitstellen eines SQL-Projekts<br /><br />Contributors können alle in einer einzelnen Assembly oder in mehreren Assemblys erstellt werden – je nachdem, wie Sie die Contributors auf Ihr Team verteilen möchten.|[Exemplarische Vorgehensweise: Erweitern eines Datenbankprojektbuilds zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Bearbeiten des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**Erstellen von Beispiel-Contributors**: Lernen Sie die erforderlichen Schritte zum Erstellen eines Erstellungs- oder Bereitstellungs-Contributors kennen. In diesen exemplarischen Vorgehensweisen lernen Sie Folgendes:<br /><br />–   Erstellen eines Erstellungs-Contributors zum Generieren eines Berichts mit einer Liste aller im Modell enthaltenen Elemente<br />–   Erstellen eines Bereitstellungs-Contributors zum Ändern des Bereitstellungsplans vor dessen Ausführung<br />–   Erstellen eines Bereitstellungs-Contributors zum Generieren eines Bereitstellungsberichts beim Bereitstellen eines SQL-Projekts<br /><br />Contributors können alle in einer einzelnen Assembly oder in mehreren Assemblys erstellt werden – je nachdem, wie Sie die Contributors auf Ihr Team verteilen möchten.|[Exemplarische Vorgehensweise: Erweitern eines Datenbankprojektbuilds zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Bearbeiten des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Definieren benutzerdefinierter Bedingungen für SQL-Komponententests](http://msdn.microsoft.com/en-us/library/jj860449(v=vs.103).aspx)  

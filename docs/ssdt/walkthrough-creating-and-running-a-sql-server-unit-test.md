@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b3358a05940feb1905b65242877cf951e17776a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a04bd99b8106615efc7e210c11c281abd4fdaf9f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094330"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086832"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -401,7 +401,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
     Nach diesem Schritt können Sie die Daten mithilfe der erforderlichen Anweisungen für die Ausführung des Tests vorbereiten. Zur Verwendung dieses Beispiels müssen Sie den Datensatz „Customer“ erstellen, bevor Sie eine Bestellung aufgeben können.  
   
-7.  Klicken Sie auf **Klicken Sie zum Erstellen hierauf**, um ein Vortestskript zu erstellen.  
+7.  Klicken Sie auf **Zum Erstellen hierauf klicken**, um ein Vortestskript zu erstellen.  
   
 8.  Aktualisieren Sie die Transact\-SQL-Anweisungen im Transact\-SQL-Editor, damit sie folgenden Anweisungen entsprechen:  
   
@@ -478,7 +478,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 6.  Klicken Sie auf der Navigationsleiste des SQL Server-Komponententest-Designers auf **Sales_uspFillOrderTest**, und achten Sie darauf, dass **Vortest** in der nebenstehenden Liste markiert ist. Nach diesem Schritt können Sie die Daten mithilfe der erforderlichen Anweisungen für die Ausführung des Tests vorbereiten. Zur Verwendung dieses Beispiels müssen Sie den Datensatz „Customer“ erstellen, bevor Sie eine Bestellung aufgeben können.  
   
-7.  Klicken Sie auf **Klicken Sie zum Erstellen hierauf**, um ein Vortestskript zu erstellen.  
+7.  Klicken Sie auf **Zum Erstellen hierauf klicken**, um ein Vortestskript zu erstellen.  
   
 8.  Aktualisieren Sie die Transact\-SQL-Anweisungen im Transact\-SQL-Editor, damit sie folgenden Anweisungen entsprechen:  
   

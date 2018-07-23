@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcc447259a2ad685f89ead386f403c4a7781d67a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f942fa53b0b4db80a8f8f666a628ab43dde85691
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046387"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980279"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder ei
   
 Jeder Auftragsschritt wird in einem bestimmten Sicherheitskontext ausgeführt. Wenn der Auftragsschritt einen Proxy erfordert, wird er im Sicherheitskontext der Anmeldeinformationen des Proxys ausgeführt. Wenn ein Auftragsschritt keinen Proxy erfordert, wird er im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienstkontos ausgeführt. Nur Mitglieder der festen Serverrolle sysadmin können Aufträge erstellen, die nicht ausdrücklich einen Proxy angeben.  
   
-Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Benutzers ausgeführt werden, muss dieser Benutzer über die Berechtigungen und Konfigurationen verfügen, die für die Ausführung des Auftragsschritts erforderlich sind. Wenn Sie beispielsweise einen Auftrag erstellen, der einen Laufwerkbuchstaben oder einen UNC-Pfad (Universal Naming Convention) erfordert, können die Auftragsschritte unter Ihrem Windows-Benutzerkonto ausgeführt werden, während die Tasks getestet werden. Allerdings muss der Windows-Benutzer für den Auftragsschritt auch über die notwendigen Berechtigungen, die Laufwerkbuchstabenkonfigurationen oder den Zugriff auf das erforderliche Laufwerk verfügen. Andernfalls erzeugt der Auftragsschritt einen Fehler. Um dieses Problem zu verhindern, stellen Sie sicher, dass der Proxy für jeden Auftragsschritt über die notwendigen Berechtigungen für den Task verfügt, von dem der Auftragsschritt ausgeführt wird. Weitere Informationen finden Sie unter [Sicherheit und Schutz (Datenbank-Engine)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7).  
+Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Benutzers ausgeführt werden, muss dieser Benutzer über die Berechtigungen und Konfigurationen verfügen, die für die Ausführung des Auftragsschritts erforderlich sind. Wenn Sie beispielsweise einen Auftrag erstellen, der einen Laufwerkbuchstaben oder einen UNC-Pfad (Universal Naming Convention) erfordert, können die Auftragsschritte unter Ihrem Windows-Benutzerkonto ausgeführt werden, während die Tasks getestet werden. Allerdings muss der Windows-Benutzer für den Auftragsschritt auch über die notwendigen Berechtigungen, die Laufwerkbuchstabenkonfigurationen oder den Zugriff auf das erforderliche Laufwerk verfügen. Andernfalls erzeugt der Auftragsschritt einen Fehler. Um dieses Problem zu verhindern, stellen Sie sicher, dass der Proxy für jeden Auftragsschritt über die notwendigen Berechtigungen für den Task verfügt, von dem der Auftragsschritt ausgeführt wird. Weitere Informationen finden Sie unter [Sicherheit und Schutz (Datenbank-Engine)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Auftragsschrittprotokolle  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann die Ausgabe bestimmter Auftragsschritte entweder in eine Betriebssystemdatei oder in die sysjobstepslogs-Tabelle der msdb-Datenbank schreiben. Von den folgenden Auftragsschritttypen können Ausgaben in beide Ziele geschrieben werden:  
@@ -70,7 +70,7 @@ Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../incl
   
 -   [!INCLUDE[tsql](../../includes/tsql_md.md)] Anweisungen verwendet werden.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]-Tasks.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Aufgaben.  
   
 Nur von Auftragsschritten, die von Benutzern ausgeführt werden, die Mitglieder der festen Serverrolle sysadmin sind, können Auftragsschrittausgaben in Betriebssystemdateien geschrieben werden. Wenn die Auftragsschritte von Benutzern ausgeführt werden, die Mitglieder der festen Datenbankrolle SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole der msdb-Datenbank sind, kann die Ausgabe dieser Auftragsschritte nur in die sysjobstepslogs-Tabelle geschrieben werden.  
   
@@ -100,7 +100,7 @@ Beim Erstellen eines [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschrit
   
 Sie können auch eine vorhandene [!INCLUDE[tsql](../../includes/tsql_md.md)] -Datei als Befehl für den Auftragsschritt öffnen.  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] Auftragsschritte verwenden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Proxys. Stattdessen wird der Auftragsschritt als Besitzer des Auftragsschritts bzw. als [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienstkonto ausgeführt, wenn der Besitzer des Auftragsschritts Mitglied der festen Serverrolle sysadmin ist. Mitglieder der festen Serverrolle „sysadmin“ können auch angeben, dass [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritte unter dem Kontext eines anderen Benutzers ausgeführt werden, indem der *database_user_name* -Parameter der gespeicherten Prozedur „sp_add_jobstep“ verwendet wird. Weitere Informationen finden Sie unter [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql_md.md)] Auftragsschritte verwenden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Proxys. Stattdessen wird der Auftragsschritt als Besitzer des Auftragsschritts bzw. als [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienstkonto ausgeführt, wenn der Besitzer des Auftragsschritts Mitglied der festen Serverrolle sysadmin ist. Mitglieder der festen Serverrolle „sysadmin“ können auch angeben, dass [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritte unter dem Kontext eines anderen Benutzers ausgeführt werden, indem der *database_user_name* -Parameter der gespeicherten Prozedur „sp_add_jobstep“ verwendet wird. Weitere Informationen finden Sie unter [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
 > Ein einzelner [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritt kann mehrere Batches enthalten. [!INCLUDE[tsql](../../includes/tsql_md.md)] Auftragsschritte können mehrere eingebettete GO-Befehle enthalten.  
@@ -112,12 +112,12 @@ Wenn Sie einen PowerShell-Skript-Auftragsschritt erstellen, müssen Sie eins von
   
 -   Eine vorhandene PowerShell-Skriptdatei, die geöffnet werden soll.  
   
-Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell-Subsystem öffnet eine PowerShell-Sitzung und lädt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Snap-Ins. Das als Auftragsschrittbefehl verwendete PowerShell-Skript kann auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Anbieter und auf Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell-Subsystem öffnet eine PowerShell-Sitzung und lädt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Snap-Ins. Das als Auftragsschrittbefehl verwendete PowerShell-Skript kann auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Anbieter und auf Cmdlets verweisen. Weitere Informationen über das Schreiben von PowerShell-Skripts mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell-Snap-Ins finden Sie unter [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX-Skript-Auftragsschritte  
   
 > [!IMPORTANT]  
-> Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
+> Der ActiveX-Skript-Auftragsschritt wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
   
 Wenn Sie einen ActiveX-Skriptauftragsschritt erstellen, ist Folgendes notwendig:  
   
@@ -157,7 +157,7 @@ Replikationsauftragsschritte aktivieren einen dieser Replikations-Agents:
   
 -   Warteschlangenlese-Agent (Warteschlangenleser-Auftrag)  
   
-Beim Einrichten der Replikation können Sie zwischen drei Ausführungsarten für die Replikations-Agents wählen: immer nach dem Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents, bei Bedarf oder gemäß einem Zeitplan. Weitere Informationen zu Replikations-Agents finden Sie unter [Replikations-Agents (Übersicht)](http://msdn.microsoft.com/en-us/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
+Beim Einrichten der Replikation können Sie zwischen drei Ausführungsarten für die Replikations-Agents wählen: immer nach dem Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents, bei Bedarf oder gemäß einem Zeitplan. Weitere Informationen zu Replikations-Agents finden Sie unter [Replikations-Agents (Übersicht)](http://msdn.microsoft.com/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
   
 ## <a name="analysis-services-job-steps"></a>Analysis Services-Auftragsschritte  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent unterstützt zwei unterschiedliche Typen von Analysis Services-Auftragsschritten: Befehlsauftragsschritte und Abfrageauftragsschritte.  
@@ -176,7 +176,7 @@ Wenn Sie einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] -Ab
   
 -   Eingeben der auszuführenden Anweisung. Bei der Anweisung muss es sich um eine MDX-Abfrage handeln (Multidimensional Expressions, mehrdimensionale Ausdrücke).  
   
-Weitere Informationen zu MDX finden Sie unter [Grundlegendes zur MDX-Anweisung (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+Weitere Informationen zu MDX finden Sie unter [Grundlegendes zur MDX-Anweisung (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## <a name="integration-services-packages"></a>Integration Services-Pakete  
 Wenn Sie einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] -Paketauftragsschritt erstellen, müssen Sie folgende Schritte durchführen:  
@@ -203,9 +203,9 @@ Wenn Sie einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] -Pa
   
 Hinweis: Wenn Sie das Paket im SSIS-Katalog bereitgestellt und Sie **SSIS-Katalog** als Paketquelle angegeben haben, werden viele dieser Konfigurationsinformationen automatisch vom Paket abgerufen. Auf der Registerkarte **Konfiguration** können Sie die Umgebung, Parameterwerte, Verbindungs-Manager-Werte und Eigenschaftenüberschreibungen angeben und ob das Paket in einer 32-Bit-Laufzeitumgebung ausgeführt wird.  
   
-Informationen zum Erstellen von Auftragsschritten, von denen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] -Pakete ausgeführt werden, finden Sie unter [Aufträge des SQL Server-Agents für Pakete](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
+Informationen zum Erstellen von Auftragsschritten, von denen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] -Pakete ausgeführt werden, finden Sie unter [Aufträge des SQL Server-Agents für Pakete](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -221,7 +221,7 @@ Informationen zum Erstellen von Auftragsschritten, von denen [!INCLUDE[ssISnover
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Erstellen von Aufträgen](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042007"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985312"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:
 ## <a name="related-tasks"></a>Related Tasks  
 In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|Description|Thema|  
+|und Beschreibung|Thema|  
 |---------------|---------|  
 |Beschreibt, wie ein Masterserver erstellt wird.|[Einrichten eines Masterservers](../../ssms/agent/make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](../../ssms/agent/make-a-target-server.md)|  
 |Beschreibt, wie ein Zielserver bei einem Masterserver eingetragen wird.|[Eintragen eines Zielservers bei einem Masterserver](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |Beschreibt, wie der Austritt eines Zielservers aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts eines Zielservers aus einem Masterserver](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Problembehandlung von proxybasierten Multiserveraufträgen](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a8ce11021e45d363b9713c2ae7bafc7d2c1b58e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c202d0c9a95a8e98cd9c603b2a2dbd874d4122b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048287"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979122"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Zuordnen von m:n-Beziehungen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ In Datenbanken werden n:n-Beziehungen zwischen Tabellen mithilfe von Jointabelle
   
 4.  Kopieren Sie die Primärschlüsselspalten aus den beiden anderen Tabellen in die Jointabelle. Sie können der Jointabelle wie jeder anderen Tabelle weitere Spalten hinzufügen.  
   
-5.  Der Primärschlüssel in der Jointabelle muss sämtliche Primärschlüsselspalten aus den beiden anderen Tabellen enthalten. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Primärschlüsseln (Visual Database Tools)](http://msdn.microsoft.com/en-us/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  Der Primärschlüssel in der Jointabelle muss sämtliche Primärschlüsselspalten aus den beiden anderen Tabellen enthalten. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Primärschlüsseln (Visual Database Tools)](http://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  Definieren Sie zwischen beiden Primärtabellen und der Jointabelle jeweils eine 1:n-Beziehung. Die Jointabelle muss in beiden Beziehungen die n-Seite darstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Beziehungen zwischen Tabellen (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Definieren Sie zwischen beiden Primärtabellen und der Jointabelle jeweils eine 1:n-Beziehung. Die Jointabelle muss in beiden Beziehungen die n-Seite darstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Beziehungen zwischen Tabellen (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > Beim Erstellen einer Jointabelle in einem Datenbankdiagramm werden keine Daten aus den verknüpften Tabellen in die Jointabelle eingefügt. Informationen zum Einfügen von Daten in eine Tabelle finden Sie unter [Erstellen von Abfragen zum Einfügen von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  

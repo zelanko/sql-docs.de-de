@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37bd259c8f4925a222d5e4b5aac47ca882ed2a6e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4a9da9c532e20375581a425e8072280cf892ce67
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094207"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088062"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer
 Mit der Power Buffer-Technologie von SQL Server Data Tools können Sie einfach Änderungen auf die verbundene Datenbank anwenden, indem Sie sämtliche Bearbeitungen in der aktuellen Sitzung speichern. Alle durch die Bearbeitung im Power Buffer-Fenster (im Transact\-SQL-Editor oder Tabellen-Designer) verursachten Fehler werden sofort im Bereich **Fehlerliste** angezeigt, sodass Sie die identifizierten Fehler zur weiteren Problembehandlung verfolgen können. Sie können die ausstehenden Änderungen überprüfen, bevor Sie diese auf die Datenbank anwenden. Während des Updates erstellt SSDT automatisch ein ALTER-Skript auf Grundlage der Bearbeitungen und weist Sie auf alle potenziellen Probleme hin. Sie können dann sämtliche Änderungen, die bisher in allen geöffneten Power Buffer-Fenstern vorgenommen wurden, auf dieselbe Datenbank anwenden oder das ALTER-Skript speichern, um die Änderungen bereitzustellen.  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc03001c6bad49728134da6fd65f5fd0ee40873
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 7852d23e283c21f62856e4b3b9242c5e5115d0cd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094327"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085608"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren
 Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können DeploymentPlanModifier oder DeploymentPlanExecutor erstellen. Verwenden Sie DeploymentPlanModifier, um den Plan zu ändern, bevor er ausgeführt wird, und DeploymentPlanExecutor, um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen DeploymentPlanExecutor mit der Bezeichnung DeploymentUpdateReportContributor, der einen Bericht über die Aktionen erstellt, die beim Bereitstellen eines Datenbankprojekts ausgeführt werden. Da dieser Erstellungs-Contributor einen Parameter akzeptiert, mit dem gesteuert wird, ob der Bericht erstellt wird, müssen Sie einen weiteren erforderlichen Schritt durchführen.  
@@ -604,7 +604,7 @@ Die zweite Methode ist das Erstellen einer Zieledatei, die die erforderlichen Co
     </Project>  
     ```  
   
-4.  Importieren Sie in die SQLPROJ-Datei für jedes Projekt, in dem Sie Contributor ausführen möchten, die Zieldatei durch Hinzufügen folgender Anweisung zur SQLPROJ-Datei nach dem Knoten \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> in der Datei:  
+4.  Importieren Sie in die SQLPROJ-Datei für jedes Projekt, in dem Sie Contributors ausführen möchten, die Zieldatei durch Hinzufügen folgender Anweisung zur SQLPROJ-Datei nach dem Knoten \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> in der Datei:  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  

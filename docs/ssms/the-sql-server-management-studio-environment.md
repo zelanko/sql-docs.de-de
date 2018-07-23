@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046647"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981313"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Die SQL Server Management Studio-Umgebung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ Beschreibt allgemeine Funktionen der Benutzeroberfläche, z. B. den Projektmappe
 [Projektmappen-Explorer](../ssms/solution/solution-explorer.md)  
 Bietet eine Einführung in den Projektmappen-Explorer, der eine strukturierte Ansicht der Projekte und der darin enthaltenen Dateien bietet sowie einen sofortigen Zugriff auf Befehle zum Verwalten dieser Elemente.  
   
-[Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/library/ms173879.aspx)  
 Beschreibt die Integration von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] mit Quellcodeverwaltungsprodukten.  
   

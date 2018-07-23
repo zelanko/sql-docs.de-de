@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e43a42c781ae0133f7d1644d6ea0c82e3197bef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054717"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981802"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Zeigt den Namen der Datenquelle für die ausgewählte Spalte an. (Gilt nur für 
 Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
 **Datentyp**  
-Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **ID-Schrittweite**  
 Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile der Identitätsspalte erhöht wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
@@ -99,7 +99,7 @@ Zeigt den Namen der Spalte an. Bearbeiten Sie das Textfeld, um den Namen zu änd
 Zeigt an, ob der Datentyp der Spalte NULL-Werte zulässt.  
   
 **Datentyp**  
-Zeigt den Datentyp der ausgewählten Spalte an. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Zeigt den Datentyp der ausgewählten Spalte an. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Standardwert oder -bindung**  
 Zeigt, welcher Standardwert für die Spalte verwendet wird, wenn kein Wert angegeben ist. Die Dropdownliste enthält alle in der Datenquelle definierten globalen Standards. Um die Spalte an einen globalen Standard zu binden, wählen Sie diesen aus der Dropdownliste aus. Sie können den Standardwert aber auch direkt als Text eingeben, um eine Standardeinschränkung für die Spalte zu erstellen.  
@@ -147,7 +147,7 @@ Zeigt, welche Spalte verwendet wird, um den Dokumenttyp einer Spalte vom Typ Ima
 Gibt die für die Indizierung der Spalte verwendete Sprache an.  
   
 **Statistische Semantik**  
-Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache**auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
   

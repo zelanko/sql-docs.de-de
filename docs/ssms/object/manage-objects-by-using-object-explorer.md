@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed3b055f684a0dfc7b3932c1a0d9aff318cf98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75d7f222b5fb12856a1248020142a11600df803e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046587"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983972"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Verwalten von Objekten mittels Objekt-Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Sie führen Aktionen bei Objekten aus, indem Sie direkt auf den Objekt-Explorer-
 Wenn der Objekt-Explorer mit einem Server verbunden ist, können Sie mit den Verbindungseinstellungen des Objekt-Explorers ein neues Fenster des Code-Editors öffnen. Um ein neues Code-Editor-Fenster im Objekt-Explorer zu öffnen, klicken mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neue Abfrage**. Um ein Code-Editor-Fenster mit einer bestimmten Datenbank zu öffnen, klicken Sie mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie dann auf **Neue Abfrage**. Beim Öffnen einer neuen Abfrage für einen Server mit Analysis Services können Sie DMX-, MDX- oder XMLA-Abfragen auswählen.  
   
 ### <a name="start-powershell"></a>Starten von PowerShell  
-Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter PowerShell-Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Zum Starten einer PowerShell-Sitzung können Sie mit der rechten Maustaste auf den Großteil der Ordner und Objekte in der Struktur des Objekt-Explorers klicken und **PowerShell starten**auswählen. Hierdurch wird eine PowerShell-Sitzung mit aktivierter PowerShell-Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gestartet. Gleichzeitig ist der Pfad auf den Speicherort des Objekts festgelegt, auf das Sie mit der rechten Maustaste im Objekt-Explorer geklickt haben. Sie können PowerShell-Befehle anschließend in einer interaktiven PowerShell-Umgebung eingeben. Weitere Informationen finden Sie unter [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Objekt-Explorers](../../ssms/object/object-explorer.md)  

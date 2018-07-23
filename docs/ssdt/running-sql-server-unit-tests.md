@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8ae9faa2a1556b7ca1e71c7cc52e00df2222688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 67f49ab119e43ed59fc6bee5f9f10ede55143618
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094339"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088492"
 ---
 # <a name="running-sql-server-unit-tests"></a>Ausführen von SQL Server-Komponententests
 Um eine beständige und optimale Codequalität zu gewährleisten, können Sie SQL Server-Komponententests erstellen und ausführen, durch die das Verhalten von Datenbankobjekten überprüft wird, und die Tests anschließend in die Versionskontrolle einchecken. Nachdem das Datenbankschema von Ihnen oder einem der Teammitglieder geändert wurde, führen Sie sowohl SQL Server-Komponententests als auch Softwarekomponententests aus, um sicherzustellen, dass bestehende Funktionen durch die Änderungen nicht außer Kraft gesetzt wurden. Sie können Einzeltests oder Testgruppen ausführen, die als "Testlisten" bezeichnet werden. Weitere Informationen finden Sie unter [Verwenden von Testlisten (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182461(VS.100).aspx).  

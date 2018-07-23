@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b84ab228993294300fa02c65e76e562bea345c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2fa73a0d25934117a4ae8a199e665e36f1a229d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050767"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981682"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Entwerfen von Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Innerhalb eines Datenbankdiagramms können Tabellen mit drei unterschiedlichen M
   
 Wenn Sie in einer Tabelle Änderungen vorgenommen und diese noch nicht gespeichert haben, wird am Ende des Tabellennamens ein Sternchen (*) angezeigt, um so auf ungespeicherte Änderungen hinzuweisen. Informationen zum Speichern von geänderten Tabellen und Diagrammen finden Sie unter [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Zeilenselektor** Klicken Sie auf den Zeilenselektor, um eine Spalte in einer Datenbank auszuwählen. Der Zeilenselektor zeigt ein Symbol in Form eines Schlüssels an, wenn sich die Spalte im Primärschlüssel der Tabelle befindet. Informationen zu Primärschlüsseln finden Sie unter [Verwenden von Schlüsseln (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Zeilenselektor** Klicken Sie auf den Zeilenselektor, um eine Spalte in einer Datenbank auszuwählen. Der Zeilenselektor zeigt ein Symbol in Form eines Schlüssels an, wenn sich die Spalte im Primärschlüssel der Tabelle befindet. Informationen zu Primärschlüsseln finden Sie unter [Verwenden von Schlüsseln (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
 **Eigenschaftenspalten** Die Eigenschaftenspalten werden nur in bestimmten Sichten der Tabellen angezeigt. Sie können sich eine Tabelle in fünf verschiedenen Sichten anzeigen lassen, um dann die Größe und das Layout des betreffenden Diagramms verwalten zu können.  
   

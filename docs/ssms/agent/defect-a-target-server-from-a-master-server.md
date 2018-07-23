@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: df10e43d1b039fbc9bd7a56a66ace4cc2eba1741
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a4f2d71c8949f051b5961165505d65c5961e789
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041287"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978953"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Vollziehen des Austritts eines Zielservers aus einem Masterserver
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Zum Ausführen dieser gespeicherten Prozedur muss ein Benutzer Mitglied der fest
 sp_msx_defect ;  
 ```  
   
-Weitere Informationen finden Sie unter [sp_msx_defect (Transact-SQL)](http://msdn.microsoft.com/en-us/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
+Weitere Informationen finden Sie unter [sp_msx_defect (Transact-SQL)](http://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
   
 ## <a name="PowerShellProcedure"></a>Verwendung von SQL Server Management Objects (SMO)  
 Verwenden Sie **MsxDefect Method**.  

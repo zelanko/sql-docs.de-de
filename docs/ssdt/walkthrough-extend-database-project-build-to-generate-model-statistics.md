@@ -8,20 +8,20 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6433702a0b265053d8a6124adcca065b3f876f25
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094345"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086282"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Hauptaufgaben aus:  
@@ -595,6 +595,6 @@ Relationships
 Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei durchzuführen. Dies ist nur ein Beispiel eines Erstellungs-Contributors. Sie können beispielsweise einen Erstellungs-Contributor erstellen, um eine Datenwörterbuch-Datei als Teil Ihres Builds auszugeben.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Datenbank-Build und -Bereitstellung anpassen durch Verwendung von Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
+[Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

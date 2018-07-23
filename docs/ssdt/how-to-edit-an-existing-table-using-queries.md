@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a5814bf073891006b6f2a1917459f9b711482f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 541310addcd1b9fec25038e962197a1b06eea34a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094180"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088532"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>Vorgehensweise: Bearbeiten einer vorhandenen Tabelle mit Abfragen
 Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie eine Transact\-SQL-Abfrage schreiben. Verwenden Sie zum Anzeigen oder visuellen Eingeben von Daten in einer Tabelle den Daten-Editor, wie unter [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md) beschrieben wird.  

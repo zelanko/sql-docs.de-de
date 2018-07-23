@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9def185eb7e584123b68913ce5be1c576807adf
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 9c0953156c0f3c002ea3f08ab7e18d6544eb667b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094144"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083212"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests
 Sie können die SQL Server-Komponententests verwenden, um einen Baselinezustand für die Datenbank festzulegen und anschließend alle nachfolgenden Änderungen zu überprüfen, die an Datenbankobjekten vorgenommen werden.  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d6d4c85a287dc000d761df1eafeb49e4261336
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094159"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087882"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Gewusst wie: Installieren und Verwalten von Funktionserweiterungen
 Sie können Regeln zum Analysieren von Datenbankcode, Bedingungen für Datenbankkomponententests und Erstellungs-/Bereitstellungs-Contributors hinzufügen, um die Funktionalität von Visual Studio-Editionen, einschließlich SQL Server Data Tools, zu erweitern. Bevor eine Funktionserweiterung verwendet werden kann, muss sie jedoch installiert werden, unabhängig davon, ob die zu installierende Erweiterung von Ihnen oder einer anderen Person erstellt wurde.  

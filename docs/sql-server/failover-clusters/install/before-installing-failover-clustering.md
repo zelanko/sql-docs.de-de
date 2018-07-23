@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 572ccd5abbfc5cae54364a13af20e0851412e38a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061208"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,12 +186,12 @@ ms.locfileid: "34772086"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Edition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-Bit) x64*|ja|ja|Ja**|Ja**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|ja|ja|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Bit) Developer (64|ja|ja|Ja**|Ja**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|ja|ja|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|ja|ja|ja|ja|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|ja|ja|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-Bit) x64*|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja**|Ja**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Bit) Developer (64|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja**|Ja**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-Bit)|Benutzerkontensteuerung|Benutzerkontensteuerung|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster werden im WOW-Modus nicht unterstützt. Dies schließt Upgrades von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustern ein, die ursprünglich unter WOW installiert wurden. Für diese Upgrades ist nur eine parallele Installation der neuen Version mit anschließender Migration möglich.  
   

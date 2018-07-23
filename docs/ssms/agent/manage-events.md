@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0262ff33df1f98283c7eb5ebdc63256c69f0f88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045187"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981902"
 ---
 # <a name="manage-events"></a>Verwalten von Ereignissen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Beim Verwalten von Ereignissen in einer Multiserverumgebung fallen die folgenden
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## <a name="running-event-triggered-jobs"></a>Ausführen von ereignisgesteuerten Aufträgen  
 Sie können einen Auftrag so definieren, dass er als Antwort auf eine Warnung ausgeführt werden soll. Sie können beispielsweise einen Auftrag ausführen, der ein von einer Warnung erkanntes Problem behebt oder weiter diagnostiziert.  
@@ -99,5 +99,5 @@ Sie können einen Auftrag so definieren, dass er als Antwort auf eine Warnung au
 > Da ein Auftrag ein Ereignis auslösen kann, sollten Sie darauf achten, keine rekursive Schleife aus Warnungen und Aufträgen zu erstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   
