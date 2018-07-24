@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 313ddda23b53fc0a4458ee2f12926a47cf0b3830
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995052"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Erforderliche Berechtigungen zum Ausführen von SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "33076137"
   
  Das folgende Diagramm zeigt, wie bei der Wiedergabe von Ablaufverfolgungen die Berechtigungen überprüft werden:  
   
- ![Trace-Berechtigungen für SQL Server Profiler Replay](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler Replay Trace-Berechtigungen")  
+ ![Trace-Berechtigungen für SQL Server Profiler Replay](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler-Wiedergabe-Trace-Berechtigungen")  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gespeicherte Prozeduren von SQL Server Profiler &#40;SQL Server Profiler&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

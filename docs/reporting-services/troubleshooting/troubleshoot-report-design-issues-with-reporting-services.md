@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055835"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Behandlung von Problemen in Reporting Services
 Probleme bei der Berichtserstellung können auftreten, wenn Sie das Berichtslayout in der Entwurfsansicht in einer Berichterstellungsanwendung erstellen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   

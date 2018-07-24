@@ -1,5 +1,5 @@
 ---
-title: Clientprotokolle-Eigenschaften (Registerkarte Reihenfolge) | Microsoft Docs
+title: Eigenschaften (Registerkarte Reihenfolge) der Clientprotokolle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069227"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987472"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Eigenschaften der Clientprotokolle (Registerkarte Reihenfolge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "33069227"
   
 ## <a name="options"></a>Tastatur  
  **Deaktivierte Protokolle**  
- Listet die Protokolle, die installiert sind, aber derzeit nicht verwendet.  
+ Listet die Protokolle, die installiert werden, aber derzeit nicht verwendet werden.  
   
  **Aktivierte Protokolle**  
- Listet die Protokolle, die für die verfügbaren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients auf diesem Computer.  
+ Listet die Protokolle, die zur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients auf diesem Computer.  
   
  **>**  
  Aktiviert das aktuell hervorgehobene Protokoll im Feld **Deaktivierte Protokolle** und verschiebt es in das Feld **Aktivierte Protokolle** .  

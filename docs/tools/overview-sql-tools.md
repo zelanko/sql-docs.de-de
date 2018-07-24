@@ -1,5 +1,5 @@
 ---
-title: SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse | Microsoft Docs
+title: SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: sql
@@ -18,46 +18,46 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34709028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035218"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und SQL Azure Datawarehouse
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Zum Verwalten (Abfrage, Monitor, usw.) der Datenbank, die Sie benötigen ein Tool. Es stehen mehrere Datenbanktools. Während die Datenbanken ausgeführt werden können, in der Cloud, die unter Windows oder auf [Linux](../linux/sql-server-linux-overview.md), muss das Tool nicht für dieselbe Plattform wie die Datenbank ausführen. 
+Zum Verwalten ("Abfrage", "überwachen", "usw.") Ihrer Datenbank, die Sie benötigen ein Tool. Mehrere Datenbanktools stehen zur Verfügung. Während Ihre Datenbanken ausgeführt werden können, in der Cloud, die auf Windows oder auf [Linux](../linux/sql-server-linux-overview.md), Ihr Tool muss nicht auf derselben Plattform wie die Datenbank ausgeführt. 
 
-Dieser Artikel enthält Informationen zu den verfügbaren Tools zum Arbeiten mit SQL-Datenbanken. 
+Dieser Artikel enthält Informationen zu den verfügbaren Tools für die Arbeit mit Ihrer SQL-Datenbanken. 
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Tools zum Ausführen von Abfragen und Verwalten von Datenbanken  
 
 | Tool | und Beschreibung |
 |:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Verwaltungsfunktionen, z. B. eine erweiterte Transact-SQL-Editor und anpassbare Einblicke in den Betriebsstatus Ihrer Datenbanken bereit. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, Mac OS und Linux ausgeführt wird**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSMS unter Windows ausgeführt wird**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Umwandeln von Visual Studio in einer leistungsstarken Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSDT unter Windows ausgeführt wird**.|
-|[MSSQL-cli](mssql-cli.md)|MSSQL-Cli-ist ein interaktives Befehlszeilen-Tool zum Abfragen von SQL Server. **MSSQL-Cli unter Windows, Mac OS und Linux ausgeführt wird**|
-| [Visual Studio Code](https://code.visualstudio.com/)| Installieren Sie nach der Installation von Visual Studio-Code, der [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) zum Entwickeln von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse. **Visual Studio-Code ausgeführt wird, unter Windows, Mac OS und Linux**.|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken aus, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Management-Funktionen, einschließlich einer erweiterten Transact-SQL-Editor und anpassbare Einblicke in den Betriebszustand der Datenbanken bereit. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, MacOS und Linux ausgeführt wird**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSMS ausgeführt wird, auf Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Verwandeln Sie Visual Studio in eine leistungsstarke Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSDT ausgeführt wird, auf Windows**.|
+|[MSSQL-cli](mssql-cli.md)|MSSQL-Cli ist eine interaktive Befehlszeilen-Tool für die Abfragen von SQL Server. **MSSQL-Cli wird auf Windows, MacOS und Linux ausgeführt.**|
+| [Visual Studio Code](https://code.visualstudio.com/)| Installieren Sie nach der Installation von Visual Studio Code, der [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) für die Entwicklung von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse. **Visual Studio Code ausgeführt wird, unter Windows, MacOS und Linux**.|
 
-## <a name="which-tool-should-i-choose"></a>Welches Tool muss werden ausgewählt?
+## <a name="which-tool-should-i-choose"></a>Welches Tool soll ich auswählen?
 
-- Möchten Sie eine SQL Server-Instanz oder Datenbank in einer Lightweight-Editor unter Windows, Linux oder Mac verwalten? Verwenden Sie in diesem Fall [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md).
-- Möchten Sie eine SQL Server-Instanz oder Datenbank auf Windows mit vollständiger GUI-Unterstützung verwalten? Verwenden Sie in diesem Fall [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-- Führen Sie zum Erstellen oder Verwalten von Datenbankcode, einschließlich der Kompilierung bei der Überprüfung werden sollen, Umgestaltung und Designer-Unterstützung unter Windows? Verwenden Sie in diesem Fall [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
-- Möchten Sie den SQL Server mit einem Befehlszeilentool Abfragen, die Syntax hoch-Beleuchtung, IntelliSense-Funktionen und vieles mehr? Wählen Sie [Mssql-Cli](mssql-cli.md)
-- Möchten Sie die T-SQL-Skripts in einer Lightweight-Editor unter Windows, Linux oder Mac schreiben? Wählen Sie [Visual Studio Code](https://code.visualstudio.com/) und [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+- Möchten Sie eine SQL Server-Instanz oder Datenbank, in einem Lightweight-Editor unter Windows, Linux oder Mac zu verwalten? Verwenden Sie in diesem Fall [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md).
+- Möchten Sie ein SQL Server-Instanz oder Datenbank auf Windows mit vollständiger GUI-Unterstützung verwalten? Verwenden Sie in diesem Fall [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+- Sie erstellen oder Verwalten von Datenbankcode, einschließlich Überprüfung kompilieren, refactoring und Designer-Unterstützung auf Windows? Verwenden Sie in diesem Fall [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+- Möchten Sie die Abfragen von SQL Server über ein Befehlszeilentool, das IntelliSense, Beleuchtung aus High-Syntax, Funktionen und vieles mehr? Wählen Sie [Mssql-Cli](mssql-cli.md)
+- Möchten Sie die T-SQL-Skripts in einem Lightweight-Editor unter Windows, Linux oder Mac zu schreiben? Wählen Sie [Visual Studio Code](https://code.visualstudio.com/) und [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>Zusätzliche tools
 
 | Tool | und Beschreibung |
 |:--|:--|
-| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, zum Konfigurieren von SQL Server-Dienste und Netzwerkkonnektivität. Konfigurations-Manager unter Windows ausgeführt wird.|
-|[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Verwenden Sie Mssql-Conf so konfigurieren Sie SQL Server auf dem Linux ausgeführt wird.|
+| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, SQL Server-Dienste konfigurieren, und konfigurieren die Netzwerkkonnektivität. Configuration Manager ausgeführt wird, auf Windows|
+|[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Verwenden Sie Mssql-Conf so konfigurieren Sie SQL Server unter Linux ausgeführt wird.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Verwenden Sie SQL Server Migration Assistant zur Automatisierung der Datenbankmigration von Microsoft Access, DB2, MySQL, Oracle und Sybase zu SQL Server.|
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Verwenden Sie die Distributed Replay-Funktion können Sie das Bewerten der Auswirkungen zukünftiger Upgrades von SQL Server. Verwenden des Distributed Replay auch Bewerten der Auswirkungen von Hardware- und Betriebssystemupgrades sowie SQL Server-Computer optimieren. |
+| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Verwenden Sie die Distributed Replay-Funktion können Sie das Bewerten der Auswirkungen zukünftiger Upgrades von SQL Server. Distributed Replay kann auch zum Bewerten der Auswirkungen von Hardware und Betriebssystem-Upgrades und Optimierung von SQL Server-Hilfe verwenden Sie werden. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Die Ssbdiagnose (Hilfsprogramm) meldet Probleme in Service Broker-Konversationen oder die Konfiguration von Service Broker-Dienste. |
 
 
@@ -72,7 +72,7 @@ Dieser Artikel enthält Informationen zu den verfügbaren Tools zum Arbeiten mit
 |[dtexec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)|Wird verwendet, um ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket zu konfigurieren und auszuführen. Unter dem Namen **DTExecUI**steht eine Version dieses Hilfsprogramms mit Benutzeroberfläche zur Verfügung, über die das Paketausführungsprogramm aufgerufen wird.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil (Hilfsprogramm)](../integration-services/dtutil-utility.md)|Wird für die Verwaltung von SSIS-Paketen verwendet.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Wird verwendet, um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekte für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanzen bereitzustellen.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[MSSQL-Skripter (öffentliche Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Zum Generieren von CREATE "und" Einfügen von T-SQL-Skripts für Datenbankobjekte in SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse verwendet.|Finden Sie in unserem [GitHub-Repository](https://github.com/Microsoft/sql-xplat-cli) für Download und Nutzungsinformationen.| 
+|[MSSQL-Skripter (öffentliche Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Zum Generieren von erstellen und Einfügen von T-SQL-Skripts für Datenbankobjekte in SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse verwendet.|Finden Sie in unserem [GitHub-Repository](https://github.com/Microsoft/sql-xplat-cli) Download und Verwendung von Informationen.| 
 |[osql (Hilfsprogramm)](../tools/osql-utility.md)|Ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung einzugeben.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Profiler-Hilfsprogramm](../tools/profiler-utility.md)|Wird verwendet, um [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] von der Eingabeaufforderung zu starten.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Hilfsprogramm RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|Wird verwendet, um Skripts für die Verwaltung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsservern auszuführen.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

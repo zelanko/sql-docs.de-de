@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f95e9b831b21ab71053c04d2ab2bc27238906c4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072907"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048335"
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Lektion 1–1: Starten des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Zunächst öffnen Sie die grafische Benutzeroberfläche des Datenbankoptimierung
   
 Standardmäßig wird der Datenbankoptimierungsratgeber mit der in der folgenden Abbildung gezeigten Konfiguration geöffnet:  
   
-![Database Engine Tuning Advisor-Standardfenster](../../tools/dta/media/defaultdtagui.gif "Standardfenster Datenbankmodul-Optimierungsratgeber")  
+![Database Engine Tuning Advisor-Standardfenster](../../tools/dta/media/defaultdtagui.gif "Standardfenster des Datenbankoptimierungsratgebers")  
   
 > [!NOTE]  
 > Auf der Registerkarte und im Feld **Sitzungsname** werden der Name des Computers und der Instanz angezeigt, mit der Sie verbunden sind. Außerdem werden das aktuelle Datum und die aktuelle Uhrzeit auf der Registerkarte und im Feld angezeigt.  

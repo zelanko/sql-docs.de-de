@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler | Microsoft Docs
+title: SQL Server Profiler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 304aa9c09508fc7feb9a3522390acb221a7e4a7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078177"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037998"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir i
 -   **Lock:Released**  
   
  **EventCategory**  
- Eine Ereigniskategorie bestimmt, wie Ereignisse innerhalb von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zusammengefasst werden. So sind beispielsweise alle Sperrereignisklassen in der Ereigniskategorie **Sperren** zusammengefasst. Ereigniskategorien sind jedoch nur in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vorhanden. Dieser Begriff drückt nicht aus, wie Modulereignisse gruppiert werden.  
+ Eine Ereigniskategorie bestimmt, wie Ereignisse innerhalb von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zusammengefasst werden. So sind beispielsweise alle Sperrereignisklassen in der Ereigniskategorie **Sperren** zusammengefasst. Ereigniskategorien sind jedoch nur in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vorhanden. Dieser Begriff drückt nicht aus, wie Engine-Ereignisse gruppiert werden.  
   
  **DataColumn**  
  Eine Datenspalte ist ein Attribut einer Ereignisklasse, die in der Ablaufverfolgung erfasst ist. Da von der Ereignisklasse der Typ der Daten festgelegt wird, die gesammelt werden können, gelten nicht alle Datenspalten für alle Ereignisklassen. In einer Ablaufverfolgung, in der die **Lock:Acquired** -Ereignisklasse erfasst wird, enthält die **BinaryData** -Datenspalte beispielsweise den Wert der gesperrten Seiten-ID oder der Zeile, aber die **Integer Data** -Datenspalte enthält keine Werte, weil sie nicht auf die erfasste Ereignisklasse anwendbar ist.  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-Vorlagen | Microsoft Docs
+title: SQL Server Profiler-Vorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc5ca43e247a0cf2114b471f4f5096066fa7b3cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038048"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler-Vorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

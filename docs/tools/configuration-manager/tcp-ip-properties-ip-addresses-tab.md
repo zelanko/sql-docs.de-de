@@ -1,5 +1,5 @@
 ---
-title: TCP/IP-Eigenschaften (Registerkarte "IP-Adressen") | Microsoft Docs
+title: TCP/IP-Eigenschaften (Registerkarte "IP-Adressen") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986010"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "33072447"
  **TCP-Port**  
  Zeigt den Port an, an dem SQL Server lauscht, oder ändert diesen. Die Standardinstanz von SQL Server lauscht standardmäßig an Port 1433.  
   
- Das Datenbankmodul kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
+ Die Datenbank-Engine kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
   
- Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren des Datenbankmoduls zum Lauschen an mehreren TCP-Ports" in der SQL Server-Onlinedokumentation.  
+ Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren der Datenbank-Engine zum Lauschen an mehreren TCP-Ports" in der SQL Server-Onlinedokumentation.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Hinzufügen und Entfernen von IP-Adressen  
  Der SQL Server-Konfigurations-Manager zeigt die IP-Adressen an, die zum Zeitpunkt der Installation von SQL Server verfügbar waren. Die verfügbaren IP-Adressen können sich ändern, wenn Netzwerkkarten hinzugefügt oder entfernt werden, wenn dynamisch zugewiesene IP-Adressen ablaufen, wenn die Netzwerkstruktur neu konfiguriert wird oder wenn der physische Standort des Computers geändert wird, z. B. bei einem Laptop, über das von einem anderen Gebäude aus eine Verbindung mit dem Netzwerk hergestellt wird. Zum Ändern der IP-Adresse bearbeiten Sie das Feld **IP-Adresse** , und starten Sie anschließend SQL Server neu.  
   
 ## <a name="additional-topics-in-books-online"></a>Weitere Themen in der Onlinedokumentation  
- Suchen Sie in MSDN nach Themen wie **Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)** und **Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports**.  
+ Suchen Sie in MSDN nach Themen wie **Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)** und **Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports**.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   

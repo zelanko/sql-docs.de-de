@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2461c6da5edd6bb8cd9af720c7600eac2562366
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: ef54c0d2261dfa24b35feba932834b283ee20209
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941876"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108672"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,27 +31,27 @@ ms.locfileid: "36941876"
   
 |Spaltenname|und Beschreibung|Typ|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
-|**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|ja|  
-|**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|ja|  
-|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|ja|  
-|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> 1 = Erfolg, <br />0 = Fehler|ja|  
+|**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Benutzerkontensteuerung|  
+|**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Benutzerkontensteuerung|  
+|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Benutzerkontensteuerung|  
+|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> 1 = Erfolg, <br />0 = Fehler|Benutzerkontensteuerung|  
 |**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|nein|  
 |**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />1 = TRUE, <br />0 = False|nein|  
-|**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|ja|  
-|**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|ja|  
+|**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|Benutzerkontensteuerung|  
+|**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|Benutzerkontensteuerung|  
 |**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|nein|  
 |**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Folgende IDs sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|**int**|nein|  
-|**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|**int**|ja|  
+|**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|**int**|Benutzerkontensteuerung|  
 |**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|**int**|nein|  
-|**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|**varchar(2)**|ja|  
-|**session_server_principal_name**|Serverprinzipal für die Sitzung.|**sysname**|ja|  
-|**server_principal_name**|Aktuelle Anmeldung.|**sysname**|ja|  
-|**server_principal_sid**|Aktuelle Anmeldungs-SID.|**varbinary**|ja|  
+|**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|**varchar(2)**|Benutzerkontensteuerung|  
+|**session_server_principal_name**|Serverprinzipal für die Sitzung.|**sysname**|Benutzerkontensteuerung|  
+|**server_principal_name**|Aktuelle Anmeldung.|**sysname**|Benutzerkontensteuerung|  
+|**server_principal_sid**|Aktuelle Anmeldungs-SID.|**varbinary**|Benutzerkontensteuerung|  
 |**database_principal_name**|Aktueller Benutzer.|**sysname**|nein|  
 |**target_server_principal_name**|Zielanmeldung der Aktion.|**sysname**|nein|  
 |**target_server_principal_sid**|SID der Zielanmeldung.|**varbinary**|nein|  
 |**target_database_principal_name**|Zielbenutzer der Aktion.|**sysname**|nein|  
-|**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|**nvarchar(120)**|ja|  
+|**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|**nvarchar(120)**|Benutzerkontensteuerung|  
 |**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
 |**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
 |**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Folgende Namen sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|**sysname**|nein|  

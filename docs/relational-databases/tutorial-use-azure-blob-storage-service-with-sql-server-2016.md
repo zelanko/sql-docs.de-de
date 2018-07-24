@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012399"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981472"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Willkommen zum Tutorial über das Arbeiten mit SQL Server 2016 im Dienst Microso
 Die Unterstützung der SQL Server-Integration für den Dienst Microsoft Azure Blob Storage startete als eine Erweiterung von SQL Server 2012 Servicepack 1 CU2 und wurde zudem mit SQL Server 2014 und SQL Server 2016 erweitert. Eine Übersicht der Funktionen und Vorteile finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache).  
   
   
-**Download**<br /><br />**>>**  Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, gehen Sie unter  **[Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
+**Download**<br /><br />**>>**  Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, gehen Sie unter  **[Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Tutorial erfahren Sie in mehreren Lektionen, wie Sie im Dienst Microsoft Azure Blob Storage mit SQL Server-Datendateien arbeiten. Jede Lektion ist auf eine bestimmte Aufgabe fokussiert, und die Lektionen sollten nacheinander ausgeführt werden. Zunächst erfahren Sie, wie Sie in Blob Storage einen neuen Container mit einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) erstellen. Danach erfahren Sie, wie Sie SQL Server-Anmeldeinformationen erstellen, um SQL Server in Azure Blob Storage zu integrieren. Als Nächstes sichern Sie eine Datenbank in Blob Storage und stellen sie in einem virtuellen Azure-Computer wieder her. Anschließend verwenden Sie die Protokollsicherung für die Übertragung von Dateimomentaufnahmen von SQL Server 2016, um den Stand eines bestimmten Zeitpunkts in einer neuen Datenbank wiederherzustellen. Das Tutorial wird schließlich die Verwendung der gespeicherten Meta Data-Prozeduren und -Funktionen demonstrieren, um Ihnen dabei zu helfen, Dateimomentaufnahme-Sicherungen zu verstehen und mit ihnen zu arbeiten.  
@@ -43,7 +43,7 @@ In diesem Artikel wird Folgendes vorausgesetzt:
   
 -   Sie verfügen über ein Azure-Speicherkonto.  
   
--   Sie besitzen mindestens einen virtuellen Azure-Computer auf dem SQL Server 2016 installiert ist, und haben diesen virtuellen Computer gemäß [Bereitstellen eines virtuellen Computers mit SQL Server im Azure-Portal](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/)bereitgestellt. Optional kann für das Szenario in [Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md) ein zweiter virtueller Computer verwendet werden.  
+-   Sie besitzen mindestens einen virtuellen Azure-Computer auf dem SQL Server 2016 installiert ist, und haben diesen virtuellen Computer gemäß [Bereitstellen eines virtuellen Computers mit SQL Server im Azure-Portal](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)bereitgestellt. Optional kann für das Szenario in [Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md) ein zweiter virtueller Computer verwendet werden.  
   
 Dieses Tutorial ist in neun Lektionen aufgeteilt, die nach der Reihenfolge abgeschlossen werden müssen:  
   

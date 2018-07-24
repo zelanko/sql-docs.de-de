@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974279"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [bcp-Hilfsprogramm](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
- > Die neueste Version des Hilfsprogramms Bcp, finden Sie unter [Microsoft über die Befehlszeile Hilfsprogramme 14.0 für SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Die neueste Version des Hilfsprogramms Bcp finden Sie unter [Microsoft Command Line Utilities 14.0 für SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > Verwenden von Bcp unter Linux, finden Sie unter [Sqlcmd und Bcp unter Linux installieren](../linux/sql-server-linux-setup-tools.md).
+ > Mit Bcp unter Linux finden Sie unter [Sqlcmd und Bcp unter Linux installieren](../linux/sql-server-linux-setup-tools.md).
 
- > Ausführliche Informationen zur Verwendung von Bcp mit Azure SQL Data Warehouse finden Sie unter [Laden von Daten mithilfe von Bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+ > Ausführliche Informationen zum Verwenden von Bcp mit Azure SQL Data Warehouse finden Sie unter [Laden von Daten mit Bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   Mit dem Hilfsprogramm **bcp**( **B**ulk **C**opy**P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)]erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Es wird empfohlen, für jede Spalte in einer Formatdatei einen Sortierungsnamen anzugeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
   
-|Codepagewert|Description|  
+|Codepagewert|und Beschreibung|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *erste_Zeile* kann eine positive ganze Zahl mit einem Wert bis zu 2^63-1 sein. **-F** *erste_Zeile* ist 1-basiert.  
 
 **-G**<a name="G"></a>  
- Diese Option wird vom Client beim Herstellen einer Verbindung mit Azure SQL-Datenbank oder Azure SQL-Datenbank verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Erfordert die Option-G [Version 14.0.3008.27 oder höher](http://go.microsoft.com/fwlink/?LinkID=825643). Führen Sie „bcp -v“ aus, um die von Ihnen verwendete Version zu ermitteln. Weitere Informationen finden Sie unter [verwenden Azure Active Directory-Authentifizierung für die Authentifizierung mit SQL-Datenbank oder SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Diese Option wird vom Client beim Herstellen einer Verbindung mit Azure SQL-Datenbank oder Azure SQL-Datenbank verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Der Schalter-G erfordert [Version 14.0.3008.27 oder höher](http://go.microsoft.com/fwlink/?LinkID=825643). Führen Sie „bcp -v“ aus, um die von Ihnen verwendete Version zu ermitteln. Weitere Informationen finden Sie unter [verwenden Azure Active Directory-Authentifizierung für die Authentifizierung mit SQL-Datenbank oder SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!TIP]
->  Zum Überprüfen, ob Ihre Version des Bcp-Unterstützung für Azure Active Directory-Authentifizierung (AAD) Typ umfasst **Bcp--** (Bcp\<Speicherplatz >\<Dash >\<Dash >), und überprüfen Sie, ob - G in der Liste der Verfügbare Argumente.
+>  Zum Überprüfen, ob Ihre Version des Bcp-Unterstützung für Azure Active Directory-Authentifizierung (AAD)-Typ enthält **Bcp--** (Bcp\<Speicherplatz >\<Dash >\<Dash >) und stellen Sie sicher, dass: Password-g in der Liste angezeigt Verfügbare Argumente.
 
 - **Azure Active Directory-Benutzername und -Kennwort:** 
 
     Wenn Sie einen Azure Active Directory-Benutzernamen und das zugehörige Kennwort verwenden möchten, geben Sie die Option **-G** zusammen mit dem Benutzernamen und dem Kennwort an, indem Sie die Optionen **-U** und **-P** bereitstellen. 
 
-    Im folgenden Beispiel werden Daten mithilfe von Azure AD-Benutzername und Kennwort, in denen Benutzer und das Kennwort ist eine AAD-Anmeldeinformationen. Im Beispiel wird die Tabelle exportiert `bcptest` aus Datenbank `testdb` von Azure-Server `aadserver.database.windows.net` und speichert die Daten in der Datei `c:\last\data1.dat`:
+    Das folgende Beispiel exportiert die Daten mithilfe von Azure AD-Benutzername und Kennwort, in denen Benutzer und das Kennwort ist eine AAD-Anmeldeinformationen. Im Beispiel wird die Tabelle exportiert `bcptest` aus Datenbank `testdb` aus Azure-Server `aadserver.database.windows.net` und speichert die Daten in der Datei `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    Im folgende Beispiel wird importiert, Daten mithilfe von Azure AD-Benutzername und Kennwort, in denen Benutzer und das Kennwort ist eine AAD-Anmeldeinformationen. Im Beispiel wird importiert Daten aus der Datei `c:\last\data1.dat` in Tabelle `bcptest` für Datenbank `testdb` auf Azure-Server `aadserver.database.windows.net` mithilfe von Azure AD-Benutzername und Kennwort:
+    Das folgende Beispiel importiert die Daten mithilfe von Azure AD-Benutzername und Kennwort, in denen Benutzer und das Kennwort ist eine AAD-Anmeldeinformationen. Das Beispiel importiert die Daten aus Datei `c:\last\data1.dat` in Tabelle `bcptest` für die Datenbank `testdb` auf Azure-Server `aadserver.database.windows.net` mithilfe von Azure AD-Benutzername und Kennwort:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Integrierte Azure Active Directory-Authentifizierung** 
  
-    Wenn Sie die integrierte Azure Active Directory-Authentifizierung verwenden möchten, geben Sie die Option **-G** ohne Benutzername und Kennwort an. Diese Konfiguration wird davon ausgegangen, dass das aktuelle Windows-Benutzerkonto (das Konto, unter die Bcp-Befehl ausgeführt wird) einen Verbund mit Azure AD ist: 
+    Wenn Sie die integrierte Azure Active Directory-Authentifizierung verwenden möchten, geben Sie die Option **-G** ohne Benutzername und Kennwort an. Diese Konfiguration wird davon ausgegangen, dass das aktuelle Windows-Benutzerkonto (das Konto, unter der Bcp-Befehl ausgeführt wird) in Azure AD verbunden ist: 
 
-    Im folgenden Beispiel werden Daten mithilfe der integrierten Azure AD-Konto. Im Beispiel wird die Tabelle exportiert `bcptest` aus Datenbank `testdb` mithilfe von Azure AD Integrated aus Azure-Server `aadserver.database.windows.net` und speichert die Daten in der Datei `c:\last\data2.dat`:
+    Das folgende Beispiel exportiert die Daten mit integrierten Azure AD-Konto. Im Beispiel wird die Tabelle exportiert `bcptest` aus Datenbank `testdb` mithilfe von Azure AD integriert, von Azure-Server `aadserver.database.windows.net` und speichert die Daten in der Datei `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    Im folgende Beispiel wird importiert, Daten mithilfe von Azure AD integrierten auth. Im Beispiel wird importiert Daten aus der Datei `c:\last\data2.txt` in Tabelle `bcptest` für Datenbank `testdb` auf Azure-Server `aadserver.database.windows.net` mithilfe von Azure AD-integrierte Authentifizierung:
+    Das folgende Beispiel importiert die Daten mit integrierten Azure AD-auth. Das Beispiel importiert die Daten aus Datei `c:\last\data2.txt` in Tabelle `bcptest` für die Datenbank `testdb` auf Azure-Server `aadserver.database.windows.net` mit integrierten Azure AD-Authentifizierung:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -395,7 +395,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
   
  XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tools zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client installiert werden.  
   
- Informationen zum Speicherort und zum Verwenden des Hilfsprogramms **bcp** sowie zu den für Eingabeaufforderungs-Hilfsprogramme geltenden Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ Informationen zum Speicherort und zum Verwenden des Hilfsprogramms **bcp** sowie zu den für Eingabeaufforderungs-Hilfsprogramme geltenden Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
  Informationen zum Vorbereiten von Daten für Massenimport- oder Massenexportvorgänge finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -498,7 +498,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
 
 
 ### <a name="example-test-conditions"></a>**Beispieltestbedingungen**
-In den folgenden Beispielen wird die `WideWorldImporters` -Beispieldatenbank für SQL Server (ab 2016) und Azure SQL-Datenbank verwendet.  `WideWorldImporters` kann von heruntergeladen werden [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Die Syntax zum Wiederherstellen der Beispieldatenbank finden Sie unter [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Sofern nicht anders angegeben, wird bei diesem Beispiel vorausgesetzt, dass Sie die Windows-Authentifizierung verwenden und über eine vertrauenswürdige Verbindung mit der Serverinstanz verfügen, auf der Sie den **bcp** -Befehl ausführen.  Ein Verzeichnis namens `D:\BCP` wird in vielen der Beispiele verwendet.
+In den folgenden Beispielen wird die `WideWorldImporters` -Beispieldatenbank für SQL Server (ab 2016) und Azure SQL-Datenbank verwendet.  `WideWorldImporters` kann heruntergeladen werden [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Die Syntax zum Wiederherstellen der Beispieldatenbank finden Sie unter [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Sofern nicht anders angegeben, wird bei diesem Beispiel vorausgesetzt, dass Sie die Windows-Authentifizierung verwenden und über eine vertrauenswürdige Verbindung mit der Serverinstanz verfügen, auf der Sie den **bcp** -Befehl ausführen.  Ein Verzeichnis namens `D:\BCP` wird in vielen der Beispiele verwendet.
 
 Das folgende Skript erstellt eine leere Kopie der `WideWorldImporters.Warehouse.StockItemTransactions`-Tabelle und fügt dann eine Primärschlüsseleinschränkung hinzu.  Führen Sie das folgende T-SQL-Skript in SQL Server Management Studio (SSMS) aus.
 
