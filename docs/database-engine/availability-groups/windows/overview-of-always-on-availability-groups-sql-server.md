@@ -19,17 +19,17 @@ caps.latest.revision: 121
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849eeaa4b46712ba789f60f43e9c77c02eee6558
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 71d9b599a32351c3aac8bc3b40eb28d7434fb9cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984292"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Overview of Always On Availability Groups (SQL Server) (Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server))](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
+ > Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Overview of Always On Availability Groups (SQL Server) (Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server))](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx).
 
  In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   

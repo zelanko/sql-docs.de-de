@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942005"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984682"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In dieser Lektion verwenden Sie ein [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) -Skript zum Erstellen einer SAS für einen Azure-Blobcontainer mithilfe einer gespeicherten Zugriffsrichtlinie.  
+In dieser Lektion verwenden Sie ein [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) -Skript zum Erstellen einer SAS für einen Azure-Blobcontainer mithilfe einer gespeicherten Zugriffsrichtlinie.  
   
 > [!NOTE]  
 > Dieses Skript wurde mit Azure PowerShell 5.0.10586 geschrieben.  
@@ -139,7 +139,7 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
 [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Erstellen von Containern](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

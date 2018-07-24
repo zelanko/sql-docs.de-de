@@ -19,12 +19,12 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc31efe5f3e78a80061d47149c56bf942cd7e8b7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989376"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980599"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Die Neuigkeiten der anderen SQL Server-Komponenten finden Sie unter [Was ist neu
 
 - Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] zu **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![Herunterladen](../analysis-services/media/download.png "download").
 
-- Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.
+- Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.
 
 > [!NOTE]
 > Die aktuellen Anmerkungen zu dieser Version finden Sie unter [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).

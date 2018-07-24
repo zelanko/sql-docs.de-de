@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7f34454fc72120a480879a7d48d5924816e8e038
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8cee752f2168929723dae86cd0da774cb02518bd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322749"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983582"
 ---
 # <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank
 
@@ -76,6 +76,6 @@ ms.locfileid: "35322749"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Reporting Services-Konfigurations-Manager](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services-Konfigurations-Manager](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

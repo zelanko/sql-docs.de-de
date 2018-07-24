@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bad05c05805557c218fe372298c8840be3df9bb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63f6cce007ec4586a31e9acd7b170c7c826e708f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018537"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985152"
 ---
 # <a name="planning-for-reporting-services"></a>Planung für Reporting Services
   Diese Themen sollen Sie dabei unterstützen, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]besser zu verstehen. Erfahren Sie, wie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Umgebung installiert und konfiguriert wird, damit sie Ihren Anforderungen am besten entspricht.  
@@ -28,7 +28,7 @@ ms.locfileid: "33018537"
  ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Allgemeine Planung und Architektur von Reporting Services-Funktionen**  
  [Browser Support for Reporting Services and Power View (Browserunterstützung für Reporting Services und Power View)](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Planen von Berichtsentwurf und -bereitstellung | Reporting Services](http://msdn.microsoft.com/en-us/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [Plan for report design and report deployment | Reporting Services (Planen von Berichtsentwurf und -bereitstellung | Reporting Services)](http://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
  [Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   

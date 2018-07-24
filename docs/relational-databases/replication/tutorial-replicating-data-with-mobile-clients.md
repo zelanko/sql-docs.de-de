@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353962"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983092"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
-In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Tutorial werden mithilfe einer Mergereplikation Daten aus einer zentralen Datenbank für mindestens einen mobilen Benutzer veröffentlicht, sodass jeder Benutzer eine eindeutig gefilterte Teilmenge von Daten erhält. 
@@ -54,14 +54,14 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
   
 - Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von SQL Server mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Die in diesem Tutorial erstellte Veröffentlichung bietet keine Unterstützung für [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
 > - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL Server-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Geschätzte Dauer dieses Tutorials: 60 Minuten**  
@@ -97,7 +97,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
    >
    > Wenn Sie einen früheren Build als SQL Server 2017 verwenden, wird unten auf dem Bildschirm eine Meldung angezeigt, in der Sie darüber informiert werden, dass möglicherweise Daten verloren gehen können, wenn Sie diese Spalte in einer bidirektionalen Replikation verwenden. Sie können diese Meldung für dieses Tutorial ignorieren. Trotzdem sollte dieser Datentyp nur in einer Produktionsumgebung repliziert werden, wenn Sie den unterstützten Build verwenden.
    > 
-   > Weitere Informationen zum Replizieren des Datentyps **hierarchyid** finden Sie unter [Verwenden von hierarchyid-Spalten in replizierten Tabellen](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Weitere Informationen zum Replizieren des Datentyps **hierarchyid** finden Sie unter [Verwenden von hierarchyid-Spalten in replizierten Tabellen](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Hinzufügen**, und klicken Sie anschließend auf **Filter hinzufügen**.  

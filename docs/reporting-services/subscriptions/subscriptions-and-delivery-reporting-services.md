@@ -26,12 +26,12 @@ caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a3d81598480aab552b0891fb7ae1247d9149ce71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47ac8b682f2e31fc104c91203b9174ea0a4f0297
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036917"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980842"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren.  
@@ -85,7 +85,7 @@ ms.locfileid: "33036917"
   
  In der folgenden Tabelle werden häufige Abonnementszenarien für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] beschrieben.  
   
-|Szenario|Description|  
+|Szenario|und Beschreibung|  
 |--------------|-----------------|  
 |Senden von Berichten als E-Mail|Senden Sie Berichte als E-Mail an einzelne Benutzer und Gruppen. Erstellen Sie ein Abonnement, und geben Sie einen Gruppenalias oder einen E-Mail-Alias für den Empfang eines von Ihnen verteilten Berichts an. Sie können die Abonnementdaten von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zur Laufzeit bestimmen lassen. Wenn Sie den gleichen Bericht an eine Gruppe senden möchten, deren Mitgliederliste sich häufig ändert, können Sie die Abonnementliste mithilfe einer Abfrage zur Laufzeit abrufen.|  
 |Anzeigen von Berichten im Offlinemodus|Benutzer können eines der folgenden Formate für die Abonnementausgabe wählen:<br /><br /> XML-Datei mit Berichtsdaten<br />CSV (durch Trennzeichen getrennt)<br />PDF<br />MHTML (Webarchiv)<br />Microsoft Excel<br />TIFF-Datei<br />Microsoft Word<br /><br /> Berichte, die Sie archivieren möchten, können direkt an einen freigegebenen Ordner gesendet werden, den Sie beispielsweise nachts sichern lassen. Umfangreiche Berichte, die zu lange Ladezeiten im Browser verursachen würden, können in einem Format an einen freigegebenen Ordner gesendet werden, das in einer Desktopanwendung angezeigt werden kann.|  
@@ -104,10 +104,10 @@ ms.locfileid: "33036917"
 ##  <a name="bkmk_subscription_requirements"></a> Abonnementanforderungen  
  Vor dem Erstellen eines Abonnements für einen Bericht müssen die folgenden Voraussetzungen erfüllt sein:  
   
-|Anforderung|Description|  
+|Anforderung|und Beschreibung|  
 |-----------------|-----------------|  
 |Berechtigungen|Sie benötigen Zugriff auf den Bericht. Zum Abonnieren eines Berichts benötigen Sie die Berechtigung zum Anzeigen des Berichts.<br /><br /> Für Berichtsserver im einheitlichen Modus wirken sich die folgenden Rollenzuweisungen auf Abonnements aus:<br /><br /> Mit dem Task „Einzelne Abonnements verwalten“ können Benutzer für einen bestimmten Bericht Abonnements erstellen, ändern und löschen. In den vordefinierten Rollen ist dieser Task Teil der Browser- und Berichts-Generator-Rollen. Mit Rollenzuweisungen, die diesen Task enthalten, können Benutzer nur die Abonnements verwalten, die sie oder er erstellt hat.<br />Mit dem Task „Alle Abonnements verwalten“ kann der Benutzer auf alle Abonnements zugreifen und diese ändern. Dieser Task ist für das Erstellen eines datengesteuerten Abonnements erforderlich. In vordefinierten Rollen enthält nur die Inhalts-Manager-Rolle diesen Task.|  
-|Gespeicherte Anmeldeinformationen|Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden, um ein Abonnement zu erstellen. Sie können keinen Bericht abonnieren, für den die Verwendung der anonymisierten oder delegierten Anmeldeinformationen des aktuellen Benutzers zum Herstellen einer Verbindung mit einer externen Datenquelle konfiguriert ist. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Außerdem müssen Sie über die Berechtigung verfügen, den Bericht anzuzeigen und einzelne Abonnements zu erstellen. **Geplante Ereignisse und Berichtsübermittlung** muss auf dem Berichtsserver aktiviert sein. Weitere Informationen finden Sie unter [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
+|Gespeicherte Anmeldeinformationen|Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden, um ein Abonnement zu erstellen. Sie können keinen Bericht abonnieren, für den die Verwendung der anonymisierten oder delegierten Anmeldeinformationen des aktuellen Benutzers zum Herstellen einer Verbindung mit einer externen Datenquelle konfiguriert ist. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Außerdem müssen Sie über die Berechtigung verfügen, den Bericht anzuzeigen und einzelne Abonnements zu erstellen. **Geplante Ereignisse und Berichtsübermittlung** muss auf dem Berichtsserver aktiviert sein. Weitere Informationen finden Sie unter [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Benutzerabhängige Werte in einem Bericht|Nur bei Standardabonnements können Sie Abonnements für Berichte erstellen, bei denen Benutzerkontoinformationen in einen Filter integriert sind oder als Text im Bericht angezeigt werden. Im Bericht wird der Name des Benutzerkontos über den **User!UserID** -Ausdruck angegeben, der in den aktuellen Benutzer aufgelöst wird. Beim Erstellen eines Abonnements wird der Benutzer, der das Abonnement erstellt, als aktueller Benutzer betrachtet.|  
 |Keine Modellelementsicherheit|Sie können keine mit dem Berichts-Generator erstellten Berichte abonnieren, die ein Modell als Datenquelle verwenden, wenn das Modell Sicherheitseinstellungen für Modellelemente enthält. Diese Einschränkung bezieht sich nur auf Berichte, die Sicherheitseinstellungen für Modellelemente verwenden.|  
 |Parameterwerte|Falls der Bericht Parameter verwendet, muss ein Parameterwert im Bericht selbst oder im Abonnement, das Sie definieren, angegeben werden. Falls im Bericht Standardwerte definiert wurden, können Sie den Standardwert für den Parameterwert festlegen.|  
@@ -117,7 +117,7 @@ ms.locfileid: "33036917"
   
  Beim Erstellen eines Abonnements kann der Benutzer eine der verfügbaren Übermittlungserweiterungen auswählen, um die Art der Übermittlung zu bestimmen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] beinhaltet die folgenden Übermittlungserweiterungen:  
   
-|Übermittlungserweiterung|Description|  
+|Übermittlungserweiterung|und Beschreibung|  
 |------------------------|-----------------|  
 |Windows-Dateifreigabe|Übermittelt einen Bericht als statische Anwendungsdatei an einen freigegebenen Ordner, der über das Netzwerk zugänglich ist.|  
 |E-Mail|Übermittelt eine Benachrichtigung oder einen Bericht als E-Mail-Anlage oder URL-Link.|  

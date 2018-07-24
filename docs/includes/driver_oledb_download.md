@@ -1,1 +1,1 @@
-![Herunterladen](../ssdt/media/download.png)[Herunterladen von OLE DB-Treiber](../connect/oledb/download-oledb-driver-for-sql-server.md)
+![Herunterladen](../ssdt/media/download.png)[OLE DB-Treiber herunterladen](../connect/oledb/download-oledb-driver-for-sql-server.md)

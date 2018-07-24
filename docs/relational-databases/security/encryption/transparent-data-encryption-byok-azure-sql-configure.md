@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093314"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979174"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell und CLI: Aktivieren von Transparent Data Encryption mithilfe eines eigenen Azure Key Vault-Schlüssels
 
@@ -39,8 +39,8 @@ Dieser Leitfaden zur Vorgehensweise erläutert die Art und Weise, wie Sie einen 
    - [Erste Schritte mit Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Instructions for using a hardware security module (HSM) and Key Vault (Anweisungen zur Verwendung eines Hardwaresicherheitsmodells (HSM) und Key Vault)](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Der Schlüsseltresor muss über folgende Eigenschaft verfügen, um für TDE verwendet werden zu können:
-   - [Vorläufiges Löschen](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Verwenden des vorläufigen Löschens in Key Vault mit PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [Vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Verwenden des vorläufigen Löschens in Key Vault mit PowerShell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - Der Schlüssel muss über folgende Attribute verfügen, um für TDE verwendet werden zu können:
    - Kein Ablaufdatum
    - Nicht deaktiviert
@@ -200,13 +200,13 @@ Verwenden Sie [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/modu
 
 - Sie müssen über ein Azure-Abonnement verfügen und Administrator für dieses Abonnement sein.
 - [Empfohlen aber optional] Sie sollten ein Hardwaresicherheitsmodul (HSM) oder einen lokalen Schlüsselspeicher zum Erstellen einer lokalen Kopie des Schlüsselmaterials für den TDE-Schutz besitzen.
-- CLI 2.0 oder höhere Version. Wie Sie die neueste Version installieren und eine Verbindung mit Ihrem Azure-Abonnement herstellen, können Sie unter [Installieren und Konfigurieren der plattformübergreifenden Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) nachlesen. 
+- CLI 2.0 oder höhere Version. Wie Sie die neueste Version installieren und eine Verbindung mit Ihrem Azure-Abonnement herstellen, können Sie unter [Installieren und Konfigurieren der plattformübergreifenden Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) nachlesen. 
 - Sie müssen einen Azure Key Vault-Schlüsseltresor und einen Schlüssel für die Verwendung für TDE erstellen.
-   - [Manage Key Vault using CLI 2.0 (Verwalten von Key Vault mithilfe der CLI 2.0)](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Manage Key Vault using CLI 2.0 (Verwalten von Key Vault mithilfe der CLI 2.0)](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [Instructions for using a hardware security module (HSM) and Key Vault (Anweisungen zur Verwendung eines Hardwaresicherheitsmodells (HSM) und Key Vault)](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Der Schlüsseltresor muss über folgende Eigenschaft verfügen, um für TDE verwendet werden zu können:
-   - [Vorläufiges Löschen](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Verwenden des vorläufigen Löschens in Key Vault mit CLI](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [Vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Verwenden des vorläufigen Löschens in Key Vault mit CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - Der Schlüssel muss über folgende Attribute verfügen, um für TDE verwendet werden zu können:
    - Kein Ablaufdatum
    - Nicht deaktiviert
@@ -264,11 +264,11 @@ Nun verfügt die Datenbank oder Data Warehouse über aktivierte TDE-Technologie 
 
 ## <a name="sql-cli-references"></a>CLI-Referenzen zu SQL
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

@@ -1,5 +1,5 @@
 ---
-title: DiagnosticInformation-Element (Ssbdiagnose) | Microsoft Docs
+title: DiagnosticInformation-Element (Ssbdiagnose) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9887264fb9715697e94fabfc41150ff988580b50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057607"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation-Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "33075957"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|attribute|und Beschreibung|  
 |---------------|-----------------|  
 |**Keine**|–|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|und Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

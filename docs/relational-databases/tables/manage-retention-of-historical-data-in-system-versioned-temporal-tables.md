@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239119"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985612"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ Der Bereinigungstask für den gruppierten Columnstore entfernt ganze Zeilengrupp
 
 Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung machen den gruppierten Columnstore-Index zur perfekten Lösung für Szenarios, bei denen Ihre Workload in kürzester Zeit eine große Menge an Verlaufsdaten generiert. Dieses Muster ist typisch für intensive Transaktionsverarbeitungs-Workloads, die temporale Tabellen verwenden, um die Änderungsnachverfolgung und -überwachung, Trendanalysen oder die Erfassung von IoT-Daten durchzuführen.
 
-Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   

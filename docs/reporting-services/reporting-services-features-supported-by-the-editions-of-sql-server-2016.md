@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028949"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983122"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen
 
@@ -34,7 +34,7 @@ Dieses Thema bietet detaillierte Informationen zu den von verschiedenen Versione
     
  > [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Virtueller Azure-Computer (klein)](../analysis-services/media/azure-virtual-machine-small.png) **[Starten eines virtuellen Computers, auf dem SQL Server 2016 bereits installiert ist](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Virtueller Azure-Computer (klein)](../analysis-services/media/azure-virtual-machine-small.png) **[Starten eines virtuellen Computers, auf dem SQL Server 2016 bereits installiert ist](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Informationen über Funktionen, die von den Evaluation- und Developer-Editionen unterstützt werden, finden Sie unter „SQL Server Enterprise Edition“.
 
@@ -48,33 +48,33 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Mobile Berichte und KPIs|ja||||||ja|  
+|Mobile Berichte und KPIs|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
 |Unterstützte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition für Katalogdatenbanken|Standard oder höher|Standard oder höher|Web|Express|||Standard oder höher|  
 |Unterstützte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition für Datenquellen|Alle   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen|Alle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen|Web|Express|||Alle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen|  
-|Berichtsserver|ja|ja|ja|ja|||ja|  
-|Berichts-Designer|ja|ja|ja|ja|||ja|  
-|Berichts-Designer-Webportal|ja|ja|ja|ja|||ja|  
-|Rollenbasierte Sicherheit|ja|ja|ja|ja|||ja|  
-|Export in Excel, PowerPoint, Word, PDF und Bilder|ja|ja|ja|ja|||ja|  
-|Verbesserte Messgeräte und Diagramme|ja|ja|ja|ja|||ja|  
-|Anheften von Berichtselementen an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]Dashboards|ja|ja|ja|ja|||ja|  
-|Benutzerdefinierte Authentifizierung|ja|ja|ja|ja|||ja|  
-|Berichte als Datenfeeds|ja|ja|ja|ja|||ja|  
-|Modellunterstützung|ja|ja|ja||||ja|  
-|Erstellen von benutzerdefinierten Rollen für rollenbasierte Sicherheit|ja|ja|||||ja|  
-|Modellelementsicherheit|ja|ja|||||ja|  
-|Uneingeschränktes Durchklicken|ja|ja|||||ja|  
-|Bibliothek freigegebener Komponenten|ja|ja|||||ja|  
-|Abonnements und Zeitplanung für E-Mail und Dateifreigabe|ja|ja|||||ja|  
-|Berichtsverlauf, Ausführungs-Momentaufnahmen und Zwischenspeichern|ja|ja|||||ja|  
-|SharePoint-Integration|ja|ja|||||ja|  
-|Unterstützung von Remotedatenquellen und Nicht-SQL-Datenquellen<sup>1</sup>|ja|ja|||||ja|  
-|RDCE-Erweiterbarkeit von Datenquellen, Übermittlung und Rendering|ja|ja|||||ja|  
-|Benutzerdefiniertes Branding|ja||||||ja|  
-|Datengesteuerte Berichtsabonnements|ja||||||ja|  
-|Bereitstellung für horizontales Skalieren (Webfarmen)|ja||||||ja|  
-|Warnungen<sup>2</sup>|ja||||||ja|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|ja||||||ja|  
+|Berichtsserver|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Berichts-Designer|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Berichts-Designer-Webportal|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Rollenbasierte Sicherheit|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Export in Excel, PowerPoint, Word, PDF und Bilder|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Verbesserte Messgeräte und Diagramme|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Anheften von Berichtselementen an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]Dashboards|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Benutzerdefinierte Authentifizierung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Berichte als Datenfeeds|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|||Benutzerkontensteuerung|  
+|Modellunterstützung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung||||Benutzerkontensteuerung|  
+|Erstellen von benutzerdefinierten Rollen für rollenbasierte Sicherheit|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Modellelementsicherheit|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Uneingeschränktes Durchklicken|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Bibliothek freigegebener Komponenten|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Abonnements und Zeitplanung für E-Mail und Dateifreigabe|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Berichtsverlauf, Ausführungs-Momentaufnahmen und Zwischenspeichern|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|SharePoint-Integration|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Unterstützung von Remotedatenquellen und Nicht-SQL-Datenquellen<sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|RDCE-Erweiterbarkeit von Datenquellen, Übermittlung und Rendering|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|Benutzerdefiniertes Branding|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|Datengesteuerte Berichtsabonnements|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|Bereitstellung für horizontales Skalieren (Webfarmen)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|Warnungen<sup>2</sup>|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
   
  <sup>1</sup> Weitere Informationen zu unterstützten Datenquellen in SQL Server 2016 Reporting Services (SSRS) finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -96,9 +96,9 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
   
 |Name des Tools|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (RDL und RDS)|ja|ja|||||ja|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (RSMOBILE)|ja||||||ja|  
-|Power BI-Apps für mobile Geräte (iOS, Windows 10, Android) (RSMOBILE)|ja||||||ja|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (RDL und RDS)|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (RSMOBILE)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|Power BI-Apps für mobile Geräte (iOS, Windows 10, Android) (RSMOBILE)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
   
 > [!NOTE]  
 > 1.  In der oben aufgeführten Tabelle sind die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen angegeben, die zur Aktivierung dieser Clienttools erforderlich sind. Über diese Tools kann jedoch auf Daten zugegriffen werden, die von beliebigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen gehostet werden.  

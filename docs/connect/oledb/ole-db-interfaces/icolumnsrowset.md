@@ -1,5 +1,5 @@
 ---
-title: IColumnsRowset | Microsoft Docs
+title: IColumnsRowset | Microsoft-Dokumentation
 description: IDBColumnsRowset-Schnittstelle
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,21 +15,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 57044ee12be13d0ecc2c62cedb54e37a5a02b893
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: da249467e9eeca92009266eec5190f20b488f9e3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689943"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107842"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB-Treiber für SQL Server hinzugefügt IColumnsRowset:: Getcolumnrowset die Spalte DBCOLUMN_BASETABLEINSTANCE. Diese Spalte gibt DBTYPE_I2 zurück, und sie ist für die Verwendung durch Microsoft reserviert. Die Informationen in dieser Spalte können in zukünftigen Versionen geändert werden.  
+  OLE DB-Treiber für SQL Server fügt IColumnsRowset:: getcolumnrowset die Spalte. Diese Spalte gibt DBTYPE_I2 zurück, und sie ist für die Verwendung durch Microsoft reserviert. Die Informationen in dieser Spalte können in zukünftigen Versionen geändert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Schnittstellen &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

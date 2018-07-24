@@ -1,5 +1,5 @@
 ---
-title: Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler) | Microsoft Docs
+title: Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea73582b99e4b76edeacbb8e6da1ef68dbe5fec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076467"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057657"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33076467"
   
     -   **Standardanzahl von Wiedergabethreads** wird die Anzahl von Prozessorthreads kontrolliert, die während der Wiedergabe verwendet werden sollen. Durch eine höhere Anzahl von Threads wird die Wiedergabe schneller abgeschlossen. Die Serverleistung wird während der Wiedergabe jedoch beeinträchtigt. Die empfohlene Einstellung lautet **4**. Die folgende Tabelle enthält die verfügbaren Optionen:  
   
-        |value|Description|  
+        |value|und Beschreibung|  
         |-----------|-----------------|  
         |**2**|Minimalwert. Verwenden von zwei Threads für die Wiedergabe.|  
         |**4**|Standardwert.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33076467"
   
     -   Mit**Standardwartezeit für Systemüberwachung (Sek.)** wird die maximale Zeitspanne in Sekunden angegeben, über die ein Wiedergabethread einen anderen Prozess blockieren kann. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
-        |value|Description|  
+        |value|und Beschreibung|  
         |-----------|-----------------|  
         |**0**|Minimalwert. Die Einstellung **0** bedeutet, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] einen blockierenden Prozess in keinem Fall beendet.|  
         |**3600**|Standardwert. Lässt blockierende Prozesse zu, die nicht länger als **3600** Sekunden oder eine Stunde dauern.|  
@@ -65,7 +65,7 @@ ms.locfileid: "33076467"
   
     -   Mit**Standardabrufintervall für Systemüberwachung (Sek.)** wird die Frequenz festgelegt, mit der Wiedergabethreads für blockierende Prozesse abgerufen werden. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
-        |value|Description|  
+        |value|und Beschreibung|  
         |-----------|-----------------|  
         |**1**|Minimalwert. Eine Einstellung von **1** bedeutet, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] blockierende Prozesse einmal pro Sekunde abruft.|  
         |**60**|Standardwert. Abrufen von blockierenden Prozessen einmal pro Minute.|  

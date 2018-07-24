@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423180"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108362"
 ---
 # <a name="logon-triggers"></a>Logon-Trigger
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Logon-Trigger lösen gespeicherte Prozeduren als Antwort auf ein LOGON-Ereignis aus. Dieses Ereignis wird ausgelöst, wenn eine Benutzersitzung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt wird. Logon-Trigger werden ausgelöst, nachdem die Authentifizierungsphase der Anmeldung abgeschlossen ist und bevor die Benutzersitzung erstellt wird. Aus diesem Grund werden alle Meldungen, die aus dem Trigger stammen und normalerweise den Benutzer erreichen (z. B. Fehlermeldungen und Meldungen aus der PRINT-Anweisung) zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll umgeleitet. Logon-Trigger werden nicht ausgelöst, wenn die Authentifizierung nicht ausgeführt werden kann.  
   
  Sie können Logon-Trigger zum Überwachen und Steuern von Serversitzungen verwenden, beispielsweise durch Nachverfolgung der Anmeldeaktivität, Einschränkung von Anmeldungen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder durch Einschränkung der Anzahl der Sitzungen für einen bestimmten Anmeldenamen. Beispielsweise werden im folgenden Code durch den Logon-Trigger Anmeldeversuche für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgelehnt, die mit dem Anmeldenamen *login_test* initiiert werden, wenn mit diesem Anmeldenamen bereits drei Benutzersitzungen erstellt wurden.  

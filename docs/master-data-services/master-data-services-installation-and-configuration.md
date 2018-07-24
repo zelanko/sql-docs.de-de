@@ -15,12 +15,12 @@ caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eeea06688707eb143254d62bbfaf59ef5d7d800
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f26803afed7f38e00c87db06e1c3c6398d346b5e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335504"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980482"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -40,7 +40,7 @@ Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../incl
   
 > **Download**  
 >-   Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**, um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
+>-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**, um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
  
 > **Sie können keine MDS-Website erstellen?**
 >>Lesen Sie diesen Microsoft Support-Artikel für Anweisungen zum Lösen dieses Problems.

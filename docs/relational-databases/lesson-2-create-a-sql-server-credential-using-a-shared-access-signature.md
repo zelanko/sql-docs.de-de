@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942425"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983163"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ In dieser Lektion erstellen Sie Anmeldeinformationen zum Speichern der Sicherhei
 SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature für diesen Container gespeichert.  
   
 > [!NOTE]  
-> Wenn Sie eine SQL Server 2012 SP1 CU2 oder höhere Datenbank oder eine SQL Server 2014-Datenbank in diesem Azure-Container sichern möchten, können Sie die hier dokumentierte [veraltete Syntax](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) verwenden, um SQL Server-Anmeldeinformationen basierend auf Ihrem Schlüssel für das Speicherkonto zu erstellen.  
+> Wenn Sie eine SQL Server 2012 SP1 CU2 oder höhere Datenbank oder eine SQL Server 2014-Datenbank in diesem Azure-Container sichern möchten, können Sie die hier dokumentierte [veraltete Syntax](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) verwenden, um SQL Server-Anmeldeinformationen basierend auf Ihrem Schlüssel für das Speicherkonto zu erstellen.  
   
 ## <a name="create-sql-server-credential"></a>Erstellen von SQL Server-Anmeldeinformationen  
 Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  

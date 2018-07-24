@@ -1,5 +1,5 @@
 ---
-title: Banner-Element (Ssbdiagnose) | Microsoft Docs
+title: Banner-Element (Ssbdiagnose) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055115"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner-Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33076097"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|attribute|und Beschreibung|  
 |---------------|-----------------|  
 |**title**|Identifiziert das Hilfsprogramm, das die XML-Ausgabedatei von **ssbdiagnose** generiert hat.|  
 |**product**|Identifiziert das Produkt, das die XML-Ausgabedatei von **ssbdiagnose** generiert hat.|  
@@ -51,7 +51,7 @@ ms.locfileid: "33076097"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|und Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  

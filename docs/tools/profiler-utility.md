@@ -1,5 +1,5 @@
 ---
-title: Profiler-Hilfsprogramm | Microsoft Docs
+title: Profiler-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3bcd3dab5c08b7d8df8dec05004b7ee67bbb5a30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074258"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055168"
 ---
 # <a name="profiler-utility"></a>Profiler-Hilfsprogramm
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,6 +132,7 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
+ 
+  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

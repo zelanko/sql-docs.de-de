@@ -1,5 +1,5 @@
 ---
-title: Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen | Microsoft Docs
+title: Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c745679dcae70ebb1fbf5e5bbdd667bf839020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055072"
 ---
 # <a name="save-traces-and-trace-templates"></a>Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33076427"
 ## <a name="saving-traces"></a>Speichern von Ablaufverfolgungen  
  Speichern Sie die aufgezeichneten Ereignisdaten in einer Datei oder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle, wenn Sie die aufgezeichneten Daten später analysieren oder wiedergeben müssen. Verwenden Sie eine Ablaufverfolgungsdatei folgendermaßen:  
   
--   Verwenden Sie eine Ablaufverfolgungsdatei oder eine Ablaufverfolgungstabelle, um eine Arbeitsauslastung zu erstellen, die als Eingabe für den Datenbankmodul-Optimierungsratgeber verwendet wird.  
+-   Verwenden Sie eine Ablaufverfolgungsdatei oder eine Ablaufverfolgungstabelle, um eine Arbeitsauslastung zu erstellen, die als Eingabe für den Datenbankoptimierungsratgeber verwendet wird.  
   
 -   Verwenden Sie eine Ablaufverfolgungsdatei, um Ereignisse aufzuzeichnen und die Ablaufverfolgungsdatei an den Technischen Support zur Analyse zu senden.  
   
@@ -52,7 +52,8 @@ ms.locfileid: "33076427"
 >  Benutzer mit den Berechtigungen SHOWPLAN, ALTER TRACE oder VIEW SERVER STATE können Abfragen anzeigen, die in der Showplan-Ausgabe erfasst werden. Diese Abfragen enthalten möglicherweise vertrauliche Informationen wie Kennwörter. Daher wird empfohlen, diese Berechtigungen nur Benutzern zu gewähren, die zum Zugreifen auf vertrauliche Informationen berechtigt sind, z.B. Mitglieder der festen Datenbankrolle **db_owner** oder Mitglieder der festen Serverrolle **sysadmin** . Darüber hinaus wird empfohlen, Showplan-Dateien oder Ablaufverfolgungsdateien, die Ereignisse mit Bezug zu Showplan enthalten, nur an einem Speicherort zu speichern, für den das NTFS-Dateisystem verwendet wird, und den Zugriff auf Benutzer zu beschränken, die zum Zugreifen auf vertrauliche Informationen berechtigt sind.  
   
 ## <a name="saving-templates"></a>Speichern von Vorlagen  
- Die Vorlagendefinition einer Ablaufverfolgung enthält die Ereignisklassen, Datenspalten, Filter und alle anderen Eigenschaften (außer den aufgezeichneten Ereignisdaten), mit denen eine Ablaufverfolgung erstellt werden kann. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stellt vordefinierte Systemvorlagen für allgemeine Ablaufverfolgungstasks und für spezielle Tasks bereit, z. B. für das Erstellen einer Arbeitsauslastung, mit der der Datenbankoptimierungsratgeber den physischen Datenbankentwurf optimieren kann. Sie können auch benutzerdefinierte Vorlagen erstellen und speichern.  
+ Die Vorlagendefinition einer Ablaufverfolgung enthält die Ereignisklassen, Datenspalten, Filter und alle anderen Eigenschaften (außer den aufgezeichneten Ereignisdaten), mit denen eine Ablaufverfolgung erstellt werden kann. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stellt vordefinierte Systemvorlagen für allgemeine Ablaufverfolgungstasks und für spezielle Tasks bereit, z. B. für das Erstellen einer Arbeitsauslastung, mit der der Datenbankoptimierungsratgeber den physischen Datenbankentwurf optimieren kann. Sie können auch benutzerdefinierte Vorlagen erstellen und speichern.  
   
 ### <a name="importing-and-exporting-templates"></a>Importieren und Exportieren von Vorlagen  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Importieren und Exportieren von Vorlagen zwischen Servern. Beim Exportieren einer Vorlage wird eine Kopie einer vorhandenen Vorlage in ein von Ihnen angegebenes Verzeichnis verschoben. Beim Importieren einer Vorlage wird eine Kopie einer von Ihnen angegebenen Vorlage erstellt. Wenn diese Vorlagen in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angezeigt werden, können Sie sie durch die an den Vorlagennamen angefügte Zeichenfolge "(Benutzer)" von Systemvorlagen unterscheiden. Sie können eine vordefinierte Systemvorlage nicht überschreiben oder direkt ändern.  
