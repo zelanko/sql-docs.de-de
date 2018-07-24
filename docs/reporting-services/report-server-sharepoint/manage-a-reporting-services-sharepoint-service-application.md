@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028067"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971782"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028067"
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
   
-|Seite|Description|  
+|Seite|und Beschreibung|  
 |----------|-----------------|  
 |Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern Sie ggf. die Schlüsseldatei auf einem separaten Computer und nicht auf dem Computer, auf dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ausgeführt wird. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
 |Wiederherstellen von Verschlüsselungsschlüsseln|1.) Geben Sie den Speicherort der Schlüsseldatei in das Feld **Dateispeicherort** ein, oder navigieren Sie zum Speicherort.<br /><br /> 2.) Geben Sie im Feld **Kennwort** das Kennwort ein, mit dem die Verschlüsselungsdatei gesichert wurde.<br /><br /> 3.) Klicken Sie auf **OK**.|  

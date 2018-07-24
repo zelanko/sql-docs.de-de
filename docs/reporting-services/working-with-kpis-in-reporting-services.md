@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971702"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
@@ -57,7 +57,7 @@ Dies zeigt Ihnen den Bildschirm **Neue KPI** an.
   
 Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen Dataset verwenden. Wenn Sie eine neue KPI erstellen, wird diese mit zufälligen manuellen Daten aufgefüllt.  
   
-|Feld|Description|  
+|Feld|und Beschreibung|  
 |---|---|  
 |Wertformat|  Wird verwendet, um das Format des angezeigten Werts zu ändern.|   
 |value|Der für die KPI anzuzeigender Wert.|  

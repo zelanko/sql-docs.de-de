@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 37ee32082954a2fed7d3119d70a1ccfa208fdfcd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006860"
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  Wenn die gespeicherte Prozedur fehlschlägt, wird ein Fehler ausgelöst.  
   
 ## <a name="result-set"></a>Resultset  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

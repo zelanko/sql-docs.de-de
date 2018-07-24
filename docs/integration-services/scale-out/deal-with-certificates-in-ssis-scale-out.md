@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e602b89a44b5d26369973ef6f5ec8dc1f6d5c4eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405132"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130586"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Verwalten von Zertifikaten für SQL Server Integration Services Scale Out
 
@@ -45,12 +45,12 @@ Sie sollten das Scale Out-Masterzertifikat ändern, weil es abgelaufen sein kann
 Erstellen und installieren Sie mithilfe des folgenden Befehls ein neues SSL-Zertifikat auf dem Masterknoten:
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 Zum Beispiel:
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### <a name="2-bind-the-certificate-to-the-master-port"></a>2. Binden Sie das Zertifikat an den Masterport
@@ -92,7 +92,7 @@ A.  Installieren Sie das SSL-Clientzertifikat im Stammspeicher des lokalen Compu
 
 B.  Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts.
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) auf dem Workerknoten. Aktualisieren Sie **MasterHttpsCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
 
 c.  Starten Sie den Scale Out-Workerdienst neu.
 

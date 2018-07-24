@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968844"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
@@ -96,7 +96,7 @@ Die Datei colors.json für Reporting Services ist in zwei Hauptkategorien untert
   
 Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.  
   
-|Abschnitt|Description|  
+|Abschnitt|und Beschreibung|  
 |---|---|  
 |primary|Schaltflächen- und Hoverfarben.|  
 |Secondary|Titelleiste, Suchleiste, linkes Menü (sofern angezeigt) und die Textfarbe für diese Elemente|  

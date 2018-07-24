@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012857"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978229"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ In der folgenden Tabelle sind SQL Server-Komponenten aufgeführt, und es wird an
 
 |Prozessname   |Ausführbares Programm |Verwenden von mehr als 64 CPUs |  
 |----------|----------|----------|  
-|SQL Server-Datenbank-Engine |Sqlserver.exe  |ja |  
+|SQL Server-Datenbank-Engine |Sqlserver.exe  |Benutzerkontensteuerung |  
 |Reporting Services |Rs.exe |nein |  
 |Analysis Services  |As.exe |nein |  
 |Integration Services   |Is.exe |nein |  
 |Service Broker |Sb.exe |nein |  
 |Volltextsuche   |Fts.exe    |nein |  
 |SQL Server-Agent   |Sqlagent.exe   |nein |  
-|SQL Server Management Studio   |Ssms.exe   |nein |  
+|SQL Server Management Studio   |Ssms.exe   |nein |  
 |SQL Server-Setup   |Setup.exe  |nein |  
 
 

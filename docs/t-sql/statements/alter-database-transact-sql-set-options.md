@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04b95a4a2249f1b5eb80d28b43e082a75e8b9ffd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792161"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946994"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 
@@ -1105,25 +1105,25 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
   
 |Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|ja|ja|  
-|\<db_user_access_option>|ja|ja|  
-|\<db_update_option>|ja|ja|  
-|\<delayed_durability_option>|ja|ja|  
-|\<external_access_option>|ja|nein|  
-|\<cursor_option>|ja|nein|  
-|\<auto_option>|ja|nein|  
-|\<sql_option>|ja|nein|  
-|\<recovery_option>|ja|nein|  
-|\<target_recovery_time_option>|nein|ja|  
+|\<db_state_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<db_user_access_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<db_update_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<delayed_durability_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<external_access_option>|Benutzerkontensteuerung|nein|  
+|\<cursor_option>|Benutzerkontensteuerung|nein|  
+|\<auto_option>|Benutzerkontensteuerung|nein|  
+|\<sql_option>|Benutzerkontensteuerung|nein|  
+|\<recovery_option>|Benutzerkontensteuerung|nein|  
+|\<target_recovery_time_option>|nein|Benutzerkontensteuerung|  
 |\<database_mirroring_option>|nein|nein|  
 |ALLOW_SNAPSHOT_ISOLATION|nein|nein|  
-|READ_COMMITTED_SNAPSHOT|nein|ja|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|ja|ja|  
-|\<service_broker_option>|ja|nein|  
-|DATE_CORRELATION_OPTIMIZATION|ja|ja|  
-|\<parameterization_option>|ja|ja|  
-|\<change_tracking_option>|ja|ja|  
-|\<db_encryption_option>|ja|nein|  
+|READ_COMMITTED_SNAPSHOT|nein|Benutzerkontensteuerung|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<service_broker_option>|Benutzerkontensteuerung|nein|  
+|DATE_CORRELATION_OPTIMIZATION|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<parameterization_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<change_tracking_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<db_encryption_option>|Benutzerkontensteuerung|nein|  
   
 Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird:  
   
@@ -1867,20 +1867,20 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
   
 |Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|ja|nein|  
-|\<change_tracking_option>|ja|ja|  
-|\<cursor_option>|ja|nein|  
-|\<db_encryption_option>|ja|nein|  
-|\<db_update_option>|ja|ja|  
-|\<db_user_access_option>|ja|ja|  
-|\<delayed_durability_option>|ja|ja|  
-|\<parameterization_option>|ja|ja|  
+|\<auto_option>|Benutzerkontensteuerung|nein|  
+|\<change_tracking_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<cursor_option>|Benutzerkontensteuerung|nein|  
+|\<db_encryption_option>|Benutzerkontensteuerung|nein|  
+|\<db_update_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<db_user_access_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<delayed_durability_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<parameterization_option>|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |ALLOW_SNAPSHOT_ISOLATION|nein|nein|  
-|READ_COMMITTED_SNAPSHOT|nein|ja|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|ja|ja|  
-|DATE_CORRELATION_OPTIMIZATION|ja|ja|  
-|\<sql_option>|ja|nein|  
-|\<target_recovery_time_option>|nein|ja|  
+|READ_COMMITTED_SNAPSHOT|nein|Benutzerkontensteuerung|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|DATE_CORRELATION_OPTIMIZATION|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|\<sql_option>|Benutzerkontensteuerung|nein|  
+|\<target_recovery_time_option>|nein|Benutzerkontensteuerung|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -1994,7 +1994,7 @@ Kompatibilitätsgrade sind `SET`-Optionen, die jedoch unter [ALTER DATABASE-Komp
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2003,9 +2003,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2047,12 +2045,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2100,14 +2092,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
