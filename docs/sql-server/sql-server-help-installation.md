@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926101"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036018"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
@@ -94,7 +94,7 @@ SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterst�
 |DAX-Referenz (Data Analysis Expressions) | DAX-Referenz (Data Analysis Expressions)|
 |DMX-Referenz (Data Mining-Erweiterungen) | DMX-Referenz (Data Mining-Erweiterungen)|
 |Leitfäden für Entwickler für SQL Server | SQL Server Developer-Referenz|
-|Hier können Sie SQL Server Management Studio herunterladen. | SQL Server Management Studio|
+|Hier können Sie SQL Server Management Studio herunterladen. | SQL Server Management Studio|
 |Erste Schritte mit Machine Learning in SQL Server | Microsoft Machine Learning Services|
 |Power Query M-Referenz | Power Query M-Referenz|
 |SQL Server-Treiber | Treiber für die SQL Server-Verbindung|

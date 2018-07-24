@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 2baeb6b5b8a491fe906ad0f15de9b86b2d226508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023117"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988854"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
@@ -48,10 +48,10 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|ja|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
-||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|ja|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Benutzerkontensteuerung|nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
   
  *Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), SAML (Secure Application Markup Language)-Token, sonstige Identitätsanbieter oder eine Kombination aus mehreren der oben aufgeführten Authentifizierungsanbieter.  
   
@@ -59,9 +59,9 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 ||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|nein|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
 ||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|nein|nein<br /><br /> Formularbasierte und anspruchsbasierte Authentifizierung werden bei SharePoint-Remotelisten nicht unterstützt.|  
   
  *Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), SAML (Secure Application Markup Language)-Token, sonstige Identitätsanbieter oder eine Kombination aus mehreren der oben aufgeführten Authentifizierungsanbieter.  
