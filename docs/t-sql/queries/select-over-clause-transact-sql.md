@@ -133,7 +133,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  ROWS | RANGE  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Grenzt die Zeilen innerhalb der Partition weiter ein, indem Start- und Endpunkte innerhalb der Partition angegeben werden. Dies erfolgt durch die Angabe einer Reihe von Zeilen unter Berücksichtigung aktuellen Zeile – entweder anhand der logischen oder physischen Zuordnung. Die physische Zuordnung wird erreicht, indem die ROWS-Klausel verwendet wird.  
+ Grenzt die Zeilen innerhalb der Partition weiter ein, indem Start- und Endpunkte innerhalb der Partition angegeben werden. Dies erfolgt durch die Angabe einer Reihe von Zeilen unter Berücksichtigung der aktuellen Zeile – entweder anhand der logischen oder physischen Zuordnung. Die physische Zuordnung wird erreicht, indem die ROWS-Klausel verwendet wird.  
   
  Die ROWS-Klausel schränkt die Zeilen innerhalb einer Partition ein, indem eine feste Anzahl an Zeilen angegeben wird, die der aktuellen Zeile vorausgehen oder dieser folgen. Alternativ schränkt die RANGE-Klausel die Zeilen innerhalb einer Partition logisch ein, indem eine Reihe von Werten unter Berücksichtigung des Werts der aktuellen Zeile angegeben wird. Vorausgehende und folgende Zeilen werden auf Grundlage der Reihenfolge in der ORDER BY-Klausel definiert. Der Fensterrahmen "RANGE … CURRENT ROW …“ beinhaltet alle Zeilen, die im ORDER BY-Ausdruck über die gleichen Werte wie die aktuelle Zeile verfügen. Beispielsweise bedeutet ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, dass das Zeilenfenster, über das die Funktion ausgeführt wird, drei Zeilen umfasst – beginnend mit zwei vorausgehenden Zeilen bis zur und einschließlich der aktuellen Zeile.  
   
@@ -181,7 +181,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 Bei Angabe von ROWS/RANGE und Verwendung von \<window frame preceding> für \<window frame extent> (kurze Syntax) wird diese Spezifikation für den Startgrenzpunkt des Fensterrahmens und CURRENT ROW für den Endgrenzpunkt verwendet. Beispielsweise ist "ROWS 5 PRECEDING" gleich "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
-> Wenn ORDER BY nicht angegeben ist, wird die ganze Partition für einen Fensterrahmen verwendet. Dies gilt für nur Funktionen, die keine ORDER BY-Klausel erfordern. Wenn ROWS/RANGE nicht angegeben und ORDER BY angegeben ist, wird RANGE UNBOUNDED PRECEDING AND CURRENT ROW für Fensterrahmen als Standard verwendet. Dies gilt für nur Funktionen, die eine optionale ROWS/RANGE-Spezifikation akzeptieren. Beispielsweise können Rangfolgefunktionen ROWS/RANGE nicht akzeptieren. Daher wird dieser Fensterrahmen nicht übernommen, obwohl ORDER BY angegeben und ROWS/RANGE nicht angegeben ist.  
+> Wenn ORDER BY nicht angegeben ist, wird die ganze Partition für einen Fensterrahmen verwendet. Dies gilt nur für Funktionen, die keine ORDER BY-Klausel erfordern. Wenn ROWS/RANGE nicht angegeben und ORDER BY angegeben ist, wird RANGE UNBOUNDED PRECEDING AND CURRENT ROW für Fensterrahmen als Standard verwendet. Dies gilt nur für Funktionen, die eine optionale ROWS/RANGE-Spezifikation akzeptieren. Beispielsweise können Rangfolgefunktionen ROWS/RANGE nicht akzeptieren. Daher wird dieser Fensterrahmen nicht übernommen, obwohl ORDER BY angegeben und ROWS/RANGE nicht angegeben ist.  
     
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Die OVER-Klausel kann nicht mit der CHECKSUM-Aggregatfunktion verwendet werden.  
