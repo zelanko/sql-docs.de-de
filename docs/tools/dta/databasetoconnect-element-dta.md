@@ -1,5 +1,5 @@
 ---
-title: DatabaseToConnect-Element (DTA) | Microsoft Docs
+title: DatabaseToConnect-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca44a74b5499eea7491741be33b41fa543b685ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048798"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33069862"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|und Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
@@ -53,7 +53,7 @@ ms.locfileid: "33069862"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Untergeordnete Elemente**|InclusionThresholdSetting|  
+|**Untergeordnete Elemente**|None|  
   
 ## <a name="remarks"></a>Remarks  
  Mit **DatabaseToConnect** können Sie den Namen der ersten Datenbank angeben, mit der der Datenbankoptimierungsratgeber beim Starten der Optimierungssitzung eine Verbindung herstellen soll. Sie können mithilfe dieses Elements nur eine Datenbank angeben. Wenn mehrere Datenbanknamen angegeben werden, gibt der Datenbankoptimierungsratgeber einen Fehler zurück.  
@@ -62,6 +62,7 @@ ms.locfileid: "33069862"
  Ein Beispiel für die Verwendung finden Sie unter [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ 
+  [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

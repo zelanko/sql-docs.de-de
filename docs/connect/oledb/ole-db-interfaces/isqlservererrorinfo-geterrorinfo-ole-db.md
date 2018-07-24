@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft-Dokumentation'
 description: "'ISQLServerErrorInfo::GetErrorInfo' (OLE DB)"
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,21 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 936924540c5c55f8e333a64d794e54af098f7279
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 124ed1cb5b91be80e9c5cec27f5dac8927cd2db0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690193"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106236"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>'ISQLServerErrorInfo::GetErrorInfo' (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Gibt einen Zeiger auf einen OLE DB-Treiber für SQL Server-SSERRORINFO Struktur mit den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fehlerdetails.  
+  Gibt einen Zeiger auf eine OLE DB-Treiber für SQL Server-SSERRORINFO, die Struktur enthält die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fehlerdetails.  
   
- Der OLE DB-Treiber für SQL Server definiert die **ISQLServerErrorInfo** fehlerschnittstelle. Diese Schnittstelle gibt Details zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fehler, einschließlich seines Schweregrads und Status.  
+ Der OLE DB-Treiber für SQL Server definiert die **ISQLServerErrorInfo** fehlerschnittstelle. Diese Schnittstelle gibt Details zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehler zurück, einschließlich seines Schweregrads und Status.  
 
   
 ## <a name="syntax"></a>Syntax  
@@ -48,10 +48,10 @@ HRESULT GetErrorInfo(
   
 ## <a name="arguments"></a>Argumente  
  *ppSSErrorInfo*[out]  
- Ein Zeiger auf eine SSERRORINFO-Struktur. Wenn die Methode fehlschlägt, oder es ist keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Fehler Verknüpfte Informationen der Anbieter nicht Speicher und stellt sicher, dass die *PpSSErrorInfo* Argument ist ein null-Zeiger in der Ausgabe.  
+ Ein Zeiger auf eine SSERRORINFO-Struktur. Wenn die Methode fehlschlägt oder dem Fehler keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Informationen zugeordnet sind, teilt der Anbieter keinen Speicher zu und stellt sicher, dass das *ppSSErrorInfo* -Argument bei der Ausgabe ein NULL-Zeiger ist.  
   
  *ppErrorStrings*[out]  
- Ein Zeiger auf einen Unicode-Zeichenfolgenzeiger. Wenn die Methode fehlschlägt, oder es ist keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Informationen, die mit einem Fehler verknüpft sind, der Anbieter nicht Speicher und stellt sicher, dass die *PpErrorStrings* Argument ist ein null-Zeiger in der Ausgabe. Durch die Freigabe des *ppErrorStrings* -Arguments mit der **IMalloc::Free** -Methode werden die drei einzelnen Zeichenfolgenelemente der zurückgegebenen SSERRORINFO-Struktur freigegeben, da der Speicher in einem Block zugeteilt wird.  
+ Ein Zeiger auf einen Unicode-Zeichenfolgenzeiger. Wenn die Methode fehlschlägt oder dem Fehler keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Informationen zugeordnet sind, teilt der Anbieter keinen Speicher zu und stellt sicher, dass das *ppErrorStrings* -Argument bei der Ausgabe ein NULL-Zeiger ist. Durch die Freigabe des *ppErrorStrings* -Arguments mit der **IMalloc::Free** -Methode werden die drei einzelnen Zeichenfolgenelemente der zurückgegebenen SSERRORINFO-Struktur freigegeben, da der Speicher in einem Block zugeteilt wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -63,8 +63,8 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  Der OLE DB-Treiber für SQL Server konnte nicht genügend Arbeitsspeicher zum Ausführen der Anforderung zuordnen.  
   
-## <a name="remarks"></a>Hinweise  
- Der OLE DB-Treiber für SQL Server belegt Speicher für die SSERRORINFO- und die OLECHAR-Zeichenfolgen, die durch die Zeiger, die vom Consumer übergeben werden zurückgegeben. Der Consumer muss diesen Arbeitsspeicher mithilfe der **IMalloc::Free** -Methode freigeben, wenn er keinen Zugriff auf die Fehlerdaten mehr benötigt.  
+## <a name="remarks"></a>Remarks  
+ Der  Native Client OLE DB-Anbieter teilt Arbeitsspeicher für die SSERRORINFO- und die OLECHAR-Zeichenfolgen zu, die durch die Zeiger zurückgegeben werden, die vom Consumer übergeben werden. Der Consumer muss diesen Arbeitsspeicher mithilfe der **IMalloc::Free** -Methode freigeben, wenn er keinen Zugriff auf die Fehlerdaten mehr benötigt.  
   
  Die SSERRORINFO-Struktur ist folgendermaßen definiert:  
   
@@ -82,20 +82,20 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|Description|  
+|Member|und Beschreibung|  
 |------------|-----------------|  
-|*pwszMessage*|Die Fehlermeldung aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die Meldung wird durch die **IErrorInfo::GetDescription** -Methode zurückgegeben.|  
-|*pwszServer*|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem der Fehler auftrat.|  
-|*pwszProcedure*|Der Name der gespeicherten Prozedur, die den Fehler generiert, wenn der Fehler in einer gespeicherten Prozedur aufgetreten ist; anderenfalls ist es eine leere Zeichenfolge.|  
-|*lNative*|Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fehlernummer. Die Fehlernummer ist mit der im *plNativeError* -Parameter der **ISQLErrorInfo::GetSQLInfo** -Methode zurückgegebenen identisch.|  
-|*bState*|Der Zustand des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlers.|  
-|*bClass*|Der Schweregrad des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlers.|  
-|*wLineNumber*|Gegebenenfalls die Zeile eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherten Prozedur, die die Fehlermeldung generiert hat. Wenn keine Prozedur betroffen ist, lautet der Standardwert 1.|  
+|pwszMessage|Die Fehlermeldung aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die Meldung wird durch die **IErrorInfo::GetDescription** -Methode zurückgegeben.|  
+|pwszServer|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , auf der der Fehler aufgetreten ist|  
+|pwszProcedure|Der Name der gespeicherten Prozedur, die den Fehler generiert, wenn der Fehler in einer gespeicherten Prozedur aufgetreten ist; anderenfalls ist es eine leere Zeichenfolge.|  
+|lNative|Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehlernummer. Die Fehlernummer ist mit der im *plNativeError* -Parameter der **ISQLErrorInfo::GetSQLInfo** -Methode zurückgegebenen identisch.|  
+|bState|Der Zustand des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlers.|  
+|bClass|Der Schweregrad des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlers.|  
+|wLineNumber|Das ist gegebenenfalls die Zeile einer gespeicherten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozedur, die die Fehlermeldung generiert hat. Wenn keine Prozedur betroffen ist, lautet der Standardwert 1.|  
   
  Zeiger auf die Strukturverweisadressen in der Zeichenfolge, die im *ppErrorStrings* -Argument zurückgegeben wird  
   
-## <a name="see-also"></a>Siehe auch  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ISQLServerErrorInfo &#40;OLE-DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

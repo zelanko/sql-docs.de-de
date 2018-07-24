@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052390"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
 
 ##  <a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Transact-SQL
-|Katalogsicht oder dynamische Verwaltungssicht|Beschreibung|  
+|Katalogsicht oder dynamische Verwaltungssicht|und Beschreibung|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Gibt eine Zeile für jeden Verweis zwischen Volltextkatalog und Volltextindex zurück.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Enthält eine Zeile für jede Spalte, die Teil eines Volltextindexes ist.|  
@@ -76,11 +76,11 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
 5.  Im Bereich **Seite auswählen** können Sie eine der folgenden Seiten auswählen:  
   
-    |Seite|Beschreibung|  
+    |Seite|und Beschreibung|  
     |----------|-----------------|  
-    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite „Spalten“&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
-    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
+    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|Beschreibung|Funktion|  
+|Eigenschaft|und Beschreibung|Funktion|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f736a1bd51628f5a03dc2fb29b53b1a3a8eb3b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025587"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049200"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Verbinden des Webparts „Filter“ oder „Dokumente“ mit einem Webpart des Berichts-Viewers von Reporting Services
 

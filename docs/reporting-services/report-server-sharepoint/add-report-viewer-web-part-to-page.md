@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049128"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 

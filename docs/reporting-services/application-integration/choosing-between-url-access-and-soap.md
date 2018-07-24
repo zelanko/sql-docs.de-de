@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: dbb294c04f82661c2f7a1ebd736ec0ad2ceb143f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049238"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Entscheidung zwischen URL-Zugriff und SOAP in Reporting Services
 

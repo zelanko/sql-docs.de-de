@@ -1,5 +1,5 @@
 ---
-title: Datei-Element (DTA) | Microsoft Docs
+title: File-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce2d29b97757b054cd66a245644f37122d355d26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048368"
 ---
 # <a name="file-element-dta"></a>File-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33069717"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|und Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Mit dem **string** -Datentyp geben Sie den Verzeichnispfad zu der Arbeitsauslastungsdatei an. Zum Beispiel:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Beachten Sie, dass der Grenzwert für die Länge vom Server durchgesetzt wird.|  
 |**Standardwert**|Keine.|  
@@ -61,6 +61,7 @@ ms.locfileid: "33069717"
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine einfache XML-Eingabedatei &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ 
+  [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

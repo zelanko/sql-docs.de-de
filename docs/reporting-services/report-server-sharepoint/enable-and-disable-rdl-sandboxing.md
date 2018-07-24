@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049148"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus
 
@@ -71,7 +71,7 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
 
  Die folgende Tabelle enthält Informationen zu Konfigurationseinstellungen. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden.  
   
-|Einstellung|Description|  
+|Einstellung|und Beschreibung|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
 |**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  

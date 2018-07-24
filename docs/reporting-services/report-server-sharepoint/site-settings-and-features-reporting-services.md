@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053338"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Einstellungen und Funktionen für Reporting Services-Websites (SharePoint-Modus)
 
@@ -31,7 +31,7 @@ Der SharePoint-Modus von Reporting Services bietet mehrere benutzerdefinierte Fu
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
-|Siteeinstellung|Description|  
+|Siteeinstellung|und Beschreibung|  
 |------------------|-----------------|  
 |Websiteeinstellungen für Reporting Services|In diesem Thema beschriebene websiteweite Einstellungen.|  
 |Datenwarnungen verwalten|Verwaltung der Datenwarnungsfunktion.|  
@@ -45,7 +45,7 @@ Der SharePoint-Modus von Reporting Services bietet mehrere benutzerdefinierte Fu
   
 ## <a name="options-for-reporting-services-site-settings"></a>Optionen für Reporting Services-Websiteeinstellungen
   
-|Option|Description|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |**Download des RSClientPrint-ActiveX-Steuerelements aktivieren**|Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Weitere Informationen zum Steuerelement finden Sie unter [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Remotefehler im lokalen Modus aktivieren**|Zeigen Sie bei der Ausführung im lokalen Modus ausführliche Fehlermeldungen auf Remotecomputern an, oder blenden Sie sie aus. Wenn ungefähr folgende Fehlermeldung angezeigt wird, ist die Aktivierung von Remotefehlern möglicherweise nützlich:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

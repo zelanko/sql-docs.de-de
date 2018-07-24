@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028587"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052181"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028587"
   
  Die benutzerdefinierten Eigenschaften des Berichts-Viewer-Webparts werden nachfolgend aufgelistet.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |Bericht|Ein vollqualifizierter Pfad für einen Bericht, der sich auf der aktuellen SharePoint-Website oder auf einer Website innerhalb der gleichen Webanwendung oder Farm befindet. Optimale Ergebnisse beim Festlegen zusätzlicher Eigenschaften erzielen Sie, indem Sie nach dem Angeben der Berichts-URLs auf Anwenden klicken.|  
 |Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind **_Top**, **_Blank**und **_Self**. Mit **_Top** wird das aktuelle Fenster verwendet, mit **_Blank** wird das Dokument in einem neuen Browserfenster geladen, und mit **_Self** wird das Dokument im aktuellen Frame geöffnet. Obwohl **_Parent** ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  

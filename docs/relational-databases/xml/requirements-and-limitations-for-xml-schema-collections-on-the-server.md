@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cfece11f3cec121dcdd56a3918f3bdafc7bbd05e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017207"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049258"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "33017207"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Beschreibt kanonische Formen und Musterbeschränkungen.|  
 |[Platzhalterkomponenten und Inhaltsüberprüfung](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Beschreibt die Einschränkungen bei der Verwendung von Platzhalterzeichen, lax-Überprüfung und anyType-Elementen mit XML-Schemaauflistungen.|  

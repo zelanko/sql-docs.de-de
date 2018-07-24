@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046208"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974215"
   
  Ob Filter verfügbar sind, ist von der Datenspalte abhängig. Einige Datenspalten können nicht gefiltert werden. Filterbare Datenspalten können nur durch bestimmte relationale Operatoren gefiltert werden, wie Sie der folgenden Tabelle entnehmen können.  
   
-|Relationaler Operator|Operatorsymbol|Description|  
+|Relationaler Operator|Operatorsymbol|und Beschreibung|  
 |-------------------------|---------------------|-----------------|  
 |Wie|Wie|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
 |Nicht wie|Nicht wie|Die Ereignisablaufverfolgungsdaten dürfen nicht dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  

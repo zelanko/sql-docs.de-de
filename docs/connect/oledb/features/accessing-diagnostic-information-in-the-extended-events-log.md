@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse | Microsoft Docs
+title: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
 description: Ablaufverfolgung von OLE DB-Treiber für SQL Server und den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,19 +14,19 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 57103074c0dd9453678e115bafcdfabf2270d1ba
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 14d23bfc0763a393262e5bc7219c2ac729d45682
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611655"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105956"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB-Treiber für SQL-Servers samt Daten Datenzugriffs-Ablaufverfolgung ([Datenzugriffsablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805)) wurden aktualisiert, um Diagnoseinformationen zum Verbindungsfehler aus dem konnektivitätsringpuffer abrufen zu vereinfachen und Leistung der Anwendungsinformationen aus dem Protokoll für erweiterte Ereignisse.  
+  Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden der [ Native Client und die Datenzugriffs-Ablaufverfolgung (](http://go.microsoft.com/fwlink/?LinkId=125805)Datenzugriffs-Ablaufverfolgung) aktualisiert, um das Abrufen von Diagnoseinformationen über Verbindungsfehler vom Verbindungsringpuffer sowie von Informationen zur Anwendungsleistung aus dem Protokoll für erweiterte Ereignisse zu erleichtern.  
   
  Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [View Event Session Data](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md). 
 
@@ -34,7 +34,7 @@ ms.locfileid: "35611655"
 > [!NOTE]  
 >  Diese Funktion ist nur für Problembehandlung und Diagnosezwecke vorgesehen und ist möglicherweise nicht geeignet zu Überwachungs oder Sicherheitszwecken.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Für Verbindungsvorgänge, OLE DB-Treiber für SQL Server sendet einen Client Verbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den Konnektivitätsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](http://go.microsoft.com/fwlink/?LinkId=207752)), das Feld **ClientConnectionID** suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie können auch die Clientverbindungs-ID im erweiterten Ereignisse-Ausgabeziel suchen, wenn Ereignissen in einer Sitzung für erweiterte Ereignisse die **client_connection_id** -Aktion hinzugefügt wird. Sie können die Datenzugriffs-Ablaufverfolgung aktivieren, den Verbindungsbefehl erneut ausführen und das **ClientConnectionID** -Feld in der Datenzugriffs-Ablaufverfolgung für einen fehlgeschlagenen Vorgang beobachten, wenn Sie weitere Hilfe bei der Diagnose benötigen.  
    
   
@@ -54,7 +54,7 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="control-file"></a>Steuerelementdatei  
- Der Inhalt des OLE DB-Treiber für SQL Server-Steuerungsdatei (ctrl.guid) ist:  
+ Der Inhalt der der OLE DB-Treiber für SQL Server-Steuerelementdatei (ctrl.guid) ist:  
   
 ```  
 {8B98D3F2-3CC6-0B9C-6651-9649CCE5C752}  0x630ff  0   MSDADIAG.ETW
@@ -62,7 +62,7 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="mof-file"></a>MOF-Datei  
- Der Inhalt des OLE DB-Treiber für SQL Server-Mof-Datei lautet:  
+ Der Inhalt der der OLE DB-Treiber für SQL Server-Mof-Datei ist:  
   
 ```  
 #pragma classflags("forceupdate")  
@@ -219,7 +219,7 @@ class Bid2Etw_MSOLEDBSQL_1_Trace_TextW : Bid2Etw_MSOLEDBSQL_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Behandlung von Fehlern](../../oledb/ole-db-errors/errors.md)  
   
   
