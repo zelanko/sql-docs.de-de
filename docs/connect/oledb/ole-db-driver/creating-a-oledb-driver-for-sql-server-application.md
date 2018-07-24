@@ -1,6 +1,6 @@
 ---
-title: Erstellen einen OLE DB-Treiber für SQL Server-Anwendung | Microsoft Docs
-description: Erstellen einen OLE DB-Treiber für SQL Server-Anwendung
+title: Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung
+description: Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0b995fb5171f8eda41045751bad2932e9afa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665310"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109462"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Erstellen einen OLE DB-Treiber für SQL Server-Anwendung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Erstellen einen OLE DB-Treiber für SQL Server-Anwendung umfasst folgende Schritte aus:  
+  Erstellen einen OLE DB-Treiber für SQL Server-Anwendung umfasst die folgenden Schritte aus:  
   
-1.  Eine Verbindung mit einer Datenquelle herzustellen.  
+1.  Herstellen einer Verbindung zu einer Datenquelle  
   
-2.  Ausführen eines Befehls an.  
+2.  Ausführen eines Befehls  
   
 3.  Verarbeiten der Ergebnisse  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35665310"
   
 -   [Verwenden der OUTPUT-Klausel mit OLE DB im OLE DB-Treiber für SQL Server](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   
