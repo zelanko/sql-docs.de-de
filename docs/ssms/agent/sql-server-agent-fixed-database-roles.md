@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 19c4b994355cc4a4578342675f9f02c78ccf2bd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971822"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentUserRole** -B
   
 |Aktion|Operatoren|Lokale Aufträge<br /><br />(nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br />(nur Zeitpläne mit Besitzern)|Proxys|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Erstellen/Ändern/Löschen|nein|ja<br /><br />Der Auftragsbesitz kann nicht geändert werden.|ja|nein|  
-|Liste anzeigen (aufzählen)|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
-|Aktivieren/Deaktivieren|nein|ja|ja|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|ja|ja|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|nein|Benutzerkontensteuerung<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Benutzerkontensteuerung|nein|  
+|Liste anzeigen (aufzählen)|Benutzerkontensteuerung<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
+|Aktivieren/Deaktivieren|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|  
+|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|nein<br /><br />Den Mitgliedern von **SQLAgentUserRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|ja|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole-Berechtigungen  
 **SQLAgentReaderRole** enthält alle **SQLAgentUserRole** -Berechtigungen sowie die Berechtigungen zum Anzeigen der Liste verfügbarer Multiserveraufträge, ihrer Eigenschaften und ihres Verlaufs. Die Mitglieder dieser Rolle können auch die Liste aller verfügbaren Aufträge und Auftragszeitpläne sowie ihre Eigenschaften anzeigen, nicht nur die Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Die Mitglieder von**SQLAgentReaderRole** können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ist für die Mitglieder von **SQLAgentReaderRole** sichtbar.  
@@ -81,12 +81,12 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentReaderRole** 
 |Aktion|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Erstellen/Ändern/Löschen|nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja|ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
+|Liste anzeigen (aufzählen)|Benutzerkontensteuerung<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
 |Aktivieren/Deaktivieren|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|ja|ja|ja|nein|  
+|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
 |Eigenschaften bearbeiten|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|nein<br /><br />Den Mitgliedern von **SQLAgentReaderRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
@@ -105,13 +105,13 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentOperatorRole*
 |Aktion|Warnungen|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Erstellen/Ändern/Löschen|nein|nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|ja|ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|ja|ja|ja|ja|  
-|Aktivieren/Deaktivieren|nein|nein|ja<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|nein|ja<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
-|Eigenschaften anzeigen|ja|ja|ja|ja|ja|ja|  
+|Liste anzeigen (aufzählen)|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Aktivieren/Deaktivieren|nein|nein|Benutzerkontensteuerung<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|nein|Benutzerkontensteuerung<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
+|Eigenschaften anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |Eigenschaften bearbeiten|nein|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
 ## <a name="assigning-users-multiple-roles"></a>Zuweisen von mehreren Rollen an Benutzer  

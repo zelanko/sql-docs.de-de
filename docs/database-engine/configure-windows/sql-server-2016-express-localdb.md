@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870155"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984502"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
 
@@ -40,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Ex
   
 -   Um SQL Server 2016 Express herunterzuladen und zu installieren, navigieren Sie zu der Seite **[SQL Server Downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das **LocalDB** Paket aus. 
   
--   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bereits installiert ist.  
   
 ## <a name="install-localdb"></a>Installieren von LocalDB  
  Installieren Sie **LocalDB** über den Installations-Assistenten oder mithilfe des SqlLocalDB.msi-Programms. **LocalDB** ist eine Option bei der Installation von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -49,7 +49,7 @@ Wählen Sie während der Installation **LocalDB** auf der Seite **Funktionsauswa
 
  Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** wird mit dem Hilfsprogramm **SqlLocalDB.exe** verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Benutzerinstanzfeatures verwendet werden. 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>und Beschreibung  
  Das **LocalDB** -Setupprogramm installiert mithilfe des SqlLocalDB.msi-Programms die notwendigen Dateien auf dem Computer. Nach der Installation ist **LocalDB** eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert. Dieser Pfad ist normalerweise verborgen. Beispiel: **C:\Users\\<Benutzer\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner **C:\Users\\<Benutzer\>\Documents\\**.  
   
  Weitere Informationen zum Einbeziehen von **LocalDB** in eine Anwendung finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Dokumentation [Übersicht über lokale Daten](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) unter [Exemplarische Vorgehensweise: Erstellen einer SQL Server-LocalDB-Datenbank](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) und unter [Exemplarische Vorgehensweise: Herstellen einer Verbindung zu Daten in einer SQL Server-LocalDB-Datenbank (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
