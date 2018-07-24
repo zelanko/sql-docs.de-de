@@ -14,11 +14,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: d51961c8c06c0b7769ef8896b92ad1ad0633e0cf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36259532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983806"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,9 +79,9 @@ JSON_MODIFY versieht alle Sonderzeichen im neuen Wert mit Escapezeichen, wenn de
   
 |Vorhandener Wert|Pfad ist vorhanden|Lax-Modus|Strict-Modus|  
 |--------------------|-----------------|--------------|-----------------|  
-|Nicht NULL|ja|Vorhandenen Wert aktualisieren.|Vorhandenen Wert aktualisieren.|  
+|Nicht NULL|Benutzerkontensteuerung|Vorhandenen Wert aktualisieren.|Vorhandenen Wert aktualisieren.|  
 |Nicht NULL|nein|Versucht, ein neues Schlüssel-Wert-Paar für den angegebenen Pfad zu erstellen.<br /><br /> Dies kann fehlschlagen. Wenn Sie beispielsweise den Pfad `$.user.setting.theme` angeben, fügt JSON_MODIFY den Schlüssel `theme` nicht ein, wenn die `$.user`- oder `$.user.settings`-Objekte nicht vorhanden sind, oder wenn Einstellungen ein Array oder ein Skalarwert sind.|Fehler – INVALID_PROPERTY|  
-|NULL|ja|Löscht die vorhandene Eigenschaft.|Legt den vorhandenen Wert auf NULL fest.|  
+|NULL|Benutzerkontensteuerung|Löscht die vorhandene Eigenschaft.|Legt den vorhandenen Wert auf NULL fest.|  
 |NULL|nein|Keine Aktion. Das erste Argument wird als Ergebnis zurückgegeben.|Fehler – INVALID_PROPERTY|  
   
  Im Lax-Modus versucht JSON_MODIFY, ein neues Schlüssel-Wert-Paar zu erstellen, aber in einigen Fällen schlägt dies möglicherweise fehl.  

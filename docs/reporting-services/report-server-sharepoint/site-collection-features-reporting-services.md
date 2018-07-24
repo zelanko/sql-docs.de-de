@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982412"
 ---
 # <a name="reporting-services-site-collection-features"></a>Funktionen zur Reporting Services-Websitesammlung
 
@@ -35,7 +35,7 @@ Der SharePoint-Modus von Reporting Services umfasst drei Funktionen für SharePo
 
  In der folgenden Tabelle sind die Funktionen der Websitesammlungen von Reporting Services beschrieben.  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |-------------|-----------------|  
 |**Funktion für die Berichtsserver-Zentraladministration**|Aktiviert Funktionen zum Verwalten der Integration in einen Reporting Services-Berichtsserver. Diese Funktion ist nur unter der Websitesammlung-Funktion der SharePoint-Zentraladministration installiert und wird auch nur darunter verwendet.<br /><br /> Die Berichtsserver-Integrationsfunktion wird für die Websitesammlung in der SharePoint-Zentraladministration automatisch aktiviert, nachdem Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Add-In für SharePoint-Produkte installiert haben. In einigen Situationen müssen Sie die Funktion manuell aktivieren. Verwenden Sie die Reporting Services-Seiten auf der Seite „Siteeinstellungen“ der SharePoint-Zentraladministration, um die Berichtsserverfunktion zu aktivieren.<br /><br /> Durch die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services-Version und höhere Versionen des Add-Ins für SharePoint-Produkte wird die Berichtsserver-Integrationsfunktion bei der Installation des Add-Ins für alle vorhandenen Websitesammlungen aktiviert. Darüber hinaus ist die Funktion für neue Websitesammlungen automatisch aktiv.|  
 |**Funktion für die Berichtsserverintegration**|Ermöglicht die umfassende Berichterstellung mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Diese Funktion ist standardmäßig aktiv.|  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS) | Microsoft Docs'
+title: 'Gewusst wie: Deaktivieren von Multiple Active Resultsets (MARS)'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc5e138bbd9e293076b0f05173d9d4a8d1747fde
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985602"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel zeigt die Vorgehensweise beim Deaktivieren der MARS-Unterstützung, unter Verwendung des PDO_SQLSRV-Treibers die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Das folgende Beispiel zeigt die Vorgehensweise zum Deaktivieren der MARS-Unterstützung, unter Verwendung des PDO_SQLSRV-Treibers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
 <?php  
@@ -85,6 +85,6 @@ $conn = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
   

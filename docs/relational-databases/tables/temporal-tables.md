@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000672"
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  In der Tabelle unten steht SysStartTime in der Spalte „Qualifizierte Zeilen“ für den Wert in der -Spalte **SysStartTime** in der abgefragten Tabelle, und **SysEndTime** stellt den Wert in der Spalte **SysEndTime** in der abgefragten Tabelle dar. Die vollständige Syntax und Beispiele finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) und [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)unterstützt wird.  
   
-|expression|Qualifizierte Zeilen|Description|  
+|expression|Qualifizierte Zeilen|und Beschreibung|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<Datum_Uhrzeit>|SysStartTime \<= date_time AND SysEndTime > date_time|Gibt eine Tabelle mit Zeilen zurück, die die Werte enthalten, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte in der Zeile zurückgegeben werden, die zu dem durch den Parameter *<Datum_Uhrzeit>* angegebenen Zeitpunkt gültig waren. Der Wert für eine Zeile ist gültig, wenn der Wert *system_start_time_column_name* kleiner als oder gleich dem Parameterwert *<Datum_Uhrzeit>* und der Wert *system_end_time_column_name* größer als der Parameterwert *<Datum_Uhrzeit>* ist.|  
 |**FROM**<Start_Datum_Zeit>**TO**<End_Datum_Zeit>|SysStartTime < Ende_Datum_Uhrzeit AND SysEndTime > Start_Datum_Uhrzeit|Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *<Start_Datum_Zeit>*-Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *<End_Datum_Zeit>*-Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert deaktiviert wurden, sind nicht enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind auch nicht enthalten.|  

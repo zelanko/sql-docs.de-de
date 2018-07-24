@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d828bb3d70346ecb41bd5382f67a8c54ed18e8fd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322389"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988890"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migration vom einheitlichen vom SharePoint-Modus (SSRS)
 
@@ -49,12 +49,12 @@ ms.locfileid: "35322389"
   
 |Objekt|Skripterstellung möglich|Kommentare|  
 |------------|---------------------|--------------|  
-|Berichte|ja|Nach der Migration geben Sie die Kennwörter für Datenquellen erneut ein.|  
-|Datenquellen|ja|Nach der Migration verknüpfen Sie Berichte erneut mit Datenquellen.|  
-|Modelle|ja||  
-|Datasets|ja||  
+|Berichte|Benutzerkontensteuerung|Nach der Migration geben Sie die Kennwörter für Datenquellen erneut ein.|  
+|Datenquellen|Benutzerkontensteuerung|Nach der Migration verknüpfen Sie Berichte erneut mit Datenquellen.|  
+|Modelle|Benutzerkontensteuerung||  
+|Datasets|Benutzerkontensteuerung||  
 |Berichtsteile||Nach der Migration überprüfen oder aktualisieren Sie den Pfad zu den Berichtsteilen.|  
-|Zeitpläne|ja|Weitere Informationen finden Sie unter dem Thema zur ListSchedules-Methode [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Zeitpläne|Benutzerkontensteuerung|Weitere Informationen finden Sie unter dem Thema zur ListSchedules-Methode [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |Abonnements|ja|Informationen finden Sie im Thema zur ListSubscriptions-Methode unter [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) und im Thema zur <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> -Methode.|  
 |Momentaufnahmen|||
 
