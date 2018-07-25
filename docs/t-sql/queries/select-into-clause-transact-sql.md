@@ -213,7 +213,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importieren aus einer externen mit PolyBase erstellten Tabelle  
- Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie `SELECT INTO`, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index am oberen Rand der Tabelle.  
+ Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie `SELECT INTO`, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index über die Tabelle.  
   
  **Gilt für:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
