@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404752"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084482"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -218,7 +218,7 @@ Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task
  **Parametername**  
  Geben Sie einen Parameternamen an.  
   
- Je nachdem, welchen Verbindungs-Manager-Typ der Task verwendet, müssen Sie Zahlen oder Parameternamen verwenden. Bei einigen Verbindungs-Manager-Typen wird vorausgesetzt, dass Parameternamen mit dem @-Zeichen beginnen oder bestimmte Namen (z.B. @Param1) oder Spaltennamen als Parameternamen verwendet werden.  
+ Je nachdem, welchen Verbindungs-Manager-Typ der Task verwendet, müssen Sie Zahlen oder Parameternamen verwenden. Einige Verbindungs-Manager-Typen erfordern, dass Parameternamen mit dem \@-Zeichen beginnen oder bestimmte Namen (z. B. \@Param1) bzw. Spaltennamen als Parameternamen verwendet werden.  
   
  **Parametergröße**  
  Geben Sie die Größe von Parametern mit variabler Länge an, z. B. Zeichenfolgen und binäre Felder.  
@@ -273,16 +273,16 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 -   [Abrufen von Rückgabecodewerten](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> Parameternamen und Marker  
- Die Syntax des SQL-Befehls verwendet verschiedene Parametermarkierungen, je nach verwendetem Verbindungstyp im Task SQL ausführen. Beispielsweise erfordert der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager-Typ, dass der SQL-Befehl eine Parametermarkierung im Format **@varParameter** verwendet, während für den OLEDB-Verbindungstyp das Fragezeichen („?“) als Parametermarkierung erforderlich ist.  
+ Die Syntax des SQL-Befehls verwendet verschiedene Parametermarkierungen, je nach verwendetem Verbindungstyp im Task SQL ausführen. Beispielsweise erfordert der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager-Typ, dass der SQL-Befehl einen Parametermarker im Format **\@varParameter** verwendet, während der OLE DB-Verbindungstyp das Fragezeichen (?) als Parametermarker benötigt.  
   
- Die Namen, die in den Zuordnungen zwischen Variablen und Parametern als Parameternamen verwendet werden können, variieren ebenfalls je nach Managertyp. Beispielsweise verwendet der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Managertyp einen benutzerdefinierten Namen mit einem @-Präfix, während der OLE DB-Verbindungs-Managertyp die Verwendung des numerischen Wertes einer 0-basierten Ordnungszahl als Parameternamen erfordert.  
+ Die Namen, die in den Zuordnungen zwischen Variablen und Parametern als Parameternamen verwendet werden können, variieren ebenfalls je nach Managertyp. Beispielsweise verwendet der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager-Typ einen benutzerdefinierten Namen mit einem \@-Präfix, während der OLE DB-Verbindungs-Manager-Typ die Verwendung des numerischen Wertes einer 0-basierten Ordnungszahl als Parameternamen benötigt.  
   
  In der folgenden Tabelle finden Sie eine Auflistung der Anforderungen für SQL-Befehle für Verbindungs-Managertypen, die der Task SQL ausführen verwenden kann.  
   
 |Verbindungstyp|Parametermarkierung|Parametername|Beispiel SQL-Befehl|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<Parametername>|@\<Parametername>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<Parametername>|\@\<Parametername>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL und OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
   
 -   Der ADO-Verbindungstyp kann zwei beliebige Parameternamen verwenden, wie z. B. Param1 und Param2, deren Zuordnung muss aber nach ihrer Ordnungsposition in der Parameterliste erfolgen.  
   
--   Der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungstyp verwendet die Parameternamen @parmMinProductID und @parmMaxProductID.  
+-   Der [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungstyp verwendet die Parameternamen \@parmMinProductID und \@parmMaxProductID.  
   
 ###  <a name="Stored_procedures"></a> Verwenden von Parametern mit gespeicherten Prozeduren  
  Für SQL-Befehle, die gespeicherte Prozeduren ausführen, kann die Parameterzuordnung ebenfalls verwendet werden. Die Regeln für die zu verwendenden Parametermarkierungen und Parameternamen hängen, wie die Regeln für parametrisierte Abfragen, vom Typ des Verbindungs-Managers ab, den der Task SQL ausführen verwendet.  
@@ -421,7 +421,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
     |Verbindungstyp|Parametermarkierung|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET und SQLMOBILE|@\<Parametername>|  
+    |ADO.NET und SQLMOBILE|\@\<Parametername>|  
     |ODBC|?|  
     |EXCEL und OLE DB|?|  
   
@@ -444,7 +444,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
     |Verbindungstyp|Parametername|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET und SQLMOBILE|@\<Parametername>|  
+    |ADO.NET und SQLMOBILE|\@\<Parametername>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL und OLE DB|0, 1, 2, 3, …|  
   

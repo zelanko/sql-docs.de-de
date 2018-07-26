@@ -20,12 +20,12 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 11dfa49c18beda96b86817fc4391d1b6f4cf772d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 947d4664d042818d7955f45252d2986accd86f8d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025447"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982792"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
 Erfahren Sie mehr zu Verhaltensänderungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Hier werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt werden.
@@ -34,14 +34,14 @@ Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekannt
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
-|[Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/d529cc96-3483-480b-9bfc-bd28b1d0ef52)|Beschreibt Funktionen, die in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vorhanden waren, jedoch in späteren Versionen entfernt wurden.|  
-|[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/3876c01e-f81d-4cce-9104-5106a8c369e6)|Beschreibt Funktionen, die in dieser Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aus Gründen der Abwärtskompatibilität beibehalten wurden, die aber in einer zukünftigen Version von SQL Server entfernt werden.|  
-|[Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|Beschreibt Probleme, die beim Aktualisieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]auftreten können.|  
-|[Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/en-us/2a767f0f-84f2-4099-8784-1e37790f858e)|Beschreibt Funktionen, die in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]geändert wurden.|  
+|[Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 (Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016)](http://msdn.microsoft.com/d529cc96-3483-480b-9bfc-bd28b1d0ef52)|Beschreibt Funktionen, die in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vorhanden waren, jedoch in späteren Versionen entfernt wurden.|  
+|[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/3876c01e-f81d-4cce-9104-5106a8c369e6)|Beschreibt Funktionen, die in dieser Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aus Gründen der Abwärtskompatibilität beibehalten wurden, die aber in einer zukünftigen Version von SQL Server entfernt werden.|  
+|[Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|Beschreibt Probleme, die beim Aktualisieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]auftreten können.|  
+|[Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](http://msdn.microsoft.com/2a767f0f-84f2-4099-8784-1e37790f858e)|Beschreibt Funktionen, die in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]geändert wurden.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Abwärtskompatibilität | Analysis Services](http://msdn.microsoft.com/en-us/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
+ [Abwärtskompatibilität | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

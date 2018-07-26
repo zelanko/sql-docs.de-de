@@ -2,7 +2,7 @@
 title: tempdb-Datenbank | Microsoft-Dokumentation
 description: Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank.
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582322"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108372"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit SQL-Datenbank verbunden sind. Tempdb wird verwendet, um Folgendes zu speichern:  
   
 - Temporäre **Benutzerobjekte**, die explizit erstellt werden, z.B. globale oder lokale temporäre Tabellen und Indizes, temporäre gespeicherte Prozeduren, Tabellenvariablen, in Tabellenwertfunktionen zurückgegebene Tabellen oder Cursor.  
@@ -44,7 +44,7 @@ ms.locfileid: "34582322"
   > Jedes interne Objekt verwendet mindestens neun Seiten: eine IAM-Seite (Index Allocation Map) und eine achtseitige Erweiterung. Weitere Informationen zu Seiten und Blöcken finden Sie unter [Seiten und Blöcke](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > In Azure SQL-Datenbank werden globale temporäre Tabellen und globale temporär gespeicherte Prozeduren unterstützt, die in tempdb gespeichert werden und auf Datenbankebene gelten. Globale temporäre Tabellen und globale temporär gespeicherte Prozeduren werden für alle Benutzersitzungen innerhalb derselben Azure SQL-Datenbank freigegeben. Benutzersitzungen von anderen Azure SQL-Datenbanken können nicht auf globale temporäre Tabellen zugreifen. Weitere Informationen finden Sie unter [Database scoped global temporary tables (Azure SQL Database) (Globale temporäre Tabellen auf Datenbankebene (Azure SQL-Datenbank))](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database).
+  > Im logischen Server von Azure SQL-Datenbank werden globale temporäre Tabellen und globale temporär gespeicherte Prozeduren unterstützt, die in tempdb gespeichert werden und auf Datenbankebene gelten. Globale temporäre Tabellen und globale temporär gespeicherte Prozeduren werden für alle Benutzersitzungen innerhalb derselben Azure SQL-Datenbank freigegeben. Benutzersitzungen von anderen Azure SQL-Datenbanken können nicht auf globale temporäre Tabellen zugreifen. Weitere Informationen finden Sie unter [Database scoped global temporary tables (Azure SQL Database) (Globale temporäre Tabellen auf Datenbankebene (Azure SQL-Datenbank))](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) unterstützt die gleichen temporäre Objekte wie SQL Server. Für den logischen Server von Azure SQL-Datenbank gelten nur die Masterdatenbank und die tempdb-Datenbank. Weitere Informationen zum Konzept eines logischen Servers und einer logischen Masterdatenbank finden Sie unter [Was ist ein logischer Azure SQL-Server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Eine Erläuterung von tempdb im Kontext des logischen Servers von Azure SQL-Datenbank finden Sie unter [tempdb-Datenbank im logischen Server von Azure SQL-Datenbank](#tempdb-database-in-sql-database). Für die verwaltete Azure SQL-Datenbank-Instanz gelten alle Systemdatenbanken. 
 
 - **Versionsspeicher**, die aus einer Auflistung von Datenseiten bestehen, in denen die Datenzeilen enthalten sind, die zur Unterstützung der Funktionen, die die Zeilenversionsverwaltung verwenden, erforderlich ist. Es gibt zwei Versionsspeicher: ein allgemeiner Versionsspeicher und ein Onlineindexerstellungs-Versionsspeicher. Die Versionsspeicher beinhalten Folgendes:
   - Zeilenversionen, die von Datenänderungstransaktionen in einer Datenbank generiert werden, die READ COMMITTED mit Zeilenversionsverwaltung oder Transaktionen der Momentaufnahmeisolation verwendet.  
@@ -74,34 +74,34 @@ Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Roll
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|ja|  
-|ANSI_NULL_DEFAULT|OFF|ja|  
-|ANSI_NULLS|OFF|ja|  
-|ANSI_PADDING|OFF|ja|  
-|ANSI_WARNINGS|OFF|ja|  
-|ARITHABORT|OFF|ja|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Benutzerkontensteuerung|  
+|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
+|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
+|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
+|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
+|ARITHABORT|OFF|Benutzerkontensteuerung|  
 |AUTO_CLOSE|OFF|nein|  
-|AUTO_CREATE_STATISTICS|ON|ja|  
+|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
 |AUTO_SHRINK|OFF|nein|  
-|AUTO_UPDATE_STATISTICS|ON|ja|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
+|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
 |CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|ja|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
-|CURSOR_DEFAULT|GLOBAL|ja|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
+|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
 |Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
 |DB_CHAINING|ON|nein|  
 |ENCRYPTION|OFF|nein|  
 |MIXED_PAGE_ALLOCATION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|ja|  
-|PARAMETERIZATION|SIMPLE|ja|  
-|QUOTED_IDENTIFIER|OFF|ja|  
+|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
+|PAGE_VERIFY|CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE für Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Benutzerkontensteuerung|  
+|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
+|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
 |READ_COMMITTED_SNAPSHOT|OFF|nein|  
 |RECOVERY|SIMPLE|nein|  
-|RECURSIVE_TRIGGERS|OFF|ja|  
-|Service Broker-Optionen|ENABLE_BROKER|ja|  
+|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
+|Service Broker-Optionen|ENABLE_BROKER|Benutzerkontensteuerung|  
 |TRUSTWORTHY|OFF|nein|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  

@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255512"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086742"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|**Attributzentrierte** Zuordnung als Standard verwenden.|  
 |**1**|Verwenden der **attributzentrierten** Zuordnung. Kann mit XML_ELEMENTS kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung und anschließend die **elementzentrierte** Zuordnung auf alle noch nicht verarbeiteten Spalten angewendet.|  
 |**2**|Verwenden der **elementzentrierten** Zuordnung. Kann mit XML_ATTRIBUTES kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung und anschließend die **elementzentrierte** Zuordnung auf alle noch nicht verarbeiteten Spalten angewendet.|  
-|**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Kontext des Abrufens zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **@mp:xmltext** kopiert werden sollen.|  
+|**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Abrufkontext zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **\@mp:xmltext** kopiert werden sollen.|  
   
  *SchemaDeclaration*  
  Die Schemadefinition im folgenden Format: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357822"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085132"
 ---
 # <a name="replication-to-sql-database"></a>Replikation zu SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357822"
  -  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz sein, der lokal ausgeführt wird. Alternativ kann es sich um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handeln, die auf einem virtuellen Azure-Computer in der Cloud ausgeführt wird. Weitere Informationen finden Sie unter [Übersicht zu SQL Server auf virtuellen Azure-Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] muss ein Pushabonnent eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegers sein.  
  -  Die Verteilungsdatenbank und die Replikations-Agents können nicht auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]platziert werden.  
- - Es werden nur Momentaufnahmen und die unidirektionale Transaktionsreplikation unterstützt. Die Peer-zu-Peer-Transaktionsreplikation und Mergereplikation werden nicht unterstützt.  
+ - Es werden nur Momentaufnahmen und die unidirektionale Transaktionsreplikation unterstützt. Die Peer-zu-Peer-Transaktionsreplikation und Mergereplikation werden nicht unterstützt.
+ - Die verwaltete SQL-Datenbank-Instanz (Vorschau) unterstützt Verleger- und Verteilerdatenbanken. Weitere Informationen finden Sie unter [Replikation mit der verwalteten SQL-Datenbank-Instanz](replication-with-sql-database-managed-instance.md).
  
  ## <a name="versions"></a>Versionen  
  - Verleger und Verteiler müssen mindestens eine der folgenden Versionen aufweisen:  

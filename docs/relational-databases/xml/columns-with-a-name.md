@@ -17,29 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011587"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084302"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
   
--   Der Spaltenname beginnt mit einem @-Zeichen.  
+-   Der Spaltenname beginnt mit einem At-Zeichen (\@).  
   
--   Der Spaltenname beginnt nicht mit einem @-Zeichen.  
+-   Der Spaltenname beginnt nicht mit einem At-Zeichen (\@).  
   
--   Der Spaltenname beginnt nicht mit einem @-Zeichen und enthält einen Schrägstrich (/).  
+-   Der Spaltenname beginnt nicht mit einem At-Zeichen (\@) und enthält einen Schrägstrich (/).  
   
 -   Mehrere Spalten verwenden dasselbe Präfix.  
   
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>Der Spaltenname beginnt mit einem @-Zeichen  
- Wenn der Spaltenname mit einem @-Zeichen beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des `row`-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden `row`-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
+## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
+ Wenn der Spaltenname mit einem At-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des `row`-Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden `row`-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```  
   
@@ -71,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>Der Spaltenname beginnt nicht mit einem @-Zeichen  
- Wenn der Spaltenname nicht mit einem @-Zeichen beginnt, es sich nicht um einen der XPath-Knotentests handelt und er keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein Unterelement des Zeilenelements ist (standardmäßig `row`).  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@)  
+ Wenn der Spaltenname nicht mit einem At-Zeichen (\@) beginnt, kein XPath-Knotentest ist und keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein Unterelement des Zeilenelements ist (standardmäßig `row`).  
   
  Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem `row`-Element das untergeordnete `result`-Element hinzugefügt.  
   
@@ -118,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Der Spaltenname beginnt nicht mit einem @-Zeichen und enthält einen Schrägstrich (/)  
- Wenn der Spaltenname nicht mit einem @-Zeichen beginnt, jedoch einen Schrägstrich (/) enthält, zeigt der Spaltenname eine XML-Hierarchie. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n*** “ lautet, stellt „Name***i*** “ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn „Name***n*** “ mit „@“ beginnt, wird er einem Attribut des „Name***n-1*** “-Elements zugeordnet.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@) und enthält einen Schrägstrich (/)  
+ Wenn der Spaltenname nicht mit einem At-Zeichen (\@) beginnt, jedoch einen Schrägstrich (/) enthält, zeigt der Spaltenname eine XML-Hierarchie an. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n*** “ lautet, stellt „Name***i*** “ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn „Namen***n***“ mit „\@“ beginnt, wird er einem Attribut des „Namen***n-1***“-Elements zugeordnet.  
   
  Die folgende Abfrage gibt beispielsweise die ID und den Namen eines Mitarbeiters als komplexes Element EmpName zurück, welches zwei Vornamen und einen Nachnamen enthält (FirstName, MiddleName, LastName).  
   

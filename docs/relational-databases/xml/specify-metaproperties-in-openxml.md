@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83908645f3578cbb29579d11ecaf19aa8cbac0b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e1547929bbb323f8211fcc6d1f23ffdb9722655
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018007"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087352"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,23 @@ ms.locfileid: "33018007"
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
   
-|Metaeigenschaftsattribut|Description|  
+|Metaeigenschaftsattribut|und Beschreibung|  
 |----------------------------|-----------------|  
-|**@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
-|**@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
-|**@mp:namespaceuri**|Gibt den Namespace-URI des aktuellen Elements an. Ist der Wert dieses Attributs NULL, ist kein Namespace vorhanden.|  
-|**@mp:prefix**|Speichert das Namespacepräfix des aktuellen Elementnamens.<br /><br /> Wenn kein Präfix vorhanden ist (NULL) und ein URI angegeben ist, zeigt dieses Attribut an, dass der angegebene Namespace der Standardnamespace ist. Ist kein URI angegeben, wird kein Namespace angefügt.|  
-|**@mp:prev**|Speichert das vorhergehende gleichgeordnete Objekt eines Knotens. Dadurch werden Informationen über die Reihenfolge der Elemente im Dokument bereitgestellt.<br /><br /> **@mp:prev** enthält die XML-ID des vorhergehenden gleichgeordneten Objekts, das über dasselbe übergeordnete Element verfügt. Wird ein Element am Anfang der Liste der gleichgeordneten Objekte aufgeführt, ist **@mp:prev** gleich NULL.|  
-|**@mp:xmltext**|Wird zu Verarbeitungszwecken genutzt. Legt die Textserialisierung des Elements und der zugehörigen Attribute und auch die Teilelemente fest, wie dies bei der Überlaufbearbeitung von OPENXML der Fall ist.|  
+|**\@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
+|**\@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
+|**\@mp:namespaceuri**|Gibt den Namespace-URI des aktuellen Elements an. Ist der Wert dieses Attributs NULL, ist kein Namespace vorhanden.|  
+|**\@mp:prefix**|Speichert das Namespacepräfix des aktuellen Elementnamens.<br /><br /> Wenn kein Präfix vorhanden ist (NULL) und ein URI angegeben ist, zeigt dieses Attribut an, dass der angegebene Namespace der Standardnamespace ist. Ist kein URI angegeben, wird kein Namespace angefügt.|  
+|**\@mp:prev**|Speichert das vorhergehende gleichgeordnete Objekt eines Knotens. Dadurch werden Informationen über die Reihenfolge der Elemente im Dokument bereitgestellt.<br /><br /> **\@mp:prev** enthält die XML-ID des vorhergehenden gleichgeordneten Elements, das über dasselbe übergeordnete Element verfügt. Wird ein Element am Anfang der Liste der gleichgeordneten Elemente aufgeführt, ist **\@mp:prev** gleich NULL.|  
+|**\@mp:xmltext**|Wird zu Verarbeitungszwecken genutzt. Legt die Textserialisierung des Elements und der zugehörigen Attribute und auch die Teilelemente fest, wie dies bei der Überlaufbearbeitung von OPENXML der Fall ist.|  
   
  In dieser Tabelle werden die zusätzlichen Eigenschaften übergeordneter Metaeigenschaftsattribute dargestellt, die Ihnen das Abrufen von Hierarchieinformationen ermöglichen.  
   
-|Übergeordnetes Metaeigenschaftsattribut|Description|  
+|Übergeordnetes Metaeigenschaftsattribut|und Beschreibung|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|Entspricht **../@mp:id**|  
-|**@mp:parentlocalname**|Entspricht **../@mp:localname**|  
-|**@mp:parentnamespacerui**|Entspricht **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|Entspricht **../@mp:prefix**|  
+|**\@mp:parentid**|Entspricht **../\@mp:id**|  
+|**\@mp:parentlocalname**|Entspricht **../\@mp:localname**|  
+|**\@mp:parentnamespacerui**|Entspricht **../\@mp:namespaceuri**|  
+|**\@mp:parentprefix**|Entspricht **../\@mp:prefix**|  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird die Verwendung von OPENXML zum Erstellen unterschiedlicher Rowsetsichten veranschaulicht.  
@@ -69,11 +69,11 @@ ms.locfileid: "33018007"
   
  Die OPENXML-Anweisung verdeutlicht Folgendes:  
   
--   Der **id** -Spalte wird dem **@mp:id** -Metaeigenschaftsattribut zugeordnet. Dies zeigt an, dass die systemgenerierte eindeutige XML-ID des Elements in der Spalte enthalten ist.  
+-   Die **id**-Spalte wird dem **\@mp:id**-Metaeigenschaftsattribut zugeordnet und zeigt an, dass die Spalte die systemgenerierte eindeutige XML-ID des Elements enthält.  
   
--   Der **parent** -Spalte wird **@mp:parentid** zugeordnet. Dies zeigt an, dass die Spalte die XML-ID des übergeordneten Elements enthält.  
+-   Die **parent**-Spalte wird **\@mp:parentid** zugeordnet und zeigt an, dass die Spalte die XML-ID des übergeordneten Elements enthält.  
   
--   Der **parentLocalName** -Spalte wird **@mp:parentlocalname** zugeordnet. Dies zeigt an, dass die Spalte den lokalen Namen des übergeordneten Elements enthält.  
+-   Die **parentLocalName**-Spalte wird **\@mp:parentlocalname** zugeordnet und zeigt an, dass die Spalte den lokalen Namen des übergeordneten Elements enthält.  
   
  Schließlich gibt die SELECT-Anweisung das von OPENXML bereitgestellte Rowset zurück.  
   
@@ -166,13 +166,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Angeben der xmltext-Metaeigenschaft zur Abfrage der nicht verbrauchten Daten in einer Spalte  
  In diesem Beispiel wird OPENXML zum Erstellen einer Rowsetsicht des XML-Beispieldokuments verwendet. Das Beispiel veranschaulicht die Abfrage nicht verbrauchter XML-Daten durch Zuordnen des **xmltext** -Metaeigenschaftsattributs zu einer Rowsetspalte in OPENXML.  
   
- Der **comment** -Spalte wird als Überlaufspalte durch Zuordnen zur **@mp:xmltext** -Metaeigenschaft). Der *flags* -Parameter wird auf **9** festgelegt (XML_ATTRIBUTE and XML_NOCOPY). Dies zeigt die **attributzentrierte** Zuordnung an und dass ausschließlich nicht verbrauchte Daten in die Überlaufspalte kopiert werden sollten.  
+ Die **comment**-Spalte wird durch Zuordnen zur **\@mp:xmltext**-Metaeigenschaft als Überlaufspalte identifiziert. Der *flags* -Parameter wird auf **9** festgelegt (XML_ATTRIBUTE and XML_NOCOPY). Dies zeigt die **attributzentrierte** Zuordnung an und dass ausschließlich nicht verbrauchte Daten in die Überlaufspalte kopiert werden sollten.  
   
  Schließlich gibt die SELECT-Anweisung das von OPENXML bereitgestellte Rowset zurück.  
   
- In diesem Beispiel wird die **@mp:parentlocalname** -Metaeigenschaft für eine Spalte ( **ParentLocalName**) in dem von OPENXML generierten Rowset festgelegt. Folglich enthält diese Spalte den lokalen Namen des übergeordneten Elements.  
+ In diesem Beispiel wird die **\@mp:parentlocalname**-Metaeigenschaft für eine Spalte (**ParentLocalName**) in dem von OPENXML generierten Rowset festgelegt. Folglich enthält diese Spalte den lokalen Namen des übergeordneten Elements.  
   
- Es werden zwei zusätzliche Spalten im Rowset angegeben ( **parent** und **comment**). Der **parent** -Spalte wird **@mp:parentid** zugeordnet. Dies zeigt an, dass die Spalte die XML-ID des übergeordneten Elements des Elements enthält. Die comment-Spalte wird als Überlaufspalte durch Zuordnen zur **@mp:xmltext** -Metaeigenschaft).  
+ Es werden zwei zusätzliche Spalten im Rowset angegeben ( **parent** und **comment**). Die **parent**-Spalte wird **\@mp:parentid** zugeordnet und zeigt an, dass die Spalte die XML-ID des übergeordneten Elements des Elements enthält. Die **comment\@-Spalte wird durch Zuordnen zur** mp:xmltext-Metaeigenschaft als Überlaufspalte identifiziert.  
   
 ```  
 DECLARE @idoc int  

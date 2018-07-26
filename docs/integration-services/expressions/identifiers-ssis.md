@@ -24,12 +24,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a37b39e8630257be25efde7b3d2a74c60f3e46c0
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61529c64150bb28c595ade859f45453591526b51
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334124"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084582"
 ---
 # <a name="identifiers-ssis"></a>Bezeichner (SSIS)
   In Ausdrücken sind Bezeichner Spalten und Variablen, die für den Vorgang verfügbar sind. Reguläre und qualifizierte Bezeichner können in Ausdrücken verwendet werden.  
@@ -39,9 +39,9 @@ ms.locfileid: "35334124"
   
  Die Namen von regulären Bezeichnern müssen den folgenden Regeln entsprechen:  
   
--   Das erste Zeichen des Namens muss ein Buchstabe gemäß Unicode-Standard 2.0 sein oder ein Unterstrich (_).  
+-   Das erste Zeichen des Namens muss ein Buchstabe gemäß Unicode-Standard 2.0 sein oder ein Unterstrich (_).  
   
--   Nachfolgende Zeichen können Buchstaben oder Zahlen gemäß Unicode-Standard 2.0, ein Unterstrich (_) oder die Zeichen @, $ und # sein.  
+-   Nachfolgende Zeichen können Buchstaben oder Zahlen gemäß Unicode-Standard 2.0, ein Unterstrich (_) oder die Zeichen \@, $ und # sein.  
   
 > [!IMPORTANT]  
 >  Nur die aufgeführten eingebetteten Zeichen und Sonderzeichen sind in regulären Bezeichnern gültig. Für die Verwendung von Leerzeichen und Sonderzeichen müssen Sie anstelle eines regulären Bezeichners einen qualifizierten Bezeichner verwenden.  
@@ -89,15 +89,15 @@ ms.locfileid: "35334124"
 >  Falls beide Elemente in gepunkteter Schreibweise in eckige Klammern eingeschlossen sind, interpretiert die Ausdrucksauswertung das Klammernpaar als einen einzelnen Bezeichner, und nicht als eine Kombination aus Quelle und Spalte.  
   
 ## <a name="variables-in-expressions"></a>Variablen in Ausdrücken  
- Wenn in Ausdrücken auf Variablen verwiesen wird, muss das @-Präfix verwendet werden. Beispielsweise wird auf die **Counter**-Variable mit @Counter verwiesen. Das @-Zeichen ist nicht Bestandteil des Variablennamens, sondern identifiziert die Variable nur gegenüber der Ausdrucksauswertung. Wenn Sie Ausdrücke mithilfe der Dialogfelder des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers erstellen, wird dem Variablennamen automatisch das @-Zeichen hinzugefügt. Leerzeichen sind zwischen dem @-Zeichen und dem Variablennamen nicht zulässig.  
+ Wenn in Ausdrücken auf Variablen verwiesen wird, muss das \@-Präfix verwendet werden. Beispielsweise wird auf die **Counter**-Variable mit \@Counter verwiesen. Das Zeichen \@ ist nicht Bestandteil des Variablennamens, sondern identifiziert die Variable nur gegenüber der Ausdrucksauswertung. Wenn Sie Ausdrücke mithilfe der Dialogfelder des [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designers erstellen, wird dem Variablennamen automatisch das \@-Zeichen hinzugefügt. Leerzeichen sind zwischen dem \@-Zeichen und dem Variablennamen nicht zulässig.  
   
  Für Variablennamen gelten dieselben Regeln wie für andere reguläre Bezeichner:  
   
 -   Das erste Zeichen des Namens muss ein Buchstabe gemäß Unicode-Standard 2.0 sein oder ein Unterstrich (_).  
   
--   Nachfolgende Zeichen können Buchstaben oder Zahlen gemäß Unicode-Standard 2.0, ein Unterstrich (_) oder die Zeichen @, $ und # sein.  
+-   Nachfolgende Zeichen können Buchstaben oder Zahlen gemäß Unicode-Standard 2.0, ein Unterstrich (_) oder die Zeichen \@, $ und # sein.  
   
- Enthält ein Variablenname andere als die aufgeführten Zeichen, muss die Variable in eckige Klammern eingeschlossen werden. Beispielsweise müssen Variablennamen mit Leerzeichen in eckige Klammern eingeschlossen werden. Die öffnende eckige Klammer folgt auf das @-Zeichen. Beispielsweise wird auf die **My Name** -Variable mit „@[My Name]“ verwiesen. Leerzeichen sind zwischen dem Variablennamen und den eckigen Klammern nicht zulässig.  
+ Enthält ein Variablenname andere als die aufgeführten Zeichen, muss die Variable in eckige Klammern eingeschlossen werden. Beispielsweise müssen Variablennamen mit Leerzeichen in eckige Klammern eingeschlossen werden. Auf das \@-Zeichen folgt die öffnende eckige Klammer. Beispielsweise wird auf die **My Name**-Variable mit „\@[My Name]“ verwiesen. Leerzeichen sind zwischen dem Variablennamen und den eckigen Klammern nicht zulässig.  
   
 > [!NOTE]  
 >  Die Namen von benutzerdefinierten und Systemvariablen unterscheiden nach Groß-/Kleinschreibung.  

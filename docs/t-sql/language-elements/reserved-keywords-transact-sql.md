@@ -22,19 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fc9be10a3197f645b824afe7f33f0235408439d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 668c6cf81028417539d204fd1f28d9a7992311ea
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248312"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216911"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
   
- In der folgenden Tabelle werden die reservierten Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt.  
+ Die folgende Tabelle enthält für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und SQL Data Warehouse reservierte Schlüsselwörter.  
   
 ||||  
 |-|-|-|  
@@ -75,7 +75,7 @@ ms.locfileid: "36248312"
 |CURRENT_DATE|MERGE|TEXTSIZE|  
 |CURRENT_TIME|NATIONAL|THEN|  
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
-|CURRENT_USER|NONCLUSTERED|NACH OBEN|  
+|CURRENT_USER|NONCLUSTERED|TOP|  
 |CURSOR|NICHT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
@@ -99,7 +99,13 @@ ms.locfileid: "36248312"
 |EXEC|PRECISION|mit|  
 |Führen Sie|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
-|EXIT|PROC||  
+|EXIT|PROC||
+  
+Die folgende Tabelle enthält die für **SQL Data Warehouse** exklusiv reservierten Schlüsselwörter.
+
+|||
+|-|-|
+|**Label**||
   
  Darüber hinaus definiert der ISO-Standard eine Liste mit reservierten Schlüsselwörtern. Sie sollten keine dieser in ISO reservierten Schlüsselwörter für Objektnamen und -bezeichner verwenden. Die Liste der reservierten ODBC-Schlüsselwörter, die in der folgenden Tabelle aufgeführt werden, stimmt mit der Liste der reservierten ISO-Schlüsselwörter überein.  
   

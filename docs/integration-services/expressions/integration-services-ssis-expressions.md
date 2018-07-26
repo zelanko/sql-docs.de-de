@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0a9a404de670421850f985f5db7be2efc9d6d58d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408362"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084902"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
   Ein Ausdruck ist eine Kombination aus Symbolen (Bezeichner, Literale, Funktionen und Operatoren), die einen einzelnen Datenwert ergeben. Einfache Ausdrücke können aus einer einzelnen Konstante, Variable oder Funktion bestehen. Meist sind Ausdrücke jedoch komplex, verwenden mehrere Operatoren und Funktionen und verweisen auf mehrere Spalten und Variablen. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Ausdrücke zum Definieren von Bedingungen für CASE-Anweisungen, Erstellen und Aktualisieren von Werten in Datenspalten, Zuweisen von Werten zu Variablen, Aktualisieren oder Auffüllen von Eigenschaften zur Laufzeit, Definieren von Einschränkungen in Rangfolgeneinschränkungen sowie zum Bereitstellen von Ausdrücken für den For-Schleifencontainer verwendet werden.  
@@ -47,9 +47,9 @@ ms.locfileid: "35408362"
   
 -   Variablen, deren Wert mit einem Ausdruck festgelegt werden kann. Die Variable GETDATE() legt z. B. den Wert der Variablen auf das aktuelle Datum fest.  
   
--   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer Rangfolgeneinschränkung verwendete Ausdrücke müssen zu **true** oder **false**ausgewertet werden. Der Ausdruck @A > @B z.B. vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
+-   Rangfolgeneinschränkungen, bei denen mithilfe von Ausdrücken die Bedingungen angegeben werden können, die festlegen, ob der eingeschränkte Task oder Container eines Pakets ausgeführt wird. In einer Rangfolgeneinschränkung verwendete Ausdrücke müssen zu **true** oder **false**ausgewertet werden. Der Ausdruck \@A > \@B z. B. vergleicht zwei benutzerdefinierte Variablen, um zu bestimmen, ob der eingeschränkte Task ausgeführt wird.  
   
--   For-Schleifen-Container, bei denen mithilfe von Ausdrücken Initialisierungs-, Auswertungs- und Inkrementanweisungen erstellt werden können, die von der Schleifenstruktur verwendet werden. Der Ausdruck @Counter = 1 z.B. initialisiert den Schleifenzähler.  
+-   For-Schleifen-Container, bei denen mithilfe von Ausdrücken Initialisierungs-, Auswertungs- und Inkrementanweisungen erstellt werden können, die von der Schleifenstruktur verwendet werden. Der Ausdruck \@Counter = 1 z. B. initialisiert den Schleifenzähler.  
   
  Ausdrücke können auch zum Aktualisieren der Werte von Paketeigenschaften, Containern wie dem For- und dem Foreach-Schleifencontainer, Tasks, Verbindungs-Managern auf Paket- und Projektebene, Protokollanbietern und Foreach-Enumeratoren verwendet werden. Mithilfe eines Eigenschaftsausdrucks kann z.B. die Zeichenfolge „Localhost.AdventureWorks“ der ConnectionName-Eigenschaft des Tasks „SQL ausführen“ zugewiesen werden. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "35408362"
 ## <a name="expression-builder"></a>Ausdrucks-Generator  
  Der Ausdrucks-Generator ist ein grafisches Tool zum Erstellen von Ausdrücken. Dieser ist in den Dialogfeldern **Transformations-Editor für bedingtes Teilen**, **Transformations-Editor für abgeleitete Spalte** und **Ausdrucks-Generator** verfügbar, es handelt sich um ein grafisches Tool zum Erstellen von Ausdrücken.  
   
- Der Ausdrucks-Generator stellt Ordner bereit, die paketspezifische Elemente enthalten, sowie Ordner, die die von der Ausdruckssprache bereitgestellten Funktionen, Typumwandlungen und Operatoren enthalten. Paketspezifische Elemente umfassen Systemvariablen und benutzerdefinierte Variablen. In den Dialogfeldern **Transformations-Editor für bedingtes Teilen** und **Transformations-Editor für abgeleitete Spalte** können Sie auch Datenspalten anzeigen. Sie können Elemente aus den Ordnern in die Spalten **Bedingung** oder **Ausdruck** ziehen, um die Ausdrücke für die Transformationen zu erstellen, oder Sie können Ausdrücke direkt in die Spalten eingeben. Der Ausdrucks-Generator fügt erforderliche Syntaxelemente, wie z. B. das @-Präfix bei Variablennamen, automatisch hinzu.  
+ Der Ausdrucks-Generator stellt Ordner bereit, die paketspezifische Elemente enthalten, sowie Ordner, die die von der Ausdruckssprache bereitgestellten Funktionen, Typumwandlungen und Operatoren enthalten. Paketspezifische Elemente umfassen Systemvariablen und benutzerdefinierte Variablen. In den Dialogfeldern **Transformations-Editor für bedingtes Teilen** und **Transformations-Editor für abgeleitete Spalte** können Sie auch Datenspalten anzeigen. Sie können Elemente aus den Ordnern in die Spalten **Bedingung** oder **Ausdruck** ziehen, um die Ausdrücke für die Transformationen zu erstellen, oder Sie können Ausdrücke direkt in die Spalten eingeben. Der Ausdrucks-Generator fügt erforderliche Syntaxelemente wie das \@-Präfix bei Variablennamen automatisch hinzu.  
   
 > [!NOTE]  
 >  Die Namen von benutzerdefinierten und Systemvariablen unterscheiden nach Groß-/Kleinschreibung.  

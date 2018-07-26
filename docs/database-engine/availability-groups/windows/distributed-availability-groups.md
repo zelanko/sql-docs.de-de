@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270951"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083731"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ Im Folgenden finden Sie die drei Hauptverwendungsszenarios für eine verteilte V
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Szenarios für Notfallwiederherstellung und mehrere Standorte
 
-Bei einer herkömmlichen Verfügbarkeitsgruppe ist erforderlich, dass alle Server Teil desselben WSFC-Clusters sind, wodurch das Umfassen mehrerer Rechenzentren eine Herausforderung darstellen kann. Die folgende Abbildung zeigt eine herkömmliche Architektur für eine Verfügbarkeitsgruppe mit mehreren Standorten, einschließlich des Datenflusses. Es gibt ein primäres Replikat, das Transaktionen an alle sekundären Replikate sendet. Diese Konfiguration ist in einigen Punkten weniger flexibel als eine verteilte Verfügbarkeitsgruppe. Sie müssen beispielsweise Elemente wie Active Directory (sofern vorhanden) und den Zeugen für ein Quorum in den WSFC-Cluster implementieren. Sie müssen gegebenenfalls auch andere Aspekte eines WSFC-Clusters berücksichtigen, zum Beispiel das Ändern von Knotenvoten.
+Bei einer herkömmlichen Verfügbarkeitsgruppe ist erforderlich, dass alle Server Teil desselben WSFC-Clusters sind, wodurch das Umfassen mehrerer Rechenzentren eine Herausforderung darstellen kann. Die folgende Abbildung zeigt eine herkömmliche Architektur für eine Verfügbarkeitsgruppe mit mehreren Standorten, einschließlich des Datenflusses. Es gibt ein primäres Replikat, das Transaktionen an alle sekundären Replikate sendet. Diese Konfiguration umfasst weniger Aspekte als eine verteilte Verfügbarkeitsgruppe. Sie müssen beispielsweise Elemente wie Active Directory (sofern vorhanden) und den Zeugen für ein Quorum in den WSFC-Cluster implementieren. Sie müssen gegebenenfalls auch andere Aspekte eines WSFC-Clusters berücksichtigen, zum Beispiel das Ändern von Knotenvoten.
 
 ![Herkömmliche Verfügbarkeitsgruppe mit mehreren Standorten][4]
 
-Verteilte Verfügbarkeitsgruppen bieten ein flexibleres Bereitstellungsszenario für Verfügbarkeitsgruppen, die mehrere Rechenzentren umfassen. Sie können verteilte Verfügbarkeitsgruppen sogar statt in der Vergangenheit verwendeten Funktionen, zum Beispiel [log shipping (Protokollversand)]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server), verwenden. Anders als bei herkömmlichen Verfügbarkeitsgruppen ist bei verteilten Verfügbarkeitsgruppen jedoch keine verzögerte Anwendung von Transaktionen möglich. Das bedeutet, dass weder Verfügbarkeitsgruppen noch verteilte Verfügbarkeitsgruppen Sie im Fall eines menschlichen Fehlers unterstützen können, wenn beispielsweise Daten falsch aktualisiert oder gelöscht werden.
+Verteilte Verfügbarkeitsgruppen bieten ein flexibleres Bereitstellungsszenario für Verfügbarkeitsgruppen, die mehrere Rechenzentren umfassen. Sie können verteilte Verfügbarkeitsgruppen sogar statt früheren Funktionen, z. B. [Protokollversand]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server), für Szenarien wie die Notfallwiederherstellung verwenden. Im Gegensatz zum Protokollversand ist bei verteilten Verfügbarkeitsgruppen die verzögerte Anwendung von Transaktionen jedoch nicht verzögern. Das bedeutet, dass weder Verfügbarkeitsgruppen noch verteilte Verfügbarkeitsgruppen Sie im Fall eines menschlichen Fehlers unterstützen können, wenn beispielsweise Daten falsch aktualisiert oder gelöscht werden.
 
 Verteilte Verfügbarkeitsgruppen sind lose gekoppelt, was in diesem Fall bedeutet, dass sie keinen einzelnen WSFC-Cluster erfordern und von SQL Server verwaltet werden. Da die WSFC-Cluster einzeln verwaltet werden und die Synchronisation zwischen den beiden Verfügbarkeitsgruppen in erster Linie asynchron abläuft, ist die Konfiguration der Notfallwiederherstellung auf einer anderen Website einfacher. Die primären Replikate in jeder Verfügbarkeitsgruppe synchronisieren ihre eigenen sekundären Replikate.
 
@@ -222,9 +222,9 @@ Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verw
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 In der folgenden Abbildung wird ein Beispiel für eine Ausgabe des zweiten WSFC-Clusters gezeigt, das in der verteilten Verfügbarkeitsgruppe enthalten ist. SPAG1 besteht aus zwei Replikaten: DENNIS und JY. Die verteilte Verfügbarkeitsgruppe namens „SPDistAG“ verfügt jedoch über die Namen der zwei enthaltenen Verfügbarkeitsgruppen (SPAG1 und SPAG2) statt den Namen der Instanzen, wie es bei herkömmlichen Verfügbarkeitsgruppen der Fall ist. 
@@ -235,12 +235,12 @@ Jeder Status, der in SQL Server Management Studio auf dem Dashboard und in ander
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ Sie können die vorherige Abfrage weiter erweitern, indem Sie `sys.dm_hadr_datab
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![Leistungsinformationen einer verteilten Verfügbarkeitsgruppe][13]

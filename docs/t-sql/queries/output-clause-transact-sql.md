@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252402"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088362"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252402"
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @*table_variable*  
- Gibt eine **table**-Variable an, in die die zurückgegebenen Zeilen eingefügt werden, statt an den Aufrufer zurückgegeben zu werden. @*table_variable* muss vor der INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung deklariert werden.  
+ \@*table_variable*  
+ Gibt eine **table**-Variable an, in die die zurückgegebenen Zeilen eingefügt werden, statt an den Aufrufer zurückgegeben zu werden. \@*table_variable* muss vor der INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung deklariert werden.  
   
  Wenn *column_list* nicht angegeben wird, muss die **table**-Variable dieselbe Anzahl von Spalten wie das OUTPUT-Resultset aufweisen. Ausnahmen bilden Identitätsspalten sowie berechnete Spalten, die ausgelassen werden müssen. Wenn *column_list* angegeben wird, müssen alle ausgelassenen Spalten entweder NULL-Werte zulassen oder über zugewiesene Standardwerte verfügen.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE'. Der zurückgegebene Wert hängt von der für diese Zeile ausgeführten Aktion ab.  
   
 ## <a name="remarks"></a>Remarks  
- Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
+ Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
   
 > [!NOTE]  
 >  Sofern nicht anderweitig angegeben, beziehen sich Verweise auf die OUTPUT-Klausel sowohl auf die OUTPUT- als auch die OUTPUT INTO-Klausel.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   Die OUTPUT INTO-Klausel wird nicht in INSERT-Anweisungen unterstützt, die eine \<dml_table_source>-Klausel enthalten.  
   
--   @@ROWCOUNT gibt nur die Zeilen zurück, die von der äußeren INSERT-Anweisung eingefügt wurden.  
+-   \@\@ROWCOUNT gibt nur die Zeilen zurück, die von der äußeren INSERT-Anweisung eingefügt wurden.  
   
--   @@IDENTITY, SCOPE_IDENTITY und IDENT_CURRENT geben nur die von der geschachtelten DML-Anweisung generierten und nicht die von der äußeren INSERT-Anweisung generierten Identitätswerte zurück.  
+-   \@\@IDENTITY, SCOPE_IDENTITY und IDENT_CURRENT geben nur die von der geschachtelten DML-Anweisung generierten und nicht die von der äußeren INSERT-Anweisung generierten Identitätswerte zurück.  
   
 -   In Abfragebenachrichtigungen gilt die Anweisung als einzelne Entität, und der Typ aller erstellten Benachrichtigungen wird auf den Typ der geschachtelten DML-Anweisung festgelegt, selbst wenn die signifikante Änderung von der äußeren INSERT-Anweisung stammt.  
   

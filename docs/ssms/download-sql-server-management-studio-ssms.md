@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - Installieren von SSMS, Herunterladen von SSMS, neueste SSMS-Version
-- SQL Server Management Studio
+- SQL Server Management Studio
 - ssms.exe
 - sql man studio
 - sql management studio
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957683"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188936"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ Verwenden Sie SQL Server Management Studio (SSMS) zum Abfragen, Entwerfen und Ve
 
 SSMS 17.X ist die größte Generation von *SQL Server Management Studio* und stellt Unterstützung für SQL Server 2017 bereit.
 
-**[![Download](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![Herunterladen](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875802) (es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
-**[![Download](../ssdt/media/download.png) Upgradepaket für SQL Server Management Studio 17.8.1 (Upgrades 17.x bis 17.8.1) herunterladen](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![Herunterladen](../ssdt/media/download.png)Upgradepaket für SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875804) (aktualisiert 17.x auf 17.8.1; es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
 
 **Versionsinformationen**
@@ -73,13 +73,13 @@ Diese Version von SSMS kann in folgenden Sprachen installiert werden:
 SQL Server Management Studio 17.8.1:<br>
 [Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
-Upgradepaket für SQL Server Management Studio 17.8.1 (Upgrades 17.x bis 17.8.1):<br>
+Upgradepaket für SQL Server Management Studio 17.8.1 (aktualisiert 17.x auf 17.8.1):<br>
 [Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > Das SQL Server PowerShell-Modul ist nun eine separate Installation über den PowerShell-Katalog. Weitere Informationen finden Sie unter [Download SQL Server PowerShell Module](download-sql-server-ps-module.md) (Herunterladen des SQL Server PowerShell-Moduls).
 
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
 ## <a name="new-in-this-release"></a>In dieser Version neu
@@ -92,7 +92,7 @@ Version 17.8.1 enthält Folgendes:
 
 Datenbankeigenschaften:
 
-- Durch diese Verbesserung wird die Konfigurationsoption „AUTOGROW_ALL_FILES“ für Dateigruppen verfügbar gemacht. Diese neue Konfigurationsoption wurde unter „Datenbankeigenschaften“ > Fenster „Dateigruppen“ hinzugefügt und zwar in Form einer neuen Spalte („Autogrow All Files“) von Kontrollkästchen für jede verfügbare Dateigruppe (mit Ausnahme der Dateigruppen „Filestream“ und „Speicheroptimiert“). Der Benutzer kann AUTOGROW_ALL_FILES für eine bestimmte Dateigruppe aktivieren oder deaktivieren, indem er das entsprechende Kontrollkästchen „Autogrow_All_Files“ umschaltet. Dementsprechend wird für die Option „AUTOGROW_ALL_FILES“ ordnungsgemäß ein Skript erstellt, wenn Skripts für die Datenbank für CREATE erstellt oder Skripts für die Datenbank (SQL 2016 und höher) generiert werden.
+- Durch diese Verbesserung wird die Konfigurationsoption „AUTOGROW_ALL_FILES“ für Dateigruppen verfügbar gemacht. Diese neue Konfigurationsoption wurde unter „Datenbankeigenschaften“ > Fenster „Dateigruppen“ hinzugefügt und zwar in Form einer neuen Spalte („Autogrow All Files“) mit Kontrollkästchen für jede verfügbare Dateigruppe (mit Ausnahme der Dateigruppen „Filestream“ und „Speicheroptimiert“). Der Benutzer kann AUTOGROW_ALL_FILES für eine bestimmte Dateigruppe über das entsprechende Kontrollkästchen unter „Autogrow_All_Files“ aktivieren oder deaktivieren. Dementsprechend wird für die Option „AUTOGROW_ALL_FILES“ ordnungsgemäß ein Skript erstellt, wenn Skripts für die Datenbank für CREATE erstellt oder Skripts für die Datenbank (SQL 2016 und höher) generiert werden.
     
 SQL-Editor:
 
@@ -142,11 +142,16 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
 
 ## <a name="release-notes"></a>Versionsanmerkungen
 
-Das Release 17.8 weist folgende Probleme und Einschränkungen auf:
+Release 17.8.1 weist folgende Probleme und Einschränkungen auf:
 
 - Wenn Sie auf die Schaltfläche *Skript* klicken, nachdem eine der Dateigruppeneigenschaften im Fenster *Eigenschaften* geändert wurde, werden zwei Skripts generiert: ein Skript mit einer *USE <database>*-Anweisung und ein zweites Skript mit einer *USE master*-Anweisung.  Beim Generieren des Skripts mit *USE master* tritt ein Fehler auf. Es sollte daher verworfen werden. Führen Sie das Skript aus, das die *USE <database>*-Anweisung enthält.
 - In einigen Dialogfeldern wird ein Fehler wegen ungültiger Edition angezeigt, wenn mit einer der neuen Azure SQL-Datenbank-Editionen *Allgemein* oder *Unternehmenskritisch* gearbeitet wird.
 - Beim XEvents-Viewer lassen sich möglicherweise Latenzen feststellen. Dies ist ein [bekanntes Problem im .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Erwägen Sie ein Upgrade auf NetFx 4.7.2.
+- Der Replikationsmonitor stürzt mit der Fehlermeldung *Datei oder Assembly konnte nicht geladen werden...* ab. So umgehen Sie dieses Problem:
+  1. Schließen Sie *SqlMonitor.exe* (d.h. Repl Monitor) und SSMS.
+  2. Laden Sie die aktualisierte *sqlmonitor.exe.config* von [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) herunter.
+  3. Ersetzen Sie *sqlmonitor.exe.config* (in der Regel unter „C:\Programme (x86)\Microsoft SQL Server\140\Tools\Binn“) durch die heruntergeladen Datei.
+  4. Starten Sie SSMS und/oder Replikationsmonitor neu.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Deinstallation und Neuinstallation von SSMS

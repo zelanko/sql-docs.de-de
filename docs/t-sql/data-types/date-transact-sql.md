@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415439"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083832"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Eigenschaft|value|  
 |--------------|-----------|  
 |Syntax|**Datum**|  
-|Verwendung|Deklarieren Sie @MyDate **date**.<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Verwendung|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
 |Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1. Januar 1 bis zum 31. Dezember 9999 (15. Oktober 1582 bis zum 31. Dezember 9999 für Informatica)|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern von 0001 bis 9999, die ein Jahr darstellen. Für Informatica ist JJJJ auf den Bereich 1582 bis 9999 beschränkt.<br /><br /> Bei MM handelt es sich um zwei Ziffern von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern von 01 bis 31, die im angegebenen Monat einen Tag darstellen.|  

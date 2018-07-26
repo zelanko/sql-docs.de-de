@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249702"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088392"
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert 
 * Zum Speichern eines Datenwerts, der vom Rückgabecode einer gespeicherten Prozedur oder vom Funktionsrückgabewert zurückgegeben werden soll.
 
 > [!NOTE]
-> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@*-Zeichen (@@). Obwohl die @@functions in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die @@functions sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
+> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@*-Zeichen (\@\@). Obwohl die \@\@-Funktionen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
 
 Das folgende Skript erstellt eine kleine Testtabelle, die mit 26 Zeilen aufgefüllt wird. Das Skript verwendet eine Variable zur Durchführung von drei Aufgaben: 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Deklarieren einer Transact-SQL-Variablen
 Die DECLARE-Anweisung initialisiert eine Transact-SQL-Variable auf die folgende Weise: 
-* Zuweisen eines Namens. Der Name muss ein einzelnes @-Zeichen als erstes Zeichen enthalten.
+* Zuweisen eines Namens. Der Name muss ein einzelnes \@-Zeichen als erstes Zeichen enthalten.
 * Zuweisen eines vom System bereitgestellten oder benutzerdefinierten Datentyps und einer Länge. Für numerische Variablen werden außerdem die Genauigkeit und die Dezimalstellen zugewiesen. Für Variablen des Typs XML kann eine optionale Schemaauflistung zugewiesen werden.
 * Festlegen des Werts auf NULL.
 
-Beispielsweise erstellt die folgende **DECLARE**-Anweisung eine lokale Variable namens **@mycounter** vom int-Datentyp.  
+Beispielsweise erstellt die folgende **DECLARE**-Anweisung eine lokale Variable namens **\@mycounter** vom int-Datentyp.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Zum Deklarieren von mehreren lokalen Variablen verwenden Sie ein Komma nach der ersten definierten lokalen Variablen und geben dann den Namen und den Datentyp der nächsten lokalen Variablen an.
 
-Die folgende **DECLARE**-Anweisung erstellt z.B. drei lokale Variablen mit den Namen **@LastName**, **@FirstName** und **@StateProvince** und initialisiert alle mit NULL:  
+Diese **DECLARE**-Anweisung erstellt z. B. drei lokale Variablen namens **\@LastName**, **\@FirstName** und **\@StateProvince** und initialisiert alle mit NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > Wenn es in einer einzelnen SELECT-Anweisung mehrere Zuordnungsklauseln gibt, kann SQL Server die Bewertungsreihenfolge der Ausdrücke nicht sicherstellen. Beachten Sie, dass die Auswirkungen nur dann sichtbar sind, wenn es Verweise zwischen den Zuordnungen gibt.
 
-Wenn eine SELECT-Anweisung mehrere Zeilen zurückgibt und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable auf den Wert festgelegt, der für den Ausdruck in der letzten Zeile des Resultsets zurückgegeben wurde. Im folgenden Batch wird z.B. **@EmpIDVariable** auf den **BusinessEntityID**-Wert der zuletzt zurückgegebenen Zeile festgelegt, der 1 ist:  
+Wenn eine SELECT-Anweisung mehrere Zeilen zurückgibt und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable auf den Wert festgelegt, der für den Ausdruck in der letzten Zeile des Resultsets zurückgegeben wurde. Im folgenden Batch wird z.B. **\@EmpIDVariable** auf den **BusinessEntityID**-Wert der zuletzt zurückgegebenen Zeile festgelegt, der 1 ist:  
 
 ```sql
 USE AdventureWorks2014;

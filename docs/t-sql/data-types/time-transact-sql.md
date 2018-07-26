@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421569"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088122"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421569"
 |Eigenschaft|value|  
 |--------------|-----------|  
 |Syntax|**time** [ (*fractional second scale*) ]|  
-|Verwendung|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Im Zusammenhang mit Informatica kann dies eine ganze Zahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Bruchteil beträgt 7 (100 ns).|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
 |Bereich|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
@@ -56,7 +56,7 @@ ms.locfileid: "37421569"
 |Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. In Informatica sind es standardmäßig 4 Byte (fest), wobei die Standardgenauigkeit in Sekundenbruchteilen 1 ms beträgt.|  
 |Genauigkeit|100 ns (1 ms in Informatica)|  
 |Standardwert|00:00:00<br /><br /> Dieser Wert wird für den angefügten Datumsteil für eine implizite Konvertierung von **date** in **datetime2** oder **datetimeoffset** verwendet.|  
-|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|ja|  
+|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Benutzerkontensteuerung|  
 |Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
 |Beachtung der Sommerzeit|nein|  
   

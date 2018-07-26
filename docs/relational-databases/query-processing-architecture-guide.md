@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842903"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087562"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ Außerdem werden die folgenden Abfrageklauseln nicht parametrisiert. Beachten Si
   * Der Ausdruck enthält eine `CASE` -Klausel.  
 * Argumente von Abfragehinweisklauseln. Zu diesen gehören das `number_of_rows` -Argument des `FAST` -Abfragehinweises, das `number_of_processors` -Argument des `MAXDOP` -Abfragehinweises sowie das number-Argument des `MAXRECURSION` -Abfragehinweises.
 
-Die Parametrisierung wird auf der Ebene der einzelnen Transact-SQL-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, wie beispielsweise (@1 tinyint).
+Die Parametrisierung wird auf der Ebene der einzelnen Transact-SQL-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, z. B. (\@1 tinyint).
 
 > [!NOTE]
 > Parameternamen sind willkürlich. Benutzer bzw. Anwendungen sollten sich nicht auf eine bestimmte Namensreihenfolge verlassen. Darüber hinaus kann sich zwischen verschiedenen Versionen und Service Pack-Upgrades von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Folgendes ändern: Parameternamen, die Auswahl der parametrisierten Literale und der Abstand im parametrisierten Text.

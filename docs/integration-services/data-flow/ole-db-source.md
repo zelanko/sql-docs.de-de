@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401352"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083352"
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
   Die OLE DB-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls aus einer Reihe von OLE DB-kompatiblen relationalen Datenbanken. Beispielsweise kann die OLE DB-Quelle Daten aus Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken extrahieren.  
@@ -87,7 +87,7 @@ ms.locfileid: "35401352"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- Die gespeicherte Prozedur erwartet, dass die `@StartProductID` - und `@CheckDate`-Variablen Parameterwerte bereitstellen. Dabei ist die Reihenfolge, in der die Parameter in der **Mappings** -Liste angezeigt werden, irrelevant. Die einzige Voraussetzung ist, dass die Parameternamen den Variablennamen der gespeicherten Prozedur entsprechen müssen. Hierzu zählt auch das @-Zeichen.  
+ Die gespeicherte Prozedur erwartet, dass die `@StartProductID` - und `@CheckDate`-Variablen Parameterwerte bereitstellen. Dabei ist die Reihenfolge, in der die Parameter in der **Mappings** -Liste angezeigt werden, irrelevant. Die einzige Voraussetzung ist, dass die Parameternamen den Variablennamen der gespeicherten Prozedur entsprechen. Das gilt auch für das \@-Zeichen.  
   
 ### <a name="mapping-parameters-to-variables"></a>Zuordnen von Parametern zu Variablen  
  Die Parameter werden Variablen zugeordnet, die die Parameterwerte zur Laufzeit bereitstellen. Bei den Variablen handelt es sich in der Regel um benutzerdefinierte Variablen, obwohl Sie auch die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Systemvariablen verwenden können. Stellen Sie beim Verwenden von benutzerdefinierten Variablen sicher, dass Sie den Datentyp auf einen Typ festlegen, der mit dem Datentyp der Spalte, auf die der zugeordnete Parameter verweist, kompatibel ist. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  

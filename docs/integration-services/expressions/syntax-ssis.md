@@ -17,12 +17,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50aade82abccaa58b62d28b086392a276dee3f2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7b7e364b9384813e63036b184f80f4e807f7218
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335894"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084832"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
   Die Ausdruckssyntax von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ähnelt der von den Sprachen C und C# verwendeten Syntax. Ausdrücke schließen Elemente ein, wie z. B. Bezeichner (Spalten und Variablen), Literale, Operatoren und Funktionen. Dieses Thema enthält eine Zusammenfassung der speziellen Anforderungen der Ausdrucksauswertungssyntax für die verschiedenen Ausdruckselemente.  
@@ -39,7 +39,7 @@ ms.locfileid: "35335894"
 ## <a name="identifiers"></a>Bezeichner  
  Ausdrücke können Spalten- und Variablenbezeichner einschließen. Die Spalten können aus der Datenquelle stammen oder mithilfe von Transformationen im Datenfluss erstellt werden. In Ausdrücken kann mit Herkunftsbezeichnern auf Spalten verwiesen werden. Bei Herkunftsbezeichnern handelt es sich um Zahlen, mit denen Paketelemente eindeutig identifiziert werden. Wenn in Ausdrücken auf Herkunftsbezeichner verwiesen wird, muss das Nummernzeichen (#) verwendet werden. Beispielsweise wird auf den Herkunftsbezeichner 138 mit #138 verwiesen.  
   
- Ausdrücke können Systemvariablen von [!INCLUDE[ssIS](../../includes/ssis-md.md)] sowie benutzerdefinierte Variablen einschließen. Wenn in Ausdrücken auf Variablen verwiesen wird, muss das @-Präfix verwendet werden. Beispielsweise wird auf die `Counter`-Variable mit @Counter verwiesen. Das @-Zeichen ist nicht Bestandteil des Variablennamens, sondern identifiziert die Variable nur gegenüber der Ausdrucksauswertung. Weitere Informationen finden Sie unter [Bezeichner &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
+ Ausdrücke können Systemvariablen von [!INCLUDE[ssIS](../../includes/ssis-md.md)] sowie benutzerdefinierte Variablen einschließen. Wenn in Ausdrücken auf Variablen verwiesen wird, muss das \@-Präfix verwendet werden. Beispielsweise wird auf die `Counter`-Variable mit \@Counter verwiesen. Das Zeichen \@ ist nicht Bestandteil des Variablennamens, sondern zeigt der Ausdrucksauswertung nur an, dass der Bezeichner eine Variable ist. Weitere Informationen finden Sie unter [Bezeichner &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## <a name="literals"></a>Literale  
  Ausdrücke können numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Zeichenfolgenliterale müssen in Ausdrücken in Anführungszeichen eingeschlossen werden. Für numerische und boolesche Literale werden keine Anführungszeichen verwendet. Die Ausdruckssprache beinhaltet Escapesequenzen für für häufig verwendete Escapezeichen. Weitere Informationen finden Sie unter [Literale &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  

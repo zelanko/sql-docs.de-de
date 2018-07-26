@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786141"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106726"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786141"
  Gibt die einer DEFAULT-Definition auf Tabellenebene zugeordnete Spalte an.  
   
  WITH VALUES  
- Gibt an, dass der in DEFAULT *constant_expression* angegebene Wert in einer neuen Spalte gespeichert wird, die vorhandenen Zeilen hinzugefügt wird. WITH VALUES kann nur angegeben werden, wenn DEFAULT in einer ADD-Klausel für Spalten angegeben ist. Wenn die hinzugefügte Spalte NULL-Werte zulässt und WITH VALUES angegeben ist, wird der Standardwert in der neuen, zu vorhandenen Zeilen hinzugefügten Spalte gespeichert. Ist WITH VALUES für Spalten, die NULL-Werte zulassen, nicht angegeben, wird der NULL-Wert in der neuen Spalte in vorhandenen Zeilen gespeichert. Wenn die neue Spalte keine NULL-Werte zulässt, wird der Standardwert in neuen Zeilen gespeichert, unabhängig davon, ob WITH VALUES angegeben ist.  
+ Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Wenn dieser verwendet wird, hat dies keine Auswirkung wenn die verknüpfte Spalte ist nicht ebenfalls hinzugefügt wird. 
   
  CHECK  
  Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird.  

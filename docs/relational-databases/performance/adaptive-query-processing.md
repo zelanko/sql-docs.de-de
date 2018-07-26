@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332441"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087502"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
+
+## <a name="row-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilenmodus
+**Gilt für**: SQL-Datenbank als öffentliche Vorschau
+
+Das Feedback zur Speicherzuweisung im Zeilenmodus erweitert die Feedbackfunktion zur Speicherzuweisung im Batchmodus, indem die Größe der Speicherzuweisung sowohl für Batch- als auch für Zeilenmodusoperatoren angepasst wird.  
+
+Um die öffentliche Vorschau von Feedback zur Speicherzuweisung im Zeilenmodus in der Azure SQL-Datenbank zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
+
+Die Feedbackaktivität zur Speicherzuweisung im Zeilenmodus wird über das XEvent-Ereignis **memory_grant_updated_by_feedback** angezeigt. 
+
+Seitdem Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden zwei neue Abfrageplanattribute für die tatsächlichen Pläne nach der Ausführung angezeigt: **IsMemoryGrantFeedbackAdjusted** und **LastRequestedMemory**. Diese werden dem XML-Element des MemoryGrantInfo-Abfrageplans hinzugefügt. 
+
+LastRequestedMemory zeigt den zugewiesenen Speicher in Kilobytes (KB) von der vorherigen Abfrageausführung an. Mit dem Attribut IsMemoryGrantFeedbackAdjusted können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
+
+| Wert IsMemoryGrantFeedbackAdjusted | und Beschreibung |
+|--- |--- |
+| No: First Execution | Das Feedback zur Speicherzuweisung passt den Speicher für die erste Kompilierung und die zugeordnete Ausführung nicht an.  |
+| No: Accurate Grant | Wenn es keinen Überlauf auf dem Datenträger gibt und die Anweisung mindestens 50 % des zugewiesenen Speichers nutzt, wird Feedback zur Speicherzuweisung nicht ausgelöst. |
+| No: Feedback disabled | Wenn das Feedback zur Speicherzuweisung kontinuierlich ausgelöst wird und zwischen Speichererhöhung und -verkleinerung schwankt, deaktivieren Sie das Feedback zur Speicherzuweisung für die Anweisung. |
+| Yes: Adjusting | Das Feedback zur Speicherzuweisung wurde angewendet und kann für die nächste Ausführung weiter angepasst werden. |
+| Yes: Stable | Das Feedback zur Speicherzuweisung wurde angewendet und der zugewiesene Speicher ist jetzt stabil. Das bedeutet: Der für die vorherige Ausführung zuletzt zugewiesene Speicher entspricht dem für die aktuelle Ausführung. |
+
+Die Planattribute für das Feedback zur Speicherzuweisung werden derzeit in den grafischen Abfrageausführungsplänen von SQL Server Management Studio nicht angezeigt. Allerdings können Sie sie zu Testzwecken mit SET STATISTICS XML ON oder dem query_post_execution_showplan-XEvent ansehen.  
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.

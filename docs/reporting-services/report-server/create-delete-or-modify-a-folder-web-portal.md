@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025077"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082452"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Erstellen, Löschen oder Ändern eines Ordners (Webportal)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  
@@ -33,7 +33,7 @@ ms.locfileid: "33025077"
   
      Das Dialogfeld **Create a new folder in** (Neuen Ordner erstellen in) wird geöffnet.  
   
-3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : @ & = + , $ / * < > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
+3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = + , $ / * < > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
   
 4.  Wählen Sie **Erstellen**aus.  
   

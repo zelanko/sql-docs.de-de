@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787766"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024246"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufw
 
 In einer Tabelle mit einem gruppierten Columnstore-Index können keine Cursor oder Trigger verwendet werden. Diese Einschränkung gilt nicht für nicht gruppierte Columnstore-Indizes; in einer Tabelle mit einem nicht gruppierten Columnstore-Index können Cursor und Trigger verwendet werden.
 
-**SQL Server 2014-spezifische Einschränkungen**  
-Diese Einschränkungen gelten nur für SQL Server 2014. Mit diesem Release wurden aktualisierbare gruppierte Columnstore-Indizes eingeführt. Nicht gruppierte Columnstore-Indizes waren noch schreibgeschützt.  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-spezifische Einschränkungen**  
+Diese Einschränkungen gelten nur für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Mit diesem Release wurden aktualisierbare gruppierte Columnstore-Indizes eingeführt. Nicht gruppierte Columnstore-Indizes waren noch schreibgeschützt.  
 
 -   Änderungsnachverfolgung. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
 -   Change Data Capture. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
 -   Lesbares sekundäres Replikat. Auf einen gruppierten Columnstore-Index (CCI) kann nicht über ein lesbares sekundäres Replikat einer lesbaren Always On-Verfügbarkeitsgruppe zugegriffen werden.  Auf einen nicht gruppierten Columnstore-Index (NCCI) kann über ein lesbares sekundäres Replikat zugegriffen werden.  
--   Mehrere aktive Resultsets (MARS). SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen mit Tabellen mit einem Columnstore-Index.    SQL Server 2014 unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet SQL Server die Verbindung und bricht die Transaktionen ab.  
+-   Mehrere aktive Resultsets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verwendet MARS für schreibgeschützte Verbindungen für Tabellen mit einem Columnstore-Index. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verbindung und bricht die Transaktionen ab.  
   
  Informationen zu den Leistungsvorteilen und Einschränkungen von Columnstore-Indizes finden Sie unter [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -383,7 +383,7 @@ Diese Einschränkungen gelten nur für SQL Server 2014. Mit diesem Release wurde
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Konvertieren eines Heaps in einen gruppierten Columnstore-Index  
  In diesem Beispiel wird eine Tabelle als Heap erstellt und anschließend in einen gruppierten Columnstore-Index mit dem Namen cci_Simple konvertiert. Dadurch wird der Speicher für die gesamte Tabelle von rowstore in columnstore geändert.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Konvertiert einen gruppierten Index in einen gruppierten Columnstore-Index mit demselben Namen.  
  In diesem Beispiel wird eine Tabelle mit einem gruppierten Index erstellt. Anschließend wird die Syntax zum Konvertieren des gruppierten Indexes in einen gruppierten Columnstore-Index veranschaulicht. Dadurch wird der Speicher für die gesamte Tabelle von rowstore in columnstore geändert.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] konnte für einen Columnstore-Index kein nicht gruppierter Index erstellt werden. Im folgenden Beispiel wird gezeigt, dass in früheren Releases vor dem Erstellen des Columnstore-Indexes die nicht gruppierten Indizes gelöscht werden mussten.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. Konvertieren einer großen Faktentabelle von einem Rowstore in einen Columnstore  
@@ -452,7 +450,7 @@ GO
   
 1.  Erstellen Sie zunächst eine kleine Tabelle, die für das Beispiel verwendet werden kann.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  Löschen Sie alle nicht gruppierten Indizes aus der Rowstore-Tabelle.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   Führen Sie diesen Schritt nur aus, wenn Sie beim Konvertieren in einen gruppierten Columnstore-Index einen neuen Namen für den Index angeben möchten. Wenn Sie den gruppierten Index nicht löschen, weist der neue gruppierte Columnstore-Index den gleichen Namen auf.  
   
         > [!NOTE]  
-        >  Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes weisen den Standardnamen auf, der ''ClusteredIndex_\<GUID>'' lautet.  
+        > Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes weisen den Standardnamen auf, der ''ClusteredIndex_\<GUID>'' lautet.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  Konvertieren Sie die Rowstore-Tabelle in eine Columnstore-Tabelle mit einem gruppierten Columnstore-Index.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. Konvertieren einer Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index  
  Verwenden Sie die CREATE INDEX-Anweisung mit der DROP_EXISTING-Option, um eine Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index zu konvertieren.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. Konvertieren einer Columnstore-Tabelle in einen Rowstore-Heap  
  Löschen Sie zum Konvertieren einer Columnstore-Tabelle in einen Rowstore-Heap einfach den gruppierten Columnstore-Index.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Defragmentieren durch Neuerstellen des gesamten gruppierten Columnstore-Indexes  
-   Gilt für: SQL Server 2014  
+   Gilt für: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  Es gibt zwei Möglichkeiten, den gesamten gruppierten Columnstore-Index neu zu erstellen. Sie können CREATE CLUSTERED COLUMNSTORE INDEX oder [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) und die REBUILD-Option verwenden. Mit beiden Methoden werden die gleichen Ergebnisse erzielt.  
   
 > [!NOTE]  
->  Ab SQL Server 2016 wird der Index nicht mehr mit den in diesem Beispiel beschriebenen Methoden neu erstellt, sondern es wird ALTER INDEX REORGANIZE verwendet.  
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie `ALTER INDEX...REORGANIZE` verwenden, anstatt den gesamten Index mit diesen beispielhaften Methoden neu zu erstellen.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> Beispiele für nicht gruppierte Columnstore-Indizes  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Erstellen eines Columnstore-Indexes als sekundärer Index für eine Rowstore-Tabelle  
  In diesem Beispiel wird ein nicht gruppierter Columnstore-Index für eine Rowstore-Tabelle erstellt. In diesem Fall kann nur ein Columnstore-Index erstellt werden. Der Columnstore-Index erfordert zusätzlichen Speicher, da er eine Kopie der Daten in der Rowstore-Tabelle enthält. In diesem Beispiel wird eine einfache Tabelle und ein gruppierter Index erstellt. Anschließend wird die Syntax zum Erstellen eines nicht gruppierten Columnstore-Indexes beschrieben.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Erstellen eines einfachen nicht gruppierten Columnstore-Indexes mit allen Optionen  
  Im folgenden Beispiel wird die Syntax zum Erstellen eines nicht gruppierten Columnstore-Indexes unter Verwendung aller Optionen veranschaulicht.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Erstellen eines nicht gruppierten Columnstore-Indexes mit einem gefilterten Prädikat  
  Im folgenden Beispiel wird ein gefilterter nicht gruppierter Columnstore-Index für die Production.BillOfMaterials-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt. Das Filterprädikat kann Spalten einschließen, die keine Schlüsselspalten im gefilterten Index sind. Das Prädikat in diesem Beispiel wählt nur die Zeilen aus, in denen EndDate nicht NULL ist.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. Ändern der Daten in einem nicht gruppierten Columnstore-Index  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Deaktivieren oder löschen Sie den Columnstore-Index. Anschließend können Sie die Daten in der Tabelle aktualisieren. Wenn Sie den Columnstore-Index deaktivieren, können Sie den Columnstore-Index nach dem Aktualisieren der Daten neu erstellen. Beispiel:  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  In diesem Beispiel wird die xDimProduct-Tabelle als Rowstore-Tabelle mit einem gruppierten Index erstellt. Anschließend wird die Rowstore-Tabelle mit CREATE CLUSTERED COLUMNSTORE INDEX in eine Columnstore-Tabelle konvertiert.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Neuerstellen eines gruppierten Columnstore-Indexes  
  Aufbauend auf dem vorherigen Beispiel wird in diesem Beispiel der vorhandene gruppierte Columnstore-Index namens „cci_xDimProduct“ mit CREATE CLUSTERED COLUMNSTORE INDEX neu erstellt.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  In diesem Beispiel wird der gruppierte Columnstore-Index „cci_xDimProduct“ aus dem vorherigen Beispiel gelöscht. Anschließend wird der gruppierte Columnstore-Index mit dem Namen „mycci_xDimProduct“ neu erstellt.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Konvertieren einer Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index  
  Es kann vorkommen, dass ein gruppierter Columnstore-Index gelöscht und ein gruppierter Index erstellt werden soll. Dadurch wird die Tabelle im Rowstore-Format gespeichert. In diesem Beispiel wird eine Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index mit demselben Namen konvertiert. Dabei gehen keine Daten verloren. Alle Daten werden in die Rowstore-Tabelle verschoben, und aus den aufgelisteten Spalten werden die Schlüsselspalten im gruppierten Index.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Konvertieren einer Columnstore-Tabelle in einen Rowstore-Heap  
  Verwenden Sie [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), um den gruppierten Columnstore-Index zu verwerfen und die Tabelle in einen Rowstore-Heap zu konvertieren. In diesem Beispiel wird die Tabelle „cci_xDimProduct“ in einen Rowstore-Heap konvertiert. Die Tabelle wird weiterhin verteilt, jedoch als Heap gespeichert.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

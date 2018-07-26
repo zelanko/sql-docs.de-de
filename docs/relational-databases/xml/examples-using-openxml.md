@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017423"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087482"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von **CustomerID** und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem *flags*-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
   
- @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
+ \@xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
   
  Wenn <`CustomerID`> und <`ContactName`> im XML-Dokument Unterelemente sind, ruft die elementzentrierte Zuordnung die Werte ab.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Die OPENXML-Anweisung verdeutlicht Folgendes:  
   
--   *Rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) endet mit dem XML-Attribut **ProductID**. Im resultierenden Rowset wird für jeden im XML-Dokument ausgewählten Attributknoten eine Zeile erstellt.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) endet mit einem XML-Attribut, **ProductID**. Im resultierenden Rowset wird für jeden im XML-Dokument ausgewählten Attributknoten eine Zeile erstellt.  
   
 -   In diesem Beispiel wird der *flags* -Parameter nicht angegeben. Vielmehr werden die Zuordnungen vom *ColPattern* -Parameter angegeben.  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Das als *ColPattern* für die **ProdID**-Spalte im Rowset angegebene XPath-Muster (**.**) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
--   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **../@Quantity** identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID).  
+-   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **(../\@Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
--   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* **../../@OrderID** das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
+-   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* (**../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Konkret wird eine **xml**-Typvariable (@x) an die **sp_xml_preparedocument()**-Funktion übergeben.  
+ Konkret wird eine **xml** -Typvariable (\@x) an die **sp_xml_preparedocument()**-Funktion übergeben.  
   
  Dies ist das Ergebnis:  
   

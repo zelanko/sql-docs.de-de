@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 57bafde547e9c2705d55308187fd53e241594d5f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791511"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088372"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
   
 ```  
 ALTER DATABASE database_name   
-SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }  
+SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *database_name*  
  Der Name der Datenbank, die geändert werden soll.  
   
- COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
+ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):  
   
 |Product|Version der Datenbank-Engine|Bestimmung des Kompatibilitätsgrads|Unterstützte Kompatibilitätsgradwerte|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|Logischer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server|12|130|140, 130, 120, 110, 100|  
-|Verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz|12|130|140, 130, 120, 110, 100|  
+|Logischer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server|12|130|150, 140, 130, 120, 110, 100|  
+|Verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -166,6 +166,11 @@ Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Kompatibilitätsgrade und gespeicherte Prozeduren  
  Wenn eine gespeicherte Prozedur ausgeführt wird, verwendet sie den aktuellen Kompatibilitätsgrad der Datenbank, in der sie definiert ist. Wenn die Kompatibilitätseinstellung einer Datenbank geändert wird, werden alle zugehörigen gespeicherten Prozeduren automatisch entsprechend neu kompiliert.  
+
+## <a name="differences-between-compatibility-level-140-and-level-150"></a>Unterschiede zwischen Kompatibilitätsgrad 140 und Kompatibilitätsgrad 150  
+In diesem Abschnitt werden neue mit Kompatibilitätsgrad 150 eingeführte Verhaltensweisen beschrieben.
+
+Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der privaten Vorschau für Azure SQL-Datenbank.  Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.  
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Unterschiede zwischen Kompatibilitätsgrad 130 und Kompatibilitätsgrad 140  
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 140 eingeführte Verhaltensweisen beschrieben.

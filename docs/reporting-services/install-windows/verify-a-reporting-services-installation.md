@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 401288bfde8caf4550260f7695d9bc13d07e468a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322799"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983776"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver können in zwei Modi installiert werden: einheitlich oder SharePoint. Die Schritte, die Sie zum Überprüfen der Installation ausführen sollten, hängen vom Berichtsservermodus ab.  
@@ -39,7 +39,7 @@ ms.locfileid: "35322799"
   
 2.  Überprüfen Sie, ob der **SQL Server Reporting Services-Dienst** installiert ist und den Status **Wird ausgeführt** aufweist.  
   
-     Wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst nicht in der Liste aufgeführt, überprüfen Sie, ob der Dienst installiert ist. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst nicht in der Liste aufgeführt, überprüfen Sie, ob der Dienst installiert ist. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="to-verify-the-service-application"></a>So überprüfen Sie die Dienstanwendung  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35322799"
   
 1.  Erstellen Sie in einer SharePoint-Dokumentbibliothek einen grundlegenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht, der nur ein Textfeld enthält, z. B. einen Titel. Der Bericht enthält keine Datenquellen oder Datasets. Ziel ist es, zu überprüfen, ob Sie den Berichts-Generator öffnen und einen grundlegenden Bericht in der Vorschau anzeigen können.  
   
-2.  Speichern Sie den Bericht in der Dokumentbibliothek, und führen Sie den Bericht dann aus der Bibliothek heraus aus. Weitere Informationen zum Erstellen von Berichten mit dem Berichts-Generator finden Sie unter [Starten des Berichts-Generators](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Speichern Sie den Bericht in der Dokumentbibliothek, und führen Sie den Bericht dann aus der Bibliothek heraus aus. Weitere Informationen zum Erstellen von Berichten mit dem Berichts-Generator finden Sie unter [Starten des Berichts-Generators](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
   
 ### <a name="reporting-services-samples"></a>Reporting Services-Beispiele  
   
@@ -100,7 +100,7 @@ ms.locfileid: "35322799"
   
 2.  Verwenden Sie den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , um einen neuen Ordner zu erstellen, oder laden Sie eine Datei hoch, um zu testen, ob Definitionen an die Berichtsserver-Datenbank zurückgegeben werden. Falls diese Vorgänge erfolgreich sind, ist die Verbindung einsatzbereit.  
   
-     Weitere Informationen finden Sie unter [Webportal (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Weitere Informationen finden Sie unter [Webportal (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>So überprüfen Sie, ob der Berichts-Designer installiert ist und ausgeführt wird  
   

@@ -1,7 +1,7 @@
 ---
 title: Master-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: databases
@@ -19,16 +19,19 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d33bb332481561a1a81c0d18ebcfb19b4fc32f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ffc0e8ccb310cb5a5d491f057ee2b8b5074e080
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930985"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108123"
 ---
 # <a name="master-database"></a>master-Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
+
+> [!IMPORTANT]
+> Für den logischen Server von Azure SQL-Datenbank gelten nur die Masterdatenbank und die tempdb-Datenbank. Weitere Informationen zum Konzept eines logischen Servers und einer logischen Masterdatenbank finden Sie unter [Was ist ein logischer Azure SQL-Server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Eine Erläuterung von tempdb im Kontext von Azure SQL-Datenbank finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank](tempdb-database.md#tempdb-database-in-sql-database). Für die verwaltete Azure SQL-Datenbank-Instanz gelten alle Systemdatenbanken. Weitere Informationen zu verwalteten Instanzen in Azure SQL-Datenbank finden Sie unter [Was ist eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="physical-properties-of-master"></a>physische Eigenschaften der master-Datenbank  
  Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **master** -Daten und -Protokolldateien. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
@@ -46,34 +49,34 @@ ms.locfileid: "32930985"
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
-|ANSI_NULL_DEFAULT|OFF|ja|  
-|ANSI_NULLS|OFF|ja|  
-|ANSI_PADDING|OFF|ja|  
-|ANSI_WARNINGS|OFF|ja|  
-|ARITHABORT|OFF|ja|  
+|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
+|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
+|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
+|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
+|ARITHABORT|OFF|Benutzerkontensteuerung|  
 |AUTO_CLOSE|OFF|nein|  
-|AUTO_CREATE_STATISTICS|ON|ja|  
+|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
 |AUTO_SHRINK|OFF|nein|  
-|AUTO_UPDATE_STATISTICS|ON|ja|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
+|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
 |CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|ja|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
-|CURSOR_DEFAULT|GLOBAL|ja|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
+|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
 |Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
 |DB_CHAINING|ON|nein|  
 |ENCRYPTION|OFF|nein|  
 |MIXED_PAGE_ALLOCATION|ON|nein|  
-|NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM|ja|  
-|PARAMETERIZATION|SIMPLE|ja|  
-|QUOTED_IDENTIFIER|OFF|ja|  
+|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
+|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
+|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
+|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
 |READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|ja|  
-|RECURSIVE_TRIGGERS|OFF|ja|  
+|RECOVERY|SIMPLE|Benutzerkontensteuerung|  
+|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
 |Service Broker-Optionen|DISABLE_BROKER|nein|  
-|TRUSTWORTHY|OFF|ja|  
+|TRUSTWORTHY|OFF|Benutzerkontensteuerung|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   

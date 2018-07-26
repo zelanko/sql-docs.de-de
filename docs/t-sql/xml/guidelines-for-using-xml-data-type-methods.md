@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248452"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083372"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Richtlinien zum Verwenden von Methoden des xml-Datentyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  Positionsschritte, Funktionsparameter und Operatoren, die Singleton-Elemente benötigen, geben einen Fehler zurück, wenn der Compiler nicht ermitteln kann, ob zur Laufzeit ein Singleton-Element sichergestellt ist. Dieses Problem tritt häufig bei nicht typisierten Daten auf. So erfordert z. B. die Suche eines Attributs ein übergeordnetes Singleton-Element. Dabei ist eine Ordinalzahl ausreichend, die einen einzelnen übergeordneten Knoten auswählt. Die Auswertung einer **node()**-**-value()**-Kombination zum Extrahieren von Attributwerten erfordert möglicherweise keine Angabe der Ordinalzahl. Dies ist im nächsten Beispiel dargestellt.  
   
 ### <a name="example-known-singleton"></a>Beispiel: Bekanntes Singleton  
- In diesem Beispiel generiert die **nodes()**-Methode eine separate Zeile für jedes <`book`>-Element. Die **value()**-Methode, die in einem <`book`>-Knoten ausgewertet wird, extrahiert den Wert von @genre und stellt, da es sich um ein Attribut handelt, ein Singleton-Element dar.  
+ In diesem Beispiel generiert die **nodes()**-Methode eine separate Zeile für jedes <`book`>-Element. Die **value()**-Methode, die in einem <`book`>-Knoten ausgewertet wird, extrahiert den Wert von \@genre und stellt ein Singleton dar, da es sich um ein Attribut handelt.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

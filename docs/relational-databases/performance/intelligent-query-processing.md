@@ -2,7 +2,7 @@
 title: Intelligente Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Features zur intelligenten Abfrageverarbeitung, die die Abfrageleistung in SQL Server und in Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,25 +16,43 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7786fd048f1698c90f379450b31e0bac3457706e
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455766"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216821"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Die Featurefamilie **Intelligente Abfrageverarbeitung** enthält Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern.   Darin enthalten sind Verbesserungen bereits vorhandener Konstrukte und die Einführung adaptiver Methoden und Funktionen.  
+Die Featurefamilie **Intelligente Abfrageverarbeitung** umfasst Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern.
+
+![Features der intelligenten Abfrageverarbeitung](./media/1_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Adaptive Abfrageverarbeitung
-Innerhalb der Featurefamilie für intelligente Abfrageverarbeitung wurde in SQL Server 2017 und Azure SQL-Datenbank die Featurefamilie für adaptive Abfrageverarbeitung eingeführt. Hierdurch wurden neue Funktionen für die Abfrageverarbeitung hinzugefügt, die Optimierungsstrategien für die Bedingungen der Runtime Ihrer Anwendungsarbeitsauslastung anwenden:
-- **Adaptive Joins im Batchmodus** Dieses Feature ermöglicht Ihrem Plan, während der Ausführung mithilfe eines einzelnen zwischengespeicherten Plans dynamisch zu einer besseren Joinstrategie zu wechseln.
-- **Feedback zur Speicherzuweisung im Batchmodus** Dieses Feature berechnet den tatsächlich benötigten Speicherplatz für eine Abfrage und aktualisiert anschließend den Zuweisungswert für den zwischengespeicherten Plan. Hierdurch werden exzessive Speicherzuweisungen reduziert, die die Parallelität beeinflussen, und zu gering geschätzte Speicherzuweisungen behoben, die zu teuren Überläufen auf den Datenträger führen.
-- **Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen** Bei der verschachtelten Ausführung verwenden Sie die tatsächliche Zeilenanzahl aus der Funktion, um besser informierte Entscheidungen zum Downstream-Abfrageplan zu treffen. 
+Die Featurefamilie „Adaptive Abfrageverarbeitung“ umfasst Verbesserungen bei der Abfrageverarbeitung, die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsarbeitsauslastung anwenden. Diese Verbesserungen umfassen: Adaptive Joins im Batchmodus, Feedback zur Speicherzuweisung und die verschachtelte Ausführung für Tabellenwertfunktionen mit mehreren Anweisungen.
 
-Weitere Informationen zur adaptiven Abfrageverarbeitung finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
+Dieses Feature ermöglicht Ihrem Plan, während der Ausführung mithilfe eines einzelnen zwischengespeicherten Plans dynamisch zu einer besseren Joinstrategie zu wechseln.
+
+### <a name="row-and-batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilen- und Batchmodus
+Dieses Feature berechnet den tatsächlich benötigten Speicherplatz für eine Abfrage und aktualisiert anschließend den Zuweisungswert für den zwischengespeicherten Plan. Hierdurch werden exzessive Speicherzuweisungen reduziert, die die Parallelität beeinflussen, und zu gering geschätzte Speicherzuweisungen behoben, die zu teuren Überläufen auf den Datenträger führen.
+
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen (MSTVFs)
+Bei der verschachtelten Ausführung verwenden Sie die tatsächliche Zeilenanzahl aus der Funktion, um besser informierte Entscheidungen zum Downstream-Abfrageplan zu treffen. 
+
+Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/adaptive-query-processing.md).
+
+## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
+Die verzögerte Kompilierung von Tabellenvariablen verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung propagiert diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren.  Diese genauen Zeilenzahlinformationen werden für die Optimierung der nachgelagerten Planvorgänge verwendet.
+
+Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses verzögerte Kompilierungsverhalten ist identisch mit dem Verhalten von temporären Tabellen, und diese Änderung führt zur Verwendung der tatsächlichen Kardinalität anstelle der ursprünglichen einzeiligen Schätzung. Um die öffentliche Vorschau der verzögerten Kompilierung von Tabellenvariablen in der Azure SQL-Datenbank zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
+
+## <a name="approximate-query-processing"></a>Geschätzte Abfrageverarbeitung
+Die geschätzte Abfrageverarbeitung ist eine neue Featurefamilie, die konzipiert wurde, um Aggregationen über große Datasets hinweg bereitzustellen, bei denen die Reaktionsfähigkeit wichtiger ist als die absolute Präzision.  Ein Beispiel könnte die Berechnung eines COUNT(DISTINCT()) über 10 Milliarden Zeilen für die Anzeige auf einem Dashboard sein.  In diesem Fall ist absolute Genauigkeit nicht wichtig, aber die Reaktionsfähigkeit ist es jedoch. Diese neue APPROX_COUNT_DISTINCT-Aggregatfunktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück.
+
+Weitere Informationen finden Sie unter [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
 
 ## <a name="see-also"></a>Siehe auch
 [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

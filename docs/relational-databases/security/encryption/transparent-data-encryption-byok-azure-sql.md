@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107238"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982392"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 - Erteilen Sie dem logischen Server über dessen Azure AD-Identität (Azure Active Directory) Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure AD-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen für den Schlüsseltresor erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure AD-Identität erstellt werden. Außerdem sollte der Abschluss des Vorgangs überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]
-  >Wenn die Azure AD-Identität über die Zugriffsrichtlinie des Schlüsseltresors **aus Versehen gelöscht wird oder die Serverberechtigungen widerrufen werden**, kann der Server nicht mehr auf den Schlüsseltresor zugreifen.
+  >Wenn die Azure AD-Identität über die Zugriffsrichtlinie des Schlüsseltresors **versehentlich gelöscht wird oder die Serverberechtigungen widerrufen werden**, verliert der Server den Zugriff auf den Schlüsseltresor, und mit TDE verschlüsselte Datenbanken werden innerhalb von 24 Stunden gelöscht.
   >
-  
+
+- Konfigurieren von Azure Key Vault ohne VNET oder Firewall:  Wenn SQL den Zugriff auf den Schlüsseltresor verliert, werden mit TDE verschlüsselte Datenbanken innerhalb von 24 Stunden gelöscht.
 - Aktivieren Sie die Überwachung und die Berichterstellung auf allen Verschlüsselungsschlüsseln: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
 - Konfigurieren Sie alle logischen Server mit jeweils zwei Azure Key Vaults, die sich in verschiedenen Regionen befinden, um die Hochverfügbarkeit von verschlüsselten Datenbanken zu gewährleisten.
 

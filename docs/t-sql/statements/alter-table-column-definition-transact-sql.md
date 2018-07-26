@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785331"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109242"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  Ein Literalwert, ein NULL-Wert oder eine Systemfunktion, der bzw. die als Standardwert für die Spalte verwendet wird. Wenn die Implementierung des Datentyps zusammen mit einer Spalte verwendet wird, die als benutzerdefinierter Datentyp von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definiert ist, muss die Implementierung des Datentyps sie eine implizite Konvertierung von *constant_expression* in den benutzerdefinierten Datentyp unterstützen.  
   
-WITH VALUES  
- Gibt an, dass der in DEFAULT *constant_expression* angegebene Wert in einer neuen, zu vorhandenen Zeilen hinzugefügten Spalte gespeichert wird. Wenn die hinzugefügte Spalte NULL-Werte zulässt und WITH VALUES angegeben ist, wird der Standardwert in der neuen, der vorhandenen Zeilen hinzugefügten Spalte gespeichert. Ist WITH VALUES für Spalten, die NULL-Werte zulassen, nicht angegeben, wird der Wert NULL in der neuen Spalte in vorhandenen Zeilen gespeichert. Wenn die neue Spalte keine NULL-Werte zulässt, wird der Standardwert in neuen Zeilen gespeichert, unabhängig davon, ob WITH VALUES angegeben ist.  
+WITH VALUES   
+ Beim Hinzufügen einer Spalte UND einer DEFAULT-Beschränkung wird, wenn die Spalte NULL-Werte mit WITH VALUES erlaubt, für bestehende Zeilen der Wert der neuen Spalte auf den in DEFAULT *constant_expression* angegebenen Wert gesetzt. Wenn die hinzugefügte Spalte NULL-Werte nicht zulässt, wird der Wert der Spalte immer auf den im DEFAULT *constant expression* angegebenen Wert gesetzt. Ab SQL Server 2012 kann dies auch ein Metadatenvorgang sein [Hinzufügen von NOT NULL-Spalten als Onlinevorgang](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Wenn dieser verwendet wird, hat dies keine Auswirkung wenn die verknüpfte Spalte ist nicht ebenfalls hinzugefügt wird.
+ 
+ Gibt an, dass der in DEFAULT *constant_expression* angegebene Wert in einer neuen Spalte gespeichert wird, die vorhandenen Zeilen hinzugefügt wird. Wenn die hinzugefügte Spalte NULL-Werte zulässt und WITH VALUES angegeben ist, wird der Standardwert in der neuen, zu vorhandenen Zeilen hinzugefügten Spalte gespeichert. Ist WITH VALUES für Spalten, die NULL-Werte zulassen, nicht angegeben, wird der Wert NULL in der neuen Spalte in vorhandenen Zeilen gespeichert. Wenn die neue Spalte keine NULL-Werte zulässt, wird der Standardwert in neuen Zeilen gespeichert, unabhängig davon, ob WITH VALUES angegeben ist.  
   
 IDENTITY  
  Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird ein eindeutiger, inkrementeller Wert für die Spalte bereitgestellt. Wenn Sie vorhandenen Tabellen Bezeichnerspalten hinzufügen, werden die ID-Nummern mit den Ausgangswerten und den inkrementellen Werten den vorhandenen Zeilen der Tabelle hinzugefügt. Die Reihenfolge, in der die Zeilen aktualisiert werden, ist nicht sichergestellt. Auch für alle neu hinzugefügten Zeilen werden ID-Nummern generiert.  

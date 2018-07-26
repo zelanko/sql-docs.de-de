@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4c97ece725be5b8703c4f6d8514cb810fa8cb504
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: c816df2aca01dd17d2c5d5e613f86995ccdda092
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322169"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981742"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus schließt für Anwendungsserver und Web-Front-End-Server (WFE) benötigte Komponenten ein. In diesem Thema liegt der Schwerpunkt auf der Installation der erforderlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten für einen WFE-Server, einschließlich der Anwendungsseiten, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen wie z. B. Abonnements, Datenwarnungen und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwendet werden. Die primäre für ein WFE benötigte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation ist das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint 2016-Produkte.  
@@ -54,7 +54,7 @@ ms.locfileid: "35322169"
 |Schritt|Beschreibung und Link|  
 |----------|--------------------------|  
 |Fügen Sie einen SharePoint-Server zu einer Farm hinzu.|Sie müssen SharePoint installieren, um eine weitere Reporting Services-Anwendung bereitzustellen.<br/><br/>Für SharePoint 2013 finden Sie Informationen dazu unter [Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Für SharePoint 2016 finden Sie Informationen dazu unter [Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Installieren Sie das SQL Server Reporting Services-Add-In für SharePoint 2016-Produkte|Es gibt mehrere Methoden zum Installieren des Add-Ins. In den folgenden Schritten wird der SQL Server-Setup-Assistent verwendet. Weitere Informationen zur Installation des Add-Ins finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).<br /><br /> 1) Führen Sie die SQL Server-Installation aus.<br /><br /> 2) Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server-Funktionsinstallation**aus.<br /><br /> 3) Wählen Sie auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte**aus.<br /><br /> 4) Klicken Sie auf den nächsten Seiten auf **Weiter** , um die Setupoptionen zu vervollständigen.<br /><br/>Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).|  
+|Installieren Sie das SQL Server Reporting Services-Add-In für SharePoint 2016-Produkte|Es gibt mehrere Methoden zum Installieren des Add-Ins. In den folgenden Schritten wird der SQL Server-Setup-Assistent verwendet. Weitere Informationen zur Installation des Add-Ins finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).<br /><br /> 1) Führen Sie die SQL Server-Installation aus.<br /><br /> 2) Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server-Funktionsinstallation**aus.<br /><br /> 3) Wählen Sie auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte**aus.<br /><br /> 4) Klicken Sie auf den nächsten Seiten auf **Weiter** , um die Setupoptionen zu vervollständigen.<br /><br/>Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).|  
 |Überprüfen Sie, ob der neue Server betriebsbereit ist.|1) Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Systemeinstellungen** auf **Server in dieser Farm verwalten** .<br /><br /> 2) Überprüfen Sie, ob der neue Server in der Liste aufgeführt ist.|  
 |Aktualisieren Sie die NLB-Lösung.|Aktualisieren Sie die Hardware- oder Software-NLB-Umgebung, falls erforderlich, um den neuen Server einzuschließen.|  
 
