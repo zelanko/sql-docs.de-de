@@ -9,8 +9,7 @@
 ## [Step 3: Proof of concept connecting to SQL using Java (Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java)](step-3-proof-of-concept-connecting-to-sql-using-java.md)
 
 # [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](overview-of-the-jdbc-driver.md)
-## 
-  [Herunterladen des Microsoft JDBC-Treibers für SQL Server](download-microsoft-jdbc-driver-for-sql-server.md)
+## [Herunterladen des Microsoft JDBC-Treibers für SQL Server](download-microsoft-jdbc-driver-for-sql-server.md)
 ## [Release Notes for the JDBC Driver (Versionshinweise für den JDBC-Treiber)](release-notes-for-the-jdbc-driver.md)
 ## [Systemanforderungen für den JDBC-Treiber](system-requirements-for-the-jdbc-driver.md)
 ## [Verwenden des JDBC-Treibers](using-the-jdbc-driver.md)
@@ -18,11 +17,9 @@
 ## [Bereitstellen des JDBC-Treibers](deploying-the-jdbc-driver.md)
 ## [Weitervertreiben des Microsoft JDBC-Treibers](redistributing-the-microsoft-jdbc-driver.md)
 ## [Suchen von zusätzlichen Informationen zum JDBC-Treiber](finding-additional-jdbc-driver-information.md)
-## 
-  [Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
+## [Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Häufig gestellte Fragen (FAQ) zu JDBC Driver](frequently-asked-questions-faq-for-jdbc-driver.md)
-## 
-  [Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
+## [Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Sichern von JDBC-Treiberanwendungen](securing-jdbc-driver-applications.md)
 ## [Sichern von Verbindungszeichenfolgen](securing-connection-strings.md)
