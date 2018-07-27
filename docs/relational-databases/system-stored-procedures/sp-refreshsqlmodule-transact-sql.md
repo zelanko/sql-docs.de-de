@@ -1,7 +1,7 @@
 ---
-title: Sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs
+title: Sp_refreshsqlmodule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261006"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278731"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Aktualisiert die Metadaten für die angegebene nicht schemagebundene gespeicherte Prozedur, benutzerdefinierte Funktion oder Sicht, den DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene in der aktuellen Datenbank. Persistente Metadaten für diese Objekte, z. B. Datentypen von Parametern, können aufgrund von Änderungen an den zugrunde liegenden Objekten veraltet sein.  
+  Aktualisiert die Metadaten für die angegebene nicht schemagebundene gespeicherte Prozedur, benutzerdefinierte Funktion oder Sicht, den DML-Trigger, DDL-Trigger auf Datenbankebene oder DDL-Trigger auf Serverebene in der aktuellen Datenbank. Persistente Metadaten für diese Objekte, z. B. Datentypen von Parametern, können aufgrund von Änderungen an den zugrunde liegenden Objekten veraltet sein.
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +61,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name=** ] **"***Modulname***"**  
- Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *Modulname* nicht mit eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *Modulname* darf nicht schemagebunden sein. *Modulname* ist **Nvarchar**, hat keinen Standardwert. *Modulname* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen.  
+ [  **@name=** ] **"***Module_name***"**  
+ Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *MODULE_NAME* darf nicht sein, eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *MODULE_NAME* darf nicht schemagebunden sein. *MODULE_NAME* ist **Nvarchar**, hat keinen Standardwert. *MODULE_NAME* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen kann.  
   
  [ **,** @**Namespace** =] **"** \<Klasse > **"**  
- Klasse des angegebenen Moduls. Wenn *Modulname* wird ein DDL-Trigger \<Klasse > ist erforderlich. *\<Klasse >* ist **Nvarchar**(20). Gültige Eingaben sind:  
+ Klasse des angegebenen Moduls. Wenn *Module_name* ein DDL-Triggers ist \<Klasse > ist erforderlich. *\<Klasse >* ist **Nvarchar**(20). Gültige Eingaben sind:  
   
 |||  
 |-|-|  
@@ -76,14 +76,14 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten, die dem Modul zugrunde liegen vorgenommen werden, die zugehörige Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Um eine Ansicht zu aktualisieren, verwenden Sie entweder **Sp_refreshsqlmodule** oder **Sp_refreshview** mit den gleichen Ergebnissen.  
+ **Sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten, die dem Modul zugrunde liegen vorgenommen werden, die zugehörige Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Um eine Ansicht zu aktualisieren, verwenden Sie entweder **Sp_refreshsqlmodule** oder **Sp_refreshview** mit gleichen Ergebnissen.  
   
  **Sp_refreshsqlmodule** wirkt sich keine Berechtigungen, erweiterte Eigenschaften oder SET-Optionen, die dem Objekt zugeordnet sind.  
   
  Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.  
   
 > [!NOTE]  
->  Alle Signaturen, die dem Objekt zugeordnet sind werden gelöscht, wenn Sie ausführen **Sp_refreshsqlmodule**.  
+>  Alle Signaturen, die dem Objekt zugeordnet sind werden gelöscht, beim Ausführen von **Sp_refreshsqlmodule**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für das Modul und die REFERENCES-Berechtigung für alle CLR-benutzerdefinierten Typen und XML-Schemaauflistungen, auf die durch das Objekt verwiesen wird. Erfordert eine ALTER ANY DATABASE DDL TRIGGER-Berechtigung in der aktuellen Datenbank, wenn es sich beim angegebenen Modul um einen DDL-Trigger auf Datenbankebene handelt. Erfordert eine CONTROL SERVER-Berechtigung, wenn es sich beim angegebenen Modul um einen DDL-Trigger auf Serverebene handelt.  
@@ -177,6 +177,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

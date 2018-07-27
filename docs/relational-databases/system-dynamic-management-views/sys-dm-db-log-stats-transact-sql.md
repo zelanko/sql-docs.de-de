@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061448"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278951"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -75,6 +75,9 @@ Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) ka
 |log_recovery_size_mb   |**float**  |   Protokollgröße in MB seit protokollwiederherstellung [Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |recovery_vlf_count |**bigint** |   Gesamtanzahl von [virtuelle Protokolldateien (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) wiederhergestellt werden, wenn Failovers oder eines Serverneustarts vorhanden war,. |  
 
+
+## <a name="remarks"></a>Hinweise
+Bei der Ausführung `sys.dm_db_log_stats` für eine Datenbank, das in einer Verfügbarkeitsgruppe als sekundäres Replikat beteiligt ist, wird nur eine Teilmenge der oben beschriebenen Felder zurückgegeben werden.  Derzeit nur `database_id`, `recovery_model`, und `log_backup_time` wird zurückgegeben, wenn für eine sekundäre Datenbank ausgeführt.   
 
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989272"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216971"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys. database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ Gibt die Edition (Dienstebene), das dienstziel (Tarif) und die Namen des Pools f
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Die ID der Datenbank, eindeutig innerhalb einer Instanz von SQL-Datenbankserver. Mit beigetreten [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium** oder **Data Warehouse**.|  
-|service_objective|sysname|Der Tarif der Datenbank. Wenn die Datenbank in Pools für elastische Datenbanken ist, gibt **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> **Einzeldatenbank in einem standard-Dienstebene** gibt einen der folgenden zurück: S0, S1, S2 oder S3.<br /><br /> **Einzeldatenbank in einem Premium-Tarif** gibt Folgendes zurück: P1, P2, P4, P6/P3 oder P11.<br /><br /> **SQL Data Warehouse** DW100 über DW10000c zurückgibt.|  
+|service_objective|sysname|Der Tarif der Datenbank. Wenn die Datenbank in Pools für elastische Datenbanken ist, gibt **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> **Einzeldatenbank in einem standard-Dienstebene** gibt einen der folgenden zurück: S0, S1, S2, S3, S4, S6, S7, S9 und S12.<br /><br /> **Einzeldatenbank in einem Premium-Tarif** gibt Folgendes zurück: P1, P2, P4, P6, P11 oder P15-Datenbank.<br /><br /> **SQL Data Warehouse** DW100 über DW10000c zurückgibt.|  
 |elastic_pool_name|sysname|Der Name des der [Pool für elastische Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , zu der die Datenbank gehört. Gibt **NULL** , wenn die Datenbank eine einzeldatenbank oder eine Warehoue Daten ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  

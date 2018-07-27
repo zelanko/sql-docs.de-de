@@ -4,19 +4,19 @@ description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102228"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268808"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQLServer unter Linux: häufig gestellte Fragen (FAQ)
 
@@ -34,9 +34,13 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 
    SQL Server wird getestet und für die zuvor aufgeführten Distributionen unter Linux unterstützt. Andere Linux-Distributionen sind eng miteinander verknüpft und möglicherweise zum Ausführen von SQL Server (z. B. CentOS ist eng verwandt mit Red Hat Enterprise Server). Aber wenn Sie SQL Server auf einem nicht unterstützten Betriebssystem installieren möchten, lesen Sie bitte die **Supportrichtlinie** im Abschnitt der [technischer Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) zu verstehen, die Unterstützung Auswirkungen auf. Beachten Sie außerdem, dass einige Community, dass die Linux-Distributionen keine formale können Support zu erhalten verwaltet, wenn das zugrunde liegende Betriebssystem, das Problem ist.
 
-1. **Welche SQL Server-Funktionen unter Linux unterstützt werden?**
+1. **Wie funktioniert die Lizenzierung unter Linux?**
 
-   Eine vollständige Liste der unterstützten Features und bekannten Problemen, finden Sie unter den [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+   SQL Server wird die gleiche Weise wie für Windows und Linux lizenziert. In der Tat Sie SQL Server lizenzieren, und klicken Sie dann können Sie diese Lizenz auf der Plattform Ihrer Wahl verwenden. Weitere Informationen finden Sie unter [wie SQL Server-Lizenz](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **Ist SQL Server unter Linux, wie unter Windows?**
+
+   Der Kern für SQL Server-Datenbank-Engine ist identisch für Linux, wie mit Windows. Allerdings werden einige Funktionen unter Linux derzeit nicht unterstützt. Eine Liste der Funktionen, die unter Linux nicht unterstützt werden, finden Sie unter den [nicht unterstützte Features und-Dienste](sql-server-linux-release-notes.md#Unsupported). Überprüfen Sie auch die [bekannte Probleme](sql-server-linux-release-notes.md#known-issues). Es sei denn, die in diesen Listen angegeben, werden andere SQL Server-Funktionen und Dienste unter Linux unterstützt.
 
 1. **Was ist die Unterstützungsrichtlinie für SQL Server?**
 
