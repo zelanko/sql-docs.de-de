@@ -1,7 +1,0 @@
-# [Collation and Unicode Support](collation-and-unicode-support.md)
-## [Festlegen oder Ändern der Serversortierung](set-or-change-the-server-collation.md)
-## [Festlegen oder Ändern der Datenbanksortierung](set-or-change-the-database-collation.md)
-## [Festlegen oder Ändern der Spaltensortierung](set-or-change-the-column-collation.md)
-## [Anzeigen von Sortierungsinformationen](view-collation-information.md)
-## [Schreiben internationaler Transact-SQL-Anweisungen](write-international-transact-sql-statements.md)
-## [Festlegen einer Sitzungssprache](set-a-session-language.md)

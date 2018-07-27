@@ -1,6 +1,0 @@
-# [Behandlung von Fehlern und Meldungen](handling-errors-and-messages.md)
-# [Diagnosedatensätze und -felder](diagnostic-records-and-fields.md)
-# [Fehlermeldungen](error-messages.md)
-# [Systemeigene Fehlernummern](native-error-numbers.md)
-# [Verarbeiten von Anweisungen, die Meldungen generieren](processing-statements-that-generate-messages.md)
-# [SQLSTATE (ODBC-Fehlercodes)](sqlstate-odbc-error-codes.md)

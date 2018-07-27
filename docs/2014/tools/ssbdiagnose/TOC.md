@@ -1,5 +1,0 @@
-# [ssbdiagnose-Hilfsprogramm (Service Broker)](ssbdiagnose-utility-service-broker.md)
-# [XML Output File Format (ssbdiagnose) (Format der XML-Ausgabedatei (ssbdiagnose))](xml-output-file-format-ssbdiagnose.md)
-## [DiagnosticInformation Element (ssbdiagnose) (DiagnosticInformation-Element (ssbdiagnose))](diagnosticinformation-element-ssbdiagnose.md)
-## [Banner Element (ssbdiagnose) (Banner-Element (ssbdiagnose))](banner-element-ssbdiagnose.md)
-## [Issue Element (ssbdiagnose) (Issue-Element (ssbdiagnose))](issue-element-ssbdiagnose.md)

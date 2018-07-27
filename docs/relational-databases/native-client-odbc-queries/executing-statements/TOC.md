@@ -1,6 +1,0 @@
-# [Ausführen von ODBC-Anweisungen](executing-statements-odbc.md)
-# [Batches von Anweisungen](batches-of-statements.md)
-# [Direkte Ausführung](direct-execution.md)
-# [Effekte von ISO-Optionen](effects-of-iso-options.md)
-# [Vorbereitete Ausführung](prepared-execution.md)
-# [Vorgehensweisen](procedures.md)

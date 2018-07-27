@@ -1,5 +1,0 @@
-# [SQL Server-Datentypen in .NET Framework](sql-server-data-types-in-the-net-framework.md)
-# [Sortierung und Datentypen für die CLR-Integration](collation-and-clr-integration-data-types.md)
-# [Behandlung von LOB-Parametern (Large Object) in der CLR-Routine](handling-large-object-lob-parameters-in-the-clr.md)
-# [Zuordnen von CLR-Parameterdaten](mapping-clr-parameter-data.md)
-# [Zulässigkeit von NULL-Werten und Vergleiche mit dreiwertiger Logik](nullability-and-three-value-logic-comparisons.md)

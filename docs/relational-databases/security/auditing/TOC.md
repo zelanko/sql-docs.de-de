@@ -1,7 +1,0 @@
-# [Übersicht](sql-server-audit-database-engine.md)  
-# [Aktionsgruppen und Aktionen](sql-server-audit-action-groups-and-actions.md)  
-# [Audit-Datensätze](sql-server-audit-records.md)  
-# [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md)  
-# [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](create-a-server-audit-and-database-audit-specification.md)  
-# [Anzeigen eines SQL Server-Überwachungsprotokolls](view-a-sql-server-audit-log.md)  
-# [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md)  
