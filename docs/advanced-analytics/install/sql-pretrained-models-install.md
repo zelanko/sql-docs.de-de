@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 53bffd17ee225cf3e1d10ec4a0cd813ec7688989
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174997"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216831"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vorab trainierten Machine learning-Modelle in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel erläutert das kostenlose vorab trainiertes Machine learning-Modelle für hinzufügen *standpunktanalyse* und *Image featurebereitstellung* , R oder Python-Integration mit SQL Server-Datenbank-Engine-Instanz. Die vorab trainierte Modelle basieren von Microsoft und bereit zu bedienende, einfache Weise zu einer vorhandenen Instanz, die mithilfe eines PowerShell-Skripts hinzugefügt. Weitere Informationen zu diesen Modellen finden Sie unter den [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
+In diesem Artikel wird erläutert, wie Sie Powershell verwenden, um das Hinzufügen von kostenlosen vorab trainierten Machine learning-Modelle für *standpunktanalyse* und *Image featurebereitstellung* eine Instanz des SQL Server-Datenbank-Engine mit R oder Python Integration. Die vorab trainierte Modelle werden von Microsoft und sofort zu bedienende, erstellt eine Instanz der Datenbank-Engine als Task nach der Installation hinzugefügt. Weitere Informationen zu diesen Modellen finden Sie unter den [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
 
 Nach Abschluss der Installation werden die vorab trainierte Modelle ein Implementierungsdetail, die bestimmte Funktionen im MicrosoftML (R) und Microsoftml (Python) Bibliotheken power berücksichtigt. Sie sollten nicht (und kann nicht) anzeigen, anpassen oder die Modelle erneut trainieren, noch kann Sie behandelt sie als unabhängige Ressource in benutzerdefiniertem Code oder anderen Funktionen kombiniert. 
 
-Funktionen, die die vorab trainierten Modellen aufrufen, werden in der folgenden Tabelle aufgeführt.
+Um die vorab trainierten Modelle zu verwenden, rufen Sie die Funktionen in der folgenden Tabelle aufgeführt sind.
 
 | R-Funktion (MicrosoftML) | Python-Funktion (Microsoftml) | Verwendung |
 |--------------------------|-------------------------------|-------|
@@ -31,15 +31,18 @@ Funktionen, die die vorab trainierten Modellen aufrufen, werden in der folgenden
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-[SQL Server 2017-Machine Learning-Dienste](sql-machine-learning-services-windows-install.md) mit R, Python oder beides. 
-
-[SQL Server 2016 R Services](sql-r-services-windows-install.md) Kunden können einen anderen Ansatz verwenden. Für SQL Server 2016, ein Upgrade von R-Komponenten ist erforderlich, um Hinzufügen der [MicrosoftML-Pakets](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), wie in der dokumentiert [Aktualisieren von Machine learning (R- und Python) Komponenten](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Wenn Sie R-Komponenten aktualisieren, können Sie gleichzeitig die vorab trainierte Modelle, hinzufügen, wodurch das Ausführen des PowerShell-Skripts, die redundante. Aber wenn Sie bereits ein Upgrade ausgeführt, aber verpasst haben, die vorab trainierte Modelle beim ersten Mal hinzufügen, können Sie das PowerShell-Skript ausführen, wie in diesem Artikel beschrieben. Vor dem Ausführen, vergewissern Sie sich, dass die MicrosoftML-Bibliothek unter C:\Program Files\Microsoft SQL Server\MSSQL13 vorhanden ist. MSSQLSERVER\R_SERVICES\library.
-  
-Externe Skripts aktiviert werden müssen, und SQL Server LaunchPad-Dienst muss ausgeführt werden. Anweisungen zur Installation sind die Schritte für die zusätzliche Konfiguration und Überprüfung.
+Machine Learning-Algorithmen, die rechenintensiv sind. Es wird empfohlen, 16 GB RAM für niedrig bis mittlere Workloads, einschließlich der Ergänzung der Tutorial exemplarischen Vorgehensweisen unter Verwendung aller der Beispieldaten.
 
 Sie müssen über Administratorrechte auf dem Computer und SQL Server vorab trainierte Modelle hinzufügen.
 
-Machine Learning-Algorithmen, die rechenintensiv sind. Es wird empfohlen, 16 GB RAM für niedrig bis mittlere Workloads, einschließlich der Ergänzung der Tutorial exemplarischen Vorgehensweisen unter Verwendung aller der Beispieldaten.
+Externe Skripts aktiviert werden müssen, und SQL Server LaunchPad-Dienst muss ausgeführt werden. Anweisungen zur Installation geben Sie die Schritte zum Aktivieren und überprüfen diese Funktionen. 
+
+[MicrosoftML-R-Paket](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) oder [Microsoftml-Python-Paket](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) enthalten die vorab trainierte Modelle.
+
++ [SQL Server 2017-Machine Learning-Dienste](sql-machine-learning-services-windows-install.md) beide Sprachversionen von der Machine Learning-Bibliothek enthält, damit diese Voraussetzung, ohne weitere Aktion Ihrerseits erfüllt ist. Da die Bibliotheken vorhanden sind, können Sie das PowerShell-Skript, das in diesem Artikel beschriebenen verwenden, die vorab trainierte Modelle zur diese Bibliotheken hinzufügen.
+
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md), d.h. R nur umfasst keine [MicrosoftML-Pakets](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) vorkonfiguriert. Um MicrosoftML hinzuzufügen, müssen Sie eine [Upgrade von Integrationskomponenten](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Ein Vorteil der Aktualisierung der Komponente ein ist, dass Sie gleichzeitig das vorab trainierte Modelle, hinzufügen können, wodurch das Ausführen der PowerShell-Skripts, die nicht erforderlich. Aber wenn Sie bereits ein Upgrade ausgeführt, aber verpasst haben, die vorab trainierte Modelle beim ersten Mal hinzufügen, können Sie das PowerShell-Skript ausführen, wie in diesem Artikel beschrieben. Dies funktioniert für beide Versionen von SQL Server. Vor dem Ausführen, vergewissern Sie sich, dass die MicrosoftML-Bibliothek unter C:\Program Files\Microsoft SQL Server\MSSQL13 vorhanden ist. MSSQLSERVER\R_SERVICES\library.
+
 
 <a name="file-location"></a>
 
@@ -47,9 +50,9 @@ Machine Learning-Algorithmen, die rechenintensiv sind. Es wird empfohlen, 16 GB 
 
 Die Installationspfade für R und Python-Modellen lauten wie folgt aus:
 
-+ Für R: C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64
++ Für r `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Für Python: C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs 
++ Für Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
 
 Modell-Dateinamen sind unten aufgeführt:
 

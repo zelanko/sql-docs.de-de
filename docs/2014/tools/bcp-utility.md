@@ -31,12 +31,12 @@ caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170311"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310297"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
   Die **Bcp** Utility Bulk kopiert Daten zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in eine vom Benutzer angegebenes Format. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  

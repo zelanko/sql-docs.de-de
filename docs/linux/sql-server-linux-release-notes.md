@@ -4,20 +4,20 @@ description: Dieser Artikel enthält die Versionshinweise und unterstützte Funk
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/20/2018
-ms.topic: article
+ms.date: 07/18/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 85fb0060a7143aa77cd5495a6140a33d5ac881cc
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854362"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146760"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 
@@ -47,6 +47,7 @@ Die folgende Tabelle enthält die Versionsgeschichte für SQL Server 2017.
 
 | Release     | Version       | Veröffentlichungsdatum |
 |-------------|---------------|--------------|
+| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
@@ -68,9 +69,23 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie den entsprechen
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
 - [SQL Server-Agent aktivieren](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU9"></a> CU9 (Juli 2018)
+
+Dies ist die kumulativen Update 9 (CU9) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3030.27. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265).
+
+### <a name="package-details"></a>Paketdetails
+
+Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Debian-Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 14.0.3030.27-1 | [Engine-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES-RPM-Paket | 14.0.3030.27-1 | [MSSQL-Server-Engine-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Volltext-Suche-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian-Paket | 14.0.3030.27-1 | [Engine-Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[Full-Text Search Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU8"></a> CU8 (Juni 2018)
 
-Dies ist das kumulative Update 8 (CU8) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3029.16. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+Dies ist das kumulative Update 8 (CU8) Version von SQL Server 2017. SQL Server-Engine-Version für diese Version ist 14.0.3029.16. Weitere Informationen zu den Problembehebungen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363).
 
 ### <a name="package-details"></a>Paketdetails
 

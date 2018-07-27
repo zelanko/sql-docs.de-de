@@ -1,8 +1,8 @@
 ---
-title: Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
-description: Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschau) für Windows, Mac OS oder Linux
+title: Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschau) | Microsoft-Dokumentation
+description: Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschauversion) für Windows, MacOS oder Linux
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,58 +13,58 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
-ms.translationtype: HT
+ms.openlocfilehash: 1cd69a0dbc2399c4b16a656d20731e4548739505
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270991"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146820"
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Herunterladen und Installieren von SQL-Vorgänge Studio (Vorschau)
+# <a name="download-and-install-sql-operations-studio-preview"></a>Herunterladen Sie und installieren Sie SQL Operations Studio (Vorschau)
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, Mac OS und Linux ausgeführt wird.
+[!INCLUDE[name-sos](../includes/name-sos.md)] auf Windows, MacOS und Linux ausgeführt wird.
 
-Herunterladen und installieren Sie die neueste Version der *öffentliche Vorschau Juni*:
+Herunterladen und installieren die neueste Version der *Public Preview von Juli*:
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Version |
 |:---|:---|:---|:---|
-|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=875603)|20 Juni 2018 |0.30.6|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=875604)|20 Juni 2018 |0.30.6|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=875606)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|20 Juni 2018 |0.30.6|
+|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2005949)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2005950)|Am 19. Juli 2018 |0.31.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2005959)|Am 19. Juli 2018 |0.31.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2006084)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)|Am 19. Juli 2018 |0.31.4|
 
-Einzelheiten über die neueste Version finden Sie unter der [Anmerkungen zu dieser Version](release-notes.md).
+Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Abrufen von SQL-Vorgänge Studio (Vorschau) für Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Rufen Sie SQL Operations Studio (Vorschauversion) für Windows
 
-Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält einen standardmäßigen Windows Installer-Umgebung und eine ZIP: 
+Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält eine standardmäßige Windows Installer-Erfahrung und ZIP-Datei: 
 
 **Installationsprogramm**
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Windows Installer](https://go.microsoft.com/fwlink/?linkid=875602).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Installer für Windows](https://go.microsoft.com/fwlink/?linkid=2005949).
 1. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **ZIP-Datei**
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=875603).
-2. Rufen Sie die heruntergeladene Datei, und extrahieren Sie es.
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2005950).
+2. Suchen Sie die heruntergeladene Datei, und extrahieren Sie sie.
 3. Ausführen von `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Abrufen von SQL-Vorgänge Studio (Vorschau) für macOS
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Rufen Sie SQL Operations Studio (Vorschauversion) für macOS
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=875604).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=2005959).
 2. Doppelklicken Sie darauf, um den Inhalt der ZIP-Datei zu erweitern.
-3. Vornehmen [!INCLUDE[name-sos](../includes/name-sos-short.md)] zur Verfügung, in der *Launchpad*, ziehen Sie *sqlops.app* auf die *Anwendungen* Ordner.
+3. Zu [!INCLUDE[name-sos](../includes/name-sos-short.md)] zur Verfügung, in der *Launchpad*, ziehen Sie *sqlops.app* auf die *Anwendungen* Ordner.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Abrufen von SQL-Vorgänge Studio (Vorschau) für Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>SQL Operations Studio (Vorschauversion) für Linux zu erhalten.
 
-1. Herunterladen [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux mit einer der Installationsprogramme oder das Archiv weswegen:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=875607)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=875606)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
-1. Extrahieren Sie die Datei, und starten Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], öffnen Sie ein neues Terminal-Fenster, und geben Sie die folgenden Befehle:
+1. Herunterladen [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux mithilfe eines der Installationsprogramme oder das Archiv für die ".TAR.gz":
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2006084)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)
+1. Extrahieren Sie die Datei, und starten Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], öffnen Sie ein neues Terminalfenster, und geben Sie die folgenden Befehle:
 
    **Debian-Installation:**
    ```bash
@@ -74,7 +74,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    sqlops
    ```
 
-   **RPM-Installation:**
+   **u/Min Installation:**
    ```bash
    cd ~
    yum install ./Downloads/sqlops-linux-<version string>.rpm
@@ -93,7 +93,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    ``` 
 
    > [!NOTE]
-   > Unter Debian, Redhat und Ubuntu müssen Sie möglicherweise fehlenden Abhängigkeiten. Verwenden Sie die folgenden Befehle aus, um diese Abhängigkeiten abhängig von Ihrer Version von Linux zu installieren:
+   > Für Debian, Red hat und Ubuntu müssen Sie möglicherweise fehlende Abhängigkeiten. Verwenden Sie die folgenden Befehle aus, um diese Abhängigkeiten abhängig von Ihrer Version von Linux zu installieren:
    
 
    **Debian:** 
@@ -101,7 +101,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    sudo apt-get install libuwind8
    ```
 
-   **RedHat:** 
+   **Redhat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -116,28 +116,28 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Deinstallieren Sie SQL-Vorgänge Studio (Vorschau)
+## <a name="uninstall-sql-operations-studio-preview"></a>Deinstallieren Sie SQL Operations Studio (Vorschau)
 
-Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mithilfe von Windows Installer, deinstallieren Sie die gleiche Weise wie Sie jede Windows-Anwendung entfernen.
+Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mit dem Windows-Installer, deinstallieren Sie die gleiche Weise, wie Sie eine Windows-Anwendung entfernen.
 
-Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mit einem ZIP- oder andere Archiv, klicken Sie dann einfach löschen Sie die Dateien.
+Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mit ZIP-Datei oder andere archivieren, löschen Sie anschließend einfach die Dateien.
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, Mac OS und Linux ausgeführt wird, und wird auf folgenden Plattformen unterstützt:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, MacOS und Linux ausgeführt wird, und wird auf folgenden Plattformen unterstützt:
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64-Bit)
 - Windows 8.1 (64-Bit)
 - Windows 8 (64-Bit)
-- Windows 7 (SP1) (64-Bit) erfordert [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Erfordert Windows 7 (SP1) (64-Bit) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
 - Windows Server 2016
 - Windows Server 2012 R2 (64-Bit)
 - Windows Server 2012 (64-Bit)
 - Windows Server 2008 R2 (64-Bit)
 
 ### <a name="macos"></a>macOS
-- MacOS 10,13 hohe Sierra
+- MacOS 10.13 High Sierra
 - MacOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
@@ -147,16 +147,16 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 - Ubuntu 16.04
 
 ## <a name="check-for-updates"></a>Nach Updates suchen
-Um nach aktuellen Updates zu suchen, klicken Sie auf das Zahnradsymbol auf der unteren linken Seite des Fensters, und klicken Sie auf **nach Updates suchen**
+Um die neuesten Updates zu überprüfen, klicken Sie auf das Zahnradsymbol unten links des Fensters, und klicken Sie auf **nach Updates suchen**
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie in der folgenden Schnellstarts für den Einstieg:
-- [Eine Verbindung herstellen und Abfragen von SQLServer](quickstart-sql-server.md)
-- [Eine Verbindung herstellen und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
-- [Eine Verbindung herstellen und Abfragen von Azure Datawarehouse](quickstart-sql-dw.md)
+Finden Sie in der folgenden schnellstartanleitungen für den Einstieg:
+- [Verbinden und Abfragen von SQLServer](quickstart-sql-server.md)
+- [Verbinden und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
+- [Verbinden und Abfragen von Azure Datawarehouse](quickstart-sql-dw.md)
 
-Tragen zu [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Mitwirken an [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) und [Sammlung von Verwendungsdaten](usage-data-collection.md).

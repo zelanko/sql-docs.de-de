@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_missing_index_details (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_missing_index_details (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7d3b07692b4e12ab4bdd0be15566cf115ad71b76
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 55d4e8b272b9ffaa120062ae6d870639bc3b6647
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465626"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310257"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,16 +47,19 @@ ms.locfileid: "34465626"
 |**object_id**|**int**|Identifiziert die Tabelle, in der der Index fehlt.|  
 |**equality_columns**|**nvarchar(4000)**|Durch Trennzeichen getrennte Liste von Spalten, die zu Gleichheitsprädikaten der folgenden Form beitragen:<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Durch Trennzeichen getrennte Liste von Spalten, die zu Ungleichheitsprädikaten beispielsweise der folgenden Form beitragen:<br /><br /> *table.column* > *constant_value*<br /><br /> Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.|  
-|**included_columns**|**nvarchar(4000)**|Durch Trennzeichen getrennte Liste von Spalten, die zur Abdeckung der Abfrage benötigt werden. Weitere Informationen zu abdeckenden oder eingeschlossene Spalten finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Für Speicheroptimierte Indizes (sowohl Hashindizes als auch Speicheroptimierte nicht gruppierte), ignorieren **Included_columns**. Alle Spalten der Tabelle werden in jeden speicheroptimierten Index eingeschlossen.|  
+|**included_columns**|**nvarchar(4000)**|Durch Trennzeichen getrennte Liste von Spalten, die zur Abdeckung der Abfrage benötigt werden. Weitere Informationen zu abdeckenden oder eingeschlossenen Spalten finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Für Speicheroptimierte Indizes (sowohl Hashindizes als auch Speicheroptimierte nicht gruppierte), ignorieren **Included_columns**. Alle Spalten der Tabelle werden in jeden speicheroptimierten Index eingeschlossen.|  
 |**statement**|**nvarchar(4000)**|Der Name der Tabelle, in der der Index fehlt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zurückgegebene Informationen **Sys. dm_db_missing_index_details** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
+ Informationen, die vom **Sys. dm_db_missing_index_details** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
   
- Zum Bestimmen der fehlender Index der Gruppen eines bestimmten fehlenden Indexes angehört, können Sie Abfragen der **Sys. dm_db_missing_index_groups** dynamischen verwaltungssicht von gleichheitsjoin mit **Sys. dm_db_missing_index_details**  basierend auf den **Index_handle** Spalte.  
+ Um zu bestimmen, welche fehlender Index einen bestimmten fehlenden Index gruppiert ist Teil, Sie können Abfragen, die **Sys. dm_db_missing_index_groups** dynamische verwaltungssicht von gleichheitsjoin mit **Sys. dm_db_missing_index_details**  basierend auf den **Index_handle** Spalte.  
+
+  >[!NOTE]
+  >Das Resultset für diese DMV wird auf 600 Zeilen beschränkt. Jede Zeile enthält einen fehlenden Index. Wenn Sie mehr als 600 fehlende Indizes verfügen, sollten Sie die vorhandenen fehlende Indizes behandeln, damit Sie Sie dann die neuere anzeigen können. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Verwenden von Informationen zu fehlenden Indizes in CREATE INDEX-Anweisungen  
- Konvertieren von zurückgegebene Informationen **Sys. dm_db_missing_index_details** in eine CREATE INDEX-Anweisung für sowohl Speicheroptimierte und datenträgerbasierte Indizes gleichheitsspalten vor die ungleichheitsspalten und zusammen gesetzt werden soll Diese sollten die Schlüssel des Indexes bilden. Eingeschlossene Spalten sollten der CREATE INDEX-Anweisung mithilfe der INCLUDE-Klausel hinzugefügt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei Sie die ausgewählten Spalten zuerst (am weitesten links in der Spaltenliste) aufführen.  
+ Konvertieren von zurückgegebene Informationen **Sys. dm_db_missing_index_details** in eine CREATE INDEX-Anweisung für sowohl Speicheroptimierte und datenträgerbasierte Indizes gleichheitsspalten vor die ungleichheitsspalten und zusammen gesetzt werden soll Diese sollten den Schlüssel des Indexes bilden. Eingeschlossene Spalten sollten der CREATE INDEX-Anweisung mithilfe der INCLUDE-Klausel hinzugefügt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei Sie die ausgewählten Spalten zuerst (am weitesten links in der Spaltenliste) aufführen.  
   
  Weitere Informationen zu speicheroptimierten Indizes finden Sie unter [Indizes für Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   

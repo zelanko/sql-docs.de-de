@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Dienstkonten (Analysis Services) | Microsoft Docs
+title: Konfigurieren von Dienstkonten (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019337"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130606"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
+  Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
   
  Dieses Thema enthält ergänzende Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich erforderlichen zusätzlichen Berechtigungen für tabellarische und gruppierte Installationen. Außerdem werden Berechtigungen behandelt, die zur Unterstützung von Servervorgängen erforderlich sind. Sie können beispielsweise Verarbeitungs- und Abfrageoperationen so konfigurieren, dass sie über das Dienstkonto ausgeführt werden. In diesem Fall müssen Sie zusätzliche Berechtigungen gewähren.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019337"
   
  Sie finden diese Sicherheitsgruppe in den lokalen Sicherheitseinstellungen:  
   
--   Ausführen von compmgmt.msc | **Lokale Benutzer und Gruppen** | **Gruppen** | **SQLServerMSASUser$**\<Servername >**$MSSQLSERVER**  (für eine Standardinstanz).  
+-   Führen Sie compmgmt.msc | **Lokale Benutzer und Gruppen** | **Gruppen** | **SQLServerMSASUser$**\<Servername >**$MSSQLSERVER**  (für eine Standardinstanz).  
   
 -   Doppelklicken Sie auf die Sicherheitsgruppe, um deren Mitglieder anzuzeigen.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019337"
 |||  
 |-|-|  
 |**Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)|Dieses Privileg ist standardmäßig für alle Benutzer über die **Benutzer** -Sicherheitsgruppe verfügbar. Wenn Sie einen Server sperren, indem Sie Berechtigungen für diese Gruppe entfernen, kann Analysis Services unter Umständen nicht gestartet werden. Es wird dann folgende Fehlermeldung ausgegeben: „Dem Client fehlt ein erforderliches Recht“. Stellen Sie bei Auftreten dieses Fehlers die Berechtigung für Analysis Services wieder her, indem Sie sie der entsprechenden Analysis Services-Sicherheitsgruppe gewähren.|  
-|**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaSizePrivilege)|Diese Berechtigung wird verwendet, um mehr Speicherplatz anzufordern, wenn ein Prozess nicht über ausreichende Ressourcen verfügt, um die Ausführung abschließen zu können, in Abhängigkeit von den für die Instanz festgelegten Arbeitsspeicherschwellenwerten.|  
+|**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|Diese Berechtigung wird verwendet, um mehr Speicherplatz anzufordern, wenn ein Prozess nicht über ausreichende Ressourcen verfügt, um die Ausführung abschließen zu können, in Abhängigkeit von den für die Instanz festgelegten Arbeitsspeicherschwellenwerten.|  
 |**Sperren von Seiten im Speicher** (SeLockMemoryPrivilege)|Diese Berechtigung ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird. Standardmäßig verwendet eine tabellarische Serverinstanz die Windows-Auslagerungsdatei. Sie können dieses Verhalten jedoch ändern, indem Sie **VertiPaqPagingPolicy** auf 0 einstellen.<br /><br /> **VertiPaqPagingPolicy** auf 1 (Standard) weist die tabellarische Serverinstanz an, die Windows-Auslagerungsdatei zu verwenden. Belegungen sind nicht gesperrt, sodass Windows erforderliche Auslagerungen vornehmen kann. Da die Auslagerung verwendet wird, ist das Sperren von Seiten im Speicher nicht erforderlich. Daher ist es bei der Standardkonfiguration ( **VertiPaqPagingPolicy** = 1) nicht erforderlich, einer tabellarischen Instanz die Berechtigung **Sperren von Seiten im Speicher** zu gewähren.<br /><br /> **VertiPaqPagingPolicy** auf 0. Wenn Sie die Auslagerung für Analysis Services ausschalten, werden Belegungen gesperrt, wenn die Berechtigung **Sperren von Seiten im Speicher** gewährt wurde. Bei dieser Einstellungen und mit der Berechtigung **Sperren von Seiten im Speicher** kann Windows keine Speicherbelegungen für Analysis Services auslagern, wenn im System nicht genügend Arbeitsspeicher vorhanden ist. Analysis Services greift auf die Berechtigung **Sperren von Seiten im Speicher** zurück, um **VertiPaqPagingPolicy** = 0 zu erzwingen. Beachten Sie, dass das Ausschalten der Windows-Auslagerung nicht empfohlen wird. Dadurch treten mehr Fehler aufgrund von nicht ausreichendem Arbeitsspeicher bei Vorgängen auf, die mit Auslagerung erfolgreich ausgeführt worden wären. Unter [Memory Properties](../../analysis-services/server-properties/memory-properties.md) finden Sie weitere Details zu **VertiPaqPagingPolicy**.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>So können Sie Windows-Berechtigungen mit dem Dienstkonto anzeigen oder hinzufügen  
@@ -91,7 +91,7 @@ ms.locfileid: "34019337"
 ##  <a name="bkmk_FilePermissions"></a> Dateisystemberechtigungen, die dem Analysis Services-Dienstkonto zugewiesen sind  
   
 > [!NOTE]  
->  Eine Liste der Berechtigungen für die einzelnen Programmordner finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+>  Eine Liste der Berechtigungen für die einzelnen Programmordner finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) .  
 >   
 >  Unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) finden Sie Informationen zu Dateiberechtigungen im Zusammenhang mit IIS-Konfiguration und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -99,9 +99,9 @@ ms.locfileid: "34019337"
   
  Der Berechtigungsinhaber für Datendateien, ausführbare Programmdateien, Konfigurationsdateien, Protokolldateien und temporäre Dateien ist eine lokale Sicherheitsgruppe, die von SQL Server Setup erstellt wurde.  
   
- Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe "ist mit dem Namen nach der Instanz benannt – entweder **SQLServerMSASUser$ MSSQLSERVER** für die Standardinstanz oder **SQLServerMSASUser$**\<Servername >$\< Instancename > für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS13.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
+ Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe ist nach der Instanz benannt – entweder **SQLServerMSASUser$ MSSQLSERVER** für die Standardinstanz oder **SQLServerMSASUser$**\<Servername >$\< Instanzname > für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS13.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
   
- Die Sicherheitsgruppe enthält nur ein Mitglied: die Pro-Dienst-SID des Startkontos für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Setup fügt die Pro-Dienst-SID zur lokalen Sicherheitsgruppe hinzu. Die Verwendung einer Sicherheitsgruppe mit SID-Mitgliedschaft macht einen kleinen, aber wichtigen Unterschied dabei aus, wie SQL Server Setup im Vergleich mit dem Datenbankmodul Analysis Services bereitstellt.  
+ Die Sicherheitsgruppe enthält nur ein Mitglied: die Pro-Dienst-SID des Startkontos für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Setup fügt die Pro-Dienst-SID zur lokalen Sicherheitsgruppe hinzu. Die Verwendung einer Sicherheitsgruppe mit SID-Mitgliedschaft macht einen kleinen, aber wichtigen Unterschied dabei aus, wie SQL Server Setup im Vergleich mit der Datenbank-Engine Analysis Services bereitstellt.  
   
  Wenn Sie vermuten, dass Dateiberechtigungen beschädigt sind, führen Sie folgende Schritte aus, um sicherzustellen, dass der Dienst immer noch korrekt bereitgestellt wird:  
   
@@ -113,14 +113,14 @@ ms.locfileid: "34019337"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Verwendung **Computer-Manager** | **lokale Benutzer und Gruppen** | **Gruppen** zum Überprüfen der Mitgliedschaft der SQLServerMSASUser$\<Servername >$\<Instancename > Sicherheitsgruppe.  
+2.  Verwendung **Computer-Manager** | **lokale Benutzer und Gruppen** | **Gruppen** , überprüfen die Mitgliedschaft der SQLServerMSASUser$\<Servername >$\<Instancename > Sicherheitsgruppe.  
   
-     Die Mitglieds-SID sollte der Pro-Dienst-SID aus Schritt 1 entsprechen.  
+     Die Mitglieds-SID sollte der Pro-Dienst-SID aus Schritt 1 entsprechen.  
   
 3.  Verwenden Sie **Windows-Explorer** | **Programme** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** , um zu überprüfen, ob der Sicherheitsgruppe in Schritt 2 Ordnersicherheitseigenschaften erteilt wurden.  
   
 > [!NOTE]  
->  SIDs sollten niemals entfernt oder geändert werden. Um eine pro-Dienst-SID wiederherstellen, die versehentlich gelöscht wurde, finden Sie unter [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201).  
+>  SIDs sollten niemals entfernt oder geändert werden. Um eine pro-Dienst-SID wiederherzustellen, die versehentlich gelöscht wurde, finden Sie unter [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201).  
   
  **Weitere Informationen zu Pro-Dienst-SIDs**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019337"
  Da die SID unveränderlich ist, können während der Installation eines Dienstes erstellte Dateisystem-ACLs beliebig oft verwendet werden, und zwar unabhängig von der Anzahl der Änderungen am Kontonamen. Darüber hinaus bieten ACLs, in denen Berechtigungen per SID angegeben sind, zusätzliche Sicherheit, da sie gewährleisten, dass der Zugriff auf ausführbare Programmdateien und Datenordner ausschließlich über eine einzelne Dienstinstanz erfolgt. Dies gilt selbst dann, wenn weitere Dienste unter demselben Konto ausgeführt werden.  
   
 ##  <a name="bkmk_tasks"></a> Gewähren zusätzlicher Analysis Services-Berechtigungen für spezifische Servervorgänge  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]führt einige Tasks im Sicherheitskontext des Dienstkontos (oder Anmeldekontos), die zum Starten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und führt andere Tasks im Sicherheitskontext des Benutzers, der den Task anfordert.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt einige Tasks im Sicherheitskontext des Dienstkontos (oder des Anmeldekontos) aus, das zum Starten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet wird; andere Tasks werden im Sicherheitskontext des Benutzers ausgeführt, der den Task anfordert.  
   
  In der folgenden Tabelle werden zusätzliche Berechtigungen beschrieben, die zum Ausführen von Tasks über das Dienstkonto erforderlich sind.  
   
@@ -144,8 +144,8 @@ ms.locfileid: "34019337"
 |Schreiben in eine Abfrageprotokolltabelle in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|Erstellen eines Datenbankanmeldenamens für das Dienstkonto und Zuweisen von Schreibrechten für die Abfrageprotokolltabelle|Sie können die Abfrageprotokollierung aktivieren, um in einer Datenbanktabelle Verwendungsdaten für nachfolgende Analysen zu sammeln. Das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto muss über Schreibberechtigungen für die Abfrageprotokolltabelle in der festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügen. Wenn diese Tabelle noch nicht vorhanden ist und erstellt werden muss, erfordert das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Anmeldekonto außerdem die Berechtigung zum Erstellen von Tabellen in der festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Weitere Informationen finden Sie unter [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Verbessern der Leistung von SQL Server Analysis Services mit dem Assistenten für die verwendungsbasierte Optimierung) und [Query Logging in Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Abfrageprotokollierung in Analysis Services).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server-Dienstkonto und pro Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [SQL Server-Dienstkonto und pro-Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server verwendet eine Dienst-SID, um die Dienstisolation bereitzustellen (KB-Artikel)](http://support.microsoft.com/kb/2620201)   
  [Zugriffstoken (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [Sicherheits-IDs (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   

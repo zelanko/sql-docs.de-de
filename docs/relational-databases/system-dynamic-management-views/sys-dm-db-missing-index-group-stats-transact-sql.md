@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_missing_index_group_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b019f8e7b1f9e82e288c9c53732db4e2c7a253
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7b77b2a8df3d2f6f0afb47db519dae142baf2d13
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466426"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310217"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +57,16 @@ ms.locfileid: "34466426"
 |**avg_system_impact**|**float**|Durchschnittlicher prozentualer Nutzen, der für Systemabfragen entstünde, wenn diese Gruppe fehlender Indizes implementiert würde. Der Wert bedeutet, dass die Abfragekosten durchschnittlich um diesen Prozentsatz verringert würden, wenn diese Gruppe fehlender Indizes implementiert würde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zurückgegebene Informationen **dm_db_missing_index_group_stats** aktualisiert werden bei jeder abfrageausführung, nicht bei jeder Abfragekompilierung oder Neukompilierung. Statistiken zur Verwendung sind nicht persistent und werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beibehalten. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie die Verwendungsstatistiken nach dem Wiederverwenden des Servers beibehalten möchten.  
+ Informationen, die vom **Sys. dm_db_missing_index_group_stats** wird nach jeder abfrageausführung und nicht nach jeder Abfragekompilierung oder Neukompilierung aktualisiert. Statistiken zur Verwendung sind nicht persistent und werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beibehalten. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie die Verwendungsstatistiken nach dem Wiederverwenden des Servers beibehalten möchten.  
+
+  >[!NOTE]
+  >Das Resultset für diese DMV wird auf 600 Zeilen beschränkt. Jede Zeile enthält einen fehlenden Index. Wenn Sie mehr als 600 fehlende Indizes verfügen, sollten Sie die vorhandenen fehlende Indizes behandeln, damit Sie Sie dann die neuere anzeigen können.
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Abfragen dieser dynamischen Verwaltungssicht muss den Benutzern die VIEW SERVER STATE-Berechtigung oder eine Berechtigung, die die VIEW SERVER STATE-Berechtigung impliziert, erteilt werden.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen, wie Sie die **dm_db_missing_index_group_stats** -verwaltungssicht.  
+ Die folgenden Beispiele veranschaulichen, wie Sie mit der **Sys. dm_db_missing_index_group_stats** dynamische verwaltungssicht.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Suchen der 10 fehlenden Indizes mit der größten zu erwartenden Verbesserung für Benutzerabfragen  
  Mit der folgenden Abfrage werden in absteigender Reihenfolge die 10 fehlenden Indizes bestimmt, die die größte zu erwartende Gesamtverbesserung für Benutzerabfragen bewirken würden.  
