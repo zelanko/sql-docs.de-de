@@ -1,0 +1,15 @@
+- name: Tools zur Problembehandlung für die Paketentwicklung
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: Debuggen der Ablaufsteuerung
+      href: debugging-control-flow.md
+    - name: Debuggen von Skript
+      href: debugging-script.md
+    - name: Debuggen des Datenflusses
+      href: debugging-data-flow.md
+    - name: Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: Hinzufügen eines Daten-Viewers zu einem Datenfluss
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente
+      href: ../configure-an-error-output-in-a-data-flow-component.md

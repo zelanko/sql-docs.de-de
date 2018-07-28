@@ -1,0 +1,72 @@
+- name: Volltextsuche
+  href: full-text-search.md
+  items:
+    - name: Erste Schritte mit der Volltextsuche
+      href: get-started-with-full-text-search.md
+    - name: Abfragen mit Volltextsuche
+      href: query-with-full-text-search.md
+    - name: Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
+      href: search-for-words-close-to-another-word-with-near.md
+    - name: Einschränken von Suchergebnissen mit RANK
+      href: limit-search-results-with-rank.md
+    - name: Verbessern der Leistung von Volltextabfragen
+      href: improve-the-performance-of-full-text-queries.md
+    - name: Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
+      href: search-document-properties-with-search-property-lists.md
+    - name: Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
+      href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+    - name: Erstellen und Verwalten von Volltextkatalogen
+      href: create-and-manage-full-text-catalogs.md
+    - name: Erstellen und Verwalten von Volltextindizes
+      href: create-and-manage-full-text-indexes.md
+    - name: Auswählen einer Sprache beim Erstellen eines Volltextindex
+      href: choose-a-language-when-creating-a-full-text-index.md
+    - name: Auffüllen von Volltextindizes
+      href: populate-full-text-indexes.md
+    - name: Verbessern der Leistung von Volltextindizes
+      href: improve-the-performance-of-full-text-indexes.md
+    - name: Behandeln von Problemen mit der Volltextindizierung
+      href: troubleshoot-full-text-indexing.md
+    - name: Sichern und Wiederherstellen von Volltextkatalogen und Indizes
+      href: back-up-and-restore-full-text-catalogs-and-indexes.md
+    - name: Konfigurieren und Verwalten von Filtern für die Suche
+      href: configure-and-manage-filters-for-search.md
+    - name: Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
+      href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+    - name: Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen
+      href: view-or-change-registered-filters-and-word-breakers.md
+    - name: Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung
+      href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+    - name: Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
+      href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+    - name: Anpassen des Verhaltens der Wörtertrennung mit einem Benutzerwörterbuch
+      href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+    - name: Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
+      href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+    - name: Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
+      href: configure-and-manage-thesaurus-files-for-full-text-search.md
+    - name: Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
+      href: manage-and-monitor-full-text-search-for-a-server-instance.md
+    - name: Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
+      href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+    - name: Upgrade der Volltextsuche
+      href: upgrade-full-text-search.md
+    - name: 'DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche'
+      href: full-text-search-ddl-functions-stored-procedures-and-views.md
+    - name: Verwenden des Volltextindizierungs-Assistenten
+      href: use-the-full-text-indexing-wizard.md
+- name: Semantische Suche
+  href: semantic-search-sql-server.md
+  items:
+    - name: Installieren und Konfigurieren der semantischen Suche
+      href: install-and-configure-semantic-search.md
+    - name: Aktivieren der semantischen Suche in Tabellen und Spalten
+      href: enable-semantic-search-on-tables-and-columns.md
+    - name: Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche
+      href: find-key-phrases-in-documents-with-semantic-search.md
+    - name: Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
+      href: find-similar-and-related-documents-with-semantic-search.md
+    - name: Verwalten und Überwachen der semantischen Suche
+      href: manage-and-monitor-semantic-search.md
+    - name: 'Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten'
+      href: semantic-search-ddl-functions-stored-procedures-and-views.md

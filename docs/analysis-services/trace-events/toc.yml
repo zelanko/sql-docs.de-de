@@ -1,0 +1,64 @@
+- name: Übersicht
+  href: analysis-services-trace-events.md
+- name: In Ablaufverfolgungen verwendete Objektcodes
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: Befehlsereignisse (Ereigniskategorie)
+  href: command-events-event-category.md
+  items:
+    - name: Datenspalten für Befehlsereignisse
+      href: command-events-data-columns.md
+- name: Ermittlungsereignisse (Ereigniskategorie)
+  href: discover-events-event-category.md
+  items:
+    - name: Datenspalten für Ermittlungsereignisse
+      href: discover-events-data-columns.md
+- name: Serverstatusermittlung (Ereigniskategorie)
+  href: discover-server-state-event-category.md
+  items:
+    - name: Datenspalten mit Serverstatusermittlungs-Ereignissen
+      href: discover-server-state-events-data-columns.md
+- name: Fehler und Warnungen-Ereigniskategorie
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: Fehler- und Warnungsereignis-Datenspalten
+      href: errors-and-warnings-events-data-columns.md
+- name: File Load- und Save-Ereigniskategorie
+  href: file-load-and-save-event-category.md
+  items:
+    - name: Laden von Dateien und Speichern von Datenspalten
+      href: file-load-and-save-data-columns.md
+- name: Sperren-Ereigniskategorie
+  href: lock-events-category.md
+  items:
+    - name: Sperrenereignisse – Datenspalten
+      href: lock-events-data-columns.md
+- name: Benachrichtigungsereignisse (Ereigniskategorie)
+  href: notification-events-event-category.md
+  items:
+    - name: Datenspalten der Benachrichtigungsereignisse
+      href: notification-events-data-columns.md
+- name: Fortschrittsbericht (Ereigniskategorie)
+  href: progress-reports-event-category.md
+  items:
+    - name: Datenspalten für Fortschrittsbericht
+      href: progress-reports-data-columns.md
+- name: Abfrageereigniskategorie
+  href: queries-events-category.md
+  items:
+    - name: Datenspalten der Abfrageereignisse
+      href: queries-events-data-columns.md
+- name: Abfrageverarbeitung (Ereigniskategorie)
+  href: query-processing-events-category.md
+  items:
+    - name: Abfrageverarbeitungsereignisse – Datenspalten
+      href: query-processing-events-data-columns.md
+- name: Sicherheitsüberwachung-Ereigniskategorie
+  href: security-audit-event-category.md
+  items:
+    - name: Sicherheitsüberwachung-Datenspalten
+      href: security-audit-data-columns.md
+- name: Sitzungsereignisse (Ereigniskategorie)
+  href: session-events-event-category.md
+  items:
+    - name: Datenspalten für Sitzungsereignisse
+      href: session-events-data-columns.md

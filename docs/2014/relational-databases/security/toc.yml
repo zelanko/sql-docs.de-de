@@ -1,0 +1,117 @@
+- name: Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Sichern von SQL Server
+  href: securing-sql-server.md
+- name: Prinzipale
+  href: authentication-access/principals-database-engine.md
+  items:
+    - name: 'Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen'
+      href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      items:
+        - name: Erstellen eines Anmeldenamens
+          href: authentication-access/create-a-login.md
+        - name: Erstellen eines Datenbankbenutzers
+          href: authentication-access/create-a-database-user.md
+        - name: Erstellen eines Datenbankschemas
+          href: authentication-access/create-a-database-schema.md
+        - name: Verknüpfen einer Rolle
+          href: authentication-access/join-a-role.md
+        - name: Erteilen einer Berechtigung für einen Prinzipal
+          href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: Rollen auf Serverebene
+      href: authentication-access/server-level-roles.md
+      items:
+        - name: Erstellen einer Serverrolle
+          href: authentication-access/create-a-server-role.md
+    - name: Rollen auf Datenbankebene
+      href: authentication-access/database-level-roles.md
+    - name: Anwendungsrollen
+      href: authentication-access/application-roles.md
+      items:
+        - name: Erstellen einer Anwendungsrolle
+          href: authentication-access/create-an-application-role.md
+- name: Anmeldeinformationen
+  href: authentication-access/credentials-database-engine.md
+  items:
+    - name: Create a Credential
+      href: authentication-access/create-a-credential.md
+- name: Sicherungsfähige Elemente
+  href: securables.md
+- name: Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
+  href: contained-database-users-making-your-database-portable.md
+- name: Auswählen eines Authentifizierungsmodus
+  href: choose-an-authentication-mode.md
+- name: Konfigurieren der Sichtbarkeit von Metadaten
+  href: metadata-visibility-configuration.md
+- name: Oberflächenkonfiguration
+  href: surface-area-configuration.md
+- name: TRUSTWORTHY-Datenbankeigenschaft
+  href: trustworthy-database-property.md
+- name: Berechtigungen
+  href: permissions-database-engine.md
+- name: Berechtigungshierarchie
+  href: permissions-hierarchy-database-engine.md
+- name: Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'
+  href: permissions-or-securables-page.md
+- name: Kennwortrichtlinie
+  href: password-policy.md
+- name: Sichere Kennwörter
+  href: strong-passwords.md
+- name: SQL Server-Verschlüsselung
+  href: encryption/sql-server-encryption.md
+  items:
+    - name: Verschlüsselungshierarchie
+      href: encryption/encryption-hierarchy.md
+    - name: Auswählen eines Verschlüsselungsalgorithmus
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: Transparente Datenverschlüsselung (TDE)
+      href: encryption/transparent-data-encryption.md
+      items:
+        - name: Transparente Datenverschlüsselung in Azure SQL-Datenbank
+          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+        - name: Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
+          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+        - name: Aktivieren von TDE mit EKM
+          href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: Verschlüsselungsschlüssel für SQL Server und Datenbank
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+      items:
+        - name: Diensthauptschlüssel
+          href: encryption/service-master-key.md
+        - name: 'Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)'
+          href: encryption/extensible-key-management-ekm.md
+        - name: Erweiterbare Schlüsselverwaltung mit Azure Key Vault
+          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: Sichern des Diensthauptschlüssels
+          href: encryption/back-up-the-service-master-key.md
+        - name: Wiederherstellen des Diensthauptschlüssels
+          href: encryption/restore-the-service-master-key.md
+        - name: Erstellen eines Datenbank-Hauptschlüssels
+          href: encryption/create-a-database-master-key.md
+        - name: Sichern eines Datenbank-Hauptschlüssels
+          href: encryption/back-up-a-database-master-key.md
+        - name: Wiederherstellen eines Datenbank-Hauptschlüssels
+          href: encryption/restore-a-database-master-key.md
+        - name: Erstellen identischer symmetrischer Schlüssel auf zwei Servern
+          href: encryption/create-identical-symmetric-keys-on-two-servers.md
+        - name: Verschlüsseln einer Datenspalte
+          href: encryption/encrypt-a-column-of-data.md
+- name: Sicherheit auf Zeilenebene
+  href: row-level-security.md
+- name: SQL Server-Zertifikate und asymmetrische Schlüssel
+  href: sql-server-certificates-and-asymmetric-keys.md
+- name: SQL Server Audit (Datenbank-Engine)
+  href: auditing/sql-server-audit-database-engine.md
+  items:
+    - name: SQL Server Audit-Aktionsgruppen und -Aktionen
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: SQL Server Audit-Datensätze
+      href: auditing/sql-server-audit-records.md
+    - name: Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: Erstellen einer Server- und Datenbank-Überwachungsspezifikation
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: Anzeigen eines SQL Server-Überwachungsprotokolls
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md

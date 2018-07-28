@@ -1,0 +1,226 @@
+- name: Veröffentlichen von Daten und Datenbankobjekten
+  href: publish-data-and-database-objects.md
+  items:
+    - name: Das Replikationsveröffentlichungsmodell (Übersicht)
+      href: replication-publishing-model-overview.md
+    - name: Filtern von veröffentlichten Daten
+      href: filter-published-data.md
+    - name: Replizieren von Identitätsspalten
+      href: replicate-identity-columns.md
+    - name: Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
+      href: make-schema-changes-on-publication-databases.md
+    - name: Replizieren partitionierter Tabellen und Indizes
+      href: replicate-partitioned-tables-and-indexes.md
+      items:
+        - name: Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
+          href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+    - name: 'Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln'
+      href: create-modify-and-delete-publications-and-articles-replication.md
+      items:
+        - name: Create a Publication
+          href: create-a-publication.md
+        - name: Definieren eines Artikels
+          href: define-an-article.md
+    - name: Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
+      href: specify-article-types-replication-transact-sql-programming.md
+      items:
+        - name: Anzeigen und Ändern von Veröffentlichungseigenschaften
+          href: view-and-modify-publication-properties.md
+        - name: Anzeigen und Ändern von Artikeleigenschaften
+          href: view-and-modify-article-properties.md
+        - name: Löschen einer Veröffentlichung
+          href: delete-a-publication.md
+        - name: Löschen eines Artikels
+          href: delete-an-article.md
+        - name: Erstellen einer Veröffentlichung aus einer Oracle-Datenbank
+          href: create-a-publication-from-an-oracle-database.md
+    - name: Angeben von Datentypzuordnungen für einen Oracle-Verleger
+      href: specify-data-type-mappings-for-an-oracle-publisher.md
+      items:
+        - name: Festlegen des Ablaufdatums für Abonnements
+          href: set-the-expiration-period-for-subscriptions.md
+        - name: Angeben von Schemaoptionen
+          href: specify-schema-options.md
+        - name: Replizieren von Schemaänderungen
+          href: replicate-schema-changes.md
+        - name: Verwalten von Identitätsspalten
+          href: manage-identity-columns.md
+        - name: Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen
+          href: set-the-compatibility-level-for-merge-publications.md
+        - name: Angeben des Momentaufnahmeformats (SQL Server Management Studio)
+          href: specify-snapshot-format-sql-server-management-studio.md
+        - name: Angeben eines alternativen Speicherortes für den Momentaufnahmeordner (SQL Server Management Studio)
+          href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+        - name: Komprimieren von Momentaufnahmedateien (SQL Server Management Studio)
+          href: compress-snapshot-files-sql-server-management-studio.md
+        - name: Konfigurieren von Momentaufnahmeeigenschaften (Replikationsprogrammierung mit Transact-SQL)
+          href: configure-snapshot-properties-replication-transact-sql-programming.md
+        - name: Übermitteln einer Momentaufnahme über FTP
+          href: deliver-a-snapshot-through-ftp.md
+        - name: Definieren und Ändern eines Spaltenfilters
+          href: define-and-modify-a-column-filter.md
+        - name: Definieren oder Ändern eines statischen Zeilenfilters
+          href: define-and-modify-a-static-row-filter.md
+        - name: Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel
+          href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+        - name: Optimieren von parametrisierten Zeilenfiltern
+          href: optimize-parameterized-row-filters.md
+        - name: Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
+          href: define-and-modify-a-join-filter-between-merge-articles.md
+        - name: Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln (SQL Server Management Studio)
+          href: automatically-generate-join-filters-between-merge-articles.md
+        - name: Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
+          href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen
+          href: enable-updating-subscriptions-for-transactional-publications.md
+        - name: Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)
+          href: create-an-updatable-subscription-to-a-transactional-publication.md
+        - name: Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung mit T-SQL
+          href: ../create-updatable-subscription-transactional-publication-transact-sql.md
+        - name: Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange (SQL Server Management Studio)
+          href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+        - name: Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung (SQL Server Management Studio)
+          href: publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
+          href: define-a-logical-record-relationship-between-merge-table-articles.md
+        - name: Angeben der Verarbeitungsreihenfolge von Mergetabellenartikeln (Replikationsprogrammierung mit Transact-SQL)
+          href: specify-the-processing-order-of-merge-table-articles.md
+        - name: 'Angeben, dass ein neuer Mergetabellenartikel nur herunterladbar ist'
+          href: specify-that-a-merge-table-article-is-download-only.md
+        - name: 'Angeben, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen (Replikationsprogrammierung mit Transact-SQL)'
+          href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+        - name: Angeben der Konfliktnachverfolgungs- und -lösungsebene für Mergeartikel
+          href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+        - name: Angeben eines Mergeartikelkonfliktlösers
+          href: specify-a-merge-article-resolver.md
+        - name: Angeben von interaktiver Konfliktauflösung von Mergeartikeln
+          href: specify-interactive-conflict-resolution-for-merge-articles.md
+        - name: Hinzufügen von Artikeln zu einer Veröffentlichung und Löschen von Artikeln aus einer Veröffentlichung (SQL Server Management Studio)
+          href: add-articles-to-and-drop-articles-from-a-publication.md
+    - name: Verwalten von Veröffentlichungen
+      href: maintain-publications.md
+      items:
+        - name: Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
+          href: add-articles-to-and-drop-articles-from-existing-publications.md
+        - name: Ändern von Veröffentlichungs- und Artikeleigenschaften
+          href: change-publication-and-article-properties.md
+- name: Konfigurieren der Verteilung
+  href: ../configure-distribution.md
+  items:
+    - name: Konfigurieren der Veröffentlichung und der Verteilung
+      href: ../configure-publishing-and-distribution.md
+    - name: Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
+      href: ../view-and-modify-distributor-and-publisher-properties.md
+    - name: Deaktivieren der Veröffentlichung und Verteilung
+      href: ../disable-publishing-and-distribution.md
+    - name: Aktivieren einer Datenbank für die Replikation (SQL Server Management Studio)
+      href: ../enable-a-database-for-replication-sql-server-management-studio.md
+    - name: Aktivieren eines Remoteverlegers auf einem Verteiler (SQL Server Management Studio)
+      href: ../enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+    - name: Angeben des standardmäßigen Momentaufnahmespeicherorts (SQL Server Management Studio)
+      href: ../specify-the-default-snapshot-location-sql-server-management-studio.md
+    - name: Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen (SQL Server Management Studio)
+      href: ../set-distribution-retention-period-for-transactional-publications.md
+    - name: Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)
+      href: ../set-the-history-retention-period-sql-server-management-studio.md
+- name: Abonnieren von Veröffentlichungen
+  href: ../subscribe-to-publications.md
+  items:
+    - name: Create a Pull Subscription
+      href: ../create-a-pull-subscription.md
+    - name: Erstellen eines Pushabonnements
+      href: ../create-a-push-subscription.md
+    - name: Anzeigen und Ändern der Eigenschaften von Pullabonnements
+      href: ../view-and-modify-pull-subscription-properties.md
+    - name: Anzeigen und Ändern der Eigenschaften von Pushabonnements
+      href: ../view-and-modify-push-subscription-properties.md
+    - name: Löschen eines Pullabonnements
+      href: ../delete-a-pull-subscription.md
+    - name: Löschen eines Pushabonnements
+      href: ../delete-a-push-subscription.md
+    - name: Abonnementablauf und -deaktivierung
+      href: ../subscription-expiration-and-deactivation.md
+    - name: Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
+      href: ../create-a-subscription-for-a-non-sql-server-subscriber.md
+    - name: Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität (Server Management Studio)
+      href: ../specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+    - name: Angeben von Synchronisierungszeitplänen
+      href: ../specify-synchronization-schedules.md
+- name: Initialisieren eines Abonnements
+  href: ../initialize-a-subscription.md
+  items:
+    - name: Initialisieren eines Abonnements mit einer Momentaufnahme
+      href: ../initialize-a-subscription-with-a-snapshot.md
+      items:
+        - name: Erstellen und Anwenden der Momentaufnahme
+          href: ../create-and-apply-the-snapshot.md
+        - name: Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern
+          href: ../snapshots-for-merge-publications-with-parameterized-filters.md
+        - name: Momentaufnahmeoptionen
+          href: ../snapshot-options.md
+    - name: Alternative Speicherorte für Momentaufnahmeordner
+      href: ../alternate-snapshot-folder-locations.md
+    - name: Komprimierte Momentaufnahmen
+      href: ../compressed-snapshots.md
+    - name: Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme
+      href: ../execute-scripts-before-and-after-the-snapshot-is-applied.md
+    - name: Übertragen von Momentaufnahmen über FTP
+      href: ../transfer-snapshots-through-ftp.md
+    - name: Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
+      href: ../initialize-a-transactional-subscription-without-a-snapshot.md
+    - name: Erneutes Initialisieren von Abonnements
+      href: ../reinitialize-subscriptions.md
+- name: Synchronisieren von Abonnements (Replikation)
+  href: ../synchronize-subscriptions-replication.md
+  items:
+    - name: Erstellen und Anwenden der Anfangsmomentaufnahme
+      href: ../create-and-apply-the-initial-snapshot.md
+      items:
+        - name: Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern
+          href: ../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+    - name: Aktivieren der Initialisierung von einer Sicherung für Transaktionsveröffentlichungen (SQL Server Management Studio)
+      href: ../enable-initialization-with-backup-for-transactional-publications.md
+    - name: Initialisieren eines Transaktionsabonnements von einer Sicherung (Replikationsprogrammierung mit Transact-SQL)
+      href: ../initialize-a-transactional-subscription-from-a-backup.md
+    - name: Manuelles Initialisieren eines Abonnements
+      href: ../initialize-a-subscription-manually.md
+    - name: Synchronisieren eines Pullabonnements
+      href: ../synchronize-a-pull-subscription.md
+    - name: Synchronisieren eines Pushabonnements
+      href: ../synchronize-a-push-subscription.md
+    - name: Erneutes Initialisieren eines Abonnements
+      href: ../reinitialize-a-subscription.md
+    - name: Ausführen von Skripts vor und nach dem Anwenden einer Momentaufnahme (SQL Server Management Studio)
+      href: ../execute-scripts-before-and-after-a-snapshot-is-applied.md
+    - name: Ausführen von Skripts während der Synchronisierung (Replikationsprogrammierung mit Transact-SQL)
+      href: ../execute-scripts-during-synchronization-replication-transact-sql-programming.md
+    - name: Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen (SQL Server Management Studio)
+      href: ../view-and-resolve-data-conflicts-for-merge-publications.md
+    - name: Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen (Replikationsprogrammierung mit Transact-SQL)
+      href: ../view-conflict-information-for-merge-publications.md
+    - name: Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)
+      href: ../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+    - name: Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
+      href: ../synchronize-a-subscription-using-windows-synchronization-manager.md
+    - name: Kontrollieren des Verhaltens von Triggern und Einschränkungen während der Synchronisierung (Replikationsprogrammierung mit Transact-SQL)
+      href: ../control-behavior-of-triggers-and-constraints-in-synchronization.md
+    - name: Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
+      href: ../implement-a-business-logic-handler-for-a-merge-article.md
+      items:
+        - name: Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)
+          href: ../debug-a-business-logic-handler-replication-programming.md
+    - name: Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
+      href: ../implement-a-custom-conflict-resolver-for-a-merge-article.md
+    - name: Massenladen von Daten in Tabellen in einer Mergeveröffentlichung (Replikationsprogrammierung mit Transact-SQL)
+      href: ../bulk-load-data-into-tables-in-a-merge-publication.md
+- name: Synchronisieren von Daten
+  href: ../synchronize-data.md
+- name: Überprüfen von replizierten Daten
+  href: ../validate-replicated-data.md
+  items:
+    - name: Überprüfen von Partitionsinformationen für einen Mergeabonnenten
+      href: ../validate-partition-information-for-a-merge-subscriber.md
+    - name: Überprüfen der Daten am Abonnenten
+      href: ../validate-data-at-the-subscriber.md
+- name: Erstellen von Skripts für die Replikation
+  href: ../scripting-replication.md

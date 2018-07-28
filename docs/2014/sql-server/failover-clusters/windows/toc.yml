@@ -1,0 +1,42 @@
+- name: Windows Server-Failoverclustering (WSFC) mit SQL Server
+  href: windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: WSFC-Quorummodi und Abstimmungskonfiguration
+      href: wsfc-quorum-modes-and-voting-configuration-sql-server.md
+      items:
+        - name: Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen
+          href: view-cluster-quorum-nodeweight-settings.md
+        - name: Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
+          href: configure-cluster-quorum-nodeweight-settings.md
+    - name: WSFC-Notfallwiederherstellung durch erzwungenes Quorum
+      href: wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+      items:
+        - name: Erzwingen des Starts eines Clusters ohne Quorum
+          href: force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: SQL Server-Multisubnetzclustering
+      href: sql-server-multi-subnet-clustering-sql-server.md
+- name: AlwaysOn-Failoverclusterinstanzen
+  href: always-on-failover-cluster-instances-sql-server.md
+- name: Failoverrichtlinie für Failoverclusterinstanzen
+  href: failover-policy-for-failover-cluster-instances.md
+  items:
+    - name: Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
+      href: configure-healthchecktimeout-property-settings.md
+    - name: Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen
+      href: configure-failureconditionlevel-property-settings.md
+    - name: Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
+      href: view-and-read-failover-cluster-instance-diagnostics-log.md
+- name: Verwaltung und Wartung von Failoverclusterinstanzen
+  href: failover-cluster-instance-administration-and-maintenance.md
+  items:
+    - name: Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
+      href: add-dependencies-to-a-sql-server-resource.md
+    - name: Wiederherstellen nach einem Fehler der Failoverclusterinstanz
+      href: recover-from-failover-cluster-instance-failure.md
+    - name: Ändern der IP-Adresse einer Failoverclusterinstanz
+      href: change-the-ip-address-of-a-failover-cluster-instance.md
+- name: Aktualisieren eines SQL Server-Failoverclusters
+  href: upgrade-a-sql-server-failover-cluster-instance.md
+  items:
+    - name: Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
+      href: upgrade-a-sql-server-failover-cluster-instance-setup.md

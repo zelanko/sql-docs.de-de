@@ -1,0 +1,64 @@
+- name: Integration Services-Verbindungen (SSIS)
+  href: integration-services-ssis-connections.md
+- name: Analysis Services-Verbindungs-Manager
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: FTP-Verbindungs-Manager
+  href: ftp-connection-manager.md
+  items:
+    - name: FTP-Verbindungs-Manager-Editor
+      href: ../ftp-connection-manager-editor.md
+- name: HTTP-Verbindungs-Manager
+  href: http-connection-manager.md
+  items:
+    - name: HTTP-Verbindungs-Manager-Editor (Seite Server)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: HTTP-Verbindungs-Manager-Editor (Seite Proxy)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: MSMQ-Verbindungs-Manager
+  href: msmq-connection-manager.md
+  items:
+    - name: MSMQ-Verbindungs-Manager-Editor
+      href: ../msmq-connection-manager-editor.md
+- name: SMTP-Verbindungs-Manager
+  href: smtp-connection-manager.md
+  items:
+    - name: SMTP-Verbindungs-Manager-Editor
+      href: ../smtp-connection-manager-editor.md
+- name: SMO-Verbindungs-Manager
+  href: smo-connection-manager.md
+  items:
+    - name: SMO-Verbindungs-Manager-Editor
+      href: ../smo-connection-manager-editor.md
+- name: WMI-Verbindungs-Manager
+  href: wmi-connection-manager.md
+  items:
+    - name: WMI-Verbindungs-Manager-Editor
+      href: ../wmi-connection-manager-editor.md
+- name: Erstellen von Verbindungs-Managern
+  href: ../create-connection-managers.md
+- name: Verbindungs-Manager für mehrere Dateien
+  href: multiple-files-connection-manager.md
+- name: Verbindungs-Manager (Bereich)
+  href: ../connection-managers-area.md
+- name: Tools zur Behandlung von Problemen mit Paketverbindungen
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 'Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket'
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: SSIS-Verbindungs-Manager hinzufügen
+      href: ../add-ssis-connection-manager.md
+- name: Festlegen der Eigenschaften eines Verbindungs-Managers
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Azure Data Lake Store-Verbindungsmanager
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight-Verbindungs-Manager
+  href: ../azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager-Verbindungs-Manager
+  href: ../azure-resource-manager-connection-manager.md
+- name: Azure Storage-Verbindungs-Manager
+  href: azure-storage-connection-manager.md
+- name: Azure-Abonnementverbindungs-Manager
+  href: azure-subscription-connection-manager.md

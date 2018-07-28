@@ -1,0 +1,12 @@
+- name: Befehle
+  href: commands.md
+- name: Befehlsparameter
+  href: command-parameters.md
+- name: Befehlsyntax
+  href: command-syntax.md
+- name: Mehrere Rowsetergebnisse generierende Befehle
+  href: commands-generating-multiple-rowset-results.md
+- name: Vorbereiten von Befehlen
+  href: preparing-commands.md
+- name: Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets
+  href: using-imultipleresults-to-process-multiple-result-sets.md

@@ -1,0 +1,36 @@
+- name: Resource Governor
+  href: resource-governor.md
+  items:
+    - name: Aktivieren der Ressourcenkontrolle
+      href: enable-resource-governor.md
+    - name: Deaktivieren der Ressourcenkontrolle
+      href: disable-resource-governor.md
+- name: Ressourcenpool für die Ressourcenkontrolle
+  href: resource-governor-resource-pool.md
+  items:
+    - name: Erstellen eines Ressourcenpools
+      href: create-a-resource-pool.md
+    - name: Ändern der Einstellungen für den Ressourcenpool
+      href: change-resource-pool-settings.md
+    - name: Löschen eines Ressourcenpools
+      href: delete-a-resource-pool.md
+- name: Arbeitsauslastungsgruppe der Ressourcenkontrolle
+  href: resource-governor-workload-group.md
+  items:
+    - name: Erstellen einer Arbeitsauslastungsgruppe
+      href: create-a-workload-group.md
+    - name: Ändern der Einstellungen von Arbeitsauslastungsgruppen
+      href: change-workload-group-settings.md
+    - name: Verschieben von Arbeitsauslastungsgruppen
+      href: move-a-workload-group.md
+    - name: Löschen von Arbeitsauslastungsgruppen
+      href: delete-a-workload-group.md
+- name: Resource Governor Classifier Function
+  href: resource-governor-classifier-function.md
+  items:
+    - name: Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: Konfigurieren der Ressourcenkontrolle mit einer Vorlage
+  href: configure-resource-governor-using-a-template.md
+- name: Anzeigen der Eigenschaften der Ressourcenkontrolle
+  href: view-resource-governor-properties.md

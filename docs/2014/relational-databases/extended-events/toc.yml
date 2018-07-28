@@ -1,0 +1,69 @@
+- name: Erweiterte Ereignisse
+  href: extended-events.md
+- name: Erstellen einer Sitzung für erweiterte Ereignisse
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: Erstellen einer Sitzung für erweiterte Ereignisse mithilfe des Assistenten (Objekt-Explorer)
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: Erstellen einer Sitzung für erweiterte Ereignisse im Dialogfeld für neue Sitzungen
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: Verwalten von Ereignissitzungen im Objekt-Explorer
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Anzeigen von Ereignissitzungsdaten
+  href: ../../database-engine/view-event-session-data.md
+- name: Pakete für erweiterte Ereignisse
+  href: sql-server-extended-events-packages.md
+- name: Ziele für erweiterte Ereignisse
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: Ereigniszählerziel
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: Ziel 'Ereignispaarbildung'
+      href: ../../database-engine/event-pairing-target.md
+    - name: Histogrammziel
+      href: ../../database-engine/histogram-target.md
+    - name: Ringpufferziel
+      href: ../../database-engine/ring-buffer-target.md
+    - name: Ereignisablaufverfolgung für Windows-Ziel
+      href: event-tracing-for-windows-target.md
+- name: Engine für erweiterte Ereignisse
+  href: sql-server-extended-events-engine.md
+- name: Sitzungen für erweiterte Ereignisse
+  href: sql-server-extended-events-sessions.md
+- name: Tools für erweiterte Ereignisse
+  href: extended-events-tools.md
+  items:
+    - name: Verwenden der system_health-Sitzung
+      href: use-the-ssms-xe-profiler.md
+    - name: Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
+      href: use-the-powershell-provider-for-extended-events.md
+- name: Schreiben einer Sitzung für erweiterte Ereignisse
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: Ändern einer Sitzung für erweiterte Ereignisse
+  href: alter-an-extended-events-session.md
+- name: Kopieren oder Exportieren von Zieldaten
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: Ändern der Sicht der Ablaufverfolgungsergebnisse
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: Abrufen der Felder für alle Ereignisse
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: Anzeigen der Ereignisse für registrierte Pakete
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: Anzeigen der Ziele von erweiterten Ereignissen für registrierte Pakete
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Abrufen der konfigurierbaren Parameter für das ADD TARGET-Argument
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 'Feststellen, welche Abfragen Sperren enthalten'
+  href: determine-which-queries-are-holding-locks.md
+- name: 'Suchen der Objekte, die über die meisten Sperren verfügen'
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: Überwachen der Systemaktivität mit erweiterten Ereignisses
+  href: monitor-system-activity-using-extended-events.md

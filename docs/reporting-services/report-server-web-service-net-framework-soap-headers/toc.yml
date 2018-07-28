@@ -1,0 +1,8 @@
+- name: Verwenden von Reporting Services SOAP-Headern
+  href: using-reporting-services-soap-headers.md
+- name: Methoden der Batchverarbeitung
+  href: batching-methods.md
+- name: Identifizieren des Ausführungsstatus
+  href: identifying-execution-state.md
+- name: Festlegen des Elementnamespaces für die GetProperties-Methode
+  href: setting-the-item-namespace-for-the-getproperties-method.md

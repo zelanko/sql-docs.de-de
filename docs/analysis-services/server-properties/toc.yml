@@ -1,0 +1,26 @@
+- name: Servereigenschaften
+  href: server-properties-in-analysis-services.md
+- name: Data Mining-Eigenschaften
+  href: data-mining-properties.md
+- name: DAX-Eigenschaften
+  href: dax-properties.md
+- name: Funktionseigenschaften
+  href: feature-properties.md
+- name: FileStore (Eigenschaften)
+  href: filestore-properties.md
+- name: Allgemeine Eigenschaften
+  href: general-properties.md
+- name: Eigenschaften des Sperren-Managers
+  href: lock-manager-properties.md
+- name: Protokolleigenschaften
+  href: log-properties.md
+- name: Speichereigenschaften
+  href: memory-properties.md
+- name: Netzwerkeigenschaften
+  href: network-properties.md
+- name: OLAP-Eigenschaften
+  href: olap-properties.md
+- name: Sicherheitseigenschaften
+  href: security-properties.md
+- name: Threadpooleigenschaften
+  href: thread-pool-properties.md

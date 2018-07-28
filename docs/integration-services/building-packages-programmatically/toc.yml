@@ -1,0 +1,28 @@
+- name: Programmgesteuertes Hinzufügen von Verbindungen
+  href: adding-connections-programmatically.md
+- name: Programmgesteuertes Erstellen von Paketen
+  href: building-packages-programmatically.md
+- name: Programmgesteuertes Erstellen eines Pakets
+  href: creating-a-package-programmatically.md
+- name: Programmgesteuertes Hinzufügen von Tasks
+  href: adding-tasks-programmatically.md
+- name: Programmgesteuertes Verbinden von Tasks
+  href: connecting-tasks-programmatically.md
+- name: Programmgesteuertes Arbeiten mit Variablen
+  href: working-with-variables-programmatically.md
+- name: Programmgesteuerte Behandlung von Ereignissen
+  href: handling-events-programmatically.md
+- name: Programmgesteuertes Aktivieren der Protokollierung
+  href: enabling-logging-programmatically.md
+- name: Programmgesteuertes Hinzufügen des Datenflusstasks
+  href: adding-the-data-flow-task-programmatically.md
+- name: Programmgesteuertes Auffinden von Datenflusskomponenten
+  href: discovering-data-flow-components-programmatically.md
+- name: Programmgesteuertes Hinzufügen von Datenflusskomponenten
+  href: adding-data-flow-components-programmatically.md
+- name: Programmgesteuertes Verbinden von Datenflusskomponenten
+  href: connecting-data-flow-components-programmatically.md
+- name: Programmgesteuertes Auswählen von Eingabespalten
+  href: selecting-input-columns-programmatically.md
+- name: Programmgesteuertes Speichern von Paketen
+  href: saving-a-package-programmatically.md

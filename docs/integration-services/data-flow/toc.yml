@@ -1,0 +1,222 @@
+- name: Übersicht
+  href: data-flow.md
+- name: Daten in Datenflüssen
+  href: data-in-data-flows.md
+  items:
+    - name: SQL Server Integration Services-Datentypen
+      href: integration-services-data-types.md
+    - name: Analysieren von Daten
+      href: parsing-data.md
+    - name: Vergleichen von Zeichenfolgendaten
+      href: comparing-string-data.md
+- name: Hinzufügen oder Löschen einer Komponente im Datenfluss
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: Festlegen der Eigenschaften einer Datenflusskomponente
+  href: set-the-properties-of-a-data-flow-component.md
+- name: Verbinden von Komponenten in einem Datenfluss
+  href: connect-components-in-a-data-flow.md
+- name: SQL Server Integration Services-Pfade
+  href: integration-services-paths.md
+- name: Editor zum Auflösen von Spaltenverweisen
+  href: resolve-column-reference-editor.md
+- name: Daten-Viewer
+  href: data-viewer.md
+- name: Fehlerbehandlung in Daten
+  href: error-handling-in-data.md
+- name: Funktionen für die Datenflussleistung
+  href: data-flow-performance-features.md
+- name: Quellen-Assistent
+  href: source-assistant.md
+- name: Ziel-Assistent
+  href: destination-assistant.md
+- name: ADO NET-Quelle
+  href: ado-net-source.md
+- name: ADO NET-Ziel
+  href: ado-net-destination.md
+- name: Benutzerdefinierte Eigenschaften von ADO.NET
+  href: ado-net-custom-properties.md
+- name: Azure-Blob-Quelle
+  href: azure-blob-source.md
+- name: Azure-BLOB-Ziel
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store Source
+  href: azure-data-lake-store-source.md
+- name: Azure Data Lake Store Destination
+  href: azure-data-lake-store-destination.md
+- name: CDC-Flusskomponenten
+  href: cdc-flow-components.md
+  items:
+    - name: CDC-Quelle
+      href: cdc-source.md
+      items:
+        - name: Benutzerdefinierte Eigenschaften der CDC-Quelle
+          href: cdc-source-custom-properties.md
+        - name: Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC-Splitter
+      href: cdc-splitter.md
+    - name: Weiterleiten des CDC-Datenstroms gemäß Änderungstyp
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: Definieren einer Statusvariablen
+      href: define-a-state-variable.md
+- name: Ziel des Data Mining-Modelltrainings
+  href: data-mining-model-training-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings
+      href: data-mining-model-training-destination-custom-properties.md
+- name: Konfigurieren des Datenstreamingziels
+  href: data-streaming-destination.md
+  items:
+    - name: 'Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht'
+      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: DataReader-Ziel
+  href: datareader-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des DataReader-Ziels
+      href: datareader-destination-custom-properties.md
+- name: Ziel für Dimensionsverarbeitung
+  href: dimension-processing-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
+      href: dimension-processing-destination-custom-properies.md
+- name: Excel-Quelle
+  href: excel-source.md
+- name: Excel-Ziel
+  href: excel-destination.md
+- name: Benutzerdefinierte Eigenschaften von Excel
+  href: excel-custom-properties.md
+- name: Flatfilequelle
+  href: flat-file-source.md
+- name: Flatfileziel
+  href: flat-file-destination.md
+- name: HDFS-Dateiquelle
+  href: hdfs-file-source.md
+- name: HDFS-Dateiziel
+  href: hdfs-file-destination.md
+- name: Benutzerdefinierte Eigenschaften der Flatfile
+  href: flat-file-custom-properties.md
+- name: OData-Quelle
+  href: odata-source.md
+  items:
+    - name: 'Lernprogramm: Verwenden der OData-Quelle'
+      href: tutorial-using-the-odata-source.md
+    - name: Bereitstellen einer OData-Quellabfrage zur Laufzeit
+      href: modify-odata-source-query-at-runtime.md
+    - name: OData-Quelleneigenschaften
+      href: odata-source-properties.md
+- name: ODBC-Flusskomponenten
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC-Ziel
+      href: odbc-destination.md
+      items:
+        - name: Laden von Daten mithilfe des ODBC-Ziels
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC-Quelle
+      href: odbc-source.md
+      items:
+        - name: Extrahieren von Daten mithilfe der ODBC-Quelle
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: OLE DB-Quelle
+  href: ole-db-source.md
+  items:
+    - name: Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente
+      href: map-query-parameters-to-variables-in-a-data-flow-component.md
+    - name: Extrahieren von Daten mithilfe der OLE DB-Quelle
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB-Ziel
+  href: ole-db-destination.md
+  items:
+    - name: Laden von Daten mithilfe des OLE DB-Ziels
+      href: load-data-by-using-the-ole-db-destination.md
+- name: Benutzerdefinierte Eigenschaften für OLE DB
+  href: ole-db-custom-properties.md
+- name: Ziel für Partitionsverarbeitung
+  href: partition-processing-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung
+      href: partition-processing-destination-custom-properties.md
+- name: Rohdatendatei-Quelle
+  href: raw-file-source.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+- name: Benutzerdefinierte Eigenschaften der Rohdatendatei
+  href: raw-file-custom-properties.md
+- name: Recordsetziel
+  href: recordset-destination.md
+  items:
+    - name: Verwenden eines Recordsetziels
+      href: use-a-recordset-destination.md
+    - name: Benutzerdefinierte Eigenschaften des Recordsetziels
+      href: recordset-destination-custom-properties.md
+- name: SAP BW-Quelle
+  href: sap-bw-source.md
+  items:
+    - name: Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
+      href: sap-bw-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für SAP BW (Seite Spalten)
+      href: sap-bw-source-editor-columns-page.md
+    - name: Quellen-Editor für SAP BW (Seite Fehlerausgabe)
+      href: sap-bw-source-editor-error-output-page.md
+    - name: Quellen-Editor für SAP BW (Seite Erweitert)
+      href: sap-bw-source-editor-advanced-page.md
+    - name: RFC-Ziel suchen
+      href: look-up-rfc-destination.md
+    - name: Prozesskette suchen
+      href: look-up-process-chain.md
+    - name: Anforderungsprotokoll
+      href: request-log.md
+    - name: Vorschau
+      href: preview.md
+- name: SAP BW-Ziel
+  href: sap-bw-destination.md
+  items:
+    - name: Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
+      href: sap-bw-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für SAP BW (Seite Zuordnungen)
+      href: sap-bw-destination-editor-mappings-page.md
+    - name: Ziel-Editor für SAP BW (Seite Fehlerausgabe)
+      href: sap-bw-destination-editor-error-output-page.md
+    - name: Ziel-Editor für SAP BW (Seite Erweitert)
+      href: sap-bw-destination-editor-advanced-page.md
+    - name: InfoPackage suchen
+      href: look-up-infopackage.md
+    - name: Neues InfoObject erstellen
+      href: create-new-infoobject.md
+    - name: InfoCube für Transaktionsdaten erstellen
+      href: create-infocube-for-transaction-data.md
+    - name: InfoObject suchen
+      href: look-up-infoobject.md
+    - name: InfoSource erstellen
+      href: create-infosource.md
+    - name: InfoSource für Transaktionsdaten erstellen
+      href: create-infosource-for-transaction-data.md
+    - name: InfoSource für Masterdaten erstellen
+      href: create-infosource-for-master-data.md
+    - name: InfoPackage erstellen
+      href: create-infopackage.md
+- name: SQL Server Compact Edition-Ziel
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server-Ziel
+  href: sql-server-destination.md
+  items:
+    - name: Massenladen von Daten mithilfe des SQL Server-Ziels
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: Benutzerdefinierte Eigenschaften des SQL Server-Ziels
+      href: sql-server-destination-custom-properties.md
+- name: Transformationen
+  href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: XML-Quelle
+  href: xml-source.md
+  items:
+    - name: Extrahieren von Daten mithilfe der XML-Quelle
+      href: extract-data-by-using-the-xml-source.md
+    - name: Benutzerdefinierte Eigenschaften der XML-Quelle
+      href: xml-source-custom-properties.md

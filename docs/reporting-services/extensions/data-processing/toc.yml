@@ -1,0 +1,26 @@
+- name: Erstellen einer Bibliothek für Datenverarbeitungserweiterungen
+  href: creating-a-data-processing-extension-library.md
+- name: Übersicht über Datenverarbeitungserweiterungen
+  href: data-processing-extensions-overview.md
+- name: Debuggen von Code für Datenverarbeitungserweiterungen
+  href: debugging-data-processing-extension-code.md
+- name: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
+  href: deploying-a-data-processing-extension-to-a-report-server.md
+- name: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer
+  href: deploying-a-data-processing-extension-to-report-designer.md
+- name: Bereitstellen von Datenverarbeitungserweiterungen
+  href: deploying-a-data-processing-extension.md
+- name: Implementieren einer Command-Klasse für Datenverarbeitungserweiterungen
+  href: implementing-a-command-class-for-a-data-processing-extension.md
+- name: Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
+  href: implementing-a-connection-class-for-a-data-processing-extension.md
+- name: Implementieren von Datenverarbeitungserweiterungen
+  href: implementing-a-data-processing-extension.md
+- name: Implementieren einer DataReader-Klasse für Datenverarbeitungserweiterungen
+  href: implementing-a-datareader-class-for-a-data-processing-extension.md
+- name: Vorbereiten der Implementierung von Datenverarbeitungserweiterungen
+  href: preparing-to-implement-a-data-processing-extension.md
+- name: Entfernen einer Datenverarbeitungserweiterung
+  href: removing-a-data-processing-extension.md
+- name: Verwenden eines externen Datasets mit Reporting Services
+  href: using-an-external-dataset-with-reporting-services.md

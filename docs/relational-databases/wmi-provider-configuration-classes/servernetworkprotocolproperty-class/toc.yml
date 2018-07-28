@@ -1,0 +1,24 @@
+- name: InstanceName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: instancename-property-servernetworkprotocolproperty-class.md
+- name: IPAddressName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: ipaddressname-property-servernetworkprotocolproperty-class.md
+- name: PropertyName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: propertyname-property-servernetworkprotocolproperty-class.md
+- name: PropertyNumVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: propertynumval-property-servernetworkprotocolproperty-class.md
+- name: PropertyStrVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: propertystrval-property-servernetworkprotocolproperty-class.md
+- name: PropertyType-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: propertytype-property-servernetworkprotocolproperty-class.md
+- name: PropertyValType-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: propertyvaltype-property-servernetworkprotocolproperty-class.md
+- name: ProtocolName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
+  href: protocolname-property-servernetworkprotocolproperty-class.md
+- name: ServerNetworkProtocolProperty-Klasse
+  href: servernetworkprotocolproperty-class.md
+- name: SetFlag-Methode (ServerNetworkProtocolProperty-Klasse)
+  href: setflag-method-servernetworkprotocolproperty-class.md
+- name: SetNumericalValue-Methode (ServerNetworkProtocolProperty-Klasse)
+  href: setnumericalvalue-method-servernetworkprotocolproperty-class.md
+- name: SetStringValue-Methode (ServerNetworkProtocolProperty-Klasse)
+  href: setstringvalue-method-servernetworkprotocolproperty-class.md

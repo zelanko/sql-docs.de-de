@@ -1,0 +1,8 @@
+- name: Entwickeln eines benutzerdefinierten Protokollanbieters
+  href: developing-a-custom-log-provider.md
+- name: Erstellen eines benutzerdefinierten Protokollanbieters
+  href: creating-a-custom-log-provider.md
+- name: Codieren eines benutzerdefinierten Protokollanbieters
+  href: coding-a-custom-log-provider.md
+- name: Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter
+  href: developing-a-user-interface-for-a-custom-log-provider.md

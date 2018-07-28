@@ -1,0 +1,36 @@
+- name: 'Lernprogramm: Schreiben von Transact-SQL-Anweisungen'
+  href: tutorial-writing-transact-sql-statements.md
+  items:
+    - name: 'Lektion 1: Erstellen von Datenbankobjekten'
+      href: lesson-1-creating-database-objects.md
+      items:
+        - name: Erstellen einer Datenbank (Lernprogramm)
+          href: lesson-1-1-creating-a-database.md
+        - name: Erstellen einer Tabelle (Lernprogramm)
+          href: lesson-1-2-creating-a-table.md
+        - name: Einfügen und Aktualisieren von Daten in einer Tabelle (Lernprogramm)
+          href: lesson-1-3-inserting-and-updating-data-in-a-table.md
+        - name: Lesen der Daten in einer Tabelle (Lernprogramm)
+          href: lesson-1-4-reading-the-data-in-a-table.md
+        - name: 'Zusammenfassung: Erstellen von Datenbankobjekten'
+          href: lesson-1-5-summary-creating-database-objects.md
+    - name: 'Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte'
+      href: lesson-2-configuring-permissions-on-database-objects.md
+      items:
+        - name: Erstellen einer Anmeldung
+          href: lesson-2-1-creating-a-login.md
+        - name: Gewähren von Zugriff auf eine Datenbank
+          href: lesson-2-2-granting-access-to-a-database.md
+        - name: Erstellen von Sichten und gespeicherten Prozeduren
+          href: lesson-2-3-creating-views-and-stored-procedures.md
+        - name: Erteilen des Zugriffs auf ein Datenbankobjekt
+          href: lesson-2-4-granting-access-to-a-database-object.md
+        - name: 'Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte'
+          href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
+    - name: 'Lektion 3: Löschen von Datenbankobjekten'
+      href: lesson-3-1-deleting-database-objects.md
+      items:
+        - name: Löschen von Datenbankobjekten
+          href: lesson-3-deleting-database-objects.md
+    - name: 'Zusammenfassung: Schreiben von Transact-SQL-Code'
+      href: ../tutorials/summary-writing-transact-sql.md

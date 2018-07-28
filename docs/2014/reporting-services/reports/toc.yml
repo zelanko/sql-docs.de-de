@@ -1,0 +1,50 @@
+- name: Reporting Services-Berichte
+  href: reporting-services-reports-ssrs.md
+- name: Veröffentlichen von Datenquellen und Berichten
+  href: publishing-data-sources-and-reports.md
+  items:
+    - name: Ausführen einer Vorschau für Berichte
+      href: previewing-reports.md
+    - name: Veröffentlichen von Berichten auf einem Berichtsserver
+      href: publishing-reports-to-a-report-server.md
+    - name: Veröffentlichen von Berichten
+      href: ../publish-reports.md
+    - name: Veröffentlichen eines Berichts in einer SharePoint-Bibliothek
+      href: publish-a-report-to-a-sharepoint-library.md
+    - name: Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek
+      href: publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: Report Definition Language
+  href: report-definition-language-ssrs.md
+- name: Suchen der Berichtsdefinitions-Schemaversion
+  href: find-the-report-definition-schema-version-ssrs.md
+- name: 'Suchen von Text, Zahlen oder Datumswerten in einem Bericht'
+  href: find-text-numbers-or-dates-in-a-report.md
+- name: Konfigurieren von Ausführungseigenschaften für einen Bericht
+  href: configure-execution-properties-for-a-report-report-manager.md
+- name: Konfigurieren allgemeiner Eigenschaften für einen Bericht
+  href: ../configure-general-properties-for-a-report-report-manager.md
+- name: Einschränken des Berichtsverlaufs
+  href: limit-report-history-report-manager.md
+- name: Öffnen und Schließen eines Berichts
+  href: open-and-close-a-report-report-manager.md
+- name: Anzeigen oder Löschen des Berichtsverlaufs
+  href: ../view-or-delete-report-history-report-manager.md
+- name: Hochladen einer Datei oder eines Berichts
+  href: upload-a-file-or-report-report-manager.md
+- name: Erstellen eines verknüpften Berichts
+  href: create-a-linked-report.md
+- name: Berichte mit Durchklicken (SSRS)
+  href: clickthrough-reports-ssrs.md
+- name: Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
+  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
+- name: Hilfe (F1) zu Berichten
+  href: ../report-f1-help.md
+  items:
+    - name: 'Berichtseigenschaften (Dialogfeld), Code'
+      href: ../report-properties-dialog-box-code.md
+    - name: 'Berichtseigenschaften (Dialogfeld), Seite einrichten'
+      href: ../report-properties-dialog-box-page-setup.md
+    - name: 'Berichtseigenschaften (Dialogfeld), Verweise'
+      href: ../report-properties-dialog-box-references.md
+    - name: Berichtsabschnitte (Dialogfeld)
+      href: ../report-sections-dialog-box.md

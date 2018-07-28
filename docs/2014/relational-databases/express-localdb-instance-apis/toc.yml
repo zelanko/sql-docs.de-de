@@ -1,0 +1,33 @@
+- name: SQL Server Express LocalDB-Instanz-API-Verweis
+  href: sql-server-express-localdb-reference-instance-apis.md
+  items:
+    - name: SQL Server Express LocalDB-Header und Versionsinformationen
+      href: sql-server-express-localdb-header-and-version-information.md
+    - name: 'Verwaltungstool für Befehlszeilen: SqlLocalDB.exe'
+      href: command-line-management-tool-sqllocaldb-exe.md
+    - name: LocalDBCreateInstance-Funktion
+      href: localdbcreateinstance-function.md
+    - name: LocalDBDeleteInstance-Funktion
+      href: localdbdeleteinstance-function.md
+    - name: LocalDBFormatMessage-Funktion
+      href: localdbformatmessage-function.md
+    - name: LocalDBGetInstanceInfo-Funktion
+      href: localdbgetinstanceinfo-function.md
+    - name: LocalDBGetInstances-Funktion
+      href: localdbgetinstances-function.md
+    - name: LocalDBGetVersionInfo-Funktion
+      href: localdbgetversioninfo-function.md
+    - name: LocalDBGetVersions-Funktion
+      href: localdbgetversions-function.md
+    - name: LocalDBShareInstance-Funktion
+      href: localdbshareinstance-function.md
+    - name: LocalDBStartInstance-Funktion
+      href: localdbstartinstance-function.md
+    - name: LocalDBStartTracing-Funktion
+      href: localdbstarttracing-function.md
+    - name: LocalDBStopInstance-Funktion
+      href: localdbstopinstance-function.md
+    - name: LocalDBStopTracing-Funktion
+      href: localdbstoptracing-function.md
+    - name: LocalDBUnshareInstance-Funktion
+      href: localdbunshareinstance-function.md

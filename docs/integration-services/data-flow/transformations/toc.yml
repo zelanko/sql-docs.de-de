@@ -1,0 +1,132 @@
+- name: Übersicht
+  href: integration-services-transformations.md
+- name: Transformation für das Aggregieren
+  href: aggregate-transformation.md
+  items:
+    - name: Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: Überwachungstransformation
+  href: audit-transformation.md
+- name: Balanced Data Distributor (BDD)-Transformation
+  href: balanced-data-distributor-transformation.md
+- name: Transformation zum Zuordnen der Zeichen
+  href: character-map-transformation.md
+- name: Transformation für bedingtes Teilen
+  href: conditional-split-transformation.md
+  items:
+    - name: Teilen eines Datasets mithilfe der Transformation für bedingtes Teilen
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: Spalten-Kopieren-Transformation
+  href: copy-column-transformation.md
+- name: Transformation für Datenkonvertierung
+  href: data-conversion-transformation.md
+  items:
+    - name: Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung
+      href: convert-data-type-by-using-data-conversion-transformation.md
+- name: Transformation für Data Mining-Abfragen
+  href: data-mining-query-transformation.md
+- name: DQS-Bereinigungstransformation
+  href: dqs-cleansing-transformation.md
+  items:
+    - name: Verbindungs-Manager für DQS-Bereinigung
+      href: dqs-cleansing-connection-manager.md
+    - name: Anwenden von Datenqualitätsregeln auf eine Datenquelle
+      href: apply-data-quality-rules-to-data-source.md
+    - name: Zuordnen von Spalten zu Verbunddomänen
+      href: map-columns-to-composite-domains.md
+- name: Transformation für abgeleitete Spalten
+  href: derived-column-transformation.md
+  items:
+    - name: Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten
+      href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: Transformation für das Exportieren von Spalten
+  href: export-column-transformation.md
+- name: Transformation für Fuzzygruppierung
+  href: fuzzy-grouping-transformation.md
+  items:
+    - name: Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: Transformation für Fuzzysuche
+  href: fuzzy-lookup-transformation.md
+- name: Transformation für das Importieren von Spalten
+  href: import-column-transformation.md
+- name: Transformation für Suche
+  href: lookup-transformation.md
+  items:
+    - name: Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager
+      href: lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager
+      href: lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: Erstellen und Bereitstellen eines Cache für die Transformation für Suche
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: Beziehungen erstellen
+      href: create-relationships.md
+    - name: Cachetransformation
+      href: cache-transform.md
+      items:
+        - name: Cacheverbindungs-Manager
+          href: cache-connection-manager.md
+- name: Transformation für Zusammenführen
+  href: merge-transformation.md
+- name: Merge Join Transformation
+  href: merge-join-transformation.md
+  items:
+    - name: Erweitern eines Datasets mithilfe der Transformation für Zusammenführungsjoins
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: Transformation für Multicast
+  href: multicast-transformation.md
+- name: Transformation für OLE DB-Befehl
+  href: ole-db-command-transformation.md
+- name: Transformation für Prozentwert-Stichproben
+  href: percentage-sampling-transformation.md
+- name: Transformation für Pivot
+  href: pivot-transformation.md
+- name: Transformation für Zeilenanzahl
+  href: row-count-transformation.md
+- name: Transformation für Zeilenstichproben
+  href: row-sampling-transformation.md
+- name: Skriptkomponente
+  href: script-component.md
+- name: Transformation für langsam veränderliche Dimensionen
+  href: slowly-changing-dimension-transformation.md
+  items:
+    - name: Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: Assistent für langsam veränderliche Dimensionen (F1-Hilfe)
+      href: slowly-changing-dimension-wizard-f1-help.md
+      items:
+        - name: Willkommen beim Assistenten für langsam veränderliche Dimensionen
+          href: welcome-to-the-slowly-changing-dimension-wizard.md
+        - name: Dimensionstabelle und Schlüssel auswählen (Assistent für langsam veränderliche Dimensionen)
+          href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+        - name: Spalten von langsam veränderlichen Dimensionen (Assistent für langsam veränderliche Dimensionen)
+          href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+        - name: Optionen für feste und veränderliche Attribute (Assistent für langsam veränderliche Dimensionen)
+          href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+        - name: Optionen für Verlaufsattribute (Assistent für langsam veränderliche Dimensionen)
+          href: historical-attribute-options-slowly-changing-dimension-wizard.md
+        - name: Abgeleitete Dimensionselemente (Assistent für langsam veränderliche Dimensionen)
+          href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+        - name: Fertigstellen des Assistenten für langsam veränderliche Dimensionen
+          href: finish-the-slowly-changing-dimension-wizard.md
+- name: Transformation zum Sortieren
+  href: sort-transformation.md
+- name: Transformation für Ausdrucksextrahierung
+  href: term-extraction-transformation.md
+- name: Transformation für Ausdruckssuche
+  href: term-lookup-transformation.md
+- name: Transformation für UNION ALL
+  href: union-all-transformation.md
+  items:
+    - name: Zusammenführen von Daten mithilfe der Transformation für UNION ALL
+      href: merge-data-by-using-the-union-all-transformation.md
+- name: Entpivotierungstransformation
+  href: unpivot-transformation.md
+- name: Transformieren von Daten mit Transformationen
+  href: transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: transformation-custom-properties.md

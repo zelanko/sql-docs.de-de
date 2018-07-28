@@ -1,0 +1,29 @@
+- name: Datenebenenanwendungen
+  href: data-tier-applications.md
+  items:
+    - name: DAC-Unterstützung für SQL Server-Objekte und -Versionen
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: Löschen einer Datenebenenanwendung
+      href: delete-a-data-tier-application.md
+    - name: Bereitstellen einer Datenebenenanwendung
+      href: deploy-a-data-tier-application.md
+    - name: Exportieren einer Datenebenenanwendung
+      href: export-a-data-tier-application.md
+    - name: Extrahieren einer DAC aus einer Datenbank
+      href: extract-a-dac-from-a-database.md
+    - name: Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: Überwachen von Datenebenenanwendungen
+      href: monitor-data-tier-applications.md
+    - name: Registrieren einer Datenbank als eine DAC
+      href: register-a-database-as-a-dac.md
+    - name: Entpacken eines DAC-Pakets
+      href: unpack-a-dac-package.md
+    - name: Upgrade a Data-tier Application
+      href: upgrade-a-data-tier-application.md
+    - name: Überprüfen eines DAC-Pakets
+      href: validate-a-dac-package.md
+    - name: Überprüfungsregeln für Datenebenen-Anwendungs-Assistenten
+      href: dbengine-validation-rules.md
+    - name: Bereitstellen einer Datenbank mit DAC
+      href: deploy-a-database-by-using-a-dac.md

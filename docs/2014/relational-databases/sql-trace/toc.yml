@@ -1,0 +1,31 @@
+- name: SQL-Ablaufverfolgung
+  href: sql-trace.md
+  items:
+    - name: Erstellen und Ausführen von Ablaufverfolgungen mit gespeicherten Transact-SQL-Prozeduren
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: Erstellen manueller Ablaufverfolgungen mit gespeicherten Prozeduren
+      href: create-manual-traces-using-stored-procedures.md
+    - name: Speichern von Ablaufverfolgungsergebnissen in einer Datei
+      href: save-trace-results-to-a-file.md
+    - name: Verbessern des Zugriffs auf Ablaufverfolgungsdaten
+      href: improve-access-to-trace-data.md
+    - name: Erstellen einer Ablaufverfolgung (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: Festlegen eines Ablaufverfolgungsfilters (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: Ändern einer vorhandenen Ablaufverfolgung (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: Anzeigen einer gespeicherten Ablaufverfolgung (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: Anzeigen von Filterinformationen (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: Löschen einer Ablaufverfolgung (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: Optimieren der SQL-Ablaufverfolgung
+      href: optimize-sql-trace.md
+    - name: Filtern einer Ablaufverfolgung
+      href: filter-a-trace.md
+    - name: Beschränken der Größe von Ablaufverfolgungsdatei und -tabelle
+      href: limit-trace-file-and-table-sizes.md
+    - name: Planen von Ablaufverfolgungen
+      href: schedule-traces.md

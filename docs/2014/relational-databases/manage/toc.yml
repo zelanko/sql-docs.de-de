@@ -1,0 +1,47 @@
+- name: Funktionen und Tasks im SQL Server-Hilfsprogramm
+  href: sql-server-utility-features-and-tasks.md
+- name: Überlegungen zum Ausführen von Hilfsprogramm- und Nicht-Hilfsprogramm-Sammlungssätzen auf derselben Instanz von SQL Server
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: Verbinden mit einem SQL Server-Hilfsprogramm
+  href: connect-to-a-sql-server-utility.md
+- name: Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: Ändern der Definitionen von Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: Konfigurieren des Data Warehouses für den Steuerungspunkt für das Hilfsprogramm (SQL Server-Hilfsprogramm)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: Konfigurieren von Integritätsrichtlinien (SQL Server-Hilfsprogramm)
+  href: configure-health-policies-sql-server-utility.md
+- name: Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung (SQL Server-Hilfsprogramm)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: Entfernen einer Instanz von SQL Server aus dem SQL Server-Hilfsprogramm
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: Ändern des Proxykontos für den Hilfsprogramm-Sammlungssatz auf einer verwalteten Instanz von SQL Server (SQL Server-Hilfsprogramm)
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: Verschieben eines UCPs von einer SQL Server-Instanz in eine andere (SQL Server-Hilfsprogramm)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: Entfernen eines Steuerungspunkts für das Hilfsprogramm (SQL Server-Hilfsprogramm)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: Problembehandlung beim SQL Server-Hilfsprogramm
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: Fehlerbehebung für die SQL Server-Ressourcenintegrität (SQL Server-Hilfsprogramm)
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: Hilfsprogramm-Explorer (F1-Hilfe)
+  href: utility-explorer-f1-help.md
+  items:
+    - name: Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

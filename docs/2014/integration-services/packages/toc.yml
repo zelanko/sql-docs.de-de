@@ -1,0 +1,68 @@
+- name: Bereitstellung von Projekten und Paketen
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Deploy Projects to Integration Services Server
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: Erstellen und Zuordnen einer Serverumgebung
+      href: ../create-and-map-a-server-environment.md
+    - name: Assistent für die Konvertierung von Integration Services-Projekten
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Bereitstellungs-Assistent für Integration Services
+      href: ../integration-services-deployment-wizard.md
+    - name: In Paketbereitstellungsmodell konvertieren (Dialogfeld)
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: Paketbereitstellung (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: Paketkonfigurationen
+          href: ../package-configurations.md
+        - name: Erstellen von Paketkonfigurationen
+          href: ../create-package-configurations.md
+    - name: Paketkonfigurationsplaner
+      href: ../package-configurations-organizer.md
+    - name: Referenz zur Benutzeroberfläche des Paketkonfigurations-Assistenten
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Create a Deployment Utility
+          href: ../create-a-deployment-utility.md
+        - name: Bereitstellen von Paketen mithilfe des Bereitstellungshilfsprogramms
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: Erneutes Bereitstellen von Paketen
+          href: ../redeployment-of-packages.md
+        - name: Referenz zur Benutzeroberfläche des Paketinstallations-Assistenten
+          href: ../package-installation-wizard-ui-reference.md
+- name: Ausführung von Projekten und Paketen
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: Ausführen eines Pakets in SQL Server Data Tools
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: Ausführen eines Pakets auf dem SSIS-Server mit SQL Server Management Studio
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: Implementierung von untergeordneten Paketen
+          href: ../implementation-of-child-packages.md
+        - name: Implementierung des übergeordneten Pakets
+          href: ../implementation-of-the-parent-package.md
+        - name: 'Protokollierung für Pakete auf Remoteservern, für die ein Lastenausgleich ausgeführt wurde'
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: Behandlung von Problemen mit Paketausführungstools
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: Behandlung von Problemen in Berichten für die Paketausführung
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: Generieren von Dumpdateien für die Paketausführung
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: Aufträge des SQL Server-Agents für Pakete
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: Planen eines Pakets mit dem SQL Server-Agent
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: Auftrag des SQL Server-Agents ausführen (Task)
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

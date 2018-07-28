@@ -1,0 +1,195 @@
+- name: Übersicht
+  href: spatial-types-geometry-transact-sql.md
+- name: OGC-Methoden für geomety-Instanzen
+  href: ogc-methods-on-geometry-instances.md
+  items:
+    - name: STArea (geometry-Datentyp)
+      href: starea-geometry-data-type.md
+    - name: STAsBinary (geometry-Datentyp)
+      href: stasbinary-geometry-data-type.md
+    - name: STAsText (geometry-Datentyp)
+      href: stastext-geometry-data-type.md
+    - name: STBoundary (geometry-Datentyp)
+      href: stboundary-geometry-data-type.md
+    - name: STBuffer (geometry-Datentyp)
+      href: stbuffer-geometry-data-type.md
+    - name: STCentroid (geometry-Datentyp)
+      href: stcentroid-geometry-data-type.md
+    - name: STContains (geometry-Datentyp)
+      href: stcontains-geometry-data-type.md
+    - name: STConvexHull (geometry-Datentyp)
+      href: stconvexhull-geometry-data-type.md
+    - name: STCrosses (geometry-Datentyp)
+      href: stcrosses-geometry-data-type.md
+    - name: STCurveN (geometry-Datentyp)
+      href: stcurven-geometry-data-type.md
+    - name: STCurveToLine (geometry-Datentyp)
+      href: stcurvetoline-geometry-data-type.md
+    - name: STDifference (geometry-Datentyp)
+      href: stdifference-geometry-data-type.md
+    - name: STDimension (geometry-Datentyp)
+      href: stdimension-geometry-data-type.md
+    - name: STDisjoint (geometry-Datentyp)
+      href: stdisjoint-geometry-data-type.md
+    - name: STDistance (geometry-Datentyp)
+      href: stdistance-geometry-data-type.md
+    - name: STEndpoint (geometry-Datentyp)
+      href: stendpoint-geometry-data-type.md
+    - name: STEnvelope (geometry-Datentyp)
+      href: stenvelope-geometry-data-type.md
+    - name: STEquals (geometry-Datentyp)
+      href: stequals-geometry-data-type.md
+    - name: STExteriorRing (geometry-Datentyp)
+      href: stexteriorring-geometry-data-type.md
+    - name: STGeometryN (geometry-Datentyp)
+      href: stgeometryn-geometry-data-type.md
+    - name: STGeometryType (geometry-Datentyp)
+      href: stgeometrytype-geometry-data-type.md
+    - name: STInteriorRingN (geometry-Datentyp)
+      href: stinteriorringn-geometry-data-type.md
+    - name: STIntersection (geometry-Datentyp)
+      href: stintersection-geometry-data-type.md
+    - name: STIntersects (geometry-Datentyp)
+      href: stintersects-geometry-data-type.md
+    - name: STIsClosed (geometry-Datentyp)
+      href: stisclosed-geometry-data-type.md
+    - name: STIsEmpty (geometry-Datentyp)
+      href: stisempty-geometry-data-type.md
+    - name: STIsRing (geometry-Datentyp)
+      href: stisring-geometry-data-type.md
+    - name: STIsSimple (geometry-Datentyp)
+      href: stissimple-geometry-data-type.md
+    - name: STIsValid (geometry-Datentyp)
+      href: stisvalid-geometry-data-type.md
+    - name: STLength (geometry-Datentyp)
+      href: stlength-geometry-data-type.md
+    - name: STNumCurves (geometry-Datentyp)
+      href: stnumcurves-geometry-data-type.md
+    - name: STNumGeometries (geometry-Datentyp)
+      href: stnumgeometries-geometry-data-type.md
+    - name: STNumInteriorRing (geometry-Datentyp)
+      href: stnuminteriorring-geometry-data-type.md
+    - name: STNumPoints (geometry-Datentyp)
+      href: stnumpoints-geometry-data-type.md
+    - name: STOverlaps (geometry-Datentyp)
+      href: stoverlaps-geometry-data-type.md
+    - name: STPointN (geometry-Datentyp)
+      href: stpointn-geometry-data-type.md
+    - name: STPointOnSurface (geometry-Datentyp)
+      href: stpointonsurface-geometry-data-type.md
+    - name: STRelate (geometry-Datentyp)
+      href: strelate-geometry-data-type.md
+    - name: STSrid (geometry-Datentyp)
+      href: stsrid-geometry-data-type.md
+    - name: STStartPoint (geometry-Datentyp)
+      href: ststartpoint-geometry-data-type.md
+    - name: STSymDifference (geometry-Datentyp)
+      href: stsymdifference-geometry-data-type.md
+    - name: STTouches (geometry-Datentyp)
+      href: sttouches-geometry-data-type.md
+    - name: STUnion (geometry-Datentyp)
+      href: stunion-geometry-data-type.md
+    - name: STWithin (geometry-Datentyp)
+      href: stwithin-geometry-data-type.md
+    - name: STX (geometry-Datentyp)
+      href: stx-geometry-data-type.md
+    - name: STY (geometry-Datentyp)
+      href: sty-geometry-data-type.md
+- name: Erweiterte Methoden für geometry-Instanzen
+  href: extended-methods-on-geometry-instances.md
+  items:
+    - name: AsBinaryZM (geometry-Datentyp)
+      href: asbinaryzm-geometry-datatype.md
+    - name: AsGml (geometry-Datentyp)
+      href: asgml-geometry-data-type.md
+    - name: AsTextZM (geometry-Datentyp)
+      href: astextzm-geometry-data-type.md
+    - name: BufferWithCurves (geometry-Datentyp)
+      href: bufferwithcurves-geometry-data-type.md
+    - name: BufferWithTolerance (geometry-Datentyp)
+      href: bufferwithtolerance-geometry-data-type.md
+    - name: CurveToLineWithTolerance (geometry-Datentyp)
+      href: curvetolinewithtolerance-geometry-data-type.md
+    - name: Filter (geometry-Datentyp)
+      href: filter-geometry-data-type.md
+    - name: HasM (geometry-Datentyp)
+      href: hasm-geometry-datatype.md
+    - name: HasZ (geometry-Datentyp)
+      href: hasz-geometry-datatype.md
+    - name: InstanceOf (geometry-Datentyp)
+      href: instanceof-geometry-data-type.md
+    - name: IsNull (geometry-Datentyp)
+      href: isnull-geometry-data-type.md
+    - name: IsValidDetailed (geometry-Datentyp)
+      href: isvaliddetailed-geometry-datatype.md
+    - name: M (geometry-Datentyp)
+      href: m-geometry-data-type.md
+    - name: MakeValid (geometry-Datentyp)
+      href: makevalid-geometry-data-type.md
+    - name: MinDbCompatibilityLevel (geometry-Datentyp)
+      href: mindbcompatibilitylevel-geometry-data-type.md
+    - name: Reduce (geometry-Datentyp)
+      href: reduce-geometry-data-type.md
+    - name: ShortestLineTo (geometry-Datentyp)
+      href: shortestlineto-geometry-data-type.md
+    - name: ToString (geometry-Datentyp)
+      href: tostring-geometry-data-type.md
+    - name: Z (geometry-Datentyp)
+      href: z-geometry-data-type.md
+- name: Statische geometry-Methoden des OGC
+  href: ogc-static-geometry-methods.md
+  items:
+    - name: STGeomCollFromText (geometry-Datentyp)
+      href: stgeomcollfromtext-geometry-data-type.md
+    - name: STGeomCollFromWKB (geometry-Datentyp)
+      href: stgeomcollfromwkb-geometry-data-type.md
+    - name: STGeomFromText (geometry-Datentyp)
+      href: stgeomfromtext-geometry-data-type.md
+    - name: STGeomFromWKB (geometry-Datentyp)
+      href: stgeomfromwkb-geometry-data-type.md
+    - name: STLineFromText (geometry-Datentyp)
+      href: stlinefromtext-geometry-data-type.md
+    - name: STLineFromWKB (geometry-Datentyp)
+      href: stlinefromwkb-geometry-data-type.md
+    - name: STMLineFromText (geometry-Datentyp)
+      href: stmlinefromtext-geometry-data-type.md
+    - name: STMLineFromWKB (geometry-Datentyp)
+      href: stmlinefromwkb-geometry-data-type.md
+    - name: STMPointFromText (geometry-Datentyp)
+      href: stmpointfromtext-geometry-data-type.md
+    - name: STMPointFromWKB (geometry-Datentyp)
+      href: stmpointfromwkb-geometry-data-type.md
+    - name: STMPolyFromText (geometry-Datentyp)
+      href: stmpolyfromtext-geometry-data-type.md
+    - name: STMPolyFromWKB (geometry-Datentyp)
+      href: stmpolyfromwkb-geometry-data-type.md
+    - name: STPointFromText (geometry-Datentyp)
+      href: stpointfromtext-geometry-data-type.md
+    - name: STPointFromWKB (geometry-Datentyp)
+      href: stpointfromwkb-geometry-data-type.md
+    - name: STPolyFromText (geometry-Datentyp)
+      href: stpolyfromtext-geometry-data-type.md
+    - name: STPolyFromWKB (geometry-Datentyp)
+      href: stpolyfromwkb-geometry-data-type.md
+- name: Erweiterte statische geometry-Methoden
+  href: extended-static-geometry-methods.md
+  items:
+    - name: GeomFromGml (geometry-Datentyp)
+      href: geomfromgml-geometry-data-type.md
+    - name: Null (geometry-Datentyp)
+      href: null-geometry-data-type.md
+    - name: Parse (geometry-Datentyp)
+      href: parse-geometry-data-type.md
+    - name: Point (geometry-Datentyp)
+      href: point-geometry-data-type.md
+- name: Statische Geometry-Aggregatmethoden
+  href: static-aggregate-geometry-methods.md
+  items:
+    - name: CollectionAggregate (geometry-Datentyp)
+      href: collectionaggregate-geometry-data-type.md
+    - name: ConvexHullAggregate (geometry-Datentyp)
+      href: convexhullaggregate-geometry-data-type.md
+    - name: EnvelopeAggregate (geometry-Datentyp)
+      href: envelopeaggregate-geometry-data-type.md
+    - name: UnionAggregate (geometry-Datentyp)
+      href: unionaggregate-geometry-data-type.md

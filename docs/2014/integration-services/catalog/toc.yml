@@ -1,0 +1,29 @@
+- name: Integration Services (SSIS)-Server
+  href: integration-services-ssis-server-and-catalog.md
+- name: Projekteigenschaften (Dialogfeld)
+  href: project-properties-dialog-box.md
+- name: Dialogfeld 'Überprüfen'
+  href: validate-dialog-box.md
+- name: Paketeigenschaften (Dialogfeld)
+  href: package-properties-dialog-box.md
+- name: Konfigurieren (Dialogfeld)
+  href: configure-dialog-box.md
+- name: Alle Prinzipale durchsuchen (Dialogfeld)
+  href: browse-all-principals-dialog-box.md
+- name: Ordnereigenschaften (Dialogfeld)
+  href: folder-properties-dialog-box.md
+- name: Projektversionen (Dialogfeld)
+  href: project-versions-dialog-box.md
+- name: SSIS-Katalog
+  href: ssis-catalog.md
+  items:
+    - name: Erstellen des SSIS-Katalogs
+      href: ../create-the-ssis-catalog.md
+    - name: Katalogeigenschaften (Dialogfeld)
+      href: ../catalog-properties-dialog-box.md
+    - name: 'Sichern, Wiederherstellen und Verschieben des SSIS-Katalogs'
+      href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: Anzeigen der Liste der auf dem Integration Services-Server gespeicherten Pakete
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Parameterwert festlegen (Dialogfeld)
+  href: set-parameter-value-dialog-box.md
