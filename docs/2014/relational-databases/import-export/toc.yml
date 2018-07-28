@@ -1,0 +1,65 @@
+- name: Massenimport und -export von Daten
+  href: bulk-import-and-export-of-data-sql-server.md
+  items:
+    - name: Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp
+      href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+    - name: Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...)
+      href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+    - name: Voraussetzungen für die minimale Protokollierung beim Massenimport
+      href: prerequisites-for-minimal-logging-in-bulk-import.md
+- name: Vorbereiten des Massenimports von Daten
+  href: prepare-to-bulk-import-data-sql-server.md
+  items:
+    - name: Vorbereiten von Daten für den Massenexport oder -import
+      href: prepare-data-for-bulk-export-or-import-sql-server.md
+- name: HumanResources.myTeam-Beispieltabelle
+  href: humanresources-myteam-sample-table-sql-server.md
+- name: Datenformate für Massenimport oder Massenexport
+  href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+  items:
+    - name: Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: Verwenden des Zeichenformats zum Importieren und Exportieren von Daten
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+- name: Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp
+  href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+  items:
+    - name: Angeben des Dateispeichertyps mithilfe von bcp
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: Angeben der Präfixlänge in Datendateien mittels bcp
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: Angeben der Feldlänge mithilfe von bcp
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: Angeben von Feld- und Zeilenabschlusszeichen
+      href: specify-field-and-row-terminators-sql-server.md
+- name: Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports
+  href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+- name: Beibehalten von Identitätswerten beim Massenimport von Daten
+  href: keep-identity-values-when-bulk-importing-data-sql-server.md
+- name: Massenimport von LOB-Daten (Large Objects) mithilfe des OPENROWSET-Massrnbowsetanbieters
+  href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+- name: Formatdateien zum Importieren oder Exportieren von Daten
+  href: format-files-for-importing-or-exporting-data-sql-server.md
+  items:
+    - name: Nicht-XML-Formatdateien
+      href: non-xml-format-files-sql-server.md
+    - name: XML-Formatdateien
+      href: xml-format-files-sql-server.md
+    - name: Erstellen einer Formatdatei
+      href: create-a-format-file-sql-server.md
+    - name: Verwenden einer Formatdatei für den Massenimport von Daten
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: Überspringen einer Tabellenspalte mithilfe einer Formatdatei
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: Auslassen eines Datenfelds mithilfe einer Formatdatei
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: Beispiele für den Massenimport und -export von XML-Dokumenten
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md

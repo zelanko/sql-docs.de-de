@@ -1,0 +1,78 @@
+- name: Überwachen und Optimieren der Leistung
+  href: monitor-and-tune-for-performance.md
+- name: Überwachen von SQL Server-Komponenten
+  href: monitor-sql-server-components.md
+- name: Tools für die Leistungsüberwachung und -optimierung
+  href: performance-monitoring-and-tuning-tools.md
+- name: Kardinalitätsschätzung
+  href: cardinality-estimation-sql-server.md
+- name: Festlegen einer Leistungsbasislinie
+  href: establish-a-performance-baseline.md
+- name: Isolieren von Leistungsproblemen
+  href: isolate-performance-problems.md
+- name: Identifizieren von Engpässen
+  href: identify-bottlenecks.md
+- name: Überwachen der Leistung mit dem Abfragespeicher
+  href: monitoring-performance-by-using-the-query-store.md
+- name: Überwachen der Serverleistung und -aktivität
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: Starten des Systemmonitors (Windows)
+      href: start-system-monitor-windows.md
+    - name: Einrichten einer SQL Server-Datenbankwarnung (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Anzeigen des Anwendungsprotokolls von Windows (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Speichern von Deadlockdiagrammen (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 'Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Separates Speichern von Showplan XML-Ereignissen (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: Anzeigen und Speichern von Ausführungsplänen
+  href: display-and-save-execution-plans.md
+  items:
+    - name: Anzeigen des geschätzten Ausführungsplans
+      href: display-the-estimated-execution-plan.md
+    - name: Anzeigen eines tatsächlichen Ausführungsplans
+      href: display-an-actual-execution-plan.md
+    - name: Speichern eines Ausführungsplans im XML-Format
+      href: save-an-execution-plan-in-xml-format.md
+- name: Planhinweislisten
+  href: plan-guides.md
+  items:
+    - name: Erstellen einer neuen Planhinweisliste
+      href: create-a-new-plan-guide.md
+    - name: Erstellen einer Planhinweisliste für parametrisierte Abfragen
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Anwenden eines festen Abfrageplans auf eine Planhinweisliste
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Anfügen von Abfragehinweisen an eine Planhinweisliste
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Anzeigen der Eigenschaften der Planhinweisliste
+      href: view-plan-guide-properties.md
+    - name: Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Überprüfen von Planhinweislisten nach einem Upgrade
+      href: validate-plan-guides-after-upgrade.md
+    - name: Löschen einer Planhinweisliste
+      href: delete-a-plan-guide.md
+    - name: Aktivieren oder Deaktivieren einer Planhinweisliste
+      href: enable-or-disable-a-plan-guide.md
+- name: Datenbankoptimierungsratgeber
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: Starten und Verwenden des Datenbankoptimierungsratgebers
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: Reduzieren der Optimierungsauslastung des Produktionsservers
+      href: reduce-the-production-server-tuning-load.md
+    - name: Gesichtspunkte bei der Verwendung von Testservern
+      href: considerations-for-using-test-servers.md
+    - name: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

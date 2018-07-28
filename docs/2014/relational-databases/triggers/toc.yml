@@ -1,0 +1,36 @@
+- name: DDL-Trigger
+  href: ddl-triggers.md
+  items:
+    - name: Implementieren von DDL-Triggern
+      href: implement-ddl-triggers.md
+    - name: Abrufen von Informationen zu DDL-Triggern
+      href: get-information-about-ddl-triggers.md
+    - name: Verwenden der EVENTDATA-Funktion
+      href: use-the-eventdata-function.md
+    - name: DDL-Ereignisse
+      href: ddl-events.md
+    - name: DDL-Ereignisgruppen
+      href: ddl-event-groups.md
+- name: DML-Trigger
+  href: dml-triggers.md
+  items:
+    - name: Erstellen von DML-Triggern
+      href: create-dml-triggers.md
+    - name: Erstellen von CLR-Triggern
+      href: create-clr-triggers.md
+    - name: Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: Erstellen von geschachtelten Triggern
+      href: create-nested-triggers.md
+    - name: Angeben des ersten und des letzten Triggers
+      href: specify-first-and-last-triggers.md
+    - name: Verwenden der Tabellen inserted und deleted
+      href: use-the-inserted-and-deleted-tables.md
+    - name: Ändern oder Umbenennen von DML-Triggern
+      href: modify-or-rename-dml-triggers.md
+    - name: Abrufen von Informationen zu DML-Triggern
+      href: get-information-about-dml-triggers.md
+    - name: Löschen oder Deaktivieren von DML-Triggern
+      href: delete-or-disable-dml-triggers.md
+    - name: Verwalten der Triggersicherheit
+      href: manage-trigger-security.md

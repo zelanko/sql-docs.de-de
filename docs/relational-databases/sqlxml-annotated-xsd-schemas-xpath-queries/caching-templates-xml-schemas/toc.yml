@@ -1,0 +1,8 @@
+- name: 'Zwischenspeichern von Vorlagen, XSL und Schemas (SQLXML 4.0)'
+  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
+- name: Zwischenspeichern von Schemas (SQLXML 4.0)
+  href: schema-caching-sqlxml-4-0.md
+- name: Zwischenspeichern von Vorlagen (SQLXML 4.0)
+  href: template-caching-sqlxml-4-0.md
+- name: XSL-Zwischenspeichern (SQLXML 4.0)
+  href: xsl-caching-sqlxml-4-0.md

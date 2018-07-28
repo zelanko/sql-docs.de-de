@@ -1,0 +1,73 @@
+- name: Sicherheit und Schutz
+  href: reporting-services-security-and-protection.md
+- name: Erweiterter Schutz für die Authentifizierung mit Reporting Services
+  href: extended-protection-for-authentication-with-reporting-services.md
+- name: Authentifizierung mit dem Berichtsserver
+  href: authentication-with-the-report-server.md
+  items:
+    - name: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
+      href: configure-windows-authentication-on-the-report-server.md
+    - name: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
+      href: configure-basic-authentication-on-the-report-server.md
+    - name: Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
+      href: configure-custom-or-forms-authentication-on-the-report-server.md
+    - name: Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies
+      href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: Rollen und Berechtigungen
+  href: roles-and-permissions-reporting-services.md
+  items:
+    - name: Gewähren von Benutzerzugriff auf einen Berichtsserver
+      href: grant-user-access-to-a-report-server.md
+    - name: Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
+      href: granting-permissions-on-a-native-mode-report-server.md
+      items:
+        - name: Sicherbare Elemente
+          href: securable-items.md
+        - name: Aufgaben und Berechtigungen
+          href: tasks-and-permissions.md
+          items:
+            - name: Aufgaben auf Elementebene
+              href: tasks-and-permissions-item-level-tasks.md
+            - name: Aufgaben auf Systemebene
+              href: tasks-and-permissions-system-level-tasks.md
+        - name: Erstellen und Verwalten von Rollenzuweisungen
+          href: create-and-manage-role-assignments.md
+        - name: Sichere Ordner
+          href: secure-folders.md
+        - name: Sichere Berichte und Ressourcen
+          href: secure-reports-and-resources.md
+        - name: Sichern freigegebener Datenquellenelemente
+          href: secure-shared-data-source-items.md
+        - name: Sichern von freigegebenen Datasetelementen
+          href: secure-shared-dataset-items.md
+        - name: Sichern von Meine Berichte
+          href: secure-my-reports.md
+        - name: Erstellen der Rolle RSExecRole
+          href: create-the-rsexecrole.md
+        - name: Rollendefinitionen
+          href: role-definitions.md
+          items:
+            - name: 'Erstellen, Löschen oder Ändern von Rollen'
+              href: role-definitions-create-delete-or-modify.md
+            - name: Vordefinierte Rollen
+              href: role-definitions-predefined-roles.md
+        - name: Rollenzuweisungen
+          href: role-assignments.md
+          items:
+            - name: Ändern oder Löschen einer Rollenzuweisung
+              href: role-assignments-modify-or-delete.md
+    - name: Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
+      href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+      items:
+        - name: Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente
+          href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+        - name: Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen
+          href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+        - name: Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
+          href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+        - name: Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
+          href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+        - name: Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
+          href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
+  href: configure-ssl-connections-on-a-native-mode-report-server.md

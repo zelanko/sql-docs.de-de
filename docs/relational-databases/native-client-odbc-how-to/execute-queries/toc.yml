@@ -1,0 +1,10 @@
+- name: Themen zur Vorgehensweise zum Ausführen von Abfragen (ODBC)
+  href: executing-queries-how-to-topics-odbc.md
+- name: Direktes Ausführen von Anweisungen (ODBC)
+  href: execute-a-statement-directly-odbc.md
+- name: Vorbereiten und Ausführen von Anweisungen (ODBC)
+  href: prepare-and-execute-a-statement-odbc.md
+- name: Festlegen von Cursoroptionen (ODBC)
+  href: set-cursor-options-odbc.md
+- name: Verwenden einer Anweisung (ODBC)
+  href: use-a-statement-odbc.md

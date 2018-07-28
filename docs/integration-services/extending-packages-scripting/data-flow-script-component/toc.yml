@@ -1,0 +1,20 @@
+- name: Erweitern des Datenflusses mit der Skriptkomponente
+  href: extending-the-data-flow-with-the-script-component.md
+- name: Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
+  href: configuring-the-script-component-in-the-script-component-editor.md
+- name: Codieren und Debuggen der Skriptkomponente
+  href: coding-and-debugging-the-script-component.md
+- name: Grundlegendes zum Skript-Komponentenobjektmodell
+  href: understanding-the-script-component-object-model.md
+- name: Verwenden von Variablen in der Skriptkomponente
+  href: using-variables-in-the-script-component.md
+- name: 'Herstellen einer Verbindung zu Datenquellen in der Skriptkomponente '
+  href: connecting-to-data-sources-in-the-script-component.md
+- name: Auslösen von Ereignissen in der Skriptkomponente
+  href: raising-events-in-the-script-component.md
+- name: Protokollieren in der Skriptkomponente
+  href: logging-in-the-script-component.md
+- name: Entwickeln bestimmter Arten von Skriptkomponenten
+  href: ../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+- name: Zusätzliche Skriptkomponentenbeispiele
+  href: ../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md

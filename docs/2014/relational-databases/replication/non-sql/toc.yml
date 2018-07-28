@@ -1,0 +1,37 @@
+- name: Heterogene Datenbankreplikation
+  href: heterogeneous-database-replication.md
+  items:
+    - name: Nicht-SQL Server-Verleger
+      href: non-sql-server-publishers.md
+    - name: Oracle Publishing Overview
+      href: oracle-publishing-overview.md
+    - name: Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten
+      href: glossary-of-terms-for-oracle-publishing.md
+    - name: Konfigurieren eines Oracle-Verlegers
+      href: configure-an-oracle-publisher.md
+    - name: Skript zum Erteilen von Oracle-Berechtigungen
+      href: script-to-grant-oracle-permissions.md
+    - name: Verwalten von Oracle-Tabellenbereichen
+      href: manage-oracle-tablespaces.md
+    - name: Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
+      href: design-considerations-and-limitations-for-oracle-publishers.md
+    - name: Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern
+      href: administrative-considerations-for-oracle-publishers.md
+    - name: Leistungsoptimierung für Oracle-Verleger
+      href: performance-tuning-for-oracle-publishers.md
+    - name: Data Type Mapping for Oracle Publishers
+      href: data-type-mapping-for-oracle-publishers.md
+    - name: Sichern und Wiederherstellen bei Oracle-Verlegern
+      href: backup-and-restore-for-oracle-publishers.md
+    - name: Objects Created on the Oracle Publisher
+      href: objects-created-on-the-oracle-publisher.md
+    - name: Problembehandlung bei Oracle-Verlegern
+      href: troubleshooting-oracle-publishers.md
+    - name: Nicht-SQL Server-Abonnenten
+      href: non-sql-server-subscribers.md
+    - name: Oracle-Abonnenten
+      href: oracle-subscribers.md
+    - name: IBM DB2 Subscribers
+      href: ibm-db2-subscribers.md
+    - name: Andere Nicht-SQL Server-Abonnenten
+      href: other-non-sql-server-subscribers.md

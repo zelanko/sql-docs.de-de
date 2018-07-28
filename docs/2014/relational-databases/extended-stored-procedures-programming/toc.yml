@@ -1,0 +1,92 @@
+- name: Programmieren erweiterter gespeicherter Prozeduren
+  href: database-engine-extended-stored-procedures-programming.md
+  items:
+    - name: Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur
+      href: ../database-engine-extended-stored-procedure-programming.md
+    - name: Funktionsweise erweiterter gespeicherter Prozeduren
+      href: how-extended-stored-procedures-work.md
+    - name: Erstellen erweiterter gespeicherter Prozeduren
+      href: creating-extended-stored-procedures.md
+    - name: Senden von Resultsets an den Server (API für erweiterte gespeicherte Prozeduren)
+      href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+    - name: Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server
+      href: adding-an-extended-stored-procedure-to-sql-server.md
+    - name: Ausführungsmerkmale erweiterter gespeicherter Prozeduren
+      href: execution-characteristics-of-extended-stored-procedures.md
+    - name: Entfernen einer erweiterten gespeicherten Prozedur aus SQL Server
+      href: removing-an-extended-stored-procedure-from-sql-server.md
+    - name: Abfragen von in SQL Server installierten erweiterten gespeicherten Prozeduren
+      href: querying-extended-stored-procedures-installed-in-sql-server.md
+    - name: Entfernen der DLL einer erweiterten gespeicherten Prozedur aus dem Arbeitsspeicher
+      href: unloading-an-extended-stored-procedure-dll.md
+    - name: Unicode-Daten und Server-Codepages
+      href: unicode-data-and-server-code-pages.md
+- name: Erweiterte gespeicherte Prozeduren – Programmierreferenz
+  href: ../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  items:
+    - name: srv_alloc (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+    - name: srv_convert (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+    - name: srv_describe (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+    - name: srv_getbindtoken (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+    - name: '''srv_got_attention'' (API für erweiterte gespeicherte Prozeduren)'
+      href: ../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+    - name: srv_message_handler (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+    - name: srv_paramdata (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+    - name: srv_paraminfo (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+    - name: srv_paramlen (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+    - name: srv_parammaxlen (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+    - name: srv_paramname (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+    - name: srv_paramnumber (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+    - name: srv_paramset (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+    - name: srv_paramsetoutput (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+    - name: '''srv_paramstatus'' (API für erweiterte gespeicherte Prozeduren)'
+      href: ../extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+    - name: srv_paramtype (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+    - name: srv_pfield (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+    - name: srv_pfieldex (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+    - name: srv_rpcdb (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+    - name: srv_rpcname (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+    - name: srv_rpcnumber (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+    - name: srv_rpcoptions (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+    - name: srv_rpcowner (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+    - name: srv_rpcparams (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+    - name: srv_senddone (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+    - name: srv_sendmsg (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+    - name: srv_sendrow (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+    - name: srv_setcoldata (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+    - name: srv_setcollen (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+    - name: srv_setutype (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+    - name: srv_willconvert (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+    - name: srv_wsendmsg (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+    - name: Datentypen (API für erweiterte gespeicherte Prozeduren)
+      href: ../extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md

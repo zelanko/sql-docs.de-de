@@ -1,0 +1,10 @@
+- name: Bereitstellen von Renderingerweiterungen
+  href: deploying-a-rendering-extension.md
+- name: Implementieren von Renderingerweiterungen
+  href: implementing-a-rendering-extension.md
+- name: Implementieren der IRenderingExtension-Schnittstelle
+  href: implementing-the-irenderingextension-interface.md
+- name: Entfernen von Renderingerweiterungen
+  href: removing-a-rendering-extension.md
+- name: Übersicht über Renderingerweiterungen
+  href: rendering-extensions-overview.md

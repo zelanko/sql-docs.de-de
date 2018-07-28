@@ -1,0 +1,8 @@
+- name: Verwenden von Cursorn (Vorgehensweisen) (ODBC)
+  href: using-cursors-how-to-topics-odbc.md
+- name: Abfragen und Aktualisieren von Rowsets (ODBC)
+  href: fetch-and-update-rowsets-odbc.md
+- name: Verwenden von Cursorn (ODBC)
+  href: use-cursors-odbc.md
+- name: Verwenden der Rowsetbindung (ODBC)
+  href: use-rowset-binding-odbc.md

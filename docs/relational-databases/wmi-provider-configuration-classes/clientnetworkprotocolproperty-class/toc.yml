@@ -1,0 +1,26 @@
+- name: ClientNetworkProtocolProperty-Klasse
+  href: clientnetworkprotocolproperty-class.md
+- name: PropertyIdx-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertyidx-property-clientnetworkprotocolproperty-class.md
+- name: PropertyName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertyname-property-clientnetworkprotocolproperty-class.md
+- name: PropertyNumVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertynumval-property-clientnetworkprotocolproperty-class.md
+- name: PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertystrval-property-clientnetworkprotocolproperty-class.md
+- name: PropertyType-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertytype-property-clientnetworkprotocolproperty-class.md
+- name: PropertyValType-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: propertyvaltype-property-clientnetworkprotocolproperty-class.md
+- name: ProtocolName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
+  href: protocolname-property-clientnetworkprotocolproperty-class.md
+- name: SetFlag-Methode (ClientNetworkProtocolProperty-Klasse)
+  href: setflag-method-clientnetworkprotocolproperty-class.md
+- name: SetNumericalValue-Methode (ClientNetworkProtocolProperty-Klasse)
+  href: setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse)
+  href: setnumvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetStringValue-Methode (ClientNetworkProtocolProperty-Klasse)
+  href: setstringvalue-method-clientnetworkprotocolproperty-class.md
+- name: SetStrValue-Methode (ClientNetworkProtocolProperty-Klasse)
+  href: setstrvalue-method-clientnetworkprotocolproperty-class.md

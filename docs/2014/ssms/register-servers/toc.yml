@@ -1,0 +1,35 @@
+- name: Registrieren von Servern
+  href: register-servers.md
+  items:
+    - name: Registrieren eines verbundenen Servers (SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: Erstellen eines neu registrierten Servers (SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: Anzeigen von registrierten Servern in SQL Server Management Studio
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: Entfernen eines registrierten Servers (SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: Ändern der Registrierung eines Servers (SQL Server Management Studio)
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: Herstellen einer Verbindung zu einem registrierten Server (SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: Trennen der Verbindung mit einem registrierten Server (SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: Verschieben eines registrierten Servers oder einer registrierten Servergruppe (SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: Ändern des Namens eines registrierten Servers oder einer registrierten Servergruppe (SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: Erstellen oder Bearbeiten einer Servergruppe (SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: Entfernen einer Servergruppe (SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: Exportieren von Informationen zum registrierten Server (SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: Importieren von Informationen zum registrierten Server (SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: Erstellen eines zentralen Verwaltungsservers und einer Servergruppe (SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: Gleichzeitiges Ausführen von Anweisungen für mehrere Server (SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: Registrierte Server (F1-Hilfe)
+      href: registered-servers-f1-help.md

@@ -1,0 +1,39 @@
+- name: Integration Services-Dienst (SSIS-Dienst)
+  href: integration-services-service-ssis-service.md
+  items:
+    - name: Verwalten des Integration Services-Diensts
+      href: ../manage-the-integration-services-service.md
+    - name: Festlegen der Eigenschaften des Integration Services-Diensts
+      href: ../set-the-properties-of-the-integration-services-service.md
+    - name: Konfigurieren des Integration Services-Diensts (SSIS-Dienst)
+      href: ../configuring-the-integration-services-service-ssis-service.md
+    - name: Konfigurieren einer Windows-Firewall für den Zugriff auf den SSIS-Dienst
+      href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+    - name: Herstellen einer Verbindung mit einem Integration Services-Remoteserver (SSIS-Dienst)
+      href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+    - name: Herstellen einer Verbindung mit Integration Services
+      href: ../connect-to-integration-services.md
+    - name: Gewähren von Berechtigungen an Integration Services-Dienst
+      href: ../grant-permissions-to-integration-services-service.md
+    - name: Ereignisprotokollierung durch den Integration Services-Dienst
+      href: events-logged-by-the-integration-services-service.md
+      items:
+        - name: Anzeigen von Ereignissen für den Integration Services-Dienst
+          href: ../view-events-for-the-integration-services-service.md
+- name: Paketverwaltung (SSIS-Dienst)
+  href: package-management-ssis-service.md
+  items:
+    - name: Import und Export von Paketen (SSIS-Dienst)
+      href: ../import-and-export-packages-ssis-service.md
+    - name: Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
+      href: ../export-package-dialog-box-ui-reference.md
+    - name: Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
+      href: ../import-package-dialog-box-ui-reference.md
+    - name: Paketsicherung und -wiederherstellung (SSIS-Dienst)
+      href: ../package-backup-and-restore-ssis-service.md
+    - name: Anzeigen von Integration Services-Paketen in SQL Server Management Studio (SSIS-Dienst)
+      href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+    - name: Integration Services (SSIS) in einem Cluster
+      href: integration-services-ssis-in-a-cluster.md
+    - name: Konfigurieren des Integration Services-Diensts als Clusterressource
+      href: ../configure-the-integration-services-service-as-a-cluster-resource.md
