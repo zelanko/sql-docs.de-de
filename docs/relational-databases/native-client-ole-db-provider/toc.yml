@@ -1,0 +1,12 @@
+- name: Erstellen einer SQL Server Native Client OLE DB-Anbieteranwendung
+  href: creating-a-sql-server-native-client-ole-db-provider-application.md
+- name: Informationen zu OLE DB-Eigenschaften
+  href: about-ole-db-properties.md
+- name: Herstellen einer Verbindung zu einer Datenquelle
+  href: establishing-a-connection-to-a-data-source.md
+- name: Ausführen eines Befehls
+  href: executing-a-command.md
+- name: Ergebnisverarbeitung
+  href: processing-results.md
+- name: Verwenden der OUTPUT-Klausel mit OLE DB in SQL Server Native Client
+  href: using-the-output-clause-with-ole-db-in-sql-server-native-client.md

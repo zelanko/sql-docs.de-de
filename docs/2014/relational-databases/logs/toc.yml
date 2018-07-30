@@ -1,0 +1,18 @@
+- name: Protokolldatei-Viewer
+  href: log-file-viewer.md
+  items:
+    - name: Öffnen des Protokolldatei-Viewers
+      href: open-log-file-viewer.md
+    - name: Anzeigen von Offlineprotokolldateien
+      href: view-offline-log-files.md
+    - name: Protokolldatei-Viewer (F1-Hilfe)
+      href: log-file-viewer-f1-help.md
+- name: 'Das Transaktionsprotokoll [SQL Server]'
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: Verwalten der Größe der Transaktionsprotokolldatei
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: Steuern der Transaktionsdauerhaftigkeit
+      href: control-transaction-durability.md

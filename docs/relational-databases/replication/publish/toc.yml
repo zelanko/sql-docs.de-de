@@ -1,0 +1,105 @@
+- name: Übersicht
+  href: publish-data-and-database-objects.md
+- name: Das Replikationsveröffentlichungsmodell (Übersicht)
+  href: replication-publishing-model-overview.md
+- name: Filtern von veröffentlichten Daten
+  href: filter-published-data.md
+- name: Replizieren von Identitätsspalten
+  href: replicate-identity-columns.md
+- name: Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
+  href: make-schema-changes-on-publication-databases.md
+- name: Replizieren partitionierter Tabellen und Indizes
+  href: replicate-partitioned-tables-and-indexes.md
+  items:
+    - name: Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
+      href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+- name: 'Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln'
+  href: create-modify-and-delete-publications-and-articles-replication.md
+  items:
+    - name: Create a Publication
+      href: create-a-publication.md
+    - name: Definieren eines Artikels
+      href: define-an-article.md
+      items:
+        - name: Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
+          href: specify-article-types-replication-transact-sql-programming.md
+    - name: Anzeigen und Ändern von Veröffentlichungseigenschaften
+      href: view-and-modify-publication-properties.md
+    - name: Anzeigen und Ändern von Artikeleigenschaften
+      href: view-and-modify-article-properties.md
+    - name: Löschen einer Veröffentlichung
+      href: delete-a-publication.md
+    - name: Löschen eines Artikels
+      href: delete-an-article.md
+    - name: Erstellen einer Veröffentlichung aus einer Oracle-Datenbank
+      href: create-a-publication-from-an-oracle-database.md
+      items:
+        - name: Angeben von Datentypzuordnungen für einen Oracle-Verleger
+          href: specify-data-type-mappings-for-an-oracle-publisher.md
+    - name: Festlegen des Ablaufdatums für Abonnements
+      href: set-the-expiration-period-for-subscriptions.md
+    - name: Angeben von Schemaoptionen
+      href: specify-schema-options.md
+    - name: Replizieren von Schemaänderungen
+      href: replicate-schema-changes.md
+    - name: Verwalten von Identitätsspalten
+      href: manage-identity-columns.md
+    - name: Festlegen des Kompatibilitätsgrads von Mergeveröffentlichungen
+      href: set-the-compatibility-level-for-merge-publications.md
+    - name: Angeben des Momentaufnahmeformats (SQL Server Management Studio)
+      href: specify-snapshot-format-sql-server-management-studio.md
+    - name: Angeben eines alternativen Speicherortes für den Momentaufnahmeordner (SQL Server Management Studio)
+      href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+    - name: Komprimieren von Momentaufnahmedateien (SQL Server Management Studio)
+      href: compress-snapshot-files-sql-server-management-studio.md
+    - name: Konfigurieren von Momentaufnahmeeigenschaften (Replikationsprogrammierung mit Transact-SQL)
+      href: configure-snapshot-properties-replication-transact-sql-programming.md
+    - name: Übermitteln einer Momentaufnahme über FTP
+      href: deliver-a-snapshot-through-ftp.md
+    - name: Definieren und Ändern eines Spaltenfilters
+      href: define-and-modify-a-column-filter.md
+    - name: Definieren oder Ändern eines statischen Zeilenfilters
+      href: define-and-modify-a-static-row-filter.md
+    - name: Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel
+      href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+    - name: Optimieren von parametrisierten Zeilenfiltern
+      href: optimize-parameterized-row-filters.md
+    - name: Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
+      href: define-and-modify-a-join-filter-between-merge-articles.md
+    - name: Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln (SQL Server Management Studio)
+      href: automatically-generate-join-filters-between-merge-articles.md
+    - name: Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
+      href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+    - name: Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen
+      href: enable-updating-subscriptions-for-transactional-publications.md
+    - name: Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)
+      href: create-an-updatable-subscription-to-a-transactional-publication.md
+    - name: Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung mit T-SQL
+      href: create-updatable-subscription-to-transactional-publication.md
+    - name: Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange (SQL Server Management Studio)
+      href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+    - name: Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung (SQL Server Management Studio)
+      href: publish-execution-of-stored-procedure-in-transactional-publication.md
+    - name: Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
+      href: define-a-logical-record-relationship-between-merge-table-articles.md
+    - name: Angeben der Verarbeitungsreihenfolge von Mergetabellenartikeln (Replikationsprogrammierung mit Transact-SQL)
+      href: specify-the-processing-order-of-merge-table-articles.md
+    - name: 'Angeben, dass ein neuer Mergetabellenartikel nur herunterladbar ist'
+      href: specify-that-a-merge-table-article-is-download-only.md
+    - name: 'Angeben, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen (Replikationsprogrammierung mit Transact-SQL)'
+      href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+    - name: Angeben der Konfliktnachverfolgungs- und -lösungsebene für Mergeartikel
+      href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+    - name: Angeben eines Mergeartikelkonfliktlösers
+      href: specify-a-merge-article-resolver.md
+    - name: Angeben von interaktiver Konfliktauflösung von Mergeartikeln
+      href: specify-interactive-conflict-resolution-for-merge-articles.md
+    - name: Hinzufügen von Artikeln zu einer Veröffentlichung und Löschen von Artikeln aus einer Veröffentlichung (SQL Server Management Studio)
+      href: add-articles-to-and-drop-articles-from-a-publication.md
+- name: Verwalten von Veröffentlichungen
+  href: maintain-publications.md
+  items:
+    - name: Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
+      href: add-articles-to-and-drop-articles-from-existing-publications.md
+    - name: Ändern von Veröffentlichungs- und Artikeleigenschaften
+      href: change-publication-and-article-properties.md

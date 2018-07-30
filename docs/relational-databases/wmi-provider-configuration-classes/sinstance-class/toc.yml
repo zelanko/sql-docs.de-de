@@ -1,0 +1,20 @@
+- name: SInstance-Klasse
+  href: sinstance-class.md
+- name: Eigenschaften
+  items:
+    - name: GeneralFlags-Eigenschaft (SInstance-Klasse)
+      href: generalflags-property-sinstance-class.md
+    - name: InstanceName-Eigenschaft (SInstance-Klasse)
+      href: instancename-property-sinstance-class.md
+    - name: NumberOfFlags-Eigenschaft (SInstance-Klasse)
+      href: numberofflags-property-sinstance-class.md
+- name: Methoden
+  items:
+    - name: GetCurrentCertificate-Methode (SInstance-Klasse)
+      href: getcurrentcertificate-method-sinstance-class.md
+    - name: RemoveCertificate-Methode (SInstance-Klasse)
+      href: removecertificate-method-sinstance-class.md
+    - name: SetCurrentCertificate-Methode (SInstance-Klasse)
+      href: setcurrentcertificate-method-sinstance-class.md
+    - name: SetDefaults-Methode (SInstance-Klasse)
+      href: setdefaults-method-sinstance-class.md

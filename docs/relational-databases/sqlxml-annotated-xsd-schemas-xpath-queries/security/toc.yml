@@ -1,0 +1,12 @@
+- name: Sicherheitsüberlegungen zu SQLXML 4.0
+  href: sqlxml-4-0-security-considerations.md
+- name: Überlegungen zur Sicherheit von Schemas mit Anmerkungen (SQLXML 4.0)
+  href: annotated-schema-security-considerations-sqlxml-4-0.md
+- name: Sicherheitsüberlegungen zum Massenladen (SQLXML 4.0)
+  href: bulk-load-security-considerations-sqlxml-4-0.md
+- name: Wichtige Sicherheitsüberlegungen zu SQLXML
+  href: core-sqlxml-security-considerations.md
+- name: FOR XML-Sicherheitsüberlegungen (SQLXML 4.0)
+  href: for-xml-security-considerations-sqlxml-4-0.md
+- name: Sicherheitsüberlegungen zu Updategrams (SQLXML 4.0)
+  href: updategram-security-considerations-sqlxml-4-0.md

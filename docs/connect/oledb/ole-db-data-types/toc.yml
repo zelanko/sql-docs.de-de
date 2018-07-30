@@ -1,0 +1,8 @@
+- name: Datentypen (OLE DB)
+  href: data-types-ole-db.md
+- name: Datentypzuordnung zu ITableDefinition
+  href: data-type-mapping-in-itabledefinition.md
+- name: Datentypzuordnung zu Rowsets und Parametern
+  href: data-type-mapping-in-rowsets-and-parameters.md
+- name: SSVARIANT-Struktur
+  href: ssvariant-structure.md

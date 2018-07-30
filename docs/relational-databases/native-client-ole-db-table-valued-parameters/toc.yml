@@ -1,0 +1,18 @@
+- name: Tabellenwertparameter (OLE DB)
+  href: table-valued-parameters-ole-db.md
+- name: 'Ausführen von Befehlen, die Tabellenwertparameter enthalten'
+  href: executing-commands-containing-table-valued-parameters.md
+- name: Einfügen von Daten in Tabellenwertparameter
+  href: inserting-data-into-table-valued-parameters.md
+- name: OLE DB-Unterstützung von Tabellenwertparameter-Typen (Methoden)
+  href: ole-db-table-valued-parameter-type-support-methods.md
+- name: OLE DB-Unterstützung von Tabellenwertparameter-Typen (Eigenschaften)
+  href: ole-db-table-valued-parameter-type-support-properties.md
+- name: OLE DB-Typunterstützung für Tabellenwertparameter
+  href: ole-db-table-valued-parameter-type-support.md
+- name: Schemarowsets für OLE DB-Tabellenwertparameter geändert
+  href: schema-rowsets-changed-for-ole-db-table-valued-parameters.md
+- name: Tabellenwertparameter-Rowseterstellung
+  href: table-valued-parameter-rowset-creation.md
+- name: Tabellenwertparameter-Typermittlung
+  href: table-valued-parameter-type-discovery.md

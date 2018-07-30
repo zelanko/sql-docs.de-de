@@ -1,0 +1,39 @@
+- name: Mergereplikation
+  href: merge-replication.md
+- name: Artikeloptionen für die Mergereplikation
+  href: article-options-for-merge-replication.md
+- name: Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel
+  href: optimize-merge-replication-performance-with-download-only-articles.md
+- name: Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen
+  href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+- name: Angeben der Verarbeitungsreihenfolge von Mergeartikeln
+  href: specify-the-processing-order-of-merge-articles.md
+- name: Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
+  href: group-changes-to-related-rows-with-logical-records.md
+- name: Erkennen und Beseitigen von Konflikten bei der Mergereplikation
+  href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+- name: Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
+  href: advanced-merge-replication-conflict-detection-and-resolution.md
+  items:
+    - name: Auswählen von Resolvern
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: COM-Based Custom Resolvers
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: Microsoft COM-Based Resolvers
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: Interactive Conflict Resolution
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: Ermitteln und Lösen von Konflikten in logischen Datensätzen
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+- name: Ausführen der Geschäftslogik während der Mergesynchronisierung
+  href: execute-business-logic-during-merge-synchronization.md
+- name: Filtern veröffentlichter Daten für die Mergereplikation
+  href: filter-published-data-for-merge-replication.md
+- name: Parameterized Row Filters
+  href: parameterized-filters-parameterized-row-filters.md
+- name: Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen
+  href: parameterized-filters-optimize-for-precomputed-partitions.md
+- name: Verknüpfungsfilter
+  href: join-filters.md
+- name: Bewährte Methoden für zeitbasierte Zeilenfilter
+  href: best-practices-for-time-based-row-filters.md

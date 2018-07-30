@@ -1,0 +1,24 @@
+- name: Webdienstmethoden für Berichtsserver
+  href: report-server-web-service-methods.md
+- name: Autorisierungsmethoden
+  href: authorization-methods.md
+- name: Datenquellen- und Verbindungsmethoden
+  href: data-sources-and-connection-methods.md
+- name: Methoden für verknüpfte Berichte
+  href: linked-reports-methods.md
+- name: Modellmethoden – Berichtsserver-Webdienst
+  href: model-methods-report-server-web-service.md
+- name: Rendering-Methode und Execution-Methode
+  href: rendering-and-execution-methods.md
+- name: Berichtsverlaufsmethoden
+  href: report-history-methods.md
+- name: Melden von Parametermethoden
+  href: report-parameters-methods.md
+- name: Methoden zur Berichtsserver-Namespaceverwaltung
+  href: report-server-namespace-management-methods.md
+- name: Report Server-Webdienst-Endpunkte
+  href: report-server-web-service-endpoints.md
+- name: Zeitplanmethoden
+  href: scheduling-methods.md
+- name: Abonnement und Übermittlungsmethoden
+  href: subscription-and-delivery-methods.md

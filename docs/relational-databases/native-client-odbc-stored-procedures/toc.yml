@@ -1,0 +1,8 @@
+- name: Ausführen gespeicherter Prozeduren
+  href: running-stored-procedures.md
+- name: Batchverarbeitung von gespeicherten Prozeduraufrufen
+  href: batching-stored-procedure-calls.md
+- name: Aufrufen von gespeicherten Prozeduren
+  href: calling-a-stored-procedure.md
+- name: Verarbeiten von Ergebnissen gespeicherter Prozeduren
+  href: processing-stored-procedure-results.md

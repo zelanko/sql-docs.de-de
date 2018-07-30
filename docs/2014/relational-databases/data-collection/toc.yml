@@ -1,0 +1,33 @@
+- name: Datensammlung
+  href: data-collection.md
+- name: Verwalten von Datensammlungen
+  href: manage-data-collection.md
+  items:
+    - name: Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: Konfigurieren der Eigenschaften eines Datensammlers
+      href: configure-properties-of-a-data-collector.md
+    - name: Aktivieren oder Deaktivieren der Datensammlung
+      href: enable-or-disable-data-collection.md
+    - name: Starten oder Beenden eines Sammlungssatzes
+      href: start-or-stop-a-collection-set.md
+    - name: Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung (SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: Anzeigen von Sammlungssatzprotokollen (SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: Anzeigen eines Sammlungssatzberichts (SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: Konfigurieren von Parametern für die Datensammlung (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: 'Erstellen eines benutzerdefinierten Sammlungssatzes, der einen generischen T-SQL-Abfragesammlertyp verwendet (Transact-SQL)'
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: Hinzufügen eines Sammelelements zu einem Sammlungssatz (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: Berichte der Systemdaten-Sammlungssätze
+  href: system-data-collection-set-reports.md
+- name: Verwaltungs-Data Warehouse
+  href: management-data-warehouse.md
+- name: Datensammlersicherheit
+  href: data-collector-security.md

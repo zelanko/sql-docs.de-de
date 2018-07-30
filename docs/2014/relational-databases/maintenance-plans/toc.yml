@@ -1,0 +1,50 @@
+- name: Wartungspläne
+  href: maintenance-plans.md
+- name: Erstellen eines Wartungsplans
+  href: create-a-maintenance-plan.md
+  items:
+    - name: Verwenden des Wartungsplanungs-Assistenten
+      href: use-the-maintenance-plan-wizard.md
+    - name: Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: Knoten Wartungspläne (Objekt-Explorer)
+      href: maintenance-plans-node-object-explorer.md
+- name: Toolboxkomponente (F1-Hilfe)
+  href: toolbox-component-f1-help.md
+  items:
+    - name: Wartungsplan (Registerkarte Entwurf)
+      href: maintenance-plan-design-tab.md
+    - name: Wartungsplan (Dialogfeld 'Berichterstellung und Protokollierung')
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: Wartungsplan (Verbindungen verwalten)
+      href: maintenance-plan-manage-connections.md
+    - name: Task 'Datenbank sichern' (Wartungsplan)
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: Task 'Statistiken aktualisieren' (Wartungsplan)
+      href: update-statistics-task-maintenance-plan.md
+    - name: Task 'Index neu erstellen' (Wartungsplan)
+      href: rebuild-index-task-maintenance-plan.md
+    - name: Task 'Datenbank verkleinern' (Wartungsplan)
+      href: shrink-database-task-maintenance-plan.md
+    - name: Task 'Datenbankintegrität überprüfen' (Wartungsplan)
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: Task 'T-SQL-Anweisung ausführen' (Wartungsplan)
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: Task 'Index neu organisieren' (Wartungsplan)
+      href: reorganize-index-task-maintenance-plan.md
+    - name: Task 'Operator benachrichtigen' (Wartungsplan)
+      href: notify-operator-task-maintenance-plan.md
+    - name: Task 'Verlaufscleanup' (Wartungsplan)
+      href: history-cleanup-task-maintenance-plan.md
+    - name: Task 'Auftrag des SQL Server-Agents ausführen' (Wartungsplan)
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: Task 'Wartungscleanup' (Wartungsplan)
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: Auftragsaktivitätsmonitor (Filtereinstellungen)
+      href: job-activity-monitor-filter-settings.md
+    - name: Aktualisieren des Auftragsaktivitätsmonitors
+      href: job-activity-monitor-refresh.md
+    - name: Wartungsplan (Unterplaneigenschaften)
+      href: maintenance-plan-subplan-properties.md
+    - name: Wartungsplan (Server)
+      href: maintenance-plan-servers.md

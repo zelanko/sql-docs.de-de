@@ -1,0 +1,149 @@
+- name: Übersicht
+  href: change-data-capture-ssis.md
+- name: Angeben eines Intervalls von Änderungsdaten
+  href: specify-an-interval-of-change-data.md
+- name: 'Bestimmen, ob die Änderungsdaten bereit sind'
+  href: determine-whether-the-change-data-is-ready.md
+- name: Vorbereiten zur Abfrage der Änderungsdaten
+  href: prepare-to-query-for-the-change-data.md
+- name: Erstellen der Funktion zum Abrufen der Änderungsdaten
+  href: create-the-function-to-retrieve-the-change-data.md
+- name: Abrufen und Verstehen der Änderungsdaten
+  href: retrieve-and-understand-the-change-data.md
+- name: 'Verarbeiten von Einfügungen, Updates und Löschungen'
+  href: process-inserts-updates-and-deletes.md
+- name: Anwenden der Änderungen auf das Ziel
+  href: apply-the-changes-to-the-destination.md
+- name: Ausführen eines inkrementellen Ladens von mehreren Tabellen
+  href: perform-an-incremental-load-of-multiple-tables.md
+- name: Change Data Capture für Oracle von Attunity
+  href: change-data-capture-for-oracle-by-attunity.md
+- name: Change Data Capture Designer für Oracle von Attunity
+  href: change-data-capture-designer-for-oracle-by-attunity.md
+  items:
+    - name: Einführung in die CDC Designer Console
+      href: the-cdc-designer-console-introduction.md
+    - name: Datentypen von Oracle CDC-Instanzen
+      href: oracle-cdc-instance-data-types.md
+    - name: Fehlerbehandlung
+      href: error-handling.md
+    - name: Oracle CDC-Instanz
+      href: the-oracle-cdc-instance.md
+    - name: Oracle CDC-Datenbanken
+      href: the-oracle-cdc-databases.md
+    - name: Change Data Capture Designer für Oracle von Attunity – Referenz zur F1-Hilfe
+      href: change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+      items:
+        - name: Zugreifen auf die CDC Designer Console
+          href: access-the-cdc-designer-console.md
+        - name: Verwalten eines CDC Service
+          href: manage-a-cdc-service.md
+        - name: Verwalten einer CDC-Instanz
+          href: manage-a-cdc-instance.md
+        - name: Verwenden des Assistenten für neue Instanzen
+          href: use-the-new-instance-wizard.md
+          items:
+            - name: Erstellen der SQL Server-Änderungsdatenbank
+              href: create-the-sql-server-change-database.md
+            - name: Herstellen einer Verbindung zu einer Oracle-Quelldatenbank
+              href: connect-to-an-oracle-source-database.md
+            - name: Herstellen einer Verbindung mit Oracle
+              href: connect-to-oracle.md
+            - name: Auswählen von Oracle-Tabellen und -Spalten
+              href: select-oracle-tables-and-columns.md
+            - name: Auswählen von Oracle-Tabellen zum Aufzeichnen von Änderungen
+              href: select-oracle-tables-for-capturing-changes.md
+            - name: Vornehmen von Änderungen an den zum Aufzeichnen von Änderungen ausgewählten Tabellen
+              href: make-changes-to-the-tables-selected-for-capturing-changes.md
+            - name: Generieren und Ausführen des ergänzenden Protokollierungsskripts
+              href: generate-and-run-the-supplemental-logging-script.md
+            - name: Generieren von Spiegeltabellen und CDC-Aufzeichnungsinstanzen
+              href: generate-mirror-tables-and-cdc-capture-instances.md
+            - name: Fertig stellen
+              href: finish.md
+        - name: Bearbeiten von Instanzeigenschaften
+          href: edit-instance-properties.md
+          items:
+            - name: Bearbeiten der Oracle-Datenbankeigenschaften
+              href: edit-the-oracle-database-properties.md
+            - name: Bearbeiten von Tabellen
+              href: edit-tables.md
+            - name: Hinzufügen von Tabellen zu einer CDC-Instanz
+              href: add-tables-to-a-cdc-instance.md
+            - name: Bearbeiten der Tabelleneigenschaften
+              href: edit-the-table-properties.md
+            - name: Überprüfen und Generieren ergänzender Protokollierungsskripts
+              href: review-and-generate-supplemental-logging-scripts.md
+            - name: Bearbeiten der erweiterten Eigenschaften
+              href: edit-the-advanced-properties.md
+    - name: Change Data Capture Designer für Oracle von Attunity – Anleitung
+      href: change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+      items:
+        - name: Verwalten eines CDC Service über die CDC Designer Console
+          href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+        - name: Erstellen der Instanz für die SQL Server-Änderungsdatenbank
+          href: how-to-create-the-sql-server-change-database-instance.md
+        - name: Verwalten einer CDC-Instanz
+          href: how-to-manage-a-cdc-instance.md
+        - name: Bearbeiten der CDC-Instanzeigenschaften
+          href: how-to-edit-the-cdc-instance-properties.md
+        - name: Anzeigen der CDC-Instanzeigenschaften
+          href: how-to-view-the-cdc-instance-properties.md
+    - name: SQL Server-Verbindung für die Instanzerstellung
+      href: sql-server-connection-for-instance-creation.md
+    - name: Erweiterte Verbindungseigenschaften
+      href: advanced-connection-properties.md
+    - name: Oracle-Anmeldeinformationen zum Ausführen von Skripts
+      href: oracle-credentials-for-running-script.md
+    - name: Ergänzendes Oracle-Protokollierungsskript
+      href: oracle-supplemental-logging-script.md
+    - name: CDC Instance Deployment Script
+      href: cdc-instance-deployment-script.md
+    - name: SQL Server-Verbindung erfordert Berechtigungen für den CDC Designer
+      href: sql-server-connection-required-permissions-for-the-cdc-designer.md
+- name: Change Data Capture Service für Oracle von Attunity
+  href: change-data-capture-service-for-oracle-by-attunity.md
+  items:
+    - name: Change Data Capture Service für Oracle von Attunity System Architecture
+      href: change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+    - name: Oracle CDC Service
+      href: the-oracle-cdc-service.md
+      items:
+        - name: Unterstützung für hohe Verfügbarkeit
+          href: high-availability-support.md
+        - name: Für SQL Server-Verbindung erforderliche Berechtigungen für den CDC Service
+          href: sql-server-connection-required-permissions-for-the-cdc-service.md
+        - name: Benutzerrollen
+          href: user-roles.md
+        - name: Arbeiten mit dem Oracle CDC Service
+          href: working-with-the-oracle-cdc-service.md
+    - name: Change Data Capture Service für Oracle von Attunity – F1-Hilfe
+      href: change-data-capture-service-for-oracle-by-attunity-f1-help.md
+      items:
+        - name: Verbindung zu SQL Server
+          href: connection-to-sql-server.md
+        - name: Verbindung zu SQL Server zum Löschen
+          href: connection-to-sql-server-for-delete.md
+        - name: Erstellen und Bearbeiten eines Oracle CDC Service
+          href: create-and-edit-an-oracle-cdc-service.md
+        - name: Verwalten eines Oracle CDC Service
+          href: manage-an-oracle-cdc-service.md
+        - name: Vorbereiten von SQL Server für CDC
+          href: prepare-sql-server-for-cdc.md
+        - name: Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen
+          href: prepare-sql-server-for-oracle-cdc-view-script.md
+        - name: Verwenden von CDC Services
+          href: work-with-cdc-services.md
+    - name: Change Data Capture Service für Oracle von Attunity – Anleitung
+      href: change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+      items:
+        - name: Erstellen und Bearbeiten eines CDC Service
+          href: how-to-create-and-edit-a-cdc-service.md
+        - name: Verwalten eines lokalen CDC Service
+          href: how-to-manage-a-local-cdc-service.md
+        - name: Vorbereiten von SQL Server für CDC
+          href: how-to-prepare-sql-server-for-cdc.md
+        - name: Verwenden der CDC Service-Befehlszeilenschnittstelle
+          href: how-to-use-the-cdc-service-command-line-interface.md
+        - name: Verwenden von CDC Services
+          href: how-to-work-with-cdc-services.md

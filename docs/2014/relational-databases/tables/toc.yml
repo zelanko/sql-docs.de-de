@@ -1,0 +1,84 @@
+- name: Tabellen
+  href: tables.md
+  items:
+    - name: Erstellen von Tabellen (Datenbank-Engine)
+      href: create-tables-database-engine.md
+    - name: Löschen von Tabellen (Datenbank-Engine)
+      href: delete-tables-database-engine.md
+    - name: Duplizieren von Tabellen
+      href: duplicate-tables.md
+    - name: Umbenennen von Tabellen (Datenbank-Engine)
+      href: rename-tables-database-engine.md
+    - name: Anzeigen der Tabellendefinition
+      href: view-the-table-definition.md
+      items:
+        - name: Tabelleneigenschaften
+          href: table-properties-ssms.md
+        - name: Spalteneigenschaften (Registerkarte Allgemein)
+          href: column-properties-general-page.md
+    - name: Anzeigen der Abhängigkeiten einer Tabelle
+      href: view-the-dependencies-of-a-table.md
+    - name: Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
+      href: add-columns-to-a-table-database-engine.md
+    - name: Spalten aus einer Tabelle löschen
+      href: delete-columns-from-a-table.md
+    - name: Umbenennen von Spalten (Datenbank-Engine)
+      href: rename-columns-database-engine.md
+    - name: Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: Ändern von Spalten (Datenbank-Engine)
+      href: modify-columns-database-engine.md
+    - name: Ändern der Spaltenreihenfolge einer Tabelle
+      href: change-column-order-in-a-table.md
+    - name: Angeben von berechneten Spalten in einer Tabelle
+      href: specify-computed-columns-in-a-table.md
+    - name: Angeben von Standardwerten für Spalten
+      href: specify-default-values-for-columns.md
+    - name: Verwenden von Spalten mit geringer Dichte
+      href: use-sparse-columns.md
+    - name: Verwenden von Spaltensätzen
+      href: use-column-sets.md
+    - name: Verwenden von Tabellenwertparameter (Datenbank-Engine)
+      href: use-table-valued-parameters-database-engine.md
+- name: Primärschlüssel- und Fremdschlüsseleinschränkungen
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Erstellen von Primärschlüsseln
+      href: create-primary-keys.md
+    - name: Ändern von Primärschlüsseln
+      href: modify-primary-keys.md
+    - name: Löschen von Primärschlüsseln
+      href: delete-primary-keys.md
+    - name: Erstellen von Fremdschlüssel-Beziehungen
+      href: create-foreign-key-relationships.md
+    - name: Ändern von Fremdschlüsselbeziehungen
+      href: modify-foreign-key-relationships.md
+    - name: Löschen von Primärschlüssel-Fremdschlüssel-Beziehungen
+      href: delete-foreign-key-relationships.md
+    - name: Anzeigen von Fremdschlüsseleigenschaften
+      href: view-foreign-key-properties.md
+    - name: Deaktivieren von Fremdschlüsseleinschränkungen für die Replikation
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Deaktivieren von Fremdschlüsseleinschränkungen mit INSERT- und UPDATE-Anweisungen
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: UNIQUE- und CHECK-Einschränkungen
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Erstellen von Unique-Einschränkungen
+      href: create-unique-constraints.md
+    - name: Ändern von UNIQUE-Einschränkungen
+      href: modify-unique-constraints.md
+    - name: Löschen von Unique-Einschränkungen
+      href: delete-unique-constraints.md
+    - name: Erstellen von CHECK-Einschränkungen
+      href: create-check-constraints.md
+    - name: Ändern von CHECK-Einschränkungen
+      href: modify-check-constraints.md
+    - name: Löschen von CHECK-Einschränkungen
+      href: delete-check-constraints.md
+    - name: Deaktivieren von CHECK-Einschränkungen für die Replikation
+      href: disable-check-constraints-for-replication.md
+    - name: Deaktivieren von CHECK-Einschränkungen mit den Anweisungen INSERT und UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Tabellenspalteneigenschaften (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md
