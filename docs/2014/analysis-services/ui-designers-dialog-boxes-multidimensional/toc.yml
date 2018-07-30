@@ -1,0 +1,307 @@
+- name: Benutzeroberflächen-Designer und -Dialogfelder für die mehrdimensionale Analyse
+  href: ui-designers-dialog-boxes-multidimensional.md
+- name: Designer und Dialogfelder für Analysis Services (multidimensional)
+  href: ../analysis-services-designers-and-dialog-boxes-multidimensional-data.md
+- name: Cubedimension hinzufügen (Dialogfeld)
+  href: ../add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md
+- name: Verweis hinzufügen (Dialogfeld)
+  href: ../add-reference-dialog-box-analysis-services-multidimensional-data.md
+- name: Tabelle hinzufügen (Dialogfeld)
+  href: ../add-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Tabellen hinzufügen/entfernen (Dialogfeld)
+  href: ../../database-engine/add-remove-tables-dialog-box-analysis-services-multidimensional-data.md
+- name: Eigenschaften für Analysis-Server (Dialogfeld)
+  href: ../analysis-server-properties-dialog-box-analysis-services.md
+- name: Analysis Services MDX-Abfrage-Designer (PowerPivot)
+  href: ../analysis-services-mdx-query-designer-powerpivot.md
+- name: Assemblyeigenschaften (Dialogfeld)
+  href: ../assembly-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Aggregationsentwurf zuweisen (Dialogfeld)
+  href: ../assign-aggregation-design-dialog-box-analysis-services-multidimensional-data.md
+- name: Attributdatenübersetzung (Dialogfeld)
+  href: ../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md
+- name: Sicherungsdatenbank (Dialogfeld)
+  href: ../backup-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Datenquelle durchsuchen (Dialogfeld)
+  href: ../browse-data-source-dialog-box-analysis-services-multidimensional-data.md
+- name: Datenquellensicht (Dialogfeld zum Durchsuchen)
+  href: ../browse-data-source-view-dialog-box-analysis-services-multidimensional-data.md
+- name: Nach Remoteordner suchen (Dialogfeld)
+  href: ../browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md
+- name: Dialogfeld 'Generator für berechnete Elemente'
+  href: ../calculated-member-builder-dialog-box-analysis-services-multidimensional-data.md
+- name: Berechnungseigenschaften (Dialogfeld)
+  href: ../calculation-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Einstellungen ändern (Dialogfeld)
+  href: ../change-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: Dialogfeld Verbindung mit Datenbank herstellen
+  href: ../connect-to-database-dialog-box.md
+- name: Dialogfelder Attributbeziehung erstellen und Attributbeziehung bearbeiten
+  href: ../create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md
+- name: Benannte Berechnung erstellen/bearbeiten (Dialogfeld)
+  href: ../create-edit-named-calculation-dialog-box-analysis-services.md
+- name: Benannte Abfrage erstellen/bearbeiten (Dialogfeld)
+  href: ../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Beziehung erstellen oder bearbeiten (Dialogfeld)
+  href: ../create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: Abrufabfrage erstellen (Dialogfeld)
+  href: ../create-polling-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Verarbeitungsabfrage erstellen (Dialogfeld)
+  href: ../create-processing-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Cube-Designer
+  href: ../cube-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Cubestruktur (Cube-Designer)
+      href: ../cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Cubestruktur, Cube-Designer)'
+      href: ../toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Datenquellensicht (Registerkarte Cubestruktur, Cube-Designer)'
+      href: ../data-source-view-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Measures (Registerkarte Cubestruktur, Cube-Designer)'
+      href: ../measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Dimensionen (Registerkarte Cubestruktur, Cube-Designer)'
+      href: ../dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: Dimensionsverwendung (Cube-Designer)
+      href: ../dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Dimensionsverwendung, Cube-Designer)'
+      href: ../toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Raster (Registerkarte Dimensionsverwendung, Cube-Designer)'
+      href: ../grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: Berechnungen (Cube-Designer)
+      href: ../calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Skriptplaner (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../script-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Berechnungstools (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../calculation-tools-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Formular-Editor für berechnete Elemente (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Formular-Editor für benannte Mengen (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Skript-Editor (Registerkarte Berechnungen, Cube-Designer)'
+      href: ../script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPIs (Cube-Designer)
+      href: ../kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte KPIs, Cube-Designer)'
+      href: ../toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'KPI-Planer (Registerkarte KPIs, Cube-Designer)'
+      href: ../kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Berechnungstools (Registerkarte KPIs, Cube-Designer)'
+      href: ../calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'KPI-Formular-Editor (Registerkarte KPIs, Cube-Designer)'
+      href: ../kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'KPI-Browser (Registerkarte KPIs, Cube-Designer)'
+      href: ../kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: Aktionen (Cube-Designer)
+      href: ../actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Aktionen, Cube-Designer)'
+      href: ../toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Aktionsplaner (Registerkarte Aktionen, Cube-Designer)'
+      href: ../action-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Berechnungstools (Registerkarte Aktionen, Cube-Designer)'
+      href: ../calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Aktionsformular-Editor (Registerkarte Aktionen, Cube-Designer)'
+      href: ../action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Drillthroughaktionsformular-Editor (Registerkarte Aktionen, Cube-Designer)'
+      href: ../drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Berichtsaktionsformular-Editor (Registerkarte Aktionen, Cube-Designer)'
+      href: ../report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: Partitionen (Cube-Designer)
+      href: ../partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Partitionen, Cube-Designer)'
+      href: ../toolbar-partitions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Measuregruppen (Registerkarte Partitionen, Cube-Designer)'
+      href: ../measure-groups-partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: Aggregationen (Cube-Designer)
+      href: ../aggregations-cube-design.md
+    - name: 'Symbolleiste (Registerkarte ''Aggregationen'', Cube-Designer)'
+      href: ../toolbar-aggregations-tab-cube-designer.md
+    - name: 'Standardsicht (Registerkarte ''Aggregationen'', Cube-Designer)'
+      href: ../standard-view-aggregations-tab-cube-designer.md
+    - name: 'Erweiterte Sicht (Registerkarte ''Aggregationen'', Cube-Designer)'
+      href: ../advanced-view-aggregations-tab-cube-designer.md
+    - name: Perspektiven (Cube-Designer)
+      href: ../perspectives-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Perspektiven, Cube-Designer)'
+      href: ../toolbar-perspectives-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Perspektivendetails (Registerkarte Perspektiven, Cube-Designer)'
+      href: ../perspective-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: Übersetzungen (Cube-Designer)
+      href: ../translations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Übersetzungen, Cube-Designer)'
+      href: ../toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Übersetzungsdetails (Registerkarte Übersetzungen, Cube-Designer)'
+      href: ../translation-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: Browser (Cube-Designer)
+      href: ../browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Browser, Cube-Designer)'
+      href: ../toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'In Excel analysieren (Registerkarte ''Browser'', Cube-Designer)'
+      href: ../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Metadaten (Registerkarte Browser, Cube-Designer)'
+      href: ../metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Abfrage und Filter (Registerkarte ''Browser'', Cube-Designer)'
+      href: ../query-filter-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: Dialogfeld "Abfrageparameter" (MDX)
+      href: ../query-parameters-dialog-box-mdx.md
+- name: Dialogfeld für Cube- oder Modelleigenschaften
+  href: ../cube-or-model-properties-dialog-box-ssas.md
+- name: Optionen zum Durchsuchen von Daten (Dialogfeld)
+  href: ../data-exploration-options-dialog-box-analysis-services-data-mining.md
+- name: Datenstichproben-Viewer (Dialogfeld)
+  href: ../data-sample-viewer-dialog-box-analysis-services-multidimensional-data.md
+- name: Datenquellensicht-Designer
+  href: ../data-source-view-designer-analysis-services-multidimensional-data.md
+- name: Eigenschaften der Datenquellensicht (Dialogfeld)
+  href: ../data-source-view-properties-dialog-box-ssas.md
+- name: Datenbank-Designer
+  href: ../database-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Allgemein (Datenbank-Designer)
+      href: ../general-database-designer-analysis-services-multidimensional-data.md
+    - name: Warnungen (Datenbank-Designer)
+      href: ../warnings-database-designer-analysis-services-multidimensional-data.md
+- name: Datenbankeigenschaften (Dialogfeld)
+  href: ../database-properties-dialog-box-ssas-multidimensional.md
+- name: Beziehung definieren (Dialogfeld)
+  href: ../define-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: Dimensions-Designer
+  href: ../dimension-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Dimensionsstruktur (Dimensions-Designer)
+      href: ../dimension-structure-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Dimensionsstruktur, Dimensions-Designer)'
+      href: ../toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md
+    - name: 'Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer)'
+      href: ../datasource-view-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Hierarchien (Registerkarte Dimensionsstruktur, Dimensions-Designer)'
+      href: ../hierarchies-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer)'
+      href: ../attributes-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Attributbeziehungen (Dimensions-Designer)
+      href: ../attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer)'
+      href: ../toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Attributbeziehungsdiagramm (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer)'
+      href: ../attribute-relationship-diagram-analysis-services-multidimensional-data.md
+    - name: 'Attribute (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer)'
+      href: ../attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Attributbeziehungen (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer)'
+      href: ../attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Übersetzungen (Dimensions-Designer)
+      href: ../translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Übersetzungen, Dimensions-Designer)'
+      href: ../toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Übersetzungsdetails (Registerkarte Übersetzungen, Dimensions-Designer)'
+      href: ../translation-details-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Browser (Dimensions-Designer)
+      href: ../browser-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Symbolleiste (Registerkarte Browser, Dimensions-Designer)'
+      href: ../toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Ebenen und Elemente (Registerkarte Browser, Dimensions-Designer)'
+      href: ../level-members-dimension-designer-analysis-services-multidimensional-data.md
+- name: Dimensionseigenschaften (Dialogfeld)
+  href: ../dimension-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Dialogfeld Warnung verwerfen
+  href: ../dismiss-warning-dialog-box-analysis-services-multidimensional-data.md
+- name: Rolle duplizieren (Dialogfeld)
+  href: ../duplicate-security-role-dialog-box-analysis-services-multidimensional-data.md
+- name: Rückschreiben aktivieren/deaktivieren (Dialogfeld)
+  href: ../enable-disable-writeback-dialog-box-analysis-services-multidimensional-data.md
+- name: Elemente filtern (Dialogfeld)
+  href: ../filter-members-dialog-box-analysis-services-multidimensional-data.md
+- name: Tabelle suchen (Dialogfeld)
+  href: ../find-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Benannte Abfrage generieren (Dialogfeld)
+  href: ../generate-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Auswirkungsanalyse (Dialogfeld)
+  href: ../impact-analysis-dialog-box-analysis-services-multidimensional-data.md
+- name: Inkrementelles Update (Dialogfeld)
+  href: ../incremental-update-dialog-box-analysis-services-multidimensional-data.md
+- name: Dialogfeld Schlüsselspalten
+  href: ../key-columns-dialog-box-analysis-services-multidimensional-data.md
+- name: Vorlage zur Ebenenbenennung (Dialogfeld)
+  href: ../level-naming-template-dialog-box-analysis-services-multidimensional-data.md
+- name: Datenbankdateien suchen (Dialogfeld)
+  href: ../locate-database-files-dialog-box-analysis-services-multidimensional-data.md
+- name: MDX-Generator
+  href: ../mdx-builder-analysis-services-multidimensional-data.md
+- name: MDX-Abfrage-Editor
+  href: ../mdx-query-editor-analysis-services-multidimensional-data.md
+- name: Measuregruppenbindungen (Dialogfeld)
+  href: ../measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md
+- name: Mergepartition (Dialogfeld)
+  href: ../merge-partition-dialog-box-analysis-services-multidimensional-data.md
+- name: Neue Datenbank (Dialogfeld)
+  href: ../new-database-dialog-box-analysis-services.md
+- name: Neues Measure (Dialogfeld)
+  href: ../new-measure-dialog-box-analysis-services-multidimensional-data.md
+- name: 'Neue Measuregruppe (Dialogfeld, Cube-Designer)'
+  href: ../new-measure-group-dialog-box-cube-designer.md
+- name: Objektbindung (Dialogfeld)
+  href: ../object-binding-dialog-box.md
+- name: Partitionseigenschaften (Dialogfeld)
+  href: ../partition-properties-dialog-box-ssms.md
+  items:
+    - name: Auswahl (Dialogfeld Partitionseigenschaften)
+      href: ../selection-partition-properties-dialog-box-ssms.md
+    - name: Allgemein (Dialogfeld Partitionseigenschaften)
+      href: ../general-partition-properties-dialog-box-ssms.md
+    - name: Proaktives Zwischenspeichern (Dialogfeld Partitionseigenschaften)
+      href: ../proactive-caching-partition-properties-dialog-box-ssms.md
+- name: Partitionsquelle (Dialogfeld)
+  href: ../partition-source-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: Tabellenbindungsdetails (Dialogfeld Partitionsquelle)
+      href: ../table-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+    - name: Abfragebindungsdetails (Dialogfeld Partitionsquelle)
+      href: ../query-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+- name: Verarbeiten (Dialogfeld)
+  href: ../process-dialog-box-analysis-services-multidimensional-data.md
+- name: Verarbeitungsstatus (Dialogfeld)
+  href: ../process-progress-dialog-box-analysis-services-multidimensional-data.md
+- name: Datenquellensicht aktualisieren (Dialogfeld)
+  href: ../refresh-data-source-view-dialog-box.md
+- name: Datenbankassembly registrieren (Dialogfeld)
+  href: ../register-database-assembly-dialog-box-analysis-services-multidimensional-data.md
+- name: Relationale Objekte (Dialogfeld)
+  href: ../relational-objects-dialog-box-analysis-services-multidimensional-data.md
+- name: Remotepartitionen - Erweiterte Einstellungen (Dialogfeld)
+  href: ../remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md
+- name: Instanz umbenennen (Dialogfeld)
+  href: ../rename-instance-dialog-box-analysis-services.md
+- name: Tabelle durch eine andere Tabelle ersetzen (Dialogfeld)
+  href: ../replace-table-with-other-table-dialog-box.md
+- name: Datenbank wiederherstellen (Dialogfeld)
+  href: ../restore-database-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: Allgemein (Dialogfeld Datenbank wiederherstellen)
+      href: ../general-restore-database-dialog-box-analysis-services-multidimensional-data.md
+    - name: Partitionen (Dialogfeld Datenbank wiederherstellen)
+      href: ../partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Datei speichern unter (Dialogfeld)
+  href: ../save-file-as-dialog-box-analysis-services-multidimensional-data.md
+- name: Sicherheitskontext (Dialogfeld)
+  href: ../security-context-dialog-box-analysis-services-multidimensional-data.md
+- name: Sprache auswählen (Dialogfeld)
+  href: ../select-language-dialog-box-analysis-services-multidimensional-data.md
+- name: Übergeordnetes Element auswählen (Dialogfeld)
+  href: ../select-parent-member-dialog-box-analysis-services-multidimensional-data.md
+- name: Tabelle anzeigen (Dialogfeld)
+  href: ../show-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Speicheroptionen (Dialogfeld)
+  href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: Allgemein (Dialogfeld „Speicheroptionen“)
+      href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
+    - name: Benachrichtigungen (Dialogfeld Speicheroptionen)
+      href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
+- name: Speichereinstellungen (Dialogfeld)
+  href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: Benutzerauswahl (Dialogfeld)
+  href: ../user-selection-dialog-box-analysis-services-multidimensional-data.md
+- name: Details anzeigen (Dialogfeld)
+  href: ../view-details-dialog-box-analysis-services-multidimensional-data.md
+- name: XMLA-Abfrage-Editor
+  href: ../xmla-query-editor-analysis-services-multidimensional-data.md

@@ -1,0 +1,83 @@
+- name: Was ist SSMS?
+  href: sql-server-management-studio-ssms.md
+- name: Herunterladen von SSMS
+  href: download-sql-server-management-studio-ssms.md
+  items:
+    - name: Änderungsprotokoll und frühere Versionen von SSMS
+      href: sql-server-management-studio-changelog-ssms.md
+    - name: Versionsanmerkungen
+      href: 'download-sql-server-management-studio-ssms.md#release-notes'
+    - name: Installieren nicht englischsprachiger SSMS-Versionen
+      href: install-other-languages.md
+    - name: Neue und aktualisierte Artikel
+      href: new-updated-ssms.md
+- name: Installieren des SQL Server PowerShell-Moduls
+  href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
+- name: SQL Server-Agent +
+  href: ../ssms/agent/sql-server-agent.md
+- name: F1-Hilfe +
+  href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+- name: Menü „Hilfe“ +
+  href: ../ssms/menu-help/sql-server-management-studio-menu-help.md
+- name: Objekt-Explorer +
+  href: ../ssms/object/object-explorer.md
+- name: Projektmappen-Explorer +
+  href: ../ssms/solution/solution-explorer.md
+- name: Vorlagen +
+  href: ../ssms/template/template-explorer.md
+- name: Visual Database Tools +
+  href: ../ssms/visual-db-tools/visual-database-tools.md
+- name: Registrieren von Servern +
+  href: ../ssms/register-servers/register-servers.md
+- name: Tutorials +
+  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+- name: Einführung in SSMS für BI
+  href: introduction-to-sql-server-management-studio-for-business-intelligence.md
+- name: Anpassen von Menüs und Tastenkombinationen
+  href: customize-menus-and-shortcut-keys.md
+- name: Toolfenster in SSMS
+  href: tool-windows-in-sql-server-management-studio.md
+- name: Verwenden von SSMS zum Erstellen von Datenbankprojekten
+  href: build-database-projects-by-using-sql-server-management-studio.md
+- name: Grundlegendes zur SQL Server Management Studio-Fensterverwaltung
+  href: understand-sql-server-management-studio-windows-management.md
+- name: Externe Tools (Dialogfeld)
+  href: external-tools-dialog-box.md
+- name: Argumente (Dialogfeld)
+  href: arguments-dialog-box.md
+- name: Verwalten von Servern mit SQL Server Management Studio
+  href: administer-servers-with-sql-server-management-studio.md
+- name: Lizenzbedingungen
+  href: sql-server-management-studio-license-terms.md
+- name: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
+  href: configure-wmi-to-show-server-status-in-sql-server-tools.md
+- name: Die SQL Server Management Studio-Umgebung
+  href: the-sql-server-management-studio-environment.md
+- name: Eigenschaftenseiten in SSMS
+  href: property-pages-in-sql-server-management-studio.md
+- name: Eigenschaftenfenster in SSMS
+  href: properties-window-management-studio.md
+- name: Ausgabefenster in SSMS
+  href: output-window.md
+- name: Info (Dialogfeld)
+  href: about-dialog-box.md
+- name: SQL Server Management Studio-Webbrowser
+  href: sql-server-management-studio-web-browser.md
+- name: Allgemeine Benutzeroberflächenelemente
+  href: general-user-interface-elements.md
+- name: Benutzerhilfe in SSMS
+  href: user-assistance-in-sql-server-management-studio.md
+- name: Arguments for External Tools
+  href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
+- name: Hinzufügen eines externen Tools zum Menü „Extras“
+  href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+- name: Konfigurieren der Anmeldungsüberwachung
+  href: configure-login-auditing-sql-server-management-studio.md
+- name: Verwenden der Toolbox
+  href: use-the-toolbox.md
+- name: Ssms-Hilfsprogramm
+  href: ssms-utility.md
+- name: Tastenkombinationen für SQL Server Management Studio
+  href: sql-server-management-studio-keyboard-shortcuts.md
+- name: Anonyme Nutzungsdaten
+  href: sql-server-management-studio-telemetry-ssms.md

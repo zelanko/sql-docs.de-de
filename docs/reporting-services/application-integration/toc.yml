@@ -1,0 +1,28 @@
+- name: Integration von Reporting Services in Anwendungen
+  href: integrating-reporting-services-into-applications.md
+- name: Integrieren mit...
+  items:
+    - name: 'Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Datensammlung'
+      href: integrating-reporting-services-using-reportviewer-controls-data-collection.md
+    - name: 'Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Erste Schritte'
+      href: integrating-reporting-services-using-reportviewer-controls-get-started.md
+    - name: 'Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: WebForms-ReportViewer'
+      href: using-the-webforms-reportviewer-control.md
+    - name: 'Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: WinForms-ReportViewer'
+      href: using-the-winforms-reportviewer-control.md
+    - name: Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: 'Integrieren von Reporting Services mithilfe von SOAP: Webanwendung'
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: 'Integrieren von Reporting Services mit SOAP: Windows-Anwendung'
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: Integrieren von Reporting Services mit SOAP
+      href: integrating-reporting-services-using-soap.md
+    - name: 'Integrieren von Reporting Services mithilfe des URL-Zugriffs: Webanwendung'
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: 'Integrieren von Reporting Services mithilfe des URL-Zugriffs: Windows-Anwendung'
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: Integrieren von Reporting Services mit URL-Zugriff
+      href: integrating-reporting-services-using-url-access.md
+- name: Entscheidung zwischen URL-Zugriff und SOAP
+  href: choosing-between-url-access-and-soap.md

@@ -1,0 +1,50 @@
+- name: SQL Server Native Client (OLE DB)
+  href: sql-server-native-client-ole-db.md
+- name: Spezifische Bereiche
+  items:
+    - name: OLE DB-Anbieter von Native Client +
+      href: ../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
+    - name: OLE DB-Datenquellenobjekte +
+      href: ../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Befehle +
+      href: ../../../relational-databases/native-client-ole-db-commands/commands.md
+    - name: Rowsets +
+      href: ../../../relational-databases/native-client-ole-db-rowsets/rowsets.md
+    - name: Blobs +
+      href: ../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
+    - name: Tabellenindizes +
+      href: ../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md
+    - name: Datentypen +
+      href: ../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
+    - name: Tabellenwertparameter +
+      href: ../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Datum und Uhrzeit +
+      href: ../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Transaktionen +
+      href: ../../../relational-databases/native-client-ole-db-transactions/transactions.md
+    - name: Fehler +
+      href: ../../../relational-databases/native-client-ole-db-errors/errors.md
+    - name: Schnittstellen +
+      href: ../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
+    - name: Vorgehensweise +
+      href: ../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md
+- name: FILESTREAM-Unterstützung (OLE DB)
+  href: filestream-support-ole-db.md
+- name: Große benutzerdefinierte CLR-Typen (OLE DB)
+  href: large-clr-user-defined-types-ole-db.md
+- name: Schemarowset-Unterstützung (OLE DB)
+  href: schema-rowset-support-ole-db.md
+- name: 'Schemarowsets: Verteilte Abfrageunterstützung'
+  href: schema-rowsets-distributed-query-support.md
+- name: 'Schemarowsets: LINKEDSERVERS-Rowset'
+  href: schema-rowsets-linkedservers-rowset.md
+- name: Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Unterstützung für Spalten mit geringer Dichte (OLE DB)
+  href: sparse-columns-support-ole-db.md
+- name: Aufrufen von gespeicherte Prozeduren
+  href: stored-procedures-calling.md
+- name: 'Gespeicherter Prozeduren: Ausführen'
+  href: stored-procedures-running.md
+- name: Gespeicherte Prozeduren
+  href: stored-procedures.md

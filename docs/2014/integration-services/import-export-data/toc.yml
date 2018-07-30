@@ -1,0 +1,41 @@
+- name: SQL Server-Import/Export-Assistent
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+    - name: Ausführen des SQL Server-Import/Export-Assistenten
+      href: start-the-sql-server-import-and-export-wizard.md
+    - name: Willkommen beim SQL Server-Import/Export-Assistenten
+      href: welcome-to-sql-server-import-and-export-wizard.md
+    - name: Datenquelle auswählen (SQL Server-Import/Export-Assistent)
+      href: choose-a-data-source-sql-server-import-and-export-wizard.md
+    - name: Ziel auswählen (SQL Server-Import/Export-Assistent)
+      href: choose-a-destination-sql-server-import-and-export-wizard.md
+    - name: Datenbank erstellen (SQL Server-Import/Export-Assistent)
+      href: create-database-sql-server-import-and-export-wizard.md
+    - name: Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)
+      href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+    - name: Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
+      href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+    - name: Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
+      href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+    - name: Quellabfrage angeben (SQL Server-Import/Export-Assistent)
+      href: provide-a-source-query-sql-server-import-and-export-wizard.md
+    - name: Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
+      href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+    - name: Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
+      href: column-mappings-sql-server-import-and-export-wizard.md
+    - name: SQL-Anweisung CREATE TABLE (SQL Server-Import/Export-Assistent)
+      href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+    - name: Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
+      href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+    - name: Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
+      href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+    - name: Konvertieren von Typen ohne Konvertierungsprüfung (SQL Server-Import/Export-Assistent)
+      href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+    - name: Paket speichern und ausführen (SQL Server-Import/Export-Assistent)
+      href: save-and-run-package-sql-server-import-and-export-wizard.md
+    - name: SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
+      href: save-ssis-package-sql-server-import-and-export-wizard.md
+    - name: Assistenten abschließen (SQL Server-Import/Export-Assistent)
+      href: complete-the-wizard-sql-server-import-and-export-wizard.md
+    - name: Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
+      href: performing-operation-sql-server-import-and-export-wizard.md

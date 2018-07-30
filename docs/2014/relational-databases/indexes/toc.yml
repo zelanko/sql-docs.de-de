@@ -1,0 +1,60 @@
+- name: Indizes (Datenbank-Engine)
+  href: indexes.md
+- name: Heaps (Tabellen ohne gruppierte Indizes)
+  href: heaps-tables-without-clustered-indexes.md
+- name: Beschreibung von gruppierten und nicht gruppierten Indizes
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: Verwenden von Columnstore-Indizes
+  href: dbengine-columnstore-indexes.md
+- name: Erstellen gruppierter Indizes
+  href: create-clustered-indexes.md
+- name: Erstellen nicht gruppierter Indizes
+  href: create-nonclustered-indexes.md
+- name: Erstellen eindeutiger Indizes
+  href: create-unique-indexes.md
+- name: Erstellen gefilterter Indizes
+  href: create-filtered-indexes.md
+- name: Erstellen von Indizes mit eingeschlossenen Spalten
+  href: create-indexes-with-included-columns.md
+- name: Löschen eines Indexes
+  href: delete-an-index.md
+- name: Ändern eines Indexes
+  href: modify-an-index.md
+- name: Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: Indizes in berechneten Spalten
+  href: indexes-on-computed-columns.md
+- name: SORT_IN_TEMPDB-Option für Indizes
+  href: sort-in-tempdb-option-for-indexes.md
+- name: Deaktivieren von Indizes und Einschränkungen
+  href: disable-indexes-and-constraints.md
+- name: Aktivieren von Indizes und Einschränkungen
+  href: enable-indexes-and-constraints.md
+- name: Umbenennen von Indizes
+  href: rename-indexes.md
+- name: Festlegen von Indexoptionen
+  href: set-index-options.md
+- name: Speicherplatzanforderungen für Index-DDL-Vorgänge
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: Transaktionsprotokollspeicherplatz für Indexvorgänge
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
+      href: index-disk-space-example.md
+- name: Neuorganisieren und Neuerstellen von Indizes
+  href: reorganize-and-rebuild-indexes.md
+- name: Angeben des Füllfaktors für einen Index
+  href: specify-fill-factor-for-an-index.md
+- name: Ausführen von Onlineindexvorgängen
+  href: perform-index-operations-online.md
+  items:
+    - name: Funktionsweise von Onlineindexvorgängen
+      href: how-online-index-operations-work.md
+    - name: Richtlinien für Onlineindexvorgänge
+      href: guidelines-for-online-index-operations.md
+- name: Konfigurieren von Parallelindexvorgängen
+  href: configure-parallel-index-operations.md
+- name: Indexeigenschaften (F1-Hilfe)
+  href: index-properties-f1-help.md

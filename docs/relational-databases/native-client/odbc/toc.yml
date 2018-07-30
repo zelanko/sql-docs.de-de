@@ -1,0 +1,54 @@
+- name: SQL Server Native Client (ODBC)
+  href: sql-server-native-client-odbc.md
+- name: Spezifische Bereiche
+  items:
+    - name: ODBC-API des nativen Clients +
+      href: ../../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
+    - name: ODBC-Erweiterungen für Massenkopierfunktionen +
+      href: ../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
+    - name: Massenkopiervorgänge +
+      href: ../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
+    - name: Kommunikation +
+      href: ../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
+    - name: Abfragen +
+      href: ../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
+    - name: Ergebnisse +
+      href: ../../../relational-databases/native-client-odbc-results/processing-results-odbc.md
+    - name: Cursor +
+      href: ../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
+    - name: Fehlermeldungen +
+      href: ../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
+    - name: Gespeicherte Prozeduren +
+      href: ../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
+    - name: Text und Imagespalten +
+      href: ../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
+    - name: Tabellenwertparameter +
+      href: ../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
+    - name: Datum und Uhrzeit +
+      href: ../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
+    - name: Vorgehensweise +
+      href: ../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
+- name: Erstellen einer Treiberanwendung – Asynchroner Modus und SQLCancel
+  href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
+- name: Erstellen einer Treiberanwendung – Multithreadanwendungen
+  href: creating-a-driver-application-multithreaded-applications.md
+- name: Erstellen einer Treiberanwendung
+  href: creating-a-driver-application.md
+- name: Datenquellennamen und 64-Bit-Betriebssysteme
+  href: data-source-names-and-64-bit-operating-systems.md
+- name: FILESTREAM-Unterstützung (ODBC)
+  href: filestream-support-odbc.md
+- name: Große benutzerdefinierte CLR-Typen (ODBC)
+  href: large-clr-user-defined-types-odbc.md
+- name: Ausführen von Transaktionen – verteilte Transaktionen
+  href: performing-transactions-distributed-transactions.md
+- name: Ausführen von Transaktionen in ODBC
+  href: performing-transactions-in-odbc.md
+- name: Leistungsprofilerstellung des ODBC-Treibers
+  href: profiling-odbc-driver-performance.md
+- name: Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)
+  href: service-principal-names-spns-in-client-connections-odbc.md
+- name: Unterstützung für Spalten mit geringer Dichte (ODBC)
+  href: sparse-columns-support-odbc.md
+- name: Verwenden von Katalogfunktionen
+  href: using-catalog-functions.md

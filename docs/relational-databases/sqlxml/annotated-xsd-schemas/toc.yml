@@ -1,0 +1,14 @@
+- name: XSD-Schemas mit Anmerkungen in SQLXML 4.0
+  href: annotated-xsd-schemas-in-sqlxml-4-0.md
+- name: XSD-Schemas mit Anmerkungen in SQLXML mithilfe von +
+  href: ../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md
+- name: XSD-Schemas mit Anmerkungen in XPath-Abfragen +
+  href: ../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
+- name: XDR-Schemas mit Anmerkungen (in SQLXML 4.0 veraltet)
+  href: annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md
+- name: Konvertieren von XDR-Schemas mit Anmerkungen in gleichbedeutende XSD-Schemas (SQLXML 4.0)
+  href: converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md
+- name: Einführung in XSD-Schemas mit Anmerkungen (SQLXML 4.0)
+  href: introduction-to-annotated-xsd-schemas-sqlxml-4-0.md
+- name: Verwenden von XSD-Schemas mit Anmerkungen in Abfragen (SQLXML 4.0)
+  href: using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md

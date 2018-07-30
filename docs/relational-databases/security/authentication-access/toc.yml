@@ -1,0 +1,37 @@
+- name: Berechtigungen
+  href: getting-started-with-database-engine-permissions.md
+  items:
+    - name: Bestimmen der effektiven Berechtigungen
+      href: determining-effective-database-engine-permissions.md
+- name: Prinzipale
+  href: principals-database-engine.md
+- name: 'Verwalten von Anmeldungen, Benutzern und Schemas'
+  href: managing-logins-users-and-schemas-how-to-topics.md
+  items:
+    - name: Erstellen eines Anmeldenamens
+      href: create-a-login.md
+    - name: Erstellen eines Datenbankbenutzers
+      href: create-a-database-user.md
+    - name: Erstellen eines Datenbankschemas
+      href: create-a-database-schema.md
+    - name: Verknüpfen einer Rolle
+      href: join-a-role.md
+    - name: Erteilen einer Berechtigung für einen Prinzipal
+      href: grant-a-permission-to-a-principal.md
+- name: Rollen auf Serverebene
+  href: server-level-roles.md
+  items:
+    - name: Erstellen
+      href: create-a-server-role.md
+- name: Rollen auf Datenbankebene
+  href: database-level-roles.md
+- name: Anwendungsrollen
+  href: application-roles.md
+  items:
+    - name: Erstellen einer Anwendungsrolle
+      href: create-an-application-role.md
+- name: Anmeldeinformationen
+  href: credentials-database-engine.md
+  items:
+    - name: Erstellen
+      href: create-a-credential.md

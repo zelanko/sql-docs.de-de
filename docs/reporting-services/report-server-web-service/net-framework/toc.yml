@@ -1,0 +1,32 @@
+- name: Erstellen von Anwendungen mit dem Webdienst und .NET Framework
+  href: building-applications-using-the-web-service-and-the-net-framework.md
+- name: Einführung in die Ausnahmebehandlung in Reporting Services
+  href: ../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json
+- name: Verwenden von Reporting Services SOAP-Headern +
+  href: ../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json
+- name: Aufrufen von Webdienstmethoden
+  href: calling-web-service-methods.md
+- name: Erstellen des Webdienstproxys
+  href: creating-the-web-service-proxy.md
+- name: Weglassen von Werten für optionale Webdienstobjekte
+  href: omitting-values-for-optional-web-service-objects.md
+- name: Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen
+  href: passing-device-information-settings-to-rendering-extensions.md
+- name: Einstellungen der Reporting Services-Übermittlungserweiterungen
+  href: reporting-services-delivery-extension-settings.md
+- name: 'Berichtsserver-Eigenschaften: Berichtsserver-Elementeigenschaften'
+  href: reporting-services-properties-report-server-item-properties.md
+- name: 'Berichtsserver-Eigenschaften: Berichtsserver-Systemeigenschaften'
+  href: reporting-services-properties-report-server-system-properties.md
+- name: Eigenschaften von Reporting Services
+  href: reporting-services-properties.md
+- name: Festlegen der URL-Eigenschaft des Webdiensts
+  href: setting-the-url-property-of-the-web-service.md
+- name: Bereitstellen von Argumenten für Webdienstmethoden
+  href: supplying-web-service-method-arguments.md
+- name: Verwenden von sicheren Webdienstmethoden
+  href: using-secure-web-service-methods.md
+- name: Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
+  href: using-the-rsclientprint-control-in-custom-applications.md
+- name: Webdienstauthentifizierung
+  href: web-service-authentication.md

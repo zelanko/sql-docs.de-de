@@ -1,0 +1,70 @@
+- name: Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
+  href: backing-up-and-restoring-databases-and-transaction-logs.md
+- name: Konfigurieren von SQL Server in SMO
+  href: configuring-sql-server-in-smo.md
+- name: Erstellen und Aktualisieren von Statistiken
+  href: creating-and-updating-statistics.md
+- name: 'Erstellen, Ändern und Löschen von Datenbankenobjekten'
+  href: creating-altering-and-removing-database-objects.md
+- name: 'Erstellen, Ändern und Löschen von Datenbanken'
+  href: creating-altering-and-removing-databases.md
+- name: 'Erstellen, Ändern und Löschen von Standardwerten'
+  href: creating-altering-and-removing-defaults.md
+- name: 'Erstellen, Ändern und Löschen von Fremdschlüsseln'
+  href: creating-altering-and-removing-foreign-keys.md
+- name: 'Erstellen, Ändern und Löschen von Indizes'
+  href: creating-altering-and-removing-indexes.md
+- name: 'Erstellen, Ändern und Löschen von Regeln'
+  href: creating-altering-and-removing-rules.md
+- name: 'Erstellen, Ändern und Löschen von Schemas'
+  href: creating-altering-and-removing-schemas.md
+- name: 'Erstellen, Ändern und Löschen von gespeicherten Prozeduren'
+  href: creating-altering-and-removing-stored-procedures.md
+- name: 'Erstellen, Ändern und Löschen von Tabellen'
+  href: creating-altering-and-removing-tables.md
+- name: 'Erstellen, Ändern und Löschen von Trigger'
+  href: creating-altering-and-removing-triggers.md
+- name: 'Erstellen, Ändern und Löschen von benutzerdefinierten Funktionen'
+  href: creating-altering-and-removing-user-defined-functions.md
+- name: 'Erstellen, Ändern und Löschen von Sichten'
+  href: creating-altering-and-removing-views.md
+- name: 'Gewährung, Widerrufen und Verweigern von Berechtigungen'
+  href: granting-revoking-and-denying-permissions.md
+- name: Implementieren von Endpunkten
+  href: implementing-endpoints.md
+- name: Einbinden einer Volltextsuche
+  href: implementing-full-text-search.md
+- name: Verwalten von Service Broker
+  href: managing-service-broker.md
+- name: Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
+  href: managing-services-and-network-settings-by-using-wmi-provider.md
+- name: 'Verwalten von Benutzern, Rollen und Anmeldungen'
+  href: managing-users-roles-and-logins.md
+- name: Programming Specific Tasks
+  href: programming-specific-tasks.md
+- name: 'Planen von automatischen, administrativen Tasks im SQL Server-Agent'
+  href: scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+- name: Skripterstellung
+  href: scripting.md
+- name: Verfolgen und Wiedergeben von Ereignissen
+  href: tracing-and-replaying-events.md
+- name: Übertragen von Daten
+  href: transferring-data.md
+- name: Verwenden von Datenbank-E-Mail
+  href: using-database-mail.md
+- name: Verwenden der Verschlüsselung
+  href: using-encryption.md
+- name: Verwenden von Dateigruppen und Dateien zur Speicherung von Daten
+  href: using-filegroups-and-files-to-store-data.md
+- name: Verwenden von Verbindungsservern in SMO
+  href: using-linked-servers-in-smo.md
+- name: Verwenden von Meldungen
+  href: using-messages.md
+- name: Verwenden von Synonymen
+  href: using-synonyms.md
+- name: Verwenden von Tabellen- und Indexpartitionierung
+  href: using-table-and-index-partitioning.md
+- name: Verwenden von benutzerdefinierten Tabellen
+  href: using-user-defined-tables.md
+- name: Verwenden von XML-Schemas
+  href: using-xml-schemas.md

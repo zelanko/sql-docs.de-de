@@ -1,0 +1,46 @@
+- name: Übersicht
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Sichern von SQL Server
+  href: securing-sql-server.md
+- name: Überwachung
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: Authentifizierung – Zugriff
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: Verschlüsselung
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: Schutz Ihres geistigen SQL Server-Eigentums
+  href: protecting-your-sql-server-intellectual-property.md
+- name: Sicherungsfähige Elemente
+  href: securables.md
+- name: Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
+  href: contained-database-users-making-your-database-portable.md
+- name: Auswählen eines Authentifizierungsmodus
+  href: choose-an-authentication-mode.md
+- name: Konfigurieren der Sichtbarkeit von Metadaten
+  href: metadata-visibility-configuration.md
+- name: Oberflächenkonfiguration
+  href: surface-area-configuration.md
+- name: SQL Injection
+  href: sql-injection.md
+- name: SQL-Sicherheitsrisikobewertung
+  href: sql-vulnerability-assessment.md
+- name: SQL-Datenermittlung und -klassifizierung
+  href: sql-data-discovery-and-classification.md
+- name: TRUSTWORTHY-Datenbankeigenschaft
+  href: trustworthy-database-property.md
+- name: Berechtigungen
+  href: permissions-database-engine.md
+- name: Berechtigungshierarchie
+  href: permissions-hierarchy-database-engine.md
+- name: Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'
+  href: permissions-or-securables-page.md
+- name: Kennwortrichtlinie
+  href: password-policy.md
+- name: Sichere Kennwörter
+  href: strong-passwords.md
+- name: Sicherheit auf Zeilenebene
+  href: row-level-security.md
+- name: Dynamische Datenmaskierung
+  href: dynamic-data-masking.md
+- name: SQL Server-Zertifikate und asymmetrische Schlüssel
+  href: sql-server-certificates-and-asymmetric-keys.md

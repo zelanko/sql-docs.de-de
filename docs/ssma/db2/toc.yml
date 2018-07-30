@@ -1,0 +1,110 @@
+- name: Installieren von SSMA
+  href: installing-ssma-for-db2-db2tosql.md
+- name: Erste Schritte mit SSMA für die DB2-Konsole
+  href: getting-started-with-ssma-for-db2-console-db2tosql.md
+- name: Neuerungen in SSMA für DB2
+  href: what-s-new-in-ssma-for-db2-db2tosql.md
+- name: Neue GUI-Features in SSMA
+  href: new-gui-features-in-ssma-for-db2-db2tosql.md
+- name: Installieren von SSMA für den DB2-Client
+  href: installing-ssma-for-db2-client-db2tosql.md
+- name: Referenz zur Benutzeroberfläche
+  href: user-interface-reference-db2tosql.md
+- name: Bearbeiten der Typzuordnung
+  href: edit-type-mapping-db2tosql.md
+- name: Laden konvertierter Datenbankobjekte in SQL Server
+  href: loading-converted-database-objects-into-sql-server-db2tosql.md
+- name: Festlegen von Projektoptionen
+  href: setting-project-options-db2tosql.md
+- name: Globale Einstellungen (Ausgabefenster)
+  href: global-settings-output-window-db2tosql.md
+- name: Erstellen von Skriptdateien
+  href: creating-script-files-db2tosql.md
+- name: Problembehandlung
+  href: troubleshooting-db2tosql.md
+- name: Zuordnen von DB2- und SQL Server-Datentypen
+  href: mapping-db2-and-sql-server-data-types-db2tosql.md
+- name: Globale Einstellungen (Protokollierung)
+  href: global-settings-logging-db2tosql.md
+- name: Rechtliche Hinweise
+  href: legal-notice-db2tosql.md
+- name: Projekteinstellungen (Typzuordnung)
+  href: project-settings-type-mapping-db2tosql.md
+- name: Installieren von SSMA-Komponenten für SQL Server
+  href: installing-ssma-components-on-sql-server-db2tosql.md
+- name: Ausführen der SSMA-Konsole
+  href: executing-the-ssma-console-db2tosql.md
+- name: Tastenkombinationen
+  href: shortcut-keys-db2tosql.md
+- name: Erweiterte Objektauswahl
+  href: advanced-object-selection-db2tosql.md
+- name: Verbindung mit SQL Server herstellen
+  href: connect-to-sql-server-db2tosql.md
+- name: Herstellen einer Verbindung mit SQL Server
+  href: connecting-to-sql-server-db2etosql.md
+- name: Projekteinstellungen (GUI)
+  href: project-settings-gui-db2tosql.md
+- name: Projekteinstellungen (Synchronisierung)
+  href: project-settings-synchronization-db2tosql.md
+- name: Globale Einstellungen (Editor)
+  href: global-settings-editor-db2tosql.md
+- name: Bewertungsbericht
+  href: assessment-report-db2tosql.md
+- name: Herstellen einer Verbindung mit DB2
+  href: connect-to-db2-db2tosql.md
+- name: Speichern von Metadaten
+  href: save-metadata-db2tosql.md
+- name: Projekteinstellungen (Laden von Systemobjekten)
+  href: project-settings-loading-system-objects-db2tosql.md
+- name: Bewerten von DB2-Schemas für die Konvertierung
+  href: assessing-db2-schemas-for-conversion-db2tosql.md
+- name: Migrieren von DB2-Daten zu SQL Server
+  href: migrating-db2-data-into-sql-server-db2tosql.md
+- name: Konvertieren von DB2-Schemas
+  href: converting-db2-schemas-db2tosql.md
+- name: SQL Server Migration Assistant
+  href: sql-server-migration-assistant-for-db2-db2tosql.md
+- name: Generieren von Berichten
+  href: generating-reports-db2tosql.md
+- name: Erstellen der Serververbindungsdateien
+  href: creating-the-server-connection-files-db2tosql.md
+- name: Neues Projekt
+  href: new-project-db2tosql.md
+- name: Aktualisierung der Datenbank
+  href: refresh-from-database-db2tosql.md
+- name: Herstellen einer Verbindung mit der DB2-Datenbank
+  href: connecting-to-db2-database-db2tosql.md
+- name: Arbeiten mit Beispielskriptdateien der Konsole
+  href: working-with-the-sample-console-script-files-db2tosql.md
+- name: Einstellungen für die Datenmigration
+  href: data-migration-settings-db2tosql.md
+- name: Verwalten von Kennwörtern
+  href: managing-passwords-db2tosql.md
+- name: Projekteinstellungen (Konvertierung)
+  href: project-settings-conversion-db2tosql.md
+- name: Entfernen von SSMA-Komponenten für DB2
+  href: removing-ssma-for-db2-components-db2tosql.md
+- name: Erste Schritte mit SSMA für DB2
+  href: getting-started-with-ssma-for-db2-db2tosql.md
+- name: Projekteinstellungen (Migration)
+  href: project-settings-migration-db2tosql.md
+- name: Datenmigrationsbericht
+  href: data-migration-report-db2tosql.md
+- name: Globale Einstellungen
+  href: global-settings-dialogs-db2tosql.md
+- name: Arbeiten mit der SSMA-Konsole für Oracle
+  href: working-with-ssma-for-oracle-console-db2tosql.md
+- name: Befehlszeilenoptionen in der SSMA-Konsole
+  href: command-line-options-in-ssma-console-db2tosql.md
+- name: Migrieren von DB2-Datenbanken zu SQL Server
+  href: migrating-db2-databases-to-sql-server-db2tosql.md
+- name: Menübefehle und andere Tastenkombinationen
+  href: menu-commands-and-other-shortcut-keys-db2tosql.md
+- name: Erstellen von Variablenwertdateien
+  href: creating-variable-value-files-db2tosql.md
+- name: Arbeiten mit SSMA-Projekten
+  href: working-with-ssma-projects-db2tosql.md
+- name: Zuordnen von DB2-Schemas zu SQL Server-Schemas
+  href: mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
+- name: Anhang – 1
+  href: appendix-1-db2tosql.md

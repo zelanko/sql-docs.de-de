@@ -1,0 +1,155 @@
+- name: 'Suchen, Anzeigen und Verwalten von Berichten'
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+    - name: Suchen und Anzeigen von Berichten in Berichts-Manager
+      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+    - name: Suchen und Anzeigen von Berichten mit einem Browser
+      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+    - name: Suchen nach Berichten und anderen Elementen
+      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+    - name: Verwenden von Meine Berichte
+      href: using-my-reports-report-builder-and-ssrs.md
+    - name: Anzeigen einer Berichtsvorschau in Berichts-Generator
+      href: previewing-reports-in-report-builder.md
+- name: Exportieren von Berichten
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+    - name: Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen
+      href: interactive-functionality-different-report-rendering-extensions.md
+    - name: Exportieren als CSV-Datei
+      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+    - name: Exportieren nach Microsoft Excel
+      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+    - name: Exportieren nach Microsoft Word
+      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+    - name: Rendern in das HTML-Format
+      href: rendering-to-html-report-builder-and-ssrs.md
+    - name: Exportieren in eine Bilddatei
+      href: exporting-to-an-image-file-report-builder-and-ssrs.md
+    - name: Exportieren als PDF-Datei
+      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+    - name: Exportieren nach XML
+      href: exporting-to-xml-report-builder-and-ssrs.md
+    - name: Exportieren eines Berichts in ein anderes Dateiformat
+      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+    - name: Generieren von Datenfeeds aus Berichten
+      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+    - name: Generieren von Datenfeeds aus einem Bericht
+      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+    - name: Umgehung der Zeilenbeschränkung in Excel
+      href: work-around-the-excel-2003-row-limitation.md
+- name: Drucken von Berichten
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+    - name: Drucken von Berichten in einem Browser mit dem Drucksteuerelement
+      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+    - name: Drucken von Berichten aus anderen Anwendungen
+      href: print-reports-from-other-applications-report-builder-and-ssrs.md
+    - name: Drucken eines Berichts
+      href: print-a-report-report-builder-and-ssrs.md
+    - name: Drucken eines Berichts (Reporting Services im SharePoint-Modus)
+      href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: Speichern von Berichten
+  href: saving-reports-report-builder.md
+  items:
+    - name: Speichern von Berichten auf einem Berichtsserver
+      href: save-reports-to-a-report-server-report-builder.md
+    - name: Speichern eines Berichts in einer SharePoint-Bibliothek
+      href: save-a-report-to-a-sharepoint-library-report-builder.md
+    - name: Speichern von Berichten auf dem Computer
+      href: ../save-reports-to-your-computer-report-builder.md
+- name: F1-Hilfe zum Berichts-Generator
+  href: report-builder-f1-help.md
+  items:
+    - name: 'Hilfe für Dialogfelder, Bereiche und Assistenten (F1)'
+      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+    - name: Aktionseigenschaften (Dialogfeld)
+      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+    - name: Diagrammdialogfelder (Berichts-Generator und SSRS)
+      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 'Achseneigenschaften (Dialogfeld), Achsenoptionen'
+      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+    - name: 'Achsentiteleigenschaften (Dialogfeld), Allgemein'
+      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Eigenschaften von berechneten Reihen (Dialogfeld), Allgemein (Berichts-Generator und SSRS)'
+      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Eigenschaften von berechneten Reihen (Dialogfeld), Marker'
+      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+    - name: 'Filter (Seite), Diagramm-Dialogfelder'
+      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 'Legendeneigenschaften (Dialogfeld), Allgemein'
+      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Spaltensichtbarkeit (Dialogfeld)
+      href: ../column-visibility-dialog-box-report-builder.md
+    - name: CRI konvertieren (Dialogfeld)
+      href: convert-cri-dialog-box-report-builder.md
+    - name: Cubeauswahl (Dialogfeld)
+      href: ../cube-selection-dialog-box-report-builder.md
+    - name: 'Datenquelleneigenschaften (Dialogfeld), Anmeldeinformationen'
+      href: ../data-source-properties-dialog-box-credentials-report-builder.md
+    - name: 'Datenquelleneigenschaften (Dialogfeld), Allgemein'
+      href: ../data-source-properties-dialog-box-general-report-builder.md
+    - name: 'Dataseteigenschaften (Dialogfeld), Felder'
+      href: ../dataset-properties-dialog-box-fields-report-builder.md
+    - name: 'Dataseteigenschaften (Dialogfeld), Filter'
+      href: ../dataset-properties-dialog-box-filters-report-builder.md
+    - name: 'Dataseteigenschaften (Dialogfeld), Optionen'
+      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+    - name: 'Dataseteigenschaften (Dialogfeld), Parameter'
+      href: ../dataset-properties-dialog-box-parameters-report-builder.md
+    - name: 'Dataseteigenschaften (Dialogfeld), Abfrage'
+      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+    - name: Datenquellen-Anmeldeinformationen eingeben (Dialogfeld)
+      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+    - name: Ausdruck (Dialogfeld)
+      href: ../expression-dialog-box-report-builder.md
+    - name: Ausfüllen (Dialogfeld)
+      href: ../fill-dialog-box-report-builder-and-ssrs.md
+    - name: Gruppierungsbereich
+      href: ../report-design/grouping-pane-report-builder.md
+    - name: 'Bildeigenschaften (Dialogfeld), Allgemein'
+      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Bildeigenschaften (Dialogfeld), Größe'
+      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+    - name: 'Platzhaltereigenschaften (Dialogfeld), Allgemein'
+      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Abfrage-Designer
+      href: ../query-designers-report-builder.md
+      items:
+        - name: Benutzeroberfläche des relationalen Abfrage-Designers
+          href: ../report-data/relational-query-designer-user-interface-report-builder.md
+        - name: Benutzeroberfläche des textbasierten Abfrage-Designers
+          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+          items:
+            - name: Abfrageparameter definieren (Dialogfeld)
+              href: ../define-query-parameters-dialog-box-report-builder.md
+        - name: Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services
+          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+        - name: Benutzeroberfläche des Abfrage-Designers von Hyperion Essbase
+          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+        - name: Designer für SharePoint-Listenabfragen
+          href: ../report-data/sharepoint-list-query-designer-report-builder.md
+        - name: Benutzeroberfläche des Abfrage-Designers für SAP NetWeaver BI
+          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+    - name: 'Berichts-Generator-Optionen (Dialogfeld), Einstellungen'
+      href: set-default-options-for-report-builder.md
+    - name: Berichtsdatenbereich
+      href: ../report-data-pane-report-builder.md
+    - name: Berichtsabschnitte (Dialogfeld)
+      href: report-sections-dialog-box-report-builder.md
+    - name: Reporting Services-Anmeldung (Dialogfeld)
+      href: reporting-services-login-dialog-box-report-builder.md
+    - name: 'Berichtseigenschaften (Dialogfeld), Code'
+      href: ../report-properties-dialog-box-code-report-builder.md
+    - name: 'Berichtseigenschaften (Dialogfeld), Seite einrichten'
+      href: ../report-properties-dialog-box-page-setup-report-builder.md
+    - name: 'Berichtseigenschaften (Dialogfeld), Verweise'
+      href: ../report-properties-dialog-box-references-report-builder.md
+    - name: Zeilensichtbarkeit (Dialogfeld)
+      href: ../row-visibility-dialog-box-report-builder.md
+    - name: Farbe auswählen (Dialogfeld)
+      href: ../select-color-dialog-box-report-builder-and-ssrs.md
+    - name: 'Textfeldeigenschaften (Dialogfeld), Ausrichtung'
+      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+    - name: Ausrichtung (Dialogfeld) für Text und Platzhalter
+      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

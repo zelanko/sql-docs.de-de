@@ -1,0 +1,35 @@
+- name: Übersicht
+  href: sql-server-database-engine-overview.md
+- name: Neuerungen – SQL Server 2017
+  href: whats-new-in-sql-server-2017.md
+- name: Neuerungen – SQL Server 2016
+  href: whats-new-in-sql-server-2016.md
+- name: Versionshinweise
+  items:
+    - name: Abwärtskompatibilität
+      href: sql-server-database-engine-backward-compatibility.md
+    - name: In SQL Server 2017 als veraltet markiert
+      href: deprecated-database-engine-features-in-sql-server-2017.md
+    - name: In SQL Server 2016 als veraltet markiert
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: In SQL Server 2016 nicht mehr unterstützte Funktionen
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Grundlegende Änderungen in SQL Server 2017
+      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+    - name: Grundlegende Änderungen in SQL Server 2016
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+    - name: Neue und aktualisierte Artikel
+      href: new-updated-database-engine.md
+- name: Install
+  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+- name: Konfigurieren
+  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
+- name: Hohe Verfügbarkeit
+  href: sql-server-business-continuity-dr.md
+  items:
+    - name: Verfügbarkeitsgruppen
+      href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - name: Datenbankspiegelung
+      href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    - name: Protokollversand
+      href: ../database-engine/log-shipping/about-log-shipping-sql-server.md

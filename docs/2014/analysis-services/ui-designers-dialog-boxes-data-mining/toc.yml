@@ -1,0 +1,122 @@
+- name: Benutzeroberflächen-Designer und -Dialogfelder für die Data Mining-Analyse
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: Designer und Dialogfelder für Data Mining
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: Modell-Designer für Data Mining
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: Miningstruktur-Sicht (Modell-Designer für Data Mining)
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: Neues Miningmodell (Dialogfeld) (Miningstruktur-Ansicht)
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: Spalte auswählen (Dialogfeld) (Miningstruktur-Ansicht)
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: Schlüsselspalte für eine geschachtelte Tabelle auswählen (Dialogfeld) (Miningstruktur-Ansicht)
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: Data Mining-Dimension erstellen (Dialogfeld)
+      href: ../create-data-mining-dimension-dialog.md
+    - name: Miningmodellansicht (Data Mining-Modelldesigner)
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: 'Algorithmusparameter (Dialogfeld, Miningmodelle-Sicht)'
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: Datasetfilter/Modellfilter (Dialogfeld)
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: 'Filter (Dialogfeld, Mininggenauigkeitsdiagramm)'
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: Miningmodell-Viewer
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: Registerkarte "Attributmerkmale"
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: Registerkarte "Attributunterscheidung"
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: Registerkarte "Attributprofile"
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: Registerkarte "Diagramm" (Time Series-Viewer)
+      href: ../chart-tab-mining-model-viewers.md
+    - name: Registerkarte Clustermerkmale
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: Registerkarte "Clusterdiagramm"
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: Registerkarte Clusterunterscheidung
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: Registerkarte Clusterprofile
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: Registerkarte "Entscheidungsstruktur"
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: Registerkarte "Abhängigkeitsnetzwerk"
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: Drillthrough (Dialogfeld)
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: Knoten suchen (Dialogfeld)
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: Generic Content Tree Viewer
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: Registerkarte "Itemsets"
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: Dialogfeld "Mininglegende"
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: Registerkarte "Neuronales Netzwerk"
+      href: ../neural-network-mining-model-viewer.md
+    - name: Registerkarte "Regeln"
+      href: ../rules-tab-mining-model-viewer.md
+    - name: Registerkarte "Sequenzcluster/Clusterdiagramm"
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: Registerkarte "Clusterprofile des Sequenzclustermodells"
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: Registerkarte "Sequenzcluster/Clustermerkmale"
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: Registerkarte "Sequenzcluster/Clusterunterscheidung"
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: Registerkarte "Sequenzcluster/Clusterübergang"
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: Registerkarte "Modell" (Time Series-Viewer)
+      href: ../model-tab-mining-model-viewers.md
+- name: Miningstruktur-Diagrammdesigner (Data Mining)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: Eingabeauswahl (Registerkarte)
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: Prognosegütediagrammtyp (Registerkarte)
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: Registerkarte "Klassifikationsmatrix"
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: Übergreifende Überprüfung (Registerkarte)
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: Dialogfeld Gewinndiagrammeinstellungen (Mininggenauigkeitsdiagrammsicht)
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: 'Spaltenzuordnung angeben (Dialogfeld, Mininggenauigkeitsdiagramm)'
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Dialogfeld Miningstruktur auswählen (Mininggenauigkeitsdiagrammsicht)
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: Tabelle auswählen (Dialogfeld) (Mininggenauigkeitsdiagramm)
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: 'Zuordnung ändern (Dialogfeld, Mininggenauigkeitsdiagramm)'
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Dialogfeld Geschachtelten Join angeben (Mininggenauigkeitsdiagrammsicht)
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: Generator für Vorhersageabfragen
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: Entwurfsbereich
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: Abfragebereich
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: Ergebnisbereich
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: Miningmodell auswählen-Dialogfeld
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: Ergebnis der Data Mining-Abfrage speichern (Dialogfeld)
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: Miningstruktureigenschaften (Dialogfeld)
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: Allgemein (Dialogfeld Miningstruktur)
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: Fehlerkonfiguration (Dialogfeld Miningstruktur)
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: Miningmodelleigenschaften (Dialogfeld)
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: DMX-Abfrage-Editor
+  href: ../dmx-query-editor-analysis-services-data-mining.md

@@ -1,0 +1,37 @@
+- name: Übersicht
+  href: stored-procedures-database-engine.md
+- name: Erstellen
+  href: create-a-stored-procedure.md
+- name: Ändern
+  href: modify-a-stored-procedure.md
+- name: DELETE
+  href: delete-a-stored-procedure.md
+- name: Execute
+  href: execute-a-stored-procedure.md
+- name: Angeben von Parametern
+  href: specify-parameters.md
+- name: Berechtigungen erteilen
+  href: grant-permissions-on-a-stored-procedure.md
+- name: Parameter
+  href: parameters.md
+- name: Eigenschaften
+  href: stored-procedure-properties-general-page.md
+- name: Daten zurückgeben
+  href: return-data-from-a-stored-procedure.md
+- name: Erneut kompilieren
+  href: recompile-a-stored-procedure.md
+- name: Umbenennen
+  href: rename-a-stored-procedure.md
+- name: Definition anzeigen
+  href: view-the-definition-of-a-stored-procedure.md
+- name: Abhängigkeiten anzeigen
+  href: view-the-dependencies-of-a-stored-procedure.md
+- name: OLE-Automatisierungsobjekte in Transact-SQL
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
+      href: ole-automation-return-codes-and-error-information.md
+    - name: OLE-Automatisierungsresultsets
+      href: ole-automation-result-sets.md
+    - name: OLE-Automatisierungsbeispielskript
+      href: ole-automation-sample-script.md

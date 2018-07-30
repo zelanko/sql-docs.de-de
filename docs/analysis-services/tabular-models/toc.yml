@@ -1,0 +1,185 @@
+- name: Tabellarische Modelle
+  href: tabular-models-ssas.md
+  items:
+    - name: Kompatibilitätsgrad
+      href: compatibility-level-for-tabular-models-in-analysis-services.md
+    - name: In tabellarischen 1400-Modellen unterstützte Datenquellen
+      href: data-sources-supported-ssas-tabular-1400.md
+    - name: In tabellarischen 1200-Modellen unterstützte Datenquellen
+      href: data-sources-supported-ssas-tabular.md
+    - name: Unterstützte Datentypen
+      href: data-types-supported-ssas-tabular.md
+- name: Erstellen von tabellarischen Modellen
+  items:
+    - name: Designer für tabellarische Modelle
+      href: tabular-model-designer-ssas.md
+    - name: Arbeitsbereichsdatenbank
+      href: workspace-database-ssas-tabular.md
+    - name: Tabellenmodellprojekte
+      href: tabular-model-projects-ssas-tabular.md
+      items:
+        - name: Erstellen eines neuen Tabellenmodellprojekts
+          href: create-a-new-tabular-model-project-analysis-services.md
+        - name: Aus Analysis Services importieren
+          href: import-from-analysis-services-ssas-tabular.md
+        - name: Importieren aus PowerPivot
+          href: import-from-power-pivot-ssas-tabular.md
+    - name: Eigenschaften
+      items:
+        - name: Power View – Berichterstellungseigenschaften
+          href: power-view-reporting-properties-ssas-tabular.md
+        - name: Power View – Konfigurieren eines Standardfeldsatzes
+          href: power-view-configure-default-field-set-for-reports.md
+        - name: Power View – Konfigurieren von Tabellenverhaltenseigenschaften
+          href: power-view-configure-table-behavior-properties-for-reports.md
+        - name: Projekteigenschaften
+          href: project-properties-ssas-tabular.md
+        - name: Modelleigenschaften
+          href: model-properties-ssas-tabular.md
+        - name: Tabelleneigenschaften
+          href: table-properties-ssas-tabular.md
+        - name: Spalteneigenschaften
+          href: column-properties-ssas-tabular.md
+        - name: Konfigurieren von Standarddatenmodellierungs- und Bereitstellungseigenschaften
+          href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+    - name: Importieren von Daten
+      items:
+        - name: In tabellarischen 1400-Modellen unterstützte Datenquellen
+          href: data-sources-supported-ssas-tabular-1400.md
+        - name: In tabellarischen 1200-Modellen unterstützte Datenquellen
+          href: data-sources-supported-ssas-tabular.md
+        - name: Unterstützte Datentypen
+          href: data-types-supported-ssas-tabular.md
+        - name: Identitätswechsel
+          href: impersonation-ssas-tabular.md
+        - name: Importieren von Daten mit einer nativen Abfrage
+          href: ssas-import-query.md
+    - name: DirectQuery-Modus
+      href: directquery-mode-ssas-tabular.md
+      items:
+        - name: Aktivieren des DirectQuery-Modus in SSDT
+          href: enable-directquery-mode-in-ssdt.md
+        - name: Aktivieren des DirectQuery-Modus in SSMS
+          href: enable-directquery-mode-in-ssms.md
+        - name: Hinzufügen von Beispieldaten zu DirectQuery-Modellen
+          href: add-sample-data-to-a-directquery-model-in-design-mode.md
+        - name: Definieren von Partitionen im DirectQuery-Modellen
+          href: define-partitions-in-directquery-models-ssas-tabular.md
+        - name: Testen eines Modells im DirectQuery-Modus
+          href: test-a-model-in-directquery-mode.md
+        - name: DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2016)
+          href: dax-formula-compatibility-in-directquery-mode-ssas-2016.md
+    - name: Tabellen und Spalten
+      href: tables-and-columns-ssas-tabular.md
+      items:
+        - name: Hinzufügen von Spalten zu einer Tabelle
+          href: add-columns-to-a-table-ssas-tabular.md
+        - name: Löschen einer Spalte
+          href: delete-a-column-ssas-tabular.md
+        - name: 'Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen'
+          href: change-table-column-or-row-filter-mappings-ssas-tabular.md
+        - name: Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz
+          href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+        - name: Hinzufügen einer Tabelle
+          href: add-a-table-ssas-tabular.md
+        - name: Löschen einer Tabelle
+          href: delete-a-table-ssas-tabular.md
+        - name: Erstellen einer berechneten Tabelle
+          href: create-a-calculated-table-ssas-tabular.md
+        - name: Umbenennen einer Tabelle oder Spalte
+          href: rename-a-table-or-column-ssas-tabular.md
+        - name: Einstellung des Datentyps einer Spalte
+          href: set-the-data-type-of-a-column-ssas-tabular.md
+        - name: Ausblenden oder Fixieren von Spalten
+          href: hide-or-freeze-columns-ssas-tabular.md
+        - name: Berechnete Spalten
+          href: ssas-calculated-columns.md
+        - name: Erstellen einer berechneten Spalte
+          href: ssas-calculated-columns-create-a-calculated-column.md
+        - name: Sortieren von Daten in einer Tabelle
+          href: sort-data-in-a-table-ssas-tabular.md
+        - name: Filtern von Daten in einer Tabelle
+          href: filter-data-in-a-table-ssas-tabular.md
+    - name: Beziehungen
+      href: relationships-ssas-tabular.md
+      items:
+        - name: Erstellen einer Beziehung zwischen zwei Tabellen
+          href: create-a-relationship-between-two-tables-ssas-tabular.md
+        - name: Löschen von Beziehungen
+          href: delete-relationships-ssas-tabular.md
+        - name: Bidirektionale Kreuzfilter
+          href: bi-directional-cross-filters-tabular-models-analysis-services.md
+    - name: Berechnungen
+      href: calculations-ssas-tabular.md
+      items:
+        - name: Grundlegendes zu DAX in tabellarischen Modellen
+          href: understanding-dax-in-tabular-models-ssas-tabular.md
+    - name: Measures
+      href: measures-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Measures
+          href: create-and-manage-measures-ssas-tabular.md
+    - name: KPIs (Key Performance Indicators)
+      href: kpis-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von KPIs
+          href: create-and-manage-kpis-ssas-tabular.md
+    - name: Hierarchien
+      href: hierarchies-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Hierarchien
+          href: create-and-manage-hierarchies-ssas-tabular.md
+    - name: Partitionen
+      href: partitions-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank
+          href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+        - name: Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank
+          href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+    - name: Perspektiven
+      href: perspectives-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Perspektiven
+          href: create-and-manage-perspectives-ssas-tabular.md
+    - name: Translations
+      href: translations-in-tabular-models-analysis-services.md
+    - name: Rollen
+      href: roles-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Rollen
+          href: create-and-manage-roles-ssas-tabular.md
+        - name: Sicherheit auf Objektebene
+          href: object-level-security.md
+    - name: In Excel analysieren
+      href: analyze-in-excel-ssas-tabular.md
+      items:
+        - name: Analysieren eines tabellarischen Modells in Excel
+          href: analyze-a-tabular-model-in-excel-ssas-tabular.md
+    - name: Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen
+      href: string-storage-and-collation-in-tabular-models.md
+- name: Bereitstellen von Tabellenmodelllösungen
+  href: tabular-model-solution-deployment-ssas-tabular.md
+  items:
+    - name: Bereitstellen über SQL Server Data Tools
+      href: deploy-from-sql-server-data-tools-ssas-tabular.md
+- name: Verwalten von Datenbanken für tabellarische Modelle
+  href: tabular-model-databases-ssas-tabular.md
+  items:
+    - name: 'Verarbeiten von Datenbank, Tabelle oder Partition'
+      href: process-database-table-or-partition-analysis-services.md
+    - name: Rollen tabellarischer Modelle
+      href: tabular-model-roles-ssas-tabular.md
+      items:
+        - name: Verwalten von Rollen mit SSMS
+          href: manage-roles-by-using-ssms-ssas-tabular.md
+    - name: Tabellenmodellpartitionen
+      href: tabular-model-partitions-ssas-tabular.md
+      items:
+        - name: Erstellen und Verwalten von Tabellenmodellpartitionen
+          href: create-and-manage-tabular-model-partitions-ssas-tabular.md
+        - name: Verarbeiten von Tabellenmodellpartitionen
+          href: process-tabular-model-partitions-ssas-tabular.md
+    - name: Herstellen einer Verbindung mit einer Datenbank für tabellarische Modelle
+      href: connect-to-a-tabular-model-database-ssas.md
+    - name: Wiederherstellen von PowerPivot
+      href: restore-from-power-pivot.md

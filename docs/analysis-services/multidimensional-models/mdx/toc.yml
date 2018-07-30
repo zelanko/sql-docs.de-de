@@ -1,0 +1,101 @@
+- name: Datenzugriff mit MDX
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: Abfragen von mehrdimensionalen Daten mit MDX
+  href: querying-multidimensional-data-with-mdx.md
+- name: Schlüsselkonzepte in MDX
+  href: key-concepts-in-mdx-analysis-services.md
+  items:
+    - name: Autoexists
+      href: autoexists.md
+    - name: Berechnungskontext
+      href: calculation-context.md
+    - name: Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
+      href: calculated-members-in-subselects-and-subcubes.md
+    - name: Cuberaum
+      href: cube-space.md
+    - name: Unterauswahlen in Abfragen
+      href: subselects-in-queries.md
+    - name: Tupel
+      href: tuples.md
+    - name: Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte
+      href: visual-totals-and-non-visual-totals.md
+    - name: 'Verwenden von Elementen, Tupeln und Mengen (MDX)'
+      href: working-with-members-tuples-and-sets-mdx.md
+- name: Grundlegendes zu MDX-Abfragen
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+    - name: MDX-Abfrage – grundlegende Abfrage
+      href: mdx-query-the-basic-query.md
+    - name: MDX-Abfrage – EXISTING-Schlüsselwort
+      href: mdx-query-existing-keyword.md
+    - name: MDX-Abfrage- und Slicerachsen – Einschränken der Abfrage
+      href: mdx-query-and-slicer-axes-restricting-the-query.md
+    - name: MDX-Abfrage- und Slicerachsen – Angeben des Inhalts einer Abfrageachse
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+    - name: MDX-Abfrage- und Slicerachsen – Angeben des Inhalts einer Slicerachse
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+    - name: MDX-Abfrage- und Slicerachsen – Verwenden von Achsen in einem einfachen Beispiel
+      href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+    - name: Festlegen des Cubekontexts in einer Abfrage
+      href: establishing-cube-context-in-a-query-mdx.md
+    - name: Erstellen von Teilcubes in MDX
+      href: building-subcubes-in-mdx-mdx.md
+    - name: Benannte Mengen (MDX) – Erstellen
+      href: mdx-named-sets-building-named-sets.md
+    - name: Benannte Mengen (MDX) – Erstellen von Mengen im Bereich einer Abfrage
+      href: mdx-named-sets-creating-query-scoped-named-sets.md
+    - name: Benannte Mengen (MDX) – Erstellen von Mengen im Bereich einer Sitzung
+      href: mdx-named-sets-creating-session-scoped-named-sets.md
+    - name: Berechnete Elemente (MDX) – Erstellen berechneter Elemente
+      href: mdx-calculated-members-building-calculated-members.md
+    - name: Berechnete Elemente (MDX) – im Bereich einer Abfrage
+      href: mdx-calculated-members-query-scoped-calculated-members.md
+    - name: Berechnete Elemente (MDX) – im Bereich einer Sitzung
+      href: mdx-calculated-members-session-scoped-calculated-members.md
+    - name: Zellenberechnungen (MDX) – Erstellen
+      href: mdx-cell-calculations-build-cell-calculations.md
+    - name: Zellenberechnungen (MDX) – im Bereich einer Abfrage
+      href: mdx-cell-calculations-query-scoped-cell-calculations.md
+    - name: Zellenberechnungen (MDX) – im Bereich einer Sitzung
+      href: mdx-cell-calculations-session-scoped-calculated-cells.md
+    - name: MDX – Erstellen von Measures
+      href: mdx-building-measures.md
+    - name: MDX – Elementeigenschaften
+      href: mdx-member-properties.md
+    - name: 'MDX – Elementeigenschaften: integriert'
+      href: mdx-member-properties-intrinsic-member-properties.md
+    - name: 'MDX – Elementeigenschaften: benutzerdefiniert'
+      href: mdx-member-properties-user-defined-member-properties.md
+    - name: 'MDX – Zelleigenschaften: Verwendung'
+      href: mdx-cell-properties-using-cell-properties.md
+    - name: 'MDX – Zelleigenschaften: FORMAT_STRING-Inhalte'
+      href: mdx-cell-properties-format-string-contents.md
+    - name: 'MDX – Zelleigenschaften: FORE_COLOR- und BACK_COLOR-Inhalte'
+      href: mdx-cell-properties-fore-color-and-back-color-contents.md
+    - name: 'MDX – Zelleigenschaften: FORMATTED_VALUE'
+      href: mdx-cell-properties-formatted-value-property.md
+    - name: MDX – Datenbearbeitung
+      href: mdx-data-manipulation-manipulating-data.md
+    - name: 'MDX – Datenbearbeitung: Abrufen von Quelldaten mit DRILLTHROUGH'
+      href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+    - name: 'MDX – Datenbearbeitung: RollupChildren-Funktion'
+      href: mdx-data-manipulation-rollupchildren-function.md
+    - name: 'MDX – Datenbearbeitung: Grundlegendes zu Durchlauf- und Lösungsreihenfolgen'
+      href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+    - name: MDX – Datenbearbeitung
+      href: mdx-data-modification-modifying-data.md
+    - name: 'MDX – Datenbearbeitung: Verwenden des Cuberückschreibens'
+      href: mdx-data-modification-using-cube-writebacks.md
+    - name: Verwenden von Variablen und Parametern
+      href: using-variables-and-parameters-mdx.md
+- name: Grundlegendes zu MDX-Skripts
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+    - name: Grundlegendes MDX-Skript
+      href: the-basic-mdx-script-mdx.md
+    - name: Verwalten von Gültigkeitsbereich und Kontext
+      href: managing-scope-and-context-mdx.md
+    - name: Fehlerbehandlung
+      href: error-handling-mdx.md
+    - name: Unterstütztes MDX
+      href: supported-mdx-mdx.md

@@ -1,0 +1,40 @@
+- name: F1-Hilfe für Serververbindungen (SSMS)
+  href: f1-help-for-server-connections-sql-server-management-studio.md
+- name: Mit Microsoft Azure Storage verbinden
+  href: connect-to-microsoft-azure-storage.md
+- name: Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio
+  href: connect-to-any-sql-server-component-from-sql-server-management-studio.md
+- name: Verbindungseigenschaften (Dialogfeld)
+  href: connection-properties-dialog-box.md
+- name: Verbindung mit Server herstellen – Datenbank-Engine
+  href: connect-to-server-database-engine.md
+- name: Verbindung mit Server herstellen – Eigenschaftenseite – Datenbank-Engine
+  href: connect-to-server-connection-properties-page-database-engine.md
+- name: Verbindung mit Server herstellen – Anmeldung – Datenbank-Engine
+  href: connect-to-server-login-page-database-engine.md
+- name: Anmeldung – Herstellen einer Verbindung mit SSAS-Server
+  href: connect-to-server-login-page-analysis-services.md
+- name: Herstellen einer Verbindung mit SSAS
+  href: connect-to-server-analysis-services.md
+- name: Herstellen einer Verbindung mit SSAS-Server (Eigenschaftenseite „Verbindung“)
+  href: connect-to-server-connection-properties-page-analysis-services.md
+- name: Anmeldung – Herstellen einer Verbindung mit SSRS-Server
+  href: connect-to-server-login-page-reporting-services.md
+- name: Herstellen einer Verbindung mit SSRS-Server
+  href: connect-to-server-reporting-services.md
+- name: Herstellen einer Verbindung mit SSRS-Server (Eigenschaftenseite „Verbindung“)
+  href: connect-to-server-connection-properties-page-reporting-services.md
+- name: Nach Servern suchen (lokale Server)
+  href: browse-for-servers-local-servers.md
+- name: Verbindung mit Server herstellen (Zusätzliche Verbindungsparameter)
+  href: connect-to-server-additional-connection-parameters-page.md
+- name: Nach Servern suchen (Netzwerkserver)
+  href: browse-for-servers-network-servers.md
+- name: Kennwort abgelaufen
+  href: password-expired.md
+- name: Herstellen einer Verbindung mit SSIS-Server
+  href: connect-to-server-integration-services.md
+- name: Herstellen einer Verbindung mit SSIS-Server (Seite „Anmeldung“)
+  href: connect-to-server-login-page-integration-services.md
+- name: Herstellen einer Verbindung mit SSIS-Server (Eigenschaftenseite „Verbindung“)
+  href: connect-to-server-connection-properties-page-integration-services.md
