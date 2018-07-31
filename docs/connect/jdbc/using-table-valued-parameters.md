@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Tabellenwertparametern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978762"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279211"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37978762"
 > [!NOTE]  
 >  Sie können keine Daten in einem Table-valued Parameter zurückgeben. Tabellenwertparameter sind reine; Die OUTPUT-Schlüsselwort wird nicht unterstützt.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter  in der -Onlinedokumentation.  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter den folgenden Ressourcen.  
   
 |Ressource|und Beschreibung|  
 |--------------|-----------------|  
@@ -53,17 +53,17 @@ ms.locfileid: "37978762"
   
 -   Verwenden Sie das Bcp-Hilfsprogramm-Programm oder die ["sqlserverbulkcopy"](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx) Objekt, das viele Zeilen mit Daten in eine Tabelle zu laden. Obwohl diese Technik sehr effizient ist, unterstützt es nicht für serverseitige Verarbeitung, es sei denn, die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
   
-## <a name="creating-table-valued-parameter-types"></a>• Tabellenwertparameter-Typ  
+## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
  Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mithilfe von Transact-SQL CREATE TYPE-Anweisungen definiert sind. Sie müssen einen Tabellentyp erstellen und definieren die Struktur in SQL Server, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [benutzerdefinierte Tabellentypen](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server-Onlinedokumentation.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  Nach der Erstellung eines Tabellentyps, können Sie die Tabellenwertparameter enthalten, die basierend auf diesem Typ deklarieren. Das folgende Transact-SQL-Fragment zeigt, wie ein Tabellenwertparameter in der Definition einer gespeicherten Prozedur deklariert wird. Beachten Sie, dass das READONLY-Schlüsselwort zum Deklarieren von-Tabellenwertparameter erforderlich ist.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  Die folgende Transact-SQL UPDATE-Anweisung veranschaulicht, wie ein Tabellenwertparameter durch einen Join mit der Categories-Tabelle. Wenn Sie einen Tabellenwertparameter mit einem JOIN in einer FROM-Klausel verwenden, müssen Sie auch alias, wie hier gezeigt, in dem der Tabellenwertparameter ein Alias "EC" ist:  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  Diese Transact-SQL-Beispiel veranschaulicht das zum Auswählen von Zeilen aus einem Tabellenwertparameter-Parameter, um einen INSERT in einem einzigen satzbasierten Vorgang auszuführen.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  Die folgenden zwei Codefragmente veranschaulichen einen Tabellenwertparameter mit Sqlserverpreparedstatement- und ein SQLServerCallableStatement zum Einfügen von Daten konfigurieren. SourceTVPObject kann es sich hier um eine "sqlserverdatatable", oder ein ResultSet oder ein ISQLServerDataRecord-Objekt sein. In den Beispielen wird davon ausgegangen, dass die Verbindung über eine aktive Verbindungsobjekt ist.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Ein Tabellenwert-Parameter übergeben wird, als "sqlserverdatatable"-Objekt  
  Ab Microsoft JDBC-Treiber 6.0 für SQL Server, stellt die "sqlserverdatatable"-Klasse eine in-Memory-Tabelle mit relationalen Daten dar. In diesem Beispiel wird veranschaulicht, wie ein Tabellenwertparameter von in-Memory-Daten, die mithilfe der "sqlserverdatatable"-Objekts erstellt wird. Der Code zuerst erstellt ein "sqlserverdatatable"-Objekt, das Schema definiert und füllt die Tabelle mit Daten. Der Code, konfiguriert ein sqlserverpreparedstatement-Klasse, die diese Datentabelle als ein Tabellenwertparameter in SQL Server zu übergeben.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Übergeben einen Tabellenwertparameter als ein ResultSet-Objekt  
  Dieses Beispiel zeigt, wie Sie Zeilen von Daten aus einem ResultSet in einen Tabellenwertparameter zu streamen. Der Code ruft zunächst Daten aus einer Quelltabelle in einer erstellt ein "sqlserverdatatable"-Objekt, das Schema definiert und füllt die Tabelle mit Daten. Der Code, konfiguriert ein sqlserverpreparedstatement-Klasse, die diese Datentabelle als ein Tabellenwertparameter in SQL Server zu übergeben.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>Ein Tabellenwert-Parameter übergeben wird, wie ein ISQLServerDataRecord-Objekt  
  Ab Microsoft JDBC-Treiber 6.0 für SQL Server eine neue Schnittstelle ISQLServerDataRecord ist für das streaming von Daten (je nachdem, wie der Benutzer für die Implementierung für sie bereitstellt) mit einem Tabellenwertparameter-Parameter. Im folgende Beispiel wird veranschaulicht, wie die ISQLServerDataRecord-Schnittstelle implementieren und ihn als einen Tabellenwert-Parameter übergeben. Aus Gründen der Einfachheit übergibt die im folgenden Beispiel wird nur eine Zeile mit hartcodierten Werten, die Tabellenwertparameter. Im Idealfall würde der Benutzer diese Schnittstelle zum Streamen von Zeilen aus beliebigen Quellen, z. B. aus einer Textdatei implementieren.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  
@@ -283,7 +283,7 @@ pStmt.execute();
 |Öffentliche SQLServerMetaData GetColumnMetaData (Int-Spalte);|Ruft ab die Spaltenmetadaten des angegebenen Spaltenindexes.|  
 |öffentliches Int getColumnCount();|Ruft die Gesamtanzahl der Spalten ab.|  
 |Öffentliche getRowData() für Objekt [];|Ruft die Daten für die aktuelle Zeile als Array von Objekten ab.|  
-|Öffentlicher boolescher Next()";|Wechselt zum nächsten  in . Gibt True zurück, wenn die Verschiebung erfolgreich ist, und andernfalls eine nächste Zeile, die "false ist".|  
+|Öffentlicher boolescher Next()";|Wechselt zur nächsten Zeile. Gibt True zurück, wenn die Verschiebung erfolgreich ist, und andernfalls eine nächste Zeile, die "false ist".|  
   
  **SQLServerPreparedStatement**  
   

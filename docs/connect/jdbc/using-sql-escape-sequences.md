@@ -1,7 +1,7 @@
 ---
 title: Verwenden von SQL-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978670"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278591"
 ---
 # <a name="using-sql-escape-sequences"></a>Verwenden von SQL-Escapesequenzen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978670"
 ## <a name="like-wildcard-literals"></a>LIKE-Platzhalterliterale  
  Der JDBC-Treiber unterstützt die `{escape 'escape character'}`-Syntax zum Verwenden von LIKE-Klauselplatzhaltern als Literale. Der folgende Code gibt beispielsweise Werte für „col3“ zurück, wenn der Wert von „col2“ wirklich mit einem Unterstrich beginnt (und nicht mit dem Platzhalter).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>Funktionsbehandlung  
  Der JDBC-Treiber unterstützt Funktionsescapesequenzen in SQL-Anweisungen mit der folgenden Syntax:  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  Dabei ist `functionName` eine vom JDBC-Treiber unterstützte Funktion. Zum Beispiel:  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>Datums- und Uhrzeitliterale  
  Die Escapesyntax für Datums-, Zeit- und Timestampliterale lautet wie folgt:  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  Zum Beispiel:  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  Bei einer Prozedur handelt es sich um ein in der Datenbank gespeichertes, ausführbares Objekt. In der Regel handelt es sich dabei um eine oder mehrere vorkompilierte SQL-Anweisungen. Die Escapesequenzsyntax zum Aufrufen einer gespeicherten Prozedur lautet wie folgt:  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>Äußere Joins  
  Der JDBC-Treiber unterstützt die linke, rechte und vollständige äußere SQL92-Joinsyntax. Die Escapesequenz für äußere Joins lautet wie folgt:  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  Dabei lautet der äußere Join:  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  Zum Beispiel:  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  Die Escapesyntax für LIMIT ist wie folgt:  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   
