@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Indizes erstellen | Microsoft Docs
+title: Erstellen von SQL Server-Indizes | Microsoft-Dokumentation
 description: Erstellen von SQL Server-Indizes, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,51 +20,51 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6d8f20b4d6b18e6e7c995e3957b51b20cb59d5b3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689493"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107973"
 ---
 # <a name="creating-sql-server-indexes"></a>Erstellen von SQL Server-Indizes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **iindexdefinition:: CreateIndex** -Funktion, ermöglicht es Consumern, neue Indizes für definieren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen.  
+  Der OLE DB-Treiber für SQL Server macht die Funktion **IIndexDefinition::CreateIndex** verfügbar und ermöglicht es Consumern, neue Indizes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen zu erstellen.  
   
- Der OLE DB-Treiber für SQL Server erstellt Tabellenindizes entweder als Indizes oder Einschränkungen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gewährt dem Tabellenbesitzer, Datenbankbesitzer und Mitgliedern bestimmter Administratorrollen die Berechtigung zum Erstellen von Einschränkungen. Standardmäßig kann nur der Tabellenbesitzer einen Index für eine Tabelle erstellen. Aus diesem Grund den Erfolg oder Misserfolg des **CreateIndex** abhängig ist, nicht nur auf die Zugriffsrechte des Anwendungsbenutzers, sondern auch von der Art des erstellten Indexes.  
+ Der OLE DB-Treiber für SQL Server erstellt Tabellenindizes entweder als Indizes oder Einschränkungen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gewährt dem Tabellenbesitzer, Datenbankbesitzer und Mitgliedern bestimmter Administratorrollen die Berechtigung zum Erstellen von Einschränkungen. Standardmäßig kann nur der Tabellenbesitzer einen Index für eine Tabelle erstellen. Aus diesem Grund hängt es nicht nur von den Zugriffsrechten des Anwendungsbenutzers, sondern auch von der Art des erstellten Indexes ab, ob **CreateIndex** erfolgreich verläuft oder fehlschlägt.  
   
- Consumer geben den Tabellennamen als Unicode-Zeichenfolge in der *PwszName* Mitglied der *uName* -Vereinigung der *pTableID* Parameter. Die *eKind* Mitglied *pTableID* muss DBKIND_NAME sein.  
+ Consumer geben den Tabellennamen als Unicode-Zeichenfolge in das Element *pwszName* der Vereinigung *uName* des Parameters *pTableID* ein. Das Element *eKind* von *pTableID* muss DBKIND_NAME sein.  
   
- Die *pIndexID* Parameter kann NULL sein, und wenn dies der Fall, erstellt der OLE DB-Treiber für SQL Server einen eindeutigen Namen für den Index. Der Consumer kann den Namen des Indexes durch einen gültigen Zeiger auf eine DBID im Erfassen der *PpIndexID* Parameter.  
+ Der Parameter *pIndexID* kann NULL sein. In diesem Fall erstellt der OLE DB-Treiber für SQL Server einen eindeutigen Namen für den Index. Der Consumer kann den Namen des Indexes aufzeichnen, indem er einen gültigen Zeiger auf eine DBID im Parameter *ppIndexID* angibt.  
   
- Der Consumer kann den Indexnamen als Unicode-Zeichenfolge in angeben der *PwszName* Mitglied der *uName* der union der *pIndexID* Parameter. Die *eKind* Mitglied *pIndexID* muss DBKIND_NAME sein.  
+ Der Consumer kann den Indexnamen als Unicode-Zeichenfolge in das Element *pwszName* der Vereinigung *uName* des Parameters *pIndexID* eingeben. Das Element *eKind* von *pIndexID* muss DBKIND_NAME sein.  
   
- Der Consumer gibt die Spalte oder die Spalten an, die namentlich in den Index einbezogen werden. Für jede DBINDEXCOLUMNDESC-Struktur, die verwendet werden, **CreateIndex**, *eKind* Mitglied der *pColumnID* muss DBKIND_NAME sein. Der Name der Spalte wird angegeben, als Unicode-Zeichenfolge in der *PwszName* Mitglied der *uName* -Vereinigung der *pColumnID*.  
+ Der Consumer gibt die Spalte oder die Spalten an, die namentlich in den Index einbezogen werden. Für jede DBINDEXCOLUMNDESC-Struktur, die in **CreateIndex** verwendet wird, muss das Element *eKind* der *pColumnID* DBKIND_NAME sein. Der Name der Spalte wird als Unicode-Zeichenfolge in das Element *pwszName* der Vereinigung *uName* des Parameters *pColumnID* eingegeben.  
   
- Der OLE DB-Treiber für SQL Server und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen die aufsteigende Reihenfolge auf die Werte im Index. Der OLE DB-Treiber für SQL Server gibt E_INVALIDARG zurück, wenn der Consumer die Spalte in einer DBINDEXCOLUMNDESC-Struktur gibt.  
+ Der OLE DB-Treiber für SQL Server und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen die aufsteigende Reihenfolge auf die Werte im Index. Der OLE DB-Treiber für SQL Server gibt E_INVALIDARG zurück, wenn der Consumer in einer DBINDEXCOLUMNDESC-Spalte DBINDEX_COL_ORDER_DESC angibt.  
   
  **CreateIndex** interpretiert Indexeigenschaften wie folgt.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_CLUSTERED|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Steuert die Indexgruppierung.<br /><br /> VARIANT_TRUE: Der OLE DB-Treiber für SQL Server versucht, zum Erstellen eines gruppierten Indexes auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt maximal einen gruppierten Index pro Tabelle.<br /><br /> VARIANT_FALSE: Der OLE DB-Treiber für SQL Server versucht, zum Erstellen eines nicht gruppierten Indexes auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle.|  
-|DBPROP_INDEX_FILLFACTOR|R/w: Lesen/Schreiben<br /><br /> Standard: 0<br /><br /> Beschreibung: Gibt den Prozentsatz einer für Speicher verwendeten Indexseite an. Weitere Informationen finden Sie unter [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Der Typ der Variante ist VT_I4. Der Wert muss größer als oder gleich 1 und kleiner als oder gleich 100 sein.|  
-|DBPROP_INDEX_INITIALIZE|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_NULLCOLLATION|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_NULLS|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_PRIMARYKEY|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE Beschreibung: Erstellt den Index als PRIMARY KEY-Einschränkung mit referenzieller Integrität.<br /><br /> VARIANT_TRUE: Der Index wird erstellt, um die PRIMARY KEY-Einschränkung der Tabelle zu unterstützen. Die Spalten dürfen keine NULL-Werte zulassen.<br /><br /> VARIANT_FALSE: Der Index wird nicht als PRIMARY KEY-Einschränkung für Zeilenwerte in der Tabelle verwendet.|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_TEMPINDEX|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_TYPE|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versucht, die Eigenschaft festzulegen, **CreateIndex** verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Die *DwStatus* -Element der Eigenschaftsstruktur gibt dbpropstatus_badvalue an.|  
-|DBPROP_INDEX_UNIQUE|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Erstellt den Index als UNIQUE-Einschränkung für die einbezogene(n) Spalte oder Spalten.<br /><br /> VARIANT_TRUE: Der Index wird verwendet, um Zeilenwerte in der Tabelle eindeutig einzuschränken.<br /><br /> VARIANT_FALSE: Der Index schränkt Zeilenwerte nicht eindeutig ein.|  
+|DBPROP_INDEX_AUTOUPDATE|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_CLUSTERED|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Steuert die Indexgruppierung.<br /><br /> VARIANT_TRUE: Der OLE DB-Treiber für SQL Server versucht, zum Erstellen eines gruppierten Indexes auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt maximal einen gruppierten Index pro Tabelle.<br /><br /> VARIANT_FALSE: Der OLE DB-Treiber für SQL Server versucht, erstellen Sie einen nicht gruppierten Index auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle.|  
+|DBPROP_INDEX_FILLFACTOR|R/W: Lesen/Schreiben<br /><br /> Standard: 0<br /><br /> Beschreibung: Gibt den Prozentsatz einer für Speicher verwendeten Indexseite an. Weitere Informationen finden Sie unter [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Der Typ der Variante ist VT_I4. Der Wert muss größer als oder gleich 1 und kleiner als oder gleich 100 sein.|  
+|DBPROP_INDEX_INITIALIZE|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_NULLCOLLATION|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_NULLS|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_PRIMARYKEY|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE Beschreibung: Erstellt den Index als PRIMARY KEY-Einschränkung mit referenzieller Integrität.<br /><br /> VARIANT_TRUE: Der Index wird erstellt, um die PRIMARY KEY-Einschränkung der Tabelle zu unterstützen. Die Spalten dürfen keine NULL-Werte zulassen.<br /><br /> VARIANT_FALSE: Der Index wird nicht als PRIMARY KEY-Einschränkung für Zeilenwerte in der Tabelle verwendet.|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_TEMPINDEX|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_TYPE|R/W: Lesen/Schreiben<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
+|DBPROP_INDEX_UNIQUE|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Erstellt den Index als UNIQUE-Einschränkung für die einbezogene(n) Spalte oder Spalten.<br /><br /> VARIANT_TRUE: Der Index wird verwendet, um Zeilenwerte in der Tabelle eindeutig einzuschränken.<br /><br /> VARIANT_FALSE: Der Index schränkt Zeilenwerte nicht eindeutig ein.|  
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERINDEX definiert der OLE DB-Treiber für SQL Server die folgende Eigenschaft für Datenquelleninformationen.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Typ: VT_BOOL (R/W)<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Wenn diese Eigenschaft mit dem Wert VARIANT_TRUE mit IIndexDefinition::CreateIndex angegeben wird, wird ein primärer XML-Index erstellt, der der zu indizierenden Spalte entspricht. Wenn diese Eigenschaft VARIANT_TRUE ist, sollte cIndexColumnDescs 1 sein; andernfalls tritt ein Fehler auf.|  
   
@@ -159,7 +159,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tabellen und Indizes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

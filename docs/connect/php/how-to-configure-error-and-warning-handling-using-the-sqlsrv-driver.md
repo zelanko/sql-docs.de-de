@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie Fehler- und Warnungsbehandlung Using the SQLSRV Driver | Microsoft Docs
+title: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999244"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Dieses Thema beschreibt, wie der SQLSRV-Treiber zur Behandlung von Fehlern und Warnungen konfiguriert wird.  
   
-Standardmäßig werden mit der SQLSRV-Treiber Warnungen als Fehler behandelt; ein Aufruf einer **Sqlsrv** -Funktion, die einen Fehler oder eine Warnung generiert gibt **"false"**. Um dieses Verhalten zu deaktivieren, verwenden die [Sqlsrv_configure](../../connect/php/sqlsrv-configure.md) Funktion. Wenn Sie die folgende Codezeile am Anfang eines Skripts enthalten ist ein **Sqlsrv** Funktion, die nur Warnungen (keine Fehler) generiert keine zurück **"false"**:  
+Standardmäßig werden im SQLSRV-Treiber Warnungen als Fehler behandelt. Ein Aufruf einer **sqlsrv**-Funktion, die einen Fehler oder eine Warnung generiert, gibt **FALSE** zurück. Verwenden Sie die Funktion [sqlsrv_configure](../../connect/php/sqlsrv-configure.md), um dieses Verhalten zu deaktivieren. Wenn die folgende Codezeile am Anfang eines Skripts enthalten ist, gibt eine **sqlsrv**-Funktion, die nur Warnungen (keine Fehler) generiert, nicht **FALSE** zurück:  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-Die folgende Codezeile setzt das Standardverhalten (Warnungen als Fehler behandelt):  
+Die folgende Codezeile setzt das Standardverhalten zurück (Warnungen werden als Fehler behandelt):  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, werden nie als Fehler behandelt. Eine **sqlsrv** -Funktion, die nur Warnungen generiert, die einem dieser Zustände entsprechen, gibt unabhängig von der Konfiguration nicht **false**zurück.  
   
-Der Wert für **WarningsReturnAsErrors** kann auch in der Datei php.ini festgelegt werden. Beispielsweise diesen Eintrag in der `[sqlsrv]` -Abschnitts der "PHP.ini"-Datei schaltet das Standardverhalten.  
+Der Wert für **WarningsReturnAsErrors** kann auch in der Datei php.ini festgelegt werden. Zum Beispiel deaktiviert dieser Eintrag im Abschnitt `[sqlsrv]` der Datei „php.ini“ das Standardverhalten.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 Informationen zum Abrufen von Fehler- und Warnungsinformationen finden Sie unter [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) und unter [Vorgehensweise: Behandeln von Fehlern und Warnungen](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Codebeispiel veranschaulicht, wie das Standardverhalten der Fehlerbehandlung deaktiviert wird. Das Beispiel verwendet den Befehl PRINT von Transact-SQL, um eine Warnung zu generieren. Weitere Informationen zum Befehl PRINT, finden Sie unter [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
+Das folgende Codebeispiel veranschaulicht, wie das Standardverhalten der Fehlerbehandlung deaktiviert wird. Das Beispiel verwendet den Befehl PRINT von Transact-SQL, um eine Warnung zu generieren. Weitere Informationen zum Befehl PRINT finden Sie unter [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 Das Beispiel veranschaulicht durch das Ausführen einer Abfrage, die eine Warnung generiert, zunächst das Standardverhalten der Fehlerbehandlung. Diese Warnung wird als Fehler behandelt. Nach Ändern der Konfiguration für die Fehlerbehandlung wird die gleiche Abfrage ausgeführt. Die Warnung wird nicht als Fehler behandelt.  
   
@@ -101,7 +101,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Protokollieren von Aktivitäten](../../connect/php/logging-activity.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)

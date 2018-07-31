@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob-Konstruktor (SQLServerConnection, Byte) | Microsoft Docs
+title: SQLServerBlob-Konstruktor (SQLServerConnection, byte) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064413"
 ---
-# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob-Konstruktor (SQLServerConnection, Byte)
+# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob-Konstruktor (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialisiert eine neue Instanz der dem [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) Klasse, sofern eine [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt und ein **Byte** Array.  
+  Initialisiert eine neue Instanz der [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)-Klasse, wenn ein [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt und ein **Bytearray** angegeben werden.  
   
 > [!NOTE]  
->  Diese Methode ist seit Version 2.0 des JDBC-Treibers veraltet. Verwenden Sie stattdessen die [CreateBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) Methode der [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Klasse.  
+>  Diese Methode ist seit Version 2.0 des JDBC-Treibers veraltet. Verwenden Sie stattdessen die [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,15 +43,15 @@ public SQLServerBlob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Verbindung*  
+ *connection*  
   
  Ein SQLServerConnection-Objekt.  
   
  *data*  
   
- Ein **Byte** Array.  
+ Ein **Bytearray**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerBlob-Konstruktoren](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

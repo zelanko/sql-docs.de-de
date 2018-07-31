@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_next_result | Microsoft Docs
+title: Sqlsrv_next_result | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019608"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309439"
 Aktiviert das nächste Ergebnis (Resultset, Zeilenanzahl oder Ausgabeparameter) der angegebenen Anweisung.  
   
 > [!NOTE]  
-> Das erste (oder einzige) Ergebnis, die von einer Batchabfrage oder gespeicherten Prozedur zurückgegebene ist aktiv, ohne einen Aufruf von **Sqlsrv_next_result**.  
+> Das erste (oder einzige) Ergebnis, das von einer Batchabfrage oder gespeicherten Prozedur zurückgegeben wird, ist ohne einen Aufruf von **sqlsrv_next_result** aktiv.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ sqlsrv_next_result( resource $stmt )
 Wenn das nächste Ergebnis erfolgreich aktiviert wurde, wird der boolesche Wert **true** zurückgegeben. Wenn beim Aktivieren des nächsten Ergebnisses ein Fehler auftritt, wird **false** zurückgegeben. Wenn keine weiteren Ergebnisse verfügbar sind, wird **NULL** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt und ausgeführt, die eine Produktprüfung in die *Production.ProductReview* -Tabelle einfügt und dann alle Bewertungen für das angegebene Produkt wählt. Nach der Ausführung der gespeicherten Prozedur das erste Ergebnis (die Anzahl der von der INSERT-Abfrage in der gespeicherten Prozedur betroffenen Zeilen) genutzt, ohne **Sqlsrv_next_result**. Das nächste Ergebnis (die von der SELECT-Abfrage in der gespeicherten Prozedur zurückgegebenen Zeilen) wird zur Verfügung gestellt, durch den Aufruf **Sqlsrv_next_result** und mit [Sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
+Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt und ausgeführt, die eine Produktprüfung in die *Production.ProductReview* -Tabelle einfügt und dann alle Bewertungen für das angegebene Produkt wählt. Nach der Ausführung der gespeicherten Prozedur wird das erste Ergebnis (die Anzahl der Zeilen, die von der INSERT-Abfrage in der gespeicherten Prozedur betroffen sind) genutzt, ohne **sqlsrv_next_result** aufzurufen. Das nächste Ergebnis (die von der SELECT-Abfrage in der gespeicherten Prozedur zurückgegebenen Zeilen) wird durch Aufrufen von **sqlsrv_next_result** zur Verfügung gestellt und mit [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) verarbeitet.  
   
 > [!NOTE]  
 > Die Verwendung kanonischer Syntax stellt die empfohlene Vorgehensweise für das Abrufen gespeicherter Prozeduren dar. Weitere Informationen zur kanonischen Syntax finden Sie unter [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
@@ -187,9 +187,9 @@ Beim Ausführen einer gespeicherten Prozedur, die Ausgabeparameter besitzt, wird
 Im folgenden Beispiel wird eine Batchabfrage durchgeführt, die eine Produktprüfungsinformation für eine angegebene Produkt-ID abruft, dann eine Prüfung für das Produkt einfügt und anschließend erneut die Produktprüfungsinformationen für die angegebene Produkt-ID abruft. Die neu eingefügte Produktprüfung wird im endgültigen Resultset der Batchabfrage enthalten sein. Im Beispiel wird [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) verwendet, um von einem Ergebnis der Batchabfrage zum nächsten zu wechseln.  
   
 > [!NOTE]  
-> Das erste (oder einzige) Ergebnis, die von einer Batchabfrage oder gespeicherten Prozedur zurückgegebene ist aktiv, ohne einen Aufruf von **Sqlsrv_next_result**.  
+> Das erste (oder einzige) Ergebnis, das von einer Batchabfrage oder gespeicherten Prozedur zurückgegeben wird, ist ohne einen Aufruf von **sqlsrv_next_result** aktiv.  
   
-Im Beispiel wird die *Purchasing.ProductReview* Tabelle mit den [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) Datenbank, und setzt voraus, dass diese Datenbank auf dem Server installiert ist. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Im Beispiel wird die *Purchasing.ProductReview*-Tabelle mit der [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) verwendet. Es wird vorausgesetzt, dass diese Datenbank auf dem Server installiert ist. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)

@@ -1,5 +1,5 @@
 ---
-title: UpdateShort-Methode (java.lang.String, short) | Microsoft Docs
+title: updateShort-Methode (java.lang.String, short)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc6a4258b027cb529cbf448ae2512de9cae5931a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039173"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>updateShort-Methode (java.lang.String, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **kurze** Wert Berücksichtigung des Spaltennamens.  
+  Aktualisiert die angegebene Spalte mit einem **kurzen** Wert unter Berücksichtigung des Spaltennamens.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ public void updateShort(java.lang.String columnName,
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
  *x*  
   
@@ -51,11 +51,11 @@ public void updateShort(java.lang.String columnName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese UpdateShort-Methode wird von der UpdateShort-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateShort-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateShort-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

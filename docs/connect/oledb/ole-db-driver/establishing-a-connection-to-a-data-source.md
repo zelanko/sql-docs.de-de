@@ -1,6 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft Docs
-description: Herstellen einer Verbindung mit einer Datenquelle mithilfe von OLE DB-Treiber für SQL Server
+title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft-Dokumentation
+description: Herstellen einer Verbindung mit einer Datenquelle mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666100"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107036"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Herstellen einer Verbindung zu einer Datenquelle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Für den Zugriff auf den OLE DB-Treiber für SQL Server der Consumer muss zuerst erstellen Sie eine Instanz von einem Datenquellenobjekt durch Aufrufen der **CoCreateInstance** Methode. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den OLE DB-Treiber für SQL Server ist der Klassenbezeichner CLSID_MSOLEDBSQL. Sie können auch das Symbol MSOLEDBSQL_CLSID verwenden, die in der OLE DB-Treiber für SQL Server aufgelöst wird, die in der msoledbsql.h verwendet wird, die Sie verweisen.  
+  Der Consumer muss zum Zugreifen auf den OLE DB-Treiber für SQL Server zunächst eine Instanz eines Datenquellenobjekts erstellen, indem er die **CoCreateInstance**-Methode aufruft. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den OLE DB-Treiber für SQL Server ist der Klassenbezeichner CLSID_MSOLEDBSQL. Sie können auch das Symbol MSOLEDBSQL_CLSID verwenden, die in der OLE DB-Treiber für SQL Server aufgelöst wird, die in der msoledbsql.h verwendet wird, die Sie verweisen.  
   
- Die Datenquelle macht die **IDBProperties** -Schnittstelle, die der Consumer verwendet, um grundlegende Authentifizierungsinformationen wie Servername, Datenbankname, Benutzer-ID und Kennwort bereitzustellen. Die **IDBProperties:: SetProperties** Methode wird aufgerufen, um diese Eigenschaften festzulegen.  
+ Das Datenquellenobjekt macht die **IDBProperties**-Schnittstelle verfügbar, die der Consumer verwendet, um grundlegende Authentifizierungsinformationen wie Servername, Datenbankname, Benutzer-ID und Kennwort bereitzustellen. Die **IDBProperties::SetProperties**-Methode wird aufgerufen, um diese Eigenschaften festzulegen.  
   
  Wenn mehrere Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem Computer ausgeführt werden, wird der Servername als ServerName\InstanceName angegeben.  
   
- Auch das Datenquellenobjekt macht die **IDBInitialize** Schnittstelle. Nach dem Festlegen der Eigenschaften wird die Verbindung mit der Datenquelle hergestellt, durch Aufrufen der **IDBInitialize:: Initialize** Methode. Zum Beispiel:  
+ Das Datenquellenobjekt macht auch die **IDBInitialize**-Schnittstelle verfügbar. Nachdem die Eigenschaften festgelegt wurden, wird die Verbindung zur Datenquelle durch Aufrufen der **IDBInitialize::Initialize**-Methode hergestellt. Zum Beispiel:  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,9 +48,9 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- Dieser Aufruf **CoCreateInstance** erstellt ein einzelnes Objekt der Klasse CLSID_MSOLEDBSQL (CSLID zugeordnet, die Daten und den Code, der zum Erstellen des Objekts verwendet wird) zugeordnet. IID_IDBInitialize ist ein Verweis auf den Bezeichner der Schnittstelle (**IDBInitialize**) für die Kommunikation mit dem Objekt verwendet werden.  
+ Durch diesen Aufruf von **CoCreateInstance** wird ein einzelnes Objekt der Klasse erstellt, die CLSID_MSOLEDBSQL zugeordnet ist (CSLID ist den Daten und dem Code zugeordnet, die zur Objekterstellung verwendet werden). IID_IDBInitialize ist ein Verweis auf den Bezeichner der Schnittstelle (**IDBInitialize**), die zur Kommunikation mit dem Objekt verwendet werden soll.  
   
- Das folgende Beispiel zeigt das Initialisieren und eine Verbindung mit der Datenquelle herstellen.
+ Das folgende Beispiel zeigt das Initialisieren und eine Verbindung mit der Datenquelle herzustellen.
   
 ```cpp
 #include "msoledbsql.h"
@@ -176,7 +176,7 @@ _ExitInitialize:
 }
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

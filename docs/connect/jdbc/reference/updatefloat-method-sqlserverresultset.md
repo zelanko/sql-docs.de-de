@@ -1,5 +1,5 @@
 ---
-title: UpdateFloat-Methode (SQLServerResultSet) | Microsoft Docs
+title: updateFloat-Methode (SQLServerResultSet)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dddc90d2d40d500d7d014705c6fb2f90155c1ef8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849755"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972793"
 ---
-# <a name="updatefloat-method-sqlserverresultset"></a>UpdateFloat-Methode (SQLServerResultSet)
+# <a name="updatefloat-method-sqlserverresultset"></a>updateFloat-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **"float"** Wert.  
+  Aktualisiert die angegebene Spalte mit einem **Gleitkommawert**.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[UpdateFloat (Int, Float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Aktualisiert die angegebene Spalte mit einem **"float"** Wert Berücksichtigung des Spaltenindexes.|  
-|[UpdateFloat (java.lang.String, Float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Aktualisiert die angegebene Spalte mit einem **"float"** Wert Berücksichtigung des Spaltennamens.|  
+|[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Aktualisiert die angegebene Spalte mit einem **Gleitkommawert** unter Berücksichtigung des Spaltenindexes.|  
+|[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Aktualisiert die angegebene Spalte mit einem **Gleitkommawert** unter Berücksichtigung des Spaltennamens.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

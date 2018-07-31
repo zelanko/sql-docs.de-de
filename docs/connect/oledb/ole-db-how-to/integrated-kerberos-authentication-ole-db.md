@@ -1,5 +1,5 @@
 ---
-title: Die integrierte Kerberosauthentifizierung (OLE DB) | Microsoft Docs
+title: Integrierte Kerberos-Authentifizierung (OLE DB)
 description: Integrierte Kerberos-Authentifizierung (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665630"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109132"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In diesem Beispiel wird gezeigt, wie gegenseitigen Kerberos-Authentifizierung mithilfe von OLE DB in OLE DB-Treiber für SQL Server abgerufen werden. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  Dieses Beispiel zeigt, wie gegenseitige Kerberos-Authentifizierung mithilfe von OLE DB in  -Native Client eingerichtet wird. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
- Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; -Unterstützung in Clientverbindungen](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
+ Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei "MyServer" in einen Computernamen, die eine von Instanz [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher).  
+ Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei „MyServer“ in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) befindet.  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   
- Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält. Kompilieren Sie mit ole32.lib und oleaut32.lib.  
+ Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält. Kompilieren Sie mit ole32.lib und oleaut32.lib.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

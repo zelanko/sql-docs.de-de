@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbinden über einen angegebenen Port | Microsoft Docs'
+title: 'Vorgehensweise: Verbinden über einen angegebenen Port | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6dd90c68aa47f21c35c2f566a2a8206ba421ace6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033025"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Vorgehensweise: Verbinden über einen angegebenen Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,16 +30,16 @@ In diesem Thema wird beschrieben, wie über einen angegebenen Port mit der [!INC
   
 ### <a name="to-connect-on-a-specified-port"></a>Verbinden über einen angegebenen Port  
   
-1.  Stellen Sie sicher, dass der Port, auf den der Server konfiguriert ist, Verbindungen akzeptiert. Informationen zum Konfigurieren eines Servers zum Akzeptieren von Verbindungen über einen angegebenen Port finden Sie unter [Vorgehensweise: konfigurieren ein Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+1.  Stellen Sie sicher, dass der Port, auf den der Server konfiguriert ist, Verbindungen akzeptiert. Informationen zum Konfigurieren eines Servers, um Verbindungen über einen angegebenen Port zu akzeptieren, finden Sie unter [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager) (Vorgehensweise: Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager))](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
-2.  Fügen Sie den gewünschten Port dem *$serverName* Parameter von der [Sqlsrv_connect](../../connect/php/sqlsrv-connect.md) Funktion. Trennen Sie den Servernamen und den Port durch ein Komma. Beispielsweise verwenden die folgenden Codezeilen die SQLSRV-Treiber, um zu veranschaulichen, wie die Verbindung mit einem Server namens *myServer* über Port 1521 hergestellt wird:  
+2.  Fügen Sie den gewünschten Port dem *$serverName*-Parameter der [sqlsrv_connect](../../connect/php/sqlsrv-connect.md)-Funktion hinzu. Trennen Sie den Servernamen und den Port durch ein Komma. Beispielsweise verwenden die folgenden Codezeilen die SQLSRV-Treiber, um zu veranschaulichen, wie die Verbindung mit einem Server namens *myServer* über Port 1521 hergestellt wird:  
   
     ```  
     $serverName = "myServer, 1521";  
     sqlsrv_connect( $serverName );  
     ```  
   
-    Die folgenden Codezeilen verwenden den PDO_SQLSRV-Treiber zu um zeigen, wie die Verbindung mit einem Server mit dem Namen *"EigenerServer"* über Port 1521 hergestellt:  
+    Die folgenden Codezeilen verwenden den PDO_SQLSRV-Treiber, um zu veranschaulichen, wie die Verbindung mit einem Server namens *myServer* über Port 1521 hergestellt wird:  
   
     ```  
     $serverName = "(local), 1521";  
@@ -47,12 +47,12 @@ In diesem Thema wird beschrieben, wie über einen angegebenen Port mit der [!INC
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Erste Schritte mit Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 

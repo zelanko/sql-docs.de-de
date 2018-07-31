@@ -1,6 +1,6 @@
 ---
-title: OLE DB-Treiber für SQL Server (OLE DB)-Referenz | Microsoft Docs
-description: OLE DB-Treiber für SQL Server (OLE DB)-Referenz
+title: OLE DB-Treiber für SQL Server (OLE DB) – Referenz | Microsoft-Dokumentation
+description: OLE DB-Treiber für SQL Server – Referenz (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690163"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105806"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server (OLE DB)-Schnittstellen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server-Schnittstellen (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht Schnittstellen für Consumer möchte den Zugriff auf Daten auf einem oder mehreren Computern ausgeführt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der OLE DB-Treiber für SQL Server ist mit OLE DB Version 2.0 kompatibel.  
+  Der OLE DB-Treiber für SQL Server macht Schnittstellen für Consumer verfügbar, die Datenzugriff auf einen oder mehrere Computer benötigen, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Der OLE DB-Treiber für SQL Server ist mit OLE DB Version 2.0 kompatibel.  
   
- Diese OLE DB-Treiber für SQL Server-Programmierreferenz dokumentiert nicht alle OLE DB-Schnittstellen und Methoden, die nur die Schnittstellen und Methoden, die anbieterspezifische-Verhalten auf, wenn der OLE DB-Treiber für SQL Server verwenden.  
+ In dieser Programmierungsdokumentation für den OLE DB-Treiber für SQL Server werden nicht alle OLE DB-Schnittstellen und -Methoden behandelt, sondern nur solche, die eine anbieterspezifische Funktionsweise aufweisen, wenn der OLE DB-Treiber für SQL Server verwendet wird.  
   
- Eine vollständige Beschreibung der Core-OLE DB-Schnittstellen und Methoden, finden Sie unter der [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Schnittstellen &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Schnittstellen &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

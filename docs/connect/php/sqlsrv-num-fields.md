@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_num_fields | Microsoft Docs
+title: Sqlsrv_num_fields | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006866"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Ruft die Anzahl der Felder in einem aktiven Resultset ab. Diese Funktion kann für jede vorbereitete Anweisung, vor oder nach der Ausführung aufgerufen werden.  
+Ruft die Anzahl der Felder in einem aktiven Resultset ab. Beachten Sie, dass sqlsrvnumfields für jede vorbereitete Anweisung vor oder nach der Ausführung aufgerufen werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ sqlsrv_num_fields( resource $stmt)
 Ein ganzzahliger Wert, der die Anzahl der Felder im aktiven Resultset darstellt. Falls ein Fehler auftritt, wird der boolesche Wert **false** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel führt eine Abfrage zum Abrufen aller Felder für die oberen drei Zeilen in der *HumanResources.Department* Tabelle der AdventureWorks-Datenbank. Die Funktion **sqlsrv_num_fields** bestimmt die Anzahl der Felder im Resultset. Dies erlaubt die Darstellung der Daten indem in einem Iterationsverfahren durch jede ausgegebenen Zeile durchgegangen wird.  
+Das folgende Beispiel führt eine Abfrage zum Abrufen aller Felder für die ersten drei Zeilen in der *HumanResources.Department* -Tabelle der AdventureWorks-Datenbank durch. Die Funktion **sqlsrv_num_fields** bestimmt die Anzahl der Felder im Resultset. Dies erlaubt die Darstellung der Daten indem in einem Iterationsverfahren durch jede ausgegebenen Zeile durchgegangen wird.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
@@ -93,7 +93,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

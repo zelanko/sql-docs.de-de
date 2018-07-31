@@ -1,6 +1,6 @@
 ---
-title: Festlegen großer Datenmengen | Microsoft Docs
-description: Festlegen von großen Daten, die mithilfe von OLE DB-Treiber für SQL Server
+title: Festlegen großer Datenmengen | Microsoft-Dokumentation
+description: Festlegen großer Datenmengen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665930"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107196"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Mit dem OLE DB-Treiber für SQL Server können Sie BLOB-Daten durch die Übergabe eines Zeigers auf ein consumerspeicherobjekt festlegen.  
+  Mit den OLE DB-Treiber für SQL Server können Sie die BLOB-Daten durch die Übergabe eines Zeigers auf ein consumerspeicherobjekt festlegen.  
   
  Der Consumer erstellt ein Speicherobjekt, das die Daten enthält, und übergibt einen Zeiger auf dieses Speicherobjekt an den Anbieter. Anschließend liest der Anbieter Daten vom Consumerspeicherobjekt und schreibt diese in die BLOB-Spalte.  
   
- Zum Übergeben eines Zeigers auf das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet. Der Consumer ruft dann die **IRowsetChange:: SetData** oder **IRowsetChange:: InsertRow** Methode mit dem Accessor auf, das die BLOB-Spalte bindet. Es wird ein Zeiger auf eine Speicherschnittstelle des Consumerspeicherobjekts übergeben.  
+ Zum Übergeben eines Zeigers auf das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet. Der Consumer ruft dann die **IRowsetChange::SetData**- oder die **IRowsetChange::InsertRow**-Methode mit dem Accessor auf, der die BLOB-Spalte bindet. Es wird ein Zeiger auf eine Speicherschnittstelle des Consumerspeicherobjekts übergeben.  
   
  In diesem Thema wird die mit folgenden Funktionen verfügbare Funktionalität behandelt:  
   
@@ -49,17 +49,17 @@ ms.locfileid: "35665930"
 ## <a name="how-to-set-large-data"></a>So legen Sie große Datenmengen fest  
  Zum Übergeben eines Zeigers an das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet, und ruft anschließend die **IRowsetChange::SetData** -Methode oder die **IRowsetChange::InsertRow** -Methode auf. So legen Sie BLOB-Daten fest:  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die *DwFlag* -Element der DBOBJECT-Struktur auf STGM_READ und das *Iid* -Element auf IID_ISequentialStream (die Schnittstelle verfügbar gemacht werden sollen).  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das *dwFlag*-Element der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das *iid*-Element auf IID_ISequentialStream (die verfügbar zu machende Schnittstelle) fest.  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie die *wType* Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und die *pObject* -Element der DBOBJECT-Struktur verweisen Sie erstellt haben.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
 5.  Rufen Sie **GetNextRows** auf, um die nächsten Zeilen für das Rowset abzurufen. Rufen Sie **GetData** auf, um die Daten aus dem Rowset zu lesen.  
   
-6.  Erstellen Sie ein Speicherobjekt, das die Daten (und auch den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, das Festlegen der BLOB-Spalte bindet.  
+6.  Erstellen Sie ein Speicherobjekt, das die Daten (sowie den Längenindikator) enthält, und rufen Sie anschließend **IRowsetChange::SetData** (oder **IRowsetChange::InsertRow**) mit dem Accessor auf, der die BLOB-Spalte bindet, die die Daten binden soll.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie BLOB-Daten festgelegt werden. Im Beispiel wird eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt.  
@@ -725,7 +725,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Verwenden von Datentypen mit umfangreichen Werten](../../oledb/features/using-large-value-types.md)  
   

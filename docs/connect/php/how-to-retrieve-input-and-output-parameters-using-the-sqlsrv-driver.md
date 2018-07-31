@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abrufen von e/a-Parameter mit dem SQLSRV-Treiber | Microsoft Docs'
+title: 'Vorgehensweise: Abrufen der e/a-Parameter, die mithilfe des SQLSRV-Treibers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054078"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema wird veranschaulicht, wie der SQLSRV-Treiber verwendet wird, um eine gespeicherte Prozedur aufzurufen, in der ein Parameter als Eingabe-/Ausgabeparameter definiert wurde, und wie die Ergebnisse abgerufen werden. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameter, müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse genutzt werden, bevor der Wert des zurückgegebenen Parameters zugegriffen werden kann.  
+In diesem Thema wird veranschaulicht, wie der SQLSRV-Treiber verwendet wird, um eine gespeicherte Prozedur aufzurufen, in der ein Parameter als Eingabe-/Ausgabeparameter definiert wurde, und wie die Ergebnisse abgerufen werden. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameters müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse verarbeitet werden, bevor auf den Wert des zurückgegebenen Parameters zugegriffen werden kann.  
   
 > [!NOTE]  
 > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
@@ -36,7 +36,7 @@ Im folgenden Beispiel wird eine gespeicherte Prozedur aufgerufen, die genommene 
 > [!NOTE]  
 > Initialisieren von *$vacationHrs* auf 4 setzt den Rückgabetyp „PHPTYPE auf“ „Integer“ zurück. Um Datentypintegrität sicherzustellen, sollten Eingabe-/Ausgabeparameter vor dem Aufruf der gespeicherten Prozedur initialisiert oder der gewünschte Typ für PHPTYPE angegeben werden. Informationen zum Angeben des PHPTYPE finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-Da die gespeicherte Prozedur zwei Ergebnisse zurückgibt [Sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) muss aufgerufen werden, nachdem die gespeicherte Prozedur ausgeführt wurde, um den Wert des Ausgabeparameters verfügbar zu machen. Nach dem Aufruf **Sqlsrv_next_result**, *$vacationHrs* enthält den Wert des Ausgabeparameters, von der gespeicherten Prozedur zurückgegeben.  
+Da die gespeicherte Prozedur zwei Ergebnisse zurückgibt, muss [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) aufgerufen werden, nachdem die gespeicherte Prozedur ausgeführt wurde, um den Wert des Ausgabeparameters verfügbar zu machen. Nach dem Aufruf von **sqlsrv_next_result** enthält $*vacationHrs* den Wert des Ausgabeparameters, der von der gespeicherten Prozedur zurückgegeben wird.  
   
 > [!NOTE]  
 > Die Verwendung kanonischer Syntax stellt die empfohlene Vorgehensweise für das Abrufen gespeicherter Prozeduren dar. Weitere Informationen zur kanonischen Syntax finden Sie unter [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
@@ -126,10 +126,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Beim Binden ein Eingabe-/Ausgabeparameter an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
+> Wenn ein Eingabe-/Ausgabeparameter in einen Bigint-Typ, zu binden, wenn der Wert außerhalb des Bereichs von anwachsen ein [ganze Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann dies zu einer Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
 
 ## <a name="example-2"></a>Beispiel 2
-Dieses Codebeispiel zeigt, wie einen große Bigint-Wert als eine Eingabe-/Ausgabeparameter zu binden.  
+In diesem Codebeispiel wird veranschaulicht, wie einen große Bigint-Wert als Eingabe/Ausgabe-Parameter gebunden wird.  
 
 ```
 <?php
@@ -155,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

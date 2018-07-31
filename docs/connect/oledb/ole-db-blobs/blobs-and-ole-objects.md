@@ -1,5 +1,5 @@
 ---
-title: BLOBs und OLE-Objekte | Microsoft Docs
+title: BLOBs und OLE-Objekte | Microsoft-Dokumentation
 description: BLOBs und OLE-Objekte
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,47 +20,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3582b5566adc03ed8d4e7e35a71b32d18a1f4c41
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666080"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106096"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Bild** , **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und Xml-Datentypen als binary large Objects (BLOBs). Die **lesen** Methode **ISequentialStream** ermöglicht dem Consumer, die viel Datenmengen in überschaubaren Abschnitten abzurufen.  
+  Der OLE DB-Treiber für SQL Server macht die **ISequentialStream**-Schnittstelle verfügbar, um den Consumerzugriff auf die Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und XML als Binary Large Objects (BLOBs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
- Ein Beispiel für diese Funktion ist, finden Sie unter [Festlegen von großen Daten &#40;OLE DB-&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Ein Beispiel für diese Funktion ist, finden Sie unter [festlegen großer Datenmengen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
- Der OLE DB-Treiber für SQL Server können Sie eine vom Consumer implementierte **IStorage** Schnittstelle, wenn der Consumer den Schnittstellenzeiger in einem Accessor sorgt für datenänderungen gebundenen.  
+ Der OLE DB-Treiber für SQL Server kann eine vom Consumer implementierte **IStorage**-Schnittstelle verwenden, wenn der Consumer den Schnittstellenzeiger in einem für Datenänderungen gebundenen Accessor bereitstellt.  
   
- Für große Datenwerttypen, überprüft der OLE DB-Treiber für SQL Server für Annahmen über die typgroße in **IRowset** und DDL-Schnittstellen. Spalten mit **Varchar**, **Nvarchar**, und **Varbinary** Datentypen und die maximale Größe auf unlimited festgelegt dargestellt werden, als ISLONG über die Schemarowsets und mittels Schnittstellen, die Spaltendatentypen zurückgegeben.  
+ Für Datentypen mit umfangreichen Werten prüft der OLE DB-Treiber für SQL Server, ob in **IRowset** und DDL-Schnittstellen Annahmen über die Typgröße vorhanden sind. Spalten mit den Datentypen **varchar**, **nvarchar** und **varbinary**, bei denen die maximale Größe auf „Unlimited“ festgelegt ist, werden von den Schemarowsets und Schnittstellen, die Spaltendatentypen wiedergeben, als ISLONG dargestellt.  
   
- Der OLE DB-Treiber für SQL Server macht die **varchar(max)**, **varbinary(max)** und **nvarchar(max)** bzw. als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR Typen.  
+ Der OLE DB-Treiber für SQL Server macht die Datentypen **varchar(max)**, **varbinary(max)** und **nvarchar(max)** als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR verfügbar.  
   
  Um mit diesen Typen zu arbeiten, stehen der Anwendung die folgenden Optionen zur Verfügung:  
   
--   Als den betreffenden Typ binden (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Wenn der Puffer nicht groß ist erfolgt genügend abschneiden, wie dies in früheren Versionen (obwohl jetzt umfangreichere Werte verfügbar sind).  
+-   Als den betreffenden Typ binden (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Wenn der Puffer nicht groß genug ist, werden Daten abgeschnitten, wie dies auch in früheren Versionen der Fall war (obwohl jetzt umfangreichere Werte verfügbar sind).  
   
 -   Als den betreffenden Typ binden und zudem DBTYPE_BYREF angeben  
   
 -   Als DBTYPE_IUNKNOWN binden und Streaming verwenden  
   
- Wenn die Bindung an DBTYPE_IUNKNOWN erfolgt, wird die Streamingfunktion ISequentialStream verwendet. Der OLE DB-Treiber für SQL Server unterstützt Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen an. Dies ist zur Unterstützung von Szenarien, in denen eine gespeicherte Prozedur diese Datentypen als Rückgabewerte zurückgibt, das als DBTYPE_IUNKNOWN an dem Client zurückgegeben wird.  
+ Wenn die Bindung an DBTYPE_IUNKNOWN erfolgt, wird die Streamingfunktion ISequentialStream verwendet. Der OLE DB-Treiber für SQL Server unterstützt Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen für hohe Werte. Dies ist zur Unterstützung von Szenarien, in dem eine gespeicherte Prozedur diese Datentypen als Rückgabewerte gibt zurück, die an dem Client als DBTYPE_IUNKNOWN zurückgegeben werden.  
   
 ## <a name="storage-object-limitations"></a>Speicherobjekteinschränkungen  
   
--   Der OLE DB-Treiber für SQL Server kann nur ein einzelnes geöffnetes Speicherobjekt unterstützen. Versucht, mehr als ein Speicherobjekt zu öffnen (Abrufen eines Verweises auf mehr als einem **ISequentialStream** Schnittstellenzeiger) DBSTATUS_E_CANTCREATE zurückgegeben.  
+-   Der OLE DB-Treiber für SQL Server kann nur ein einzelnes geöffnetes Speicherobjekt unterstützen. Wenn versucht wird, mehrere Speicherobjekte zu öffnen (um einen Verweis auf mehrere **ISequentialStream**-Schnittstellenzeiger abzurufen), wird DBSTATUS_E_CANTCREATE zurückgegeben.  
   
--   In der OLE DB-Treiber für SQL Server ist der Standardwert der schreibgeschützten DBPROP_BLOCKINGSTORAGEOBJECTS nur-Lese Eigenschaft auf VARIANT_TRUE festgelegt. Wenn ein Speicherobjekt aktiv ist, werden daher einige Methoden (mit Ausnahme der Methoden in den Speicherobjekten) mit E_UNEXPECTED fehlschlagen.  
+-   Im OLE DB-Treiber für SQL Server lautet der Standardwert der schreibgeschützten DBPROP_BLOCKINGSTORAGEOBJECTS-Eigenschaft VARIANT_TRUE. Deshalb schlagen einige Methoden (solche, die sich nicht in den Speicherobjekten befinden) mit E_UNEXPECTED fehl, wenn ein Speicherobjekt aktiv ist.  
   
--   Die Länge der Daten eines von einem Consumer implementierten Speicherobjekts muss erfolgen bekannte an den OLE DB-Treiber für SQL Server aus der Erstellung der zeilenaccessor, der auf das Speicherobjekt verweist. Der Consumer muss einen Längenindikator in der zur Accessorerstellung verwendeten DBBINDING-Struktur binden.  
+-   Die Länge der Daten eines von einem Consumer implementierten Speicherobjekts muss dem OLE DB-Treiber für SQL Server mitgeteilt werden, wenn der auf das Speicherobjekt verweisende Zeilenaccessor erstellt wird. Der Consumer muss einen Längenindikator in der zur Accessorerstellung verwendeten DBBINDING-Struktur binden.  
   
--   Wenn eine Zeile enthält mehr als einen großen Datenwert und DBPROP_ACCESSORDER nicht DBPROPVAL_AO_RANDOM, der Consumer muss entweder ein OLE DB-Treiber für SQL Server durch Cursor unterstütztes Rowset verwenden, um Zeilendaten abzurufen oder alle großen Datenwerte vor dem Abrufen von anderen verarbeiten Zeilenwerte. Wenn DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM lautet, speichert der OLE DB-Treiber für SQL Server alle Xml-Datentypen als binary large Objects (BLOBs), damit sie in beliebiger Reihenfolge zugegriffen werden kann.  
+-   Wenn eine Zeile mehrere große Datenwerte enthält und DBPROP_ACCESSORDER nicht auf DBPROPVAL_AO_RANDOM lautet, muss der Consumer entweder ein vom Cursor des OLE DB-Treibers für SQL Server unterstütztes Rowset verwenden, um Zeilendaten abzurufen, oder alle großen Datenwerte vor dem Abrufen weiterer Zeilenwerte verarbeiten. Wenn DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM lautet, speichert der OLE DB-Treiber für SQL Server alle XML-Datentypen als Binary Large Objects (BLOBs) zwischen, damit in jeder beliebigen Reihenfolge auf sie zugegriffen werden kann.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -70,7 +70,7 @@ ms.locfileid: "35666080"
   
 -   [Streamingunterstützung für BLOB-Ausgabeparameter](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Verwenden von Datentypen mit umfangreichen Werten](../../oledb/features/using-large-value-types.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: OLE DB-Themen zur Vorgehensweise | Microsoft Docs
-description: 'OLE DB: Themen zur Vorgehensweise'
+title: Vorgehensweisen für OLE DB | Microsoft-Dokumentation
+description: Vorgehensweisen für OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d26d126d8a25c59fa30b9ac7a51e33bcdb3f0f97
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 253f239cbbde4944fe9444360378d129d9fa7b2b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665900"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109612"
 ---
 # <a name="ole-db-how-to-topics"></a>Vorgehensweisen für OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Um den OLE DB-Treiber für SQL Server zu verwenden, müssen Sie verstehen, wie eine Verbindung mit dem Server herzustellen, führen Sie den Befehl und die Ergebnisse zu verarbeiten.  
+  Um den OLE DB-Treiber für SQL Server zu verwenden, müssen Sie verstehen, wie eine Verbindung zum Server hergestellt wird, wie Befehle ausgeführt und die Ergebnisse verarbeitet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ergebnisse Vorgehensweisen zum Verarbeiten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Festlegen von großen Daten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Festlegen von großen Daten &#40;OLE-DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Auflisten von OLE DB-Datenquellen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -44,27 +44,27 @@ ms.locfileid: "35665900"
   
 -   [Abrufen von Zeilen mithilfe von Lesezeichen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Abrufen von Spalten mithilfe von IRow:: GetColumns &#40;oder IRow:: Open&#41; und ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Abrufen von Spalten mithilfe von IRow::GetColumns &#40;oder IRow::Open&#41; und ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Abrufen von Spalten mithilfe von IRow:: GetColumns &#40;OLE DB&#41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Abrufen von Spalten mithilfe von IRow::GetColumns &#40;OLE DB&#41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [Ändern ein SQL Server-Authentifizierungsbenutzerkennworts &#40;OLE DB&#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [Ändern eines SQL Server-Authentifizierungsbenutzerkennworts &#40;OLE DB&#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Verwenden von verbesserten Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [Verwenden von erweiterten Datums- und Uhrzeitfeatures &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [FILESTREAM und OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [Senden von BLOB-Daten mit SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [Senden von BLOB-Daten an SQL SERVER mit IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Verwenden Sie große CLR-UDTs &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Verwenden von großen CLR-UDTs (OLE DB)](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [Die integrierte Kerberosauthentifizierung &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [Integrierte Kerberos-Authentifizierung &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
 -   [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

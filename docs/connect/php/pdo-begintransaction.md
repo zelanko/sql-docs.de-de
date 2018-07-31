@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: BeginTransaction | Microsoft Docs'
+title: 'PDO:: BeginTransaction | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020888"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>Rückgabewert  
 „true“, bei erfolgreichem Aufruf der Methode; andernfalls „false“.  
   
-## <a name="remarks"></a>Hinweise  
-Die Transaktion, die mit PDO:: BeginTransaction gestartet wurde beendet, wenn [PDO:: Commit](../../connect/php/pdo-commit.md) oder [PDO:: Rollback](../../connect/php/pdo-rollback.md) aufgerufen wird.  
+## <a name="remarks"></a>Remarks  
+Die Transaktion, die mit PDO::beginTransaction gestartet wurde, endet, wenn [PDO::commit](../../connect/php/pdo-commit.md) oder [PDO::rollback](../../connect/php/pdo-rollback.md) aufgerufen wird.  
   
 PDO::beginTransaction ist nicht betroffen von dem (und hat keinen Einfluss auf den) Wert von PDO::ATTR_AUTOCOMMIT.  
   
 Sie dürfen PDO::beginTransaction nicht aufrufen, solange die vorherige PDO::beginTransaction noch nicht mit PDO::rollback oder PDO::commit beendet wurde.  
   
-Wenn diese Methode fehlschlägt, werden die Verbindung zum Autocommit-Modus zurückgegeben.  
+Die Verbindung kehrt zum Autocommit-Modus zurück, falls diese Methode fehlschlägt.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
@@ -63,7 +63,7 @@ Im folgenden Beispiel wird eine Datenbank namens „Test“ und eine Tabelle nam
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

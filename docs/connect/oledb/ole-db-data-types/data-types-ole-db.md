@@ -1,5 +1,5 @@
 ---
-title: Datentypen (OLE DB) | Microsoft Docs
+title: Datentypen (OLE DB) | Microsoft-Dokumentation
 description: Datentypen (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665160"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109342"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Zum Ausführen [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen und verarbeiten die Ergebnisse mithilfe der OLE DB-Treiber für SQL Server, Sie müssen wissen, wie der OLE DB-Treiber für SQL Server zugeordnet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen in OLE DB-Datentypen, wenn Parameter oder Spalten in einem Rowsets gebunden, und es u SES der **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Um [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen ausführen und die Ergebnisse mit dem OLE DB-Treiber für SQL Server verarbeiten zu können, müssen Sie wissen, wie dieser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen den OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowsets gebunden werden und wann mit der **ITableDefinition**-Schnittstelle eine Tabelle in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35665160"
   
 -   [SSVARIANT-Struktur](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

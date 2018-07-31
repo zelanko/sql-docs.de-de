@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId | Microsoft Docs
+title: PDO::lastInsertId | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308549"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983372"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Gibt den Bezeichner für eine Zeile an, die zuletzt in eine Tabelle in der Datenbank eingefügt wurde. Die Tabelle muss eine IDENTITY NOT NULL-Spalte enthalten. Wenn Sie den Namen einer Tasksequenz bereitgestellt wird, `lastInsertId` gibt die zuletzt Sequenznummer für den Namen der bereitgestellten Tasksequenz eingefügt (Weitere Informationen zu Sequenznummern finden Sie unter [hier](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Gibt den Bezeichner für eine Zeile an, die zuletzt in eine Tabelle in der Datenbank eingefügt wurde. Die Tabelle muss eine IDENTITY NOT NULL-Spalte enthalten. Wenn ein Name der Tasksequenz angegeben wird, `lastInsertId` gibt die zuletzt eingefügte Sequenznummer für den Namen der bereitgestellten Tasksequenz (Weitere Informationen zu Sequenznummern finden Sie unter [hier](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,18 +34,18 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*Namen*: eine optionale Zeichenfolge, die Sie einen Sequenznamen angeben kann. 
+$*name*: Eine optionale Zeichenfolge, mit der Sie den Sequenznamen angeben können. 
   
 ## <a name="return-value"></a>Rückgabewert  
-Wenn kein Name für die Tasksequenz bereitgestellt wird, eine Zeichenfolge des Bezeichners für die Zeile zuletzt hinzugefügt wurde.
-Wenn Sie den Namen einer Tasksequenz bereitgestellt wird, eine Zeichenfolge des Bezeichners für die Sequenz zuletzt hinzugefügt wurde.
+Wenn kein Sequenzname angegeben wird, eine Zeichenfolge des Bezeichners für die Zeile zuletzt hinzugefügt wurde.
+Wenn ein Name der Tasksequenz angegeben wird, eine Zeichenfolge des Bezeichners für die Sequenz zuletzt hinzugefügt wurde.
 Wenn der Methodenaufruf fehlschlägt, wird eine leere Zeichenfolge zurückgegeben.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
-Zwischen der Version 2.0 und 4.3 der optionale Parameter ist ein Tabellenname und der Rückgabewert ist die ID der Zeile, der angegebenen Tabelle zuletzt hinzugefügt wurde.
-5.0 ab, der optionale Parameter als einen Sequenznamen betrachtet wird, und der Rückgabewert ist die Sequenz, die für den Namen der bereitgestellten Tasksequenz zuletzt hinzugefügt wurde.
-Wenn ein Tabellenname Versionen nach 4.3, aus Gründen der `lastInsertId` eine leere Zeichenfolge zurückgegeben.
+Zwischen der Version 2.0 und 4.3 der optionale Parameter ist ein Tabellenname, und der Rückgabewert ist die ID der Zeile, in der angegebenen Tabelle zuletzt hinzugefügt wurde.
+5.0 ab, der optionale Parameter wird als Name der Tasksequenz betrachtet, und der Rückgabewert ist die Sequenz, die zuletzt hinzugefügt wurde, für den Namen der bereitgestellten Tasksequenz.
+Wenn ein Tabellenname für Versionen, nach 4.3 bereitgestellt wird, `lastInsertId` eine leere Zeichenfolge zurückgegeben.
 Sequenzen werden nur in SQL Server 2012 und höher unterstützt.
   
 ## <a name="example"></a>Beispiel  
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

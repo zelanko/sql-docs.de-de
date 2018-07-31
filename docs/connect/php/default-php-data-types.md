@@ -1,5 +1,5 @@
 ---
-title: Default PHP Data Types | Microsoft Docs
+title: Default PHP Data Types | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981359"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |FLOAT|float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
 |Geometrie|Datenstrom|Binär<sup>3</sup>|  
-|Bild<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
+|Image<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |ssNoversion|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |money|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |NCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
@@ -61,7 +61,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |smalldatetime|DATETIME|8-Bit-Zeichen<sup>1</sup>|  
 |SMALLINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |SMALLMONEY|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|Sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |Text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Nicht verfügbar|  
 |timestamp|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
@@ -75,9 +75,9 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |xml|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
   
 
-1.  Daten werden in 8-Bit-Zeichen gemäß der Codepage des im System eingestellten Windows-Gebietsschemas zurückgegeben. Alle Multi-Byte-Zeichen oder Zeichen, die nicht in dieser Codepage zugeordnet sind, werden mit einem Einzelbyte-Fragezeichen (?) Zeichen durch ersetzt.  
+1.  Daten werden in 8-Bit-Zeichen gemäß der Codepage des im System eingestellten Windows-Gebietsschemas zurückgegeben. Alle Multi-Byte-Zeichen oder Zeichen, die nicht in dieser Codepage enthalten sind, werden durch ein aus einem einzelnen Byte bestehendes Fragezeichen (?) ersetzt.  
   
-2.  Wenn [Sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) oder [Sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) wird verwendet, um Daten abzurufen, einen PHP-Standardtyp Stream besitzen, die Daten als Zeichenfolge mit der gleichen Codierung wie des Streams zurückgegeben werden. Z. B. wenn eine SQL Server-Datentypen Typ wird abgerufen, wobei **Sqlsrv_fetch_array**, der Typ ist eine binäre Zeichenfolge zurückzugeben.  
+2.  Wenn [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) oder [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) verwendet wird, um Daten abzurufen, die den PHP-Standardtyp „Stream“ besitzen, werden die Daten als Zeichenfolge ausgegeben und genauso wie der Stream codiert. Wird z.B. einer der binären SQL Server-Datentypen über **sqlsrv_fetch_array** abgerufen, so wird als Standardrückgabetyp eine binäre Zeichenfolge verwendet.  
   
 3.  Die Daten werden als uncodierter und nicht übersetzter Strom aus unbearbeiteten Bytes vom Server zurückgegeben.  
 
@@ -97,21 +97,21 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Weitere neue Datentypen und Funktionen in SQL Server 2008  
-Datentypen, die in SQL Server 2008 neu sind und die außerhalb von Spalten (z. B. Tabellenwertparameter) vorhanden sind, werden nicht unterstützt die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. In der folgenden Tabelle werden die PHP-Unterstützung für die neuen SQL Server 2008-Funktionen zusammengefasst.  
+Datentypen, die in SQL Server 2008 neu sind und die außerhalb von Spalten (z.B. Tabellenwertparameter) vorhanden sind, werden in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nicht unterstützt. Die folgende Tabelle fasst die PHP-Unterstützung für die neuen Features von SQL Server 2008 zusammen.  
   
 |Funktion|PHP-Unterstützung|  
 |-----------|---------------|  
 |Tabellenwertparameter|nein|  
 |Spalten mit geringer Dichte|Teilweise|  
-|NULL-Bit-Komprimierung|ja|  
-|Große benutzerdefinierte CLR-Typen (UDTs)|ja|  
+|NULL-Bit-Komprimierung|Benutzerkontensteuerung|  
+|Große benutzerdefinierte CLR-Typen (UDTs)|Benutzerkontensteuerung|  
 |Dienstprinzipalname|nein|  
-|MERGE|ja|  
+|MERGE|Benutzerkontensteuerung|  
 |FILESTREAM|Teilweise|  
   
 Teilweise Unterstützung besagt, dass Sie den Spaltentyp nicht programmgesteuert abfragen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

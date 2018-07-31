@@ -1,6 +1,6 @@
 ---
-title: Mehrere Rowsetergebnisse generierende Befehle | Microsoft Docs
-description: Mehrere rowsetergebnisse generierende Befehle
+title: Mehrere Rowsetergebnisse generierende Befehle
+description: Mehrere Rowsetergebnisse generierende Befehle
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665517"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109622"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Mehrere Rowsetergebnisse generierende Befehle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "35665517"
 -   Gespeicherte Prozeduren implementieren einen Batch SQL-Anweisungen.  
   
 ## <a name="batches"></a>Batches  
- Der OLE DB-Treiber für SQL Server erkennt das Semikolon als Batchtrennzeichen für SQL-Anweisungen:  
+ Der  Native Client OLE DB-Anbieter erkennt das Semikolon-Zeichen als Batchtrennzeichen für SQL-Anweisungen:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -56,7 +56,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Befehle](../../oledb/ole-db-commands/commands.md)  
   
   

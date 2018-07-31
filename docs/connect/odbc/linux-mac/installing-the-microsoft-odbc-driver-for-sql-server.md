@@ -1,7 +1,7 @@
 ---
-title: Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS | Microsoft Docs
+title: Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8b601c52db4dae0a7d103cee09ca231fc4d058d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.author: v-jizho2
+manager: kenvh
+ms.openlocfilehash: 6d26bdd9d3d91ca138e6ae4413acd122eb4676b3
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852775"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946944"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-In diesem Artikel wird erläutert, wie zum Installieren der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] für Linux und MacOS sowie die optionalen Command-Line-Tools für SQL Server (`bcp` und `sqlcmd`) und den UnixODBC-Header-Entwicklung.
+In diesem Artikel wird erläutert, wie zum Installieren der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] für Linux und MacOS als auch der optional für SQL Server-Befehlszeilentools (`bcp` und `sqlcmd`) und den UnixODBC-Header-Entwicklung.
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 für SQLServer 
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
 > [!IMPORTANT]
-> Bei der Installation der v17 `msodbcsql` Paket, das kurz verfügbar war, sollten Sie dies entfernen sie vor der Installation von die `msodbcsql17` Paket. Dadurch werden Konflikte vermieden. Die `msodbcsql17` Paket kann installiert werden, parallel zu den `msodbcsql` v13-Paket.
+> Bei der Installation der v17 `msodbcsql` Paket, das kurz verfügbar war, sollten Sie dies entfernen sie vor der Installation von der `msodbcsql17` Paket. Dadurch werden Konflikte vermieden. Die `msodbcsql17` Paket kann installiert werden, parallel mit den `msodbcsql` v13-Paket.
 
 ### <a name="debian-8-and-9"></a>Debian 8 und 9
 ```
@@ -59,7 +59,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Unternehmensserver 6 und 7
+### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server 6 und 7
 ```
 sudo su
 
@@ -84,7 +84,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server-11sp4-and-12"></a>SUSE Linux Enterprise Server 11SP4 und 12
+### <a name="suse-linux-enterprise-server-11sp4-and-12"></a>SUSE Linux Enterprise Server 11 SP4 und 12
 
 ```
 sudo su
@@ -109,7 +109,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### <a name="ubuntu-1404-1604-and-1710"></a>Ubuntu 14.04, 16.04 und 17.10
+### <a name="ubuntu-1404-1604-1710-and-1804"></a>Ubuntu 14.04, 16.04, 17.10 und 18.04
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -126,6 +126,9 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 #Ubuntu 17.10
 curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Ubuntu 18.04
+curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -137,8 +140,10 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
 ```
+> [!NOTE]
+> Driver, Version 17.2 oder höher ist für Ubuntu 18.04-Unterstützung erforderlich.
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), MacOS 10.12 (Sierra) und MacOS 10,13 (hohe Sierra)
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), MacOS 10.12 (Sierra) und MacOS 10.13 (High Sierra)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -147,7 +152,7 @@ brew update
 brew install --no-sandbox msodbcsql17 mssql-tools
 ```
 
-## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQLServer 
+## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
 
 ### <a name="debian-8"></a>Debian 8
 ```
@@ -166,7 +171,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -182,7 +187,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise 7-Server
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -290,9 +295,9 @@ brew update
 brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
-## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQLServer
+## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>Red Hat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -306,7 +311,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise 7-Server
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -362,17 +367,17 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="offline-installation"></a>Offlineinstallation
-Wenn Sie lieber/erfordern die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Odbcdriver 13 auf einem Computer ohne Internetzugang installiert werden, müssen Sie manuell Auflösen von paketabhängigkeiten. Die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 gelten die folgenden direkte Abhängigkeiten:
-- Ubuntu: libc6 (> = 2.21), Libstdc ++ 6 (> = 4.9), libkrb5 3 "," libcurl3 "," Openssl "," Debconf (> = 0,5), Unixodbc (> = 2.3.1-1)
+Wenn Sie lieber/erfordern die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Odbcdriver 13, die auf einem Computer ohne Internetverbindung installiert werden, Sie müssen paketabhängigkeiten manuell auflösen. Die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 gelten die folgenden direkten Abhängigkeiten:
+- Ubuntu: libc6 (> = 2.21), Libstdc ++ 6 (> = 4.9), libkrb5-3 "," libcurl3 "," Openssl "," Debconf (> = 0,5), Unixodbc (> = 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Jedes dieser Pakete wiederum ihre eigenen Abhängigkeiten aufweist, die nicht unbedingt auf dem System vorhanden. Eine allgemeine Lösung für dieses Problem, finden Sie in Ihren verteilungspunktcomputern Paket-Manager-Dokumentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), und [SUSE](https://en.opensuse.org/Portal:Zypper)
+Jedes dieser Pakete hat wiederum eigene Abhängigkeiten auf, die nicht unbedingt auf dem System vorhanden. Eine allgemeine Lösung für dieses Problem, finden Sie in der Dokumentation der Distribution-Paket-Manager: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), und [SUSE](https://en.opensuse.org/Portal:Zypper)
 
-Es ist auch für alle abhängigen Pakete manuell herunterladen gemeinsam auf dem Installationscomputer zu platzieren, und installieren jedes Paket manuell wiederum Schlichten mit der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13-Paket.
+Es ist auch üblich, alle abhängigen Pakete manuell herunterladen platzieren Sie sie zusammen, auf dem Installationscomputer, und installieren jedes Paket manuell wiederum er abgeschlossen wird die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13-Paket.
 
-#### <a name="redhat-linux-enterprise-server-7"></a>RedHat Linux Enterprise Server 7
-  - Laden Sie das aktuelle `msodbcsql` `.rpm` von hier aus: http://packages.microsoft.com/rhel/7/prod/
+#### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
+  - Herunterladen der neuesten `msodbcsql` `.rpm` von hier aus: http://packages.microsoft.com/rhel/7/prod/
   - Installieren von Abhängigkeiten und der Treiber
   
 ```
@@ -381,7 +386,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Laden Sie das aktuelle `msodbcsql` `.deb` von hier aus: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Herunterladen der neuesten `msodbcsql` `.deb` von hier aus: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Installieren von Abhängigkeiten und der Treiber 
 
 ```
@@ -390,7 +395,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Laden Sie das aktuelle `msodbcsql` `.rpm` von hier aus: http://packages.microsoft.com/sles/12/prod/
+- Herunterladen der neuesten `msodbcsql` `.rpm` von hier aus: http://packages.microsoft.com/sles/12/prod/
 - Installieren Sie die Abhängigkeiten und der Treiber
 
 ```
@@ -398,47 +403,47 @@ zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install 
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-Wenn Sie die Installation des Pakets abgeschlossen haben, können Sie sicherstellen, dass die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 können alle abhängigen Elemente suchen, indem Ldd ausgeführt, und überprüfen die Ausgabe für fehlende Bibliotheken:
+Nachdem Sie die Installation des Pakets abgeschlossen haben, können Sie sicherstellen, dass die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 finden alle Abhängigkeiten, indem Ldd ausgeführt, und überprüfen die Ausgabe für fehlende Bibliotheken:
 ```
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
   
-## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Microsoft ODBC Driver 11 for SQLServer on Linux
+## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Microsoft ODBC Driver 11 for SQL Server unter Linux
 
-Bevor Sie den Treiber verwenden können, installieren Sie den UnixODBC Treiber-Manager. Weitere Informationen finden Sie unter [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
+Sie müssen den unixODBC-Treiber-Manager installieren, bevor Sie den Treiber verwenden können. Weitere Informationen finden Sie unter [Installieren des Treiber-Managers](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
 **Installationsschritte**  
 
 > [!IMPORTANT]  
-> Diese Anleitung bezieht sich auf `msodbcsql-11.0.2270.0.tar.gz`, also die Installationsdatei für Red Hat Linux. Wenn Sie die Vorschau für SUSE Linux installieren, wird der Dateiname `msodbcsql-11.0.2260.0.tar.gz`.  
+> Diese Anleitung bezieht sich auf `msodbcsql-11.0.2270.0.tar.gz`, die Installationsdatei für Red Hat Linux. Wenn Sie die Vorschauversion von SUSE Linux installieren, ist der Dateiname `msodbcsql-11.0.2260.0.tar.gz`.  
   
 Den Treiber installieren:
 
 1.  Stellen Sie sicher, dass Sie die Root-Berechtigung besitzen.  
 
-2.  Wechseln Sie zum Verzeichnis, in dem der Download die Datei platziert `msodbcsql-11.0.2270.0.tar.gz`. Stellen Sie sicher, dass Sie die zu Ihrer Linux-Version passende Datei „ \*.tar.g“ besitzen. Extrahieren Sie die Dateien, führen Sie den folgenden Befehl `tar xvzf msodbcsql-11.0.2270.0.tar.gz`.  
+2.  Wechseln Sie zum Verzeichnis, in dem der Download die Datei platziert `msodbcsql-11.0.2270.0.tar.gz`. Stellen Sie sicher, dass Sie die zu Ihrer Linux-Version passende Datei „ \*.tar.g“ besitzen. Führen Sie den folgenden Befehl aus, um die Dateien zu extrahieren: `tar xvzf msodbcsql-11.0.2270.0.tar.gz`.  
   
-3.  Ändern Sie in der `msodbcsql-11.0.2270.0` Verzeichnis, und es wird eine Datei namens angezeigt **"Install.sh" angezeigt**.  
+3.  Wechseln Sie zum Verzeichnis `msodbcsql-11.0.2270.0`, das eine Datei namens **install.sh** enthalten sollte.  
   
 4.  Um eine Liste aller verfügbaren Installationsoptionen zu erhalten, führen Sie den folgenden Befehl aus: **./install.sh**.  
   
-5.  Führen Sie eine Sicherung von **odbcinst.ini**mittels Backup durch. Die Treiberinstallation aktualisiert **odbcinst.ini**. „odbcinst.ini“ beinhaltet die Liste der Treiber, die beim unixODBC-Treiber-Manager registriert sind. Um den Speicherort von "Odbcinst.ini" auf Ihrem Computer zu ermitteln, führen Sie den folgenden Befehl: ```odbc_config --odbcinstini```.  
+5.  Führen Sie eine Sicherung von **odbcinst.ini**mittels Backup durch. Die Treiberinstallation aktualisiert **odbcinst.ini**. „odbcinst.ini“ beinhaltet die Liste der Treiber, die beim unixODBC-Treiber-Manager registriert sind. Um den Speicherort von „odbcinst.ini“ auf Ihrem Computer zu finden, führen Sie den folgenden Befehl aus: ```odbc_config --odbcinstini```.  
   
-6.  Bevor Sie den Treiber installieren, führen Sie den folgenden Befehl: `./install.sh verify`. Die Ausgabe des `./install.sh verify` meldet, ob Ihr Computer über die erforderliche Software zur Unterstützung des ODBC-Treibers unter Linux verfügt.  
+6.  Führen Sie den folgenden Befehl aus, bevor Sie den Treiber installieren: `./install.sh verify`. Die Ausgabe von `./install.sh verify` gibt an, ob Ihr Computer über die erforderliche Software verfügt, um den ODBC-Treiber unter Linux zu unterstützen.  
   
-7.  Wenn Sie den ODBC-Treiber unter Linux zu installieren möchten, führen Sie den Befehl: `./install.sh install`. Wenn Sie einen Installationsbefehl angeben müssen (`bin-dir` oder `lib-dir`), geben Sie den Befehl nach der **installieren** Option.  
+7.  Wenn Sie bereit sind, den ODBC-Treiber unter Linux zu installieren, führen Sie diesen Befehl aus: `./install.sh install`. Falls Sie einen Installationsbefehl angeben müssen (`bin-dir` oder `lib-dir`), geben Sie den Befehl nach der Option **install** an.  
   
 8.  Lesen Sie die Lizenzvereinbarung und geben Sie **YES** ein, um mit der Installation fortzufahren.  
   
-Die Installation platziert den Treiber in `/opt/microsoft/msodbcsql/11.0.2270.0`. Der Treiber und seine Unterstützungsdateien muss `/opt/microsoft/msodbcsql/11.0.2270.0`.  
+Die Installation platziert den Treiber in `/opt/microsoft/msodbcsql/11.0.2270.0`. Der Treiber und seine Unterstützungsdateien müssen sein `/opt/microsoft/msodbcsql/11.0.2270.0`.  
   
-Um sicherzustellen, dass der Microsoft ODBC-Treiber unter Linux erfolgreich registriert wurde, führen Sie den folgenden Befehl: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
+Um zu überprüfen, ob der ODBC-Treiber unter Linux erfolgreich registriert wurde, führen Sie den folgenden Befehl aus: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
 [Verwende bestehende MSDN C++ ODBC-Beispiele für den ODBC-Treiber unter Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) zeigt ein Beispiel, das mittels des ODBC-Treibers unter Linux eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] herstellt.  
   
 **Deinstallieren**  
   
-Sie können den odbcdriver 11 unter Linux deinstallieren, indem Sie die folgenden Befehle ausführen:  
+Sie können den ODBC-Treiber 11 unter Linux deinstallieren, indem Sie die folgenden Befehle ausführen:  
   
 1.  `rm -f /usr/bin/sqlcmd`
   
@@ -449,11 +454,11 @@ Sie können den odbcdriver 11 unter Linux deinstallieren, indem Sie die folgende
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## <a name="troubleshooting-connection-problems"></a>Beheben von Verbindungsproblemen  
-Wenn Sie nicht zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mit dem ODBC-Treiber verwenden Sie die folgenden Informationen, um das Problem zu identifizieren.  
+Falls Sie keine Verbindung mittels ODBC-Treiber mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] herstellen können, verwenden Sie die folgenden Informationen, um das Problem zu identifizieren.  
   
 Das häufigste Verbindungsproblem besteht darin, dass der unixODBC-Treiber-Manager doppelt installiert wurde. Durchsuchen Sie „/usr“ nach „libodbc\*.so\*“. Falls Sie mehr als eine Version der Datei sehen, haben Sie (möglicherweise) mehr als einen Treiber-Manager installiert. Ihre Anwendung verwendet eventuell die falsche Version.
   
-Aktivieren Sie das Verbindungsprotokoll, indem Sie die Bearbeitung Ihrer `/etc/odbcinst.ini` Datei, die im folgenden Abschnitt mit diesen Elementen enthalten:
+Aktivieren Sie das Verbindungsprotokoll, indem Sie die Bearbeitung Ihrer `/etc/odbcinst.ini` -Datei im folgenden Abschnitt mit diesen Elementen:
 
 ```
 [ODBC]
@@ -476,13 +481,13 @@ Falls der Verbindungsversuch wieder fehlschlägt und Ihnen keine Protokolldatei 
         UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
 ```  
   
-Ist der ASCII-zeichencodierung nicht UTF-8, zum Beispiel: 
+Falls die ASCII-Zeichencodierung beispielsweise nicht UTF-8 ist: 
   
 ```  
 UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
 ```  
   
-Es ist mehr als ein Treiber-Manager installiert und die Anwendung verwendet die falsche, die eine oder der Treiber-Manager nicht korrekt erstellt wurde.  
+Es gibt mehr als einen Treiber-Manager installiert und Ihre Anwendung ist mit dem falschen, die einen oder der Treiber-Manager nicht ordnungsgemäß erstellt wurde.  
   
 Weitere Informationen zum Beheben von Verbindungsproblemen finden Sie hier:  
   
@@ -494,48 +499,48 @@ Weitere Informationen zum Beheben von Verbindungsproblemen finden Sie hier:
   
 -   [Problembehebung für die SQL Server-Authentifizierung](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Fehler-Details ()http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Fehlerdetails (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     Die in der URL spezifizierte Fehlernummer (11001) sollte geändert werden, damit sie mit dem Ihnen angezeigten Fehler übereinstimmt.  
   
 ## <a name="driver-files"></a>Treiberdateien
-Der ODBC-Treiber unter Linux und MacOS besteht aus folgenden Komponenten:
+Der ODBC-Treiber unter Linux und MacOS umfasst die folgenden Komponenten:
 
 ### <a name="linux"></a>Linux
 
-|Komponente|Description|  
+|Komponente|und Beschreibung|  
 |---------------|-----------------|  
-|Libmsodbcsql-17. X.so.X.X oder Libmsodbcsql 13. X.so.X.X|Gemeinsam genutzte Objekt (`so`) dynamische Bibliotheksdatei, die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/lib64/` für Driver 13.|  
-|`msodbcsqlr17.rll`oder`msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird in installiert. `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|Die Header-Datei, die alle erforderlichen neuen Definitionen benötigt des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/opt/microsoft/msodbcsql17/include/` für Treiber 17 und in `/opt/microsoft/msodbcsql/include/` für Driver 13. |
-|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/share/doc/msodbcsql/` für Driver 13.|
-|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/share/doc/msodbcsql/` für Driver 13.|
+|Libmsodbcsql-17. X.so.X.X oder Libmsodbcsql-13. X.so.X.X|Das gemeinsam genutzte Objekt (`so`) dynamische Bibliothek-Datei, die alle von der Funktionalität des Treibers enthält. Diese Datei wird im installiert `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und im `/opt/microsoft/msodbcsql/lib64/` für Driver 13.|  
+|`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert. `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/opt/microsoft/msodbcsql17/include/` für Driver 17 und im `/opt/microsoft/msodbcsql/include/` für Driver 13. |
+|Dateien "License.txt"|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Driver 17 und im `/usr/share/doc/msodbcsql/` für Driver 13.|
+|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Driver 17 und im `/usr/share/doc/msodbcsql/` für Driver 13.|
 
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-|Komponente|Description|  
+|Komponente|und Beschreibung|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib oder libmsodbcsql.13.dylib|Die dynamische Bibliothek (`dylib`) Datei, die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll`oder`msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` für Treiber 17 und in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` für Driver 13. | 
-|msodbcsql.h|Die Header-Datei, die alle erforderlichen neuen Definitionen benötigt des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/usr/local/include/msodbcsql17/` für Treiber 17 und in `/usr/local/include/msodbcsql/` für Driver 13. |
-|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für Driver 13. |
-|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für Driver 13. |
+|libmsodbcsql.17.dylib oder libmsodbcsql.13.dylib|Die Datei (`dylib`) der dynamischen Bibliothek, die die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/usr/local/lib/`.|  
+|`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` für Driver 17 und im `[driver .dylib directory]../share/msodbcsql/resources/en_US/` für Driver 13. | 
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/usr/local/include/msodbcsql17/` für Driver 17 und im `/usr/local/include/msodbcsql/` für Driver 13. |
+|Dateien "License.txt"|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Driver 17 und im `/usr/local/share/doc/msodbcsql/` für Driver 13. |
+|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Driver 17 und im `/usr/local/share/doc/msodbcsql/` für Driver 13. |
 
 ## <a name="resource-file-loading"></a>Laden von Ressourcendateien
 
-Der Treiber muss die Ressourcendatei zu laden, um zu funktionieren. Diese Datei heißt `msodbcsqlr17.rll` oder `msodbcsqlr13.rll` abhängig von der Version des Treibers. Der Speicherort des der `.rll` Datei ist relativ zum Speicherort des Treibers selbst (`so` oder `dylib`), wie in der obigen Tabelle aufgeführt. Ab Version 17.1 versucht der Treiber auch beim Laden der `.rll` aus der Standard-Verzeichnis, wenn das Laden von Daten aus den relativen Pfad ein Fehler auftritt. Der Standardpfad für die Ressource sind:
+Der Treiber muss die Ressourcendatei zu laden, um zu funktionieren. Diese Datei heißt `msodbcsqlr17.rll` oder `msodbcsqlr13.rll` abhängig von der Version des Treibers. Die Position des der `.rll` Datei ist relativ zum Speicherort des Treibers selbst (`so` oder `dylib`), wie in der obigen Tabelle aufgeführt. Ab Version 17.1 versucht der Treiber auch beim Laden der `.rll` vom Standardwert Verzeichnis, wenn das Laden von Daten aus den relativen Pfad ein Fehler auftritt. Die Standard-Ressource sind:
 
 Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
 
-MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
+macOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Installieren des Treiber-Managers](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
-[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)
+[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
 
 [Systemanforderungen](../../../connect/odbc/linux-mac/system-requirements.md)

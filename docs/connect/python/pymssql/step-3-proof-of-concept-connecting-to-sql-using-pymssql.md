@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL Pymssql mit | Microsoft Docs'
+title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von pymssql | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309929"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982232"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit pymssql
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-In diesem Beispiel soll ein Proof of Concept nur berücksichtigt werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar.  
+In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
   
 ## <a name="step-1--connect"></a>Schritt 1: Verbinden  
   
-Die [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) Funktion dient zum Herstellen einer SQL-Datenbank.  
+Die [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
   
 ```python
     import pymssql  
@@ -38,7 +38,7 @@ Die [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) Funktion di
   
 ## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
-Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage an SQL-Datenbank abzurufen. Diese Funktion ist im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset, das mit der Verwendung von durchlaufen werden kann [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -54,7 +54,7 @@ Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Curso
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](../../../t-sql/statements/insert-transact-sql.md) Anweisung sicher, übergeben von Parametern die schützen Ihre Anwendung von [SQL Injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
   
   
 ```python
@@ -74,9 +74,9 @@ In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](../../../t
   
 Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:  
   
-* Eine Transaktion starten  
-* Fügen Sie eine Zeile mit Daten  
-* Rollback Ihre Transaktion einfügen rückgängig machen  
+* Starten von Transaktionen  
+* Einfügen von Zeilen mit Daten  
+* Rollback der Transaktion zum Rückgängigmachen von einfügungen  
   
 ```python
     import pymssql  
@@ -90,4 +90,4 @@ Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:
     
   ## <a name="next-steps"></a>Nächste Schritte  
   
-Weitere Informationen finden Sie unter der [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+Weitere Informationen finden Sie unter den [Python Developer Center](https://azure.microsoft.com/develop/python/).

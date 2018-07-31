@@ -1,5 +1,5 @@
 ---
-title: Ausführen von gespeicherten Prozeduren (OLE DB) | Microsoft Docs
+title: Ausführen von gespeicherten Prozeduren (OLE DB) | Microsoft-Dokumentation
 description: Ausführen von gespeicherten Prozeduren (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611885"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108962"
 ---
-# <a name="stored-procedures---running"></a>-Ausgeführte, gespeicherte Prozeduren
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>Gespeicherter Prozeduren: Ausführen
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,15 +34,15 @@ ms.locfileid: "35611885"
   
 -   Bessere Leistung  
   
--   Geringere netzwerkbelastung.  
+-   Geringere Netzwerkbelastung  
   
 -   Bessere Konsistenz  
   
--   Eine erhöhte Genauigkeit.  
+-   Eine höhere Genauigkeit.  
   
--   Es wurden Funktionen hinzugefügt.  
+-   Zusätzliche Funktionalität  
   
- Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren verwenden, um Daten zurückzugeben:  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die gespeicherte Prozeduren in  zum Zurückgeben von Daten verwenden:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "35611885"
   
  Die Anwendung muss diese Ausgaben von gespeicherten Prozeduren verwenden können.  
   
- Die Rückgabe von Ausgabeparametern und Rückgabewerten erfolgt bei verschiedenen OLE DB-Anbietern zu unterschiedlichen Zeitpunkten während der Ergebnisverarbeitung. Im Falle der OLE DB-Treiber für SQL Server werden die Ausgabeparameter und Rückgabecodes nicht bis bereitgestellt, nachdem der Consumer abgerufen oder die von der gespeicherten Prozedur zurückgegebenen Resultsets abgebrochen hat. Die Rückgabecodes und die Ausgabeparameter werden im letzten TDS-Paket vom Server zurückgegeben.  
+ Die Rückgabe von Ausgabeparametern und Rückgabewerten erfolgt bei verschiedenen OLE DB-Anbietern zu unterschiedlichen Zeitpunkten während der Ergebnisverarbeitung. Der OLE DB-Treiber für SQL Server stellt die Ausgabeparameter und Rückgabecodes beispielsweise erst bereit, nachdem der Consumer die durch die gespeicherte Prozedur zurückgegebenen Resultsets abgerufen oder abgebrochen hat. Die Rückgabecodes und die Ausgabeparameter werden im letzten TDS-Paket vom Server zurückgegeben.  
   
  Anbieter verwenden die DBPROP_OUTPUTPARAMETERAVAILABILITY-Eigenschaft, um die Rückgabe von Ausgabeparametern und Rückgabewerten zu melden. Bei dieser Eigenschaft handelt es sich um den DBPROPSET_DATASOURCEINFO-Eigenschaftensatz.  
   
- Der OLE DB-Treiber für SQL Server legt die DBPROP_OUTPUTPARAMETERAVAILABILITY-Eigenschaft auf dbpropval_oa_atrowrelease fest, um anzugeben, dass Rückgabecodes und Ausgabeparameter nicht zurückgegeben werden, bis das Resultset verarbeitet oder freigegeben wird.  
+ Der OLE DB-Treiber für SQL Server legt die DBPROP_OUTPUTPARAMETERAVAILABILITY-Eigenschaft auf DBPROPVAL_OA_ATROWRELEASE fest, um anzugeben, dass Rückgabecodes und Ausgabeparameter erst zurückgegeben werden, nachdem das Resultset verarbeitet oder freigegeben wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gespeicherte Prozeduren](../../oledb/ole-db/stored-procedures.md)  
   
   

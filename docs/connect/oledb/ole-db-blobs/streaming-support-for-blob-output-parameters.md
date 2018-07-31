@@ -1,5 +1,5 @@
 ---
-title: Streamingunterstützung für BLOB-Ausgabeparameter | Microsoft Docs
+title: Streamingunterstützung für BLOB-Ausgabeparameter | Microsoft-Dokumentation
 description: Streamingunterstützung für BLOB-Ausgabeparameter
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665170"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106866"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Streamingunterstützung für BLOB-Ausgabeparameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel enthält ein Beispiel, das die Ausgabeparameter als ISequentialStreams Streamingunterstützung für BLOB-Ausgabeparameter BLOB gebunden wird.  
+  Dieser Artikel enthält ein Beispiel, das die Streamingunterstützung für BLOB-Ausgabeparameter veranschaulicht und das BLOB-Ausgabeparameter als IsequentialStreams bindet.  
   
- Sie können auf Ausgabeparametern in IMultipleResults::GetResult blockiert werden, wenn der DB_E_OBJECTOPEN-Rückgabewert empfangen wird. Der Aufrufer sollte überprüfen Sie, ob ausstehende Blob Parameter, und entweder vollständig lesen oder freigeben.  
+ Sie können auf Ausgabeparametern in IMultipleResults::GetResult blockiert werden, wenn der DB_E_OBJECTOPEN-Rückgabewert empfangen wird. Der Aufrufer sollte ausstehende BLOB-Parameter überprüfen und sie entweder vollständig lesen oder freigeben.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Systemanforderungen für JDBC Driver | Microsoft Docs
+title: Systemanforderungen für JDBC Driver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,47 +15,47 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978722"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Für den Datenzugriff aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] mithilfe der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], müssen die folgenden Komponenten auf Ihrem Computer installiert sein:
+  Für den Zugriff auf Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] mit dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] müssen die folgenden Komponenten auf dem Computer installiert sein:
 
-- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([herunterladen](download-microsoft-jdbc-driver-for-sql-server.md))
+- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([Download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment (JRE)
 
 ## <a name="java-runtime-environment-requirements"></a>JRE-Anforderungen  
- Ab Microsoft JDBC Driver 6.4 für SQL Server, werden Sun Java SE Development Kit (JDK) 9.0 und Java Runtime Environment (JRE) 9.0 unterstützt.
+ Ab dem Microsoft JDBC-Treiber 6.4 für SQL Server werden Sun Java SE Development Kit (JDK) 9.0 und Java Runtime Environment (JRE) 9.0 unterstützt.
 
  Ab Version 4.2 des Microsoft JDBC-Treibers für SQL Server werden das Sun Java SE Development Kit (JDK) 8.0 und die Java-Laufzeitumgebung (JRE) 8.0 unterstützt. Die Unterstützung für die Java Database Connectivity (JDBC) Spec-API wurde nun auf die JDBC 4.1 und 4.2-API ausgeweitet.  
   
  Ab dem Microsoft JDBC-Treiber 4.1 für SQL Server werden Sun Java SE Development Kit (JDK) 7.0 und Java Runtime Environment (JRE) 7.0 unterstützt.  
   
- Beginnend mit der [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], die JDBC-treiberunterstützung für Java Database Connectivity (JDBC) Spec-API wurde erweitert, damit die JDBC 4.0-API erweitert. Die JDBC 4.0-API wurde als Bestandteil des Sun Java SE Development Kits (JDK) 6.0 und der Java Runtime Environment (JRE) 6.0 eingeführt. JDBC 4.0 ist eine Obermenge der JDBC 3.0-API.  
+ Seit der Einführung von [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die JDBC-Treiberunterstützung für die API der JDBC- (Java Database Connectivity-)Spezifikation um die JDBC 4.0-API erweitert. Die JDBC 4.0-API wurde als Bestandteil des Sun Java SE Development Kits (JDK) 6.0 und der Java Runtime Environment (JRE) 6.0 eingeführt. JDBC 4.0 ist eine Obermenge der JDBC 3.0-API.  
   
- Bei der Bereitstellung der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] auf Windows- und UNIX-Betriebssystemen müssen Sie die Installationspakete verwenden *"sqljdbc_"\<Version > _enu.exe*, und *"sqljdbc_"\<Version > _ ENU.TAR.GZ*zugeordnet. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md) Thema.  
+ Bei der Bereitstellung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unter Windows- und UNIX-Betriebssystemen müssen Sie entsprechend eines der folgenden Installationspakete verwenden: *sqljdbc_\<version> _enu.exe* oder *sqljdbc_\<version>_enu.tar.gz*. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md) Thema.  
   
-**Microsoft JDBC Driver 6.4 für SQLServer:**  
+**Microsoft JDBC-Treiber 6.4 für SQL Server:**  
 
-  6.4 der JDBC-Treiber umfasst drei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.4.0.jre7.jar**, **Mssql-Jdbc-6.4.0.jre8.jar**, und **Mssql-Jdbc-6.4.0.jre9.jar** .
+  Der JDBC-Treiber 6.4 enthält drei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.4.0.jre7.jar**, **Mssql-Jdbc-6.4.0.jre8.jar**, und **Mssql-Jdbc-6.4.0.jre9.jar** .
 
-  Der JDBC-Treiber 6.4, die zum Arbeiten mit und unterstützt werden, indem Sie alle wichtigen Sun entsprechende Java-VMs ausgelegt ist, aber nur auf der Sun JRE 7.0, 8.0 und 9.0 getestet wird.
+  Der JDBC-Treiber 6.4 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun-Laufzeitumgebung 7.0, 8.0 und 9.0 getestet.
   
-  Im folgenden wird die Unterstützung durch die drei JAR-Dateien, die mit Microsoft JDBC-Treiber 6.4 für SQL Server enthaltenen zusammengefasst:  
+  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den drei im Microsoft JDBC-Treiber 6.4 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Description|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|und Beschreibung|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 umfassen: Azure AD-Authentifizierung für Linux Prinzipal/Kennwort-Methode für die automatische Erkennung des Bereichs DARSTELLT, in der SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeout, Sockettimeout, Kerberos und vorbereitete Anweisungshandle wiederzuverwenden. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Verwendung von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 umfassen: Azure AD-Authentifizierung für Linux Prinzipal/Kennwort-Methode für die automatische Erkennung des Bereichs DARSTELLT, in der SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeout, Sockettimeout, Kerberos und vorbereitete Anweisungshandle wiederzuverwenden. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Erfordert die Java-Laufzeitumgebung (JRE) 9.0. Verwenden JRE 8.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 umfassen: Azure AD-Authentifizierung für Linux Prinzipal/Kennwort-Methode für die automatische Erkennung des Bereichs DARSTELLT, in der SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeout, Sockettimeout, Kerberos und vorbereitete Anweisungshandle wiederzuverwenden. |    
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Erfordert die Java-Laufzeitumgebung (JRE), Version 9.0. Verwenden JRE 8.0- oder niedrigere löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |    
 
 
-  Der JDBC-Treiber 6.4 steht auch auf das zentrale Repository für Maven und können durch Hinzufügen des folgenden Codes in der POM eine Maven-Projekt hinzugefügt werden. XML 
+  Der JDBC-Treiber 6.4 steht auch auf das zentrale Maven-Repository und kann durch Hinzufügen des folgenden Codes in die POM, ein Maven-Projekt hinzugefügt werden. XML 
   
  ```xml
 <dependency>
@@ -64,20 +64,20 @@ ms.locfileid: "34563948"
     <version>6.4.0.jre9</version>
 </dependency>
 ```    
-**Microsoft JDBC Driver 6.2 für SQLServer:**  
+**Microsoft JDBC-Treiber 6.2 für SQL Server:**  
   
-  Der JDBC-Treiber 6.2 umfasst zwei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.2.1.jre7.jar**, und **Mssql-Jdbc-6.2.1.jre8.jar**. 
+  Der JDBC-Treiber 6.2 enthält zwei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.2.1.jre7.jar**, und **Mssql-Jdbc-6.2.1.jre8.jar**. 
   
- Der JDBC-Treiber 6.2 dient zum Arbeiten mit und vom alle wichtigen Sun entsprechende Java-VMs unterstützt werden, jedoch wird nur auf der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet. 
+ Der JDBC-Treiber 6.2 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet. 
   
- Im folgenden wird die Unterstützung durch die zwei JAR-Dateien, die mit Microsoft JDBC Driver 6.0 und 4.2 für SQL Server enthaltenen zusammengefasst:  
+ Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden in den Microsoft JDBC-Treibern 6.0 und 4.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Description|  
+|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|und Beschreibung|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.2.1.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.2 umfassen: Azure AD-Authentifizierung für Linux Prinzipal/Kennwort-Methode für die automatische Erkennung des Bereichs DARSTELLT, in der SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeout, Sockettimeout, Kerberos und vorbereitete Anweisungshandle wiederzuverwenden. |  
-|mssql-jdbc-6.2.1.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Verwendung von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.2 umfassen: Azure AD-Authentifizierung für Linux Prinzipal/Kennwort-Methode für die automatische Erkennung des Bereichs DARSTELLT, in der SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeout, Sockettimeout, Kerberos und vorbereitete Anweisung Handle erneut verwenden|    
+|MSSQL-Jdbc-6.2.1.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |  
+|MSSQL-Jdbc-6.2.1.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisung Handle erneut verwenden|    
 
-  Der JDBC-Treiber 6.2 steht auch auf das zentrale Repository für Maven und können durch Hinzufügen des folgenden Codes in der POM eine Maven-Projekt hinzugefügt werden. XML 
+  Der JDBC-Treiber 6.2 finden Sie auch auf das zentrale Maven-Repository und kann durch Hinzufügen des folgenden Codes in die POM, ein Maven-Projekt hinzugefügt werden. XML 
   
  ```xml
 <dependency>
@@ -87,47 +87,47 @@ ms.locfileid: "34563948"
 </dependency>
 ```    
 
- **Microsoft JDBC Driver 6.0 und 4.2 für SQLServer:**  
+ **Microsoft JDBC-Treiber 6.0 und 4.2 für SQL Server:**  
   
-  Der JDBC-Treiber 6.0 und 4.2 enthalten zwei JAR-Klassenbibliotheken in jedem Installationspaket: **"sqljdbc41.jar"**, und **"sqljdbc42.jar"**. 
+  Der JDBC-Treiber 6.0- und 4.2, umfassen zwei JAR-Klassenbibliotheken in jedem Installationspaket: **"sqljdbc41.jar"**, und **"sqljdbc42.jar"**. 
   
- Der JDBC-Treiber 6.0 und 4.2 dienen zum Arbeiten mit und von allen wichtigen Sun entsprechende Java virtuellen Computern unterstützt werden, aber nur auf der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet wird. 
+ Die JDBC-Treiber 6.0 und 4.2 sind für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Sie werden jedoch nur mit der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet. 
   
- Im folgenden wird die Unterstützung durch die zwei JAR-Dateien, die mit Microsoft JDBC Driver 6.0 und 4.2 für SQL Server enthaltenen zusammengefasst:  
+ Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden in den Microsoft JDBC-Treibern 6.0 und 4.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Description|  
+|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|und Beschreibung|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.0- und 4.2-Paketen schließen Folgendes mit ein: JDBC 4.1-Kompatibilität und Massenkopieren<br /><br /> Außerdem neue Funktionen in im 6.0-Paket einschließen: Always Encrypted Table-Valued Parameters, Azure Active Directory-Authentifizierung, transparente Verbindungen mit AlwaysOn-Verfügbarkeitsgruppen, zur Verbesserung der im Parameters Abruf von Metadaten für vorbereitete Abfragen und Internationalized Domain Name (IDN)|  
-|sqljdbc42.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Verwendung von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.0- und 4.2-Paketen schließen Folgendes mit ein: JDBC 4.1 Compliance, JDBC 4.2 Compliance und Massenkopieren<br /><br /> Außerdem neue Funktionen in im 6.0-Paket einschließen: Always Encrypted Table-Valued Parameters, Azure Active Directory-Authentifizierung, transparente Verbindungen mit AlwaysOn-Verfügbarkeitsgruppen, zur Verbesserung der im Parameters Abruf von Metadaten für vorbereitete Abfragen und Internationalized Domain Name (IDN)|  
+|sqljdbc41.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.0- und 4.2-Paketen schließen Folgendes mit ein: JDBC 4.1-Kompatibilität und Massenkopieren<br /><br /> Darüber hinaus neue Features in im 6.0-Paket enthalten: Always Encrypted, Table-Valued Parameters, Azure Active Directory-Authentifizierung, transparente Verbindungen mit Always On Availability Groups, zur Verbesserung der im Parameter-Abruf von Metadaten für vorbereitete Abfragen und Internationalized Domain Name (IDN)|  
+|sqljdbc42.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.0- und 4.2-Paketen schließen Folgendes mit ein: JDBC 4.1 Compliance, JDBC 4.2 Compliance und Massenkopieren<br /><br /> Darüber hinaus neue Features in im 6.0-Paket enthalten: Always Encrypted, Table-Valued Parameters, Azure Active Directory-Authentifizierung, transparente Verbindungen mit Always On Availability Groups, zur Verbesserung der im Parameter-Abruf von Metadaten für vorbereitete Abfragen und Internationalized Domain Name (IDN)|  
   
- **Microsoft JDBC Driver 4.1 für SQLServer:**  
+ **Microsoft JDBC-Treiber 4.1 für SQL Server:**  
   
- Der JDBC Driver 4.1 beinhaltet eine JAR-Klassenbibliothek in jedem Installationspaket: **"sqljdbc41.jar"**.  
+ Der JDBC-Treiber 4.1 enthält eine JAR-Klassenbibliothek in jedem Installationspaket: **"sqljdbc41.jar"**.  
     
-|JAR|Description|  
+|JAR|und Beschreibung|  
 |---------|-----------------|  
-|sqljdbc41.jar|**"sqljdbc41.jar"** -Klassenbibliothek bietet Unterstützung für JDBC 4.0-API. Sie umfasst alle Funktionen von der JDBC 4.0-Treiber sowie die JDBC 4.0-API-Methoden. JDBC 4.1 wird nicht unterstützt (löst eine Ausnahme "SQLFeatureNotSupportedException").<br /><br /> **"sqljdbc41.jar"** -Klassenbibliothek ist eine Java Runtime Environment (JRE) 7.0 erforderlich. Mit **"sqljdbc41.jar"** für JRE 6.0 und 5.0 löst eine Ausnahme aus.<br /><br /> 
+|sqljdbc41.jar|Die Klassenbibliothek **sqljdbc41.jar** stellt Unterstützung für die JDBC 4.0-API bereit. Sie enthält außerdem alle Funktionen des JDBC 4.0-Treibers sowie die JDBC 4.0-API-Methoden. JDBC 4.1 wird nicht unterstützt (die Ausnahme SQLFeatureNotSupportedException wird ausgelöst).<br /><br /> Die Klassenbibliothek **sqljdbc41.jar** erfordert JRE (Java Runtime Environment) Version 7.0. Mithilfe von **"sqljdbc41.jar"** für JRE 6.0 und 5.0 löst eine Ausnahme aus.<br /><br /> 
   
- Der JDBC-Treiber dient zum Arbeiten mit und vom alle wichtigen Sun entsprechende Java-VMs unterstützt werden, aber mit Sun JRE 5.0, 6.0 und 7.0 getestet ist.  
+ Der JDBC-Treiber ist zwar für die Verwendung mit und die Unterstützung aller wichtigen Sun-kompatiblen Java-VMs (Virtual Machines) ausgelegt, Tests erfolgen jedoch nur mit Sun JRE 5.0, 6.0 und 7.0.  
   
- Im folgenden zusammengefasst Unterstützung durch die mit Microsoft JDBC Driver 4.1 für SQL Server enthaltenen JAR-Datei.  
+ Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von der im Microsoft JDBC-Treiber 4.1 für SQL Server enthaltenen JAR-Datei bereitgestellt wird.  
   
 |JAR|JDBC-Version|JRE (kann ausgeführt werden)|JDK (kann kompilieren)|  
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
- Der JDBC-Treiber unterstützt Verbindungen mit Azure SQL-Datenbank und SQL Server. Die Microsoft JDBC-Treiber 4.2 und 4.1 für SQL Server werden beginnend mit SQL Server 2008 unterstützt.
+ Der JDBC-Treiber unterstützt Verbindungen mit Azure-SQL-Datenbank und SQL Server. Die Microsoft JDBC-Treiber 4.2 und 4.1 für SQL Server werden beginnend mit SQL Server 2008 unterstützt.
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
  Der JDBC-Treiber ist für die Verwendung mit einem Betriebssystem konzipiert, das die Java Virtual Machine (JVM) unterstützt. Allerdings wurden nur die Betriebssysteme Sun Solaris, SUSE Linux und Windows offiziell getestet.  
   
 ## <a name="supported-languages"></a>Unterstützte Sprachen  
- Der JDBC-Treiber unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] spaltensortierungen. Weitere Informationen zu den vom JDBC-Treiber unterstützten Sortierungen finden Sie unter [internationale Features des JDBC-Treibers](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Der JDBC-Treiber unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Spaltensortierungen. Weitere Informationen zu den vom JDBC-Treiber unterstützten Sortierungen finden Sie unter [internationale Funktionen des JDBC-Treibers](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Weitere Informationen zu Sortierungen finden Sie unter "Arbeiten mit Sortierungen" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+ Weitere Informationen zu Sortierungen finden Sie unter „Arbeiten mit Sortierungen“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

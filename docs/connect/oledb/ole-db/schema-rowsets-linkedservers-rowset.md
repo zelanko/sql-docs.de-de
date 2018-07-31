@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS-Rowset (OLE DB) | Microsoft Docs
+title: LINKEDSERVERS-Rowset (OLE DB) | Microsoft-Dokumentation
 description: LINKEDSERVERS-Rowset (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611725"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105766"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Schemarowsets - LINKEDSERVERS-Rowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>Schemarowsets: LINKEDSERVERS-Rowset
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Die **LINKEDSERVERS** Rowset listet organisationsdatenquellen beteiligt sein können, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen.  
+  Das **LINKEDSERVERS**-Rowset listet Organisationsdatenquellen auf, die an verteilten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abfragen teilnehmen können.  
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|Description|  
+|Spaltenname|Typindikator|und Beschreibung|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  
@@ -44,7 +44,7 @@ ms.locfileid: "35611725"
   
  Das Rowset wird nach SRV_NAME sortiert, und eine einzelne Einschränkung wird für SRV_NAME unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schemarowset-Unterstützung &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

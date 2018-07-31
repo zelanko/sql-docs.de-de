@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von Transaktionen | Microsoft Docs'
+title: 'Vorgehensweise: Ausführen von Transaktionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307659"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015787"
 ---
 # <a name="how-to-perform-transactions"></a>Vorgehensweise: Ausführen von Transaktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,18 +46,18 @@ Ein Beispiel hierzu finden Sie unter [PDO::beginTransaction](../../connect/php/p
   
 Im weiteren Verlauf dieses Themas wird erläutert und veranschaulicht, wie Sie Transaktionen mit dem SQLSRV-Treiber durchführen können.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst werden:  
   
 1.  Starten Sie die Transaktion mit **sqlsrv_begin_transaction**.  
   
 2.  Überprüfen Sie jede Abfrage, die Teil der Transaktion ist, auf Erfolg oder Fehlschlagen.  
   
-3.  Committen Sie die Transaktion gegebenenfalls mit **Sqlsrv_commit**. Andernfalls können Sie mit **sqlsrv_rollback**. Nach dem Aufruf **Sqlsrv_commit** oder **Sqlsrv_rollback**, wird der Treiber in den Autocommit-Modus zurückgegeben.  
+3.  Committen Sie die Transaktion gegebenenfalls mit **Sqlsrv_commit**. Andernfalls können Sie mit **sqlsrv_rollback**. Nach dem Aufrufen von **sqlsrv_commit** oder **sqlsrv_rollback** wird der Treiber in den Autocommit-Modus zurückversetzt.  
   
-    Wird standardmäßig der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] befindet sich im Autocommit-Modus. Dies bedeutet, dass alle Abfragen bei Erfolg automatisch committet werden, es sei denn, sie wurden durch **sqlsrv_begin_transaction**.  
+    [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] befindet sich standardmäßig im Autocommit-Modus. Dies bedeutet, dass alle Abfragen bei Erfolg automatisch committet werden, es sei denn, sie wurden durch **sqlsrv_begin_transaction**.  
   
-    Wenn eine explizite Transaktion nicht mit übernommen wird **Sqlsrv_commit**, wird ein Rollback beim Trennen der Verbindung oder bei Beendigung des Skripts.  
+    Wenn eine explizite Transaktion nicht mit **sqlsrv_commit** committet wird, wird beim Trennen der Verbindung oder bei der Beendigung des Skripts ein Rollback durchgeführt.  
   
     Verwenden Sie eingebettetes Transact-SQL nicht zum Durchführen von Transaktionen. Führen Sie z. B. keine Anweisung mit "BEGIN TRANSACTION" als Transact-SQL-Abfrage aus, um eine Transaktion zu beginnen. Das erwartete Transaktionsverhalten kann nicht garantiert werden, wenn Sie eingebettetes Transact-SQL zum Durchführen von Transaktionen verwenden.  
   
@@ -65,7 +65,7 @@ Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst 
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>und Beschreibung  
 Im folgenden Beispiel werden mehrere Abfragen im Rahmen einer Transaktion ausgeführt. Wenn alle Abfragen erfolgreich sind, wird die Transaktion committet. Wenn eine der Abfragen fehlschlägt, wird für die Transaktion ein Rollback ausgeführt.  
   
 Das Beispiel versucht, einen Verkaufsauftrag aus der *Sales.SalesOrderDetail* -Tabelle zu löschen und die Lagerbestände der Produkte in der *Product.ProductInventory* -Tabelle für jedes Produkt im Verkaufsauftrag anzupassen. Diese Abfragen werden in eine Transaktion aufgenommen, weil alle Abfragen erfolgreich ausgeführt werden müssen, damit die Datenbank den Status der Aufträge und die Verfügbarkeit von Produkten korrekt widerspiegelt.  
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Kommentare  
-Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für eine produktionsanwendung empfehlen wir überprüfen jeden Aufruf eine **Sqlsrv** Funktion auf Fehler, und diese entsprechend zu behandeln.
+Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für eine Produktionsanwendung empfehlen wir, dass jeder Aufruf einer **sqlsrv** -Funktion auf Fehler überprüft und entsprechend behandelt wird.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Transaktionen (Datenbankmodul)](https://msdn.microsoft.com/library/ms190612.aspx)
+[Transaktionen (Datenbank-Engine)](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

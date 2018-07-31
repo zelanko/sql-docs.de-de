@@ -1,6 +1,6 @@
 ---
-title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (oder IRow:: Open) und ISequentialStream | Microsoft Docs'
-description: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (oder IRow:: Open) und ISequentialStream'
+title: Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream | Microsoft-Dokumentation
+description: Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8eac2f4cd623ac488de6d1d16a40e71965b3193d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666180"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107006"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Umfangreiche Daten können gebunden oder abgerufen werden mithilfe der **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, dass die Daten abgeschnitten werden.  
+  Umfangreiche Daten können mit der **ISequentialStream**-Schnittstelle gebunden oder abgerufen werden. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, dass die Daten abgeschnitten werden.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -39,26 +39,26 @@ ms.locfileid: "35666180"
   
 1.  Stellen Sie eine Verbindung mit der Datenquelle her.  
   
-2.  Führen Sie den Befehl (in diesem Beispiel **ICommandExecute** mit IID_IRow aufgerufen).  
+2.  Führen Sie den Befehl aus (in diesem Beispiel wird **ICommandExecute::Execute()** mit IID_IRow aufgerufen).  
   
-3.  Die Spaltendaten mit FETCH **IRow::Open()** oder **IRow::GetColumns()**.  
+3.  Abrufen der Spaltendaten mit **IRow::Open()** oder **IRow::GetColumns()**.  
   
-    -   **IRow::Open()** dienen zum Öffnen einer **ISequentialStream** in der Zeile. Geben Sie DBGUID_STREAM an, dass die Spalte einen Strom von Binärdaten enthält (**IStream** oder **ISequentialStream** kann dann zum Lesen der Daten aus der Spalte verwendet werden).  
+    -   **IRow::Open()** dienen zum Öffnen einer **ISequentialStream** in der Zeile. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
   
-    -   Wenn **IRow::GetColumns()** verwendet wird, die **pData** -Element der DBCOLUMNACCESS-Struktur auf ein Datenstromobjekt festgelegt ist.  
+    -   Wenn **IRow::GetColumns()** verwendet wird, wird das **pData**-Element der DBCOLUMNACCESS-Struktur so festgelegt, dass es auf ein Datenstromobjekt zeigt.  
   
-4.  Verwendung **ISequentialStream::Read()** wiederholt, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
+4.  Verwendung **ISequentialStream::Read()** wiederholt, um die angegebene Anzahl von Bytes in den Puffer des Consumers zu lesen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe von IRow eine einzelne Zeile abrufen können. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. In diesem Beispiel wird die Verwendung von IRow::Open() sowie IRow::GetColumns() veranschaulicht. Im Beispiel werden die Spaltendaten mithilfe von ISequentialStream::Read gelesen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Die erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting erstellt eine im Beispiel verwendete Tabelle.  
+ Mit dem ersten Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) wird eine im Beispiel verwendete Tabelle erstellt.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++). Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  
+ Kompilieren Sie mit „ole32.lib“ und „oleaut32.lib“, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
- Das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting löscht die im Beispiel verwendete Tabelle.  
+ Das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Tabelle.  
   
 ```  
 USE AdventureWorks  
@@ -677,7 +677,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

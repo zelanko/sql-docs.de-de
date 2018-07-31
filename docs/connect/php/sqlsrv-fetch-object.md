@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_fetch_object | Microsoft Docs
+title: Sqlsrv_fetch_object | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309149"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991242"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Parameter  
 *$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
-*$className* [OPTIONAL]: eine Zeichenfolge, die den Namen der zu instanziierenden Klasse angibt. Falls der Wert für den *$className* -Parameter nicht festgelegt ist, wird eine Instanz der PHP **stdClass** instanziiert.  
+*$className* (optional): Eine Zeichenfolge, die den Namen der zu instanziierenden Klassen angibt. Falls der Wert für den *$className* -Parameter nicht festgelegt ist, wird eine Instanz der PHP **stdClass** instanziiert.  
   
-*$ctorParams* [OPTIONAL]: ein Array, das Werte enthält, übergeben wird, an den Konstruktor der Klasse angegeben, mit der *$className* Parameter. Falls der Konstruktor der angegebenen Klasse Parameterwerte akzeptiert, muss der *$ctorParams* -Parameter verwendet werden, wenn **sqlsrv_fetch_object**aufgerufen wird.  
+*$ctorParams* (optional): Ein Array, das Werte enthält, die an den Konstruktor der Klasse übergeben werden, die durch den *$className*-Parameter angegeben wird. Falls der Konstruktor der angegebenen Klasse Parameterwerte akzeptiert, muss der *$ctorParams* -Parameter verwendet werden, wenn **sqlsrv_fetch_object**aufgerufen wird.  
   
-*Zeile* [OPTIONAL]: einer der folgenden Werte, die Zeile spezifiziert, die auf in einem Resultset zugegriffen wird, welches einen bildlauffähigen Cursor verwendet. (Wenn *Zeile* angegeben wird, *$className* und *$ctorParams* muss explizit angegeben werden, auch wenn Sie null angeben müssen *$className*und *$ctorParams*.)  
+*row* (optional): Einer der folgenden Werte, der die Zeile angibt, auf die in einem Resultset zugegriffen wird, das einen scrollfähigen Cursor verwendet. (Wenn *row* angegeben ist, müssen *$className* und *$ctorParams* explizit angegeben werden, selbst wenn Sie für *$className* und *$ctorParams* NULL angeben müssen.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,14 +63,14 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*Offset* [OPTIONAL]: SQLSRV_SCROLL_ABSOLUTE und sqlsrv_scroll_relative verwenden verwendet wird, um die abzurufende Zeile anzugeben. Der erste Datensatz im Resultset ist „0“.  
+*offset* (optional): Wird mit SQLSRV_SCROLL_ABSOLUTE und SQLSRV_SCROLL_RELATIVE verwendet, um die Zeile anzugeben, die abgerufen werden soll. Der erste Datensatz im Resultset ist „0“.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein PHP-Objekt mit Eigenschaften, die zu den Feldnamen des Resultsets passen. Eigenschaftswerte werden mit den passenden Werten aus den Resultsetfeldern befüllt. Wenn die mit dem optionalen *$className* -Parameter spezifizierte Klasse nicht existiert, oder wenn es kein aktives Resultset zu der angegebenen Anweisung gibt, wird **false** zurückgegeben. Wenn keine weiteren Zeilen mehr abgerufen werden können, wird **NULL** zurückgegeben.  
   
 Der Datentyp eines Werts im zurückgegebenen Objekt wird der PHP-Standarddatentyp sein. Informationen zu PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Falls ein Klassenname mit dem optionalen *$className* -Parameter festgelegt ist, wird ein Objekt diesen Klassentyps instanziiert. Falls die Klasse Eigenschaften aufweist, deren Namen zu den Namen der Resultsetfelder passen, werden die entsprechenden Resultsetwerte auf die Eigenschaften angewendet. Falls ein Resultsetfeldname mit keiner Klasseneigenschaft übereinstimmt, wird dem Objekt eine Eigenschaft mit dem Resultsetfeldnamen hinzugefügt und der Wert aus dem Resultset wird auf die Eigenschaft angewendet.  
   
 Die folgenden Regeln gelten, wenn eine Klasse mit einem *$className* -Parameter spezifiziert wird:  
@@ -93,7 +93,7 @@ Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden,
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird jede Zeile eines Resultsets als PHP-Objekt abgerufen. Das Beispiel setzt voraus, dass die SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Im folgenden Beispiel wird jede Zeile eines Resultsets als PHP-Objekt abgerufen. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail* und *Production.Product* Tabellen der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum ( *DueDate*), und einer gelagerten Menge (*StockQty*) kleiner als ein angegebener Wert. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
+Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel werden Produktinformationen aus den Tabellen *Purchasing.PurchaseOrderDetail* und *Production.Product* der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum (*DueDate*) und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
   
 -   Die *$product* -Variable ist eine Instanz der *Product* -Klasse, da „Produkt“ mit dem *$className* -Parameter spezifiziert wurde und die *Product* -Klasse existiert.  
   
@@ -245,7 +245,7 @@ Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden,
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

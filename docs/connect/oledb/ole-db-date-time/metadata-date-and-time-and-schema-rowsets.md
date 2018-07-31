@@ -1,6 +1,6 @@
 ---
-title: Datum und Uhrzeit und Schemarowsets | Microsoft Docs
-description: Datum und Uhrzeit und Schema rowsets
+title: Datums- und Uhrzeit- sowie Schemarowsets | Microsoft-Dokumentation
+description: Datums-, Uhrzeit- und Schemarowsets
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c501274d977b924cb0dd478db26f9e39e399f61f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e2e1192cb0f69f72075a9e6164b91def61c80871
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666420"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109652"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadaten: Datum und Uhrzeit und Schemarowsets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadaten: Datums-, Uhrzeit- und Schemarowsets
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "35666420"
   
  Das neue DBCOLUMNFLAGS_SS_ISVARIABLESCALE-Flag wird in COLUMN_FLAGS bereitgestellt, damit eine Anwendung den Servertyp der Spalten bestimmen kann, wobei DATA_TYPE = DBTYPE_DBTIMESTAMP ist. DATETIME_PRECISION muss ebenfalls verwendet werden, um den Servertyp zu identifizieren.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE ist nur gültig, wenn es sich bei einer Verbindung mit einem [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Server oder höher. DBCOLUMNFLAGS_SS_ISFIXEDSCALE ist nicht definiert, wenn eine Verbindung mit einem Downlevelserver besteht.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE ist nur gültig, wenn eine Verbindung mit einem Server von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) besteht. DBCOLUMNFLAGS_SS_ISFIXEDSCALE ist nicht definiert, wenn eine Verbindung mit einem Downlevelserver besteht.  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS-Rowset  
  DATA_TYPE enthält die gleichen Werte wie das COLUMNS-Schemarowset, und TYPE_NAME enthält den Servertyp.  
@@ -96,9 +96,9 @@ ms.locfileid: "35666420"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> Der Client ist mit einem Downlevelserver verbunden.<br /><br /> Die Verbindungseigenschaft für die Datentypkompatibilität gibt einen Kompatibilitätsgrad von 80 an.|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> Der Client ist mit einem Downlevelserver verbunden.<br /><br /> Die Verbindungseigenschaft für die Datentypkompatibilität gibt einen Kompatibilitätsgrad von 80 an.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen Typen, also OLE DB-Treiber für SQL Server Verwendung dieser Spalten für Time, datetime2 und Datetimeoffset nicht standardmäßige.  
+ OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen, weshalb die Verwendung dieser Spalten für „time“, „datetime2“ und „datetimeoffset“ durch den OLE DB-Treiber für SQL Server nicht dem Standardverhalten entspricht.  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadaten &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Metadaten &#40;OLE-DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

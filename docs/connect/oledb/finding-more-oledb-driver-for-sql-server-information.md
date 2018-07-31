@@ -1,6 +1,6 @@
 ---
-title: Suchen von Weitere OLE DB-Treiber für SQL Server-Informationen | Microsoft Docs
-description: Wo finden Sie weitere OLE DB-Treiber für SQL Server-Informationen
+title: Weitere Informationen zum OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
+description: Weitere Informationen zum OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dca26d61ca49a0e7e3baa0e4f8304311d90668a6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 0b0131f2b2bce3af1eb4d0c7550d77b4089385af
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689783"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106276"
 ---
-# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Suchen von Weitere OLE DB-Treiber für SQL Server-Informationen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Weitere Informationen zum OLE DB-Treiber für SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Weitere Informationen zu OLE DB-Treiber für SQL Server und andere Arten der datenzugriffsprogrammierung finden Sie unter den folgenden Onlineressourcen:  
+  Weitere Informationen zum OLE DB-Treiber für SQL Server und anderen Arten der Datenzugriffsprogrammierung finden Sie in den folgenden Onlineressourcen:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
- Diese Site enthält technische Artikel, Beispielcode und andere Ressourcen für OLE DB-Treiber für SQL Server und andere datenzugriffstechnologien.  
+ [Developer Center für Datenzugriff und -speicherung](http://go.microsoft.com/fwlink?linkid=4173)  
+ Diese Website bietet technische Artikel, Beispielcode und andere Ressourcen für den OLE DB-Treiber für SQL Server und andere Datenzugriffstechnologien.  
   
  [Datenzugriffs-Blog](http://go.microsoft.com/fwlink/?LinkId=48617)  
  Diese Blog-Site bietet Informationen zu Datenzugriffstechnologien und ermöglicht Ihnen, direkt mit Mitgliedern des Microsoft DataWorks-Produktteams zu kommunizieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "35689783"
  Das Window DAC SDK enthält Dokumentationen zu ADO (ActiveX Data Objects), OLE DB und ODBC (Open Database Connectivity).  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL-Server](../oledb/oledb-driver-for-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_fetch_array | Microsoft Docs
+title: Sqlsrv_fetch_array | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979713"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,15 +43,15 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>Parameter  
 *$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
-*$fetchType* [OPTIONAL]: eine vordefinierte Konstante. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
+*$fetchType* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|Die nächste Datenzeile wird als numerisches Array zurückgegeben.|  
 |SQLSRV_FETCH_ASSOC|Die nächste Datenzeile wird als assoziatives Array zurückgegeben. Die Array-Schlüssel sind die Spaltennamen im Resultset.|  
 |SQLSRV_FETCH_BOTH|Die nächste Datenzeile wird als numerisches und assoziatives Array zurückgegeben. Dies ist der Standardwert.|  
   
-*Zeile* [OPTIONAL]: in Version 1.1 hinzugefügt. Einer der folgenden Werte, der spezifiziert, auf welche Zeile in einem Resultset zuzugreifen ist, welches einen bildlauffähigen Cursor verwendet: (Wenn *Zeile* angegeben wird, *Fetchtype* muss explizit angegeben werden, auch wenn Sie den Standardwert angeben.)  
+*row* (optional): in Version 1.1 hinzugefügt Einer der folgenden Werte, der spezifiziert, auf welche Zeile in einem Resultset zuzugreifen ist, welches einen bildlauffähigen Cursor verwendet: (Wenn *row* angegeben wird, muss *fetchtype* explizit angegeben werden, auch wenn Sie den Standardwert angeben.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -62,14 +62,14 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). Unterstützung für einen bildlauffähigen Cursor wurde in Version 1.1 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-*Offset* [OPTIONAL]: SQLSRV_SCROLL_ABSOLUTE und sqlsrv_scroll_relative verwenden verwendet wird, um die abzurufende Zeile anzugeben. Der erste Datensatz im Resultset ist „0“.  
+*offset* (optional): Wird mit SQLSRV_SCROLL_ABSOLUTE und SQLSRV_SCROLL_RELATIVE verwendet, um die Zeile anzugeben, die abgerufen werden soll. Der erste Datensatz im Resultset ist „0“.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn eine Datenzeile abgerufen wird, wird ein **Array** zurückgegeben. Wenn keine weiteren Zeilen mehr abgerufen werden können, wird **NULL** zurückgegeben. Wenn ein Fehler auftritt, wird **false** zurückgegeben.  
   
 Basierend auf dem Wert des *$fetchType* -Parameters, kann das zurückgegebene **Array** ein numerisch indiziertes **Array**, ein assoziatives **Array**oder beides sein. In der Standardeinstellung wird ein **Array** mit numerischen und assoziativen Schlüsseln zurückgegeben. Der Datentyp eines Werts im zurückgegebenen Array wird der PHP-Standarddatentyp sein. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Wenn eine Spalte ohne Namen zurückgegeben wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Betrachten Sie beispielsweise diese Transact-SQL-Anweisung, die einen Wert in eine Datenbanktabelle einfügt und den vom Server generierten Primärschlüssel abruft:  
   
 ```
@@ -77,7 +77,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Wenn das Resultset, durch zurückgegeben die `SELECT SCOPE_IDENTITY()` -Teil dieser Anweisung wird als assoziatives Array abgerufen wird, der Schlüssel des zurückgegebenen Werts eine leere Zeichenfolge (""), da die zurückgegebene Spalte keinen Namen hat. Um dies zu vermeiden, können Sie das Ergebnis als numerisches Array abrufen oder Sie können einen Namen für die zurückgegebene Spalte in der Transact-SQL-Anweisung angeben. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
+Wenn das Resultset, das vom `SELECT SCOPE_IDENTITY()`-Teil dieser Anweisung zurückgegeben wird, als assoziatives Array abgerufen wird, ist der Schlüssel des zurückgegebenen Werts eine leere Zeichenfolge (""), da die zurückgegebene Spalte keinen Namen hat. Um dies zu vermeiden, können Sie das Ergebnis als numerisches Array abrufen oder Sie können einen Namen für die zurückgegebene Spalte in der Transact-SQL-Anweisung angeben. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -86,7 +86,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Wenn ein Resultset mehrere Spalten ohne Namen enthält, wird der Wert der letzten unbenannten Spalte dem Schlüssel einer leeren Zeichenfolge ("") zugewiesen.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass die SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -127,7 +127,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>Beispiel  
 Das folgende Beispiel ruft jede Zeile eines Resultsets als numerisch indiziertes Array auf.  
   
-Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail* Tabelle der AdventureWorks-Datenbank für Produkte mit einem angegebenen Datum und einer gelagerten Menge (*StockQty*) kleiner als ein angegebener Wert.  
+Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail*-Tabelle der AdventureWorks-Datenbank für Produkte mit einem angegebenen Datum und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
@@ -184,7 +184,7 @@ Die **sqlsrv_fetch_array** Funktion gibt immer die Daten gemäß der [Default PH
   
 Wenn ein Feld ohne Namen abgerufen wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Weitere Informationen finden Sie unter [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)

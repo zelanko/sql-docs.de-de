@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Datentypen default | Microsoft Docs
+title: Standardmäßige SQL Server-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307225"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979572"
 ---
 # <a name="default-sql-server-data-types"></a>SQL Server-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ Beim Senden von Daten an den Server konvertiert der [!INCLUDE[ssDriverPHP](../..
 |Boolean|bit|bit|  
 |Integer|ssNoversion|ssNoversion|  
 |float|float(24)|nicht unterstützt|  
-|Zeichenfolge (Länge kleiner als 8000 Bytes)|Varchar (<string length>)|Varchar (<string length>)|  
+|Zeichenfolge (Länge kleiner als 8000 Bytes)|varchar(<string length>)|varchar(<string length>)|  
 |Zeichenfolge (Länge größer als 8000 Bytes)|varchar(max)|varchar(max)|  
 |Ressource|Wird nicht unterstützt.|Wird nicht unterstützt.|  
 |Stream (Codierung: nicht binär)|varchar(max)|varchar(max)|  
@@ -44,7 +44,7 @@ Beim Senden von Daten an den Server konvertiert der [!INCLUDE[ssDriverPHP](../..
 |Objekt|Wird nicht unterstützt.|Wird nicht unterstützt.|  
 |DatumUhrzeit (1)|DATETIME|Wird nicht unterstützt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ Beim Senden von Daten an den Server konvertiert der [!INCLUDE[ssDriverPHP](../..
 
 [PHP-Typen](http://php.net/manual/language.types.php)
 
-[Datentypen (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Datentypen (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -1,6 +1,6 @@
 ---
-title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB) | Microsoft Docs
-description: Massenkopieren von Daten in eine SQL Server Tabelle mithilfe von IRowsetFastLoad-Schnittstelle von OLE DB-Treiber für SQL Server
+title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
+description: Massenkopieren von Daten in eine SQL Server-Tabelle mithilfe von IRowsetFastLoad-Schnittstelle von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665660"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107722"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In diesem Beispiel wird die Verwendung von IRowsetFastLoad für das Massenkopieren von Datensätzen in eine Tabelle gezeigt.  
   
- Der Consumer benachrichtigt den OLE DB-Treiber für SQL Server über die Anforderung zum Massenkopieren, indem der OLE DB-Treiber für SQL Server-Treiber-spezifische Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Mit der Eigenschaft für die Datenquelle festgelegt wurde erstellt der Consumer einen OLE DB-Treiber für SQL Server-Sitzung an. Die neue Sitzung lässt den Consumerzugriff auf **IRowsetFastLoad**.  
+ Der Consumer benachrichtigt den OLE DB-Treiber für SQL Server über die Anforderung zum Massenkopieren, indem Sie den OLE DB-Treiber für SQL Server-Treiber-spezifische Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Wenn die Datenquelle für die Eigenschaft festgelegt wurde, erstellt der Consumer eine  Native Client-OLE DB-Anbietersitzung. Die neue Sitzung lässt den Consumerzugriff auf ** zu.  
   
- Ein vollständiges Beispiel zur Verfügung steht, die veranschaulicht die Verwendung der **IRowsetFastLoad** zum Massenkopieren der Datensätze in einer Tabelle. In diesem Beispiel werden der Tabelle 10 Datensätze hinzugefügt **IRFLTable**. Sie müssen zum Erstellen der Tabelle **IRFLTable** in der Datenbank.  
+ Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
@@ -46,24 +46,24 @@ ms.locfileid: "35665660"
   
 1.  Stellen Sie eine Verbindung mit der Datenquelle her.  
   
-2.  Der OLE DB-Treiber für SQL Server-Treiber-spezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festgelegt. Diese Eigenschaft auf VARIANT_TRUE festgelegt ist, lässt die neu erstellte Sitzung den Consumerzugriff auf **IRowsetFastLoad**.  
+2.  Der OLE DB-Treiber für SQL Server-Treiber-spezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festgelegt ist. Wenn diese Eigenschaft auf VARIANT_TRUE festgelegt wurde, lässt die neu erstellte Sitzung den Consumerzugriff auf **IRowsetFastLoad** zu.  
   
-3.  Erstellen einer Sitzung anfordert der **IOpenRowset** Schnittstelle.  
+3.  Erstellen Sie eine Sitzung, in der die **-Schnittstelle angefordert wird.  
   
-4.  Rufen Sie **IOpenRowset:: OPENROWSET** zum Öffnen eines Rowsets, die alle Zeilen aus der Tabelle enthält (in der Daten ist mit der Massenkopiervorgang kopiert werden soll).  
+4.  Rufen Sie **IOpenRowset::OpenRowset** auf, um ein Rowset zu öffnen, das alle Zeilen aus der Tabelle enthält, in die Daten mit dem Massenkopiervorgang kopiert werden sollen.  
   
-5.  Führen Sie die notwendigen Bindungen und erstellen Sie einen Accessor mithilfe **IAccessor:: CreateAccessor**.  
+5.  Führen Sie die notwendigen Bindungen, und erstellen Sie einen Accessor mithilfe **IAccessor:: CreateAccessor**.  
   
 6.  Richten Sie den Arbeitsspeicherpuffer ein, aus dem die Daten in die Tabelle kopiert werden.  
   
-7.  Rufen Sie **IRowsetFastLoad:: InsertRow** zum Massenkopieren von Daten in der Tabelle.  
+7.  Rufen Sie **IRowsetFastLoad:: InsertRow** zum Massenkopieren der Daten in der Tabelle.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden der Tabelle IRFLTable 10 Datensätze hinzugefügt. Sie müssen die Tabelle IRFLTable in der Datenbank erstellen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu löschen.  
   

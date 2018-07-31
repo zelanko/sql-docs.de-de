@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft Docs'
+title: 'Gewusst wie: Ausführen von parametrisierten Abfragen'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032989"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ Die Schritte zur Durchführung einer parametrisierten Abfrage können in vier Sc
   
 2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen.  
   
-3.  Verwenden Sie PHP-Variablen aus Schritt 2 erstellt oder aktualisiert ein Array von Parameterwerten entsprechen Parameterplatzhalter in der Transact-SQL-Zeichenfolge. Die Parameterwerte im Array muss sich in derselben Reihenfolge wie die Platzhalter vorgesehen, die sie darstellen.
+3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren, das den Parameterplatzhaltern in der Transact-SQL-Zeichenfolge entspricht. Die Parameterwerte in das Array muss sich in derselben Reihenfolge wie die Platzhalter dargestellt werden sollen.
   
 4.  Führen Sie die Abfrage aus:  
   
     -   Wenn Sie den SQLSRV-Treiber verwenden, verwenden Sie [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-    -   Wenn Sie den PDO_SQLSRV-Treiber verwenden, führen Sie die Abfrage mit [PDO:: Prepare](../../connect/php/pdo-prepare.md) und [pdostatement:: Execute](../../connect/php/pdostatement-execute.md). Die Themen für [PDO::prepare](../../connect/php/pdo-prepare.md) und [PDOStatement::execute](../../connect/php/pdostatement-execute.md) enthalten Codebeispiele.  
+    -   Wenn Sie den PDO_SQLSRV-Treiber verwenden, führen Sie die Abfrage mit [PDO::prepare](../../connect/php/pdo-prepare.md) und [PDOStatement::execute](../../connect/php/pdostatement-execute.md) aus. Die Themen für [PDO::prepare](../../connect/php/pdo-prepare.md) und [PDOStatement::execute](../../connect/php/pdostatement-execute.md) enthalten Codebeispiele.  
   
 Im weiteren Verlauf dieses Themas werden parametrisierte Abfragen erläutert, die SQLSRV-Treiber verwenden.  
   
@@ -114,10 +114,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Das vorhergehende Beispiel verwendet die Funktion **sqlsrv_query** , um Abfragen ausführen. Diese Funktion eignet sich zum Ausführen von einmaligen Abfragen, da sie jeweils die Anweisungsvorbereitung als auch die -Ausführung durchführt. Die Kombination von **Sqlsrv_prepare**/**Sqlsrv_execute** eignet sich am besten für die erneute Ausführung einer Abfrage mit verschiedenen Parameterwerten. Ein Beispiel für die erneute Ausführung einer Abfrage mit anderen Parameterwerten finden Sie im nächsten Beispiel.  
+Das vorhergehende Beispiel verwendet die Funktion **sqlsrv_query** , um Abfragen ausführen. Diese Funktion eignet sich zum Ausführen von einmaligen Abfragen, da sie jeweils die Anweisungsvorbereitung als auch die -Ausführung durchführt. Die Kombination von **sqlsrv_prepare**/**sqlsrv_execute** eignet sich für die erneute Ausführung einer Abfrage mit anderen Parameterwerten. Ein Beispiel für die erneute Ausführung einer Abfrage mit anderen Parameterwerten finden Sie im nächsten Beispiel.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel veranschaulicht die implizite Bindung von Variablen bei Verwendung der **sqlsrv_prepare** -Funktion. Das Beispiel fügt mehrere Verkaufsaufträge in die *Sales.SalesOrderDetail* -Tabelle ein Die *$params* Array an die Anweisung gebunden ist (*$stmt*) beim **Sqlsrv_prepare** aufgerufen wird. Vor jeder Ausführung einer Abfrage, die einen neuen Verkaufsauftrag in die Tabelle einfügt, wird das *$params* -Array mit neuen Werten entsprechend der Auftragsdetails aktualisiert. Die Ausführung der nachfolgenden Abfrage verwendet die neuen Parameterwerte.  
+Das folgende Beispiel veranschaulicht die implizite Bindung von Variablen bei Verwendung der **sqlsrv_prepare** -Funktion. Das Beispiel fügt mehrere Verkaufsaufträge in die *Sales.SalesOrderDetail* -Tabelle ein Das $*params*-Array ist an die $*stmt*-Anweisung gebunden, wenn **sqlsrv_prepare** aufgerufen wird. Vor jeder Ausführung einer Abfrage, die einen neuen Verkaufsauftrag in die Tabelle einfügt, wird das *$params* -Array mit neuen Werten entsprechend der Auftragsdetails aktualisiert. Die Ausführung der nachfolgenden Abfrage verwendet die neuen Parameterwerte.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
@@ -191,7 +191,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
 
 [Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/security-considerations-for-php-sql-driver.md)

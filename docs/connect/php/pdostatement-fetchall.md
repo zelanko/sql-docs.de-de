@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll | Microsoft Docs
+title: PDOStatement::fetchAll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308989"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983020"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,16 +34,16 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*Fetch_style*: ein Symbol (ganze Zahl), welches das Format der Zeilendaten angibt. Unter [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) finden Sie eine Liste der Werte. PDO::FETCH_COLUMN ist ebenfalls zulässig. PDO::FETCH_BOTH ist der Standard.  
+$*fetch_style:* Ein ganzzahliges Symbol, das das Format der Zeilendaten angibt. Unter [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) finden Sie eine Liste der Werte. PDO::FETCH_COLUMN ist ebenfalls zulässig. PDO::FETCH_BOTH ist der Standard.  
   
-$*Spaltenindex*: einen ganzzahligen Wert, der die Spalte wird zurückgegeben, wenn $*Fetch_style* PDO:: fetch_column ist. Der Standardwert ist 0.  
+$*column_index:* Ein ganzzahliger Wert, der die zurückzugebende Spalte darstellt, falls für $*fetch_style* PDO::FETCH_COLUMN festgelegt ist. Der Standardwert ist 0.  
   
-$*Ctor_args*: ein Array der Parameter für einen Klassenkonstruktor, wenn $*Fetch_style* ist PDO:: fetch_class oder PDO:: fetch_obj ist.  
+$*ctor_args:* Ein Array der Parameter für einen Klassenkonstruktor, wenn für $*fetch_style* PDO::FETCH_CLASS oder PDO::FETCH_OBJ festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein Array der verbleibenden Zeilen im Resultset oder „false“ falls der Methodenaufruf fehlschlägt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  
@@ -87,7 +87,7 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

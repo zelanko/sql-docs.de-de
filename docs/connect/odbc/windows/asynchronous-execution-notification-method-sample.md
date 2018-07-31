@@ -1,5 +1,5 @@
 ---
-title: Beispiel für asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft Docs
+title: Beispiel für asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047493"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Beispiel für asynchrone Ausführung (Benachrichtigungsmethode)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Die Codebeispiele in diesem Thema veranschaulichen, wie Sie mithilfe der [asynchrone Ausführung (Benachrichtigungsmethode)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Die Codebeispiele in diesem Artikel demonstrieren, wie die [asynchrone Ausführung (Benachrichtigungsmethode)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx) verwendet werden kann.  
   
- Diese Funktion verwendet die asynchrone Benachrichtigung, um fünf Verbindungen zu öffnen und führt eine Abfrage in einer einzelnen Verbindung-Anweisung aus.  
+ Diese Funktion verwendet die asynchrone Benachrichtigung, um fünf Verbindungen zu öffnen und führt für jede der Verbindungen eine Abfrage zur Anweisung aus.  
   
 ```  
   
@@ -354,7 +354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

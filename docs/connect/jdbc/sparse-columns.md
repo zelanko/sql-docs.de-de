@@ -1,5 +1,5 @@
 ---
-title: Spalten mit geringer Dichte | Microsoft Docs
+title: Sparsespalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020976"
 ---
 # <a name="sparse-columns"></a>Spalten mit geringer Dichte
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Spalten mit geringer Dichte, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden.  
+  Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 unterstützt Spalten mit geringer Dichte, bei der Herstellung einer [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (oder höher) Server. Sie können [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), oder [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) Legen Sie Spalte, um zu bestimmen, welche Spalten mit geringer Dichte und welche Spalte die Spalte ist.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 werden bei der Herstellung einer Verbindung mit einem Server von [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (oder höher) Sparsespalten unterstützt. Sie können [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) oder [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) verwenden, um zu ermitteln, welche Spalte die Sparsespalte und welche die Spaltensatz-Spalte ist.  
   
  Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisierten XML-Format zurückgeben. Verwenden Sie Spaltensätze, wenn die Tabelle eine große Anzahl an Spalten (oder mehr als 1024 Spalten) enthält und es sehr aufwändig ist, einzelne Sparsespalten zu verarbeiten. Ein Spaltensatz kann bis zu 30 000 Spalten enthalten.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>und Beschreibung  
  Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.  
   
  Die erste Codeauflistung ist die Transact-SQL, die auf diesem Server ausgeführt werden sollte.  
@@ -189,7 +189,7 @@ public class SparseColumns {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

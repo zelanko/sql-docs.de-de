@@ -1,6 +1,6 @@
 ---
-title: Verwendung von OLE DB-Treiber für SQLServer | Microsoft Docs
-description: Verwendung von OLE DB-Treiber für SQL Server
+title: Verwenden von OLE DB-Treiber für SQLServer | Microsoft-Dokumentation
+description: Verwendung des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,34 +18,34 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1aaca043dc057f6f7cc07322e6bf75822a8ebe8b
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4e83751fe83db3ab678547a3a1fde68b5db22df
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690103"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107672"
 ---
-# <a name="when-to-use-ole-db-driver-for-sql-server"></a>Verwendung von OLE DB-Treiber für SQLServer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="when-to-use-ole-db-driver-for-sql-server"></a>Verwendung des OLE DB-Treibers für SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB-Treiber für SQL Server ist eine Technologie, die Sie verwenden können, Zugriff auf Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  Eine Erläuterung der verschiedenen datenzugriffstechnologien, finden Sie unter [Data Access Technologies Road Map](http://go.microsoft.com/fwlink/?LinkID=179186)  
+  OLE DB-Treiber für SQL Server ist eine Technologie, mit denen Sie Zugriff auf Daten in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  Eine Besprechung der unterschiedlichen Datenzugriffstechnologien finden Sie unter [Data Access Technologies Road Map (Übersicht über Datenzugriffstechnologien)](http://go.microsoft.com/fwlink/?LinkID=179186).  
   
- Bei der Entscheidung, ob OLE DB-Treiber für SQL Server als datenzugriffstechnologie in Ihrer Anwendung verwendet, sollten Sie die verschiedenen Faktoren ab.  
+ Sie sollten bei der Entscheidung, ob Sie den OLE DB-Treiber für SQL Server als Datenzugriffstechnologie in einer Anwendung verwenden möchten, verschiedene Faktoren berücksichtigen.  
   
  Wenn Sie neue Anwendungen in einer verwalteten Programmiersprache wie Microsoft Visual C# oder Visual Basic schreiben und auf die neuen Funktionen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, zugreifen müssen, sollten Sie den .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, der Teil von .NET Framework ist.  
   
- Wenn Sie eine COM-basierte Anwendung entwickeln und auf die neuen Funktionen zugreifen müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sollten Sie OLE DB-Treiber für SQL Server verwenden. Wenn Sie nicht auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen müssen, können Sie weiterhin Windows Data Access Components (WDAC) verwenden.  
+ Wenn Sie eine COM-basierte Anwendung entwickeln und auf die neuen Funktionen zugreifen müssen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, dann sollten Sie den OLE DB-Treiber für SQL Server verwenden. Wenn Sie nicht auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen müssen, können Sie weiterhin Windows Data Access Components (WDAC) verwenden.  
   
- Bei vorhandenen OLE DB-Anwendungen ist ausschlaggebend, ob Sie Zugriff auf die neuen Funktionen müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine ausgereifte Anwendung haben, die nicht auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen muss, können Sie weiterhin WDAC verwenden. Aber wenn Sie benötigen diese neuen Features wie z. B. den Zugriff auf die [Xml-Datentyp](../../t-sql/xml/xml-transact-sql.md), sollten Sie OLE DB-Treiber für SQL Server verwenden.  
+ Bei vorhandenen OLE DB-Anwendungen ist ausschlaggebend, ob Sie auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen müssen. Wenn Sie eine ausgereifte Anwendung haben, die nicht auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen muss, können Sie weiterhin WDAC verwenden. Falls Sie jedoch auf diese neuen Funktionen zugreifen müssen, wie etwa auf den [xml-Datentyp](../../t-sql/xml/xml-transact-sql.md), dann sollten Sie den OLE DB-Treiber für SQL Server verwenden.  
   
- Beide OLE DB-Treiber für SQL Server auch MDAC unterstützen lesen committed-Transaktionsisolation mit zeilenversionsverwaltung, aber nur OLE DB-Treiber für SQL Server unterstützt die Momentaufnahmen-Transaktionsisolation. (Programmiertechnisch ausgedrückt ist read committed-Transaktionsisolation mit zeilenversionsverwaltung Read Committed-Transaktion identisch.)  
+ Beide OLE DB-Treiber für SQL Server auch MDAC unterstützen lesen committed-Transaktionsisolation mit zeilenversionsverwaltung, aber nur OLE DB-Treiber für SQL Server unterstützt die Momentaufnahmen-Transaktionsisolation. (Programmiertechnisch ausgedrückt ist die Read Committed-Transaktionsisolation mit Zeilenversionsverwaltung gleichbedeutend mit einer Read Committed-Transaktion.)  
   
- Informationen zu den Unterschieden zwischen OLE DB-Treiber für SQL Server und MDAC finden Sie unter [Aktualisieren von einer Anwendung auf OLE DB-Treiber für SQL Server von MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
+ Weitere Informationen zu den Unterschieden zwischen OLE DB-Treiber für SQL Server und MDAC finden Sie unter [Aktualisieren einer Anwendung auf OLE DB-Treiber für SQL Server über MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQLServer](../oledb/oledb-driver-for-sql-server.md)     
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server](../oledb/oledb-driver-for-sql-server.md)     
  [Vorgehensweisen für OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

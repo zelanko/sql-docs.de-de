@@ -1,5 +1,5 @@
 ---
-title: Verbindungsresilienz im Windows ODBC-Treiber | Microsoft Docs
+title: Verbindungsresilienz im Windows ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060331"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Um sicherzustellen, dass Anwendungen mit verbunden bleiben ein [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], die ODBC-Treiber unter Windows Verbindungen im Leerlauf wiederherstellen kann.  
+  Um sicherzustellen, dass die Anwendungen mit [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)] verbunden sind, kann der ODBC-Treiber unter Windows Verbindungen im Leerlauf herstellen.  
   
 > [!IMPORTANT]  
 >  Das Verbindungsstabilitätsfeature wird von Microsoft Azure SQL-Datenbanken und den Server-Versionen SQL Server 2014 (und neuer) unterstützt.  
   
- Weitere Informationen zu verbindungsstabilität im Leerlauf finden Sie unter [technischer Artikel – Verbindungsstabilität im Leerlauf](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Weitere Informationen zur Verbindungsstabilität im Leerlauf finden Sie unter [Technische Artikel – Verbindungsstabilität im Leerlauf](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Um das Verhalten bei der Verbindungswiederherstellung zu steuern, bietet der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows zwei Optionen:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32852865"
   
     -   Verwenden Sie das Schlüsselwort für Verbindungszeichenfolgen **ConnectionRetryCount** .  
   
-     Verwenden Sie zum Abrufen der Anzahl der Verbindungsherstellungsversuche der **SQL_COPT_SS_CONNECT_RETRY_COUNT** (schreibgeschützt) Verbindungsattribut. Wenn eine Anwendung mit einem Server verbunden ist, der keine verbindungsresilienz unterstützt **SQL_COPT_SS_CONNECT_RETRY_COUNT** gibt 0 zurück.  
+     Verwenden Sie zum Abrufen der Anzahl der Verbindungsversuche das Verbindungsattribut **SQL_COPT_SS_CONNECT_RETRY_COUNT** (schreibgeschützt). Wenn eine Anwendung mit einem Server verbunden ist, der keine Verbindungsresilienz unterstützt, gibt **SQL_COPT_SS_CONNECT_RETRY_COUNT** 0 zurück.  
   
 -   Intervall für Wiederholungen der Verbindungen  
   
@@ -55,13 +55,13 @@ ms.locfileid: "32852865"
   
     -   Verwenden Sie das Schlüsselwort **ConnectionRetryInterval** für Verbindungszeichenfolgen.  
   
-     Verwenden Sie zum Abrufen der Länge der das Intervall für Verbindungsversuche das **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (schreibgeschützt) Verbindungsattribut.  
+     Verwenden Sie zum Abrufen der Länge des Intervalls für Verbindungsversuche das Verbindungsattribut **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (schreibgeschützte).  
   
  Wenn eine Anwendung eine Verbindung mit SQL_DRIVER_COMPLETE_REQUIRED herstellt und dann versucht, eine Anweisung über eine unterbrochene Verbindung ausführen, zeigt der ODBC-Treiber das Dialogfeld nicht erneut an. Darüber hinaus während der Wiederherstellung,  
   
--   Während der Wiederherstellung muss jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_FALSE**.  
+-   Während der Wiederherstellung muss jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** **SQL_CD_FALSE** zurückgeben.  
   
--   Bei Wiederherstellungsfehlern jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_TRUE**.  
+-   Wenn die Wiederherstellung fehlschlägt, muss jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** **SQL_CD_TRUE** zurückgeben.  
   
  Die folgenden Statuscodes werden von jeder Funktion zurückgegeben, die auf dem Server einen Befehl ausführt:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "32852865"
 |IMC06|Die Verbindung ist unterbrochen und kann nicht wiederhergestellt werden. Die Verbindung wird vom Clienttreiber als nicht behebbar markiert. Es wurde nicht versucht, die Verbindung wiederherzustellen.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält zwei Funktionen. **func1** wird gezeigt, wie Sie mit einem Datenquellennamen (DSN) eine Verbindung herstellen können, die für die ODBC-Treiber verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der Verbindungsversuche mit **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der erneuten Verbindungsversuche mithilfe von **SQL**COPTSSCONNECTRETRYCOUNT ab.  
   
  **func2** verwendet **SQLDriverConnect**, **ConnectRetryCount** -Schlüsselwort der Verbindungszeichenfolge sowie die Verbindungsattribute, um die Einstellung für Verbindungsversuche und das Wiederholungsintervall aufzurufen.  
   
@@ -176,7 +176,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

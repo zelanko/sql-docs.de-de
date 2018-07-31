@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten | Microsoft Docs
+title: Abrufen von Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983036"
 ---
 # <a name="retrieving-data"></a>Abrufen von Daten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ Der SQLSRV-Treiber des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
   
 Wenn Ihre Abfrage mehr als ein Resultset abruft, können Sie das nächste Resultset mit [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)anzeigen.  
   
-Ab Version 1.1 von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], können Sie [zu Sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) um festzustellen, ob ein Resultset Zeilen enthält.  
+Ab Version 1.1 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] können Sie [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) verwenden, um zu überprüfen, ob ein Resultset Zeilen enthält.  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV-Treiber  
-Der PDO_SQLSRV-Treiber von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] bietet die folgenden Optionen zum Abrufen von Daten aus einem Resultset:  
+Der PDO_SQLSRV-Treiber von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] bietet die folgenden Optionen zum Abrufen von Daten aus einem Resultset:  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ Sie können sehen, wie viele Zeilen ein Resultset aufweist, indem Sie einen bild
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 |[Abrufen von Daten als Stream](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Bietet einen Überblick über das Streamen von Daten vom Server und stellt Links für spezifische Anwendungsszenarien bereit.|  
 |[Verwenden direktionaler Parameter](../../connect/php/using-directional-parameters.md)|Beschreibt die Verwendung direktionaler Parameter beim Aufrufen einer gespeicherten Prozedur.|  
@@ -83,7 +83,7 @@ Sie können sehen, wie viele Zeilen ein Resultset aufweist, indem Sie einen bild
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  

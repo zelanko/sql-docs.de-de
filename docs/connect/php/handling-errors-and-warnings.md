@@ -1,5 +1,5 @@
 ---
-title: Behandeln von Fehlern und Warnungen | Microsoft Docs
+title: Behandeln von Fehlern und Warnungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054598"
 ---
 # <a name="handling-errors-and-warnings"></a>Behandeln von Fehlern und Warnungen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Wenn Sie den PDO_SQLSRV-Treiber verwenden, finden Sie weitere Informationen zu Fehlern und Fehlerbehandlung auf die [PDO](http://php.net/manual/book.pdo.php) Website.  
+Falls Sie den PDO_SQLSRV-Treiber verwenden, können Sie auf der [PDO](http://php.net/manual/book.pdo.php)-Webseite weitere Informationen zu Fehlern und Fehlerbehandlung finden.  
   
 Die Themen in diesem Abschnitt bieten Informationen zur Fehlerbehandlung und Warnungen mit dem SQLSRV-Treiber der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 |[Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Demonstriert, wie Konfigurationseinstellungen für die Behandlung von Fehlern und Warnungen geändert werden können.|  
 |[Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Demonstriert, wie man mit Fehlern und Warnungen getrennt umgehen sollte.|  
@@ -42,6 +42,6 @@ Die Themen in diesem Abschnitt bieten Informationen zur Fehlerbehandlung und War
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
   

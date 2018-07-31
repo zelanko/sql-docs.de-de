@@ -1,5 +1,5 @@
 ---
-title: Unterstützen von verteilten Transaktionen | Microsoft Docs
+title: Unterstützen von verteilten Transaktionen
 description: Verteilte Transaktionen in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690303"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105986"
 ---
 # <a name="supporting-distributed-transactions"></a>Unterstützen von verteilten Transaktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB-Treiber für SQL Server-Consumer können die **ITransactionJoin:: JoinTransaction** Methode in einer verteilten Transaktion teilnehmen, die von Microsoft Distributed Transaction Coordinator (MS DTC) koordiniert.  
+  Consumer des OLE DB-Treibers für SQL Server können die **ITransactionJoin::JoinTransaction**-Methode verwenden, um an verteilten Transaktionen teilzunehmen, die von Microsoft Distributed Transaction Coordinator (MS DTC) koordiniert werden.  
   
- MS DTC macht COM-Objekte verfügbar, mit denen Clients koordinierte Transaktionen initiieren und an koordinierten Transaktionen teilnehmen können, die sich über mehrere Verbindungen zu verschiedenen Datenspeichern erstrecken. Informationen zum Initiieren einer Transaktions verwendet die OLE DB-Treiber für SQL Server-Consumer des MS DTC **ITransactionDispenser** Schnittstelle. Die **BeginTransaction** Mitglied **ITransactionDispenser** gibt einen Verweis auf einem verteilten Transaktionsobjekt zurück. Dieser Verweis wird an den OLE DB-Treiber für die Verwendung von SQL Server übergeben **JoinTransaction**.  
+ MS DTC macht COM-Objekte verfügbar, mit denen Clients koordinierte Transaktionen initiieren und an koordinierten Transaktionen teilnehmen können, die sich über mehrere Verbindungen zu verschiedenen Datenspeichern erstrecken. Zum Initiieren einer Transaktion verwendet der Consumer des **Native Client OLE DB-Anbieters die MS DTC ITransactionDispenser**-Schnittstelle. Das **BeginTransaction**-Element von **ITransactionDispenser** gibt einen Verweis auf ein verteiltes Transaktionsobjekt zurück. Dieser Verweis wird an den OLE DB-Treiber für die Verwendung von SQL Server übergeben **JoinTransaction**.  
   
- MS DTC unterstützt asynchrone „Commit“- und „Abort“-Funktionen bei verteilten Transaktionen. Für die Benachrichtigung für den asynchronen Transaktionsstatus implementiert der Consumer die **ITransactionOutcomeEvents** -Schnittstelle und verbindet die Schnittstelle mit einer MS DTC-Transaktionsobjekt.  
+ MS DTC unterstützt asynchrone „Commit“- und „Abort“-Funktionen bei verteilten Transaktionen. Für Benachrichtigungen über den asynchronen Transaktionsstatus implementiert der Consumer die **ITransactionOutcomeEvents**-Schnittstelle und verbindet die Schnittstelle mit einem MS DTC-Transaktionsobjekt.  
   
- Für verteilte Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransactionJoin:: JoinTransaction** Parameter wie folgt.  
+ Für verteilte Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransactionJoin::JoinTransaction**-Parameter wie folgt.  
   
-|Parameter|Description|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
-|*IsoLevel*|Vom OLE DB-Treiber ignoriert für SqlServer. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  
-|*IsoFlags*|Muss den Wert 0 (null) haben. Der OLE DB-Treiber für SQL Server gibt xact_e_noisoretain zurück, wenn vom Consumer ein anderer Wert angegeben ist.|  
-|*POtherOptions*|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server das Optionsobjekt von der Schnittstelle. Der OLE DB-Treiber für SQL Server gibt xact_e_notimeout zurück, wenn die Options-Objekt *UlTimeout* Element ist nicht 0 (null). Der OLE DB-Treiber für SQL Server ignoriert den Wert, der die *SzDescription* Member.|  
+|*IsoLevel*|Wird von der OLE DB-Treiber für SQLServer ignoriert. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  
+|*IsoFlags*|Muss den Wert 0 (null) haben. Der  Native Client OLE DB-Anbieter gibt XACT_E_NOISORETAIN zurück, wenn vom Consumer ein anderer Wert angegeben wird.|  
+|*POtherOptions*|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server-Anforderungen das Options-Objekt von der Schnittstelle. Der  *Native Client OLE DB-Anbieter gibt XACT_E_NOTIMEOUT zurück, wenn das ulTimeout*-Element des Optionsobjekts nicht 0 (null) ist. Der OLE DB-Treiber für SQL Server ignoriert den Wert des der *SzDescription* Member.|  
   
  In diesem Beispiel wird eine Transaktion mit MS DTC koordiniert.  
   
@@ -146,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transaktionen](../../oledb/ole-db-transactions/transactions.md)  
   
   

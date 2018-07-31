@@ -1,6 +1,6 @@
 ---
-title: Sitzungen | Microsoft Docs
-description: Sitzungen in OLE DB-Treiber für SQLServer
+title: Sitzungen | Microsoft-Dokumentation
+description: Sitzungen im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ecb43b33acd7c2e95cf9b1335ead2ec7a42939fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666170"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106826"
 ---
 # <a name="sessions"></a>Sitzungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "35666170"
   
  Ein zusätzliches für die Datenquelle erstelltes Sitzungsobjekt stellt eine eigene Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, wie von der Datenquelle angegeben. Die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird unterbrochen, wenn die Anwendung alle Verweise auf Objekte freigibt, die in dieser Sitzung erstellt wurden.  
   
- Im folgenden Beispiel wird veranschaulicht, wie der OLE DB-Treiber für SQL Server zum Herstellen einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank:  
+ Im folgenden Beispiel wird veranschaulicht, wie der OLE DB-Treiber für SQL Server zum Herstellen einer Verbindung mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank:  
   
 ```  
 int main()  
@@ -186,14 +186,14 @@ EXIT:
 }  
 ```  
   
- Herstellen einer Verbindung von OLE DB-Treiber für SQL Server-Session-Objekte mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erheblichen Mehraufwand für Anwendungen, die kontinuierlich sitzungsbojekte erstellen und Freigeben von Sitzungsobjekte generieren können. Durch die Verwaltung von OLE DB-Treiber für SQL Server-Sitzungsobjekte effizient, kann der Aufwand minimiert werden. OLE DB-Treiber für SQL Server-Anwendungen können behalten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindung eines Sitzungsobjekts aktiv ist, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts zu verwalten.  
+ Das Verbinden von Sitzungsobjekten des OLE DB-Treibers für SQL Server mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann zu einem erheblichen Mehraufwand für Anwendungen führen, die kontinuierlich Sitzungsobjekte erstellen und freigeben. Durch die effiziente Verwaltung von OLE DB-Treiber für SQL Server-Session-Objekte, kann der Aufwand minimiert werden. Anwendungen des OLE DB-Treibers für SQL Server können die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verbindung eines Sitzungsobjekts aktiv halten, indem ein Verweis auf mindestens eine Schnittstelle des Objekts aufrechterhalten wird.  
   
- Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wie Session-Objekte erforderlich sind, übergibt der poolverwaltungscode einen gültigen **IDBCreateCommand** Schnittstellenzeiger auf die Anwendungsmethode die Sitzung erfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
+ Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wenn Sitzungsobjekte angefordert werden, übergibt der Poolverwaltungscode einen gültigen **IDBCreateCommand**-Schnittstellenzeiger an die Anwendungsmethode, die die Sitzung anfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
   
 > [!NOTE]  
->  Im vorherigen Beispiel der **IDBCreateCommand** Schnittstelle wird verwendet, da die **ICommand** -Schnittstelle implementiert die **GetDBSession** -Methode, die einzige Methode im Befehls- oder rowsetbereich, die einem Objekt Gelegenheit zu die Sitzung zu ermitteln, auf dem es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
+>  Im vorherigen Beispiel wird die **IDBCreateCommand**-Schnittstelle verwendet, da die **ICommand**-Schnittstelle die **GetDBSession** -Methode implementiert. Dies ist die einzige Methode im Befehls- oder Rowsetbereich, mit der ein Objekt die Sitzung bestimmen kann, in der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Datenquellenobjekte &#40;OLE-DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

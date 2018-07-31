@@ -1,5 +1,5 @@
 ---
-title: Ausführen von asynchronen Vorgängen | Microsoft Docs
+title: Ausführen von asynchronen Vorgängen | Microsoft-Dokumentation
 description: Ausführen von asynchronen Vorgängen mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -23,55 +23,55 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3ba220d754eb3ebc31a719cb840e93378438e09c
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612135"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108042"
 ---
 # <a name="performing-asynchronous-operations"></a>Ausführen asynchroner Vorgänge
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht es Anwendungen, asynchrone Datenbankvorgänge auszuführen. Die asynchrone Verarbeitung ermöglicht es Methoden, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren. Dadurch kann ein Großteil der Leistungsfähigkeit und Flexibilität des Multithreadings genutzt werden, ohne dass Entwickler Threads explizit erstellen oder die Synchronisation durchführen müssen. Anwendungen fordern die asynchrone Verarbeitung an, wenn sie eine Datenbankverbindung oder das Ergebnis einer Befehlsausführung initialisieren.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Öffnen und Schließen einer Datenbankverbindung  
- Bei Verwendung der OLE DB-Treiber für SQL Server können das DBPROPVAL_ASYNCH_INITIALIZE-bit in der DBPROP_INIT_ASYNCH-Eigenschaft vor dem Aufruf von Anwendungen entwickelt, um die asynchrone Initialisierung ein Datenquellenobjekts festlegen **IDBInitialize:: Initialize** . Wenn diese Eigenschaft festgelegt ist, gibt der Anbieter sofort aus dem Aufruf von **initialisieren** mit S_OK, wenn die Operation sofort abgeschlossen ist, oder DB_S_ASYNCHRONOUS, wenn die Initialisierung asynchron fortgesetzt wird. Anwendungen können eine Abfrage für die **IDBAsynchStatus** oder [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) -Schnittstelle für das Datenquellenobjekt, und rufen dann **idbasynchstatus:: GetStatus** oder [ Issasynchstatus:: Waitforasynchcompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) zum Abrufen des Status der Initialisierung.  
+ Wenn der OLE DB-Treiber für SQL Server verwendet wird, können Anwendungen, die für die asynchrone Initialisierung eines Datenquellenobjekts ausgelegt sind, das DBPROPVAL_ASYNCH_INITIALIZE-Bit in der DBPROP_INIT_ASYNCH-Eigenschaft vor dem Aufrufen von **IDBInitialize::Initialize** festlegen. Wenn diese Eigenschaft festgelegt ist, antwortet der Anbieter unverzüglich auf den Aufruf von **Initialize** mit S_OK, wenn der Vorgang sofort ausgeführt wird, oder mit DB_S_ASYNCHRONOUS, wenn die Initialisierung asynchron fortgesetzt wird. Anwendungen können die **IDBAsynchStatus**-Schnittstelle oder die [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)-Schnittstelle des Datenquellenobjekts abfragen und dann **IDBAsynchStatus::GetStatus** oder [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) aufrufen, um den Status der Initialisierung zu ermitteln.  
   
- Außerdem wurde dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die SSPROP_ISSAsynchStatus-Eigenschaft hinzugefügt. Anbieter, unterstützen die **ISSAsynchStatus** Schnittstelle muss diese Eigenschaft mit dem Wert VARIANT_TRUE implementieren.  
+ Außerdem wurde dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die SSPROP_ISSAsynchStatus-Eigenschaft hinzugefügt. Anbieter, die die **ISSAsynchStatus**-Schnittstelle unterstützen, müssen diese Eigenschaft mit dem Wert VARIANT_TRUE implementieren.  
   
- **Idbasynchstatus:: Abort** oder [issasynchstatus:: Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) aufgerufen werden, um den asynchronen "Abbrechen" **initialisieren** aufrufen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls **IDBInitialize:: Initialize** wird nicht zurückgegeben, bis das Datenquellenobjekt vollständig initialisiert ist.  
+ **IDBAsynchStatus::Abort** oder [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen Aufruf von **Initialize** abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
   
 > [!NOTE]  
->  Datenquellenobjekte, die für das Verbindungspooling verwendet nicht Aufrufen der **ISSAsynchStatus** -Schnittstelle in der OLE DB-Treiber für SQL Server. Die **ISSAsynchStatus** Schnittstelle wird nicht für in einem Pool zusammengefasste Datenquellenobjekte verfügbar gemacht.  
+>  Datenquellenobjekte, die für das Verbindungspooling verwendet werden, können die **ISSAsynchStatus**-Schnittstelle im OLE DB-Treiber für SQL Server aufrufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
 >   
->  Wenn eine Anwendung Verwendung des Cursormoduls explizit erzwingt **IOpenRowset:: OPENROWSET** und **IMultipleResults:: GetResult** asynchrone Verarbeitung wird nicht unterstützt.  
+>  Wenn eine Anwendung die Verwendung der Cursor-Engine explizit erzwingt, unterstützen **IOpenRowset::OpenRowset** und **IMultipleResults::GetResult** keine asynchrone Verarbeitung.  
 >   
->  Das Remoting Proxy/Stub-Dll (in MDAC 2.8) kann nicht aufgerufen werden darüber hinaus die **ISSAsynchStatus** -Schnittstelle in OLE DB-Treiber für SQL Server. Die **ISSAsynchStatus** Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
+>  Zudem kann die DLL des Remoteproxys/-stubs (in MDAC 2.8) die **ISSAsynchStatus**-Schnittstelle im OLE DB-Treiber für SQL Server nicht aufrufen. Die **ISSAsynchStatus**-Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
 >   
->  Dienstkomponenten unterstützen keine **ISSAsynchStatus**.  
+>  Dienstkomponenten unterstützen **ISSAsynchStatus** nicht.  
   
 ## <a name="execution-and-rowset-initialization"></a>Ausführung und Rowsetinitialisierung  
- Anwendungen, die dafür ausgelegt sind, das Ergebnis einer Befehlsausführung asynchron zu öffnen, können das DBPROPVAL_ASYNCH_INITIALIZE-Bit in der DBPROP_ROWSET_ASYNCH-Eigenschaft festlegen. Wenn dieses Bit vor dem Aufrufen **IDBInitialize:: Initialize**, **ICommand:: Execute**, **IOpenRowset:: OPENROWSET** oder **IMultipleResults:: GetResult**, *Riid* Argument muss auf IID_IDBAsynchStatus, IID_ISSAsynchStatus oder IID_IUnknown festgelegt werden.  
+ Anwendungen, die dafür ausgelegt sind, das Ergebnis einer Befehlsausführung asynchron zu öffnen, können das DBPROPVAL_ASYNCH_INITIALIZE-Bit in der DBPROP_ROWSET_ASYNCH-Eigenschaft festlegen. Wenn dieses Bit vor dem Aufrufen von **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** oder **IMultipleResults::GetResult** festgelegt wird, muss das Argument *riid* auf IID_IDBAsynchStatus, IID_ISSAsynchStatus oder IID_Iunknown festgelegt werden.  
   
- Die Methode gibt unverzüglich S_OK zurück, wenn die rowsetinitialisierung abgeschlossen wird sofort oder mit DB_S_ASYNCHRONOUS, wenn die rowsetinitialisierung asynchron fortgesetzt wird, mit *PpRowset* auf die angeforderte Schnittstelle festgelegt ist, auf die Rowset. Für den OLE DB-Treiber für SQL Server diese Schnittstelle ist nur möglich **IDBAsynchStatus** oder **ISSAsynchStatus**. Bis das Rowset vollständig initialisiert wurde, wird diese Schnittstelle verhält, als wäre er in einen Zustand "angehalten", und der Aufruf **QueryInterface** für andere Schnittstellen als **IID_IDBAsynchStatus** oder **IID_ ISSAsynchStatus** möglicherweise zur Rückgabe von E_NOINTERFACE. Sofern der Consumer die asynchrone Verarbeitung nicht explizit anfordert, wird das Rowset synchron initialisiert. Alle angeforderten Schnittstellen sind verfügbar, wenn **Idbasynchstaus** oder **issasynchstatus:: Waitforasynchcompletion** gibt, die mit der Angabe, dass der asynchrone Vorgang abgeschlossen ist zurück. Das bedeutet nicht notwendigerweise, dass das Rowset vollständig aufgefüllt ist, jedoch ist es komplett und voll funktionstüchtig.  
+ Die Methode gibt unverzüglich S_OK zurück, wenn die Rowsetinitialisierung sofort ausgeführt wird, oder DB_S_ASYNCHRONOUS, wenn die Rowsetinitialisierung asynchron fortgesetzt wird, wobei *ppRowset* im Rowset auf die angeforderte Schnittstelle festgelegt ist. Für den OLE DB-Treiber für SQL Server diese Schnittstelle ist nur möglich **IDBAsynchStatus** oder **ISSAsynchStatus**. Bis das Rowset vollständig initialisiert wurde, verhält sich diese Schnittstelle so, als befände sie sich im Zustand „Angehalten“. Der Aufruf von **QueryInterface** für andere Schnittstellen als **IID_IDBAsynchStatus** oder **IID_ISSAsynchStatus** führt möglicherweise zur Rückgabe von E_NOINTERFACE. Sofern der Consumer die asynchrone Verarbeitung nicht explizit anfordert, wird das Rowset synchron initialisiert. Alle angeforderten Schnittstellen sind verfügbar, wenn **IDBAsynchStaus::GetStatus** oder **ISSAsynchStatus::WaitForAsynchCompletion** die Rückgabe übermittelt, dass der asynchrone Vorgang abgeschlossen ist. Das bedeutet nicht notwendigerweise, dass das Rowset vollständig aufgefüllt ist, jedoch ist es komplett und voll funktionstüchtig.  
   
- Wenn der ausgeführte Befehl kein Rowset zurückgibt, ist es weiterhin sofort zurückgegeben ein Objekt, das unterstützt **IDBAsynchStatus**.  
+ Wenn der ausgeführte Befehl kein Rowset zurückgibt, so gibt er doch unverzüglich ein Objekt zurück, das **IDBAsynchStatus** unterstützt.  
   
  Wenn Sie mehrere Ergebnisse von der asynchronen Befehlsausführung benötigen, sollten Sie Folgendes tun:  
   
 -   Legen Sie das DBPROPVAL_ASYNCH_INITIALIZE-Bit der DBPROP_ROWSET_ASYNCH-Eigenschaft vor dem Ausführen des Befehls fest.  
   
--   Rufen Sie **ICommand:: Execute**, und fordern **IMultipleResults**.  
+-   Rufen Sie **ICommand::Execute** auf, und fordern Sie **IMultipleResults** an.  
   
- Die **IDBAsynchStatus** und **ISSAsynchStatus** Schnittstellen können dann abgerufen werden, durch Abfragen, die mehrere Ergebnisse Schnittstelle mit **QueryInterface**.  
+ Die **IDBAsynchStatus**-Schnittstelle und die **ISSAsynchStatus**-Schnittstelle können dann angefordert werden, indem die Schnittstelle für mehrere Ergebnisse mit **QueryInterface** abgefragt wird.  
   
- Wenn der Befehl ausgeführt hat, **IMultipleResults** genutzt werden wie gewohnt mit einer Ausnahme, die den synchronen Fall: möglicherweise wird DB_S_ASYNCHRONOUS zurückgegeben, in diesem Fall **IDBAsynchStatus** oder **ISSAsynchStatus** können verwendet werden, um zu bestimmen, wann der Vorgang abgeschlossen ist.  
+ Wenn die Ausführung des Befehls abgeschlossen ist, kann **IMultipleResults** wie gewohnt verwendet werden. Es gibt jedoch eine Ausnahme für den synchronen Fall: Möglicherweise wird DB_S_ASYNCHRONOUS zurückgegeben; in diesem Fall kann mit **IDBAsynchStatus** oder **ISSAsynchStatus** ermittelt werden, wann der Vorgang abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **Issasynchstatus:: Waitforasynchcompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang abgeschlossen ist und die Menge des angegebenen Zeitintervalls *DwMilisecTimeOut* übergeben wird.  
+ Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt wurde oder die durch *dwMilisecTimeOut* angegebene Zeit verstrichen ist.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +112,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **Issasynchstatus:: Waitforasynchcompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang abgeschlossen ist oder die *DwMilisecTimeOut* Wert übergeben wird.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt oder der *dwMilisecTimeOut*-Wert übergeben wurde.  
   
  Im folgenden Beispiel wird die asynchrone Verarbeitung mit mehreren Resultsets veranschaulicht:  
   
@@ -192,9 +192,9 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Funktionen](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Eigenschaften und Verhaltensweisen von Rowsets](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

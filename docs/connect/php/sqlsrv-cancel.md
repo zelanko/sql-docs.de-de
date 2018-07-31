@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_cancel | Microsoft Docs
+title: Sqlsrv_cancel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983569"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Bricht eine Anweisung ab. Dies bedeutet, dass alle ausstehenden Ergebnisse für die Anweisung verworfen werden. Nachdem diese Funktion aufgerufen wird, die Anweisung kann erneut ausgeführt werden, wenn er mit vorbereitet wurde [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Das Aufrufen dieser Funktion ist nicht erforderlich, wenn alle Ergebnisse, die der Anweisung zugeordnet sind, verwendet wurden.  
+Bricht eine Anweisung ab. Dies bedeutet, dass alle ausstehenden Ergebnisse für die Anweisung verworfen werden. Nachdem diese Funktion aufgerufen wurde, kann die Anweisung erneut ausgeführt werden, wenn sie mit [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) vorbereitet wurde. Das Aufrufen dieser Funktion ist nicht erforderlich, wenn alle Ergebnisse, die der Anweisung zugeordnet sind, verwendet wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ sqlsrv_cancel( resource $stmt)
 Ein boolescher Wert: **true** , wenn der Vorgang erfolgreich war. Andernfalls lautet der Wert **false**.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel ist das Ziel der [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) Datenbank um eine Abfrage auszuführen, klicken Sie dann Ergebnisse verarbeitet und gezählt bis die Variable *$salesTotal* einen angegebenen Betrag erreicht. Die verbleibenden Abfrageergebnisse werden anschließend verworfen. Das Beispiel setzt voraus, dass SQL Server und die AdventureWorks-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel nimmt die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank als Ziel zur Ausführung einer Abfrage. Es werden dann Ergebnisse verarbeitet und gezählt, bis die Variable *$salesTotal* einen angegebenen Betrag erreicht. Die verbleibenden Abfrageergebnisse werden anschließend verworfen. Das Beispiel setzt voraus, dass SQL Server und die AdventureWorks-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -96,9 +96,9 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>Kommentare  
-Eine Anweisung, die vorbereitet und ausgeführt wird, mit der Kombination von wird [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) und [Sqlsrv_execute](../../connect/php/sqlsrv-execute.md) kann erneut ausgeführt, mit **Sqlsrv_execute** nach dem Aufrufen von **Sqlsrv_cancel**. Eine Anweisung, die ausgeführt wird, mit [Sqlsrv_query](../../connect/php/sqlsrv-query.md) kann nicht erneut ausgeführt werden, nach dem Aufruf **Sqlsrv_cancel**.  
+Eine Anweisung, die mit der Kombination von [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) und [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) vorbereitet und ausgeführt wird, kann nach dem Aufruf von **sqlsrv_cancel** erneut mit **sqlsrv_execute** ausgeführt werden. Eine Anweisung, die mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) ausgeführt wird, kann nach dem Aufruf von **sqlsrv_cancel** nicht erneut ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)

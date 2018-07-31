@@ -1,5 +1,5 @@
 ---
-title: Verwenden von gespeicherten Prozeduren mit Eingabeparametern | Microsoft Docs
+title: Verwenden von gespeicherten Prozeduren mit Eingabeparametern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852170"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978592"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Verwenden von gespeicherten Prozeduren mit Eingabeparametern
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gespeicherter Prozedur, die Sie aufrufen können, ist eine, die einen enthält oder mehr Parameter, sind die Parameter, die verwendet werden können, um Daten an die gespeicherte Prozedur übergeben. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufrufen und die zurückgegebenen Daten verarbeiten.  
+  Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozedur enthält mindestens einen IN-Parameter, über den Daten an die gespeicherte Prozedur übergeben werden können. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und zum Verarbeiten der Daten, die zurückgegeben.  
   
- Wenn Sie den JDBC-Treiber zum Aufrufen einer gespeicherten Prozedur mit IN-Parameter verwenden, müssen Sie mithilfe der `call` SQL-Escapesequenz zusammen mit den [PrepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) Klasse. Die Syntax für die `call` -Escapesequenz mit IN-Parameter lautet wie folgt:  
+ Wenn Sie eine gespeicherte Prozedur mit IN-Parametern mit dem JDBC-Treiber aufrufen, müssen Sie die `call`-SQL-Escapesequenz zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Die Syntax für die `call`-Escapesequenz mit IN-Parameter lautet wie folgt:  
   
  `{call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  Weitere Informationen zu den SQL-Escapesequenzen finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- Bei der Erstellung der `call` Escapesequenz, die IN-Parameter angeben, indem die? (?) an. das als Platzhalter für die Parameterwerte fungiert, die an die gespeicherte Prozedur übergeben werden. Um einen Wert für einen Parameter angeben, können Sie eine der Methoden Setter-Methode der SQLServerPreparedStatement-Klasse. Die verwendbare Festlegungsmethode hängt vom Datentyp des IN-Parameters ab.  
+ Geben Sie die IN-Parameter beim Erstellen der `call`-Escapesequenz mit dem Fragezeichen (?) an. das als Platzhalter für die Parameterwerte fungiert, die an die gespeicherte Prozedur übergeben werden. Mit den Festlegungsmethoden der -Klasse können Sie für einen Parameter einen Wert angeben. Die verwendbare Festlegungsmethode hängt vom Datentyp des IN-Parameters ab.  
   
  Wenn Sie einen Wert an die Festlegungsmethode übergeben, müssen Sie nicht nur den Wert angeben, der im Parameter verwendet wird, sondern auch die ordinale Position des Parameters in der gespeicherten Prozedur. Wenn die gespeicherte Prozedur beispielsweise einen einzigen IN-Parameter enthält, ist der Ordinalwert "1". Wenn die gespeicherte Prozedur zwei Parameter enthält, ist der erste Ordinalwert "1" und der zweite Ordinalwert "2".  
   
- Verwenden Sie als Beispiel dafür, wie eine gespeicherte Prozedur aufrufen, die IN-Parameter enthält, die UspGetEmployeeManagers gespeicherte Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Diese gespeicherte Prozedur übernimmt einen einzelnen Eingabeparameter mit dem Namen "EmployeeID" (integer-Wert) und gibt abhängig von der angegebenen "EmployeeID" eine rekursive Liste der Mitarbeiter und deren Vorgesetzten zurück. Der Java-Code für den Aufruf dieser gespeicherten Prozedur sieht folgendermaßen aus:  
+ Ein Beispiel für den Aufruf einer gespeicherten Prozedur mit einem IN-Parameter enthält die gespeicherte Prozedur „uspGetEmployeeManagers“ in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Diese gespeicherte Prozedur übernimmt einen einzelnen Eingabeparameter mit dem Namen "EmployeeID" (integer-Wert) und gibt abhängig von der angegebenen "EmployeeID" eine rekursive Liste der Mitarbeiter und deren Vorgesetzten zurück. Der Java-Code für den Aufruf dieser gespeicherten Prozedur sieht folgendermaßen aus:  
   
 ```  
 public static void executeSprocInParams(Connection con) {  
@@ -63,7 +63,7 @@ public static void executeSprocInParams(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

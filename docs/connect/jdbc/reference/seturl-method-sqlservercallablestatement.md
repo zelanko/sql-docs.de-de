@@ -1,5 +1,5 @@
 ---
-title: SetURL-Methode (SQLServerCallableStatement) | Microsoft Docs
+title: setURL-Methode (SQLServerCallableStatement)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c316b8293ce77ecd6c4e4719af9381dfc8cddc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066908"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf den angegebenen URL-Wert.  
+  Legt den angegebenen Parameter auf den angegebenen URL-Wert fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ public void setURL(java.lang.String sCol,
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Eine **Zeichenfolge**, die den Namen des Parameters enthält.  
   
  *u*  
   
@@ -51,10 +51,10 @@ public void setURL(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetURL-Methode wird von der SetURL-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese -Methode wird von der -Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

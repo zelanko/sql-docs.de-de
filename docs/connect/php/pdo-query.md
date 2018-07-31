@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Query | Microsoft Docs'
+title: 'PDO:: Query | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308269"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979744"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parameter  
 *$statement*: Die SQL-Anweisung, die Sie ausführen möchten.  
   
-*$Fetch_style*: die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $*Fetch_style* in PDO:: Query kann mit $ überschrieben werden*Fetch_style* in PDO:: Fetch.  
+*$fetch_style:* Die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $*$fetch_style* in PDO::query kann mit $*fetch_style* in PDO::fetch überschrieben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn der Aufruf erfolgreich ist, gibt PDO::query ein PDOStatement-Objekt zurück. Wenn der Aufruf fehlschlägt, löst PDO::query ein PDOException-Objekt aus oder gibt „false“ zurück, abhängig von der Einstellung für PDO::ATTR_ERRMODE.  
@@ -44,17 +44,17 @@ Wenn der Aufruf erfolgreich ist, gibt PDO::query ein PDOStatement-Objekt zurück
 ## <a name="exceptions"></a>Ausnahmen  
 PDOException  
   
-## <a name="remarks"></a>Hinweise  
-Eine Abfrage mit PDO:: Query kann entweder eine vorbereitete Anweisung ausgeführt oder direkt, abhängig von der Einstellung für PDO:: sqlsrv_attr_direct_query. Weitere Informationen finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
+## <a name="remarks"></a>Remarks  
+Bei einer mithilfe von PDO::query ausgeführten Abfrage wird entweder eine vorbereitete Anweisung ausgeführt, oder die Abfrage wird direkt durchgeführt. Dies hängt von der Einstellung für PDO::SQLSRV_ATTR_DIRECT_QUERY ab. Weitere Informationen finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO:: sqlsrv_attr_query_timeout wirkt sich auch auf das Verhalten der PDO:: EXEC aus. Weitere Informationen finden Sie unter [PDO:: setAttribute](../../connect/php/pdo-setattribute.md).  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT wirkt sich auf das Verhalten von PDO::exec aus. Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
-Sie können die folgenden Optionen angeben, für die $*Fetch_style*.  
+Sie können die folgenden Optionen für $*fetch_style* angeben.  
   
-|style|Description|  
+|style|und Beschreibung|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Abfragen von Daten in der angegebenen Spalte. Die erste Spalte in der Tabelle ist die Spalte „0“.|  
-|PDO:: fetch_class, '*Classname*', Array ( *Arglist* )|Erstellt eine Instanz einer Klasse und weist Eigenschaften in der Klasse Spaltennamen zu. Wenn der Konstruktor der Klasse einen oder mehrere Parameter akzeptiert, können Sie auch eine *arglist*übergeben.|  
+|PDO::FETCH_CLASS, '*Klassenname*', array( *Argumentliste* )|Erstellt eine Instanz einer Klasse und weist Eigenschaften in der Klasse Spaltennamen zu. Wenn der Konstruktor der Klasse einen oder mehrere Parameter akzeptiert, können Sie auch eine *arglist*übergeben.|  
 |PDO:: fetch_class, '*Classname*"|Weist Eigenschaften in einer vorhandenen Klasse Spaltennamen zu|  
   
 Rufen Sie vor dem erneuten Aufrufen von PDO::query das PDOStatement::closeCursor auf, um zum PDOSTATEMENT-Objekt gehörende Datenbankressourcen freizugeben.  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: Mithilfe der integrierten Authentifizierung | Microsoft Docs
+title: Mithilfe der integrierten Authentifizierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,99 +16,99 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c70de16565cd90c3ca594fffcbbcc82bae89b90e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a6e45f2253abd85387ce43b4888e934e6f2dbfde
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853175"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984402"
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Die [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS unterstützt Verbindungen mit Kerberos die integrierte Authentifizierung. Es unterstützt MIT Kerberos Key Distribution Center (KDC), und arbeitet mit der Generic Security Services Anwendung Programm-Schnittstelle (GSSAPI) und Kerberos v5-Bibliotheken.
+Der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux und macOS unterstützt Verbindungen, die eine integrierte Kerberos-Authentifizierung verwenden. Er unterstützt das MIT Kerberos Key Distribution Center (KDC) und kann mit der Generic Security Services Anwendungsprogramm-Schnittstelle (GSSAPI) und mit Kerberos v5-Bibliotheken ausgeführt werden.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>Mithilfe der integrierten Authentifizierung für die Verbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aus einer ODBC-Anwendung  
+## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>Herstellen einer Verbindung zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] über eine ODBC-Anwendung mithilfe der integrierten Authentifizierung  
 
-Sie können die integrierte Kerberos-Authentifizierung aktivieren, indem **Trusted_Connection = Yes** in der Verbindungszeichenfolge des **SQLDriverConnect** oder **SQLConnect**. Beispiel:  
+Sie können eine integrierte Kerberos-Authentifizierung aktivieren, indem Sie **Trusted_Connection=yes** in der Verbindungszeichenfolge von **SQLDriverConnect** oder **SQLConnect**angeben. Zum Beispiel:  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-Bei der Verbindung mit einem DSN, können Sie auch hinzufügen **Trusted_Connection = Yes** auf den DSN-Eintrag im `odbc.ini`.
+Beim Herstellen der Verbindung mit einem DSN, Sie können auch hinzufügen **Trusted_Connection = Yes** mit dem DSN-Eintrag im `odbc.ini`.
   
-Die `-E` -Option von `sqlcmd` und `-T` Option `bcp` auch an die integrierte Authentifizierung verwendet werden kann, finden Sie unter [Herstellen einer Verbindung mit **Sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) und [ Herstellen einer Verbindung mit **Bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) für Weitere Informationen.
+Die `-E` Option `sqlcmd` und `-T` Option `bcp` kann auch zur Angabe der integrierten Authentifizierung verwendet werden, finden Sie unter [Herstellen einer Verbindung mit **Sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) und [ Herstellen einer Verbindung mit **Bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) für Weitere Informationen.
 
-Stellen Sie sicher, dass den clientprinzipal, auf die Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ist bereits beim Kerberos KDC authentifiziert.
+Stellen Sie sicher, dass der Clientprinzipal, der mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] verbunden werden soll, bereits mit Kerberos KDC authentifiziert ist.
   
 **ServerSPN** und **FailoverPartnerSPN** werden nicht unterstützt.  
   
-## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Bereitstellen von einem Linux- oder MacOS ODBC-Treiber-Anwendung entwickelt zum Ausführen als Dienst
+## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Bereitstellen einer Linux- oder MacOS-ODBC-Treiber-Anwendung entwickelt für die Ausführung als Dienst
 
-Ein Systemadministrator kann eine Anwendung als Dienst ausgeführt wird, die Kerberos-Authentifizierung verwendet wird, für die Verbindung bereitstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Ein Systemadministrator kann eine Anwendung bereitstellen, die als Dienst laufen soll, der eine Kerberos-Authentifizierung verwendet, um sich mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]zu verbinden.  
   
-Sie müssen zuerst Kerberos auf dem Client zu konfigurieren und stellen Sie sicher, dass die Anwendung die Kerberos-Anmeldeinformationen des standardprinzipals verwenden kann.
+Sie müssen zuerst Kerberos auf dem Client konfigurieren und anschließend sicherstellen, dass die Anwendung die Kerberos-Anmeldeinformationen des Prinzipals Standard verwenden kann.
 
-Stellen Sie sicher, dass die Verwendung von `kinit` oder PAM (Pluggable Authentication Module) zum Abrufen und Zwischenspeichern TGT für den Prinzipal, der die Verbindung verwendet wird, über eine der folgenden Methoden:  
+Stellen Sie sicher, dass Sie `kinit` oder PAM (Pluggable Authentication Module) verwenden, um das TGT für den Prinzipal, der die Verbindung verwendet, abzurufen und zwischenzuspeichern:  
   
--   Führen Sie `kinit`, und übergeben Sie einen Prinzipalnamen und ein Kennwort.  
+-   Führen Sie `kinit` aus und geben Sie Prinzipalnamen und -kennwort an.  
   
--   Führen Sie `kinit`, und übergeben Sie einen Prinzipalnamen und den Speicherort einer schlüsseltabellendatei, die den prinzipalschlüssel erstellt, indem enthält `ktutil`.  
+-   Führen Sie `kinit` aus und geben Sie einen Prinzipalnamen und einen Speicherort einer Schlüsseltabellendatei an, die den von `ktutil` erstellten Prinzipalschlüssel enthält.  
   
--   Stellen Sie sicher, dass die Anmeldung am System vorgenommen wurde mithilfe von Kerberos PAM (Pluggable Authentication Module).
+-   Stellen Sie sicher, dass die Anmeldung beim System mithilfe des Kerberos-PAM (Pluggable Authentication Module) vorgenommen wurde.
 
-Wenn eine Anwendung als Dienst wird ausgeführt, da Kerberos-Anmeldeinformationen programmbedingt ablaufen, erneuern Sie die Anmeldeinformationen, um kontinuierliche Verfügbarkeit des Diensts sicherzustellen. Der ODBC-Treiber erneuert nicht Anmeldeinformationen selbst; Stellen Sie sicher, dass es ist ein `cron` Job oder ein Skript, die regelmäßig ausgeführt wird, um die Anmeldeinformationen vor deren Ablauf zu erneuern. Um zu vermeiden, dass das Kennwort bei jeder Verlängerung, können Sie eine Keytab-Datei verwenden.  
+Wenn eine Anwendung als Dienst ausgeführt wird, da die Kerberos-Anmeldeinformationen programmbedingt ablaufen, erneuern Sie die Anmeldeinformationen, um eine kontinuierliche Verfügbarkeit des Diensts sicherzustellen. Der ODBC-Treiber erneuert nicht Anmeldeinformationen selbst; Stellen Sie sicher, dass es ist ein `cron` Job oder ein Skript, das regelmäßig ausgeführt wird, um die Anmeldeinformationen vor deren Ablauf zu verlängern. Um zu vermeiden, müssen das Kennwort für jede Erneuerung, können Sie eine Keytab-Datei verwenden.  
   
 [Kerberos-Konfiguration und Verwendung](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) bietet ausführliche Informationen zu Methoden zum kerberisieren von Diensten unter Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Nachverfolgen von Zugriffen auf eine Datenbank
 
-Ein Datenbankadministrator kann einen Audit-Trail des Zugriffs auf eine Datenbank erstellen, wenn Systemkonten genutzt wird, den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe der integrierten Authentifizierung.  
+Ein Datenbankadministrator kann einen Audit-Trail des Zugriffs auf eine Datenbank erstellen, wenn Systemkonten genutzt werden, um mithilfe integrierter Authentifizierung auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] zuzugreifen.  
   
-Anmelden an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] wird das Systemkonto verwendet und ist keine Funktionalität für Linux, um den Sicherheitskontext imitieren. Aus diesem Grund muss der Benutzer genauer bestimmt werden.
+Beim Anmelden bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] wird das Systemkonto verwendet und es gibt keine Funktionen für Linux, um die Identität des Sicherheitskontexts zu wechseln. Aus diesem Grund muss der Benutzer genauer bestimmt werden.
   
-Überwachen der Aktivitäten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] im Auftrag von Benutzern als das Systemkonto, muss die Anwendung verwenden [!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS**.  
+Zur Überwachung von Aktivitäten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter einer anderen Identität als dem Systemkonto muss die Anwendung [!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS** verwenden.  
   
-Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Allerdings erstellt die Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung ein Sicherheitsrisiko, da der UnixODBC-Treiber-Manager mit andere Benutzern, gepoolte Verbindungen wiederzuverwenden erlaubt. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](http://www.unixodbc.org/doc/conn_pool.html).  
+Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Das Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung stellt jedoch ein Sicherheitsrisiko dar, da der UnixODBC-Treiber-Manager unterschiedlichen Benutzern ermöglicht, gepoolte Verbindungen wiederzuverwenden. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
-Vor der Wiederverwendung muss eine Anwendung gepoolte Verbindungen durch Ausführen zurückgesetzt `sp_reset_connection`.  
+Vor der Wiederverwendung muss eine Anwendung gepoolte Verbindungen durch Ausführen von `sp_reset_connection` zurücksetzen.  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Verwalten von Benutzeridentitäten mithilfe von Active Directory
 
-Ein anwendungssystemadministrator muss keine separate Sätze von Anmeldeinformationen verwalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Es ist möglich, Active Directory als ein Schlüsselverteilungscenter (KDC) für die integrierte Authentifizierung zu konfigurieren. Finden Sie unter [Microsoft Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747(v=vs.85).aspx) für Weitere Informationen.
+Ein Systemadministrator, der für Anwendungen zuständig ist, muss keine separaten Sätze von Anmeldeinformationen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]verwalten. Es ist möglich, Active Directory als ein Schlüsselverteilungscenter (KDC) für die integrierte Authentifizierung zu konfigurieren. Finden Sie unter [Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx) für Weitere Informationen.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Verbindungsserver und verteilte Abfragen nutzen
 
-Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver oder verteilte Abfragen nutzt. Dies geschieht ohne einen Datenbankadministrator, der separate Sätze von SQL-Anmeldeinformationen verwaltet. In diesem Fall muss ein Entwickler eine Anwendung auf die Verwendung der integrierten Authentifizierung konfigurieren:  
+Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver oder verteilte Abfragen nutzt. Dies geschieht ohne einen Datenbankadministrator, der separate Sätze von SQL-Anmeldeinformationen verwaltet. In diesem Fall muss ein Entwickler eine Anwendung so konfigurieren, dass sie integrierte Authentifizierung nutzt:  
   
 -   Der Benutzer meldet sich bei einem Clientcomputer an und authentifiziert sich beim Anwendungsserver.  
   
--   Die Anwendungsserver als eine andere Datenbank authentifiziert und eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   Der Anwendungsserver ist mit anderem Datenbanknamen authentifiziert und stellt eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] her.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] als Datenbankbenutzer in eine andere Datenbank authentifiziert ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ist als Datenbankbenutzer bei einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]) authentifiziert.  
   
 Nachdem die integrierte Authentifizierung konfiguriert ist, werden Anmeldeinformationen für den Verbindungsserver übergeben.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>Integrierte Authentifizierung und sqlcmd
-Für den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe der integrierten Authentifizierung, verwenden Sie die `-E` -Option von `sqlcmd`. Stellen Sie sicher, dass das Konto, das führt `sqlcmd` der Standard-Kerberos-Client-Prinzipal zugeordnet ist.
+Verwenden Sie für den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe der integrierten Authentifizierung die `-E`-Option `sqlcmd`. Stellen Sie sicher, dass das Konto, das führt `sqlcmd` der Standard-Kerberos-Client-Prinzipal zugeordnet ist.
 
 ## <a name="integrated-authentication-and-bcp"></a>Integrierte Authentifizierung und bcp
-Für den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe der integrierten Authentifizierung, verwenden Sie die `-T` -Option von `bcp`. Stellen Sie sicher, dass das Konto, das führt `bcp` der Standard-Kerberos-Client-Prinzipal zugeordnet ist. 
+Verwenden Sie für den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe der integrierten Authentifizierung die `-T`-Option `bcp`. Stellen Sie sicher, dass das Konto, das führt `bcp` der Standard-Kerberos-Client-Prinzipal zugeordnet ist. 
   
 Es ist ein Fehler mit `-T` mit der `-U` oder `-P` Option.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Unterstützte Syntax für einen SPN registriert von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Unterstützte Syntax für einen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] registrierten SPN
 
-Die Syntax, die SPNs in der Verbindungszeichenfolge oder Verbindungsattribute verwenden lautet wie folgt:  
+Die Syntax, die SPNs in den Attributen für Verbindungszeichenfolgen und Verbindungen verwenden, lautet wie folgt:  
 
-|Syntax|Description|  
+|Syntax|und Beschreibung|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer. *fqdn* ist ein vollqualifizierter Domänenname.|  
   
-## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Authentifizieren einen Linux- oder MacOS Computer mit Active Directory
+## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Authentifizieren eines Linux- oder macOS-Computers mit Active Directory
 
-Geben Sie zum Konfigurieren von Kerberos, Daten in die `krb5.conf` Datei. `krb5.conf` befindet sich im `/etc/` aber erhalten Sie in eine andere Datei, die mit der Syntax, z. B. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Im folgenden ist ein Beispiel für `krb5.conf` Datei:  
+Um Kerberos zu konfigurieren, geben Sie auf der Daten in die `krb5.conf` Datei. `krb5.conf` befindet sich im `/etc/` jedoch finden Sie in einer anderen Datei, die mit der Syntax, z. B. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Im Folgenden finden Sie eine `krb5.conf`-Beispieldatei:  
   
 ```  
 [libdefaults]  
@@ -123,17 +123,17 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Wenn Ihre Linux- oder MacOS-Computer konfiguriert ist, um das Dynamic Host Configuration Protocol (DHCP) mit einem Windows-DHCP-Server bietet der DNS-Server zu verwenden, verwenden, können Sie **Dns_lookup_kdc = "true"**. Jetzt können Sie Kerberos verwenden, mit der Domäne anmelden, indem er den Befehl `kinit alias@YYYY.CORP.CONTOSO.COM`. Parameter übergeben wird, um `kinit` Groß-/Kleinschreibung beachtet und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Computer so konfiguriert, dass in der Domäne befinden, muss dieser Benutzer haben `alias@YYYY.CORP.CONTOSO.COM` Anmeldenamen hinzugefügt. Sie können nun vertrauenswürdige Verbindungen (**Trusted_Connection = YES** in einer Verbindungszeichenfolge **Bcp -T**, oder **Sqlcmd-e**).  
+Wenn Ihre Linux- oder MacOS-Computer konfiguriert ist, um das Dynamic Host Configuration Protocol (DHCP) mit einem Windows-DHCP-Server, die Bereitstellung von DNS-Server zu verwenden, um verwenden, können Sie **Dns_lookup_kdc = True**. Jetzt können Sie Kerberos verwenden, mit der Domäne anmelden, mit dem Befehl `kinit alias@YYYY.CORP.CONTOSO.COM`. Parameter zu übergeben, um `kinit` Groß-/Kleinschreibung beachtet und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Computer so konfiguriert, dass in der Domäne befinden, müssen diesen Benutzer `alias@YYYY.CORP.CONTOSO.COM` Anmeldenamen hinzugefügt. Sie können nun vertrauenswürdige Verbindungen (**Trusted_Connection=YES** in einer Verbindungszeichenfolge **bcp -T** oder **sqlcmd -E**) verwenden.  
   
-Die Zeit auf dem Linux oder MacOS Computer und die Zeit auf Kerberos Key Distribution Center (KDC) müssen möglichst übereinstimmen. Stellen Sie sicher, dass die Systemzeit richtig, z. B. mithilfe der Netzwerkzeitprotokoll (NTP) festgelegt ist.  
+Die Uhrzeit auf dem Linux oder MacOS-Computer und die Zeit auf den Kerberos Key Distribution Center (KDC) müssen möglichst übereinstimmen. Stellen Sie sicher, dass die Systemzeit richtig eingestellt ist, d.h., dass die Network Time Protocol (NTP) verwendet wird.  
 
-Wenn Kerberos-Authentifizierung fehlschlägt, wird der ODBC-Treiber unter Linux oder MacOS NTLM-Authentifizierung nicht verwendet.  
+Wenn die Kerberos-Authentifizierung fehlschlägt, verwendet der ODBC-Treiber unter Linux oder macOS nicht die NTLM-Authentifizierung.  
 
-Weitere Informationen zum Authentifizieren von Linux oder MacOS Computer mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [bewährte Methoden für die Integration von OS X mit Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zum Konfigurieren von Kerberos finden Sie unter der [MIT Kerberos-Dokumentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Weitere Informationen zum Authentifizieren von Linux oder MacOS-Computer mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [bewährte Methoden für die Integration von OS X in Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zum Konfigurieren von Kerberos finden Sie unter den [MIT Kerberos-Dokumentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)
+[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
 
-[Mithilfe von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Verwendung von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

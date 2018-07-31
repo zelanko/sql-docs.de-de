@@ -1,5 +1,5 @@
 ---
-title: UpdateObject-Methode (Int, java.lang.Object, Int) | Microsoft Docs
+title: updateObject-Methode (int, java.lang.Object, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036168"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>updateObject-Methode (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **Objekt** Wert angegebenen Spaltenindexes und der Dezimalstellen.  
+  Aktualisiert die angegebene Spalte mit einem Wert vom Typ **Object** unter Verwendung des angegebenen Spaltenindexes und der Dezimalstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ public void updateObject(int index,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
  *obj*  
   
- Ein **Objekt** Wert.  
+ Ein **Object**-Wert.  
   
  *scale*  
   
@@ -56,8 +56,8 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateObject-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateObject-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

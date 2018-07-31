@@ -1,5 +1,5 @@
 ---
-title: WasNull-Methode (SQLServerResultSet) | Microsoft Docs
+title: WasNull-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848495"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979192"
 ---
-# <a name="wasnull-method-sqlserverresultset"></a>WasNull-Methode (SQLServerResultSet)
+# <a name="wasnull-method-sqlserverresultset"></a>wasNull-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Überprüft, ob es sich beim letzten gelesenen Wert um einen NULL-Wert handelt.  
@@ -39,15 +39,15 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn der letzte Wert schreibgeschützt war null. Andernfalls lautet der Wert **false**.  
+ **"true"** , wenn der letzte gelesene Wert war null. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese WasNull-Methode wird von der WasNull-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese -Methode wird von der -Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

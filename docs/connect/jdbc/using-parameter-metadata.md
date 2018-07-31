@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Parametermetadaten | Microsoft Docs
+title: Verwenden von Parametermetadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2ff7d2646c0a3838b8a0dc72249b73e64227dd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852195"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982175"
 ---
 # <a name="using-parameter-metadata"></a>Verwenden von Parametermetadaten
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Abfrage eine [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) oder ein [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Objekt zu den Parametern, die sie enthalten, die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implementiert die [ SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) Klasse. Diese Klasse enthält eine Vielzahl von Feldern und Methoden, die Informationen in der Form eines einzelnen Werts zurückgeben.  
+  Für die Abfrage der enthaltenen Parameter bei [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)- oder [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Objekten implementiert [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md)-Klasse. Diese Klasse enthält eine Vielzahl von Feldern und Methoden, die Informationen in der Form eines einzelnen Werts zurückgeben.  
   
- Um ein SQLServerParameterMetaData-Objekt zu erstellen, können Sie die [GetParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) der Sqlserverpreparedstatement- und SQLServerCallableStatement-Klasse.  
+ Um ein SQLServerParameterMetaData-Objekt zu erstellen, können Sie die [GetParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) der die Sqlserverpreparedstatement- und SQLServerCallableStatement-Klasse.  
   
- Im folgenden Beispiel wird eine offene Verbindung mit dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank an die Funktion übergeben, die GetParameterMetaData-Methode der SQLServerCallableStatement-Klasse wird verwendet, um ein SQLServerParameterMetaData-Objekt, und klicken Sie dann verschiedenen zurückgeben Methoden, die von der SQLServerParameterMetaData-Objekt dienen zum Anzeigen von Informationen zu Typ und Modus der Parameter, die in der gespeicherten Prozedur HumanResources.uspUpdateEmployeeHireInfo enthalten sind.  
+ Im folgenden Beispiel werden eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank an die Funktion übergeben, mit der -Methode der -Klasse ein -Objekt zurückgegeben und dann mit den verschiedenen Methoden des -Objekts Informationen zu Typ und Modus der Parameter angezeigt, die in der gespeicherten Prozedur „HumanResources.uspUpdateEmployeeHireInfo“ enthalten sind.  
   
  [!code[JDBC#UsingParamMetaData1](../../connect/jdbc/codesnippet/Java/using-parameter-metadata_1.java)]  
     
 > [!NOTE]  
-Es gibt einige Einschränkungen bei die SQLServerParameterMetaData-Klasse mit vorbereiteten Anweisungen verwendet. 
-**Mit Microsoft JDBC Driver 6.0 (oder höher) für SQL Server**: bei Verwendung von SQL Server 2008 oder 2008 R2 unterstützt der JDBC-Treiber SELECT, DELETE, INSERT und UPDATE-Anweisungen, solange diese Anweisungen enthält keine Unterabfragen.  
+Es gibt einige Einschränkungen auf, wenn die SQLServerParameterMetaData-Klasse mit vorbereiteten Anweisungen verwendet. 
+**Mit Microsoft JDBC-Treiber 6.0 (oder höher) für SQL Server:** Bei SQL Server 2008 oder 2008 R2 unterstützt der JDBC-Treiber SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten.  
 
-Abfragen ZUSAMMENFÜHREN werden auch nicht für die SQLServerParameterMetaData-Klasse unterstützt, bei Verwendung von SQL Server 2008 oder 2008 R2. Bei SQL Server 2012 und höheren werden Parametermetadaten in komplexen Abfragen unterstützt.  
+Auch MERGE-Abfragen werden bei SQL Server 2008 oder 2008 R2 nicht für die SQLServerParameterMetaData-Klasse unterstützt. Bei SQL Server 2012 und höheren werden Parametermetadaten in komplexen Abfragen unterstützt.  
 
-Abrufen von Parametermetadaten für verschlüsselte Spalten werden nicht unterstützt. **Mit Microsoft JDBC Driver 4.1 und 4.2 für SQL Server**: der JDBC-Treiber unterstützt SELECT, DELETE, INSERT und UPDATE-Anweisungen aus, solange diese Anweisungen enthält keine Unterabfragen. Abfragen ZUSAMMENFÜHREN, werden auch nicht für die SQLServerParameterMetaData-Klasse unterstützt.  
+Abrufen von Parametermetadaten für verschlüsselte Spalten werden nicht unterstützt. **Mit Microsoft-JDBC-Treiber 4.1 oder 4.2 für SQL Server:** Der JDBC-Treiber unterstützt SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten. Auch MERGE-Abfragen werden bei SQL Server 2008 oder 2008 R2 nicht für die SQLServerParameterMetaData-Klasse unterstützt.  
   
   

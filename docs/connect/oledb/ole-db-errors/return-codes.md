@@ -1,5 +1,5 @@
 ---
-title: Rückgabecodes | Microsoft Docs
+title: Rückgabecodes | Microsoft-Dokumentation
 description: Rückgabecodes
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,15 +26,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665960"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107046"
 ---
 # <a name="return-codes"></a>Rückgabecodes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,17 +42,17 @@ ms.locfileid: "35665960"
   
  Weitere Informationen zu OLE DB-Rückgabecodes finden Sie unter [Rückgabecodes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Wenn ein OLE DB-Treiber für SQL Server-Memberfunktion S_OK zurückgibt, war die Funktion erfolgreich.  
+ Wenn ein OLE DB-Treiber für SQL Server-Memberfunktion S_OK zurückgibt, wurde die Funktion erfolgreich.  
   
- Wenn ein OLE DB-Treiber für SQL Server-Memberfunktion S_OK zurückgibt, können die Entpacken von OLE/COM HRESULT fehlgeschlagen, und IS_ERROR-Makros den Erfolg oder das Fehlschlagen einer Funktion bestimmen.  
+ Wenn eine Elementfunktion des OLE DB-Treibers für SQL Server nicht S_OK zurückgibt, ist das Entpacken von OLE/COM HRESULT fehlgeschlagen, und IS_ERROR-Makros können den Erfolg oder das Fehlschlagen einer Funktion bestimmen.  
   
- Wenn FAILED oder IS_ERROR "true" zurückgibt, wird der OLE DB-Treiber für SQL Server-Consumer sicher, dass die Ausführung der Elementfunktion fehlgeschlagen. Wenn FAILED oder IS_ERROR zurückgeben entspricht "false" und das HRESULT nicht S_OK, der OLE DB-Treiber für SQL Server-Consumer die Funktion erfolgreich ausgeführt, in gewisser Hinsicht gewährleistet ist. Der Consumer kann ausführliche Informationen zu dieser Rückgabewert "Success mit Informationen" aus der OLE DB-Treiber für SQL Server-Schnittstellen für Error abgerufen werden. In Fällen, in denen eine Funktion eindeutig (das FAILED-Makro gibt "true") fehlschlägt, ist auch, erweiterte Fehlerinformationen der OLE DB-Treiber für SQL Server-Schnittstellen für Error verfügbar.  
+ Wenn FAILED oder IS_ERROR den Wert TRUE zurückgibt, erkennt der OLE DB-Treiber für SQL Server, dass die Ausführung der Memberfunktion fehlgeschlagen ist. Wenn FAILED oder IS_ERROR zurückgeben entspricht "false" und das HRESULT nicht S_OK, der OLE DB-Treiber für SQL Server-Consumer die Funktion erfolgreich ausgeführt, in gewisser Weise gewährleistet werden kann. Der Consumer kann ausführliche Informationen über diese „Erfolgsrückgabe mit Informationen“ von den Fehlerschnittstellen des OLE DB-Treibers für SQL Server abrufen. Auch in Fällen, in denen eine Funktion vollständig fehlschlägt (und das FAILED-Makro den Wert TRUE zurückgibt), sind erweiterte Fehlerinformationen von den Fehlerschnittstellen des OLE DB-Treibers für SQL Server verfügbar.  
   
- OLE DB-Treiber für SQL Server-Consumer treten häufig auf den HRESULT-erfolgsrückgabe mit Informationen DB_S_ERRORSOCCURRED "Success". In der Regel definieren Elementfunktionen, die DB_S_ERRORSOCCURRED zurückgeben, einen oder mehrere Parameter, die Statuswerte an den Consumer übermitteln. Keine Fehlerinformationen kann an den Consumer, die in statuswertparametern, zurückgegeben werden, damit Consumer Anwendungslogik, um Statuswerte abzurufen, wenn sie verfügbar sind implementieren soll als verfügbar sein.  
+ OLE DB-Treiber für SQL Server-Consumer kommen häufig die HRESULT-erfolgsrückgabe mit Informationen DB_S_ERRORSOCCURRED "Success". In der Regel definieren Elementfunktionen, die DB_S_ERRORSOCCURRED zurückgeben, einen oder mehrere Parameter, die Statuswerte an den Consumer übermitteln. Möglicherweise stehen dem Consumer nur die Fehlerinformationen zur Verfügung, die in Statuswertparametern zurückgegeben werden. Daher sollten Consumer Anwendungslogik implementieren, um Statuswerte abzurufen, wenn diese verfügbar sind.  
   
- Der OLE DB-Treiber für SQL Server-Memberfunktionen zurück nicht den Erfolgscode S_FALSE. Alle OLE DB-Treiber für SQL Server-Memberfunktionen stets S_OK zurück, um einen Erfolg zu melden.  
+ Der OLE DB-Treiber für SQL Server-Memberfunktionen nicht den Erfolgscode S_FALSE nicht zurück. Alle OLE DB-Treiber für SQL Server-Memberfunktionen immer gibt S_OK zurück, um den Erfolg mitzuteilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler](../../oledb/ole-db-errors/errors.md)  
   
   

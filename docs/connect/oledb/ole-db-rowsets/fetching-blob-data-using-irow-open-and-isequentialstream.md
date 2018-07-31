@@ -1,6 +1,6 @@
 ---
-title: 'Abrufen von Blobdaten, die mithilfe von IRow:: Open and ISequentialStream | Microsoft Docs'
-description: 'Abrufen von BLOB-Daten, die mithilfe von IRow:: Open and ISequentialStream'
+title: Abrufen von BLOB-Daten mithilfe von IRow::Open und ISequentialStream | Microsoft-Dokumentation
+description: Abrufen von BLOB-Daten mithilfe von IRow::Open und ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690083"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109772"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Abrufen von BLOB-Daten mithilfe von 'IRow::Open' und 'ISequentialStream'
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow:: Open** unterstützt nur Typs DBGUID_STREAM und DBGUID_NULL von Objekten, die geöffnet werden.  
+  **IRow::Open** unterstützt nur das Öffnen von Objekten des Typs DBGUID_STREAM und DBGUID_NULL.  
   
- Die folgende Funktion verwendet **IRow:: Open** und **ISequentialStream** um umfangreiche Daten abzurufen.  
+ Die folgende Funktion verwendet **IRow::Open** und **ISequentialStream**, um umfangreiche Daten abzurufen.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Umfangreiche Daten können gebunden oder abgerufen, indem die **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
+ Umfangreiche Daten können gebunden oder mit der **ISequentialStream**-Schnittstelle abgerufen werden. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abrufen von BLOB-Daten mit IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

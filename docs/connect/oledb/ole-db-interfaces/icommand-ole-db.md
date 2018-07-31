@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) | Microsoft Docs
+title: ICommand (OLE DB) | Microsoft-Dokumentation
 description: ICommand-Schnittstelle (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,24 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1fb757655c6369964822cd473a50f9633feb2ab8
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 2627398879f7525ab8cd9182f2f1102500cfb5a5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689843"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106206"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel beschreibt die OLE DB-Verhalten, die speziell für OLE DB-Treiber für SQL Server ist.  
+  Dieser Artikel beschreibt die OLE DB-Verhalten, das speziell für OLE DB-Treiber für SQL Server ist.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- Das Einfügen von Daten, die größer als die Größe einer Spalte sind, führt in der Regel zu einem Fehler. In bestimmten Situationen wird zwar S_OK zurückgegeben, der *dwStatus* wird jedoch auf DBSTATUS_S_TRUNCATED festgelegt. Es im Allgemeinen tritt auf beim Einfügen von Daten mit Parametern, in denen die Spalte nicht groß genug zum Speichern der Daten ist, und **ICommandWithParameters:: SetParameterInfo** wurde nicht aufgerufen wurde.  
+ Das Einfügen von Daten, die größer als die Größe einer Spalte sind, führt in der Regel zu einem Fehler. In bestimmten Situationen wird zwar S_OK zurückgegeben, der *dwStatus* wird jedoch auf DBSTATUS_S_TRUNCATED festgelegt. Dies tritt in der Regel auf, wenn Daten mit Parametern eingefügt werden, die Spalte jedoch zum Speichern der Daten nicht groß genug ist und **ICommandWithParameters::SetParameterInfo** nicht aufgerufen wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Schnittstellen &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

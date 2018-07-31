@@ -1,5 +1,5 @@
 ---
-title: Durchführen von Massenkopiervorgängen | Microsoft Docs
+title: Durchführen von Massenkopiervorgängen | Microsoft-Dokumentation
 description: Ausführen von Massenkopiervorgängen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f9a820a3e5e2f7f2cf81bb00ce8cb72f195eca27
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 55ee44220bd66308c20ea4aab0d1e650e5df9756
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612155"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108912"
 ---
 # <a name="performing-bulk-copy-operations"></a>Durchführen von Massenkopiervorgängen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Die Massenkopierfunktion von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die Übertragung großer Datenmengen in bzw. aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle oder Sicht. Daten können auch mithilfe einer SELECT-Anweisung aus einer Tabelle oder Sicht übertragen werden. Die Daten können zwischen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und einer Betriebssystemdatendatei verschoben werden, z. B. eine ASCII-Datei. Datendateien können verschiedene Formate aufweisen. Das Format wird in einer Formatdatei definiert. Optional können die Daten in Programmvariablen geladen und mithilfe von Massenkopierfunktionen und -methoden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] übertragen werden.  
   
- Eine beispielanwendung, die diese Funktion veranschaulicht wird, finden Sie unter [Bulk Daten mithilfe von IRowsetFastLoad &#40;OLE DB-&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
+ Eine beispielanwendung, die diese Funktion veranschaulicht wird, finden Sie unter [Bulk Daten mithilfe von IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
   
  Eine Anwendung verwendet Massenkopiervorgänge in der Regel in einer der folgenden Arten:  
   
@@ -60,19 +60,19 @@ ms.locfileid: "35612155"
   
  SET FMTONLY OFF kann nicht mit Massenkopiervorgängen verwendet werden. SET FMTONLY OFF führt möglicherweise bei Massenkopiervorgängen zu unerwarteten Ergebnissen oder Fehlern.  
   
-## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQLServer 
- Der OLE DB-Treiber für SQL Server implementiert zwei Methoden zum Ausführen von Massenkopiervorgängen mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank. Die erste Methode umfasst die Verwendung der [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) -Schnittstelle für speicherbasierte Massenkopiervorgänge; und das zweite umfasst die Verwendung der [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) -Schnittstelle für dateibasierte Massenkopiervorgänge.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server 
+ Der OLE DB-Treiber für SQL Server implementiert zwei Methoden zum Ausführen von Massenkopiervorgängen mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank. Bei der ersten Methode kommt die [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)-Schnittstelle für speicherbasierte Massenkopiervorgänge zur Anwendung. Die zweite Methode stützt sich auf die [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)-Schnittstelle für dateibasierte Massenkopiervorgänge.  
   
 ### <a name="using-memory-based-bulk-copy-operations"></a>Verwenden von speicherbasierten Massenkopiervorgängen  
- Der OLE DB-Treiber für SQL Server implementiert die **IRowsetFastLoad** Schnittstelle, um Unterstützung für verfügbar machen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speicherbasierte Massenkopiervorgänge. Die **IRowsetFastLoad** -Schnittstelle implementiert die [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) und [IRowsetFastLoad:: InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) Methoden.  
+ Der OLE DB-Treiber für SQL Server implementiert die **IRowsetFastLoad**-Schnittstelle, um die Unterstützung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-speicherbasierte Massenkopiervorgänge verfügbar zu machen. Die **IRowsetFastLoad**-Schnittstelle implementiert die Methoden [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) und [IRowsetFastLoad::InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md).  
   
 #### <a name="enabling-a-session-for-irowsetfastload"></a>Aktivieren einer Sitzung für IRowsetFastLoad  
- Der Consumer benachrichtigt den OLE DB-Treiber für SQL Server über die Anforderung zum Massenkopieren von der OLE DB-Treiber für SQL Server-spezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Mit der Eigenschaft für die Datenquelle festgelegt wurde erstellt der Consumer einen OLE DB-Treiber für SQL Server-Sitzung an. Die neue Sitzung lässt den Consumerzugriff auf die **IRowsetFastLoad** Schnittstelle.  
+ Der Consumer benachrichtigt der OLE DB-Treiber für SQL Server über die Anforderung für das Massenkopieren von der OLE DB-Treiber für SQL Server-spezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Mit der Eigenschaft für die Datenquelle festgelegt wurde erstellt der Consumer einen OLE DB-Treiber für SQL Server-Sitzung. Die neue Sitzung lässt den Zugriff des Consumers auf die **IRowsetFastLoad**-Schnittstelle zu.  
   
 > [!NOTE]  
->  Wenn die **IDataInitialize** Schnittstelle für die Initialisierung der Datenquelle verwendet wird, und es ist notwendig, die SSPROP_IRowsetFastLoad-Eigenschaft festgelegt wird, der *RgPropertySets* Parameter von der  **IOpenRowset:: OPENROWSET** Methode ist, andernfalls der Aufruf der **OpenRowset** Methode E_NOINTERFACE zurück.  
+>  Wenn die **IDataInitialize**-Schnittstelle für die Initialisierung der Datenquelle verwendet wird, muss die SSPROP_IRowsetFastLoad-Eigenschaft im *rgPropertySets*-Parameter der **IOpenRowset::OpenRowset**-Methode festgelegt werden. Andernfalls gibt der Aufruf der **OpenRowset**-Methode E_NOINTERFACE zurück.  
   
- Das Aktivieren einer Sitzung für das Massenkopieren schränkt die OLE DB-Treiber für SQL Server-Unterstützung für Schnittstellen in der Sitzung. Eine Sitzung mit aktivierter Massenkopierfunktion bietet lediglich die folgenden Schnittstellen:  
+ Aktivieren einer Sitzung für das Massenkopieren schränkt die OLE DB-Treiber für SQL Server-Unterstützung für Schnittstellen in der Sitzung. Eine Sitzung mit aktivierter Massenkopierfunktion bietet lediglich die folgenden Schnittstellen:  
   
 -   **IDBSchemaRowset**  
   
@@ -84,10 +84,10 @@ ms.locfileid: "35612155"
   
 -   **ITransactionJoin**  
   
- Um die Erstellung mit aktivierter Massenkopierfunktion Sammel-Rowsets zu deaktivieren und dazu führen, dass der OLE DB-Treiber für SQL Server-Sitzung wieder in den normalen Verarbeitung, setzen Sie SSPROP_ENABLEFASTLOAD auf VARIANT_FALSE zurück.  
+ Um die Erstellung massenkopierter Rowsets zu deaktivieren und die Sitzung des OLE DB-Treibers für SQL Server auf die Standardverarbeitungsweise zurückzusetzen, setzen Sie SSPROP_ENABLEFASTLOAD auf VARIANT_FALSE zurück.  
   
 #### <a name="irowsetfastload-rowsets"></a>IRowsetFastLoad Rowsets  
- Der OLE DB-Treiber für SQL Server Massenkopieren-Rowsets weisen nur Schreibzugriff auf, machen jedoch Schnittstellen, die den Consumer bestimmt die Struktur zu ermöglichen eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle. Die folgenden Schnittstellen sind für eine Massenkopierfunktion aktiviert verfügbar gemacht werden OLE DB-Treiber für SQL Server-Rowset:  
+ Die massenkopierten Rowsets im OLE DB-Treiber für SQL Server weisen nur Schreibzugriff auf, machen jedoch Schnittstellen verfügbar, die dem Consumer ermöglichen, die Struktur einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle zu bestimmen. Die folgenden Schnittstellen sind für eine Massenkopierfunktion aktiviert verfügbar gemacht werden OLE DB-Treiber für SQL Server-Rowset:  
   
 -   **IAccessor**  
   
@@ -103,23 +103,23 @@ ms.locfileid: "35612155"
   
 -   **ISupportErrorInfo**  
   
- Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhalten des OLE DB-Treiber für SQL Server-Massenkopieren-Rowsets. Die Eigenschaften werden angegeben, der *RgProperties* Mitglied ein *RgPropertySets* **IOpenRowset** Parameterelements.  
+ Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhaltensweisen des Massenkopierrowsets eines OLE DB-Treibers für SQL Server. Die Eigenschaften werden im *rgProperties*-Element eines *rgPropertySets* **IOpenRowset**-Parameterelements angegeben.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Verwaltet vom Consumer angegebene Identitätswerte.<br /><br /> VARIANT_FALSE: Werte für eine Identitätsspalte in der Tabelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generiert. Ein Wert, der für die Spalte gebunden wird vom OLE DB-Treiber für SQL Server ignoriert.<br /><br /> VARIANT_TRUE: Der Consumer bindet einen Accessor, der einen Wert für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätsspalte bereitstellt. Die Identity-Eigenschaft ist nicht verfügbar für Spalten, die NULL ist, akzeptieren, damit der Consumer einen eindeutigen Wert für jedes bietet **Identity** aufrufen.|  
-|SSPROP_FASTLOADKEEPNULLS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Behält NULL-Werte für Spalten mit einer DEFAULT-Einschränkung bei. Betrifft nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten, die NULL-Werte akzeptieren und eine DEFAULT-Einschränkung aufweisen.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Sie der Standardwert für die Spalte aus, wenn der OLE DB-Treiber für SQL Server-Consumer Fügt eine Zeile mit NULL für die Spalte ein.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NULL für den Spaltenwert eingefügt, wenn der OLE DB-Treiber für SQL Server-Consumer Fügt eine Zeile mit NULL für die Spalte ein.|  
-|SSPROP_FASTLOADOPTIONS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Diese Eigenschaft ist identisch mit der **-h** "*Hinweis*[,... *n*] "-Option von der **Bcp** Hilfsprogramm. Die folgende(n) Zeichenfolge(n) kann/können beim Massenkopieren von Daten in eine Tabelle optional verwendet werden.<br /><br /> **Reihenfolge**(*Spalte*[**ASC** &#124; **"DESC"**] [,... *n*]): Sortierreihenfolge nach Daten in der Datendatei. Die Leistung des Massenkopierens wird verbessert, wenn die zu ladende Datendatei entsprechend dem gruppierten Index der Tabelle sortiert ist.<br /><br /> **ROWS_PER_BATCH** = *bb*: Anzahl der Datenzeilen pro Batch (als *bb*). Der Server optimiert das Massenladen entsprechend dem Wert von *bb*. Standardmäßig **ROWS_PER_BATCH** ist unbekannt.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: Anzahl der Kilobytes (KB) an Daten pro Batch (als cc). Standardmäßig **KILOBYTES_PER_BATCH** ist unbekannt.<br /><br /> **TABLOCK**: eine Sperre auf Tabellenebene für die Dauer des Massenkopiervorgangs aktiviert ist. Diese Option verbessert die Leistung beträchtlich, da weniger Sperrkonflikte für die Tabelle auftreten, wenn diese nur während des Massenkopiervorgangs gesperrt wird. Eine Tabelle kann werden von mehreren Clients gleichzeitig geladen, wenn die Tabelle keine Indizes aufweist und **TABLOCK** angegeben ist. Standardmäßig wird das Sperrverhalten durch die Tabellenoption bestimmt **Tabellensperre auf Massenladen**.<br /><br /> **Check_constraints**: alle Einschränkungen für *Table_name* werden während des Massenkopiervorgangs überprüft. Standardmäßig werden Einschränkungen ignoriert.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet die zeilenversionsverwaltung für Trigger und speichert die Zeilenversionen im Versionsspeicher in **Tempdb**. Deshalb sind Massenprotokollierungsoptimierungen verfügbar, auch wenn Trigger aktiviert sind. Vor dem Massenimport eines Batches mit einer großen Anzahl von Zeilen mit aktivierten Triggern, müssen Sie möglicherweise die Größe von **Tempdb**.|  
+|SSPROP_FASTLOADKEEPIDENTITY|Spalte: No<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Verwaltet vom Consumer angegebene Identitätswerte.<br /><br /> VARIANT_FALSE: Werte für eine Identitätsspalte in der Tabelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generiert. Jeder Wert, der für die Spalte gebunden wird, wird von der OLE DB-Treiber für SQL Server ignoriert.<br /><br /> VARIANT_TRUE: Der Consumer bindet einen Accessor, der einen Wert für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätsspalte bereitstellt. Die IDENTITY-Eigenschaft ist nicht für Spalten verfügbar, die NULL-Werte akzeptieren, daher stellt der Consumer für jeden **IRowsetFastLoad::Insert**-Aufruf einen eindeutigen Wert bereit.|  
+|SSPROP_FASTLOADKEEPNULLS|Spalte: No<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Behält NULL-Werte für Spalten mit einer DEFAULT-Einschränkung bei. Betrifft nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten, die NULL-Werte akzeptieren und eine DEFAULT-Einschränkung aufweisen.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt den Standardwert für die Spalte ein, wenn der Consumer des OLE DB-Treibers für SQL Server eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt einen NULL-Wert für den Spaltenwert ein, wenn der Consumer des OLE DB-Treibers für SQL Server eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.|  
+|SSPROP_FASTLOADOPTIONS|Spalte: No<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standardwert: keiner<br /><br /> Beschreibung: Diese Eigenschaft ist mit der Option **-h** "*hint*[,...*n*]" des **bcp**-Hilfsprogramms identisch. Die folgende(n) Zeichenfolge(n) kann/können beim Massenkopieren von Daten in eine Tabelle optional verwendet werden.<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): Sortierreihenfolge nach Daten in der Datendatei. Die Leistung des Massenkopierens wird verbessert, wenn die zu ladende Datendatei entsprechend dem gruppierten Index der Tabelle sortiert ist.<br /><br /> **ROWS_PER_BATCH** = *bb*: Anzahl der Datenzeilen pro Batch (als *bb*). Der Server optimiert das Massenladen entsprechend dem Wert von *bb*. Standardmäßig ist **ROWS_PER_BATCH** unbekannt.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: Die Anzahl der Kilobytes (KB) an Daten pro Batch (als cc). Standardmäßig ist **KILOBYTES_PER_BATCH** unbekannt.<br /><br /> **TABLOCK**: Eine Sperre auf Tabellenebene wird für die Dauer des Massenimportvorgangs aktiviert. Diese Option verbessert die Leistung beträchtlich, da weniger Sperrkonflikte für die Tabelle auftreten, wenn diese nur während des Massenkopiervorgangs gesperrt wird. Eine Tabelle kann gleichzeitig von mehreren Clients geladen werden, wenn die Tabelle keine Indizes aufweist und **TABLOCK** angegeben ist. Standardmäßig wird das Sperrverhalten durch die Tabellenoption **table lock on bulk load** bestimmt.<br /><br /> **CHECK_CONSTRAINTS**: Alle Einschränkungen für *table_name* werden während des Massenkopiervorgangs überprüft. Standardmäßig werden Einschränkungen ignoriert.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet die Zeilenversionsverwaltung für Trigger und speichert die Zeilenversionen im Versionsspeicher in **tempdb**. Deshalb sind Massenprotokollierungsoptimierungen verfügbar, auch wenn Trigger aktiviert sind. Bevor Sie einen Massenimport eines Batches mit einer großen Anzahl von Zeilen vornehmen, für die Trigger aktiviert sind, müssen Sie gegebenenfalls die Größe von **tempdb** erweitern.|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>Verwenden von dateibasierten Massenkopiervorgängen  
- Der OLE DB-Treiber für SQL Server implementiert die **IBCPSession** Schnittstelle, um Unterstützung für verfügbar machen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dateibasierte Massenkopiervorgänge. Die **IBCPSession** -Schnittstelle implementiert die [ibcpsession:: BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [ibcpsession:: BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [Ibcpsession](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [Ibcpsession](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [ibcpsession:: Bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md), und [Bcpwritefmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)Methoden.  
+ Der OLE DB-Treiber für SQL Server implementiert die **IBCPSession**-Schnittstelle, um die Unterstützung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-dateibasierte Massenkopiervorgänge verfügbar zu machen. Die **IBCPSession**-Schnittstelle implementiert die Methoden [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) und [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Funktionen](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Datenquelleneigenschaften &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimieren der Leistung des Massenimportierens](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [IRowsetFastLoad &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
+ [IBCPSession &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [Optimieren der Leistung des Massenimports](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
 

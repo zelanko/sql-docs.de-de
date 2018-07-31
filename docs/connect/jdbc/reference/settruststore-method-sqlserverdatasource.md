@@ -1,5 +1,5 @@
 ---
-title: SetTrustStore-Methode (SQLServerDataSource) | Microsoft Docs
+title: setTrustStore-Methode (SQLServerDataSource)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846735"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042280"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public void setTrustStore(java.lang.String trustStore)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *truststore-Eigenschaft*  
+ *trustStore*  
   
- Ein **Zeichenfolge** , die den Pfad (einschließlich Dateiname) zur TrustStore-Zertifikatsdatei enthält.  
+ Eine **Zeichenfolge** mit dem Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die TrustStore-Eigenschaft nicht angegeben oder auf Null gesetzt, wird die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] die Suchregeln der Trust-Manager-Factory Suchregeln, die zu verwendenden Zertifikatspeicher zu ermitteln. Der Standard-SunX509 TrustManagerFactory versucht, die Vertrauenswürdigkeitsinformationen in den folgenden Speicherorten in der angegebenen Reihenfolge zu finden:  
+## <a name="remarks"></a>Remarks  
+ Ist die trustStore-Eigenschaft nicht angegeben oder auf NULL festgelegt, wird der zu verwendende Zertifikatspeicher von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mithilfe der Suchregeln der Trust-Manager-Factory ermittelt. Die Vertrauenswürdigkeitsinformationen werden von der SunX509-Standardklasse „TrustManagerFactory“ an folgenden Speicherorten und in der folgenden Reihenfolge gesucht:  
   
 -   1. Eine von der Java Virtual Machine (JVM)-Systemeigenschaft "javax.net.ssl.trustStore" angegebene Datei  
   
@@ -56,9 +56,9 @@ public void setTrustStore(java.lang.String trustStore)
   
  Ist die trustStore-Eigenschaft auf eine Zeichenfolge oder auf eine leere Zeichenfolge ("") festgelegt, wird die trustStore-Datei anhand dieses Werts gesucht, um das SSL-Zertifikat des Servers zu überprüfen.  
   
- Die trustStorePassword-Eigenschaft kann zusammen mit der trustStore-Eigenschaft angegeben werden, und deren Wert wird zum Öffnen der trustStore-Datei verwendet. Weitere Informationen finden Sie unter [SetTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
+ Die trustStorePassword-Eigenschaft kann zusammen mit der trustStore-Eigenschaft angegeben werden, und deren Wert wird zum Öffnen der trustStore-Datei verwendet. Weitere Informationen finden Sie unter [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

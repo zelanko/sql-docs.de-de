@@ -1,5 +1,5 @@
 ---
-title: UpdateBlob-Methode (SQLServerResultSet) | Microsoft Docs
+title: updateBlob-Methode (SQLServerResultSet)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019918"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,16 +33,16 @@ ms.locfileid: "32850915"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[UpdateBlob (Int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Aktualisiert die angegebene Spalte mit einem java.sql.Blob-Wert.|  
-|[UpdateBlob (Int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms.|  
-|[UpdateBlob (Int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms mit der angegebenen Anzahl von Bytes.|  
-|[UpdateBlob (java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|Aktualisiert die angegebene Spalte mit einem java.sql.Blob-Wert.|  
-|[UpdateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms.|  
-|[UpdateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms mit der angegebenen Anzahl von Bytes.|  
+|[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Aktualisiert die angegebene Spalte mit einem java.sql.Blob-Wert.|  
+|[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms.|  
+|[updateBlob (int, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms mit der angegebenen Anzahl von Bytes.|  
+|[updateBlob (java.lang.String, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md)|Aktualisiert die angegebene Spalte mit einem java.sql.Blob-Wert.|  
+|[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabestreams.|  
+|[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte unter Verwendung des angegebenen Eingabedatenstroms mit der angegebenen Anzahl von Bytes.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_begin_transaction | Microsoft Docs
+title: Sqlsrv_begin_transaction | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83c62cf6a9ec637573682cc3b0193b173875a42
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983145"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35309199"
 Beginnt eine Transaktion für eine angegebene Verbindung Die aktuelle Transaktion enthält alle Anweisungen für die angegebene Verbindung, die nach dem Aufruf von **sqlsrv_begin_transaction** und vor allen Aufrufen von [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) oder [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)ausgeführt wurden.  
   
 > [!NOTE]  
-> Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] befindet sich im Autocommit-Modus in der Standardeinstellung. Dies bedeutet, dass alle Abfragen bei Erfolg automatisch committet werden, es sei denn, sie wurden durch **sqlsrv_begin_transaction**.  
+> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] befindet sich standardmäßig im Autocommit-Modus. Dies bedeutet, dass alle Abfragen bei Erfolg automatisch committet werden, es sei denn, sie wurden durch **sqlsrv_begin_transaction**.  
   
 > [!NOTE]  
 > Wenn **sqlsrv_begin_transaction** aufgerufen wird, nachdem eine Transaktion bereits für die Verbindung initiiert, aber nicht durch Aufrufen von entweder **sqlsrv_commit** oder **sqlsrv_rollback**abgeschlossen wurde, gibt der Aufruf **false** zurück, und der Fehlerauflistung wird ein *Already in Transaction* -Fehler hinzugefügt.  
@@ -127,10 +127,10 @@ Da wir uns auf die Überwachung des Transaktionsverhaltens konzentrieren, sind T
 > [!NOTE]  
 > Verwenden Sie eingebettetes Transact-SQL nicht zum Durchführen von Transaktionen. Führen Sie z. B. keine Anweisung mit "BEGIN TRANSACTION" als Transact-SQL-Abfrage aus, um eine Transaktion zu beginnen. Das erwartete Transaktionsverhalten kann nicht garantiert werden, wenn eingebettetes Transact-SQL zum Durchführen von Transaktionen verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
-[Übersicht über die Microsoft-Treiber für PHP für SQLServer](../../connect/php/overview-of-the-php-sql-driver.md) 
+[Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md) 
   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Microsoft Docs'
+title: 'Pdostatement:: Bindparam | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308313"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007139"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,21 +34,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*Parameter*: ein (gemischter) Parameterbezeichner. Für Sie Platzhalter mit einer Anweisung mit dem Namen, verwenden Sie einen Parameternamen an (: Name). Für eine vorbereitete Anweisung mit der fragezeichensyntax ist es der 1-basierte Index des Parameters.  
+$*parameter*: Ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.  
   
-&$*Variable*: der (gemischte) Name der PHP-Variablen, die an den SQL-Anweisungsparameter zu binden.  
+&$*variable:* Der (gemischte) Name der PHP-Variablen, die an den SQL-Anweisungsparameter gebunden werden soll.  
   
-$*Data_type*: eine optionale (Integer-) PDO:: param_ * Konstanten. Der Standardwert ist PDO:: param_str.  
+$*data_type:* Eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardwert ist PDO::PARAM_STR.  
   
-$*Länge*: eine optionale (Integer-) Länge des Datentyps. Sie können angeben, um die Standardgröße anzugeben, wenn PDO:: param_int oder PDO:: param_bool in $ PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE*Data_type*.  
+$*length:* Eine optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
   
-$*Driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
+$$: Die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Hinweise  
-Beim Binden von null-Daten an Serverspalten vom Typ Varbinary, Binary oder varbinary(max) sollten Sie angeben, binäre Codierung (PDO:: sqlsrv_encoding_binary) unter Verwendung der $*Driver_options*. Weitere Informationen zur Codierung Konstanten finden Sie unter [Konstanten](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+## <a name="remarks"></a>Remarks  
+Beim Binden von NULL-Daten an Serverspalten vom Typ „varbinary“, „binary“ oder „varbinary(max)“ sollten Sie die binäre Codierung (PDO::SQLSRV_ENCODING_BINARY) unter Verwendung von $*driver_options* angeben. Weitere Informationen zu Codierungskonstanten finden Sie unter [Konstanten](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
 
@@ -103,7 +103,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Beim Binden von eines Output-Parameters an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO:: param_int mit PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE möglicherweise ergeben eine Ausnahme "der Wert außerhalb des gültigen Bereichs". Daher verwenden Sie stattdessen den Standard-PDO:: param_str, und geben Sie die Größe der resultierenden Zeichenfolge, die höchstens 21 ist. Es ist die maximale Anzahl von Ziffern, z. B. die negativen Vorzeichen ausnahmslos "bigint". 
+> Wenn Output-Parameter auf einen Bigint-Typ, zu binden, wenn der Wert außerhalb des Bereichs von anwachsen ein [ganze Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE PDO:: param_int mit einer Ausnahme "der Wert außerhalb des gültigen Bereichs" führen kann. Aus diesem Grund verwenden Sie stattdessen die PDO:: param_str-Standardeinstellung, und geben Sie die Größe der resultierenden Zeichenfolge ist, handelt es sich maximal 21. Es ist die maximale Anzahl von Ziffern, einschließlich die negativen Vorzeichen, der einen beliebigen Bigint-Wert. 
 
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verwendet wird.  
@@ -125,10 +125,10 @@ In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verw
 ```  
 
 > [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs der sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Es wird empfohlen, die Zeichenfolgen als Eingabe verwendet, bei der Bindung von Werten, eine [decimal oder numeric-Spalte](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) auf Richtigkeit und Genauigkeit zu gewährleisten, wie PHP Genauigkeit für eingeschränkten [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs von sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Beispiel  
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.  
+In diesem Codebeispiel wird veranschaulicht, wie einen decimal-Wert als Eingabeparameter gebunden wird.  
 
 ```
 <?php  
@@ -146,7 +146,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

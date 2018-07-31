@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Daten (Microsoft Drivers for PHP for SQLServer) | Microsoft Docs
+title: Aktualisieren von Daten (Microsoft-Treiber für PHP für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64ade4d758d7ee5c87283750259641f59959731a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979512"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Aktualisieren von Daten (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,13 +36,13 @@ Die Schritte zur Verwendung von [!INCLUDE[ssDriverPHP](../../includes/ssdriverph
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 |[Vorgehensweise: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)|Beschreibt, wie parametrisierte Abfragen ausgeführt werden|  
 |[Vorgehensweise: Streamen von Daten](../../connect/php/how-to-send-data-as-a-stream.md)|Beschreibt, wie Datenströme an den Server übermittelt werden|  
 |[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)|Beschreibt, wie **sqlsrv** -Funktionen zur Durchführung von Transaktionen verwendet werden|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_field_metadata | Microsoft Docs
+title: Sqlsrv_field_metadata | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309389"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991272"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Ruft Metadaten für die Felder einer vorbereiteten Anweisung ab. Informationen zum Vorbereiten einer Anweisung finden Sie unter [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Beachten Sie, dass **Sqlsrv_field_metadata** für jede vorbereitete Anweisung, vor oder nach der Ausführung aufgerufen werden kann.  
+Ruft Metadaten für die Felder einer vorbereiteten Anweisung ab. Informationen zum Vorbereiten einer Anweisung finden Sie unter [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Beachten Sie, dass **sqlsrv_field_metadata** sowohl vor als auch nach der Ausführung jeder Anweisung aufgerufen werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für jedes Feld im Resultset. Jedes Teilarray hat Schlüssel, wie in der unten stehenden Tabelle beschrieben. Falls beim Abrufen der Feldmetadaten ein Fehler auftritt, wird **false** zurückgegeben.  
   
-|Key|Description|  
+|Key|und Beschreibung|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
 |Typ|Numerischer Wert, der einem SQL-Typ entspricht|  
 |Größe|Anzahl der Zeichen für die Felder eines bestimmten Zeichentyps (char(n), varchar(n), nchar(n), nvarchar(n), XML) Anzahl der Bytes für Felder vom Typ „binär“ (binary(n), varbinary(n), UDT). **NULL** für andere SQL Server-Datentypen.|  
 |Genauigkeit|Die Genauigkeit für die Typen mit variabler Genauigkeit (real, numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |Dezimalstellen|Die Skalierung für die Typen mit variabler Skalierung (numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
-|NULL zulassen|Ein Enumerationswert, der angibt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**), die Spalte ist keine NULL-Werte zulässt (**SQLSRV_NULLABLE_NO**), oder es ist nicht bekannt, wenn die Spalte NULL-Werte zulässt ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|NULL zulassen|Ein Aufzählungswert, der anzeigt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**) oder nicht (**SQLSRV_NULLABLE_NO**), oder ob diese Eigenschaft nicht bekannt ist (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):   
   
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

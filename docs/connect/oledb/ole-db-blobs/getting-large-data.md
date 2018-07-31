@@ -1,6 +1,6 @@
 ---
-title: Abrufen großer Datenmengen | Microsoft Docs
-description: Abrufen großer Datenmengen mit OLE DB-Treiber für SQL Server
+title: Abrufen großer Datenmengen | Microsoft-Dokumentation
+description: Abrufen großer Datenmengen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666200"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106179"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Im Allgemeinen sollten Consumer Code, der ein OLE DB-Treiber für SQL Server-Speicherobjekt aus anderem Code erstellt, die Daten behandelt, die nicht über verwiesen wird Isolieren einer **ISequentialStream** Schnittstellenzeiger auf.  
+  Im Allgemeinen sollten Consumer Code, der ein Speicherobjekt des OLE DB-Treibers für SQL Server erzeugt, von anderem Code isolieren, der Daten verarbeitet, die nicht durch einen **ISequentialStream**-Schnittstellenzeiger referenziert sind.  
   
- Dieser Artikel bezieht sich auf Funktionen, die mit den folgenden Funktionen zur Verfügung:  
+ In diesem Artikel wird die mit folgenden Funktionen verfügbare Funktionalität behandelt:  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666200"
   
 -   ICommand::Execute  
   
- Der Consumer sollte nur eine einzelne Zeile mit Daten in einem Aufruf von fetch die **GetNextRows** Methode, wenn die Eigenschaft DBPROP_ACCESSORDER in der Rowset-Eigenschaftengruppe DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_ festgelegt ist SEQUENTIALSTORAGEOBJECTS. Dies liegt daran BLOB-Daten nicht zwischengespeichert werden. Wenn der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM eingestellt, kann der Consumer mehrere Zeilen mit Daten in fetch **GetNextRows**.  
+ Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) entweder auf DBPROPVAL_AO_SEQUENTIAL oder auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer in einem Aufruf der **GetNextRows**-Methode nur eine einzige Datenzeile abrufen. Dies ist da BLOB-Daten nicht zwischengespeichert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
- Der OLE DB-Treiber für SQL Server ist nicht abgerufen werden große Datenmengen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erst vom Consumer dazu aufgefordert. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
+ Der OLE DB-Treiber für SQL Server ist nicht abgerufen werden große Datenmengen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bis vom Consumer dazu aufgefordert. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein großer Datenwert aus einer einzelnen Spalte abgerufen:  
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Verwenden von Datentypen mit umfangreichen Werten](../../oledb/features/using-large-value-types.md)  
   

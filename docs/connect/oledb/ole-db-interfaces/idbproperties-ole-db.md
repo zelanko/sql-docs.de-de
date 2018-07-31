@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) | Microsoft Docs
+title: IDBProperties-Schnittstelle (OLE DB) | Microsoft-Dokumentation
 description: IDBProperties-Schnittstelle (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,21 +15,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d2b5fa37e7cacb6ae29a260ceb6e57089b85e817
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4f514c391b51326ced8df9e45082af54ee1c8c2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689823"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106036"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dank der OLE DB-Standardspezifikation können Anbieter VT_EMPTY für **DBPROPINFO::vValues**angeben. Allerdings OLE DB-Treiber für SQL Server-OLE DB immer VT_EMPTY zurückgegeben beim Aufrufen von **GetPropertyInfo** mit **DBPROPSET_ROWSETALL** Rowseteigenschaften abgerufen werden.  
+  Dank der OLE DB-Standardspezifikation können Anbieter VT_EMPTY für **DBPROPINFO::vValues**angeben. Vom OLE DB-Treiber für SQL Server wird jedoch immer VT_EMPTY zurückgegeben, wenn Sie **IDBProperties::GetPropertyInfo** zum Abrufen von Rowseteigenschaften zusammen mit **DBPROPSET_ROWSETALL** aufrufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Schnittstellen &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

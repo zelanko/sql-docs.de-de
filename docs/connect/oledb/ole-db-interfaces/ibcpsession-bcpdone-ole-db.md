@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPDone (OLE DB) | Microsoft-Dokumentation
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690273"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106686"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -41,8 +41,8 @@ ms.locfileid: "35690273"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Kann kein weiterer Vorgang aufgerufen werden, auf die [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) Schnittstelle nach dem Aufruf der **BCPDone** Methode. Die einzige Möglichkeit besteht im Aufrufen der [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) Methode, um einen neuen Massenkopiervorgang zu initiieren. Dies ist vergleichbar mit einem Aufruf der [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) Methode.  
+## <a name="remarks"></a>Remarks  
+ Nach dem Aufruf der **BCPDone**-Methode kann kein weiterer Vorgang für die [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)-Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -54,7 +54,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die Verwendung der **IBCPSession** -Schnittstelle dargestellt.  
   
- Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] muss vor dem Ausführen dieses Beispiels ausgeführt werden:  
+ Das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] muss vor der Durchführung dieses Beispiels ausgeführt werden:  
   
 ```sql  
 create table fltest(col1 int, col2 int, col3 image)  
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Sie könnten BCP verwenden, um diese Daten mit dem folgenden Befehl wieder der Tabelle hinzuzufügen:  
   
- **Bcp-Master... Fltest in outfile.dat - n -T -S** *Server*  
+ **bcp master..fltest in outfile.dat -n -T -S** *Server*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -467,8 +467,8 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [IBCPSession &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

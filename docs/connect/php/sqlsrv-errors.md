@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_errors | Microsoft Docs
+title: Sqlsrv_errors | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979791"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Gibt erweiterte Fehler führen, und/oder Warnungsinformationen zu den letzten **Sqlsrv** Vorgang ausgeführt.  
+Gibt erweiterte Informationen über Fehler und/oder Warnungen für den letzten ausgeführten **sqlsrv**-Vorgang zurück.  
   
-Die **Sqlsrv_errors** Funktion kann durch Aufrufen dieser mit einem der Parameterwerte, die im Abschnitt Parameter angegebenen Fehler führen, und/oder Warnungsinformationen zurückgeben.  
+Die **sqlsrv_errors**-Funktion kann eine Information über Fehler und/oder Warnungen zurückgeben, indem sie diese mit einem der Parameterwerte aufruft, die unten im Abschnitt „Parameter“ angegeben sind.  
   
 Standardmäßig werden Warnungen, die bei einem Aufruf einer **sqlsrv** -Funktion generiert werden, als Fehler behandelt. Wenn eine Warnung bei einem Aufruf einer **sqlsrv** -Funktion auftritt, gibt die Funktion „false“ zurück. Jedoch werden Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, nie als Fehler behandelt.  
   
@@ -49,7 +49,7 @@ Die folgende Codezeile aktiviert wieder das Standardverhalten; Warnungen (mit Au
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-Unabhängig von der Einstellung können Warnungen nur durch den Aufruf abgerufen werden **Sqlsrv_errors** entweder mit der **SQLSRV_ERR_ALL** oder **SQLSRV_ERR_WARNINGS** Parameterwert (Siehe Im Parameterabschnitt unten).  
+Unabhängig von der Einstellung können Warnungen nur durch Aufrufen von **sqlsrv_errors** abgerufen werden, entweder mit dem Parameterwert **SQLSRV_ERR_ALL** oder **SQLSRV_ERR_WARNINGS** (Einzelheiten finden Sie im Abschnitt „Parameter“).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$errorsAndOrWarnings*[OPTIONAL]: eine vordefinierte Konstante. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
+*$errorsAndOrWarnings* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Fehler und Warnungen, die beim letzten **sqlsrv** -Funktionsaufruf generiert wurden, werden zurückgegeben.|  
 |SQLSRV_ERR_ERRORS|Fehler und Warnungen aus dem letzten **sqlsrv** -Funktionsaufruf werden zurückgegeben.|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 Wenn kein Parameterwert angegeben wird, werden Fehler und Warnungen zurückgegeben, die durch den letzten **sqlsrv** -Funktionsaufruf generiert wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
-Ein **Array** von Arrays oder **NULL**. Jede **Array** im zurückgegebenen **Array** enthält drei Schlüssel-Wert-Paaren. In der folgenden Tabelle wird jeder Schlüssel und dessen Beschreibung aufgelistet.  
+Ein **Array** von Arrays oder **NULL**. Jedes **Array** im zurückgegebenen **Array** enthält drei Schlüssel-Wert-Paare. In der folgenden Tabelle wird jeder Schlüssel und dessen Beschreibung aufgelistet.  
   
-|Key|Description|  
+|Key|und Beschreibung|  
 |-------|---------------|  
-|SQLSTATE|Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Wert SQLSTATE zurückgegeben Weitere Informationen zu SQLSTATE-Werten für ODBC, finden Sie unter [ODBC-Fehlercodes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von IMSSP<br /><br />Für Warnungen, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von 01SSP|  
+|SQLSTATE|Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Wert SQLSTATE zurückgegeben Weitere Informationen zu SQLSTATE-Werten für ODBC finden Sie unter [ODBC-Fehlercodes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von IMSSP<br /><br />Für Warnungen, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von 01SSP|  
 |Code|Für Fehler, die vom SQL Server stammen, den systemeigenen SQL Server-Fehlercode<br /><br />Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Fehlercode zurückgegeben<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]oder dem [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] -Fehlercode stammen Weitere Informationen finden Sie unter [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Eine Beschreibung des Fehlers|  
   
 Auf die Arraywerte kann auch mit den numerischen Schlüsseln 0, 1 und 2 zugegriffen werden. Wenn keine Fehler oder Warnungen auftreten, wird **NULL** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel zeigt auftretende Fehler, die während einer fehlgeschlagene Anweisungsausführung entstehen. (Die Anweisung schlägt fehl, da **InvalidColumName** ist kein gültiger Spaltenname in der angegebenen Tabelle.) Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel zeigt auftretende Fehler, die während einer fehlgeschlagene Anweisungsausführung entstehen. (Bei der Anweisung tritt ein Fehler auf, da **InvalidColumName** kein gültiger Spaltenname in der angegebenen Tabelle ist.) Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

@@ -1,5 +1,5 @@
 ---
-title: Using-Anweisungen mit gespeicherten Prozeduren | Microsoft Docs
+title: Verwenden von Anweisungen mit gespeicherten Prozeduren
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2e5ff4dc6ffa18d553b0b0e3bbe0c9c3a629920
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020908"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Verwenden von Anweisungen mit gespeicherten Prozeduren
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Bei einer gespeicherten Prozedur handelt es sich um eine Datenbankprozedur, ähnlich einer Prozedur in anderen Programmiersprachen, die in der eigentlichen Datenbank enthalten ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], gespeicherte Prozeduren können erstellt werden, mithilfe von [!INCLUDE[tsql](../../includes/tsql_md.md)], oder die common Language Runtime (CLR) und einer der Visual Studio mit Programmiersprachen wie Visual Basic oder c#. Im allgemeinen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gespeicherte Prozeduren können Folgendes tun:  
+  Bei einer gespeicherten Prozedur handelt es sich um eine Datenbankprozedur, ähnlich einer Prozedur in anderen Programmiersprachen, die in der eigentlichen Datenbank enthalten ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] können gespeicherte Prozeduren mit [!INCLUDE[tsql](../../includes/tsql_md.md)] oder mit der Common Language Runtime (CLR) und einer der Visual Studio-Programmiersprachen wie Visual Basic oder C# erstellt werden. Im Allgemeinen weisen gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozeduren die folgenden Merkmale auf:  
   
 -   Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an die aufrufende Prozedur oder den aufrufenden Batch.  
   
@@ -33,25 +33,25 @@ ms.locfileid: "32852955"
 -   Zurückgeben eines Statuswertes an eine aufrufende Prozedur oder einen aufrufenden Batch, der Erfolg oder Fehlschlagen (sowie die Ursache für das Fehlschlagen) anzeigt.  
   
 > [!NOTE]  
->  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gespeicherte Prozeduren finden Sie unter "Grundlegendes zu gespeicherten Prozeduren" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozeduren finden Sie unter „Grundlegendes zu gespeicherten Prozeduren“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Onlinedokumentation.  
   
- Arbeiten mit Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] her, indem Sie eine gespeicherte Prozedur die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), und [ SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Klassen. Welche Klasse verwendet wird, hängt davon ab, ob von der gespeicherten Prozedur IN- (Eingabe) oder OUT-Parameter (Ausgabe) benötigt werden. Wenn die gespeicherte Prozedur keine in-erfordert oder OUT-Parameter, Sie die SQLServerStatement-Klasse können. Wenn die gespeicherte Prozedur mehrmals aufgerufen werden wird, oder nur IN-Parameter benötigt, können Sie die SQLServerPreparedStatement-Klasse. Wenn die gespeicherte Prozedur erfordert in- und OUT-Parameter, sollten Sie die SQLServerCallableStatement-Klasse verwenden. Es ist nur wenn die gespeicherte Prozedur OUT-Parameter erfordert, dass Sie den Aufwand für das Verwenden der SQLServerCallableStatement-Klasse benötigen.  
+ Zum Verarbeiten von Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank mit einer gespeicherten Prozedur verfügt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] über die Klassen [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Welche Klasse verwendet wird, hängt davon ab, ob von der gespeicherten Prozedur IN- (Eingabe) oder OUT-Parameter (Ausgabe) benötigt werden. Wenn die gespeicherte Prozedur keine IN- oder OUT-Parameter benötigt, können Sie die SQLServerStatement-Klasse verwenden. Wenn die gespeicherte Prozedur mehrmals aufgerufen wird oder nur IN-Parameter benötigt, können Sie die SQLServerPreparedStatement-Klasse verwenden. Wenn die gespeicherte Prozedur IN- und OUT-Parameter benötigt, müssen Sie die -Klasse verwenden. Nur wenn die gespeicherte Prozedur OUT-Parameter benötigt, müssen Sie den Aufwand für die Verwendung der SQLServerCallableStatement-Klasse betreiben.  
   
 > [!NOTE]  
 >  Gespeicherte Prozeduren können auch Updatezählungen und mehrere Resultsets zurückgeben. Weitere Informationen finden Sie unter [mithilfe einer gespeicherten Prozedur mit einer Updatezählung](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) und [mehrere Resultsets mithilfe von](../../connect/jdbc/using-multiple-result-sets.md).  
   
- Wenn Sie den JDBC-Treiber verwenden, um eine gespeicherte Prozedur mit Parametern aufzurufen, müssen Sie mithilfe der `call` SQL-Escapesequenz zusammen mit den [PrepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) Klasse. Die vollständige Syntax für die `call` -Escapesequenz lautet wie folgt:  
+ Wenn Sie den JDBC-Treiber verwenden, um eine gespeicherte Prozedur mit Parametern aufzurufen, müssen Sie die `call`-SQL-Escapesequenz zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection-Klasse](../../connect/jdbc/reference/sqlserverconnection-class.md) verwenden. Die vollständige Syntax für die `call`-Escapesequenz lautet wie folgt:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
 >  Weitere Informationen zu den `call` und anderen SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- Die Themen in diesem Abschnitt beschreibt die Methoden, die Sie aufrufen können [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gespeicherte Prozeduren mithilfe des JDBC-Treibers und der `call` SQL-Escapesequenz.  
+ Die Themen in diesem Abschnitt beschreiben, wie Sie gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozeduren mit dem JDBC-Treiber und der`call`-SQL-Escapesequenz aufrufen können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von gespeicherten Prozeduren ohne Parameter](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die keine Eingabe- oder Ausgabeparameter enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Eingabeparameter enthalten.|  
@@ -59,7 +59,7 @@ ms.locfileid: "32852955"
 |[Verwenden von gespeicherten Prozeduren mit einem Rückgabestatus](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Rückgabestatuswerte enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit einer Updatezählung](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Updatezählungen enthalten.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

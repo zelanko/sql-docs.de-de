@@ -1,5 +1,5 @@
 ---
-title: Data Access Tracing, mit der ODBC-Treiber unter Linux und MacOS | Microsoft Docs
+title: Ablaufverfolgung des Datenzugriffs mit dem ODBC-Treiber unter Linux und macOS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,41 +18,41 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982185"
 ---
-# <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Data Access Tracing, mit dem ODBC-Treiber unter Linux und Mac OS
+# <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Ablaufverfolgung des Datenzugriffs mit dem ODBC-Treiber unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Der UnixODBC-Treiber-Manager unter Mac OS und Linux unterstützt die Verfolgung von ODBC-API-Aufrufeintrag, und Beenden des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Der UnixODBC-Treiber-Manager unter MacOS und Linux unterstützt die Ablaufverfolgung von ODBC-API-Aufruf-Eintrag, und Beenden des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
-Um die Anwendung ODBC-Verhalten zu verfolgen, bearbeiten Sie die `odbcinst.ini` Datei `[ODBC]` Abschnitt zum Festlegen der Werte `Trace=Yes` und `TraceFile` auf den Pfad der Datei, die in der Ablaufverfolgungsausgabe; enthalten z. B.:
+Um das Verhalten Ihrer Anwendung ODBC zu verfolgen, bearbeiten Sie die `odbcinst.ini` Datei `[ODBC]` Abschnitt zum Festlegen der Werte `Trace=Yes` und `TraceFile` auf den Pfad der Datei, die in der Ablaufverfolgungsausgabe; enthalten z. B.:
 
 ```  
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```  
 
-(Sie können auch `/dev/stdout` oder den Namen eines anderen Geräts Ablaufverfolgungsausgabe es anstelle des in einer persistenten Datei senden.) Mit den oben genannten Einstellungen jedes Mal, wenn eine Anwendung den UnixODBC Treiber-Managers, lädt zeichnet er alle ODBC-API-Aufrufe die es in die Ausgabedatei ausgeführt.
+(Sie können auch `/dev/stdout` oder den Namen eines anderen Geräts Ablaufverfolgungsausgabe gibt es nicht in einer persistenten Datei senden.) Mit den obigen Einstellungen jedes Mal, wenn eine Anwendung den UnixODBC Treiber-Manager lädt werden sie alle ODBC-API-Aufrufe aufgezeichnet, den sie in die Ausgabedatei ausgeführt.
 
-Nachdem Sie die Ablaufverfolgung Ihrer Anwendung abgeschlossen haben, entfernen `Trace=Yes` aus der `odbcinst.ini` -Datei, um Leistungseinbußen während der Ablaufverfolgung zu vermeiden und sicherzustellen, dass unnötigen Ablaufverfolgungsdateien werden entfernt.
+Entfernen Sie nach Abschluss der Ablaufverfolgung für Ihre Anwendung `Trace=Yes` aus der `odbcinst.ini` -Datei, um Leistungseinbußen während der Ablaufverfolgung zu vermeiden und sicherzustellen, dass unnötigen Ablaufverfolgungsdateien werden entfernt.
   
-Die Ablaufverfolgung gilt für alle Anwendungen mit dem Treiber `odbcinst.ini`. Um alle Anwendungen (z. B. verhindern, dass benutzerbezogene vertrauliche Informationen weitergegeben) nicht verfolgen zu können, können Sie eine einzelne Anwendungsinstanz verfolgen, unter Angabe den Speicherort einer privaten `odbcinst.ini`unter Verwendung der `ODBCSYSINI` -Umgebungsvariablen angegeben. Beispiel:  
+Die Ablaufverfolgung gilt für alle Anwendungen, die den Treiber in `odbcinst.ini` verwenden. Um nicht alle Anwendungen zu verfolgen (z.B., damit benutzerbezogene vertrauliche Informationen nicht weitergegeben werden), können Sie eine einzelne Anwendungsinstanz verfolgen, indem Sie den Speicherort einer privaten `odbcinst.ini`-Datei mit der Umgebungsvariable `ODBCSYSINI` verwenden. Zum Beispiel:  
   
 ```  
 $ ODBCSYSINI=/home/myappuser myapp
 ```  
   
-In diesem Fall können Sie hinzufügen `Trace=Yes` auf die `[ODBC Driver 13 for SQL Server]` Abschnitt `/home/myappuser/odbcinst.ini`.
+Sie können in diesem Fall hinzufügen `Trace=Yes` auf die `[ODBC Driver 13 for SQL Server]` Abschnitt `/home/myappuser/odbcinst.ini`.
 
-## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Bestimmen, welche odbc.ini Datei der Treiber verwendet wird
+## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Bestimmen, welche odbc.ini-Datei der Treiber verwendet
 
-Die ODBC-Treiber für Linux und MacOS führen Sie nicht wissen, welche `odbc.ini` wird verwendet, oder den Pfad zu der `odbc.ini` Datei. Allerdings Informationen dazu, welche `odbc.ini` Datei befindet sich in Verwendung ist über die UnixODBC-Tools verfügbar `odbc_config` und `odbcinst`, und von den UnixODBC Treiber-Manager-Dokumentation.  
+Die ODBC-Treiber für Linux und MacOS wissen nicht, die `odbc.ini` verwendet wird, oder der Pfad zu der `odbc.ini` Datei. Allerdings Informationen dazu, welche `odbc.ini` Datei befindet sich in Verwendung ist verfügbar, über die UnixODBC-Tools `odbc_config` und `odbcinst`, und von den UnixODBC Treiber-Manager-Dokumentation.  
   
-Beispielsweise wird mit der folgende Befehl ausgibt (u. a.) für den Speicherort der System- und `odbc.ini` Dateien, die System- und Benutzer-DSN enthalten:
+Beispielsweise gibt der folgende Befehl (unter anderem) den Speicherort der `odbc.ini`-System- und Benutzerdateien aus, die jeweils die System- und Benutzer-DSNs enthalten:
 
 ```
 $ odbcinst -j
@@ -66,11 +66,11 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Die [UnixODBC-Dokumentation](http://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Zusammenfassung:  
+Die [UnixODBC-Dokumentation](http://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Ausführungszusammenfassung  
 
-- Benutzer-DSNs---Hierbei handelt es sich um DSNs nur mit einem bestimmten Benutzer zur Verfügung stehen. Benutzer können Verbindung mit herstellen, hinzufügen, ändern oder entfernen eigene Benutzer-DSNs. Benutzer-DSNs werden in einer Datei im Basisverzeichnis des Benutzers oder auf einem Unterverzeichnis gespeichert.
+- Benutzer-DSNs---Hierbei handelt es sich um DSNs, die nur für einen bestimmten Benutzer verfügbar sind. Benutzer können Herstellen einer Verbindung mit hinzufügen, ändern und eigene Benutzer-DSNs entfernen. Benutzer-DSNs werden in einer Datei im Basisverzeichnis des Benutzers oder davon ein Unterverzeichnis gespeichert.
   
-- System-DSNs---diese DSNs stehen für alle Benutzer des Systems für die verbindungsherstellung, jedoch können nur hinzugefügt, geändert, und entfernt werden von einem Systemadministrator. Wenn ein Benutzer einen Benutzer-DSN mit dem gleichen Namen wie ein System-DSN hat, wird der Benutzer-DSN bei Verbindungen von diesem Benutzer verwendet werden.
+- System-DSNs---diese DSNs stehen für alle Benutzer des Systems für die verbindungsherstellung, jedoch können nur hinzugefügt, geändert, und entfernt werden von einem Systemadministrator. Wenn ein Benutzer einen Benutzer-DSN mit dem gleichen Namen wie ein System-DSN hat, wird der Benutzer-DSN nach Verbindungen von diesem Benutzer verwendet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)

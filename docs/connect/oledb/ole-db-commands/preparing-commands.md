@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten von Befehlen | Microsoft Docs
+title: Vorbereiten von Befehlen | Microsoft-Dokumentation
 description: Vorbereiten von Befehlen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666060"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106016"
 ---
 # <a name="preparing-commands"></a>Vorbereiten von Befehlen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server unterstützt die befehlsvorbereitung für mehrfache Ausführung eines einzelnen Befehls optimiert; Allerdings befehlsvorbereitung Mehraufwand, und ein Consumer muss nicht vorbereiten ein Befehls mehrmals auszuführen. Im Allgemeinen sollte ein Befehl vorbereitet werden, wenn er mehr als drei Mal ausgeführt wird.  
+  Der OLE DB-Treiber für SQL Server unterstützt die Befehlsvorbereitung für die optimierte mehrfache Ausführung eines einzelnen Befehls. Allerdings ist die Befehlsvorbereitung mit zusätzlichem Aufwand verbunden, und Consumer müssen Befehle nicht vorbereiten, um sie mehrfach auszuführen. Im Allgemeinen sollte ein Befehl vorbereitet werden, wenn er mehr als drei Mal ausgeführt wird.  
   
  Aus Leistungsgründen wird die Befehlsvorbereitung verzögert, bis der Befehl ausgeführt wird. Dies ist das Standardverhalten. Fehler in dem vorbereiteten Befehl werden erst dann erkannt, wenn der Befehl ausgeführt wird oder ein Metaeigenschaftsvorgang durchgeführt wird. Durch die Festlegung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Eigenschaft SSPROP_DEFERPREPARE auf FALSE kann dieses Standardverhalten deaktiviert werden.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "35666060"
   
  Einige Befehle sollten nie vorbereitet werden. Beispielsweise sollten Befehle, mit denen die Ausführung gespeicherter Prozeduren angegeben wird oder die ungültigen Text für die Erstellung gespeicherter Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten, nicht vorbereitet werden.  
   
- Wenn eine temporäre gespeicherte Prozedur erstellt wird, führt der OLE DB-Treiber für SQL Server die temporäre gespeicherte Prozedur zurückgeben von Ergebnissen, als wäre die Anweisung selbst ausgeführt wurde.  
+ Wenn eine temporäre gespeicherte Prozedur erstellt wird, dann führt der OLE DB-Treiber für SQL Server die temporäre gespeicherte Prozedur aus, wobei die Ergebnisse so ausgegeben werden, als sei die Anweisung selbst ausgeführt worden.  
   
- Erstellung temporär gespeicherter Prozeduren wird gesteuert, von der OLE DB-Treiber für SQL Server-spezifische Initialisierungseigenschaft SSPROP_INIT_USEPROCFORPREP. Wenn der Eigenschaftswert SSPROPVAL_USEPROCFORPREP_ON oder SSPROPVAL_USEPROCFORPREP_ON_DROP ist, versucht der OLE DB-Treiber für SQL Server zum Erstellen einer gespeicherten Prozedur, wenn ein Befehl vorbereitet wird. Die Erstellung der gespeicherten Prozedur ist erfolgreich, wenn der Anwendungsbenutzer über ausreichende [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Berechtigungen verfügt.  
+ Die Erstellung temporär gespeicherter Prozeduren wird durch die Initialisierungseigenschaft SSPROP_INIT_USEPROCFORPREP gesteuert, die dem OLE DB-Treiber für SQL Server eigen ist. Wenn der Eigenschaftswert SSPROPVAL_USEPROCFORPREP_ON oder SSPROPVAL_USEPROCFORPREP_ON_DROP lautet, versucht der OLE DB-Treiber für SQL Server eine gespeicherte Prozedur zu erstellen, wenn ein Befehl vorbereitet wird. Die Erstellung der gespeicherten Prozedur ist erfolgreich, wenn der Anwendungsbenutzer über ausreichende [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Berechtigungen verfügt.  
   
- Für Consumer, die selten die Verbindung trennen, kann die Erstellung temporär gespeicherter Prozeduren bedeutende Menge von Ressourcen erfordern **Tempdb**die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Systemdatenbank, in denen temporäre Objekte erstellt werden. Bei der Wert sspropval_useprocforprep_on zwischen ist, werden temporäre gespeicherte Prozeduren, die von der OLE DB-Treiber für SQL Server erstellt wurden gelöscht, nur, wenn die Sitzung, die der Befehl erstellt eine Verbindung mit der Instanz von verliert[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Falls es sich bei dieser Verbindung um die Standardverbindung handelt, die bei der Initialisierung der Datenquelle erstellt wurde, dann wird die temporär gespeicherte Prozedur nur dann gelöscht, wenn die Initialisierung der Datenquelle aufgehoben wird.  
+ Bei Consumern, die selten die Verbindung trennen, kann die Erstellung temporär gespeicherter Prozeduren eine bedeutende Menge von Ressourcen in **tempdb** erfordern, der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatenbank, in der temporäre Objekte erstellt werden. Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON hat, werden die vom OLE DB-Treiber für SQL Server erstellten temporären gespeicherten Prozeduren nur dann gelöscht, wenn die Verbindung zwischen der Sitzung, in der der Befehl erstellt wurde, und der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] getrennt wird. Falls es sich bei dieser Verbindung um die Standardverbindung handelt, die bei der Initialisierung der Datenquelle erstellt wurde, dann wird die temporär gespeicherte Prozedur nur dann gelöscht, wenn die Initialisierung der Datenquelle aufgehoben wird.  
   
- Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON_DROP ist, werden die OLE DB-Treiber für SQL Server temporäre gespeicherte Prozeduren gelöscht, wenn eines der folgenden Ereignisse eintritt:  
+ Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON_DROP hat, werden die vom OLE DB-Treiber für SQL Server erstellten temporär gespeicherten Prozeduren gelöscht, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Der Consumer verwendet **ICommandText:: SetCommandText** um einen neuen Befehl anzugeben.  
+-   Der Consumer verwendet **ICommandText::SetCommandText**, um einen neuen Befehl anzugeben.  
   
--   Der Consumer verwendet **ICommandPrepare:: Unprepare** , um anzugeben, dass sie den Befehlstext nicht mehr erforderlich ist.  
+-   Der Consumer verwendet **ICommandPrepare::Unprepare**, um anzugeben, dass der Befehlstext nicht mehr benötigt wird.  
   
 -   Der Consumer gibt alle Verweise auf das Befehlsobjekt, das die temporäre gespeicherte Prozedur verwendet, frei.  
   
- Ein Befehlsobjekt verfügt höchstens eine temporäre gespeicherte Prozedur **Tempdb**. Jede vorhandene temporär gespeicherte Prozedur stellt den aktuellen Befehlstext eines bestimmten Befehlsobjekts dar.  
+ Ein Befehlsobjekt verfügt höchstens über eine temporär gespeicherte Prozedur in **tempdb**. Jede vorhandene temporär gespeicherte Prozedur stellt den aktuellen Befehlstext eines bestimmten Befehlsobjekts dar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Befehle](../../oledb/ole-db-commands/commands.md)  
   
   

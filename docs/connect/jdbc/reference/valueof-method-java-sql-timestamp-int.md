@@ -1,5 +1,5 @@
 ---
-title: ValueOf-Methode (java.sql.Timestamp, Int) | Microsoft Docs
+title: valueOf-Methode (java.sql.Timestamp, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 290878fc0a3687a95fd6335eba4b6ed6e1c2fda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848885"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979182"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf-Methode (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Erstellt eine **"DateTimeOffset"** Objekt, einen Zeitpunkt in einem bestimmten Offset von GMT erhält ein java.sql.Timestamp-Wert und einen Wert, der angibt, der des Offsets in Minuten darstellt.  
+  Erstellt ein **DateTimeOffset**-Objekt, das einen Zeitpunkt in einem bestimmten Offset von GMT darstellt, wenn ein java.sql.Timestamp-Wert sowie ein den Offset in Minuten angegebener Wert gegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,10 +43,10 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  Das Offset in Minuten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt ein "DateTimeOffset"-Objekt, das den Zeitpunkt gegebenen Zeitpunkt vom java.sql.Timestamp-Objekt am angegebenen Offset in Minuten von GMT darstellt.  
+ Gibt ein -Objekt zurück, das den vom  -Objekt gegebenen Zeitpunkt zum gegebenen Offset in Minuten von GMT darstellt.  
   
-## <a name="see-also"></a>Siehe auch  
- ["DateTimeOffset"-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

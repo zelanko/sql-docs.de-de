@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit "bcp" | Microsoft Docs
+title: Herstellen einer Verbindung mit Bcp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852595"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041401"
 ---
 # <a name="connecting-with-bcp"></a>Herstellen einer Verbindung mit bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Die [Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) Dienstprogramm finden Sie in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS. Auf dieser Seite werden die Unterschiede gegenüber der Windows-Version des `bcp`.
+Das Hilfsprogramm [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux und macOS verfügbar. Diese Seite beschreibt die Unterschiede aus der Windows-Version von `bcp`.
   
 - Das Feldabschlusszeichen ist ein Tabulator („\t“).  
   
 - Das Zeilenabschlusszeichen ist ein Zeilenvorschub („\n“).  
   
-- Zeichenmodus ist das bevorzugte Format für `bcp` formatieren, Dateien und Datendateien, die keine Sonderzeichen enthalten.  
+- Zeichenmodus ist das bevorzugte Format für `bcp`-Formatdateien und -Datendateien, die keine Sonderzeichen enthalten.  
   
 > [!NOTE]  
-> Ein umgekehrter Schrägstrich "\\" auf ein Befehlszeilenargument muss entweder in Anführungszeichen oder mit Escapezeichen versehen. Beispielsweise müssen ein Zeilenumbruch als benutzerdefiniertes Zeilenabschlusszeichen angeben, Sie einen der folgenden Mechanismen verwenden:  
+> Ein umgekehrter Schrägstrich „\\“ für ein Befehlszeilenargument muss entweder mit Anführungszeichen oder mit Escapezeichen versehen sein. Um z.B. einen Zeilenumbruch als benutzerdefiniertes Zeilenabschlusszeichen anzugeben, müssen Sie einen der folgenden Mechanismen verwenden:  
 >   
 > -   -R\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-Im folgenden finden Sie eine Beispiel-Befehlsaufruf von `bcp` zum Kopieren von Tabellenzeilen in eine Textdatei:  
+Der folgende Code ist ein Beispielbefehlsaufruf von `bcp` zum Kopieren von Tabellenzeilen in eine Textdatei:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
 ## <a name="available-options"></a>Verfügbare Optionen
-In der aktuellen Version sind die folgende Syntax und Optionen verfügbar:  
+In der aktuellen Version sind die folgende Syntax und die folgenden Optionen verfügbar:  
 
-[*Datenbank ***.**]* Schema ***.*** Tabelle * **in** *Data_file* | **out** *Data_file*
+[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden.  
@@ -65,11 +65,11 @@ Verwendet einen Zeichendatentyp.
 Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll.  
   
 - -d  
-Bewirkt, dass der Wert, der zum Übergeben der `bcp` Option "-S" als einen Datenquellennamen (DSN) interpretiert werden. Weitere Informationen finden Sie unter "DSN-Unterstützung in Sqlcmd und Bcp" in [Herstellen einer Verbindung mit Sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Bewirkt, dass der Wert, der an die Option -S von `bcp` übergeben wird, als Datenquellenname (Data Source Name, DSN) interpretiert wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in sqlcmd und bcp“ in [Herstellen einer Verbindung mit sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
   
-- e - *Error_file* gibt der vollständige Pfad einer Fehlerdatei an, die zum Speichern von einem Zeilen werden, die `bcp` -Hilfsprogramm nicht aus der Datei in die Datenbank übertragen.  
+- -e *error_file* Gibt den vollständigen Pfad einer Fehlerdatei an, in der alle Zeilen gespeichert werden, die das Hilfsprogramm `bcp` nicht von der Datei in die Datenbank übertragen kann.  
   
-- -e  
+- -E  
 Verwendet für die Identitätsspalte in der importierten Datendatei einen Identitätswert oder -werte.  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ Gibt die Nummer der ersten Zeile an, die aus einer Tabelle exportiert oder von e
 Gibt an, dass während des Vorgangs keine Standardwerte in leere Spalten eingefügt werden, sondern ein NULL-Wert für diese Spalten beibehalten werden soll.  
   
 - -l  
-Gibt einen Anmeldungstimeout an. Die Option "– i" gibt die Anzahl der Sekunden, bevor Sie eine Anmeldung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ein Timeout eintritt, wenn Sie versuchen, eine Verbindung mit einem Server herstellen. Das Standardtimeout für die Anmeldung ist 15 Sekunden. Das Anmeldungstimeout muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 gibt ein unbegrenztes Timeout.
+Gibt einen Anmeldungstimeout an. Die Option -I gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ein Timeout eintritt. Das Standardtimeout für die Anmeldung ist 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an.
   
 - -L *last_row*  
 Gibt die Nummer der letzten Zeile an, die aus einer Tabelle exportiert oder von einer Datendatei importiert werden soll.  
   
 - -m *max_errors*  
-Gibt die maximale Anzahl von Syntaxfehlern, die vor dem auftreten können die `bcp` Operation abgebrochen wird.  
+Gibt an, wie viele Syntaxfehler maximal auftreten können, bevor der `bcp`-Vorgang abgebrochen wird.  
   
 - -n  
 Verwendet die systemeigenen (Datenbank-) Datentypen, um den Massenkopiervorgang auszuführen.  
@@ -106,18 +106,18 @@ Gibt das Zeilenabschlusszeichen an.
 Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird.  
   
 - -S *server*  
-Gibt den Namen des der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Instanz für die Verbindung, oder -D wird verwendet, einen DSN.  
+Gibt den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Instanz herstellen oder wenn – D verwendet wird, einen DSN.  
   
 - -t *field_terminator*  
 Gibt das Feldabschlusszeichen an.  
   
 - -T  
-Gibt an, dass die `bcp` Hilfsprogramm Verbinden mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] über eine vertrauenswürdige Verbindung (integrierte Sicherheit).  
+Gibt an, dass das Hilfsprogramm `bcp` die Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe einer vertrauenswürdigen Verbindung (integrierte Sicherheit) herstellt.  
   
 - -U *login_id*  
 Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] verwendet wird.  
   
-- -v  
+- -V  
 Meldet die Versionsnummer und das Copyright für das Hilfsprogramm `bcp`.  
   
 - -w  
@@ -126,7 +126,7 @@ Verwendet Unicode-Zeichen, um den Massenkopiervorgang auszuführen.
 In dieser Version werden Latin-1- und UTF-16-Zeichen unterstützt.  
   
 ## <a name="unavailable-options"></a>Nicht verfügbare Optionen
-In der aktuellen Version sind die folgende Syntax und Optionen nicht verfügbar:  
+In der aktuellen Version sind die folgende Syntax und die folgenden Optionen nicht verfügbar:  
 
 - -c  
 Gibt die Codepage für die in der Datendatei enthaltenen Daten an.  
@@ -149,6 +149,6 @@ Verwendet Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../.
 - -X  
 Bei Verwendung mit den Optionen Format und -f format_file wird anstelle der standardmäßigen Nicht-XML-Formatdatei eine XML-basierte Formatdatei generiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-[Herstellen einer Verbindung mit **Sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Herstellen einer Verbindung mit **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

@@ -1,6 +1,6 @@
 ---
-title: Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQLServer | Microsoft Docs
-description: Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQL Server
+title: Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
+description: Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,56 +17,56 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d8e0139f126760cd62b44d699d8a0eef4fbaee38
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b17aee151630795f2cbee9c679058c748fbf31df
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612006"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106966"
 ---
-# <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQLServer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB-Treiber für SQL Server unterstützt Spalten mit geringer Dichte. Weitere Informationen zu Spalten mit geringer Dichte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], finden Sie unter [Use Sparse Columns](../../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../../relational-databases/tables/use-column-sets.md).  
+  OLE DB-Treiber für SQL Server unterstützt sparsespalten. Weitere Informationen über sparsespalten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], finden Sie unter [Verwenden von Sparsespalten](../../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../../relational-databases/tables/use-column-sets.md).  
   
- Weitere Informationen zur Unterstützung der Spalte mit geringer Dichte in OLE DB-Treiber für SQL Server [zu Spalten mit geringer Dichte unterstützen &#40;OLE DB-&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
+ Weitere Informationen zur Unterstützung von Spalten mit geringer Dichte im OLE DB-Treiber für SQL Server [Sparse-Spalten unterstützt &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](http://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>Benutzerszenarien für Spalten mit geringer Dichte und OLE DB-Treiber für SQLServer  
- In der folgenden Tabelle sind die gängigen Benutzerszenarien für OLE DB-Treiber für SQL Server-Benutzer mit Spalten mit geringer Dichte zusammengefasst:  
+ In der folgende Tabelle werden die gängigen Benutzerszenarien für OLE DB-Treiber für SQL Server-Benutzer mit sparsespalten zusammengefasst:  
   
 |Szenario|Verhalten|  
 |--------------|--------------|  
-|**Wählen Sie \* aus Tabelle** oder IOpenRowset:: OPENROWSET.|Gibt alle Spalten, die nicht Mitglied mit geringer Dichte sind **Column_set**, zuzüglich einer XML-Spalte, die die Werte aller nicht-Null-Spalten enthält, die Elemente mit geringer Dichte **Column_set**.|  
-|Verweisen auf eine Spalte über den Namen|Die Spalte kann verwiesen werden, unabhängig von deren Status für die Spalte mit geringer Dichte oder **Column_set** Mitgliedschaft.|  
-|Zugriff **Column_set** -Elementspalten über eine berechnete XML-Spalte.|Spalten, die Elemente mit geringer Dichte **Column_set** zugegriffen werden kann, durch Auswählen der **Column_set** anhand des Namens und können Werte eingefügt und aktualisiert durch Aktualisieren der XML-Code in der **Column_set** Spalte.<br /><br /> Der Wert muss dem Schema für **Column_set** Spalten.|  
-|Abrufen von Metadaten für alle Spalten in einer Tabelle über das DBSCHEMA_COLUMNS-Schemarowset ohne spaltenbeschränkung (OLE DB).|Gibt eine Zeile für alle Spalten, die nicht Mitglied einer **Column_set**. Wenn die Tabelle mit geringer Dichte **Column_set**, wird eine Zeile dafür zurückgegeben werden.<br /><br /> Beachten Sie, dass dies keine Metadaten für Spalten zurückgibt, die Elemente einer **Column_set**.|  
-|Abrufen von Metadaten für alle Spalten, unabhängig von geringer Dichte oder Zugehörigkeit in einem **Column_set**. Hier könnte eine sehr große Anzahl an Zeilen zurückgegeben werden.|Rufen Sie IDBSchemaRowset:: GetRowset für das DBSCHEMA_COLUMNS_EXTENDED-Schemarowset ein.|  
-|Abrufen von Metadaten nur für Spalten, die Elemente einer **Column_set**. Hier könnte eine sehr große Anzahl an Zeilen zurückgegeben werden.|Rufen Sie IDBSchemaRowset:: GetRowset für das DBSCHEMA_SPARSE_COLUMN_SET-Schemarowset ein.|  
+|**Wählen Sie \* aus Tabelle** oder IOpenRowset:: OPENROWSET.|Gibt alle Spalten, die keine Elemente der Sparsespalte **column_set** sind, sowie eine XML-Spalte zurück, die die Werte aller Spalten ungleich NULL enthält, die Elemente der Sparsespalte **column_set** sind.|  
+|Verweisen auf eine Spalte über den Namen|Auf die Spalte kann unabhängig von ihrem Status als Sparsespalte oder ihrer **column_set**-Zugehörigkeit verwiesen werden.|  
+|Zugreifen auf **column_set**-Elementspalten über eine berechnete XML-Spalte.|Auf Spalten, die Elemente der Sparsespalte **column_set** sind, kann zugegriffen werden, indem Sie den **column_set** über den Namen auswählen und Werte durch Aktualisieren des XML-Codes in der Spalte **column_set** einfügen und aktualisieren.<br /><br /> Der Wert muss dem Schema für **column_set**-Spalten entsprechen.|  
+|Abrufen von Metadaten für alle Spalten in einer Tabelle über das DBSCHEMA_COLUMNS-Schemarowset ohne spaltenbeschränkung (OLE DB).|Gibt eine Zeile für alle Spalten zurück, die nicht Elemente eines **column_set** sind. Wenn die Tabelle eine Sparsespalte **column_set** aufweist, wird eine Zeile dafür zurückgegeben.<br /><br /> Beachten Sie, dass hier keine Metadaten für Spalten zurückgegeben werden, die Elemente eines **column_set** sind.|  
+|Abrufen von Metadaten für alle Spalten, unabhängig von geringer Dichte oder Zugehörigkeit in einem **column_set**. Hier könnte eine sehr große Anzahl an Zeilen zurückgegeben werden.|Rufen Sie IDBSchemaRowset:: GetRowset für das DBSCHEMA_COLUMNS_EXTENDED-Schemarowset ein.|  
+|Abrufen von Metadaten nur für Spalten, die Elemente eines **column_set** sind. Hier könnte eine sehr große Anzahl an Zeilen zurückgegeben werden.|Rufen Sie IDBSchemaRowset:: GetRowset für das DBSCHEMA_SPARSE_COLUMN_SET-Schemarowset ein.|  
 |Bestimmen, ob eine Spalte eine geringe Dichte aufweist|Betrachten Sie die SS_IS_SPARSE-Spalte des DBSCHEMA_COLUMNS-Schemarowsets (OLE DB).|  
-|Bestimmen Sie, ob eine Spalte ist eine **Column_set**.|Betrachten Sie die SS_IS_COLUMN_SET-Spalte des DBSCHEMA_COLUMNS-Schemarowsets. Oder Lesen Sie *DwFlags* zurückgegebenes IColumnsInfo:: GetColumnInfo oder DBCOLUMNFLAGS im von IColumnsRowset:: GetColumnsRowset zurückgegebenen Rowset. Für **Column_set** Spalten DBCOLUMNFLAGS_SS_ISCOLUMNSET festgelegt.|  
-|Importieren und Exportieren von Spalten mit geringer Dichte über BCP für eine Tabelle ohne **Column_set**.|Keine Änderung im Verhalten unterscheidet sich von früheren Versionen des OLE DB-Treiber für SQL Server.|  
-|Importieren und Exportieren von Spalten mit geringer Dichte über BCP für eine Tabelle mit einer **Column_set**.|Die **Column_set** importiert und exportiert, auf die gleiche Weise wie XML; d. h. als **varbinary(max)** Wenn gebunden als Binär oder als **nvarchar(max)** Wenn als eine gebunden**Char** oder **Wchar** Typ.<br /><br /> Spalten, die Elemente mit geringer Dichte **Column_set** werden nicht exportiert werden, als unterschiedliche Spalten; sie sind nur im Wert des exportiert die **Column_set**.|  
+|Bestimmen, ob eine Spalte ist eine **Column_set**.|Betrachten Sie die SS_IS_COLUMN_SET-Spalte des DBSCHEMA_COLUMNS-Schemarowsets. Oder wenden Sie sich an *DwFlags* IColumnsInfo:: GetColumnInfo oder DBCOLUMNFLAGS im von IColumnsRowset:: GetColumnsRowset zurückgegebenen Rowset zurückgegeben. Für **column_set**-Spalten wird DBCOLUMNFLAGS_SS_ISCOLUMNSET festgelegt.|  
+|Importieren und Exportieren von Sparsespalten über BCP für eine Tabelle ohne **column_set**.|Keine Änderung im Verhalten von Vorgängerversionen von OLE DB-Treiber für SQL Server.|  
+|Importieren und Exportieren von Sparsespalten über BCP für eine Tabelle mit einem **column_set**.|Die **Column_set** importiert und exportiert Sie in die gleiche Weise wie XML, also als **'varbinary(max)'** Wenn gebunden wird, als ein binärer Typ ist, oder als **nvarchar(max)** Wenn als eine gebunden**Char** oder **Wchar** Typ.<br /><br /> Spalten, die Elemente der Sparsespalte **column_set** sind, werden nicht als unterschiedliche Spalten exportiert. Sie werden nur im Wert des **column_set** exportiert.|  
 |**Queryout** -Verhalten für BCP.|Keine Änderung bei der Behandlung explizit benannter Spalten aus früheren Versionen von OLE DB-Treiber für SQL Server.<br /><br /> In Szenarien, die das Importieren und Exportieren zwischen Tabellen mit unterschiedlichen Schemas umfassen, ist möglicherweise eine besondere Behandlung erforderlich.<br /><br /> Weitere Informationen über BCP finden Sie unter „Massenkopierunterstützung (BCP) für Spalten mit geringer Dichte” weiter unten in diesem Thema.|  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
- Downlevelclients geben Metadaten nur für Spalten, die nicht Mitglied mit geringer Dichte sind zurück **Column_set** für SQLColumns und DBSCHMA_COLUMNS.
+ Downlevelclients geben Metadaten nur für Spalten zurück, die nicht Elemente der Sparsespalte **column_set** für SQLColumns und DBSCHMA_COLUMNS sind.
   
- Downlevelclients können auf Spalten, die Elemente mit geringer Dichte zugreifen **Column_set** anhand des Namens, und die **Column_set** Spalte als XML-Spalte für zugegriffen werden [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Clients.  
+ Downlevelclients können auf Spalten, die Elemente der Sparsespalte **column_set** sind, über den Namen zugreifen. Auf die Spalte **column_set** kann als XML-Spalte für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Clients zugegriffen werden.  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Massenkopierunterstützung (BCP) für Spalten mit geringer Dichte  
- Es gibt keine Änderungen an der BCP-API in der OLE DB für die Spalten mit geringer Dichte oder **Column_set** Funktionen.  
+ In OLE DB sind keine Änderungen an der BCP-API für die Sparsespalten oder **column_set**-Funktionen vorgenommen werden.  
   
- Wenn eine Tabelle hat eine **Column_set**, Spalten mit geringer Dichte nicht als unterschiedliche Spalten behandelt. Die Werte aller Spalten mit geringer Dichte sind im Wert des enthalten die **Column_set**, dem auf die gleiche Weise wie eine XML-Spalte exportiert wird, also als **varbinary(max)** Wenn gebunden als Binär oder als  **nvarchar(max)** wenn er als ein **Char** oder **Wchar** Typ). Beim Import der **Column_set** Wert muss das Schema der entsprechen den **Column_set**.  
+ Wenn eine Tabelle einen **column_set** aufweist, werden Sparsespalten nicht wie unterschiedliche Spalten behandelt. Die Werte aller sparsespalten sind im Wert des enthalten die **Column_set**, dem auf die gleiche Weise wie eine XML-Spalte exportiert wird, also als **'varbinary(max)'** Wenn gebunden wird, als ein binärer Typ ist, oder als  **nvarchar(max)** wenn er als ein **Char** oder **Wchar** Typ). Beim Import der **Column_set** Wert muss dem Schema der entsprechen den **Column_set**.  
   
- Für **Queryout** Vorgänge, erfolgt keine Änderung der Art und Weise, die explizit verwiesen wird Spalten behandelt werden. **COLUMN_SET** Spalten weisen das gleiche Verhalten wie XML-Spalten und geringe Dichte hat keine Auswirkung auf die Handhabung von Namen von Spalten mit geringer Dichte.  
+ Bei **queryout**-Vorgängen gibt es keine Änderungen in der Behandlung von Spalten, auf die explizit verwiesen wird. **column_set**-Spalten weisen das gleiche Verhalten auf wie XML-Spalten, und die Sparseeigenschaft hat keine Auswirkungen auf die Behandlung von benannten Sparsespalten.  
   
- Jedoch wenn **Queryout** wird verwendet, für das Exportieren und Sie Spalten mit geringer Dichte, die Elemente der Spaltensatz mit geringer Dichte nach Name verweisen, Sie können keine keinen direkten Import in eine Tabelle mit gleicher Struktur ausführen. Dies ist, da BCP Metadaten konsistent mit verwendet werden, eine **wählen \***  Vorgang für den Import und nicht zuordnen kann **Column_set** -Elementspalten diesen Metadaten. So importieren Sie **Column_set** -Elementspalten einzeln zu definieren, eine Ansicht für die Tabelle, die auf den gewünschten verweist **Column_set** Spalten, und Sie müssen den Importvorgang mithilfe der Sicht ausführen.  
+ Wenn jedoch **queryout** für das Exportieren verwendet wird, und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass BCP Metadaten verwendet, die konsistent mit einem **select \***-Vorgang für den Import sind, und **column_set**-Elementspalten diesen Metadaten nicht zuordnen kann. Damit **column_set**-Elementspalten einzeln importiert werden können, müssen Sie eine Ansicht für die Tabelle definieren, die auf die gewünschten **column_set**-Spalten verweist. Darüber hinaus müssen Sie den Importvorgang über die Ansicht ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

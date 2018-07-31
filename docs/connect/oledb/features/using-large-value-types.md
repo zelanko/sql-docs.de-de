@@ -1,6 +1,6 @@
 ---
-title: Große Werttypen mit | Microsoft Docs
-description: Verwenden von Datentypen mit umfangreichen Werten mit OLE DB-Treiber für SQL Server
+title: Verwenden von großen Werttypen | Microsoft-Dokumentation
+description: Verwenden von Typen mit umfangreichen Werten mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,47 +20,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b8b0e413eabbcf52e98d778ba309e9a2ca45f68f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612095"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107952"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Von Datentypen mit umfangreichen Werten sind die Typen, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt eine **max** Spezifizierer für **Varchar**, **Nvarchar**, und **Varbinary** von Datentypen für die Speicherung von Werten so groß wie 2 zulassen ^ 31-1 Bytes. Spalten der Tabelle und [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen geben möglicherweise **varchar(max)**, **nvarchar(max)**, oder **varbinary(max)** Datentypen.  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] führte einen **maximalen** Bezeichner für die Datentypen **varchar**, **nvarchar** und **varbinary** ein, um das Speichern von Werten in der Größenordnung von 2^31 -1 Byte zu ermöglichen. Tabellenspalten und [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Variablen können den Datentyp **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** angeben.  
   
 > [!NOTE]  
->  Von Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 KB und 8 KB haben oder sie können angegeben werden als unbegrenzt.  
+>  Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 KB und 8 KB haben oder ohne Größenbeschränkung festgelegt werden.  
   
- Zuvor nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen wie **Text**, **Ntext** und **Image** derartige Längen erreichen konnte. Die **max** Spezifizierer für **Varchar**, **Nvarchar**, und **Varbinary** wurden diese Datentypen redundant. Allerdings da Datentypen mit umfangreichen noch verfügbar sind, werden die meisten der Schnittstellen auf die OLE DB-Datenzugriffskomponenten unverändert bleiben. Für die Abwärtskompatibilität mit früheren Versionen bleibt das DBCOLUMNFLAGS_ISLONG-Flag in der OLE DB-Treiber für SQL Server verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
-  
-> [!NOTE]  
->  Sie können auch angeben, **varchar(max)**, **nvarchar(max)**, und **varbinary(max)** Datentypen als Eingabe- und Parametertypen von gespeicherten Prozeduren, die Funktion Rückgabetypen , oder im [CAST und CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) Funktionen.  
+ Zuvor konnten nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen wie **text**, **ntext** und **image** derartige Längen erreichen. Durch den **max**-Bezeichner für **varchar**, **nvarchar** und **varbinary** wurden diese Datentypen überflüssig. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB-Datenzugriffskomponenten unverändert. Für die Abwärtskompatibilität mit früheren Versionen wird das DBCOLUMNFLAGS_ISLONG-Flag in der OLE DB-Treiber für SQL Server verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
   
 > [!NOTE]  
->  Wenn das Replizieren von Daten, müssen Sie möglicherweise so konfigurieren Sie die [max Text Repl Size Server Configuration-Option](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) auf-1 festgelegt.  
+>  Sie können die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** auch als Eingabe- und Ausgabeparametertypen für gespeicherte Prozeduren, Funktionsrückgabetypen oder in [CAST und CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktionen angeben.  
   
-## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQLServer 
- Der OLE DB-Treiber für SQL Server macht die **varchar(max)**, **varbinary(max)**, und **nvarchar(max)** bzw. als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR, Typen .  
+> [!NOTE]  
+>  Beim Replizieren von Daten müssen Sie möglicherweise die [Serverkonfigurationsoption „Max. Textgröße für Replikation“](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) auf -1 festlegen.  
   
- Die Datentypen **varchar(max)**, **varbinary(max)**, und **nvarchar(max)** in Spalten mit den **max** Größe auf unlimited festgelegt werden. dargestellt als ISLONG Core-OLE DB-Schemarowsets und Schnittstellen, die Spaltendatentypen.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server 
+ Der OLE DB-Treiber für SQL Server macht die Datentypen **varchar(max)**, **varbinary(max)** und **nvarchar(max)** als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR verfügbar.  
   
- Des Befehlsobjekts **IAccessor** Implementierung wurde geändert, um das Binden als DBTYPE_IUNKNOWN zu ermöglichen. Wenn der Consumer DBTYPE_IUNKNOWN angibt und legt *pObject* auf null, gibt der Anbieter zurück, die **ISequentialStream** -Schnittstelle an den Consumer, sodass der Consumer streamen kann **Varchar ( max)**, **nvarchar(max)**, oder **varbinary(max)** Daten aus den Ausgabevariablen.  
+ Spalten mit den Datentypen **varchar(max)**, **varbinary(max)** und **nvarchar(max)**, bei denen die **maximale** Größe auf „Unbegrenzt“ festgelegt ist, werden von den OLE DB-Kernschemarowsets und Schnittstellen, die Spaltendatentypen wiedergeben, als ISLONG dargestellt.  
   
- Aus dem Datenstrom übertragene Ausgabeparameterwerte werden nach den Ergebniszeilen zurückgegeben. Wenn die Anwendung versucht, auf das nächste Ergebnis festgelegt werden, indem auf verschieben **IMultipleResults:: GetResult** ohne alle zurückgegebenen Ausgabeparameterwerte in Anspruch, wird DB_E_OBJECTOPEN zurückgegeben.  
+ Die **IAccessor**-Implementierung des Befehlsobjekts wurde geändert, um das Binden als DBTYPE_IUNKNOWN zu ermöglichen. Wenn der Consumer DBTYPE_IUNKNOWN angibt und *pObject* auf NULL festlegt, gibt der Anbieter die **ISequentialStream**-Schnittstelle an den Consumer zurück, sodass der Consumer den **varchar(max)**-, **nvarchar(max)**- oder **varbinary(max)**-Datenstrom aus den Ausgabevariablen übertragen kann.  
   
- Zur Unterstützung von streaming erfordert der OLE DB-Treiber für SQL Server Parameter variabler Länge in sequenzieller Reihenfolge zugegriffen werden. Dies bedeutet, dass DBPROP_ACCESSORDER auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS oder DBPROPVAL_AO_SEQUENTIAL festgelegt werden, muss bei jedem **varchar(max)**, **nvarchchar(max)**, oder  **varbinary(max)** -Spalten oder Ausgabeparameter an DBTYPE_IUNKNOWN gebunden sind. Aufrufe von **IRowset:: GetData** schlägt mit DBSTATUS_E_UNAVAILABLE fehl, wenn diese Zugriffsreihenfolge nicht eingehalten wird. Die Beschränkung ist nicht gültig, wenn keine Ausgabebindungen mit DBTYPE_IUNKNOWN vorhanden sind.  
+ Aus dem Datenstrom übertragene Ausgabeparameterwerte werden nach den Ergebniszeilen zurückgegeben. Wenn die Anwendung versucht, durch Aufrufen von **IMultipleResults::GetResult** zum nächsten Resultset überzugehen, ohne alle zurückgegebenen Ausgabeparameterwerte zu verbrauchen, wird DB_E_OBJECTOPEN zurückgegeben.  
   
- Der OLE DB-Treiber für SQL Server unterstützt außerdem Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen in Szenarien nützlich, in denen eine gespeicherte Prozedur Datentypen mit umfangreichen Werten als Rückgabewerte zurückgibt, die an den Client als DBTYPE_IUNKNOWN verfügbar sind.  
+ Zur Unterstützung von Streaming erfordert der OLE DB-Treiber für SQL Server, dass auf Parameter mit variabler Länge in sequenzieller Reihenfolge zugegriffen wird. Dies bedeutet, dass DBPROP_ACCESSORDER entweder auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS oder DBPROPVAL_AO_SEQUENTIAL festgelegt werden muss, wenn die **varchar(max)**-, **nvarchchar(max)**- oder **varbinary(max)**-Spalten oder Ausgabeparameter an DBTYPE_IUNKNOWN gebunden sind. Aufrufe von **IRowset::GetData** schlagen mit DBSTATUS_E_UNAVAILABLE fehl, wenn diese Beschränkung der Zugriffsreihenfolge nicht eingehalten wird. Die Beschränkung ist nicht gültig, wenn keine Ausgabebindungen mit DBTYPE_IUNKNOWN vorhanden sind.  
+  
+ Der OLE DB-Treiber für SQL Server unterstützt außerdem das Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen mit umfangreichen Werten. Dies ist in Szenarios nützlich, in denen eine gespeicherte Prozedur Datentypen mit umfangreichen Werten als Rückgabewerte zurückgibt, die dem Client als DBTYPE_IUNKNOWN verfügbar gemacht werden.  
   
  Um mit diesen Typen zu arbeiten, stehen der Anwendung die folgenden Optionen zur Verfügung:  
   
--   Binden Sie als ein Typ, der Bindungen mit dem Basistyp der Spalte unterstützt hat (z. B. b. Binden für nvarchar(max) als Typ, der an Nvarchar gebunden werden kann). Wenn der Puffer nicht groß ist erfolgt genügend abschneiden, genau wie der Basistyp für baumverzweigungen, die jetzt umfangreichere Werte verfügbar sind.  
+-   Als Typ binden, dessen Bindungen mit dem Basistyp der Spalte unterstützt werden (z.B. Binden für nvarchar(max) als Typ, der an nvarchar gebunden werden kann). Wenn der Puffer nicht groß genug ist, werden Daten abgeschnitten, wie dies auch beim Basistyp der Fall ist, obwohl jetzt umfangreichere Werte verfügbar sind.  
   
 -   Als Typ binden, dessen Konvertierungen mit dem Basistyp der Spalte unterstützt werden und der DBTYPE_BYREF angibt.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "35612095"
   
  Wenn Sie die maximale Größe einer Spalte zu melden, meldet der OLE DB-Treiber für SQL Server:  
   
--   Die definierte maximale Größe, z. B. 2000 für ist eine **Varchar (** 2000 **)** Spalte, oder  
+-   Die definierte maximale Größe, die für eine **varchar(** 2000 **)**-Spalte beispielsweise 2000 beträgt. Oder:  
   
--   Der Wert "unlimited", der im Fall einer **varchar(max)** Spalte gleich ~ 0. Dieser Wert wird für die DBCOLUMN_COLUMNSIZE-Metadateneigenschaft festgelegt.  
+-   Den Wert „unlimited“, der im Fall einer **varchar(max)**-Spalte ~0 entspricht. Dieser Wert wird für die DBCOLUMN_COLUMNSIZE-Metadateneigenschaft festgelegt.  
   
- Die Standardkonvertierungsregeln gilt für das ein **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (** 2000 **)** Spalte werden ebenfalls gültig für eine **varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
+ Die Standardkonvertierungsregeln gelten für eine **varchar(max)**-Spalte. Dies bedeutet, dass eine Konvertierung, die für eine **varchar(** 2000 **)**-Spalte gilt, auch für eine **varchar(max)**-Spalte gültig ist. Das Gleiche gilt für **nvarchar(max)**- und **varbinary(max)**-Spalten.  
   
  Beim Abrufen von Datentypen mit umfangreichen Werten besteht der effizienteste Ansatz im Binden als DBTYPE_IUNKNOWN und Festlegen der Rowseteigenschaft DBPROP_ACCESSORDER auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Dadurch wird der Wert direkt ohne Zwischenspeichern aus dem Netzwerkdatenstrom übertragen, wie im folgenden Beispiel gezeigt:  
   
@@ -694,10 +694,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Weitere Informationen dazu, wie der OLE DB-Treiber für SQL Server von Datentypen mit umfangreichen Werten verfügbar macht, finden Sie unter [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Weitere Informationen dazu, wie der OLE DB-Treiber für SQL Server mit umfangreichen Datentypen verfügbar macht, finden Sie unter [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

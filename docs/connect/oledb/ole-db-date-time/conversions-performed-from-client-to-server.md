@@ -1,6 +1,6 @@
 ---
-title: Konvertierungen ausgeführt vom Client zum Server | Microsoft Docs
-description: Konvertierungen, die vom Client zum server
+title: Client-/Server-Konvertierungen
+description: Client-/Server-Konvertierungen
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,24 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2b697052bf9de21671201ae840f828c0fc73481d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666360"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109822"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel beschreibt die Datum/Uhrzeit-Konvertierungen zwischen einer Clientanwendung, die mit OLE DB-Treiber für SQL Server geschrieben und [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher).  
+  In diesem Artikel wird beschrieben, Datum/Uhrzeit-Konvertierungen zwischen einer Clientanwendung, die mit OLE DB-Treiber für SQL Server geschrieben und [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher).  
   
 ## <a name="conversions"></a>Konvertierungen  
- In diesem Artikel wird beschrieben, auf dem Client ausgeführte Konvertierungen. Wenn der Client Bruchsekundengenauigkeit für einen Parameter angibt, die von der auf dem Server definierten abweicht, schlägt die Clientkonvertierung in Fällen, in denen der Server eine erfolgreiche Konvertierung zugelassen hätte, möglicherweise fehl. Insbesondere behandelt der Client jedes Abschneiden von Sekundenbruchteilen als Fehler, wohingegen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rundet Zeitwerte auf die nächste ganze Sekunde.  
+ In diesem Artikel werden die auf dem Client durchgeführten Konvertierungen beschrieben. Wenn der Client Bruchsekundengenauigkeit für einen Parameter angibt, die von der auf dem Server definierten abweicht, schlägt die Clientkonvertierung in Fällen, in denen der Server eine erfolgreiche Konvertierung zugelassen hätte, möglicherweise fehl. Insbesondere behandelt der Client jedes Abschneiden von Sekundenbruchteilen als Fehler, wohingegen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Zeitwerte auf die nächste ganze Sekunde rundet.  
   
- ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, werden DBTYPE_DBTIMESTAMP-Bindungen konvertiert, als wären sie **datetime2**.  
+ Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, werden DBTYPE_DBTIMESTAMP-Bindungen konvertiert, als wären sie **datetime2**.  
   
 |To -><br /><br /> Von|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "35666360"
   
 |Symbol|Bedeutung|  
 |------------|-------------|  
-|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: CreateAccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in zurückgegeben *RgStatus*. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
+|-|Es wird keine Konvertierung unterstützt. Wenn beim Aufruf von *die Bindung überprüft wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in* zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
 |–|Nicht verfügbar.|  
 |1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d.&nbsp;h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
 |2|Zeitfelder werden ignoriert.|  
@@ -65,23 +65,23 @@ ms.locfileid: "35666360"
 |6|Die Uhrzeit wird auf 0 (Null) festgelegt.|  
 |7|Das Datum wird auf das aktuelle Datum festgelegt.|  
 |8|Die Zeit wird zu UTC konvertiert. Wenn während dieser Konvertierung ein Fehler auftritt, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt.|  
-|9|Die Zeichenfolge wird als ISO-Literal analysiert und in den Zieltyp konvertiert. Falls dies fehlschlägt, wird die Zeichenfolge als OLE-Datumsliteral analysiert (welches gleichfalls Zeitkomponenten enthält) und vom OLE-Datumstyp (DBTYPE_DATE) in den Zieldatumstyp konvertiert.<br /><br /> Wenn der Zieltyp DBTIMESTAMP, ist **Smalldatetime**, **"DateTime"**, oder **datetime2**, die Zeichenfolge muss mit der Syntax entsprechen, für das Datum, Uhrzeit oder **datetime2**  Literale oder der von OLE erkannten Syntax. Wenn die Zeichenfolge ein Datumsliteral ist, werden alle Uhrzeitkomponenten auf&nbsp;0 festgelegt. Wenn die Zeichenfolge ein Uhrzeitliteral ist, wird das Datum auf das aktuelle Datum festgelegt.<br /><br /> Für alle anderen Zieltypen muss die Zeichenfolge der Syntax für Literale des Zieltyps entsprechen.|  
-|10|Wenn das Abschneiden von Sekundenbruchteilen Datenverlust verursacht, wird DBSTATUS_E_DATAOVERFLOW festgelegt. Für Zeichenfolgenkonvertierungen ist eine Überlaufprüfung nur möglich, wenn die Zeichenfolge der ISO-Syntax entspricht. Wenn es sich bei der Zeichenfolge um ein OLE-Datumsliteral handelt, werden Sekundenbruchteile gerundet.<br /><br /> Für die Konvertierung von DBTIMESTAMP (Datetime) in Smalldatetime OLE DB-Treiber für SQL Server wird automatisch den Sekundenwert, statt den Fehler dbstatus_e_dataoverflow auszulösen gekürzt.|  
-|11|Die Anzahl der Sekundenbruchteile (Dezimalstellen) wird von der Größe der Zielspalte gemäß der folgenden Tabelle bestimmt. Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> Wenn jedoch der Quelltyp DBTIMESTAMP ist, und Sekundenbruchteile auf 0 gesetzt wurden, werden keine Dezimalstellen für Sekundenbruchteile und kein Dezimaltrennzeichen generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren OLE&nbsp;DB-Anbietern entwickelt wurden.<br /><br /> Eine Spaltengröße von ~0 impliziert unbegrenzte Größe in OLE&nbsp;DB (9 Ziffern, sofern nicht die 3-Ziffern-Regel für DBTIMESTAMP gilt).|  
-|12|Gültige Konvertierungssemantik [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] für DBTYPE_DATE wird beibehalten. Die Sekundenbruchteile werden zu&nbsp;0 abgeschnitten.|  
-|13|Gültige Konvertierungssemantik [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] für DBTYPE_FILETIME wird beibehalten. Wenn Sie die Windows-FileTimeToSystemTime-API verwenden, ist die Genauigkeit der Sekundenbruchteile auf 1 Millisekunde beschränkt.|  
-|14|Gültige Konvertierungssemantik [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] für **Smalldatetime** werden beibehalten. Die Sekunden werden auf&nbsp;0 festgelegt.|  
-|15|Gültige Konvertierungssemantik [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] für **"DateTime"** werden beibehalten. Sekunden werden zum nächstem 300stel einer Sekunde gerundet.|  
+|9|Die Zeichenfolge wird als ISO-Literal analysiert und in den Zieltyp konvertiert. Falls dies fehlschlägt, wird die Zeichenfolge als OLE-Datumsliteral analysiert (welches gleichfalls Zeitkomponenten enthält) und vom OLE-Datumstyp (DBTYPE_DATE) in den Zieldatumstyp konvertiert.<br /><br /> Wenn der Zieltyp DBTIMESTAMP, ist **Smalldatetime**, **"DateTime"**, oder **datetime2**, die Zeichenfolge muss mit der Syntax entsprechen, für das Datum, Zeit oder **datetime2**  Literale oder der von OLE erkannten Syntax. Wenn die Zeichenfolge ein Datumsliteral ist, werden alle Uhrzeitkomponenten auf&nbsp;0 festgelegt. Wenn die Zeichenfolge ein Uhrzeitliteral ist, wird das Datum auf das aktuelle Datum festgelegt.<br /><br /> Für alle anderen Zieltypen muss die Zeichenfolge der Syntax für Literale des Zieltyps entsprechen.|  
+|10|Wenn das Abschneiden von Sekundenbruchteilen Datenverlust verursacht, wird DBSTATUS_E_DATAOVERFLOW festgelegt. Für Zeichenfolgenkonvertierungen ist eine Überlaufprüfung nur möglich, wenn die Zeichenfolge der ISO-Syntax entspricht. Wenn es sich bei der Zeichenfolge um ein OLE-Datumsliteral handelt, werden Sekundenbruchteile gerundet.<br /><br /> Zur Konvertierung von DBTIMESTAMP (datetime) in smalldatetime schneidet der OLE DB-Treiber für SQL Server den Sekundenwert automatisch ab, statt den Fehler DBSTATUS_E_DATAOVERFLOW auszulösen.|  
+|11|Die Anzahl der Dezimalziffern für Sekundenbruchteile (Dezimalstellen) wird anhand der Größe der Zielspalte gemäß der folgenden Tabelle ermittelt. Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> Wenn jedoch der Quelltyp DBTIMESTAMP ist, und Sekundenbruchteile auf 0 gesetzt wurden, werden keine Dezimalstellen für Sekundenbruchteile und kein Dezimaltrennzeichen generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren OLE&nbsp;DB-Anbietern entwickelt wurden.<br /><br /> Eine Spaltengröße von ~0 impliziert unbegrenzte Größe in OLE&nbsp;DB (9 Ziffern, sofern nicht die 3-Ziffern-Regel für DBTIMESTAMP gilt).|  
+|12|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für DBTYPE_DATE wird beibehalten. Die Sekundenbruchteile werden zu&nbsp;0 abgeschnitten.|  
+|13|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für DBTYPE_FILETIME wird beibehalten. Wenn Sie die Windows-FileTimeToSystemTime-API verwenden, ist die Genauigkeit für Sekundenbruchteile auf eine Millisekunde beschränkt.|  
+|14|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für **smalldatetime** wird beibehalten. Die Sekunden werden auf&nbsp;0 festgelegt.|  
+|15|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für **datetime** wird beibehalten. Sekunden werden zum nächstem 300stel einer Sekunde gerundet.|  
 |16|Das Konvertierungsverhalten eines in eine SSVARIANT-Clientstruktur eingebetteten Werts (eines bestimmten Typs) ist mit dem Verhalten desselben Werts und Typs identisch, wenn er nicht eingebettet ist.|  
   
 ||||  
 |-|-|-|  
 |Typ|Länge (in Zeichen)|Dezimalstellen|  
-|DBTIME2|8, 10..18|0,1..9|  
-|DBTIMESTAMP|19, 21..29|0,1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
+|DBTIME2|8, 10..18|0, 1..9|  
+|DBTIMESTAMP|19, 21..29|0, 1..9|  
+|DBTIMESTAMPOFFSET|26, 28...36|0, 1..9|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Bindungen und Konvertierungen &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

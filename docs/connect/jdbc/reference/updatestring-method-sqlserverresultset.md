@@ -1,5 +1,5 @@
 ---
-title: UpdateString-Methode (SQLServerResultSet) | Microsoft Docs
+title: updateString-Methode (SQLServerResultSet)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851055"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979222"
 ---
-# <a name="updatestring-method-sqlserverresultset"></a>UpdateString-Methode (SQLServerResultSet)
+# <a name="updatestring-method-sqlserverresultset"></a>updateString-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **Zeichenfolge** Wert.  
+  Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert**.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[UpdateString (Int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolge** Wert Berücksichtigung des Spaltenindexes.|  
-|[UpdateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolge** Wert Berücksichtigung des Spaltennamens.|  
+|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Berücksichtigung des Spaltenindexes.|  
+|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Berücksichtigung des Spaltennamens.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

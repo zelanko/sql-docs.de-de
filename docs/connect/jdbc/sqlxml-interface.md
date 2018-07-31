@@ -1,5 +1,5 @@
 ---
-title: SQLXML-Schnittstelle | Microsoft Docs
+title: SQLXML-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,43 +15,43 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991652"
 ---
 # <a name="sqlxml-interface"></a>SQLXML-Schnittstelle
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC Driver bietet Unterstützung für die JDBC 4.0-API, in der die java.sql.SQLXML-Schnittstelle eingeführt wird. Die SQLXML-Schnittstelle definiert Methoden zum interagieren und Bearbeiten von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Xml** -Datentyp.  
+  JDBC Driver bietet Unterstützung für die JDBC 4.0-API, in der die java.sql.SQLXML-Schnittstelle eingeführt wird. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Xml** -Datentyp.  
   
- Die SQLXML-Schnittstelle bietet Methoden für den Zugriff auf den XML-Wert als eine **Zeichenfolge**, **Reader** oder **Writer**, oder als eine **Stream**. Der XML-Wert kann auch durch zugegriffen werden eine **Quelle** oder legen Sie als eine **Ergebnis**, dem dienen mit XML-Parser-APIs wie z. B. (DOKUMENTOBJEKTMODELL), Simple API für XML (SAX) und Streaming API for XML-StAX (), als sowie mit XSLT transformiert und XPath.  
+ Die SQLXML-Schnittstelle bietet Methoden für den Zugriff auf den XML-Wert als eine **Zeichenfolge**, **Reader** oder **Writer**, oder als eine **Stream**. Der Zugriff auf den XML-Wert ist auch über eine **Quelle** möglich, und er kann als **Ergebnis** festgelegt werden. Diese werden mit XML-Parser-APIs wie DOM (Document Object Model), SAX (Simple API for XML) und StAX (Streaming API for XML) sowie mit XSLT-Transformationen und XPath verwendet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle werden die in der SQLXML-Schnittstelle definierten Methoden beschrieben:  
   
 |Methodensyntax|Methodenbeschreibung|  
 |-------------------|------------------------|  
-|["void" free()](http://go.microsoft.com/fwlink/?LinkId=131685)|Mit dieser Methode werden das SQLXML-Objekt und die von diesem verwendeten Ressourcen freigegeben.|  
+|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|Mit dieser Methode werden das SQLXML-Objekt und die von diesem verwendeten Ressourcen freigegeben.|  
 |[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|Gibt einen Eingabedatenstrom zum Lesen von Daten aus dem SQLXML zurück.|  
-|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Gibt die **XML** Daten als java.io.Reader-Objekt oder als zeichendatenstrom.|  
-|[T erweitert Quelle T GetSource (Klasse\<T > SourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Gibt eine **Quelle** zum Lesen der **XML** Wert angegeben, die von diesem **SQLXML** Objekt.<br /><br /> **Hinweis:** die GetSource-Methode unterstützt die folgenden Quellen: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource und java.io.InputStream.|  
-|[Zeichenfolge GetString() zu](http://go.microsoft.com/fwlink/?LinkId=131757)|Gibt eine Zeichenfolgendarstellung der **XML** Wert festgelegt, die von diesem SQLXML-Objekt.|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Ruft einen Stream, der zum Schreiben verwendet werden kann die **XML** Wert, der diesem SQLXML-Objekt darstellt.|  
-|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Gibt einen Stream zum Schreiben zu verwendende der **XML** Wert, der diesem SQLXML-Objekt darstellt.|  
-|[T erweitert Ergebnis T z. B. SetResult (Klasse\<T > ResultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Gibt eine **Ergebnis** für die Einstellung der **XML** Wert angegeben, die von diesem **SQLXML** Objekt.<br /><br /> **Hinweis:** z. B. SetResult-Methode unterstützt die folgenden Quellen: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult und java.io.OutputStream.|  
-|["void" setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Legt den XML-Wert, der von diesem SQLXML-Objekt in den angegebenen benannten **Zeichenfolge** Darstellung.|  
+|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Gibt die **XML**-Daten als java.io.Reader-Objekt oder als Zeichendatenstrom zurück.|  
+|[T erweitert Quelle T GetSource (Klasse\<T > SourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Gibt eine **Quelle** zum Lesen der **XML** Wert angegeben, die von diesem **SQLXML** Objekt.<br /><br /> **Hinweis:** Die Methode „getSource“ unterstützt die folgenden Quellen: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource und java.io.InputStream.|  
+|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|Gibt eine Zeichenfolgendarstellung des **XML**-Werts zurück, der von diesem SQLXML-Objekt angegeben wird.|  
+|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Ruft einen Datenstrom ab, der zum Schreiben des **XML**-Werts verwendet werden kann, der von diesem SQLXML-Objekt angegeben wird.|  
+|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Gibt einen Datenstrom zurück, der zum Schreiben des **XML**-Werts verwendet werden kann, der von diesem SQLXML-Objekt angegeben wird.|  
+|[T erweitert Ergebnis T SetResult (Klasse\<T > ResultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Gibt eine **Ergebnis** für die Einstellung der **XML** Wert angegeben, die von diesem **SQLXML** Objekt.<br /><br /> **Hinweis:** Die Methode „setResult“ unterstützt die folgenden Quellen: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult und java.io.OutputStream.|  
+|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Legt den von diesem SQLXML-Objekt angegebenen XML-Wert auf die angegebene **String**-Darstellung fest.|  
   
  Die Anwendungen können XML-Werte nur einmal aus einem SQLXML-Objekt lesen bzw. in dieses schreiben.  
   
- Wenn die free()-Methode aufgerufen wird, wird ein SQLXML-Objekt wird ungültig und wird weder gelesen noch geschrieben werden. Wenn die Anwendung versucht, eine Methode auf das SQLXML-Objekt als die free()-Methode aufrufen, wird eine Ausnahme ausgelöst.  
+ Nach dem Aufrufen der Methode „free()“ wird ein SQLXML-Objekt ungültig und kann weder gelesen noch geschrieben werden. Wenn die Anwendung versucht, für das SQLXML-Objekt eine andere Methode als „free()“ aufzurufen, wird eine Ausnahme ausgelöst.  
   
- Die SQLXML-Objekt nicht mehr gelesen oder geschrieben beim Aufrufen einer der folgenden Abrufmethoden: GetSource, GetCharacterStream, GetBinaryStream, und GetString.  
+ Das SQLXML-Objekt nicht mehr gelesen oder beschreibbaren beim Aufrufen einer der folgenden Abrufmethoden: GetSource, GetCharacterStream, GetBinaryStream, und GetString.  
   
- Das SQLXML-Objekt nicht mehr weder beschreibbaren gelesen oder geschrieben werden beim Aufrufen einer der folgenden festlegungsmethoden: z. B. SetResult, SetCharacterStream, SetBinaryStream, und SetString.  
+ Das SQLXML-Objekt wird beschreibbaren weder lesbar, wenn die Anwendung eine der folgenden festlegungsmethoden aufruft: SetResult, SetCharacterStream, SetBinaryStream, und SetString.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   

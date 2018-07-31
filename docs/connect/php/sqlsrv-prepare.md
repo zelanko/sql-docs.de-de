@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_prepare | Microsoft Docs
+title: Sqlsrv_prepare | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -21,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 62789cd3b0ab8cea6d744addd35721746a443328
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309679"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982292"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +43,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 #### <a name="parameters"></a>Parameter  
 *$conn*: Mit der erstellten Anweisung verknüpfte Verbindungsressource.  
   
-*$tsql*: der Transact-SQL-Ausdruck, der erstellten Anweisung entspricht.  
+*$tsql*: Transact-SQL-Ausdruck, der der erstellten Anweisung entspricht.  
   
-*$params* [OPTIONAL]: ein **Array** von Werten, die Parametern in einer parametrisierten Abfrage entsprechen. Jedes Element des Arrays kann eines der folgenden sein:
+*$params* [OPTIONAL]: Ein **Array** von Werten, die Parametern in einer parametrisierten Abfrage entsprechen. Jedes Element des Arrays kann eines der folgenden sein:
   
 -   Ein Literalwert  
   
@@ -58,39 +58,39 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     ```  
   
     > [!NOTE]  
-    > Als Abfrageparameter übergebene Variablen sollten durch Verweis und nicht als Wert übergeben werden. Übergeben Sie beispielsweise `&$myVariable` anstelle von `$myVariable`. Eine PHP-Warnung wird ausgelöst, wenn eine Abfrage mit Parametern per-Wert ausgeführt wird.  
+    > Als Abfrageparameter übergebene Variablen sollten durch Verweis und nicht als Wert übergeben werden. Übergeben Sie beispielsweise `&$myVariable` anstelle von `$myVariable`. Beim Ausführen einer Abfrage mit Wertparametern wird eine PHP-Warnung ausgelöst.  
   
     In der folgenden Tabelle sind die Elemente des Arrays beschrieben.  
   
-    |Element|Description|  
+    |Element|und Beschreibung|  
     |-----------|---------------|  
     |*&$value*|Ein Literalwert oder ein Verweis auf eine PHP-Variable.|  
-    |*$direction*[OPTIONAL]|Eines der folgenden **SQLSRV_PARAM_\*** Konstanten, um die parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPTIONAL]|Ein **SQLSRV_PHPTYPE_\*** Konstante, die PHP-Datentyp des zurückgegebenen Werts angibt.|  
-    |*$sqlType*[OPTIONAL]|Ein **SQLSRV_SQLTYPE_\*** Konstante, die die SQL Server-Datentyp des Eingabewerts angibt.|  
+    |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\***-Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\***-Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.|  
+    |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\***-Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.|  
   
-*$options* [OPTIONAL]: ein assoziatives Array, das Abfrageeigenschaften festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:  
+*$options* [OPTIONAL]: Ein assoziatives Array, das Abfrageeigenschaften festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:  
   
-|Key|Unterstützte Werte|Description|  
+|Key|Unterstützte Werte|und Beschreibung|  
 |-------|--------------------|---------------|  
 |QueryTimeout|Ein positiver ganzzahliger Wert|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
-|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber zur alle Streamdaten bei der Ausführung zu senden (**"true"**), oder Streamdaten in Blöcken zu senden (**"false"**). In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|SendStreamParamsAtExec|**WAHR** oder **FALSCH**<br /><br />Der Standardwert ist **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisungsressource nicht erstellt werden kann, wird **false** zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Wenn Sie eine Anweisung vorbereiten, die Variablen als Parameter verwendet, werden die Variablen an die Anweisung gebunden. Das bedeutet, dass die Anweisung beim nächsten Ausführen mit aktualisierten Parametern laufen wird, wenn Sie die Variablenwerte aktualisieren.  
   
 Die Kombination von **sqlsrv_prepare** und **sqlsrv_execute** trennt Anweisungsvorbereitung und Ausführen der Anweisung in zwei Funktionsaufrufe und kann verwendet werden, um parametrisierte Abfragen ausführen. Diese Funktion eignet sich zum mehrfachen Ausführen einer Anweisung mit verschiedenen Parameterwerten für jede Ausführung.  
   
-Alternative Strategien zum Schreiben und Lesen großer Datenmengen Informationen finden Sie unter [Batches von SQL-Anweisungen](../../odbc/reference/develop-app/batches-of-sql-statements.md) und [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
+Alternative Strategien zum Schreiben und Lesen großer Datenmengen finden Sie unter [Batches von SQL-Anweisungen](../../odbc/reference/develop-app/batches-of-sql-statements.md) und [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiberr](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Weitere Informationen finden Sie unter [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird eine Anweisung vorbereitet und ausgeführt. Die Anweisung ausgeführt (finden Sie unter [Sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aktualisiert diese ein Feld in der *Sales.SalesOrderDetail* Tabelle der AdventureWorks-Datenbank. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Im folgenden Beispiel wird eine Anweisung vorbereitet und ausgeführt. Wenn die Anweisung ausgeführt wird (siehe [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aktualisiert diese ein Feld in der *Sales.SalesOrderDetail*-Tabelle der AdventureWorks-Datenbank. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -222,10 +222,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs der sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Es wird empfohlen, die Zeichenfolgen als Eingabe verwendet, bei der Bindung von Werten, eine [decimal oder numeric-Spalte](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) auf Richtigkeit und Genauigkeit zu gewährleisten, wie PHP Genauigkeit für eingeschränkten [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php). Dasselbe gilt auch für Bigint-Spalten, insbesondere, wenn die Werte außerhalb des Bereichs von sind ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Beispiel  
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.  
+In diesem Codebeispiel wird veranschaulicht, wie einen decimal-Wert als Eingabeparameter gebunden wird.  
 
 ```
 <?php
@@ -249,7 +249,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Gewusst wie: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)

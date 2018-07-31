@@ -1,5 +1,5 @@
 ---
-title: UpdateBinaryStream-Methode (SQLServerResultSet) | Microsoft Docs
+title: updateBinaryStream-Methode (SQLServerResultSet)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 729dce9ba56aa7592dfb98f585ad07165dde5fd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046668"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,16 +33,16 @@ ms.locfileid: "32851165"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[UpdateBinaryStream (Int, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert.|  
-|[UpdateBinaryStream (Int, java.io.InputStream, Int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
-|[UpdateBinaryStream (Int, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
-|[UpdateBinaryStream (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert.|  
-|[UpdateBinaryStream (java.lang.String, java.io.InputStream, Int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
-|[UpdateBinaryStream (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
+|[updateBinaryStream(int, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert.|  
+|[updateBinaryStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
+|[updateBinaryStream(int, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
+|[updateBinaryStream(java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert.|  
+|[updateBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
+|[updateBinaryStream(java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Aktualisiert die angegebene Spalte mit einem Binärdatenstromwert mit der angegebenen Anzahl von Bytes.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Senden von BLOB-Daten mit SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM | Microsoft Docs
-description: Senden von BLOB-Daten mit SQL Server mit IROWSETFASTLOAD und ISEQUENTIALSTREAM
+title: Senden von BLOB-Daten an SQL Server mit IROWSETFASTLOAD und ISEQUENTIALSTREAM | Microsoft-Dokumentation
+description: Senden von BLOB-Daten an SQL Server mit IROWSETFASTLOAD und ISEQUENTIALSTREAM
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcad0b5d9842380965e2dcc5634f563c4de6cfda
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: cefb12471433c34162f71249d4f84f7653707a02
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666130"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106836"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Senden von BLOB-Daten an SQL SERVER mit IROWSETFASTLOAD und ISEQUENTIALSTREAM (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,9 +30,9 @@ ms.locfileid: "35666130"
   
  In diesem Beispiel wird gezeigt, wie IRowsetFastLoad verwendet wird, um BLOB-Daten variabler Länge pro Zeile mit In-Line-Bindungen zu senden. Die In-Line-BLOB-Daten müssen in den verfügbaren Speicher passen. Diese Methode ist am besten geeignet, wenn die BLOB-Daten kleiner als einige Megabyte sind, da es keinen zusätzlichen Datenstromaufwand gibt. Für Daten, die größer als einige Megabytes sind, insbesondere wenn sie nicht in einem Block verfügbar sind, bietet Streaming eine bessere Leistung.  
   
- Wenn Sie im Quellcode die Kommentierung von #define USE_ISEQSTREAM aufheben, wird im Beispiel ISequentialStream verwendet. Die datenstromimplementierung wird im Beispiel definiert und kann BLOB-Daten durch einfaches Ändern von MAX_BLOB senden. Die Datenstromdaten müssen nicht in den Arbeitsspeicher passen oder in einem Block verfügbar sein. Dieser Anbieter wird mit IRowsetFastLoad::InsertRow aufgerufen. Übergeben Sie mit IRowsetFastLoad::InsertRow einen Zeiger an die Datenstromimplementierung im Datenpuffer (rgBinding.obValue offset) zusammen mit der zum Lesen aus dem Datenstrom zur Verfügung stehenden Datenmenge. Einige Anbieter müssen die Länge der Daten bei Auftreten einer Bindung möglicherweise nicht kennen. In diesem Fall kann die Länge in der Bindung ausgelassen werden.  
+ Wenn Sie im Quellcode die Kommentierung von #define USE_ISEQSTREAM aufheben, wird im Beispiel ISequentialStream verwendet. Die Datenstromimplementierung wird im Beispiel definiert und kann BLOB-Daten in allen Größen durch einfaches Ändern von MAX_BLOB senden. Die Datenstromdaten müssen nicht in den Arbeitsspeicher passen oder in einem Block verfügbar sein. Dieser Anbieter wird mit IRowsetFastLoad::InsertRow aufgerufen. Übergeben Sie mit IRowsetFastLoad::InsertRow einen Zeiger an die Datenstromimplementierung im Datenpuffer (rgBinding.obValue offset) zusammen mit der zum Lesen aus dem Datenstrom zur Verfügung stehenden Datenmenge. Einige Anbieter müssen die Länge der Daten bei Auftreten einer Bindung möglicherweise nicht kennen. In diesem Fall kann die Länge in der Bindung ausgelassen werden.  
   
- Im Beispiel wird die Datenstromschnittstelle des Anbieters nicht verwendet, um Daten an den Anbieter zu senden. Es wird stattdessen ein Zeiger an das Datenstromobjekt übergeben, das der Anbieter zum Lesen der Daten verwendet. Microsoft-Anbieter (SQLOLEDB, SQLNCLI und MSOLEDBSQL) lesen in der Regel Daten in 1024-Byte-Abschnitten aus dem Objekt, bis alle Daten wurden verarbeitet. Weder SQLOLEDB oder SQLNCLI noch MSOLEDBSQL haben vollständige Implementierungen, ermöglicht dem Consumer, die Daten in das Datenstromobjekt des Anbieters zu schreiben. Nur Daten der Länge 0 können durch das Datenstromobjekt des Anbieters gesendet werden.  
+ Im Beispiel wird die Datenstromschnittstelle des Anbieters nicht verwendet, um Daten an den Anbieter zu senden. Es wird stattdessen ein Zeiger an das Datenstromobjekt übergeben, das der Anbieter zum Lesen der Daten verwendet. In der Regel lesen Microsoft-Anbieter (SQLOLEDB, SQLNCLI und MSOLEDBSQL) die Daten des Objekts in 1024-Byte-Abschnitten, bis alle Daten verarbeitet sind. Weder SQLOLEDB noch SQLNCLI noch MSOLEDBSQL haben vollständige Implementierungen, die es dem Consumer ermöglichen, Daten in das Datenstromobjekt des Anbieters zu schreiben. Nur Daten der Länge 0 können durch das Datenstromobjekt des Anbieters gesendet werden.  
   
  Das vom Consumer implementierte ISequentialStream-Objekt kann mit Rowsetdaten (IRowsetChange::InsertRow, IRowsetChange::SetData) und mit Parametern verwendet werden, indem ein Parameter als DBTYPE_IUNKNOWN gebunden wird.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "35666130"
 ## <a name="example"></a>Beispiel  
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu löschen.  
   

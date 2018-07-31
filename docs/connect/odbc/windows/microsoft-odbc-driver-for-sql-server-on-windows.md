@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Driver for SQLServer on Windows | Microsoft Docs
+title: Microsoft ODBC Driver for SQL Server unter Windows | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -15,27 +15,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32856655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047438"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Der Microsoft ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sind eigenständige ODBC-Treiber die eine Anwendungsprogrammierschnittstelle (API), der Implementieren der ODBC-Standardschnittstellen für Microsoft bereitstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Microsoft ODBC Driver 13 (Preview) und 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sind eigenständiger Treiber, die eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) bieten, welche die ODBC-Standardschnittstellen für Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] implementiert.
 
-Der Microsoft ODBC-Treiber für SQL Server kann verwendet werden, um neue Anwendungen zu erstellen. Sie können auch Ihre älteren Anwendungen aktualisieren, die zurzeit einen älteren ODBC-Treiber verwenden. Der ODBC-Treiber für SQL Server unterstützt Verbindungen mit Azure SQL-Datenbank, Azure SQL Data Warehouse, SQL Server-2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und SQL Server 2005.  
+Der Microsoft ODBC Driver for SQL Server kann verwendet werden, um neue Anwendungen zu erstellen. Außerdem können Sie Ihre älteren Anwendungen, die zurzeit einen älteren ODBC-Treiber verwenden, aktualisieren. Der ODBC Driver for SQL Server unterstützt Verbindungen zur Azure SQL-Datenbank, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und SQL Server 2005.  
 
 ## <a name="summary"></a>Zusammenfassung
 
-| Version       | Unterstützte Funktionen      |
+| Versionsoptionen       | Unterstützte Funktionen      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 für SQLServer | <ul><li>Always Encrypted-Unterstützung für BCP-API</li><li>Neues Verbindungszeichenfolgen-Attribut UseFMTONLY bewirkt, dass Treiber ältere Metadaten in besonderen Fällen, dass temporäre Tabellen verwendet werden.</li>
-| Microsoft ODBC Driver 13.1 for SQLServer     | <ul><li>Always Encrypted</li><li>Azure AD-Authentifizierung</li><li>Always On-Verfügbarkeitsgruppen (Availability Groups, AG)</li></ul>   | 
-| Microsoft ODBC Driver 13 for SQLServer      | <ul><li>Internationaler Domänenname (IDN)</li></ul> |
-| Microsoft ODBC Driver 11 for SQL Server | <ul><li>Treiberfähiges Verbindungspooling</li><li>Verbindungsstabilität</li><li>Asynchrone Ausführung (Abruf-Methode)</li></ul> |    
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Unterstützung von Always Encrypted für BCP-API</li><li>Neues Verbindungszeichenfolgen-Attribut UseFMTONLY bewirkt, dass ältere Metadaten in besonderen Fällen erfordern der temporäre Tabellen zu verwendenden Treiber</li>
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD-Authentifizierung</li><li>Always On-Verfügbarkeitsgruppen (Availability Groups, AG)</li></ul>   | 
+| Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Internationaler Domänenname (IDN)</li></ul> |
+| Microsoft ODBC Driver 11 for SQL Server | <ul><li>Treiberfähiges Verbindungspooling</li><li>Verbindungsstabilität</li><li>Asynchrone Ausführung (Abrufmethode)</li></ul> |    
 
 ## <a name="documentation"></a>Dokumentation  
 Diese Dokumentation für den Microsoft ODBC Driver für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] enthält:  
@@ -46,15 +46,15 @@ Diese Dokumentation für den Microsoft ODBC Driver für [!INCLUDE[ssNoVersion](.
 -   [Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server.](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [Beispiel für asynchrone Ausführung &#40;Benachrichtigungsmethode&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
--   [Mit "immer verschlüsselt" mit dem ODBC-Treiber](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+-   [Verwenden von Always Encrypted mit dem ODBC-Treiber](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [Verwenden von Azure Active Directory mit dem ODBC-Treiber](../../../connect/odbc/using-azure-active-directory.md) 
--   [Mithilfe des transparenten Netzwerk-IP-Auflösung](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
+-   [Verwenden der transparenten Netzwerk-IP-Adressauflösung](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>Community  
 - [Microsoft ODBC Driver for SQL Server Teamblog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server-Datenzugriffsforum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 - [Informationen zu SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
 - [Erstellen von Anwendungen mit SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [FAQ zu SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   

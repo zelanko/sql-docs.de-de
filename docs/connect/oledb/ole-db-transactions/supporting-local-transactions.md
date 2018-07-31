@@ -1,5 +1,5 @@
 ---
-title: Unterstützen lokaler Transaktionen | Microsoft Docs
+title: Unterstützen lokaler Transaktionen | Microsoft-Dokumentation
 description: Lokale Transaktionen in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,54 +21,54 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 8bf157a5f5bdbea93c9361edc4903c5cd6c41302
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689363"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109722"
 ---
 # <a name="supporting-local-transactions"></a>Unterstützen lokaler Transaktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Eine Sitzung begrenzt den Transaktionsbereich für einen OLE DB-Treiber für lokale SQL Server-Transaktion. Wenn bei der Anweisung eines Consumers, der OLE DB-Treiber für SQL Server eine Anforderung an eine verbundene Instanz von übermittelt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die Anforderung stellt eine Arbeitseinheit für den OLE DB-Treiber für SQL Server. Lokale Transaktionen umschließen stets eine oder mehrere Arbeitseinheiten auf einen einzelnen OLE DB-Treiber für SQL Server-Sitzung.  
+  Eine Sitzung begrenzt den Transaktionsbereich für eine OLE DB-Treiber für die lokale SQL Server-Transaktion. Wenn auf die Richtung eines Consumers, der OLE DB-Treiber für SQL Server eine Anforderung an eine verbundene Instanz von übermittelt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die Anforderung stellt eine Arbeitseinheit für den OLE DB-Treiber für SQL Server dar. Lokale Transaktionen umschließen stets eine oder mehrere Arbeitseinheiten für einen einzelnen OLE DB-Treiber für SQL Server-Sitzung.  
   
- Der Standard OLE DB-Treiber für SQL Server-Autocommit-Modus verwenden, wird eine einzelne Arbeitseinheit als Bereich einer lokalen Transaktion behandelt. Nur eine Einheit nimmt an der lokalen Transaktion teil. Wenn eine Sitzung erstellt wird, beginnt der OLE DB-Treiber für SQL Server eine Transaktion für die Sitzung an. Nach der erfolgreichen Verarbeitung einer Arbeitseinheit wird ein Commit für die Arbeit ausgeführt. Bei Auftreten eines Fehlers wird ein Rollback für den begonnenen Teil der Arbeit ausgeführt, und der Fehler wird dem Consumer gemeldet. In beiden Fällen startet der OLE DB-Treiber für SQL Server eine neue lokale Transaktion für die Sitzung, damit, dass alle Aufgaben innerhalb einer Transaktion durchgeführt wird.  
+ Bei Verwendung des standardmäßigen Autocommitmodus des OLE DB-Treibers für SQL Server wird eine einzelne Arbeitseinheit als Bereich einer lokalen Transaktion behandelt. Nur eine Einheit nimmt an der lokalen Transaktion teil. Wenn eine Sitzung erstellt wird, beginnt der OLE DB-Treiber für SQL Server für die Sitzung eine Transaktion aus. Nach der erfolgreichen Verarbeitung einer Arbeitseinheit wird ein Commit für die Arbeit ausgeführt. Bei Auftreten eines Fehlers wird ein Rollback für den begonnenen Teil der Arbeit ausgeführt, und der Fehler wird dem Consumer gemeldet. In jedem Fall beginnt der OLE DB-Treiber für SQL Server eine neue lokale Transaktion für die Sitzung, damit die gesamte Arbeitseinheit innerhalb einer Transaktion verarbeitet wird.  
   
- Der OLE DB-Treiber für SQL Server-Consumer kann eine genauere Kontrolle über die lokalen Transaktionsbereich weiterleiten, mithilfe der **ITransactionLocal** Schnittstelle. Wenn eine consumersitzung eine Transaktion initiiert, alle Arbeitseinheiten der Sitzung zwischen der Transaktion starten, Punkt- und eventuellen **Commit** oder **Abort** Methodenaufrufe werden als unteilbare Einheit behandelt. Der OLE DB-Treiber für SQL Server startet implizit eine Transaktion, wenn Sie dazu aufgefordert werden, vom Consumer. Wenn der Consumer keine Beibehaltung anfordert, kehrt die Sitzung zum Verhalten der übergeordneten Transaktionsebene zurück, in der Regel ist das der Autocommitmodus.  
+ Der Consumer des OLE DB-Treibers für SQL Server kann den Bereich der lokalen Transaktion mithilfe der **ITransactionLocal** -Schnittstelle genauer steuern. Wenn eine Consumersitzung eine Transaktion initiiert, werden alle Arbeitseinheiten der Sitzung zwischen dem Anfangspunkt der Transaktion und eventuellen Aufrufen der Methode **Commit** oder der Methode **Abort** als eine unteilbare Einheit behandelt. Der OLE DB-Treiber für SQL Server beginnt implizit eine Transaktion, wenn Sie dazu aufgefordert werden, vom Consumer. Wenn der Consumer keine Beibehaltung anfordert, kehrt die Sitzung zum Verhalten der übergeordneten Transaktionsebene zurück, in der Regel ist das der Autocommitmodus.  
   
  Der OLE DB-Treiber für SQL Server unterstützt **ITransactionLocal:: StartTransaction** Parameter wie folgt.  
   
-|Parameter|Description|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
-|*IsoLevel*[in]|Die innerhalb dieser Transaktion zu verwendende Isolationsstufe. In lokalen Transaktionen unterstützt der OLE DB-Treiber für SQL Server Folgendes:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Hinweis: Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT gilt für die *IsoLevel* Argument fest, ob der versionsverwaltung für die Datenbank aktiviert ist. Jedoch tritt ein Fehler auf, wenn der Benutzer versucht, eine Anweisung auszuführen und die Versionsverwaltung nicht aktiviert und/oder die Datenbank nicht schreibgeschützt ist. Darüber hinaus wird der Fehler XACT_E_ISOLATIONLEVEL auftreten, wenn ISOLATIONLEVEL_SNAPSHOT als angegeben wird die *IsoLevel* beim Verbinden mit einer Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
-|*IsoFlags*[in]|Der OLE DB-Treiber für SQL Server gibt einen Fehler für einen anderen Wert als 0 (null) zurück.|  
-|*pOtherOptions*[in]|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server das Optionsobjekt von der Schnittstelle. Der OLE DB-Treiber für SQL Server gibt xact_e_notimeout zurück, wenn die Options-Objekt *UlTimeout* Element ist nicht 0 (null). Der OLE DB-Treiber für SQL Server ignoriert den Wert, der die *SzDescription* Member.|  
-|*PulTransactionLevel*[Out]|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server gibt die Schachtelungsebene der Transaktion.|  
+|*isoLevel*[in]|Die innerhalb dieser Transaktion zu verwendende Isolationsstufe. In lokalen Transaktionen unterstützt der OLE DB-Treiber für SQL Server Folgendes:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Hinweis: Unabhängig davon, ob die Versionsverwaltung für die Datenbank aktiviert ist, ist ISOLATIONLEVEL_SNAPSHOT ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] für das Argument *isoLevel* gültig. Jedoch tritt ein Fehler auf, wenn der Benutzer versucht, eine Anweisung auszuführen und die Versionsverwaltung nicht aktiviert und/oder die Datenbank nicht schreibgeschützt ist. Zudem tritt bei einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist, der Fehler XACT_E_ISOLATIONLEVEL auf, wenn ISOLATIONLEVEL_SNAPSHOT als *isoLevel* angegeben wird.|  
+|*isoFlags*[in]|Der OLE DB-Treiber für SQL Server gibt einen Fehler für einen anderen Wert als 0 (null) zurück.|  
+|*pOtherOptions*[in]|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server-Anforderungen das Options-Objekt von der Schnittstelle. Der OLE DB-Treiber für SQL Server gibt xact_e_notimeout zurück, wenn des optionsobjekts *UlTimeout* Member ist nicht 0 (null). Der OLE DB-Treiber für SQL Server ignoriert den Wert des der *SzDescription* Member.|  
+|*pulTransactionLevel*[out]|Wenn nicht NULL ist, der OLE DB-Treiber für SQL Server gibt die Schachtelungsebene der Transaktion.|  
   
  Für lokale Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransaction:: Abort** Parameter wie folgt.  
   
-|Parameter|Description|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
-|*PboidReason*[in]|Wird bei Festlegung ignoriert. Kann daher auch NULL sein.|  
-|*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "false", wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
-|*fAsync*[in]|Asynchroner Abbruch wird vom OLE DB-Treiber für SQL Server nicht unterstützt. Der OLE DB-Treiber für SQL Server gibt xact_e_notsupported zurück, wenn der Wert nicht "false" ist.|  
+|*pboidReason*[in]|Wird bei Festlegung ignoriert. Kann daher auch NULL sein.|  
+|*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "FALSE" wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
+|*fAsync*[in]|Asynchroner Abbruch wird nicht vom OLE DB-Treiber für SQL Server unterstützt. Der OLE DB-Treiber für SQL Server gibt xact_e_notsupported zurück, wenn der Wert nicht "false" ist.|  
   
  Für lokale Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransaction:: Commit** Parameter wie folgt.  
   
-|Parameter|Description|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "false", wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
-|*GrfTC*[in]|Asynchrone Rückkehr und die Phase, die einen zurückgibt, werden vom OLE DB-Treiber für SQL Server nicht unterstützt. Der OLE DB-Treiber für SQL Server gibt xacttc_sync für jeden Wert xact_e_notsupported zurück.|  
-|*GrfRM*[in]|Muss den Wert 0 (null) haben.|  
+|*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "FALSE" wird der OLE DB-Treiber für SQL Server für die Sitzung den Autocommit-Modus zurückgesetzt.|  
+|*grfTC*[in]|Asynchrone Rückkehr und die Phase, in einen zurückgibt werden nicht vom OLE DB-Treiber für SQL Server unterstützt. Der OLE DB-Treiber für SQL Server gibt xacttc_sync für jeden Wert xact_e_notsupported zurück.|  
+|*grfRM*[in]|Muss den Wert 0 (null) haben.|  
   
- Der OLE DB-Treiber für SQL Server Rowsets in der Sitzung bleiben bei einem lokalen Commit- oder Abbruchvorgang basierend auf den Werten für die Rowseteigenschaften DBPROP_ABORTPRESERVE und dbprop_commitpreserve beibehalten. Standardmäßig sind diese Eigenschaften VARIANT_FALSE und alle OLE DB-Treiber für SQL Server Rowsets in der Sitzung verloren, nach einem Abbruch oder commit-Vorgang.  
+ Die Rowsets des OLE DB-Treibers für SQL Server für die Sitzung werden bei einem lokalen Commit- oder Abbruchvorgang je nach den Werten für die Rowseteigenschaften DBPROP_ABORTPRESERVE und DBPROP_COMMITPRESERVE beibehalten. Standardmäßig lauten die Werte dieser Eigenschaften auf VARIANT_FALSE und gehen alle Rowsets des OLE DB Driver for SQL Server für die Sitzung bei einem Abbruch- oder Commitvorgang verloren.  
   
  Der OLE DB-Treiber für SQL Server implementiert nicht die **ITransactionObject** Schnittstelle. Bei einem Versuch des Consumers, einen Verweis auf die Schnittstelle abzurufen, wird E_NOINTERFACE zurückgegeben.  
   
- Dieses Beispiel verwendet **ITransactionLocal**.  
+ Im folgenden Beispiel wird **ITransactionLocal** verwendet.  
   
 ```  
 // Interfaces used in the example.  
@@ -133,7 +133,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transaktionen](../../oledb/ole-db-transactions/transactions.md)   
  [Arbeiten mit der Momentaufnahmeisolation](../../oledb/features/working-with-snapshot-isolation.md)  
   

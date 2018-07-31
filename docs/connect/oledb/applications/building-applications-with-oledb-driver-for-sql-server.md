@@ -1,6 +1,6 @@
 ---
-title: Erstellen von Anwendungen mit OLE DB-Treiber für SQLServer | Microsoft Docs
-description: Erstellen von Anwendungen mit OLE DB-Treiber für SQL Server
+title: Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
+description: Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,45 +19,45 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 19166f1c665ac2b4c90e636adcffdd9d20fcfc47
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612115"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106246"
 ---
-# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Erstellen von Anwendungen mit OLE DB-Treiber für SQLServer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Beim Entwickeln einer Anwendung, die der OLE DB-Treiber für SQL Server-Bibliothek verwendet wird, sind gibt es eine Reihe von Problemen, die eine sprachbasierte möglich. Die Themen in diesem Abschnitt beschreiben viele dieser Punkte einschließlich Aktualisieren von MDAC auf OLE DB-Treiber für SQL Server, mit der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien sowie einen Überblick über die verschiedenen Verbindungszeichenfolgen, die mit OLE DB-Treiber für S verwendet werden können SQL Server.  
+  Beim Entwickeln einer Anwendung, die der OLE DB-Treiber für SQL Server-Bibliothek verwendet, gibt es eine Reihe von Problemen, die ins Spiel. Die Themen in diesem Abschnitt beschreiben viele dieser Punkte einschließlich Aktualisieren von MDAC auf OLE DB-Treiber für SQL Server mithilfe der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien sowie einen Überblick über die verschiedenen Verbindungszeichenfolgen, die mit OLE DB-Treiber für S verwendet werden können SQL Server.  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Installation des OLE DB-Treibers für SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
- Erläutert, wie OLE DB-Treiber für SQL Server installiert ist, die Speicherorte, denen verschiedenen Komponenten sind installiert und OLE DB-Treiber für SQL Server deinstallieren.  
+ Erläutert, wie OLE DB-Treiber für SQL Server installiert wird, die Standorte, für die verschiedenen Komponenten installiert sind und OLE DB-Treiber für SQL Server deinstallieren.  
 
  [Komponenten des OLE DB-Treibers für SQL Server](../../oledb/applications/components-of-oledb-driver-for-sql-server.md)  
- Erläutert die Komponenten, die OLE DB-Treiber für SQL Server-Bibliothek, Ressource, Hilfe und Headerdateien einschließlich bilden.  
+ Beschreibt die Komponenten, die OLE DB-Treiber für SQL Server-Bibliothek, Ressource, Hilfe und Headerdateien einschließlich bilden.  
 
  [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
- Erläutert die verschiedenen Typen von Verbindungszeichenfolgen, die beim Herstellen einer Verbindung mit einer Datenbank über OLE DB-Treiber für SQL Server verwendet werden können.  
+ Erläutert die verschiedenen Verbindungszeichenfolgen, die beim Herstellen einer Verbindung zu einer Datenbank mit dem OLE DB-Treiber für SQL Server verwendet werden können.  
 
  [Verwenden des OLE DB-Treiber für SQL Server-Headers und der -Bibliotheksdateien](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
- Erläutert, wie der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien innerhalb einer Anwendung verwenden.  
+ Erläutert, wie der OLE DB-Treiber für SQL Server-Header und Bibliotheksdateien innerhalb einer Anwendung.  
 
  [Aktualisieren einer Anwendung auf OLE DB-Treiber für SQL Server über MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
- Beschreibt die Unterschiede zwischen OLE DB-Treiber für SQL Server und MDAC und Probleme, die beim Aktualisieren von MDAC auf OLE DB-Treiber für SQL Server berücksichtigt werden sollten.  
+ Erläutert die Unterschiede zwischen OLE DB-Treiber für SQL Server und MDAC und Probleme, die beim Aktualisieren von MDAC auf OLE DB-Treiber für SQL Server berücksichtigt werden sollten.  
 
  [Aktualisieren einer Anwendung von SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
- Erläutert Probleme, die berücksichtigt werden sollten, bei der Aktualisierung von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client OLE DB-Treiber für SQL Server.  
+ Beschreibt Probleme, die berücksichtigt werden sollten, bei der Aktualisierung von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client OLE DB-Treiber für SQL Server.  
 
  [Verwenden von ADO mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
- Beschreibt, wie ADO verwenden kann OLE DB-Treiber für SQL Server-Zugriffsmethode verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktionalität.  
+ Erläutert, wie ADO kann OLE DB-Treiber für SQL Server und Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktionalität.  
 
  [Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Erläutert die Verwendung verschiedener Datenzugriffskomponenten mit verschiedenen Versionen des OLE DB-Treiber für SQL Server verwendet werden können.  
 
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQLServer](../../oledb/oledb-driver-for-sql-server.md)     
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

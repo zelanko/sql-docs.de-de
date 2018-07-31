@@ -1,6 +1,6 @@
 ---
-title: Senden von Daten an FILESTREAM - ISequentialStream Grenze ICommandText | Microsoft Docs
-description: Senden von Daten an FILESTREAM - ISequentialStream an ICommandText gebunden
+title: 'Senden von Daten an FILESTREAM: eine ISequentialStream-Schnittstelle, die an ICommandText gebunden ist | Microsoft-Dokumentation'
+description: 'Senden von Daten an FILESTREAM: eine ISequentialStream-Schnittstelle, die an ICommandText gebunden ist'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665570"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108772"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Senden von Daten an FILESTREAM - Grenze ICommandText einer ISequentialStream-Schnittstelle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Senden von Daten an FILESTREAM: eine ISequentialStream-Schnittstelle, die an ICommandText gebunden ist
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -31,9 +31,9 @@ ms.locfileid: "35665570"
  Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  
+ Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
  Der Server muss ein Verzeichnis mit dem Namen C:\DBFsa aufweisen; dort erstellt das Beispiel die Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] muss Schreibzugriff auf diesen Speicherort haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35665570"
   
  Wenn Sie dieses Beispiel ausführen, müssen Sie den Namen eines Servers oder Server\Instanzname sowie einen Wert zwischen 4 MB (0x400001) und 4 GB (0xFFFFFFFF) übergeben, der die Menge der zu schreibenden Daten angibt.  
   
- Das vierte ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) Codelisting löscht, die von diesem Beispiel erstellte Datenbank.  
+ Das vierte Codelisting ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) löscht die in diesem Beispiel erstellte Datenbank.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

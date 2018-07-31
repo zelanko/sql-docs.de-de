@@ -1,6 +1,6 @@
 ---
-title: Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB) | Microsoft Docs
-description: Anzeigen von Metadaten von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB)
+title: Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten (OLE DB) | Microsoft-Dokumentation
+description: Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665600"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108992"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Dieses Beispiel erstellt eine Tabelle mit drei Spalten: eine Sparsespalte, eine Nicht-Sparsespalte und eine Spaltensatz-Spalte. Anschließend zeigt das Beispiel OLE DB-Flags mit den Spalten- und Katalogmetadaten für die Nicht-Sparsespalte und die Spaltensatz-Spalte an.  
   
- Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt. Weitere Informationen zu Spalten mit geringer Dichte, finden Sie unter [Sparse Columns Support in OLE DB-Treiber für SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt. Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in OLE DB Driver for SQL Server (Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server)](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
- Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  
+ Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
 ```  
 #include <stddef.h>  
