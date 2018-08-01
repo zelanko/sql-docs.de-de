@@ -1,0 +1,21 @@
+- name: Übersicht
+  href: polybase-guide.md
+- name: Erste Schritte
+  href: get-started-with-polybase.md
+- name: Zusammenfassung der Funktionen
+  href: polybase-versioned-feature-summary.md
+- name: Erweiterungsgruppen
+  href: polybase-scale-out-groups.md
+- name: Installation
+  href: polybase-installation.md
+- name: Konfiguration
+  href: polybase-configuration.md
+- name: T-SQL-Objekte
+  href: polybase-t-sql-objects.md
+- name: Abfragen
+  href: polybase-queries.md
+- name: Problembehandlung
+  href: polybase-troubleshooting.md
+  items:
+    - name: 'Problembehandlung: PolyBase-Kerberos-Konnektivität'
+      href: polybase-troubleshoot-connectivity.md

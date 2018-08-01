@@ -1,0 +1,45 @@
+- name: Benutzeroberflächen-Assistenten für die Data Mining-Analyse
+  href: ui-wizards-data-mining.md
+- name: Data Mining-Assistenten
+  href: ../data-mining-wizards.md
+- name: Data Mining-Assistent (F1-Hilfe)
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: Auswählen der Definitionsmethode (Data Mining-Assistent)
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: Data Mining-Struktur erstellen (Data Mining-Assistent)
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: Datenquellensicht auswählen (Data Mining-Assistent)
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: Datenquellensicht durchsuchen (Data Mining-Assistent)
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: Tabellentypen angeben (Data Mining-Assistent)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: Trainingsdaten angeben (Data Mining-Assistent)
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: Inhalt und Datentyp der Spalten angeben (Data Mining-Assistent)
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: Erstellen eines Testsatzes
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: Verbundene Spalten vorschlagen (Data Mining-Assistent)
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: Quellcubedimension auswählen (Data Mining-Assistent)
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: Fallschlüssel auswählen (Data Mining-Assistent)
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: Spalten auf Fallebene auswählen (Data Mining-Assistent)
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: Verwendung der Miningmodellspalte angeben (Data Mining-Assistent)
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: Wählen Sie eine Measuregruppendimension aus (Assistent für Neue geschachtelte Tabelle hinzufügen)
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: Schlüssel der geschachtelten Tabelle auswählen (Assistent zum Hinzufügen einer neuen geschachtelten Tabelle)
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: Geschachtelte Tabellenspalten auswählen (Assistent zum Hinzufügen einer neuen geschachtelten Tabelle)
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: Inhalt und Datentyp einer Spalte angeben (Data Mining-Assistent)
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: Quellcube in Slices aufteilen (Data Mining-Assistent)
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: Abschließen des Assistenten (Data Mining-Assistent)
+      href: ../completing-the-wizard-data-mining-wizard.md

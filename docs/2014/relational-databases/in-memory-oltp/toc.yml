@@ -1,0 +1,184 @@
+- name: In-Memory OLTP (Arbeitsspeicheroptimierung)
+  href: in-memory-oltp-in-memory-optimization.md
+- name: Anforderungen für die Verwendung von speicheroptimierten Tabellen
+  href: requirements-for-using-memory-optimized-tables.md
+- name: Verwenden von In-Memory OLTP in einer VM-Umgebung
+  href: ../../database-engine/using-in-memory-oltp-in-a-vm-environment.md
+- name: Codebeispiele für In-Memory OLTP
+  href: in-memory-oltp-code-samples.md
+  items:
+    - name: 'Demo: Leistungsverbesserungen von In-Memory OLTP'
+      href: demonstration-performance-improvement-of-in-memory-oltp.md
+    - name: Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
+      href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md
+    - name: Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
+      href: creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - name: Partitionierung auf Anwendungsebene
+      href: application-level-partitioning.md
+- name: Speicheroptimierte Tabellen
+  href: memory-optimized-tables.md
+  items:
+    - name: Einführung in speicheroptimierte Tabellen
+      href: introduction-to-memory-optimized-tables.md
+    - name: Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren
+      href: native-compilation-of-tables-and-stored-procedures.md
+    - name: Ändern von speicheroptimierten Tabellen
+      href: altering-memory-optimized-tables.md
+    - name: Grundlegendes zu Transaktionen in speicheroptimierten Tabellen
+      href: ../../database-engine/understanding-transactions-on-memory-optimized-tables.md
+    - name: Transaktionen in speicheroptimierten Tabellen
+      href: ../../database-engine/transactions-in-memory-optimized-tables.md
+    - name: Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
+      href: ../../database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md
+    - name: Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen
+      href: ../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md
+    - name: Transaktionsisolationsstufen
+      href: ../../database-engine/transaction-isolation-levels.md
+    - name: Containerübergreifende Transaktionen
+      href: ../../database-engine/cross-container-transactions.md
+    - name: Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
+      href: application-pattern-for-partitioning-memory-optimized-tables.md
+    - name: Statistiken für speicheroptimierte Tabellen
+      href: statistics-for-memory-optimized-tables.md
+    - name: Sortierungen und Codepages
+      href: ../../database-engine/collations-and-code-pages.md
+    - name: Tabellen- und Zeilengröße in speicheroptimierten Tabellen
+      href: table-and-row-size-in-memory-optimized-tables.md
+    - name: Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
+      href: a-guide-to-query-processing-for-memory-optimized-tables.md
+- name: Speicheroptimierte Tabellenvariablen
+  href: ../../database-engine/memory-optimized-table-variables.md
+- name: Indizes für speicheroptimierte Tabellen
+  href: ../../database-engine/indexes-on-memory-optimized-tables.md
+  items:
+    - name: Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
+      href: ../../database-engine/guidelines-for-using-indexes-on-memory-optimized-tables.md
+    - name: Hashindizes
+      href: ../../database-engine/hash-indexes.md
+    - name: Bestimmen der korrekten Bucketanzahl für Hashindizes
+      href: ../../database-engine/determining-the-correct-bucket-count-for-hash-indexes.md
+    - name: Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes
+      href: ../../database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md
+- name: Systemintern kompilierte gespeicherte Prozeduren
+  href: natively-compiled-stored-procedures.md
+  items:
+    - name: Erstellen systemintern kompilierter gespeicherter Prozeduren
+      href: creating-natively-compiled-stored-procedures.md
+    - name: ATOMIC-Blöcke
+      href: atomic-blocks-in-native-procedures.md
+    - name: Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
+      href: supported-features-for-natively-compiled-t-sql-modules.md
+    - name: Verwenden von TRY...CATCH in systemintern kompilierten gespeicherten Prozeduren
+      href: ../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md
+    - name: Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren
+      href: supported-ddl-for-natively-compiled-t-sql-modules.md
+    - name: Systemintern kompilierte gespeicherte Prozeduren und deren Ausführung mit SET-Optionen
+      href: natively-compiled-stored-procedures-and-execution-set-options.md
+    - name: Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren
+      href: best-practices-for-calling-natively-compiled-stored-procedures.md
+    - name: Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
+      href: monitoring-performance-of-natively-compiled-stored-procedures.md
+    - name: Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
+      href: calling-natively-compiled-stored-procedures-from-data-access-applications.md
+- name: Verwalten des Arbeitsspeichers für In-Memory OLTP
+  href: ../../database-engine/managing-memory-for-in-memory-oltp.md
+  items:
+    - name: Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
+      href: estimate-memory-requirements-for-memory-optimized-tables.md
+    - name: Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
+      href: bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+    - name: Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
+      href: monitor-and-troubleshoot-memory-usage.md
+    - name: Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
+      href: resolve-out-of-memory-issues.md
+    - name: Wiederherstellen einer Datenbank und Binden der Datenbank an einen Ressourcenpool
+      href: restore-a-database-and-bind-it-to-a-resource-pool.md
+    - name: In-Memory OLTP-Garbage Collection
+      href: in-memory-oltp-garbage-collection.md
+- name: Erstellen und Verwalten von Speicher für speicheroptimierte Objekte
+  href: creating-and-managing-storage-for-memory-optimized-objects.md
+  items:
+    - name: Konfigurieren von Speicher für speicheroptimierte Tabellen
+      href: configuring-storage-for-memory-optimized-tables.md
+    - name: Die speicheroptimierte Dateigruppe
+      href: the-memory-optimized-filegroup.md
+    - name: Dauerhaftigkeit für speicheroptimierte Tabellen
+      href: durability-for-memory-optimized-tables.md
+    - name: Prüfpunktvorgang für speicheroptimierte Tabellen
+      href: checkpoint-operation-for-memory-optimized-tables.md
+    - name: Definieren von Dauerhaftigkeit für speicheroptimierte Objekte
+      href: defining-durability-for-memory-optimized-objects.md
+    - name: Vergleichen des datenträgerbasierten Tabellenspeichers mit dem speicheroptimierten Tabellenspeicher
+      href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+    - name: Überwachung und Problembehandlung beim Zusammenführen von Daten-/Änderungsdateipaaren
+      href: ../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md
+- name: Sichern und Wiederherstellen speicheroptimierter Tabellen
+  href: ../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md
+  items:
+    - name: Sichern einer Datenbank mit speicheroptimierten Tabellen
+      href: backing-up-a-database-with-memory-optimized-tables.md
+    - name: Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
+      href: piecemeal-restore-of-databases-with-memory-optimized-tables.md
+    - name: Wiederherstellen von speicheroptimierten Tabellen
+      href: restore-and-recovery-of-memory-optimized-tables.md
+- name: Transact-SQL-Unterstützung für In-Memory OLTP
+  href: transact-sql-support-for-in-memory-oltp.md
+  items:
+    - name: Unterstützte Datentypen
+      href: supported-data-types-for-in-memory-oltp.md
+    - name: Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
+      href: accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+    - name: 'Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory-OLTP'
+      href: ../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md
+- name: SQL Server-Unterstützung für In-Memory OLTP
+  href: sql-server-support-for-in-memory-oltp.md
+  items:
+    - name: Unterstützte SQL Server-Funktionen
+      href: unsupported-sql-server-features-for-in-memory-oltp.md
+    - name: SQL Server Management Objects-Unterstützung für In-Memory OLTP
+      href: sql-server-management-objects-support-for-in-memory-oltp.md
+    - name: SQL Server Integration Services-Unterstützung für In-Memory OLTP
+      href: sql-server-integration-services-support-for-in-memory-oltp.md
+    - name: SQL Server Management Studio-Unterstützung für In-Memory OLTP
+      href: sql-server-management-studio-support-for-in-memory-oltp.md
+    - name: Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
+      href: high-availability-support-for-in-memory-oltp-databases.md
+- name: Migrating to In-Memory OLTP
+  href: migrating-to-in-memory-oltp.md
+  items:
+    - name: 'Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll'
+      href: determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+    - name: Ratgeber für die Speicheroptimierung
+      href: memory-optimization-advisor.md
+    - name: Ratgeber für native Kompilierung
+      href: native-compilation-advisor.md
+    - name: Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
+      href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
+    - name: Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
+      href: ../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md
+    - name: Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
+      href: implementing-sql-variant-in-a-memory-optimized-table.md
+    - name: Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren
+      href: migration-issues-for-natively-compiled-stored-procedures.md
+    - name: Erstellen von und Zugreifen auf Tabellen in TempDB aus systemintern kompilierten gespeicherten Prozeduren
+      href: create-and-access-tables-in-tempdb-from-stored-procedures.md
+    - name: Simulieren einer EXISTS-Klausel in einer systemintern kompilierten gespeicherten Prozedur
+      href: simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+    - name: Implementieren von MERGE-Funktionalität
+      href: implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+    - name: Implementieren einer CASE-Anweisung
+      href: implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+    - name: Implementieren eines äußeren Joins
+      href: implementing-an-outer-join.md
+    - name: Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
+      href: ../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md
+    - name: Migrieren von berechneten Spalten
+      href: migrating-computed-columns.md
+    - name: Migrieren von Triggern
+      href: migrating-triggers.md
+    - name: Datenbankübergreifende Abfragen
+      href: cross-database-queries.md
+    - name: Migrieren von Überprüfungs- und Fremdschlüsseleinschränkungen
+      href: ../../database-engine/migrating-check-and-foreign-key-constraints.md
+    - name: Implementieren von IDENTITY in einer speicheroptimierten Tabelle
+      href: implementing-identity-in-a-memory-optimized-table.md

@@ -1,0 +1,16 @@
+- name: Ausführen von Abfragen (ODBC)
+  href: executing-queries-odbc.md
+- name: Ausführen von Anweisungen +
+  href: ../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+- name: Zuordnen eines Anweisungshandles
+  href: allocating-a-statement-handle.md
+- name: Erstellen einer SQL-Anweisung (ODBC)
+  href: constructing-an-sql-statement-odbc.md
+- name: Erstellen von SQL-Anweisungen für Cursor
+  href: constructing-sql-statements-for-cursors.md
+- name: Freigeben eines Anweisungshandles
+  href: freeing-a-statement-handle.md
+- name: 'Verwenden von Anweisungsparametern: Binden von Parametern'
+  href: using-statement-parameters-binding-parameters.md
+- name: Verwenden von Anweisungsparametern
+  href: using-statement-parameters.md

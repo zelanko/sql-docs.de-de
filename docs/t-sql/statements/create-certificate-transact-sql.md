@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036178"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359597"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  Das Datum, an dem das Zertifikat gültig wird. Falls nicht anders angegeben, wird das aktuelle Datum für START_DATE festgelegt. START_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann.  
   
  EXPIRY_DATE ='*datetime*'  
- Das Datum, an dem das Zertifikat abläuft. Falls nicht anders angegeben, wird EXPIRY_DATE auf das Datum ein Jahr nach START_DATE festgelegt. EXPIRY_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker überprüft das Ablaufdatum. Der Ablauf wird jedoch nicht erzwungen, wenn das Zertifikat für die Verschlüsselung verwendet wird.  
+ Das Datum, an dem das Zertifikat abläuft. Falls nicht anders angegeben, wird EXPIRY_DATE auf das Datum ein Jahr nach START_DATE festgelegt. EXPIRY_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker überprüft das Ablaufdatum. Bei der Sicherung mit Verschlüsselung unter Verwendung von Zertifikaten wird ebenfalls das Ablaufdatum überprüft, und es wird verhindert, dass eine Sicherung mit einem abgelaufenen Zertifikat erstellt wird. Wiederherstellungen mit einem abgelaufenen Zertifikat sind aber möglich. Der Ablauf wird jedoch nicht erzwungen, wenn das Zertifikat für die die Datenbankverschlüsselung oder die Always Encrypted-Funktion verwendet wird.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Stellt das Zertifikat für den Initiator einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dialogkonversation zur Verfügung. Der Standardwert ist ON.  

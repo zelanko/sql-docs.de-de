@@ -1,0 +1,30 @@
+- name: Rowsets
+  href: rowsets.md
+- name: Lesezeichen
+  href: bookmarks.md
+- name: Erstellen eines Rowsets mit 'IopenRowset'
+  href: creating-a-rowset-with-iopenrowset.md
+- name: 'Erstellen von Rowsets mit ''ICommand::Execute'''
+  href: creating-rowsets-with-icommand-execute.md
+- name: Abrufen einer einzelnen Zeile mit IRow
+  href: fetching-a-single-row-with-irow.md
+- name: 'Abrufen von BLOB-Daten mithilfe von ''IRow::GetColumns'' und ''ISequentialStream'''
+  href: fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
+- name: 'Abrufen von BLOB-Daten mithilfe von ''IRow::Open'' und ''ISequentialStream'''
+  href: fetching-blob-data-using-irow-open-and-isequentialstream.md
+- name: Abrufen von Zeilen – Nächste Abrufposition
+  href: fetching-rows-next-fetch-position.md
+- name: Abrufen von Zeilen
+  href: fetching-rows.md
+- name: Eigenschaften und Verhaltensweisen von Rowsets
+  href: rowset-properties-and-behaviors.md
+- name: Rowsets und SQL Server-Cursor
+  href: rowsets-and-sql-server-cursors.md
+- name: Aktualisieren von Daten in Rowsets – Erneutes Synchronisieren von Zeilen
+  href: updating-data-in-rowsets-resynchronizing-rows.md
+- name: Aktualisieren von Daten in Rowsets
+  href: updating-data-in-rowsets.md
+- name: Aktualisieren von Daten in SQL Server-Cursorn
+  href: updating-data-in-sql-server-cursors.md
+- name: 'Verwenden von IRow::GetColumns'
+  href: using-irow-getcolumns.md

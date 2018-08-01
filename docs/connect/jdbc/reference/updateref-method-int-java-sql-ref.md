@@ -1,5 +1,5 @@
 ---
-title: UpdateRef-Methode (Int, java.sql.Ref) | Microsoft Docs
+title: UpdateRef-Methode (Int, java.sql.Ref) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e08f3912e3a688e12b9e568a8974f55aef281586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036268"
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef-Methode (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateRef(int columnIndex,
 #### <a name="parameters"></a>Parameter  
  *columnIndex*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
  *x*  
   
@@ -51,11 +51,11 @@ public void updateRef(int columnIndex,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese UpdateRef-Methode wird von der UpdateRef-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateRef-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateRef-Methode (SQLServerResultSet)](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

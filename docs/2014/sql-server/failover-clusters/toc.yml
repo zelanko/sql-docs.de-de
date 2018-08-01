@@ -1,0 +1,13 @@
+- name: Hochverfügbarkeitslösungen mit SQL Server 2014
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: Automatische Seitenreparatur (für Verfügbarkeitsgruppen und Datenbankspiegelung)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: Problembehandlung bei verwaisten Benutzern
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: SQL Server-Failoverclusterinstallation +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Windows Server-Failoverclustering (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

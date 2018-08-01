@@ -1,0 +1,18 @@
+- name: Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server
+  href: building-applications-with-oledb-driver-for-sql-server.md
+- name: Komponenten des OLE DB-Treibers für SQL Server
+  href: components-of-oledb-driver-for-sql-server.md
+- name: Installieren des OLE DB-Treibers für SQL Server
+  href: installing-oledb-driver-for-sql-server.md
+- name: Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server
+  href: support-policies-for-oledb-driver-for-sql-server.md
+- name: Aktualisieren einer Anwendung von SQL Server 2005 Native Client
+  href: updating-an-application-from-sql-server-2005-native-client.md
+- name: Aktualisieren einer Anwendung auf den OLE DB-Treiber für SQL Server über MDAC
+  href: updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md
+- name: Verwenden von ADO mit dem OLE DB-Treiber für SQL Server
+  href: using-ado-with-oledb-driver-for-sql-server.md
+- name: Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server
+  href: using-connection-string-keywords-with-oledb-driver-for-sql-server.md
+- name: Verwenden des OLE DB-Treibers für SQL Server-Header- und -Bibliotheksdateien
+  href: using-the-oledb-driver-for-sql-server-header-and-library-files.md

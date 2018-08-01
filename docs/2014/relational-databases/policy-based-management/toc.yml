@@ -1,0 +1,154 @@
+- name: Verwalten von Servern mit der richtlinienbasierten Verwaltung
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: Speicher der richtlinienbasierten Verwaltung
+      href: policy-based-management-storage.md
+    - name: Konfigurieren allgemeiner Eigenschaften der richtlinienbasierten Verwaltung
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: Erstellen einer Richtlinie der richtlinienbasierten Verwaltung
+      href: create-a-policy-based-management-policy.md
+    - name: Erstellen einer neuen Bedingung der richtlinienbasierten Verwaltung
+      href: create-a-new-policy-based-management-condition.md
+    - name: Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: Löschen einer Richtlinie der richtlinienbasierten Verwaltung
+      href: delete-a-policy-based-management-policy.md
+    - name: Löschen einer Bedingung der richtlinienbasierten Verwaltung
+      href: delete-a-policy-based-management-condition.md
+    - name: Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von der Richtlinie aus
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: Auswerten einer Richtlinie der richtlinienbasierten Verwaltung nach einem Zeitplan
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: Exportieren einer Richtlinie der richtlinienbasierten Verwaltung
+      href: export-a-policy-based-management-policy.md
+    - name: Importieren einer Richtlinie der richtlinienbasierten Verwaltung
+      href: import-a-policy-based-management-policy.md
+    - name: Abonnieren einer Richtlinienkategorie für eine Datenbank bzw. Kündigen des Abonnements
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: Richtlinienkategorien verwalten
+      href: manage-policy-categories.md
+- name: Arbeiten mit Facets der richtlinienbasierten Verwaltung
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: Anzeigen der Eigenschaften eines Facets der richtlinienbasierten Verwaltung
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: Kopieren eines Facet-Status der richtlinienbasierten Verwaltung in eine XML-Datei
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: Verschlüsselungsstärke von asymmetrischen Schlüsseln
+      href: asymmetric-keys-encryption-strength.md
+    - name: Sicherungsdateien und Datenbankdateien müssen auf separaten Medien gespeichert sein
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: Prüfen der Integrität von Datenbanken mit fehlerverdächtigen Seiten
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: Richtige Überlappung von 'Affinity Mask' und 'Affinity I/O Mask'
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: Protokolldateien für Standardablaufverfolgung deaktiviert
+      href: default-trace-log-files-disabled.md
+    - name: Erkennen von Fehlern bei der E/A-Anforderung
+      href: detect-failed-input-and-output-requests.md
+    - name: Erkennen von SCSI-Hostadapterproblemen
+      href: detect-scsi-host-adapter-issues.md
+    - name: Gerätetreiber-Steuerungsfehler
+      href: device-driver-control-error.md
+    - name: Fehler 'Gerät nicht bereit'
+      href: device-not-ready-error.md
+    - name: Deaktivieren des Lightweightpoolings
+      href: disable-lightweight-pooling.md
+    - name: Gastberechtigungen für Benutzerdatenbanken
+      href: guest-permissions-on-user-databases.md
+    - name: Input and Output Error During Hard Page Fault
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: Erhöhen oder Deaktivieren des Schwellenwerts für blockierte Prozesse
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: Beibehalten des Standardwerts für die Affinitätsmaske
+      href: keep-the-affinity-mask-default-value.md
+    - name: Beibehalten des Standardwerts für die Konfigurationsoption 'locks'
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: Netzwerkpaketgröße darf 8060 Bytes nicht überschreiten
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: Obsolete Sicherung
+      href: outdated-backup.md
+    - name: Platzieren von Daten- und Protokolldateien auf separaten Laufwerken
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: Serverberechtigungen für 'public'
+      href: server-public-permissions.md
+    - name: Festlegen der Datenbankoption AUTO_CLOSE auf OFF
+      href: set-the-auto-close-database-option-to-off.md
+    - name: Festlegen der AUTO_SHRINK-Datenbankoption auf OFF
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der master- und model-Datenbanken
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: Festlegen der PAGE_VERIFY-Datenbankoption auf CHECKSUM
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: Ablauf des SQL Server-Anmeldekennworts
+      href: sql-server-login-password-expiration.md
+    - name: Sicherheit des SQL Server-Anmeldekennworts
+      href: sql-server-login-password-strength.md
+    - name: Speichersystem – E/A-Timeout
+      href: storage-system-input-output-time-out.md
+    - name: Symmetrische Schlüssel für Systemdatenbanken
+      href: symmetric-keys-on-system-databases.md
+    - name: Symmetrische Schlüssel für Benutzerdatenbanken
+      href: symmetric-keys-on-user-databases.md
+    - name: Bit für die Kennzeichnung der Datenbank als vertrauenswürdig
+      href: trustworthy-bit.md
+    - name: Unerwartete Systemfehler
+      href: unexpected-system-failures.md
+    - name: Verwenden von Datenbank-E-Mail anstelle von SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: Überprüfen der Einstellung 'Max. Anzahl von Arbeitsthreads'
+      href: verify-max-worker-threads-setting.md
+- name: Richtlinienverwaltungsknoten (Objekt-Explorer)
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: 'Dialogfeld ''Neue Bedingung erstellen'' oder ''Bedingung öffnen'', Seite ''Allgemein'''
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: 'Dialogfeld ''Neue Bedingung erstellen'' oder ''Bedingung öffnen'', Seite ''Beschreibung'''
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: 'Dialogfeld ''Bedingung öffnen'', Seite ''Abhängige Richtlinien'''
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
+      href: advanced-edit-condition-dialog-box.md
+    - name: 'Dialogfeld ''Neue Richtlinie erstellen'' oder ''Richtlinie öffnen'', Seite ''Allgemein'''
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: 'Dialogfeld ''Neue Richtlinie erstellen'' oder ''Richtlinie öffnen'', Seite ''Beschreibung'''
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: Dialogfeld 'Richtlinien anzeigen'
+      href: view-policies-dialog-box.md
+    - name: 'Dialogfeld ''Richtlinien auswerten'', Seite ''Richtlinienauswahl'''
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: 'Dialogfeld ''Richtlinien auswerten'', Seite ''Auswertungsergebnisse'''
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: 'Dialogfeld ''Facet-Eigenschaften'', Seite ''Allgemein'''
+      href: facet-properties-dialog-box-general-page.md
+    - name: 'Dialogfeld ''Facet-Eigenschaften'', Seite ''Abhängige Richtlinien'''
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: 'Dialogfeld ''Facet-Eigenschaften'', Seite ''Abhängige Bedingungen'''
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: 'Ergebnisse, Detailansicht (Dialogfeld)'
+      href: results-detailed-view-dialog-box.md
+    - name: Dialogfeld 'Facets anzeigen'
+      href: view-facets-dialog-box.md
+    - name: Dialogfeld 'Quelle auswählen'
+      href: select-source-dialog-box.md
+    - name: Dialogfeld 'Als Richtlinie exportieren'
+      href: export-as-policy-dialog-box.md
+    - name: Dialogfeld 'Richtlinien importieren'
+      href: import-policies-dialog-box.md

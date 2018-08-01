@@ -1,0 +1,90 @@
+- name: Benutzeroberflächen-Designer und -Dialogfelder für die tabellarische Analyse
+  href: ui-designers-dialog-boxes-tabular.md
+- name: Analysis Services-Designer und -Dialogfelder (tabellarisch)
+  href: ../analysis-services-designers-and-dialog-boxes-tabular.md
+- name: Dialogfelderreferenz
+  href: ../dialog-boxes-reference-ssas.md
+  items:
+    - name: Spaltenbreite (Dialogfeld)
+      href: ../column-width-dialog-box-ssas.md
+    - name: Als Datumstabelle markieren (Dialogfeld)
+      href: ../mark-as-date-table-dialog-box-ssas.md
+    - name: Tabelleneigenschaften bearbeiten (Dialogfeld)
+      href: ../edit-table-properties-dialog-box-ssas.md
+    - name: Gehe zu (Dialogfeld)
+      href: ../go-to-dialog-box-ssas.md
+    - name: Funktion einfügen (Dialogfeld)
+      href: ../insert-function-dialog-box-ssas.md
+    - name: Tabelle verschieben (Dialogfeld)
+      href: ../move-table-dialog-box-ssas.md
+- name: Tabellenimport-Assistent
+  href: ../table-import-wizard-reference-ssas.md
+  items:
+    - name: Erweiterte Einstellungen
+      href: ../advanced-settings-ssas.md
+    - name: Analysis Services MDX-Abfrage-Designer
+      href: ../analysis-services-mdx-query-designer-ssas.md
+    - name: 'Auswählen, wie die Daten importiert werden sollen'
+      href: ../choose-how-to-import-the-data-ssas.md
+    - name: Mit einem Bericht/Datenfeed verbinden
+      href: ../connect-to-a-report-or-data-feed-ssas.md
+    - name: Herstellen einer Verbindung mit einer Datenquelle
+      href: ../connect-to-a-data-source-ssas.md
+    - name: Mit einer DB2-Datenbank verbinden
+      href: ../connect-to-a-db2-database-ssas.md
+    - name: Mit einer Flatfile verbinden
+      href: ../connect-to-a-flat-file-ssas.md
+    - name: Herstellen einer Verbindung mit einer Microsoft Access-Datenbank
+      href: ../connect-to-a-microsoft-access-database-ssas.md
+    - name: Herstellen einer Verbindung mit einer Microsoft Excel-Datei
+      href: ../connect-to-a-microsoft-excel-file-ssas.md
+    - name: Mit einer Azure SQL-Datenbank verbinden
+      href: ../connect-to-an-azure-sql-database-ssas.md
+    - name: Herstellen einer Verbindung zu einer Microsoft SQL Server-Datenbank
+      href: ../connect-to-a-microsoft-sql-server-database-ssas.md
+    - name: Verbindung mit Microsoft SQL Server Parallel Data Warehouse herstellen
+      href: ../connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md
+    - name: Stellen Sie eine Verbindung mit Microsoft SQL Server Analysis Services her
+      href: ../connect-to-microsoft-sql-server-analysis-services-ssas.md
+    - name: Verbinden mit einer Informix-Datenbank
+      href: ../connect-to-an-informix-database-ssas.md
+    - name: Herstellen einer Verbindung mit einer Oracle-Datenbank
+      href: ../connect-to-an-oracle-database-ssas.md
+    - name: Mit einer Sybase-Datenbank verbinden
+      href: ../connect-to-a-sybase-database-ssas.md
+    - name: Verbinden mit einer Teradata-Datenbank
+      href: ../connect-to-a-teradata-database-ssas.md
+    - name: Anmeldeinformationen für die Datenquelle
+      href: ../data-source-credentials-ssas.md
+    - name: Details
+      href: ../details-ssas.md
+    - name: Filterdetails
+      href: ../filter-details-ssas.md
+    - name: Identitätswechselinformationen (Dialogfeld)
+      href: ../impersonation-information-dialog-box-table-import-wizard.md
+    - name: Importieren
+      href: ../importing-ssas.md
+    - name: Importzusammenfassung
+      href: ../import-summary-ssas.md
+    - name: Vorschau der ausgewählten Tabelle
+      href: ../preview-selected-table-ssas.md
+    - name: Relationaler Abfrage-Designer
+      href: ../relational-query-designer-ssas.md
+    - name: Tabellen und Sichten auswählen
+      href: ../select-tables-and-views-ssas.md
+    - name: Auswählen von Tabellen und Sichten (Datenfeeds)
+      href: ../select-tables-and-views-data-feeds-ssas.md
+    - name: Festlegen von erweiterten Eigenschaften
+      href: ../set-advanced-properties-ssas.md
+    - name: Verbindungszeichenfolge angeben
+      href: ../specify-a-connection-string-ssas.md
+    - name: Angeben einer SQL- oder MDX-Abfrage
+      href: ../specify-a-sql-or-mdx-query-ssas.md
+- name: 'Verbindungseigenschaften (Dialogfeld, SSAS – tabellarisch)'
+  href: ../connection-properties-dialog-box-ssas-tabular.md
+- name: 'Datenbankeigenschaften (Dialogfeld, SSAS – tabellarisch)'
+  href: ../database-properties-dialog-box-ssas-tabular.md
+- name: 'Tabelleneigenschaften (Dialogfeld, SSAS – tabellarisch)'
+  href: ../table-properties-dialog-box-ssas-tabular.md
+- name: Zeilenfilter (Rollen-Designer) (tabellarisches Modell)
+  href: ../row-filters-role-designer-tabular-model.md

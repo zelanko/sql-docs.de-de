@@ -1,0 +1,195 @@
+- name: Benutzeroberflächen-Assistenten für die mehrdimensionale Analyse
+  href: ui-wizards-multidimensional.md
+- name: Analysis Services-Assistenten (mehrdimensional)
+  href: ../analysis-services-wizards-multidimensional-data.md
+- name: Aggregationsentwurfs-Assistent (F1-Hilfe)
+  href: ../aggregation-design-wizard-f1-help.md
+  items:
+    - name: Zu ändernde Partitionen auswählen (Aggregationsentwurfs-Assistent)
+      href: ../select-partitions-to-modify-aggregation-design-wizard.md
+    - name: Aggregationsverwendung überprüfen (Aggregationsentwurfs-Assistent)
+      href: ../review-aggregation-usage-aggregation-design-wizard.md
+    - name: Objektanzahl angeben (Aggregationsentwurfs-Assistent)
+      href: ../specify-object-counts-aggregation-design-wizard.md
+    - name: Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent)
+      href: ../set-aggregation-options-aggregation-design-wizard.md
+    - name: Assistenten abschließen (Aggregationsentwurfs-Assistent)
+      href: ../completing-the-wizard-aggregation-design-wizard.md
+- name: Business Intelligence-Assistent (F1-Hilfe)
+  href: ../business-intelligence-wizard-f1-help.md
+  items:
+    - name: Erweiterung auswählen (Business Intelligence-Assistent)
+      href: ../choose-enhancement-business-intelligence-wizard.md
+    - name: Zielhierarchie und Berechnungen auswählen (Business Intelligence-Assistent)
+      href: ../choose-time-calculations-business-intelligence-wizard.md
+    - name: Umfang der Berechnungen definieren (Business Intelligence-Assistent)
+      href: ../define-scope-of-calculations-business-intelligence-wizard.md
+    - name: Kontointelligenz definieren (Dimension) (Business Intelligence-Assistent)
+      href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
+    - name: Dimensionsattribute konfigurieren (Business Intelligence-Assistent)
+      href: ../configure-dimension-attributes-business-intelligence-wizard.md
+    - name: Definieren der Kontointelligenz (Business Intelligence-Assistent)
+      href: ../define-account-intelligence-business-intelligence-wizard.md
+    - name: Optionen für Dimensionsintelligenz festlegen (Business Intelligence-Assistent)
+      href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
+    - name: Dimensionsintelligenz definieren (Business Intelligence-Assistent)
+      href: ../define-dimension-intelligence-business-intelligence-wizard.md
+    - name: Unären Operator angeben (Dimension) (Business Intelligence-Assistent)
+      href: ../specify-a-unary-operator-dimension-business-intelligence-wizard.md
+    - name: Unären Operator angeben (Business Intelligence-Assistent)
+      href: ../specify-a-unary-operator-business-intelligence-wizard.md
+    - name: Erstellen einer benutzerdefinierten Elementformel (Dimension) (Business Intelligence-Assistent)
+      href: ../create-a-custom-member-formula-dimension-business-intelligence-wizard.md
+    - name: Benutzerdefinierte Elementformel erstellen (Business Intelligence-Assistent)
+      href: ../create-a-custom-member-formula-business-intelligence-wizard.md
+    - name: Attributreihenfolge angeben (Dimension) (Business Intelligence-Assistent)
+      href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
+    - name: Attributreihenfolge angeben (Business Intelligence-Assistent)
+      href: ../specify-attribute-ordering-business-intelligence-wizard.md
+    - name: Rückschreiben von Dimensionen aktivieren (Dimension) (Business Intelligence-Assistent)
+      href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md
+    - name: Rückschreiben von Dimensionen aktivieren (Business Intelligence-Assistent)
+      href: ../enable-dimension-writeback-business-intelligence-wizard.md
+    - name: Semiadditives Verhalten definieren (Business Intelligence-Assistent)
+      href: ../define-semiadditive-behavior-business-intelligence-wizard.md
+    - name: Währungsumrechnung festlegen (Business Intelligence-Assistent) (SSAS)
+      href: ../set-currency-conversion-options-business-intelligence-wizard.md
+    - name: Elemente auswählen (Business Intelligence-Assistent)
+      href: ../select-members-business-intelligence-wizard.md
+    - name: Umrechnungstyp auswählen (Business Intelligence-Assistent)
+      href: ../select-conversion-type-business-intelligence-wizard.md
+    - name: Verweis auf lokale Währung definieren (Business Intelligence-Assistent)
+      href: ../define-local-currency-reference-business-intelligence-wizard.md
+    - name: Währungen für die Berichterstellung angeben (Business Intelligence-Assistent)
+      href: ../specify-reporting-currencies-business-intelligence-wizard.md
+    - name: Währungsumrechnung definieren (Business Intelligence-Assistent)
+      href: ../define-currency-conversion-business-intelligence-wizard.md
+    - name: Spalte auswählen (Dialogfeld) (Business Intelligence-Assistent)
+      href: ../select-a-column-dialog-box-business-intelligence-wizard.md
+    - name: Assistenten abschließen (Business Intelligence-Assistent)
+      href: ../completing-the-wizard-business-intelligence-wizard.md
+- name: Cube-Assistent (F1-Hilfe)
+  href: ../cube-wizard-f1-help.md
+  items:
+    - name: Erstellungsmethode auswählen (Cube-Assistent)
+      href: ../select-creation-method-cube-wizard.md
+    - name: Datenquellensicht auswählen (Cube-Assistent)
+      href: ../select-a-data-source-view-cube-wizard.md
+    - name: Measuregruppentabellen auswählen (Cube-Assistent)
+      href: ../select-measure-group-tables-cube-wizard.md
+    - name: Neue Measures definieren (Cube-Assistent)
+      href: ../define-new-measures-cube-wizard.md
+    - name: Measures auswählen (Cube-Assistent)
+      href: ../select-measures-cube-wizard.md
+    - name: Vorhandene Dimensionen auswählen (Cube-Assistent)
+      href: ../select-existing-dimensions-cube-wizard.md
+    - name: Neue Dimensionen auswählen (Cube-Assistent)
+      href: ../select-new-dimensions-cube-wizard.md
+    - name: Fehlende Dimensionsschlüssel auswählen (Cube-Assistent)
+      href: ../select-missing-dimension-keys-cube-wizard.md
+    - name: Assistenten abschließen (Cube-Assistent)
+      href: ../completing-the-wizard-cube-wizard.md
+- name: Datenquellen-Assistent (F1-Hilfe)
+  href: ../data-source-wizard-f1-help-analysis-services.md
+  items:
+    - name: 'Wählen Sie aus, wie die Verbindung definiert werden soll (Datenquellen-Assistent)'
+      href: ../select-how-to-define-the-connection-data-source-wizard-analysis-services.md
+    - name: Identitätswechselinformationen
+      href: ../impersonation-information.md
+    - name: Datenquellen von vorhandenen Objekten (Datenquellen-Assistent)
+      href: ../data-sources-from-existing-objects-data-source-wizard-analysis-services.md
+    - name: Abschließen des Assistenten
+      href: ../completing-the-wizard-data-source-wizard-analysis-services.md
+- name: Datenquellensicht-Assistent (F1-Hilfe)
+  href: ../data-source-view-wizard-f1-help-analysis-services.md
+  items:
+    - name: Wählen Sie eine Datenquelle aus (Datenquellensicht-Assistent)
+      href: ../select-a-data-source-data-source-view-wizard-analysis-services.md
+    - name: Erweiterte Optionen für Datenquellensicht (Dialogfeld) (Datenquellensicht-Assistenten)
+      href: ../advanced-data-source-view-options-data-source-view-wizard-analysis-services.md
+    - name: Namensübereinstimmung (Datenquellensicht-Assistent)
+      href: ../name-matching-data-source-view-wizard-analysis-services.md
+    - name: Tabellen und Sichten auswählen (Datenquellensicht-Assistent)
+      href: ../select-tables-and-views-data-source-view-wizard-analysis-services.md
+    - name: Assistenten abschließen (Datenquellensicht-Assistent)
+      href: ../completing-the-wizard-data-source-view-wizard-analysis-services.md
+- name: Dimensions-Assistent (F1-Hilfe)
+  href: ../dimension-wizard-f1-help.md
+  items:
+    - name: Erstellungsmethode auswählen (Dimensions-Assistent)
+      href: ../select-creation-method-dimension-wizard.md
+    - name: Zeiträume definieren (Datenquelle) (Dimensions-Assistent)
+      href: ../define-time-periods-data-source-dimension-wizard.md
+    - name: Zeiträume definieren (Dimensions-Assistent)
+      href: ../define-time-periods-dimension-wizard.md
+    - name: Kalender auswählen (Dimensions-Assistent)
+      href: ../select-calendars-dimension-wizard.md
+    - name: Quellinformationen angeben (Dimensions-Assistent)
+      href: ../specify-source-information-dimension-wizard.md
+    - name: Verknüpfte Tabellen auswählen (Dimensions-Assistent)
+      href: ../select-related-tables-dimension-wizard.md
+    - name: Dimensionsattribute auswählen (Dimensions-Assistent)
+      href: ../select-dimension-attributes-dimension-wizard.md
+    - name: Dimensionstyp angeben (Dimensions-Assistent)
+      href: ../specify-dimension-type-dimension-wizard.md
+    - name: Dimensionsschlüssel und -typ angeben (Dimensions-Assistent)
+      href: ../specify-dimension-key-and-type-dimension-wizard.md
+    - name: Kontointelligenz definieren (Dimensions-Assistent)
+      href: ../define-account-intelligence-dimension-wizard.md
+    - name: Assistenten abschließen (Dimensions-Assistent)
+      href: ../completing-the-wizard-dimension-wizard.md
+- name: Assistent zum Importieren einer Analysis Services-Datenbank
+  href: ../import-analysis-services-database-wizard-f1-help.md
+  items:
+    - name: Quelldatenbank (Assistent zum Importieren einer Analysis Services-Datenbank)
+      href: ../source-database-import-analysis-services-database-wizard.md
+    - name: Assistenten abschließen (Assistent zum Importieren einer Analysis Services-Datenbank)
+      href: ../completing-the-wizard-import-analysis-services-database-wizard.md
+- name: Assistent für verknüpfte Objekte (F1-Hilfe)
+  href: ../linked-object-wizard-f1-help.md
+  items:
+    - name: Datenquelle auswählen (Assistent für verknüpfte Objekte)
+      href: ../select-a-data-source-linked-object-wizard.md
+    - name: Objekte auswählen (Assistent für verknüpfte Objekte)
+      href: ../select-objects-linked-object-wizard.md
+    - name: Assistenten abschließen (Assistent für verknüpfte Objekte)
+      href: ../completing-the-wizard-linked-object-wizard.md
+- name: Partitions-Assistent (F1-Hilfe)
+  href: ../partition-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: Quellinformationen angeben (Partitions-Assistent)
+      href: ../specify-source-information-partition-wizard.md
+    - name: Zeilen einschränken (Partitions-Assistent)
+      href: ../restrict-rows-partition-wizard.md
+    - name: Speicherorte zum Verarbeiten und Speichern (Partitions-Assistent)
+      href: ../processing-and-storage-locations-partition-wizard.md
+    - name: Assistenten abschließen (Partitions-Assistent)
+      href: ../completing-the-wizard-partition-wizard.md
+- name: Schemagenerierungs-Assistent (F1-Hilfe)
+  href: ../schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: Ziel angeben (Schemagenerierungs-Assistent)
+      href: ../specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md
+    - name: Schemaoptionen für die Themenbereichsdatenbank (Schemagenerierungs-Assistent)
+      href: ../subject-area-database-schema-options-analysis-services-multidimensional-data.md
+    - name: Benennungskonventionen angeben (Schemagenerierungs-Assistent)
+      href: ../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md
+    - name: Assistenten abschließen (Schemagenerierungs-Assistent)
+      href: ../complete-schema-generation-wizard-analysis-services-multidimensional-data.md
+- name: Assistent für verwendungsbasierte Optimierung (F1-Hilfe)
+  href: ../usage-based-optimization-wizard-f1-help.md
+  items:
+    - name: Zu ändernde Partitionen auswählen (Verwendungsbasierte Optimierung-Assistent)
+      href: ../select-partitions-to-modify-usage-based-optimization-wizard.md
+    - name: Abfragekriterien angeben (Assistent für verwendungsbasierte Optimierung)
+      href: ../specify-query-criteria-usage-based-optimization-wizard.md
+    - name: Zu optimierende Abfragen prüfen (Assistent für verwendungsbasierte Optimierung)
+      href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
+    - name: Aggregationsverwendung überprüfen (Assistent für verwendungsbasierte Optimierung)
+      href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+    - name: Objektanzahl angeben (Assistent für verwendungsbasierte Optimierung)
+      href: ../specify-object-counts-usage-based-optimization-wizard.md
+    - name: Aggregationsoptionen festlegen (Assistent für verwendungsbasierte Optimierung)
+      href: ../set-aggregation-options-usage-based-optimization-wizard.md
+    - name: Assistenten abschließen (Assistent für verwendungsbasierte Optimierung)
+      href: ../completing-the-wizard-usage-based-optimization-wizard.md

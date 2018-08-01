@@ -1,0 +1,20 @@
+- name: Erweitern von Paketen mit benutzerdefinierten Objekten
+  href: extending-packages-with-custom-objects.md
+- name: Entwickeln benutzerdefinierter Objekte für Integration Services
+  href: developing-custom-objects-for-integration-services.md
+- name: Beibehalten von benutzerdefinierten Objekten
+  href: persisting-custom-objects.md
+- name: 'Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten'
+  href: building-deploying-and-debugging-custom-objects.md
+- name: Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
+  href: support-multi-targeting-in-your-custom-components.md
+- name: Entwickeln eines benutzerdefinierten Tasks
+  href: ../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md
+- name: Entwickeln eines benutzerdefinierten Verbindungs-Managers
+  href: ../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+- name: Entwickeln eines benutzerdefinierten Protokollanbieters
+  href: ../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+- name: Entwickeln eines benutzerdefinierten ForEach-Enumerators
+  href: foreach-enumerator/developing-a-custom-foreach-enumerator.md
+- name: Entwickeln einer benutzerdefinierten Datenflusskomponente
+  href: data-flow/developing-a-custom-data-flow-component.md

@@ -1,0 +1,30 @@
+- name: Entwickeln einer benutzerdefinierten Datenflusskomponente
+  href: developing-a-custom-data-flow-component.md
+- name: Erstellen einer benutzerdefinierten Datenflusskomponente
+  href: creating-a-custom-data-flow-component.md
+- name: Entwurfszeitmethoden einer Datenflusskomponente
+  href: design-time-methods-of-a-data-flow-component.md
+- name: Laufzeitmethoden einer Datenflusskomponente
+  href: run-time-methods-of-a-data-flow-component.md
+- name: Ausführungsplan und Pufferzuordnung
+  href: execution-plan-and-buffer-allocation.md
+- name: Verwenden von Datentypen im Datenfluss
+  href: working-with-data-types-in-the-data-flow.md
+- name: Überprüfen einer Datenflusskomponente
+  href: validating-a-data-flow-component.md
+- name: Implementieren externer Metadaten
+  href: implementing-external-metadata.md
+- name: Auslösen und Definieren von Ereignissen in einer Datenflusskomponente
+  href: raising-and-defining-events-in-a-data-flow-component.md
+- name: Protokollieren und Definieren von Protokolleinträgen in einer Datenflusskomponente
+  href: logging-and-defining-log-entries-in-a-data-flow-component.md
+- name: Verwenden von Fehlerausgaben in einer Datenflusskomponente
+  href: using-error-outputs-in-a-data-flow-component.md
+- name: Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
+  href: developing-a-user-interface-for-a-data-flow-component.md
+- name: Aktualisieren der Version einer Datenflusskomponente
+  href: upgrading-the-version-of-a-data-flow-component.md
+- name: Unterkategorien von Artikeln
+  items:
+    - name: Datenflusstypen
+      href: ../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md

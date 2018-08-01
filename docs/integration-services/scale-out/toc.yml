@@ -1,0 +1,26 @@
+- name: Übersicht
+  href: integration-services-ssis-scale-out.md
+- name: Erste Schritte mit SSIS Scale Out auf einem einzelnen Computer
+  href: get-started-with-ssis-scale-out-onebox.md
+- name: 'Exemplarische Vorgehensweise: Einrichten von horizontaler Hochskalierung für Integration Services'
+  href: walkthrough-set-up-integration-services-scale-out.md
+- name: Ausführen von Paketen in horizontaler Hochskalierung
+  href: run-packages-in-integration-services-ssis-scale-out.md
+- name: Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
+  href: add-scale-out-worker.md
+- name: Scale Out-Master
+  href: integration-services-ssis-scale-out-master.md
+- name: Scale Out-Worker
+  href: integration-services-ssis-scale-out-worker.md
+- name: Scale Out-Manager
+  href: integration-services-ssis-scale-out-manager.md
+- name: Ändern des Kontos für die Scale Out-Protokollierung
+  href: change-logdb-account.md
+- name: Verwalten von Zertifikaten für Scale Out
+  href: deal-with-certificates-in-ssis-scale-out.md
+- name: Hochverfügbarkeit für Scale Out
+  href: scale-out-support-for-high-availability.md
+- name: Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz
+  href: scale-out-failover-cluster-instance.md
+- name: Problembehandlung in Scale Out
+  href: troubleshooting-scale-out.md

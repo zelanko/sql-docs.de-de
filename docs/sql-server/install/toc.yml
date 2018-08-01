@@ -1,0 +1,40 @@
+- name: Übersicht
+  href: planning-a-sql-server-installation.md
+- name: Planung
+  items:
+    - name: Neuigkeiten in der SQL Server-Installation
+      href: what-s-new-in-sql-server-installation.md
+    - name: Hardware- und Softwareanforderungen für die Installation von SQL Server
+      href: hardware-and-software-requirements-for-installing-sql-server.md
+    - name: Überlegungen zur Sicherheit bei SQL Server-Installationen
+      href: security-considerations-for-a-sql-server-installation.md
+    - name: Netzwerkprotokolle und Netzwerkbibliotheken
+      href: network-protocols-and-network-libraries.md
+    - name: Verwenden mehrerer Versionen und Instanzen von SQL Server
+      href: work-with-multiple-versions-and-instances-of-sql-server.md
+    - name: Lokale Sprachversionen in SQL Server
+      href: local-language-versions-in-sql-server.md
+    - name: Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
+      href: file-locations-for-default-and-named-instances-of-sql-server.md
+- name: Deinstallieren von SQL Server
+  href: uninstall-sql-server.md
+  items:
+    - name: Deinstallieren einer vorhandenen SQL Server-Instanz (Setup)
+      href: uninstall-an-existing-instance-of-sql-server-setup.md
+    - name: Entfernen von Data Quality Server-Objekten
+      href: remove-data-quality-server-objects.md
+    - name: Deinstallieren und Entfernen von Master Data Services
+      href: uninstall-and-remove-master-data-services.md
+    - name: Deinstallieren von Power Pivot für SharePoint
+      href: uninstall-power-pivot-for-sharepoint.md
+    - name: Deinstallieren von Reporting Services
+      href: uninstall-reporting-services.md
+- name: Installieren von SQL Server-BI-Funktionen
+  href: install-sql-server-business-intelligence-features.md
+- name: Configure the Windows Firewall to Allow SQL Server Access
+  href: configure-the-windows-firewall-to-allow-sql-server-access.md
+  items:
+    - name: Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
+      href: configure-a-multi-homed-computer-for-sql-server-access.md
+- name: Hilfe zum Installations-Assistenten
+  href: instance-configuration.md

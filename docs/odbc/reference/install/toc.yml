@@ -1,0 +1,50 @@
+- name: ODBC-Unterschlüssel
+  href: odbc-subkey.md
+- name: Konfigurieren von Datenquellen
+  href: configuring-data-sources.md
+- name: Installationsprogramm-DLL
+  href: installer-dll.md
+- name: Installieren und Konfigurieren der ODBC-Software
+  href: installing-and-configuring-the-odbc-software.md
+- name: Unterschlüssel für Datenquellenspezifikationen
+  href: data-source-specification-subkeys.md
+- name: Registrierungseinträge für ODBC-Komponenten
+  href: registry-entries-for-odbc-components.md
+- name: Referenz zur Installation und Konfiguration von Komponenten
+  href: installation-and-configuration-components-reference.md
+- name: Installieren von ODBC-Komponenten
+  href: installing-odbc-components.md
+- name: Unterschlüssel für Treiberspezifikationen
+  href: driver-specification-subkeys.md
+- name: Setup-DLLs für das Konvertierungsprogramm
+  href: translator-setup-dlls.md
+- name: Verwaltungsprogramm
+  href: administration-program.md
+- name: Standardunterschlüssel
+  href: default-subkey.md
+- name: Unterschlüssel für Standardtreiber
+  href: default-driver-subkey.md
+- name: Installationskomponenten
+  href: installation-components.md
+- name: Setupprogramm
+  href: setup-program.md
+- name: ODBC-Headerdateien
+  href: odbc-header-files.md
+- name: Unterschlüssel für ODBC-Treiber
+  href: odbc-drivers-subkey.md
+- name: Registrierungseinträge für Datenquellen
+  href: registry-entries-for-data-sources.md
+- name: Unterschlüssel für ODBC-Konvertierungsprogramme
+  href: odbc-translators-subkey.md
+- name: Setup-DLL für Treiber
+  href: driver-setup-dll.md
+- name: Unterschlüssel für Konvertierungsprogrammspezifikationen
+  href: translator-specification-subkeys.md
+- name: Konfigurationskomponenten
+  href: configuration-components.md
+- name: Unterschlüssel für ODBC-Datenquellen
+  href: odbc-data-sources-subkey.md
+- name: Zählen der Verwendung
+  href: usage-counting.md
+- name: Unterschlüssel für ODBC-Kernkomponenten
+  href: odbc-core-subkey.md

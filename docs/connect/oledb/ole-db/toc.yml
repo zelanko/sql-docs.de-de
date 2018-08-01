@@ -1,0 +1,48 @@
+- name: OLE DB-Treiber für SQL Server-Programmierung
+  href: oledb-driver-for-sql-server-programming.md
+- name: Spezifische Bereiche
+  items:
+    - name: Erstellen eines OLE DB-Treibers für SQL Server-Anwendungen +
+      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+    - name: OLE DB-Datenquellenobjekte +
+      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Befehle +
+      href: ../../oledb/ole-db-commands/commands.md
+    - name: Rowsets +
+      href: ../../oledb/ole-db-rowsets/rowsets.md
+    - name: Blobs +
+      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+    - name: Tabellenindizes +
+      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+    - name: Datentypen +
+      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+    - name: Tabellenwertparameter +
+      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Datum und Uhrzeit +
+      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Transaktionen +
+      href: ../../oledb/ole-db-transactions/transactions.md
+    - name: Fehler +
+      href: ../../oledb/ole-db-errors/errors.md
+    - name: Schnittstellen +
+      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+    - name: Vorgehensweise +
+      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: Große benutzerdefinierte CLR-Typen
+  href: large-clr-user-defined-types-ole-db.md
+- name: Schemarowset-Unterstützung
+  href: schema-rowset-support-ole-db.md
+- name: 'Schemarowsets: Verteilte Abfrageunterstützung'
+  href: schema-rowsets-distributed-query-support.md
+- name: 'Schemarowsets: LINKEDSERVERS-Rowset'
+  href: schema-rowsets-linkedservers-rowset.md
+- name: 'Dienstprinzipalnamen (Service Principal Names, SPNs) in Clientverbindungen'
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Unterstützung für Sparsespalten
+  href: sparse-columns-support-ole-db.md
+- name: Aufrufen von gespeicherte Prozeduren
+  href: stored-procedures-calling.md
+- name: 'Gespeicherte Prozeduren: Ausführen'
+  href: stored-procedures-running.md
+- name: Gespeicherte Prozeduren
+  href: stored-procedures.md

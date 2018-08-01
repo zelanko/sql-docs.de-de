@@ -1,0 +1,409 @@
+- name: Einführung
+  href: master-data-services-overview-mds.md
+- name: Übersicht
+  items:
+    - name: Neues in Master Data Services (MDS)
+      href: what-s-new-in-master-data-services-mds.md
+    - name: Neue und aktualisierte Artikel
+      href: new-updated-master-data-services.md
+    - name: Erlernen von SQL Server Master Data Services
+      href: learn-sql-server-master-data-services.md
+    - name: 'SQL Server-Beispiele: Modellbereitstellungspakete (MDS)'
+      href: sql-server-samples-model-deployment-packages-mds.md
+    - name: Von den SQL Server 2016-Editionen unterstützte Master Data Services- und Data Quality Services-Features
+      href: master-data-services-and-data-quality-services-features-support.md
+    - name: Abwärtskompatibilität (Master Data Services)
+      href: backward-compatibility-master-data-services.md
+    - name: Veraltete Funktionen von Master Data Services
+      href: deprecated-master-data-services-features.md
+    - name: Eingestellte Master Data Services-Funktionen
+      href: discontinued-master-data-services-features.md
+- name: Installieren und konfigurieren
+  href: master-data-services-installation-and-configuration.md
+  items:
+    - name: Install-Windows
+      href: ../master-data-services/install-windows/install-master-data-services.md
+    - name: Whitepaper zur Installation von AlwaysOn
+      href: installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
+    - name: Master Data Services-Serverkonfiguration (Seite)
+      href: server-configuration-mds-configuration-manager.md
+    - name: Datenbankkonfiguration (Seite)
+      href: database-configuration-page-master-data-services-configuration-manager.md
+- name: Funktionen und Tasks
+  href: master-data-services-features-and-tasks.md
+  items:
+    - name: Verbindung mit einer Master Data Services-Datenbank herstellen (Dialogfeld)
+      href: connect-to-a-master-data-services-database-dialog-box.md
+    - name: Datenbank erstellen (Assistent)
+      href: create-database-wizard-master-data-services-configuration-manager.md
+    - name: Datenbankupgrade-Assistent
+      href: upgrade-database-wizard-master-data-services-configuration-manager.md
+    - name: Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
+      href: create-database-mail-profile-and-account-dialog-box.md
+    - name: Webkonfiguration (Seite)
+      href: web-configuration-page-master-data-services-configuration-manager.md
+    - name: Webanwendung erstellen (Dialogfeld)
+      href: create-web-application-dialog-box-master-data-services-configuration-manager.md
+    - name: Website erstellen (Dialogfeld)
+      href: create-website-dialog-box-master-data-services-configuration-manager.md
+    - name: Webkonfigurationsreferenz
+      href: web-configuration-reference-master-data-services.md
+    - name: Add-In für Microsoft Excel
+      href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
+    - name: Modelle
+      href: models-master-data-services.md
+      items:
+        - name: Erstellen eines Modells
+          href: create-a-model-master-data-services.md
+        - name: Bearbeiten von Modellen
+          href: edit-model-master-data-services.md
+        - name: Löschen eines Modells
+          href: delete-a-model-master-data-services.md
+    - name: Entitäten
+      href: entities-master-data-services.md
+      items:
+        - name: Entitätsabhängigkeiten-Explorer
+          href: entity-dependencies-explorer.md
+        - name: Erstellen einer Entität
+          href: create-an-entity-master-data-services.md
+        - name: Bearbeiten einer Entität
+          href: edit-an-entity-master-data-services.md
+        - name: Löschen einer Entität
+          href: delete-an-entity-master-data-services.md
+        - name: Entitäten-Synchronisierungspartnerschaft
+          href: entity-sync-relationship-master-data-services.md
+        - name: Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung
+          href: create-and-execute-an-entity-sync-relationship-master-data-services.md
+        - name: Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft
+          href: edit-and-delete-an-entity-sync-relationship-master-data-services.md
+        - name: Genehmigung erforderlich
+          href: approval-required-master-data-services.md
+    - name: Benutzerdefinierter Index
+      href: custom-index-master-data-services.md
+      items:
+        - name: Erstellen eines Indexes
+          href: create-an-index-master-data-services.md
+        - name: Bearbeiten und Löschen eines Indexes
+          href: edit-and-delete-an-index-master-data-services.md
+    - name: Attribute
+      href: attributes-master-data-services.md
+      items:
+        - name: Erstellen eines Textattributs
+          href: create-a-text-attribute-master-data-services.md
+        - name: Erstellen eines numerischen Attributs
+          href: create-a-numeric-attribute-master-data-services.md
+        - name: Erstellen eines Datenattributs
+          href: create-a-date-attribute-master-data-services.md
+        - name: Erstellen eines Linkattributs
+          href: create-a-link-attribute-master-data-services.md
+        - name: Erstellen eines Dateiattributs
+          href: create-a-file-attribute-master-data-services.md
+        - name: Ändern eines Attributnamens und Datentyps
+          href: change-an-attribute-name-and-data-type-master-data-services.md
+        - name: Löschen eines Attributs
+          href: delete-an-attribute-master-data-services.md
+        - name: Ändern der Reihenfolge von Attributen
+          href: change-the-order-of-attributes.md
+    - name: Domänenbasierte Attribute
+      href: domain-based-attributes-master-data-services.md
+      items:
+        - name: Erstellen eines domänenbasierten Attributs
+          href: create-a-domain-based-attribute-master-data-services.md
+    - name: Attributgruppen
+      href: attribute-groups-master-data-services.md
+      items:
+        - name: Erstellen einer Attributgruppe
+          href: create-an-attribute-group-master-data-services.md
+        - name: Sichtbarmachen einer Attributgruppe für Benutzer
+          href: make-an-attribute-group-visible-to-users-master-data-services.md
+        - name: Ändern des Namens einer Attributgruppe
+          href: change-an-attribute-group-name-master-data-services.md
+        - name: Löschen einer Attributgruppe
+          href: delete-an-attribute-group-master-data-services.md
+    - name: 'Übersicht: Importieren von Daten aus Tabellen (Master Data Services)'
+      href: overview-importing-data-from-tables-master-data-services.md
+      items:
+        - name: Importieren von Daten aus Tabellen (Master Data Services)
+          href: import-data-from-tables-master-data-services.md
+        - name: 'Anzeigen von Fehlern, die während des Stagings auftreten'
+          href: view-errors-that-occur-during-staging-master-data-services.md
+        - name: Stagingtabelle für Blattelemente
+          href: leaf-member-staging-table-master-data-services.md
+        - name: Konsolidierte Elementstagingtabelle
+          href: consolidated-member-staging-table-master-data-services.md
+        - name: Stagingtabelle für Beziehungen
+          href: relationship-staging-table-master-data-services.md
+        - name: Gespeicherte Stagingprozedur
+          href: staging-stored-procedure-master-data-services.md
+        - name: Fehler des Stagingprozesses
+          href: staging-process-errors-master-data-services.md
+        - name: Importstatus
+          href: import-statuses-master-data-services.md
+    - name: Member
+      href: members-master-data-services.md
+      items:
+        - name: Erstellen eines Blattelements
+          href: create-a-leaf-member-master-data-services.md
+        - name: Create a Consolidated Member
+          href: create-a-consolidated-member-master-data-services.md
+        - name: Löschen eines Elements oder einer Auflistung
+          href: delete-a-member-or-collection-master-data-services.md
+        - name: Reaktivieren eines Elements oder einer Auflistung
+          href: reactivate-a-member-or-collection-master-data-services.md
+        - name: Filteroperatoren
+          href: filter-operators-master-data-services.md
+        - name: Konflikte zusammenführen
+          href: merge-conflicts-master-data-services.md
+    - name: Reservierte Wörter
+      href: reserved-words-master-data-services.md
+    - name: Automatische Codeerstellung
+      href: automatic-code-creation-master-data-services.md
+      items:
+        - name: Automatisches Generieren von Codeattributwerten
+          href: automatically-generate-code-attribute-values-master-data-services.md
+        - name: Automatisches Generieren von anderen Attributwerten als Code
+          href: automatically-generate-attribute-values-other-than-code-master-data-services.md
+    - name: Geschäftsregeln
+      href: business-rules-master-data-services.md
+      items:
+        - name: Erstellen und Veröffentlichen einer Geschäftsregel
+          href: create-and-publish-a-business-rule-master-data-services.md
+        - name: Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel
+          href: add-multiple-conditions-to-a-business-rule-master-data-services.md
+        - name: Erfordern von Attributwerten
+          href: require-attribute-values-master-data-services.md
+        - name: Ändern des Namens einer Geschäftsregel
+          href: change-a-business-rule-name-master-data-services.md
+        - name: Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen
+          href: configure-business-rules-to-send-notifications-master-data-services.md
+        - name: Überprüfen von bestimmten Elementen auf Geschäftsregeln
+          href: validate-specific-members-against-business-rules-master-data-services.md
+        - name: Ausschließen einer Geschäftsregel
+          href: exclude-a-business-rule-master-data-services.md
+        - name: Löschen einer Geschäftsregel
+          href: delete-a-business-rule-master-data-services.md
+        - name: Geschäftsregelbedingungen
+          href: business-rule-conditions-master-data-services.md
+        - name: Geschäftsregelaktionen
+          href: business-rule-actions-master-data-services.md
+        - name: Business Rules Extension
+          href: business-rules-extension-master-data-services.md
+        - name: Beispiele für Geschäftsregeln (Master Data Services)
+          href: business-rule-examples-master-data-services.md
+    - name: Changesets
+      href: changesets-master-data-services.md
+      items:
+        - name: Erstellen eines Changesets
+          href: create-a-changeset-master-data-services.md
+        - name: Anwenden und Aktualisieren eines Changeset
+          href: apply-and-update-a-changeset-master-data-services.md
+        - name: Bestätigen oder Übermitteln eines Changesets
+          href: commit-or-submit-a-changeset-master-data-services.md
+        - name: Genehmigen oder Ablehnen eines Changesets
+          href: approve-or-reject-a-changeset-master-data-services.md
+        - name: Verwalten von Changesets
+          href: manage-changesets-master-data-services.md
+    - name: Benachrichtigungen
+      href: notifications-master-data-services.md
+      items:
+        - name: Konfigurieren von E-Mail-Benachrichtigungen
+          href: configure-email-notifications-master-data-services.md
+    - name: Transaktionen
+      href: transactions-master-data-services.md
+      items:
+        - name: Umkehren einer Transaktion
+          href: reverse-a-transaction-master-data-services.md
+        - name: Ändern des Transaktionsprotokolltyps von Entitäten
+          href: change-the-entity-transaction-log-type-master-data-services.md
+        - name: Elementrevisionsverlauf
+          href: member-revision-history-master-data-services.md
+        - name: Zurücksetzen des Elementrevisionsverlaufs
+          href: rollback-member-revision-history-master-data-services.md
+    - name: Anmerkungen
+      href: annotations-master-data-services.md
+      items:
+        - name: Hinzufügen einer Anmerkung zu einer Transaktion
+          href: annotate-a-transaction-master-data-services.md
+    - name: Hierarchien
+      href: hierarchies-master-data-services.md
+      items:
+        - name: Explizite Hierarchien
+          href: explicit-hierarchies-master-data-services.md
+          items:
+            - name: Erstellen einer expliziten Hierarchie
+              href: create-an-explicit-hierarchy-master-data-services.md
+            - name: Ändern des Namens einer expliziten Hierarchie
+              href: change-an-explicit-hierarchy-name-master-data-services.md
+            - name: Löschen einer expliziten Hierarchie
+              href: delete-an-explicit-hierarchy-master-data-services.md
+        - name: Abgeleitete Hierarchien
+          href: derived-hierarchies-master-data-services.md
+          items:
+            - name: Rekursive Hierarchien
+              href: recursive-hierarchies-master-data-services.md
+            - name: Abgeleitete Hierarchien mit expliziten Abschlüssen
+              href: derived-hierarchies-with-explicit-caps-master-data-services.md
+            - name: Erstellen einer abgeleiteten Hierarchie
+              href: create-a-derived-hierarchy-master-data-services.md
+            - name: Ausblenden oder Löschen von Ebenen in einer abgeleiteten Hierarchie
+              href: hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
+            - name: Ändern des Namens einer abgeleiteten Hierarchie
+              href: change-a-derived-hierarchy-name-master-data-services.md
+            - name: Löschen einer abgeleiteten Hierarchie
+              href: delete-a-derived-hierarchy-master-data-services.md
+            - name: 'Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien'
+              href: show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
+    - name: Auflistungen
+      href: collections-master-data-services.md
+      items:
+        - name: Erstellen einer Auflistung
+          href: create-a-collection-master-data-services.md
+        - name: Hinzufügen von Elementen zu einer Auflistung
+          href: add-members-to-a-collection-master-data-services.md
+    - name: 'Übersicht: Exportieren von Daten (Master Data Services)'
+      href: overview-exporting-data-master-data-services.md
+      items:
+        - name: Erstellen einer Abonnementsicht zum Exportieren von Daten (Master Data Services)
+          href: create-a-subscription-view-to-export-data-master-data-services.md
+        - name: Löschen einer Abonnementsicht
+          href: delete-a-subscription-view-master-data-services.md
+        - name: Abonnementsichtformate
+          href: subscription-view-formats-master-data-services.md
+    - name: Versionen
+      href: versions-master-data-services.md
+      items:
+        - name: Ändern eines Versionsnamens
+          href: change-a-version-name-master-data-services.md
+        - name: Sperren einer Version
+          href: lock-a-version-master-data-services.md
+        - name: Entsperren einer Version
+          href: unlock-a-version-master-data-services.md
+        - name: Durchführen eines Commits für eine Version
+          href: commit-a-version-master-data-services.md
+        - name: Erstellen eines Versionsflags
+          href: create-a-version-flag-master-data-services.md
+        - name: Ändern des Namens eines Versionsflags
+          href: change-a-version-flag-name-master-data-services.md
+        - name: Zuweisen eines Flags zu einer Version
+          href: assign-a-flag-to-a-version-master-data-services.md
+        - name: Kopieren einer Version
+          href: copy-a-version-master-data-services.md
+        - name: Löschen einer Version
+          href: delete-a-version-master-data-services.md
+        - name: Endgültiges Löschen von Versionselementen
+          href: purge-version-members-master-data-services.md
+    - name: Überprüfung
+      href: validation-master-data-services.md
+      items:
+        - name: Überprüfen einer Version anhand von Geschäftsregeln
+          href: validate-a-version-against-business-rules-master-data-services.md
+        - name: Überprüfungsstatus
+          href: validation-statuses-master-data-services.md
+        - name: Gespeicherte Überprüfungsprozedur
+          href: validation-stored-procedure-master-data-services.md
+    - name: Bereitstellen von Modellen
+      href: deploying-models-master-data-services.md
+      items:
+        - name: Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten
+          href: create-a-model-deployment-package-by-using-the-wizard.md
+        - name: Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy
+          href: create-a-model-deployment-package-by-using-mdsmodeldeploy.md
+        - name: Optionen für Modellbereitstellung
+          href: model-deployment-options-master-data-services.md
+        - name: Bereitstellen eines Modellbereitstellungspakets mithilfe des Assistenten
+          href: deploy-a-model-deployment-package-by-using-the-wizard.md
+        - name: Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
+          href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
+        - name: Bearbeiten eines Modellbereitstellungspakets
+          href: edit-a-model-deployment-package.md
+    - name: Security
+      href: security-master-data-services.md
+      items:
+        - name: Administratoren
+          href: administrators-master-data-services.md
+          items:
+            - name: Erstellen eines Modelladministrators
+              href: create-a-model-administrator-master-data-services.md
+            - name: Erstellen eines Entitätsadministrators (Master Data Services)
+              href: create-an-entity-administrator-master-data-services.md
+        - name: Benutzer und Gruppen
+          href: users-and-groups-master-data-services.md
+          items:
+            - name: Hinzufügen eines Benutzers
+              href: add-a-user-master-data-services.md
+            - name: Hinzufügen einer Gruppe
+              href: add-a-group-master-data-services.md
+            - name: Ändern einer Benutzer-E-Mail-Adresse
+              href: change-a-user-s-email-address-master-data-services.md
+            - name: Löschen von Benutzern oder Gruppen
+              href: delete-users-or-groups-master-data-services.md
+        - name: Berechtigungen für Funktionsbereiche
+          href: functional-area-permissions-master-data-services.md
+          items:
+            - name: Zuweisen von Berechtigungen für Funktionsbereiche
+              href: assign-functional-area-permissions-master-data-services.md
+        - name: Berechtigungen für Modellobjekte
+          href: model-object-permissions-master-data-services.md
+          items:
+            - name: Zuweisen von Berechtigungen für Modellobjekte
+              href: assign-model-object-permissions-master-data-services.md
+            - name: Löschen von Berechtigungen für Modellobjekte
+              href: delete-model-object-permissions-master-data-services.md
+            - name: Modellberechtigungen
+              href: model-permissions-master-data-services.md
+            - name: Entitätsberechtigungen
+              href: entity-permissions-master-data-services.md
+            - name: Blattberechtigungen
+              href: leaf-permissions-master-data-services.md
+            - name: Auflistungsberechtigungen
+              href: collection-permissions-master-data-services.md
+            - name: Navigationszugriff
+              href: navigational-access-master-data-services.md
+        - name: Hierarchieelementberechtigungen
+          href: hierarchy-member-permissions-master-data-services.md
+          items:
+            - name: Zuweisen von Hierarchieelementberechtigungen
+              href: assign-hierarchy-member-permissions-master-data-services.md
+            - name: Sofortiges Anwenden von Elementberechtigungen
+              href: immediately-apply-member-permissions-master-data-services.md
+            - name: Löschen von Hierarchieelementberechtigungen
+              href: delete-hierarchy-member-permissions-master-data-services.md
+        - name: 'Vorgehensweise: Festlegen von Berechtigungen'
+          href: how-permissions-are-determined-master-data-services.md
+        - name: Überlappende Modell- und Elementberechtigungen
+          href: overlapping-model-and-member-permissions-master-data-services.md
+        - name: Überlappende Benutzer- und Gruppenberechtigungen
+          href: overlapping-user-and-group-permissions-master-data-services.md
+        - name: Testen der Berechtigungen eines Benutzers
+          href: test-a-user-s-permissions-master-data-services.md
+- name: Technische Referenz (Master Data Services)
+  href: technical-reference-master-data-services.md
+  items:
+    - name: Master Data Services-Datenbank
+      href: master-data-services-database.md
+      items:
+        - name: Systemeinstellungen
+          href: system-settings-master-data-services.md
+        - name: Sicherheit von Datenbankobjekten
+          href: database-object-security-master-data-services.md
+        - name: 'Datenbankanmeldenamen, -benutzer und -rollen'
+          href: database-logins-users-and-roles-master-data-services.md
+    - name: 'Master Data Manager-Webanwendung [Master Data Services]'
+      href: master-data-manager-web-application.md
+      items:
+        - name: Funktionsbereich "Explorer"
+          href: explorer-functional-area-master-data-manager.md
+        - name: Funktionsbereich "Versionsverwaltung"
+          href: version-management-functional-area-master-data-manager.md
+        - name: Funktionsbereich "Integrationsmanagement"
+          href: integration-management-functional-area-master-data-manager.md
+        - name: Funktionsbereich "Systemverwaltung"
+          href: system-administration-functional-area-master-data-manager.md
+        - name: Funktionsbereich "Benutzer- und Gruppenberechtigungen"
+          href: user-and-group-permissions-functional-area-master-data-manager.md
+        - name: Ordner- und Dateiberechtigungen
+          href: folder-and-file-permissions-master-data-services.md
+    - name: Ablaufverfolgung
+      href: tracing-master-data-services.md
+- name: Entwicklerartikel für MDS
+  href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md

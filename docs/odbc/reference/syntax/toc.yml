@@ -1,0 +1,260 @@
+- name: ODBC-Referenz
+  href: odbc-reference.md
+- name: Funktionsübersicht
+  href: function-summary.md
+  items:
+    - name: Installer-DLL – Funktionsübersicht
+      href: installer-dll-function-summary.md
+    - name: ODBC – Funktionsübersicht
+      href: odbc-function-summary.md
+    - name: ODBC-Dienstanbieterschnittstelle – Übersicht
+      href: odbc-service-provider-interface-summary.md
+    - name: Setup-DLL – Funktionsübersicht
+      href: setup-dll-function-summary.md
+    - name: Übersetzungs-DLL – Funktionsübersicht
+      href: translation-dll-function-summary.md
+- name: ODBC-API-Referenz
+  href: odbc-api-reference.md
+  items:
+    - name: SQLAllocConnect-Funktion
+      href: sqlallocconnect-function.md
+    - name: SQLAllocEnv-Funktion
+      href: sqlallocenv-function.md
+    - name: SQLAllocHandle-Funktion
+      href: sqlallochandle-function.md
+    - name: SQLAllocStmt-Funktion
+      href: sqlallocstmt-function.md
+    - name: SQLBindCol-Funktion
+      href: sqlbindcol-function.md
+    - name: SQLBindParameter-Funktion
+      href: sqlbindparameter-function.md
+    - name: SQLBrowseConnect-Funktion
+      href: sqlbrowseconnect-function.md
+    - name: SQLBulkOperations-Funktion
+      href: sqlbulkoperations-function.md
+    - name: SQLCancel-Funktion
+      href: sqlcancel-function.md
+    - name: SQLCancelHandle-Funktion
+      href: sqlcancelhandle-function.md
+    - name: SQLCloseCursor-Funktion
+      href: sqlclosecursor-function.md
+    - name: SQLColAttribute-Funktion
+      href: sqlcolattribute-function.md
+    - name: SQLColAttributes-Funktion
+      href: sqlcolattributes-function.md
+    - name: SQLColumnPrivileges-Funktion
+      href: sqlcolumnprivileges-function.md
+    - name: SQLColumns-Funktion
+      href: sqlcolumns-function.md
+    - name: SQLCompleteAsync-Funktion
+      href: sqlcompleteasync-function.md
+    - name: SQLConnect-Funktion
+      href: sqlconnect-function.md
+    - name: SQLCopyDesc-Funktion
+      href: sqlcopydesc-function.md
+    - name: SQLDataSources-Funktion
+      href: sqldatasources-function.md
+    - name: SQLDescribeCol-Funktion
+      href: sqldescribecol-function.md
+    - name: SQLDescribeParam-Funktion
+      href: sqldescribeparam-function.md
+    - name: SQLDisconnect-Funktion
+      href: sqldisconnect-function.md
+    - name: SQLDriveConnect-Funktion
+      href: sqldriverconnect-function.md
+    - name: SQLDrivers-Funktion
+      href: sqldrivers-function.md
+    - name: SQLEndTran-Funktion
+      href: sqlendtran-function.md
+    - name: SQLError-Funktion
+      href: sqlerror-function.md
+    - name: SQLExecDirect-Funktion
+      href: sqlexecdirect-function.md
+    - name: SQLExecute-Funktion
+      href: sqlexecute-function.md
+    - name: SQLExtendedFetch-Funktion
+      href: sqlextendedfetch-function.md
+    - name: SQLFetch-Funktion
+      href: sqlfetch-function.md
+    - name: SQLFetchScroll-Funktion
+      href: sqlfetchscroll-function.md
+    - name: SQLForeignKeys-Funktion
+      href: sqlforeignkeys-function.md
+    - name: SQLFreeConnect-Funktion
+      href: sqlfreeconnect-function.md
+    - name: SQLFreeEnv-Funktion
+      href: sqlfreeenv-function.md
+    - name: SQLFreeHandle-Funktion
+      href: sqlfreehandle-function.md
+    - name: SQLFreeStmt-Funktion
+      href: sqlfreestmt-function.md
+    - name: SQLGetConnectAttr-Funktion
+      href: sqlgetconnectattr-function.md
+    - name: SQLGetConnectOption-Funktion
+      href: sqlgetconnectoption-function.md
+    - name: SQLGetCursorName-Funktion
+      href: sqlgetcursorname-function.md
+    - name: SQLGetData-Funktion
+      href: sqlgetdata-function.md
+    - name: SQLGetDescField-Funktion
+      href: sqlgetdescfield-function.md
+    - name: SQLGetDescRec-Funktion
+      href: sqlgetdescrec-function.md
+    - name: SQLGetDiagField-Funktion
+      href: sqlgetdiagfield-function.md
+    - name: SQLGetDiagRec-Funktion
+      href: sqlgetdiagrec-function.md
+    - name: SQLGetEnvAttr-Funktion
+      href: sqlgetenvattr-function.md
+    - name: SQLGetFunctions-Funktion
+      href: sqlgetfunctions-function.md
+    - name: SQLGetInfo-Funktion
+      href: sqlgetinfo-function.md
+    - name: SQLGetStmtAttr-Funktion
+      href: sqlgetstmtattr-function.md
+    - name: SQLGetStmtOption-Funktion
+      href: sqlgetstmtoption-function.md
+    - name: SQLGetTypeInfo-Funktion
+      href: sqlgettypeinfo-function.md
+    - name: SQLMoreResults-Funktion
+      href: sqlmoreresults-function.md
+    - name: SQLNativeSql-Funktion
+      href: sqlnativesql-function.md
+    - name: SQLNumParams-Funktion
+      href: sqlnumparams-function.md
+    - name: SQLNumResultCols-Funktion
+      href: sqlnumresultcols-function.md
+    - name: SQLParamData-Funktion
+      href: sqlparamdata-function.md
+    - name: SQLParamOptions-Funktion
+      href: sqlparamoptions-function.md
+    - name: SQLPrepare-Funktion
+      href: sqlprepare-function.md
+    - name: SQLPrimaryKeys-Funktion
+      href: sqlprimarykeys-function.md
+    - name: SQLProcedureColumns-Funktion
+      href: sqlprocedurecolumns-function.md
+    - name: SQLProcedures-Funktion
+      href: sqlprocedures-function.md
+    - name: SQLPutData-Funktion
+      href: sqlputdata-function.md
+    - name: SQLRowCount-Funktion
+      href: sqlrowcount-function.md
+    - name: SQLSetConnectAttr-Funktion
+      href: sqlsetconnectattr-function.md
+    - name: SQLSetConnectOption-Funktion
+      href: sqlsetconnectoption-function.md
+    - name: SQLSetCursorName-Funktion
+      href: sqlsetcursorname-function.md
+    - name: SQLSetDescField-Funktion
+      href: sqlsetdescfield-function.md
+    - name: SQLSetDescRec-Funktion
+      href: sqlsetdescrec-function.md
+    - name: SQLSetEnvAttr-Funktion
+      href: sqlsetenvattr-function.md
+    - name: SQLSetParam-Funktion
+      href: sqlsetparam-function.md
+    - name: SQLSetPos-Funktion
+      href: sqlsetpos-function.md
+    - name: SQLSetScrollOptions-Funktion
+      href: sqlsetscrolloptions-function.md
+    - name: SQLSetStmtAttr-Funktion
+      href: sqlsetstmtattr-function.md
+    - name: SQLSetStmtOption-Funktion
+      href: sqlsetstmtoption-function.md
+    - name: SQLSpecialColumns-Funktion
+      href: sqlspecialcolumns-function.md
+    - name: SQLStatistics-Funktion
+      href: sqlstatistics-function.md
+    - name: SQLTablePrivileges-Funktion
+      href: sqltableprivileges-function.md
+    - name: SQLTables-Funktion
+      href: sqltables-function.md
+    - name: SQLTransact-Funktion
+      href: sqltransact-function.md
+- name: Setup-DLL-API-Referenz
+  href: setup-dll-api-reference.md
+  items:
+    - name: ConfigDriver-Funktion
+      href: configdriver-function.md
+    - name: ConfigDSN-Funktion
+      href: configdsn-function.md
+    - name: ConfigTranslator-Funktion
+      href: configtranslator-function.md
+- name: Installer-DLL-API-Referenz – Funktion
+  href: installer-dll-api-reference-function.md
+  items:
+    - name: SQLConfigDataSource-Funktion
+      href: sqlconfigdatasource-function.md
+    - name: SQLConfigDriver-Funktion
+      href: sqlconfigdriver-function.md
+    - name: SQLCreateDataSource-Funktion
+      href: sqlcreatedatasource-function.md
+    - name: SQLGetConfigMode-Funktion
+      href: sqlgetconfigmode-function.md
+    - name: SQLGetInstalledDrivers-Funktion
+      href: sqlgetinstalleddrivers-function.md
+    - name: SQLGetPrivateProfileString-Funktion
+      href: sqlgetprivateprofilestring-function.md
+    - name: SQLGetTranslator-Funktion
+      href: sqlgettranslator-function.md
+    - name: SQLInstallDriverEx-Funktion
+      href: sqlinstalldriverex-function.md
+    - name: SQLInstallDriverManager-Funktion
+      href: sqlinstalldrivermanager-function.md
+    - name: SQLInstallerError-Funktion
+      href: sqlinstallererror-function.md
+    - name: SQLInstallTranslator-Funktion
+      href: sqlinstalltranslator-function.md
+    - name: SQLInstallTranslatorEx-Funktion
+      href: sqlinstalltranslatorex-function.md
+    - name: SQLManageDataSources
+      href: sqlmanagedatasources.md
+    - name: SQLPostInstallerError-Funktion
+      href: sqlpostinstallererror-function.md
+    - name: SQLReadFileDSN-Funktion
+      href: sqlreadfiledsn-function.md
+    - name: SQLRemoveDefaultDataSource-Funktion
+      href: sqlremovedefaultdatasource-function.md
+    - name: SQLRemoveDriver-Funktion
+      href: sqlremovedriver-function.md
+    - name: SQLRemoveDriverManager-Funktion
+      href: sqlremovedrivermanager-function.md
+    - name: SQLRemoveDSNFromIni-Funktion
+      href: sqlremovedsnfromini-function.md
+    - name: SQLRemoveTranslator-Funktion
+      href: sqlremovetranslator-function.md
+    - name: SQLSetConfigMode-Funktion
+      href: sqlsetconfigmode-function.md
+    - name: SQLValidDSN-Funktion
+      href: sqlvaliddsn-function.md
+    - name: SQLWriteDSNToIni-Funktion
+      href: sqlwritedsntoini-function.md
+    - name: SQLWriteFileDSN-Funktion
+      href: sqlwritefiledsn-function.md
+    - name: SQLWritePrivateProfileString-Funktion
+      href: sqlwriteprivateprofilestring-function.md
+- name: Übersetzungs-DLL-API-Referenz
+  href: translation-dll-api-reference.md
+  items:
+    - name: SQLDataSourceToDriver-Funktion
+      href: sqldatasourcetodriver-function.md
+    - name: SQLDriverToDataSource-Funktion
+      href: sqldrivertodatasource-function.md
+- name: ODBC-Dienstanbieterschnittstelle – Referenz
+  href: odbc-service-provider-interface-spi-reference.md
+  items:
+    - name: SQLCleanupConnectionPoolID-Funktion
+      href: sqlcleanupconnectionpoolid-function.md
+    - name: SQLGetPoolID-Funktion
+      href: sqlgetpoolid-function.md
+    - name: SQLPoolConnect-Funktion
+      href: sqlpoolconnect-function.md
+    - name: SQLRateConnection-Funktion
+      href: sqlrateconnection-function.md
+    - name: SQLSetConnectAttrForDbcInfo-Funktion
+      href: sqlsetconnectattrfordbcinfo-function.md
+    - name: SQLSetConnectInfo-Funktion
+      href: sqlsetconnectinfo-function.md
+    - name: SQLSetDriverConnectInfo-Funktion
+      href: installation-and-configuration-wwi-oltp.md

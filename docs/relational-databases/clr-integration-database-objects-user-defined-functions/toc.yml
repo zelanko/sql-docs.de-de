@@ -1,0 +1,12 @@
+- name: CLR-benutzerdefinierte Funktionen
+  href: clr-user-defined-functions.md
+- name: CLR-Skalarwertfunktionen
+  href: clr-scalar-valued-functions.md
+- name: CLR-Tabellenwertfunktionen
+  href: clr-table-valued-functions.md
+- name: 'Benutzerdefinierte CLR-Aggregate: Aufrufen von Funktionen'
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: 'Benutzerdefinierte CLR-Aggregate: Anforderungen'
+  href: clr-user-defined-aggregates-requirements.md
+- name: Benutzerdefinierte CLR-Aggregate
+  href: clr-user-defined-aggregates.md

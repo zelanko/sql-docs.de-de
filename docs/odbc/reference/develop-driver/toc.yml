@@ -1,0 +1,12 @@
+- name: Entwickeln eines ODBC-Treibers
+  href: developing-an-odbc-driver.md
+- name: ODBC-Treiberarchitektur
+  href: odbc-driver-architecture.md
+- name: Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
+  href: developing-connection-pool-awareness-in-an-odbc-driver.md
+- name: SQLAsyncNotificationCallback-Funktion
+  href: sqlasyncnotificationcallback-function.md
+- name: Benachrichtigung der Asynchronen Funktionsvollendung
+  href: notification-of-asynchronous-function-completion.md
+- name: Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber
+  href: upgrading-a-3-5-driver-to-a-3-8-driver.md

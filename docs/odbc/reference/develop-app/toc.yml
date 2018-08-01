@@ -1,0 +1,622 @@
+- name: Überprüfung der Funktionsunterstützung und Variabilität
+  href: checking-feature-support-and-variability.md
+- name: Funktionszuordnung im Treiber-Manager
+  href: function-mapping-in-the-driver-manager.md
+- name: Binden von Parametermarkern
+  href: binding-parameter-markers.md
+- name: Statusübergänge
+  href: state-transitions.md
+- name: Herstellen einer Verbindung direkt mit Treibern
+  href: connecting-directly-to-drivers.md
+- name: Übereinstimmungsebenen
+  href: conformance-levels.md
+- name: Ziehpunkte
+  href: handles.md
+- name: 'SQL-Anweisungen, die zur Laufzeit erstellt werden'
+  href: sql-statements-constructed-at-run-time.md
+- name: Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
+  href: mapping-replacement-functions-for-backward-compatibility-of-applications.md
+- name: Argumente in Katalogfunktionen
+  href: arguments-in-catalog-functions.md
+- name: Explizit zugewiesene Deskriptoren
+  href: explicitly-allocated-descriptors.md
+- name: Deskriptorfelder
+  href: descriptor-fields.md
+- name: Asynchrone Ausführung
+  href: asynchronous-execution.md
+- name: SQLSTATEs
+  href: sqlstates.md
+- name: Benutzerdefinierte Anwendungen
+  href: custom-applications.md
+- name: Adresse des Datenpuffers
+  href: data-buffer-address.md
+- name: Schemaansichten
+  href: schema-views.md
+- name: Vorbereitete Ausführungs-ODBC
+  href: prepared-execution-odbc.md
+- name: Ausführen von Batches
+  href: executing-batches.md
+- name: Scrollbare Cursor und Transaktionsisolation
+  href: scrollable-cursors-and-transaction-isolation.md
+- name: Aufrufen von SQLCloseCursor
+  href: calling-sqlclosecursor.md
+- name: Deskriptoren
+  href: descriptors.md
+- name: Fehler des Treiber-Managers und Überprüfungen der Warnung
+  href: driver-manager-error-and-warning-checks.md
+- name: Erstellen von SQL-Anweisungen
+  href: constructing-sql-statements.md
+- name: Verbindungspooling des Treiber-Managers
+  href: driver-manager-connection-pooling.md
+- name: Groß-/Kleinschreibung von Bezeichnern
+  href: identifier-case.md
+- name: Schnittstellenübereinstimmung auf Ebene 1
+  href: level-1-interface-conformance.md
+- name: Freigeben einer Anweisungshandle-ODBC
+  href: freeing-a-statement-handle-odbc.md
+- name: Einfügen von Zeilen mit SQLBulkOperations
+  href: inserting-rows-with-sqlbulkoperations.md
+- name: Ablaufverfolgungsdatei
+  href: trace-file.md
+- name: Typen von Deskriptoren
+  href: types-of-descriptors.md
+- name: Dynamische Ablaufverfolgung
+  href: dynamic-tracing.md
+- name: Unicode-Funktionsargumente
+  href: unicode-function-arguments.md
+- name: Senden von Long-Daten
+  href: sending-long-data.md
+- name: Vergleichen von Textmarken
+  href: comparing-bookmarks.md
+- name: Aktualisieren von Daten mit SQLSetPos
+  href: updating-data-with-sqlsetpos.md
+- name: Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber
+  href: connecting-to-a-data-source-or-driver.md
+- name: ODBC-Rückgabecodes
+  href: return-codes-odbc.md
+- name: Verbindungsattribute
+  href: connection-attributes.md
+- name: Ausführen einer Anweisung
+  href: executing-a-statement.md
+- name: Asynchrone Ausführung (Benachrichtigungsmethode)
+  href: asynchronous-execution-notification-method.md
+- name: Herstellen einer Verbindung mit SQLDriverConnect
+  href: connecting-with-sqldriverconnect.md
+- name: Hartcodierte SQL-Anweisungen
+  href: hard-coded-sql-statements.md
+- name: 'Long-Daten, SQLSetPos und SQLBulkOperations'
+  href: long-data-and-sqlsetpos-and-sqlbulkoperations.md
+- name: 'Aktualisieren, Löschen oder Abrufen durch Textmarke'
+  href: updating-deleting-or-fetching-by-bookmark.md
+- name: Binden von Parametern anhand des Namens (benannte Parameter)
+  href: binding-parameters-by-name-named-parameters.md
+- name: Beispiel für die Diagnose von Gateways
+  href: gateways-diagnostic-example.md
+- name: Konstruieren von interoperablen SQL­-Anweisungen
+  href: constructing-interoperable-sql-statements.md
+- name: Konsistenzprüfung
+  href: consistency-check.md
+- name: Dynamische ODBC-Cursor
+  href: odbc-dynamic-cursors.md
+- name: Allgemeine Anwendungen
+  href: generic-applications.md
+- name: Standarddatenquelle
+  href: default-data-source.md
+- name: Direkte Ausführung – ODBC
+  href: direct-execution-odbc.md
+- name: Scrollbare Cursortypen
+  href: scrollable-cursor-types.md
+- name: Aufforderung an Benutzer zur Eingabe von Verbindungsinformationen
+  href: prompting-the-user-for-connection-information.md
+- name: Aktualisieren von Zeilen im Rowset mit SQLSetPos
+  href: updating-rows-in-the-rowset-with-sqlsetpos.md
+- name: Festlegen von Deskriptorfeldern
+  href: setting-descriptor-fields.md
+- name: Verwendung von Katalogdaten
+  href: uses-of-catalog-data.md
+- name: Transaktionsunterstützung.
+  href: transaction-support.md
+- name: Vertikale Anwendungen
+  href: vertical-applications.md
+- name: Abrufen von Datentypinformationen mit SQLGetTypeInfo
+  href: retrieving-data-type-information-with-sqlgettypeinfo.md
+- name: Anwendungstypen
+  href: types-of-applications.md
+- name: Datentypkonvertierungen
+  href: data-type-conversions.md
+- name: Headerdatensatz
+  href: header-record.md
+- name: Escapesequenzen in ODBC
+  href: escape-sequences-in-odbc.md
+- name: Multithreading
+  href: multithreading.md
+- name: Parametermarker in Prozeduraufrufen
+  href: parameter-markers-in-procedure-calls.md
+- name: Textmarkentypen
+  href: bookmark-types.md
+- name: Rolle des Treibers
+  href: role-of-the-driver.md
+- name: Aktualisieren von Zeilen durch Textmarken mit SQLBulkOperations
+  href: updating-rows-by-bookmark-with-sqlbulkoperations.md
+- name: Zuordnen eines ODBC-Verbindungshandles
+  href: allocating-a-connection-handle-odbc.md
+- name: C-Datentypen in ODBC
+  href: c-data-types-in-odbc.md
+- name: Autocommitmodus
+  href: auto-commit-mode.md
+- name: Zuordnen und Freigeben von Deskriptoren
+  href: allocating-and-freeing-descriptors.md
+- name: Verwenden von scrollbaren Cursor
+  href: using-scrollable-cursors.md
+- name: Ausführen von Katalogfunktionen
+  href: executing-catalog-functions.md
+- name: Binden von Spalten
+  href: binding-columns.md
+- name: Durchscrollen und Abrufen von Zeilen (ODBC)
+  href: scrolling-and-fetching-rows-odbc.md
+- name: Änderungen des Datentyps „datetime“
+  href: datetime-data-type-changes.md
+- name: SQLDescribeCol und SQLColAttribute
+  href: sqldescribecol-and-sqlcolattribute.md
+- name: Abrufen der Werte in Deskriptorfeldern
+  href: retrieving-the-values-in-descriptor-fields.md
+- name: Ist ODBC die Antwort?
+  href: is-odbc-the-answer.md
+- name: Äußere Verknüpfungen
+  href: outer-joins.md
+- name: ODBC-Grundlagen
+  href: odbc-fundamentals.md
+- name: Abrufen von Ergebnissen (Erweitert)
+  href: retrieving-results-advanced.md
+- name: Funktionsübereinstimmung
+  href: function-conformance.md
+- name: Bezeichnerargumente
+  href: identifier-arguments.md
+- name: Einrichten des Cursors
+  href: setting-up-the-cursor.md
+- name: Festlegen des Commitmodus
+  href: setting-the-commit-mode.md
+- name: Abwärtskompatibilität und Einhaltung von Standards
+  href: backward-compatibility-and-standards-compliance.md
+- name: Transaktions-ODBC
+  href: transactions-odbc.md
+- name: Headerdateien
+  href: header-files.md
+- name: Simulieren von positionierten Aktualisierungen und DELETE-Anweisungen
+  href: simulating-positioned-update-and-delete-statements.md
+- name: Herstellen einer Verbindung mit SQLConnect
+  href: connecting-with-sqlconnect.md
+- name: Beispiel für die Diagnose des Treiber-Managers
+  href: driver-manager-diagnostic-example.md
+- name: 'Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute'
+  href: driver-specific-data-types-descriptor-information-diagnostic.md
+- name: Unicode-Daten
+  href: unicode-data.md
+- name: Schnittstellenübereinstimmung auf Kernebene
+  href: core-interface-conformance.md
+- name: Grundlegende Schritte für die ODBC-Anwendung
+  href: basic-odbc-application-steps.md
+- name: Neue Funktionen
+  href: new-features.md
+- name: Unterstützte Datentypen
+  href: supported-data-types.md
+- name: SQL-Datentypen in ODBC
+  href: sql-data-types-in-odbc.md
+- name: Beispiel für die Diagnose des DBMS-basierten Treibers
+  href: dbms-based-driver-diagnostic-example.md
+- name: Ausführen von Prozeduren
+  href: executing-procedures.md
+- name: Mehrere aktive Anweisungen und Verbindungen
+  href: multiple-active-statements-and-connections.md
+- name: Diagnosetools
+  href: diagnostic-tools.md
+- name: Mehrere Ergebnisse
+  href: multiple-results.md
+- name: Abrufen von Textmarken
+  href: retrieving-bookmarks.md
+- name: Erstellen und Beenden von Threads
+  href: creating-and-terminating-threads.md
+- name: Normale Argumente
+  href: ordinary-arguments.md
+- name: Verhaltensänderungen
+  href: behavioral-changes.md
+- name: Standardkonforme Anwendungen und Treiber
+  href: standards-compliant-applications-and-drivers.md
+- name: Anzahl von abgerufenen Zeilen und Status
+  href: number-of-rows-fetched-and-status.md
+- name: Implizit zugewiesene Deskriptoren
+  href: implicitly-allocated-descriptors.md
+- name: Zuordnen der Informationstypen „Cursor Attributes1“
+  href: mapping-the-cursor-attributes1-information-types.md
+- name: 'Umgebungs-, Verbindungs- und Anweisungsattribute'
+  href: environment-connection-and-statement-attributes.md
+- name: Optimistische Nebenläufigkeit
+  href: optimistic-concurrency.md
+- name: Manualcommitmodus
+  href: manual-commit-mode.md
+- name: Gemischte Cursor
+  href: mixed-cursors.md
+- name: Schreiben von ODBC-3.x-Treibern
+  href: writing-odbc-3-x-drivers.md
+- name: Arrays für Parameterwerte
+  href: arrays-of-parameter-values.md
+- name: ODBC in Windows
+  href: odbc-in-windows.md
+- name: Diagnosemeldungen
+  href: diagnostic-messages.md
+- name: DDL-Anweisungen
+  href: ddl-statements.md
+- name: Commit-Modus
+  href: commit-mode.md
+- name: Kopieren von Deskriptoren
+  href: copying-descriptors.md
+- name: Abrufen von Deskriptorhandles
+  href: obtaining-descriptor-handles.md
+- name: Diagnosedatensätze
+  href: diagnostic-records.md
+- name: Prozeduren (ODBC)
+  href: procedures-odbc.md
+- name: Umgebungshandles
+  href: environment-handles.md
+- name: Herstellen einer Verbindung
+  href: establishing-a-connection.md
+- name: Asynchrone Ausführung (Abrufmethode)
+  href: asynchronous-execution-polling-method.md
+- name: Vom ODBC-Treiber-Manager generierte Ereignisse
+  href: events-generated-by-the-odbc-driver-manager.md
+- name: Schreiben einer interoperablen Anwendung
+  href: writing-an-interoperable-application.md
+- name: Zuweisen und Freigeben von Puffern
+  href: allocating-and-freeing-buffers.md
+- name: Spaltenbezogenes Binden
+  href: column-wise-binding.md
+- name: Treibertypen
+  href: types-of-drivers.md
+- name: Argumente der Werteliste
+  href: value-list-arguments.md
+- name: Katalog- und Schemaverwendung
+  href: catalog-and-schema-usage.md
+- name: Verwenden von Längen- und Indikatorwerten
+  href: using-length-and-indicator-values.md
+- name: Aufrufen von SQLSetPos
+  href: calling-sqlsetpos.md
+- name: 'Schritt 1: Herstellen der Verbindung mit der Datenquelle'
+  href: step-1-connect-to-the-data-source.md
+- name: Trennen der Verbindung mit einer Datenquelle oder einem Treiber
+  href: disconnecting-from-a-data-source-or-driver.md
+- name: 'Blockcursor, scrollbare Cursor und Abwärtskompatibilität für ODBC 3.x-Anwendungen'
+  href: block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md
+- name: Katalogfunktionen
+  href: catalog-functions.md
+- name: Ausführen von Commits und Rollbacks von Transaktionen
+  href: committing-and-rolling-back-transactions.md
+- name: Verwendung von Prozeduren
+  href: when-to-use-procedures.md
+- name: Rolle des Treiber-Managers
+  href: role-of-the-driver-manager.md
+- name: Abrufen von Ausgabeparametern mithilfe von SQLGetData
+  href: retrieving-output-parameters-using-sqlgetdata.md
+- name: Unicode-Anwendungen
+  href: unicode-applications.md
+- name: SQL-Anweisungen
+  href: sql-statements.md
+- name: Ablaufverfolgung
+  href: tracing.md
+- name: 'Schritt 4a: Abrufen der Ergebnisse'
+  href: step-4a-fetch-the-results.md
+- name: Die Rolle des Treiber-Managers im Verbindungsprozess
+  href: driver-manager-s-role-in-the-connection-process.md
+- name: Zuordnen des Umgebungshandles
+  href: allocating-the-environment-handle.md
+- name: Deskriptorhandles
+  href: descriptor-handles.md
+- name: Batches von SQL-Anweisungen
+  href: batches-of-sql-statements.md
+- name: Aktualisieren von Daten mit SQLBulkOperations
+  href: updating-data-with-sqlbulkoperations.md
+- name: Parallelitätssteuerung
+  href: concurrency-control.md
+- name: Binden von Parametern (ODBC)
+  href: binding-parameters-odbc.md
+- name: Regeln der Diagnosebehandlung
+  href: diagnostic-handling-rules.md
+- name: Datentypen in ODBC
+  href: data-types-in-odbc.md
+- name: Tabellen und Sichten
+  href: tables-and-views.md
+- name: Bezeichner in Anführungszeichen
+  href: quoted-identifiers.md
+- name: Datenpufferlänge
+  href: data-buffer-length.md
+- name: Verbindungszeichenfolgen
+  href: connection-strings.md
+- name: Betroffene ODBC-Komponenten
+  href: affected-odbc-components.md
+- name: Wie werden Metadaten verwendet?
+  href: how-is-metadata-used.md
+- name: Cursoreigenschaften und Cursortyp
+  href: cursor-characteristics-and-cursor-type.md
+- name: Versionsnummer
+  href: version-number.md
+- name: SQLSTATE-Zuordnungen
+  href: sqlstate-mappings.md
+- name: SQL Server-Suchbeispiel
+  href: sql-server-browsing-example.md
+- name: Fehler und Batches
+  href: errors-and-batches.md
+- name: Resultsetmetadaten
+  href: result-set-metadata.md
+- name: Abrufen von Long-Daten
+  href: getting-long-data.md
+- name: Herstellen einer Verbindung mit SQLBrowseConnect
+  href: connecting-with-sqlbrowseconnect.md
+- name: Deskriptorfeldübereinstimmung
+  href: descriptor-field-conformance.md
+- name: 'Schritt 6: Trennen der Verbindung mit der Datenquelle'
+  href: step-6-disconnect-from-the-data-source.md
+- name: Änderungstypen
+  href: types-of-changes.md
+- name: Überlegungen zur Programmierung
+  href: programming-considerations.md
+- name: Visual Studio Analyzer
+  href: visual-studio-analyzer.md
+- name: Anweisungshandles
+  href: statement-handles.md
+- name: Festlegen der Transaktionsisolationsstufe
+  href: setting-the-transaction-isolation-level.md
+- name: Doppelte Funktionen
+  href: duplicated-features.md
+- name: Rowsetgröße
+  href: rowset-size.md
+- name: Katalogposition
+  href: catalog-position.md
+- name: Zurückgestellte Felder
+  href: deferred-fields.md
+- name: Ablaufverfolgungs-DLL
+  href: trace-dll.md
+- name: Verwenden von Parameterarrays
+  href: using-arrays-of-parameters.md
+- name: Erwägen der zu verwendenden Datenbankfunktionen
+  href: considering-database-features-to-use.md
+- name: Escapesequenzen
+  href: escape-sequences.md
+- name: Anweisungsparameter
+  href: statement-parameters.md
+- name: Datenpuffertyp
+  href: data-buffer-type.md
+- name: Beispiele für die Diagnosebehandlung
+  href: diagnostic-handling-examples.md
+- name: Gebundene Deskriptordatensätze
+  href: bound-descriptor-records.md
+- name: Prozedurparameter
+  href: procedure-parameters.md
+- name: Treiberfähiges Verbindungspooling
+  href: driver-aware-connection-pooling.md
+- name: Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen
+  href: effect-of-transactions-on-cursors-and-prepared-statements.md
+- name: 'UPDATE-, DELETE- und INSERT-Anweisungen'
+  href: update-delete-and-insert-statements.md
+- name: Zeilenbezogenes Binden
+  href: row-wise-binding.md
+- name: Verwenden von SQLGetDiagRec und SQLGetDiagField
+  href: using-sqlgetdiagrec-and-sqlgetdiagfield.md
+- name: Katalogfunktionen in ODBC
+  href: catalog-functions-in-odbc.md
+- name: Schließen des Cursors
+  href: closing-the-cursor.md
+- name: Auswählen einer SQL-Grammatik
+  href: choosing-an-sql-grammar.md
+- name: Länge des Produktzyklus
+  href: length-of-the-product-cycle.md
+- name: Zuordnen eines ODBC-Anweisungshandles
+  href: allocating-a-statement-handle-odbc.md
+- name: Anweisungsattribute
+  href: statement-attributes.md
+- name: Binden von Resultsetspalten
+  href: binding-result-set-columns.md
+- name: Zeilenstatusarray
+  href: row-status-array.md
+- name: Statusdatensätze
+  href: status-records.md
+- name: Wurde ein Resultset erstellt?
+  href: was-a-result-set-created.md
+- name: Aktivieren der Ablaufverfolgung
+  href: enabling-tracing.md
+- name: Testen von interoperablen Anwendungen
+  href: testing-interoperable-applications.md
+- name: Scrollen durch Textmarken
+  href: scrolling-by-bookmark.md
+- name: Anzahl der Datensätze
+  href: record-count.md
+- name: Parallelitätstypen
+  href: concurrency-types.md
+- name: Löschen von Zeilen durch Textmarken mit SQLBulkOperations
+  href: deleting-rows-by-bookmark-with-sqlbulkoperations.md
+- name: Diagnose
+  href: diagnostics.md
+- name: Interoperabilität
+  href: interoperability.md
+- name: Puffer
+  href: buffers.md
+- name: Aktivieren von Visual Studio Analyzer
+  href: enabling-visual-studio-analyzer.md
+- name: NOT NULL in CREATE TABLE-Anweisungen
+  href: not-null-in-create-table-statements.md
+- name: Batchverarbeitung
+  href: batch-processing.md
+- name: Relatives und absolutes Scrollen
+  href: relative-and-absolute-scrolling.md
+- name: Aufrufen von SQLGetDiagField
+  href: calling-sqlgetdiagfield.md
+- name: Unicode-Treiber
+  href: unicode-drivers.md
+- name: Interoperabilität von SQL-Anweisungen
+  href: interoperability-of-sql-statements.md
+- name: 'Schritt 4b: Abrufen der Zeilenanzahl'
+  href: step-4b-fetch-the-row-count.md
+- name: Zeichendaten und C-Zeichenfolgen
+  href: character-data-and-c-strings.md
+- name: Von Katalogfunktionen zurückgegebene Daten
+  href: data-returned-by-catalog-functions.md
+- name: Abrufen und Festlegen von Deskriptorfeldern
+  href: getting-and-setting-descriptor-fields.md
+- name: Übersetzungs-DLLs
+  href: translation-dlls.md
+- name: Überprüfungen des Argumentwerts
+  href: argument-value-checks.md
+- name: Treiberspezifische Verbindungsinformationen
+  href: driver-specific-connection-information.md
+- name: Festlegen der Cursorfähigkeiten
+  href: determining-cursor-capabilities.md
+- name: SQL-Übereinstimmungsebenen
+  href: sql-conformance-levels.md
+- name: Transaktionsisolation
+  href: transaction-isolation.md
+- name: Attributübereinstimmung
+  href: attribute-conformance.md
+- name: Die ODBC-Cursorbibliothek
+  href: the-odbc-cursor-library.md
+- name: Verwenden präziser Funktionen
+  href: using-concise-functions.md
+- name: Freigeben von Deskriptoren
+  href: freeing-descriptors.md
+- name: Löschen von Zeilen im Rowset mit SQLSetPos
+  href: deleting-rows-in-the-rowset-with-sqlsetpos.md
+- name: 'Schritt 5: Ausführen eines Commits für die Transaktion'
+  href: step-5-commit-the-transaction.md
+- name: Offsets der Parameterbindung
+  href: parameter-binding-offsets.md
+- name: ODBC-SQL-Grammatik
+  href: odbc-sql-grammar.md
+- name: Herstellen einer Verbindung mithilfe von Dateidatenquellen
+  href: connecting-using-file-data-sources.md
+- name: Anweisungen mit generiertem Ergebnis und ohne Ergebnis
+  href: result-generating-and-result-free-statements.md
+- name: Schnittstellenübereinstimmung auf Ebene 2
+  href: level-2-interface-conformance.md
+- name: Transaktionen in ODBC
+  href: transactions-in-odbc-odbc.md
+- name: Scrollbare Cursor
+  href: scrollable-cursors.md
+- name: Ebenen der Schnittstellenübereinstimmung
+  href: interface-conformance-levels.md
+- name: 'Datums-, Zeit- und Zeitstempelliterale'
+  href: date-time-and-timestamp-literals.md
+- name: Commit- und Rollbackverhalten
+  href: commit-and-rollback-behavior.md
+- name: Verwenden von Blockcursorn
+  href: using-block-cursors.md
+- name: Literalpräfixe und -suffixe
+  href: literal-prefixes-and-suffixes.md
+- name: Statische ODBC-Cursor
+  href: odbc-static-cursors.md
+- name: 'Datenlänge, Pufferlänge und Abschneiden'
+  href: data-length-buffer-length-and-truncation.md
+- name: Anwendungs- und Treiberkompatibilität
+  href: application-and-driver-compatibility.md
+- name: Ermitteln der Ziel-DBMS und Zieltreiber
+  href: determining-the-target-dbmss-and-drivers.md
+- name: 'Schritt 2: Initialisieren der Anwendung'
+  href: step-2-initialize-the-application.md
+- name: Binden von Spalten für die Verwendung mit Blockcursorn
+  href: binding-columns-for-use-with-block-cursors.md
+- name: SQL-Typenbezeichner
+  href: sql-type-identifiers.md
+- name: Auswählen einer Interoperabilitätsebene
+  href: choosing-a-level-of-interoperability.md
+- name: Bestimmen der Anzahl der betroffenen Zeilen
+  href: determining-the-number-of-affected-rows.md
+- name: Initialisierung der Deskriptorfelder
+  href: initialization-of-descriptor-fields.md
+- name: Typenbezeichner
+  href: type-identifiers.md
+- name: Textmarken (ODBC)
+  href: bookmarks-odbc.md
+- name: Argumente des Musterwerts
+  href: pattern-value-arguments.md
+- name: Blockcursor
+  href: block-cursors.md
+- name: Schreiben von ODBC-3.x-Anwendungen
+  href: writing-odbc-3-x-applications.md
+- name: CString-Klasse
+  href: cstring-class.md
+- name: Escapezeichen des LIKE-Prädikats
+  href: like-predicate-escape-character.md
+- name: Verwenden von SQLBindCol
+  href: using-sqlbindcol.md
+- name: Abrufen einer Datenzeile
+  href: fetching-a-row-of-data.md
+- name: Prozeduraufrufe
+  href: procedure-calls.md
+- name: Serialisierbarkeit
+  href: serializability.md
+- name: Festlegen von Parameterwerten
+  href: setting-parameter-values.md
+- name: 'Schritt 3: Erstellen und Ausführen einer SQL­Anweisung'
+  href: step-3-build-and-execute-an-sql-statement.md
+- name: SQLGetData und Blockcursor
+  href: sqlgetdata-and-block-cursors.md
+- name: Verbindungshandles
+  href: connection-handles.md
+- name: Implementieren von SQLGetDiagRec und SQLGetDiagField
+  href: implementing-sqlgetdiagrec-and-sqlgetdiagfield.md
+- name: Beschreiben von Parametern
+  href: describing-parameters.md
+- name: Automatische Auffüllung des IPD
+  href: automatic-population-of-the-ipd.md
+- name: Unicode
+  href: unicode.md
+- name: Aufrufe von Skalarfunktionen
+  href: scalar-function-calls.md
+- name: Auswählen einer Datenquelle oder eines Treibers
+  href: choosing-a-data-source-or-driver.md
+- name: Vom Benutzer eingegebene SQL-Anweisungen
+  href: sql-statements-entered-by-the-user.md
+- name: Transaktionsunterstützung in DBMS
+  href: transaction-support-in-dbmss.md
+- name: Zu überwachende Funktionen
+  href: features-to-watch-for.md
+- name: Abrufen von Zeilen mit SQLBulkOperations
+  href: fetching-rows-with-sqlbulkoperations.md
+- name: Positionierte Aktualisierung und DELETE-Anweisungen
+  href: positioned-update-and-delete-statements.md
+- name: Sequenz der Statusdatensätze
+  href: sequence-of-status-records.md
+- name: Entwickeln von Anwendungen
+  href: developing-applications.md
+- name: Transaktionsisolationsstufen
+  href: transaction-isolation-levels.md
+- name: Überprüfungen auf allgemeine Fehler
+  href: general-error-checks.md
+- name: Cursor
+  href: cursors.md
+- name: Ausführen von ODBC-Anweisungen
+  href: executing-statements-odbc.md
+- name: Deklarieren der ODBC-Version der Anwendung
+  href: declaring-the-application-s-odbc-version.md
+- name: SQL_NO_DATA
+  href: sql-no-data.md
+- name: Überprüfungen des Statusübergangs
+  href: state-transition-checks.md
+- name: Verwenden von Datenpuffern
+  href: using-data-buffers.md
+- name: Ausrichtung
+  href: alignment.md
+- name: Kompatibilitätsmatrix
+  href: compatibility-matrix.md
+- name: Aktualisieren einer Datenübersicht
+  href: updating-data-overview.md
+- name: Beispiel für die Diagnose des dateibasierten Treibers
+  href: file-based-driver-diagnostic-example.md
+- name: Abrufen von Ergebnissen (Standard)
+  href: retrieving-results-basic.md
+- name: Cursorbibliotheksvorgänge
+  href: cursor-library-operations.md
+- name: Abrufen von Daten
+  href: fetching-data.md
+- name: Binden von Parameterarrays
+  href: binding-arrays-of-parameters.md
+- name: Zurückgestellte Puffer
+  href: deferred-buffers.md
+- name: Keysetgesteuerte Cursor
+  href: keyset-driven-cursors.md

@@ -1,0 +1,8 @@
+- name: Verwalten von Text und Imagespalten
+  href: managing-text-and-image-columns.md
+- name: Vergleich von gebundenen und ungebundenen Text- und Image-Spalten
+  href: bound-vs-unbound-text-and-image-columns.md
+- name: 'Data-at-Execution und Text-, ntext- oder Imagespalten'
+  href: data-at-execution-and-text-ntext-or-image-columns.md
+- name: Vergleich von protokollierten und nicht protokollierten Änderungen
+  href: logged-vs-unlogged-modifications.md

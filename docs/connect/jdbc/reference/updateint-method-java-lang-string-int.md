@@ -1,5 +1,5 @@
 ---
-title: UpdateInt-Methode (java.lang.String, Int) | Microsoft Docs
+title: updateInt-Methode (java.lang.String, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62560202d4808bda26431044e5bf50720f6823b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983439"
 ---
 # <a name="updateint-method-javalangstring-int"></a>updateInt-Methode (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **Int** Wert Berücksichtigung des Spaltennamens.  
+  Aktualisiert die angegebene Spalte mit einem **ganzzahligen Wert** unter Berücksichtigung des Spaltennamens.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ public void updateInt(java.lang.String columnName,
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
  *x*  
   
@@ -51,11 +51,11 @@ public void updateInt(java.lang.String columnName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese UpdateInt-Methode wird von der UpdateInt-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateInt-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateInt-Methode (SQLServerResultSet)](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

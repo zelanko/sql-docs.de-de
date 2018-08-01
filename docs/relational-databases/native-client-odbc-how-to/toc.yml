@@ -1,0 +1,52 @@
+- name: ODBC How-to Topics
+  href: odbc-how-to-topics.md
+- name: Unterbereiche
+  items:
+    - name: Ausführen von Abfragen +
+      href: ../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+    - name: Cursor +
+      href: ../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+    - name: Massenkopieren +
+      href: ../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
+  href: allocate-handles-and-connect-to-sql-server-odbc.md
+- name: Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
+  href: call-sqlcolumns-on-a-table-with-sparse-columns.md
+- name: 'Konfigurieren des SQL Server-ODBC-Treibers: Hinzufügen einer Datenquelle'
+  href: configuring-the-sql-server-odbc-driver-add-a-data-source.md
+- name: 'Konfigurieren des SQL Server-ODBC-Treibers: Löschen einer Datenquelle'
+  href: configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+- name: Einrichten der gegenseitigen Kerberos-Authentifizierung
+  href: get-mutual-kerberos-authentication.md
+- name: 'Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)'
+  href: how-to-insert-rows-into-geography-column-odbc.md
+- name: 'Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Spalten'
+  href: managing-text-and-image-columns-use-data-at-execution-columns.md
+- name: 'Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Parametern'
+  href: managing-text-and-image-columns-use-data-at-execution-parameters.md
+- name: Verarbeiten von ODBC-Fehlern (ODBC)
+  href: process-odbc-errors-odbc.md
+- name: 'Verarbeiten von Ergebnissen: Prozessergebnisse'
+  href: processing-results-process-results.md
+- name: 'Verarbeiten von Ergebnissen: Abrufen von Resultsetinformationen'
+  href: processing-results-retrieve-result-set-information.md
+- name: Profilerstellung der ODBC-Treiberleistung (ODBC)
+  href: profiling-odbc-driver-performance-odbc.md
+- name: 'Profilerstellung von ODBC-Treiberleistungsdaten: Protokollieren von lang ausgeführten Abfragen'
+  href: profiling-odbc-driver-performance-data-log-long-running-queries.md
+- name: Profilerstellung von ODBC-Treiberleistungsdaten
+  href: profiling-odbc-driver-performance-data.md
+- name: 'Ausführen gespeicherter Prozeduren: Aufrufen gespeicherter Prozeduren'
+  href: running-stored-procedures-call-stored-procedures.md
+- name: 'Ausführen gespeicherter Prozeduren: Verarbeiten von Rückgabecodes und Ausgabeparametern'
+  href: running-stored-procedures-process-return-codes-and-output-parameters.md
+- name: Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
+  href: send-and-receive-data-incrementally-with-filestream-odbc.md
+- name: Unterstützung für große UDTs
+  href: support-for-large-udts.md
+- name: Verwenden von Datums- und Uhrzeittypen
+  href: use-date-and-time-types.md
+- name: Verwenden von Microsoft Distributed Transaction Coordinator (ODBC)
+  href: use-microsoft-distributed-transaction-coordinator-odbc.md
+- name: Verwenden von Tabellenwertparametern (ODBC)
+  href: use-table-valued-parameters-odbc.md

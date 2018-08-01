@@ -1,0 +1,78 @@
+- name: Instanzverwaltung
+  href: analysis-services-instance-management.md
+- name: Install
+  href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+- name: Überprüfen der Buildversion für kumulierte Updates für Analysis Services
+  href: analysis-services-component-version.md
+- name: Konfiguration nach der Installation
+  href: post-install-configuration-analysis-services.md
+  items:
+    - name: Konfigurieren der Windows-Firewall
+      href: configure-the-windows-firewall-to-allow-analysis-services-access.md
+    - name: Konfigurieren des Dienstkontos
+      href: configure-service-accounts-analysis-services.md
+    - name: Hinzufügen von Administratoren
+      href: grant-server-admin-rights-to-an-analysis-services-instance.md
+    - name: Standardmäßig deaktivierte Funktionen
+      href: features-off-by-default-analysis-services.md
+    - name: Servergruppen in SSMS
+      href: register-an-analysis-services-instance-in-a-server-group.md
+    - name: Bestimmen des Servermodus
+      href: determine-the-server-mode-of-an-analysis-services-instance.md
+    - name: Umbenennen einer Analysis Services-Instanz
+      href: rename-an-analysis-services-instance.md
+- name: Verbindung mit Analysis Services herstellen
+  href: connect-to-analysis-services.md
+  items:
+    - name: Herstellen einer Verbindung von Clientanwendungen
+      href: connect-from-client-applications-analysis-services.md
+    - name: Connection String Properties
+      href: connection-string-properties-analysis-services.md
+    - name: Authentifizierungsmethoden
+      href: authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos-Authentifizierung
+      href: configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN-Registrierung
+      href: spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP-Zugriff
+      href: configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: Clientbibliotheken (Datenanbieter)
+      href: data-providers-used-for-analysis-services-connections.md
+    - name: Trennen von Benutzern und Sitzungen
+      href: disconnect-users-and-sessions-on-analysis-services-server.md
+- name: Überwachen von Analysis Services
+  items:
+    - name: SQL Server Profiler
+      href: use-sql-server-profiler-to-monitor-analysis-services.md
+      items:
+        - name: Überwachung von Analysis Services mit SQL Server Profiler
+          href: introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: Erstellen von Profiler-Ablaufverfolgungen für Replay
+          href: create-profiler-traces-for-replay-analysis-services.md
+    - name: Erweiterte Ereignisse
+      href: monitor-analysis-services-with-sql-server-extended-events.md
+    - name: Dynamische Verwaltungssichten (DMVs)
+      href: use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+    - name: Performance Counters
+      href: performance-counters-ssas.md
+    - name: Löschen des Zwischenspeichers von Analysis Services
+      href: clear-the-analysis-services-caches.md
+- name: Skriptverwaltungsaufgaben
+  items:
+    - name: Erstellen von Skripts in Management Studio
+      href: create-analysis-services-scripts-in-management-studio.md
+      items:
+        - name: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
+          href: use-analysis-services-templates-in-sql-server-management-studio.md
+        - name: Verwenden des Analysis Services-Skriptprojekts in Management Studio
+          href: analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: Planen von administrativen Tasks mithilfe von SQL Server-Agent
+      href: schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: Automatisieren von administrativen Tasks mit SSIS
+      href: automate-analysis-services-administrative-tasks-with-ssis.md
+- name: Hohe Verfügbarkeit und Skalierbarkeit
+  href: high-availability-and-scalability-in-analysis-services.md
+- name: Protokollierung in Analysis Services
+  href: log-operations-in-analysis-services.md
+- name: DBCC für Analysis Services
+  href: database-consistency-checker-dbcc-for-analysis-services.md

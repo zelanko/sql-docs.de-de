@@ -1,0 +1,12 @@
+- name: WMI-Anbieter für die Konfigurationsverwaltung
+  href: wmi-provider-for-configuration-management.md
+- name: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit VBScript
+  href: access-wmi-provider-for-configuration-management-using-vbscript.md
+- name: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
+  href: access-wmi-provider-for-configuration-management-using-wql.md
+- name: Grundlegendes zum WMI-Anbieter für die Konfigurationsverwaltung
+  href: understanding-the-wmi-provider-for-configuration-management.md
+- name: Verwenden von WQL und Skriptsprachen mit dem WMI-Anbieter
+  href: using-wql-and-scripting-languages-with-the-wmi-provider.md
+- name: Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
+  href: working-with-the-wmi-provider-for-configuration-management.md

@@ -1,0 +1,12 @@
+- name: OLE DB-Treiber für SQL Server – Fehler
+  href: errors.md
+- name: Informationen in Fehlerschnittstellen
+  href: information-in-error-interfaces.md
+- name: Abrufen von Fehlerinformationen
+  href: retrieving-error-information.md
+- name: Rückgabecodes
+  href: return-codes.md
+- name: SQL Server-Fehlerdetail
+  href: sql-server-error-detail.md
+- name: SQL Server-Meldungsergebnisse
+  href: sql-server-message-results.md

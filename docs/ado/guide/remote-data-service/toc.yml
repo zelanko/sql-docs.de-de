@@ -1,0 +1,110 @@
+- name: Remote Data Service (RDS)
+  href: remote-data-service-rds.md
+- name: Grundlegendes zu RDS
+  href: rds-fundamentals.md
+  items:
+    - name: Lösungen für den Remotedatenzugriff
+      href: solutions-for-remote-data-access.md
+    - name: Grundlegendes RDS-Programmiermodell
+      href: basic-rds-programming-model.md
+    - name: RDS-Programmiermodell im Detail
+      href: rds-programming-model-in-detail.md
+    - name: RDS-Programmiermodell mit Objekten
+      href: rds-programming-model-with-objects.md
+    - name: Zusammenfassung zum RDS-Objektmodell
+      href: rds-object-model-summary.md
+    - name: RDS-Szenario
+      href: rds-scenario.md
+      items:
+        - name: Systemanforderungen für die Adress Book-Anwendung
+          href: system-requirements-for-the-address-book-application.md
+        - name: Ausführen des Adress Book-SQL-Skripts
+          href: running-the-address-book-sql-script.md
+        - name: Ausführen der Adress Book-Beispielanwendung
+          href: running-the-address-book-sample-application.md
+        - name: Adress Book-Datenbindungsobjekt
+          href: address-book-data-binding-object.md
+        - name: Adress Book-Befehlsschaltflächen
+          href: address-book-command-buttons.md
+        - name: Adress Book-Navigationsschaltflächen
+          href: address-book-navigation-buttons.md
+- name: RDS-Tutorial
+  href: rds-tutorial.md
+  items:
+    - name: 'Schritt 1: Serverprogramm angeben (RDS-Tutorial)'
+      href: step-1-specify-a-server-program-rds-tutorial.md
+    - name: 'Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)'
+      href: step-2-invoke-the-server-program-rds-tutorial.md
+    - name: 'Schritt 3: Server ruft ein Recordset ab (RDS-Tutorial)'
+      href: step-3-server-obtains-a-recordset-rds-tutorial.md
+    - name: 'Schritt 4: Server gibt das Recordset zurück (RDS-Tutorial)'
+      href: step-4-server-returns-the-recordset-rds-tutorial.md
+    - name: 'Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)'
+      href: step-5-datacontrol-is-made-usable-rds-tutorial.md
+    - name: 'Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)'
+      href: step-6-changes-are-sent-to-the-server-rds-tutorial.md
+    - name: RDS-Tutorial (VBScript)
+      href: rds-tutorial-vbscript.md
+- name: Verwendung und Sicherheit von RDS
+  href: rds-usage-and-security.md
+  items:
+    - name: Konfigurieren von RDS
+      href: configuring-rds.md
+      items:
+        - name: Gewähren von Gastberechtigungen für einen Webservercomputer
+          href: granting-guest-privileges-to-a-web-server-computer.md
+        - name: Registrieren eines benutzerdefinierten Geschäftsobjekts
+          href: registering-a-custom-business-object.md
+        - name: Markieren von Geschäftsobjekten als sicher für das Skripting
+          href: marking-business-objects-as-safe-for-scripting.md
+        - name: Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM
+          href: registering-business-objects-on-the-client-for-use-with-dcom.md
+        - name: Festlegen des DCOM-Datenstrom-Marshalling-Formats
+          href: setting-dcom-stream-marshaling-format.md
+        - name: Aktivieren einer DLL zur Ausführung unter DCOM
+          href: enabling-a-dll-to-run-on-dcom.md
+        - name: Konfigurieren von virtuellen Servern unter IIS
+          href: configuring-virtual-servers-on-iis.md
+        - name: Schützen von RDS-Anwendungen
+          href: securing-rds-applications.md
+        - name: Konfigurieren von DataFactory für den sicheren oder den uneingeschränkten Modus
+          href: configuring-datafactory-for-safe-or-unrestricted-modes.md
+    - name: Verwenden von verwandten Technologien mit RDS
+      href: using-related-technologies-with-rds.md
+      items:
+        - name: Verwenden von RDS mit ODBC-Verbindungspooling
+          href: using-rds-with-odbc-connection-pooling.md
+        - name: Ausführen von Geschäftsobjekten in Komponentendiensten
+          href: running-business-objects-in-component-services.md
+    - name: DataFactory-Anpassung
+      href: datafactory-customization.md
+      items:
+        - name: Grundlegendes zur Anpassungsdatei
+          href: understanding-the-customization-file.md
+        - name: Connect-Abschnitt der Anpassungsdatei
+          href: customization-file-connect-section.md
+        - name: SQL-Abschnitt der Anpassungsdatei
+          href: customization-file-sql-section.md
+        - name: UserList-Abschnitt der Anpassungsdatei
+          href: customization-file-userlist-section.md
+        - name: Logs-Abschnitt der Anpassungsdatei
+          href: customization-file-logs-section.md
+        - name: Erforderliche Clienteinstellungen
+          href: required-client-settings.md
+        - name: Schreiben Ihres eigenen benutzerdefinierten Handlers
+          href: writing-your-own-customized-handler.md
+    - name: RDS-Problembehandlung
+      href: troubleshooting-rds.md
+      items:
+        - name: Konfigurieren von RDS unter Windows 2000
+          href: configuring-rds-on-windows-2000.md
+        - name: 'Internetserverfehler: Zugriff verweigert'
+          href: internet-server-error-access-denied.md
+        - name: RDS gibt „Datenstrom nicht gelesen“-Fehler zurück
+          href: rds-returns-stream-not-read-error.md
+        - name: Deadlocks mit Read Repeatable-Isolationsstufe
+          href: deadlocks-with-read-repeatable-isolation-level.md
+        - name: 'Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist'
+          href: ensuring-sufficient-tempdb-space.md
+        - name: Minimieren des Verbrauchs an Protokolldatei-Speicherplatz
+          href: minimizing-log-file-space-usage.md

@@ -1,0 +1,407 @@
+- name: Datenfluss
+  href: data-flow.md
+- name: Quellen-Assistent
+  href: source-assistant.md
+  items:
+    - name: Hinzufügen einer Quelle mit dem Quellen-Assistenten
+      href: ../add-a-source-using-source-assistant.md
+    - name: Neue Quelle hinzufügen (Dialogfeld)
+      href: ../add-new-source-dialog-box.md
+- name: Ziel-Assistent
+  href: destination-assistant.md
+  items:
+    - name: Hinzufügen eines Ziels mit dem Ziel-Assistenten
+      href: ../add-a-destination-using-destination-assistant.md
+    - name: Neues Ziel hinzufügen (Dialogfeld)
+      href: ../add-new-destination-dialog-box.md
+- name: ADO NET-Quelle
+  href: ado-net-source.md
+  items:
+    - name: ADO.NET-Quellen-Editor (Seite 'Verbindungs-Manager')
+      href: ../ado-net-source-editor-connection-manager-page.md
+    - name: ADO.NET-Quellen-Editor (Seite 'Spalten')
+      href: ../ado-net-source-editor-columns-page.md
+    - name: ADO.NET-Quellen-Editor (Seite 'Fehlerausgabe')
+      href: ../ado-net-source-editor-error-output-page.md
+- name: ADO NET-Ziel
+  href: ado-net-destination.md
+  items:
+    - name: ADO.NET-Ziel-Editor (Seite 'Verbindungs-Manager')
+      href: ../ado-net-destination-editor-connection-manager-page.md
+    - name: ADO.NET-Ziel-Editor (Seite 'Zuordnungen')
+      href: ../ado-net-destination-editor-mappings-page.md
+    - name: ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
+      href: ../ado-net-destination-editor-error-output-page.md
+- name: ADO.NET-Verbindungs-Manager
+  href: ../connection-manager/ado-net-connection-manager.md
+  items:
+    - name: ADO.NET-Verbindungs-Manager konfigurieren
+      href: ../configure-ado-net-connection-manager.md
+- name: Benutzerdefinierte Eigenschaften von ADO.NET
+  href: ado-net-custom-properties.md
+- name: ADO-Verbindungs-Manager
+  href: ../connection-manager/ado-connection-manager.md
+- name: CDC-Flusskomponenten
+  href: cdc-flow-components.md
+  items:
+    - name: CDC-Quelle
+      href: cdc-source.md
+      items:
+        - name: Quellen-Editor für CDC (Seite Verbindungs-Manager)
+          href: ../cdc-source-editor-connection-manager-page.md
+        - name: Quellen-Editor für CDC (Seite Spalten)
+          href: ../cdc-source-editor-columns-page.md
+        - name: Quellen-Editor für CDC (Seite Fehlerausgabe)
+          href: ../cdc-source-editor-error-output-page.md
+        - name: Benutzerdefinierte Eigenschaften der CDC-Quelle
+          href: cdc-source-custom-properties.md
+        - name: Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC-Splitter
+      href: cdc-splitter.md
+    - name: Weiterleiten des CDC-Datenstroms gemäß Änderungstyp
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: Definieren einer Statusvariablen
+      href: define-a-state-variable.md
+- name: Excel-Quelle
+  href: excel-source.md
+  items:
+    - name: Quellen-Editor für Excel (Seite Verbindungs-Manager)
+      href: ../excel-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für Excel (Seite Spalten)
+      href: ../excel-source-editor-columns-page.md
+    - name: Quellen-Editor für Excel (Seite Fehlerausgabe)
+      href: ../excel-source-editor-error-output-page.md
+- name: Excel-Ziel
+  href: excel-destination.md
+  items:
+    - name: Ziel-Editor für Excel (Seite Verbindungs-Manager)
+      href: ../excel-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für Excel (Seite Zuordnungen)
+      href: ../excel-destination-editor-mappings-page.md
+    - name: Ziel-Editor für Excel (Seite Fehlerausgabe)
+      href: ../excel-destination-editor-error-output-page.md
+- name: Excel-Verbindungs-Manager
+  href: ../connection-manager/excel-connection-manager.md
+  items:
+    - name: Verbindungs-Manager-Editor für Excel
+      href: ../excel-connection-manager-editor.md
+- name: Benutzerdefinierte Eigenschaften von Excel
+  href: excel-custom-properties.md
+- name: Dateiverbindungs-Manager
+  href: ../connection-manager/file-connection-manager.md
+  items:
+    - name: Dateiverbindungs-Manager-Editor
+      href: ../file-connection-manager-editor.md
+    - name: Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
+      href: ../connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+    - name: Referenz zur Benutzeroberfläche des Dialogfelds Spaltentypen vorschlagen
+      href: ../connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: Flatfilequelle
+  href: flat-file-source.md
+  items:
+    - name: Quellen-Editor für Flatfiles (Seite Verbindungs-Manager)
+      href: ../flat-file-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für Flatfiles (Seite Spalten)
+      href: ../flat-file-source-editor-columns-page.md
+    - name: Quellen-Editor für Flatfiles (Seite Fehlerausgabe)
+      href: ../flat-file-source-editor-error-output-page.md
+- name: Flatfileziel
+  href: flat-file-destination.md
+  items:
+    - name: Ziel-Editor für Flatfiles (Seite Verbindungs-Manager)
+      href: ../flat-file-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für Flatfiles (Seite Zuordnungen)
+      href: ../flat-file-destination-editor-mappings-page.md
+- name: Verbindungs-Manager für Flatfiles
+  href: ../connection-manager/flat-file-connection-manager.md
+  items:
+    - name: Verbindungs-Manager-Editor für Flatfiles (Vorschauseite)
+      href: ../flat-file-connection-manager-editor-preview-page.md
+    - name: Verbindungs-Manager-Editor für Flatfiles (Seite Erweitert)
+      href: ../flat-file-connection-manager-editor-advanced-page.md
+    - name: Verbindungs-Manager-Editor für Flatfiles (Seite Spalten)
+      href: ../flat-file-connection-manager-editor-columns-page.md
+    - name: Verbindungs-Manager-Editor für Flatfiles (Seite Allgemein)
+      href: ../flat-file-connection-manager-editor-general-page.md
+- name: Verbindungs-Manager für mehrere Flatfiles
+  href: ../connection-manager/multiple-flat-files-connection-manager.md
+  items:
+    - name: Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Allgemein)
+      href: ../multiple-flat-files-connection-manager-editor-general-page.md
+    - name: Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Spalten)
+      href: ../multiple-flat-files-connection-manager-editor-columns-page.md
+    - name: Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Erweitert)
+      href: ../multiple-flat-files-connection-manager-editor-advanced-page.md
+    - name: Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Vorschau)
+      href: ../multiple-flat-files-connection-manager-editor-preview-page.md
+- name: Benutzerdefinierte Eigenschaften der Flatfile
+  href: flat-file-custom-properties.md
+- name: ODBC-Flusskomponenten
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC-Ziel
+      href: odbc-destination.md
+      items:
+        - name: Ziel-Editor für ODBC (Seite "Fehlerausgabe")
+          href: ../odbc-destination-editor-error-output-page.md
+        - name: Ziel-Editor für ODBC (Seite Zuordnungen)
+          href: ../odbc-destination-editor-mappings-page.md
+        - name: Ziel-Editor für ODBC (Verbindungs-Manager-Seite)
+          href: ../odbc-destination-editor-connection-manager-page.md
+        - name: Laden von Daten mithilfe des ODBC-Ziels
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC-Quelle
+      href: odbc-source.md
+      items:
+        - name: Quellen-Editor für ODBC (Seite Fehlerausgabe)
+          href: ../odbc-source-editor-error-output-page.md
+        - name: Quellen-Editor für ODBC (Seite Spalten)
+          href: ../odbc-source-editor-columns-page.md
+        - name: Quellen-Editor für ODBC (Seite Verbindungs-Manager)
+          href: ../odbc-source-editor-connection-manager-page.md
+        - name: Extrahieren von Daten mithilfe der ODBC-Quelle
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: ODBC-Verbindungs-Manager
+  href: ../connection-manager/odbc-connection-manager.md
+  items:
+    - name: ODBC-Verbindungs-Manager – Referenz zur Benutzeroberfläche
+      href: ../odbc-connection-manager-ui-reference.md
+- name: OLE DB-Quelle
+  href: ole-db-source.md
+  items:
+    - name: Quellen-Editor für OLE DB (Seite Verbindungs-Manager)
+      href: ../ole-db-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für OLE DB (Seite Spalten)
+      href: ../ole-db-source-editor-columns-page.md
+    - name: Quellen-Editor für OLE DB (Seite Fehlerausgabe)
+      href: ../ole-db-source-editor-error-output-page.md
+    - name: Extrahieren von Daten mithilfe der OLE DB-Quelle
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB-Ziel
+  href: ole-db-destination.md
+  items:
+    - name: Ziel-Editor für OLE DB (Seite Verbindungs-Manager)
+      href: ../ole-db-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für OLE DB (Seite Zuordnungen)
+      href: ../ole-db-destination-editor-mappings-page.md
+    - name: Ziel-Editor für OLE DB (Seite Fehlerausgabe)
+      href: ../ole-db-destination-editor-error-output-page.md
+    - name: Laden von Daten mithilfe des OLE DB-Ziels
+      href: load-data-by-using-the-ole-db-destination.md
+- name: OLE DB-Verbindungs-Manager
+  href: ../connection-manager/ole-db-connection-manager.md
+  items:
+    - name: OLE DB-Verbindungs-Manager konfigurieren
+      href: ../configure-ole-db-connection-manager.md
+- name: Benutzerdefinierte Eigenschaften für OLE DB
+  href: ole-db-custom-properties.md
+- name: Rohdatendatei-Quelle
+  href: raw-file-source.md
+  items:
+    - name: Editor für Rohdatendatei-Quellen (Seite Verbindungs-Manager)
+      href: ../raw-file-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für Rohdatendateien (Seite Spalten)
+      href: ../raw-file-source-editor-columns-page.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+  items:
+    - name: Ziel-Editor für Rohdatendateien (Seite Verbindungs-Manager)
+      href: ../raw-file-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für Rohdatendateien (Seite Spalten)
+      href: ../raw-file-destination-editor-columns-page.md
+- name: Benutzerdefinierte Eigenschaften der Rohdatendatei
+  href: raw-file-custom-properties.md
+- name: Ziel des Data Mining-Modelltrainings
+  href: data-mining-model-training-destination.md
+  items:
+    - name: Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
+      href: ../data-mining-model-training-editor-connection-tab.md
+    - name: Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
+      href: ../data-mining-model-training-editor-columns-tab.md
+    - name: Benutzerdefinierte Eigenschaften des Ziels des Data Mining-Modelltrainings
+      href: data-mining-model-training-destination-custom-properties.md
+- name: DataReader-Ziel
+  href: datareader-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des DataReader-Ziels
+      href: datareader-destination-custom-properties.md
+- name: Ziel für Dimensionsverarbeitung
+  href: dimension-processing-destination.md
+  items:
+    - name: Ziel-Editor für Dimensionsverarbeitung (Seite Verbindungs-Manager)
+      href: ../dimension-processing-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
+      href: ../dimension-processing-destination-editor-mappings-page.md
+    - name: Ziel-Editor für Dimensionsverarbeitung (Seite Erweitert)
+      href: ../dimension-processing-destination-editor-advanced-page.md
+    - name: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
+      href: dimension-processing-destination-custom-properies.md
+- name: Ziel für Partitionsverarbeitung
+  href: partition-processing-destination.md
+  items:
+    - name: Ziel-Editor für Partitionsverarbeitung (Seite Verbindungs-Manager)
+      href: ../partition-processing-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für Partitionsverarbeitung (Seite Zuordnungen)
+      href: ../partition-processing-destination-editor-mappings-page.md
+    - name: Ziel-Editor für Partitionsverarbeitung (Seite Erweitert)
+      href: ../partition-processing-destination-editor-advanced-page.md
+    - name: Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung
+      href: partition-processing-destination-custom-properties.md
+- name: Recordsetziel
+  href: recordset-destination.md
+  items:
+    - name: Verwenden eines Recordsetziels
+      href: use-a-recordset-destination.md
+    - name: Benutzerdefinierte Eigenschaften des Recordsetziels
+      href: recordset-destination-custom-properties.md
+- name: SQL Server Compact Edition-Ziel
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server Compact Edition-Verbindungs-Manager
+  href: ../connection-manager/sql-server-compact-edition-connection-manager.md
+  items:
+    - name: Verbindungs-Manager-Editor für SQL Server Compact Edition (Seite Verbindung)
+      href: ../sql-server-compact-edition-connection-manager-editor-connection-page.md
+    - name: Verbindungs-Manager-Editor für SQL Server Compact Edition (Seite Alle)
+      href: ../sql-server-compact-edition-connection-manager-editor-all-page.md
+- name: SQL Server-Ziel
+  href: sql-server-destination.md
+  items:
+    - name: Ziel-Editor für SQL (Seite Verbindungs-Manager)
+      href: ../sql-destination-editor-connection-manager-page.md
+    - name: Ziel-Editor für SQL (Seite Zuordnungen)
+      href: ../sql-destination-editor-mappings-page.md
+    - name: Ziel-Editor für SQL (Seite Erweitert)
+      href: ../sql-destination-editor-advanced-page.md
+    - name: Massenladen von Daten mithilfe des SQL Server-Ziels
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: Benutzerdefinierte Eigenschaften des SQL Server-Ziels
+      href: sql-server-destination-custom-properties.md
+- name: XML-Quelle
+  href: xml-source.md
+  items:
+    - name: Quellen-Editor für XML (Seite Verbindungs-Manager)
+      href: ../xml-source-editor-connection-manager-page.md
+    - name: Quellen-Editor für XML (Seite Spalten)
+      href: ../xml-source-editor-columns-page.md
+    - name: Quellen-Editor für XML (Seite Fehlerausgabe)
+      href: ../xml-source-editor-error-output-page.md
+    - name: Extrahieren von Daten mithilfe der XML-Quelle
+      href: extract-data-by-using-the-xml-source.md
+    - name: Benutzerdefinierte Eigenschaften der XML-Quelle
+      href: xml-source-custom-properties.md
+- name: Integration Services-Transformationen +
+  href: transformations/integration-services-transformations.md
+- name: SQL Server Integration Services-Pfade
+  href: integration-services-paths.md
+  items:
+    - name: Anzeigen von Pfadmetadaten im Datenflusspfad-Editor
+      href: ../view-path-metadata-in-the-data-flow-path-editor.md
+      items:
+        - name: Datenflusspfad-Editor (Seite Allgemein)
+          href: ../data-flow-path-editor-general-page.md
+        - name: Datenflusspfad-Editor (Seite Metadaten)
+          href: ../data-flow-path-editor-metadata-page.md
+        - name: Datenflusspfad-Editor (Seite Daten-Viewer)
+          href: ../data-flow-path-editor-data-viewers-page.md
+    - name: Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors
+      href: ../set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md
+    - name: Verbinden von Komponenten mit Pfaden
+      href: ../connect-components-with-paths.md
+    - name: Pfadeigenschaften
+      href: ../path-properties.md
+- name: Daten in Datenflüssen
+  href: data-in-data-flows.md
+  items:
+    - name: SQL Server Integration Services-Datentypen
+      href: integration-services-data-types.md
+    - name: Analysieren von Daten
+      href: parsing-data.md
+      items:
+        - name: Fast Parse
+          href: ../fast-parse.md
+          items:
+            - name: Numerische Datenformate
+              href: ../numeric-data-formats.md
+            - name: Datums- und Zeitformate
+              href: ../date-and-time-formats.md
+            - name: Festlegen der schnellen Analyse
+              href: ../set-fast-parse.md
+        - name: Standard Parse
+          href: ../standard-parse.md
+    - name: Vergleichen von Zeichenfolgendaten
+      href: comparing-string-data.md
+- name: Fehlerbehandlung in Daten
+  href: error-handling-in-data.md
+  items:
+    - name: Fehlerausgabe konfigurieren
+      href: ../configure-error-output.md
+- name: Allgemeine Eigenschaften
+  href: ../common-properties.md
+  items:
+    - name: Festlegen der Eigenschaften einer Datenflusskomponente
+      href: set-the-properties-of-a-data-flow-component.md
+- name: Datenfluss (Registerkarte)
+  href: ../data-flow-tab.md
+- name: Datenflusstask
+  href: ../control-flow/data-flow-task.md
+- name: Projektmappen-Explorer
+  href: ../connection-manager/data-sources.md
+- name: Daten-Viewer
+  href: data-viewer.md
+  items:
+    - name: Daten-Viewer konfigurieren (Registerkarte Allgemein)
+      href: ../configure-data-viewer-general-tab.md
+    - name: Daten-Viewer konfigurieren (Registerkarte Säulendiagramm)
+      href: ../configure-data-viewer-column-chart-tab.md
+    - name: Daten-Viewer konfigurieren (Registerkarte Raster)
+      href: ../configure-data-viewer-grid-tab.md
+    - name: Daten-Viewer konfigurieren (Registerkarte Histogramm)
+      href: ../configure-data-viewer-histogram-tab.md
+    - name: Daten-Viewer konfigurieren (Registerkarte Punktdiagramm)
+      href: ../configure-data-viewer-scatter-plot-tab.md
+- name: Hinzufügen oder Löschen einer Komponente im Datenfluss
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: Verbinden von Komponenten in einem Datenfluss
+  href: connect-components-in-a-data-flow.md
+- name: Editor zum Auflösen von Spaltenverweisen
+  href: resolve-column-reference-editor.md
+- name: Funktionen für die Datenflussleistung
+  href: data-flow-performance-features.md
+- name: OData-Verbindungs-Manager
+  href: ../connection-manager/odata-connection-manager.md
+  items:
+    - name: OData-Verbindungs-Manager-Editor
+      href: ../odata-connection-manager-editor.md
+- name: OData-Quelle
+  href: odata-source.md
+  items:
+    - name: Installieren und Deinstallieren der OData-Quellkomponente
+      href: ../install-and-uninstall-odata-source-component.md
+    - name: 'Lernprogramm: Verwenden der OData-Quelle'
+      href: tutorial-using-the-odata-source.md
+    - name: Ändern einer OData-Quellabfrage zur Laufzeit
+      href: modify-odata-source-query-at-runtime.md
+    - name: Quellen-Editor für OData (Seite 'Verbindung')
+      href: ../odata-source-editor-connection-page.md
+    - name: Quellen-Editor für OData (Seite 'Spalten')
+      href: ../odata-source-editor-columns-page.md
+    - name: Quellen-Editor für OData (Seite 'Fehlerausgabe')
+      href: ../odata-source-editor-error-output-page.md
+    - name: OData-Quelleneigenschaften
+      href: odata-source-properties.md
+- name: Azure-Blob-Quelle
+  href: azure-blob-source.md
+- name: Azure-BLOB-Ziel
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store Source
+  href: ../azure-data-lake-store-source.md
+- name: Azure Data Lake Store Destination
+  href: ../azure-data-lake-store-destination.md

@@ -1,0 +1,20 @@
+- name: Verbesserungen bei Datum und Uhrzeit (OLE DB)
+  href: date-and-time-improvements-ole-db.md
+- name: Vergleichbarkeit für 'IRowsetFind'
+  href: comparability-for-irowsetfind.md
+- name: Konvertierungen (OLE DB)
+  href: conversions-ole-db.md
+- name: Client-/Server-Konvertierungen
+  href: conversions-performed-from-client-to-server.md
+- name: Server/Client-Konvertierungen
+  href: conversions-performed-from-server-to-client.md
+- name: Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
+  href: data-type-support-for-ole-db-date-and-time-improvements.md
+- name: Metadaten – Datums- und Uhrzeit- sowie Schemarowsets
+  href: metadata-date-and-time-and-schema-rowsets.md
+- name: Metadaten – Parameter und Rowsets
+  href: metadata-parameter-and-rowset.md
+- name: Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
+  href: new-date-and-time-features-with-previous-sql-server-versions-ole-db.md
+- name: OLE DB-API-Unterstützung für Datums- und Uhrzeit-Erweiterungen
+  href: ole-db-api-support-for-date-and-time-enhancements.md

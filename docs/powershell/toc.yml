@@ -1,0 +1,44 @@
+- name: Installieren des SQL PowerShell-Moduls
+  href: download-sql-server-ps-module.md
+- name: Übersicht über SQL Server PowerShell
+  href: sql-server-powershell.md
+  items:
+    - name: SQL Server PowerShell-Anbieter
+      href: sql-server-powershell-provider.md
+    - name: Abfrageausdrücke und eindeutige Ressourcennamen
+      href: query-expressions-and-uniform-resource-names.md
+- name: Zugreifen auf SQL Server-Objekte
+  href: navigate-sql-server-powershell-paths.md
+- name: Laden der SMO-Assemblys in Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Ausführen von PowerShell in SSMS
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Ausführen von PowerShell mit SQL Server-Agent
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: Verwalten der Authentifizierung
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Verwalten der Befehlszeilenergänzung
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Verwenden von SQL Server PowerShell-Pfaden
+  href: work-with-sql-server-powershell-paths.md
+- name: SQL Server-Bezeichnern in PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: Angeben von Instanzen im SQL Server PowerShell-Anbieter
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: Codierung und Decodierung von SQL Server-Bezeichnern
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: Escape-Bezeichner für SQL Server
+      href: escape-sql-server-identifiers.md
+- name: Ressourcen
+  items:
+    - name: Neue und aktualisierte Artikel
+      href: new-updated-powershell.md
+    - name: Lizenzbedingungen für SQL Server PowerShell
+      href: sql-server-powershell-license-terms.md
+- name: Cmdlet-Referenz
+  items:
+    - name: SqlServer-Cmdlets
+      href: 'https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json'
+    - name: SQLPS-Cmdlets
+      href: 'https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json'

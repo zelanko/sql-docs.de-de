@@ -1,0 +1,40 @@
+- name: Übersicht
+  href: merge-replication.md
+- name: Artikeloptionen für die Mergereplikation
+  href: article-options-for-merge-replication.md
+  items:
+    - name: Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel
+      href: optimize-merge-replication-performance-with-download-only-articles.md
+    - name: Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen
+      href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+    - name: Angeben der Verarbeitungsreihenfolge von Mergeartikeln
+      href: specify-the-processing-order-of-merge-articles.md
+    - name: Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
+      href: group-changes-to-related-rows-with-logical-records.md
+    - name: Erweiterte Mergereplikation – Beseitigen von Mergereplikation bei Konflikten
+      href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+    - name: Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
+      href: advanced-merge-replication-conflict-detection-and-resolution.md
+    - name: Konflikte bei der erweiterten Mergereplikation – Auswählen eines Konfliktlösers
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: Erweiterte Konflikten bei der Mergereplikation – COM-basierte benutzerdefinierte Konfliktlöser
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: Erweiterte Konflikte bei der Mergereplikation – COM-basierte Konfliktlöser
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: Erweiterte Konflikte bei der Mergereplikation – Interaktive Lösung
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: Erweiterte Konflikte in Mergereplikationen – Lösen von Konflikten in logischen Datensätzen
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+    - name: Ausführen der Geschäftslogik während der Mergesynchronisierung
+      href: execute-business-logic-during-merge-synchronization.md
+- name: Filtern veröffentlichter Daten für die Mergereplikation
+  href: filter-published-data-for-merge-replication.md
+  items:
+    - name: Parametrisierte Filter – Zeilenfilter
+      href: parameterized-filters-parameterized-row-filters.md
+    - name: Parametrisierte Filter - Optimierung für vorausberechnete Partitionen
+      href: parameterized-filters-optimize-for-precomputed-partitions.md
+    - name: Verknüpfungsfilter
+      href: join-filters.md
+    - name: Bewährte Methoden für zeitbasierte Zeilenfilter
+      href: best-practices-for-time-based-row-filters.md

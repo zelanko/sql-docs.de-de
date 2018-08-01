@@ -1,7 +1,7 @@
 ---
 title: Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/01/2016
+ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: mobile-reports
@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a854a49884c6a2f1bd93794a7854d30dc1e2d3d
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018381"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359607"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services
-Sie können mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte mit Parametern erstellen, sodass Sie und die Leser des Berichts Ihre Berichte filtern können. Berichte mit Parametern können auch Ziel eines [Drillthrough aus einem Zielbericht](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)sein. 
+Sie können einen mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht mit Parametern erstellen, sodass Sie und die Leser des Berichts Ihre Berichte filtern können. Ein Bericht mit Parametern kann als Ziel eines [Drillthroughs aus einem Quellbericht](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md) verwendet werden. 
 
-Beginnen Sie mit einem freigegebenen Dataset mit mindestens einem Parameter, um einen mobilen Bericht mit Parametern zu erstellen. Erfahren Sie mehr über das [Erstellen von Parametern in einem freigegebenen Dataset](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+Beginnen Sie mit einem freigegebenen Dataset mit mindestens einem Parameter, um einen mobilen Bericht mit Parametern zu erstellen. Erfahren Sie mehr über das [Erstellen von Parametern in einem freigegebenen Dataset](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md). Mobile Berichte unterstützen keine NULL-Werte für Standardparameter, deshalb müssen Sie sicherstellen, dass Ihre Parameter andere Standardwerte als NULL verwenden.
 
-Nachdem Sie einem mobilen Bericht Parameter hinzugefügt haben, erstellen Sie eine URL zum [Öffnen des Berichts mit Abfragezeichenfolgenparametern](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md).
+Nachdem Sie einem mobilen Bericht Parameter hinzugefügt haben, erstellen Sie eine URL zum [Öffnen des Berichts mit Abfragezeichenfolgenparametern](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
 1. Wählen Sie auf der oberen Leiste des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Webportals **Neu** > **Mobiler Bericht**aus.  
   

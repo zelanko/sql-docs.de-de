@@ -1,0 +1,65 @@
+- name: Übersicht
+  href: master-data-services-add-in-for-microsoft-excel.md
+- name: Verbindungen
+  href: connections-mds-add-in-for-excel.md
+  items:
+    - name: Herstellen einer Verbindung mit einem MDS-Repository
+      href: connect-to-an-mds-repository-mds-add-in-for-excel.md
+- name: 'Overview: Exporting Data to Excel (MDS Add-in for Excel)'
+  href: overview-exporting-data-to-excel-mds-add-in-for-excel.md
+  items:
+    - name: Filtern von Daten vor dem Export
+      href: filter-data-before-exporting-mds-add-in-for-excel.md
+    - name: Export Data to Excel from Master Data Services
+      href: export-data-to-excel-from-master-data-services.md
+    - name: Filtern (Dialogfeld)
+      href: filter-dialog-box-mds-add-in-for-excel.md
+    - name: Neuanordnen von Spalten
+      href: reorder-columns-mds-add-in-for-excel.md
+- name: Shortcutabfragedateien
+  href: shortcut-query-files-mds-add-in-for-excel.md
+  items:
+    - name: Speichern einer Shortcutabfragedatei
+      href: save-a-shortcut-query-file-mds-add-in-for-excel.md
+    - name: Senden einer Shortcutabfragedatei
+      href: email-a-shortcut-query-file-mds-add-in-for-excel.md
+- name: Aktualisieren von Daten
+  href: refreshing-data-mds-add-in-for-excel.md
+- name: 'Übersicht: Importieren von Daten aus Excel (MDS-Add-In für Excel)'
+  href: overview-importing-data-from-excel-mds-add-in-for-excel.md
+  items:
+    - name: Importieren von Daten aus Excel in Master Data Services
+      href: import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
+    - name: Löschen einer Zeile
+      href: delete-a-row-mds-add-in-for-excel.md
+    - name: Anzeigen aller Anmerkungen oder Transaktionen für ein Element
+      href: view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
+    - name: Kombinieren von Daten
+      href: combine-data-mds-add-in-for-excel.md
+    - name: Konflikte zusammenführen
+      href: merge-conflicts-mds-add-in-for-excel.md
+    - name: Changesets und Genehmigung
+      href: change-sets-and-approval-mds-add-in-for-excel.md
+- name: Überprüfen von Daten
+  href: validating-data-mds-add-in-for-excel.md
+  items:
+    - name: Anwenden von Geschäftsregeln
+      href: apply-business-rules-mds-add-in-for-excel.md
+- name: Data Quality-Abgleich
+  href: data-quality-matching-in-the-mds-add-in-for-excel.md
+  items:
+    - name: Abgleichen ähnlicher Daten
+      href: match-similar-data-mds-add-in-for-excel.md
+    - name: Spalten für Data Quality-Abgleich
+      href: data-quality-matching-columns-mds-add-in-for-excel.md
+- name: Erstellen eines Modells
+  href: building-a-model-mds-add-in-for-excel.md
+  items:
+    - name: Erstellen einer Entität
+      href: create-an-entity-mds-add-in-for-excel.md
+    - name: Erstellen eines domänenbasierten Attributs
+      href: create-a-domain-based-attribute-mds-add-in-for-excel.md
+    - name: Ändern des Attributtyps
+      href: change-the-attribute-type-mds-add-in-for-excel.md
+- name: Festlegen von Eigenschaften für das Master Data Services-Add-In für Microsoft Excel
+  href: setting-properties-for-master-data-services-add-in-for-excel.md

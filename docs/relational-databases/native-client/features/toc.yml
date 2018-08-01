@@ -1,0 +1,48 @@
+- name: SQL Server Native Client-Funktionen
+  href: sql-server-native-client-features.md
+- name: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Programmgesteuertes Ändern von Kennwörtern
+  href: changing-passwords-programmatically.md
+- name: Verbesserungen bei Datum und Uhrzeit
+  href: date-and-time-improvements.md
+- name: FILESTREAM-Unterstützung
+  href: filestream-support.md
+- name: Große benutzerdefinierte CLR-Typen
+  href: large-clr-user-defined-types.md
+- name: Metadatenermittlung
+  href: metadata-discovery.md
+- name: Verhaltensänderungen des ODBC-Treibers bei der Behandlung von Zeichenkonvertierungen
+  href: odbc-driver-behavior-change-when-handling-character-conversions.md
+- name: Ausführen asynchroner Vorgänge
+  href: performing-asynchronous-operations.md
+- name: Durchführen von Massenkopiervorgängen
+  href: performing-bulk-copy-operations.md
+- name: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client
+  href: sparse-columns-support-in-sql-server-native-client.md
+- name: 'SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung'
+  href: sql-server-native-client-support-for-high-availability-disaster-recovery.md
+- name: SQL Server Native Client-Unterstützung für LocalDB
+  href: sql-server-native-client-support-for-localdb.md
+- name: Tabellenwertparameter (SQL Server Native Client)
+  href: table-valued-parameters-sql-server-native-client.md
+- name: Verwenden der Datenbankspiegelung
+  href: using-database-mirroring.md
+- name: Verwenden von Verschlüsselung ohne Überprüfung
+  href: using-encryption-without-validation.md
+- name: Verwenden von Datentypen mit umfangreichen Werten
+  href: using-large-value-types.md
+- name: Verwenden von Multiple Active Result Sets (MARS)
+  href: using-multiple-active-result-sets-mars.md
+- name: Verwenden von benutzerdefinierten Typen
+  href: using-user-defined-types.md
+- name: Verwenden von XML-Datentypen
+  href: using-xml-data-types.md
+- name: Unterstützung für UTF-16 in SQL Server Native Client 11.0
+  href: utf-16-support-in-sql-server-native-client-11-0.md
+- name: Arbeiten mit Abfragebenachrichtigungen
+  href: working-with-query-notifications.md
+- name: Arbeiten mit Momentaufnahmeisolation
+  href: working-with-snapshot-isolation.md

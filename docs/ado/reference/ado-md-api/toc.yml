@@ -1,0 +1,177 @@
+- name: ADO MD-Objektmodell
+  href: ado-md-object-model.md
+- name: ADO MD-Objekte
+  href: ado-md-objects.md
+  items:
+    - name: Catalog-Objekt (ADO MD)
+      href: catalog-object-ado-md.md
+      items:
+        - name: 'Catalog-Objekt – Eigenschaften, Methoden und Ereignisse (ADO MD)'
+          href: catalog-object-properties-methods-and-events-ado-md.md
+    - name: Member-Objekt (ADO MD)
+      href: member-object-ado-md.md
+      items:
+        - name: 'Member-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: member-object-properties-methods-and-events.md
+    - name: Cellset-Objekt (ADO MD)
+      href: cellset-object-ado-md.md
+      items:
+        - name: 'Cellset-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: cellset-object-properties-methods-and-events.md
+    - name: Axis-Objekt (ADO MD)
+      href: axis-object-ado-md.md
+      items:
+        - name: 'Axis-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: axis-object-properties-methods-and-events.md
+    - name: Dimension-Objekt (ADO MD)
+      href: dimension-object-ado-md.md
+      items:
+        - name: 'Dimension-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: dimension-object-properties-methods-and-events.md
+    - name: Level-Objekt (ADO MD)
+      href: level-object-ado-md.md
+      items:
+        - name: 'Level-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: level-object-properties-methods-and-events.md
+    - name: Cell-Objekt (ADO MD)
+      href: cell-object-ado-md.md
+      items:
+        - name: 'Cell-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: cell-object-properties-methods-and-events.md
+    - name: Position-Objekt (ADO MD)
+      href: position-object-ado-md.md
+      items:
+        - name: 'Position-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: position-object-properties-methods-and-events.md
+    - name: CubeDef-Objekt (ADO MD)
+      href: cubedef-object-ado-md.md
+      items:
+        - name: 'CubeDef-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: cubedef-object-properties-methods-and-events.md
+    - name: Hierarchy-Objekt (ADO MD)
+      href: hierarchy-object-ado-md.md
+      items:
+        - name: 'Hierarchy-Objekt – Eigenschaften, Methoden und Ereignisse'
+          href: hierarchy-object-properties-methods-and-events.md
+- name: ADO MD-Collections
+  href: ado-md-collections.md
+  items:
+    - name: Axes-Collection (ADO MD)
+      href: axes-collection-ado-md.md
+      items:
+        - name: 'Axes-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: axes-collection-properties-methods-and-events.md
+    - name: CubeDefs-Collection (ADO MD)
+      href: cubedefs-collection-ado-md.md
+      items:
+        - name: 'CubeDefs-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: cubedefs-collection-properties-methods-and-events.md
+    - name: Dimension-Collection (ADO MD)
+      href: dimensions-collection-ado-md.md
+      items:
+        - name: 'Dimension-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: dimensions-collection-properties-methods-and-events.md
+    - name: Hierarchies-Collection (ADO MD)
+      href: hierarchies-collection-ado-md.md
+      items:
+        - name: 'Hierarchies-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: hierarchies-collection-properties-methods-and-events.md
+    - name: Levels-Collection (ADO MD)
+      href: levels-collection-ado-md.md
+      items:
+        - name: 'Levels-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: levels-collection-properties-methods-and-events.md
+    - name: Members-Collection (ADO MD)
+      href: members-collection-ado-md.md
+      items:
+        - name: 'Members-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: members-collection-properties-methods-and-events.md
+    - name: Positions-Collection (ADO MD)
+      href: positions-collection-ado-md.md
+      items:
+        - name: 'Positions-Collection – Eigenschaften, Methoden und Ereignisse'
+          href: positions-collection-properties-methods-and-events.md
+- name: ADO MD-Eigenschaften
+  href: ado-md-properties.md
+  items:
+    - name: ActiveConnection-Eigenschaft (ADO MD)
+      href: activeconnection-property-ado-md.md
+    - name: Caption-Eigenschaft (ADO MD)
+      href: caption-property-ado-md.md
+    - name: ChildCount-Eigenschaft (ADO MD)
+      href: childcount-property-ado-md.md
+    - name: Children-Eigenschaft (ADO MD)
+      href: children-property-ado-md.md
+    - name: Depth-Eigenschaft (ADO MD)
+      href: depth-property-ado-md.md
+    - name: Description-Eigenschaft (ADO MD)
+      href: description-property-ado-md.md
+    - name: DimensionCount-Eigenschaft (ADO MD)
+      href: dimensioncount-property-ado-md.md
+    - name: DrilledDown-Eigenschaft (ADO MD)
+      href: drilleddown-property-ado-md.md
+    - name: FilterAxis-Eigenschaft (ADO MD)
+      href: filteraxis-property-ado-md.md
+    - name: FormattedValue-Eigenschaft (ADO MD)
+      href: formattedvalue-property-ado-md.md
+    - name: Item-Eigenschaft (ADO MD Cellset)
+      href: item-property-ado-md-cellset.md
+    - name: LevelDepth-Eigenschaft (ADO MD)
+      href: leveldepth-property-ado-md.md
+    - name: LevelName-Eigenschaft (ADO MD)
+      href: levelname-property-ado-md.md
+    - name: Name-Eigenschaft (ADO MD)
+      href: name-property-ado-md.md
+    - name: Ordinal-Eigenschaft (ADO MD Cell)
+      href: ordinal-property-ado-md-cell.md
+    - name: Ordinal-Eigenschaft (ADO MD Position)
+      href: ordinal-property-ado-md-position.md
+    - name: Parent-Eigenschaft (ADO MD)
+      href: parent-property-ado-md.md
+    - name: ParentSameAsPrev-Eigenschaft (ADO MD)
+      href: parentsameasprev-property-ado-md.md
+    - name: Source-Eigenschaft (ADO MD)
+      href: source-property-ado-md.md
+    - name: State-Eigenschaft (ADO MD)
+      href: state-property-ado-md.md
+    - name: Type-Eigenschaft (ADO MD)
+      href: type-property-ado-md.md
+    - name: UniqueName-Eigenschaft (ADO MD)
+      href: uniquename-property-ado-md.md
+    - name: Value-Eigenschaft (ADO MD)
+      href: value-property-ado-md.md
+- name: ADO MD-Methoden
+  href: ado-md-methods.md
+  items:
+    - name: Close-Methode (ADO MD)
+      href: close-method-ado-md.md
+    - name: GetSchemaObject-Modell (ADO MD)
+      href: getschemaobject-method-ado-md.md
+    - name: Open-Methode (ADO MD)
+      href: open-method-ado-md.md
+- name: Enumerationskonstanten – ADO MD
+  href: ado-md-enumerated-constants.md
+  items:
+    - name: MemberTypeEnum
+      href: membertypeenum.md
+    - name: SchemaObjectTypeEnum
+      href: schemaobjecttypeenum.md
+- name: ADO MD-Codebeispiele
+  href: ado-md-code-examples.md
+  items:
+    - name: ADO MD-Codebeispiele in Visual Basic
+      href: ado-md-code-examples-in-visual-basic.md
+      items:
+        - name: Cellset-Beispiel (VB)
+          href: cellset-example-vb.md
+        - name: Katalog-Beispiel (VB)
+          href: catalog-example-vb.md
+    - name: ADO MD-Codebeispiele in Visual Basic Scripting Edition
+      href: ado-md-code-examples-in-visual-basic-scripting-edition.md
+      items:
+        - name: Achse-Beispiel (VBScript)
+          href: axis-example-vbscript.md
+        - name: Member-Beispiel (VBScript)
+          href: members-example-vbscript.md
+        - name: CubeDef-Beispiel (VBScript)
+          href: cubedef-example-vbscript.md

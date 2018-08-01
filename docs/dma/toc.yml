@@ -1,0 +1,22 @@
+- name: Übersicht über den Datenmigrations-Assistenten
+  href: dma-overview.md
+- name: Neuerungen im Datenmigrations-Assistenten
+  href: dma-whatsnew.md
+- name: Bewerten Ihrer SQL Server-Migration
+  href: dma-assesssqlonprem.md
+- name: Durchführen eines Upgrades von SQL Server auf eine höhere Version
+  href: dma-migrateonpremsql.md
+- name: Migrieren von SQL Server zu Azure SQL-Datenbank
+  href: dma-migrateonpremsqltosqldb.md
+- name: Migrieren von SQL Server-Anmeldungen
+  href: dma-migrateserverlogins.md
+- name: Bewährte Methoden für den Datenmigrations-Assistenten
+  href: dma-bestpractices.md
+- name: Konsolidieren von Bewertungsberichten
+  href: dma-consolidatereports.md
+- name: Power BI-Berichte für Bewertungen
+  href: dma-powerbiassesreport.md
+- name: Ausführen über die Befehlszeile
+  href: dma-commandline.md
+- name: Konfigurieren von Einstellungen
+  href: dma-configurationsettings.md

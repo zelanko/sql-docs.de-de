@@ -1,0 +1,328 @@
+- name: ADO-Grundlagen
+  href: ado-fundamentals.md
+- name: ADO-Objekte und -Collections
+  href: ado-objects-and-collections.md
+- name: 'HelloData: Eine einfache ADO-Anwendung'
+  href: hellodata-a-simple-ado-application.md
+  items:
+    - name: Kommentare zur HelloData
+      href: comments-on-hellodata.md
+    - name: HelloData-Code
+      href: hellodata-code.md
+- name: OLE DB-Anbieter (ADO)
+  href: ole-db-providers-ado.md
+  items:
+    - name: Datenanbieter
+      href: data-providers.md
+    - name: Dienstanbieter und -komponenten
+      href: service-providers-and-components.md
+- name: Fehler (ADO)
+  href: errors-ado.md
+- name: Abrufen von Daten
+  href: getting-data.md
+  items:
+    - name: Herstellen einer Verbindung mit Datenquellen
+      href: connecting-to-data-sources.md
+      items:
+        - name: Verwenden eines Connection-Objekts
+          href: using-a-connection-object.md
+        - name: Verwenden eines Recordset-Objekts
+          href: using-a-recordset-object.md
+        - name: Erstellen einer Verbindungszeichenfolge
+          href: creating-a-connection-string.md
+        - name: Angeben von Verbindungseigenschaften
+          href: specifying-connection-properties.md
+        - name: Steuern von Transaktionen (ADO)
+          href: controlling-transactions-ado.md
+    - name: Vorbereiten und Ausführen von Befehlen
+      href: preparing-and-executing-commands.md
+      items:
+        - name: Command-Objekt – Übersicht
+          href: command-object-overview.md
+        - name: Erstellen und Ausführen eines einfachen Befehls
+          href: creating-and-executing-a-simple-command.md
+        - name: Parameter für Command-Objekt
+          href: command-object-parameters.md
+        - name: Aufrufen einer gespeicherten Prozedur mit einem Befehl
+          href: calling-a-stored-procedure-with-a-command.md
+        - name: Aufrufen einer gespeicherten Prozedur als Methode für ein Connection-Objekt
+          href: calling-a-stored-procedure-as-a-method-on-a-connection-object.md
+        - name: Benannte Befehle
+          href: named-commands.md
+        - name: Übergeben von Parametern an einen benannten Befehl
+          href: passing-parameters-to-a-named-command.md
+    - name: Empfangen von Ergebnissen
+      href: receiving-results.md
+      items:
+        - name: Empfangen von mehreren Recordsets
+          href: receiving-multiple-recordsets.md
+- name: Untersuchen von Daten
+  href: examining-data.md
+  items:
+    - name: Aktueller Datensatz und Größe des Recordsets
+      href: current-record-and-size-of-recordset.md
+    - name: Grenzen eines Recordsets
+      href: boundaries-of-a-recordset.md
+    - name: Navigieren durch Daten
+      href: navigating-through-data.md
+      items:
+        - name: Springen zu einem Datensatz
+          href: jumping-to-a-record.md
+        - name: Weitere Möglichkeiten zum Navigieren in einem Recordset
+          href: more-ways-to-move-in-a-recordset.md
+        - name: Verwenden von Textmarken
+          href: using-bookmarks.md
+        - name: Verwenden von Seiten
+          href: using-pages.md
+        - name: Positionieren von Recordsets
+          href: recordset-positioning.md
+    - name: Beispiel-Recordset zum Untersuchen von Daten
+      href: sample-recordset-for-examining-data.md
+      items:
+        - name: JScript-Codebeispiel zum Zurückgeben eines Recordsets
+          href: jscript-code-example-to-return-a-recordset.md
+    - name: Grundlegendes zur Struktur von Recordsets
+      href: understanding-recordset-structure.md
+      items:
+        - name: Die Fields-Collection
+          href: the-fields-collection.md
+        - name: Das Field-Objekt
+          href: the-field-object.md
+        - name: Arbeiten mit Recordsets
+          href: working-with-recordsets.md
+- name: Bearbeiten von Daten
+  href: editing-data.md
+  items:
+    - name: Bearbeiten vorhandener Datensätze
+      href: editing-existing-records.md
+    - name: Hinzufügen von Datensätzen
+      href: adding-records.md
+      items:
+        - name: Hinzufügen von Datensätzen mithilfe von AddNew
+          href: adding-records-using-addnew.md
+        - name: Hinzufügen von mehreren Feldern
+          href: adding-multiple-fields.md
+        - name: Bestimmen des Bearbeitungsmodus
+          href: determining-edit-mode.md
+        - name: Verwenden von AddNew im unmittelbaren und im Batchmodus
+          href: using-addnew-in-immediate-and-batch-modes.md
+    - name: Bestimmen der unterstützten Vorgänge
+      href: determining-what-is-supported.md
+    - name: Löschen von Datensätzen mit der Delete-Methode
+      href: deleting-records-using-the-delete-method.md
+    - name: 'Alternativen: Verwenden von SQL-Anweisungen'
+      href: alternatives-using-sql-statements.md
+- name: Aktualisieren und Beibehalten von Daten
+  href: updating-and-persisting-data.md
+  items:
+    - name: Aktualisieren von Daten
+      href: updating-data.md
+      items:
+        - name: Unmittelbarer Modus
+          href: immediate-mode.md
+        - name: Batchmodus
+          href: batch-mode.md
+          items:
+            - name: 'Senden der Updates: UpdateBatch-Methode'
+              href: sending-the-updates-updatebatch-method.md
+            - name: Filtern nach aktualisierten Datensätzen
+              href: filtering-for-updated-records.md
+            - name: Umgang mit fehlerhaften Updates
+              href: dealing-with-failed-updates.md
+            - name: Erkennen und Lösen von Konflikten
+              href: detecting-and-resolving-conflicts.md
+            - name: Trennen und erneutes Herstellen einer Verbindung mit dem Recordset
+              href: disconnecting-and-reconnecting-the-recordset.md
+            - name: 'Aktualisieren von verknüpften Ergebnissen: eindeutige Tabelle'
+              href: updating-joined-results-unique-table.md
+        - name: Transaktionsverarbeitung
+          href: transaction-processing.md
+    - name: Beibehalten von Daten
+      href: persisting-data.md
+      items:
+        - name: Weitere Informationen zur Beibehaltung von Recordsets
+          href: more-about-recordset-persistence.md
+        - name: Beibehalten von gefilterten und hierarchischen Recordsets
+          href: persisting-filtered-and-hierarchical-recordsets.md
+        - name: Beibehalten von Datensätzen im XML-Format
+          href: persisting-records-in-xml-format.md
+          items:
+            - name: XML-Beibehaltungsformat
+              href: xml-persistence-format.md
+            - name: Namespaces
+              href: namespaces.md
+            - name: Schemaabschnitt
+              href: schema-section.md
+            - name: Datenabschnitt
+              href: data-section.md
+            - name: Hierarchische Recordsets im XML-Format
+              href: hierarchical-recordsets-in-xml.md
+            - name: Dynamische Recordseteigenschaften in XML
+              href: recordset-dynamic-properties-in-xml.md
+            - name: XSLT-Transformationen
+              href: xslt-transformations.md
+            - name: Speichern in das XML-DOM-Objekt
+              href: saving-to-the-xml-dom-object.md
+            - name: Überlegungen zur Sicherheit bei XML
+              href: xml-security-considerations.md
+            - name: Beibehaltungsszenario für XML-Recordsets
+              href: xml-recordset-persistence-scenario.md
+- name: Fehlerbehandlung
+  href: error-handling.md
+  items:
+    - name: ADO-Fehler
+      href: ado-errors.md
+      items:
+        - name: ADO-Fehlerreferenz
+          href: ado-error-reference.md
+    - name: Anbieterfehler
+      href: provider-errors.md
+    - name: Fehlerinformationen im Zusammenhang mit Feldern
+      href: field-related-error-information.md
+    - name: Fehlerinformationen in Bezug auf Recordsets
+      href: recordset-related-error-information.md
+    - name: Behandeln von Fehlern in anderen Sprachen
+      href: handling-errors-in-other-languages.md
+      items:
+        - name: Behandeln von Fehlern in VBScript
+          href: handling-errors-in-vbscript.md
+        - name: Behandeln von Fehlern in Visual C++
+          href: handling-errors-in-visual-c.md
+        - name: Behandeln von Fehlern in Visual J++
+          href: handline-errors-in-visual-j.md
+        - name: Behandeln von Fehlern in JScript
+          href: handling-errors-in-jscript.md
+    - name: Vorhersehen von Fehlern
+      href: anticipating-errors.md
+- name: Behandeln von ADO-Ereignissen
+  href: handling-ado-events.md
+  items:
+    - name: ADO-Ereignishandler – Übersicht
+      href: ado-event-handler-summary.md
+    - name: Ereignistypen
+      href: types-of-events.md
+    - name: Ereignisparameter
+      href: event-parameters.md
+    - name: Zusammenwirken der Ereignishandler
+      href: how-event-handlers-work-together.md
+    - name: ADO-Ereignisinstanziierung nach Sprache
+      href: ado-event-instantiation-by-language.md
+      items:
+        - name: 'ADO-Ereignisinstanziierung: Visual Basic'
+          href: ado-event-instantiation-visual-basic.md
+        - name: 'ADO-Ereignisinstanziierung: Visual C++'
+          href: ado-event-instantiation-visual-c.md
+        - name: 'ADO-Ereignisinstanziierung: Visual J++'
+          href: ado-event-instantiation-visual-j.md
+        - name: 'ADO-Ereignisinstanziierung: VBScript'
+          href: ado-event-instantiation-vbscript.md
+        - name: 'ADO-Ereignisinstanziierung: JScript'
+          href: ado-event-instantiation-jscript.md
+        - name: 'ADO-Ereignisinstanziierung: ADO und WFC'
+          href: ado-event-instantiation-ado-and-wfc.md
+- name: Grundlegendes zu Cursorn und Sperren
+  href: understanding-cursors-and-locks.md
+  items:
+    - name: Was ist ein Cursor?
+      href: what-is-a-cursor.md
+    - name: Cursortypen (ADO)
+      href: types-of-cursors-ado.md
+      items:
+        - name: Vorwärtscursor
+          href: forward-only-cursors.md
+        - name: Statische Cursor
+          href: static-cursors.md
+        - name: KEYSET-Cursor
+          href: keyset-cursors.md
+        - name: Dynamische Cursor
+          href: dynamic-cursors.md
+    - name: Die Bedeutung der Cursorposition
+      href: the-significance-of-cursor-location.md
+    - name: Microsoft Cursor-Dienst für OLE DB
+      href: the-microsoft-cursor-service-for-ole-db.md
+    - name: Was ist eine Sperre?
+      href: what-is-a-lock.md
+      items:
+        - name: Typen von Sperren
+          href: types-of-locks.md
+    - name: Verwenden von CacheSize
+      href: using-cachesize.md
+    - name: Cursor und Merkmale der Sperre
+      href: cursor-and-lock-characteristics.md
+- name: Datenstrukturierung
+  href: data-shaping.md
+  items:
+    - name: Datenstrukturierung – Übersicht
+      href: data-shaping-overview.md
+    - name: Datenstrukturierung – Beispiel
+      href: data-shaping-example.md
+      items:
+        - name: Visual Basic-Beispiel der Datenstrukturierung
+          href: visual-basic-example-of-data-shaping.md
+    - name: Neustrukturierung
+      href: reshaping.md
+    - name: Untergeordnete Aggregate
+      href: grandchild-aggregates.md
+    - name: Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen
+      href: parameterized-commands-with-intervening-compute-commands.md
+    - name: Beibehalten von hierarchischen Recordsets
+      href: persisting-hierarchical-recordsets.md
+    - name: Erforderliche Anbieter für die Datenstrukturierung
+      href: required-providers-for-data-shaping.md
+    - name: Shape-Befehle im Allgemeinen
+      href: shape-commands-in-general.md
+      items:
+        - name: 'Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort'
+          href: aggregate-functions-the-calc-function-and-the-new-keyword.md
+        - name: Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter
+          href: issuing-commands-to-the-underlying-data-provider.md
+    - name: SHAPE APPEND-Klausel
+      href: shape-append-clause.md
+      items:
+        - name: Verarbeitung nicht-parametrisierter Befehle
+          href: operation-of-non-parameterized-commands.md
+        - name: Verarbeitung parametrisierter Befehle
+          href: operation-of-parameterized-commands.md
+        - name: Hybridbefehle
+          href: hybrid-commands.md
+        - name: Zwischenschalten von SHAPE COMPUTE-Klauseln
+          href: intervening-shape-compute-clauses.md
+    - name: SHAPE COMPUTE-Klausel
+      href: shape-compute-clause.md
+    - name: Herstellen hierarchischer Recordsets
+      href: fabricating-hierarchical-recordsets.md
+    - name: Zugreifen auf Zeilen in einem hierarchischen Recordset
+      href: accessing-rows-in-a-hierarchical-recordset.md
+    - name: Formale Grammatik für Strukturen
+      href: formal-shape-grammar.md
+    - name: Visual Basic for Applications-Funktionen
+      href: visual-basic-for-applications-functions.md
+- name: Datensätze und Datenströme
+  href: records-and-streams.md
+  items:
+    - name: Datenströme und Persistenz
+      href: streams-and-persistence.md
+    - name: Command-Datenströme
+      href: command-streams.md
+    - name: Abrufen von Resultsets in Datenströme
+      href: retrieving-resultsets-into-streams.md
+    - name: Verwenden von ADO für die Veröffentlichung im Internet
+      href: using-ado-for-internet-publishing.md
+      items:
+        - name: Der OLE DB-Anbieter für die Veröffentlichung im Internet
+          href: the-ole-db-provider-for-internet-publishing.md
+        - name: 'Szenario: Veröffentlichung im Internet'
+          href: internet-publishing-scenario.md
+          items:
+            - name: 'Schritt 1: Einrichten des Visual Basic-Projekts'
+              href: step-1-set-up-the-visual-basic-project.md
+            - name: 'Schritt 2: Initialisieren des Listenfelds „Main“'
+              href: step-2-initialize-the-main-list-box.md
+            - name: 'Schritt 3: Auffüllen des Listenfelds „Fields“'
+              href: step-3-populate-the-fields-list-box.md
+            - name: 'Schritt 4: Auffüllen des Textfelds „Details“'
+              href: step-4-populate-the-details-text-box.md
+        - name: Absolute und relative URLs
+          href: absolute-and-relative-urls.md
+        - name: Datensätze und von Anbietern bereitgestellte Felder
+          href: records-and-provider-supplied-fields.md
