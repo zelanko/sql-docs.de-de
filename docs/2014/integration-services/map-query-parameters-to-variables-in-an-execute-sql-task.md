@@ -73,7 +73,7 @@ ms.locfileid: "37233390"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Beispiele zum Verwenden von Parametern mit gespeicherten Prozeduren finden Sie unter [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Beispiele zur Verwendung von Parametern mit gespeicherten Prozeduren finden Sie [Parameter und Rückgabecodes im Task SQL ausführen](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Klicken Sie auf **Parameterzuordnung**.  
   

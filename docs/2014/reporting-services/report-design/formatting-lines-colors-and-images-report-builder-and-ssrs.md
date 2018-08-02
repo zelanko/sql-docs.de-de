@@ -47,7 +47,7 @@ ms.locfileid: "37258206"
   
  Neben den Standardrahmen können auch zusätzliche Rahmen für Diagramme verwendet werden. Weitere Informationen finden Sie unter [Hinzufügen eines Rahmens zu einem Diagramm (Berichts-Generator und SSRS)](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
   
- Sie können auch dem Bericht selbst einen Rahmen hinzufügen. Weitere Informationen finden Sie unter [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ Sie können auch dem Bericht selbst einen Rahmen hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen eines Rahmens zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 ## <a name="applying-background-colors"></a>Anwenden von Hintergrundfarben  
  Sie können dem Hintergrund eines gesamten Berichts, eines Textfelds im Bericht oder einer Zelle oder Gruppe von Zellen in einem Datenbereich eine Volltonfarbe hinzufügen. Die Hintergrundfarbe ist standardmäßig Weiß. Sie können jedoch auf der Registerkarte **Ausfüllen** im Dialogfeld **Eigenschaften** des Berichtselements eine andere Farbe auswählen. Wenn Sie z.B. die Hintergrundfarbe eines Textfelds ändern möchten, klicken Sie mit der rechten Maustaste auf das Textfeld, und wählen Sie **Textfeldeigenschaften**aus. Klicken Sie auf **Ausfüllen** , und wählen Sie die dann die gewünschte Farbe aus. In diesem Dialogfeld können Sie für das ausgewählte Element eine Hintergrundfarbe festlegen, oder Sie können ein Bild hinzufügen, das im Hintergrund angezeigt wird.  

@@ -48,7 +48,7 @@ ms.locfileid: "37278284"
 ##  <a name="EmbedImages"></a> Einbetten von Bildern  
  Sie können Bilder in einen Bericht einbetten, sodass alle Bilddaten innerhalb der Berichtsdefinition gespeichert werden. Wenn Sie ein Bild einbetten, wird für das Bild die MIME-Codierung ausgeführt, und es wird als Text in der Berichtsdefinition gespeichert. Durch das Verwenden eines eingebetteten Bilds wird sichergestellt, dass das Bild immer für den Bericht verfügbar ist. Gleichzeitig nimmt allerdings die Größe der Berichtsdefinition zu.  
   
- Weitere Informationen zum Einbetten eines Bilds finden Sie unter [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Einbetten eines Bilds finden Sie unter [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -59,7 +59,7 @@ ms.locfileid: "37278284"
   
  Wenn der Bericht im Berichts-Generator oder im Berichts-Designer ausgeführt wird, verwendet die Vorschau die Anmeldeinformationen des Benutzers zur Anzeige des Bilds. Wenn der Bericht auf dem Berichtsserver ausgeführt wird, wird das Bild in dem Bericht möglicherweise nicht angezeigt, wenn die Serveranmeldeinformationen nicht für den Zugriff auf das Bild ausreichen. In diesem Fall wenden Sie sich an den Systemadministrator.  
   
- Weitere Informationen zum Hinzufügen eines externen Bilds zu einem Bericht finden Sie unter [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Hinzufügen eines externen Bilds zu einem Bericht finden Sie unter [Hinzufügen eines externen Bilds &#40;Berichts-Generator und SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -69,12 +69,12 @@ ms.locfileid: "37278284"
 > [!NOTE]  
 >  Einige Renderingerweiterungen, z.B. die HTML-Renderingerweiterung, rendern das Hintergrundbild für den Hauptteil des Berichts im Hauptteil, in der Kopfzeile und in der Fußzeile. Sie können ein separates Hintergrundbild für die Kopfzeile und die Fußzeile definieren. Wenn jedoch kein Bild definiert ist, verwendet der Bericht das Hintergrundbild des Hauptteiles. Bei anderen Renderingerweiterungen, z.B. der Bildrenderingerweiterung, wird das Hintergrundbild nicht in der Kopfzeile und Fußzeile gerendert.  
   
- Weitere Informationen zum Hinzufügen eines Hintergrundbilds finden Sie unter [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Hinzufügen eines Hintergrundbilds finden Sie unter [Hinzufügen eines Hintergrundbilds &#40;Berichts-Generator und SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Datengebundene Bilder  
- Sie können einem Bericht Bilder hinzufügen, die in einer Datenbank gespeichert sind. Dabei können Sie dasselbe Bildberichtselement wie für statische Bilder verwenden, jedoch mit einer Reihe von Eigenschaften, die die Speicherung des Bilds in einer Datenbank angeben. Anleitungen zum Verwenden von datengebundenen Bildern finden Sie unter [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
+ Sie können einem Bericht Bilder hinzufügen, die in einer Datenbank gespeichert sind. Dabei können Sie dasselbe Bildberichtselement wie für statische Bilder verwenden, jedoch mit einer Reihe von Eigenschaften, die die Speicherung des Bilds in einer Datenbank angeben. Anleitungen zum Verwenden von datengebundenen Bildern finden Sie unter [Hinzufügen eines datengebundenen Bilds &#40;Berichts-Generator und SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   

@@ -93,7 +93,7 @@ ms.locfileid: "37168311"
   
 -   Löschen Sie Symbole aus dem Indikatorsatz, um die Darstellung der Daten zu vereinfachen, indem Sie nur einige wenige Symbole verwenden.  
   
- Weitere Informationen finden Sie unter [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Verwenden von Indikatoren in Tabellen und Matrizen  
@@ -103,9 +103,9 @@ ms.locfileid: "37168311"
   
  ![rs_IndikatorBerichtBlauePfeile](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- Weitere Informationen zum Hinzufügen, Ändern und Löschen von Indikatoren finden Sie unter [Add or Delete an Indicator &#40;Report Builder and SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Hinzufügen, Ändern und Löschen von Indikatoren finden Sie unter [Hinzufügen oder Löschen eines Indikators &#40;Berichts-Generator und SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md).  
   
- Wenn Sie einem Bericht zum ersten Mal einen Indikator hinzufügen, wird dieser mit den Standardwerten konfiguriert. Sie können die Werte dann ändern, damit der Indikator die Daten wie gewünscht darstellt. Sie können die Darstellung der Indikatorsymbole, die Methode, wie der Indikator das zu verwendende Symbol auswählt, und die von einem Indikatorsatz verwendeten Symbole ändern. Weitere Informationen finden Sie unter [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Wenn Sie einem Bericht zum ersten Mal einen Indikator hinzufügen, wird dieser mit den Standardwerten konfiguriert. Sie können die Werte dann ändern, damit der Indikator die Daten wie gewünscht darstellt. Sie können die Darstellung der Indikatorsymbole, die Methode, wie der Indikator das zu verwendende Symbol auswählt, und die von einem Indikatorsatz verwendeten Symbole ändern. Weitere Informationen finden Sie unter [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
  Standardmäßig werden Indikatoren so konfiguriert, dass Prozentsätze als Maßeinheit verwendet und der Minimal- sowie Maximalwert in den Daten automatisch erkannt wird. Jedes Symbol im Indikatorsatz entspricht einem Prozentbereich. Die Anzahl der Prozentbereiche hängt von der Anzahl der Symbole im Symbolsatz ab, die Bereiche haben allerdings die gleiche Größe und folgen sequenziell aufeinander. Wenn der Symbolsatz z. B. fünf Symbole aufweist, enthält er fünf Prozentbereiche mit einer Größe von jeweils 20 Prozent. Der erste Bereich beginnt bei 0 und endet bei 20, der zweite beginnt bei 20 und endet bei 40 usw. Für den Indikator im Bericht wird das Symbol aus dem Indikatorsatz verwendet, das dem Prozentbereich entspricht, in dem der Indikatordatenwert liegt. Sie können den Prozentbereich für jedes Symbol im Satz ändern. Die Minimal- und Maximalwerte können explizit festgelegt werden, indem ein Wert oder ein Ausdruck angegeben wird. Sie können die Maßeinheit stattdessen in einen numerischen Wert ändern. In diesem Fall geben Sie kein Minimum oder Maximum für die Daten an. Stattdessen geben Sie nur den Start- und Endwert für jedes vom Indikator verwendete Symbol an. Weitere Informationen finden Sie unter [Gruppe und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "37168311"
   
  Allgemeine Informationen zum Verständnis und zum Festlegen von Bereichen in Berichten finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Indikatoren verwenden nur einen einzelnen Wert. Wenn Sie mehrere Datenwerte anzeigen müssen, verwenden Sie eine Sparkline oder einen Datenbalken anstelle eines Indikators. Sie können mehrere Datenwerte darstellen, sind jedoch ebenfalls einfach aufgebaut, bei kleiner Größe leicht zu verstehen und gut geeignet für Tabellen und Matrizen. Weitere Informationen finden Sie unter [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Indikatoren verwenden nur einen einzelnen Wert. Wenn Sie mehrere Datenwerte anzeigen müssen, verwenden Sie eine Sparkline oder einen Datenbalken anstelle eines Indikators. Sie können mehrere Datenwerte darstellen, sind jedoch ebenfalls einfach aufgebaut, bei kleiner Größe leicht zu verstehen und gut geeignet für Tabellen und Matrizen. Weitere Informationen finden Sie unter [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SizingIndicatators"></a> Anpassen der Größe von Indikatoren für eine maximale visuelle Wirkung  
@@ -131,7 +131,7 @@ ms.locfileid: "37168311"
   
  ![rs_MessgerätBereichMitIndikatorUndMessgerät](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Weitere Informationen finden Sie unter [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich &#40;Berichts-Generator und SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
  Weitere Informationen zum Verwenden von Messgeräten finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   

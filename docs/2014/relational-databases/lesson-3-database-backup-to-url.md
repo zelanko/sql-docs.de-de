@@ -105,7 +105,7 @@ ms.locfileid: "37327840"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     Weitere Informationen finden Sie unter [Add Data or Log Files to a Database](databases/add-data-or-log-files-to-a-database.md).  
+     Weitere Informationen finden Sie unter [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Behalten Sie alle anderen Standardwerte bei.  
   
