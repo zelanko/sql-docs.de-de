@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 description: "'ISSCommandWithParameters::GetParameterProperties' (OLE DB)"
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3bc5932fc68b627f6bc204deec971402046baca9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689993"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108092"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>'ISSCommandWithParameters::GetParameterProperties' (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -48,13 +48,13 @@ HRESULT GetParameterProperties(
  Ein Zeiger auf den Arbeitsspeicher, der die Anzahl von SSPARAMPROPS-Strukturen enthält, die in *prgParamProperties*zurückgegeben werden.  
   
  *prgParamProperties*[out]  
- Ein Zeiger auf den Arbeitsspeicher, in den ein Array aus SSPARAMPROPS-Strukturen zurückgegeben wird. Der Anbieter teilt Speicher für die Strukturen und gibt die Adresse zu diesem Arbeitsspeicher zurück, der Consumer gibt diesen Arbeitsspeicher mit **IMalloc:: Free** wenn er die Strukturen nicht mehr benötigt. Vor dem Aufruf **IMalloc:: Free** für *PrgParamProperties*, der Consumer muss auch aufrufen, **VariantClear** für die *vValue* Eigenschaft Geben Sie z. B. einen BSTR, jeder DBPROP-Struktur, um einen Speicherverlust in Fällen zu verhindern, in dem die Variante einen Verweis enthält. Wenn *PcParams* ist 0 (null) bei der Ausgabe oder ein anderer Fehler als DB_E_ERRORSOCCURRED auftritt, der Anbieter nicht Arbeitsspeicher zu und stellt sicher *PrgParamProperties* bei Ausgabe ein null-Zeiger ist.  
+ Ein Zeiger auf den Arbeitsspeicher, in den ein Array aus SSPARAMPROPS-Strukturen zurückgegeben wird. Der Anbieter teilt Speicher für die Strukturen zu und gibt die Adresse an den Arbeitsspeicher zurück. Der Consumer gibt diesen Speicher mit **IMalloc::Free** frei, wenn er die Strukturen nicht mehr benötigt. Bevor der Consumer **IMalloc::Free** für *prgParamProperties* aufrufen kann, muss er auch **VariantClear** für die *vValue*-Eigenschaft jeder DBPROP-Struktur aufrufen, um einem Speicherverlust vorzubeugen. Zu diesem kann es kommen, wenn die Variante einen Verweistyp enthält (z.B. BSTR). Wenn *pcParams* bei der Ausgabe 0 (null) ist oder ein anderer Fehler als DB_E_ERRORSOCCURRED auftritt, teilt der Anbieter keinen Arbeitsspeicher zu und stellt sicher, dass *prgParamProperties* bei Ausgabe ein NULL-Zeiger ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Die **GetParameterProperties** Methodenrückgabe die gleichen Fehlercodes wie die OLE DB- **ICommandProperties:: GetProperties** -Methode, mit Ausnahme von DB_S_ERRORSOCCURRED und DB_E_ERRORSOCCURED nicht möglich wird ausgelöst.  
+ Die **GetParameterProperties**-Methode gibt dieselben Fehlercodes zurück wie die **ICommandProperties::GetProperties** -Methode von OLE DB, allerdings können DB_S_ERRORSOCCURRED und DB_E_ERRORSOCCURED nicht ausgelöst werden.  
   
-## <a name="remarks"></a>Hinweise  
- **ISSCommandWithParameters::GetParameterProperties** method behaves consistently with respect to **GetParameterInfo**. Wenn [isscommandwithparameters:: SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) oder **SetParameterInfo** nicht aufgerufen wurden oder gleich 0 (null), einem aufgerufen worden **GetParameterInfo**Parameterinformationen abgeleitet und gibt ihn zurück. Wenn **isscommandwithparameters:: SetParameterProperties** oder **SetParameterInfo** aufgerufen wurden, für mindestens einen Parameter **isscommandwithparameters:: Getparameterproperties**  Methodenrückgabe Eigenschaften nur für die Parameter für die **isscommandwithparameters:: SetParameterProperties** aufgerufen wurde. Wenn **isscommandwithparameters:: SetParameterProperties** wird aufgerufen, nachdem **isscommandwithparameters:: Getparameterproperties** oder **GetParameterInfo**, nachfolgende Aufrufe **isscommandwithparameters:: Getparameterproperties** die überschriebenen Werte für jene Parameter zurück, für die **isscommandwithparameters:: SetParameterProperties** -Methode aufgerufen wurde.  
+## <a name="remarks"></a>Remarks  
+ Die **ISSCommandWithParameters::GetParameterProperties**-Methode verhält sich in Bezug auf **GetParameterInfo** konsistent. Wenn [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) und **SetParameterInfo** nicht aufgerufen wurden oder mit einem Wert von 0 (null) für **cParams** aufgerufen wurden, leitet „GetParameterInfo“ Parameterinformationen ab und gibt diese zurück. Wenn **ISSCommandWithParameters::SetParameterProperties** oder **SetParameterInfo** für mindestens einen Parameter aufgerufen wurde, gibt die **ISSCommandWithParameters::GetParameterProperties**-Methode Eigenschaften nur für die Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde. Wenn **ISSCommandWithParameters::SetParameterProperties** nach **ISSCommandWithParameters::GetParameterProperties** oder **GetParameterInfo** aufgerufen wird, geben nachfolgende Aufrufe von **ISSCommandWithParameters::GetParameterProperties** die überschriebenen Werte für jene Parameter zurück, für die die **ISSCommandWithParameters::SetParameterProperties**-Methode aufgerufen wurde.  
   
  Die SSPARAMPROPS-Struktur ist folgendermaßen definiert:  
   
@@ -68,13 +68,13 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|Member|Description|  
+|Member|und Beschreibung|  
 |------------|-----------------|  
 |*iOrdinal*|Die Ordnungszahl des übergebenen Parameters|  
 |*cPropertySets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
 |*rgPropertySets*|Ein Zeiger auf den Speicher, in den ein Array aus DBPROPSET-Strukturen zurückgegeben werden soll|  
   
-## <a name="see-also"></a>Siehe auch  
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ISSCommandWithParameters &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

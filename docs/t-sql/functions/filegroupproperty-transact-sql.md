@@ -24,55 +24,52 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc112a5e07197ed8b0056a7daeddb55c0c418c9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6cdc7d89b93d8961ed6000efdef4b34c34a54a7d
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790146"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228406"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den angegebenen Eigenschaftswert der Dateigruppe für bereitgestellte Dateigruppen- und Eigenschaftsnamen zurück.  
+Diese Funktion gibt den filegroup-Eigenschaftenwert für einen angegebenen Namens- und Dateigruppenwert zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-FILEGROUPPROPERTY ( filegroup_name , property )  
+FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *filegroup_name*  
- Ein Ausdruck vom **sysname**-Datentyp, der den Namen der Dateigruppe darstellt, für die die benannte Eigenschaftsinformation zurückgegeben wird.  
+Ein Ausdruck vom Datentyp **sysname**, der den Namen der Dateigruppe darstellt, für die `FILEGROUPPROPERTY` die benannten Eigenschafteninformationen zurückgibt.  
   
  *property*  
- Ein Ausdruck vom Typ **varchar(128)**, der den Namen der Dateigruppeneigenschaft enthält, die zurückgegeben werden soll. *property* kann einen der folgenden Werte aufweisen.  
+Ein Ausdruck vom Typ **varchar(128)**, der den Namen der Dateigruppeneigenschaft zurückgibt. *property* kann einen dieser Werte zurückgeben:  
   
-|value|und Beschreibung|Zurückgegebener Wert|  
+|Wert|Beschreibung|Zurückgegebener Wert|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Dateigruppe ist schreibgeschützt.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsUserDefinedFG**|Dateigruppe ist eine benutzerdefinierte Dateigruppe.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsDefault**|Dateigruppe ist die Standarddateigruppe.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsReadOnly**|Dateigruppe ist schreibgeschützt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe|  
+|**IsUserDefinedFG**|Dateigruppe ist eine benutzerdefinierte Dateigruppe.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe|  
+|**IsDefault**|Dateigruppe ist die Standarddateigruppe.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: Ungültige Eingabe|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
+*filegroup_name* entspricht der Spalte **name** der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Einstellung für die `IsDefault`-Eigenschaft für die primäre Dateigruppe in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
+In diesem Beispiel wird die Einstellung der Eigenschaft `IsDefault` für die primäre Dateigruppe in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
 ```  
-  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
-  
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  

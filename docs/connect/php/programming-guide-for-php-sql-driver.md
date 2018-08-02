@@ -1,5 +1,5 @@
 ---
-title: Programmierhandbuch für den Microsoft Drivers for PHP for SQLServer | Microsoft Docs
+title: Programmierhandbuch für den Microsoft Drivers for PHP for SQLServer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992792"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 |[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)|Beschreibt die Optionen und Verfahren zum Verbinden mit dem SQL Server.|  
 |[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)|Vergleicht die Funktionen, die zum Ausführen einer Abfrage verwendet werden, indem verschiedene Anwendungsfälle für jede einzelne Funktion untersucht werden. Im Besonderen vergleicht dieses Dokument die Ausführung einer einzelnen Abfrage mit der mehrmaligen Ausführung einer vorbereiteten Abfrage.|  
@@ -38,13 +38,13 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
 |[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)|Erläutert, wie Datentypen angegeben und Details zu Standard-Datentypen zur Verfügung gestellt werden.|  
 |[Behandeln von Fehlern und Warnungen](../../connect/php/handling-errors-and-warnings.md)|Erläutert, wie Fehler und Warnungen zu behandeln sind.|  
 |[Protokollieren von Aktivitäten](../../connect/php/logging-activity.md)|Informationen zum Protokollieren von Fehlern und Warnungen.|  
-|[Mit "immer verschlüsselt" mit dem Microsoft-Treiber für PHP für SQLServer](../../connect/php/using-always-encrypted-php-drivers.md)|Enthält Informationen zur Verwendung von Always Encrypted-Funktion mit der PHP-Treibern.|  
+|[Verwenden von Always Encrypted mit dem Microsoft-Treiber für PHP für SQLServer](../../connect/php/using-always-encrypted-php-drivers.md)|Enthält Informationen zur Verwendung von Always Encrypted-Funktion mit den PHP-Treibern.|  
 |[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/security-considerations-for-php-sql-driver.md)|Beschreibt Sicherheitsaspekte für das Entwickeln, Bereitstellen und Ausführen von Anwendungen.|  
   
-## <a name="see-also"></a>Siehe auch  
-[Übersicht über die Microsoft-Treiber für PHP für SQLServer](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
 
-[Erste Schritte mit Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 

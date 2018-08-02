@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Leistung mit dem Abfragespeicher | Microsoft -Dokumentation
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f30d87526729100a99336408778f2d2df4406475
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 932137c603db51693f90b2aa823232842e918e50
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332451"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228436"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "34332451"
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfragespeicher bietet Ihnen Einblick in die Auswahl und die Leistung eines Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern, sodass Sie Verwendungsmuster für Datenbanken erkennen können und verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Sie können den Abfragespeicher mit der Option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) konfigurieren. 
   
  Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Verwenden des Abfragespeichers in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
+ 
+> [!IMPORTANT]
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](http://support.microsoft.com/help/4340759) ein. 
   
 ##  <a name="Enabling"></a> Aktivieren des Abfragespeichers  
  Der Abfragespeicher ist bei neuen Datenbanken standardmäßig nicht aktiviert.  
@@ -57,7 +60,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 Weitere Syntaxoptionen im Zusammenhang mit dem Abfragespeicher finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
->  Sie können den Abfragespeicher nicht für die **master** - oder **tempdb** -Datenbank aktivieren.  
+> Sie können den Abfragespeicher nicht für die **master** - oder **tempdb** -Datenbank aktivieren.  
+ 
+> [!IMPORTANT]
+> Informationen zum Aktivieren des Abfragespeichers und dazu, wie Sie ihn an Ihre Arbeitsauslastung angepasst halten, finden Sie unter [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
  
 ## <a name="About"></a> Informationen im Abfragespeicher  
  Die Ausführungspläne für eine bestimmte Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verändern sich i. Allg. im Laufe der Zeit aufgrund unterschiedlicher Ursachen wie z.B. statischer Änderungen, Schemaänderungen, des Erstellens/Löschens von Indizes usw. Der Prozedurcache (in dem zwischengespeicherte Abfragepläne gespeichert werden) speichert nur den letzten Ausführungsplan. Pläne werden auch bei Speicherplatzknappheit aus dem Plancache entfernt. Aus diesem Grund kann die Problembehandlung bei einer Regression der Abfrageleistung schwierig und zeitaufwendig sein.  
@@ -492,9 +498,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time \<= @history_start_time   
+        OR (rs.first_execution_time <= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time \<= @history_end_time   
+        OR (rs.first_execution_time <= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -509,9 +515,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time \<= @recent_start_time   
+        OR (rs.first_execution_time <= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time \<= @recent_end_time   
+        OR (rs.first_execution_time <= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  

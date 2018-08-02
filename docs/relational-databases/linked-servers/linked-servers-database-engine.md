@@ -25,12 +25,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40dcd4294f55d7b65957bb8b3fe30367618b6b0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76c1666b70f7df6b5aa0939dd469be444d865ed7
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946125"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349988"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "32946125"
   
 -   Die Möglichkeit, verschiedene Datenquellen ähnlich zu adressieren.  
   
- Ein Verbindungsserver kann mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe der Anweisung [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) konfiguriert werden. OLE DB-Anbieter variieren stark in Hinblick auf Typ und Anzahl der erforderlichen Parameter. Bei manchen Anbietern müssen Sie beispielsweise mit [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)zu aktivieren. Einige OLE DB-Anbieter ermöglichen es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Daten in der OLE DB-Quelle zu aktualisieren. Andere Anbieter stellen nur schreibgeschützten Datenzugriff bereit. Informationen zu den einzelnen OLE DB-Anbietern finden Sie in der jeweiligen Dokumentation des OLE DB-Anbieters.  
+Ein Verbindungsserver kann mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe der Anweisung [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) konfiguriert werden. OLE DB-Anbieter variieren stark in Hinblick auf Typ und Anzahl der erforderlichen Parameter. Bei manchen Anbietern müssen Sie beispielsweise mit [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)zu aktivieren. Einige OLE DB-Anbieter ermöglichen es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Daten in der OLE DB-Quelle zu aktualisieren. Andere Anbieter stellen nur schreibgeschützten Datenzugriff bereit. Informationen zu den einzelnen OLE DB-Anbietern finden Sie in der jeweiligen Dokumentation des OLE DB-Anbieters.  
   
 ## <a name="linked-server-components"></a>Verbindungsserverkomponenten  
  Eine Verbindungsserverdefinition gibt die folgenden Objekte an:  
@@ -51,31 +51,33 @@ ms.locfileid: "32946125"
   
 -   Eine OLE DB-Datenquelle.  
   
- Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.  
+Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.  
   
- Der OLE DB-Anbieter für [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Der OLE DB-Anbieter für [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.  
   
 ## <a name="linked-server-details"></a>Einzelheiten zu Verbindungsservern  
  Die folgende Abbildung zeigt die Grundlagen einer Verbindungsserverkonfiguration.  
   
  ![Clientebene, Serverebene und Datenbankserverebene](../../relational-databases/linked-servers/media/lsvr.gif "Clientebene, Serverebene und Datenbankserverebene")  
   
- Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
+Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
   
- Damit eine Datenquelle Daten über einen Verbindungsserver zurückgibt, muss der OLE DB-Anbieter (DLL) für diese Datenquelle auf demselben Server wie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden sein.  
+> [!NOTE]
+> Damit eine Datenquelle Daten über einen Verbindungsserver zurückgibt, muss der OLE DB-Anbieter (DLL) für diese Datenquelle auf demselben Server wie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden sein.  
   
- Wenn ein OLE DB-Anbieter eines Drittanbieters verwendet wird, müssen dem Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt worden sein, in dem der Anbieter installiert ist.  
+> [!IMPORTANT] 
+> Wenn ein OLE DB-Anbieter verwendet wird, müssen dem Konto, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird, Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt worden sein, in dem der Anbieter installiert ist. Dies schließt den Anbieter von Microsoft und alle Anbieter von Drittanbietern ein. 
   
 ## <a name="managing-providers"></a>Verwalten von Anbietern  
- Eine Gruppe von Optionen steuert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter lädt und verwendet, die in der Registrierung angegeben werden.  
+Eine Gruppe von Optionen steuert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter lädt und verwendet, die in der Registrierung angegeben werden.  
   
 ## <a name="managing-linked-server-definitions"></a>Verwalten von Verbindungsserverdefinitionen  
- Beim Einrichten eines Verbindungsservers sollten die Verbindungsinformationen und Datenquelleninformationen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert werden. Nach der Registrierung kann über einen einzelnen logischen Namen auf diese Datenquelle verwiesen werden.  
+Beim Einrichten eines Verbindungsservers sollten die Verbindungsinformationen und Datenquelleninformationen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert werden. Nach der Registrierung kann über einen einzelnen logischen Namen auf diese Datenquelle verwiesen werden.  
   
- Sie können gespeicherte Prozeduren und Katalogsichten zum Verwalten von Verbindungsserverdefinitionen verwenden:  
+Sie können gespeicherte Prozeduren und Katalogsichten zum Verwalten von Verbindungsserverdefinitionen verwenden:  
   
 -   Erstellen Sie eine Verbindungsserverdefinition, indem Sie **sp_addlinkedserver**ausführen.  
   
@@ -83,12 +85,12 @@ ms.locfileid: "32946125"
   
 -   Löschen Sie eine Verbindungsserverdefinition, indem Sie **sp_dropserver**ausführen. Sie können mit dieser gespeicherten Prozedur auch einen Remoteserver entfernen.  
   
- Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]definieren. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Serverobjekte**, klicken Sie auf **Neu**, und klicken Sie dann auf **Verbindungsserver**. Sie können eine Verbindungsserverdefinition löschen, indem Sie mit der rechten Maustaste auf den Namen des Verbindungsservers und dann auf **Löschen**klicken.  
+Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]definieren. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Serverobjekte**, klicken Sie auf **Neu**, und klicken Sie dann auf **Verbindungsserver**. Sie können eine Verbindungsserverdefinition löschen, indem Sie mit der rechten Maustaste auf den Namen des Verbindungsservers und dann auf **Löschen**klicken.  
   
  Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss in der Form *linked_server_name.catalog ***.*** schema ***.*** object_name* vorliegen.  
   
 > [!NOTE]  
->  Verbindungsserver können so definiert werden, dass sie zurück auf den Server zeigen, auf dem sie definiert sind (zurücklaufen = loop back). Loopbackserver sind sehr nützlich, um eine Anwendung, von der verteilte Abfragen verwendet werden, in einem Netzwerk mit einem einzelnen Server zu testen. Loopbackverbindungsserver sind für Tests bestimmt und werden für viele Vorgänge, z. B. verteilte Transaktionen, nicht unterstützt.  
+> Verbindungsserver können so definiert werden, dass sie zurück auf den Server zeigen, auf dem sie definiert sind (zurücklaufen = loop back). Loopbackserver sind sehr nützlich, um eine Anwendung, von der verteilte Abfragen verwendet werden, in einem Netzwerk mit einem einzelnen Server zu testen. Loopbackverbindungsserver sind für Tests bestimmt und werden für viele Vorgänge, z. B. verteilte Transaktionen, nicht unterstützt.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  

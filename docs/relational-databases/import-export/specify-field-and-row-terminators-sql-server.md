@@ -1,7 +1,7 @@
 ---
 title: Angeben von Feld- und Zeilenabschlusszeichen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278678"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,13 +98,21 @@ ms.lasthandoff: 05/03/2018
 -   Für eine lange Spalte mit fester Länge, deren Breite von vielen Zeilen nicht vollständig genutzt wird.  
   
      In dieser Situation kann das Angeben eines Abschlusszeichens den Speicherplatz minimieren, sodass das Feld als Feld variabler Länge behandelt werden kann.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Angeben von `\n` als Zeilenabschlusszeichen für den Massenexport
+
+Wenn Sie `\n` als Zeilenabschlusszeichen für den Massenexport angeben oder implizit das standardmäßige Zeilenabschlusszeichen verwenden, gibt „bcp“ als Zeilenabschlusszeichen CRLF (Carriage Return-Line Feed Combination) aus. Wenn Sie nur ein LF-Zeichen (Line Feed) als Zeilenabschlusszeichen ausgeben möchten – dies ist auf Unix- und Linux-Computern typisch –, verwenden Sie Hexadezimalnotation zur Angabe des LF-Zeilenabschlusszeichens. Zum Beispiel:
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>Beispiele  
  In diesem Beispiel wird ein Massenexport von Daten aus der `AdventureWorks.HumanResources.Department` -Tabelle in die `Department-c-t.txt` -Datendatei mithilfe des Zeichenformats ausgeführt, wobei ein Komma als Feldabschlusszeichen und das Neue-Zeile-Zeichen (\n) als Zeilenabschlusszeichen dient.  
   
  Der Befehl **bcp** verfügt über folgende Schalter.  
   
-|Schalter|Description|  
+|Schalter|und Beschreibung|  
 |------------|-----------------|  
 |**-c**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |**-t** `,`|Gibt ein Komma (,) als Feldabschlusszeichen an.|  
@@ -131,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Abschlusszeichen können für einzelne Felder in einer Formatdatei oder für die gesamten Datendatei angegeben werden, indem die in der folgenden Tabelle aufgeführten Qualifizierer verwendet werden:  
   
-    |Qualifizierer|Description|  
+    |Qualifizierer|und Beschreibung|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***Feldabschlusszeichen***'**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
     |ROWTERMINATOR **='***Zeilenabschlusszeichen***'**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
@@ -143,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      Für den OPENROWSET-Massenrowsetanbieter können Abschlusszeichen nur in der Formatdatei angegeben werden. Dies ist bis auf Datentypen für große Objekte vorgeschrieben. Wenn von einer Zeichendatendatei ein nicht-standardmäßiges Abschlusszeichen verwendet wird, muss dieses in der Formatdatei definiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) und [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)zu markieren.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>Angeben von `\n` als Zeilenabschlusszeichen für den Massenimport
+Wenn Sie `\n` als Zeilenabschlusszeichen für den Massenimport angeben oder implizit das standardmäßige Zeilenabschlusszeichen verwenden, erwarten „bcp“ und die BULK INSERT-Anweisung ein CRLF (Carriage Return-Line Feed Combination) als Zeilenabschlusszeichen. Wenn Ihre Quelldatei nur ein LF-Zeichen (Line Feed) als Zeilenabschlusszeichen verwendet – dies ist typisch für Dateien, die auf Unix- und Linux-Computern generiert werden –, verwenden Sie Hexadezimalnotation zur Angabe des LF-Zeilenabschlusszeichens. Beispiel für eine BULK INSERT-Anweisung:
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>Beispiele  
  In den Beispielen in diesem Abschnitt wird jeweils ein Massenimport von Zeichendaten aus der `Department-c-t.txt` -Datendatei, die im vorhergehenden Beispiel erstellt wurde, in die `myDepartment` -Tabelle in der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Beispieldatenbank ausgeführt. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie zum Erstellen dieser Tabelle unter dem **dbo** -Schema im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor den folgenden Code aus:  
   

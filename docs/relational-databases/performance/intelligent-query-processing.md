@@ -2,7 +2,7 @@
 title: Intelligente Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Features zur intelligenten Abfrageverarbeitung, die die Abfrageleistung in SQL Server und in Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
+ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216821"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39250448"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -48,6 +48,8 @@ Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Date
 Die verzögerte Kompilierung von Tabellenvariablen verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung propagiert diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren.  Diese genauen Zeilenzahlinformationen werden für die Optimierung der nachgelagerten Planvorgänge verwendet.
 
 Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses verzögerte Kompilierungsverhalten ist identisch mit dem Verhalten von temporären Tabellen, und diese Änderung führt zur Verwendung der tatsächlichen Kardinalität anstelle der ursprünglichen einzeiligen Schätzung. Um die öffentliche Vorschau der verzögerten Kompilierung von Tabellenvariablen in der Azure SQL-Datenbank zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
+
+Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
 
 ## <a name="approximate-query-processing"></a>Geschätzte Abfrageverarbeitung
 Die geschätzte Abfrageverarbeitung ist eine neue Featurefamilie, die konzipiert wurde, um Aggregationen über große Datasets hinweg bereitzustellen, bei denen die Reaktionsfähigkeit wichtiger ist als die absolute Präzision.  Ein Beispiel könnte die Berechnung eines COUNT(DISTINCT()) über 10 Milliarden Zeilen für die Anzeige auf einem Dashboard sein.  In diesem Fall ist absolute Genauigkeit nicht wichtig, aber die Reaktionsfähigkeit ist es jedoch. Diese neue APPROX_COUNT_DISTINCT-Aggregatfunktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück.

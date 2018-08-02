@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432239"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240682"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ Abfragen, die **table**-Variablen ändern, generieren keine Pläne für die para
   
 Die explizite Erstellung von Indizes für **table**-Variablen ist nicht möglich, zudem werden für **table**-Variablen keine Statistiken geführt. Mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] wurde eine neue Syntax eingeführt, die es erlaubt, bestimmte Indextypen inline mit der Tabellendefinition zu erstellen.  Mit dieser neuen Syntax können Sie Indizes für **table**-Variablen als Teil der Tabellendefinition erstellen. In einigen Fällen kann die Leistung verbessert werden, indem stattdessen temporäre Tabellen verwendet werden, die eine vollständige Unterstützung für Indizes und Statistiken bieten. Weitere Informationen zu temporären Tabellen und der Inlineerstellung von Indizes finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-
 CHECK-Einschränkungen, DEFAULT-Werte und berechnete Spalten in der **table**-Typdeklaration können keine benutzerdefinierten Funktionen aufrufen.
   
 Zuweisungsvorgänge zwischen **table**-Variablen werden nicht unterstützt.
@@ -115,6 +114,23 @@ Zuweisungsvorgänge zwischen **table**-Variablen werden nicht unterstützt.
 Transaktionsrollbacks wirken sich nicht auf **table**-Variablen aus, da diese Variablen einen beschränkten Bereich haben und kein Teil der permanenten Datenbank sind.
   
 Tabellenvariablen können nicht geändert werden, nachdem sie erstellt wurden.
+
+## <a name="table-variable-deferred-compilation"></a>Verzögerte Kompilierung von Tabellenvariablen
+Die **verzögerte Kompilierung von Tabellenvariablen** verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung des Plans verteilt diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese genauen Zeilenzahlinformationen werden dann für die Optimierung der nachgelagerten Planvorgänge verwendet.
+
+> [!NOTE]
+> Die verzögerte Kompilierung von Tabellenvariablen ist ein Feature in Azure SQL-Datenbank, das sich in der öffentlichen Vorschau befindet.  
+
+Bei der verzögerten Kompilierung von Tabellenvariablen wird die Kompilierung einer Anweisung, die auf eine Tabellenvariable verweist, bis zur ersten tatsächlichen Ausführung der Anweisung verzögert. Dieses verzögerte Kompilierungsverhalten ist identisch mit dem Verhalten von temporären Tabellen, und diese Änderung führt zur Verwendung der tatsächlichen Kardinalität anstelle der ursprünglichen einzeiligen Schätzung. 
+
+Um die öffentliche Vorschau der verzögerten Kompilierung von Tabellenvariablen zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
+
+Die verzögerte Kompilierung von Tabellenvariablen führt **nicht** zu Änderungen an anderen Merkmalen von Tabellenvariablen. Beispielsweise wird durch dieses Feature keine Spaltenstatistik zu Tabellenvariablen hinzugefügt.
+
+Die verzögerte Kompilierung von Tabellenvariablen **führt nicht zu einer häufigeren Neukompilierung**.  Stattdessen wird der Zeitpunkt der ersten Kompilierung verschoben. Der resultierende zwischengespeicherte Plan wird basierend auf der anfänglichen Zeilenanzahl für die verzögerte Kompilierung von Tabellenvariablen generiert. Der zwischengespeicherte Plan wird bei nachfolgenden Abfragen wiederverwendet, bis der Plan entfernt oder neu kompiliert wird. 
+
+Wenn die Zeilenanzahl für Tabellenvariablen für die anfängliche Plankompilierung einen typischen Wert darstellt, der erheblich von einem geschätzten Festwert für die Zeilenanzahl abweicht, sind Downstreamvorgänge vorteilhaft.  Weicht die Zeilenanzahl für Tabellenvariablen für alle durchgeführten Ausführungen erheblich ab, kann die Leistung durch dieses Feature möglicherweise nicht verbessert werden.
+
   
 ## <a name="examples"></a>Beispiele  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

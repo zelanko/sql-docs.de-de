@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981422"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279181"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  In diesem Thema werden die bewährten Methoden für den Einsatz eines Abfragespeichers bei Ihrer Arbeitsauslastung vorgestellt.  
+  In diesem Artikel werden die bewährten Methoden für den Einsatz des Abfragespeichers mit Ihrer Arbeitsauslastung vorgestellt.  
   
 ##  <a name="SSMS"></a> Verwenden des neuesten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers sowie zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden.  
@@ -45,7 +45,7 @@ Sie können den Abfragespeicher bedenkenlos in allen Datenbanken verwenden, selb
 
 ##  <a name="Configure"></a> Dauerhafte Abfragespeicheranpassung an Ihre Arbeitsauslastung  
  Konfigurieren Sie Abfragespeicher basierend auf den Anforderungen hinsichtlich der Arbeitsauslastung und der Behandlung von Leistungsproblemen.   
-Die Standardparameter sind gut für einen schnellen Einstieg geeignet; Sie sollten jedoch das Verhalten von Abfragespeicher im Verlauf der Zeit überwachen und die Konfiguration entsprechend anpassen:  
+Die Standardparameter sind für den Einstieg ausreichend, Sie sollten jedoch das Verhalten von Abfragespeicher im Verlauf der Zeit überwachen und die Konfiguration entsprechend anpassen:  
   
  ![abfrage-speicher-eigenschaften](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -213,7 +213,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
   
  Gehen Sie proaktiv folgendermaßen vor:  
   
--   Sie können die automatischen Änderungen des Betriebsmodus durch Anwenden bewährter Methoden verhindern. Wenn Sie sicherstellen, dass die Abfragespeichergröße immer unterhalb des maximal zulässigen Werts ist, sinkt die Wahrscheinlichkeit des Übergangs in den schreibgeschützten Modus maßgeblich. Aktivieren Sie die größenbasierte Richtlinie, wie im Abschnitt zum [Konfigurieren von Abfragespeicher](#Configure) beschrieben, sodass der Abfragespeicher die Daten automatisch bereinigt, wenn sich die Größe dem Grenzwert nähert.  
+-   Sie können die automatischen Änderungen des Betriebsmodus durch Anwenden bewährter Methoden verhindern. Wenn Sie sicherstellen, dass die Abfragespeichergröße immer unterhalb des maximal zulässigen Werts ist, sinkt die Wahrscheinlichkeit des Übergangs in den schreibgeschützten Modus maßgeblich. Aktivieren Sie die größenbasierte Richtlinie, wie im Abschnitt zum [Konfigurieren des Abfragespeichers](#Configure) beschrieben, sodass der Abfragespeicher die Daten automatisch bereinigt, wenn sich die Größe dem Grenzwert nähert.  
   
 -   Um sicherzustellen, dass die aktuellsten Daten beibehalten werden, konfigurieren Sie die zeitbasierte Richtlinie, um regelmäßig veraltete Informationen zu entfernen.  
   
@@ -276,13 +276,13 @@ Die folgende Tabelle enthält bewährte Methoden:
 |Löschen von weniger relevanten Abfragen, wenn die maximale Größe erreicht ist.|Aktivieren Sie die größenbasierte Cleanuprichtlinie.|  
   
 ##  <a name="Parameterize"></a> Vermeiden des Einsatzes von nicht parametrisierten Abfragen  
- Der Einsatz von nicht parametrisierten Abfragen, wenn diese nicht unbedingt erforderlich sind (z.B. bei Ad-hoc-Analysen), wird nicht empfohlen.  Zwischengespeicherte Pläne können nicht wiederverwendet werden, sodass der Abfrageoptimierer gezwungen ist, Abfragen für jeden eindeutigen Abfragetext zu kompilieren. Weitere Informationen zu diesem Thema finden Sie unter [Richtlinien für die Verwendung der erzwungenen Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
-  Abfragespeicher kann darüber hinaus schnell die Kontingentgröße aufgrund einer potenziell großen Anzahl von verschiedenen Abfragetexten und somit einer großen Anzahl von verschiedenen Ausführungsplänen mit ähnlicher Form überschreiten.  
+Der Einsatz von nicht parametrisierten Abfragen, wenn diese nicht unbedingt erforderlich sind (z.B. bei Ad-hoc-Analysen), wird nicht empfohlen.  Zwischengespeicherte Pläne können nicht wiederverwendet werden, sodass der Abfrageoptimierer gezwungen ist, Abfragen für jeden eindeutigen Abfragetext zu kompilieren. Weitere Informationen finden Sie unter [Richtlinien für die Verwendung der erzwungenen Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
+Abfragespeicher kann darüber hinaus schnell die Kontingentgröße aufgrund einer potenziell großen Anzahl von verschiedenen Abfragetexten und somit einer großen Anzahl von verschiedenen Ausführungsplänen mit ähnlicher Form überschreiten.  
 Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfragespeicher wechselt möglicherweise in den schreibgeschützten Modus oder löscht kontinuierlich die Daten, um mit den eingehenden Abfragen Schritt zu halten.  
   
- Ziehen Sie die folgenden Optionen in Betracht:  
+Ziehen Sie die folgenden Optionen in Betracht:  
 
-  -   Parametrisieren Sie Abfragen, sofern möglich, indem Sie z.B. Abfragen innerhalb einer gespeicherten Prozedur oder sp_executesql umschließen. Weitere Informationen zu diesem Thema finden Sie unter [Parameter und Wiederverwendung von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
+-   Parametrisieren Sie Abfragen, sofern möglich, indem Sie z.B. Abfragen innerhalb einer gespeicherten Prozedur oder sp_executesql umschließen. Weitere Informationen finden Sie unter [Parameter und Wiederverwendung von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Verwenden Sie die Option [**Für Ad-hoc-Arbeitsauslastungen optimieren**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md), wenn Ihre Arbeitsauslastung viele einmalige Ad-hoc-Batches mit anderen Abfrageplänen enthält.  
   
@@ -297,11 +297,11 @@ Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfrage
 -   Legen Sie den **Abfrageerfassungsmodus** auf AUTO fest, um Ad-hoc-Abfragen mit geringem Ressourcenverbrauch automatisch herauszufiltern.  
   
 ##  <a name="Drop"></a> Vermeiden des DROP- und CREATE-Musters beim Verwalten von enthaltenen Objekten für Abfragen  
- Der Abfragespeicher ordnet einen Abfrageeintrag einem enthaltenen Objekt zu (gespeicherte Prozedur, Funktion und Trigger).  Wenn Sie ein enthaltenes Objekt neu erstellen, wird ein neuer Abfrageeintrag für den gleichen Abfragetext generiert. Dies verhindert die Nachverfolgung der Leistungsstatistiken für diese Abfrage im Verlauf der Zeit und diesen Nutzungsplanerzwingungsmechanismus. Um dies zu vermeiden, verwenden Sie den `ALTER <object>` -Prozess, um die Definition des enthaltenen Objekts nach Möglichkeit zu ändern.  
+Der Abfragespeicher ordnet einen Abfrageeintrag einem enthaltenen Objekt zu (gespeicherte Prozedur, Funktion und Trigger).  Wenn Sie ein enthaltenes Objekt neu erstellen, wird ein neuer Abfrageeintrag für den gleichen Abfragetext generiert. Dies verhindert die Nachverfolgung der Leistungsstatistiken für diese Abfrage im Verlauf der Zeit und diesen Nutzungsplanerzwingungsmechanismus. Um dies zu vermeiden, verwenden Sie den `ALTER <object>` -Prozess, um die Definition des enthaltenen Objekts nach Möglichkeit zu ändern.  
   
 ##  <a name="CheckForced"></a> Regelmäßiges Überprüfen des Status der erzwungenen Pläne  
 
- Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
+Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans jedoch keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, beginnt das Erzwingen eines Plans in der Regel zu scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) eingeblendet wird. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das **query_store_plan_forcing_failed** -XEvent verwenden, um Fehler bei der Problembehandlung der Planerzwingung nachzuverfolgen.  
+ Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das XEvent **query_store_plan_forcing_failed** verwenden, um Fehler bei der Planerzwingung nachzuverfolgen und zu beheben.  
   
 ##  <a name="Renaming"></a> Vermeiden der Umbenennung von Datenbanken bei Abfragen mit erzwungenen Plänen  
 
@@ -322,13 +322,16 @@ WHERE is_forced_plan = 1;
 
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.  
 
-##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenswichtige Server zur effizienteren Notfallwiederherstellung
+##  <a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server zur effizienteren Notfallwiederherstellung
  
-  Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Die globalen Ablaufverfolgungsflags 7745 und 7752 können zur Leistungsoptimierung des Abfragespeichers in HADR-Szenarios verwendet werden. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-  Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor SQL Server beendet werden kann.
+Das Ablaufverfolgungsflag 7745 verhindert, dass der Abfragespeicher standardmäßig Daten auf den Datenträger schreibt, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet werden kann.
   
-  Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespeichers und erlaubt SQL Server die Ausführung von Abfragen, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
+Das Ablaufverfolgungsflag 7752 ermöglicht das asynchrone Laden eines Abfragespeichers und erlaubt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Ausführung von Abfragen, bevor der Abfragespeicher vollständig geladen wurde. Der Abfragespeicher verhindert standardmäßig, dass Abfragen ausgeführt werden, bevor der Abfragespeicher wiederhergestellt wurde.
+
+> [!IMPORTANT]
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](http://support.microsoft.com/help/4340759) ein. 
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Treiber für SQL Server-Programmierung | Microsoft Docs
+title: OLE DB-Treiber für SQL Server-Programmierung
 description: OLE DB-Treiber für SQL Server-Programmierung
 ms.custom: ''
 ms.date: 06/12/2018
@@ -22,19 +22,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612185"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109152"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB-Treiber für SQL Server-Programmierung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server ist eine untergeordnete COM-API, die für den Datenzugriff verwendet wird. Der OLE DB-Treiber für SQL Server wird empfohlen, für die Entwicklung von Tools, Hilfsprogrammen oder untergeordneten Komponenten, die hohe Leistung erfordern. Der OLE DB-Treiber für SQL Server ist eine systemeigene Hochleistungsanbieter, die greift auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabular Data Stream (TDS)-Protokolls direkt.  
+  Der OLE DB-Treiber für SQL Server ist eine untergeordnete COM-API, die für den Zugriff auf Daten verwendet wird. Der OLE DB-Treiber für SQL Server wird für die Entwicklung von Tools, Hilfsprogrammen oder untergeordneten Komponenten empfohlen, die eine hohe Leistung erfordern. Der OLE DB-Treiber für SQL Server ist ein nativer Hochleistungsanbieter, der direkt auf das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-TDS-Protokoll (Tabular Data Stream) zugreift.  
   
  OLE DB-Treiber für SQL Server stellt OLE DB-Unterstützung zum Herstellen einer Verbindung mit Anwendungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -44,7 +44,7 @@ ms.locfileid: "35612185"
   
 -   [Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Datenquellenobjekte &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Datenquellenobjekte &#40;OLE-DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Befehle](../../oledb/ole-db-commands/commands.md)  
   
@@ -56,13 +56,13 @@ ms.locfileid: "35612185"
   
 -   [Tabellen und Indizes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Datentypen &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Datentypen &#40;OLE-DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Schemarowset-Unterstützung &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [Tabellenwertparameter &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Datum und Uhrzeit-Verbesserungen &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
@@ -74,13 +74,13 @@ ms.locfileid: "35612185"
   
 -   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Unterstützung für Spalten mit geringer Dichte &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
+-   [Unterstützung für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
 -   [OLE DB-Treiber für SQLServer &#40;OLE DB&#41; Verweis](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

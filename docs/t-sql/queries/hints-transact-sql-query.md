@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
+ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854342"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331596"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "37854342"
  Verhindert, dass die Abfrage einen nicht gruppierten speicheroptimierten Columnstore-Index verwendet. Wenn die Abfrage den Abfragehinweis, der die Verwendung des columnstore-Indexes verhindert, und einen Indexhinweis, der die Verwendung eines columnstore-Index angibt, enthält, besteht ein Konflikt zwischen den Hinweisen, und die Abfrage gibt einen Fehler zurück.  
   
  MAX_GRANT_PERCENT = *percent*  
- Die maximale Größe der Arbeitsspeicherzuweisung in Prozent. Die Abfrage überschreitet diese Begrenzung garantiert nicht. Die tatsächliche Begrenzung kann niedriger sein, wenn die Ressourcenkontrolle niedriger als die Begrenzung ist. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
+ Die maximale Größe der Arbeitsspeicherzuweisung in Prozent. Die Abfrage überschreitet diese Begrenzung garantiert nicht. Die tatsächliche Begrenzung kann niedriger sein, wenn die Resource Governor-Einstellung niedriger als die Begrenzung ist. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
   
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

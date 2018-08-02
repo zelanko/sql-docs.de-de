@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788361"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228426"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Gibt die Datei-ID für den angegebenen logischen Dateinamen der Daten-, Protokoll- oder Volltextdatei in der aktuellen Datenbank zurück.  
+Diese Funktion gibt die Datei-ID für den angegebenen logischen Dateinamen der Daten-, Protokoll- oder Volltextdatei in der aktuellen Datenbank zurück. 
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Argumente  
  *file_name*  
- Ein Ausdruck vom Typ **sysname** für den Namen der Datei, für die die Datei-ID zurückgegeben werden soll.  
+Ein Ausdruck vom Typ **sysname**, der den Datei-ID-Wert „FILE_IDEX“ für den Namen der Datei zurückgibt. 
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+**int**  
   
- **NULL** bei Fehler  
+**NULL** bei Fehler  
   
-## <a name="remarks"></a>Remarks  
- *file_name* entspricht dem logischen Dateinamen, der in der Spalte **Name** in den Katalogsichten [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) oder [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) angezeigt wird.  
+## <a name="remarks"></a>Hinweise  
+*file_name* entspricht dem logischen Dateinamen, der in der Spalte **name** in den Katalogsichten [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) oder [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) angezeigt wird.  
   
- FILE_IDEX kann in einer SELECT-Liste, in einer WHERE-Klausel oder überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Verwenden Sie `FILE_IDEX` in einer SELECT-Liste, einer WHERE-Klausel oder an einer beliebigen Stelle, an der ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Abrufen der Datei-ID einer angegebenen Datei  
-Im folgenden Beispiel wird die Datei-ID für die Datei `AdventureWorks_Data` zurückgegeben.  
+In diesem Beispiel wird die Datei-ID für die Datei `AdventureWorks_Data` zurückgegeben.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Abrufen der Datei-ID, wenn der Dateiname nicht bekannt ist  
-Im folgenden Beispiel wird die Datei-ID der `AdventureWorks`-Protokolldatei zurückgegeben, indem der logische Dateiname in der `sys.database_files`-Katalogsicht ausgewählt wird, wobei der Dateityp `1` (Protokoll) entspricht.  
+In diesem Beispiel wird die Datei-ID für die Protokolldatei `AdventureWorks` zurückgegeben. Der Transact-SQL-Codeausschnitt (T-SQL) wählt den logischen Dateinamen aus der Katalogsicht `sys.database_files` aus, wobei der Dateityp `1` entspricht (Protokoll).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Abrufen der Datei-ID einer Volltextkatalogdatei  
-Im folgenden Beispiel wird die Datei-ID einer Volltextdatei zurückgegeben, indem der logische Dateiname in der `sys.database_files`-Katalogsicht ausgewählt wird, wobei der Dateityp `4` (Volltext) entspricht. Dieses Beispiel gibt NULL zurück, wenn ein Volltextkatalog nicht vorhanden ist.  
+In diesem Beispiel wird die Datei-ID einer Volltextdatei zurückgegeben. Der Transact-SQL-Codeausschnitt (T-SQL) wählt den logischen Dateinamen aus der Katalogsicht `sys.database_files` aus, wobei der Dateityp `4` entspricht (Volltextdatei). Dieser Code gibt NULL zurück, wenn kein Volltextkatalog vorhanden ist.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

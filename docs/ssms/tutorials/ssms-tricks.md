@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080098"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228456"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -189,6 +189,8 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
     ![Fehlerprotokoll durch Abfrage suchen](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn keine Verbindung mit SQL Server möglich ist
+Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurationseinstellungen variieren. Der Pfad für das Fehlerprotokoll ist in den Startparametern im SQL Server-Konfigurations-Manager enthalten. Führen Sie die folgenden Schritte aus, um die relevanten Startparameter mit dem Speicherort Ihres SQL Server-Fehlerprotokolls zu identifizieren. *Ihr Pfad weicht möglicherweise vom unten angegebenen Pfad ab.* 
+
 1. Öffnen Sie den SQL Server-Konfigurations-Manager. 
 2. Erweitern Sie **Dienste**.
 3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz, und klicken Sie dann auf **Eigenschaften**:
