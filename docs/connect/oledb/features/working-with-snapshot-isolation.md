@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Snapshot-Isolation | Microsoft Docs
+title: Arbeiten mit Momentaufnahmeisolation | Microsoft-Dokumentation
 description: Arbeiten mit Snapshot-Isolation in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -25,47 +25,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de034f85b2daa053a3259417d6f10afdef71063d
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 81c637192b9702b73a70f3fa2c1aee58c02bc66b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611785"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109052"
 ---
 # <a name="working-with-snapshot-isolation"></a>Arbeiten mit Momentaufnahmeisolation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde eine neue Momentaufnahmenisolationsstufe eingeführt, die die Parallelität für OLTP-Anwendungen (Online Transaction Processing, Onlinetransaktionsverarbeitung) verbessern soll. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basierte die Parallelität ausschließlich auf dem Sperren, was zu Blockierungs- und Deadlockproblemen bei einigen Anwendungen führen konnte. Die Momentaufnahmenisolation hängt von Verbesserungen der Zeilenversionsverwaltung ab und soll die Leistung durch Vermeidung von Leser-/Schreiberblockierungsszenarien erhöhen.  
   
- Transaktionen, die mit der Momentaufnahmenisolation gestartet werden, lesen eine Datenbankmomentaufnahme zu dem Zeitpunkt, an dem die Transaktion gestartet wird. Keysetgesteuerte, dynamische und statische Servercursor innerhalb eines momentaufnahmentransaktionskontexts geöffnet Verhalten sich wie ähnlich wie statische Cursor, die innerhalb serialisierbarer Transaktionen geöffnet waren. Wenn der Cursor, unter geöffnet sind werden die Snapshot-Isolation Level Sperren jedoch nicht implementiert. Diese Tatsache reduzieren, auf dem Server blockiert.  
+ Transaktionen, die mit der Momentaufnahmenisolation gestartet werden, lesen eine Datenbankmomentaufnahme zu dem Zeitpunkt, an dem die Transaktion gestartet wird. Keysetgesteuerte, dynamische und statische Servercursors verhalten sich, wenn sie innerhalb des Kontexts einer Momentaufnahmentransaktion geöffnet werden, ähnlich wie statische Cursors, die innerhalb von serialisierbaren Transaktionen geöffnet werden. Jedoch unter der Cursor geöffnet, werden die Sperren nicht erfolgen. Diese Tatsache kann verringern von Blockierungen auf dem Server.  
   
-## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQLServer  
- Der OLE DB-Treiber für SQL Server verfügt über Erweiterungen, die eingeführte Momentaufnahmenisolation nutzen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Diese Erweiterungen schließen Änderungen an den DBPROPSET_DATASOURCEINFO und DBPROPSET_SESSION-Eigenschaftsgruppen ein.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server  
+ Der [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client OLE DB-Anbieter verfügt über Erweiterungen, die die in  eingeführte Momentaufnahmenisolation nutzen. Diese Erweiterungen schließen Änderungen an den DBPROPSET_DATASOURCEINFO und DBPROPSET_SESSION-Eigenschaftsgruppen ein.  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- Die DBPROPSET_DATASOURCEINFO-Eigenschaftsgruppe wurde geändert, um anzugeben, dass die Momentaufnahmenisolationsstufe vom hinzugefügten DBPROPVAL_TI_SNAPSHOT-Wert unterstützt wird, der in der DBPROP_SUPPORTEDTXNISOLEVELS-Eigenschaft verwendet wird. Dieser neue Wert gibt an, dass die Momentaufnahmenisolationsstufe unabhängig davon unterstützt wird, ob die Versionsverwaltung für die Datenbank aktiviert ist. In der folgenden Tabelle sind die DBPROP_SUPPORTEDTXNISOLEVELS-Werte aufgeführt:  
+ Die DBPROPSET_DATASOURCEINFO-Eigenschaftsgruppe wurde geändert, um anzugeben, dass die Momentaufnahmenisolationsstufe vom hinzugefügten DBPROPVAL_TI_SNAPSHOT-Wert unterstützt wird, der in der DBPROP_SUPPORTEDTXNISOLEVELS-Eigenschaft verwendet wird. Dieser neue Wert gibt an, dass die Momentaufnahmenisolationsstufe unabhängig davon unterstützt wird, ob die Versionsverwaltung für die Datenbank aktiviert ist. Im Folgenden sind die DBPROP_SUPPORTEDTXNISOLEVELS-Werte aufgeführt:  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_SUPPORTEDTXNISOLEVELS|Typ: VT_I4<br /><br /> R/W: Schreibgeschützt<br /><br /> Beschreibung: Eine Bitmaske, die die unterstützten Transaktionsisolationsstufen angibt. Eine Kombination von null oder mehreren der folgenden Werte:<br /><br /> DBPROPVAL_TI_CHAOS<br /><br /> DBPROPVAL_TI_READUNCOMMITTED<br /><br /> DBPROPVAL_TI_BROWSE<br /><br /> DBPROPVAL_TI_CURSORSTABILITY<br /><br /> DBPROPVAL_TI_READCOMMITTED<br /><br /> DBPROPVAL_TI_REPEATABLEREAD<br /><br /> DBPROPVAL_TI_SERIALIZABLE<br /><br /> DBPROPVAL_TI_ISOLATED<br /><br /> DBPROPVAL_TI_SNAPSHOT|  
   
 ### <a name="dbpropsetsession"></a>DBPROPSET_SESSION  
  Die DBPROPSET_SESSION-Eigenschaftsgruppe wurde geändert, um anzugeben, dass die Momentaufnahmenisolationsstufe vom hinzugefügten DBPROPVAL_TI_SNAPSHOT-Wert unterstützt wird, der in der DBPROP_SESS_AUTOCOMMITISOLEVELS-Eigenschaft verwendet wird. Dieser neue Wert gibt an, dass die Momentaufnahmenisolationsstufe unabhängig davon unterstützt wird, ob die Versionsverwaltung für die Datenbank aktiviert ist. In der folgenden Tabelle sind die DBPROP_SESS_AUTOCOMMITISOLEVELS-Werte aufgeführt:
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Typ: VT_I4<br /><br /> R/W: Schreibgeschützt<br /><br /> Beschreibung: Legt eine Bitmaske fest, die die Transaktionsisolationsstufe im Autocommit-Modus angibt. Die Werte, die in dieser Bitmaske festgelegt werden können, sind identisch mit den Werten, die für dbprop_supportedtxnisolevels möglichen Werten festgelegt werden können.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Typ: VT_I4<br /><br /> R/W: Schreibgeschützt<br /><br /> Beschreibung: Legt eine Bitmaske fest, die die Transaktionsisolationsstufe im Autocommit-Modus angibt. Die Werte, die in dieser Bitmaske festgelegt werden können, entsprechen den für DBPROP_SUPPORTEDTXNISOLEVELS möglichen Werten.|  
   
 > [!NOTE]  
 >  Der Fehler DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED tritt auf, wenn DBPROPVAL_TI_SNAPSHOT in Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt wird.  
   
- Informationen, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [unterstützen lokale Transaktionen](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
+ Informationen darüber, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [unterstützen lokale Transaktionen](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Funktionen](../../oledb/features/oledb-driver-for-sql-server-features.md)    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [Eigenschaften und Verhaltensweisen von Rowsets](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

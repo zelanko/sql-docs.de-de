@@ -1,5 +1,5 @@
 ---
-title: Supportressourcen für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
+title: Supportressourcen für die Microsoft-Treiber für PHP für SQLServer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 125d571c30a201aa3934ea8e4d1e69b2cc88b263
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309859"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019268"
 ---
-# <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Supportressourcen Sie für die Microsoft-Treiber für PHP für SQLServer
+# <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Thema werden Ressourcen aufgelistet, die möglicherweise hilfreich sind, wenn Sie Anwendungen entwickeln, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]nutzen.  
@@ -31,32 +31,32 @@ In diesem Thema werden Ressourcen aufgelistet, die möglicherweise hilfreich sin
 ## <a name="includessdriverphpincludesssdriverphpmdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Supportressourcen  
 Die neueste Dokumentation finden Sie unter der [Microsoft PHP-Treiber für SQL Server](../../connect/php/microsoft-php-driver-for-sql-server.md) für den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Peer-zu-Peer-Unterstützung finden Sie die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
+Weitere Informationen zur Peer-to-Peer-Unterstützung finden Sie im[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp) für die Microsoft-Treiber für PHP für SQL Server.  
   
-Zum Bereitstellen von Feedback, Fragen, oder erfahren, was das Entwicklungsteam erwägt, besuchen Sie die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Teamblog](https://blogs.msdn.microsoft.com/sqlphp/).  
+Um Feedback zu geben, Fragen zu stellen oder um zu erfahren, was das Entwicklungsteam erwägt, besuchen Sie den[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Teamblog](https://blogs.msdn.microsoft.com/sqlphp/) für die Microsoft-Treiber für PHP für SQL Server.  
   
-[Microsoft PHP-Treiber für SQL Server-Quellcode auf Github](https://github.com/Microsoft/msphpsql)  
+[Quellcode des Microsoft-Treibers für PHP für SQL Server auf GitHub](https://github.com/Microsoft/msphpsql)  
   
 ## <a name="sql-servertransact-sql-support-resources"></a>SQL Server/Transact-SQL-Supportressourcen  
-SQL Server und Transact-SQL-Dokumentation finden Sie unter [SQL Server-Dokumentation](../../sql-server/sql-server-technical-documentation.md).  
+Die Dokumentation für SQL Server und Transact-SQL finden Sie in der [SQL Server-Dokumentation](../../sql-server/sql-server-technical-documentation.md).  
   
-Peer-zu-Peer-Unterstützung finden Sie die [MSDN SQL Server-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home).  
+Weitere Informationen zur Peer-to-Peer-Unterstützung finden Sie in den [MSDN-Foren für SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home).  
   
 ## <a name="internet-information-services-iis-support-resources"></a>Supportressourcen für Internetinformationsdienste (IIS)  
-Das neueste von IIS finden Sie auf [IIS Home](https://www.iis.net/).  
+Das Neueste zu IIS finden Sie auf der [Startseite von IIS](https://www.iis.net/).  
   
-Peer-zu-Peer-Unterstützung finden Sie die [IIS-Foren](https://forums.iis.net/).  
+Weitere Informationen zur Peer-to-Peer-Unterstützung finden Sie in den [IIS-Foren](https://forums.iis.net/).  
   
 ## <a name="php-support-resources"></a>PHP-Supportressourcen  
 [Dokumentation zu PHP für Windows](http://windows.php.net/)  
   
-Die neuesten Informationen zu PHP finden Sie auf [ http://www.php.net/ ](http://www.php.net).  
+Die neuesten Informationen zu PHP finden Sie auf [http:http://www.php.net/www.php.net](http://www.php.net).  
   
-PHP-Dokumentation finden Sie auf [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+PHP-Dokumentation finden Sie unter [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
   
 ## <a name="microsoft-customer-support"></a>Microsoft Kundendienst  
-Für Supportfragen zu den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], erhalten Sie [Microsoft-Support](https://support.microsoft.com/contactus/), oder Fragen Sie die [Github-Projektseite](https://github.com/Microsoft/msphpsql/issues).  
+Für Supportfragen zu den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], erreichen Sie [Microsoft-Support](https://support.microsoft.com/contactus/), oder stellen Sie auf die [Projektseite auf Github](https://github.com/Microsoft/msphpsql/issues).  
   
-## <a name="see-also"></a>Siehe auch  
-[Übersicht über die Microsoft-Treiber für PHP für SQLServer](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
   

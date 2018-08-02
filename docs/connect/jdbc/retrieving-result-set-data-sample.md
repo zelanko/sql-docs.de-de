@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Resultsetdaten-Beispiel festgelegt | Microsoft Docs
+title: Abrufen von Resultsetdaten Datenbeispiel festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852995"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039194"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Abrufen von Resultsetdaten - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Dies [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht das Abrufen von eines Satz von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank, und klicken Sie dann Daten angezeigt werden.  
+  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen und anschließend angezeigt werden.  
   
  Die Codedatei für dieses Beispiel heißt "retrieveRS.java" und befindet sich im folgenden Pfad:  
   
  \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\resultsets  
   
 ## <a name="requirements"></a>Anforderungen  
- Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei sqljdbc.jar oder sqljdbc4.jar in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für sqljdbc.jar oder sqljdbc4.jar vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Sie benötigen auch Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei sqljdbc.jar oder sqljdbc4.jar in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für sqljdbc.jar oder sqljdbc4.jar vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält "sqljdbc.jar" und "sqljdbc4.jar", je nach Ihren bevorzugten Einstellungen für Java Runtime Environment (JRE) verwendet werden. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] stellt die Klassenbibliotheksdateien „sqljdbc.jar“ und „sqljdbc4.jar“ für die jeweilige Verwendung mit den bevorzugten JRE-Einstellungen (Java Runtime Environment) bereit. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Beispiel  
- In der folgende Beispielcode stellt eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Klicken Sie dann mithilfe einer SQL-Anweisung mit der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekts können sie führt die SQL-Anweisung und fügt die Daten werden in eine [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank hergestellt. Anschließend wird eine SQL-Anweisung mit dem [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt verwendet. Die SQL-Anweisung wird ausgeführt, und die zurückgegebenen Daten werden in ein [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt eingefügt.  
   
- Als Nächstes der Beispielcode ruft die benutzerdefinierten DisplayRow-Methode, die die Datenzeilen durchlaufen, die im Resultset enthalten sind, und verwendet die [GetString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) Methode, um einige der Daten anzuzeigen, die es enthält.  
+ Danach ruft der Beispielcode die benutzerdefinierte displayRow-Methode auf, um die im Resultset enthaltenen Datenzeilen zu durchlaufen. Mithilfe der [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)-Methode werden einige enthaltene Daten angezeigt.  
   
 ```java
 import java.sql.*;  
@@ -96,7 +96,7 @@ public class retrieveRS {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)  
   
   
