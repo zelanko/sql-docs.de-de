@@ -69,7 +69,7 @@ pfNull
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *srvproc *  
+ *srvproc*   
  Ein Handle für eine Clientverbindung.  
   
  *n*  

@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgung für Treibervorgänge | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991972"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279261"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "37991972"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung der Ablaufverfolgung (oder Protokollierung), um die Lösung von Problemen mit dem JDBC-Treiber in der Anwendung zu ermöglichen. Für die Ablaufverfolgung verwendet der JDBC-Treiber die Protokollierungs-APIs in „java.util.logging“, die eine Reihe von Klassen zum Erstellen der Objekte „Logger“ und „LogRecord“ bereitstellen.  
   
 > [!NOTE]  
->  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](http://go.microsoft.com/fwlink/?LinkId=70042).Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben.  
+>  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](http://go.microsoft.com/fwlink/?LinkId=70042).  
   
- When you develop your application, you can make calls to Logger objects, which in turn create LogRecord objects, which are then passed to Handler objects for processing. Protokollierung und -Handler Objekte beide verwenden Protokolliergrade und optional Protokollierungsfilter, um zu steuern, welche LogRecords verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
+ Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben. Protokollierung und -Handler Objekte beide verwenden Protokolliergrade und optional Protokollierungsfilter, um zu steuern, welche LogRecords verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
   
  Standardmäßig erfolgt die Ausgabe des java.util.logging-Frameworks in eine Datei. Diese Ausgabeprotokolldatei muss Schreibberechtigungen für den Kontext aufweisen, unter dem der JDBC-Treiber ausgeführt wird.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "37991972"
  Die folgenden Abschnitte beschreiben die Protokolliergrade sowie die protokollierbaren Kategorien und enthalten Informationen darüber, wie die Ablaufverfolgung in der Anwendung aktiviert werden kann.  
   
 ## <a name="logging-levels"></a>Protokolliergrade  
- Jeder erstellten Protokollmeldung ist ein Protokolliergrad zugeordnet. Der Protokolliergrad bestimmt die Wichtigkeit der Protokollmeldung, die durch die **Level**-Klasse in „java.util.logging“ definiert wird. Durch Aktivieren der Protokollierung für einen bestimmten Grad wird auch das Protokollieren für alle höheren Grade aktiviert. In diesem Abschnitt werden die Protokolliergrade für öffentliche und interne Protokollierungskategorien beschrieben. Weitere Informationen zu den Protokollierungskategorien finden Sie in diesem Thema im Abschnitt "Protokollierungskategorien".  
+ Jeder erstellten Protokollmeldung ist ein Protokolliergrad zugeordnet. Der Protokolliergrad bestimmt die Wichtigkeit der Protokollmeldung, die durch die **Level**-Klasse in „java.util.logging“ definiert wird. Durch Aktivieren der Protokollierung für einen bestimmten Grad wird auch das Protokollieren für alle höheren Grade aktiviert. In diesem Abschnitt werden die Protokolliergrade für öffentliche und interne Protokollierungskategorien beschrieben. Weitere Informationen zu den Protokollierungskategorien finden Sie in diesem Artikel im Abschnitt „Protokollierungskategorien“.  
   
  Die verfügbaren Protokolliergrade für öffentliche Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "37991972"
 |TDS.DATA|Protokolliert Meldungen, die Konversationen auf TDS-Protokollebene zwischen Treiber und SQL Server enthalten. Die ausführlichen Inhalte jedes gesendeten und empfangenen TDS-Pakets werden in ASCII und hexadezimal protokolliert. Die Anmeldeinformationen (Benutzernamen und Kennwörter) werden nicht protokolliert. Alle sonstigen Daten werden protokolliert.<br /><br /> Diese Kategorie erstellt sehr ausführliche Meldungen. Sie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.Channel|Diese Kategorie verfolgt Aktionen der TCP-Kommunikationskanäle mit SQL Server. Die protokollierten Meldungen umfassen das Öffnen und Schließen von Sockets sowie Lese- und Schreibvorgänge. Außerdem werden Meldungen zum Herstellen einer SSL (Secure Sockets Layer)-Verbindung mit SQL Server verfolgt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINE, FINER oder FINEST festgelegt wird.|  
 |TDS.Writer|Diese Kategorie verfolgt Schreibvorgänge für den TDS-Kanal. Beachten Sie, dass nur die Länge der Schreibvorgänge verfolgt wird, nicht deren Inhalt. Diese Kategorie verfolgt außerdem Probleme, wenn zum Abbrechen der Ausführung einer Anweisung ein Achtungssignal gesendet wird.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
-|TDS.Reader|Diese Kategorie verfolgt bestimmte Lesevorgänge für den TDS-Kanal mit dem Grad FINEST. Die Nachverfolgung mit dem Grad FINEST ist möglicherweise sehr ausführlich. Mit den Graden WARNING und SEVERE wird in dieser Kategorie verfolgt, wenn der Treiber ein ungültiges TDS-Protokoll von SQL Server empfängt, bevor der Treiber die Verbindung trennt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINER und FINEST festgelegt wird.|  
+|TDS.Reader|Diese Kategorie verfolgt bestimmte Lesevorgänge für den TDS-Kanal mit dem Grad FINEST. Die Nachverfolgung mit dem Grad FINEST kann ausführlich ausfallen. Mit den Graden WARNING und SEVERE wird in dieser Kategorie verfolgt, wenn der Treiber ein ungültiges TDS-Protokoll von SQL Server empfängt, bevor der Treiber die Verbindung trennt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINER und FINEST festgelegt wird.|  
 |TDS.Command|Diese Kategorie verfolgt Zustandsübergänge auf niedriger Ebene und sonstige Informationen zur Ausführung von TDS-Befehlen wie der Ausführung von [!INCLUDE[tsql](../../includes/tsql_md.md)]-Anweisungen, Abrufvorgängen von ResultSet-Cursorn, Commits usw.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.TOKEN|Diese Kategorie protokolliert nur die Token im TDS-Paket und ist weniger ausführlich als die TDS.DATA-Kategorie. Sie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.<br /><br /> Mit dem Grad FINEST verfolgt diese Kategorie TDS-Token bei der Verarbeitung in der Antwort. Mit dem Grad SEVERE verfolgt diese Kategorie das Auftreten ungültiger TDS-Token.|  
 |SQLServerDatabaseMetaData|Protokolliert Meldungen in der Klasse [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Die Anwendungen können den Protokolliergrad auf FINE festlegen.|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991972"
 ## <a name="enabling-tracing-programmatically"></a>Programmgesteuerte Aktivierung der Ablaufverfolgung  
  Die Ablaufverfolgung kann programmgesteuert aktiviert werden, indem ein Logger-Objekt erstellt und die zu protokollierende Kategorie angegeben wird. Der folgende Code veranschaulicht beispielsweise, wie die Protokollierung für SQL-Anweisungen aktiviert wird:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  Die Protokollierung können Sie im Code folgendermaßen deaktivieren:  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  Mit dem folgenden Code können Sie alle verfügbaren Kategorien protokollieren:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  Mit dem folgenden Code können Sie die Protokollierung einer bestimmten Kategorie deaktivieren:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

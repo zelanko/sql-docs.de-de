@@ -1,7 +1,7 @@
 ---
-title: Transaktionsisolationsstufen | Microsoft-Dokumentation
+title: Grundlegendes zu Isolationsstufen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039160"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278652"
 ---
 # <a name="understanding-isolation-levels"></a>Grundlegendes zu Isolationsstufen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,19 +59,19 @@ ms.locfileid: "38039160"
   
  Zum Festlegen der Isolationsstufe für eine Transaktion können Sie die [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Diese Methode nimmt einen **ganzzahligen** Wert als Argument an. Dieser basiert wie im Folgenden dargestellt auf den Verbindungskonstanten:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- Zum Verwenden der neuen Momentaufnahme-Isolationsstufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] können Sie eine der SQLServerConnection-Konstanten wie folgt verwenden:  
+ Zum Verwenden der neuen Momentaufnahme-Isolationsstufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] können Sie eine der SQLServerConnection-Konstanten verwenden:  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  oder Sie verwenden können:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

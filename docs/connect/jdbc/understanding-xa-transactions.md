@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zu XA-Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040608"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278601"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38040608"
   
 -   Ein Flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) ermöglicht, dass die Anwendungen die eng verkoppelten XA-Transaktionen verwenden können, die verschiedene XA-Verzweigungstransaktions-IDs (BQUAL) aufweisen, jedoch über dieselbe globale Transaktions-ID (GTRID) und Format-ID (FormatID) verfügen. Um dieses Feature verwenden zu können, müssen Sie festlegen der [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den Flagsparameter, der die XAResource.start-Methode:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040608"
   
 1.  Öffnen Sie das Verzeichnis „LOG“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Computers, der an verteilten Transaktionen teilnehmen soll. Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datei „ERRORLOG“ aus, und öffnen Sie diese. Suchen Sie in der Datei "ERRORLOG" nach "Version ... von 'SQLJDBC_XA.dll' wird verwendet".  
   
-2.  Öffnen Sie das Verzeichnis „Binn“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Computers, der an den verteilten Transaktionen teilnehmen soll. Wählen Sie die Assembly „sqljdbc_xa.dll“ aus.  
+2.  Öffnen Sie das Verzeichnis „Binn“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Computers, der an verteilten Transaktionen teilnehmen soll. Wählen Sie die Assembly "sqljdbc_xa.dll".  
   
     -   Unter Windows Vista oder höheren Versionen: Klicken Sie mit der rechten Maustaste auf "sqljdbc_xa.dll", und klicken Sie anschließend auf "Eigenschaften". Klicken Sie dann auf die Registerkarte **Details**. Im Feld **Dateiversion** wird die Version von „sqljdbc_xa.dll“ angezeigt, die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Instanz installiert ist.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040608"
 ### <a name="configuring-the-user-defined-roles"></a>Konfigurieren der benutzerdefinierten Rollen  
  Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu. Mit dem folgenden [!INCLUDE[tsql](../../includes/tsql_md.md)]-Code können Sie z.B. der Rolle „SqlJDBCXAUser“ einen Benutzer mit dem Namen „shelby“ (Benutzer mit dem Namen „shelby“, der die normale SQL-Anmeldung verwendet) hinzufügen:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  
