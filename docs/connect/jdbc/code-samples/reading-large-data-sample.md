@@ -1,7 +1,7 @@
 ---
-title: Lesen große Datenbeispiel | Microsoft Docs
+title: Beispiel zum Lesen großer Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,40 +14,40 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d75c6fcf4148a4aa27dee51300d41a8c42e80acf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 51f1925c55fc3ece88aa8354afb181af8aec38ce
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830055"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278640"
 ---
 # <a name="reading-large-data-sample"></a>Beispiel zum Lesen umfangreicher Daten
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Dies [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie zum Abrufen eines großen einspalten-Werts aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank mithilfe der [GetCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) Methode.  
+  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein großer Wert in einer Spalte mithilfe der [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Methode aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank abgerufen wird.  
   
- Die Codedatei für dieses Beispiel heißt readLargeData.java und befindet sich unter folgendem Pfad:  
+ Die Codedatei für dieses Beispiel heißt „ReadLargeData.java“ und befindet sich unter folgendem Pfad:  
   
  \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\adaptive  
   
 ## <a name="requirements"></a>Anforderungen  
- Zum Ausführen dieser beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Außerdem müssen Sie die Datei sqljdbc.jar oder sqljdbc4.jar in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für sqljdbc.jar oder sqljdbc4.jar vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Auch festlegen Sie, den Klassenpfad aufnehmen die Mssql-Jdbc-JAR-Datei. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält "sqljdbc.jar" und "sqljdbc4.jar", je nach Ihren bevorzugten Einstellungen für Java Runtime Environment (JRE) verwendet werden. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Beispiel  
- In der folgende Beispielcode stellt eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] Datenbank. Im Beispielcode werden anschließend Beispieldaten erstellt, und die Tabelle Production.Document wird mithilfe einer parametrisierten Abfrage aktualisiert.  
+ Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Datenbank hergestellt. Im Beispielcode werden anschließend Beispieldaten erstellt, und die Tabelle Production.Document wird mithilfe einer parametrisierten Abfrage aktualisiert.  
   
- Darüber hinaus wird der Beispielcode zum Abrufen der adaptiven Pufferung Modus mithilfe der [GetResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) Methode der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Klasse. Beachten Sie, dass ab Version 2.0 des JDBC-Treibers die responseBuffering-Verbindungseigenschaft standardmäßig auf "adaptive" festgelegt ist.  
+ Außerdem wird im Beispielcode veranschaulicht, wie der Modus für die adaptive Pufferung mithilfe der Methode [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) der Klasse [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) abgerufen wird. Beachten Sie, dass ab Version 2.0 des JDBC-Treibers die responseBuffering-Verbindungseigenschaft standardmäßig auf "adaptive" festgelegt ist.  
   
- Anschließend mithilfe einer SQL-Anweisung mit der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt, der Beispielcode führt die SQL-Anweisung und fügt die Daten werden in einem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Anschließend wird im Beispielcode eine SQL-Anweisung mit dem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt verwendet. Die SQL-Anweisung wird ausgeführt, und die zurückgegebenen Daten werden in ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt eingefügt.  
   
- Schließlich der Code durchläuft die Datenzeilen im Resultset enthalten sind, und verwendet die [GetCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) Methode, um einige der Daten zugreifen, die es enthält.  
+ Schließlich durchläuft der Beispielcode die Datenzeilen im Resultset und greift mithilfe der [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Methode auf einige der Daten zu.  
   
  [!code[JDBC#UsingAdaptiveBuffering1](../../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Arbeiten mit umfangreichen Daten](../../../connect/jdbc/working-with-large-data.md)  
   
   

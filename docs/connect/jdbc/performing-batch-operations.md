@@ -1,7 +1,7 @@
 ---
-title: Ausführen von Batchvorgängen | Microsoft Docs
+title: Ausführen von Batchvorgängen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831865"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279014"
 ---
 # <a name="performing-batch-operations"></a>Ausführen von Batchvorgängen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Zur Verbesserung der Leistung bei mehreren updates einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank auftreten, die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die Möglichkeit, mehrere Updates als einzelne Einheit arbeiten, auch bezeichnet als Batch zu übermitteln.  
+  Um die Leistung bei mehreren Updates einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank zu verbessern, bietet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die Möglichkeit, mehrere Updates als einzelne Arbeitseinheit (auch Batch genannt) zu übermitteln.  
   
- Die [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Klassen können alle zum Übermitteln von BatchUpdates verwendet werden. Die [AddBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) Methode wird verwendet, um einen Befehl hinzufügen. Die [ClearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) Methode wird verwendet, um die Liste der Befehle löschen. Die [ExecuteBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) Methode wird verwendet, um alle zu verarbeitenden Befehle übermitteln. In einem Batch können nur DDL- (Data Definition Language) und DML-Anweisungen (Data Manipulation Language) ausgeführt werden, die eine einfache Updatezählung zurückgeben.  
+ Zum Übermitteln von Batchupdates können die Klassen [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) verwendet werden. Mit der [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)-Methode können Sie einen Befehl hinzufügen. Mit der [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)-Methode können Sie die Liste der Befehle löschen. Mit der [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)-Methode können Sie alle zu verarbeitenden Befehle übermitteln. In einem Batch können nur DDL- (Data Definition Language) und DML-Anweisungen (Data Manipulation Language) ausgeführt werden, die eine einfache Updatezählung zurückgeben.  
   
- ExecuteBatch-Methode gibt ein Array von **Int** Werte, die der updatezählung der einzelnen Befehle entsprechen. Wenn einer der Befehle fehlschlägt, eine BatchUpdateException wird ausgelöst, und Sie sollten die GetUpdateCounts-Methode der Klasse BatchUpdateException verwenden, das Update Array mit updatezählungen abrufen. Wenn ein Befehl fehlschlägt, wird die Verarbeitung der restlichen Befehle vom Treiber fortgesetzt. Wenn ein Befehl einen Syntaxfehler enthält, schlagen die Anweisungen im Batch allerdings fehl.  
+ Die executeBatch-Methode gibt ein Array mit **ganzzahligen** Werten zurück, die der Updatezählung der einzelnen Befehle entsprechen. Wenn Sie einen der Befehle fehlschlägt, eine BatchUpdateException ausgelöst, und verwenden Sie die GetUpdateCounts-Methode der-Klasse BatchUpdateException das Update Array mit updatezählungen abrufen. Wenn ein Befehl fehlschlägt, wird die Verarbeitung der restlichen Befehle vom Treiber fortgesetzt. Wenn ein Befehl einen Syntaxfehler enthält, schlagen die Anweisungen im Batch allerdings fehl.  
   
 > [!NOTE]  
->  Wenn Sie keine updatezählungen verwendet, können Sie zuerst eine SET NOCOUNT ON-Anweisung an ausgeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Dadurch wird das Verkehrsaufkommen im Netzwerk verringert und zusätzlich die Leistung der Anwendung verbessert.  
+>  Wenn keine Updatezählungen verwendet werden müssen, können Sie zuerst eine SET NOCOUNT ON-Anweisung an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeben. Dadurch wird das Verkehrsaufkommen im Netzwerk verringert und zusätzlich die Leistung der Anwendung verbessert.  
   
- Erstellen Sie beispielsweise die folgende Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank:  
+ Erstellen Sie als Beispiel die folgende Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- Im folgenden Beispiel wird eine offene Verbindung mit dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank an die Funktion übergeben, die AddBatch-Methode wird verwendet, um die auszuführenden Anweisungen erstellen und die ExecuteBatch-Methode wird aufgerufen, um den Stapel an die Datenbank zu übermitteln.  
+ Im folgenden Beispiel wird eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank an die Funktion übergeben, mit der addBatch-Methode werden die auszuführenden Anweisungen erstellt, und die executeBatch-Methode wird aufgerufen, um den Batch an die Datenbank zu übermitteln.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  
@@ -60,7 +60,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

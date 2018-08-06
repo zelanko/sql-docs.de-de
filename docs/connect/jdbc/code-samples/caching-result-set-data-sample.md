@@ -1,7 +1,7 @@
 ---
-title: Zwischenspeichern von Ergebnis Datenbeispiel festlegen | Microsoft Docs
+title: Zwischenspeichern von Resultsetdaten Datenbeispiel festlegen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,143 +14,124 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5e76a7d66a2cba66774a27e5d0f0c155bfb92d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 487033ade14c5f320b45baba8857c171b94032a4
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833715"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278971"
 ---
 # <a name="caching-result-set-data-sample"></a>Zwischenspeichern von Resultsetdaten - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Dies [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie umfangreiche Daten aus einer Datenbank abgerufen und dann steuern die Anzahl von Zeilen mit Daten, die auf dem Client, mithilfe zwischengespeichert werden der [SetFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) Methode der [ SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie umfangreiche Daten aus einer Datenbank abgerufen werden und mithilfe der [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts die Anzahl der Datenzeilen gesteuert wird, die im Client zwischengespeichert werden.  
   
 > [!NOTE]  
->  Die Einschränkung der im Client zwischengespeicherten Zeilen ist nicht mit der Einschränkung der Gesamtanzahl von Zeilen identisch, die ein Resultset enthalten kann. Verwenden, um die Gesamtzahl der Zeilen zu steuern, die in einem Resultset enthalten sind, die [SetMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) Methode der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt, das von beiden geerbt wird die [ SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) Objekte.  
+>  Die Einschränkung der im Client zwischengespeicherten Zeilen ist nicht mit der Einschränkung der Gesamtanzahl von Zeilen identisch, die ein Resultset enthalten kann. Verwenden Sie zum Steuern der Gesamtanzahl der in einem Resultset enthaltenen Zeilen die Methode [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) des Objekts [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), das von den Objekten [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) geerbt wird.  
   
- Um eine Grenze für die Anzahl der Zeilen, die auf dem Client zwischengespeicherten festzulegen, müssen Sie zuerst einen serverseitigen Cursor verwenden, wenn Sie eines der Statement-Objekte erstellen, indem Sie ausdrücklich den Cursortyp angeben zu verwenden, wenn das Statement-Objekt zu erstellen. Der JDBC-Treiber enthält beispielsweise den Cursortyp TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, d. h. eine schnelle Vorwärtscursor, schreibgeschützte serverseitige Cursor für die Verwendung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbanken.  
+ Zum Einschränken der Anzahl von Zeilen, die im Client zwischengespeichert werden, müssen Sie zunächst einen serverseitigen Cursor verwenden, wenn Sie eines der Statement-Objekte erstellen. Geben Sie hierzu den spezifischen Cursortyp an, der bei der Erstellung des Statement-Objekts verwendet werden soll. Der JDBC-Treiber enthält beispielsweise den Cursortyp TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (ein schneller schreibgeschützter serverseitiger Vorwärtscursor für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbanken).  
   
 > [!NOTE]  
->  Alternativ zum SQL Server-spezifischen Cursortyp kann die selectMethod-Verbindungszeichenfolgeneigenschaft verwendet werden, indem deren Wert auf "cursor" festgelegt wird. Weitere Informationen zu den vom JDBC-Treiber unterstützten Cursortypen finden Sie unter [Grundlegendes zu Cursortypen](../../../connect/jdbc/understanding-cursor-types.md).  
+>  Alternativ zum SQL Server-spezifischen Cursortyp kann die selectMethod-Verbindungszeichenfolgeneigenschaft verwendet werden, indem deren Wert auf "cursor" festgelegt wird. Weitere Informationen zu den vom JDBC-Treiber unterstützten Cursortypen, finden Sie unter [Grundlegendes zu Cursortypen](../../../connect/jdbc/understanding-cursor-types.md).  
   
- Nachdem Sie die Abfrage in das Statement-Objekt enthaltenen ausgeführt haben, und die Daten ist an den Client als Resultset zurückgegebenen, können Sie durch Aufrufen die SetFetchSize-Methode, um zu steuern, wie viele Daten gleichzeitig aus der Datenbank abgerufen werden. Wenn eine Tabelle beispielsweise 100 Datenzeilen enthält und die Abrufgröße auf 10 festgelegt wird, werden im Client jeweils nur immer 10 Datenzeilen zwischengespeichert. Obwohl dadurch die Verarbeitungsgeschwindigkeit der Daten sinkt, ist auf dem Client weniger Speicher erforderlich, was insbesondere dann von Nutzen sein kann, wenn umfangreiche Daten verarbeitet werden müssen.  
+ Nachdem die Abfrage im Statement-Objekt ausgeführt und die Daten als Resultset an den Client zurückgegeben wurden, können Sie die setFetchSize-Methode aufrufen und den aus der Datenbank abgerufenen Umfang der Daten steuern. Wenn eine Tabelle beispielsweise 100 Datenzeilen enthält und die Abrufgröße auf 10 festgelegt wird, werden im Client jeweils nur immer 10 Datenzeilen zwischengespeichert. Obwohl dadurch die Verarbeitungsgeschwindigkeit der Daten sinkt, ist auf dem Client weniger Speicher erforderlich, was insbesondere dann von Nutzen sein kann, wenn umfangreiche Daten verarbeitet werden müssen.  
   
- Die Codedatei für dieses Beispiel heißt "cacheRS.java" und befindet sich im folgenden Pfad:  
+ Die Codedatei für dieses Beispiel heißt „CacheRS.java“ und befindet sich im folgenden Pfad:  
   
  \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\resultsets  
   
 ## <a name="requirements"></a>Anforderungen  
- Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei sqljdbc.jar oder sqljdbc4.jar in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für sqljdbc.jar oder sqljdbc4.jar vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Sie benötigen auch Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält "sqljdbc.jar" und "sqljdbc4.jar", je nach Ihren bevorzugten Einstellungen für Java Runtime Environment (JRE) verwendet werden. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Beispiel  
- In der folgende Beispielcode stellt eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Anschließend wird eine SQL-Anweisung mit der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt, gibt den serverseitige Cursortyp, und klicken Sie dann führt die SQL-Anweisung und die zurückgegebenen Daten, die in ein SQLServerResultSet-Objekt zurückgegeben.  
+ Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank hergestellt. Anschließend wird eine SQL-Anweisung mit dem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt verwendet und der serverseitige Cursortyp angegeben. Die SQL-Anweisung wird ausgeführt, und die zurückgegebenen Daten werden in ein SQLServerResultSet-Objekt eingefügt.  
   
- Als Nächstes ruft der Beispielcode die benutzerdefinierten TimerTest-Methode und übergeben die Abrufgröße als Argumente aus, und das Resultset. Die TimerTest-Methode legt die Abrufgröße des Resultsets mithilfe der SetFetchSize-Methode, die Startzeit des Tests fest und iteriert dann durch das Resultset mit einer `While` Schleife. Sobald die `While` Schleife beendet wird, der Code die Beendigungszeit des Tests und anschließend das Testergebnis einschließlich Abrufgröße, die Anzahl der Zeilen verarbeitet, wird angezeigt, und die Zeit zum Ausführen des Tests.  
+ Danach wird die benutzerdefinierte timerTest-Methode aufgerufen, wobei die zu verwendende Abrufgröße und das Resultset als Argumente übergeben werden. Die timerTest-Methode legt dann die Abrufgröße des Resultsets mithilfe der setFetchSize-Methode sowie die Startzeit des Tests fest. Anschließend wird das Resultset mit einer `While`-Schleife durchlaufen. Unmittelbar nachdem die `While`-Schleife verlassen wurde, wird die Beendigungszeit des Tests festgelegt. Anschließend wird das Testergebnis einschließlich Abrufgröße, der Anzahl verarbeiteter Zeilen und der Zeit für die Testausführung angezeigt.  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.SQLServerResultSet;  
-  
-public class cacheRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns a large  
-         // set of data and then display it.  
-         String SQL = "SELECT * FROM Sales.SalesOrderDetail;";  
-         stmt = con.createStatement(SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, +  
-               SQLServerResultSet.CONCUR_READ_ONLY);  
-  
-         // Perform a fetch for every row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(1, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every tenth row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(10, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 100th row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(100, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 1000th row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(1000, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 128th row (the default) in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(0, rs);  
-         rs.close();  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void timerTest(int fetchSize, ResultSet rs) {  
-      try {  
-  
-         // Declare the variables for tracking the row count and elapsed time.  
-         int rowCount = 0;  
-         long startTime = 0;  
-         long stopTime = 0;  
-         long runTime = 0;  
-  
-         // Set the fetch size then iterate through the result set to  
-         // cache the data locally.  
-         rs.setFetchSize(fetchSize);  
-         startTime = System.currentTimeMillis();  
-         while (rs.next()) {  
-            rowCount++;  
-         }  
-         stopTime = System.currentTimeMillis();  
-         runTime = stopTime - startTime;  
-  
-         // Display the results of the timer test.  
-         System.out.println("FETCH SIZE: " + rs.getFetchSize());  
-         System.out.println("ROWS PROCESSED: " + rowCount);  
-         System.out.println("TIME TO EXECUTE: " + runTime);  
-         System.out.println();  
-  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
+
+public class CacheRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl);
+                Statement stmt = con.createStatement(SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, SQLServerResultSet.CONCUR_READ_ONLY);) {
+
+            String SQL = "SELECT * FROM Sales.SalesOrderDetail;";
+
+            // Perform a fetch for every row in the result set.
+            ResultSet rs = stmt.executeQuery(SQL);
+            timerTest(1, rs);
+            rs.close();
+
+            // Perform a fetch for every tenth row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(10, rs);
+            rs.close();
+
+            // Perform a fetch for every 100th row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(100, rs);
+            rs.close();
+
+            // Perform a fetch for every 1000th row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(1000, rs);
+            rs.close();
+
+            // Perform a fetch for every 128th row (the default) in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(0, rs);
+            rs.close();
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void timerTest(int fetchSize,
+            ResultSet rs) throws SQLException {
+
+        // Declare the variables for tracking the row count and elapsed time.
+        int rowCount = 0;
+        long startTime = 0;
+        long stopTime = 0;
+        long runTime = 0;
+
+        // Set the fetch size then iterate through the result set to
+        // cache the data locally.
+        rs.setFetchSize(fetchSize);
+        startTime = System.currentTimeMillis();
+        while (rs.next()) {
+            rowCount++;
+        }
+        stopTime = System.currentTimeMillis();
+        runTime = stopTime - startTime;
+
+        // Display the results of the timer test.
+        System.out.println("FETCH SIZE: " + rs.getFetchSize());
+        System.out.println("ROWS PROCESSED: " + rowCount);
+        System.out.println("TIME TO EXECUTE: " + runTime);
+        System.out.println();
+    }
+}
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Arbeiten mit Resultsets](../../../connect/jdbc/working-with-result-sets.md)  
   
   

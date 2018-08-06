@@ -1,7 +1,7 @@
 ---
-title: Aktualisieren von großen Datenbeispiel | Microsoft Docs
+title: Beispiel zum Aktualisieren großer Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,42 +14,42 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff0d903d9e4f47580fbce5b4c117a2a339dd22c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b8c4fe76531a4557e0c7915fa67a50e2da794095
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852915"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278701"
 ---
 # <a name="updating-large-data-sample"></a>Beispiel zum Aktualisieren umfangreicher Daten
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Dies [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie eine umfangreiche Spalte in einer Datenbank aktualisiert.  
+  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie eine umfangreiche Spalte in einer Datenbank aktualisiert wird.  
   
- Die Codedatei für dieses Beispiel heißt "updateLargeData.java" und befindet sich unter folgendem Pfad:  
+ Die Codedatei für dieses Beispiel heißt „UpdateLargeData.java“ und befindet sich unter folgendem Pfad:  
   
  \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\adaptive  
   
 ## <a name="requirements"></a>Anforderungen  
- Zum Ausführen dieser beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank. Außerdem müssen Sie die Datei "sqljdbc4.jar" in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für "sqljdbc4.jar" vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Außerdem müssen Sie die Datei "sqljdbc4.jar" in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für "sqljdbc4.jar" vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält "sqljdbc.jar", "sqljdbc4.jar", "sqljdbc41.jar" oder "sqljdbc42.jar", je nach Ihren bevorzugten Einstellungen für Java Runtime Environment (JRE) verwendet werden. Dieses Beispiel verwendet die [IsWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) und [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) Methoden, die in der JDBC 4.0-API zum Zugriff auf die treiberspezifischen antwortpuffermethoden vorgestellt werden. Zum Kompilieren und Ausführen dieses Beispiels benötigen Sie die "sqljdbc4.jar"-Klassenbibliothek, die die Unterstützung für JDBC 4.0 bereitstellt. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] stellt die Klassenbibliotheksdatei „sqljdbc.jar“, „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ für die jeweilige Verwendung mit den bevorzugten JRE-Einstellungen (Java Runtime Environment) bereit. In diesem Beispiel werden die in der JDBC 4.0-API neu eingeführten Methoden [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) und [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) für den Zugriff auf die treiberspezifischen Antwortpuffermethoden verwendet. Zum Kompilieren und Ausführen dieses Beispiels benötigen Sie die "sqljdbc4.jar"-Klassenbibliothek, die die Unterstützung für JDBC 4.0 bereitstellt. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Beispiel  
- In der folgende Beispielcode stellt eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] Datenbank. Klicken Sie dann der Beispielcode ein Statement-Objekt erstellt und verwendet die [IsWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) -Methode überprüft, ob das Statement-Objekt ein Wrapper für die angegebene ist [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) Klasse. Die [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) Methode wird verwendet, um Zugriff auf die treiberspezifischen antwortpuffermethoden.  
+ Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Datenbank hergestellt. Danach wird ein Statement-Objekt erstellt und mithilfe der [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode überprüft, ob das Statement-Objekt ein Wrapper für die angegebene [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse ist. Die [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode wird für den Zugriff auf treiberspezifische Antwortpuffermethoden verwendet.  
   
- Als Nächstes setzt der Beispielcode den antwortpuffermodus als "**adaptive**" mithilfe der [SetResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) Klasse sowie veranschaulicht, wie Modus für die adaptive Pufferung abgerufen.  
+ Dann wird der Antwortpuffermodus mithilfe der [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse auf **Adaptiv** festgelegt und veranschaulicht, wie der Modus für die adaptive Pufferung abgerufen wird.  
   
- Anschließend führt die SQL-Anweisung, und fügt die Daten werden in ein aktualisierbares [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Anschließend wird die SQL-Anweisung ausgeführt, und die zurückgegebenen Daten werden in ein aktualisierbares [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt eingefügt.  
   
- Schließlich werden die Datenzeilen durchlaufen, die im Resultset enthalten sind. Wenn sie eine leere dokumentzusammenfassung, verwendet es die Kombination von [UpdateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) und [UpdateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) Methoden, um die Zeile der Daten zu aktualisieren und erneut in der Datenbank gespeichert. Wenn bereits Daten vorhanden sind, verwendet der [GetString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) Methode, um einige der Daten anzuzeigen, die es enthält.  
+ Schließlich werden die Datenzeilen im Resultset durchlaufen. Wenn eine leere Dokumentzusammenfassung erkannt wird, wird die Datenzeile mit einer Kombination aus [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)-Methode und [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode aktualisiert und erneut in der Datenbank gespeichert. Wenn bereits Daten vorhanden sind, werden einige der Daten mithilfe der [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)-Methode angezeigt.  
   
- Das Standardverhalten des Treibers ist "**adaptive.**" Für das aktualisierbare Resultset mit Vorwärtscursor und wenn die Daten im Resultset größer als der Arbeitsspeicher für die Anwendung ist, die Anwendung muss jedoch die adaptiven Pufferung Modus explizit festlegen, indem die [SetResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) die Methode von der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) Klasse.  
+ Das Verhalten des Treibers ist standardmäßig auf **Adaptiv** festgelegt. Für das aktualisierbare Resultset mit Vorwärtscursor und bei Daten, deren Größe die des Anwendungsspeichers übersteigt, muss der Modus für die adaptive Pufferung von der Anwendung jedoch explizit mithilfe der [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse festgelegt werden.  
   
  [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Arbeiten mit umfangreichen Daten](../../connect/jdbc/working-with-large-data.md)  
   
   

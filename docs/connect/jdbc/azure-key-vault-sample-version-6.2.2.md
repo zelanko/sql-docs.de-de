@@ -1,7 +1,7 @@
 ---
-title: Azure Key Vault Beispielversion 6.2.2 | Microsoft Docs
+title: Für Azure Key Vault-Beispielversion 6.2.2 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f51fc5a5dace2c973b363e26d3c5d627a370f1f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 927b46d548a0eb13f7346b9e0cb68702ae0070f1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832365"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278831"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault-Beispielversion 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ##  <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung, die mit Azure Key Vault-Funktion
-Diese Anwendung kann ausgeführt werden, mithilfe von JDBC Driver 6.2.2 und höher und Azure-Keyvault (Version 1.0.0) Adal4j (Version 1.4.0) herunter, und ihre Abhängigkeiten.  Die zugrunde liegenden Abhängigkeiten aufgelöst werden können, indem Sie diese Bibliotheken Pom-Datei des Projekts hinzufügen, wie beschrieben [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+Diese Anwendung ist mit JDBC-Treiber 6.2.2 ausführbar und höher und Azure Key Vault (Version 1.0.0) Adal4j (Version 1.4.0), und ihre Abhängigkeiten.  Die zugrunde liegenden Abhängigkeiten aufgelöst werden können, indem Sie diese Bibliotheken in die Pom-Datei des Projekts hinzufügen, wie beschrieben [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -254,5 +254,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>Siehe auch  
- [Azure Key Vault-Beispiel-Version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Azure Key Vault-Beispielversion 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

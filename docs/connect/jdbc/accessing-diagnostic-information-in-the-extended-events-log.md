@@ -1,7 +1,7 @@
 ---
-title: Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse | Microsoft Docs
+title: Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06da8446c04bf656d5ae4dfb13d15f8a173e5bbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832076"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278711"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In der [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]wurde die Ablaufverfolgung ([Ablaufverfolgung Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md)) wurde aktualisiert, um einfacher mit Diagnoseinformationen, z. B. Verbindungsfehlern, aus dem Server Connectivity Ring korreliert vereinfachen und den anwendungsbezogenen Leistungsinformationen in das Protokoll für erweiterte Ereignisse. Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [View Event Session Data](http://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die Ablaufverfolgung ([Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md)) aktualisiert, damit Clientereignisse einfacher mit Diagnoseinformationen (z.B. Verbindungsfehlern) aus dem Konnektivitätsringpuffer des Servers und den anwendungsbezogenen Leistungsinformationen in den erweiterten Ereignisprotokollen korreliert werden können. Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [View Event Session Data](http://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
   
 ## <a name="details"></a>Details  
- Für Verbindungsvorgänge die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sendet einen Client Verbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den Konnektivitätsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](http://go.microsoft.com/fwlink/?LinkId=207752)), das Feld **ClientConnectionID** suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie erhalten auch die Clientverbindungs-ID in der Zielausgabe für erweiterte Ereignisse, ob die **Client_connection_id** -Aktion Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wird. Aktivieren der Ablaufverfolgung und den Verbindungsbefehl erneut ausführen und beobachten Sie die **ClientConnectionID** Feld in der Ablaufverfolgung, wenn Sie weitere clienttreiberdiagnose benötigen.  
+ Bei Verbindungsvorgängen sendet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Clientverbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den Konnektivitätsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](http://go.microsoft.com/fwlink/?LinkId=207752)), das Feld **ClientConnectionID** suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie können auch die Clientverbindungs-ID in der erweiterten Ereignisse-Zielausgabe suchen, wenn Ereignissen in einer Sitzung für erweiterte Ereignisse die Aktion **client_connection_id** hinzugefügt wird. Wenn Sie weitere Unterstützung zur Clienttreiberdiagnose benötigen, können Sie die Ablaufverfolgung aktivieren und den Verbindungsbefehl erneut ausführen. Beobachten Sie dabei das Feld **ClientConnectionID** in der Ablaufverfolgung.  
   
  Sie können den Client abrufen Verbindungs­id programmgesteuert über [ISQLServerConnection-Schnittstelle](../../connect/jdbc/reference/isqlserverconnection-interface.md). Die Verbindungs-ID ist auch in verbindungsbezogenen Ausnahmen enthalten.  
   
- Bei einem Verbindungsfehler kann die Clientverbindungs-ID in den BID-Ablaufverfolgungsinformationen des Servers und im Konnektivitätsringpuffer nützlich sein, um die Clientverbindungen mit Verbindungen auf dem Server zu korrelieren. Weitere Informationen zur Bid-ABLAUFVERFOLGUNG auf dem Server verfolgt werden, finden Sie unter [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805). Beachten Sie, dass der Artikel enthält auch Informationen zum Ausführen einer datenzugriffsablaufverfolgung, gelten nicht für die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; finden Sie unter [Ablaufverfolgung Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md) Informationen zum Ausführen einer Data Access-Ablaufverfolgung unter Verwendung der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ Bei einem Verbindungsfehler kann die Clientverbindungs-ID in den BID-Ablaufverfolgungsinformationen (integrierte Diagnose) des Servers und im Konnektivitätsringpuffer nützlich sein, um die Clientverbindungen mit Verbindungen auf dem Server zu korrelieren. Weitere Informationen zur BID-Ablaufverfolgung auf dem Server finden Sie unter [Data Access Tracing (Datenzugriffsablaufverfolgung)](http://go.microsoft.com/fwlink/?LinkId=125805). Der Artikel zur Datenzugriffsablaufverfolgung enthält auch Informationen zu Datenzugriffsablaufverfolgungen, die sich nicht auf [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beziehen. Informationen zum Ausführen einer Datenzugriffsablaufverfolgung unter Verwendung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] finden Sie unter [Tracing Driver Operation (Ablaufverfolgung für Treibervorgänge)](../../connect/jdbc/tracing-driver-operation.md).  
   
  Der JDBC-Treiber sendet außerdem eine threadspezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Ablaufverfolgung des Clients (Feld „ActivityID“) abrufen und dann in der Ausgabe der erweiterten Ereignisse nach der Aktivitäts-ID suchen. Die Aktivitäts-ID in erweiterten Ereignissen ist eine 16-Byte-GUID (entspricht nicht der GUID für die Clientverbindungs-ID), an die eine 4-Byte-Sequenznummer angehängt ist. Die Sequenznummer stellt die Reihenfolge einer Anforderung in einem Thread dar. Die ActivityId wird bei SQL-Stapelanweisungen und RPC-Anforderungen gesendet. Zum Aktivieren des Sendens der ActivityId an den Server müssen Sie zunächst das folgende Schlüssel-Wert-Par in der Datei „Logging.Properties“ angeben:  
   
-```  
+```
 com.microsoft.sqlserver.jdbc.traceactivity = on  
 ```  
   
- Jeder andere Wert als `on` (Groß-/Kleinschreibung beachten) deaktiviert das Senden der ActivityId.  
+ Jeder andere Wert als `on` (unter Beachtung der Groß-/Kleinschreibung) deaktiviert das Senden der ActivityId.  
   
- Weitere Informationen finden Sie unter [Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md). Dieses Ablaufverfolgungsflag wird mit den entsprechenden JDBC-Objektprotokollierungen verwendet, um zu bestimmen, ob im JDBC-Treiber eine Ablaufverfolgung der ActivityId ausgeführt und diese gesendet werden soll. Zusätzlich zum Aktualisieren der Datei „Logging.Properties“ muss die Protokollierung „com.microsoft.sqlserver.jdbc“ mit dem Wert FINER oder höher aktiviert werden. Wenn die ActivityId bei Anforderungen an eine bestimmte Klasse an den Server gesendet werden soll, muss die entsprechende Klassenprotokollierung mit dem Wert FINER oder FINEST aktiviert werden. Wenn die Klasse beispielsweise SQLServerStatement lautet, aktivieren Sie die Protokollierung „com.microsoft.sqlserver.jdbc.SQLServerStatement“.  
+ Weitere Informationen finden Sie unter [Tracing Driver Operation (Ablaufverfolgung für Treibervorgänge)](../../connect/jdbc/tracing-driver-operation.md). Dieses Ablaufverfolgungsflag wird mit den entsprechenden JDBC-Objektprotokollierungen verwendet, um zu bestimmen, ob im JDBC-Treiber eine Ablaufverfolgung der ActivityId ausgeführt und diese gesendet werden soll. Zusätzlich zum Aktualisieren der Datei „Logging.Properties“ muss die Protokollierung „com.microsoft.sqlserver.jdbc“ mit dem Wert FINER oder höher aktiviert werden. Wenn Sie die ActivityId an den Server für Anforderungen einer bestimmten Klasse senden möchten, muss die entsprechende Klassenprotokollierung mit dem Wert FINER oder FINEST aktiviert werden. Wenn die Klasse beispielsweise SQLServerStatement lautet, aktivieren Sie die Protokollierung „com.microsoft.sqlserver.jdbc.SQLServerStatement“.  
   
- Im folgenden finden Sie ein Beispiel, verwendet [!INCLUDE[tsql](../../includes/tsql_md.md)] um eine Sitzung für erweiterte Ereignisse zu starten, die in einem Ringpuffer gespeichert wird und die Aktivitäts-ID gesendet, von einem Client bei RPC- und Stapelvorgängen:  
+ Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql_md.md)] zum Starten einer Sitzung für erweiterte Ereignisse verwendet, die in einem Ringpuffer gespeichert werden und die von einem Client in RPC- und Batch-Vorgängen gesendete Aktivitäts-ID aufzeichnen:  
   
-```  
+```sql
 create event session MySession on server  
 add event connectivity_ring_buffer_recorded,  
 add event sql_statement_starting (action (client_connection_id)),  
@@ -55,7 +55,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

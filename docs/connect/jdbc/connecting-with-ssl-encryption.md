@@ -1,7 +1,7 @@
 ---
-title: Herstellen einer Verbindung mit SSL-Verschlüsselung | Microsoft Docs
+title: Herstellen einer Verbindung mit SSL-Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,36 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c6aaf771bb5335b8ba649869a4a8cf13894e82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c3b72cb8d69659202b9a8f138ca14860dfe275c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832615"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278552"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Herstellen von Verbindungen mit SSL-Verschlüsselung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In diesem Beispiel wird veranschaulicht, wie Verbindungszeichenfolgeneigenschaften verwendet werden, mit denen Anwendungen Secure Sockets Layer (SSL)-Verschlüsselung in einer Java-Anwendung verwenden können. Weitere Informationen zu diesen neuen Verbindung string-Eigenschaften wie z. B. **verschlüsseln**, **"TrustServerCertificate"**, **TrustStore**,  **TrustStorePassword**, und **HostNameInCertificate**, finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
+  In diesem Beispiel wird veranschaulicht, wie Eigenschaften von Verbindungszeichenfolgen verwendet werden, mit denen Anwendungen die SSL-Verschlüsselung (Secure Sockets Layer) in einer Java-Anwendung verwenden können. Weitere Informationen zu den neuen Eigenschaften für Verbindungszeichenfolgen (beispielsweise **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** und **hostNameInCertificate**) finden Sie unter [Setting the Connection Properties (Festlegen der Verbindungseigenschaften)](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Wenn die **verschlüsseln** -Eigenschaftensatz auf **"true"** und die **"TrustServerCertificate"** -Eigenschaftensatz auf **"true"**, die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] kann nicht überprüft werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-Zertifikat. Dies ist in der Regel zum Zulassen von Verbindungen in testumgebungen, z. B. Where erforderlich, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Instanz verfügt über ein selbst signiertes Zertifikat.  
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **TRUE** festgelegt ist, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] keine Überprüfung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-SSL-Zertifikats ausgeführt. Dies ist normalerweise zum Zulassen von Verbindungen in Testumgebungen erforderlich, beispielsweise wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Instanz nur über ein selbst signiertes Zertifikat verfügt.  
   
- Das folgende Codebeispiel veranschaulicht das Festlegen der **"TrustServerCertificate"** Eigenschaft in einer Verbindungszeichenfolge:  
+ Im folgenden Codebeispiel wird das Festlegen der **trustServerCertificate**-Eigenschaft in einer Verbindungszeichenfolge veranschaulicht:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- Wenn die **verschlüsseln** -Eigenschaftensatz auf **"true"** und die **"TrustServerCertificate"** -Eigenschaftensatz auf **"false"**, die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] überprüft die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-Zertifikat. Das Überprüfen des Serverzertifikats ist Teil des SSL-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Überprüfen des Serverzertifikats muss die Vertrauensinformationen zur Verbindungszeit mithilfe angegeben werden **TrustStore** und **TrustStorePassword** Verbindungseigenschaften explizit oder mithilfe von Standardeinstellung für die Vertrauenswürdigkeit der zugrunde liegenden Java Virtual Machine (JVM) implizit speichern.  
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, wird die Überprüfung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-SSL-Zertifikats von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des SSL-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
   
- Die **TrustStore** Eigenschaft gibt den Pfad (einschließlich Dateiname) der TrustStore-Zertifikatsdatei, die die Liste der Zertifikate enthält, die der Client vertraut. Die **TrustStorePassword** Eigenschaft gibt an, das zum Überprüfen der Integrität der TrustStore-Daten verwendete Kennwort. Weitere Informationen zur Verwendung des standardvertrauensspeichers der JVM finden Sie unter der [Konfigurieren des Clients für SSL-Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ Die **trustStore**-Eigenschaft gibt den Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei an. Diese enthält die Liste der Zertifikate, denen der Client vertraut. Die **trustStorePassword**-Eigenschaft gibt das Kennwort an, das verwendet wird, um die Integrität der trustStore-Daten zu überprüfen. Weitere Informationen zur Verwendung des standardvertrauensspeichers der JVM finden Sie unter den [Konfigurieren des Clients für SSL-Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
- Das folgende Codebeispiel veranschaulicht das Festlegen der **TrustStore** und **TrustStorePassword** Eigenschaften in einer Verbindungszeichenfolge:  
+ Im folgenden Codebeispiel wird das Festlegen der **trustStore**-Eigenschaft und der **trustStorePassword**-Eigenschaft in einer Verbindungszeichenfolge veranschaulicht:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -51,11 +51,11 @@ String connectionUrl =
      "trustStore=storeName;trustStorePassword=storePassword";  
 ```  
   
- Der JDBC-Treiber bietet eine zusätzliche Eigenschaft **HostNameInCertificate**, die den Hostnamen des Servers angibt. Der Wert dieser Eigenschaft muss mit der subject-Eigenschaft des Zertifikats übereinstimmen.  
+ Der JDBC-Treiber stellt die zusätzliche Eigenschaft **hostNameInCertificate** bereit, mit der der Hostname des Servers angegeben wird. Der Wert dieser Eigenschaft muss mit der subject-Eigenschaft des Zertifikats übereinstimmen.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie die **HostNameInCertificate** Eigenschaft in einer Verbindungszeichenfolge:  
+ Im folgenden Codebeispiel wird das Verwenden der **hostNameInCertificate**-Eigenschaft in einer Verbindungszeichenfolge veranschaulicht:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -65,12 +65,12 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  Alternativ können Sie den Wert von Verbindungseigenschaften festlegen, indem Sie mit dem entsprechenden **Setter** bereitgestellten Methoden die [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) Klasse.  
+>  Sie können den Wert von Verbindungseigenschaften auch mithilfe der entsprechenden **Setter**-Methoden festlegen, die von der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse bereitgestellt werden.  
   
- Wenn die **verschlüsseln** -Eigenschaftensatz auf **"true"** und **"TrustServerCertificate"** -Eigenschaftensatz auf **"false"** und wenn der Servername in der Verbindungszeichenfolge entspricht nicht der Name des Servers in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-Zertifikat, die folgende Fehlermeldung ausgegeben: der Treiber konnte keine sichere Verbindung mit herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mit Secure Sockets Layer (SSL)-Verschlüsselung. Fehler: "java.security.cert.CertificateException: Fehler bei der Servernamenüberprüfung in einem Zertifikat während der SSL (Secure Sockets Layer)-Initialisierung."  
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, und der Servername in der Verbindungszeichenfolge nicht dem Servernamen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-SSL-Zertifikat entspricht, wird der folgende Fehler ausgegeben: The driver couldn't establish a secure connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] by using Secure Sockets Layer (SSL) encryption (Der Treiber konnte keine sichere Verbindung mit SQL Server über die SSL-Verschlüsselung herstellen). Fehler: "java.security.cert.CertificateException: Fehler bei der Servernamenüberprüfung in einem Zertifikat während der SSL (Secure Sockets Layer)-Initialisierung."  
   
-## <a name="see-also"></a>Siehe auch  
- [Mithilfe von SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Using SSL Encryption (Verwenden der SSL-Verschlüsselung)](../../connect/jdbc/using-ssl-encryption.md)   
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
