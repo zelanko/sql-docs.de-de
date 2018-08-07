@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432389"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539030"
 ---
 # <a name="ddl-triggers"></a>DDL-Trigger
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432389"
 >  Testen Sie die DDL-Trigger, um ihre Reaktionen auf ausgeführte, gespeicherte Systemprozeduren zu ermitteln. Beispielsweise wird durch die CREATE TYPE-Anweisung ebenso wie durch die gespeicherte Prozedur **sp_addtype** ein DDL-Trigger ausgelöst, der für ein CREATE_TYPE-Ereignis erstellt wurde.  
   
 ## <a name="types-of-ddl-triggers"></a>DDL-Triggertypen  
- DDL-Trigger für Transact-SQL  
+ ### <a name="transact-sql-ddl-trigger"></a>DDL-Trigger für Transact-SQL  
  Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
   
- CLR-DDL-Trigger  
+ ### <a name="clr-ddl-trigger"></a>CLR-DDL-Trigger  
  Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  
   
  DDL-Trigger werden nur ausgelöst, nachdem die DDL-Anweisungen ausgeführt werden, die diese Trigger auslösen. DDL-Trigger können nicht als INSTEAD OF-Trigger verwendet werden. DDL-Trigger werden nicht als Antwort auf Ereignisse ausgelöst, die sich auf lokale oder globale temporäre Tabellen und gespeicherte Prozeduren auswirken.  
