@@ -18,13 +18,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ecc827d1b784ad81907443c42f80d69b6f7f05f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7305d11cfa471f7885684cefabd0817ceb86ef03
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940726"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564674"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ Sie können Daten im Unicode-Zeichenformat in eine Tabelle importieren, indem Si
   
 Das Unicode-Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|Description|  
+|Befehl|Option|und Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Verwendet das Unicode-Zeichenformat|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Verwendet das Unicode-Zeichenformat beim Massenimport von Daten|  

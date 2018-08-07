@@ -15,13 +15,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b2ce7ce7e891e0750f80637c3ebc42176167834
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aee77102736555249afa814d21cb0359b8a8e044
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329571"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563404"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -205,11 +205,11 @@ Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextyp
   
 | Vorgang | Speicheroptimiert, <br/> Hashindizes | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| Indexscan, alle Tabellenzeilen abrufen. | ja | ja | ja |  
-| Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | ja  | ja |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | nein | ja | ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | nein | nein | ja |  
+| Indexscan, alle Tabellenzeilen abrufen. | Benutzerkontensteuerung | Benutzerkontensteuerung | Benutzerkontensteuerung |  
+| Indexsuche nach Gleichheitsprädikaten (=). | Benutzerkontensteuerung <br/> (Vollständiger Schlüssel ist erforderlich.) | Benutzerkontensteuerung  | Benutzerkontensteuerung |  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | Benutzerkontensteuerung |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | nein | Benutzerkontensteuerung | Benutzerkontensteuerung |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | nein | nein | Benutzerkontensteuerung |  
 
 <sup>1</sup> Für einen nicht gruppierten speicheroptimierten Index ist der vollständige Schlüssel nicht erforderlich, um eine Indexsuche auszuführen.  
 

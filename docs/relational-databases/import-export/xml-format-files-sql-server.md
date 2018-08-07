@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941405"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563534"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "32941405"
   
  Ein Feld wird mithilfe der folgenden Attribute einer Spalte in der Zieltabelle zugeordnet:  
   
-|COLUMN-Attribut|Description|Optional /<br /><br /> Required|  
+|COLUMN-Attribut|und Beschreibung|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***Feld-ID***"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="***Feld-ID***"**/> wird \<FIELD ID **="***Feld-ID***"**/> zugeordnet.|Required|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Required|  

@@ -15,13 +15,13 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f8bfbc8445aeba0ce0e280a4a2587ee3eb46c08
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c19cba9a006c424bf0b7b386854587d5b943b65b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326951"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562034"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "34326951"
   
 |Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|**int**|CPU-Verwendung in Millisekunden|18|ja|  
+|CPU|**int**|CPU-Verwendung in Millisekunden|18|Benutzerkontensteuerung|  
 |EventClass|**int**|214|27|nein|  
-|EventSubClass|**int**|CPU-Grenzwertüberschreitung|21|ja|  
-|GroupID|**int**|ID der Gruppe, in der die Überschreitung aufgetreten ist|66|ja|  
-|OwnerID|**int**|SPID des Prozesses, der die Überschreitung verursacht hat|58|ja|  
-|SPID|**int**|ID des Serverprozesses, von dem das Ereignis ausgelöst wird<br /><br /> Hinweis: Diese SPID kann sich von der tatsächlichen Benutzer-SPID unterscheiden, wenn die CPU-Verwendung von einem Systemthread als Hintergrundaufgabe überprüft wird.|12|ja|  
-|StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis ausgelöst wurde|14|ja|  
+|EventSubClass|**int**|CPU-Grenzwertüberschreitung|21|Benutzerkontensteuerung|  
+|GroupID|**int**|ID der Gruppe, in der die Überschreitung aufgetreten ist|66|Benutzerkontensteuerung|  
+|OwnerID|**int**|SPID des Prozesses, der die Überschreitung verursacht hat|58|Benutzerkontensteuerung|  
+|SPID|**int**|ID des Serverprozesses, von dem das Ereignis ausgelöst wird<br /><br /> Hinweis: Diese SPID kann sich von der tatsächlichen Benutzer-SPID unterscheiden, wenn die CPU-Verwendung von einem Systemthread als Hintergrundaufgabe überprüft wird.|12|Benutzerkontensteuerung|  
+|StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis ausgelöst wurde|14|Benutzerkontensteuerung|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
