@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239370"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541720"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,9 +92,9 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Einzelseitenbelegungen|ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
+|Einzelseitenbelegungen|Benutzerkontensteuerung|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
-|CLR-Belegungen|nein|ja|
+|CLR-Belegungen|nein|Benutzerkontensteuerung|
 |Threadstapel-Arbeitsspeicher|nein|nein|
 |Direkte Belegungen von Windows|nein|nein|
 
@@ -120,10 +120,10 @@ Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbeleg
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Einzelseitenbelegungen|nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
-|Mehrseitenbelegungen|ja|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
-|CLR-Belegungen|ja|ja|
-|Threadstapel-Arbeitsspeicher|ja|ja|
-|Direkte Belegungen von Windows|ja|ja|
+|Mehrseitenbelegungen|Benutzerkontensteuerung|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
+|CLR-Belegungen|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Threadstapel-Arbeitsspeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Direkte Belegungen von Windows|Benutzerkontensteuerung|Benutzerkontensteuerung|
 
 ## <a name="dynamic-memory-management"></a> Dynamische Arbeitsspeicherverwaltung
 Die Arbeitsspeicherverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ruft standardmäßig so viel Arbeitsspeicher wie nötig ab, ohne dass es dabei zu einem Speicherengpass auf dem System kommt. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet dazu die für Arbeitsspeicherbenachrichtigungen verfügbaren APIs in Microsoft Windows.
