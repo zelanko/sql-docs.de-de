@@ -14,22 +14,24 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991652"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454194"
 ---
 # <a name="sqlxml-interface"></a>SQLXML-Schnittstelle
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC Driver bietet Unterstützung für die JDBC 4.0-API, in der die java.sql.SQLXML-Schnittstelle eingeführt wird. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Xml** -Datentyp.  
+JDBC Driver bietet Unterstützung für die JDBC 4.0-API, in der die java.sql.SQLXML-Schnittstelle eingeführt wird. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Xml** -Datentyp.  
   
- Die SQLXML-Schnittstelle bietet Methoden für den Zugriff auf den XML-Wert als eine **Zeichenfolge**, **Reader** oder **Writer**, oder als eine **Stream**. Der Zugriff auf den XML-Wert ist auch über eine **Quelle** möglich, und er kann als **Ergebnis** festgelegt werden. Diese werden mit XML-Parser-APIs wie DOM (Document Object Model), SAX (Simple API for XML) und StAX (Streaming API for XML) sowie mit XSLT-Transformationen und XPath verwendet.  
+Die SQLXML-Schnittstelle bietet Methoden für den Zugriff auf den XML-Wert als eine **Zeichenfolge**, **Reader** oder **Writer**, oder als eine **Stream**. Der Zugriff auf den XML-Wert ist auch über eine **Quelle** möglich, und er kann als **Ergebnis** festgelegt werden. Diese werden mit XML-Parser-APIs wie DOM (Document Object Model), SAX (Simple API for XML) und StAX (Streaming API for XML) sowie mit XSLT-Transformationen und XPath verwendet.  
   
 ## <a name="remarks"></a>Remarks  
- In der folgenden Tabelle werden die in der SQLXML-Schnittstelle definierten Methoden beschrieben:  
+
+In der folgenden Tabelle werden die in der SQLXML-Schnittstelle definierten Methoden beschrieben:  
   
 |Methodensyntax|Methodenbeschreibung|  
 |-------------------|------------------------|  
@@ -43,15 +45,14 @@ ms.locfileid: "37991652"
 |[T erweitert Ergebnis T SetResult (Klasse\<T > ResultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Gibt eine **Ergebnis** für die Einstellung der **XML** Wert angegeben, die von diesem **SQLXML** Objekt.<br /><br /> **Hinweis:** Die Methode „setResult“ unterstützt die folgenden Quellen: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult und java.io.OutputStream.|  
 |[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Legt den von diesem SQLXML-Objekt angegebenen XML-Wert auf die angegebene **String**-Darstellung fest.|  
   
- Die Anwendungen können XML-Werte nur einmal aus einem SQLXML-Objekt lesen bzw. in dieses schreiben.  
+Die Anwendungen können XML-Werte nur einmal aus einem SQLXML-Objekt lesen bzw. in dieses schreiben.  
   
- Nach dem Aufrufen der Methode „free()“ wird ein SQLXML-Objekt ungültig und kann weder gelesen noch geschrieben werden. Wenn die Anwendung versucht, für das SQLXML-Objekt eine andere Methode als „free()“ aufzurufen, wird eine Ausnahme ausgelöst.  
+Nach dem Aufrufen der Methode „free()“ wird ein SQLXML-Objekt ungültig und kann weder gelesen noch geschrieben werden. Wenn die Anwendung versucht, für das SQLXML-Objekt eine andere Methode als „free()“ aufzurufen, wird eine Ausnahme ausgelöst.  
   
- Das SQLXML-Objekt nicht mehr gelesen oder beschreibbaren beim Aufrufen einer der folgenden Abrufmethoden: GetSource, GetCharacterStream, GetBinaryStream, und GetString.  
+Das SQLXML-Objekt nicht mehr gelesen oder beschreibbaren beim Aufrufen einer der folgenden Abrufmethoden: GetSource, GetCharacterStream, GetBinaryStream, und GetString.  
   
- Das SQLXML-Objekt wird beschreibbaren weder lesbar, wenn die Anwendung eine der folgenden festlegungsmethoden aufruft: SetResult, SetCharacterStream, SetBinaryStream, und SetString.  
+Das SQLXML-Objekt wird beschreibbaren weder lesbar, wenn die Anwendung eine der folgenden festlegungsmethoden aufruft: SetResult, SetCharacterStream, SetBinaryStream, und SetString.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
-  
-  
+
+[Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  

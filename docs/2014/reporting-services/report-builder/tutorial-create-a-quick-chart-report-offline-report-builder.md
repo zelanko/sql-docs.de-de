@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216810"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400783"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie ein Kreisdiagramm mithilfe eines Assistenten. Danach nehmen Sie eine kleine Änderung an diesem Diagramm vor, damit Sie eine Vorstellung von den Bearbeitungsmöglichkeiten erhalten. Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der folgenden Abbildung:  
   
- ! ["Mein erstes Kreisdiagramm" in Testlauf anzeigen] (.. /Media/RS-my1stpierunview.gif "view" Mein erstes Kreisdiagramm "in Testlauf")  
+ ! ["Mein erstes Kreisdiagramm" in Testlauf anzeigen] (.. /Media/RS-my1stpierunview.gif anzeigen "Mein erstes Kreisdiagramm" in Testlauf")  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Berichts-Generator. Sie können die eigenständige Version oder die ClickOnce-Version ausführen, die im Berichts-Manager oder auf einer SharePoint-Website verfügbar ist. Bei der ClickOnce-Version ist lediglich der erste Schritt anders, also das Öffnen des Berichts-Generators. Weitere Informationen finden Sie unter [Installation, Deinstallation und Unterstützung von Berichts-Generator](../install-uninstall-and-report-builder-support.md).  

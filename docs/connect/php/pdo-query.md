@@ -1,7 +1,7 @@
 ---
 title: 'PDO:: Query | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71c5125b2948918a1a0fdefb4884529e8c1703c6
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979744"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415529"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -119,8 +119,56 @@ while ( $stmt->fetch() ){
   
 $stmt = null;  
 ?>  
-```  
-  
+```
+
+## <a name="example"></a>Beispiel
+In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen einer Tabelle von [Sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) Typen und die eingefügten Daten abzurufen.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$conn = new PDO("sqlsrv:server=$server; database = $dbName", $uid, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+
+try {
+    $tableName = 'testTable';
+    $query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "SELECT * FROM $tableName";
+    $stmt = $conn->query($query);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+```
+
+Die erwartete Ausgabe wäre:
+
+```
+Array
+(
+    [c1_int] => 1
+    [c2_varchar] => test_data
+)
+```
+
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 

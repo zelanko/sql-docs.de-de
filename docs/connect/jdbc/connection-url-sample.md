@@ -1,7 +1,7 @@
 ---
 title: Verbindungs-URL-Beispiel | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,41 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a82318e9fc77b21e9e634e612d5d65a7ed5137
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: f8150ae02c014d7460be10845e38d3e13be133d3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278662"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452554"
 ---
 # <a name="connection-url-sample"></a>Verbindungs-URL - Beispiel
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie unter Verwendung einer Verbindungs-URL eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank hergestellt wird. Darüber hinaus wird gezeigt, wie Daten mithilfe einer SQL-Anweisung aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen werden.  
-  
- Die Codedatei für dieses Beispiel heißt „ConnectURL.java“ und befindet sich im folgenden Pfad:  
-  
- \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\connections  
-  
-## <a name="requirements"></a>Anforderungen  
- Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie unter Verwendung einer Verbindungs-URL eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank hergestellt wird. Darüber hinaus wird gezeigt, wie Daten mithilfe einer SQL-Anweisung aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen werden.
+
+Die Codedatei für dieses Beispiel heißt „ConnectURL.java“ und befindet sich im folgenden Pfad:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\connections
+```
+
+## <a name="requirements"></a>Anforderungen
+
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispielcode werden verschiedene Verbindungseigenschaften für die Verbindungs-URL festgelegt. Anschließend wird die Methode „getConnection“ der Klasse „DriverManager“ aufgerufen, um ein [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt zurückzugeben.  
-  
- Danach wird mithilfe der [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)-Methode des SQLServerConnection-Objekts ein [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt erstellt. Anschließend wird die [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode aufgerufen, um die SQL-Anweisung auszuführen.  
-  
- Schließlich wird das von der Methode executeQuery zurückgegebene [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt verwendet, um die von der SQL-Anweisung zurückgegebenen Ergebnisse zu durchlaufen.  
-  
-```java  
+> Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispielcode werden verschiedene Verbindungseigenschaften für die Verbindungs-URL festgelegt. Anschließend wird die Methode „getConnection“ der Klasse „DriverManager“ aufgerufen, um ein [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt zurückzugeben.
+
+Danach wird mithilfe der [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)-Methode des SQLServerConnection-Objekts ein [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt erstellt. Anschließend wird die [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode aufgerufen, um die SQL-Anweisung auszuführen.
+
+Schließlich wird das von der Methode executeQuery zurückgegebene [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt verwendet, um die von der SQL-Anweisung zurückgegebenen Ergebnisse zu durchlaufen.
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -71,7 +76,8 @@ public class ConnectURL {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verbinden und Abrufen von Daten](../../connect/jdbc/connecting-and-retrieving-data.md)
+```
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+
+[Verbinden und Abrufen von Daten](../../connect/jdbc/connecting-and-retrieving-data.md)

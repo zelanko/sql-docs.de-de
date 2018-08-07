@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278841"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452644"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Eine Datenbank mit eigenständigen Benutzern muss vorhanden sein, und der Benutzer einer eigenständigen Datenbank, die die angegebene Azure AD-Benutzer oder eine der Gruppen der angegebenen Azure AD-Benutzer gehört, muss in der Datenbank vorhanden sein, und muss (mit Ausnahme von Azure Active Directory CONNECT-Berechtigung Serveradministrator oder Gruppe)
 
-
 ## <a name="connecting-using-access-token"></a>Verbindungsherstellung per Zugriffstoken
-Anwendungen/Diensten können Abrufen eines Zugriffstokens aus Azure Active Directory und verwenden, die Verbindung mit SQL Azure-Datenbank herstellen. Beachten Sie, dass diese AccessToken nur festgelegt werden kann, verwenden den Eigenschaftenparameter der getConnection()-Methode in der DriverManager-Klasse. Es kann nicht in der Verbindungszeichenfolge verwendet werden.
- 
+Anwendungen/Diensten können Abrufen eines Zugriffstokens aus Azure Active Directory und verwenden, die Verbindung mit SQL Azure-Datenbank herstellen.
+
+> [!NOTE] 
+> **AccessToken** kann nur mit den Eigenschaftenparameter der getConnection()-Methode in der DriverManager-Klasse festgelegt werden. Es kann nicht in der Verbindungszeichenfolge verwendet werden.
+
 Das folgende Beispiel enthält eine einfache Java-Anwendung die Verbindung mit Azure SQL-Datenbank mithilfe von Access-Token-basierte Authentifizierung. Vor dem Erstellen und das Beispiel ausführen, führen Sie die folgenden Schritte aus:
 1.  Erstellen Sie ein Anwendungskonto in Azure Active Directory, für den Dienst.
     1. Melden Sie sich beim Azure-Portal an.

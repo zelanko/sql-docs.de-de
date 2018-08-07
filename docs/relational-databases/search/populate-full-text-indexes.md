@@ -29,13 +29,13 @@ caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15619488c2b8d9f71423af9a0ca853b74ed5b12b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5d1c1d149f89cbbd34365531b56885a84a5d89ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181736"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533420"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu
       
 1.  Wählen Sie im Bereich **Seite auswählen** **Zeitpläne** aus.  
   
-     Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Basistabelle oder indizierte Sicht eines Volltextindex beginnt.  
+     Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Basistabelle oder indizierte Sicht eines Volltextindex beginnt.  
 
      Folgende Optionen stehen zur Verfügung:  
   
@@ -226,7 +226,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 -   <**Volltext-Katalog-ID**>: Die ID eines Volltextkatalogs. <**catid**> ist eine fünfstellige Zahl mit führenden Nullen.  
 -   <**n**>: Ist eine ganze Zahl, die angibt, dass mindestens ein Durchforstungsprotokoll desselben Volltextkatalogs vorhanden ist.  
   
- `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
+ `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   

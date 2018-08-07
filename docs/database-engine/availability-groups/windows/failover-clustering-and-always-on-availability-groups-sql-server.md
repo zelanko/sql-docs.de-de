@@ -20,13 +20,13 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f681d05c05d54762da3ba49206befa5ddfe0bd52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769356"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509079"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
@@ -71,11 +71,11 @@ ms.locfileid: "34769356"
   
 ||Knoten in einer FCI|Replikate in einer Verfügbarkeitsgruppe|  
 |-|-------------------------|-------------------------------------------|  
-|**Verwendet WSFC-Cluster**|ja|ja|  
+|**Verwendet WSFC-Cluster**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |**Schutzebene**|Instanz|Datenbank|  
 |**Speichertyp**|Shared|Nicht freigegeben<br /><br /> Obwohl die Replikate in einer Verfügbarkeitsgruppe keinen Speicher gemeinsam verwenden, verwendet ein Replikat, das von einer FCI gehostet wird, gemäß der Anforderung dieser FCI eine gemeinsame Speicherlösung. Die Speicherlösung wird nur von Knoten in dieser FCI verwendet und nicht zwischen den Replikaten der Verfügbarkeitsgruppe.|  
 |**Speicherlösungen**|Direkt angefügt, SAN, Einbindungspunkte, SMB|Hängt von Knotentyp ab|  
-|**Lesbare sekundäre**|Nein*|ja|  
+|**Lesbare sekundäre**|Nein*|Benutzerkontensteuerung|  
 |**Anwendbare Failoverrichtlinieneinstellungen**|WSFC-Quorum<br /><br /> FCI-spezifisch<br /><br /> Verfügbarkeitsgruppeneinstellungen*|WSFC-Quorum<br /><br /> Verfügbarkeitsgruppeneinstellungen|  
 |**Failoverressourcen**|Server, Instanz und Datenbank|Nur Datenbank|  
   

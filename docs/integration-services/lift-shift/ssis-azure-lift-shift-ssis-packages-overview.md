@@ -12,12 +12,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3864a5ac0f4bb1ebd87ab54a0b949ec80b636bc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304390"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482661"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben. SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) können Sie in Azure SQL-Datenbank oder über eine verwaltete Azure SQL-Datenbank-Instanz (Vorschauversion) mit gängigen Tools wie SQL Server Management Studio (SSMS) bereitstellen, ausführen und verwalten.
@@ -75,7 +75,7 @@ Weitere Informationen zur Verbindung mit Dateien und Dateifreigaben finden Sie u
 
 Wenn Sie eine Instanz von SQL-Datenbank bereitstellen, um SSISDB zu hosten, werden auch das Azure Feature Pack für SSIS und die weitervertreibbare Komponente von Access installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit.
 
-Sie können auch weitere Komponenten installieren, wie z.B. einen Treiber, der standardmäßig nicht installiert ist. Weitere Informationen finden Sie unter [Customize setup for the Azure-SSIS integration runtime (Anpassen des Setups von Azure SSIS Integration Runtime)](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Sie können auch weitere Komponenten installieren, wie z.B. einen Treiber, der standardmäßig nicht installiert ist. Weitere Informationen finden Sie unter [Customize setup for the Azure-SSIS integration runtime (Anpassen des Setups von Azure SSIS Integration Runtime)](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Wenn Sie über eine Lizenz für die Enterprise Edition verfügen, stehen zusätzliche Komponenten zur Verfügung. Weitere Informationen finden Sie unter [Bereitstellen der Enterprise-Edition für die Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 

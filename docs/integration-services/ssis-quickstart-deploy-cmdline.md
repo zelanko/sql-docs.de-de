@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335864"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482701"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung mit ISDeploymentWizard.exe
 In diesem Schnellstart wird gezeigt, wie Sie ein SSIS-Projekt über die Eingabeaufforderung bereitstellen, indem Sie den Bereitstellungs-Assistenten für Integration Services, `ISDeploymentWizard.exe`, ausführen.
@@ -47,7 +47,7 @@ Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsin
 3. Überprüfen Sie auf der **Übersichtsseite** Ihrer Datenbank den vollqualifizierten Servernamen. Zeigen Sie auf den Servernamen, damit die Option **Klicken Sie zum Kopieren** angezeigt wird. 
 4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbankserver vergessen, navigieren Sie zur Seite „SQL Datenbankserver“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Authentifizierungsmethoden im Bereitstellungs-Assistenten
+## <a name="wizard_auth"></a> Authentifizierungsmethoden im Bereitstellungs-Assistenten
 
 Wenn Sie mit dem Bereitstellungs-Assistenten eine Bereitstellung auf einem SQL-Server vornehmen, müssen Sie die Windows-Authentifizierung verwenden, nicht die SQL Server-Authentifizierung.
 

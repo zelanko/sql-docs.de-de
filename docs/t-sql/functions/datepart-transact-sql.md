@@ -30,13 +30,13 @@ caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1209d7cc2bf7270922fa271d7f63984d50fb775
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3d86b859ed9f5688485ed796b742607ec737a592
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785391"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458364"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ Das Nummerierungssystem anderer Länder oder Regionen entspricht möglicherweise
   
 |Erster Tag der Woche|Erste Woche im Jahr enthält|Doppelt zugewiesene Wochen|Verwendet von/in|  
 |---|---|---|---|
-|Sonntag|1. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|ja|United States|  
-|Montag|1. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|ja|Die meisten Länder Europas und das Vereinigte Königreich|  
+|Sonntag|1. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung|United States|  
+|Montag|1. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung|Die meisten Länder Europas und das Vereinigte Königreich|  
 |Montag|4. Januar<br /><br /> Erster Donnerstag<br /><br /> 4–7 Tage im Jahr|nein|ISO 8601, Norwegen und Schweden|  
 |Montag|7. Januar,<br /><br /> Erster Montag<br /><br /> 7 Tage im Jahr|nein||  
-|Mittwoch|1. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|ja||  
-|Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|ja||  
+|Mittwoch|1. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung||  
+|Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|Benutzerkontensteuerung||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` gibt den Wert **TZoffset** (**tz**) als Anzahl der Minuten (mit Vorzeichen) zurück. Diese Anweisung gibt einen Zeitzonenoffset von 310 Minuten zurück:
