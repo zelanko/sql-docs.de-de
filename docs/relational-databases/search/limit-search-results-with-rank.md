@@ -23,13 +23,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ee823af2b6d1c6c9345efc022e138feedd1f74c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a9d255c40a410484fb6af62cc385d55ed07c710
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182176"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537851"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33182176"
   
 ##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
  Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
   
 ```  
@@ -75,7 +75,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Beispiel B: Suchen nach ausschließlich den obersten zehn Übereinstimmungen  
  Im folgenden Beispiel wird CONTAINSTABLE verwendet, um die Beschreibung der ersten 5 Produkte zurückzugeben, bei denen die `Description` -Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -98,10 +98,10 @@ GO
   
   
 ##  <a name="how"></a> Ordnen von Suchabfrageergebnissen nach Rang  
- Die Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine optionale Bewertung (einen Rangwert) generieren, die die Relevanz der von einer Volltextabfrage zurückgegebenen Daten angibt. Dieser Rangwert wird für jede Zeile berechnet und als Sortierkriterium verwendet, um das Resultset einer bestimmten Abfrage nach Relevanz zu sortieren. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage. Der Rangwert hat keinerlei abfrageüberschreitende Bedeutung.  
+ Die Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine optionale Bewertung (einen Rangwert) generieren, die die Relevanz der von einer Volltextabfrage zurückgegebenen Daten angibt. Dieser Rangwert wird für jede Zeile berechnet und als Sortierkriterium verwendet, um das Resultset einer bestimmten Abfrage nach Relevanz zu sortieren. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage. Der Rangwert hat keinerlei abfrageüberschreitende Bedeutung.  
   
 ### <a name="statistics-for-ranking"></a>Statistiken für die Rangfolge  
- Beim Erstellen eines Indexes werden Statistiken für die Reihenfolgebestimmung gesammelt. Der Vorgang der Erstellung eines Volltextkatalogs führt nicht direkt zu einer einzelnen Indexstruktur. Stattdessen erstellt die Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Indizieren der Daten Zwischenindizes. Anschließend werden diese Indizes von der Volltext-Engine bei Bedarf in einen größeren Index zusammengeführt. Dieser Vorgang kann mehrfach wiederholt werden. Die Volltextsuch-Engine führt einen "Mastermergeprozess" aus, bei dem alle Zwischenindizes zu einem größeren Masterindex kombiniert werden.  
+ Beim Erstellen eines Indexes werden Statistiken für die Reihenfolgebestimmung gesammelt. Der Vorgang der Erstellung eines Volltextkatalogs führt nicht direkt zu einer einzelnen Indexstruktur. Stattdessen erstellt die Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Indizieren der Daten Zwischenindizes. Anschließend werden diese Indizes von der Volltextsuch-Engine bei Bedarf in einen größeren Index zusammengeführt. Dieser Vorgang kann mehrfach wiederholt werden. Die Volltextsuch-Engine führt einen "Mastermergeprozess" aus, bei dem alle Zwischenindizes zu einem größeren Masterindex kombiniert werden.  
   
  Auf jeder Zwischenstufe werden Statistiken erhoben. Die Statistiken werden beim Zusammenführen der Indizes zusammengeführt. Einige statistische Werte können nur während des Mastermergeprozesses generiert werden.  
   
@@ -148,7 +148,7 @@ GO
 ### <a name="rank-computation-issues"></a>Gesichtspunkte bei der Rangberechnung  
  Der Vorgang der Rangberechnung hängt von mehreren Faktoren ab.  Die Wörtererkennung für unterschiedliche Sprachen zerlegt Text unterschiedlich in Wörter. So könnte z. B. die Zeichenfolge "dog-house" von einer Wörtererkennung in "dog" "house" und von einer anderen in "dog-house" zerlegt werden. Dies bedeutet, dass Vergleiche und Rangfolgenberechnung je nach der angegebenen Sprache unterschiedliche Ergebnisse liefern, da nicht nur die Wörter unterschiedlich sind, sondern auch die Dokumentlänge. Die unterschiedliche Dokumentlänge kann sich auf die Rangfolgenberechnung für alle Abfragen auswirken.  
   
- Statistiken wie **IndexRowCount** können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltext-Engine zusammengeführt.  
+ Statistiken wie **IndexRowCount** können stark variieren. Hat z. B. ein Katalog 2 Milliarden Zeilen im Masterindex, wird ein einzelnes neues Dokument in einen im Arbeitsspeicher befindlichen Zwischenindex indiziert, und die Ränge für das Dokument, die auf der Anzahl der Dokumente im Index im Arbeitsspeicher basieren, können im Vergleich zu den Rängen für Dokumente aus dem Masterindex verfälscht sein. Daher wird empfohlen, dass die Indizes nach jeder Auffüllung, durch die viele Zeilen indiziert oder neu indiziert werden, in einen Masterindex zusammengeführt werden, mithilfe der ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Entsprechend bestimmten Parametern, wie Anzahl und Größe der Zwischenindizes, werden die Indizes auch automatisch von der Volltextsuch-Engine zusammengeführt.  
   
  **MaxOccurrence** -Werte werden in den Bereich 1 bis 32 normalisiert. Das heißt, dass z. B. ein 50 Wörter langes Dokument genau so behandelt wird wie ein 100 Wörter langes. Die zur Normalisierung verwendete Tabelle ist unten aufgeführt. Da die Dokumentlängen im Bereich zwischen den benachbarten Tabellenwerten 32 und 128 liegen, werden sie behandelt, als hätten sie dieselbe Länge, nämlich 128 (32 < **docLength** <= 128).  
   

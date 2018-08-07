@@ -18,13 +18,13 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 163ea15a1293ce128725bdbb3d20baa4129fdb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332222"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558880"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,10 +82,10 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
 |Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|ja|ja|nein|
-|Erstellen von Schlüsselmetadaten in der Datenbank|ja|ja|ja|
-|Erstellen neuer Tabellen mit verschlüsselten Spalten|ja|ja|ja|
-|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|ja|ja|nein|
+|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
+|Erstellen von Schlüsselmetadaten in der Datenbank|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Erstellen neuer Tabellen mit verschlüsselten Spalten|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
 
 > [!NOTE]
 > Stellen Sie sicher, dass Sie Schlüsselbereitstellungs- oder Datenverschlüsselungstools in einer sicheren Umgebung auf einem Computer ausführen, auf dem nicht Ihre Datenbank gehostet wird. Andernfalls könnten vertrauliche Daten oder die Schlüssel in der Serverumgebung zugänglich werden, was die Vorteile der Verwendung von Always Encrypted verringern würde.  

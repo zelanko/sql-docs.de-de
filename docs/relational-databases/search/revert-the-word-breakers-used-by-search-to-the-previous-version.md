@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f09da24682c65d737e03685f936f85de62b6e2e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a6d1b5ad744de6973b7a4cfcbfa41863a0c47f20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182506"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537840"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "33182506"
   
 2.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-3.  Sichern Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von NaturalLanguage6.dll an einem anderen Speicherort.  
+3.  Sichern Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll an einem anderen Speicherort.  
   
 4.  Kopieren Sie die frühere Version von NaturalLanguage6.dll aus dem Ordner "Binn" einer Instanz von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in den Ordner "Binn" der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz.  
   
@@ -219,8 +219,8 @@ ms.locfileid: "33182506"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Keine|  
-|Aktueller Dateiname|MSWB7.dll|Keine|  
+|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Aktueller Dateiname|MSWB7.dll|None|  
   
  **Deutsch (deu), LCID 1031**  
   
@@ -229,7 +229,7 @@ ms.locfileid: "33182506"
 |Vorherige CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Aktueller Dateiname|MsWb7.dll|MsWb7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MSWB7.dll|  
   
  **Japanisch (jpn), LCID 1041**  
   
@@ -237,8 +237,8 @@ ms.locfileid: "33182506"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|Keine|  
-|Aktueller Dateiname|MsWb70011.dll|Keine|  
+|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Aktueller Dateiname|MsWb70011.dll|None|  
   
  **Niederländisch (nld), LCID 1043**  
   
@@ -247,7 +247,7 @@ ms.locfileid: "33182506"
 |Vorherige CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Aktueller Dateiname|MsWb7.dll|MsWb7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MSWB7.dll|  
   
  **Russisch (rus), LCID 1049**  
   
@@ -353,8 +353,8 @@ ms.locfileid: "33182506"
 |---------------|------------------|-------------|  
 |Vorherige CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Vorheriger Dateiname|Thawbrkr.dll|Thawbrkr.dll|  
-|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|Keine|  
-|Aktueller Dateiname|MsWb7001e.dll|Keine|  
+|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Aktueller Dateiname|MsWb7001e.dll|None|  
   
  **Chinesisch traditionell (zh-hk), LCID 3076**  
   

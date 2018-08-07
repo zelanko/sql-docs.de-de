@@ -25,13 +25,13 @@ caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2250ed27de30f400a665eaf14e5d992ac0e84da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708878"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559560"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "34708878"
 |Funktion|Change Data Capture|Änderungsnachverfolgung|  
 |-------------|-------------------------|---------------------|  
 |**Nachverfolgte Änderungen**|||  
-|DML-Änderungen|ja|ja|  
+|DML-Änderungen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |**Nachverfolgte Informationen**|||  
-|Verlaufsdaten|ja|nein|  
-|Ob Spalte geändert wurde|ja|ja|  
-|DML-Typ|ja|ja|  
+|Verlaufsdaten|Benutzerkontensteuerung|nein|  
+|Ob Spalte geändert wurde|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|DML-Typ|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
@@ -94,11 +94,11 @@ ms.locfileid: "34708878"
   
 |Typ der Spalte|In Änderungstabellen aufgezeichnete Änderungen|Einschränkungen|  
 |--------------------|---------------------------------------|-----------------|  
-|Spalten mit geringer Dichte|ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
+|Spalten mit geringer Dichte|Benutzerkontensteuerung|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
 |Berechnete Spalten|nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
-|XML|ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
-|timestamp|ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
-|BLOB-Datentypen|ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
+|XML|Benutzerkontensteuerung|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
+|timestamp|Benutzerkontensteuerung|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
+|BLOB-Datentypen|Benutzerkontensteuerung|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen  
  In diesem Abschnitt wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  

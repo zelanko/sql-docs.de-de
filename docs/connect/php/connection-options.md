@@ -1,7 +1,7 @@
 ---
 title: Optionen für die Serververbindung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174937"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367642"
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 |TraceFile|Zeichenfolge|Gibt den Pfad für die Datei an, die für Ablaufverfolgungsdaten verwendet wird.|Kein Wert festgelegt.|  
 |TraceOn|1 oder **true** zum Aktivieren der Ablaufverfolgung.<br /><br />0 oder **false** zum Deaktivieren der Ablaufverfolgung.|Gibt an, ob für die herzustellende Verbindung die ODBC-Protokollierung aktiviert (1 oder **TRUE** oder deaktiviert 0 oder **FALSE**) ist.|**FALSE** (0)|  
 |TransactionIsolation|Der SQLSRV-Treiber verwendet die folgenden Werte:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Der PDO_SQLSRV-Treiber verwendet die folgenden Werte:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Bestimmt die Isolationsstufe für die Transaktionen.<br /><br />Weitere Informationen zur Transaktionsisolation finden Sie unter [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) in der SQL Server-Dokumentation.|SQLSRV_TXN_READ_COMMITTED<br /><br />oder<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**Aktiviert** oder **Deaktiviert**|Wirkt sich auf den Hostnamen die Verbindungssequenz, wenn die erste aufgelöst, IP-Adresse den Hostnamen nicht reagiert, und es gibt mehrere IP-Adressen zugeordnet.<br /><br />Er interagiert mit MultiSubnetFailover andere Verbindung Sequenzen angeben. Weitere Informationen finden Sie unter [mithilfe transparente Netzwerk-IP-Adressauflösung](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Aktiviert|
+|TransparentNetworkIPResolution|**Aktiviert** oder **Deaktiviert**|Wirkt sich auf den Hostnamen die Verbindungssequenz, wenn die erste aufgelöst, IP-Adresse den Hostnamen nicht reagiert, und es gibt mehrere IP-Adressen zugeordnet.<br /><br />Er interagiert mit MultiSubnetFailover andere Verbindung Sequenzen angeben. Weitere Informationen finden Sie unter [transparente Netzwerk-IP-Adressauflösung](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) oder [mithilfe transparente Netzwerk-IP-Adressauflösung](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Aktiviert|
 |TrustServerCertificate|1 oder **true** , um dem Zertifikat zu vertrauen.<br /><br />0 oder **false** , um dem Zertifikat nicht zu vertrauen.|Gibt an, ob der Client einem selbstsignierten Serverzertifikat vertrauen (1 oder **TRUE**) oder es ablehnen soll (0 oder **FALSE**).|**FALSE** (0)|  
 |UID<br /><br />(vom PDO_SQLSRV-Treiber nicht unterstützt)|Zeichenfolge|Gibt die Benutzer-ID an, die bei der Verbindung mit SQL Server-Authentifizierung<sup>4</sup> verwendet wird.|Kein Wert festgelegt.|  
 |WSID|Zeichenfolge|Gibt den Namen des Computers für die Ablaufverfolgung an.|Kein Wert festgelegt.|  
@@ -69,7 +69,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 
 4. Die *UID* -Authentifizierung müssen sowohl das *PWD* - als auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Attribut festgelegt sein.  
 
-Viele der unterstützten Schlüssel sind ODBC-Verbindungszeichenfolgen-Attribute. Informationen zu ODBC-Verbindungszeichenfolgen finden Sie unter [Using Connection String Keywords with SQL Native Client (Verwenden von Schlüsselwörter für Verbindungszeichenfolgen mit SQL Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Viele der unterstützten Schlüssel sind ODBC-Verbindungszeichenfolgen-Attribute. Informationen zu ODBC-Verbindungszeichenfolgen finden Sie unter [Using Connection String Keywords with SQL Native Client (Verwenden von Schlüsselwörter für Verbindungszeichenfolgen mit SQL Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  

@@ -18,13 +18,13 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f5050b0def51df6ded38aa69c9eb8d45f2ccd70
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54872b5c44962f4011ae4b7e4238304fd1dfb228
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334641"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545220"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,24 +45,24 @@ ms.locfileid: "34334641"
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
-|NACH OBEN|OPTION (Hinweis)|  
+|TOP|OPTION (Hinweis)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Weitere Transact-SQL-Anweisungen, die unterstützt werden  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor stellt zudem IntelliSense-Unterstützung für die in der folgenden Tabellen aufgeführten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen bereit.  
   
 |Transact-SQL-Anweisung|Unterstützte Syntax|Ausnahmen|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|InclusionThresholdSetting|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
-|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
-|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|InclusionThresholdSetting|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|None|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|None|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|None|  
+|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|None|  
+|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|None|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|None|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Gesamte Syntax.|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Gesamte Syntax|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|None|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in unterstützten Anweisungen  
  IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Syntaxelemente, wenn sie in einer der unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden:  

@@ -15,13 +15,13 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 12058aef871aa14ec5daa8a92c22598cb9067350
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331741"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558330"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
   
 |Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Speicheroptimierte Tabelle|ja|ja|Nein*|  
-|Speicheroptimierter Tabellentyp|ja|ja|nein|  
-|Systemintern kompilierte gespeicherte Prozedur|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird jetzt unterstützt. Sie können in gespeicherten Prozeduren die EXECUTE-Syntax verwenden, solange die Prozedur, auf die verwiesen wird, ebenfalls systemintern kompiliert wird.|ja|Nein*|  
+|Speicheroptimierte Tabelle|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein*|  
+|Speicheroptimierter Tabellentyp|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Systemintern kompilierte gespeicherte Prozedur|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird jetzt unterstützt. Sie können in gespeicherten Prozeduren die EXECUTE-Syntax verwenden, solange die Prozedur, auf die verwiesen wird, ebenfalls systemintern kompiliert wird.|Benutzerkontensteuerung|Nein*|  
   
  *Sie können auf eine speicheroptimierte Tabelle oder eine systemintern kompilierte gespeicherte Prozedur nicht über die Kontextverbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn ein CLR-Modul ausgeführt wird) zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können.  
   
