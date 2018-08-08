@@ -48,7 +48,7 @@ Servergruppen bieten eine Möglichkeit zum Organisieren von Verbindungsinformati
 
 ## <a name="integrated-terminal"></a>Integrierte Terminaldienste
 
-Ihre Lieblings-Befehlszeilentools verwenden (z. B. Bash, PowerShell, Sqlcmd und Bcp und ssh) in der integrierten Terminal-Fenster innerhalb der [!INCLUDE[name-sos](../includes/name-sos-short.md)] Benutzeroberfläche. Weitere Informationen zu den integrierten Terminaldienste finden Sie unter [integrierte terminal] (integrierte terminal.md).
+Ihre Lieblings-Befehlszeilentools verwenden (z. B. Bash, PowerShell, Sqlcmd und Bcp und ssh) in der integrierten Terminal-Fenster innerhalb der [!INCLUDE[name-sos](../includes/name-sos-short.md)] Benutzeroberfläche. Weitere Informationen zu den integrierten Terminaldienste finden Sie unter [integrierte terminal](integrierte terminal.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [Herunterladen und installieren [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
