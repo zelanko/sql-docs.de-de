@@ -14,37 +14,42 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dae1363b6715c9d3c9082897bf00cf3eb3e183b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279171"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453984"
 ---
 # <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten - Beispiel
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein aktualisierbarer Datensatz aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen wird. Anschließend wird mit den Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse eine Datenzeile in das Datenset eingefügt, geändert und schließlich wieder gelöscht.  
-  
- Die Codedatei für dieses Beispiel heißt „UpdateRS.java“ und befindet sich im folgenden Pfad:  
-  
- \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \samples\resultsets  
-  
-## <a name="requirements"></a>Anforderungen  
- Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein aktualisierbarer Datensatz aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen wird. Anschließend wird mit den Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse eine Datenzeile in das Datenset eingefügt, geändert und schließlich wieder gelöscht.
+
+Die Codedatei für dieses Beispiel heißt „UpdateResultSet.java“ und befindet sich im folgenden Pfad:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
+
+## <a name="requirements"></a>Anforderungen
+
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank hergestellt. Anschließend wird eine SQL-Anweisung mit dem [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt verwendet. Die SQL-Anweisung wird ausgeführt, und die zurückgegebenen Daten werden in ein aktualisierbares SQLServerResultSet-Objekt eingefügt.  
-  
- Danach wird der Resultsetcursor mithilfe der [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)-Methode zur neuen Zeile bewegt. Mit mehreren [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)-Methoden werden anschließend Daten in die Zeile eingefügt. Daraufhin wird die [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)-Methode aufgerufen, um die neue Datenzeile in der Datenbank zu speichern.  
-  
- Nachdem die neue Datenzeile eingefügt wurde, wird die zuvor eingefügte Zeile mithilfe einer SQL-Anweisung abgerufen. Anschließend wird die Datenzeile mit einer Kombination von updateString- und [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methoden aktualisiert und erneut in der Datenbank gespeichert.  
-  
- Schließlich wird die zuvor aktualisierte Datenzeile abgerufen und mit der [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)-Methode aus der Datenbank gelöscht.  
-  
+> Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank hergestellt. Anschließend wird eine SQL-Anweisung mit dem [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt verwendet. Die SQL-Anweisung wird ausgeführt, und die zurückgegebenen Daten werden in ein aktualisierbares SQLServerResultSet-Objekt eingefügt.
+
+Danach wird der Resultsetcursor mithilfe der [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)-Methode zur neuen Zeile bewegt. Mit mehreren [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)-Methoden werden anschließend Daten in die Zeile eingefügt. Daraufhin wird die [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)-Methode aufgerufen, um die neue Datenzeile in der Datenbank zu speichern.
+
+Nachdem die neue Datenzeile eingefügt wurde, wird die zuvor eingefügte Zeile mithilfe einer SQL-Anweisung abgerufen. Anschließend wird die Datenzeile mit einer Kombination der Methoden „updateString“ und [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) aktualisiert und erneut in der Datenbank gespeichert.
+
+Schließlich wird die zuvor aktualisierte Datenzeile abgerufen und mit der [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)-Methode aus der Datenbank gelöscht.
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,7 +57,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -107,9 +112,8 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+
+[Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)
