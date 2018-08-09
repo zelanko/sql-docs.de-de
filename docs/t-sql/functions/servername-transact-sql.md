@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787361"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582186"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787361"
 |--------------|------------------------|  
 |Standardinstanz|'*servername*'|  
 |Benannte Instanz|'*servername*\\*instancename*'|  
-|Failoverclusterinstanz – Standardinstanz|'*virtualservername*'|  
-|Failoverclusterinstanz – benannte Instanz|'*virtualservername*\\*instancename*'|  
+|Failoverclusterinstanz – Standardinstanz|'*Netzwerkname_für_fci_in_wsfc*'|  
+|Failoverclusterinstanz – benannte Instanz|'*Netzwerkname_für_fci_in_wsfc*\\*Instanzname*'|  
   
  Obwohl die @@SERVERNAME-Funktion und die SERVERNAME-Eigenschaft der SERVERPROPERTY-Funktion möglicherweise Zeichenfolgen mit ähnlichen Formaten zurückgeben, kann die Information abweichen. Die SERVERNAME-Eigenschaft meldet Änderungen des Netzwerknamens des Computers automatisch.  
   

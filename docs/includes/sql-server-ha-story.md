@@ -68,7 +68,7 @@ Aufgrund der Unterschiede im Clusterstapel müssen einige Änderungen für Verf�
 
 * WSFC 
 * External
-* InclusionThresholdSetting
+* None
 
 Alle Verfügbarkeitsgruppen, die Verfügbarkeit erfordern, müssen einen zugrunde liegenden Cluster verwenden. Dies ist im Fall von SQL Server 2017 ein WSFC oder Pacemaker. Für Windows Server-basierte Verfügbarkeitsgruppen, die einen zugrunde liegenden WSFC verwenden, ist der Standardclustertyp WSFC und muss nicht festgelegt werden. Für Linux-basierte Verfügbarkeitsgruppen muss der Clustertyp beim Erstellen der Verfügbarkeitsgruppe auf „Extern“ festgelegt werden. Die Integration mit Pacemaker wird nach der Erstellung der Verfügbarkeitsgruppe konfiguriert, während dies bei einem WSFC während der Erstellungszeit geschieht.
 
@@ -128,7 +128,7 @@ Die folgende Liste hebt einige Unterschiede von FCIs zwischen Windows Server und
 * Der allgemeine Name, der von FCIs unter Linux verwendet wird, wird in DNS definiert und sollte mit dem der Ressource identisch sein, die für die FCI erstellt wurde.
 
 #### <a name="log-shipping"></a>Protokollversand
-Wenn die Ziele für den Wiederherstellungspunkt und die Wiederherstellungszeit flexibler sind, oder Datenbanken nicht als hoch unternehmenskritisch betrachtet werden, ist der Protokollversand eine weitere bewährte Verfügbarkeitsfunktion in SQL Server. Basierend auf den nativen Sicherungen von SQL Server generiert der Prozess für den Protokollversand automatisch Transaktionsprotokollsicherungen, kopiert diese auf eine oder mehrere Instanzen, die als betriebsbereit bekannt sind und wendet sie auf diese Standbyinstanzen an. Der Protokollversand verwendet SQL Server-Agent-Aufträge, um den Sicherungs- und Kopiervorgang sowie den Anwendungsvorgang der Transaktionsprotokollsicherungen zu automatisieren. 
+Wenn die Ziele für den Wiederherstellungspunkt und die Wiederherstellungszeit flexibler sind, oder Datenbanken nicht als hoch unternehmenskritisch betrachtet werden, ist der Protokollversand eine weitere bewährte Verfügbarkeitsfunktion in SQL Server. Basierend auf den nativen Sicherungen von SQL Server generiert der Prozess für den Protokollversand automatisch Transaktionsprotokollsicherungen, kopiert diese auf eine oder mehrere Instanzen, die als betriebsbereit bekannt sind, und wendet sie auf diese Standbyinstanzen an. Der Protokollversand verwendet SQL Server-Agent-Aufträge, um den Sicherungs- und Kopiervorgang sowie den Anwendungsvorgang der Transaktionsprotokollsicherungen zu automatisieren. 
 > [!IMPORTANT] 
 > Unter Linux sind SQL Server-Agent-Aufträge nicht als Teil der Installation von SQL Server enthalten. Stattdessen sind diese im Paket „package mssql-server-Agent jobs“ verfügbar, das ebenfalls für das Verwenden des Protokollversands installiert werden muss.
 

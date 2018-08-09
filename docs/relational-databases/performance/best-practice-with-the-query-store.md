@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279181"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549530"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
   
  Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet sich das weitere Vorgehen nach der Art des Problems.  
   
--   Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter ist als der vorherige, können Sie den Planerzwingungsmechanismus verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so zu konfigurieren, dass bei zukünftiger Ausführung immer der optimale Plan verwendet wird.  
+-   Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter als der vorherige ist, können Sie den Planerzwingungsmechanismus verwenden, um diesen zu erzwingen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen. 
   
      ![abfrage-speicher-erzwingungs-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
