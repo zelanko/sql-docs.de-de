@@ -85,21 +85,7 @@
   items:
     - name: 'Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber'
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-      items:
-        - name: 'Lektion 1–1: Starten des Datenbankoptimierungsratgebers'
-          href: lesson-1-1-launching-database-engine-tuning-advisor.md
-        - name: 'Lektion 1–2: Festlegen von Tooloptionen und Layout'
-          href: lesson-1-2-setting-tool-options-and-layout.md
-- name: 'Lektion 2: Verwenden des Datenbankoptimierungsratgebers'
-  href: lesson-2-using-database-engine-tuning-advisor.md
-  items:
-    - name: 'Lektion 1–1: Optimieren einer Arbeitsauslastung'
-      href: lesson-1-1-tuning-a-workload.md
-    - name: 'Lektion 1–2: Anzeigen von Optimierungsempfehlungen'
-      href: lesson-1-2-viewing-tuning-recommendations.md
-    - name: 'Lektion 1–3: Anzeigen von Optimierungsberichten'
-      href: lesson-1-3-viewing-tuning-reports.md
+    - name: 'Lektion 2: Verwenden des Datenbankoptimierungsratgebers'
+      href: lesson-2-using-database-engine-tuning-advisor.md
     - name: 'Lektion 3: Verwenden des Befehlszeilenprogramms dta'
       href: lesson-3-using-the-dta-command-prompt-utility.md
-    - name: 'Lektion 3–1: Starten der dta-Eingabeaufforderung und Optimieren einer Arbeitsauslastung'
-      href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md

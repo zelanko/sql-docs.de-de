@@ -128,7 +128,7 @@
       href: alter-table-table-constraint-transact-sql.md
     - name: TRIGGER
       href: alter-trigger-transact-sql.md
-    - name: USER
+    - name: Benutzer
       href: alter-user-transact-sql.md
     - name: VIEW
       href: alter-view-transact-sql.md
@@ -142,8 +142,6 @@
       href: backup-transact-sql.md
     - name: BACKUP CERTIFICATE
       href: backup-certificate-transact-sql.md
-    - name: BACKUP DATABASE (Parallel Data Warehouse)
-      href: backup-database-parallel-data-warehouse.md
     - name: BACKUP MASTER KEY
       href: backup-master-key-transact-sql.md
     - name: BACKUP SERVICE MASTER KEY
@@ -152,8 +150,6 @@
       href: restore-statements-transact-sql.md
     - name: RESTORE-Anweisungen
       href: restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md
-    - name: RESTORE DATABASE (Parallel Data Warehouse)
-      href: restore-database-parallel-data-warehouse.md
     - name: RESTORE-Argumente
       href: restore-statements-arguments-transact-sql.md
     - name: RESTORE FILELISTONLY
@@ -238,7 +234,7 @@
       href: create-function-sql-data-warehouse.md
     - name: INDEX
       href: create-index-transact-sql.md
-    - name: LOGIN
+    - name: Anmeldung
       href: create-login-transact-sql.md
     - name: MASTER KEY
       href: create-master-key-transact-sql.md
@@ -304,7 +300,7 @@
       href: create-trigger-transact-sql.md
     - name: TYPE
       href: create-type-transact-sql.md
-    - name: USER
+    - name: Benutzer
       href: create-user-transact-sql.md
     - name: VIEW
       href: create-view-transact-sql.md
@@ -326,7 +322,7 @@
       href: windows-collation-name-transact-sql.md
     - name: Rangfolge von Sortierungen
       href: collation-precedence-transact-sql.md
-- name: DELETE
+- name: Delete
   href: delete-transact-sql.md
 - name: DISABLE TRIGGER
   href: disable-trigger-transact-sql.md
@@ -394,7 +390,7 @@
       href: drop-index-transact-sql.md
     - name: INDEX (selektive XML-Indizes)
       href: drop-index-selective-xml-indexes.md
-    - name: LOGIN
+    - name: Anmeldung
       href: drop-login-transact-sql.md
     - name: MASTER KEY
       href: drop-master-key-transact-sql.md
@@ -450,7 +446,7 @@
       href: drop-trigger-transact-sql.md
     - name: TYPE
       href: drop-type-transact-sql.md
-    - name: USER
+    - name: Benutzer
       href: drop-user-transact-sql.md
     - name: VIEW
       href: drop-view-transact-sql.md
