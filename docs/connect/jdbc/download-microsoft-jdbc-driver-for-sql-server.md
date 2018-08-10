@@ -1,7 +1,7 @@
 ---
-title: Herunterladen von Microsoft JDBC Driver for SQLServer | Microsoft Docs
+title: Herunterladen des Microsoft JDBC-Treibers für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,35 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a113c8690b10c2d7e525acb4c762d44bdcba1001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828715"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459474"
 ---
-# <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Herunterladen von Microsoft JDBC Driver for SQLServer
+# <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Herunterladen des Microsoft JDBC-Treibers für SQL Server
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>Verwenden den JDBC-Treiber mit Maven Central
-Der JDBC-Treiber können zu einem Maven-Projekt hinzugefügt werden, indem Sie ihn als Abhängigkeit in der Datei POM.xml durch den folgenden Code hinzufügen:
+## <a name="using-the-jdbc-driver-with-maven-central"></a>Verwenden den JDBC-Treibers mit Maven Central
+Der JDBC-Treiber können zu einem Maven-Projekt hinzugefügt werden, indem Sie es als Abhängigkeit in der Datei "pom.xml" durch den folgenden Code hinzufügen:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
 </dependency>
 ```  
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Der JDBC-Treiber für SQL Server verfügbaren downloads
- * [Microsoft JDBC Driver 6.4 für SQLServer](http://go.microsoft.com/fwlink/?linkid=868290) 
- * [Microsoft JDBC Driver 6.2 für SQLServer](http://go.microsoft.com/fwlink/?linkid=852460) 
- * [Microsoft JDBC Driver 6.0 für SQLServer](http://go.microsoft.com/fwlink/?LinkId=245496) 
- * [Microsoft JDBC Driver 4.2 für SQLServer](http://go.microsoft.com/fwlink/?linkid=841534) 
- * [Microsoft JDBC Driver 4.1 für SQLServer](http://go.microsoft.com/fwlink/?linkid=841533) 
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Verfügbaren Downloads des JDBC-Treibers für SQL Server
+ * [Microsoft JDBC-Treiber 7.0 für SQL Server](http://go.microsoft.com/fwlink/?linkid=2005972) 
+ * [Microsoft JDBC-Treiber 6.4 für SQL Server:](http://go.microsoft.com/fwlink/?linkid=868290) 
+ * [Microsoft JDBC-Treiber 6.2 für SQL Server:](http://go.microsoft.com/fwlink/?linkid=852460) 
+ * [Microsoft JDBC-Treiber 6.0 für SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 
+ * [Microsoft JDBC-Treiber 4.2 für SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
+ * [Microsoft JDBC-Treiber 4.1 für SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Nicht unterstützte Treiber  
-Nicht unterstützte Treiber sind nicht zum Download zur Verfügung. Wir werden die Java-Unterstützung für Clientkonnektivität kontinuierlich verbessern. Daher wird ausdrücklich empfohlen, dass Sie mit der neuesten Version von Microsoft JDBC Driver arbeiten.  
+Nicht unterstützte Treiber werden hier nicht zum Download angeboten. Wir arbeiten laufend daran, die Unterstützung der Java-Konnektivität zu verbessern. Daher raten wir dringend zur Verwendung der neuesten Version des Microsoft JDBC-Treibers.  
   
   
