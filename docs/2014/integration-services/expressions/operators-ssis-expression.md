@@ -43,7 +43,7 @@ ms.locfileid: "37320690"
 |[Unterteilen &#40;SSIS-Ausdruck&#41;](divide-ssis-expression.md)|Dividiert den ersten numerischen Ausdruck durch den zweiten numerischen Ausdruck.|  
 |[&#40;Modulo&#41; &#40;SSIS-Ausdruck&#41;](modulo-ssis-expression.md)|Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten bereit.|  
 |[&#124;&#124;&#40;Logisches OR&#41; &#40;SSIS-Ausdruck&#41;](logical-or-ssis-expression.md)|Führt eine logische OR-Operation aus.|  
-|[& & &#40;Logisches AND&#41; &#40;SSIS-Ausdruck&#41;](logical-and-ssis-expression.md)|Führt eine logische AND-Operation aus.|  
+|[&& &#40;Logisches AND&#41; &#40;SSIS-Ausdruck&#41;](logical-and-ssis-expression.md)|Führt eine logische AND-Operation aus.|  
 |[! &#40;Logisches Not&#41; &#40;SSIS-Ausdruck&#41;](logical-not-ssis-expression.md)|Negiert einen booleschen Operanden.|  
 |[&#124;&#40;Bitweises inklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-inclusive-or-ssis-expression.md)|Führt eine bitweise OR-Operation mit zwei ganzzahligen Werten aus.|  
 |[^ &#40;Bitweises exklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-exclusive-or-ssis-expression.md)|Führt eine bitweise exklusive OR-Operation mit zwei ganzzahligen Werten aus.|  
