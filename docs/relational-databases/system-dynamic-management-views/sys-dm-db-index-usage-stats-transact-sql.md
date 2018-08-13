@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_index_usage_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3403150f88a11070c65de493c800d3c28312c74b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: dea81e4b8e67fa5faa0ca81a60595dafdef2c4ad
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465146"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533810"
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "34465146"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.  
   
 > [!NOTE]  
->  **Sys. dm_db_index_usage_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **Sys. dm_db_index_usage_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Weitere Informationen zu speicheroptimierten Index verwenden, finden Sie unter [dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Zum Aufrufen dieser Ansicht vom [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Aufrufen von dieser Ansicht vom [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,9 +50,9 @@ ms.locfileid: "34465146"
 |**object_id**|**int**|ID der Tabelle oder Sicht, für die der Index definiert ist.|  
 |**index_id**|**int**|Die ID des Index.|  
 |**user_seeks**|**bigint**|Anzahl von Suchvorgängen durch Benutzerabfragen.|  
-|**user_scans**|**bigint**|Anzahl von Scanvorgängen durch Benutzerabfragen nicht verwendet haben, die seek""-Prädikat.|  
+|**user_scans**|**bigint**|Anzahl von Scanvorgängen durch Benutzerabfragen, die nicht verwendet haben seek""-Prädikat.|  
 |**user_lookups**|**bigint**|Anzahl von Lesezeichen-Nachschlagevorgängen durch Benutzerabfragen.|  
-|**user_updates**|**bigint**|Anzahl von Updates durch Benutzerabfragen. Dies schließt INSERT-, DELETE- und aktualisiert, die Anzahl von Vorgängen, die nicht der tatsächliche betroffenen Zeilen darstellt. Z. B. Wenn Sie 1000 Zeilen in einer einzelnen Anweisung löschen, erhöht diese Zahl um 1|  
+|**user_updates**|**bigint**|Anzahl von Updates durch Benutzerabfragen. Dies umfasst die INSERT-, DELETE- und aktualisiert, die Anzahl von Vorgängen, die nicht die tatsächlichen Zeilen betroffen fertig darstellt. Z. B. Wenn Sie 1000 Zeilen in einer einzigen Anweisung zu löschen, erhöht diese Zahl um 1|  
 |**last_user_seek**|**datetime**|Zeitpunkt des letzten Suchvorgangs durch den Benutzer|  
 |**last_user_scan**|**datetime**|Zeitpunkt des letzten Scanvorgangs durch den Benutzer|  
 |**last_user_lookup**|**datetime**|Zeitpunkt des letzten Nachschlagevorgangs durch den Benutzer.|  
@@ -70,11 +70,11 @@ ms.locfileid: "34465146"
 ## <a name="remarks"></a>Hinweise  
  Jeder einzelne Such-, Scan-, Nachschlage- oder Updatevorgang für den angegebenen Index durch eine Abfrageausführung zählt als Verwendung dieses Indexes, und der entsprechende Zähler in dieser Sicht wird inkrementiert. Informationen werden für Vorgänge angezeigt, die durch Benutzerabfragen verursacht werden, und für Vorgänge, die durch intern generierte Abfragen verursacht werden, wie z. B. Scans zum Sammeln von Statistikdaten.  
   
- Die **User_updates** -Leistungsindikator gibt die wartungsebene für den Index, der durch Insert verursacht, update oder delete-Vorgänge in der zugrunde liegenden Tabelle oder Sicht. Mithilfe dieser Sicht können Sie ermitteln, welche Indizes selten von den Anwendungen verwendet werden. Außerdem können Sie mithilfe dieser Sicht bestimmen, welche Indizes einen hohen Wartungsaufwand erzeugen. Sie können Indizes löschen, die einen hohen Wartungsaufwand erzeugen, aber nicht oder nur selten für Abfragen verwendet werden.  
+ Die **User_updates** -Leistungsindikator gibt die wartungsebene für den Index, der durch Insert verursacht werden, aktualisieren oder delete-Vorgänge in der zugrunde liegenden Tabelle oder Sicht. Mithilfe dieser Sicht können Sie ermitteln, welche Indizes selten von den Anwendungen verwendet werden. Außerdem können Sie mithilfe dieser Sicht bestimmen, welche Indizes einen hohen Wartungsaufwand erzeugen. Sie können Indizes löschen, die einen hohen Wartungsaufwand erzeugen, aber nicht oder nur selten für Abfragen verwendet werden.  
   
  Die Zähler werden auf 'leer' gesetzt, sobald ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst (MSSQLSERVER) gestartet wird. Außerdem werden jedes Mal, wenn eine Datenbank getrennt oder beendet wird (beispielsweise, weil AUTO_CLOSE auf ON festgelegt ist), alle dieser Datenbank zugehörigen Zeilen entfernt.  
   
- Wenn ein Index verwendet wird, wird eine Zeile hinzugefügt, um **Sys. dm_db_index_usage_stats** Wenn eine Zeile für den Index nicht bereits vorhanden ist. Beim Hinzufügen der Zeile sind deren Zähler anfänglich auf 0 festgelegt.  
+ Wenn ein Index verwendet wird, wird eine Zeile hinzugefügt, um **Sys. dm_db_index_usage_stats** , wenn eine Zeile für den Index noch nicht vorhanden ist. Beim Hinzufügen der Zeile sind deren Zähler anfänglich auf 0 festgelegt.  
   
  Während des Upgrades auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], Einträge in Sys. dm_db_index_usage_stats werden entfernt. Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Einträge werden beibehalten, wie vor [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   

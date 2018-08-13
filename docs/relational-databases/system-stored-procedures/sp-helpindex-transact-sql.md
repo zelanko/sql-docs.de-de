@@ -1,5 +1,5 @@
 ---
-title: Sp_helpindex (Transact-SQL) | Microsoft Docs
+title: Sp_helpindex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547620"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,9 +62,9 @@ sp_helpindex [ @objname = ] 'name'
  Eine absteigende indizierte Spalte wird im Resultset mit einem Minuszeichen (-) hinter dem Namen aufgelistet. Eine aufsteigende indizierte Spalte, der Standard, wird nur mit dem Namen aufgelistet.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Indizes mit der NORECOMPUTE-Option von UPDATE STATISTICS festgelegt wurden, wird diese Informationen enthalten, der **Index_description** Spalte.  
+ Wenn Indizes mit der NORECOMPUTE-Option von UPDATE STATISTICS festgelegt wurden, befindet sich diese Informationen den **Index_description** Spalte.  
   
- **Sp_helpindex** macht nur Indexspalten; daher es macht Informationen zu XML-Indizes oder räumliche Indizes.  
+ **Sp_helpindex** macht nur Indexspalten; aus diesem Grund macht es keine Informationen über XML-Indizes oder räumliche Indizes verfügbar.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

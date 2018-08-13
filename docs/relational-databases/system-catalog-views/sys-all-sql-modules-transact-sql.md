@@ -1,5 +1,5 @@
 ---
-title: Sys. all_sql_modules (Transact-SQL) | Microsoft Docs
+title: Sys. all_sql_modules (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3ddc8d8b4acc0b6d21fe0084bba8cd818f55429
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 81f8779fbb25d092ea40298516f8fd395915b02e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180596"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541530"
 ---
 # <a name="sysallsqlmodules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die Vereinigung der **sql_modules** und **Sys. system_sql_modules**.  
+  Gibt die Union der **Sys. sql_modules** und **Sys. system_sql_modules**.  
   
- Die Sicht gibt eine Zeile für jede systemintern kompilierte, skalare benutzerdefinierte Funktion zurück. Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ Die Sicht gibt eine Zeile für jede nativ kompilierte, skalare benutzerdefinierte Funktion zurück. Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

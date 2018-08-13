@@ -1,5 +1,5 @@
 ---
-title: spatial_reference_systems (Transact-SQL) | Microsoft Docs
+title: spatial_reference_systems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: acdf8059c75ac6bec1bdd45fc7e1d348331a7e90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f1cb77a5da692f17a790d2eb5ffca6f82a939449
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219921"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538290"
 ---
 # <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33219921"
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|Das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte SRID.|  
 |authority_name|**nvarchar(128)**|Die Autorität des SRID.|  
-|authorized_spatial_reference_id|**int**|Das SRID von der Stelle mit dem Namen im **Authority_name**.|  
+|authorized_spatial_reference_id|**int**|Das SRID, von der Zertifizierungsstelle, die mit dem Namen in **Authority_name**.|  
 |well_known_text|**nvarchar(4000)**|Die WKT-Darstellung des SRID.|  
 |unit_of_measure|**nvarchar(128)**|Der Name der Maßeinheit.|  
 |unit_conversion_factor|**float**|Die Länge der Maßeinheit in Metern.|  

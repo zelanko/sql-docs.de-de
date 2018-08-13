@@ -1,203 +1,141 @@
 ---
-title: Installieren Sie SQL Server-Machine Learning-Komponenten ohne Internetzugang | Microsoft Docs
+title: Installieren von SQL Server-Machine Learning-Komponenten ohne Internetzugang | Microsoft-Dokumentation
+description: Offline oder getrennt Machine Learning-R und Pytyon Setup für SQL Server-Instanz isoliert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/02/2018
+ms.date: 08/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a340acfbbcf19a6015e3b2745b1f6089e12d3fd
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822193"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546260"
 ---
-# <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Installieren von SQL Server-Machine learning-Komponenten ohne Internetzugang
+# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Installieren von SQL Server-Machine learning-R und Python-Funktionen auf Computern ohne Internetzugang
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Standardmäßig Installationsprogramme mit Downloadwebsites abzurufenden erforderliche Microsoft verbinden und aktualisierte Komponenten für machine Learning auf SQL Server. Wenn firewalleinschränkungen verhindern, dass der Installationsprogramm diesen Standorten erreichen, können Sie ein Gerät mit Internetzugang Herunterladen von Dateien, Dateien mit einem offline-Server übertragen und führen Sie Setup.
+Standardmäßig Installationsprogramme Verbindung mit Microsoft-Download-Websites zum Abrufen der erforderlichen und aktualisierte Komponenten für machine Learning in SQL Server. Wenn firewalleinschränkungen verhindern, dass das Installationsprogramm diese Websites zu erreichen, können Sie ein Gerät mit Internetzugang Herunterladen von Dateien, Dateien mit einem offline-Server übertragen, und führen Sie Setup.
 
-## <a name="get-the-installation-media"></a>Abrufen der Installationsmedien
+In-Database-Analyse bestehen aus der Datenbank-Engine-Instanz sowie zusätzliche Komponenten für die Integration von R und Python, abhängig von der Version von SQL Server. 
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
++ SQL Server 2017 enthält R und Python. 
++ SQL Server 2016 ist nur für R. 
 
-> [!NOTE]  
-> Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
- 
- ###  <a name="bkmk_ga_instalpatch"></a> Installieren einer Patchanforderung 
+Auf einem Server isoliert werden Machine Learning und R/Python-Sprache-spezifischen Funktionen über CAB-Dateien hinzugefügt. 
 
-Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Runtime-Binärdateien erkannt, die von SQL Server als vorausgesetzte Komponenten installiert werden. Wenn dieses Update an den VC++ Runtime-Binärdateien nicht installiert wird, können bei SQL Server in bestimmten Szenarios Stabilitätsprobleme auftreten. Bevor Sie SQL Server installieren, sollten Sie entsprechend den Anweisungen unter [Versionsanmerkungen zu SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) vorgehen, um festzustellen, ob Ihr Computer einen Patch für die VC-Runtime-Binärdateien benötigt.  
+## <a name="sql-server-2017-offline-install"></a>SQL Server 2017-offline-Installation
 
+Um SQL Server 2017 Machine Learning Services (R- und Python) auf einem isolierten-Server zu installieren, starten Sie durch Herunterladen der ersten Version von SQL Server, und die entsprechenden CAB-Dateien für R und Python unterstützt. Auch wenn Sie planen, den Server, um Sie verwenden das aktuelle kumulative Update sofort zu aktualisieren, muss zunächst eine erste Version installiert werden.
 
-## <a name="download-cab-files"></a>Herunterladen der CAB-Dateien
+> [!Note]
+> SQL Server 2017 besitzt keine Servicepacks. Es ist die erste Version von SQL Server die erste Version als die einzige Basis-Zeile, für die Verarbeitung durch nur kumulative Updates verwenden. 
 
-Herunterladen Sie auf einem Server mit Internetzugang die für eine offline-Installation erforderliche CAB-Dateien Das Setup-Programm verwendet die CAB-Dateien, um zusätzliche Funktionen zu installieren.
+### <a name="1---download-2017-cabs"></a>1 – herunterladen von 2017-CAB-Dateien
+
+Auf einem Computer, die über einen Internetzugang verfügen Laden Sie die CAB-Dateien, die Bereitstellung von R und Python-Funktionen für die erste Version und die Installationsmedien für SQL Server 2017 herunter. 
 
 Release  |Downloadlink  |
----------|---------|
-**SQL Server-2017 Erstveröffentlichung** |
+---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft-Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
-**SQL Server 2017 CU1** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden |
-Microsoft-Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**SQL Server 2017 CU2** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |keine Änderung; Vorheriges verwenden|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |keine Änderung; Vorheriges verwenden|
-**SQL Server 2017 CU3** |
-Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
-**SQL Server 2017 CU4** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**SQL Server 2017 CU5** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
-**SQL Server 2017 CU6** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
-**SQL Server 2017 CU7** |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server      |keine Änderung; Vorheriges verwenden|
-Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
-Microsoft-Python-Server    |keine Änderung; Vorheriges verwenden|
+Microsoft Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+###  <a name="2---get-sql-server-2017-installation-media"></a>2: Abrufen von SQL Server 2017-Installationsmedien
 
-### <a name="bkmk_2016Installers"></a>Downloads für SQLServer 2016
+1. Laden Sie auf einem Computer, die über einen Internetzugang verfügen, die [SQL Server 2017-Setup-Programm](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
-> [!IMPORTANT]
-> 
-> Wenn Sie SQL Server 2016 SP1 CU4 oder SP1 CU5 offline installieren zu können, laden Sie SRO_3.2.2.16000_1033.cab herunter. Wenn Sie SRO_3.2.2.13000_1033.cab aus FWLINK 831785 heruntergeladen, gemäß der einrichten (Dialogfeld), benennen Sie die Datei als SRO_3.2.2.16000_1033.cab vor der Installation des kumulativen Updates.
+2. Doppelklicken Sie auf Setup aus, und wählen Sie die **Medien herunterladen** Installationstyp. Mit dieser Option erstellt Setup eine lokale ISO (oder .cab) Datei, die mit den Installationsmedien.
 
-Release  |Downloadlink  |
----------|---------|
-**SQL Server 2016 RTM**     |
-Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
-Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
-**SQL Server 2016 CU 1**     |
-Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)
-Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)
-**SQL Server 2016 CU 2**     |
-Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)
-Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)
-**SQL Server 2016 CU 3**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     | keine Änderung; Vorheriges verwenden |
-**SQL Server 2016 CU 4**     |
-Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
-**SQL Server 2016 CU 5**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden|
-**SQL Server 2016 CU 6**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
-**SQL Server 2016 CU 7**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden |
-**SQL Server 2016 SP 1**     |
-Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 1 CU1**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden|
-**SQL Server 2016 SP1 CU2**     |
-Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
-**SQL Server 2016 SP 1 CU3**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server     |keine Änderung; Vorheriges verwenden|
-**SQL Server 2016 SP 1 CU4 und GDR**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
-**SQL Server 2016 SP 1 CU5**     |
-Microsoft R Open     |keine Änderung; Vorheriges verwenden|
-Microsoft R Server    |keine Änderung; Vorheriges verwenden |
+   ![Wählen Sie die Medien herunterladen Installationstyp](media/offline-download-tile.png "Medien herunterladen")
 
-Wenn Sie den Quellcode für Microsoft R anzeigen möchten, ist zum Download zur Verfügung als Archiv tar-Format: [Installationsprogramme R-Server herunterladen](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+## <a name="sql-server-2016-offline-install"></a>SQL Server 2016-offline-Installation
 
-### <a name = "bkmk_OtherComponents"></a>Zusätzliche erforderliche Komponenten
+SQL Server 2016-in-Database-Analyse ist R ausschließlich mit nur zwei CAB-Dateien für die Produktpakete und die Microsoft-Distribution von Open-Source-R bzw. Starten, indem Sie eine dieser Versionen installieren: RTM, SP 1, SP 2 ausgeführt wird. Sobald eine Basisinstallation vorhanden ist, können die kumulativen Updates als Nächstes angewendet werden.
 
-Je nach Ihrer Umgebung müssen Sie möglicherweise lokale Kopien von Installationsprogrammen für die folgenden erforderlichen Komponenten machen.
+Laden Sie auf einem Computer, die über einen Internetzugang verfügen die CAB-Dateien von Setup verwendet werden, um die datenbankinternen Analysen auf SQL Server 2016 zu installieren. 
 
-Komponente  |Version
----------|---------
-[Microsoft AS OLE DB-Anbieter für SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
-[Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
-[Microsoft MPI](https://go.microsoft.com/fwlink/?linkid=834316)     | 7.1.12437.25
-[Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
-[Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
+### <a name="1---download-2016-cabs"></a>1 – herunterladen von 2016 CAB-Dateien
+
+Release  | Microsoft R Open | Microsoft R Server |
+---------|-----------------|---------------------|
+**SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
+**SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
+**SQL Server 2016 SP2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+
+### <a name="2---get-sql-server-2016-installation-media"></a>2: Abrufen von SQL Server 2016-Installationsmedien
+
+Sie können SQL Server 2016 RTM, SP 1 oder SP 2 als die Installation des ersten auf dem Zielcomputer installieren. Einer dieser Versionen kann ein kumulatives Update akzeptieren.
+
+Eine Möglichkeit zum Abrufen von einer ISO-Datei mit den Installationsmedien ist über [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Melden Sie sich, und verwenden Sie dann die **Downloads** Link zu die SQL Server 2016-Version finden Sie installieren möchten. Der Download erfolgt in Form von einer ISO-Datei, die Sie auf den Zielcomputer für eine Offlineinstallation kopieren können.
 
 ## <a name="transfer-files"></a>Übertragen von Dateien
 
-Übertragen Sie die ZIP-SQL Server-Installationsmedien und die Dateien, die bereits auf den Computer heruntergeladen werden auf dem Sie Setup installieren.
+Kopieren Sie die SQL Server-Installationsmedien (ISO oder .cab) und in-Database-Analyse CAB-Dateien auf den Zielcomputer an. Platzieren Sie die CAB-Dateien und Medien-Installationsdatei in denselben Ordner auf dem Zielcomputer, z. B. **Downloads** oder Setup im Ordner des Benutzers % Temp *.
 
-Legen die CAB-Dateien in einem geeigneten Ordner z. B. **Downloads** oder temporären Ordner der Setup-Benutzer: C:\Users < Benutzername > \AppData\Local\Temp.
+Der folgende Screenshot zeigt das CAB-Datei von SQL Server 2017 und ISO-Dateien. SQL Server 2016-Downloads sehen anders: weniger Dateien (keine Python), und die Installationsmedien Dateiname ist für 2016.
 
-Legen Sie die en_sql_server_2017.iso-Datei in einem geeigneten Ordner ein. Doppelklicken Sie auf **setup.exe** um Installation zu beginnen.
+![Liste der zu übertragenden Dateien](media/offline-file-list.png "Dateiliste")
 
-### <a name="run-setup"></a>Ausführen von 'Setup'
+## <a name="run-setup"></a>Ausführen von 'Setup'
 
-Beim Ausführen von SQL Server-Setup auf einem Computer, die vom Internet getrennt Setup fügt eine **Offlineinstallation** Seite des Assistenten, damit Sie den Speicherort der CAB-Dateien angeben können, die Sie im vorherigen Schritt kopiert haben.
+Wenn Sie SQL Server-Setup auf einem Computer, die vom Internet getrennt ausführen, fügt Setup eine **Offline-Installation** Seite des Assistenten, damit Sie den Speicherort der CAB-Dateien angeben können, die Sie im vorherigen Schritt kopiert haben.
 
-1. Starten Sie den SQL Server-Setup-Assistenten.
+1. Um die Installation zu starten, doppelklicken Sie auf die ISO oder CAB-Datei für den Zugriff auf den Installationsmedien. Daraufhin sollte die **setup.exe** Datei.
 
-2. Wenn der Setup-Assistent die Lizenzierung Seite für open Source-R oder Python-Komponenten angezeigt wird, klicken Sie auf **Accept**. Annahme der Lizenzbedingungen können Sie mit dem nächsten Schritt fortfahren.
+2. Mit der rechten Maustaste **setup.exe** und als Administrator ausführen.
 
-3. In der **Offlineinstallation** Seite **Installationspfad**, geben Sie den Ordner, enthält die CAB-Dateien, die Sie zuvor kopiert haben.
+3. Wenn der Setup-Assistent die lizenzierungsseite für Open Source-R oder Python-Komponenten angezeigt wird, klicken Sie auf **Accept**. Akzeptieren der Lizenzbedingungen können Sie mit dem nächsten Schritt fortfahren.
 
-4. Weiterhin folgenden den aufforderungen, um die Installation abzuschließen.
+4. Wenn Sie sich zum erhalten der **Offline-Installation** auf der Seite **Installationspfad**, geben Sie den Ordner, enthält die CAB-Dateien, die Sie zuvor kopiert haben.
 
-Nachdem die Installation abgeschlossen ist, den Dienst neu starten und konfigurieren Sie den Server zum Ausführen von Skripts zu aktivieren, wie in beschrieben [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) oder [Installieren von SQL Server 2016 R Services (Datenbankintern)](sql-r-services-windows-install.md).
+   ![Seite des Assistenten für die Auswahl der Cab-Ordner](media/screenshot-sql-offline-cab-page.png "CAB-Ordner")
 
-## <a name="slipstream-upgrades-for-offline-servers"></a>Slipstream-Upgrades für offline-Server
+5. Weiterhin folgenden die angezeigten aufforderungen, um die Installation abzuschließen.
+
+## <a name="post-install-configuration"></a>Konfiguration nach der Installation
+
+Nachdem die Installation abgeschlossen ist, starten Sie den Dienst neu, und konfigurieren Sie dann auf den Server, um die Ausführung des Skripts zu aktivieren:
+
++ [Aktivieren Sie die Ausführung des externen Skripts (SQL Server 2017)](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
++ [Aktivieren Sie die Ausführung des externen Skripts (SQL Server 2016)](sql-r-services-windows-install.md#bkmk_enableFeature)
+
+Eine ersten offline-Installation von SQL Server 2017-Machine Learning Services oder SQL Server 2016 R Services ist die gleiche Konfiguration wie eine online-Installation erforderlich:
+
++ [Überprüfen der Installation](sql-machine-learning-services-windows-install.md#verify-installation) (für SQL Server 2016, klicken Sie auf [hier](sql-r-services-windows-install.md#verify-installation)).
++ [Zusätzliche Konfiguration nach Bedarf](sql-machine-learning-services-windows-install.md#additional-configuration) (für SQL Server 2016, klicken Sie auf [hier](sql-r-services-windows-install.md#bkmk_FollowUp)).
+
+<a name="slipstream-upgrades"></a>
+
+## <a name="slipstream-upgrades"></a>Slipstream-upgrades
 
 Als Slipstream-Einrichtung wird die Möglichkeit bezeichnet, einen Patch oder ein Update auf eine fehlgeschlagene Installation einer Instanz anzuwenden, um vorhandene Probleme zu beheben. Diese Methode hat den Vorteil, dass SQL Server während der Einrichtung aktualisiert wird, sodass Sie später nur einmal einen Neustart durchführen müssen.
 
-+ Wenn der Server keinen Internetzugriff hat, müssen Sie das SQL Server-Installationsprogramm herunterladen und anschließend die passenden Versionen der Installationsprogramme der R-Komponente, **bevor** Sie den Updateprozess beginnen.  R-Komponenten sind nicht standardmäßig mit SQL Server enthalten.
+Wenn ein Server nicht über Internetzugriff verfügt, gelten Dienstupdates durch Herunterladen einer aktualisierten SQL Server-Installer und die entsprechenden Versionen der sprachspezifische CAB-Dateien. 
 
-+ Wenn Sie diese Komponenten zu einer vorhandenen Installation hinzufügen, verwenden Sie die aktualisierte Version des SQL Server-Installationsprogramm und die entsprechenden aktualisierte Version der zusätzlichen Komponenten. Wenn Sie angeben, dass die R-Funktion installiert werden, sucht das Installationsprogramm für die passende Version der Installationsprogramme für Machine learning-Komponenten.
+1. Beginnen Sie mit einer Baseline-Instanz. Slipstream-Upgrades werden für diese Versionen von SQL Server unterstützt:
 
-## <a name="get-help"></a>Hilfe
+  + Erste Version von SQL Server 2017
+  + Erste Version von SQL Server 2016
+  + SQL Server 2016 SP1.
+  + SQL Server 2016 SP2
 
-Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
+2. Erhalten Sie eine aktualisierte Version der SQL Server-Installationsprogramm für eine angegebene kumulative Update an. Ein Update auf die Machine learning (R- und Python)-Funktionen ist zusammen mit einem kumulativen Update von der zugrunde liegenden Datenbank-Engine-Instanz.
 
-* [Upgrade und Installation häufig gestellte Fragen – Machine Learning-Dienste](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+  + [Updates für SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+  + [SQL Server 2017-updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 
-Überprüfen Sie den Installationsstatus der Instanz, und beheben Probleme, wiederholen Sie dann diese benutzerdefinierten Berichte.
+3. Erhalten Sie entsprechende CAB-Dateien für R und Python. Downloadlinks finden Sie unter [CAB-downloads für kumulative Updates auf SQL Server in-Database-Analyse für Instanzen](sql-ml-cab-downloads.md).
 
-* [Benutzerdefinierte Berichte für SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
-Dieser Artikel durch das Supportteam von R Services veranschaulicht, wie eine unbeaufsichtigte Installation oder Aktualisierung von R Services in SQL Server 2016 ausführen: [Bereitstellen von R Services auf Computern ohne Internetzugang](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-
+4. Platzieren Sie alle Dateien im selben Ordner, führen Sie Setup aus. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners für die aktualisierten CAB-Dateien auszuwählen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-R-Entwickler können mit einigen einfachen Beispielen beginnen und die Grundlagen der Funktionsweise von R mit SQL Server. Im nächsten Schritt finden Sie unter den folgenden Links:
+Überprüfen Sie den Installationsstatus der Instanz, und beheben häufig auftretende Probleme, finden Sie unter [benutzerdefinierte Berichte für SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-+ [Lernprogramm: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Lernprogramm: In-Database-Analyse für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-Python-Entwickler können zum Verwenden von Python mit SQL Server gemäß diesen Lernprogrammen erfahren:
-
-+ [Lernprogramm: Ausführen von Python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Lernprogramm: In-Database-Analyse für Python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md)
-
-Beispiele für Machine Learning, reale Szenarien basieren, finden Sie unter [Machine learning-Lernprogramme](../tutorials/machine-learning-services-tutorials.md).
+Hilfe mit unbekannten Nachrichten oder Protokolleinträge, finden Sie unter [Upgrade und Installation – häufig gestellte Fragen – Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

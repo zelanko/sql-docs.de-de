@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467267"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536010"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine virtuelle Tabelle für die Objekte zurück, die die meisten Versionen im Versionsspeicher erzeugen. **Sys. dm_tran_top_version_generators** gibt die obersten 256 aggregierten Datensatzlängen gruppiert werden, die die **Database_id** und **Rowset_id**. **Sys. dm_tran_top_version_generators** Ruft Daten ab, durch Abfragen der **Dm_tran_version_store** virtuelle Tabelle. **Sys. dm_tran_top_version_generators** ist ineffizient, ausgeführt werden, da in dieser Ansicht der Versionsspeicher abgefragt und der Versionsspeicher sehr umfangreich sein kann. Die Verwendung dieser Funktion wird empfohlen, um die größten Consumer des Versionsspeichers zu suchen.  
+  Gibt eine virtuelle Tabelle für die Objekte zurück, die die meisten Versionen im Versionsspeicher erzeugen. **Sys. dm_tran_top_version_generators** gibt die obersten 256 aggregierten Datensatzlängen gruppiert werden, die die **Database_id** und **Rowset_id**. **Sys. dm_tran_top_version_generators** Ruft Daten ab, durch Abfragen der **Dm_tran_version_store** virtuelle Tabelle. **Sys. dm_tran_top_version_generators** ist ineffizient, ausgeführt werden, da diese Ansicht der Versionsspeicher abgefragt, und der Versionsspeicher sehr groß sein kann. Die Verwendung dieser Funktion wird empfohlen, um die größten Consumer des Versionsspeichers zu suchen.  
   
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_tran_top_version_generators**.  
@@ -61,7 +61,7 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
 
 ## <a name="remarks"></a>Hinweise  
- Da **dm_tran_top_version_generators** möglicherweise viele Seiten lesen, da überprüft den gesamten Versionsspeicher ausgeführt **dm_tran_top_version_generators** können verhindern, dass System die Leistung.  
+ Da **Sys. dm_tran_top_version_generators** möglicherweise viele Seiten lesen, da überprüft den gesamten Versionsspeicher ausführen **Sys. dm_tran_top_version_generators** kann System beeinträchtigen die Leistung.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Testszenario verwendet, in dem vier gleichzeitige Transaktionen, die jeweils durch eine Transaktionssequenznummer (XSN) identifiziert werden, in einer Datenbank ausgeführt werden, für die die Optionen ALLOW_SNAPSHOT_ISOLATION und READ_COMMITTED_SNAPSHOT auf ON festgelegt sind. Die folgenden Transaktionen werden ausgeführt:  
@@ -93,7 +93,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- Die Ausgabe zeigt, dass alle Versionen erstellt werden, mit `database_id``9` und, die die Versionen aus zwei Tabellen zu generieren.  
+ Die Ausgabe zeigt, dass alle Versionen von erstellten `database_id``9` und, die die Versionen aus zwei Tabellen zu generieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

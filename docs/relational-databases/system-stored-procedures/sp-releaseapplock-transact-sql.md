@@ -1,5 +1,5 @@
 ---
-title: Sp_releaseapplock (Transact-SQL) | Microsoft Docs
+title: Sp_releaseapplock (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6db9c114f4f3faade3334e7bf682eba197a2dbb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7a3a9707be98ec3524a1d1d52c833b3ceb52f9c2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257921"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547910"
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
 ## <a name="arguments"></a>Argumente  
  [ @Resource=] '*Resource_name*"  
- Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. In der Anwendung muss sichergestellt sein, dass die Ressource eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Resource_name* ist **nvarchar(255)** hat keinen Standardwert. *Resource_name* ist Binärvergleich, daher wird Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.  
+ Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. In der Anwendung muss sichergestellt sein, dass die Ressource eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Resource_name* ist **nvarchar(255)** hat keinen Standardwert. *Resource_name* ist Binärvergleich, daher ist Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.  
   
  [ @LockOwner=] '*Lock_owner*"  
- Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, von Standard oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
+ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, wird standardmäßig oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
   
  [ @DbPrincipal=] '*Database_principal*"  
  Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Um eine Funktion erfolgreich aufzurufen, muss die aufrufende Funktion Mitglied einer der folgenden festen Datenbankrollen sein: *database_principal*, „dbo“ oder „db_owner“. Der Standardwert ist public.  
@@ -60,7 +60,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  \>= 0 (Erfolg) oder < 0 (Fehler)  
   
-|Wert|Ergebnis|  
+|value|Ergebnis|  
 |-----------|------------|  
 |0|Die Sperre wurde erfolgreich aufgehoben.|  
 |-999|Weist auf einen Fehler bei der Parameterüberprüfung oder einen anderen Aufruffehler hin.|  

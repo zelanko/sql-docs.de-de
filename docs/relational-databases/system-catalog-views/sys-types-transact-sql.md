@@ -1,5 +1,5 @@
 ---
-title: Sys.Types (Transact-SQL) | Microsoft Docs
+title: Sys.Types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce1d7cbfc11a425a1e39622b379ad8b34cac6e10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b4dc0dd6455823e2f08327a418032b47309b474
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221231"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539360"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "33221231"
 |**user_type_id**|**int**|Die ID des Typs. Ist in der Datenbank eindeutig. Für Systemdatentypen gilt **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|Die ID des Schemas, zu dem der Typ gehört.|  
 |**principal_id**|**int**|Die ID des einzelnen Besitzers, falls sie sich vom Schemabesitzer unterscheidet. Standardmäßig gehören Objekte mit Schemabereich dem Schemabesitzer. Mit der ALTER AUTHORIZATION-Anweisung kann jedoch ein anderer Besitzer angegeben werden.<br /><br /> Hat den Wert NULL, falls kein alternativer individueller Besitzer angegeben ist.|  
-|**max_length**|**smallint**|Maximale Länge (in Bytes) für den Typ.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert ist 16.|  
-|**precision**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt; andernfalls 0.|  
-|**scale**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt; andernfalls 0.|  
-|**collation_name**|**sysname**|Der Name der Sortierung des Typs wird jedoch zeichenbasierte; andere Wise NULL.|  
+|**max_length**|**smallint**|Maximale Länge (in Bytes) für den Typ.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert ist 16 sein.|  
+|**Mit einfacher Genauigkeit**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt; andernfalls 0.|  
+|**Skalieren**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt; andernfalls 0.|  
+|**collation_name**|**sysname**|Der Name der Sortierung des Typs, falls es zeichenbasierte ist; andere Wise NULL.|  
 |**is_nullable**|**bit**|Der Typ lässt NULL-Werte zu.|  
 |**is_user_defined**|**bit**|1 = Benutzerdefinierter Typ.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp.|  
 |**is_assembly_type**|**bit**|1 = Die Implementierung des Typs wird in einer CLR-Assembly definiert.<br /><br /> 0 = Der Typ basiert auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp.|  

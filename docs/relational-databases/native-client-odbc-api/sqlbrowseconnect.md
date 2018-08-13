@@ -17,13 +17,13 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78c2b7b8c6da683da00e725dd31f1b80cb05c57d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1ad3a4853ae82592b0c996ce8ca595cc1db315df
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429340"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541910"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,18 +42,18 @@ ms.locfileid: "37429340"
   
 |Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|ja|nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
-|UID|nein|ja|Benutzeranmelde-ID.|  
+|SERVER|Benutzerkontensteuerung|nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
+|UID|nein|Benutzerkontensteuerung|Benutzeranmelde-ID.|  
 |PWD|nein|Ja (vom Benutzer abhängig)|Vom Benutzer angegebenes Kennwort.|  
-|APP|nein|ja|Name der aufrufenden Anwendung **SQLBrowseConnect**.|  
-|WSID|nein|ja|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
+|APP|nein|Benutzerkontensteuerung|Name der aufrufenden Anwendung **SQLBrowseConnect**.|  
+|WSID|nein|Benutzerkontensteuerung|Workstation-ID. Dies ist normalerweise der Netzwerkname des Computers, auf dem die Anwendung ausgeführt wird.|  
   
 ## <a name="level-3"></a>Ebene 3  
   
 |Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|ja|ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
-|LANGUAGE|ja|ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
+|DATABASE|Benutzerkontensteuerung|Benutzerkontensteuerung|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
+|LANGUAGE|Benutzerkontensteuerung|Benutzerkontensteuerung|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
   
  **SQLBrowseConnect** ignoriert die Werte der Schlüsselwörter DATABASE und LANGUAGE in den ODBC-Datenquellendefinitionen gespeichert. Wenn die Datenbank oder in der Verbindungszeichenfolge angegebene Sprache an übergeben **SQLBrowseConnect** ist ungültig, **SQLBrowseConnect** gibt SQL_NEED_DATA sowie die Verbindungsattribute der Ebene 3.  
   

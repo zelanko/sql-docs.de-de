@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_connections (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_connections (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27499bf31561addd909d92a81222662e4470b8b5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f438405c33237f93cb214a1dfb40dff70fdf84e8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465516"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535630"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34465516"
 |session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |most_recent_session_id|**int**|Stellt die Sitzungs-ID für die letzte Anforderung dar, die dieser Verbindung zugeordnet ist. (SOAP-Verbindungen können von einer anderen Sitzung erneut verwendet werden.) Lässt NULL-Werte zu.|  
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|net_transport|**nvarchar(40)**|Gibt immer **Sitzung** Wenn eine Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.<br /><br /> **Hinweis:** beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
+|net_transport|**nvarchar(40)**|Gibt immer **Sitzung** bei eine Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.<br /><br /> **Hinweis:** beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
 |protocol_type|**nvarchar(40)**|Gibt den Protokolltyp der Nutzlast an. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
 |protocol_version|**int**|Die Version des Datenzugriffsprotokolls, das dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |endpoint_id|**int**|Ein Bezeichner, der beschreibt, um welchen Verbindungstyp es sich handelt. Dieser endpoint_id-Wert kann zum Abfragen der sys.endpoint-Sicht verwendet werden. Lässt NULL-Werte zu.|  
@@ -99,7 +99,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Siehe auch  
 
- [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

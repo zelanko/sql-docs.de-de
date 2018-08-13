@@ -1,5 +1,5 @@
 ---
-title: Sp_updateextendedproperty (Transact-SQL) | Microsoft Docs
+title: Sp_updateextendedproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e8d86bbcb6a35babce5ce2da7a0c63a8c310ddf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533099"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,31 +57,31 @@ sp_updateextendedproperty
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name=] {"*Property_name*'}  
+ [ @name=] {'*Property_name*'}  
  Der Name der zu aktualisierenden Eigenschaft. *Property_name* ist **Sysname**, und darf nicht NULL sein.  
   
- [ @value=] {"*Wert*'}  
+ [ @value=] {'*Wert*'}  
  Der Wert, der der Eigenschaft zugeordnet ist. *Wert* ist **Sql_variant**, hat den Standardwert NULL. Die Größe des *Wert* darf nicht größer als 7.500 Bytes sein.  
   
- [ @level0type=] {"*level0_object_type*'}  
- Der Benutzer oder benutzerdefinierte Typ. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind ASSEMBLY, Vertrag, EVENT NOTIFICATION, DATEIGRUPPE, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLAN GUIDE, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, Benutzer, TRIGGER, Typ und NULL.  
+ [ @level0type=] {'*level0_object_type*'}  
+ Der Benutzer oder benutzerdefinierte Typ. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind ASSEMBLY, Vertrag, EVENT NOTIFICATION, DATEIGRUPPE, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLANHINWEISLISTE, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, Benutzer, TRIGGER, Typ und NULL.  
   
 > [!IMPORTANT]  
 >  USER und TYPE als Typen der Ebene 0 werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden. Verwenden Sie SCHEMA anstelle von USER als Typ der Ebene 0. Verwenden Sie für TYPE als Typ der Ebene 0 SCHEMA und TYPE als Typ der Ebene 1.  
   
- [ @level0name=] {"*level0_object_name*'}  
+ [ @level0name=] {'*level0_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level0_object_name* ist **Sysname** hat den Standardwert NULL.  
   
- [ @level1type=] {"*level1_object_type*'}  
+ [ @level1type=] {'*level1_object_type*'}  
  Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
   
- [ @level1name=] {"*level1_object_name*'}  
+ [ @level1name=] {'*level1_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname** hat den Standardwert NULL.  
   
- [ @level2type=] {"*level2_object_type*'}  
+ [ @level2type=] {'*level2_object_type*'}  
  Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
- [ @level2name=] {"*level2_object_name*'}  
+ [ @level2name=] {'*level2_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -141,7 +141,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

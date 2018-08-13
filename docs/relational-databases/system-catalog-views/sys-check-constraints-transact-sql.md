@@ -1,5 +1,5 @@
 ---
-title: Sys. check_constraints (Transact-SQL) | Microsoft Docs
+title: Sys. check_constraints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d223f9ffea455c995890bbac9758d7a24d71f67
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 00eb70eb52bad5466a466395b4e30bfc91a224e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180296"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533180"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jedes Objekt, das eine CHECK-Einschränkung mit **sys.objects.type** = "C".  
+  Enthält eine Zeile für jedes Objekt, das eine CHECK-Einschränkung mit **sys.objects.type** = 'C'.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys.objects geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|Die CHECK-Einschränkung ist deaktiviert.|  
 |**is_not_for_replication**|**bit**|Die CHECK-Einschränkung wurde mit der Option NOT FOR REPLICATION erstellt.|  
 |**Sys. check_constraints**|**bit**|Die CHECK-Einschränkung wurde nicht vom System für alle Zeilen überprüft.|  

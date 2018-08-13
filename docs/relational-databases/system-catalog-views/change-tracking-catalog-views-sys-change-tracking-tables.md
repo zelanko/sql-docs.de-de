@@ -1,5 +1,5 @@
 ---
-title: change_tracking_tables (Transact-SQL) | Microsoft Docs
+title: Sys. change_tracking_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -25,15 +25,15 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f5e3702008c5913fa7321f89d14d06d47321499
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebea733f742efcc02d515eae685619820dbbfcd3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179016"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544680"
 ---
-# <a name="change-tracking-catalog-views---syschangetrackingtables"></a>Ändern Sie die Katalogsichten für den Tracking - change_tracking_tables
+# <a name="change-tracking-catalog-views---syschangetrackingtables"></a>Ändern Sie die nachverfolgung Katalogsichten - Sys. change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede Tabelle in der aktuellen Datenbank zurück, für die die Änderungsnachverfolgung aktiviert ist.  
@@ -51,7 +51,7 @@ ms.locfileid: "33179016"
   
 ## <a name="see-also"></a>Siehe auch  
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Änderungsnachverfolgung für Katalogsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Katalogsichten der änderungsnachverfolgung &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

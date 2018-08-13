@@ -22,13 +22,13 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 697abcfb8c989aac510d9b4e8730a6ebe83677d4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 77770df52a8bd21c6686b3db086aca1d3553d143
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415449"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536990"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37415449"
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Verwaltung von abgelaufenen Kennwörtern sowohl programmgesteuert über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und über Änderungen an der **SQL Server-Anmeldung** Dialogfelder.  
   
 > [!NOTE]  
->  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mithilfe der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
+>  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Fehlercodes bei der SQL Server-Anmeldung  
  Wenn eine Verbindung aufgrund von Authentifizierungsproblemen nicht hergestellt werden kann, wird für die Anwendung einer der folgenden SQL Server-Fehlercodes bereitgestellt, um Diagnose und Wiederherstellung zu erleichtern.  
@@ -46,8 +46,8 @@ ms.locfileid: "37415449"
 |---------------------------|-------------------|  
 |15113|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
 |18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort kann zurzeit nicht verwendet werden.|  
-|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht richtlinienanforderungen, da es zu kurz ist.|  
-|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht richtlinienanforderungen, da er zu lang ist.|  
+|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
 |18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
 |18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
 |18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Unerwarteter Fehler während der Kennwortüberprüfung.|  
@@ -60,12 +60,12 @@ ms.locfileid: "37415449"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB-Benutzeroberfläche für abgelaufene Kennwörter  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt das Ablaufen von Kennwörtern durch Änderungen an der **SQL Server-Anmeldung** Dialogfelder. Wenn der Wert DBPROP_INIT_PROMPT auf DBPROMPT_NOPROMPT festgelegt wird, schlägt der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist.  
   
- Wenn DBPROP_INIT_PROMPT auf einen anderen Wert festgelegt wurde, wird der Benutzer sieht die **SQL Server-Anmeldung** Dialogfeld, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die **Optionen** Schaltfläche, und überprüfen Sie **Kennwort ändern** zum Ändern des Kennworts.  
+ Wenn für DBPROP_INIT_PROMPT ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer ein Dialogfeld zur **SQL Server-Anmeldung** angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist oder nicht. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
- Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fordert den Benutzer zur Eingabe und Bestätigung eines neuen Kennworts mithilfe der **SQL Server-Kennwort ändern** Dialogfeld.  
+ Wenn der Benutzer auf OK klickt, und das Kennwort abgelaufen war, fordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ihn dazu auf, im Dialogfeld **SQL Server-Kennwort ändern** ein neues Kennwort einzugeben und zu bestätigen.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB-Eingabeaufforderungsverhalten und gesperrte Konten  
- Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Wenn dies nach der Anzeige des tritt auf, die **SQL Server-Anmeldung** Dialogfeld Fehlermeldung des Servers für den Benutzer angezeigt wird, und der Verbindungsversuch wird abgebrochen. Er kann auch auftreten, nach der Anzeige des der **SQL Server-Kennwort ändern** Dialogfeld, wenn der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  
+ Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Falls dies nach der Anzeige des Dialogfelds **SQL Server-Anmeldung** geschieht, wird dem Benutzer die entsprechende Fehlermeldung des Servers ausgegeben, und die Verbindung wird abgebrochen. Dies geschieht unter Umständen auch nach der Anzeige des Dialogfelds **SQL Server-Kennwort ändern**, falls der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB-Verbindungspooling, Ablauf von Kennwörtern und gesperrte Konten  
  Ein Konto kann gesperrt werden oder das dazugehörige Kennwort ablaufen, solange die Verbindung noch in einem Verbindungspool aktiv ist. Der Server überprüft bei zwei Gelegenheiten auf abgelaufene Kennwörter und gesperrte Konten. Zunächst findet eine Überprüfung statt, wenn eine Verbindung hergestellt wird. Die zweite Überprüfung wird nach dem Zurücksetzen einer Verbindung ausgeführt, wenn die Verbindung aus dem Verbindungspool entfernt wird.  
@@ -87,7 +87,7 @@ ms.locfileid: "37415449"
   
  Beachten Sie, dass der Anbieter jedes Mal, wenn die Old Password-Eigenschaft festgelegt ist, davon ausgeht, dass versucht wird, das Kennwort zu ändern, es sei denn, es ist auch die Windows-Authentifizierung angegeben, die immer Vorrang hat.  
   
- Wenn Windows-Authentifizierung verwendet wird, führt das alte Kennwort anzugeben entweder zu DB_E_ERRORSOCCURRED oder DB_S_ERRORSOCCURRED je nachdem, ob das alte Kennwort jeweils als erforderlich oder OPTIONAL angegeben wurde, und der Statuswert der DBPROPSTATUS_ CONFLICTINGBADVALUE wird zurückgegeben, *DwStatus*. Dies wird erkannt, wenn **IDBInitialize:: Initialize** aufgerufen wird.  
+ Wird die Windows-Authentifizierung verwendet, führt die Angabe des alten Kennworts entweder zu DB_E_ERRORSOCCURRED oder zu DB_S_ERRORSOCCURRED, abhängig davon, ob das alte Kennwort als REQUIRED (im ersten Fall) oder als OPTIONAL (im zweiten Fall) angegeben war. Der Statuswert von DBPROPSTATUS_CONFLICTINGBADVALUE wird in *dwStatus* zurückgegeben. Dies wird erkannt, wenn **IDBInitialize::Initialize** aufgerufen wird.  
   
  Wenn ein Versuch, das Kennwort zu ändern, unerwartet fehlschlägt, gibt der Server den Fehlercode 18468 zurück. Für den Verbindungsversuch wird ein Standard-OLEDB-Fehler zurückgegeben.  
   
@@ -101,12 +101,12 @@ ms.locfileid: "37415449"
   
  Wenn [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) aufgerufen wird und der Wert der **DriverCompletion** auf SQL_DRIVER_NOPROMPT festgelegt, der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist. Der SQLSTATE-Wert 28000 und der systemeigene Fehlercodewert 18487 zurückgegeben, durch nachfolgende Aufrufe **SQLError** oder **SQLGetDiagRec**.  
   
- Wenn **DriverCompletion** festgelegt wurde auf einen anderen Wert, der Benutzer sieht die **SQL Server-Anmeldung** Dialogfeld, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die **Optionen** Schaltfläche, und überprüfen Sie **Kennwort ändern** zum Ändern des Kennworts.  
+ Wenn **DriverCompletion** festgelegt wurde auf einen anderen Wert, der Benutzer sieht die **SQL Server-Anmeldung** Dialogfeld, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
  Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aufforderungen zur Eingabe und Bestätigung eines neuen Kennworts mithilfe der **SQL Server-Kennwort ändern** Dialogfeld.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC-Eingabeaufforderungsverhalten und gesperrte Konten  
- Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Wenn dies nach der Anzeige des tritt auf, die **SQL Server-Anmeldung** Dialogfeld Fehlermeldung des Servers für den Benutzer angezeigt wird, und der Verbindungsversuch wird abgebrochen. Er kann auch auftreten, nach der Anzeige des der **SQL Server-Kennwort ändern** Dialogfeld, wenn der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  
+ Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Falls dies nach der Anzeige des Dialogfelds **SQL Server-Anmeldung** geschieht, wird dem Benutzer die entsprechende Fehlermeldung des Servers ausgegeben, und die Verbindung wird abgebrochen. Dies geschieht unter Umständen auch nach der Anzeige des Dialogfelds **SQL Server-Kennwort ändern**, falls der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC-Verbindungspooling, Ablauf von Kennwörtern und gesperrte Konten  
  Ein Konto kann gesperrt werden oder das dazugehörige Kennwort ablaufen, solange die Verbindung noch in einem Verbindungspool aktiv ist. Der Server überprüft bei zwei Gelegenheiten auf abgelaufene Kennwörter und gesperrte Konten. Zunächst findet eine Überprüfung statt, wenn eine Verbindung hergestellt wird. Die zweite Überprüfung wird nach dem Zurücksetzen einer Verbindung ausgeführt, wenn die Verbindung aus dem Verbindungspool entfernt wird.  

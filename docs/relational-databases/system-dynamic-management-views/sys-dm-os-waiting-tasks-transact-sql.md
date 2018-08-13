@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_waiting_tasks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467406"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540760"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,13 +56,13 @@ ms.locfileid: "34467406"
 ## <a name="resourcedescription-column"></a>resource_description-Spalte  
  Die Resource_description-Spalte verfügt über folgende Werte möglich.  
   
- **Der Besitzer der Threadpool-Ressource:**  
+ **Ressourcenbesitzer des Threadpools:**  
   
--   Threadpool-Id = Planer\<Hex-Adresse >  
+-   Threadpool-Id = Scheduler\<Hex-Address >  
   
  **Ressourcenbesitzer der parallelen Abfrage:**  
   
--   ExchangeEvent-Id = {Port | Pipe}\<Hex-Address > Wartetyp =\<Exchange Wartetyp > NodeId =\<Exchange-Knoten-Id >  
+-   ExchangeEvent-Id = {Port | Pipe}\<Hex-Address > Wartetyp =\<Exchange-Wait-Type >-Knoten-ID =\<Exchange-Knoten-Id >  
   
  **Exchange-Wait-Type:**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34467406"
   
  **Der Besitzer der Lock-Ressource:**  
   
--   \<Type-Specific-Description > Id = Sperre\<Lock-Hex-Address > Modus =\<Modus > AssociatedObjectId =\<zugeordnete-Obj-Id >  
+-   \<Type-Specific-Description > Id = Sperre\<Lock-Hex-Address > Modus =\<Modus > AssociatedObjectId =\<verknüpfte-Obj-Id >  
   
      **\<Type-Specific-Description > kann sein:**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34467406"
   
     -   Für die Datei: Filelock Fileid =\<Datei-Id > Subresource =\<Filelock-Subresource > Dbid =\<Db-Id >  
   
-    -   Für OBJECT: Objectlock LockPartition =\<Lock-Partitions-Id > Objid =\<Obj-Id > Subresource =\<Objectlock-Subresource > Dbid =\<Db-Id >  
+    -   Für die OBJECT: Objectlock LockPartition =\<Lock-Partition-Id > Objid =\<Obj-Id > Subresource =\<Objectlock-Subresource > Dbid =\<Db-Id >  
   
     -   Für PAGE: Pagelock Fileid =\<Datei-Id > Pageid =\<-Seiten-Id > Dbid =\<Db-Id > Subresource =\<Pagelock-Subresource >  
   
@@ -100,7 +100,7 @@ ms.locfileid: "34467406"
   
     -   Für RID: Ridlock Fileid =\<Datei-Id > Pageid =\<-Seiten-Id > Dbid =\<Db-Id >  
   
-    -   Für APPLICATION: Applicationlock Hash =\<Hash > DatabasePrincipalId =\<Rolle-Id > Dbid =\<Db-Id >  
+    -   Für APPLICATION: Applicationlock Hash =\<Hash > DatabasePrincipalId =\<Rollen-Id > Dbid =\<Db-Id >  
   
     -   Für METADATA: Metadatalock Subresource =\<Metadaten-Subresource > Classid =\<Metadatalock-Description > Dbid =\<Db-Id >  
   
@@ -114,11 +114,11 @@ ms.locfileid: "34467406"
   
  **Besitzer der externen Ressource:**  
   
--   Externe ExternalResource =\<Wartetyp >  
+-   Externe ExternalResource =\<Wait-Type >  
   
  **Besitzer der allgemeinen Ressource:**  
   
--   Arbeitsbereich "TransactionMutex TransactionInfo" =\<Arbeitsbereich-Id >  
+-   TransactionMutex TransactionInfo Arbeitsbereich =\<Arbeitsbereich-Id >  
   
 -   Mutex  
   
@@ -136,7 +136,7 @@ ms.locfileid: "34467406"
   
 -   \<GUID>  
   
--   \<latchklasse > (\<Latch-Adresse >)  
+-   \<latchklasse > (\<Latch-Address >)  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -151,7 +151,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## <a name="see-also"></a>Siehe auch  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -23,13 +23,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f4bb702cfbe30b26b2f38fa159a9a49b90efed7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015175"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542390"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "38015175"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (intern) des Arbeitsspeicherconsumers.|  
 |memory_consumer_type|**int**|Der Typ des Arbeitsspeicherconsumers:<br /><br /> 0=Aggregation. (Aggregiert die Arbeitsspeichernutzung von mindestens zwei Consumern. Sollte nicht angezeigt werden.)<br /><br /> 2=VARHEAP (Verfolgt die Arbeitsspeichernutzung für einen Heap variabler Länge nach.)<br /><br /> 3=HASH (Verfolgt die Arbeitsspeichernutzung für einen Index nach.)<br /><br /> 5=DB-Seitenpool (Verfolgt die Arbeitsspeichernutzung für einen Datenbank-Seitenpool nach, der für Laufzeitvorgänge verwendet wird, z. B. Tabellenvariablen und einige serialisierbare Scans. Es gibt nur einen Arbeitsspeicherconsumer dieses Typs pro Datenbank.)|  
-|memory_consumer_type_desc|**nvarchar(64)**|Typ des Arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0 – (Sollte nicht angezeigt werden.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> HASH: Keine Beschreibung, da die Object_id gibt an, in der Tabelle und die Index_id den Hashindex selbst.<br /><br /> PGPOOL: Für die Datenbank ist nur ein Seitenpool Datenbank 64-KB-Seitenpool.|  
+|memory_consumer_type_desc|**Nvarchar(64)**|Typ des Arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0 – (Sollte nicht angezeigt werden.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> HASH: Keine Beschreibung, da die Object_id gibt an, in der Tabelle und die Index_id den Hashindex selbst.<br /><br /> PGPOOL: Für die Datenbank ist nur ein Seitenpool Datenbank 64-KB-Seitenpool.|  
 |object_id|**bigint**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
 |xtp_object_id|**bigint**|Die Objekt-ID für die Speicheroptimierte Tabelle.|  
 |index_id|**int**|Die Index-ID des Consumers (sofern vorhanden). NULL für Basistabellen.|  

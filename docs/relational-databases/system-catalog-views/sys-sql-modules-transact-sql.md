@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_modules (Transact-SQL) | Microsoft Docs
+title: Sys. sql_modules (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af128c6c3b28c448111f49adf55c66c12ab4bbae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222091"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542350"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeile für jedes Objekt, ein SQL-Sprache definiertes Modul in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einschließlich systemintern kompilierten benutzerdefinierten Skalarfunktion. Objekten des Typs P, RF, V, TR, FN, IF, TF und R ist ein SQL-Modul zugeordnet. Eigenständige Standards, Objekte des Typs D, haben ebenfalls eine SQL-Moduldefinition in dieser Sicht. Eine Beschreibung dieser Typen finden Sie in der **Typ** Spalte in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht angezeigt.  
+  Gibt eine Zeile für jedes Objekt, das ist eine SQL-Sprache definiertes Modul in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einschließlich systemintern kompilierte benutzerdefinierte Skalarfunktion. Objekten des Typs P, RF, V, TR, FN, IF, TF und R ist ein SQL-Modul zugeordnet. Eigenständige Standards, Objekte des Typs D, haben ebenfalls eine SQL-Moduldefinition in dieser Sicht. Eine Beschreibung dieser Typen finden Sie in der **Typ** -Spalte in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht angezeigt.  
   
  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "33222091"
 |**uses_native_compilation**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = nicht systemintern kompiliert<br /><br /> 1 = systemintern kompiliert<br /><br /> Der Standardwert ist 0.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich der [Sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalogsicht angezeigt. Der SQL-Ausdruck für eine CHECK-Einschränkung, Objekt vom Typ C, befindet sich der [check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalogsicht angezeigt.  
+ Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich der [Sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalogsicht angezeigt. Der SQL-Ausdruck für eine CHECK-Einschränkung, Objekt vom Typ C, befindet sich der [Sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalogsicht angezeigt.  
   
- Diese Informationen werden auch in beschrieben [dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ Diese Informationen finden Sie auch auf [dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

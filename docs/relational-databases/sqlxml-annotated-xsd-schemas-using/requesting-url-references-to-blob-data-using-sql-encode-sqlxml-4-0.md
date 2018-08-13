@@ -1,5 +1,5 @@
 ---
-title: 'Anfordern von URL-Verweise auf BLOB-Daten mithilfe von Sql: codieren (SQLXML 4.0) | Microsoft Docs'
+title: "Anfordern von URL-verweisen auf BLOB-Daten mithilfe von Sql: encode ' (SQLXML 4.0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,25 +24,25 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 537e2656730c7659edd22ac68722bf43e892ad3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5eba5d17938d4bcfce27fb70476cad3e8974a1c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970655"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543336"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Anfordern von URL-Verweisen auf BLOB-Daten mit 'sql:encode' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wenn in einem XSD-Schema mit Anmerkungen ein Attribut (oder Element) einer BLOB-Spalte in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist, werden die Daten im codierten Base-64-Format innerhalb von XML zurückgegeben.  
   
- Wenn Sie einen Verweis auf die Daten werden soll (URI) zurückgegeben werden kann später verwendet werden zum Abrufen von BLOB-Daten in ein binäres Format, geben Sie die **Sql: Codieren** Anmerkung. Sie können angeben, **Sql: Codieren** für ein Attribut oder Element des einfachen Typs.  
+ Sollten Sie einen Verweis auf die Daten (URI) zurückgegeben werden später verwendet werden kann, die BLOB-Daten in einem binären Format abzurufen, geben Sie die **Sql: Codieren** Anmerkung. Sie können angeben, **Sql: Codieren** für ein Attribut oder Element des einfachen Typs.  
   
- Geben Sie die **Sql: Codieren** Anmerkung, um anzugeben, dass eine URL für das Feld nicht den Wert des Felds zurückgegeben werden soll. **SQL: Codieren** richtet sich nach dem Primärschlüssel um eine Singleton-Auswahl in die URL zu generieren. Der Primärschlüssel kann angegeben werden, mithilfe der **SQL: Key-Felder** Anmerkung.  
+ Geben Sie die **Sql: Codieren** Anmerkung, um anzugeben, dass eine URL für das Feld nicht den Wert des Felds zurückgegeben werden sollen. **SQL: Codieren** hängt von den primären Schlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der primäre Schlüssel kann angegeben werden, mithilfe der **SQL: Key-Felder** Anmerkung.  
   
- Die **Sql: Codieren** Anmerkung kann die "Url" oder der Wert "Default" zugewiesen werden. Mit dem Wert "default" werden die Daten im codierten Base-64-Format zurückgegeben.  
+ Die **Sql: Codieren** Anmerkung zugewiesen werden kann, "Url" oder den Wert "Default". Mit dem Wert "default" werden die Daten im codierten Base-64-Format zurückgegeben.  
   
- Die **Sql: Codieren** Anmerkung kann nicht verwendet werden, mit **SQL: use-Cdata** oder für die ID, IDREF, IDREFS, NMTOKEN oder NMTOKENS Attributtypen. Es kann auch nicht verwendet werden mit XSD **fester** Attribut.  
+ Die **Sql: Codieren** Anmerkung kann nicht verwendet werden, mit **SQL: use-Cdata** oder für die ID, IDREF, IDREFS, NMTOKEN oder NMTOKENS Attributtypen. Es kann auch nicht verwendet werden mit XSD **festen** Attribut.  
   
 > [!NOTE]  
 >  BLOB-Spalten können nicht als Teil eines Schlüssels oder Fremdschlüssels verwendet werden.  
@@ -51,7 +51,7 @@ ms.locfileid: "32970655"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Angeben von sql:encode zum Abrufen eines URL-Verweises auf BLOB-Daten  
- In diesem Beispiel gibt das Zuordnungsschema **Sql: Codieren** auf die **LargePhoto** abzurufenden URI-Verweis auf ein bestimmtes Produktfoto (statt der binären Daten im Base-64 - Attributs codierte Format).  
+ In diesem Beispiel gibt das Zuordnungsschema **Sql: Codieren** auf die **LargePhoto** abzurufenden URI-Verweis auf ein bestimmtes Produktfoto (statt der binären Daten in Base-64 - Attributs codierte Format).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +89,7 @@ ms.locfileid: "32970655"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   

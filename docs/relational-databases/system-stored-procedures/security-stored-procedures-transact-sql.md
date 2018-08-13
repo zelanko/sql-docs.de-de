@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Sicherheitsprozeduren (Transact-SQL) | Microsoft Docs
+title: Gespeicherte Sicherheitsprozeduren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ae3eb8d4d0c88f4065f82536cc3a6b00bb51fb0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d4d0ec605c9cc1df08384cc8c2a95aa3cec25587
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239740"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541790"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Gespeicherte Sicherheitsprozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die zum Verwalten der Sicherheit verwendet werden. Einige dieser gespeicherten Prozeduren sind veraltet, jedoch weiterhin zur Unterstützung der Abwärtskompatibilität zur Verfügung. In den Themen für veraltete Prozeduren wird der jeweilige Ersatz aufgeführt.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die zum Verwalten der Sicherheit verwendet werden. Einige dieser gespeicherten Prozeduren sind veraltet, jedoch weiterhin für die Unterstützung der Abwärtskompatibilität zur Verfügung. In den Themen für veraltete Prozeduren wird der jeweilige Ersatz aufgeführt.  
 
 |||  
 |-|-|  
-[Sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[Sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (veraltet)|
+[sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[Sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (veraltet)|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
 |[Sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (veraltet) |[Sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (veraltet)
 |[Sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (veraltet) |[Sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (veraltet)

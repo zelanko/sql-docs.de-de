@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107138"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400913"
 ---
 # <a name="configure-auto-statistics"></a>Statistiken automatisch konfigurieren
 
@@ -45,7 +45,7 @@ Nach dem Upgrade der Zugriffspunkte AU7 – ist die Statistiken automatisch stan
 Ändern alle Werte der Feature-Switch erfordert einen Neustart des Diensts für Zugriffspunkte.
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>Ändern der Einstellungen für automatische Statistiken für eine Datenbank
-Wenn Statistiken automatisch vom Systemadministrator aktiviert ist, können Sie [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) die statistikeinstellungen für eine Datenbank zu ändern. Wenn vom Systemadministrator automatische Statistiken featureschalter aktiviert ist, müssen alle neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt Statistiken für automatisch aktiviert. Haben alle Datenbanken, die vor dem Upgrade auf AU7 vorhanden waren automatische Statistik deaktiviert. Im folgenden Beispiel wird die Statistiken auf der vorhandenen Datenbank MyPDW automatisch.
+Wenn Statistiken automatisch vom Systemadministrator aktiviert ist, können Sie [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) die statistikeinstellungen für eine Datenbank zu ändern. Wenn vom Systemadministrator automatische Statistiken featureschalter aktiviert ist, müssen alle neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt Statistiken für automatisch aktiviert. Haben alle Datenbanken, die vor dem Upgrade auf AU7 vorhanden waren automatische Statistik deaktiviert. Im folgenden Beispiel wird die Statistiken auf der vorhandenen Datenbank MyPDW automatisch.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

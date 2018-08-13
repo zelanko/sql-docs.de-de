@@ -19,13 +19,13 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54c2589db107e6646843739e098f9e4ae9ac00b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421969"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550840"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37421969"
   
  Der Consumer erstellt ein Speicherobjekt, das die Daten enthält, und übergibt einen Zeiger auf dieses Speicherobjekt an den Anbieter. Anschließend liest der Anbieter Daten vom Consumerspeicherobjekt und schreibt diese in die BLOB-Spalte.  
   
- Zum Übergeben eines Zeigers auf das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet. Der Consumer ruft dann die **IRowsetChange:: SetData** oder **IRowsetChange:: InsertRow** Methode mit dem Accessor auf, das die BLOB-Spalte bindet. Es wird ein Zeiger auf eine Speicherschnittstelle des Consumerspeicherobjekts übergeben.  
+ Zum Übergeben eines Zeigers auf das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet. Der Consumer ruft dann die **IRowsetChange::SetData**- oder die **IRowsetChange::InsertRow**-Methode mit dem Accessor auf, der die BLOB-Spalte bindet. Es wird ein Zeiger auf eine Speicherschnittstelle des Consumerspeicherobjekts übergeben.  
   
  In diesem Thema wird die mit folgenden Funktionen verfügbare Funktionalität behandelt:  
   
@@ -48,17 +48,17 @@ ms.locfileid: "37421969"
 ## <a name="how-to-set-large-data"></a>So legen Sie große Datenmengen fest  
  Zum Übergeben eines Zeigers an das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet, und ruft anschließend die **IRowsetChange::SetData** -Methode oder die **IRowsetChange::InsertRow** -Methode auf. So legen Sie BLOB-Daten fest:  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die *DwFlag* -Element der DBOBJECT-Struktur auf STGM_READ und das *Iid* -Element auf IID_ISequentialStream (die Schnittstelle verfügbar gemacht werden).  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das *dwFlag*-Element der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das *iid*-Element auf IID_ISequentialStream (die verfügbar zu machende Schnittstelle) fest.  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie die *wType* Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und die *pObject* -Element der DBOBJECT-Struktur zeigen Sie Sie erstellt haben.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
 5.  Rufen Sie **GetNextRows** auf, um die nächsten Zeilen für das Rowset abzurufen. Rufen Sie **GetData** auf, um die Daten aus dem Rowset zu lesen.  
   
-6.  Erstellen Sie ein Speicherobjekt, die die Daten (und den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, die zum Festlegen der BLOB-Spalte bindet die Daten.  
+6.  Erstellen Sie ein Speicherobjekt, das die Daten (sowie den Längenindikator) enthält, und rufen Sie anschließend **IRowsetChange::SetData** (oder **IRowsetChange::InsertRow**) mit dem Accessor auf, der die BLOB-Spalte bindet, die die Daten binden soll.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie BLOB-Daten festgelegt werden. Im Beispiel wird eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt.  

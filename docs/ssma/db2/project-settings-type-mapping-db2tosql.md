@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09fddd4e94e0c8ae000c2143d08fba25b8074f0c
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038167"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509219"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Typzuordnung) (DB2ToSQL)
 Die Seite Type Mapping der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentypen.  
@@ -85,13 +85,13 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
-|Long raw [\*... 8000]<sup>*</sup>|Varbinary [*]|  
-|Long raw [8001..\*]<sup>*</sup>|varbinary(max)|  
+|Long raw [\*... 8000]<sup>\*</sup>|Varbinary [\*]|  
+|Long raw [8001..\*]<sup>\*</sup>|varbinary(max)|  
 |National char|nvarchar(max)|  
 |National Char varying|nvarchar(max)|  
 |nationale Zeichensätze|nvarchar(max)|  
-|nationale Zeichensätze varying<sup>**</sup>|nvarchar(max)|  
-|nationale Zeichensätze varying<sup>*</sup>|nvarchar(max)|  
+|nationale Zeichensätze variieren.<sup>\*\*</sup>|nvarchar(max)|  
+|nationale Zeichensätze varying<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|"float" [53]|  
@@ -112,9 +112,9 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |Varchar2|varchar(max)|  
 |xmltype|xml|  
   
-<sup>*</sup> Zum Zurückgeben von Typ wertezuordnung nur gilt.  
+<sup>\*</sup> Zum Zurückgeben von Typ wertezuordnung nur gilt.  
   
-<sup>**</sup> Gilt für das Argument Typ nur zuordnen.  
+<sup>\*\*</sup> Gilt für das Argument Typ nur zuordnen.  
   
 ### <a name="default-column-type-mapping"></a>Standardzuordnung für Spalten  
 Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.  
@@ -126,49 +126,49 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |binary_float|"float" [53]|  
 |Blob|varbinary(max)|  
 |char|char|  
-|Char varying [*... \*]|Varchar [*]|  
-|Char [*... \*]|Char [*]|  
+|Char varying [\*... \*]|Varchar [\*]|  
+|Char [\*... \*]|Char [\*]|  
 |character|char|  
-|unterschiedliche Zeichen [*... \*]|Varchar [*]|  
-|Zeichen [*... \*]|Char [*]|  
+|unterschiedliche Zeichen [\*... \*]|Varchar [\*]|  
+|Zeichen [\*... \*]|Char [\*]|  
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec[38][0]|  
-|DEC [*... \*]|DEC [*] [0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|DEC [\*... \*]|DEC [\*] [0]|  
+|DEC [\*... \*][\*.. \*]|DEC [\*] [\*]|  
 |Decimal|Dezimal [38] [0]|  
-|Dezimal [*... \*]|Dezimal [*] [0]|  
-|Dezimal [*... \*][\*.. \*]|Dezimal [*] [\*]|  
+|Dezimal [\*... \*]|Dezimal [\*] [0]|  
+|Dezimal [\*... \*][\*.. \*]|Dezimal [\*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
 |FLOAT|"float" [53]|  
-|"float" [*... 53]|"float" [*]|  
-|"float" [54.. *]|"float" [53]|  
+|"float" [\*... 53]|"float" [\*]|  
+|"float" [54..\*]|"float" [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
-|Long raw [*... 8000]|Varbinary [*]|  
-|Long raw [8001.. *]|varbinary(max)|  
+|Long raw [\*... 8000]|Varbinary [\*]|  
+|Long raw [8001..\*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|lange [*... 8000]|Varchar [*]|  
-|long[8001..*]|varchar(max)|  
+|lange [\*... 8000]|Varchar [\*]|  
+|lange [8001..\*]|varchar(max)|  
 |National char|NCHAR|  
-|National Char varying [*... \*]|Nvarchar [*]|  
-|National Char [*... \*]|NCHAR [*]|  
+|National Char varying [\*... \*]|Nvarchar [\*]|  
+|National Char [\*... \*]|NCHAR [\*]|  
 |nationale Zeichensätze|NCHAR|  
-|nationale Zeichensätze zu unterschiedlichen [*... \*]|Nvarchar [*]|  
-|nationale Zeichensätze [*... \*]|NCHAR [*]|  
+|nationale Zeichensätze zu unterschiedlichen [\*... \*]|Nvarchar [\*]|  
+|nationale Zeichensätze [\*... \*]|NCHAR [\*]|  
 |NCHAR|NCHAR|  
-|NCHAR [*]|NCHAR [*]|  
+|NCHAR [\*]|NCHAR [\*]|  
 |NCLOB|nvarchar(max)|  
 |number|"float" [53]|  
-|Anzahl [*... \*]|numeric[*]|  
-|Anzahl [*... \*][\*.. \*]|numeric[*][\*]|  
+|Anzahl [\*... \*]|numerische [\*]|  
+|Anzahl [\*... \*][\*.. \*]|numerische [\*] [\*]|  
 |NUMERIC|NUMERIC|  
-|numerische [*... \*]|numeric[*]|  
-|numerische [*... \*][\*.. \*]|numeric[*][\*]|  
-|NVARCHAR2 [*... \*]|Nvarchar [*]|  
-|Rohdaten [*... \*]|Varbinary [*]|  
+|numerische [\*... \*]|numerische [\*]|  
+|numerische [\*... \*][\*.. \*]|numerische [\*] [\*]|  
+|NVARCHAR2 [\*... \*]|Nvarchar [\*]|  
+|Rohdaten [\*... \*]|Varbinary [\*]|  
 |REAL|"float" [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
@@ -176,12 +176,12 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
 |Zeitstempel mit der lokalen Zeitzone [\*... \*]|DateTimeOffset [\*]|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit Zeitzone [*... \*]|DateTimeOffset [*]|  
-|Timestamp [*... \*]|datetime2 [*]|  
+|Zeitstempel mit Zeitzone [\*... \*]|DateTimeOffset [\*]|  
+|Timestamp [\*... \*]|datetime2 [\*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*... \*]|UNIQUEIDENTIFIER|  
-|Varchar [*... \*]|Varchar [*]|  
-|VARCHAR2 [*... \*]|Varchar [*]|  
+|UROWID [\*... \*]|UNIQUEIDENTIFIER|  
+|Varchar [\*... \*]|Varchar [\*]|  
+|VARCHAR2 [\*... \*]|Varchar [\*]|  
 |XmlType|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Typ der lokalen Variablen der Standardzuordnung  
@@ -196,79 +196,79 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|Char varying [*... 8000]|Varchar [*]|  
-|Char varying [8001.. *]|varchar(max)|  
-|Char [*... 8000]|Char [*]|  
-|Char [8001.. *]|varchar(max)|  
+|Char varying [\*... 8000]|Varchar [\*]|  
+|Char varying [8001..\*]|varchar(max)|  
+|Char [\*... 8000]|Char [\*]|  
+|Char [8001..\*]|varchar(max)|  
 |Zeichen|char|  
-|unterschiedliche Zeichen [*... 8000]|Varchar [*]|  
-|unterschiedliche Zeichen [8001.. *]|varchar(max)|  
-|Zeichen [*... 8000]|Char [*]|  
-|Zeichen [8001.. *]|varchar(max)|  
+|unterschiedliche Zeichen [\*... 8000]|Varchar [\*]|  
+|unterschiedliche Zeichen [8001..\*]|varchar(max)|  
+|Zeichen [\*... 8000]|Char [\*]|  
+|Zeichen [8001..\*]|varchar(max)|  
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec[38][0]|  
-|DEC [*... \*]|DEC [*] [0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|DEC [\*... \*]|DEC [\*] [0]|  
+|DEC [\*... \*][\*.. \*]|DEC [\*] [\*]|  
 |Decimal|Dezimal [38] [0]|  
-|Dezimal [*... \*]|Dezimal [*] [0]|  
-|Dezimal [*... \*][\*.. \*]|Dezimal [*] [\*]|  
+|Dezimal [\*... \*]|Dezimal [\*] [0]|  
+|Dezimal [\*... \*][\*.. \*]|Dezimal [\*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
 |float|"float" [53]|  
-|"float" [*... 53]|"float" [*]|  
-|"float" [54.. *]|"float" [53]|  
+|"float" [\*... 53]|"float" [\*]|  
+|"float" [54..\*]|"float" [53]|  
 |int|ssNoversion|  
 |Integer|ssNoversion|  
-|ganze Zahl [*... \*]|numerische [*] [0]|  
+|ganze Zahl [\*... \*]|numerische [\*] [0]|  
 |Long|varchar(max)|  
 |Long raw|varbinary(max)|  
-|Long raw [*... 8000]|Varbinary [*]|  
-|Long raw [8001.. *]|varbinary(max)|  
+|Long raw [\*... 8000]|Varbinary [\*]|  
+|Long raw [8001..\*]|varbinary(max)|  
 |National char|NCHAR|  
-|National Char varying [*... 4000]|Nvarchar [*]|  
-|National Char varying [4001.. *]|nvarchar(max)|  
-|National Char [*... 4000]|NCHAR [*]|  
-|National Char [4001.. *]|nvarchar(max)|  
+|National Char varying [\*... 4000]|Nvarchar [\*]|  
+|National Char varying [4001..\*]|nvarchar(max)|  
+|National Char [\*... 4000]|NCHAR [\*]|  
+|National Char [4001..\*]|nvarchar(max)|  
 |nationale Zeichensätze|NCHAR|  
-|nationale Zeichensätze [*... 4000]|Nvarchar [*]|  
-|nationale Zeichensätze [4001.. *]|nvarchar(max)|  
-|nationale Zeichensätze zu unterschiedlichen [*... 4000]|Nvarchar [*]|  
-|nationale Zeichensätze zu unterschiedlichen [4001.. *]|nvarchar(max)|  
+|nationale Zeichensätze [\*... 4000]|Nvarchar [\*]|  
+|nationale Zeichensätze [4001..\*]|nvarchar(max)|  
+|nationale Zeichensätze zu unterschiedlichen [\*... 4000]|Nvarchar [\*]|  
+|nationale Zeichensätze zu unterschiedlichen [4001..\*]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|NCHAR [*... 4000]|NCHAR [*]|  
-|NCHAR [4001.. *]|nvarchar(max)|  
-|NCHAR unterschiedliche [*... 4000]|Nvarchar [*]|  
-|NCHAR unterschiedliche [4001.. *]|nvarchar(max)|  
+|NCHAR [\*... 4000]|NCHAR [\*]|  
+|NCHAR [4001..\*]|nvarchar(max)|  
+|NCHAR unterschiedliche [\*... 4000]|Nvarchar [\*]|  
+|NCHAR unterschiedliche [4001..\*]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Number|"float" [53]|  
-|Anzahl [*... \*]|numeric[*]|  
-|Anzahl [*... \*][\*.. \*]|numeric[*][\*]|  
+|Anzahl [\*... \*]|numerische [\*]|  
+|Anzahl [\*... \*][\*.. \*]|numerische [\*] [\*]|  
 |Numerisch|numeric[38][0]|  
-|numerische [*... \*]|numeric[*]|  
-|numerische [*... \*][\*.. \*]|numeric[*][\*]|  
-|NVARCHAR2 [*... 4000]|Nvarchar [*]|  
-|NVARCHAR2 [4001.. *]|nvarchar(max)|  
+|numerische [\*... \*]|numerische [\*]|  
+|numerische [\*... \*][\*.. \*]|numerische [\*] [\*]|  
+|NVARCHAR2 [\*... 4000]|Nvarchar [\*]|  
+|NVARCHAR2 [4001..\*]|nvarchar(max)|  
 |pls_integer|ssNoversion|  
-|Rohdaten [*... 8000]|Varbinary [*]|  
-|Rohdaten [8001.. *]|varbinary(max)|  
+|Rohdaten [\*... 8000]|Varbinary [\*]|  
+|Rohdaten [8001..\*]|varbinary(max)|  
 |Real|"float" [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |Signtype|SMALLINT|  
 |Smallint|SMALLINT|  
-|Zeichenfolge [*... 8000]|Varchar [*]|  
-|Zeichenfolge [8001.. *]|varchar(max)|  
+|Zeichenfolge [\*... 8000]|Varchar [\*]|  
+|Zeichenfolge [8001..\*]|varchar(max)|  
 |timestamp|datetime2|  
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit der lokalen Zeitzone [*... \*]|DateTimeOffset [*]|  
-|Zeitstempel mit Zeitzone [*... \*]|DateTimeOffset [*]|  
-|Timestamp [*... \*]|datetime2 [*]|  
+|Zeitstempel mit der lokalen Zeitzone [\*... \*]|DateTimeOffset [\*]|  
+|Zeitstempel mit Zeitzone [\*... \*]|DateTimeOffset [\*]|  
+|Timestamp [\*... \*]|datetime2 [\*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*... \*]|UNIQUEIDENTIFIER|  
-|Varchar [*... 8000]|Varchar [*]|  
-|Varchar [8001.. *]|varchar(max)|  
-|VARCHAR2 [*... 8000]|Varchar [*]|  
-|VARCHAR2 [8001.. *]|varcha(max)|  
+|UROWID [\*... \*]|UNIQUEIDENTIFIER|  
+|Varchar [\*... 8000]|Varchar [\*]|  
+|Varchar [8001..\*]|varchar(max)|  
+|VARCHAR2 [\*... 8000]|Varchar [\*]|  
+|VARCHAR2 [8001..\*]|varcha(max)|  
 |XmlType|xml|  
   
 ## <a name="see-also"></a>Siehe auch  

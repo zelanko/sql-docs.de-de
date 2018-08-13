@@ -1,5 +1,5 @@
 ---
-title: Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter) | Microsoft Docs
+title: Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4013b1aa99afadc5ebab0eca3157872f78bf03c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5f6322ec680995313e6f5fcb1fbb02269cf2b0ea
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969085"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532795"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "32969085"
   
  Weil die Verwendung des Platzhalterzeichens (*) in SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfix angeben. Um dieses Präfix aufzulösen, verwenden Sie die Namespaces-Eigenschaft, die Namespacebindung an.  
   
- Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mithilfe des Platzhalterzeichens (\*) und die local-name() and Namespace-URI()=' XPath-Funktionen. Diese XPath-Abfrage gibt alle Elemente zurück, in dem der lokale Name ist **Kontakt** und der Namespace-URI **Urn: Myschema:Contacts**.  
+ Im folgenden Beispiel gibt die XPath-Abfrage Namespaces mit dem Platzhalterzeichen (\*) und die local-name() and Namespace-URI()=' XPath-Funktionen. Diese XPath-Abfrage gibt alle Elemente zurück, in denen der lokale Name ist **wenden Sie sich an** und der Namespace-URI **Urn: Myschema:Contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- In SQLXML 4.0 muss diese XPath-Abfrage mit einem Namespacepräfix angegeben werden. Ein Beispiel ist **X: Wenden Sie sich an**, wobei **x** das Namespacepräfix. Betrachten Sie folgendes XSD-Schema:  
+ In SQLXML 4.0 muss diese XPath-Abfrage mit einem Namespacepräfix angegeben werden. Ein Beispiel hierfür ist **X: Wenden Sie sich an**, wobei **x** das Namespacepräfix. Betrachten Sie folgendes XSD-Schema:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -63,7 +63,7 @@ ms.locfileid: "32969085"
  Dies ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Beispielanwendung, die eine XPath-Abfrage (x:Employee) mit dem vorstehenden XSD-Schema ausführt. Um das Präfix aufzulösen, wird die Namespacebindung mithilfe der Namespaces-Eigenschaft angegeben.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Requirements for SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter angegeben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

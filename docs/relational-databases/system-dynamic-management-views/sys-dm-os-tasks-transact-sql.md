@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_tasks (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_tasks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b800dc110baa7279edb2ce788befb433b7afd77a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 213dc89ebc9bbd398813440e1c965bbce2fb8c28
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467416"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548700"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,10 +64,10 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Überwachung paralleler Anforderungen  
- Für Anforderungen, die parallel ausgeführt werden, sehen Sie mehrere Zeilen für dieselbe Kombination von (\<**Session_id**>, \< **Request_id**>). Verwenden Sie die folgende Abfrage zum Suchen der [Konfigurieren der max Degree of Parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für alle aktiven Anforderungen.  
+ Für Anforderungen, die parallel ausgeführt werden, sehen Sie mehrere Zeilen für die gleiche Kombination (\<**Session_id**>, \< **Request_id**>). Verwenden Sie die folgende Abfrage zum Suchen der [konfigurieren Sie die Max. Grad an Parallelität-Konfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für alle aktiven Anforderungen.  
   
 > [!NOTE]  
->  Ein **Request_id** ist eindeutig innerhalb einer Sitzung.  
+>  Ein **Request_id** innerhalb einer Sitzung eindeutig ist.  
   
 ```  
 SELECT  
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

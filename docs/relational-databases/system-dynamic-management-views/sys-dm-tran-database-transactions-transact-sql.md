@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_tran_database_transactions (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_database_transactions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3054cc3cc8378e34b44d97720692b040e1b1bade
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 192c5637932c5137c26e00ad380584b83a541e09
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467596"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544620"
 ---
 # <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34467596"
 |database_id|**int**|ID der Datenbank, die der Transaktion zugeordnet ist.|  
 |database_transaction_begin_time|**datetime**|Zeitpunkt, zu dem die Datenbank in die Transaktion aufgenommen wurde. Genauer gesagt: Dies ist die Zeit des ersten Protokolldatensatzes in der Datenbank für die Transaktion.|  
 |database_transaction_type|**int**|1 = Lese-/Schreibtransaktion<br /><br /> 2 = Schreibgeschützte Transaktion<br /><br /> 3 = Systemtransaktion|  
-|database_transaction_state|**int**|1 = Die Transaktion wurde nicht initialisiert.<br /><br /> 3 = Die Transaktion wurde initialisiert, hat jedoch keine Protokolldatensätze generiert.<br /><br /> 4 = Die Transaktion hat Protokolldatensätze generiert.<br /><br /> 5 = Die Transaktion wurde vorbereitet.<br /><br /> 10 = Für die Transaktion wurde ein Commit ausgeführt.<br /><br /> 11 = Für die Transaktion wurde ein Rollback ausgeführt.<br /><br /> 12 = Für die Transaktion wird ein Commit ausgeführt. (Der Protokolldatensatz generiert wird, jedoch nicht materialisiert oder permanent gespeichert.)|  
+|database_transaction_state|**int**|1 = Die Transaktion wurde nicht initialisiert.<br /><br /> 3 = Die Transaktion wurde initialisiert, hat jedoch keine Protokolldatensätze generiert.<br /><br /> 4 = Die Transaktion hat Protokolldatensätze generiert.<br /><br /> 5 = Die Transaktion wurde vorbereitet.<br /><br /> 10 = Für die Transaktion wurde ein Commit ausgeführt.<br /><br /> 11 = Für die Transaktion wurde ein Rollback ausgeführt.<br /><br /> 12 = Für die Transaktion wird ein Commit ausgeführt. (Der Protokolldatensatz generiert wird, jedoch nicht materialisiert oder permanent.)|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_log_record_count|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Anzahl der Protokolldatensätze, die in der Datenbank für die Transaktion generiert wurden.|  
@@ -58,7 +58,7 @@ ms.locfileid: "34467596"
 |database_transaction_last_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN des zuletzt protokollierten Datensatzes für die Transaktion im Datenbankprotokoll.|  
 |database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN des letzten Sicherungspunktes für die Transaktion im Datenbankprotokoll.|  
 |database_transaction_commit_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN des Protokolldatensatzes für den Commit der Transaktion im Datenbankprotokoll.|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN, zu der das letzte Rollback ausgeführt wurde. Wenn kein Rollback stattgefunden hat, ist der Wert MaxLSN.|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN, zu der das letzte Rollback ausgeführt wurde. Wenn Sie kein Rollback stattgefunden hat, ist der Wert MaxLSN an.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN des nächsten Datensatzes, der rückgängig gemacht werden soll.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   

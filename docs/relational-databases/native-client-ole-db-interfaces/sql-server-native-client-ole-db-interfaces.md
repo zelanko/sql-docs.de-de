@@ -19,15 +19,15 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413579"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552150"
 ---
-# <a name="sql-server-native-client-ole-db-interfaces"></a>Schnittstellen für SQL Server Native Client (OLE DB)
+# <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client-Schnittstellen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "37413579"
   
  Dies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter werden nicht dokumentiert alle OLE DB-Schnittstellen und Methoden, nur diese Schnittstellen und Methoden, die Anbieter-spezifischen Verhalten bei Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Anbieter.  
   
- Eine vollständige Beschreibung der Core-OLE DB-Schnittstellen und Methoden finden Sie unter den [OLE DB-Programmierreferenz](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

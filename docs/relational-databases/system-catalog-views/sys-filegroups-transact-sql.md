@@ -1,5 +1,5 @@
 ---
-title: "\"Sys.FileGroups\" (Transact-SQL) | Microsoft Docs"
+title: "\"Sys.FileGroups\" (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ce5e5cb8bc0a1fb6d8996b95db803f303b7db91
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 626256e237e776711f8fec7ae509461f5edb6692
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178856"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542970"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "33178856"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**|--|Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [Sys. data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
+|**\<geerbte Spalten >**|--|Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
 |**filegroup_guid**|**uniqueidentifier**|GUID für die Dateigruppe.<br /><br /> NULL = PRIMARY-Dateigruppe|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Wert NULL.|  
 |**is_read_only**|**bit**|1 = Die Dateigruppe ist schreibgeschützt.<br /><br /> 0 = Auf die Dateigruppe besteht Lese-/Schreibzugriff.|  
-|**"is_autogrow_all_files"**|**bit**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 =, wenn Sie eine Datei in der Dateigruppe erfüllt, die der Schwellenwert für automatische Vergrößerung, alle Dateien in der Dateigruppe vergrößert.<br /><br /> 0 =, wenn Sie eine Datei in der Dateigruppe erfüllt, die der Schwellenwert für automatische Vergrößerung, nur diese Datei vergrößert wird. Dies ist die Standardeinstellung.|  
+|**"is_autogrow_all_files"**|**bit**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 =, wenn eine Datei in der Dateigruppe entspricht, die der Schwellenwert für automatische Vergrößerung aller Dateien in der Dateigruppe vergrößert.<br /><br /> 0 =, wenn eine Datei in der Dateigruppe erfüllt der Schwellenwert für automatische Vergrößerung, nur diese Datei vergrößert. Dies ist die Standardeinstellung.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: Sys. fulltext_languages (Transact-SQL) | Microsoft Docs
+title: Sys. fulltext_languages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,23 +25,23 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182056"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535210"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörtertrennungen für eine Sprache registriert werden, werden ihre übrigen sprachlichen Ressourcen – Wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurusdateien – für Volltextindizierungs- oder Volltextabfragevorgänge verfügbar. Der Wert der **Namen** oder **Lcid** kann angegeben werden, in der Volltextabfragen und der Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  
+  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörtertrennungen für eine Sprache registriert werden, werden ihre übrigen sprachlichen Ressourcen – Wortstammerkennung, Füllwörter (Stoppwörter) und Thesaurusdateien – für Volltextindizierungs- oder Volltextabfragevorgänge verfügbar. Der Wert des **Namen** oder **Lcid** kann angegeben werden, in der Volltextabfragen und der Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  
    
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
-|**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert der **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
+|**LCID**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
+|**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert des **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
  In der folgenden Tabelle sind Werte für die Sprachen aufgeführt, deren Wörtertrennungen standardmäßig registriert werden.  

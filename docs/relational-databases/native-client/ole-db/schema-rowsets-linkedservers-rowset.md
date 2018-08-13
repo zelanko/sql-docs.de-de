@@ -18,19 +18,19 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2db65b2c936143c2f1f4987ac6ba79482e7b06b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421039"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539670"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Schemarowsets: LINKEDSERVERS-Rowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Die **LINKEDSERVERS** Rowset listet organisationsdatenquellen teilnehmen können, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen.  
+  Das **LINKEDSERVERS**-Rowset listet Organisationsdatenquellen auf, die an verteilten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abfragen teilnehmen können.  
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "37421039"
  Das Rowset wird nach SRV_NAME sortiert, und eine einzelne Einschränkung wird für SRV_NAME unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schemarowset-Unterstützung &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+ [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

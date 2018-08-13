@@ -1,5 +1,5 @@
 ---
-title: dm_os_threads (Transact-SQL) | Microsoft Docs
+title: dm_os_threads (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee180232114e311cf40a53d2e33f23acba7a0cd0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2109830ba21d60fa67eb33b1b1e5e8b5cb14a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543210"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
 
 ## <a name="examples"></a>Beispiele  
- Beim Start werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Threads gestartet, denen anschließend Arbeitsthreads zugeordnet werden. Externe Komponenten, z. B. eine erweiterte gespeicherte Prozedur, können jedoch Threads unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess starten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Kontrolle über diese Threads. dm_os_threads bieten Informationen zu extern gestarteten Threads, die Ressourcen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozess.  
+ Beim Start werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Threads gestartet, denen anschließend Arbeitsthreads zugeordnet werden. Externe Komponenten, z. B. eine erweiterte gespeicherte Prozedur, können jedoch Threads unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess starten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Kontrolle über diese Threads. dm_os_threads bieten Informationen zu extern gestarteten Threads, die Ressourcen in nutzen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozess.  
   
  Mit der folgenden Abfrage werden Arbeitsthreads zusammen mit der jeweiligen Ausführungszeit ermittelt, die nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartete Threads ausführen.  
   
@@ -90,7 +90,7 @@ SELECT *
   
 ## <a name="see-also"></a>Siehe auch  
   [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

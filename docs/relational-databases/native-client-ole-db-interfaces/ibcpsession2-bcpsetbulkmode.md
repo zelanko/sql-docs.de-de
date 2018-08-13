@@ -16,13 +16,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b0cd923904b13e9cb63b72010e89d4079b966e22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419629"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539180"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,13 +65,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |**S_OK**|Die Methode wurde erfolgreich ausgeführt.|  
-|**E_FAIL**|Ein Anwenderspezifischer Fehler ist aufgetreten, für die Detailinformationen verwenden Sie die ISQLServerErrorInfo-Schnittstelle.|  
+|**E_FAIL**|Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die ISQLServerErrorInfo-Schnittstelle.|  
 |**E_UNEXPECTED**|Die Methode wurde unerwartet aufgerufen. Z. B. die **IBCPSession2::BCPInit** Methode nicht vor dem Aufrufen von ibcpsession2:: Bcpsetbulkmode aufgerufen wurde.|  
 |**E_INVALIDARG**|Das Argument war ungültig.|  
 |**E_OUTOFMEMORY**|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ibcpsession2:: Bcpsetbulkmode kann zum Massenkopieren aus einer Abfrage oder eine Tabelle verwendet werden. Wenn ibcpsession2:: Bcpsetbulkmode zum Massenkopieren aus einer abfrageanweisung verwendet wird, muss er vor dem Aufruf aufgerufen werden `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` an die Query-Anweisung.  
+ Ibcpsession2:: Bcpsetbulkmode kann zum Massenkopieren aus einer Abfrage oder eine Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
  Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dadurch wird ICommandPrepare:: Prepare einen Fehler zurück, und verhindert das Abrufen von Metadaten. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  
   
@@ -88,7 +88,7 @@ HRESULT BCPSetBulkMode (
   
  Sie können nicht aufgerufen werden ibcpsession:: Bcpcontrol mit **BCP_OPTION_TEXTFILE** und ibcpsession2:: Bcpsetbulkmode.  
   
- Wenn Sie versuchen, ibcpsession2:: Bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol und ibcpsession:: Bcpreadfmt enthält, gibt einen der Funktionsaufrufe einen Sequenzfehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie ibcpsession:: BCPInit, um die Einstellungen zurücksetzen und von neuem anfangen.  
+ Wenn Sie versuchen, ibcpsession2:: Bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol und ibcpsession:: Bcpreadfmt enthält, gibt einen der Funktionsaufrufe einen Sequenzfehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie IBCPSession::BCPInit auf, um die Einstellungen zurückzusetzen und den Vorgang neu zu beginnen.  
   
  Im folgenden sind einige Beispiele für Funktionsaufrufe, die zu einem Fehler bei Funktionssequenz führen:  
   

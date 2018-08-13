@@ -1,5 +1,5 @@
 ---
-title: "\"sp_helpsort\" (Transact-SQL) | Microsoft Docs"
+title: "\"sp_helpsort\" (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253693"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539410"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpsort
  Gibt die Standardsortierung des Servers zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, mit einer Sortierung für die Kompatibilität mit einer früheren Installation angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **"sp_helpsort"** leere Ergebnisse zurück. Wenn dieses Verhalten auftritt, können Sie die Sortierung bestimmen, indem Sie das SERVERPROPERTY-Objekt beispielsweise folgendermaßen abfragen: `SELECT SERVERPROPERTY ('Collation');`.  
+ Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird mit einer Sortierung angegeben, um die Kompatibilität mit einer früheren Installation von installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **"sp_helpsort"** leere Ergebnisse zurück. Wenn dieses Verhalten auftritt, können Sie die Sortierung bestimmen, indem Sie das SERVERPROPERTY-Objekt beispielsweise folgendermaßen abfragen: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -73,7 +73,7 @@ sp_helpsort;
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

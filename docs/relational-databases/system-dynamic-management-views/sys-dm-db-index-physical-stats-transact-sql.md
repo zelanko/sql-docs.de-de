@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1853bdbf62701cfbaa5302615eac61684089ac5a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d52b15fc3aec74734a23f16e865a0ce3c59269d4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468076"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544760"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "34468076"
   Gibt Größen- und Fragmentierungsinformationen für die Daten und Indizes der angegebenen Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Bei einem Index wird eine Zeile für jede B-Strukturebene in den einzelnen Partitionen zurückgegeben. Bei einem Heap wird eine Zeile für die IN_ROW_DATA-Zuordnungseinheit jeder Partition zurückgegeben. Bei LOB-Daten (Large Object) wird eine Zeile für die LOB_DATA-Zuordnungseinheit jeder Partition zurückgegeben. Falls Zeilenüberlaufdaten in der Tabelle vorhanden sind, wird eine Zeile für die ROW_OVERFLOW_DATA-Zuordnungseinheit in jeder Partition zurückgegeben. Gibt keine Informationen zu speicheroptimierten xVelocity-ColumnStore-Indizes zurück.  
   
 > [!IMPORTANT]
-> Wenn Sie Abfragen **Sys. dm_db_index_physical_stats** auf einer Serverinstanz, die Always On hostet [lesbares sekundäres Replikat](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), ein REDO-Blockierungsproblem auftreten. Dies kommt daher, dass diese dynamische Verwaltungssicht eine beabsichtigte gemeinsame Sperre für die angegebene Benutzertabelle oder Sicht erhält, die Anforderungen von einem REDO-Thread für eine X-Sperre dieser Benutzertabelle oder Sicht blockieren kann.  
+> Wenn Sie Abfragen **Sys. dm_db_index_physical_stats** auf einer Serverinstanz, die eine Always On-hostet [lesbares sekundäres Replikat](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), kann ein REDO-Blockierungsproblem auftreten. Dies kommt daher, dass diese dynamische Verwaltungssicht eine IS-Sperre für die angegebene Benutzertabelle oder Sicht erhält, die Anforderungen von einem REDO-Thread für eine X-Sperre dieser Benutzertabelle oder Sicht blockieren kann.  
   
- **Sys. dm_db_index_physical_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys. dm_db_index_physical_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Weitere Informationen zu speicheroptimierten Index verwenden, finden Sie unter [dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -60,7 +60,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>Argumente  
  *Database_id* | NULL | 0 | STANDARDWERT  
- Ist die ID der Datenbank. *Database_id* ist **"smallint"**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
+ Ist die ID der Datenbank. *Database_id* ist **Smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Bei Angabe von NULL für *Database_id*, müssen Sie auch angeben, NULL für *Object_id*, *Index_id*, und *Partition_number*.  
   
@@ -69,24 +69,24 @@ sys.dm_db_index_physical_stats (
  *Object_id* | NULL | 0 | STANDARDWERT  
  Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist **int**.  
   
- Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Als der [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gültige Eingaben auch der Name der Service Broker-Warteschlange oder der Name der Warteschlange interne Tabelle enthalten. Wenn der Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), Fragmentierungsinformationen für alle Warteschlangen im Resultset enthalten sind.  
+ Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Als [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gültige Eingaben auch der Name der Service Broker-Warteschlange oder den Warteschlangennamen für die interne Tabelle enthalten. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), sind die Fragmentierungsinformationen für alle Warteschlangen im Resultset enthalten.  
   
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Bei Angabe von NULL für *Object_id*, müssen Sie auch angeben, NULL für *Index_id* und *Partition_number*.  
   
  *Index_id* | 0 | NULL | -1 | STANDARDWERT  
- Die ID des Indexes. *Index_id* ist **Int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ist ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
+ Die ID des Indexes. *Index_id* ist **Int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
   
- Geben Sie NULL an, um Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben. Bei Angabe von NULL für *Index_id*, müssen Sie auch angeben, NULL für *Partition_number*.  
+ Geben Sie NULL an, um Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Bei Angabe von NULL für *Index_id*, müssen Sie auch angeben, NULL für *Partition_number*.  
   
- *Partitionsnummer* | NULL | 0 | STANDARDWERT  
- Die Partitionsnummer im Objekt. *Partitionsnummer* ist **Int**. Gültige Eingaben sind die *Partion_number* eines Indexes oder Heaps, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
+ *Partition_number* | NULL | 0 | STANDARDWERT  
+ Die Partitionsnummer im Objekt. *Partition_number* ist **Int**. Gültige Eingaben sind die *Partion_number* eines Indexes oder Heaps, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
- Geben Sie NULL an, um Informationen für alle Partitionen des besitzenden Objekts zurückgegeben.  
+ Geben Sie NULL an, um Informationen für alle Partitionen des besitzenden Objekts zurückgegeben werden sollen.  
   
- *Partitionsnummer* ist 1-basiert. Ein nicht partitionierter Index oder Heap ist *Partition_number* auf 1 festgelegt.  
+ *Partition_number* ist 1-basiert. Hat einen nicht partitionierten Index oder Heap *Partition_number* auf 1 festgelegt.  
   
  *Modus* | NULL | STANDARDWERT  
- Der Name des Modus. *Modus* gibt die Scanebene an, die verwendet wird, um Statistiken zu erhalten. *Modus* ist **Sysname**. Gültige Eingaben sind DEFAULT, NULL, LIMITED, SAMPLED oder DETAILED. Der Standardwert (NULL) ist LIMITED.  
+ Der Name des Modus. *Modus* gibt die Scanebene an, die zum Abrufen von Statistiken verwendet wird. *Modus* ist **Sysname**. Gültige Eingaben sind DEFAULT, NULL, LIMITED, SAMPLED oder DETAILED. Der Standardwert (NULL) ist LIMITED.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -96,9 +96,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|Objekt-ID der Tabelle oder Sicht mit dem Index.|  
 |index_id|**int**|Index-ID eines Indexes.<br /><br /> 0 = Heap.|  
 |partition_number|**int**|1-basierte Partitionsnummer im besitzenden Objekt; eine Tabelle, eine Sicht oder ein Index.<br /><br /> 1 = Nicht partitionierter Index oder Heap.|  
-|index_type_desc|**nvarchar(60)**|Beschreibung des Indextyps:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> Columnstore-ZUORDNUNG INDEX (intern)<br /><br /> Columnstore-DELETEBUFFER INDEX (intern)<br /><br /> Columnstore-DELETEBITMAP INDEX (intern)|  
-|hobt_id|**bigint**|Heap- oder B-Struktur-ID des Indexes oder der Partition.<br /><br /> Neben der Rückgabe die Hobt_id benutzerdefinierte Indizes, gibt auch die Hobt_id der internen columnstore-Indizes zurück.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Datentyp gespeichert sind **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Datentyp gespeichert sind **varchar**, **nvarchar (n)**, **varbinary**, und **Sql_ Variante** , die ein Push ausgeführt wurde außerhalb von Zeilen.|  
+|index_type_desc|**nvarchar(60)**|Beschreibung des Indextyps:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> Zuordnen von SPALTENSPEICHERINDEXES (intern)<br /><br /> Columnstore-DELETEBUFFER INDEX (intern)<br /><br /> Columnstore-DELETEBITMAP INDEX (intern)|  
+|hobt_id|**bigint**|Heap- oder B-Struktur-ID des Indexes oder der Partition.<br /><br /> Neben der Rückgabe der Hobt_id benutzerdefinierte Indizes, gibt auch die Hobt_id der internen columnstore-Indizes zurück.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **varchar (n)**, **nvarchar (n)**, **varbinary**, und **Sql_ Variante** , müssen aus der Zeile verschoben wurden.|  
 |index_depth|**tinyint**|Anzahl von Indexebenen.<br /><br /> 1 = Heap oder LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit.|  
 |index_level|**tinyint**|Aktuelle Ebene des Indexes.<br /><br /> 0 für Indexblattebene, Heaps und LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> Werte größer 0 für Nicht-Indexblattebenen. *Index_level* werden auf der Stammebene eines Indexes den höchsten Wert.<br /><br /> Die nichtblattebenen von Indizes werden nur verarbeitet, wenn *Modus* = DETAILED.|  
 |avg_fragmentation_in_percent|**float**|Die logische Fragmentierung für Indizes oder die Blockfragmentierung für Heaps in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Der Wert wird als Prozentsatz gemessen und berücksichtigt mehrere Dateien. Definitionen für die logische Fragmentierung und die Blockfragmentierung finden Sie unter den Hinweisen.<br /><br /> 0 für LOB_DATA- und ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> NULL für heaps, wenn *Modus* = SAMPLED.|  
@@ -106,7 +106,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|Durchschnittliche Anzahl von Seiten in einem Fragment auf der Blattebene einer IN_ROW_DATA-Zuordnungseinheit.<br /><br /> NULL für Nichtblattebenen eines Indexes und LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> NULL für heaps, wenn *Modus* = SAMPLED.|  
 |page_count|**bigint**|Gesamtanzahl von Index- oder Datenseiten.<br /><br /> Bei einem Index die Gesamtanzahl von Indexseiten auf der aktuellen B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die Gesamtanzahl von Datenseiten in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die Gesamtanzahl von Seiten in der Zuordnungseinheit.|  
 |avg_page_space_used_in_percent|**float**|Durchschnittlicher Prozentsatz des auf allen Seiten verwendeten verfügbaren Datenspeicherplatzes.<br /><br /> Bei einem Index bezieht sich der Durchschnittswert auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf den Durchschnittswert aller Datenseiten in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf den Durchschnittswert aller Seiten in der Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
-|record_count|**bigint**|Gesamtanzahl von Datensätzen.<br /><br /> Bei einem Index bezieht sich die Gesamtanzahl von Datensätzen auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die Gesamtanzahl von Datensätzen in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> **Hinweis:** für einen Heap möglicherweise die Anzahl der Datensätze, die von dieser Funktion zurückgegeben werden. die Anzahl der Zeilen, die zurückgegeben werden, durch Ausführen von Wählen Sie die Anzahl nicht überein (\*) für den Heap. Das liegt daran, dass eine Zeile möglicherweise mehrere Datensätze enthält. So kann in bestimmten Updatesituationen eine einzelne Heapzeile möglicherweise über einen Weiterleitungsdatensatz und einen weitergeleiteten Datensatz als Ergebnis des Updates verfügen. Außerdem werden die meisten großen LOB-Zeilen im LOB_DATA-Speicher in mehrere Datensätze geteilt.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die Gesamtanzahl von Datensätzen in der gesamten Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
+|record_count|**bigint**|Gesamtanzahl von Datensätzen.<br /><br /> Bei einem Index bezieht sich die Gesamtanzahl von Datensätzen auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die Gesamtanzahl von Datensätzen in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> **Hinweis:** bei einem Heap auf die Anzahl der Datensätze, die von dieser Funktion zurückgegeben passt nicht die Anzahl der Zeilen, die zurückgegeben werden, durch Ausführen einer SELECT COUNT (\*) für den Heap. Das liegt daran, dass eine Zeile möglicherweise mehrere Datensätze enthält. So kann in bestimmten Updatesituationen eine einzelne Heapzeile möglicherweise über einen Weiterleitungsdatensatz und einen weitergeleiteten Datensatz als Ergebnis des Updates verfügen. Außerdem werden die meisten großen LOB-Zeilen im LOB_DATA-Speicher in mehrere Datensätze geteilt.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die Gesamtanzahl von Datensätzen in der gesamten Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
 |ghost_record_count|**bigint**|Anzahl von inaktiven Datensätzen, die durch den Cleanuptask für inaktive Datensätze in der Zuordnungseinheit entfernt werden können.<br /><br /> 0 für Nichtblattebenen eines Indexes in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
 |version_ghost_record_count|**bigint**|Anzahl inaktiver Datensätze, die von einer ausstehenden Momentaufnahme-Isolationstransaktion in einer Zuordnungseinheit beibehalten werden.<br /><br /> 0 für Nichtblattebenen eines Indexes in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
 |min_record_size_in_bytes|**int**|Minimale Datensatzgröße in Bytes.<br /><br /> Bei einem Index bezieht sich die minimale Datensatzgröße auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die minimale Datensatzgröße in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die minimale Datensatzgröße in der gesamten Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
@@ -114,28 +114,28 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Durchschnittliche Datensatzgröße in Bytes.<br /><br /> Bei einem Index bezieht sich die durchschnittliche Datensatzgröße auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die durchschnittliche Datensatzgröße in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die durchschnittliche Datensatzgröße in der gesamten Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
 |forwarded_record_count|**bigint**|Anzahl der Datensätze in einem Heap, die weiterleitungszeiger auf einen anderen Datenspeicherort besitzen. (Dieser Status tritt während eines Updates auf, wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeile am ursprünglichen Speicherort zu speichern.)<br /><br /> NULL für eine beliebige Zuordnungseinheit außer IN_ROW_DATA-Zuordnungseinheiten für einen Heap.<br /><br /> NULL für heaps, wenn *Modus* = LIMITED.|  
 |compressed_page_count|**bigint**|Die Anzahl der komprimierten Seiten.<br /><br /> Bei Heaps sind neu zugeordnete Seiten nicht mit PAGE seitenkomprimiert. Ein Heap wird nur unter zwei besonderen Bedingungen PAGE-komprimiert: wenn Massendaten importiert werden oder wenn ein Heap neu erstellt wird. Typische DML-Vorgänge, die Seitenzuordnungen hervorrufen, werden nicht PAGE-komprimiert. Erstellen Sie einen Heap neu, wenn der compressed_page_count-Wert den gewünschten Schwellenwert überschreitet.<br /><br /> Für Tabellen mit gruppiertem Index gibt der compressed_page_count-Wert die Wirksamkeit der PAGE-Komprimierung an.|  
-|hobt_id|bigint|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Für columnstore-Indizes ist dies die ID für ein Rowset, das die internen columnstore-Daten für eine Partition nachverfolgt. Die Rowsets sind, wie Daten heaps gespeicherte oder binäre Strukturen. Sie verfügen über dieselbe Index-ID wie der übergeordnete columnstore-Index. Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
-|column_store_delete_buffer_state|tinyint|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = EIN AUSGLEICH DURCHGEFÜHRT<br /><br /> 3 = LEEREN<br /><br /> 4 = ABKOPPELN<br /><br /> 5 = BEREIT|  
-|column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – der Index der übergeordneten ist kein columnstore-Index.<br /><br /> Öffnen – Löschvorgänge und Scanner verwenden Sie diese.<br /><br /> BELASTUNG – Löschvorgänge werden ein Ausgleich durchgeführt aber Scanner jedoch verwendet werden.<br /><br /> Das leeren – Puffer wird geschlossen, und Zeilen im Puffer für die Delete-Bitmap geschrieben werden.<br /><br /> ABKOPPELN – von Zeilen in der geschlossenen löschungspuffers geschrieben wurden, für die Delete-Bitmap, aber der Puffer wurde nicht abgeschnitten, da Scanner verwendet werden. Neue Scanner müssen nicht die Abschaltung Puffer verwendet werden, da der geöffnete Puffer ausreichend ist.<br /><br /> Soweit sind – diese löschungspuffers verwendet werden kann.|  
+|hobt_id|BIGINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Für columnstore-Indizes ist dies die ID für ein Rowset, das interne columnstore-Daten für eine Partition enthalten. Die Rowsets sind, wie Daten heaps gespeicherte oder binäre Strukturen. Sie haben dieselbe Index-ID wie der übergeordnete columnstore-Index. Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
+|column_store_delete_buffer_state|TINYINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = LEEREN<br /><br /> 3 = LEEREN<br /><br /> 4 = ABKOPPELN<br /><br /> 5 = BEREIT|  
+|column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – Index für die übergeordnete ist kein columnstore-Index.<br /><br /> OPEN: Löschvorgänge und Scanner verwenden Sie diese.<br /><br /> AUSGEGLICHEN – Löschvorgänge sind sich ausgleichen, aber Scanner, die es, weiterhin verwenden.<br /><br /> – Das leeren Puffer wird geschlossen, und Zeilen im Puffer für die Delete-Bitmap geschrieben werden.<br /><br /> ZURÜCKGEZOGEN – Zeilen in geschlossenen löschungspuffers für die Delete-Bitmap geschrieben wurden, aber der Puffer wurde noch nicht abgeschnitten, weil Scanner es immer noch verwendet werden. Neue Scanner müssen nicht die Deaktivierung eines Puffers verwendet werden, da der geöffnete Puffer ausreichend ist.<br /><br /> BEREIT – diese löschungspuffers verwendet werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
- Der Modus, in dem die Funktion ausgeführt wird, bestimmt die Scanebene, die zum Abrufen der statistischen Daten von der Funktion verwendet wird. *Modus* wird als LIMITED, SAMPLED oder DETAILED angegeben. Die Funktion durchsucht die Seitenketten nach den Zuordnungseinheiten, aus denen die angegebenen Partitionen der Tabelle oder des Indexes bestehen. Sys. dm_db_index_physical_stats erfordert nur eine beabsichtigte freigegebene Tabellensperre (IS) Tabellensperre, unabhängig vom Modus in ausgeführt wird.  
+ Der Modus, in dem die Funktion ausgeführt wird, bestimmt die Scanebene, die zum Abrufen der statistischen Daten von der Funktion verwendet wird. *Modus* wird als LIMITED, SAMPLED oder DETAILED angegeben. Die Funktion durchsucht die Seitenketten nach den Zuordnungseinheiten, aus denen die angegebenen Partitionen der Tabelle oder des Indexes bestehen. Sys. dm_db_index_physical_stats ist nur erforderlich, eine beabsichtigte freigegebene Tabellensperre (IS), unabhängig vom Modus, den es ausgeführt, in wird der.  
   
  Der Modus LIMITED ist am schnellsten und durchsucht am wenigsten Seiten. Bei einem Index werden nur die Seiten der übergeordneten B-Strukturebene (d. h. die Seiten oberhalb der Blattebene) gescannt. Bei einem Heap werden nur die zugehörigen PFS- und IAM-Seiten untersucht; die Datenseiten des Heaps werden im Modus LIMITED gescannt.  
   
- Mit dem Modus LIMITED ist compressed_page_count NULL, da der [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur Nicht- Blattseiten der B-Struktur und die IAM- und PFS-Seiten des Heaps scannt. Verwenden Sie den Modus SAMPLED, um einen geschätzten Wert für Compressed_page_count abzurufen, und verwenden Sie Modus DETAILED, um den tatsächlichen Wert für Compressed_page_count abzurufen. Der Modus SAMPLED gibt Statistiken basierend auf einer Stichprobe von 1 % aller Seiten im Index oder Heap zurück. Ergebnisse im SAMPLED-Modus sollten als ungefähre Werte angesehen werden. Falls der Index oder Heap weniger als 10.000 Seiten aufweist, wird anstelle des Modus SAMPLED der Modus DETAILED verwendet.  
+ Mit dem Modus LIMITED ist compressed_page_count NULL, da der [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur Nicht- Blattseiten der B-Struktur und die IAM- und PFS-Seiten des Heaps scannt. Verwenden Sie Modus SAMPLED, um einen geschätzten Wert für Compressed_page_count abzurufen, und verwenden Sie Modus DETAILED, um den tatsächlichen Wert für Compressed_page_count abzurufen. Der Modus SAMPLED gibt Statistiken basierend auf einer Stichprobe von 1 % aller Seiten im Index oder Heap zurück. Ergebnisse im SAMPLED-Modus sollten als ungefähre Werte angesehen werden. Falls der Index oder Heap weniger als 10.000 Seiten aufweist, wird anstelle des Modus SAMPLED der Modus DETAILED verwendet.  
   
  Der Modus DETAILED durchsucht alle Seiten und gibt alle Statistiken zurück.  
   
  Die Geschwindigkeit der Modi nimmt von LIMITED zu DETAILED schrittweise ab, weil im jeweils nächsten Modus mehr Arbeitsschritte ausgeführt werden. Verwenden Sie den Modus LIMITED, wenn Sie die Größe oder die Fragmentierungsebene einer Tabelle oder eines Indexes schnell messen möchten. Dies ist der schnellste Modus und gibt nicht für jede Nichtblattebene in der IN_ROW_DATA-Zuordnungseinheit des Indexes eine Zeile zurück.  
   
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Verwenden von Systemfunktionen zum Angeben von Parameterwerten  
- Können Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen [DB_ID](../../t-sql/functions/db-id-transact-sql.md) und [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) , geben Sie einen Wert für die *Database_id* und *Object_id* Parameter. Das Übergeben von Werten, die für diese Funktionen nicht gültig sind, kann jedoch zu unerwarteten Ergebnissen führen. Falls z. B. die Datenbank oder der Objektname nicht gefunden wird, weil er nicht vorhanden oder falsch geschrieben ist, geben beide Funktionen NULL zurück. Die sys.dm_db_index_physical_stats-Funktion interpretiert NULL als Platzhalterwert, mit dem alle Datenbanken oder alle Objekte angegeben werden.  
+ Können Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen [DB_ID](../../t-sql/functions/db-id-transact-sql.md) und [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) an einen Wert für die *Database_id* und *Object_id* Parameter. Das Übergeben von Werten, die für diese Funktionen nicht gültig sind, kann jedoch zu unerwarteten Ergebnissen führen. Falls z. B. die Datenbank oder der Objektname nicht gefunden wird, weil er nicht vorhanden oder falsch geschrieben ist, geben beide Funktionen NULL zurück. Die sys.dm_db_index_physical_stats-Funktion interpretiert NULL als Platzhalterwert, mit dem alle Datenbanken oder alle Objekte angegeben werden.  
   
- Darüber hinaus die OBJECT_ID-Funktion wird verarbeitet, bevor die Sys. dm_db_index_physical_stats-Funktion aufgerufen wird, und daher im Kontext der aktuellen Datenbank ausgewertet wird, nicht in die Datenbank angegeben, *Database_id*. Dadurch gibt die OBJECT_ID-Funktion unter Umständen einen NULL-Wert zurück, oder es wird eine Fehlermeldung zurückgegeben, falls der Objektname sowohl im aktuellen Datenbankkontext als auch in der angegebenen Datenbank vorhanden ist. In den folgenden Beispielen werden diese nicht beabsichtigten Ergebnisse veranschaulicht.  
+ Darüber hinaus die OBJECT_ID-Funktion verarbeitet wird, bevor die Sys. dm_db_index_physical_stats-Funktion aufgerufen wird, und daher im Kontext der aktuellen Datenbank ausgewertet wird, nicht in die Datenbank angegeben, *Database_id*. Dadurch gibt die OBJECT_ID-Funktion unter Umständen einen NULL-Wert zurück, oder es wird eine Fehlermeldung zurückgegeben, falls der Objektname sowohl im aktuellen Datenbankkontext als auch in der angegebenen Datenbank vorhanden ist. In den folgenden Beispielen werden diese nicht beabsichtigten Ergebnisse veranschaulicht.  
   
 ```  
 USE master;  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Bewährte Methoden  
- Stellen Sie stets sicher, dass bei der Verwendung von DB_ID oder OBJECT_ID eine gültige ID zurückgegeben wird. Beispielsweise bei Verwendung von OBJECT_ID Geben Sie einen dreiteiligen Namen wie z. B. `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, oder testen Sie den Wert, der von der Funktion zurückgegebenen werden, bevor Sie sie in der Sys. dm_db_index_physical_stats-Funktion verwenden. In den nachstehenden Beispielen A und B wird eine sichere Möglichkeit zur Angabe von Datenbank- und Objekt-IDs aufgezeigt.  
+ Stellen Sie stets sicher, dass bei der Verwendung von DB_ID oder OBJECT_ID eine gültige ID zurückgegeben wird. Z. B. bei Verwendung von OBJECT_ID Geben Sie einen dreiteiligen Namen wie z. B. `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, oder testen Sie den Wert, der von der Funktion zurückgegebenen werden, bevor Sie sie in der Sys. dm_db_index_physical_stats-Funktion verwenden. In den nachstehenden Beispielen A und B wird eine sichere Möglichkeit zur Angabe von Datenbank- und Objekt-IDs aufgezeigt.  
   
 ## <a name="detecting-fragmentation"></a>Erkennen der Fragmentierung  
  Die Fragmentierung wird durch Datenänderungen (mithilfe der Anweisungen INSERT, UPDATE oder DELETE) in Bezug auf die Tabelle und dadurch an den für diese Tabelle definierten Indizes hervorgerufen. Da diese Änderungen normalerweise nicht gleichmäßig über alle Zeilen der Tabelle und Indizes verteilt vorgenommen werden, kann sich mit der Zeit der Füllgrad jeder Seite ändern. Diese Tabellenfragmentierung kann bei Abfragen, bei denen die Indizes einer Tabelle teilweise oder ganz gescannt werden, zu zusätzlichen Seitenlesevorgängen führen. Dies behindert das parallele Scannen von Daten.  
@@ -187,7 +187,7 @@ GO
   
  Dies ist der Prozentsatz der Blöcke, die auf den Blattseiten eines Heaps nicht ordnungsgemäß sortiert sind. Ein nicht ordnungsgemäß sortierter Block ist ein Block, für den der Block, der die aktuelle Seite eines Heaps enthält, physisch nicht der nächste Block nach dem Block ist, der die vorherige Seite enthält.  
   
- Der Wert für avg_fragmentation_in_percent sollte möglichst nahe bei null liegen, um eine optimale Leistung sicherzustellen. Werte zwischen 0 und 10 % sind jedoch akzeptabel. Um diese Werte zu verringern, können alle Methoden zur Reduzierung der Fragmentierung verwendet werden, wie z. B. Neuerstellung oder Neuorganisierung. Weitere Informationen zum Analysieren des Grad der Fragmentierung in einem Index finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+ Der Wert für avg_fragmentation_in_percent sollte möglichst nahe bei null liegen, um eine optimale Leistung sicherzustellen. Werte zwischen 0 und 10 % sind jedoch akzeptabel. Um diese Werte zu verringern, können alle Methoden zur Reduzierung der Fragmentierung verwendet werden, wie z. B. Neuerstellung oder Neuorganisierung. Weitere Informationen zum Analysieren des Fragmentierungsgrads in einem Index finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 ## <a name="reducing-fragmentation-in-an-index"></a>Reduzieren der Fragmentierung in einem Index  
  Wenn ein Index derart fragmentiert ist, dass die Fragmentierung die Abfrageleistung beeinträchtigt, gibt es drei Möglichkeiten, um die Fragmentierung zu reduzieren:  
@@ -206,7 +206,7 @@ GO
 >  Ausführen von DBCC SHRINKFILE oder DBCC SHRINKDATABASE kann zur Fragmentierung führen, wenn ein Index während des Verkleinerungsvorgangs teilweise oder vollständig verschoben wird. Wenn ein Verkleinerungsvorgang ausgeführt werden muss, sollten Sie diesen deshalb vor dem Beseitigen der Fragmentierung vornehmen.  
   
 ## <a name="reducing-fragmentation-in-a-heap"></a>Reduzieren der Fragmentierung in einem Heap  
- Um die Blockfragmentierung eines Heaps zu reduzieren, erstellen Sie einen gruppierten Index für die Tabelle, und löschen Sie dann den Index. Dadurch werden die Daten neu verteilt, während der gruppierte Index erstellt wird. Dabei wird ein möglichst optimaler Zustand in Bezug auf die Verteilung des freien Speicherplatzes in der Datenbank angestrebt. Wenn der gruppierte Index dann gelöscht wird, um den Heap neu zu erstellen, werden die Daten nicht verschoben und verbleiben an ihrer optimalen Position. Informationen zum Ausführen dieser Vorgänge finden Sie unter [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) und [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md).  
+ Um die Blockfragmentierung eines Heaps zu reduzieren, erstellen Sie einen gruppierten Index für die Tabelle, und löschen Sie dann den Index. Dadurch werden die Daten neu verteilt, während der gruppierte Index erstellt wird. Dabei wird ein möglichst optimaler Zustand in Bezug auf die Verteilung des freien Speicherplatzes in der Datenbank angestrebt. Wenn der gruppierte Index dann gelöscht wird, um den Heap neu zu erstellen, werden die Daten nicht verschoben und verbleiben an ihrer optimalen Position. Weitere Informationen zum Ausführen dieser Vorgänge finden Sie unter [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) und [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md).  
   
 > [!CAUTION]  
 >  Durch das Erstellen oder Verwerfen eines gruppierten Indexes einer Tabelle werden alle nicht gruppierten Indexes der Tabelle doppelt neu erstellt.  
@@ -232,11 +232,11 @@ GO
   
 -   VIEW DATABASE STATE-Berechtigung zum Zurückgeben von Informationen zu allen Objekten innerhalb der angegebenen Datenbank mithilfe des Objekt-Platzhalters @*Object_id*= NULL.  
   
--   VIEW SERVER STATE-Berechtigung zum Zurückgeben von Informationen zu allen Datenbanken mithilfe des Datenbank-Platzhalters @*Database_id* = NULL.  
+-   VIEW SERVER STATE-Berechtigung zum Zurückgeben von Informationen zu allen Datenbanken, mit der Datenbank-Platzhalter @*Database_id* = NULL.  
   
  Wenn die VIEW DATABASE STATE-Berechtigung erteilt wurde, ist die Rückgabe für alle Objekte in der Datenbank zulässig, unabhängig davon, ob CONTROL-Berechtigungen für bestimmte Objekte verweigert wurden.  
   
- Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Auch wenn dem Datenbank-Platzhalter @*Database_id*= NULL angegeben wird, wird die Datenbank ausgelassen.  
+ Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Auch wenn der Datenbank-Platzhalter @*Database_id*= NULL angegeben wird, die Datenbank fehlt.  
   
  Weitere Informationen finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
@@ -289,7 +289,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. Zurückgeben von Informationen zu allen Datenbanken  
- Im folgenden Beispiel werden alle Statistiken für alle Tabellen und Indizes innerhalb der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben, indem der Platzhalter `NULL` für alle Parameter angegeben wird. Zum Ausführen dieser Abfrage erfordert die VIEW SERVER STATE-Berechtigung.  
+ Im folgenden Beispiel werden alle Statistiken für alle Tabellen und Indizes innerhalb der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben, indem der Platzhalter `NULL` für alle Parameter angegeben wird. Diese Abfrage ausführt, erfordert die VIEW SERVER STATE-Berechtigung.  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. Verwenden von "sys.dm_db_index_physical_stats" in einem Skript, um Indizes neu zu erstellen oder neu zu organisieren  
- Im folgenden Beispiel werden automatisch alle Partitionen in einer Datenbank neu angeordnet oder neu erstellt, die eine durchschnittliche Fragmentierung von über 10 % aufweisen. Zum Ausführen dieser Abfrage ist die VIEW DATABASE STATE-Berechtigung erforderlich. In diesem Beispiel wird `DB_ID` als erster Parameter angegeben, ohne einen Datenbanknamen anzugeben. Ein Fehler wird generiert, wenn die aktuelle Datenbank über einen Kompatibilitätsgrad von 80 oder niedriger verfügt. Zum Beheben des Fehlers ersetzen Sie `DB_ID()` durch einen gültigen Datenbanknamen. Weitere Informationen zu Kompatibilitätsgraden von Datenbanken finden Sie unter [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Im folgenden Beispiel werden automatisch alle Partitionen in einer Datenbank neu angeordnet oder neu erstellt, die eine durchschnittliche Fragmentierung von über 10 % aufweisen. Zum Ausführen dieser Abfrage ist die VIEW DATABASE STATE-Berechtigung erforderlich. In diesem Beispiel wird `DB_ID` als erster Parameter angegeben, ohne einen Datenbanknamen anzugeben. Ein Fehler wird generiert, wenn die aktuelle Datenbank über einen Kompatibilitätsgrad von 80 oder niedriger verfügt. Zum Beheben des Fehlers ersetzen Sie `DB_ID()` durch einen gültigen Datenbanknamen. Weitere Informationen zu Datenbank-Kompatibilitätsgrade, finden Sie unter [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -410,13 +410,13 @@ FROM sys.dm_db_index_physical_stats (db_id(),
     object_id ('t3'), null, null, 'DETAILED');  
 ```  
   
-### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>G. Abfragen von Service Broker-Warteschlangen für Indexfragmentierung  
+### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>G. Abfragen von Service Broker-Warteschlangen zur Indexfragmentierung  
   
 ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- In den folgenden Beispielen wird gezeigt, wie Server Broker-Warteschlangen Fragmentierung abgefragt wird.  
+ In den folgenden Beispielen wird gezeigt, wie Server Broker-Warteschlangen für die Fragmentierung abgefragt wird.  
   
 ```  
 --Using queue internal table name   

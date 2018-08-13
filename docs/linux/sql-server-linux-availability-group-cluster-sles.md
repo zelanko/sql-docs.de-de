@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c589d08832e08399d54ca9612fc1468a6b1f3baf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084822"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415509"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -215,7 +215,7 @@ crm configure property cluster-recheck-interval=2min
 
 Weitere Informationen zu den Eigenschaften der Pacemaker-Cluster, finden Sie unter [Konfigurieren von Clusterressourcen](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# <a name="configure-fencing-stonith"></a>Konfigurieren von Umgrenzung (STONITH)
+## <a name="configure-fencing-stonith"></a>Konfigurieren von Umgrenzung (STONITH)
 Pacemaker-Clusters Anbieter erfordern STONITH aktiviert werden und ein umgrenzungs-Gerät, das für einen unterstützten Cluster-Setup konfiguriert. Wenn der Clusterressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, Umgrenzung dient zum Cluster erneut in einen bekannten Zustand zu bringen.
 
 Ressource Ebene Umgrenzung hauptsächlich wird sichergestellt, dass es keine datenbeschädigung bei einem Ausfall durch Konfigurieren einer Ressource. Können Sie Ressourcen auf Umgrenzung, z. B. mit DRBD (Distributed repliziert Blockgerät), um den Datenträger auf einem Knoten, wie wenn veraltet zu markieren die kommunikationsverbindung ausfällt.
@@ -237,6 +237,16 @@ sudo crm configure property stonith-enabled=true
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Konfigurieren Sie die Clusterressourcen für SQL Server
 
 Finden Sie unter [SLES-Verwaltung-Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## <a name="enable-pacemaker"></a>Aktivieren von Pacemaker
+
+Aktivieren Sie Pacemaker, sodass er automatisch gestartet.
+
+Führen Sie den folgenden Befehl auf jedem Knoten im Cluster.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### <a name="create-availability-group-resource"></a>Verfügbarkeitsgruppen-Ressource erstellen
 

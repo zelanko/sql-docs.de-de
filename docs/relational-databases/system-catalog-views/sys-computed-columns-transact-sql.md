@@ -1,5 +1,5 @@
 ---
-title: computed_columns (Transact-SQL) | Microsoft Docs
+title: computed_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140fca749d8f9564b6d413a6e03eb7f5f57fb7e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9708eb66a90039a5098497863cbe54923e2651e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178716"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541430"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jede Spalte im gefunden **sys.columns** , einer berechneten Spalte.  
+  Enthält eine Zeile für jede Spalte in **sys.columns** , einer berechneten Spalte.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**||Die **computed_columns** Ansicht gibt alle Spalten in der **sys.columns** anzeigen. Darüber hinaus werden die unten beschriebenen, zusätzlichen Spalten zurückgegeben. Eine Beschreibung der Spalten, die die **computed_columns** Ansicht erbt von **sys.columns**, finden Sie unter [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). Der Wert von der **Is_computed** Spalte immer auf 1 festgelegt ist die **computed_columns** anzeigen.|  
+|**\<geerbte Spalten >**||Die **computed_columns** Ansicht gibt alle Spalten in der **sys.columns** anzeigen. Darüber hinaus werden die unten beschriebenen, zusätzlichen Spalten zurückgegeben. Eine Beschreibung der Spalten, die die **computed_columns** Ansicht erbt von **sys.columns**, finden Sie unter [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). Der Wert des der **Is_computed** Spalte immer auf 1 festgelegt ist die **computed_columns** anzeigen.|  
 |**definition**|**nvarchar(max)**|SQL-Text, der diese berechnete Spalte definiert.|  
 |**uses_database_collation**|**bit**|1 = Die Spaltendefinition hängt von der richtigen Auswertung der Standardsortierung der Datenbank ab, andernfalls ist der Wert 0. Durch diese Abhängigkeit wird verhindert, dass die Standardsortierung der Datenbank geändert wird.|  
 |**is_persisted**|**bit**|Die berechnete Spalte ist persistent.|  

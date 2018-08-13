@@ -1,5 +1,5 @@
 ---
-title: ROUTINEN (Transact-SQL) | Microsoft Docs
+title: ROUTINEN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240600"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548886"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "33240600"
  Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen von INFORMATION_SCHEMA. *View_name*.  
   
 > [!NOTE]  
->  Die ROUTINE_DEFINITION-Spalte enthält die quellanweisungen, die erstellt die Funktion oder gespeicherten Prozedur. Diese Quellanweisungen enthalten wahrscheinlich eingebettete Wagenrücklaufzeichen. Wenn Sie diese Spalte an eine Anwendung, die die Ergebnisse in einem Textformat anzeigt zurückgeben, können die eingebetteten Wagenrücklaufzeichen in den Ergebnissen ROUTINE_DEFINITION beeinflussen die Formatierung des gesamten Resultsets. Wenn Sie die ROUTINE_DEFINITION Spalte auswählen, müssen Sie die eingebetteten Wagenrücklaufzeichen anpassen; z. B. durch das Zurückgeben der Resultsets in einem Raster oder ROUTINE_DEFINITION in ein eigenes Textfeld zurückgeben.  
+>  Die ROUTINE_DEFINITION-Spalte enthält die quellanweisungen, die die Funktion erstellt oder eine gespeicherte Prozedur. Diese Quellanweisungen enthalten wahrscheinlich eingebettete Wagenrücklaufzeichen. Wenn Sie diese Spalte auf eine Anwendung, die die Ergebnisse in einem Textformat anzeigt zurückgeben, können die eingebetteten Wagenrücklaufzeichen in den Ergebnissen ROUTINE_DEFINITION Auswirkungen auf die Formatierung des gesamten Resultsets. Wenn Sie die ROUTINE_DEFINITION Spalte auswählen, müssen Sie die eingebetteten Wagenrücklaufzeichen anpassen; z. B. durch Zurückgeben von Resultsets in einem Raster oder ROUTINE_DEFINITION in ein eigenes Textfeld zurückgeben.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|SPECIFIC_CATALOG|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**Nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
-|SPECIFIC_NAME|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_NAME.|  
+|SPECIFIC_CATALOG|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist ROUTINE_CATALOG identisch.|  
+|SPECIFIC_SCHEMA|**Nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|SPECIFIC_NAME|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist ROUTINE_NAME identisch.|  
 |ROUTINE_CATALOG|**Nvarchar (** 128 **)**|Katalogname der Funktion.|  
-|ROUTINE_SCHEMA|**Nvarchar (** 128 **)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|ROUTINE_SCHEMA|**Nvarchar (** 128 **)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |ROUTINE_NAME|**Nvarchar (** 128 **)**|Name der Funktion.|  
 |ROUTINE_TYPE|**Nvarchar (** 20 **)**|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |MODULE_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
@@ -55,19 +55,19 @@ ms.locfileid: "33240600"
 |UDT_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |UDT_SCHEMA|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |UDT_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
-|DATA_TYPE|**Nvarchar (** 128 **)**|Datentyp des Rückgabewerts der Funktion. Gibt **Tabelle** Wenn eine Funktion mit Tabellenrückgabe.|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|Maximale Länge in Zeichen, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten.|  
-|CHARACTER_OCTET_LENGTH|**int**|Maximale Länge in Bytes, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten.|  
+|DATA_TYPE|**Nvarchar (** 128 **)**|Datentyp des Rückgabewerts der Funktion. Gibt **Tabelle** bei einer Funktion mit Tabellenrückgabe.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|Maximale Länge in Zeichen, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und große Werttypen.|  
+|CHARACTER_OCTET_LENGTH|**int**|Maximale Länge in Bytes, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und große Werttypen.|  
 |COLLATION_CATALOG|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |COLLATION_SCHEMA|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |COLLATION_NAME|**Nvarchar (** 128 **)**|Sortierungsname des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
 |CHARACTER_SET_CATALOG|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |CHARACTER_SET_SCHEMA|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |CHARACTER_SET_NAME|**Nvarchar (** 128 **)**|Name des Zeichensatzes des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
-|NUMERIC_PRECISION|**smallint**|Numerische Genauigkeit des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
+|NUMERIC_PRECISION|**smallint**|Numerische Genauigkeit des Rückgabewerts. Für nicht-numerischen Typen wird NULL zurückgegeben.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Numerische Basis der Genauigkeit des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
 |NUMERIC_SCALE|**smallint**|Dezimalstellen des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
-|DATETIME_PRECISION|**smallint**|Fraktionale Genauigkeit von einer Sekunde, wenn der Rückgabewert vom Typ **"DateTime"**. Andernfalls wird NULL zurückgegeben.|  
+|DATETIME_PRECISION|**smallint**|Genauigkeit von Bruchteilen einer Sekunde an, wenn der Rückgabewert vom Typ **"DateTime"**. Andernfalls wird NULL zurückgegeben.|  
 |INTERVAL_TYPE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |INTERVAL_PRECISION|**smallint**|NULL. Zur künftigen Verwendung reserviert.|  
 |TYPE_UDT_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240600"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Zur künftigen Verwendung reserviert.|  
 |DTD_IDENTIFIER|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |ROUTINE_BODY|**Nvarchar (** 30 **)**|Gibt SQL für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion und EXTERNAL für eine extern geschriebene Funktion zurück.<br /><br /> Funktionen sind immer SQL.|  
-|ROUTINE_DEFINITION|**Nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die vollständige Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder der Definition-Spalte in der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.|  
+|ROUTINE_DEFINITION|**Nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die vollständige Definition erhalten, Fragen den [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) Funktion oder der Definition-Spalte in der [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.|  
 |EXTERNAL_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |EXTERNAL_LANGUAGE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |PARAMETER_STYLE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  

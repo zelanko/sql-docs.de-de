@@ -1,5 +1,5 @@
 ---
-title: FREETEXTTABLE (Transact-SQL) | Microsoft Docs
+title: FREETEXTTABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,20 +26,20 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239050"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540560"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ist eine Funktion verwendet die [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung ausführen eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für die Volltext-volltextindizierte Spalten mit zeichenbasierten Datentypen. Diese Funktion gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen für alle Spalten mit Werten, die die Bedeutung und nicht nur mit dem genauen Wortlaut des Texts in der angegebenen entsprechen *Freetext_string*. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
+  Ist eine Funktion der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung Ausführen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche Volltext-indizierte Spalten mit zeichenbasierten Datentypen. Diese Funktion gibt eine Tabelle mit 0 (null) oder mehr Zeilen für alle Spalten mit Werten, die die Bedeutung und nicht nur den genauen Wortlaut des Textes in der angegebenen *Freetext_string*. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
   
- FREETEXTTABLE eignet sich für dieselben Arten von Übereinstimmungen als die [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
+ FREETEXTTABLE eignet sich für unterschiedliche Arten von Spielen als das [FREETEXT &#40;Transact-SQL-&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
  Abfragen, die FREETEXTTABLE verwenden, geben für jede Zeile einen Relevanzrangfolgenwert (Relevance Ranking Value, RANK) und einen Volltextschlüssel (KEY) zurück.  
   
@@ -62,9 +62,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argumente  
  *table*  
- Der Name der Tabelle, die für Volltextabfragen markiert wurde. *Tabelle* oder *Ansicht*kann ein ein-, zwei- oder dreiteiligen Datenbankobjekt-Name sein. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
+ Der Name der Tabelle, die für Volltextabfragen markiert wurde. *Tabelle* oder *Ansicht*kann ein, zwei oder drei Datenbank-Objektnamen. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
   
- *Tabelle* dürfen keinen Servernamen und nicht in Abfragen auf Verbindungsservern verwendet werden.  
+ *Tabelle* kann keinen Servernamen angeben und nicht in Abfragen auf Verbindungsservern verwendet werden.  
   
  *column_name*  
  Der Name einer oder mehrerer volltextindizierten Spalten der in der FROM-Klausel angegebenen Tabelle. Die Spalten können vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** oder **varbinary(max)** sein.  
@@ -73,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern stehen. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
   
  \*  
- Gibt an, dass alle für die Volltextsuche registrierten Spalten nach dem angegebenen *freetext_string*-Wert durchsucht werden. Es sei denn, *Language_term* angegeben ist, wird die Sprache aller Volltext-indizierte Spalten in der Tabelle muss identisch sein.  
+ Gibt an, dass alle für die Volltextsuche registrierten Spalten nach dem angegebenen *freetext_string*-Wert durchsucht werden. Wenn *Language_term* angegeben ist, wird die Sprache aller Volltext-indizierte Spalten in der Tabelle muss identisch sein.  
   
  *freetext_string*  
  Der Text, nach dem in *column_name* gesucht werden soll. Es kann hierbei ein beliebiger Text aus Wörtern, Ausdrücken und Sätzen eingegeben werden. Übereinstimmungen werden dann generiert, wenn ein Begriff oder Formen eines Begriffs im Volltextindex gefunden werden.  
   
- Suchen Sie im Gegensatz zu Contains Where-Bedingung AND ist ein Schlüsselwort in *Freetext_string* das Wort 'und' gilt als Füllwort oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), und werden verworfen.  
+ Im Gegensatz zu den enthält suchen Where-Bedingung und ist ein Schlüsselwort in *Freetext_string* das Wort "und" gilt ein Füllwort oder [Wortsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), und verworfen.  
   
  Die Verwendung von WEIGHT, FORMSOF, Platzhaltern, NEAR und anderer Syntax ist nicht zulässig. Für *freetext_string* wird eine Worttrennung durchgeführt, und die Wörter werden auf den Stamm zurückgeführt und durchlaufen den Thesaurus.  
   
@@ -94,14 +94,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
  *top_n_by_rank*  
- Gibt an, dass nur die *n*höchste Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn auf einen ganzzahligen Wert *n*, angegeben ist. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* können Sie die abfrageleistung zu erhöhen, indem Sie nur die relevantesten Treffer erneut aufrufen.  
+ Gibt an, dass nur die *n*höchsten Rang entspricht in absteigender Reihenfolge zurückgegeben. Gilt nur, wenn ein Ganzzahlwert *n*, angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* Abfrageperformance steigern Sie mit den wichtigsten Punkten.  
   
 ## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
  FREETEXTTABLE verwendet die gleichen Suchbedingungen wie das FREETEXT-Prädikat.  
   
- Wie bei CONTAINSTABLE enthält die zurückgegebene Tabelle enthält Spalten, die mit dem Namen **Schlüssel** und **Rang**, die verwiesen wird innerhalb der Abfrage an die entsprechenden Zeilen abzurufen und die zeilenrangfolgenwerte zu verwenden.  
+ Die zurückgegebene Tabelle besitzt wie CONTAINSTABLE, Spalten **Schlüssel** und **Rang**, die in der Abfrage und die entsprechenden Zeilen der Zeile Werte ranking verwiesen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  FREETEXTTABLE kann nur von Benutzern aufgerufen werden, die entsprechende SELECT-Berechtigungen für die angegebene Tabelle oder die referenzierten Spalten der Tabelle besitzen.  
@@ -109,7 +109,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-example"></a>A. Einfaches Beispiel  
- Das folgende Beispiel erstellt und füllt eine einfache Tabelle zwei Spalten auflisten 3 Countys und die Farben in ihre Flags. Der It erstellt und füllt einen Volltextkatalog und den Index der Tabelle. Die **FREETEXTTABLE** wird die Syntax veranschaulicht.  
+ Im folgende Beispiel erstellt und füllt eine Tabelle zwei Spalten mit 3 Landkreise und Farben in ihren Flags. It erstellt und füllt einen Volltextkatalog und Index für die Tabelle. Die **FREETEXTTABLE** Syntax veranschaulicht.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. Angeben der Sprache und der höchsten Übereinstimmungen  
- Im folgenden Beispiel ist identisch, und zeigt die Verwendung der `LANGUAGE` *Language_term* und *Top_n_by_rank* Parameter.  
+ Im folgenden Beispiel entspricht und veranschaulicht die Verwendung der `LANGUAGE` *Language_term* und *Top_n_by_rank* Parameter.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,12 +167,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Die Sprache *Language_term* Paramete*r* ist nicht erforderlich, verwenden Sie die *Top_n_by_rank* Parameter *.*  
+>  Die Sprache *Language_term* erfüllten*r* muss nicht mit der *Top_n_by_rank* Parameter *.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [Erstellen Sie FULLTEXT CATALOG & #40; Transact-SQL & #41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   

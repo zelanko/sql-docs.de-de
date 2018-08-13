@@ -1,5 +1,5 @@
 ---
-title: Sys.Triggers (Transact-SQL) | Microsoft Docs
+title: Sys.Triggers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c176e5cdf68b5aa9516cd054a57f36c630b0c64
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb87bc58f99cc501bff8d8a04f503f2fb04f1e3b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221781"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547140"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33221781"
 |**type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Das Datum, an dem der Trigger erstellt wurde.|  
 |**modify_date**|**datetime**|Das Datum, an dem das Objekt zuletzt mithilfe einer ALTER-Anweisung geändert wurde.|  
-|**is_ms_shipped**|**bit**|Trigger im Namen des Benutzers, der von einer internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente.|  
+|**is_ms_shipped**|**bit**|Trigger im Auftrag des Benutzers, der von einer internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente.|  
 |**is_disabled**|**bit**|Trigger ist deaktiviert.|  
 |**is_not_for_replication**|**bit**|Der Trigger wurde mit der NOT FOR REPLICATION-Option erstellt.|  
 |**is_instead_of_trigger**|**bit**|1 = INSTEAD OF-Trigger<br /><br /> 0 = AFTER-Trigger|  

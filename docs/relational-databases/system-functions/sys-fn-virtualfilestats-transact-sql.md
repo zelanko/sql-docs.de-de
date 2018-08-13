@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: Sys. fn_virtualfilestats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 396eee771ece7036906d1ef8e09cc69c1ab2c1da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238264"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542890"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Information ist auch verfügbar, von der [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) -verwaltungssicht.  
+  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Informationen sind auch verfügbar, aus der [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) dynamische verwaltungssicht.  
 
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,7 +72,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**BytesOnDisk**|**bigint**|Die physische Dateigröße (Anzahl der Bytes) auf dem Datenträger.<br /><br /> Für Datenbankdateien, ist dies der gleiche Wert wie **Größe** in **Sys. database_files**, aber in Byte anstatt in Seiten ausgedrückt wird.<br /><br /> Bei Sparsedateien von Datenbankmomentaufnahmen ist dies der Speicherplatz, den das Betriebssystem für die Datei in Anspruch nimmt.|  
   
 ## <a name="remarks"></a>Hinweise  
- **Fn_virtualfilestats** ist ein System-Tabellenwertfunktion, die statistische Informationen, z. B. die Gesamtanzahl der e/as bietet für eine Datei ausgeführt wird. Diese Funktion hilft beim Verfolgen der Zeitdauer, die Benutzer warten müssen, um eine Datei zu lesen oder darin zu schreiben. Diese Funktion hilft außerdem beim Identifizieren der Dateien mit hoher E/A-Aktivität.  
+ **Fn_virtualfilestats** ist ein System-Tabellenwertfunktion, die statistische Informationen, z. B. die Gesamtanzahl der e/as zu erhalten, die für eine Datei ausgeführt. Diese Funktion hilft beim Verfolgen der Zeitdauer, die Benutzer warten müssen, um eine Datei zu lesen oder darin zu schreiben. Diese Funktion hilft außerdem beim Identifizieren der Dateien mit hoher E/A-Aktivität.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

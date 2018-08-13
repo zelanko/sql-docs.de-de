@@ -1,5 +1,5 @@
 ---
-title: dm_os_nodes (Transact-SQL) | Microsoft Docs
+title: dm_os_nodes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0931202ced4031ea99680a98c3cbc1d1030c629
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f73f50850e3324bcb01766d9ef381b6e96e2e8c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467366"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534750"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34467366"
 Eine interne Komponente mit der Bezeichnung SQLOS erstellt Knotenstrukturen, die die Lage des Hardwareprozessors imitieren. Diese Strukturen können geändert werden, mithilfe von [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) um benutzerdefinierte knotenlayouts zu erstellen.  
 
 > [!NOTE]
-> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Soft-NUMA automatisch bestimmte Hardwarekonfigurationen verwenden. Weitere Informationen finden Sie unter [automatischer Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Soft-NUMA automatisch bestimmte Hardwarekonfigurationen verwenden. Weitere Informationen finden Sie unter [automatischen Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 Die folgende Tabelle enthält Informationen zu diesen Knoten.  
   
@@ -47,11 +47,11 @@ Die folgende Tabelle enthält Informationen zu diesen Knoten.
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID des Knotens.|  
-|node_state_desc|**nvarchar(256)**|Beschreibung des Knotenzustands. Die Werte werden zuerst mit den sich gegenseitig ausschließenden Werten angezeigt, gefolgt von den kombinierbaren Werten. Beispiel:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Es gibt vier sich gegenseitig ausschließende Node_state_desc-Werte. Sie können mit ihren Beschreibungen sind unten aufgeführt.<br /><ul><li>ONLINE: Knoten online ist<li>OFFLINEMODUS: Knoten ist offline<li>Im Leerlauf: Knoten verfügt über keine ausstehenden arbeitsanforderungen und hat einen Leerlaufzustand angenommen.<li>IDLE_READY: Knoten verfügt über keine ausstehenden arbeitsanforderungen und ist bereit für den Leerlauf wechselt.</li></ul><br />Es gibt drei kombinierbare Node_state_desc-Werte, mit ihren Beschreibungen unten aufgeführt.<br /><ul><li>DAC: Dieser Knoten ist reserviert für die [dedizierte Verwaltungsverbindung](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Keine neuen Threads können auf diesem Knoten aufgrund einer Bedingung Speichermangel erstellt werden.<li>HOT ADDED: Gibt an, die Knoten hinzugefügt wurden, als Antwort auf eine aktive CPU-Ereignis hinzufügen.</li></ul>|  
-|memory_object_address|**varbinary(8)**|Adresse des Speicherobjekts ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
-|memory_clerk_address|**varbinary(8)**|Adresse des Speicherclerks ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
+|node_state_desc|**nvarchar(256)**|Beschreibung des Knotenzustands. Die Werte werden zuerst mit den sich gegenseitig ausschließenden Werten angezeigt, gefolgt von den kombinierbaren Werten. Zum Beispiel:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Es gibt vier sich gegenseitig ausschließende Node_state_desc-Werte. Sie können mit ihren Beschreibungen sind unten aufgeführt.<br /><ul><li>ONLINE: Knoten ist online<li>OFFLINE: Knoten ist offline<li>Im Leerlauf: Knoten verfügt über keine ausstehenden arbeitsanforderungen und hat einen Leerlaufzustand angenommen.<li>IDLE_READY: Knoten verfügt über keine ausstehenden arbeitsanforderungen und ist bereit für den Leerlauf wechselt.</li></ul><br />Es gibt drei kombinierbare Node_state_desc-Werte, die unten aufgeführten, mit ihren Beschreibungen aufgeführt.<br /><ul><li>DAC: Dieser Knoten ist reserviert für die [dedizierte Verwaltungsverbindung](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Keine neuen Threads können auf diesem Knoten aufgrund einer Bedingung für geringen Arbeitsspeicher erstellt werden.<li>HOT ADDED: Gibt an, die Knoten hinzugefügt wurden, als Reaktion auf ein Hinzufügen von CPUS.</li></ul>|  
+|memory_object_address|**varbinary(8)**|Adresse des Speicherobjekts ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [Sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
+|memory_clerk_address|**varbinary(8)**|Adresse des Speicherclerks ist diesem Knoten zugeordnet. 1: 1-Beziehung zu [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Adresse des Arbeitsthreads ist dem E/A-Abschluss für diesen Knoten zugewiesen. 1: 1-Beziehung zu [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  
-|memory_node_id|**smallint**|ID des Arbeitsspeicherknotens, zu dem dieser Knoten gehört. Viele-zu-eins-Beziehung zu [dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id.|  
+|memory_node_id|**smallint**|ID des Arbeitsspeicherknotens, zu dem dieser Knoten gehört. Zu viele-zu-eins-Beziehung [dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id.|  
 |cpu_affinity_mask|**bigint**|Bitmap, das die CPUs identifiziert, die diesem Knoten zugeordnet sind.|  
 |online_scheduler_count|**smallint**|Die Anzahl der onlinescheduler, die von diesem Knoten verwaltet werden.|  
 |idle_scheduler_count|**smallint**|Anzahl der Onlinescheduler, die über keinen aktiven Arbeitsthread verfügen.|  
@@ -71,6 +71,6 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
 
 ## <a name="see-also"></a>Siehe auch    
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

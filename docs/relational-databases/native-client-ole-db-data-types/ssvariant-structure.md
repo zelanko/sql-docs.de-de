@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420479"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551130"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT-Struktur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420479"
 
   Die **SSVARIANT** -Struktur, die in sqlncli.h definiert ist, entspricht einem DBTYPE_SQLVARIANT-Wert in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
- **SSVARIANT** ist eine unterscheidende Vereinigung. Abhängig vom Wert des Members vt kann der Consumer welches Element gelesen bestimmen. VT-Werte entsprechen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen. Aus diesem Grund die **SSVARIANT** Struktur kann beliebige SQL Server-Datentypen enthalten. Weitere Informationen zur Datenstruktur für OLE DB-Standardtypen finden Sie unter [Type Indicators](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** ist eine unterscheidende Vereinigung. Abhängig vom Wert des vt-Elements kann der Consumer feststellen, welches Element gelesen werden soll. vt-Werte entsprechen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen. Die **SSVARIANT**-Struktur kann daher jeden SQL Server-Typ enthalten. Weitere Informationen zur Datenstruktur für OLE DB-Standardtypen finden Sie unter [Type Indicators](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn DataTypeCompat == 80, mehrere **SSVARIANT** Untertypen werden Zeichenfolgen. Die folgenden vt-Werte beispielsweise erscheint **SSVARIANT** als VT_SS_WVARSTRING:  
+ Wenn DataTypeCompat auf „80“ festgelegt ist, werden verschiedene **SSVARIANT**-Untertypen zu Zeichenfolgen. Beispielsweise werden die folgenden vt-Werte in **SSVARIANT** als VT_SS_WVARSTRING angezeigt:  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,14 +58,14 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Den vollständigen Satz der zugriffsmakros für jedes Element der **SSVARIANT** Struktur, finden Sie in der Datei sqlncli.hi.  
   
- Die folgende Tabelle beschreibt die Elemente von der **SSVARIANT** Struktur:  
+ In der folgenden Tabelle werden die Elemente der **SSVARIANT**-Struktur beschrieben:  
   
 |Member|OLE DB-Typindikator|OLE DB-C-Datentyp|vt-Wert|Kommentare|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Gibt den Typ des Werts in der **SSVARIANT** Struktur.|  
+|VT|SSVARTYPE|||Gibt den Typ des Werts in der **SSVARIANT**-Struktur an.|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Unterstützt die **Tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
-|sShortIntVal|DBTYPE_I2|**KURZE**|**VT_SS_I2**|Unterstützt die **Smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
-|lIntVal|DBTYPE_I4|**LANGE**|**VT_SS_I4**|Unterstützt die **Int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Unterstützt die **Smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
+|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Unterstützt die **Int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Unterstützt die **Bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Unterstützt die **echte** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Unterstützt die **"float"** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Unterstützt die **Bit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Unterstützt die **Uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Unterstützt die **numerischen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Unterstützt die **Datum** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Unterstützt den **date**-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Unterstützt die **Smalldatetime**, **"DateTime"**, und **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Unterstützt die **Zeit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) gibt an, für die Dezimalstellen *tTime2Val* Wert.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Unterstützt die **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *TsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) gibt an, für die Dezimalstellen *TsDataTimeVal* Wert.|  

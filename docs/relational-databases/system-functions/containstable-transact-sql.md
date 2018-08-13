@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
+title: CONTAINSTABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238527"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547600"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen für alle Spalten mit genauen oder ungenauen (Fuzzy-) Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für den Abstand von Wörtern innerhalb einer bestimmten Entfernung voneinander oder gewichtete Übereinstimmungen. CONTAINSTABLE wird verwendet, der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung und als handele es sich um einen regulären Tabellennamen verwiesen wird. Es wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchgeführt.  
+  Gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen für alle Spalten mit genauen oder ungenauen (Fuzzy-) Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für den Abstand von Wörtern in einer bestimmten Entfernung voneinander oder gewichtete Treffer zurück. CONTAINSTABLE wird verwendet, der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung aus, und auf die verwiesen wird, als handele es sich um einen regulären Tabellennamen. Es wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchgeführt.  
   
- CONTAINSTABLE eignet sich für dieselben Arten von Übereinstimmungen als die [CONTAINS-Prädikat](../../t-sql/queries/contains-transact-sql.md) und verwendet die gleichen suchbedingungen wie CONTAINS.  
+ CONTAINSTABLE ist geeignet für dieselben Arten von Übereinstimmungen, als die [CONTAINS-Prädikat](../../t-sql/queries/contains-transact-sql.md) und verwendet die gleichen suchbedingungen wie CONTAINS.  
   
  Im Gegensatz zu CONTAINS werden bei Abfragen mit CONTAINSTABLE ein Relevanzrangfolgenwert (Relevance Ranking Value, RANK) und ein Volltextschlüssel (KEY) für jede Zeile zurückgeben.  Informationen zu den Formen der Volltextsuche, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
@@ -121,7 +121,7 @@ CONTAINSTABLE
  *table*  
  Der Name einer Tabelle, die volltextindiziert wurde. *Tabelle* kann ein ein-, zwei-, drei- oder vierteiliger Datenbankobjekt-Name sein. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
   
- *Tabelle* dürfen keinen Servernamen und nicht in Abfragen auf Verbindungsservern verwendet werden.  
+ *Tabelle* kann keinen Servernamen angeben und nicht in Abfragen auf Verbindungsservern verwendet werden.  
   
  *column_name*  
  Der Name einer oder mehreren Spalten, die für die Volltextsuche indiziert werden. Die Spalten können vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** oder **varbinary(max)** sein.  
@@ -130,29 +130,29 @@ CONTAINSTABLE
  Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern stehen. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
   
  \*  
- Gibt an, dass alle volltextindizierten Spalten in indizierten *Tabelle* sollte verwendet werden, um nach der angegebenen Suchbedingung zu suchen. Sofern *language_term* nicht angegeben ist, muss die Sprache aller Spalten in der Tabelle identisch sein.  
+ Gibt an, dass alle volltextindizierten Spalten in indizierten *Tabelle* sollte verwendet werden, um die festgelegte Suchbedingung gesucht. Sofern *language_term* nicht angegeben ist, muss die Sprache aller Spalten in der Tabelle identisch sein.  
   
  LANGUAGE *language_term*  
- Ist die Sprache, deren Ressourcen für die wörtertrennung, wortstammerkennung und Thesaurus und Füllwörtern verwendet werden (oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) als Teil der Abfrage entfernen. Dieser Parameter ist optional und kann als Zeichenfolge, ganze Zahl oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier – LCID) einer Sprache angegeben werden. Wird *language_term* angegeben, wird die entsprechende Sprache auf alle Elemente der Suchbedingung angewendet. Wird kein Wert angegeben, wird die Volltextsprache der Spalte verwendet.  
+ Die Sprache, deren Ressourcen für die wörtertrennung, wortstammerkennung und Thesaurus und Füllwörtern verwendet werden (oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) entfernen, die als Teil der Abfrage. Dieser Parameter ist optional und kann als Zeichenfolge, ganze Zahl oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier – LCID) einer Sprache angegeben werden. Wird *language_term* angegeben, wird die entsprechende Sprache auf alle Elemente der Suchbedingung angewendet. Wird kein Wert angegeben, wird die Volltextsprache der Spalte verwendet.  
   
  Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte kann die Angabe von *LANGUAGE**language_term* die Wahrscheinlichkeit einer hohen Übereinstimmung steigern.  
   
- Wenn als eine Zeichenfolge angegeben *Language_term* entspricht der **Alias** Spaltenwert in der [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) -kompatibilitätssicht angezeigt.  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ Wenn als Zeichenfolge angegeben *Language_term* entspricht der **Alias** Spaltenwert in der [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) -kompatibilitätssicht angezeigt.  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
  Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) angegeben, wird er von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert.  
   
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
  *top_n_by_rank*  
- Gibt an, dass nur die *n* höchste Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn auf einen ganzzahligen Wert *n*, angegeben ist. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* können Sie die abfrageleistung zu erhöhen, indem Sie nur die relevantesten Treffer erneut aufrufen.  
+ Gibt an, dass nur die *n* höchste Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn ein Ganzzahlwert *n*, angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* lässt sich die abfrageleistung zu erhöhen, indem Sie nur die relevantesten Treffer erneut aufrufen.  
   
  <contains_search_condition>  
- Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an. Informationen zu suchbedingungen finden Sie unter [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an. Weitere Informationen zu suchbedingungen, finden Sie unter [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
- Die zurückgegebene Tabelle besitzt eine Spalte namens **Schlüssel** , Volltext-Schlüsselwerte enthält. Jede volltextindizierte Tabelle besitzt, eine Spalte, deren Werte garantiert eindeutig sein, und die Rückgabewerte die **Schlüssel** Spalte sind die Volltext-Schlüsselwerte der Zeilen, die die angegebenen Auswahlkriterien in entsprechen die Suche enthält Bedingung. Die **TableFulltextKeyColumn** Eigenschaft, die von der OBJECTPROPERTYEX-Funktion stellt die Identität des diese eindeutige Schlüsselspalte bereit. Verwenden Sie zum Abrufen der ID der Spalte der Volltextschlüssel für den Volltextindex zugeordnete **fulltext_indexes**. Weitere Informationen finden Sie unter [fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Die zurückgegebene Tabelle besitzt eine Spalte namens **Schlüssel** , Volltext-Schlüsselwerte enthält. Jeder indizierten Volltexttabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sein, und die Rückgabewerte der **Schlüssel** Spalte sind die Volltext-Schlüsselwerte der Zeilen, die die angegebenen Auswahlkriterien in entsprechen die Suche enthält Bedingung. Die **TableFulltextKeyColumn** Eigenschaft, die von der OBJECTPROPERTYEX-Funktion stellt die Identität diese eindeutige Schlüsselspalte bereit. Verwenden Sie zum Abrufen der ID der Spalte verknüpft ist, mit dem Schlüssel Volltext-die Volltextindex- **Sys. fulltext_indexes**. Weitere Informationen finden Sie unter [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Geben Sie einen Join mit den CONTAINSTABLE-Zeilen an, um die gewünschten Zeilen der Originaltabelle zu erhalten. CONTAINSTABLE wird meist in folgender Form in der FROM-Klausel einer SELECT-Anweisung verwendet:  
   
@@ -175,7 +175,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-example"></a>A. Einfaches Beispiel  
- Das folgende Beispiel erstellt und füllt eine einfache Tabelle zwei Spalten auflisten 3 Countys und die Farben in ihre Flags. Der It erstellt und füllt einen Volltextkatalog und den Index der Tabelle. Die **CONTAINSTABLE** wird die Syntax veranschaulicht. In diesem Beispiel wird veranschaulicht, wie der Rangwert höher wächst, wenn der Wert für die Suche mehrere Male erfüllt ist. In der letzten Abfrage hat Tansania der grünen und schwarzen enthält einen höheren Rang als Italien nur eines der abgefragten Farben aufweisen.  
+ Im folgende Beispiel erstellt und füllt eine Tabelle zwei Spalten mit 3 Landkreise und Farben in ihren Flags. It erstellt und füllt einen Volltextkatalog und Index für die Tabelle. Die **CONTAINSTABLE** wird die Syntax veranschaulicht. In diesem Beispiel wird veranschaulicht, wie der Rangwert höher wächst, wenn der gesuchte Wert mehrmals erfüllt ist. In der letzten Abfrage hat Tansania, die sowohl "Grün" und "Schwarz enthält einen höheren Rang als Italien, die nur eine der abgefragten Farben enthalten.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  

@@ -19,19 +19,19 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80629d81a9212801e65e272f5790b0cc57a11103
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2f1e1f961dd9ece3d69044e00dd9183920af0ba4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535500"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und die Xml-Datentypen als binary large Objects (BLOBs ). Die **lesen** Methode **ISequentialStream** ermöglicht dem Consumer, die viel Datenmengen in überschaubaren Abschnitten abzurufen.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und die Xml-Datentypen als binary large Objects (BLOBs ). Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
  Ein Beispiel für diese Funktion ist, finden Sie unter [festlegen großer Datenmengen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "37428739"
   
 ## <a name="storage-object-limitations"></a>Speicherobjekteinschränkungen  
   
--   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann nur ein einzelnes geöffnetes Speicherobjekt unterstützen. Versucht, mehr als ein Speicherobjekt zu öffnen (zum Abrufen eines Verweises auf mehr als einem **ISequentialStream** Schnittstellenzeiger) DBSTATUS_E_CANTCREATE zurückgegeben.  
+-   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann nur ein einzelnes geöffnetes Speicherobjekt unterstützen. Wenn versucht wird, mehrere Speicherobjekte zu öffnen (um einen Verweis auf mehrere **ISequentialStream**-Schnittstellenzeiger abzurufen), wird DBSTATUS_E_CANTCREATE zurückgegeben.  
   
 -   In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, der Standardwert der schreibgeschützten DBPROP_BLOCKINGSTORAGEOBJECTS-nur-Lese-Eigenschaft ist auf VARIANT_TRUE festgelegt. Das zeigt an, dass einige Methoden (solche, die sich nicht in den Speicherobjekten befinden) mit E_UNEXPECTED fehlschlagen, wenn ein Speicherobjekt aktiv ist.  
   

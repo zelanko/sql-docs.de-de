@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: Sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467766"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548950"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Entität in der aktuellen Datenbank zurück, die anhand des Namens auf eine andere benutzerdefinierte Entität verweist. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die *Entität verwiesen*, angezeigt wird, namentlich in einem persistenten SQL-Ausdruck, der einer anderen Entität, die mit dem Namen der *verweisende Entität*. Wird z. B. ein benutzerdefinierter Typ (User-Defined Type; UDT) als Entität angegeben, auf die verwiesen wird, gibt diese Funktion jede benutzerdefinierte Entität zurück, die anhand des Namens in der zugehörigen Definition auf diesen Typ verweist. Die Funktion gibt keine Entitäten in anderen Datenbanken zurück, die möglicherweise auf die angegebene Entität verweisen. Diese Funktion muss zusammen mit der master-Datenbank ausgeführt werden, um einen DDL-Trigger auf Serverebene als verweisende Entität zurückzugeben.  
+  Gibt eine Zeile für jede Entität in der aktuellen Datenbank zurück, die anhand des Namens auf eine andere benutzerdefinierte Entität verweist. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die *Entität verwiesen*, namentlich in einem persistenten SQL-Ausdruck, der eine andere Entität, die aufgerufen wird die *verweisende Entität*. Wird z. B. ein benutzerdefinierter Typ (User-Defined Type; UDT) als Entität angegeben, auf die verwiesen wird, gibt diese Funktion jede benutzerdefinierte Entität zurück, die anhand des Namens in der zugehörigen Definition auf diesen Typ verweist. Die Funktion gibt keine Entitäten in anderen Datenbanken zurück, die möglicherweise auf die angegebene Entität verweisen. Diese Funktion muss zusammen mit der master-Datenbank ausgeführt werden, um einen DDL-Trigger auf Serverebene als verweisende Entität zurückzugeben.  
   
  Verwenden Sie diese dynamische Verwaltungsfunktion, um zu folgenden Entitätstypen in der aktuellen Datenbank, die auf die angegebene Entität verweisen, einen Bericht zu erstellen:  
   
@@ -67,7 +67,7 @@ sys.dm_sql_referencing_entities (
  *schema_name.referenced*_*entity_name*  
  Der Name der Entität, auf die verwiesen wird.  
   
- *Schema_name* außer erforderlich, wenn die referenzierte Klasse PARTITION_FUNCTION ist.  
+ *Schema_name* ist mit Ausnahme von erforderlich, wenn die referenzierte Klasse um PARTITION_FUNCTION ist.  
   
  *schema_name.referenced_entity_name* ist **nvarchar(517)**.  
   
@@ -83,7 +83,7 @@ sys.dm_sql_referencing_entities (
 |referencing_schema_name|**sysname**|Schema, in das die verweisende Entität gehört. Lässt NULL-Werte zu.<br /><br /> NULL für DDL-Trigger auf Datenbankebene und Serverebene.|  
 |referencing_entity_name|**sysname**|Name der verweisenden Entität. Lässt keine NULL-Werte zu.|  
 |referencing_id|**int**|ID der verweisenden Entität. Lässt keine NULL-Werte zu.|  
-|referencing_class|**tinyint**|Klasse der verweisenden Entität. Lässt keine NULL-Werte zu.<br /><br /> 1 = Objekt<br /><br /> 12 = Datenbankebene DDL-Trigger<br /><br /> 13 = Serverebene DDL-Trigger|  
+|referencing_class|**tinyint**|Klasse der verweisenden Entität. Lässt keine NULL-Werte zu.<br /><br /> 1 = Objekt<br /><br /> 12 = auf Datenbankebene DDL-Trigger<br /><br /> 13 = auf Serverebene DDL-Trigger|  
 |referencing_class_desc|**nvarchar(60)**|Klassenbeschreibung der verweisenden Entität.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Gibt an, dass die Auflösung der Entität, auf die verwiesen wird, zur Laufzeit erfolgt, weil sie vom Schema des Aufrufers abhängt.<br /><br /> 1 = Die verweisende Entität kann zwar auf die Entität verweisen, doch die Auflösung der ID der Entität, auf die verwiesen wird, hängt vom Aufrufer ab und kann nicht bestimmt werden. Dies gilt nur für nicht schemagebundene Verweise auf eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder eine benutzerdefinierte Funktion, die in einer EXECUTE-Anweisung aufgerufen wird.<br /><br /> 0 = Die Entität, auf die verwiesen wird, ist kein aufruferabhängiges Element.|  
   
@@ -105,24 +105,24 @@ sys.dm_sql_referencing_entities (
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
-|Tabelle|Ja*|ja|  
-|Sicht|ja|ja|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
-|Gespeicherte CLR-Prozedur|nein|ja|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
-|CLR-benutzerdefinierte Funktion|nein|ja|  
+|Tabelle|Ja*|Benutzerkontensteuerung|  
+|Anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Gespeicherte CLR-Prozedur|nein|Benutzerkontensteuerung|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|CLR-benutzerdefinierte Funktion|nein|Benutzerkontensteuerung|  
 |CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|Erweiterte gespeicherte Prozeduren|nein|ja|  
-|Warteschlange|nein|ja|  
-|Synonym|nein|ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|ja|  
-|XML-Schemaauflistung|nein|ja|  
-|Partitionsfunktion|nein|ja|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|  
+|Erweiterte gespeicherte Prozeduren|nein|Benutzerkontensteuerung|  
+|Warteschlange|nein|Benutzerkontensteuerung|  
+|Synonym|nein|Benutzerkontensteuerung|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|Benutzerkontensteuerung|  
+|XML-Schemaauflistung|nein|Benutzerkontensteuerung|  
+|Partitionsfunktion|nein|Benutzerkontensteuerung|  
   
- \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
+ \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur dann, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
  ** Nummerierte gespeicherte Prozeduren mit einem ganzzahligen Wert größer als 1 werden weder als verweisende Entität noch als Entität, auf die verwiesen wird, aufgezeichnet.  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Zurückgeben der Entitäten, die auf einen bestimmten Typ verweisen  
- Im folgenden Beispiel werden die Entitäten zurückgegeben, die auf den Aliastyp `dbo.Flag` verweisen. Das Resultset zeigt an, dass zwei gespeicherte Prozeduren diesen Typ verwenden. Die `dbo.Flag` Typ wird auch verwendet, in der Definition mehrerer Spalten in der `HumanResources.Employee` Tabelle ist jedoch, da der Typ nicht in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung in der Tabelle vorhanden ist, werden keine Zeilen zurückgegeben für die `HumanResources.Employee`Tabelle.  
+ Im folgenden Beispiel werden die Entitäten zurückgegeben, die auf den Aliastyp `dbo.Flag` verweisen. Das Resultset zeigt an, dass zwei gespeicherte Prozeduren diesen Typ verwenden. Die `dbo.Flag` Typ wird auch verwendet, in der Definition mehrerer Spalten in der `HumanResources.Employee` Tabelle; jedoch, da der Typ nicht in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung in der Tabelle vorhanden ist, keine Zeilen zurückgegeben werden für die `HumanResources.Employee`Tabelle.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_locks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbc8bb6eb7dc1a178a44e67b9e23b7ec98c75dce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d93e4eda256c689c0850300b18c906a080bfdd64
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467966"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536789"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,17 +51,17 @@ ms.locfileid: "34467966"
 |**resource_lock_partition**|**Int**|ID der Sperrenpartition für eine partitionierte Sperrenressource. Nicht partitionierte Sperrenressourcen haben den Wert 0.|  
 |**request_mode**|**nvarchar(60)**|Der Anforderungsmodus. Für erteilte Anforderungen ist dies der erteilte Modus, für wartende Anforderungen ist dies der angeforderte Modus.|  
 |**request_type**|**nvarchar(60)**|Der Anforderungstyp. Der Wert ist LOCK.|  
-|**request_status**|**nvarchar(60)**|Aktueller Status dieser Anforderung. Mögliche Werte sind GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT oder ABORT_BLOCKERS. Weitere Informationen zu Wartezeiten mit niedriger Priorität und abbruchsblockern finden Sie unter der *Low_priority_lock_wait* Abschnitt [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|Aktueller Status dieser Anforderung. Mögliche Werte sind GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT oder ABORT_BLOCKERS. Weitere Informationen zu Wartezeiten mit niedriger Priorität und abbruchsblockern finden Sie unter den *Low_priority_lock_wait* Abschnitt [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Gibt zurück, wie oft derselbe Anforderer diese Ressource ungefähr angefordert hat.|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|Sitzungs-ID, der diese Anforderung derzeit gehört. Die Sitzungs-ID für den Besitzer kann sich für verteilte und gebundene Transaktionen ändern. Der Wert -2 gibt an, dass die Anforderung einer verwaisten verteilten Transaktion gehört. Der Wert -3 gibt an, dass die Anforderung zu einer verzögerten Wiederherstellungstransaktion gehört, wie z. B. eine Transaktion, für die ein Rollback bei der Wiederherstellung verzögert wurde, weil das Rollback nicht erfolgreich abgeschlossen werden konnte.|  
 |**request_exec_context_id**|**int**|Ausführungskontext-ID des Prozesses, der derzeit diese Anforderung besitzt.|  
 |**request_request_id**|**int**|Anforderungs-ID (Batch-ID) des Prozesses, der derzeit diese Anforderung besitzt. Dieser Wert wird jedes Mal geändert, wenn sich die aktive MARS-Verbindung (Multiple Active Result Set) für eine Transaktion ändert.|  
 |**request_owner_type**|**nvarchar(60)**|Entitätstyp, der die Anforderung besitzt. Sperren-Manager-Anforderungen können im Besitz einer Reihe von Entitäten sein. Folgende Werte sind möglich:<br /><br /> TRANSACTION = Der Besitzer der Anforderung ist eine Transaktion.<br /><br /> CURSOR = Der Besitzer der Anforderung ist ein Cursor.<br /><br /> SESSION = Der Besitzer der Anforderung ist eine Benutzersitzung.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Der Besitzer der Anforderung ist der freigegebene Bereich des Transaktionsarbeitsbereichs.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Der Besitzer der Anforderung ist der exklusive Bereich des Transaktionsarbeitsbereichs.<br /><br /> NOTIFICATION_OBJECT = Der Besitzer der Anforderung ist eine interne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente. Diese Komponente hat vom Sperren-Manager eine Benachrichtigung angefordert, wenn eine andere Komponente darauf wartet, die Sperre zu übernehmen. Die FileTable-Funktion ist eine Komponente, die diesen Wert verwendet.<br /><br /> **Hinweis:** Arbeitsbereiche werden intern verwendet, um Sperren für eingetragene Sitzungen aufzunehmen.|  
-|**request_owner_id**|**bigint**|ID des Besitzers dieser Anforderung.<br /><br /> Wenn eine Transaktion der Besitzer der Anforderung ist, enthält dieser Wert die Transaktions-ID.<br /><br /> Wenn eine FileTable der Besitzer der Anforderung, weist **Request_owner_id** verfügt über einen der folgenden Werte.<br /><br /> <br /><br /> -4: eine FileTable hat eine Datenbanksperre übernommen.<br /><br /> -3: eine FileTable hat eine Tabellensperre übernommen.<br /><br /> Anderer Wert: der Wert stellt ein Dateihandle dar. Dieser Wert wird auch als **Fcb_id** in der dynamischen verwaltungssicht [dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|ID des Besitzers dieser Anforderung.<br /><br /> Wenn eine Transaktion der Besitzer der Anforderung ist, enthält dieser Wert die Transaktions-ID.<br /><br /> Wenn eine FileTable der Besitzer der Anforderung ist **Request_owner_id** verfügt über mindestens einen der folgenden Werte.<br /><br /> <br /><br /> – 4: eine FileTable hat eine Datenbanksperre übernommen.<br /><br /> -3: eine FileTable hat eine Tabellensperre übernommen.<br /><br /> Anderer Wert: der Wert stellt ein Dateihandle dar. Dieser Wert wird auch als **Fcb_id** in der dynamischen verwaltungssicht [dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID des Besitzers dieser Anforderung. Wird nur von einer verteilten Transaktion verwendet, wobei der Wert dem MS DTC-GUID für diese Transaktion entspricht.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Dieser Wert stellt die Sperrenbereich-ID des Anforderers dar. Die Sperrenbereich-ID bestimmt, ob zwei Anforderer miteinander kompatibel sind und ob ihnen Sperren in Modi erteilt werden können, die ansonsten zu Konflikten miteinander führen würden.|  
-|**lock_owner_address**|**varbinary(8)**|Speicheradresse der internen Datenstruktur, mit der diese Anforderung nachverfolgt wird. Diese Spalte kann verknüpft werden, die mit **Resource_address** Spalte **dm_os_waiting_tasks**.|  
+|**lock_owner_address**|**varbinary(8)**|Speicheradresse der internen Datenstruktur, mit der diese Anforderung nachverfolgt wird. Diese Spalte kann verknüpft werden, die mit **Resource_address** Spalte **Sys. dm_os_waiting_tasks**.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -70,13 +70,13 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
  
 ## <a name="remarks"></a>Hinweise  
- Der Anforderungsstatus GRANTED gibt an, dass dem Anforderer für eine Ressource eine Sperre erteilt wurde. Der Anforderungsstatus WAITING gibt an, dass die Anforderung noch nicht erteilt wurde. Die folgenden der Anforderungsstatus Waiting Typen werden zurückgegeben, durch die **Request_status** Spalte:  
+ Der Anforderungsstatus GRANTED gibt an, dass dem Anforderer für eine Ressource eine Sperre erteilt wurde. Der Anforderungsstatus WAITING gibt an, dass die Anforderung noch nicht erteilt wurde. Die folgenden Typen der Anforderungsstatus Waiting werden zurückgegeben, durch die **Request_status** Spalte:  
   
 -   Der Anforderungsstatus CONVERT gibt an, dass dem Anforderer bereits eine Anforderung für die Ressource erteilt wurde und dass er derzeit darauf wartet, dass ein Upgrade für die ursprüngliche Anforderung erteilt wird.  
   
 -   Der Anforderungsstatus WAIT gibt an, dass der Anforderer derzeit keine erteilte Anforderung für die Ressource besitzt.  
   
- Da **Sys. dm_tran_locks** wird aus internen Sperren-Manager-Datenstrukturen, die Verwaltung dieser Informationen kein zusätzlicher Aufwand für die reguläre Verarbeitung aufgefüllt. Durch das Materialisieren der Sicht ist der Zugriff auf die internen Strukturen des Sperren-Managers erforderlich. Dies kann die reguläre Verarbeitung auf dem Server geringfügig beeinträchtigen. Diese Auswirkungen sollten nicht bemerkbar sein und sollten nur stark ausgelastete Ressourcen betreffen. Die Daten in dieser Sicht entsprechen dem Livestatus des Sperren-Managers. Deshalb können sie jederzeit geändert werden, und Zeilen werden hinzugefügt und entfernt, wenn Sperren eingerichtet und aufgehoben werden. Diese Sicht weist keine Verlaufsinformationen auf.  
+ Da **Sys. dm_tran_locks** wird aus der Verwaltung Hinzufügen dieser Informationen kein zusätzlicher Aufwand für die reguläre Verarbeitung interne Sperre Manager-Datenstrukturen aufgefüllt. Durch das Materialisieren der Sicht ist der Zugriff auf die internen Strukturen des Sperren-Managers erforderlich. Dies kann die reguläre Verarbeitung auf dem Server geringfügig beeinträchtigen. Diese Auswirkungen sollten nicht bemerkbar sein und sollten nur stark ausgelastete Ressourcen betreffen. Die Daten in dieser Sicht entsprechen dem Livestatus des Sperren-Managers. Deshalb können sie jederzeit geändert werden, und Zeilen werden hinzugefügt und entfernt, wenn Sperren eingerichtet und aufgehoben werden. Diese Sicht weist keine Verlaufsinformationen auf.  
   
  Zwei Anforderungen verwenden nur dann dieselbe Ressource, wenn alle Ressourcengruppenspalten identisch sind.  
   
@@ -84,18 +84,18 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 -   SET TRANSACTION ISOLATION LEVEL, um die Ebene von Sperren für eine Sitzung anzugeben. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Sperren von Tabellenhinweisen, um die Ebene von Sperren für einen einzelnen Verweis einer Tabelle in einer FROM-Klausel anzugeben. Informationen zu Syntax und Einschränkungen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Sperren von Tabellenhinweisen, um die Ebene von Sperren für einen einzelnen Verweis einer Tabelle in einer FROM-Klausel anzugeben. Syntax und zu Einschränkungen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Eine Ressource, die unter einer einzelnen Sitzungs-ID ausgeführt wird, kann mehrere erteilte Sperren aufweisen. Unterschiedliche Entitäten, die unter einer Sitzung ausgeführt werden können jeweils besitzen eine Sperre für dieselbe Ressource, und die Informationen werden angezeigt, der **Request_owner_type** und **Request_owner_id** Spalten zurückgegebenes **Sys. dm_tran_locks**. Wenn mehrere Instanzen des gleichen **Request_owner_type** vorhanden sind, die **Request_owner_id** Spalte wird verwendet, um die einzelnen Instanzen voneinander zu unterscheiden. Für verteilte Transaktionen die **Request_owner_type** und **Request_owner_guid** Spalten werden die unterschiedlichen Entitätsinformationen angezeigt.  
+ Eine Ressource, die unter einer einzelnen Sitzungs-ID ausgeführt wird, kann mehrere erteilte Sperren aufweisen. Unterschiedliche Entitäten, die unter einer Sitzung ausgeführt werden können jede besitzen eine Sperre für dieselbe Ressource, und die Informationen werden angezeigt, der **Request_owner_type** und **Request_owner_id** Spalten zurückgegebenes **Sys. dm_tran_locks**. Wenn mehrere Instanzen des gleichen **Request_owner_type** vorhanden sind, die **Request_owner_id** Spalte wird verwendet, um die einzelnen Instanzen voneinander zu unterscheiden. Für verteilte Transaktionen die **Request_owner_type** und **Request_owner_guid** Spalten werden die unterschiedlichen Entitätsinformationen angezeigt.  
   
- Beispielsweise besitzt die Sitzung S1 eine freigegebene Sperre auf **Table1**; und die Transaktion T1, die unter der Sitzung S1 ausgeführt wird, besitzt auch eine freigegebene Sperre für **Table1**. In diesem Fall die **Resource_description** Spalte, die zurückgegebene **Sys. dm_tran_locks** zwei Instanzen derselben Ressource. Die **Request_owner_type** -Spalte zeigt eine Instanz als Sitzung und die andere als eine Transaktion. Darüber hinaus die **Resource_owner_id** Spalte werden verschiedene Werte haben.  
+ Beispielsweise besitzt die Sitzung S1 eine freigegebene Sperre auf **Table1**; und Transaktion T1, die unter der Sitzung S1 ausgeführt wird, besitzt auch eine freigegebene Sperre auf **Table1**. In diesem Fall die **Resource_description** Spalte, die von zurückgegeben wird **Sys. dm_tran_locks** zwei Instanzen derselben Ressource. Die **Request_owner_type** Spalte wird eine Instanz als Sitzung und der andere wird als eine Transaktion angezeigt. Darüber hinaus die **Resource_owner_id** Spalte werden unterschiedliche Werte aufweisen.  
   
  Mehrere Cursor, die unter einer Sitzung ausgeführt werden, können nicht unterschieden werden und werden als eine Einheit behandelt.  
   
- Verteilte Transaktionen, denen kein Sitzungs-ID-Wert zugeordnet ist, sind verwaiste Transaktionen. Diesen wird der Sitzungs-ID-Wert -2 zugewiesen. Weitere Informationen finden Sie unter [KILL & #40; Transact-SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Verteilte Transaktionen, denen kein Sitzungs-ID-Wert zugeordnet ist, sind verwaiste Transaktionen. Diesen wird der Sitzungs-ID-Wert -2 zugewiesen. Weitere Informationen finden Sie unter [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Ressourcendetails  
- Die folgende Tabelle enthält die Ressourcen, die in angelehnt der **Resource_associated_entity_id** Spalte.  
+ Die folgende Tabelle enthält die Ressourcen, die dargestellt werden die **Resource_associated_entity_id** Spalte.  
   
 |Ressourcentyp|Ressourcenbeschreibung|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
@@ -201,16 +201,16 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 |Ressource|Format|Description|  
 |--------------|------------|-----------------|  
-|DATABASE|Nicht verfügbar|Datenbank-ID steht bereits in der **Resource_database_id** Spalte.|  
+|DATABASE|Nicht verfügbar|Datenbank-ID ist bereits in der **Resource_database_id** Spalte.|  
 |FILE|< File_id >|ID der Datei, die durch diese Ressource dargestellt wird.|  
-|OBJECT|<object_id>|ID des Objekts, das durch diese Ressource dargestellt wird. Dieses Objekt kann jedes Objekt, das in aufgeführt sein **sys.objects**, nicht nur eine Tabelle.|  
+|OBJECT|<object_id>|ID des Objekts, das durch diese Ressource dargestellt wird. Dieses Objekt kann jedes Objekt in aufgeführt sein **sys.objects**, nicht nur eine Tabelle.|  
 |PAGE|<file_id>:<page_in_file>|Stellt die Datei-ID und die Seiten-ID der Seite dar, die durch diese Ressource dargestellt wird.|  
 |KEY|<hash_value>|Stellt einen Hashwert der Schlüsselspalten aus der Zeile dar, die durch diese Ressource dargestellt wird.|  
 |EXTENT|<file_id>:<page_in_files>|Stellt die Datei und die Seiten-ID des Blocks dar, der durch diese Ressource dargestellt wird. Die Block-ID ist mit der Seiten-ID der ersten Seiten des Blocks identisch.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Stellt die Seiten-ID und die Zeilen-ID der Zeile dar, die durch diese Ressource dargestellt wird. Wenn die zugeordnete Objekt-ID 99 lautet, stellt diese Ressource eine der acht gemischten Seitenslots auf der ersten IAM-Seite einer IAM-Kette dar.|  
-|APPLICATION|\<DbPrincipalId >:\<mit maximal 32 Zeichen > :(< Hash_value >)|Stellt die ID des Datenbankprinzipals dar, der für die Bereichsauswahl dieser Anwendungssperrenressource verwendet wird. Außerdem sind bis zu 32 Zeichen aus der Ressourcenzeichenfolge enthalten, die dieser Anwendungssperrenressource entsprechen. In bestimmten Fällen können nur 2 Zeichen angezeigt werden, da die vollständige Zeichenfolge nicht mehr verfügbar ist. Dies tritt nur beim Wiederherstellen der Datenbank für Anwendungssperren auf, die im Rahmen des Wiederherstellungsprozesses erneut abgerufen werden. Der Hashwert stellt einen Hash der vollständigen Ressourcenzeichenfolge dar, die dieser Anwendungssperrenressource entspricht.|  
+|APPLICATION|\<DbPrincipalId >:\<bis zu 32 Zeichen > :(< Beziehung zum Hash_value >)|Stellt die ID des Datenbankprinzipals dar, der für die Bereichsauswahl dieser Anwendungssperrenressource verwendet wird. Außerdem sind bis zu 32 Zeichen aus der Ressourcenzeichenfolge enthalten, die dieser Anwendungssperrenressource entsprechen. In bestimmten Fällen können nur 2 Zeichen angezeigt werden, da die vollständige Zeichenfolge nicht mehr verfügbar ist. Dies tritt nur beim Wiederherstellen der Datenbank für Anwendungssperren auf, die im Rahmen des Wiederherstellungsprozesses erneut abgerufen werden. Der Hashwert stellt einen Hash der vollständigen Ressourcenzeichenfolge dar, die dieser Anwendungssperrenressource entspricht.|  
 |HOBT|Nicht verfügbar|HoBt-ID wird als die **Resource_associated_entity_id**.|  
-|ALLOCATION_UNIT|Nicht verfügbar|Zuordnungseinheit-ID wird als die **Resource_associated_entity_id**.|  
+|ALLOCATION_UNIT|Nicht verfügbar|Zuordnungseinheits-ID wird als die **Resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -277,7 +277,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Die folgenden XEvents beziehen sich auf Partition **SWITCH** und Neuerstellung von Onlineindizes. Weitere Informationen zur Syntax finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+ Die folgenden XEvents beziehen sich auf Partition **SWITCH** und Neuerstellung des Onlineindexes. Weitere Informationen zur Syntax finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -290,7 +290,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. Verwenden von sys.dm_tran_locks mit anderen Tools  
- Im folgenden Beispiel wird ein Updatevorgang durch eine andere Transaktion blockiert. Mithilfe von **Sys. dm_tran_locks** und anderen Tools werden Informationen zum Sperren von Ressourcen bereitgestellt.  
+ Im folgenden Beispiel wird ein Updatevorgang durch eine andere Transaktion blockiert. Mithilfe von **Sys. dm_tran_locks** und andere Tools, die Informationen zum Sperren von Ressourcen bereitgestellt wird.  
   
 ```sql  
 USE tempdb;  
@@ -328,7 +328,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- Mit der folgenden Abfrage werden Sperrinformationen angezeigt. Der Wert für `<dbid>` ersetzt werden sollte, mit der **Database_id** aus **sys.databases**.  
+ Mit der folgenden Abfrage werden Sperrinformationen angezeigt. Der Wert für `<dbid>` ersetzt werden soll, mit der **Database_id** aus **sys.databases**.  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  

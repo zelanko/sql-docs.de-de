@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041168"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540820"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ sp_execute handle OUTPUT
  Gibt die Verwendung zusätzlicher Parameter an. *Bound_param* ist ein erforderlicher Parameter, der Eingabewerte eines beliebigen Datentyps, um zusätzliche Parameter für die Prozedur anzugeben.  
   
 > [!NOTE]  
->  *Bound_param* den Deklarationen, die vom Sp_prepare entsprechen*Params* Wert und kann in der Form  *@name = Value* oder *Wert*.  
+>  *Bound_param* den Deklarationen, die vom Sp_prepare entsprechen*Params* Wert und kann in der Form * @name = Value* oder *Wert*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

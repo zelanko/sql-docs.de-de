@@ -25,13 +25,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a9ce2b5f63405a0754782e0dddae5584c1b47ee2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9a674efd6c2e7d9db42a0d731e9722fb267830e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031177"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552170"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "38031177"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Gibt an, den gewünschten Betriebsmodus des Abfrage-Store, die explizit vom Benutzer festgelegt.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
-|**desired_state_desc**|**nvarchar(64)**|Textbeschreibung für den gewünschten Betriebsmodus des Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
+|**desired_state_desc**|**Nvarchar(64)**|Textbeschreibung für den gewünschten Betriebsmodus des Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Gibt den Betriebsmodus des Abfrage-Store an. Zusätzlich zu der gewünschten Status seitens des Benutzers erforderlich kann die ist-Zustand Status "Fehler" sein.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = FEHLER|  
-|**actual_state_desc**|**nvarchar(64)**|Die textbeschreibung der tatsächlichen Betriebsmodus des Abfrage-Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />Fehler<br /><br /> Es gibt Situationen, wenn der tatsächliche Zustand vom gewünschten Zustand abweicht:<br /><br /> Query Store kann im schreibgeschützten Modus betrieben werden, selbst wenn die Lese-/ Schreibzugriff, die vom Benutzer angegeben wurde. Beispielsweise kann, die auftreten, wenn die Datenbank im schreibgeschützten Modus befindet oder Query Store Größe das Kontingent überschritten.<br /><br /> Äußerst selten können Query Store in Status "Fehler" aufgrund von internen Fehlern enden. In diesem Fall konnte Query Store wiederhergestellt werden, indem ausführen **Sp_query_store_consistency_check** gespeicherte Prozedur in der betroffenen Datenbank.|  
+|**actual_state_desc**|**Nvarchar(64)**|Die textbeschreibung der tatsächlichen Betriebsmodus des Abfrage-Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />Fehler<br /><br /> Es gibt Situationen, wenn der tatsächliche Zustand vom gewünschten Zustand abweicht:<br /><br /> Query Store kann im schreibgeschützten Modus betrieben werden, selbst wenn die Lese-/ Schreibzugriff, die vom Benutzer angegeben wurde. Beispielsweise kann, die auftreten, wenn die Datenbank im schreibgeschützten Modus befindet oder Query Store Größe das Kontingent überschritten.<br /><br /> Äußerst selten können Query Store in Status "Fehler" aufgrund von internen Fehlern enden. In diesem Fall konnte Query Store wiederhergestellt werden, indem ausführen **Sp_query_store_consistency_check** gespeicherte Prozedur in der betroffenen Datenbank.|  
 |**readonly_reason**|**int**|Wenn die **Desired_state_desc** ist READ_WRITE und **Actual_state_desc** ist READ_ONLY, **Readonly_reason** gibt etwas angeben, warum die Query Store in zuordnen Schreibgeschützter Modus.<br /><br /> 1 – die Datenbank befindet sich im schreibgeschützten Modus<br /><br /> 2 – die Datenbank befindet sich im Einzelbenutzermodus<br /><br /> 4 – Datenbank befindet sich im Notfallmodus<br /><br /> 8 – die Datenbank ist sekundäres Replikat (gilt für Always On und Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] georeplikation). Dieser Wert kann nur auf effektiv beobachtet werden **lesbare** sekundäre Replikate<br /><br /> 65536 – die Query Store hat die maximale Größe festlegen, indem die Option MAX_STORAGE_SIZE_MB erreicht.<br /><br /> 131072: die Anzahl der verschiedene Anweisungen in Query Store verfügt über die internen Speicher erreicht. Entfernen Sie ggf. Abfragen, die Sie nicht benötigen oder ein Upgrade auf eine höhere Dienstebene zu aktivieren, übertragen Query Store in Lese-/ Schreibmodus fest.<br />Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 262144 – Größe der Elemente im Arbeitsspeicher, die darauf warten, auf dem Datenträger beibehalten werden verfügt über die internen Speicher erreicht. Query Store werden im Nur-Lese Modus ist vorübergehend, bis die Elemente im Arbeitsspeicher auf dem Datenträger beibehalten werden. <br />Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />524288 – die Datenbank hat die datenträgergrößenbegrenzung erreicht. Query Store ist Teil des Benutzerdatenbank, sodass es ist nicht mehr verfügbaren Speicherplatz für eine Datenbank, die das bedeutet, dass Query Store weiter wachsen kann nicht mehr.<br />Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. <br /> <br /> So wechseln Sie die Abfrage von Store-Vorgänge Modus Back Lese-/ Schreibzugriff, finden Sie unter **überprüfen Query Store wird das Sammeln von kontinuierlich** Abschnitt [bewährte Methoden für die Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md).|  
 |**current_storage_size_mb**|**bigint**|Die Größe des Abfrage-Store auf dem Datenträger in Megabyte.|  
 |**flush_interval_seconds**|**bigint**|Legt fest, für die reguläre Abfrage von Store-Daten auf einem Datenträger gespeichert. Standardwert ist 900 (15 Min.).<br /><br /> Ändern Sie mithilfe der `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` Anweisung.|  

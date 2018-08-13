@@ -16,13 +16,13 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7f81f8e336d0015bd5665c9c144b76289e3e8b93
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416699"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548820"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Finden weiterer SQL Server Native Client-Informationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "37416699"
 
   Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und anderen Arten der Datenzugriffsprogrammierung finden Sie in folgenden Onlineressourcen:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Developer Center für Datenzugriff und -speicherung](http://go.microsoft.com/fwlink?linkid=4173)  
  Diese Website bietet technische Artikel, Beispielcode und andere Ressourcen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und andere Datenzugriffstechnologien.  
   
  [Datenzugriffs-Blog](http://go.microsoft.com/fwlink/?LinkId=48617)  

@@ -1,5 +1,5 @@
 ---
-title: fulltext_index_fragments (Transact-SQL) | Microsoft Docs
+title: fulltext_index_fragments (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,18 +27,18 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18997da5a5eeb691245166be015b0678403b52ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182246"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543012"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ein Volltextindex verwendet interne Tabellen, die so genannte *Volltextindex-Fragmente* um die umgekehrten Indexdaten zu speichern. Diese Sicht kann verwendet werden, um die Metadaten zu diesen Fragmenten abzufragen. Diese Sicht enthält eine Zeile für jedes Volltextindexfragment in jeder Tabelle, die einen Volltextindex enthält.  
+  Ein Volltextindex verwendet interne Tabellen, die so genannte *Volltext-indexfragmente* um die umgekehrten Indexdaten zu speichern. Diese Sicht kann verwendet werden, um die Metadaten zu diesen Fragmenten abzufragen. Diese Sicht enthält eine Zeile für jedes Volltextindexfragment in jeder Tabelle, die einen Volltextindex enthält.  
  
   
 |Spaltenname|Datentyp|Description|  
@@ -49,7 +49,7 @@ ms.locfileid: "33182246"
 |timestamp|**timestamp**|Der Fragmenterstellung zugeordneter Timestamp. Die Timestamps der aktuelleren Fragmente sind größer als die Timestamps älterer Fragmente.|  
 |data_size|**int**|Logische Größe des Fragments in Bytes.|  
 |row_count|**int**|Anzahl der einzelnen Zeilen im Fragment.|  
-|status|**int**|Status des Fragments, entweder:<br /><br /> 0 = Neu erstellt und noch nicht verwendet<br /><br /> 1 = Während Volltextindexauffüllung oder Zusammenführungen zur Einfügung verwendet<br /><br /> 4 = Beendet. Bereit für Abfrage<br /><br /> 6 = Für Eingabe für Zusammenführung verwendet und bereit für Abfrage<br /><br /> 8 = Zum Löschen markiert. Wird nicht für Abfrage undQuelle der Zusammenführung verwendet.<br /><br /> Status 4 oder 6 bedeutet, dass das Fragment Teil des logischen Volltextindex ist und abgefragt werden kann; d. h., es ist ein *abfragbare* Fragment.|  
+|status|**int**|Status des Fragments, entweder:<br /><br /> 0 = Neu erstellt und noch nicht verwendet<br /><br /> 1 = Während Volltextindexauffüllung oder Zusammenführungen zur Einfügung verwendet<br /><br /> 4 = Beendet. Bereit für Abfrage<br /><br /> 6 = Für Eingabe für Zusammenführung verwendet und bereit für Abfrage<br /><br /> 8 = Zum Löschen markiert. Wird nicht für Abfrage undQuelle der Zusammenführung verwendet.<br /><br /> Status 4 oder 6 bedeutet, dass das Fragment Teil des logischen Volltextindex ist und abgefragt werden kann; Es ist also eine *abfragbare* Fragment.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Katalogsicht sys.fulltext_index_fragments kann verwendet werden, um die Anzahl der Fragmente abzufragen, die ein Volltextindex umfasst. Wenn die Volltextabfrage nur langsam ausgeführt wird, können Sie mit fulltext_index_fragments die Anzahl der abfragbaren Fragmente (Status = 4 oder 6) im Volltextindex wie folgt abfragen:  
@@ -59,7 +59,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- Wenn viele abfragbare Fragmente vorhanden sind, empfiehlt Microsoft die Neuorganisation des Volltextkatalogs, der den Volltextindex zur Zusammenführung der Fragmente enthält. So organisieren Sie neu ein Volltextkatalog Verwendung [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*Catalog_name* neu organisieren. Um z. B. einen Volltextkatalog namens `ftCatalog` in der Datenbank `AdventureWorks2012` neu zu organisieren, geben Sie den folgenden Befehl ein:  
+ Wenn viele abfragbare Fragmente vorhanden sind, empfiehlt Microsoft die Neuorganisation des Volltextkatalogs, der den Volltextindex zur Zusammenführung der Fragmente enthält. So organisieren Sie neu ein Volltextkatalog Verwendung [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*Catalog_name* neu zu organisieren. Um z. B. einen Volltextkatalog namens `ftCatalog` in der Datenbank `AdventureWorks2012` neu zu organisieren, geben Sie den folgenden Befehl ein:  
   
 ```  
 USE AdventureWorks2012;  

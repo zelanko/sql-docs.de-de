@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc1293a87ddfb743964a40377ba126a2f745d59d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fac27390005afad19f67c5e774c381067ee78745
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467846"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542100"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile pro authentifizierter Sitzung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. sys.dm_exec_sessions ist eine Sicht des Serverbereichs mit Informationen zu allen aktiven Benutzerverbindungen und internen Tasks. Zu diesen Informationen zählen u. a. die Clientversion, der Name des Clientprogramms, die Clientanmeldezeit, der angemeldete Benutzer und die aktuelle Sitzungseinstellung. Mit sys.dm_exec_sessions zeigen Sie zuerst die aktuelle Systemauslastung an und identifizieren eine interessante Sitzung, und informieren Sie sich dann in dynamischen Verwaltungssichten oder dynamischen Verwaltungsfunktionen weiter über diese Sitzung.  
   
- Die dynamischen Verwaltungssichten Sys. dm_exec_connections, Sys. dm_exec_sessions und Sys. dm_exec_requests Zuordnen der [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle.  
+ Ordnen Sie die dynamischen Verwaltungssichten Sys. dm_exec_connections, Sys. dm_exec_sessions und Sys. dm_exec_requests der [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle.  
   
-> **Hinweis:** von Aufrufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_sessions**.  
+> **Hinweis:** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Spaltenname|Datentyp|Beschreibung und versionsspezifische Informationen|  
 |-----------------|---------------|-----------------|  
@@ -48,12 +48,12 @@ ms.locfileid: "34467846"
 |program_name|**nvarchar(128)**|Name des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |host_process_id|**int**|Prozess-ID des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |client_version|**int**|Die vom Client für die Verbindung mit dem Server verwendete TDS-Protokollversion der Schnittstelle. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
-|client_interface_name|**nvarchar(32)**|Name der Bibliothek/Treiber, die vom Client zur Kommunikation mit dem Server verwendet wird. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
+|client_interface_name|**nvarchar(32)**|Name der Bibliotheken/Treiber, die vom Client zur Kommunikation mit dem Server verwendet wird. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |security_id|**varbinary(85)**|Microsoft Windows-Sicherheits-ID, die der Anmeldung zugeordnet ist. Lässt keine NULL-Werte zu.|  
 |login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. Den ursprünglichen Anmeldenamen, mit dem die Sitzung erstellt wurde, finden Sie unter original_login_name. Kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename oder eine Windows authentifizierter Benutzername Domäne authentifiziert. Lässt keine NULL-Werte zu.|  
 |nt_domain|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Windows-Domäne für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
 |nt_user_name|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Windows-Benutzername für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
-|status|**nvarchar(30)**|Status der Sitzung. Mögliche Werte:<br /><br /> **Ausführen** -derzeit eine oder mehrere Anforderungen ausführen<br /><br /> **Sleeping** -derzeit keine Anforderungen ausgeführt<br /><br /> **Ruhende** – Sitzung wurde aufgrund des Verbindungspoolings zurückgesetzt und befindet sich nun im Status vor einer Anmeldung.<br /><br /> **Preconnect** -Sitzung ist in der Klassifizierungsfunktion der Ressourcenkontrolle.<br /><br /> Lässt keine NULL-Werte zu.|  
+|status|**nvarchar(30)**|Status der Sitzung. Mögliche Werte:<br /><br /> **Ausführung** -derzeit ausgeführten Anforderungen für eine oder mehrere<br /><br /> **Im Ruhezustand** -derzeit keine Anforderungen ausgeführt<br /><br /> **Ruhende** -Sitzung wurde aufgrund des Verbindungspoolings zurückgesetzt und befindet sich nun im Status vor einer Anmeldung.<br /><br /> **Preconnect** -Sitzung ist in der Klassifizierungsfunktion der Ressourcenkontrolle.<br /><br /> Lässt keine NULL-Werte zu.|  
 |context_info|**varbinary(128)**|CONTEXT_INFO-Wert für die Sitzung. Die Kontextinformationen vom Benutzer festgelegt ist, mithilfe der [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) Anweisung. Lässt NULL-Werte zu.|  
 |cpu_time|**int**|Die von der Sitzung verwendete CPU-Zeit in Millisekunden. Lässt keine NULL-Werte zu.|  
 |memory_usage|**int**|Anzahl der von der Sitzung verwendeten 8 KB-Speicherseiten. Lässt keine NULL-Werte zu.|  
@@ -95,8 +95,8 @@ ms.locfileid: "34467846"
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
-"Jeder" kann ihre eigenen Sitzungsinformationen zur sehen.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Erfordert `VIEW SERVER STATE` -Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zu allen Sitzungen auf dem Server finden Sie unter.  
+Alle Benutzer kann ihre eigenen Informationen sehen.  
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Erfordert `VIEW SERVER STATE` -Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zu allen Sitzungen auf dem Server angezeigt.  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Erfordert `VIEW DATABASE STATE` alle Verbindungen mit der aktuellen Datenbank angezeigt. `VIEW DATABASE STATE` kann nicht gewährt werden, der `master` Datenbank. 
   
   
@@ -109,10 +109,10 @@ ms.locfileid: "34467846"
   
 -   unsuccessful_logons  
   
- Ist diese Option nicht aktiviert, geben diese Spalten NULL-Werte zurück. Weitere Informationen zum Festlegen dieser Serverkonfigurationsoption finden Sie unter [common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ Ist diese Option nicht aktiviert, geben diese Spalten NULL-Werte zurück. Weitere Informationen über das Festlegen dieser Serverkonfigurationsoption finden Sie unter [common Criteria-Kompatibilität aktiviert Serverkonfigurationsoption](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Die Admin-Verbindungen auf Azure SQL-Datenbank werden eine Zeile pro authentifizierter Sitzung angezeigt. Die "sa"-Sitzungen, die in das Resultset angezeigt werden keine Auswirkungen auf das Benutzerkontingent für Sitzungen. Die nicht-Admin-Verbindungen werden nur Informationen im Zusammenhang mit ihrer Datenbank benutzersitzungen angezeigt.
+ Die Admin-Verbindungen in Azure SQL-Datenbank werden eine Zeile pro authentifizierter Sitzung angezeigt. Die "sa"-Sitzungen, die im Resultset, angezeigt werden keine Auswirkungen auf das Benutzerkontingent für Sitzungen. Die nicht-Verbindungen werden nur Informationen im Zusammenhang mit ihrer Datenbank benutzersitzungen angezeigt.
  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
@@ -188,7 +188,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

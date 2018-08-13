@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_actions (Azure SQL-Datenbank) | Microsoft Docs
+title: Sys. database_event_session_action (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,28 +17,28 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92b6aa34b8419c493f6da4dfe3b946b988899034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5f0a70cdf6f242b36c6cf9888d2bf9d0fc37d61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182146"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549950"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>Sys.database_event_session_actions (Azure SQL-Datenbank)
+# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt für jede Aktion jedes Ereignisses einer Ereignissitzung eine Zeile zurück.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle späteren Versionen.|  
+|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 und alle höheren Versionen.|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |event_id|**int**|Die ID des Ereignisses. Diese ID ist innerhalb des Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Der Name der Aktion. Lässt NULL-Werte zu.|  
+|NAME|**sysname**|Der Name der Aktion. Lässt NULL-Werte zu.|  
 |Paket|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt NULL-Werte zu.|  
 |Modul|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt NULL-Werte zu.|  
   

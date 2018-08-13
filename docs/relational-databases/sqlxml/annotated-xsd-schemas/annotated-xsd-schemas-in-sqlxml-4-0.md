@@ -1,5 +1,5 @@
 ---
-title: XSD-Schemas in SQLXML 4.0 mit Anmerkungen | Microsoft Docs
+title: In SQLXML 4.0-XSD-Schemas mit Anmerkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708758"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537950"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>XSD-Schemas mit Anmerkungen in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dieser Abschnitt enthält Informationen zum Verwenden von XSD-Schemas mit Anmerkungen in SQLXML 4.0. In früheren Versionen von SQLXML wurde eine ähnliche Funktionalität mit XDR-Schemas (XML-Data Reduced) bereitgestellt. Dieser Abschnitt enthält ebenfalls XDR-Informationen für ältere Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in mit Anmerkungen versehene XSD-Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+ [Einführung in die mit Anmerkungen versehene XSD-Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Bietet eine Übersicht über XSD-Schemas mit Anmerkungen in SQLXML 4.0.  
   
  [Verwenden von Anmerkungen in XSD-Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  Beschreibt, wie Anmerkungen in XSD-Schemas in zahlreichen Szenarien verwendet werden, und stellt Beispiele bereit.  
   
- [Mithilfe von XSD-Schemas in Abfragen kommentiert &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  Beschreibt, wie XSD-Schemas mit Anmerkungen in Abfragen verwendet werden.  
   
- [Konvertieren von XDR-Schemas in entsprechende XSD-Schemas kommentiert &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [Konvertieren von mit Anmerkungen in XDR-Schemas in gleichbedeutende XSD-Schemas &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  Beschreibt, wie XDR-Schemas in die entsprechenden XSD-Schemas für SQLXML 4.0 konvertiert werden.  
   
  [XDR-Schemas mit Anmerkungen &#40;in SQLXML 4.0 veraltet&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
@@ -55,11 +55,11 @@ ms.locfileid: "34708758"
   
 -   XML Schema Part 0: Primer, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Languages (XPath), ()http://www.w3.org/TR/xpath)  
+-   XML-Pfad ()-Programmiersprache (XPath)http://www.w3.org/TR/xpath)  
   
 -   XSL-Transformationen (XSLT),)http://www.w3.org/TR/xslt)  
   

@@ -1,6 +1,6 @@
 ---
-title: T-SQL-Anweisungen - Parallel Data Warehouse | Microsoft Docs
-description: T-SQL-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+title: T-SQL-Anweisungen – Parallel Data Warehouse | Microsoft-Dokumentation
+description: T-SQL-Anweisungen für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,50 +9,50 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538890"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400763"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>T-SQL-Anweisungen für Parallel Data Warehouse
-Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+Transact-SQL (T-SQL)-Anweisungen für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
-## <a name="data-definition-language-ddl-statements"></a>Anweisungen von Data Definition Language (DDL)
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+## <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
+* [DATENBANK ÄNDERN](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
-* [ÄNDERN VON SCHEMAS](../t-sql/statements/alter-schema-transact-sql.md)
-* [ALTER TABLE-ANWEISUNG](../t-sql/statements/alter-table-transact-sql.md)
+* [SCHEMA ÄNDERN](../t-sql/statements/alter-schema-transact-sql.md)
+* [ÄNDERN DER TABELLE](../t-sql/statements/alter-table-transact-sql.md)
 * [COLUMNSTORE-INDEX ERSTELLEN](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [DATENBANK ERSTELLEN](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [ERSTELLEN VON DATENBANKWEITE ANMELDEINFORMATIONEN](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [ERSTELLEN DER EXTERNEN DATENQUELLE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [ERSTELLEN SIE DATENBANKBEZOGENE ANMELDEINFORMATIONEN](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [ERSTELLEN EINES EXTERNEN DATEIFORMATS](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [ERSTELLEN EINER EXTERNEN TABELLE](../t-sql/statements/create-external-table-transact-sql.md)
-* [CREATE-FUNKTION](../t-sql/statements/create-function-sql-data-warehouse.md)
+* [FUNKTION ERSTELLEN](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
-* [ERSTELLEN VON SCHEMAS](../t-sql/statements/create-schema-transact-sql.md)
+* [ERSTELLEN DES SCHEMAS](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
-* [ERSTELLEN, WÄHLEN SIE FÜR TABELLE ALS](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
-* [LÖSCHEN SIE DIE EXTERNE DATENQUELLE](../t-sql/statements/drop-external-data-source-transact-sql.md)
-* [LÖSCHEN VON EXTERNEN DATEIFORMATS](../t-sql/statements/drop-external-file-format-transact-sql.md)
-* [LÖSCHEN SIE DIE EXTERNE TABELLE](../t-sql/statements/drop-external-table-transact-sql.md)
+* [DROP EXTERNAL DATA SOURCE](../t-sql/statements/drop-external-data-source-transact-sql.md)
+* [DROP EXTERNAL FILE FORMAT](../t-sql/statements/drop-external-file-format-transact-sql.md)
+* [DROP EXTERNAL TABLE](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md)
-* [DROP-VERFAHREN](../t-sql/statements/drop-procedure-transact-sql.md)
-* [LÖSCHEN SIE STATISTIKEN](../t-sql/statements/drop-statistics-transact-sql.md)
+* [DROP PROCEDURE](../t-sql/statements/drop-procedure-transact-sql.md)
+* [DROP STATISTICS](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
-* [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
+* [ANSICHT LÖSCHEN](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
 
-## <a name="data-manipulation-language-dml-statements"></a>DDL-Anweisungen Data Manipulation Language (DML)
+## <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
 * [DELETE](../t-sql/statements/delete-transact-sql.md)
 * [INSERT](../t-sql/statements/insert-transact-sql.md)
 * [UPDATE](../t-sql/queries/update-transact-sql.md)
@@ -85,27 +85,27 @@ Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Serv
 * [Unterabfragen](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Sicherheitsanweisungen
-* Berechtigungen: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [widerrufen](../t-sql/statements/revoke-transact-sql.md)
+* Berechtigungen: [GRANT](../t-sql/statements/grant-transact-sql.md), [Verweigern](../t-sql/statements/deny-transact-sql.md), [widerrufen](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
-* [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
+* [ZERTIFIKAT ÄNDERN](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ROLLE "ALTER"](../t-sql/statements/alter-role-transact-sql.md)
-* [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
+* [ROLLE ÄNDERN](../t-sql/statements/alter-role-transact-sql.md)
+* [BENUTZER ÄNDERN](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [ZERTIFIKAT ERSTELLEN](../t-sql/statements/create-certificate-transact-sql.md)
-* [ERSTELLEN SIE DATENBANK-VERSCHLÜSSELUNGSSCHLÜSSEL](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [ANMELDUNGSERSTELLUNG](../t-sql/statements/create-login-transact-sql.md)
-* [ERSTELLEN VON HAUPTSCHLÜSSEL](../t-sql/statements/create-master-key-transact-sql.md)
-* [ERSTELLEN DER ROLLE ""](../t-sql/statements/create-role-transact-sql.md)
+* [VERSCHLÜSSELUNGSSCHLÜSSEL FÜR DATENBANK ERSTELLEN](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [ERSTELLEN DER ANMELDUNG](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
+* [ROLLE ERSTELLEN](../t-sql/statements/create-role-transact-sql.md)
 * [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)
 * [ZERTIFIKAT LÖSCHEN](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
-* [ROLLE "DROP"](../t-sql/statements/drop-role-transact-sql.md)
+* [ROLLE LÖSCHEN](../t-sql/statements/drop-role-transact-sql.md)
 * [LÖSCHEN SIE DEN BENUTZER](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 

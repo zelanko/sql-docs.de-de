@@ -1,5 +1,5 @@
 ---
-title: Bindungen und Konvertierungen (OLE DB) | Microsoft Docs
+title: Bindungen und Konvertierungen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,33 +19,33 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db9b2366a2bee749e9f23ee0dd91227a3b832647
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9102c41f51a23438cc1761dd12e3357dd304bb67
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945645"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542140"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Abschnitt wird erläutert, wie zum Konvertieren zwischen **"DateTime"** und **"DateTimeOffset"** Werte. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
+  In diesem Abschnitt wird erläutert, wie für die Konvertierung zwischen **"DateTime"** und **Datetimeoffset** Werte. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
   
  Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client allerdings nur zwischen Typen konvertiert, wenn Daten vom oder zum Client übertragen werden, kann eine Anwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht dazu zwingen, zwischen DBTYPE_DATE und Zeichenfolgenformaten zu konvertieren. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
   
--   Das Format der **"DateTime"** und **"DateTimeOffset"** -Zeichenfolgen ist:  
+-   Das Format der **"DateTime"** und **Datetimeoffset** -Zeichenfolgen ist:  
   
-     *JJJJ*-*mm*-*Dd*[ *"hh"*:*mm*:*ss*[. *9999999*] [± *"hh"*:*mm*]]  
+     *Yyyy*-*mm*-*TT*[ *Hh*:*mm*:*ss*[.* 9999999*] [± *Hh*:*mm*]]  
   
--   Das Format der **Zeit** -Zeichenfolgen ist:  
+-   Das Format für **Uhrzeiten** lautet wie folgt:  
   
-     *"hh"*:*mm*:*ss*[. *9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   Das Format der **Datum** -Zeichenfolgen ist:  
   
-     *JJJJ*-*mm*-*TT*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
@@ -78,6 +78,6 @@ ms.locfileid: "32945645"
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB geschrieben wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

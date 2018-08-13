@@ -1,5 +1,5 @@
 ---
-title: Sp_recompile (Transact-SQL) | Microsoft Docs
+title: Sp_recompile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246138"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544640"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argumente  
  [ @objname=] '*Objekt*"  
- Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. *Objekt* ist **nvarchar(776)**, hat keinen Standardwert. Wenn *Objekt* ist der Name einer gespeicherten Prozedur, Trigger oder eine benutzerdefinierte Funktion, die gespeicherte Prozedur-Triggers oder Funktion wird beim nächsten Ausführen kompiliert werden. Wenn *Objekt* ist der Name einer Tabelle oder Sicht, alle gespeicherten Prozeduren, Trigger oder benutzerdefinierte Funktionen, die die Tabelle oder Sicht verweisen werden kompiliert, wenn Sie das nächste Mal, die sie ausgeführt werden.  
+ Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. *Objekt* ist **nvarchar(776)**, hat keinen Standardwert. Wenn *Objekt* ist der Name der eine gespeicherte Prozedur, Trigger oder eine benutzerdefinierte Funktion, die gespeicherte Prozedur, Trigger und Funktion werden neu kompiliert. das nächste Mal, die es ausgeführt wird. Wenn *Objekt* ist der Name der Tabelle oder Sicht, die alle gespeicherten Prozeduren, Trigger und benutzerdefinierte Funktionen, die auf die Tabelle oder Sicht verweisen werden neu kompiliert. das nächste Mal, die sie ausgeführt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  

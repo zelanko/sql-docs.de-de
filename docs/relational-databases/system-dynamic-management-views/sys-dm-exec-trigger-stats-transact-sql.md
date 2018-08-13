@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_trigger_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/10/2018
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dace7d8dccee89fadac0ff88fe7d1400b28b023
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb086e85072bf3b8a4713a7b4fb81c82fcaa1b5c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467666"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548510"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,24 +53,24 @@ ms.locfileid: "34467666"
 |**max_worker_time**|**bigint**|Die maximale CPU-Zeit in Mikrosekunden, dieses Triggers jemals eine einzelne Ausführung.|  
 |**total_physical_reads**|**bigint**|Die Gesamtanzahl physischer Lesevorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
 |**last_physical_reads**|**bigint**|Die Anzahl der physischen Lesevorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_physical_reads**|**bigint**|Die minimale Anzahl physischer Lesevorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
-|**max_physical_reads**|**bigint**|Die maximale Anzahl der physischen Lesevorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
+|**min_physical_reads**|**bigint**|Die minimale Anzahl physischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
+|**max_physical_reads**|**bigint**|Die maximale Anzahl physischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
 |**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
 |**last_logical_writes**|**bigint**|Die Anzahl der logischen Schreibvorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
-|**max_logical_writes**|**bigint**|Die maximale Anzahl logischer Schreibvorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
+|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
+|**max_logical_writes**|**bigint**|Die maximale Anzahl logischer Schreibvorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
 |**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
 |**last_logical_reads**|**bigint**|Die Anzahl der logischen Lesevorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_logical_reads**|**bigint**|Die minimale Anzahl logischer Lesevorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
-|**max_logical_reads**|**bigint**|Die maximale Anzahl logischer Lesevorgänge, die diese Trigger eine einzelne Ausführung bisherige.|  
-|**total_elapsed_time**|**bigint**|Die insgesamt verstrichene Zeit in Mikrosekunden für abgeschlossene Ausführungen dieses Triggers.|  
+|**min_logical_reads**|**bigint**|Die minimale Anzahl logischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
+|**max_logical_reads**|**bigint**|Die maximale Anzahl logischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
+|**total_elapsed_time**|**bigint**|Die insgesamt verstrichene Zeit in Mikrosekunden, die für abgeschlossene Ausführungen dieses Triggers.|  
 |**last_elapsed_time**|**bigint**|Verstrichene Zeit (in Mikrosekunden) für die letzte abgeschlossene Ausführung dieses Triggers.|  
 |**min_elapsed_time**|**bigint**|Die mindestens verstrichene Zeit in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieses Triggers.|  
-|**max_elapsed_time**|**bigint**|Die maximal verstrichene Zeit in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieses Triggers.| 
-|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die der Aggregierung überlaufen durch die Ausführung dieses Triggers seit der Kompilierung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Die Anzahl der Seiten gefüllt, Zeitpunkt der letzten des Triggers Ausführung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diese Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diese Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_elapsed_time**|**bigint**|Die maximale verstrichene Zeit in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieses Triggers.| 
+|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die übergelaufenen durch die Ausführung dieses Triggers seit der Kompilierung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Die Anzahl der Seiten überlaufen der letzten Ausführung des Triggers.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diesen Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diesen Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.  
@@ -96,7 +96,7 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   

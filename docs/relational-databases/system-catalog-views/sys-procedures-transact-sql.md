@@ -1,5 +1,5 @@
 ---
-title: Sys.Procedures (Transact-SQL) | Microsoft Docs
+title: Sys.Procedures (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10263b4418b90b2284d0abb3d433101a9afcaa98
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9c36883f8595b51239c78b178217a094f37e9484
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547930"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jedes Objekt, das eine Prozedur einer beliebigen Art mit **sys.objects.type** = P, X, RF und PC.  
+  Enthält eine Zeile für jedes Objekt, das eine Prozedur einer beliebigen Art ist **sys.objects.type** = P, X, RF und PC.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys.objects geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = die Prozedur wird beim Serverstart automatisch ausgeführt; andernfalls 0. Kann nur für Prozeduren in der master-Datenbank festgelegt werden.|  
 |**is_execution_replicated**|**bit**|Die Ausführung dieser Prozedur wird repliziert.|  
 |**is_repl_serializable_only**|**bit**|Die Ausführung der Prozedur wird nur repliziert, wenn die Transaktion serialisiert werden kann.|  

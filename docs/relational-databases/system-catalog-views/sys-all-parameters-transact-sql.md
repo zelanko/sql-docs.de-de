@@ -1,5 +1,5 @@
 ---
-title: Sys. all_parameters (Transact-SQL) | Microsoft Docs
+title: Sys. all_parameters (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f84ad73cb35e05e454abfa41418216de6210888f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4eb2ba402e595446ac00c07e608bbdf9b8f28599
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181586"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545560"
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +43,15 @@ ms.locfileid: "33181586"
 |**name**|**sysname**|Name des Parameters. Ist eindeutig innerhalb des Objekts. Wenn es sich bei dem Objekt um eine skalare Funktion handelt, ist der Parametername eine leere Zeichenfolge in der Zeile, die den zurückgegebenen Wert darstellt.|  
 |**parameter_id**|**int**|ID des Parameters. Ist eindeutig innerhalb des Objekts. Handelt es sich bei dem Objekt um eine Skalarfunktion, stellt **parameter_id** = 0 den Rückgabewert dar.|  
 |**system_type_id**|**tinyint**|ID des Systemtyps des Parameters.|  
-|**user_type_id**|**int**|Die ID des vom Benutzer definierten Typs des Parameters.<br /><br /> Um den Namen des Typs zurückzugeben, verknüpfen Sie mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte.|  
-|**max_length**|**smallint**|Die maximale Länge des Parameters (in Byte).<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**.|  
-|**precision**|**tinyint**|Genauigkeit des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
-|**scale**|**tinyint**|Skalierung des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
+|**user_type_id**|**int**|Die ID des vom Benutzer definierten Typs des Parameters.<br /><br /> Um den Namen des Typs zurückzugeben, fügen Sie der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte.|  
+|**max_length**|**smallint**|Die maximale Länge des Parameters (in Byte).<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.|  
+|**Mit einfacher Genauigkeit**|**tinyint**|Genauigkeit des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
+|**Skalieren**|**tinyint**|Skalierung des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
 |**is_output**|**bit**|1 = Parameter ist ein Ausgabeparameter (oder Rückgabeparameter), andernfalls 0|  
 |**is_cursor_ref**|**bit**|1 = Parameter ist ein Cursorverweisparameter.|  
-|**has_default_value**|**bit**|1 = Parameter hat einen Standardwert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet nur Standardwerte für CLR-Objekte in dieser Katalogsicht; aus diesem Grund müssen diese Spalte immer der Wert 0 für [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekte. Zum Anzeigen des Standardwert eines Parameters in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt, das Abfragen der **Definition** Spalte die [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt werden soll, oder verwenden Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)-Systemfunktion.|  
+|**has_default_value**|**bit**|1 = Parameter hat einen Standardwert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet nur Standardwerte für CLR-Objekte in dieser Katalogsicht; aus diesem Grund wird diese Spalte immer einen Wert von 0 für besitzen [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekte. An den Standardwert eines Parameters in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt, das Abfragen der **Definition** Spalte die [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt werden soll, oder verwenden Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)-Systemfunktion.|  
 |**is_xml_document**|**bit**|1 = Der Inhalt ist ein vollständiges XML-Dokument.<br /><br /> 0 = Inhalt ist ein Dokumentfragment, oder der Datentyp der Spalte ist nicht **xml**.|  
-|**default_value**|**sql_variant**|Wenn **Has_default_value** 1, ist der Wert dieser Spalte ist der Wert des Standards für den Parameter ist, andernfalls NULL.|  
+|**default_value**|**sql_variant**|Wenn **Has_default_value** ist 1. der Wert dieser Spalte der Standardwert für den Parameter ist, andernfalls NULL.|  
 |**xml_collection_id**|**int**|Die ID der XML-Schemaauflistung, die zur Überprüfung des Parameters verwendet wird.<br /><br /> Ungleich NULL, wenn der Datentyp des Parameters ist **Xml** und XML typisiert ist.<br /><br /> 0 = Es ist keine XML-Schemaauflistung vorhanden, oder der Parameter ist nicht XML.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -60,7 +60,7 @@ ms.locfileid: "33181586"
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [Sys. system_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   

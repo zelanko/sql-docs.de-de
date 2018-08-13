@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Unterstützung für Tabellenwertparameter-Typen | Microsoft-Dokumentation
+title: OLE DB-Typunterstützung für Tabellenwertparameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 73d391bcd0cd5476c9c494606e8215e6a96afb42
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7d2bc120130f2e6973ed942cf330f4186ef453c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536970"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB-Typunterstützung für Tabellenwertparameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37421949"
   In diesem Thema wird die OLE DB-Typunterstützung für Tabellenwertparameter beschrieben.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Tabellenwertparameter-Rowsetobjekt  
- Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie erstellen das Tabellenwertparameter-Rowsetobjekt mit ITableDefinitionWithConstraints::CreateTableWithConstraints oder IOpenRowset:: OPENROWSET. Zu diesem Zweck legen Sie die *eKind* Mitglied der *pTableID* -Parameters auf dbkind_guid_name fest, und geben Sie CLSID_ROWSET_INMEMORY der *Guid* Member. Der servertypname für den Tabellenwertparameter muss angegeben werden, der *PwszName* Mitglied *pTableID* Verwendung IOpenRowset:: OPENROWSET. Das Tabellenwertparameter-Rowsetobjekt verhält sich wie ein reguläres Objekt des OLE DB-Anbieters von SQL Server Native Client.  
+ Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie erstellen das Tabellenwertparameter-Rowsetobjekt mit ITableDefinitionWithConstraints::CreateTableWithConstraints oder IOpenRowset:: OPENROWSET. Legen Sie hierzu das *eKind*-Element des *pTableID*-Parameters auf DBKIND_GUID_NAME fest, und geben Sie für das *guid*-Element CLSID_ROWSET_INMEMORY an. Der servertypname für den Tabellenwertparameter muss angegeben werden, der *PwszName* Mitglied *pTableID* Verwendung IOpenRowset:: OPENROWSET. Das Tabellenwertparameter-Rowsetobjekt verhält sich wie ein reguläres Objekt des OLE DB-Anbieters von SQL Server Native Client.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -57,9 +57,9 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE hat das gleiche Format wie DBTYPE_IUNKNOWN. Es ist ein Zeiger auf ein Objekt im Datenpuffer. Für vollständige Spezifikation in den Bindungen, füllt der Consumer den DBOBJECT-Puffer mit *Iid* auf eine der Schnittstellen des Rowsetobjekts (IID_IRowset) festgelegt. Wenn DBOBJECT in den Bindungen angegeben wird, wird der IID_IRowset davon ausgegangen werden.  
+ DBTYPE_TABLE hat das gleiche Format wie DBTYPE_IUNKNOWN. Es ist ein Zeiger auf ein Objekt im Datenpuffer. Um die Bindungen vollständig anzugeben, füllt der Consumer den DBOBJECT-Puffer, wobei *iid* auf eine der Schnittstellen des Rowsetobjekts (IID_IRowset) festgelegt wird. Wenn in den Bindungen die Angabe von DBOBJECT fehlt, wird IID_IRowset angenommen.  
   
- Konvertierungen zu und von DBTYPE_TABLE für andere Typen werden nicht unterstützt. IConvertType::CanConvert gibt S_FALSE für nicht unterstützte Konvertierung für jede Anforderung als DBTYPE_TABLE an DBTYPE_TABLE Konvertierung zurück. Dies setzt voraus DBCONVERTFLAGS_PARAMETER für das Command-Objekt zu.  
+ Konvertierungen zu und von DBTYPE_TABLE für andere Typen werden nicht unterstützt. Außer bei einer Konvertierung von DBTYPE_TABLE zu DBTYPE_TABLE gibt IConvertType::CanConvert bei einer nicht unterstützten Konvertierung für jede Anforderung S_FALSE zurück. Hierbei wird die Angabe von DBCONVERTFLAGS_PARAMETER für das Command-Objekt angenommen.  
   
 ## <a name="methods"></a>Methoden  
  Weitere Informationen zu OLE DB-Methoden, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40;Methoden&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
@@ -68,7 +68,7 @@ CoType RowsetTVP
  Weitere Informationen zu OLE DB-Eigenschaften, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40;Eigenschaften&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenwertparameter &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Verwenden von Tabellenwertparametern &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Tabellenwertparameter &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

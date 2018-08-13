@@ -1,5 +1,5 @@
 ---
-title: Sp_help (Transact-SQL) | Microsoft Docs
+title: Sp_help (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b3effbe023b79ded3115eac3e62503d7a820993
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 20d86aae268c704b72310a3215756627d0662eb8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263488"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550520"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Meldet Informationen zu einem Datenbankobjekt (jedes Objekt aufgelistet, die der **sys.sysobjects** -kompatibilitätssicht angezeigt), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
+  Gibt Informationen zu einem Datenbankobjekt (alle Objekte aufgelistet, die der **sys.sysobjects** -kompatibilitätssicht angezeigt), einen benutzerdefinierten Datentyp oder einen Datentyp.  
   
  
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,38 +47,38 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@objname=**] **'***name***'**  
- Ist der Name eines beliebigen Objekts im **Sysobjects** , oder geben Sie eine benutzerdefinierte Daten der **Systypes** Tabelle. *Namen* ist **Nvarchar (** 776 **)**, hat den Standardwert NULL. Datenbanknamen sind nicht zulässig.  Zwei bis drei Teilnamen müssen eingeschränkt werden, z.B. „Person.AddressType“ oder [Person.AddressType].   
+ Ist der Name eines beliebigen Objekts im **Sysobjects** , oder geben Sie eine benutzerdefinierte Daten die **Systypes** Tabelle. *Namen* ist **Nvarchar (** 776 **)**, hat den Standardwert NULL. Datenbanknamen sind nicht zulässig.  Zwei bis drei Teilnamen müssen eingeschränkt werden, z.B. „Person.AddressType“ oder [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Die zurückgegebenen Resultsets hängen davon ab, ob *Namen* wird angegeben, wenn er angegeben wird und welches Datenbankobjekt es ist.  
+ Das Resultset mit Vorwärtscursor, die zurückgegeben werden, hängt davon ab, ob *Namen* wird angegeben, wenn er angegeben wird, und welches Datenbankobjekt kann.  
   
-1.  Wenn **Sp_help** wird ausgeführt, ohne Argumente Zusammenfassung aller Typen, die in der aktuellen Datenbank vorhanden sind zurückgegeben wird.  
+1.  Wenn **Sp_help** erfolgt keine Argumente, zusammenfassende Informationen zu aller Objekttypen, die in der aktuellen Datenbank vorhanden sind zurückgegeben wird.  
   
     |Spaltenname|Datentyp|Description|  
     |-----------------|---------------|-----------------|  
     |**Name**|**Nvarchar (** 128 **)**|Objektname|  
     |**Besitzer**|**Nvarchar (** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
-    |**object_type**|**Nvarchar (** 31 **)**|Objekttyp|  
+    |**Object_type**|**Nvarchar (** 31 **)**|Objekttyp|  
   
-2.  Wenn *Namen* ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp oder der benutzerdefinierte Datentyp **Sp_help** gibt dieses Resultset zurück.  
+2.  Wenn *Namen* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp oder den benutzerdefinierten Datentyp **Sp_help** gibt dieses Resultset zurück.  
   
     |Spaltenname|Datentyp|Description|  
     |-----------------|---------------|-----------------|  
-    |**TYPE_NAME**|**Nvarchar (** 128 **)**|Name des Datentyps.|  
+    |**Type_name**|**Nvarchar (** 128 **)**|Name des Datentyps.|  
     |**Storage_type**|**Nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
-    |**Prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
+    |**prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
     |**Dezimalstellen**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
     |**NULL zulassen**|**Varchar (** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: Yes oder No.|  
-    |**default_name**|**Nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
-    |**rule_name**|**Nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
+    |**Default_name**|**Nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
+    |**Rule_name**|**Nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Sortierung**|**sysname**|Sortierung des Datentyps. NULL für Nicht-Zeichen-Datentypen|  
   
-3.  Wenn *Namen* ist ein Datenbankobjekt, außer einem Datentyp **Sp_help** dieses Ergebnis und zusätzliche Resultsets, basierend auf dem Typ des angegebenen Objekts zurück.  
+3.  Wenn *Namen* beliebiges Datenbankobjekt außer einem Datentyp **Sp_help** dieses Ergebnis und zusätzliche Resultsets, basierend auf dem Typ des angegebenen Objekts zurück.  
   
     |Spaltenname|Datentyp|Description|  
     |-----------------|---------------|-----------------|  
@@ -89,17 +89,17 @@ sp_help [ [ @objname = ] 'name' ]
   
      Je nach der angegebenen Datenbankobjekt **Sp_help** zusätzliche Resultsets zurück.  
   
-     Wenn *Namen* ist eine Systemtabelle, Benutzertabelle oder Sicht, **Sp_help** gibt die folgenden Resultsets zurück. Das Resultset, das beschreibt, wo sich die Datendateien in einer Dateigruppe befinden, wird jedoch nicht für eine Sicht zurückgegeben.  
+     Wenn *Namen* ist eine Systemtabelle, Benutzertabelle oder Sicht **Sp_help** gibt die folgenden Resultsets zurück. Das Resultset, das beschreibt, wo sich die Datendateien in einer Dateigruppe befinden, wird jedoch nicht für eine Sicht zurückgegeben.  
   
     -   Zusätzliches Resultset, das für Spaltenobjekte zurückgegeben wird:  
   
         |Spaltenname|Datentyp|Description|  
         |-----------------|---------------|-----------------|  
-        |**Spaltenname**|**Nvarchar (** 128 **)**|Spaltenname.|  
+        |**Spaltenname**|**Nvarchar (** 128 **)**|Name der Spalte.|  
         |**Typ**|**Nvarchar (** 128 **)**|Datentyp der Spalte.|  
         |**Berechnet**|**Varchar (** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: Yes oder No.|  
-        |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**), wird der Wert als-1 angezeigt.|  
-        |**Prec**|**Char (** 5 **)**|Spaltengenauigkeit|  
+        |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**), wird der Wert als-1 angezeigt.|  
+        |**prec**|**Char (** 5 **)**|Spaltengenauigkeit|  
         |**Dezimalstellen**|**Char (** 5 **)**|Dezimalstellen einer Spalte|  
         |**NULL zulassen**|**Varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
         |**TrimTrailingBlanks**|**Varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
@@ -113,7 +113,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Identität**|**Nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
         |**Startwert**|**numeric**|Startwert für die Identitätsspalte|  
         |**Increment**|**numeric**|Schrittweite für Werte in dieser Spalte|  
-        |**Not For Replication**|**int**|IDENTITY-Eigenschaft wird nicht erzwungen, wenn eine replikationsanmeldung wie z. B. **Sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Not For Replication**|**int**|IDENTITY-Eigenschaft wird nicht erzwungen, wenn eine replikationsanmeldung wie z. B. **Sqlrepl**, fügt Daten in der Tabelle:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
   
@@ -132,7 +132,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Spaltenname|Datentyp|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Name des Indexes.|  
-        |**index_description**|**Varchar (** 210 **)**|Beschreibung des Index.|  
+        |**Index_description**|**Varchar (** 210 **)**|Beschreibung des Index.|  
         |**index_keys**|**Nvarchar (** 2078 **)**|Namen der Spalten, die für den Index verwendet werden. Gibt für speicheroptimierte xVelocity-columnstore-Indizes NULL zurück.|  
   
     -   Zusätzliches Resultset, das für Einschränkungen zurückgegeben wird:  
@@ -160,16 +160,16 @@ sp_help [ [ @objname = ] 'name' ]
         |**Parametername**|**Nvarchar (** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
         |**Typ**|**Nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
-        |**Prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
+        |**prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
         |**Dezimalstellen**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Sp_help** Prozedur sucht ein Objekt nur in der aktuellen Datenbank.  
+ Die **Sp_help** für ein Objekt nur in der aktuellen Datenbank sucht.  
   
- Wenn *Namen* nicht angegeben ist, **Sp_help** Listen-Objekt Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank. **"sp_helptrigger"** stellt Informationen zu Triggern bereit.  
+ Wenn *Namen* nicht angegeben ist, **Sp_help** Listen Objekt Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank. **Sp_helptrigger** stellt Informationen zu Triggern bereit.  
   
- **Sp_help** macht nur Indexspalten; daher es macht Informationen zu XML-Indizes oder räumliche Indizes.  
+ **Sp_help** macht nur Indexspalten; aus diesem Grund macht es keine Informationen über XML-Indizes oder räumliche Indizes verfügbar.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Der Benutzer muss mindestens eine Berechtigung verfügen, auf *Objname*. Um Spalteneinschränkungsschlüssel, Standards oder Regeln anzuzeigen, müssen Sie über die VIEW DEFINITION-Berechtigung für die Tabelle verfügen.  
@@ -197,10 +197,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [Sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

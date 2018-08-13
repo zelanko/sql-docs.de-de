@@ -1,5 +1,5 @@
 ---
-title: Sp_column_privileges (Transact-SQL) | Microsoft Docs
+title: Sp_column_privileges (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5071d68cfe594b2b4266a5c83398ebdd5a9bfbea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4742d442cf410d936706d5a67b50e08732ad253c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239770"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545602"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Die Tabelle zum Zurückgeben von Kataloginformationen. *TABLE_NAME* ist **Sysname**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
   
  [ @table_owner=] '*Table_owner*"  
- Der Besitzer der Tabelle, die zum Zurückgeben von Kataloginformationen verwendet wird. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Table_owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden Datenbank-Managementsystem (DBMS).  
+ Der Besitzer der Tabelle, die zum Zurückgeben von Kataloginformationen verwendet wird. *Table_owner* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Table_owner* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden Datenbank-Managementsystem (DBMS).  
   
- Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Table_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Table_name*, sp_column nach für eine Tabelle mit dem angegebenen *Table_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
+ Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Table_owner* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Table_name*, sp_column nach für eine Tabelle mit dem angegebenen *Table_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [ @table_qualifier=] '*Table_qualifier*"  
  Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @column_name=] '*Spalte*"  
- Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgeführt. *Spalte* kann mithilfe von Platzhalterzeichen Mustervergleich DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+ Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgelistet. *Spalte* kann Platzhalterzeichen DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
 ## <a name="result-sets"></a>Resultsets  
  Sp_column_privileges entspricht SQLColumnPrivileges in ODBC. Die zurückgegebenen Ergebnisse sind nach den Spalten TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME und PRIVILEGE sortiert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|TABLE_QUALIFIER|**sysname**|Tabelle der Name des Prozedurqualifizierers. Dieses Feld kann den Wert NULL annehmen.|  
+|TABLE_QUALIFIER|**sysname**|Name des Qualifizierers Tabelle. Dieses Feld kann den Wert NULL annehmen.|  
 |TABLE_OWNER|**sysname**|Name des Tabellenbesitzers. Dieses Feld gibt immer einen Wert zurück.|  
 |table_name|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |COLUMN_NAME|**sysname**|Der Name der Spalte für jede Spalte des zurückgegebenen TABLE_NAME. Dieses Feld gibt immer einen Wert zurück.|  
