@@ -1,5 +1,5 @@
 ---
-title: table_types (Transact-SQL) | Microsoft Docs
+title: table_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,22 +27,22 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b93b2395aa31d68de287628b512d111ac423bd92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eef7f540231ff230bf32e4f2e0d4613c5dab8477
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220631"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559250"
 ---
 # <a name="systabletypes-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp besitzt eine **Type_table_object_id** also einen Fremdschlüssel in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht angezeigt. Verwenden Sie diese ID-Spalte, um verschiedene Ansichten für den Katalog, auf eine Weise abzufragen, die ähnlich ist ein **Object_id** Spalte einer regulären Tabelle, um die Struktur des Tabellentyps, wie z. B. die Spalten und Einschränkungen zu ermitteln.    
+  Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp besitzt eine **Type_table_object_id** , einen Fremdschlüssel in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht angezeigt. Sie können diese ID-Spalte verschiedener Katalogsichten verwendet werden, auf eine Weise Abfragen, die ähnlich wie ein **Object_id** -Spalte einer regulären Tabelle, um die Struktur des Tabellentyps, wie z. B. die Spalten und Einschränkungen zu ermitteln.    
  
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|*\<geerbte Spalten >*||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
+|*\<geerbte Spalten >*||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Objekt-ID. Diese Nummer ist innerhalb einer Datenbank eindeutig.|  
 |**is_memory_optimized**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Folgende Werte sind möglich:<br /><br /> 0 = ist nicht speicheroptimiert<br /><br /> 1 = ist speicheroptimiert<br /><br /> Der Wert 0 ist der Standardwert.<br /><br /> Tabellentypen werden immer mit DURABILITY = SCHEMA_ONLY erstellt. Nur das Schema wird auf dem Datenträger beibehalten.|  
   
