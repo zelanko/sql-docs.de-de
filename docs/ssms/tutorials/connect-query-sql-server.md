@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988754"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367662"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
@@ -184,5 +184,11 @@ Mit den folgenden Schritten können Sie die Serververbindung für das aktuelle A
     > [!NOTE]
     > Diese Aktion ändert nur den Server, mit dem das Abfragefenster verbunden ist und nicht den Server, mit dem der Objekt-Explorer verbunden ist. 
 
+## <a name="next-steps"></a>Nächste Schritte
+Im nächsten Artikel erfahren Sie, wie Sie Skripts für mehrere Objekte in SQL Server Management Studio erstellen. 
+
+Zum nächsten Artikel wechseln, um mehr zu erfahren:
+> [!div class="nextstepaction"]
+> [Nächste Schritte](scripting-ssms.md)
 
 

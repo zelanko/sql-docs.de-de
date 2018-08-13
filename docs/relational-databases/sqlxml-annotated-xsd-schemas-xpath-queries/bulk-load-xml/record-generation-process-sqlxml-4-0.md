@@ -1,5 +1,5 @@
 ---
-title: Datensatzgenerierungsprozess (SQLXML 4.0) | Microsoft Docs
+title: Datensatzgenerierungsprozess (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 59ec68c1c2c321f45940eace9ef1f6a3dc9be9c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eb9f4d99a6927e0f2d7baa77a0d5147f4c9b08a7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972735"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560300"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Datensatzgenerierungsprozess (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "32972735"
 -   Ausnahmen von der Datensatzgenerierungsregel  
   
 ## <a name="scope-of-a-node"></a>Bereich eines Knotens  
- Gibt ein Knoten in einem XML-Dokument (ein Element oder Attribut) *in den Bereich* beim XML-Massenladen tritt in der XML-Eingabedatenstrom. Bei Elementknoten bringt das Starttag des Elements das Element in den Bereich. Bei Attributknoten bringt der Attributname das Attribut in den Bereich.  
+ Ein Knoten (ein Element oder Attribut) in einem XML-Dokument *in den Bereich* beim XML-Massenladen tritt in der XML-Eingabedatenstrom. Bei Elementknoten bringt das Starttag des Elements das Element in den Bereich. Bei Attributknoten bringt der Attributname das Attribut in den Bereich.  
   
  Ein Knoten verlässt den Bereich, wenn keine Daten mehr dafür vorliegen, das heißt entweder am Endtag (im Fall eines Elementknotens) oder am Ende eines Attributwerts (im Fall eines Attributknotens).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "32972735"
 </xsd:schema>  
 ```  
   
- Das Schema gibt ein  **\<Kunden >** Element mit **CustomerID** und **CompanyName** Attribute. Die **SQL: Relation** -Anmerkung ordnet das  **\<Kunden >** Element zur Customers-Tabelle.  
+ Das Schema gibt ein  **\<Kunden >** -Element mit **"CustomerID"** und **CompanyName** Attribute. Die **SQL: Relation** -Anmerkung ordnet das  **\<Kunden >** Element zur Customers-Tabelle.  
   
  Betrachten Sie dieses Fragment eines XML-Dokuments:  
   
@@ -97,17 +97,17 @@ ms.locfileid: "32972735"
   
 -   Das Starttag des ersten  **\<Kunden >** -Elements bringt dieses Element im Bereich. Dieser Knoten ist der Customers-Tabelle zugeordnet. Beim XML-Massenladen wird daher ein Datensatz für die Customers-Tabelle generiert.  
   
--   Im Schema sind alle Attribute der  **\<Kunden >** Spalten der Customers-Tabelle. Wenn diese Attribute in den Bereich gelangen, werden ihre Werte in den Kundendatensatz kopiert, der bereits vom übergeordneten Bereich generiert wurde.  
+-   Im Schema alle Attribute der  **\<Kunden >** Spalten der Customers-Tabelle. Wenn diese Attribute in den Bereich gelangen, werden ihre Werte in den Kundendatensatz kopiert, der bereits vom übergeordneten Bereich generiert wurde.  
   
--   Bei Erreichen des XML-Massenladen das Endtag für das  **\<Kunden >** -Element, das Element den Gültigkeitsbereich verlässt. Damit wird der Datensatz als vollständig betrachtet und an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet.  
+-   Bei Erreichen des XML-Massenladen das Endtag für das  **\<Kunden >** -Element, der das Element den Gültigkeitsbereich verlässt. Damit wird der Datensatz als vollständig betrachtet und an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet.  
   
- XML-Massenladen nach diesem Prozess für jeden nachfolgenden  **\<Kunden >** Element.  
+ XML-Massenladen nach diesem Prozess für jedes nachfolgende  **\<Kunden >** Element.  
   
 > [!IMPORTANT]  
 >  Da in diesem Modell ein Datensatz eingefügt wird, wenn das Endtag erreicht ist (oder der Knoten den Bereich verlässt), müssen Sie alle mit dem Datensatz verknüpften Daten innerhalb des Knotenbereichs definieren.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Datensatzteilmenge und den Schlüssel, die Reihenfolge der Regel  
- Beim Angeben eines Zuordnungsschemas, die verwendet  **\<SQL: Relationship >**, die Teilmenge Begriff bezieht sich auf die Gruppe von Datensätzen, die auf der Fremdschlüsselseite der Beziehung generiert wird. Im folgenden Beispiel werden die CustOrder-Datensätze auf der Fremdschlüsselseite  **\<SQL: Relationship >**.  
+ Wenn Sie ein Zuordnungsschema, das verwendet angeben  **\<SQL: Relationship >**, die Teilmenge Begriff bezieht sich auf die Gruppe von Datensätzen, die auf der Fremdschlüsselseite der Beziehung generiert wird. Im folgenden Beispiel wird die CustOrder-Datensätze auf der Fremdschlüsselseite, sind  **\<SQL: Relationship >**.  
   
  Nehmen Sie z. B. an, dass eine Datenbank die folgenden Tabellen enthält:  
   
@@ -153,19 +153,19 @@ ms.locfileid: "32972735"
   
  Die XML-Beispieldaten und die Schritte zum Erstellen eines funktionierenden Beispiels sind unten aufgeführt.  
   
--   Wenn eine  **\<Kunden >** -Elementknoten in der XML-Datendatei in den Bereich gelangt, XML-Massenladen wird ein Datensatz für die Cust-Tabelle generiert. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<CustomerID >**,  **\<CompanyName >**, und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
+-   Wenn eine  **\<Kunden >** Elementknoten in das XML-Datendatei in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die Cust-Tabelle. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<"CustomerID" >**,  **\<CompanyName >**, und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
   
--   Wenn ein  **\<Reihenfolge >** Elementknoten in den Bereich gelangt, XML-Massenladen wird ein Datensatz für die CustOrder-Tabelle generiert. XML-Massenladen kopiert den Wert der **OrderID** -Attributs in diesen Datensatz. Der erforderliche Wert für die CustomerID-Spalte abgerufen wird die  **\<CustomerID >** untergeordnetes Element von der  **\<Kunden >** Element. XML-Massenladen verwendet die Informationen, die im angegebenen  **\<SQL: Relationship >** die CustomerID Fremdschlüsselwerts für diesen Datensatz abrufen, es sei denn, die **CustomerID** Attribut wurde im angegebenen der  **\<Reihenfolge >** Element. Als allgemeine Regel gilt, wenn das untergeordnete Element explizit einen Wert für die foreign Key-Attribut angegeben ist, diesen Wert verwendet und den Wert nicht vom übergeordneten Element abgerufen werden, ist mit dem angegebenen XML-Massenladen **\<SQL: Relationship >**. Wie diese  **\<Reihenfolge >** Elementknoten den Gültigkeitsbereich verlässt, XML-Massenladen der Datensatz an gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und verarbeitet anschließend alle nachfolgenden  **\<Reihenfolge >** Elementknoten auf die gleiche Weise.  
+-   Wenn ein  **\<Reihenfolge >** Elementknoten in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die CustOrder-Tabelle. XML-Massenladen kopiert den Wert der **"OrderID"** -Attributs in diesen Datensatz. Der erforderliche Wert für die Spalte "CustomerID" aus erfolgt die  **\<"CustomerID" >** untergeordnetes Element von der  **\<Kunden >** Element. XML-Massenladen verwendet die Informationen, die im angegebenen  **\<SQL: Relationship >** die CustomerID Fremdschlüsselwerts für diesen Datensatz abrufen, es sei denn, die **"CustomerID"** Attribut wurde Angabe in der  **\<Reihenfolge >** Element. Als allgemeine Regel gilt, wenn das untergeordnete Element explizit einen Wert für die foreign Key-Attribut angegeben ist, diesen Wert verwendet und den Wert nicht vom übergeordneten Element ausgegeben werden, wird mit dem angegebenen XML-Massenladen **\<SQL: Relationship >**. Wie diese  **\<Reihenfolge >** Elementknoten den Gültigkeitsbereich verlässt, XML-Massenladen der Datensatz an gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und verarbeitet anschließend alle nachfolgenden  **\<Reihenfolge >** Elementknoten auf die gleiche Weise.  
   
--   Schließlich die  **\<Kunden >** Elementknoten den Gültigkeitsbereich verlässt. Der Kundendatensatz wird daraufhin an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet. Bei allen nachfolgenden Kunden im XML-Datenstrom wird nach demselben Prozess vorgegangen.  
+-   Zum Schluss die  **\<Kunden >** Elementknoten den Gültigkeitsbereich verlässt. Der Kundendatensatz wird daraufhin an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet. Bei allen nachfolgenden Kunden im XML-Datenstrom wird nach demselben Prozess vorgegangen.  
   
  Zwei Beobachtungen zum Zuordnungsschema:  
   
--   Erfüllt das Schema die Regel "Aufnahme" (z. B. alle Daten, die die Kunden und dem Auftrag zugeordnet ist definiert wird, innerhalb des Bereichs des zugehörigen  **\<Kunden >** und  **\<Reihenfolge >** Elementknoten), das Massenladen erfolgreich.  
+-   Erfüllt das Schema die Regel "Aufnahme" (z. B. alle Daten, die die Kunden und dem Auftrag zugeordnet ist definiert wird, innerhalb des Bereichs des zugeordneten  **\<Kunden >** und  **\<Reihenfolge >** Elementknoten), das Massenladen erfolgreich.  
   
--   Beim Beschreiben der  **\<Kunden >** -Elements werden seine untergeordneten Elemente in der richtigen Reihenfolge angegeben werden. In diesem Fall die  **\<CustomerID >** untergeordnetes Element wird angegeben, bevor die  **\<Reihenfolge >** untergeordnetes Element. Dies bedeutet, dass in der XML-Eingabedatendatei der  **\<CustomerID >** Elementwert steht als Fremdschlüssel Wert der  **\<Reihenfolge >** Element in den Bereich gelangt. Die Schlüsselattribute werden gemäß der "Schlüsselsortierregel" zuerst angegeben.  
+-   Bei der Beschreibung der  **\<Kunden >** -Elements werden seine untergeordneten Elemente in der richtigen Reihenfolge angegeben werden. In diesem Fall die  **\<"CustomerID" >** untergeordnetes Element angegeben ist, bevor Sie die  **\<Reihenfolge >** untergeordnetes Element. Dies bedeutet, dass in der XML-Eingabedatendatei der  **\<"CustomerID" >** Wert des Elements steht als Fremdschlüssel Wert fest, wenn die  **\<Reihenfolge >** Element in den Bereich gelangt. Die Schlüsselattribute werden gemäß der "Schlüsselsortierregel" zuerst angegeben.  
   
-     Bei Angabe der  **\<CustomerID >** untergeordnete Element nach der  **\<Reihenfolge >** untergeordnetes Element, das der Wert ist nicht verfügbar, wenn die  **\< Reihenfolge >** Element in den Bereich gelangt. Wenn die  **\</Order >** Endtag ist dann lesen, der Datensatz für die CustOrder-Tabelle als vollständig angesehen und in die CustOrder-Tabelle mit einem Nullwert für die Spalte CustomerID, die nicht das gewünschte Ergebnis eingefügt.  
+     Bei Angabe der  **\<"CustomerID" >** untergeordneten Element an, nach der  **\<Reihenfolge >** untergeordnetes Element der Wert ist nicht verfügbar, wenn die  **\< Reihenfolge >** Element in den Bereich gelangt. Wenn die  **\</Order >** Endtag wird dann gelesen, die der Datensatz für die CustOrder-Tabelle als vollständig angesehen und wird in die CustOrder-Tabelle mit einem Nullwert für die CustomerID-Spalte, die nicht das gewünschte Ergebnis ist.  
   
 #### <a name="to-create-a-working-sample"></a>So erstellen Sie ein funktionierendes Beispiel  
   
@@ -223,9 +223,9 @@ ms.locfileid: "32972735"
     ```  
   
 ## <a name="exceptions-to-the-record-generation-rule"></a>Ausnahmen von der Datensatzgenerierungsregel  
- Gelangt ein Knoten vom Typ IDREF oder IDREFS in den Bereich, wird kein Datensatz generiert. Stellen Sie sicher, dass an irgendeiner Stelle im Schema eine vollständige Beschreibung des Datensatzes vorhanden ist. Die **dt: Type = "Nmtokens"** Anmerkungen werden ignoriert, ebenso wie der IDREFS-Typ ignoriert wird.  
+ Gelangt ein Knoten vom Typ IDREF oder IDREFS in den Bereich, wird kein Datensatz generiert. Stellen Sie sicher, dass an irgendeiner Stelle im Schema eine vollständige Beschreibung des Datensatzes vorhanden ist. Die **dt: Type = "Nmtokens"** Anmerkungen werden ignoriert, genau wie der IDREFS-Typ ignoriert.  
   
- Angenommen, Sie haben die folgenden XSD-Schema beschreibt  **\<Kunden >** und  **\<Reihenfolge >** Elemente. Die  **\<Kunden >** Element enthält eine **OrderList** Attribut des IDREFS-Typs. Die  **\<SQL: Relationship >** -Tag gibt an, die 1: n-Beziehung zwischen dem Kunden und Bestellungen.  
+ Betrachten Sie beispielsweise die folgende XSD-Schema beschreibt  **\<Kunden >** und  **\<Reihenfolge >** Elemente. Die  **\<Kunden >** -Element enthält eine **OrderList** Attribut des IDREFS-Typs. Die  **\<SQL: Relationship >** Tag gibt die 1: n Beziehung zwischen dem Kunden und eine Liste von Aufträgen an.  
   
  Das ist das Schema:  
   
@@ -266,9 +266,9 @@ ms.locfileid: "32972735"
 </xsd:schema>  
 ```  
   
- Da Massenladen Knoten vom IDREFS-Typ ignoriert, es wird kein Datensatz generiert bei der **OrderList** Attributknoten in den Bereich gelangt. Um die Auftragsdatensätze der Orders-Tabelle hinzuzufügen, müssen Sie demnach diese Aufträge irgendwo im Schema beschreiben. In diesem Schema angeben der  **\<Reihenfolge >** -Elements sicher, dass die XML-Massenladen die Auftragsdatensätze der Orders-Tabelle hinzugefügt. Die  **\<Reihenfolge >** -Element beschreibt alle Attribute, die zum Auffüllen des Datensatzes für die CustOrder-Tabelle erforderlich sind.  
+ Da das Massenladen Knoten vom IDREFS-Typ ignoriert, es wird kein Datensatz generiert bei der **OrderList** Attributknoten, die in den Bereich gelangt. Um die Auftragsdatensätze der Orders-Tabelle hinzuzufügen, müssen Sie demnach diese Aufträge irgendwo im Schema beschreiben. In diesem Schema angeben der  **\<Reihenfolge >** -Elements sicher, dass die XML-Massenladen die Auftragsdatensätze der Orders-Tabelle hinzugefügt. Die  **\<Reihenfolge >** -Element beschreibt alle Attribute, die zum Auffüllen des Datensatzes für die CustOrder-Tabelle erforderlich sind.  
   
- Müssen Sie sicherstellen, dass die **CustomerID** und **OrderID** Werte in der  **\<Kunden >** Element entsprechen den Werten in der  **\<Reihenfolge >** Element. Sie sind verantwortlich für die Wahrung der referenziellen Integrität.  
+ Müssen Sie sicherstellen, dass die **"CustomerID"** und **"OrderID"** Werte in der  **\<Kunden >** Element entsprechen den Werten in der  **\<Reihenfolge >** Element. Sie sind verantwortlich für die Wahrung der referenziellen Integrität.  
   
 #### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

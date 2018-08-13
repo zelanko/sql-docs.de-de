@@ -1,5 +1,5 @@
 ---
-title: Sp_helprole (Transact-SQL) | Microsoft Docs
+title: Sp_helprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250270"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538400"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
-|**RoleID-Wert**|**smallint**|ID von **RoleName**.|  
+|**RoleId**|**smallint**|ID von **RoleName**.|  
 |**IsAppRole**|**int**|0 = **RoleName** ist keine Anwendungsrolle.<br /><br /> 1 = **RoleName** ist eine Anwendungsrolle.|  
   
 ## <a name="remarks"></a>Hinweise  

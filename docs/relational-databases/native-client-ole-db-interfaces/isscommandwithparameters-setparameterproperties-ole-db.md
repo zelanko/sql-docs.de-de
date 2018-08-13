@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ccbc15cd4493f4d0d9654e9da130ac192f9f8c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 860c4a6188254cbb1240578ee1fa9c822b9af6a2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416919"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563804"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,26 +44,26 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>Argumente  
  *cParams*[in]  
- Die Anzahl der SSPARAMPROPS-Strukturen in der *RgParamProperties* Array. Wenn diese Zahl 0 (null), ist **isscommandwithparameters:: SetParameterProperties** löscht alle Eigenschaften, die für alle Parameter im Befehl möglicherweise festgelegt wurden.  
+ Die Anzahl der SSPARAMPROPS-Strukturen im *rgParamProperties*-Array. Wenn diese Anzahl 0 ist, löscht **ISSCommandWithParameters::SetParameterProperties** alle Eigenschaften, die für Parameter im Befehl möglicherweise festgelegt wurden.  
   
- *RgParamProperties*[in]  
+ *rgParamProperties*[in]  
  Ein Array von SSPARAMPROPS-Strukturen, die festgelegt werden sollen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Die **isscommandwithparameters:: SetParameterProperties** -Methode gibt dieselben Fehlercodes wie die OLE DB **ICommandProperties:: SetProperties** Methode.  
+ Die **ISSCommandWithParameters::SetParameterProperties**-Methode gibt die gleichen Fehlercodes wie die OLE DB-Kernmethode **ICommandProperties::SetProperties** zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Festlegen von Parametereigenschaften mit dieser Methode ist zulässig auf einer einzelparameterbasis nach Ordnungszahl oder mit einem einzelnen **isscommandwithparameters:: SetParameterProperties** aufgerufen werden, sobald der SSPARAMPROPS aus dem Eigenschaftenarray erstellt wurde.  
+ Das Festlegen von Parametereigenschaften mit dieser Methode ist auf Einzelparameterbasis nach Ordnungszahl oder mit einem einzelnen **ISSCommandWithParameters::SetParameterProperties**-Aufruf zulässig, sobald SSPARAMPROPS aus dem Eigenschaftenarray aufgebaut wurde.  
   
- Die **SetParameterInfo** Methode muss aufgerufen werden, bevor die **isscommandwithparameters:: SetParameterProperties** Methode. Durch Aufrufen von `SetParameterProperties(0, NULL)` werden alle angegebenen Parametereigenschaften gelöscht, während der Aufruf von `SetParameterInfo(0,NULL,NULL)` alle Parameterinformationen löscht, einschließlich Eigenschaften, die einem Parameter zugeordnet sind.  
+ Die **SetParameterInfo**-Methode muss aufgerufen werden, bevor die **ISSCommandWithParameters::SetParameterProperties**-Methode aufgerufen wird. Durch Aufrufen von `SetParameterProperties(0, NULL)` werden alle angegebenen Parametereigenschaften gelöscht, während der Aufruf von `SetParameterInfo(0,NULL,NULL)` alle Parameterinformationen löscht, einschließlich Eigenschaften, die einem Parameter zugeordnet sind.  
   
  Aufrufen von **isscommandwithparameters:: SetParameterProperties** an Eigenschaften für einen Parameter angeben, d. h. nicht vom Typ zurückgibt DBTYPE_XML- oder DBTYPE_UDT DB_E_ERRORSOCCURRED oder DB_S_ERRORSOCCURRED und markiert die  *DwStatus* alle für diesen Parameter mit DBPROPSTATUS_NOTSET in SSPARAMPROPS enthaltenen DBPROPs Feld. Das DBPROP-Array jedes in SSPARAMPROPS enthaltenen DBPROPs sollte durchsucht werden, um zu ermitteln, auf welchen Parameter DB_E_ERRORSOCCURRED bzw. DB_S_ERRORSOCCURRED verweist.  
   
- Wenn **isscommandwithparameters:: SetParameterProperties** wird aufgerufen, um Geben Sie die Eigenschaften von Parametern, deren Parameterinformationen nicht festgelegt wurden noch mit **SetParameterInfo**, gibt der Anbieter E_ zurück ERWARTET die folgende Fehlermeldung angezeigt:  
+ Wenn **ISSCommandWithParameters::SetParameterProperties** aufgerufen wird, um die Eigenschaften von Parametern anzugeben, deren Parameterinformationen noch nicht mit **SetParameterInfo** festgelegt wurden, gibt der Anbieter E_UNEXPECTED mit der folgenden Fehlermeldung zurück:  
   
  Die SetParameterProperties-Methode kann für die angegebenen Parameter nicht aufgerufen werden, ohne dass zunächst die SetParameterInfo-Methode aufgerufen wird. Die Parameterinformationen müssen vor dem Festlegen der Parametereigenschaften festgelegt werden.  
   
- Wenn der Aufruf von **isscommandwithparameters:: SetParameterProperties** enthält einige Parameter, in denen Parameterinformationen Gruppe war, und einige Parameter, in denen Parameterinformationen nicht, die DwStatus-Eigenschaften in festgelegt wurde, der DBPROPSET der SSPARAMPROPS-Eigenschaftensatz enthalten, wird mit DBSTATUS_NOTSET zurückgegeben.  
+ Wenn der Aufruf für **ISSCommandWithParameters::SetParameterProperties** einige Parameter enthält, für die die Parameterinformationen festgelegt wurden, und einige Parameter ohne Parameterinformationen, werden die dwStatus-Eigenschaften im DBPROPSET des SSPARAMPROPS-Eigenschaftensatzes mit DBSTATUS_NOTSET zurückgegeben.  
   
  Die SSPARAMPROPS-Struktur ist folgendermaßen definiert:  
   

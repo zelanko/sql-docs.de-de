@@ -1,5 +1,5 @@
 ---
-title: 'Erstellen von CDATA-Abschnitten mithilfe von SQL: use-Cdata (SQLXML 4.0) | Microsoft Docs'
+title: 'Erstellen von CDATA-Abschnitten mithilfe von SQL: use-Cdata (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f25e8b2e46cccbca7a77abe30bae219eea8e2b75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a74e0edc5ce936534053a0ff908c0248f5052fbc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970541"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561390"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Erstellen von CDATA-Abschnitten mit sql:use-cdata (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "32970541"
   
  Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markupzeichen behandelt werden. Zum Beispiel werden spitze Klammern (< und >), das Symbol "kleiner als oder gleich" (<=) und das kaufmännische Und-Zeichen (&) als Markupzeichen behandelt. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
   
- Die **SQL: use-Cdata** -Anmerkung verwendet, um anzugeben, dass die Daten durch zurückgegeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte in einem CDATA-Abschnitt eingeschlossen werden (d. h. er gibt an, ob der Wert aus einer Spalte, die vom angegebenen **SQL: field** in einem CDATA-Abschnitt eingeschlossen werden soll). Die **SQL: use-Cdata** -Anmerkung kann nur für Elemente, die einer Datenbankspalte zugeordnet.  
+ Die **SQL: use-Cdata** -Anmerkung verwendet, um anzugeben, dass die Daten von zurückgegeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem CDATA-Abschnitt umschlossen werden (d. h. er gibt an, ob der Wert aus einer Spalte, die anhand des **SQL: field** sollten in einem CDATA-Abschnitt eingeschlossen werden). Die **SQL: use-Cdata** -Anmerkung kann angegeben werden, nur für Elemente, die einer Datenbankspalte zugeordnet.  
   
- Die **SQL: use-Cdata** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = "true"). Zulässig sind die Werte 0, 1, true und false.  
+ Die **SQL: use-Cdata** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = True). Zulässig sind die Werte 0, 1, true und false.  
   
  Diese Anmerkung kann nicht verwendet werden, mit **SQL: URL-codieren** oder für die ID, IDREF, IDREFS, NMTOKEN und NMTOKENS Attributtypen.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32970541"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Angeben von sql:use-cdata für ein Element  
- Im folgenden Schema **SQL: use-Cdata** auf 1 (True) festgelegt ist, für die  **\<AddressLine1 >** innerhalb der  **\<Adresse >** Element. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
+ Im folgenden Schema **SQL: use-Cdata** auf 1 (True) festgelegt ist, die für die  **\<AddressLine1 >** innerhalb der  **\<Adresse >** Element. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +89,7 @@ ms.locfileid: "32970541"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   

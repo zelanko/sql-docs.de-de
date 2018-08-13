@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f269692489e852e60cb30172738d8ff89ec95f53
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770073"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496709"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
   
 6.  Upgraden oder Aktualisieren von PRIMARY1 (Primär1)  
   
-## <a name="upgrade-update-sql-server-instances-with-multiple-ags"></a>Upgraden oder Aktualisieren von SQL Server-Instanzen mit mehreren Verfügbarkeitsgruppen  
+## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>Upgraden oder Aktualisieren von SQL Server-Instanzen mit mehreren Verfügbarkeitsgruppen  
  Falls Sie mehrere Verfügbarkeitsgruppen mit primären Replikaten auf verschiedenen Serverknoten ausführen (eine Aktiv/Aktiv-Konfiguration), umfasst der Upgradepfad zusätzliche Failoverschritte, um die Hochverfügbarkeit während des Vorgangs sicherzustellen. Es wird angenommen, dass Sie wie in der folgenden Tabelle dargestellt drei Verfügbarkeitsgruppen auf drei Serverknoten ausführen, bei denen sich alle Replikate im synchronen Commitmodus befinden:  
   
 |Verfügbarkeitsgruppe|Knoten1|Knoten2|Knoten3|  
@@ -171,6 +171,63 @@ Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchf�
   
 > [!NOTE]  
 >  In vielen Fällen wird nach Fertigstellung des parallelen Upgrades ein Failback auf das primäre Replikat durchgeführt. 
+
+## <a name="rolling-upgrade-of-a-distributed-availability-group"></a>Paralleles Upgrade einer verteilten Verfügbarkeitsgruppe
+Wenn Sie ein paralleles Upgrade für eine verteilte Verfügbarkeitsgruppe durchführen möchten, müssen Sie zunächst alle sekundären Replikate upgraden. Führen Sie anschließend ein Failover für die Weiterleitung durch, und upgraden Sie die letzte verbleibende Instanz der sekundären Verfügbarkeitsgruppe. Sobald ein Upgrade für alle Replikate durchgeführt wurde, führen Sie ein Failover für das globale primäre Replikat durch, und upgraden Sie die letzte verbleibende Instanz der primären Verfügbarkeitsgruppe. Im Folgenden finden Sie eine Tabelle, in der die Schritte dargestellt werden. 
+
+ Je nach Ihrer spezifischen Implementierung kann der Upgradepfad abweichen. Das Gleiche gilt für die Downtime der Clientanwendungen.  
+  
+> [!NOTE]  
+>  In vielen Fällen wird nach Fertigstellung des parallelen Upgrades ein Failback auf das primäre Replikat durchgeführt. 
+
+### <a name="general-steps-to-upgrade-a-distributed-availability-group"></a>Allgemeine Schritte für das Upgrade einer verteilten Verfügbarkeitsgruppe
+1. Sichern Sie alle Datenbanken, einschließlich Systemdatenbanken und der Datenbanken, die an der Verfügbarkeitsgruppe beteiligt sind. 
+2. Führen Sie ein Upgrade für alle sekundären Replikate der sekundären Verfügbarkeitsgruppe durch (der Downstream), und starten Sie sämtliche sekundären Replikate neu. 
+3. Führen Sie ein Upgrade für alle sekundären Replikate der primären Verfügbarkeitsgruppe durch (der Upstream), und starten Sie sämtliche sekundären Replikate neu. 
+4. Führen Sie ein Failover für das primäre Replikat der Weiterleitung auf ein aktualisiertes sekundäres Replikat der sekundären Verfügbarkeitsgruppe durch.
+5. Warten Sie, bis die Daten synchronisiert wurden. Die Datenbanken sollten auf allen Replikaten mit synchronem Commit als synchronisiert angezeigt werden, und das globale primäre Replikat sollte mit der Weiterleitung synchronisiert sein.  
+6. Upgraden Sie die letzte verbleibende Instanz der sekundäre Verfügbarkeitsgruppe, und starten Sie diese Instanz neu. 
+7. Führen Sie ein Failover für das globale primäre Replikat auf eine aktualisiertes sekundäre Replikat der primären Verfügbarkeitsgruppe durch.  
+8. Upgraden Sie die letzte verbleibende Instanz der primären Verfügbarkeitsgruppe.
+9. Starten Sie den Server, für den das Upgrade gerade durchgeführt wurde. 
+10. (optional) Führen Sie ein Failover für beide Verfügbarkeitsgruppen zu deren ursprünglichen primären Replikaten zurück durch.  
+
+>[!IMPORTANT]
+>- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
+>- **Empfehlung:** Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern, auf dem der Status jedes Replikats angezeigt wird. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+
+
+### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Beispieltabelle für ein paralleles Upgrade einer verteilten Verfügbarkeitsgruppe
+
+| Verfügbarkeitsgruppe | Primäres Replikat | Sekundäres Replikat|
+| :------ | :----------------------------- |  :------ |
+| VG1 | NODE1\SQLAG | NODE2\SQLAG|
+| VG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Verteilte Verfügbarkeitsgruppe| AG1 (global) | AG2 (Weiterleitung) |
+| &nbsp; | &nbsp; | &nbsp; |
+
+![Beispieltabelle für die verteilte Verfügbarkeitsgruppe](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
+
+
+Folgende Schritte für das Upgrade der Instanzen sind in dieser Tabelle enthalten: 
+
+1. Sichern Sie alle Datenbanken, einschließlich Systemdatenbanken und der Datenbanken, die an der Verfügbarkeitsgruppe beteiligt sind. 
+2. Upgraden Sie NODE4\SQLAG (sekundäres Replikat von AG2), und starten Sie den Server neu. 
+3. Upgraden Sie NODE2\SQLAG (sekundäres Replikat von AG1), und starten Sie den Server neu. 
+4. Führen Sie ein Failover für AG2 von NODE3\SQLAG zu NODE4\SQLAG durch. 
+5. Upgraden Sie NODE3\SQLAG, und starten Sie den Server neu. 
+6. Führen Sie ein Failover für AG1 von NODE1\SQLAG zu NODE2\SQLAG durch. 
+7. Upgraden Sie NODE1\SQLAG, und starten Sie den Server neu. 
+8. (optional) Führen Sie ein Failback auf die ursprünglichen primären Replikate durch.
+    1. Führen Sie ein Failover für AG2 von NODE4\SQLAG zu NODE3\SQLAG zurück durch.  
+    2. Führen Sie ein Failover für AG1 von NODE2\SQLAG zu NODE1\SQLAG zurück durch. 
+
+Wenn ein drittes Replikat in jeder Verfügbarkeitsgruppe vorhanden wäre, würde für dieses vor NODE3\SQLAG und NODE1\SQLAG ein Upgrade durchgeführt werden. 
+
+>[!IMPORTANT]
+>- Überprüfen Sie die Synchronisierung zwischen jedem Schritt. Bevor Sie mit dem nächsten Schritt fortfahren, sollten Sie sicherstellen, dass Ihre Replikate für synchronen Commit mit der Verfügbarkeitsgruppe synchronisiert sind und dass Ihr globales primäres Replikat mit der Weiterleitung in der verteilten Verfügbarkeitsgruppe synchronisiert ist. 
+>- Empfehlung: Immer, wenn Sie die Synchronisierung überprüfen, sollten Sie den Datenbankknoten und den Knoten der verteilten Verfügbarkeitsgruppe in SQL Server Management Studio aktualisieren. Wenn alles synchronisiert wurde, sollten Sie einen Screenshot speichern. Dadurch können Sie nachverfolgen, in welchem Schritt Sie sich befinden und sichergehen, dass alle Komponenten vor dem nächsten Schritt ordnungsgemäß ausgeführt wurden. Wenn ein Fehler auftritt, können Sie den Screenshot zur Problembehandlung verwenden. 
+
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Spezielle Schritte für Change Data Capture oder die Replikation
 

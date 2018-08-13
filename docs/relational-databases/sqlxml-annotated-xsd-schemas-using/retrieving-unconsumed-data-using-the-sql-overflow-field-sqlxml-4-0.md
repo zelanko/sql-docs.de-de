@@ -1,5 +1,5 @@
 ---
-title: 'Abrufen von nicht verbrauchten Daten mithilfe der SQL: Overflow-Feld (SQLXML 4.0) | Microsoft Docs'
+title: 'Abrufen nicht verbrauchter Daten mithilfe der SQL: Overflow-Feld (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c5ff309e264f78fe4e9ffa71c7deb0c41d93a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f9fe6c3e8053b1a03174d5e9ba3fce738c5231
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968375"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559210"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Abrufen von nicht verbrauchten Daten mithilfe von 'sql:overflow-field' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Wenn Sie Daten aus einer Datenbank abrufen, mithilfe von Schemas mit Anmerkungen, können Sie angeben der **Overflow-Feld** Attribut, um die Spalte in der Tabelle zu identifizieren, in dem die Überlaufdaten gespeichert ist. Die **Overflow-Feld** -Attribut angegeben werden, auf  **\<Element >**.  
+  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Wenn Sie Daten mit kommentierte Schemas aus einer Datenbank abrufen, können Sie die **SQL: Overflow-Feld** Attribut zu Spalte in der Tabelle, in der die Überlaufdaten gespeichert. Die **SQL: Overflow-Feld** Attribut kann angegeben werden, auf  **\<Element >**.  
   
  Anschließend gibt es folgende Möglichkeiten, diese Daten abzurufen:  
   
--   Attribute, die in der Überlaufspalte gespeichert werden hinzugefügt, um das Element, enthält die **Overflow-Feld** Anmerkung.  
+-   In der Überlaufspalte gespeicherte Attribute hinzugefügt Element mit der **SQL: Overflow-Feld** Anmerkung.  
   
 -   Die untergeordneten Elemente und ihre Nachfolger, die in der Überlaufspalte der Datenbank gespeichert sind, werden nach dem im Schema explizit angegebenen Inhalt als untergeordnete Elemente hinzugefügt. (Die Reihenfolge wird nicht beibehalten.)  
   
@@ -67,7 +67,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Darüber hinaus müssen Sie ein virtuelles Verzeichnis für die Tempdb-Datenbank erstellen – und einen virtuellen Vorlagennamen vom **Vorlage** Typ mit dem Namen "Template".  
+ Darüber hinaus müssen Sie ein virtuelles Verzeichnis für die Tempdb-Datenbank erstellen, und eine virtuelle Vorlagennamen des **Vorlage** Typ mit dem Namen "Template".  
   
  Im folgenden Beispiel ruft das Zuordnungsschema die nicht verbrauchten Daten ab, die in der Spalte AddressOverflow der Tabelle Customers2 gespeichert sind.  
   
@@ -106,7 +106,7 @@ GO
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird das Resultset aufgeführt:  
   

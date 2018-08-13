@@ -1,5 +1,5 @@
 ---
-title: Befehl Parameter | Microsoft-Dokumentation
+title: Befehlsparameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37bf1eaf79ad3a26e5a1e19108850af05d276538
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 805af790d5a703f1fefca6173b119586b002bd95
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414429"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550770"
 ---
 # <a name="command-parameters"></a>Befehlsparameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37414429"
   
  Zur Verbesserung der Leistung durch Verringern des Netzwerkverkehrs, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter wird nicht automatisch Parameterinformationen, wenn **ICommandWithParameters:: GetParameterInfo** oder  **ICommandPrepare:: Prepare** wird aufgerufen, bevor die Ausführung eines Befehls. Dies bedeutet, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter nicht automatisch unterstützt:  
   
--   Überprüfen Sie die Richtigkeit der Datentyp, der mit angegebenen **ICommandWithParameters:: SetParameterInfo**.  
+-   Überprüfen der Korrektheit des mit **ICommandWithParameters::SetParameterInfo** angegebenen Datentyps.  
   
 -   Zuordnen des in den Accessor-Bindungsinformationen angegebenen DBTYPE zum korrekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp für den Parameter  
   
@@ -47,16 +47,16 @@ ms.locfileid: "37414429"
   
  Um dies zu vermeiden, sollte die Anwendung Folgendes tun:  
   
--   Sicherstellen, dass *PwszDataSourceType* entspricht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp für den Parameter auf, wenn es sich bei einer hartcodierung **ICommandWithParameters:: SetParameterInfo**.  
+-   Sicherstellen, dass *pwszDataSourceType* dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp für den Parameter entspricht, wenn **ICommandWithParameters::SetParameterInfo** fest codiert wird.  
   
 -   Sicherstellen, dass der DBTYPE–Wert, der an den Parameter gebunden wird, vom gleichen Typ wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp des Parameters ist, wenn ein Accessor fest codiert wird.  
   
--   Die Anwendung aufrufen, **ICommandWithParameters:: GetParameterInfo** , damit der Anbieter abrufen kann die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen der Parameter dynamisch. Beachten Sie, dass dies einen zusätzlichen Netzwerkroundtrip zum Server bedingt.  
+-   Aufrufen von **ICommandWithParameters::GetParameterInfo**, damit der Anbieter die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen der Parameter während der Laufzeit ermitteln kann. Beachten Sie, dass dies einen zusätzlichen Netzwerkroundtrip zum Server bedingt.  
   
 > [!NOTE]  
->  Der Anbieter unterstützt keine Aufrufen **ICommandWithParameters:: GetParameterInfo** für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Update- oder DELETE-Anweisung, die mit einer FROM-Klausel; für alle SQL-Anweisung von einer Unterabfrage mit Parametern; für SQL-Anweisungen, wie z. B., enthält die parametermarkierungen in beiden Ausdrücken eines Vergleichs oder quantifizierten Prädikats; oder Abfragen, wobei einer der Parameter einen Parameter an eine Funktion ist. Bei der Verarbeitung eines Batches von SQL-Anweisungen des Anbieters auch unterstützt keine Aufrufen **ICommandWithParameters:: GetParameterInfo** für parametermarkierungen in Anweisungen nach der ersten Anweisung im Batch. Kommentare (/ * \*/) sind nicht zulässig, der [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl.  
+>  Der Anbieter unterstützt den Aufruf von **ICommandWithParameters::GetParameterInfo** nicht in Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE- oder DELETE-Anweisungen, die eine FROM-Klausel enthalten; SQL-Anweisungen, die von einer Unterabfrage mit Parametern abhängen; SQL-Anweisungen, die Parametermarkierungen in beiden Ausdrücken eines Vergleichs oder quantifizierten Prädikats enthalten; oder Abfragen, in denen ein Parameter ein Funktionsparameter ist. Bei der Verarbeitung von Batches von SQL-Anweisungen unterstützt der Anbieter überdies keine Aufrufe von **ICommandWithParameters::GetParameterInfo** für Parametermarkierungen in Anweisungen, die der ersten Anweisung im Batch folgen. Kommentare (/* \*/) sind im Befehl [!INCLUDE[tsql](../../includes/tsql-md.md)] nicht zulässig.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Eingabeparameter in SQL-Anweisungsbefehlen. In prozeduraufrufbefehlen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Eingabe-, Ausgabe- und Eingabe-/Ausgabeparameter. Ausgabeparameterwerte werden entweder nach der Ausführung (nur wenn keine Rowsets zurückgegeben werden) oder nach Abschluss der Rowsetverarbeitung durch die Anwendung an die Anwendung zurückgegeben. Um sicherzustellen, dass zurückgegebene Werte gültig sind, verwenden **IMultipleResults** um Rowsets zu erzwingen.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Eingabeparameter in SQL-Anweisungsbefehlen. In prozeduraufrufbefehlen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Eingabe-, Ausgabe- und Eingabe-/Ausgabeparameter. Ausgabeparameterwerte werden entweder nach der Ausführung (nur wenn keine Rowsets zurückgegeben werden) oder nach Abschluss der Rowsetverarbeitung durch die Anwendung an die Anwendung zurückgegeben. Um sicherzustellen, dass zurückgegebene Werte gültig sind, verwenden Sie **IMultipleResults**, um den Einsatz von Rowsets zu erzwingen.  
   
  Die Namen der Parameter von gespeicherten Prozeduren müssen nicht in einer DBPARAMBINDINFO-Struktur angegeben werden. Verwenden Sie NULL als Wert für die *PwszName* Member an, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter sollten den Parameternamen ignorieren und nur die Ordinalzahl, die im angegebenen verwenden die *RgParamOrdinals*Mitglied **ICommandWithParameters:: SetParameterInfo**. Wenn der Befehlstext sowohl benannte als auch unbenannte Parameter enthält, dann müssen alle unbenannten Parameter vor den benannten Parametern angegeben werden.  
   

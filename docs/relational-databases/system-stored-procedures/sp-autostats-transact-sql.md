@@ -1,5 +1,5 @@
 ---
-title: Sp_autostats (Transact-SQL) | Microsoft Docs
+title: Sp_autostats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8716d2a4580edf9d9cdb34a849210d60f31d17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e1b26b708db7fc435ea6f37ce81e6ff734e5f7d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239860"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553440"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Zeigt die AUTO_UPDATE_STATISTICS-Option zum automatischen Statistikupdate für einen Index, ein Statistikobjekt, eine Tabelle oder eine indizierte Sicht an oder ändert sie.  
   
- Weitere Informationen zur AUTO_UPDATE_STATISTICS-Option finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Statistiken](../../relational-databases/statistics/statistics.md).  
+ Weitere Informationen zur AUTO_UPDATE_STATISTICS-Option finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Statistiken](../../relational-databases/statistics/statistics.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- Wenn *Stats_flag* ist nicht angegeben wird, die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)**, hat den Standardwert NULL.  
+ Wenn *Stats_flag* ist nicht angegeben wird, die die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)**, hat den Standardwert NULL.  
   
  [  **@indname=** ] **"***Statistics_name***"**  
  Der Name der Statistik, für die die AUTO_UPDATE_STATISTICS-Option angezeigt oder aktualisiert werden soll. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
@@ -70,17 +70,17 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn *Stats_flag* angegeben wird, **Sp_autostats** meldet die Aktion, die erstellt wurde, jedoch kein Resultset zurückgegeben.  
+ Wenn *Stats_flag* angegeben wird, **Sp_autostats** gibt die Aktion, die erstellt wurde, aber kein Resultset zurückgegeben.  
   
  Wenn *Stats_flag* nicht angegeben ist, **Sp_autostats** gibt das folgende Resultset zurück.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Indexname**|**varchar(60)**|Der Name des Indexes oder der Statistik.|  
+|**Indexname**|**varchar(60)**|Name des Indexes oder der Statistiken.|  
 |**AUTOSTATS**|**varchar(3)**|Aktueller Wert für die AUTO_UPDATE_STATISTICS-Option.|  
-|**Zuletzt aktualisiert**|**datetime**|Das Datum des letzten Statistikupdates.|  
+|**Letzte Aktualisierung**|**datetime**|Das Datum des letzten Statistikupdates.|  
   
- Das Resultset für eine Tabelle oder indizierte Sicht Statistiken für Indizes, Statistiken für einzelne Spalten generiert, mit der AUTO_CREATE_STATISTICS-Option erstellt wurden umfasst und Statistiken erstellt, mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) Anweisung.  
+ Das Resultset für eine Tabelle oder indizierte Sicht Statistiken für Indizes, Statistiken für einzelne Spalten generiert, mit der AUTO_CREATE_STATISTICS-Option erstellt wurden umfasst, und Statistiken erstellt, mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) Anweisung.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der angegebene Index deaktiviert ist oder die angegebene Tabelle einen deaktivierten gruppierten Index enthält, wird eine Fehlermeldung angezeigt.  
@@ -88,7 +88,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  AUTO_UPDATE_STATISTICS ist für speicheroptimierte Tabellen immer auf OFF festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ändern der AUTO_UPDATE_STATISTICS-Option muss n Mitgliedschaft der **Db_owner** der festen Datenbankrolle oder ALTER-Berechtigung auf *Table_name*. Zum Anzeigen der AUTO_UPDATE_STATISTICS-Option erfordert die Mitgliedschaft in der **öffentlichen** Rolle.  
+ Zum Ändern der AUTO_UPDATE_STATISTICS-Option muss Mitgliedschaft der **Db_owner** der festen Datenbankrolle oder ALTER-Berechtigung auf *Table_name*. Zum Anzeigen der AUTO_UPDATE_STATISTICS-Option erfordert die Mitgliedschaft in der **öffentliche** Rolle.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -125,7 +125,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Statistiken](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

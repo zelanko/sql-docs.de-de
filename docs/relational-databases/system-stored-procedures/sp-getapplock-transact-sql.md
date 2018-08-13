@@ -1,5 +1,5 @@
 ---
-title: Sp_getapplock (Transact-SQL) | Microsoft Docs
+title: Sp_getapplock (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261669"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555680"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,27 +54,27 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  [ @Resource=] '*Resource_name*"  
  Zeichenfolge, die einen Namen zum Identifizieren der Sperrressource angibt. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Resource_name* ist **nvarchar(255)** hat keinen Standardwert. Wenn eine Ressourcenzeichenfolge länger als ist **nvarchar(255)**, wird es abgeschnitten **nvarchar(255)**.  
   
- *Resource_name* binären Vergleich und daher wird Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.  
+ *Resource_name* unterliegt dem Binärvergleich und daher Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.  
   
 > [!NOTE]  
 >  Nachdem eine Anwendungssperre eingerichtet wurde, können nur die ersten 32 Zeichen im Nur-Text-Format abgerufen werden. Die übrigen Zeichen werden hashcodiert.  
   
- [ @LockMode=] '*_mode*"  
+ [ @LockMode=] '*Lock_mode*"  
  Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Der Wert kann eine der folgenden sein: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, oder **exklusive** .  
   
  [ @LockOwner=] '*Lock_owner*"  
- Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, von Standard oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
+ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, wird standardmäßig oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
   
  [ @LockTimeout=] '*Wert*"  
  Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist identisch mit den Rückgabewert von@LOCK_TIMEOUT. Damit bei Sperranforderungen, die nicht sofort erteilt werden können, nicht auf die Sperre gewartet, sondern ein Fehler zurückgegeben wird, geben Sie 0 an.  
   
  [ @DbPrincipal=] '*Database_principal*"  
- Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Mitglied sein *Database_principal*, Dbo oder Db_owner festen Datenbankrolle an die Funktion erfolgreich aufzurufen. Der Standardwert ist public.  
+ Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Mitglied *Database_principal*, Dbo oder Db_owner "fixed"-Datenbankrolle, für die Funktion erfolgreich aufzurufen. Der Standardwert ist public.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  \>= 0 (Erfolg) oder < 0 (Fehler)  
   
-|Wert|Ergebnis|  
+|value|Ergebnis|  
 |-----------|------------|  
 |0|Die Sperre wurde erfolgreich synchron erteilt.|  
 |1|Die Sperre wurde erfolgreich erteilt, nachdem das Aufheben anderer, inkompatibler Sperren abgewartet wurde.|  

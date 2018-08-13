@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft Docs
+title: Sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 152a2de5b373c9130f5d2a579737a823b752e832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d91756ed0a9870c9748db62b7908dfb78091b175
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253750"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545120"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>Sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_id =** ] *"Plan_id"*  
- Ist die Id des Abfrageplans, deren Wert gelöscht werden. *"Plan_id"* ist ein **"bigint"**, hat keinen Standardwert.  
+ [  **@plan_id =** ] *' plan_id '*  
+ Ist die Id des Abfrageplans wird gelöscht. *Plan_id* ist eine **Bigint**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -57,7 +57,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** Berechtigung für die Datenbank und **löschen** -Berechtigung für die Abfrage Katalogsichten des Abfragespeichers.  
+ Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **löschen** -Berechtigung für der Katalogsichten des Abfragespeichers.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie die "Plan_id", die Sie die Statistik löschen möchten identifiziert, verwenden Sie im folgende Beispiel, um die Ausführung Statistiken für einen bestimmten Abfrageplan zu löschen. Dieses Beispiel löscht die Ausführung Statistiken für den Plannummer 3.  
+ Nachdem Sie die Plan_id, die Sie die Statistik löschen möchten identifiziert, verwenden Sie das folgende Beispiel, um die Ausführung Statistiken für einen bestimmten Abfrageplan zu löschen. Dieses Beispiel löscht die Ausführung Statistiken für die Plannummer 3.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

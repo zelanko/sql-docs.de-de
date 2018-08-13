@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356052"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482681"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ Ein Wert für diesen Agentparameter kann angegeben werden, mit der **@subscripti
 
 Weitere Informationen zum Implementieren von Abonnementdatenströmen finden Sie unter [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) (Navigieren in der subscriptionStream-Einstellung für die SQL-Replikation).
   
+### <a name="blocking-monitor-thread"></a>Überwachungsthread für Blockierungen
+
+Der Verteilungs-Agent verwaltet einen Überwachungsthread, der Blockierung zwischen Sitzungen erkennt. Wenn dieser Überwachungsthread eine Blockierung zwischen den Sitzungen erkennt, geht der Verteilungs-Agent dazu über, eine Sitzung zu verwenden, um die aktuellen Befehle, die zuvor nicht angewendet werden konnten, erneut anzuwenden.
+
+Der Überwachungsthread kann Blockierungen zwischen Sitzungen des Verteilungs-Agents erkennen. In folgenden Sitzungen werden Blockierungen jedoch nicht von diesem Überwachungsthread erkannt:
+- Eine der Sitzungen, bei der eine Blockierung auftritt, ist keine Sitzung des Verteilungs-Agents.
+- Eine Sitzung führt zu einem Deadlock und friert die Aktivitäten des Verteilungs-Agents ein.
+
+In dieser Situation koordiniert der Verteilungs-Agent alle Sitzungen, damit ein gemeinsamer Commit ausgeführt wird, sobald die Befehle ausgeführt wurden. Ein Deadlock kann zwischen den Sitzungen auftreten, wenn folgende Bedingungen erfüllt sind:
+
+- Die Blockierung tritt zwischen einer Sitzung des Verteilungs-Agents und einer Sitzung, die nicht vom Verteilungs-Agent stammt, auf.
+- Der Verteilungs-Agent wartet, bis alle Sitzungen ihre Befehle ausgeführt haben, bevor alle Sitzungen für einen gemeinsamen Commit koordiniert werden.
+
+Nehmen Sie an, dass Sie den Parameter *SubscriptionStreams* auf 8 festlegen. Sitzung 10 bis 17 sind Sitzungen des Verteilungs-Agents. Sitzung 18 ist keine Sitzung des Verteilungs-Agents. Sitzung 10 wird von Sitzung 18 blockiert, und Sitzung 18 wird von Sitzung 11 blockiert. Darüber hinaus muss ein gemeinsamer Commit für Sitzung 10 und Sitzung 11 ausgeführt werden. Der Verteilungs-Agent kann jedoch aufgrund der Blockierung keinen gemeinsamen Commit für Sitzung 10 und 11 ausführen. Aus diesem Grund kann der Verteilungs-Agent diese acht Sitzungen nicht für einen gemeinsamen Commit koordinieren, bis Sitzung 10 und 11 ihre Befehle ausgeführt haben.
+
+Dieses Beispielszenario führt zu einem Zustand, in dem keine Sitzung ihre Befehle ausführt. Wenn die Zeit erreicht ist, die in der Eigenschaft **QueryTimeout** festgelegt ist, bricht der Verteilungs-Agent alle Sitzungen ab.
+
+> [!Note]
+> Der Standardwert von **QueryTimeout** ist 5 Minuten.
+
+Während des Timeoutzeitraums der Abfrage werden Sie Folgendes bei den Leistungsindikatoren des Verteilungs-Agents bemerken: 
+
+- Der Wert des Leistungsindikators **Verteiler:Übermittelte Befehle/Sekunde** ist immer 0.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** ist immer 0.
+- Der Leistungsindikator **Verteiler:Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
+
+Der Artikel „Replikationsverteilungs-Agent“ in der Microsoft SQL Server-Onlinedokumentation enthält folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
+
+Der Verteilungs-Agent verwendet eine Sitzung, um den Batch zu wiederholen, der nicht angewendet werden konnte. Nachdem der Verteilungs-Agent den Batch erfolgreich angewendet hat, verwendet er wieder mehrere Sitzungen, ohne einen Neustart durchzuführen.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - Erhöhen Sie den Wert des **-CommitBatchSize** -Parameters für den Verteilungs-Agent.  
   

@@ -17,13 +17,13 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416059"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562884"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "37416059"
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**Smallint**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
+|SS_IS_SPARSE|**smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**smallint**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
   
  In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor alle treiberspezifischen Spalten, die hinzugefügt wurden, angezeigt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen älter als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], und nach alle Spalten, die von ODBC selbst.  
   

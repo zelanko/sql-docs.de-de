@@ -1,5 +1,5 @@
 ---
-title: Sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
+title: Sp_purge_jobhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c998f8b105ed0f85eb6637a3f861e435af4471e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9adf5bc1eada3a1fc2caa58db15fc4fc95ebd35b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564064"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,32 +49,32 @@ sp_purge_jobhistory
   
 ## <a name="arguments"></a>Argumente  
  [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, für den die Verlaufsdatensätze gelöscht werden sollen. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+ Der Name des Auftrags, für den die Verlaufsdatensätze gelöscht werden sollen. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
 > [!NOTE]  
->  Mitglieder der **Sysadmin** -Serverrolle oder Mitglieder der der **SQLAgentOperatorRole** feste Datenbankrolle können ausführen **Sp_purge_jobhistory** ohne Angabe einer *Job_name* oder *Job_id*. Wenn **Sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen Aufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*.  
+>  Mitglied der **Sysadmin** -Serverrolle oder Mitglied der **SQLAgentOperatorRole** festen Datenbankrolle ausführen kann **Sp_purge_jobhistory** ohne Angabe einer *Job_name* oder *Job_id*. Wenn **Sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen Aufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*.  
   
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags für die zu löschenden Datensätze. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. Siehe den Hinweis in der Beschreibung der **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer dieses Argument verwenden können.  
+ Die ID des Auftrags für die zu löschenden Datensätze. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Siehe Hinweis in der Beschreibung des **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer können dieses Argument verwenden.  
   
  [ **@oldest_date** =] *Oldest_date*  
- Der älteste Datensatz, der im Verlauf beibehalten werden soll. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur Datensätze, die älter sind als der angegebene Wert ist.  
+ Der älteste Datensatz, der im Verlauf beibehalten werden soll. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur die Datensätze, die älter als der angegebene Wert sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn **Sp_purge_jobhistory** wird erfolgreich abgeschlossen, eine Nachricht zurückgegeben.  
+ Wenn **Sp_purge_jobhistory** wird erfolgreich abgeschlossen, es wird eine Meldung zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig sind nur Mitglieder der der **Sysadmin** festen Serverrolle oder die **SQLAgentOperatorRole** festen Datenbankrolle kann diese gespeicherte Prozedur ausführen. Mitglieder der **Sysadmin** können den Auftragsverlauf für alle lokalen und Multiserveraufträge leeren. Mitglieder der **SQLAgentOperatorRole** können den Auftragsverlauf für alle lokalen Aufträge nur löschen.  
+ Standardmäßig können nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **SQLAgentOperatorRole** -Datenbankrolle diese gespeicherte Prozedur ausführen. Mitglieder der **Sysadmin** können den Auftragsverlauf für alle lokalen und Multiserveraufträge leeren. Mitglieder der **SQLAgentOperatorRole** können den Auftragsverlauf für alle lokalen Aufträge nur.  
   
- Anderen Benutzern, einschließlich Elementen der **SQLAgentUserRole** und Mitglieder der **SQLAgentReaderRole**, muss explizit gewährt werden die EXECUTE-Berechtigung auf **Sp_purge_jobhistory**. Nachdem die EXECUTE-Berechtigung für diese gespeicherte Prozedur erteilt wurde, können dieses Benutzer nur den Verlauf für Aufträge leeren, deren Besitzer sie sind.  
+ Anderen Benutzern, einschließlich Elementen der **SQLAgentUserRole** und Mitglieder der **SQLAgentReaderRole**, müssen ausdrücklich erteilt werden die EXECUTE-Berechtigung auf **Sp_purge_jobhistory**. Nachdem die EXECUTE-Berechtigung für diese gespeicherte Prozedur erteilt wurde, können dieses Benutzer nur den Verlauf für Aufträge leeren, deren Besitzer sie sind.  
   
- Die **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** feste Datenbankrollen sind der **Msdb** Datenbank. Einzelheiten zu deren Berechtigungen finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Die **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** feste Datenbankrollen sind der **Msdb** Datenbank. Weitere Informationen zu deren Berechtigungen finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -93,7 +93,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>B. Entfernen des Verlaufs für alle Aufträge  
   
 > [!NOTE]  
->  Nur Mitglieder der der **Sysadmin** -Serverrolle und Mitglieder der festen der **SQLAgentOperatorRole** Verlaufsprotokolle für alle Aufträge entfernen können. Wenn **Sysadmin** -Benutzer diese gespeicherte Prozedur ohne Parameter ausführen, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge geleert. Wenn **SQLAgentOperatorRole** -Benutzer diese gespeicherte Prozedur ohne Parameter ausführen, wird nur der Auftragsverlauf für alle lokalen Aufträge geleert.  
+>  Nur Mitglieder der der **Sysadmin** festen Serverrolle und Mitglieder der **SQLAgentOperatorRole** können Verlaufsdatensätze für alle Aufträge entfernen. Wenn **Sysadmin** -Benutzer diese gespeicherte Prozedur ohne Parameter ausführen, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge geleert. Wenn **SQLAgentOperatorRole** -Benutzer diese gespeicherte Prozedur ohne Parameter ausführen, wird nur der Auftragsverlauf für alle lokalen Aufträge geleert.  
   
  Im folgenden Beispiel wird die Prozedur ohne Parameter ausgeführt, um alle Verlaufsdatensätze zu entfernen.  
   

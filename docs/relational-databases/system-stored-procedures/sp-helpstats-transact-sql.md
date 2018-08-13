@@ -1,5 +1,5 @@
 ---
-title: Sp_helpstats (Transact-SQL) | Microsoft Docs
+title: Sp_helpstats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251636"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547560"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33251636"
   Gibt statistische Informationen zu Spalten und Indizes der angegebenen Tabelle zurück.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Um Informationen zu Statistiken abzurufen, Fragen den [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) Katalogsichten.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Um Informationen zu Statistiken abzurufen, Fragen Sie die [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) Katalogsichten.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_helpstats[ @objname = ] 'object_name'
  Gibt die Tabelle an, in der Statistikinformationen bereitgestellt werden sollen. *Object_name* ist **nvarchar(520)** und darf nicht null sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
   
  [  **@results=**] **"***Wert***"**  
- Gibt an, wie viele Informationen bereitgestellt werden. Gültige Einträge sind **alle** und **STATS**. **ALLE** listet Statistiken für alle Indizes und Spalten mit Statistiken erstellt wurden; **STATS** Listet nur Statistiken, die nicht mit einem Index zugeordnet. *Wert* ist **nvarchar(5)** hat den Standardwert STATS.  
+ Gibt an, wie viele Informationen bereitgestellt werden. Gültige Einträge sind **alle** und **Statistiken**. **ALLE** Listet die Statistiken aller Indizes und Spalten mit Statistiken erstellt wurden; **Statistiken** Listet nur Statistiken, die nicht mit einem Index zugeordnet. *Wert* ist **nvarchar(5)** hat den Standardwert STATS.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -63,7 +63,7 @@ sp_helpstats[ @objname = ] 'object_name'
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|**statistics_name**|Der Name der Statistik. Gibt **Sysname** darf nicht null sein.|  
+|**statistics_name**|Der Name der Statistik. Gibt **Sysname** und darf nicht null sein.|  
 |**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar(2078)** und darf nicht null sein.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -107,6 +107,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

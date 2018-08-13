@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von ' IMultipleResults ' zur Verarbeitung mehrerer Resultsets | Microsoft-Dokumentation
+title: Verwenden von „IMultipleResults“ zur Verarbeitung mehrerer Resultsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7281208907af5405cd30d5c9ce4f964d3df7a8e7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 764ded67b0085cfa9a6710a8b5b0417fe2662992
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422299"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535840"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37422299"
   
  Ein Client muss alle Ergebnisse der Befehlsausführung verarbeiten. Da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befehlsausführung für Native Client OLE DB-Anbieter kann mehrere Rowsetobjekte als Ergebnisse generiert werden soll, verwenden Sie die **IMultipleResults** Schnittstelle, um sicherzustellen, dass die Anwendung den Datenabruf abgeschlossen ist. die vom Client initiierten Roundtrip.  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung generiert mehrere Rowsets, von denen einige Zeilendaten aus der **OrderDetails** Tabelle und einige Ergebnisse mit der COMPUTE BY-Klausel:  
+ Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung generiert mehrere Rowsets, von denen einige Zeilendaten aus der Tabelle **OrderDetails** und einige Ergebnisse der COMPUTE BY-Klausel enthalten:  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -50,12 +50,12 @@ COMPUTE
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_OBJECTOPEN Verwendung gestreamt Output-Parameter, und die Anwendung alle zurückgegebenen Ausgabeparameterwerte vor dem Aufruf nicht verbraucht hat auch **IMultipleResults:: GetResults**  um das nächste Resultset abzurufen. Wenn MARS nicht aktiviert ist, und die Verbindung ist das Ausführen eines Befehls, der kein Rowset produziert wird, oder, erzeugt ein Rowset, das kein Servercursor ist, ausgelastet und die DBPROP_MULTIPLECONNECTIONS-Datenquelleneigenschaft auf VARIANT_TRUE festgelegt ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt zusätzliche Verbindungen um gleichzeitige Befehlsobjekte zu unterstützen, wenn eine Transaktion aktiv ist, in diesem Fall gibt einen Fehler. Transaktionen und Sperren werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Verbindungsbasis verwaltet. Wenn eine zweite Verbindung hergestellt wird, nutzt der Befehl auf den anderen Verbindungen Sperren nicht gemeinsam. Es muss darauf geachtet werden, dass ein Befehl einen anderen nicht blockiert, indem er Zeilen gesperrt hält, die von einem anderen Befehl angefordert werden. Wenn MARS aktiviert ist, können mehrere Befehle für die Verbindungen aktiv sein, und bei der Verwendung expliziter Transaktionen nutzen die Befehle alle eine gemeinsame Transaktion.  
   
- Der Consumer kann den Befehl abbrechen, indem Sie entweder [issabort:: Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) oder durch die Freigabe alle Verweise auf das Befehlsobjekt und das abgeleitete Rowset.  
+ Der Consumer kann den Befehl abbrechen, indem er [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) verwendet oder alle Verweise auf das Befehlsobjekt und das abgeleitete Rowset freigibt.  
   
- Mithilfe von **IMultipleResults** in allen Instanzen ermöglicht es, alle Rowsets durch befehlsausführung zu erhalten, und ermöglicht es Consumern zu ermitteln, wann die befehlsausführung abgebrochen und ein Sitzungsobjekt für die Verwendung durch andere Befehle.  
+ Die Verwendung von **IMultipleResults** in allen Instanzen ermöglicht es, alle Rowsets durch Befehlsausführung zu erstellen, und gestattet es Consumern zu ermitteln, wann die Befehlsausführung abgebrochen und ein Sitzungsobjekt zur Verwendung durch andere Befehle freigegeben werden sollte.  
   
 > [!NOTE]  
->  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor verwenden, erstellt die Befehlsausführung den Cursor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Erfolg oder Fehler der Cursorerstellung zurück. Der Roundtrip zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist damit nach der Rückkehr der Befehlsausführung abgeschlossen. Jede **GetNextRows** -Aufruf wird dann zum Roundtrip ausgeführt. Auf diese Weise können mehrere Befehlsobjekte vorhanden sein, und jedes verarbeitet ein Rowset, das das Ergebnis eines Abrufs vom Servercursor ist. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
+>  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor verwenden, erstellt die Befehlsausführung den Cursor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Erfolg oder Fehler der Cursorerstellung zurück. Der Roundtrip zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist damit nach der Rückkehr der Befehlsausführung abgeschlossen. Jeder Aufruf von **GetNextRows** wird dann zum Roundtrip. Auf diese Weise können mehrere Befehlsobjekte vorhanden sein, und jedes verarbeitet ein Rowset, das das Ergebnis eines Abrufs vom Servercursor ist. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Befehle](../../relational-databases/native-client-ole-db-commands/commands.md)  

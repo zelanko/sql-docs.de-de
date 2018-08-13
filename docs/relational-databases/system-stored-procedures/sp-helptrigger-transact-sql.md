@@ -1,5 +1,5 @@
 ---
-title: "\"sp_helptrigger\" (Transact-SQL) | Microsoft Docs"
+title: Sp_helptrigger (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255088"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566234"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Typen der DML-Trigger zurück, die in der angegebenen Tabelle für die aktuelle Datenbank definiert sind. "sp_helptrigger" kann nicht mit DDL-Triggern verwendet werden. Abfrage der [gespeicherte Systemprozeduren](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) stattdessen die Katalogsicht.  
+  Gibt die Typen der DML-Trigger zurück, die in der angegebenen Tabelle für die aktuelle Datenbank definiert sind. ' sp_helptrigger ' kann nicht mit DDL-Triggern verwendet werden. Abfrage der [gespeicherte Systemprozeduren](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) stattdessen-Katalogsicht angezeigt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_helptrigger [ @tabname = ] 'table'
  [ **@triggertype=** ] **'***type***'**  
  Der Typ des DML-Triggers, zu dem Informationen zurückgegeben werden sollen. *Typ* ist **char(6)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**DELETE**|Gibt DELETE-Triggerinformationen zurück.|  
 |**INSERT**|Gibt INSERT-Triggerinformationen zurück.|  
@@ -76,7 +76,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_schema**|**sysname**|Name des Schemas, zu dem der Trigger gehört.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert [die Konfiguration der Metadatensichtbarkeit](../../relational-databases/security/metadata-visibility-configuration.md) -Berechtigung für die Tabelle.  
+ Erfordert [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) Berechtigung für die Tabelle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `sp_helptrigger` ausgeführt, um Informationen zu den Triggern in der `Person.Person`-Tabelle zu erzeugen.  
@@ -88,7 +88,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

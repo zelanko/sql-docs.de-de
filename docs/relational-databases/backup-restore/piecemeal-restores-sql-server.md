@@ -19,16 +19,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c0af1af6758a9520d36398dfd34dc56430dd392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de4ff47096b20847ab3eecffee1cbe734bf17cab
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923655"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415439"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Schrittweise Wiederherstellungen [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dieses Thema ist nur für Datenbanken in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant, die mehrere Dateien oder Dateigruppen enthalten, und unter dem einfachen Modell nur für schreibgeschützte Dateigruppen.  
+  Dieses Thema ist nur für Datenbanken in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Onlinewiederherstellung) oder in der Standard Edition (Offlinewiederherstellung) relevant, die mehrere Dateien oder Dateigruppen enthalten, und im einfachen Modell nur für schreibgeschützte Dateigruppen.  
   
  Weitere Informationen zur schrittweisen Wiederherstellung und speicheroptimierten Tabellen finden Sie unter [Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

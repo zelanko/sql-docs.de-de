@@ -1,5 +1,5 @@
 ---
-title: Sp_helplanguage (Transact-SQL) | Microsoft Docs
+title: Sp_helplanguage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260433"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560630"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@language=** ] **"***Sprache***"**  
- Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* wird angegeben, werden Informationen zu der angegebenen Sprache zurückgegeben. Wenn keine Sprache angegeben ist, Informationen zu allen Sprachen in der **sys.syslanguages** -kompatibilitätssicht zurückgegeben.  
+ Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* wird angegeben, werden Informationen zu der angegebenen Sprache zurückgegeben. Wenn Language nicht angegeben ist, Informationen zu allen Sprachen in der **sys.syslanguages** -kompatibilitätssicht zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -59,13 +59,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|Sprachen-ID|  
 |**DateFormat-Einstellung**|**NCHAR(3)**|Datumsformat.|  
 |**DATEFIRST**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
-|**Upgrade**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
-|**name**|**sysname**|Der Name der Sprache.|  
+|**Aktualisieren**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
+|**name**|**sysname**|Name der Sprache.|  
 |**alias**|**sysname**|Alternativer Name der Sprache|  
 |**Monate**|**nvarchar(372)**|Monatsnamen|  
 |**ShortMonths**|**nvarchar(132)**|Kurznamen für die Monate|  
 |**Tage**|**nvarchar(217)**|Tagesnamen|  
-|**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
+|**LCID**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -88,7 +88,7 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

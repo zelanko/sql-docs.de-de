@@ -24,13 +24,13 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea9322153c59e3d83e07504236df82b0aa7b3272
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c84ea6be119438310292facda5e04c75b6f5da55
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413959"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566064"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,20 +72,20 @@ ms.locfileid: "37413959"
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Consumer angeforderte datenkonvertierungen, wie in der Abbildung dargestellt.  
   
- Die **Sql_variant** Ojekte können Daten jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp mit Ausnahme von Text, Ntext, Image, varchar(max), nvarchar(max), varbinary(max), Xml, Timestamp und Microsoft .NET Framework common Language Runtime (CLR) Benutzerdefinierte Typen. Eine Instanz der sql_variant-Daten darf außerdem nicht sql_variant als zugrunde liegenden Basisdatentyp aufweisen. Die Spalte kann z. B. enthalten **Smallint** Werte für einige Zeilen **"float"** Werte für die anderen Zeilen hat und **Char**/**Nchar**Werte in den Rest.  
+ Die **sql_variant**-Objekte können Daten jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps enthalten, mit Ausnahme von „text“, „ntext“, „image“, „varchar(max)“, „nvarchar(max)“, „varbinary(max)“, „xml“, „timestamp“ sowie benutzerdefinierten CLR-Typen (Common Language Runtime) von Microsoft .NET Framework. Eine Instanz der sql_variant-Daten darf außerdem nicht sql_variant als zugrunde liegenden Basisdatentyp aufweisen. Die Spalte kann beispielsweise in einigen Zeilen **smallint**-Werte enthalten, in anderen Zeilen **float**-Werte und in den übrigen **char**/**nchar**-Werte.  
   
 > [!NOTE]  
->  Die **Sql_variant** Datentyp den Variant-Datentyp in Microsoft Visual Basic® und den Typen DBTYPE_VARIANT, DBTYPE_SQLVARIANT in OLEDB ähnlich ist.  
+>  Der **sql_variant**-Datentyp ähnelt dem Variant-Datentyp in Microsoft-Visual-Basic® und den Typen DBTYPE_VARIANT und DBTYPE_SQLVARIANT in OLEDB.  
   
- Wenn **Sql_variant** Daten als DBTYPE_VARIANT abgerufen werden, wird es in einem VARIANT-Struktur im Puffer eingefügt. Die Untertypen in der VARIANT-Struktur können nicht definierten Untertypen zugeordnet, aber die **Sql_variant** -Datentyp. Die **Sql_variant** Daten müssen dann als DBTYPE_SQLVARIANT abgerufen werden, in der Reihenfolge für alle Untertypen zugeordnet.  
+ Wenn **sql_variant**-Daten als DBTYPE_VARIANT abgerufen werden, werden sie in einer VARIANT-Struktur im Puffer abgelegt. Die Untertypen in der VARIANT-Struktur dürfen jedoch nicht den im **sql_variant**-Datentyp definierten Untertypen zugeordnet werden. Die **sql_variant**-Daten müssen dann als DBTYPE_SQLVARIANT abgerufen werden, damit alle Untertypen zugeordnet werden.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT-Datentyp  
- Zur Unterstützung der **Sql_variant** -Datentyp, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt einen anbieterspezifischen Datentyp mit dem Namen DBTYPE_SQLVARIANT. Wenn **Sql_variant** Daten werden als DBTYPE_SQLVARIANT abgerufen werden, wird in einer anbieterspezifischen SSVARIANT-Struktur gespeichert. Die SSVARIANT-Struktur enthält alle Untertypen, die den Untertypen des der **Sql_variant** -Datentyp.  
+ Zur Unterstützung der **Sql_variant** -Datentyp, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt einen anbieterspezifischen Datentyp mit dem Namen DBTYPE_SQLVARIANT. Wenn **sql_variant**-Daten als DBTYPE_SQLVARIANT abgerufen werden, werden sie in einer anbieterspezifischen SSVARIANT-Struktur gespeichert. Die SSVARIANT-Struktur enthält alle Untertypen, die zu den Untertypen des **sql_variant**-Datentyps passen.  
   
  Die Sitzungseigenschaft SSPROP_ALLOWNATIVEVARIANT muss außerdem auf TRUE festgelegt werden.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>Anbieterspezifische Eigenschaft SSPROP_ALLOWNATIVEVARIANT  
- Beim Abrufen von Daten können Sie explizit angeben, welcher Datentyp für eine Spalte oder einen Parameter zurückgegeben werden soll. **IColumnsInfo** kann auch verwendet werden, um die Spalteninformationen aus, und verwenden, um die Bindung verwenden. Wenn **IColumnsInfo** wird verwendet, um Spalteninformationen für Bindungszwecke abgerufen, wenn die SSPROP_ALLOWNATIVEVARIANT-Sitzung, die Eigenschaft ist FALSE (Standardwert), DBTYPE_VARIANT zurückgegeben wird **Sql_variant**Spalten. Wenn die SSPROP_ALLOWNATIVEVARIANT-Eigenschaft FALSE ist, wird DBTYPE_SQLVARIANT nicht unterstützt. Wenn die SSPROP_ALLOWNATIVEVARIANT-Eigenschaft auf TRUE festgelegt ist, wird der Spaltentyp als DBTYPE_SQLVARIANT zurückgegeben. In diesem Fall enthält der Puffer die SSVARIANT-Struktur. Beim Abrufen von **Sql_variant** -Daten als DBTYPE_SQLVARIANT, die Sitzungseigenschaft SSPROP_ALLOWNATIVEVARIANT muss festgelegt werden auf "true".  
+ Beim Abrufen von Daten können Sie explizit angeben, welcher Datentyp für eine Spalte oder einen Parameter zurückgegeben werden soll. **IColumnsInfo** kann auch verwendet werden, um die Spalteninformationen abzurufen und diese Informationen für die Bindung zu verwenden. Wenn mit **IColumnsInfo** Spalteninformationen für Bindungszwecke abgerufen werden und die SSPROP_ALLOWNATIVEVARIANT-Sitzungseigenschaft FALSE (Standardwert) lautet, wird für die **sql_variant**-Spalten DBTYPE_VARIANT zurückgegeben. Wenn die SSPROP_ALLOWNATIVEVARIANT-Eigenschaft FALSE ist, wird DBTYPE_SQLVARIANT nicht unterstützt. Wenn die SSPROP_ALLOWNATIVEVARIANT-Eigenschaft auf TRUE festgelegt ist, wird der Spaltentyp als DBTYPE_SQLVARIANT zurückgegeben. In diesem Fall enthält der Puffer die SSVARIANT-Struktur. Beim Abrufen von **sql_variant**-Daten als DBTYPE_SQLVARIANT muss die SSPROP_ALLOWNATIVEVARIANT-Sitzungseigenschaft auf TRUE festgelegt sein.  
   
  Die SSPROP_ALLOWNATIVEVARIANT-Eigenschaft ist ein Teil des anbieterspezifischen DBPROPSET_SQLSERVERSESSION-Eigenschaftssatzes und eine Sitzungseigenschaft.  
   

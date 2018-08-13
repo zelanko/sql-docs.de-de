@@ -1,5 +1,5 @@
 ---
-title: 'Ausblenden von Elementen und Attributen mit SQL: Hide | Microsoft Docs'
+title: 'Ausblenden von Elementen und Attributen mit SQL: Hide | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,27 +29,27 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6b58b7503e066c8d36e178b82f9048be7cd235f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2e7f9df3211f2af5e063757b9c76c5eb9dc2ccf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969560"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544290"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ausblenden von Elementen und Attributen mit sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Wenn eine XPath-Abfrage mit einem XSD-Schema ausgeführt wird, verfügt das resultierende XML-Dokument über Elemente und Attribute, die im Schema angegeben sind. Sie können angeben, dass einige Elemente und Attribute im Schema mithilfe von ausgeblendet werden die **SQL: hide** Anmerkung. Dies ist hilfreich, wenn das Auswahlkriterium der Abfrage bestimmte Elemente oder Attribute im Schema erfordert, diese jedoch nicht im generierten XML-Dokument zurückgegeben werden sollen.  
   
- Die **SQL: hide** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = "true"). Zulässig sind die Werte 0, 1, true und false.  
+ Die **SQL: hide** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = True). Zulässig sind die Werte 0, 1, true und false.  
   
 ## <a name="examples"></a>Beispiele  
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Angeben von sql:hide für ein Attribut  
- Das XSD-Schema in diesem Beispiel besteht aus einer  **\<Person.Contact >** Element mit **ContactID**, **FirstName**, und **LastName** Attribute.  
+ Das XSD-Schema in diesem Beispiel besteht aus einem  **\<Person.Contact >** -Element mit **ContactID**, **FirstName**, und **"LastName"** Attribute.  
   
- Die  **\<Person.Contact >** -Element vom komplexen Typ und wird daher auf die Tabelle mit dem gleichen Namen (standardzuordnung) zugeordnet. Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und ordnen Sie Spalten mit identischen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema der **SQL: hide** -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben.  
+ Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird aus diesem Grund wird der Tabelle mit dem gleichen Namen (standardzuordnung). Alle Attribute des  **\<Person.Contact >** Element sind vom einfachen Typ und Spalten mit den gleichen Namen in der Person.Contacttable in der AdventureWorks-Datenbank. Im Schema die **SQL: hide** -Anmerkung für das **ContactID** Attribut. Wenn eine XPath-Abfrage mit diesem Schema wird die **ContactID** in das XML-Dokument nicht zurückgegeben wird.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -86,7 +86,7 @@ ms.locfileid: "32969560"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird das Resultset aufgeführt:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "32969560"
 </ROOT>  
 ```  
   
- Wenn **SQL: hide** ist für ein Element angegeben, das Element und dessen Attribute oder untergeordnete Elemente erscheinen nicht im XML-Dokument, das generiert wird. Hier wird ein anderes XSD-Schema in der **SQL: hide** angegeben ist, auf die  **\<OD >** Element:  
+ Wenn **SQL: hide** ist für ein Element angegeben, das Element und dessen Attribute oder untergeordnete Elemente werden nicht angezeigt, in der XML-Dokument, das generiert wird. Hier ist ein anderes XSD-Schema in der **SQL: hide** angegeben ist, auf die  **\<OD >** Element:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -151,7 +151,7 @@ ms.locfileid: "32969560"
 </xsd:schema>  
 ```  
   
- Wenn eine XPath-Abfrage (z. B. `/Customers[@CID="1"]`) angegeben anhand dieses Schemas das XML-Dokument, das generiert wird, schließt nicht die  **\<OD >** Element und seine untergeordneten Elemente, wie im folgenden Teilergebnis gezeigt:  
+ Wenn eine XPath-Abfrage (z. B. `/Customers[@CID="1"]`) angegeben für dieses Schema, das XML-Dokument, das generiert wird, enthält keine der  **\<OD >** Element und seine untergeordneten Elemente, wie im folgenden Teilergebnis gezeigt:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
