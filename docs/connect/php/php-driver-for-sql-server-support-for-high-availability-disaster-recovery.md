@@ -1,7 +1,7 @@
 ---
-title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für Microsoft Drivers for PHP for SQLServer | Microsoft Docs
+title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für die Microsoft-Treiber für PHP für SQLServer | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,33 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 152ada5137bd1e803f4cfe3ef9d34d30f90acfe7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 6d75a0c4285bddc8d3c237be35a51f1904de6d60
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308878"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367692"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema wird erläutert, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Support (eingeführt in Version 3.0) für hohe Verfügbarkeit und notfallwiederherstellung [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]-Support wurde in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] hinzugefügt. Weitere Informationen über [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Onlinedokumentation.  
+In diesem Thema wird [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Unterstützung (in Version 3.0 hinzugefügt) für Hochverfügbarkeit, Disaster Recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] erläutert.  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]-Support wurde in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] hinzugefügt. Weitere Informationen über [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Onlinedokumentation.  
   
-In Version 3.0 von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], Sie können den verfügbarkeitsgruppenlistener angeben (hohe Verfügbarkeit und Wiederherstellung im Notfall-) verfügbarkeitsgruppe (AG) in der Verbindungseigenschaft. Wenn eine [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Anwendung mit einer AlwaysOn-Datenbank, die beim Failover verbunden ist, die ursprüngliche Verbindung unterbrochen wird und die Anwendung muss eine neue Verbindung, um nach dem Failover weiterzuarbeiten öffnen.  
+In Version 3.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] können Sie den Verfügbarkeitsgruppenlistener einer Verfügbarkeitsgruppe (Hochverfügbarkeit, Notfallwiederherstellung) in der Verbindungseigenschaft angeben. Wenn eine [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Anwendung mit einer Always On-Datenbank verbunden ist, für die ein Failover ausgeführt wird, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, damit ihre Ausführung nach dem Failover fortgesetzt werden kann.  
   
-Wenn Sie nicht mit einem Verfügbarkeitsgruppen-Listener herstellen und mehrere IP-Adressen einem Hostnamen zugeordnet sind die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] durchläuft nacheinander alle IP-Adressen, DNS-Eintrag zugeordnet. Dies kann zeitaufwändig sein, wenn die erste vom DNS-Server zurückgegebene IP-Adresse an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Verbinden mit einem Verfügbarkeitsgruppen-Listener, der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Versuche zum Herstellen von Verbindungen mit allen IP-Adressen Parallel und wenn ein Verbindungsversuch erfolgreich ist, verwirft der Treiber alle ausstehenden Verbindungsversuche.  
+Wenn Sie keine Verbindung zu einem verfügbaren Gruppenlistener herstellen und mehrere IP-Adressen einem Hostnamen zugeordnet sind, durchläuft [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nacheinander alle IP-Adressen, die dem DNS-Eintrag zugeordnet sind. Dies kann zeitaufwändig sein, wenn die erste vom DNS-Server zurückgegebene IP-Adresse an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Herstellen einer Verbindung zu einem verfügbaren Gruppenlistener versucht der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], Verbindungen zu allen IP-Adressen parallel herzustellen, und wenn ein Verbindungsversuch erfolgreich ist, verwirft der Treiber alle ausstehenden Verbindungsversuche.  
   
 > [!NOTE]  
 > Das Erhöhen des Verbindungstimeouts sowie die Implementierung von Verbindungswiederholungslogik erhöhen die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung zu einer Verfügbarkeitsgruppe herstellt. Da zudem eine Verbindung aufgrund eines Verfügbarkeitsgruppenfailovers fehlschlagen kann, empfiehlt sich die Implementierung von Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
-Die **MultiSubnetFailover** -Verbindungseigenschaft gibt an, dass die Anwendung in einer verfügbarkeitsgruppe oder Failoverclusterinstanz und die bereitgestellt wird, wird die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versucht, eine Verbindung mit der Datenbank auf dem primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Instanz beim Herstellen der Verbindung mit allen IP-Adressen. Wenn **MultiSubnetFailover = True** ist für eine Verbindung angegeben, der Client TCP-Verbindungsversuche schneller als das Betriebssystem standardmäßig TCP-neuübertragungsintervallen wiederholt. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
+Die **MultiSubnetFailover** -Verbindungseigenschaft gibt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz bereitgestellt wird und [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versucht, eine Verbindung mit der Datenbank auf der primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Instanz herzustellen, indem mit allen IP-Adressen der Verfügbarkeitsgruppe Verbindungsversuche unternommen werden. Wenn **MultiSubnetFailover=true** für eine Verbindung angegeben wird, wiederholt der Client TCP-Verbindungsversuche schneller als dies bei den standardmäßigen TCP-Neuübertragungsintervallen des Betriebssystems der Fall ist. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
   
-Geben Sie immer **MultiSubnetFailover = True** beim Verbinden mit einer SQL Server 2012-verfügbarkeitsgruppenlistener oder die SQL Server 2012-Failoverclusterinstanz. **MultiSubnetFailover** ermöglicht ein schnelleres Failover für alle Verfügbarkeitsgruppen und Failoverclusterinstanzen in SQL Server 2012 und reduziert die Failoverzeit für Einzel- und multisubnetz AlwaysOn-Topologien. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines subnetzfailovers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aggressive Wiederholungsversuche zum Herstellen die TCP-Verbindung.  
+Geben Sie immer **MultiSubnetFailover=true** an, wenn Sie eine Verbindung mit einem SQL Server 2012-Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz herstellen. **MultiSubnetFailover** aktiviert schnelleres Failover für alle Verfügbarkeitsgruppen und die Failoverclusterinstanz in SQL Server 2012 und reduziert die Failoverzeit für einzelne und Always On-Multisubnetztopologien erheblich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines Subnetz-Failovers unternimmt [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aggressive Wiederholungsversuche zum Herstellen der TCP-Verbindung.  
   
-Weitere Informationen zu Schlüsselwörtern der Verbindungszeichenfolge in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], finden Sie unter [Verbindungsoptionen](../../connect/php/connection-options.md).  
+Weitere Informationen zu Verbindungszeichenfolgenschlüsselwörtern in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] finden Sie unter [Verbindungsoptionen](../../connect/php/connection-options.md).  
   
-Angeben von **MultiSubnetFailover = True** beim Herstellen einer Verbindung auf einen anderen Wert als einem verfügbarkeitsgruppenlistener oder einer Failover-Clusterinstanz möglicherweise verminderter Leistung und wird nicht unterstützt.  
+Das Angeben von **MultiSubnetFailover=true** für ein anderes Verbindungsziel als einen Verfügbarkeitsgruppenlistener oder eine Failoverclusterinstanz kann die Leistung beeinträchtigen und wird nicht unterstützt.  
   
 Stellen Sie mithilfe der folgenden Richtlinien eine Verbindung mit einem Server in einer Verfügbarkeitsgruppe her:  
   
@@ -52,29 +52,60 @@ Stellen Sie mithilfe der folgenden Richtlinien eine Verbindung mit einem Server 
   
 -   Das Verhalten einer Anwendung, die die **MultiSubnetFailover**-Verbindungseigenschaft verwendet, wird durch den Authentifizierungstyp nicht beeinflusst: [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
--   Erhöhen Sie den Wert der **LoginTimeout** für Failoverzeit zu berücksichtigen und Wiederholungsversuche für anwendungsverbindungen zu reduzieren.  
+-   Erhöhen Sie den Wert von **loginTimeout**, um die Failoverzeit zu berücksichtigen und Wiederholungsversuche für Anwendungsverbindungen zu reduzieren.  
   
 -   Verteilte Transaktionen werden nicht unterstützt.  
   
 Wenn das schreibgeschützte Routing nicht aktiviert ist, scheitert das Herstellen der Verbindung mit einem sekundären Replikatspeicherort in einer Verfügbarkeitsgruppe in den folgenden Situationen:  
   
-1.  Wenn der sekundäre Replikatspeicherort nicht zum Akzeptieren von Verbindungen konfiguriert ist.  
+- Wenn der sekundäre Replikatspeicherort nicht zum Akzeptieren von Verbindungen konfiguriert ist.  
   
-2.  Wenn eine Anwendung **ApplicationIntent=ReadWrite** verwendet (weiter unten erläutert), und der sekundäre Replikatspeicherort für schreibgeschützten Zugriff konfiguriert ist.  
+- Wenn eine Anwendung **ApplicationIntent=ReadWrite** verwendet (weiter unten erläutert), und der sekundäre Replikatspeicherort für schreibgeschützten Zugriff konfiguriert ist.  
   
 Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden, und die Verbindungszeichenfolge **ApplicationIntent=ReadOnly**enthält.  
-  
+
+## <a name="transparent-network-ip-resolution-tnir"></a>Transparente Netzwerk-IP-Auflösung (TNIR)
+
+Transparente Netzwerk-IP-Auflösung (TNIR) ist es sich um eine Überarbeitung der vorhandenen MultiSubnetFailover-Funktion. Es wirkt sich auf der Verbindungssequenz des Treibers aus, die erste beseitigt, IP-Adresse den Hostnamen nicht reagiert, und es gibt mehrere IP-Adressen, die den Hostnamen zugeordnet. Zusammen mit MultiSubnetFailover bieten die folgenden vier Verbindung Sequenzen: 
+
+- TNIR aktiviert und deaktiviert MultiSubnetFailover: eine IP-Adresse versucht wird, gefolgt von allen IP-Adressen parallel
+- TNIR aktiviert & MultiSubnetFailover aktiviert: alle IP-Adressen parallel versucht werden
+- Deaktivierte TNIR & MultiSubnetFailover deaktiviert: alle IP-Adressen versucht werden nacheinander
+- TNIR deaktiviert und aktiviert MultiSubnetFailover: alle IP-Adressen parallel versucht werden
+
+TNIR ist standardmäßig aktiviert, und MultiSubnetFailover ist standardmäßig deaktiviert.
+
+Dies ist ein Beispiel, aktivieren Sie die TNIR und MultiSubnetFailover mit dem PDO_SQLSRV-Treiber:
+
+```
+<?php
+$serverName = "yourservername";
+$username = "yourusername";
+$password = "yourpassword";
+$connectionString = "sqlsrv:Server=$serverName; TransparentNetworkIPResolution=Enabled; MultiSubnetFailover=yes";
+try {
+    $conn = new PDO($connectionString, $username, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    // your code 
+    // more of your code
+    // when done, close the connection
+    unset($conn);
+} catch(PDOException $e) {
+    print_r($e->errorInfo);
+}
+?>
+```
+
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
 Ein Verbindungsfehler tritt auf, wenn die Verbindungsschlüsselwörter **MultiSubnetFailover** und **Failover_Partner** in der Verbindungszeichenfolge vorhanden sind. Es tritt auch ein Fehler auf, wenn **MultiSubnetFailover** verwendet wird und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
-Wenn Sie ein upgrade einer [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Anwendung, die derzeit die datenbankspiegelung zu einem multisubnetz-Szenario verwendet, sollten Sie entfernen die **von Failover_Partner** Verbindungseigenschaft und ersetzen es durch **MultiSubnetFailover**  festgelegt **Ja** , und Ersetzen Sie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge verwendet **von Failover_Partner** und **MultiSubnetFailover = True**, generiert der Treiber einen Fehler. Jedoch, wenn eine Verbindungszeichenfolge verwendet **von Failover_Partner** und **MultiSubnetFailover = "false"** (oder **ApplicationIntent = ReadWrite**), die Anwendung wird die Datenbank verwenden die Spiegelung.  
+Wenn Sie eine [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Anwendung aktualisieren, die derzeit Datenbankspiegelung in einem Multisubnetz-Szenario verwendet, müssen Sie die **Failover_Partner** -Verbindungseigenschaft entfernen und mit **MultiSubnetFailover** , festgelegt auf **Yes** , ersetzen, sowie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppenlistener ersetzen. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=true**verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=false** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
-Der Treiber einen Fehler zurück, wenn die datenbankspiegelung auf der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover = True** wird verwendet, in der Verbindungszeichenfolge die Herstellung einer primären Datenbank nicht zu einer verfügbarkeitsgruppe der Listener.  
+Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover=true** in der Verbindungszeichenfolge verwendet wird, die statt mit einem Verfügbarkeitsgruppenlistener eine Verbindung mit einer primären Datenbank herstellt.  
 
 
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
   
