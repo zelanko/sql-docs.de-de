@@ -1,5 +1,5 @@
 ---
-title: DM_OS_SCHEDULERS (Transact-SQL) | Microsoft Docs
+title: DM_OS_SCHEDULERS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ecf29c32131972d2802eae9cf735582252cf145
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7f79a861f5a2e97d4a60172f86b306548ac8bad0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468446"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553520"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "34468446"
 |scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
 |parent_node_id|**int**|ID des Knotens, zu dem das Zeitplanungsmodul gehört, der auch als übergeordneter Knoten bezeichnet wird. Dies stellt einen NUMA-Knoten (Non-Uniform Memory Access) dar. Lässt keine NULL-Werte zu.|  
 |scheduler_id|**int**|ID des Zeitplanungsmoduls. Alle Zeitplanungsmodule, die zum Ausführen regulärer Abfragen verwendet werden, weisen IDs unter 1048576 auf. Zeitplanungsmodule mit IDs größer oder gleich 1048576 werden intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, wie z. B. das Zeitplanungsmodul für dedizierte Administratorverbindungen. Lässt keine NULL-Werte zu.|  
-|cpu_id|**smallint**|Die zugewiesene CPU-ID des Zeitplanungsmoduls.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** 255 nicht keine Affinität an, wie in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Finden Sie unter [dm_os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) für Weitere Informationen zur Affinität.|  
-|status|**nvarchar(60)**|Zeigt den Status des Zeitplanungsmoduls an. Folgende Werte sind möglich:<br /><br /> -AUSGEBLENDET ONLINE<br />-AUSGEBLENDET OFFLINE<br />-SICHTBAR ONLINE<br />-SICHTBAR OFFLINE<br />-ONLINE SICHTBAR (DAC)<br />-HOT_ADDED<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> Zeitplanungsmodule im Status HIDDEN werden zur Verarbeitung von Anforderungen verwendet, die intern für [!INCLUDE[ssDE](../../includes/ssde-md.md)] sind. Zeitplanungsmodule im Status VISIBLE dienen zur Verarbeitung von Benutzeranforderungen.<br /><br /> Zeitplanungsmodule im Status OFFLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als offline markiert sind und daher nicht zur Verarbeitung von Anforderungen verwendet werden. Zeitplanungsmodule im Status ONLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als online markiert sind und zur Verarbeitung von Threads zur Verfügung stehen.<br /><br /> DAC bezeichnet das Zeitplanungsmodul, das über eine dedizierte Administratorverbindung ausgeführt wird.<br /><br /> HOT ADDED gibt an, dass die Zeitplanungsmodule als Reaktion auf ein Hinzufügen von CPUs im laufenden Systembetrieb hinzugefügt wurden.|  
+|cpu_id|**smallint**|Die zugewiesene CPU-ID des Zeitplanungsmoduls.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** 255 gibt nicht keine Affinität an, wie bei [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Finden Sie unter [dm_os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) für Weitere Informationen zur Affinität.|  
+|status|**nvarchar(60)**|Zeigt den Status des Zeitplanungsmoduls an. Folgende Werte sind möglich:<br /><br /> – ONLINE AUSGEBLENDET<br />– OFFLINE AUSGEBLENDET<br />-SICHTBAR ONLINE<br />-SICHTBAR OFFLINE<br />-ONLINE SICHTBAR (DAC)<br />-HOT_ADDED<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> Zeitplanungsmodule im Status HIDDEN werden zur Verarbeitung von Anforderungen verwendet, die intern für [!INCLUDE[ssDE](../../includes/ssde-md.md)] sind. Zeitplanungsmodule im Status VISIBLE dienen zur Verarbeitung von Benutzeranforderungen.<br /><br /> Zeitplanungsmodule im Status OFFLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als offline markiert sind und daher nicht zur Verarbeitung von Anforderungen verwendet werden. Zeitplanungsmodule im Status ONLINE sind Prozessoren zugeordnet, die in der Affinitätsmaske als online markiert sind und zur Verarbeitung von Threads zur Verfügung stehen.<br /><br /> DAC bezeichnet das Zeitplanungsmodul, das über eine dedizierte Administratorverbindung ausgeführt wird.<br /><br /> HOT ADDED gibt an, dass die Zeitplanungsmodule als Reaktion auf ein Hinzufügen von CPUs im laufenden Systembetrieb hinzugefügt wurden.|  
 |is_online|**bit**|Wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass nur einige der verfügbaren Prozessoren verwendet werden, kann diese Konfiguration bedeuten, dass einige Zeitplanungsmodule Prozessoren zugeordnet werden, die nicht in der Affinitätsmaske enthalten sind. In diesem Fall gibt diese Spalte 0 zurück. Dieser Wert bedeutet, dass das Zeitplanungsmodul nicht für die Verarbeitung von Abfragen oder Batches verwendet wird.<br /><br /> Lässt keine NULL-Werte zu.|  
 |is_idle|**bit**|1 = Das Zeitplanungsmodul befindet sich im Leerlauf. Zurzeit werden keine Arbeitsthreads ausgeführt. Lässt keine NULL-Werte zu.|  
 |preemptive_switches_count|**int**|Häufigkeit, mit der Arbeitsthreads in diesem Zeitplanungsmodul in den präemptiven Modus gewechselt sind.<br /><br /> Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus.|  
-|context_switches_count|**int**|Anzahl der Kontextwechsel in diesem Zeitplanungsmodul. Lässt keine NULL-Werte zu.<br /><br /> Damit andere Arbeitsthreads ausgeführt werden können, muss der aktuelle Arbeitsthread die Steuerung des Zeitplanungsmoduls freiwillig aufgeben oder den Kontext wechseln.<br /><br /> **Hinweis:** , wenn ein Arbeitsthread im Zeitplanungsmodul und sich selbst in der ausführbaren Warteschlange fügt und dann keine anderen Arbeitsthreads gefunden, wird der Arbeitsthread wählen selbst. In diesem Fall wird context_switches_count nicht aktualisiert, yield_count wird jedoch aktualisiert.|  
+|context_switches_count|**int**|Anzahl der Kontextwechsel in diesem Zeitplanungsmodul. Lässt keine NULL-Werte zu.<br /><br /> Damit andere Arbeitsthreads ausgeführt werden können, muss der aktuelle Arbeitsthread die Steuerung des Zeitplanungsmoduls freiwillig aufgeben oder den Kontext wechseln.<br /><br /> **Hinweis:** , wenn ein Arbeitsthread im Zeitplanungsmodul und sich selbst in der ausführbaren Warteschlange fügt und sucht dann nach keine anderen Arbeitsthreads, der Worker wählt selbst. In diesem Fall wird context_switches_count nicht aktualisiert, yield_count wird jedoch aktualisiert.|  
 |idle_switches_count|**int**|Häufigkeit, mit der das Zeitplanungsmodul im Leerlauf auf ein Ereignis gewartet hat. Diese Spalte entspricht context_switches_count. Lässt keine NULL-Werte zu.|  
-|current_tasks_count|**int**|Anzahl von aktuellen Tasks, die diesem Zeitplanungsmodul zugeordnet sind. Dazu gehören die folgenden:<br /><br /> – Aufgaben, die ein Worker ihrer Ausführung warten.<br />– Aufgaben, die zurzeit warten oder ausgeführt werden (Status SUSPENDED oder RUNNABLE).<br /><br /> Nach Abschluss eines Tasks wird diese Anzahl verringert. Lässt keine NULL-Werte zu.|  
+|current_tasks_count|**int**|Anzahl von aktuellen Tasks, die diesem Zeitplanungsmodul zugeordnet sind. Dazu gehören die folgenden:<br /><br /> – Aufgaben, die auf einem Worker ihrer Ausführung warten.<br />– Aufgaben, die zurzeit warten oder ausgeführt werden (im Status SUSPENDED oder RUNNABLE).<br /><br /> Nach Abschluss eines Tasks wird diese Anzahl verringert. Lässt keine NULL-Werte zu.|  
 |runnable_tasks_count|**int**|Anzahl von Arbeitsthreads mit zugewiesenen Tasks, die darauf warten, in die ausführbare Warteschlange eingereiht zu werden. Lässt keine NULL-Werte zu.|  
 |current_workers_count|**int**|Anzahl von diesem Zeitplanungsmodul zugeordneten Arbeitsthreads. Dies schließt Arbeitsthreads ein, die keinem Task zugeordnet sind. Lässt keine NULL-Werte zu.|  
 |active_workers_count|**int**|Anzahl der aktiven Arbeitsthreads. Ein aktiver Arbeitsthread ist nie präemptiv, muss über einen zugewiesenen Task verfügen und wird entweder ausgeführt, ist ausführbar oder wurde angehalten. Lässt keine NULL-Werte zu.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34468446"
 |failed_to_create_worker|**bit**|Bei der Einstellung 1 konnte kein neuer Arbeitsthread in diesem Zeitplanungsmodul erstellt werden. Dies tritt in der Regel aufgrund von Speicherbeschränkungen auf. Lässt NULL-Werte zu.|  
 |active_worker_address|**varbinary(8)**|Speicheradresse des derzeit aktiven Arbeitsthreads. Lässt NULL-Werte zu. Weitere Informationen finden Sie unter [dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
-|task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Macht das von SQLOS verwendete Zeitplanungsmodul-Quantum verfügbar.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
@@ -138,7 +138,7 @@ active_workers_count work_queue_count
   
 -   Dem Zeitplanungsmodul `255`, das DAC darstellt, sind `3` Arbeitsthreads zugeordnet. Diese Arbeitsthreads werden beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet und nicht geändert. Diese Arbeitsthreads werden nur zur Verarbeitung von DAC-Abfragen verwendet. Die beiden Tasks in diesem Zeitplanungsmodul stellen einen Verbindungs-Manager und einen im Leerlauf befindlichen Arbeitsthread dar.  
   
--   `active_workers_count` Stellt alle Arbeitsthreads, die über zugeordnete Tasks verfügen und mit nicht präemptiven Modus ausgeführt wird. Einige Tasks, z. B. zur Netzwerküberwachung, werden mit präemptiver Zeitplanung ausgeführt.  
+-   `active_workers_count` Stellt alle Worker, die über zugeordnete Tasks verfügen und in nicht präemptiven Modus ausgeführt werden. Einige Tasks, z. B. zur Netzwerküberwachung, werden mit präemptiver Zeitplanung ausgeführt.  
   
 -   Verborgene Zeitplanungsmodule verarbeiten keine typischen Benutzeranforderungen. Das DAC-Zeitplanungsmodul ist die Ausnahme. Dieses DAC-Zeitplanungsmodul verfügt über einen Thread zum Verarbeiten von Anforderungen.  
   
@@ -192,7 +192,7 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

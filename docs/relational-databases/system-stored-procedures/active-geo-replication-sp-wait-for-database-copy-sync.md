@@ -1,5 +1,5 @@
 ---
-title: Sp_wait_for_database_copy_sync (Azure SQL-Datenbank) | Microsoft Docs
+title: Sp_wait_for_database_copy_sync (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -23,13 +23,13 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6658ab7b1b68637978ca76ea709c4c0a23414d07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d1200ffc3a7bf643b55478297dc25e40b02a3dff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237918"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557340"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Aktive geografische Replikation - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [ @target_server =] 'Servername'  
  Der Name des SQL-Datenbankservers, der die aktive sekundäre Datenbank hostet. server_name ist vom Datentyp sysname und hat keinen Standardwert.  
   
- [ @target_database =] 'Database_name'  
+ [ @target_database =] "Database_name"  
  Der Name der aktiven sekundären Datenbank. database_name ist vom Datentyp sysname und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -83,6 +83,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Sys. dm_continuous_copy_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Geografische Replikation dynamische Verwaltungssichten und-Funktionen &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [Geografische Replikation, dynamische Verwaltungssichten und-Funktionen &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

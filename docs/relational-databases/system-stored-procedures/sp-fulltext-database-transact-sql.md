@@ -1,5 +1,5 @@
 ---
-title: "\"sp_fulltext_database\" (Transact-SQL) | Microsoft Docs"
+title: Sp_fulltext_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f4904de1142052a8286aabb4a69bf439871b84e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5ee4cb63c476b898c286f6223e9e56d1778e6a47
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241462"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563904"
 ---
 # <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Hat keine Auswirkung auf Volltextkataloge in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen und wird nur für Abwärtskompatibilität unterstützt. **sp_fulltext_database** deaktiviert nicht das Volltextmodul für eine bestimmte Datenbank. Alle durch Benutzer erstellten Datenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen standardmäßig die Volltextindizierung.  
+  Hat keine Auswirkung auf Volltextkataloge in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen und wird nur für Abwärtskompatibilität unterstützt. 
+  **sp_fulltext_database** deaktiviert nicht die Volltext-Engine für eine bestimmte Datenbank. Alle durch Benutzer erstellten Datenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen standardmäßig die Volltextindizierung.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +52,7 @@ sp_fulltext_database [@action=] 'action'
  [ **@action=**] **'***action***'**  
  Die Aktion, die ausgeführt werden soll. **action** ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Aktivieren**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Hat keine Auswirkung auf die Volltextkataloge in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen.|  
 |**disable**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Hat keine Auswirkung auf die Volltextkataloge in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen.|  
@@ -60,7 +61,7 @@ sp_fulltext_database [@action=] 'action'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen kann die Volltextindizierung nicht deaktiviert werden. Bei der Deaktivierung der Volltextindizierung werden keine Zeilen aus **sysfulltextcatalogs** gelöscht, und es wird auch nicht bewirkt, dass volltextfähige Tabellen nicht mehr für die Volltextindizierung markiert sind. Alle Definitionen von Volltextmetadaten sind weiterhin in den Systemtabellen vorhanden.  

@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980522"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556910"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, mehrere Dateien von einem überwachungsdateisatz gesammelt werden. Zum Beispiel:  
   
-    -   **\<Pfad >\\ \***  – sammelt alle Überwachungsdateien am angegebenen Speicherort.  
+    -   **\<Pfad >\\ \* ** – sammelt alle Überwachungsdateien am angegebenen Speicherort.  
   
     -   **\<Pfad > \LoginsAudit_{GUID}** – sammelt alle Überwachungsdateien, die dem angegebenen Namen und GUID-Paar aufweisen.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Dieses Argument wird verwendet, eine Blob-URL (einschließlich der Storage-Endpunkt und Container) an. Während sie einen Sternchen-Platzhalter nicht unterstützt, können Sie einen partielle Datei (Blob)-Namenspräfix (anstelle der vollständigen Blob-Name) verwenden, um mehrere Dateien (Blobs) zu sammeln, die mit diesem Präfix beginnen. Zum Beispiel:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> /**  – sammelt alle Überwachungsdateien (Blobs) für die jeweilige Datenbank.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> / ** – sammelt alle Überwachungsdateien (Blobs) für die jeweilige Datenbank.    
       
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>xel** – sammelt eine bestimmte Überwachungsdatei (Blob).
   

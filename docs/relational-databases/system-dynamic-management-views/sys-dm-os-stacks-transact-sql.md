@@ -1,5 +1,5 @@
 ---
-title: dm_os_stacks (Transact-SQL) | Microsoft Docs
+title: dm_os_stacks (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5870f8b45d507a7f5eeffdee3ac46c1db2e669f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa139af60be9f2f6ef3584352ce76ba19caa4894
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465776"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563134"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese dynamische verwaltungssicht wird intern von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden Schritte ausführen:  
+  Diese dynamische verwaltungssicht wird intern vom verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden Schritte ausführen:  
   
 -   Nachverfolgen von Debugdaten wie z. B. ausstehenden Zuordnungen.  
   
--   Voraussetzen oder Überprüfen von Logik, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten stellen die Komponente wird, in denen davon ausgegangen, dass ein bestimmter Aufruf erfolgt ist.  
+-   Voraussetzen oder Überprüfen Sie die Logik, mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten stellen die Komponente wird, in denen davon ausgegangen, dass ein bestimmter Aufruf erfolgt ist.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,6 +56,6 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 
 
 ## <a name="see-also"></a>Siehe auch  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

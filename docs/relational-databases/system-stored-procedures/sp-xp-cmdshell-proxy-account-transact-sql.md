@@ -1,5 +1,5 @@
 ---
-title: Sp_xp_cmdshell_proxy_account (Transact-SQL) | Microsoft Docs
+title: Sp_xp_cmdshell_proxy_account (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18c960fdf3d70c82684d493fd498a57ed357bb4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251967"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560560"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33251967"
   Erstellt Proxyanmeldeinformationen für **xp_cmdshell**.  
   
 > [!NOTE]  
->  **Xp_cmdshell** ist standardmäßig deaktiviert. So aktivieren Sie **Xp_cmdshell**, finden Sie unter [Xp_cmdshell Serverkonfigurationsoption](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **Xp_cmdshell** ist standardmäßig deaktiviert. So aktivieren Sie **Xp_cmdshell**, finden Sie unter [Xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

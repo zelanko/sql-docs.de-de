@@ -1,5 +1,5 @@
 ---
-title: fulltext_stoplists (Transact-SQL) | Microsoft Docs
+title: fulltext_stoplists (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ab58541738654f6ffd8aedada56b31f9817cc1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fbae0d001418bfae429b640e184c8093dd66166e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182406"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554120"
 ---
 # <a name="sysfulltextstoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "33182406"
  [fulltext_system_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-system-stopwords-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Erstellen Sie FULLTEXT STOPLIST & #40; Transact-SQL & #41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [ALTER FULLTEXT STOPLIST & #40; Transact-SQL & #41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
   
   

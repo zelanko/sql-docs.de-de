@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4a38eba623e91b063985fbc6924b87648cb8d58
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e55449d882ebbda8149d25eae447916505ba4ac0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562774"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Erstellen eines Rowsets mit 'IopenRowset'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "37432619"
 
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die **IOpenRowset:: OPENROWSET** Methode mit den folgenden Einschränkungen:  
   
--   Eine Basistabelle oder Sicht muss angegeben werden in einer Datenbank ID (DBID) Struktur, die die *pTableID* -Parameter zeigt.  
+-   Eine Basistabelle oder -sicht muss in einer Datenbank-ID-Struktur angegeben sein, auf die der *pTableID*-Parameter zeigt.  
   
--   Die DBID *eKind* Element muss dbkind_name.  
+-   Das DBID-Element *eKind* muss DBKIND_NAME anzeigen.  
   
--   Die DBID *uName* Member muss den Namen einer vorhandenen Basistabelle oder einer Sicht als Unicode-Zeichenfolge angeben.  
+-   Das DBI-Element *uName* muss den Namen einer vorhandenen Basistabelle oder einer Ansicht als Unicode-Zeichenfolge angeben.  
   
--   Die *pIndexID* Parameter **OpenRowset** muss NULL sein.  
+-   Der *pIndexID*-Parameter von **OpenRowset** muss NULL sein.  
   
- Das Resultset von **IOpenRowset:: OPENROWSET** enthält ein einzelnes Rowset. Resultsets, die ein einzelnes Rowset enthalten können unterstützt werden, indem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor. Die Cursorunterstützung ermöglicht dem Entwickler die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Parallelitätsmechanismen.  
+ Das Resultset von **IOpenRowset::OpenRowset** enthält ein einzelnes Rowset. Resultsets, die ein einzelnes Rowset enthalten, können von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursorn unterstützt werden. Die Cursorunterstützung ermöglicht dem Entwickler die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Parallelitätsmechanismen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

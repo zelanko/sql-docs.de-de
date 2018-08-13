@@ -16,13 +16,13 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 64fa6c3b169d6d206b2357e7f80e9c4447138882
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423919"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554530"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37423919"
   
 -   Wie eine Gruppe von Spalten abgerufen wird (nacheinander).  
   
--   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. In der DBCOLUMNACCESS-Struktur Wenn **pData** ist NULL und **CbMaxLen** 0 ist, den Aufruf von **IRow**-**> GetColumns()** Gibt nur die Spaltenlänge zurück. In diesem Fall **IRow -> GetColumns()** erneut aufgerufen werden können, in der gleichen Spalte aus, um die eigentlichen Daten abzurufen.  
+-   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. Wenn in der DBCOLUMNACCESS-Struktur **pData** NULL und **cbMaxLen** 0 ist, wird beim Aufruf von **IRow**-**GetColumns()** nur die Spaltenlänge zurückgegeben. In diesem Fall kann **IRow->GetColumns()** wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -60,11 +60,11 @@ ms.locfileid: "37423919"
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Tabelle, die im Beispiel verwendet wird.  
+ Mit dem ersten Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) wird eine im Beispiel verwendete Tabelle erstellt.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die im Beispiel verwendete Tabelle.  
+ Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Tabelle.  
   
 ```  
 use AdventureWorks  

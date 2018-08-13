@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_memory_objects (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_memory_objects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b746df94b0b7c36802663ca22c6b49107f10db18
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467726"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558430"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt Speicherobjekte, die vom derzeit zugeordnet sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können **dm_os_memory_objects** Analyse der speichernutzung und Identifizierung möglicher Speicherverluste.  
+  Gibt Speicherobjekte, die derzeit von zugeordnet sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können **Sys. dm_os_memory_objects** speicherauslastung zu analysieren und zur Identifizierung möglicher Speicherverluste.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,20 +44,20 @@ ms.locfileid: "34467726"
 |**pages_in_bytes**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Arbeitsspeicher in Bytes, der von dieser Instanz des Arbeitsspeicherobjekts zugeordnet wird. Lässt keine NULL-Werte zu.|  
 |**creation_options**|**int**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**bytes_used**|**bigint**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
-|**type**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Hiermit wird eine Komponente, der dieses Speicherobjekt gehört, oder die Funktion des Speicherobjekts. Lässt NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Dies gibt an, eine Komponente, der dieses Speicherobjekt gehört, oder die Funktion des Speicherobjekts. Lässt NULL-Werte zu.|  
 |**name**|**varchar(128)**|Nur interne Verwendung. NULL-Werte sind zulässig.|  
 |**memory_node_id**|**smallint**|ID eines Speicherknotens, der von diesem Speicherobjekt verwendet wird. Lässt keine NULL-Werte zu.|  
 |**creation_time**|**datetime**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**max_pages_allocated_count**|**int**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Maximale Anzahl der von diesem Speicherobjekt zugeordneten Seiten. Lässt keine NULL-Werte zu.|  
 |**page_size_in_bytes**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Größe der von diesem Objekt zugeordneten Seiten in Bytes. Lässt keine NULL-Werte zu.|  
 |**max_pages_in_bytes**|**bigint**|Höchstmenge an Arbeitsspeicher, die je von diesem Arbeitsspeicherobjekt verwendet wurde. Lässt keine NULL-Werte zu.|  
-|**page_allocator_address**|**varbinary(8)**|Speicheradresse der Seitenzuordnung. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**page_allocator_address**|**varbinary(8)**|Speicheradresse der Seitenzuordnung. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**sequence_num**|**int**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
-|**partition_type**|**int**|Der Typ der Partition:<br /><br /> 0 – nicht partitionierbare Speicherobjekt<br /><br /> 1 - partitionierbare Speicherobjekt, derzeit nicht partitioniert.<br /><br /> 2 – partitionierbare Speicherobjekt, partitioniert von NUMA-Knoten. In einer Umgebung mit einem einzelnen NUMA-Knoten entspricht dies 1.<br /><br /> 3 – partitionierbare Speicherobjekt, partitioniert nach CPU aus.|  
-|**contention_factor**|**real**|Ein Wert, Konflikte mit 0 bedeutet keine Konflikte auf dieses Speicherobjekt angeben. Der Wert wird aktualisiert, sobald eine angegebene Anzahl von speicherbelegungen spiegelnden Konflikte innerhalb dieses Zeitraums vorgenommen wurden. Gilt nur für Thread-sichere Speicherobjekt-Objekte.|  
-|**waiting_tasks_count**|**bigint**|Die Anzahl von Wartevorgängen für dieses Speicherobjekt. Dieser Indikator wird erhöht, wenn Arbeitsspeicher von diesem Speicherobjekt zugewiesen ist. Das Inkrement ist die Anzahl der Aufgaben, die derzeit für den Zugriff auf dieses Speicherobjekt wartet. Gilt nur für Thread-sichere Speicherobjekt-Objekte. Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
-|**exclusive_access_count**|**bigint**|Gibt an, wie oft dieses Speicherobjekt ausschließlich zugegriffen wurde. Gilt nur für Thread-sichere Speicherobjekt-Objekte.  Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
+|**partition_type**|**int**|Der Typ der Partition:<br /><br /> 0 – nicht-partitionierbare Speicherobjekt<br /><br /> 1 – partitionierbare Speicherobjekt, derzeit nicht partitioniert.<br /><br /> 2 – partitionierbare Speicherobjekt, partitioniert nach NUMA-Knoten. In einer Umgebung mit einem einzelnen NUMA-Knoten entspricht dies auf 1.<br /><br /> 3 – partitionierbare Arbeitsspeicher-Objekt, durch die CPU partitioniert.|  
+|**contention_factor**|**real**|Ein Wert, der Konflikte für dieses Objekt Arbeitsspeicher angeben, mit 0, d. h. keine Konflikte auftreten. Der Wert wird aktualisiert, wenn eine angegebene Anzahl der speicherbelegungen reflektierenden Konflikte während dieses Zeitraums vorgenommen wurden. Gilt nur für threadsichere Speicherobjekte.|  
+|**waiting_tasks_count**|**bigint**|Die Anzahl der Wartevorgänge auf diesem Speicherobjekt. Dieser Indikator wird erhöht, wenn der Arbeitsspeicher von diesem Arbeitsspeicherobjekt zugewiesen ist. Das Inkrement ist die Anzahl der Aufgaben, die derzeit darauf warten, für den Zugriff auf dieses Speicherobjekt an. Gilt nur für threadsichere Speicherobjekte. Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
+|**exclusive_access_count**|**bigint**|Gibt an, wie oft dieses Speicherobjekt ausschließlich auf die zugegriffen wurde. Gilt nur für threadsichere Speicherobjekte.  Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
  **Partition_type**, **Contention_factor**, **Waiting_tasks_count**, und **Exclusive_access_count** sind noch nicht im implementiert [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

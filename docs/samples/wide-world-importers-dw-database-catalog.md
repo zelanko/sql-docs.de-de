@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984802"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556950"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Datenbankkatalog "wideworldimportersdw"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Erklärungen zu den Schemas, Tabellen und gespeicherten Prozeduren in der Datenbank "wideworldimportersdw". 
 
 Die Datenbank "wideworldimportersdw" wird für Datawarehousing und analytische Verarbeitung verwendet. Die Transaktionsdaten zu und Verkäufe in der Datenbank "wideworldimporters" generiert und in die Datenbank mit "wideworldimportersdw" geladen ist eine **tägliche ETL-Prozess**.
@@ -51,11 +51,11 @@ Die Tabellen Dimensions- und Faktentabellen sind unten aufgeführt. Die Tabellen
 |Ort|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|Neue Tabelle mit Informationen zu den Datumsangaben, einschließlich der Geschäftsjahr (basierend auf dem 1. November für Geschäftsjahr starten).|
-|Employee|`Application.People`installiert haben.|
+|Employee|`Application.People`. installiert haben.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Lieferanten|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`installiert haben.|
-|TransactionType|`Application.TransactionTypes`installiert haben.|
+|PaymentMethod|`Application.PaymentMethods`. installiert haben.|
+|TransactionType|`Application.TransactionTypes`. installiert haben.|
 
 ### <a name="fact-tables"></a>Faktentabellen
 

@@ -1,5 +1,5 @@
 ---
-title: Der Abfragespeicher-Katalogsichten (Transact-SQL) | Microsoft Docs
+title: Abfrage von Store-Katalogsichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 925bf4f70f1a7d32aa726620d360c36835f724e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8d4ac40f0d28e9986cb48f83c3fb69674f3801af
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178776"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554090"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>Der Abfragespeicher-Katalogsichten (Transact-SQL)
+# <a name="query-store-catalog-views-transact-sql"></a>Abfrage von Store-Katalogsichten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Dieser Abschnitt enthält die folgenden Katalogsichten.  

@@ -19,15 +19,15 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8c7072b8f36aeb00df1975c1544f73b37820153
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc3bee774d541902541894fa6a13bfab81e86a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970769"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554370"
 ---
-# <a name="setting-properties---smo"></a>Einstellen von Eigenschaften – SMO
+# <a name="setting-properties---smo"></a>Festlegen von Eigenschaften – SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Eigenschaften sind Werte, die aussagekräftige Informationen über das Objekt speichern. Z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Konfigurationsoptionen werden dargestellt, durch die <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> Eigenschaften des Objekts. Auf Eigenschaften kann mit der Eigenschaftsauflistung entweder direkt oder indirekt zugegriffen werden. Für den direkten Zugriff auf Eigenschaften wird die folgende Syntax verwendet:  

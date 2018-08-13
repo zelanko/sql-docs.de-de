@@ -1,5 +1,5 @@
 ---
-title: Senden von Daten an FILESTREAM - ISequentialStream an einen ICommandText gebunden | Microsoft-Dokumentation
+title: 'Senden von Daten an FILESTREAM: eine ISequentialStream-Schnittstelle, die an ICommandText gebunden ist | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e15ea6d968aef52c41c325bebfc6898f28050050
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 632fb5e95def0791be11969efb7714ddbe2ec50f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561050"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Senden von Daten an FILESTREAM - ISequentialStream an einen ICommandText gebunden
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Senden von Daten an FILESTREAM: eine ISequentialStream-Schnittstelle, die an ICommandText gebunden ist
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "37407619"
   
  Wenn Sie dieses Beispiel ausführen, müssen Sie den Namen eines Servers oder Server\Instanzname sowie einen Wert zwischen 4 MB (0x400001) und 4 GB (0xFFFFFFFF) übergeben, der die Menge der zu schreibenden Daten angibt.  
   
- Der vierte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting löscht die Datenbank, die von diesem Beispiel erstellten.  
+ Das vierte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) löscht die in diesem Beispiel erstellte Datenbank.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

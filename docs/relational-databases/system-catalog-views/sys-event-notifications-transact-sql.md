@@ -1,5 +1,5 @@
 ---
-title: Sys. event_notifications (Transact-SQL) | Microsoft Docs
+title: Sys. event_notifications (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 353b6504b367ddae0a1bb211c6265ca726ffe157
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1b07ca793821b39a549e709f52fa57bf1dd32dcb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562094"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33182186"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**Parent_ID**|**int**|ID des übergeordneten Objekts ungleich NULL.<br /><br /> 0 = Die übergeordnete Klasse ist die Datenbank.|  
 |**create_date**|**datetime**|Erstellungsdatum.|  
-|**modify_date**|**datetime**|Entspricht immer **Create_date**.|  
+|**modify_date**|**datetime**|Ist immer gleich **Create_date**.|  
 |**service_name**|**nvarchar(256)**|Name des Zieldienstes, an den die Benachrichtigung gesendet wird.|  
 |**broker_instance**|**nvarchar(128)**|Broker-Instanz, an den die Benachrichtigung gesendet wird.|  
 |**principal_id**|**int**|ID des Datenbankprinzipals, der Besitzer dieser Ereignisbenachrichtigung ist.|  

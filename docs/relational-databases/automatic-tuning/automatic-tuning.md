@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023858"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556470"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ Einige Spalten in dieser Ansicht werden in der folgenden Liste beschrieben:
  - Beschreibung, die Informationen, warum enthält [!INCLUDE[ssde_md](../../includes/ssde_md.md)] davon ausgeht, dass diese Änderung des Plans ein potenzieller Leistungsverlust ist.
  - "DateTime", wenn die mögliche Regression erkannt wird.
  - Dieser Empfehlung zu bewerten. 
- - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- Skript, das zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md).
+ - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben [!INCLUDE[tsql_md](../../includes/tsql_md.md)] Skripts, die zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md).
 
 Verwenden Sie die folgende Abfrage aus, um ein Skript zu erhalten, die das Problem und zusätzliche Informationen zu den geschätzten Korrekturen erhalten:
 

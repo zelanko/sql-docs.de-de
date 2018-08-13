@@ -1,5 +1,5 @@
 ---
-title: REFERENTIAL_CONSTRAINTS (Transact-SQL) | Microsoft Docs
+title: REFERENTIAL_CONSTRAINTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4eca39fc2fab5193b9dee9875a754fd224f2c1ce
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1732ea37cf7a6f84ef2f3a09c9c94fba9413fdfc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555660"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede FOREIGN KEY-Einschränkung in der aktuellen Datenbank zurück. Diese Informationsschemasicht gibt Informationen zu den Objekten zurück, für die der aktuelle Benutzer Berechtigungen besitzt.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA. *** View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Einschränkungsqualifizierer|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**sysname**|Einschränkungsname|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Der UNIQUE-Einschränkungsqualifizierer.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die UNIQUE-Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die UNIQUE-Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|UNIQUE-Einschränkung.|  
 |**MATCH_OPTION**|**Varchar (** 7 **)**|Referenzielle Bedingungen für die Übereinstimmung von Einschränkungen. Es wird immer SIMPLE zurückgegeben. Dies bedeutet, dass keine Übereinstimmung definiert ist. Die Bedingung wird als Übereinstimmung betrachtet, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> Mindestens ein Wert in der Fremdschlüsselspalte ist NULL.<br /><br /> Keiner der Werte in der Fremdschlüsselspalte ist NULL, und in der Primärschlüsseltabelle ist eine Zeile mit demselben Schlüssel vorhanden.|  
 |**UPDATE_RULE**|**Varchar (** 11 **)**|Aktion, die ausgeführt wird, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung verstößt gegen die referenzielle Integrität, die durch diese Einschränkung definiert ist. Gibt einen der folgenden Werte zurück: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Wenn für diese Einschränkung NO ACTION für ON UPDATE angegeben ist, wird das Update des Primärschlüssels, auf den in der Einschränkung verwiesen wird, nicht an den Fremdschlüssel weitergegeben. Wenn das Update eines Primärschlüssels einen Verstoß gegen die referenzielle Integrität verursacht, weil mindestens ein Fremdschlüssel den gleichen Wert enthält, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Änderungen an der übergeordneten Tabelle und der verweisenden Tabelle vorgenommen. Außerdem löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler aus.<br /><br /> Wenn für diese Einschränkung CASCADE für ON UPDATE angegeben ist, werden alle Änderungen des Primärschlüsselwerts automatisch an den Fremdschlüsselwert weitergegeben.|  

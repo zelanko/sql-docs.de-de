@@ -1,5 +1,5 @@
 ---
-title: Sys.Certificates (Transact-SQL) | Microsoft Docs
+title: Sys.Certificates (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5aaf349d050b2b1b1d27ae3067f003186c8c6eb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 35e026a66a0d170be49cfbf8d220e591a73a2f37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180316"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552660"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33180316"
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Die Beschreibung der Verschlüsselungsart des privaten Schlüssels.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Mit dem Wert 1 werden mit diesem Zertifikat verschlüsselte Dienstdialoge initiiert.|  
 |**issuer_name**|**nvarchar(442)**|Name des Zertifikatausstellers.|  
-|**cert_serial_number**|**nvarchar(64)**|Seriennummer des Zertifikats.|  
+|**cert_serial_number**|**Nvarchar(64)**|Seriennummer des Zertifikats.|  
 |**SID**|**varbinary(85)**|Anmelde-SID für dieses Zertifikat.|  
 |**string_sid**|**nvarchar(128)**|Zeichenfolgendarstellung der Anmelde-SID für dieses Zertifikat.|  
 |**Betreff**|**nvarchar(4000)**|Betreff dieses Zertifikats.|  

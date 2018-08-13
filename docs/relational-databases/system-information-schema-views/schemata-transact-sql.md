@@ -1,5 +1,5 @@
 ---
-title: SCHEMAS (Transact-SQL) | Microsoft Docs
+title: SCHEMAS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9596aca9f81b81a7195ef816409e8f9434ba9219
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2c8892f5fb2a584368567793f5bc52b23b810b52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240895"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558290"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeile für jedes Schema in der aktuellen Datenbank zurück. Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA. *** View_name*. Zum Abrufen von Informationen zu allen Datenbanken in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Abfrage der [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
+  Gibt eine Zeile für jedes Schema in der aktuellen Datenbank zurück. Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*. Zum Abrufen von Informationen zu allen Datenbanken in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Abfrage die [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Name der aktuellen Datenbank|  
 |**SCHEMA_NAME**|**Nvarchar (** 128 **)**|Gibt den Namen des Schemas zurück.|  
-|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Gibt den Namen des Standardzeichensatzes zurück.|  
 
 **Beispiel**  
-Im folgenden Beispiel werden Informationen zu den Schemas in der master-Datenbank zurückgegeben:  
+Das folgende Beispiel gibt Informationen zu den Schemas in der master-Datenbank zurück:  
 ```sql  
 SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
 ```  

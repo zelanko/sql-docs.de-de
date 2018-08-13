@@ -1,5 +1,5 @@
 ---
-title: Parameter (Transact-SQL) | Microsoft Docs
+title: Parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,37 +22,37 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b73215f275f2171f72a70a71f1855d88d60c034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238507"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564804"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Zeile für jeden Parameter einer benutzerdefinierten Funktion oder gespeicherten Prozedur zurück, auf die der aktuelle Benutzer in der aktuellen Datenbank zugreifen kann. Für Funktionen gibt diese Sicht auch eine Zeile mit Informationen zum Rückgabewert zurück.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA. *** View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**Nvarchar (** 128 **)**|Katalogname der Routine, für die dies ein Parameter ist|  
-|**SPECIFIC_SCHEMA**|**Nvarchar (** 128 **)**|Schemaname der Routine, für die dies ein Parameter ist<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**SPECIFIC_SCHEMA**|**Nvarchar (** 128 **)**|Schemaname der Routine, für die dies ein Parameter ist<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**"SPECIFIC_NAME"**|**Nvarchar (** 128 **)**|Name der Routine, für die dies ein Parameter ist|  
 |**ORDINAL_POSITION**|**int**|Die Ordnungsposition des Parameters, beginnend bei 1. Für den Rückgabewerts einer Funktion ist dies 0.|  
 |**PARAMETER_MODE**|**Nvarchar (** 10 **)**|Gibt IN zurück, wenn es ein Eingabeparameter ist, OUT, wenn es ein Ausgabeparameter ist, und INOUT, wenn es ein Eingabe/Ausgabeparameter ist.|  
-|**IS_RESULT**|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn das Ergebnis auf einer Routine beruht, die eine Funktion ist. Andernfalls gibt "Nein".|  
-|**AS_LOCATOR**|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn der Parameter als Lokator deklariert wurde. Andernfalls gibt "Nein".|  
+|**IS_RESULT**|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn das Ergebnis auf einer Routine beruht, die eine Funktion ist. Andernfalls Nein.|  
+|**AS_LOCATOR**|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn der Parameter als Lokator deklariert wurde. Andernfalls Nein.|  
 |**PARAMETERNAME**|**Nvarchar (** 128 **)**|Der Name des Parameters. NULL, wenn er dem Rückgabewert einer Funktion entspricht.|  
 |**DATA_TYPE**|**Nvarchar (** 128 **)**|Vom System bereitgestellter Datentyp|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|Maximale Länge in Zeichen für binary-Datentypen oder Zeichendatentypen<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten. Andernfalls wird NULL zurückgegeben.|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Maximale Länge in Bytes für binary-Datentypen oder Zeichendatentypen<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|Maximale Länge in Zeichen für binary-Datentypen oder Zeichendatentypen<br /><br /> -1 für **Xml** und große Werttypen. Andernfalls wird NULL zurückgegeben.|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Maximale Länge in Bytes für binary-Datentypen oder Zeichendatentypen<br /><br /> -1 für **Xml** und große Werttypen. Andernfalls wird NULL zurückgegeben.|  
 |**COLLATION_CATALOG**|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |**COLLATION_SCHEMA**|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
-|**SORTIERUNGSNAME**|**Nvarchar (** 128 **)**|Name der Sortierung des Parameters. Wenn es sich nicht um einen der Zeichentypen handelt, wird NULL zurückgegeben.|  
+|**COLLATION_NAME**|**Nvarchar (** 128 **)**|Name der Sortierung des Parameters. Wenn es sich nicht um einen der Zeichentypen handelt, wird NULL zurückgegeben.|  
 |**CHARACTER_SET_CATALOG**|**Nvarchar (** 128 **)**|Katalogname des Zeichensatzes des Parameters. Wenn es sich nicht um einen der Zeichentypen handelt, wird NULL zurückgegeben.|  
 |**CHARACTER_SET_SCHEMA**|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
 |**CHARACTER_SET_NAME**|**Nvarchar (** 128 **)**|Name des Zeichensatzes des Parameters. Wenn es sich nicht um einen der Zeichentypen handelt, wird NULL zurückgegeben.|  
@@ -74,6 +74,6 @@ ms.locfileid: "33238507"
  [Informationsschemasichten &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys.Parameters & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

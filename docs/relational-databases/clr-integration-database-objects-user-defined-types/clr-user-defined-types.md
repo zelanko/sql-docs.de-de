@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353982"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008872"
 ---
 # <a name="clr-user-defined-types"></a>Benutzerdefinierte CLR-Typen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen von Datenbankobjekten, die für eine Assembly programmiert sind, die in der CLR (Common Language Runtime) von .NET Framework erstellt wurde. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Ihnen die Möglichkeit zum Erstellen von Datenbankobjekten, die für eine in die .NET Framework common Language Runtime (CLR) erstellten Assembly programmiert werden. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  
   
 > [!NOTE]  
 >  Die Fähigkeit zum Ausführen von CLR-Code auf OFF festgelegt ist, wird standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die CLR kann aktiviert werden, mithilfe der **Sp_configure** gespeicherten Systemprozedur.  

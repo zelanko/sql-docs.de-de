@@ -1,5 +1,5 @@
 ---
-title: dm_os_memory_pools (Transact-SQL) | Microsoft Docs
+title: dm_os_memory_pools (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0de67bd53b568f77a16fd10903a5d0c3fddfce4c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2ddb9b2a240b8cc6bb0c9ca120c9e411b6eecb20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556270"
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34466187"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|Speicheradresse des Eintrags, der für den Speicherpool steht. Lässt keine NULL-Werte zu.|  
 |**pool_id**|**int**|ID eines bestimmten Pools in einer Gruppe von Pools. Lässt keine NULL-Werte zu.|  
-|**type**|**nvarchar(60)**|Typ des Objektpools. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**type**|**nvarchar(60)**|Typ des Objektpools. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**name**|**nvarchar(256)**|Vom System zugewiesener Name des Speicherobjekts. Lässt keine NULL-Werte zu.|  
 |**max_free_entries_count**|**bigint**|Maximale Anzahl freier Einträge, die ein Pool haben kann. Lässt keine NULL-Werte zu.|  
 |**free_entries_count**|**bigint**|Anzahl der derzeit im Pool befindlichen freien Einträge. Lässt keine NULL-Werte zu.|  
@@ -60,7 +60,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 ## <a name="see-also"></a>Siehe auch  
  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

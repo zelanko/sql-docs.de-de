@@ -1,5 +1,5 @@
 ---
-title: dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: dm_exec_query_optimizer_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5779c87d467a52e28623419d6cf6bac392907fae
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 282a55a0594a0d52a89066c997e6392bc8cc0dbb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464416"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557400"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "34464416"
 |Name|Datentyp|Description|  
 |----------|---------------|-----------------|  
 |**Leistungsindikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
-|**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
-|**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
+|**Vorkommen**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
+|**Wert**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -52,9 +52,9 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
     
 ## <a name="remarks"></a>Hinweise  
- **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt die Änderungen an **Dm_exec_query_optimizer_info**, einschließlich beide Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
+ **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt, Änderungen an **Dm_exec_query_optimizer_info**, einschließlich der beiden Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
   
-|Leistungsindikator|Vorkommen|Wert|  
+|Leistungsindikator|Vorkommen|value|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  
@@ -86,7 +86,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 |join hint|Häufigkeit, mit der der Joinalgorithmus von einem Joinhinweis erzwungen wurde.|Nicht verfügbar|  
 |view reference|Häufigkeit, mit der in einer Abfrage auf eine Sicht verwiesen wurde.|Nicht verfügbar|  
 |remote query|Anzahl der Optimierungen, bei denen die Abfrage auf mindestens eine Remotedatenquelle verwiesen hat, wie z. B. auf eine Tabelle mit einem vierteiligen Namen oder ein OPENROWSET-Ergebnis.|Nicht verfügbar|  
-|maximum DOP|Gesamtzahl der Optimierungen.|Durchschnittlicher effektiver MAXDOP-Wert für einen optimierten Plan. Standardmäßig wird durch effektive MAXDOP bestimmt die **Max. Grad an Parallelität** Serverkonfiguration aus, und kann für eine bestimmte Abfrage durch den Wert des MAXDOP-Abfragehinweises überschrieben werden.|  
+|maximum DOP|Gesamtzahl der Optimierungen.|Durchschnittlicher effektiver MAXDOP-Wert für einen optimierten Plan. Standardmäßig richtet durch effektive MAXDOP die **Max. Grad an Parallelität** Server-Konfiguration aus, und kann für eine bestimmte Abfrage durch den Wert des MAXDOP-Abfragehinweises überschrieben werden.|  
 |maximum recursion level|Anzahl der Optimierungen, bei denen mit dem Abfragehinweis eine höhere MAXRECURSION-Ebene als 0 angegeben wurde.|Durchschnittliche MAXRECURSION-Ebene in Optimierungen, bei denen mit dem Abfragehinweis eine maximale Rekursionsebene angegeben wurde.|  
 |indexed views loaded|Nur intern|Nur intern|  
 |indexed views matched|Anzahl der Optimierungen, bei denen für mindestens eine indizierte Sicht eine Übereinstimmung gefunden wurde.|Durchschnittliche Anzahl der übereinstimmenden Sichten.|  
@@ -133,7 +133,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

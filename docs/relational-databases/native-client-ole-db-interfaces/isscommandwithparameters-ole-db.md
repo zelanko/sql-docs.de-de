@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca1deccb70aeb15a9ea0b5422e84c35a40802c3d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 85f5ab9d465e20eb47265d06773b63728470603b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410889"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559580"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37410889"
   
 ## <a name="see-also"></a>Siehe auch  
  [Schnittstellen &#40;OLE-DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [XML-Datentypen](../../relational-databases/native-client/features/using-xml-data-types.md)   
+ [Using XML Data Types (Verwenden von XML-Datentypen)](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [Verwenden von benutzerdefinierten Typen](../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

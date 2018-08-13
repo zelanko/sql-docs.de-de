@@ -1,5 +1,5 @@
 ---
-title: Ausführen der gespeicherten Prozedur mit dem ODBC-aufrufen und der Prozessausgabe | Microsoft-Dokumentation
+title: Ausführen der gespeicherten Prozedur mit ODBC CALL und der Prozessausgabe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3e04f2d636887b943b99cab234af3f00b7b4cbf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 766dfbd14eb13392baa06265100941c38d031cb6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561160"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ausführen der gespeicherten Prozedur mit dem ODBC-aufrufen und der Prozessausgabe
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ausführen der gespeicherten Prozedur mit ODBC CALL und der Prozessausgabe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
+  Gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
@@ -55,11 +55,11 @@ ms.locfileid: "37427619"
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
+ Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
+ Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
   
 ```  
 USE AdventureWorks  
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen: Themen zur Vorgehensweise &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

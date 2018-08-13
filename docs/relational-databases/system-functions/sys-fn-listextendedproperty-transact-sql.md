@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
+title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238437"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559720"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,31 +62,31 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- {Standard | "*Property_name*" | NULL}  
+ {Standardmäßig | "*Property_name*" | NULL}  
  Ist der Name der Eigenschaft. *Property_name* ist **Sysname**. Eine gültige Eingabe ist default, NULL oder ein Eigenschaftsname.  
   
- {Standard | "*level0_object_type*" | NULL}  
+ {Standardmäßig | "*level0_object_type*" | NULL}  
  Der Benutzer oder benutzerdefinierte Typ. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER und NULL.  
   
 > [!IMPORTANT]  
 >  USER und TYPE als Typen der Ebene 0 werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden. Verwenden Sie SCHEMA anstelle von USER als Typ der Ebene 0. Verwenden Sie für TYPE als Typ der Ebene 0 SCHEMA und TYPE als Typ der Ebene 1.  
   
- {Standard | "*level0_object_name*" | NULL}  
+ {Standardmäßig | "*level0_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- {Standard | "*level1_object_type*" | NULL}  
+ {Standardmäßig | "*level1_object_type*" | NULL}  
  Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
   
 > [!NOTE]  
 >  default ergibt NULL, und 'default' ergibt den Objekttyp DEFAULT.  
   
- {Standard | "*level1_object_name*" | NULL}  
+ {Standardmäßig | "*level1_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- {Standard | "*level2_object_type*" | NULL}  
- Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* Spalte, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL sind.  
+ {Standardmäßig | "*level2_object_type*" | NULL}  
+ Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* sind Spalte, Einschränkung, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
- {Standard | "*level2_object_name*" | NULL}  
+ {Standardmäßig | "*level2_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
@@ -96,19 +96,19 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |Wert|**sql_variant**|  
   
  Wenn die zurückgegebene Tabelle leer ist, besitzt das Objekt keine erweiterten Eigenschaften oder der Benutzer hat keine Berechtigungen zum Auflisten der erweiterten Eigenschaften des Objekts. Beim Zurückgeben erweiterter Eigenschaften für die Datenbank selbst weisen die Spalten objtype und objname den Wert NULL auf.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert für *Property_name* NULL ist, oder Standardwert Fn_listextendedproperty alle Eigenschaften für das angegebene Objekt zurückgegeben.  
+ Wenn der Wert für *Property_name* Wert NULL aufweist oder standardmäßig Fn_listextendedproperty alle Eigenschaften für das angegebene Objekt zurückgegeben.  
   
  Wenn der Objekttyp angegeben ist und der Wert des entsprechenden Objektnamens NULL oder default ist, gibt fn_listextendedproperty alle erweiterten Eigenschaften für alle Objekte des angegebenen Typs zurück.  
   
  Die Objekte werden nach Ebenen unterschieden, wobei Ebene 0 die höchste und Ebene 2 die niedrigste ist. Wenn ein Objekttyp und -name einer niedrigen Ebene (Ebene 1 oder 2) angegeben sind, sollten die Werte für den Objekttyp und -namen des übergeordneten Objekts nicht NULL oder default sein. Andernfalls gibt die Funktion ein leeres Resultset zurück.  
   
- **Objname** ist als Latin1_General_CI_AI fest. Jedoch können Sie umgehen, dies durch Überschreiben der Sortierung im Vergleich.  
+ **Objname** Latin1_General_CI_AI festen. Jedoch können Sie dies umgehen, durch Sortierung im Vergleich zu überschreiben.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Anzeigen erweiterter Eigenschaften für alle Spalten in einer Tabelle  
- Im folgenden Beispiel werden die erweiterte Eigenschaften für Spalten in der `ScrapReason` Tabelle. Diese ist im `Production`-Schema enthalten.  
+ Das folgende Beispiel listet die erweiterte Eigenschaften für Spalten in der `ScrapReason` Tabelle. Diese ist im `Production`-Schema enthalten.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Anzeigen erweiterter Eigenschaften für alle Tabellen in einem Schema  
- Im folgenden Beispiel werden die erweiterte Eigenschaften für alle Tabellen in der `Sales` Schema.  
+ Das folgende Beispiel listet die erweiterte Eigenschaften für alle Tabellen der `Sales` Schema.  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_memory_buffers (Transact-SQL) | Microsoft Docs
+title: Sys. dm_fts_memory_buffers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5704ea80a15713a006fefeb5442439b9762071c0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 91a0949d70898a470e3f5b57e7d42d0befedc38f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463676"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556520"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34463676"
 > Die folgende Spalte wird in einer zukünftigen Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **Row_count**. Vermeiden Sie diese Spalte bei Neuentwicklungen, und planen Sie die Änderung von Anwendungen, in denen die Spalte derzeit verwendet wird.  
 
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|ID des belegten Speicherpools.<br /><br /> 0 = Kleine Puffer<br /><br /> 1 = Große Puffer|  
 |**memory_address**|**varbinary(8)**|Adresse des belegten Speicherpuffers.|  
@@ -66,7 +66,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Volltextsuche und semantische Suche dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

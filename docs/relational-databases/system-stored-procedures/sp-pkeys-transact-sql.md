@@ -1,5 +1,5 @@
 ---
-title: Sp_pkeys (Transact-SQL) | Microsoft Docs
+title: Sp_pkeys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5321f34ae72051bc84a83dca70f12f772f22fc9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5d51be7029c9f9da4ef7a51958f756352c5ddc1f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259480"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562994"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,18 +49,18 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="arguments"></a>Argumente  
  [ @table_name=] '*Namen*"  
- Ist die Tabelle, für die Informationen zurückgegeben werden sollen. *Namen* ist **Sysname**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
+ Ist die Tabelle für die Informationen zurückgegeben werden sollen. *Namen* ist **Sysname**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
   
  [ @table_owner=] '*Besitzer*"  
- Gibt den Besitzer der angegebenen Tabelle an. *Besitzer* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Besitzer* nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
+ Gibt den Besitzer der angegebenen Tabelle an. *Besitzer* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Besitzer* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn die *Besitzer* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen*, diese Prozedur sucht für eine Tabelle mit dem angegebenen *Namen* im Besitz der der Datenbankbesitzer. Falls vorhanden, werden die Spalten dieser Tabelle zurückgegeben.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn die *Besitzer* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Namen*, sieht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Namen* im Besitz der Besitzer der Datenbank. Wenn eine vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [ @table_qualifier=] '*Qualifizierer*"  
  Der Tabellenqualifizierer. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -76,7 +76,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="remarks"></a>Hinweise  
  sp_pkeys gibt Informationen zu den Spalten zurück, die mit einer PRIMARY KEY-Einschränkung explizit definiert werden. Da nicht alle Systeme explizit benannte Primärschlüssel unterstützen, bestimmt die Gateway-Implementierung, was als Primärschlüssel gilt. Beachten Sie, dass sich der Begriff Primärschlüssel auf einen logischen Primärschlüssel für eine Tabelle bezieht. Es wird davon ausgegangen, dass für jeden als logischen Primärschlüssel aufgeführten Schlüssel ein eindeutiger Index definiert ist. Dieser eindeutige Index wird auch in sp_statistics zurückgegeben.  
   
- Die gespeicherte Prozedur Sp_pkeys entspricht in ODBC SQLPrimaryKeys. Die zurückgegebenen Ergebnisse werden folgendermaßen sortiert: TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME und KEY_SEQ.  
+ Die gespeicherte Prozedur Sp_pkeys entspricht SQLPrimaryKeys in ODBC. Die zurückgegebenen Ergebnisse werden folgendermaßen sortiert: TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME und KEY_SEQ.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
@@ -92,7 +92,7 @@ EXEC sp_pkeys @table_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Im folgenden Beispiel wird der Primärschlüssel für die `DimAccount`-Tabelle in der `AdventureWorksPDW2012`-Datenbank abgerufen. Es gibt keine Zeilen gibt an, dass die Tabelle nicht über einen Primärschlüssel verfügt.  
+ Im folgenden Beispiel wird der Primärschlüssel für die `DimAccount`-Tabelle in der `AdventureWorksPDW2012`-Datenbank abgerufen. Es gibt keine Zeilen gibt an, dass die Tabelle keinen Primärschlüssel zurück.  
   
 ```  
 -- Uses AdventureWorks  

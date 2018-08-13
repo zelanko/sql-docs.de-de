@@ -1,7 +1,7 @@
 ---
 title: SQLServer Shared Management Objects (SMO) – Lizenzbedingungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040428"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662242"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQLServer Shared Management Objects (SMO)-Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   * der Code im Quellcodeformat offengelegt oder verteilt wird oder
   * dass andere das Recht zur Änderung haben.
 
-**3.    UMFANG DER LIZENZ.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Sie sind nicht dazu berechtigt:
-* beliebige technische Einschränkungen in der Software umgehen
-* die Software zurückentwickeln, dekompilieren oder disassemblieren, mit Ausnahme genau des Umfangs, den das geltende Recht trotz dieser Einschränkung ausdrücklich genehmigt
-* mehr Kopien der Software erstellen als in diesem Vertrag festgelegt oder durch das geltende Recht trotz dieser Einschränkung zugelassen
-* die Software veröffentlichen, damit andere sie kopieren können;
-* die Software vermieten, leasen oder verleihen
-* die Software oder diesen Vertrag an Dritte übertragen
-* die Software für kommerzielle Softwarehostingdienste verwenden
+
+**3. UMFANG DER LIZENZ.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Sie können keinen der folgenden Schritte ausführen:
+
+- Umgehen Sie alle technischen Beschränkungen in der Software aus.
+- Zurückentwickeln, dekompilieren oder disassemblieren der Software, mit dem Unterschied, und nur soweit das anwendbare Recht ungeachtet dieser Einschränkung ausdrücklich gestattet.
+- Stellen Sie mehr Kopien der Software als in dieser Vereinbarung angegeben sind, oder durch das anwendbare Recht ungeachtet dieser Einschränkung zulässig.
+- Freigeben, veröffentlichen, zu mieten oder leasen der Softwareupdates oder Bereitstellen der Software als eigenständige gehostete Lösung zur Verwendung durch andere Benutzer.
 
 **4.    DRITTANBIETERHINWEISE.** Die Software kann Komponenten von Drittanbietern enthalten, für die separate rechtliche Hinweise gelten oder die anderen Verträgen unterliegen, wie ggf. in der Datei „ThirdPartyNotices“ der Software beschrieben.  Selbst wenn solche Komponenten anderen Verträgen unterliegen, gelten ebenfalls die untengenannten Garantieausschlüsse und Einschränkungen und Ausschlüsse von Schäden.
 
@@ -82,7 +81,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **6.    DOKUMENTATION.** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.
 
-**7.    EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden Sie unter „www.microsoft.com/exporting“.
+**7.    EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden Sie unter " www.microsoft.com/exporting ".
 
 **8.    SUPPORTDIENSTE.** Da diese Software „wie besehen“ zur Verfügung gestellt wird, stellen wir möglicherweise keine Supportservices für sie bereit.
 
@@ -106,3 +105,7 @@ Diese Einschränkung gilt für
 * Ansprüche aufgrund von Vertragsverletzungen, Verletzungen der Gewährleistung, Garantie oder Konditionen, der Kausalhaftung, Unterlassung oder anderer zivilrechtlicher Delikte im vom geltenden Recht zugelassenen Umfang
 
 Sie gilt auch dann, wenn Microsoft von der Möglichkeit der Schäden wusste oder hätte wissen müssen. Die obige Einschränkung oder Ausschlussbestimmung gilt möglicherweise nicht für Sie, weil Ihr Land den Ausschluss oder die Einschränkung von zufälligen, Folge- oder anderen Schäden nicht zulässt.
+
+> [!NOTE]
+> Abschnitt 3 wurde am 8. August 2018 aktualisiert.
+

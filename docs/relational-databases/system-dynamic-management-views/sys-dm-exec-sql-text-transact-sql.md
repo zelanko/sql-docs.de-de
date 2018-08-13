@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_sql_text (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_sql_text (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465156"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557140"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den Text der SQL-batch, identifiziert durch das angegebene *Sql_handle*. Diese Tabellenwertfunktion ersetzt die Systemfunktion **Fn_get_sql**.  
+  Gibt der Text des SQL-batch, identifiziert durch das angegebene *Sql_handle*. Diese Tabellenwertfunktion ersetzt die Systemfunktion **Fn_get_sql**.  
   
  
 ## <a name="syntax"></a>Syntax  
@@ -45,7 +45,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Argumente  
 *sql_handle*  
-Das SQL-Handle für den zu suchenden Batch. *Sql_handle* ist **varbinary(64)**. *Sql_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+Das SQL-Handle für den zu suchenden Batch. *Sql_handle* ist **varbinary(64)**. *Sql_handle* aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden kann:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -74,7 +74,7 @@ Identifiziert eindeutig einen Abfrageplan für einen Batch, der zwischengespeich
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID der Datenbank.<br /><br /> Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.|  
 |**objectid**|**int**|ID des Objekts.<br /><br /> Dieser Wert ist für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen NULL.|  
-|**number**|**smallint**|Für eine nummerierte gespeicherte Prozedur gibt diese Spalte die Nummer der gespeicherten Prozedur zurück. Weitere Informationen finden Sie unter [numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Dieser Wert ist für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen NULL.|  
+|**Anzahl**|**smallint**|Für eine nummerierte gespeicherte Prozedur gibt diese Spalte die Nummer der gespeicherten Prozedur zurück. Weitere Informationen finden Sie unter [Sys. numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Dieser Wert ist für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen NULL.|  
 |**encrypted**|**bit**|1 = Der SQL-Text ist verschlüsselt.<br /><br /> 0 = Der SQL-Text ist nicht verschlüsselt.|  
 |**text**|**Nvarchar (Max** **)**|Text der SQL-Abfrage.<br /><br /> Der Wert ist für verschlüsselte Objekte NULL.|  
   
@@ -82,21 +82,21 @@ Identifiziert eindeutig einen Abfrageplan für einen Batch, der zwischengespeich
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
   
 ## <a name="remarks"></a>Hinweise  
-Für ad-hoc-Abfragen die SQL-Handles sind Hashwerte basierend auf den SQL-Text an den Server gesendet wird, und können aus einer beliebigen Datenbank stammen. 
+Für ad-hoc-Abfragen die SQL-Handles Hashwerte basierend auf dem SQL-Text wird an den Server gesendet werden, und können von jeder Datenbank stammen. 
 
 Für Datenbankobjekte, z. B. gespeicherte Prozeduren, Trigger oder Funktionen, werden die SQL-Handles von der Datenbank-ID, Objekt-ID und Objektnummer abgeleitet. 
 
-Planhandle ist ein Hashwert aus dem kompilierten Plan des gesamten Batchs abgeleitet. 
+Planhandle ist ein Hashwert aus dem kompilierten Plan des gesamten Batchs abgeleitet wird. 
 
 > [!NOTE]
 > **DBID** kann nicht bestimmt werden, von *Sql_handle* für ad-hoc-Abfragen. Um zu bestimmen, **Dbid** für ad-hoc-Abfragen verwenden *Plan_handle* stattdessen.
   
 ## <a name="examples"></a>Beispiele 
 
-### <a name="a-conceptual-example"></a>A. Konzeptionelle-Beispiel
-Folgender Ausdruck ist ein einfaches Beispiel zur Veranschaulichung der Übergabe einer **Sql_handle** entweder direkt oder über **CROSS APPLY**.
+### <a name="a-conceptual-example"></a>A. Grundlegendes Beispiel
+Im folgenden ist ein einfaches Beispiel zur Veranschaulichung der Übergabe einer **Sql_handle** entweder direkt oder indirekt mit **CROSS APPLY**.
   1.  Erstellen Sie die Aktivität.  
-Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+Führen Sie die folgende T-SQL in ein neues Abfragefenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -106,8 +106,8 @@ Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStu
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Mit **CROSS APPLY**.  
-    Sql_handle von **Sys. dm_exec_requests** übergeben werden, um **Sys. dm_exec_sql_text** mit **CROSS APPLY**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifiziert. In diesem Beispiel wird die Spid entspricht `59`.
+    2.  Mithilfe von **CROSS APPLY**.  
+    Die Sql_handle von **Sys. dm_exec_requests** an übergeben **Sys. dm_exec_sql_text** mit **CROSS APPLY**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifizierten. In diesem Beispiel die Spid zufällig `59`.
 
         ```sql
         SELECT t.*
@@ -117,7 +117,7 @@ Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStu
          ```      
  
     2.  Übergeben von **Sql_handle** direkt.  
-Abrufen der **Sql_handle** aus **Sys. dm_exec_requests**. Übergeben Sie dann die **Sql_handle** direkt zu **Sys. dm_exec_sql_text**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifizierten **Sys. dm_exec_requests**. In diesem Beispiel wird die Spid entspricht `59`. Übergeben Sie das zurückgegebene **Sql_handle** als Argument an **Sys. dm_exec_sql_text**.
+Abrufen der **Sql_handle** aus **Sys. dm_exec_requests**. Übergeben Sie dann die **Sql_handle** direkt **Sys. dm_exec_sql_text**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifizierten **Sys. dm_exec_requests**. In diesem Beispiel die Spid zufällig `59`. Übergeben Sie dann auf das zurückgegebene **Sql_handle** als Argument an **Sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -128,7 +128,7 @@ Abrufen der **Sql_handle** aus **Sys. dm_exec_requests**. Übergeben Sie dann di
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Abrufen von Informationen zu den fünf Abfragen nach durchschnittlicher CPU-Zeit  
  Im folgenden Beispiel wird der Text der SQL-Anweisung und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben.  
   
 ```sql  
@@ -143,7 +143,7 @@ CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
 ORDER BY total_worker_time/execution_count DESC;  
 ```  
   
-### <a name="c-provide-batch-execution-statistics"></a>C. Geben Sie die Batchausführung Statistiken  
+### <a name="c-provide-batch-execution-statistics"></a>C. Geben Sie die Batch-Execution-Statistiken  
  Im folgenden Beispiel wird der Text von SQL-Abfragen zurückgegeben, die in Batches ausgeführt werden. Außerdem werden statistische Informationen zu den Abfragen bereitgestellt.  
   
 ```sql  
@@ -176,12 +176,12 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [Verwenden von APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

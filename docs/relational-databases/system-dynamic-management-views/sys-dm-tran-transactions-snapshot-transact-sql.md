@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_transactions_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e862da4552d605993a5dde7913fe1bec5856603
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bdf2bfdcd5f0f6963660b865053765351f224e31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464316"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555480"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ dm_tran_transactions_snapshot
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Transaktionssequenznummer (XSN) einer Momentaufnahmetransaktion.|  
-|**snapshot_id**|**int**|Momentaufnahme-ID für die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gestartet wird, unter der Read committed mit zeilenversionsverwaltung. Mit diesem Wert wird eine im Hinblick auf Transaktionen konsistente Sicht der Datenbank generiert, die jede Abfrage unterstützt, die unter der Snapshotoption READ COMMITTED mit Zeilenversionsverwaltung ausgeführt wird.|  
+|**snapshot_id**|**int**|Momentaufnahme-ID für jede [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gestartet wird, unter der Read committed mit zeilenversionsverwaltung. Mit diesem Wert wird eine im Hinblick auf Transaktionen konsistente Sicht der Datenbank generiert, die jede Abfrage unterstützt, die unter der Snapshotoption READ COMMITTED mit Zeilenversionsverwaltung ausgeführt wird.|  
 |**snapshot_sequence_num**|**bigint**|Die Transaktionssequenznummer einer Transaktion, die beim Starten der Momentaufnahmetransaktion aktiviert war.|  
   
 ## <a name="permissions"></a>Berechtigungen

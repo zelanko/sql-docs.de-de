@@ -22,13 +22,13 @@ ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c41d37163d0b85f6e8941ef00b47aeb34e0fafe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7cde7eba934d9af12fe198c50cf4a6fd166d0713
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429519"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553090"
 ---
 # <a name="tables-and-indexes"></a>Tabellen und Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37429519"
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Default: NULL<br /><br /> Beschreibung: Diese Eigenschaft wird verwendet, nur in **ITableDefinition**. In dieser Eigenschaft angegebene Zeichenfolge wird verwendet, beim Erstellen einer [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> verwendet.|  
+|SSPROP_COL_COLLATIONNAME|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Default: NULL<br /><br /> Beschreibung: Diese Eigenschaft wird nur in **ITableDefinition** verwendet. Die in dieser Eigenschaft angegebene Zeichenfolge wird beim Erstellen einer [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)-Anweisung verwendet.<br /><br /> verwendet.|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

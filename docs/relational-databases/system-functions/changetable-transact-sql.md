@@ -1,5 +1,5 @@
 ---
-title: CHANGETABLE (Transact-SQL) | Microsoft Docs
+title: CHANGETABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b0062a473b403a62f2805f28f84d5e0d9651dcb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e323ec0ac7328625da6aa47f8fc48e04af82be6a
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239903"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009042"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "33239903"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```sql
 CHANGETABLE (  
     { CHANGES table , last_sync_version  
     | VERSION table , <primary_key_values> } )  
@@ -61,15 +60,15 @@ CHANGETABLE (
  *last_sync_version*  
  Wenn Änderungen abgeufen werden, muss die aufrufende Anwendung den Punkt angeben, ab dem Änderungen erforderlich sind. Die last_sync_version gibt diesen Punkt an. Die Funktion gibt Informationen für alle Zeilen zurück, die ab dieser Version geändert worden sind. Die Anwendung fragt Änderungen mit einer größeren Versionsnummer als last_sync_version ab.  
   
- In der Regel, bevor sie Änderungen abruft, ruft die Anwendung **change_tracking_current_version()-Funktion** um die Version zu erhalten, die verwendet werden, die nächsten Mal Änderungen erforderlich sind. Deshalb muss die Anwendung den tatsächlichen Wert nicht interpretieren oder verstehen.  
+ In der Regel, bevor sie Änderungen abruft, die Anwendung ruft **change_tracking_current_version()-Funktion** um die Version zu erhalten, die verwendet werden, sind die nächste Zeit Änderungen erforderlich. Deshalb muss die Anwendung den tatsächlichen Wert nicht interpretieren oder verstehen.  
   
  Da last_sync_version von der aufrufenden Anwendung abgerufen wird, muss die Anwendung den Wert persistent speichern. Wenn die Anwendung diesen Wert verliert, müssen Daten erneut initialisiert werden.  
   
- *Last_sync_version* ist **"bigint"**. Der Wert muss skalar sein. Ein Ausdruck verursacht einen Syntaxfehler.  
+ *Last_sync_version* ist **Bigint**. Der Wert muss skalar sein. Ein Ausdruck verursacht einen Syntaxfehler.  
   
  Wenn der Wert NULL ist, werden alle nachverfolgten Änderungen zurückgegeben.  
   
- *Last_sync_version* , um sicherzustellen, dass es nicht zu alt ist, da einige oder alle Änderungsinformationen entsprechend der für die Datenbank konfigurierten Beibehaltungsdauer bereinigt wurden möglicherweise überprüft werden soll. Weitere Informationen finden Sie unter [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) und [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *Last_sync_version* überprüft werden soll, um sicherzustellen, dass es nicht zu alt ist, da einige oder alle Änderungsinformationen gemäß der Beibehaltungsdauer für die Datenbank konfiguriert wurden möglicherweise bereinigt. Weitere Informationen finden Sie unter [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) und [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSION *Tabelle*, {< Primary_key_values >}  
  Gibt die letzten Änderungsnachverfolgungsinformationen für eine angegebene Zeile zurück. Primärschlüsselwerte müssen die Zeile identifizieren. <primary_key_values> identifiziert die Primärschlüsselspalten und gibt die Werte an. Die Namen der Primärschlüsselspalten können in beliebiger Reihenfolge angegeben werden.  
@@ -80,8 +79,8 @@ CHANGETABLE (
  *column_name*  
  Gibt den Namen der Primärschlüsselspalte oder der Spalten an. Es können mehrere Spaltennamen in beliebiger Reihenfolge angegeben werden.  
   
- *Wert*  
- Der Wert des Primärschlüssels. Wenn mehrere Primärschlüsselspalten vorhanden sind, die Werte müssen angegeben werden in der gleichen Reihenfolge wie die Spalten angezeigt, in werden der *Column_name* Liste.  
+ *ReplTest1*  
+ Der Wert des Primärschlüssels. Wenn mehrere Primärschlüsselspalten vorhanden sind, die Werte angegeben werden in der gleichen Reihenfolge wie die Spalten in der *Column_name* Liste.  
   
  [AS] *Table_alias* [(*Spaltenalias* [,... *n* ])]  
  Stellt Namen für die Ergebnisse bereit, die von CHANGETABLE zurückgegeben werden.  
@@ -104,7 +103,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Versionswert, der der letzten Änderung an der Zeile zugeordnet ist.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Versionswerte, die dem letzten Einfügevorgang zugeordnet sind.|  
-|SYS_CHANGE_OPERATION|**NCHAR(1)-Wert**|Gibt den Typ der Änderung an:<br /><br /> **U** = aktualisieren<br /><br /> **Ich** = einfügen<br /><br /> **D** = löschen|  
+|SYS_CHANGE_OPERATION|**NCHAR(1)**|Gibt den Typ der Änderung an:<br /><br /> **U** = aktualisieren<br /><br /> **Ich** = einfügen<br /><br /> **D** = löschen|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Listet die Spalten auf, die sich seit last_sync_version (der Baseline) geändert haben. Beachten Sie, dass berechnete Spalten nie als geändert aufgelistet sind.<br /><br /> Der Wert ist NULL, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> Die Änderungsnachverfolgung für Spalten ist nicht aktiviert.<br /><br /> Der Vorgang ist ein Einfüge- oder Löschvorgang.<br /><br /> Alle Nicht-Primärschlüsselspalten wurden in einem Vorgang aktualisiert. Dieser Binärwert sollte nicht direkt interpretiert werden. Verwenden Sie stattdessen zum Interpretieren [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Änderungskontextinformationen, die Sie optional angeben können, mit der [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) -Klausel als Teil einer INSERT-, Update- oder DELETE-Anweisung.|  
 |\<Wert der Primärschlüsselspalte >|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
@@ -122,13 +121,13 @@ CHANGETABLE (
  Die CHANGETABLE-Funktion wird in der Regel in der FROM-Klausel einer Abfrage verwendet, so als handele es sich um eine Tabelle.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
- Um Zeilendaten für neue oder geänderte Zeilen zu erhalten, verbinden Sie das Resultset mit der Benutzertabelle, indem Sie die Primärschlüsselspalten verwenden. Für jede Zeile in der Benutzertabelle, die geändert wurde, wird nur eine Zeile zurückgegeben, auch wenn es mehrere Änderungen an derselben Zeile seit wurden der *Last_sync_version* Wert.  
+ Um Zeilendaten für neue oder geänderte Zeilen zu erhalten, verbinden Sie das Resultset mit der Benutzertabelle, indem Sie die Primärschlüsselspalten verwenden. Ist für jede Zeile in der Benutzertabelle, die geändert wurde, nur eine Zeile zurückgegeben, auch wenn es mehrere Änderungen an derselben Zeile seit wurden der *Last_sync_version* Wert.  
   
  Änderungen von Primärschlüsselspalten werden nie als Updates markiert. Wenn sich ein Primärschlüsselwert ändert, wird dies als Löschung des alten Werts und Einfügung des neuen Werts betrachtet.  
   
  Wenn Sie eine Zeile löschen und dann eine Zeile mit dem alten Primärschlüssel einfügen, wir die Änderung als Aktualisierung aller Spalten in der Zeile betrachtet.  
   
- Die Werte, die für die sys_change_operation-Spalte und SYS_CHANGE_COLUMNS-Spalte zurückgegeben werden, sind relativ zum Baseline (Last_sync_version), die angegeben wird. Z. B. wenn ein Einfügevorgang auf Version 10 und bei Version 15 ein Updatevorgang vorgenommen wurde und der Basislinie *Last_sync_version* 12 ist, wird ein Update gemeldet. Wenn die *Last_sync_version* -Wert 8 beträgt, wird eine Einfügung gemeldet. SYS_CHANGE_COLUMNS meldet berechnete Spalten nie als aktualisiert.  
+ Die Werte, die für die sys_change_operation-Spalte und SYS_CHANGE_COLUMNS-Spalte zurückgegeben werden, sind relativ zur Baseline (Last_sync_version), die angegeben wird. Z. B. wenn ein Einfügevorgang auf Version 10 und einen Aktualisierungsvorgang bei Version 15 vorgenommen wurde und der Baseline *Last_sync_version* 12 ist, wird ein Update gemeldet. Wenn die *Last_sync_version* -Wert 8 beträgt, wird eine Einfügung gemeldet. SYS_CHANGE_COLUMNS meldet berechnete Spalten nie als aktualisiert.  
   
  Im Allgemeinen werden alle Vorgänge, bei denen Daten in Benutzertabellen eingefügt, aktualisiert oder gelöscht werden, nachverfolgt, einschließlich der MERGE-Anweisung.  
   
@@ -148,7 +147,7 @@ CHANGETABLE (
  Der Wert von SYS_CHANGE_VERSION kann NULL sein, wenn für einen längeren Zeitraum als der Beibehaltungsdauer keine Änderung vorgenommen wurde (z. B. wenn die Änderungsinformationen durch ein Cleanup entfernt wurden) oder wenn die Zeile seit Aktivierung der Änderungsnachverfolgung für die Tabelle nicht geändert wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die folgenden Berechtigungen für die Tabelle, die von angegeben wird die *Tabelle* Wert um änderungsnachverfolgungsinformationen abzurufen:  
+ Erfordert die folgenden Berechtigungen für die Tabelle, die angegeben wird die *Tabelle* Wert zum Abrufen von Informationen der änderungsnachverfolgung:  
   
 -   SELECT-Berechtigung für die Primärschlüsselspalten  
   

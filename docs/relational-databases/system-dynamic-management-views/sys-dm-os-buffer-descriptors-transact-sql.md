@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bae01f30cf7b6af860004f69effb4df44cf3c8b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 807b1bafe3ca3d374765ede6ee3e557e6e50ffe9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465816"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557270"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34465816"
   
  Beim Lesen einer Datenseite vom Datenträger wird die Seite in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool kopiert und für die Wiederverwendung zwischengespeichert. Jede zwischengespeicherte Datenseite verfügt über einen Pufferdeskriptor. Pufferdeskriptoren identifizieren jede Datenseite eindeutig, die derzeit in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zwischengespeichert ist. sys.dm_os_buffer_descriptors gibt zwischengespeicherte Seiten für alle Benutzer- und Systemdatenbanken zurück. Dazu zählen auch Seiten, die der Ressourcendatenbank zugeordnet sind.  
   
-> **Hinweis:** von Aufrufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **Hinweis:** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -119,9 +119,9 @@ ORDER BY cached_pages_count DESC;
 ## <a name="see-also"></a>Siehe auch  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Ressourcendatenbank](../../relational-databases/databases/resource-database.md)   
- [Sys.dm_os_buffer_pool_extension_configuration & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

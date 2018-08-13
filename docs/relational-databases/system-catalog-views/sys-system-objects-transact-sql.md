@@ -1,5 +1,5 @@
 ---
-title: Sys. system_objects (Transact-SQL) | Microsoft Docs
+title: system_objects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,25 +24,25 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eda958fa160f98aa4930eb12a6a14f402eee1f41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 747e0e44db51db4b5e143b79645d1b1fc677607e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221761"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552640"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für alle Schemabereich Systemobjekte, die in enthaltenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alle Systemobjekte sind in den Schemas sys oder INFORMATION_SCHEMA enthalten.  
+  Enthält eine Zeile für alle Systemobjekte mit Schemabereich, die in enthaltenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alle Systemobjekte sind in den Schemas sys oder INFORMATION_SCHEMA enthalten.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Objektname.|  
+|NAME|**sysname**|Objektname.|  
 |object_id|**int**|Objekt-ID. Ist innerhalb einer Datenbank eindeutig.|  
 |principal_id|**int**|ID des einzelnen Besitzers, falls dieser nicht mit dem Schemabesitzer identisch ist. Standardmäßig gehören Objekte mit Schemabereich dem Schemabesitzer. Es kann jedoch ein anderer Besitzer mithilfe der ALTER AUTHORIZATION-Anweisung angegeben werden, wenn der Besitzer geändert werden soll.<br /><br /> Ist NULL, wenn kein anderer einzelner Besitzer vorhanden ist.<br /><br /> Ist NULL, wenn der Objekttyp einen der folgenden Werte aufweist:<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> TA = Assembly (CLR) Trigger<br /><br /> TR = SQL-Trigger<br /><br /> UQ = UNIQUE-Einschränkung|  
-|schema_id|**int**|Die ID des Schemas, in dem das Objekt enthalten ist.<br /><br /> Für alle Schemabereich mit enthaltenen Systemobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diesen Wert werden immer in (schema_id('sys'), schema_id('information_schema')) enthalten|  
+|schema_id|**int**|Die ID des Schemas, in dem das Objekt enthalten ist.<br /><br /> Für alle Schemas als Bereiche, die in enthaltenen Systemobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diesen Wert werden immer in (schema_id('sys'), schema_id('information_schema')) enthalten|  
 |parent_object_id|**int**|ID des Objekts, zu dem dieses Objekt gehört.<br /><br /> 0 = Kein untergeordnetes Objekt.|  
 |Typ|**char(2)**|Objekttyp:<br /><br /> AF = Aggregatfunktion (CLR)<br /><br /> C = CHECK-Einschränkung<br /><br /> D = DEFAULT (Einschränkung oder eigenständig)<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> FN = SQL-Skalarfunktion<br /><br /> FS = Assemblyskalarfunktion (CLR)<br /><br /> FT = Assembly-Tabellenwertfunktion (CLR)<br /><br /> IF = SQL-Inlinefunktion mit Tabellenrückgabe<br /><br /> IT = Interne Tabelle<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> PG = Planhinweisliste<br /><br /> PK = PRIMARY KEY-Einschränkung<br /><br /> R = Regel (vom alten Typ, eigenständig)<br /><br /> RF = Replikationsfilterprozedur<br /><br /> S = Systembasistabelle<br /><br /> SN = Synonym<br /><br /> SQ = Dienstwarteschlange<br /><br /> TA = Assembly-DML-Trigger (CLR)<br /><br /> TF = Tabellenwertfunktion von SQL<br /><br /> TR = SQL-DML-Trigger<br /><br /> TT = Tabellentyp<br /><br /> U = Tabelle (benutzerdefiniert)<br /><br /> UQ = UNIQUE-Einschränkung<br /><br /> V = Sicht<br /><br /> X = Erweiterte gespeicherte Prozedur|  
 |type_desc|**nvarchar(60)**|Beschreibung des Objekttyps. AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
@@ -57,6 +57,6 @@ ms.locfileid: "33221761"
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [-Objekt Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Objekt-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

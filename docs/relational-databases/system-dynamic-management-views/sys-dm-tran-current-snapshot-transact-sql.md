@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_tran_current_snapshot (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_current_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f7d32aa395ecb53ae9ccb3fd793fb661af8480b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fd2319dff2d5cc5e7f4948ba6c1994fe2407222
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467786"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562284"
 ---
 # <a name="sysdmtrancurrentsnapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine virtuelle Tabelle zurück, in der alle aktiven Transaktionen zum Zeitpunkt des Starts der aktuellen Momentaufnahmetransaktion angezeigt werden. Wenn die aktuelle Transaktion keine Momentaufnahmetransaktion ist, gibt diese Funktion keine Zeilen zurück. **Sys. dm_tran_current_snapshot** ähnelt **Sys. dm_tran_transactions_snapshot**, außer dass **Sys. dm_tran_current_snapshot** gibt nur die aktiven Transaktionen für die aktuellen Snapshot-Transaktion.  
+  Gibt eine virtuelle Tabelle zurück, in der alle aktiven Transaktionen zum Zeitpunkt des Starts der aktuellen Momentaufnahmetransaktion angezeigt werden. Wenn die aktuelle Transaktion keine Momentaufnahmetransaktion ist, gibt diese Funktion keine Zeilen zurück. **Sys. dm_tran_current_snapshot** ähnelt **Sys. dm_tran_transactions_snapshot**, außer dass **Sys. dm_tran_current_snapshot** gibt nur die aktiven Transaktionen für die aktuelle momentaufnahmetransaktion.  
   
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_tran_current_snapshot**.  

@@ -18,13 +18,13 @@ ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00d6b525c0a52fb5b792926f110d73d3d77bdd6a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3c9bbbcd4c89b46050b5bbca4bc72bc256d8a48e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421090"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558370"
 ---
 # <a name="isolation-levels-ole-db"></a>Isolationsstufen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

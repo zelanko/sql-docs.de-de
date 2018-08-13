@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8e7f577a0939312123b398e3be1ab5b4cce0cd8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebd078b47fde7d7cd8202c1c31d7ee6a76dbff0a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465166"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559540"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den Showplan im Textformat für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch oder für eine bestimmte Anweisung innerhalb des Batches zurück. Der Abfrageplan wird angegeben, der vom planhandle entweder zwischengespeichert oder wird derzeit ausgeführt werden kann. Diese Tabellenwertfunktion ähnelt [dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), weist jedoch die folgenden Unterschiede:  
+  Gibt den Showplan im Textformat für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch oder für eine bestimmte Anweisung innerhalb des Batches zurück. Der Abfrageplan wird angegeben, vom planhandle entweder zwischengespeichert oder wird derzeit ausgeführt werden können. Diese Tabellenwertfunktion ähnelt [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), jedoch weist die folgenden Unterschiede:  
   
 -   Die Ausgabe des Abfrageplans wird im Textformat zurückgegeben.  
   
@@ -83,7 +83,7 @@ Gibt (in Bytes) die Endposition der Abfrage an, die die Zeile innerhalb des Text
   
 *Statement_start_offset* ist **Int**.  
   
-Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist-1.  
+Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist 1.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -91,20 +91,20 @@ Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist-1.
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**number**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**Anzahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**encrypted**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
-|**query_plan**|**nvarchar(max)**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im Textformat vor. Ein Plan generiert für jeden Batch, die, z. B. ad-hoc-enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionsaufrufe.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**query_plan**|**nvarchar(max)**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im Textformat vor. Ein Plan generiert für jeden Batch, die z. B. ad-hoc-enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionsaufrufe.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
  Unter den folgenden Bedingungen wird keine Showplanausgabe zurückgegeben, der **Plan** Spalte der zurückgegebenen Tabelle für **Sys. dm_exec_text_query_plan**:  
   
--   Falls der mit *plan_handle* angegebene Abfrageplan aus dem Plancache entfernt wurde, enthält die **query_plan** -Spalte der zurückgegebenen Tabelle den Wert NULL. Diese Bedingung kann z. B. auftreten, wenn es eine zeitliche Verzögerung zwischen Wenn planhandles und seiner Verwendung gibt mit **Sys. dm_exec_text_query_plan**.  
+-   Falls der mit *plan_handle* angegebene Abfrageplan aus dem Plancache entfernt wurde, enthält die **query_plan** -Spalte der zurückgegebenen Tabelle den Wert NULL. Diese Bedingung kann z. B. auftreten, liegt eine zeitliche Verzögerung zwischen, wenn das planhandle erfasst wurde und seiner Verwendung mit wurde **Sys. dm_exec_text_query_plan**.  
   
--   Einige [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen nicht zwischengespeichert, wie z. B. für Massenvorgänge oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB groß. Showpläne für solche Anweisungen können nicht abgerufen werden, mithilfe von **Sys. dm_exec_text_query_plan** , da sie nicht im Cache vorhanden sind.  
+-   Einige [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen nicht zwischengespeichert, wie z. B. für Massenvorgänge oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB groß. Showpläne für diese Anweisungen kann nicht abgerufen werden, mithilfe von **Sys. dm_exec_text_query_plan** , da sie nicht im Cache vorhanden sind.  
   
--   Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder eine gespeicherte Prozedur enthält einen Aufruf für eine benutzerdefinierte Funktion oder einen Aufruf für eine dynamische SQL, z. B. mit EXEC (*Zeichenfolge*), wird der kompilierte XML-Showplan für die benutzerdefinierte Funktion nicht in der Tabelle enthalten ist zurückgegebenes **Sys. dm_exec_text_query_plan** für den Batch oder die gespeicherte Prozedur. Stattdessen müssen Sie einen separaten Aufruf von, **Sys. dm_exec_text_query_plan** für die *Plan_handle* , die die benutzerdefinierte Funktion entspricht.  
+-   Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches oder gespeicherte Prozedur enthält einen Aufruf für eine benutzerdefinierte Funktion oder einen Aufruf für eine dynamische SQL, z. B. mit EXEC (*Zeichenfolge*), wird der kompilierte XML-Showplan, für die benutzerdefinierte Funktion nicht in der Tabelle enthalten ist zurückgegebenes **Sys. dm_exec_text_query_plan** für den Batch oder die gespeicherte Prozedur. Stattdessen müssen Sie einen separaten Aufruf von, **Sys. dm_exec_text_query_plan** für die *Plan_handle* , die der benutzerdefinierten Funktion entspricht.  
   
-Wenn eine ad-hoc-Abfrage verwendet [einfache](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) oder [erzwungene Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **Query_plan** Spalte wird nur der Anweisungstext enthalten, nicht der tatsächliche Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **Sys. dm_exec_text_query_plan** für das planhandle der vorbereiteten parametrisierten Abfrage. Können Sie bestimmen, ob die Abfrage parametrisiert wurde die **Sql** Spalte die [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) Sicht oder der Textspalte der [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)-verwaltungssicht.  
+Wenn eine ad-hoc-Abfrage verwendet [einfache](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) oder [erzwungene Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **Query_plan** Spalte enthält nur den Text der Anweisung und nicht der tatsächliche Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **Sys. dm_exec_text_query_plan** für das planhandle der vorbereiteten parametrisierten Abfrage. Können Sie bestimmen, ob die Abfrage parametrisiert wurde die **Sql** Spalte die [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) Ansicht oder der Textspalte der [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)dynamische verwaltungssicht.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Auszuführende **Sys. dm_exec_text_query_plan**, ein Benutzer muss ein Mitglied der **Sysadmin** festen Serverrolle oder die VIEW SERVER STATE-Berechtigung auf dem Server.  
@@ -136,7 +136,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- Die Tabelle, die zurückgegebene **Sys. dm_exec_requests** gibt an, dass das planhandle für die langsam ausgeführte Abfrage oder einen Batch `0x06000100A27E7C1FA821B10600`. Im folgenden Beispiel wird der Abfrageplan für das angegebene Planhandle zurückgegeben, und die Standardwerte 0 und -1 werden verwendet, um alle Anweisungen in der Abfrage oder im Batch zurückzugeben.  
+ Die Tabelle, die von zurückgegeben wird **Sys. dm_exec_requests** gibt an, dass das planhandle für die langsam ausgeführte Abfrage oder einen Batch `0x06000100A27E7C1FA821B10600`. Im folgenden Beispiel wird der Abfrageplan für das angegebene Planhandle zurückgegeben, und die Standardwerte 0 und -1 werden verwendet, um alle Anweisungen in der Abfrage oder im Batch zurückzugeben.  
   
 ```sql  
 USE master;  
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Abrufen jedes einzelnen Abfrageplans aus dem Plancache  
- Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, rufen Sie die Planhandles aller Abfragepläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_cached_plans`gespeichert. Klicken Sie dann den CROSS APPLY-Operator verwenden, um die planhandles zu zu übergeben `sys.dm_exec_text_query_plan` wie folgt. Die Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird die `query_plan` -Spalte der Tabelle, die zurückgegeben wird.  
+ Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, rufen Sie die Planhandles aller Abfragepläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_cached_plans`gespeichert. Klicken Sie dann den CROSS APPLY-Operator verwenden, um die planhandles zu übergeben `sys.dm_exec_text_query_plan` wie folgt. Die Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird die `query_plan` -Spalte der Tabelle, die zurückgegeben wird.  
   
 ```sql  
 USE master;  
@@ -158,8 +158,8 @@ CROSS APPLY sys.dm_exec_text_query_plan(cp.plan_handle, DEFAULT, DEFAULT);
 GO  
 ```  
   
-### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Abrufen jedes einzelnen Abfrageplans für die der Server aus dem Plancache Abfragestatistik erfasst hat  
- Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, für die der Server eine Statistik erfasst hat, rufen Sie die Planhandles dieser Pläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_query_stats` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_query_stats`gespeichert. Klicken Sie dann den CROSS APPLY-Operator verwenden, um die planhandles zu zu übergeben `sys.dm_exec_text_query_plan` wie folgt. Die Showplanausgabe für die einzelnen Pläne befindet sich in der `query_plan`-Spalte der zurückgegebenen Tabelle.  
+### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Abrufen jedes einzelnen Abfrageplans für den Server aus dem Plancache Abfragestatistik erfasst hat  
+ Wenn Sie eine Momentaufnahme aller im Plancache gespeicherten Abfragen abrufen möchten, für die der Server eine Statistik erfasst hat, rufen Sie die Planhandles dieser Pläne im Cache ab, indem Sie die dynamische Verwaltungssicht `sys.dm_exec_query_stats` abfragen. Die Planhandles sind in der `plan_handle` -Spalte von `sys.dm_exec_query_stats`gespeichert. Klicken Sie dann den CROSS APPLY-Operator verwenden, um die planhandles zu übergeben `sys.dm_exec_text_query_plan` wie folgt. Die Showplanausgabe für die einzelnen Pläne befindet sich in der `query_plan`-Spalte der zurückgegebenen Tabelle.  
   
 ```sql  
 USE master;  
@@ -169,7 +169,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offse
 GO  
 ```  
   
-### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeitaufwand  
+### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen nach durchschnittlicher CPU-Zeit  
  Im folgenden Beispiel werden die Abfragepläne und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben. Die **Sys. dm_exec_text_query_plan** -Funktion gibt an, die Standardwerte 0 und 1, um alle Anweisungen im Batch im Abfrageplan zurückzugeben.  
   
 ```sql  

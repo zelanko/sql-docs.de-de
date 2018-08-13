@@ -1,5 +1,5 @@
 ---
-title: Sys. allocation_units (Transact-SQL) | Microsoft Docs
+title: Sys. allocation_units (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4fdaaf57b5883d85441b6abcc5e8b468b26e1726
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1199e2cc93541af9a089eade6be4e9b5b13f0433
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180116"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565744"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "33180116"
 |allocation_unit_id|**bigint**|ID der Zuordnungseinheit. Ist innerhalb einer Datenbank eindeutig.|  
 |Typ|**tinyint**|Typ der Zuordnungseinheit:<br /><br /> 0 = Gelöscht<br /><br /> 1 = Daten in Zeilen (alle Datentypen mit Ausnahme von LOB-Datentypen)<br /><br /> 2 = LOB-Daten (Large Object) (**text**, **ntext**, **image**, **xml**, große Werttypen und benutzerdefinierte CLR-Typen)<br /><br /> 3 = Zeilenüberlaufdaten|  
 |type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> **GELÖSCHT**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
-|container_id|**bigint**|ID des Speichercontainers, der der Zuordnungseinheit zugeordnet ist.<br /><br /> Wenn Typ = 1 oder 3, Container_id = hobt_id.<br /><br /> Wenn Typ 2, und klicken Sie dann auf Container_id = partition_id.<br /><br /> 0 = Für die verzögerte Löschung gekennzeichnete Zuordnungseinheit|  
+|container_id|**bigint**|ID des Speichercontainers, der der Zuordnungseinheit zugeordnet ist.<br /><br /> Wenn Typ = 1 oder 3, Container_id hobt_id =.<br /><br /> Wenn Typ 2, und klicken Sie dann auf Container_id = partition_id.<br /><br /> 0 = Für die verzögerte Löschung gekennzeichnete Zuordnungseinheit|  
 |data_space_id|**int**|ID der Dateigruppe, in der sich diese Zuordnungseinheit befindet.|  
 |total_pages|**bigint**|Gesamtanzahl der Seiten, die von dieser Zuordnungseinheit zugeordnet oder reserviert wurden.|  
 |used_pages|**bigint**|Gesamtanzahl der tatsächlich verwendeten Seiten.|  
 |data_pages|**bigint**|Anzahl verwendeter Seiten, die über Folgendes verfügen:<br /><br /> Daten in Zeilen<br /><br /> LOB-Daten<br /><br /> Zeilenüberlaufdaten<br /><br /> <br /><br /> Beachten Sie, die der zurückgegebene Wert schließt interne Indexseiten und zuordnungsverwaltungsseiten aus.|  
   
 > [!NOTE]  
->  Löschen oder große Indizes neu erstellen oder löschen oder Abschneiden große Tabellen die [!INCLUDE[ssDE](../../includes/ssde-md.md)] orientiert sich die tatsächlichen aufgehobenen seitenzuordnungen sowie die zugehörigen sperren, bis nach dem Commit der Transaktion. Bei verzögerten Löschvorgängen wird der zugeordnete Speicherplatz nicht sofort freigegeben. Aus diesem Grund können von Sys. allocation_units sofort nach dem Löschen oder Abschneiden eines großen Objekts zurückgegebenen Werte nicht den tatsächlich verfügbaren Speicherplatz wider.  
+>  Beim Löschen oder großer Indizes Neuerstellen, oder löschen oder Abschneiden von großen Tabellen die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verzögert die tatsächlichen aufgehobenen seitenzuordnungen sowie deren zugeordneten sperren, bis die Transaktion ein Commit ausgeführt. Bei verzögerten Löschvorgängen wird der zugeordnete Speicherplatz nicht sofort freigegeben. Aus diesem Grund können die von Sys. allocation_units sofort nach dem Löschen oder Abschneiden eines großen Objekts zurückgegebenen Werte nicht den tatsächlich verfügbaren Speicherplatz wider.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -18,23 +18,23 @@ ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2d8c2610f59c73c7fac19261d2910be17928a2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 586db18e1e4782f532b17f480db5729933949d1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419639"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561974"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Entfernen einer Spalte aus einer SQL Server-Tabelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **Dropcolumn** Funktion. Dieser Funktion können Consumer eine Spalte vom Entfernen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **Dropcolumn** Funktion. Mit dieser Funktion können Consumer eine Spalte aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle entfernen.  
   
- Consumer geben den Tabellennamen als Unicode-Zeichenfolge in die *PwszName*Mitglied der *uName* -Vereinigung der *pTableID* Parameter. Die *eKind*Mitglied *pTableID* muss DBKIND_NAME sein.  
+ Consumer geben den Tabellennamen als Unicode-Zeichenfolge im *pwszName*-Element der *uName*-Vereinigung des *pTableID*-Parameters an. Das *eKind*-Element von *pTableID* muss DBKIND_NAME sein.  
   
- Der Consumer gibt den Namen einer Spalte aus der *PwszName*Mitglied der *uName* -Vereinigung der *pColumnID* Parameter. Der Spaltenname ist eine Unicode-Zeichenfolge. Die *eKind* Mitglied *pColumnID* muss DBKIND_NAME sein.  
+ Der Consumer gibt den Namen einer Spalte aus der *PwszName*Mitglied der *uName* -Vereinigung der *pColumnID* Parameter. Der Spaltenname ist eine Unicode-Zeichenfolge. Das *eKind*-Element von *pColumnID* muss DBKIND_NAME sein.  
   
 ## <a name="example"></a>Beispiel  
   

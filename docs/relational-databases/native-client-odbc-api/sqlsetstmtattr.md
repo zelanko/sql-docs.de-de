@@ -17,13 +17,13 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4fe70fb3744aa8ae7bddebac7b640fad9bad989
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7cb2cf695c13da1a69a8b4967229464212cf19b7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422279"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565674"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "37422279"
 ### <a name="sqlsoptssquerynotificationoptions"></a>SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS  
  Das SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS-Attribut gibt die Optionen an, die für die Abfragebenachrichtigungsanforderung verwendet werden. Diese werden in einer Zeichenfolge mit der Syntax `name=value` angegeben (siehe Code weiter unten). Die Anwendung ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.  
   
- Die Syntax der Abfragezeichenfolge Benachrichtigungen Optionen lautet:  
+ Die Syntax der Zeichenfolge für die Abfragebenachrichtigungsoptionen lautet:  
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   

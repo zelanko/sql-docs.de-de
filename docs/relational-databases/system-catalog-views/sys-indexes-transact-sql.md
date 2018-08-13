@@ -1,5 +1,5 @@
 ---
-title: Sys.Indexes (Transact-SQL) | Microsoft Docs
+title: Sys.Indexes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/18/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a83f1addba51d14ced6d38aa18b5c5f2d1d9082
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3be70845de3488ecb9e08f8b3d28fb832f323ccb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182456"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559850"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33182456"
 |**name**|**sysname**|Der Name des Indexes. **Namen** ist nur innerhalb des Objekts eindeutig.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|Die ID des Index. **Index_id** ist nur innerhalb des Objekts eindeutig.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = Nicht gruppierter Index|  
 |**type**|**tinyint**|Typ des Index:<br /><br /> 0 = Heap<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Nicht gruppiert<br /><br /> 3 = XML<br /><br /> 4 = Räumlich<br /><br /> 5 = gruppierter columnstore-Index. **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = nicht gruppierter columnstore-Index. **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = nicht gruppierter Hashindex. **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> GRUPPIERTE COLUMNSTORE - **betrifft**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nicht gruppierte COLUMNSTORE - **betrifft**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH: Nicht gruppierte Hashindizes werden nur auf Speicheroptimierte Tabellen unterstützt. Die sys.hash_indexes-Sicht zeigt die aktuellen Hashindizes und Hasheigenschaften an. Weitere Informationen finden Sie unter [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> GRUPPIERTE COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nicht gruppierte COLUMNSTORE - **gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH: Der nicht gruppierte Hashindizes werden nur auf Speicheroptimierte Tabellen unterstützt. Die sys.hash_indexes-Sicht zeigt die aktuellen Hashindizes und Hasheigenschaften an. Weitere Informationen finden Sie unter [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_unique**|**bit**|1 = Der Index ist eindeutig.<br /><br /> 0 = Der Index ist nicht eindeutig.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**data_space_id**|**int**|ID des Datenspeicherplatzes für diesen Index. Der Datenspeicherplatz ist entweder eine Dateigruppe oder ein Partitionsschema.<br /><br /> 0 = **Object_id** ist eine Funktion mit Tabellenrückgabe oder der Index im Arbeitsspeicher.|  
 |**IGNORE_DUP_KEY**|**bit**|1 = IGNORE_DUP_KEY ist ON.<br /><br /> 0 = IGNORE_DUP_KEY ist OFF.|  
@@ -56,8 +56,8 @@ ms.locfileid: "33182456"
 |**allow_row_locks**|**bit**|1 = Der Index lässt Zeilensperren zu.<br /><br /> 0 = Der Index lässt Zeilensperren nicht zu.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**allow_page_locks**|**bit**|1 = Der Index lässt Seitensperren zu.<br /><br /> 0 = Der Index lässt Seitensperren nicht zu.<br /><br /> Immer 0 für gruppierte columnstore-Indizes.|  
 |**has_filter**|**bit**|1 = Index hat einen Filter und enthält nur Zeilen, die der Filterdefinition entsprechen.<br /><br /> 0 = Index hat keinen Filter.|  
-|**filter_definition**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.<br /><br /> NULL für Heap oder nicht gefilterten Index.|  
-|**auto_created**|**bit**|1 = der Index wurde erstellt, durch die automatische Optimierung.<br /><br />0 = Index wurde vom Benutzer erstellt.
+|**filter_definition-Spalten**|**nvarchar(max)**|Ausdruck für die Teilmenge von Zeilen, die im gefilterten Index enthalten sind.<br /><br /> NULL für Heap oder nicht gefilterten Index.|  
+|**"auto_created"**|**bit**|1 = der Index wurde von der automatischen Optimierung erstellt.<br /><br />0 = der Index wurde vom Benutzer erstellt.
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -97,7 +97,7 @@ GO
  [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

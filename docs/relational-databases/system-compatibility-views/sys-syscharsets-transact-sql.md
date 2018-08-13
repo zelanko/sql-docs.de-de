@@ -1,5 +1,5 @@
 ---
-title: Sys.syscharsets (Transact-SQL) | Microsoft Docs
+title: Sys.syscharsets (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05812269c42b4d20a694d8a51362a376ea62d527
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ae1eb1439decfdf5c42d42f42c1063916f551ac
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221361"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562854"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für jeden Zeichensatz und Sortierreihenfolge definiert, die für die Verwendung durch die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Eine der Sortierreihenfolgen ist in **sysconfigures** als Standard-Sortierreihenfolge markiert. Dies ist die einzige Sortierreihenfolge, die tatsächlich verwendet wird.  
+  Enthält eine Zeile für jeden Zeichensatz und Sortierreihenfolge, die für die Verwendung von definiert die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Eine der Sortierreihenfolgen ist in **sysconfigures** als Standard-Sortierreihenfolge markiert. Dies ist die einzige Sortierreihenfolge, die tatsächlich verwendet wird.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

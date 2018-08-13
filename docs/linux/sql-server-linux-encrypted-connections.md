@@ -1,9 +1,9 @@
 ---
 title: Verschlüsseln von Verbindungen zu SQLServer unter Linux | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt Verschlüsseln von Verbindungen zu SQL Server unter Linux.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085032"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009032"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer unter Linux
 
@@ -32,7 +32,7 @@ Bevor Sie beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate die folgend
 - Die aktuelle Systemzeit muss nach der gültig von-Eigenschaft des Zertifikats und vor der gültig bis-Eigenschaft des Zertifikats liegen.
 - Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dies erfordert die Enhanced Key Usage-Eigenschaft des Zertifikats, das Serverauthentifizierung (1.3.6.1.5.5.7.3.1) angeben.
 - Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. Das Zertifikat des Key Usage-Eigenschaft (KEY_USAGE) enthält in der Regel auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- Dass der allgemeine Name (CN) den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt, muss die Eigenschaft Subject des Zertifikats angeben. Hinweis: Platzhalterzertifikate werden unterstützt. 
+- Dass der allgemeine Name (CN) den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt, muss die Eigenschaft Subject des Zertifikats angeben. Hinweis: Platzhalterzertifikate werden unterstützt.
 
 ## <a name="overview"></a>Übersicht
 TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn ordnungsgemäß konfiguriert ist, bietet TLS sowohl Datenschutz und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können es sich entweder um Client initiiert oder Server initiierten sein. 

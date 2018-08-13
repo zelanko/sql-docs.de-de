@@ -1,5 +1,5 @@
 ---
-title: Sys. Foreign_Keys (Transact-SQL) | Microsoft Docs
+title: Sys. Foreign_Keys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a7f33be3e5bc933abe96aa6700a8ef94c7a2e83
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 58dcea9a85120f412aaba42786b6c95bbed8850e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181166"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557680"
 ---
 # <a name="sysforeignkeys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile pro Objekt, das eine FOREIGN KEY-Einschränkung mit **sys.object.type** = f  
+  Enthält eine Zeile pro Objekt, das eine FOREIGN KEY-Einschränkung mit **sys.object.type** = F.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys.objects geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**referenced_object_id**|**int**|ID des Objekts, auf das verwiesen wird.|  
 |**key_index_id**|**int**|ID des Schlüsselindexes innerhalb des Objekts, auf das verwiesen wird.|  
 |**is_disabled**|**bit**|Die FOREIGN KEY-Einschränkung ist deaktiviert.|  
@@ -49,7 +49,7 @@ ms.locfileid: "33181166"
 |**delete_referential_action_desc**|**nvarchar(60)**|Beschreibung der referenziellen Aktion, die für den Fall eines Löschvorgangs für FOREIGN KEY deklariert wurde:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**update_referential_action**|**tinyint**|Die referenzielle Aktion, die für den Fall eines Updatevorgangs für FOREIGN KEY deklariert wurde.<br /><br /> 0 = Keine Aktion<br /><br /> 1 = Überlappend<br /><br /> 2 = NULL festlegen<br /><br /> 3 = Standard festlegen|  
 |**update_referential_action_desc**|**nvarchar(60)**|Beschreibung der referenziellen Aktion, die für den Fall eines Updatevorgangs für FOREIGN KEY deklariert wurde:<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
-|**is_system_named**|**bit**|1 = Namen vom System generiert wurde.<br /><br /> 0 = Der Name wurde vom Benutzer angegeben.|  
+|**is_system_named**|**bit**|1 = Name wurde vom System generiert.<br /><br /> 0 = Der Name wurde vom Benutzer angegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

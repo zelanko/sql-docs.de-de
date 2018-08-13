@@ -23,13 +23,13 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f14810ac9e86b40e765da86e38b66a239081468
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b69cc973b8a02d9bc3b2abcffe9dfb8f4c71106c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414729"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565814"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ms.locfileid: "37414729"
   
 -   [Datentypen &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [Schemarowset-Unterstützung &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+-   [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
--   [Tabellenwertparameter &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [Tabellenwertparameter &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [Große benutzerdefinierte CLR-Typen &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [Große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM-Unterstützung &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
@@ -71,9 +71,9 @@ ms.locfileid: "37414729"
   
 -   [Fehler](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
--   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Unterstützung für Sparsespalten &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
+-   [Unterstützung für Sparsespalten &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41; Verweis](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   

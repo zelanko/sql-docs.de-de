@@ -1,5 +1,5 @@
 ---
-title: fulltext_stopwords (Transact-SQL) | Microsoft Docs
+title: fulltext_stopwords (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1060a852471394d6b0773e69bb00bc908723ea4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: beff58fb561fcb3568efee6c6d5a74f31be04701
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179886"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553860"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "33179886"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID der Stoppliste, zu der das **stopword** gehört. Diese ID ist innerhalb der Datenbank eindeutig.|  
-|**stopword**|**nvarchar(64)**|Der Ausdruck, der für eine Stoppwortübereinstimmung berücksichtigt werden muss.|  
-|**Sprache**|**sysname**|Der Wert des Alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)entsprechend dem Wert des Gebietsschemabezeichners (**LCID**), oder die Zeichenfolgendarstellung des numerischen LCID-WERTS ist.|  
+|**stopword**|**Nvarchar(64)**|Der Ausdruck, der für eine Stoppwortübereinstimmung berücksichtigt werden muss.|  
+|**Sprache**|**sysname**|Der Wert des Alias in [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)entsprechend dem Wert des Gebietsschemabezeichners (**LCID**), oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
 |**language_id**|**int**|Die für die Wörtertrennung verwendete LCID.|  
   
 ## <a name="permissions"></a>Berechtigungen  

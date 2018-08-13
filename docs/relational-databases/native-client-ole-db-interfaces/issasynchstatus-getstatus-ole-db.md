@@ -19,13 +19,13 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d39998e41fd26bb2928290f62dd08fc54a0f567a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1e6cfa59c9e5612776c468674745eab406f0a082
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407862"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557150"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ HRESULT GetStatus(
  Es ist ein anbieterspezifischer Fehler aufgetreten.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **issasynchstatus:: GetStatus** Methode verhält sich genau wie die **idbasynchstatus:: GetStatus** Methode, außer dass, wenn die Initialisierung eines datenquellobjekts abgebrochen wird, E_UNEXPECTED wird zurückgegeben, sondern als db_e_canceled zurückgibt (obwohl [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) gibt db_e_canceled zurückgibt). Dies ist darauf zurückzuführen, dass das Datenquellobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
+ Die **ISSAsynchStatus**-Methode verhält sich genauso wie die **ISSAsynchStatus::GetStatus**-Methode, gibt jedoch anstelle von DB_E_CANCELED E_UNEXPECTED zurück, wenn die Initialisierung eines Datenquellenobjekts abgebrochen wird (obwohl [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED zurückgibt). Dies ist darauf zurückzuführen, dass das Datenquellobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
   
  Wenn das Rowset initialisiert oder asynchron aufgefüllt wird, muss es diese Methode unterstützen.  
   
@@ -129,7 +129,7 @@ HRESULT GetStatus(
  Durch Aufrufen von **ISSAsynchStatus::GetStatus** für ein initialisiertes Datenquellobjekt oder ein aufgefülltes Rowset oder durch Übergeben eines Werts für *eOperation* außer DBASYNCHOP_OPEN wird S_OK zurückgegeben, wobei *pulProgress* und *pulProgressMax* auf den gleichen Wert festgelegt sind. Wenn **ISSAsynchStatus::GetStatus** für ein Objekt aufgerufen wird, das durch Ausführung eines Befehls zum Aktualisieren, Löschen oder Einfügen von Zeilen erstellt wurde, gibt sowohl *pulProgress* als auch *pulProgressMax* die Gesamtzahl der Zeilen an, die von dem Befehl betroffen sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von asynchronen Vorgängen](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Ausführen asynchroner Vorgänge](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: dm_tran_session_transactions (Transact-SQL) | Microsoft Docs
+title: dm_tran_session_transactions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: edc9d4295d6a5e02de73d6a7c7096e8bfd288324
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b213b90ce47b0cf12eee33a9bf3f9ab562189ccb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466886"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564774"
 ---
 # <a name="sysdmtransessiontransactions-transact-sql"></a>sys.dm_tran_session_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

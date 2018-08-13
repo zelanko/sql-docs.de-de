@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_missing_index_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463816"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560190"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID der Spalte.|  
 |**column_name**|**sysname**|Name der Tabellenspalte.|  
-|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> Gleichheit: Spalte wird in ein Prädikat, das Gleichheit, von dem Formular drückt einbezogen: <br />                        *table.column* = *constant_value*<br /><br /> UNGLEICHHEITSOPERATOR: Spalte trägt zur ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat im Format: *table.column* > *für Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber er ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
+|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> Gleichheit: Spalte unterstützt ein Prädikat, das Gleichheit, von dem Formular drückt aus: <br />                        *table.column* = *constant_value*<br /><br /> UNGLEICHHEIT: Spalte trägt in ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat im Format: *table.column* > *Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber er ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zurückgegebene Informationen **dm_db_missing_index_columns** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
+ Informationen, die vom **Sys. dm_db_missing_index_columns** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
   
 ## <a name="transaction-consistency"></a>Transaktionskonsistenz  
  Wenn durch eine Transaktion eine Tabelle erstellt oder gelöscht wird, werden die Zeilen mit Informationen zu fehlenden Indizes bezüglich der gelöschten Objekte aus diesem dynamischen Verwaltungsobjekt entfernt, damit die Transaktionskonsistenz erhalten bleibt.  

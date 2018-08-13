@@ -1,5 +1,5 @@
 ---
-title: "\"Sp_rename\" (Transact-SQL) | Microsoft Docs"
+title: Sp_rename (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97d14dc014827310706bdea8143e41a628a666d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260856"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563074"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ändert den Namen eines vom Benutzer erstellten Objekts in der aktuellen Datenbank. Dieses Objekt kann eine Tabelle, Index, Spalte Aliasdatentyp oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) den benutzerdefinierten Typ.  
+  Ändert den Namen eines vom Benutzer erstellten Objekts in der aktuellen Datenbank. Dieses Objekt kann eine Tabelle, Index, Spalte Aliasdatentyp oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Typ common Language Runtime (CLR) eine benutzerdefinierte.  
   
 > [!CAUTION]  
 >  Wenn Sie Teile eines Objektnamens ändern, können Skripts und gespeicherte Prozeduren funktionsunfähig werden. Es ist empfehlenswert, diese Anweisung nicht zum Umbenennen von gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen oder Sichten zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
@@ -53,7 +53,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>Argumente  
  [ @objname =] '*Object_name*"  
- Der aktuelle qualifizierte oder nicht qualifizierte Name des Benutzerobjekts oder Datentyps. Wenn es sich bei das umzubenennenden Objekt um eine Spalte in einer Tabelle ist *Object_name* muss im Format *table.column* oder *schema.table.column*. Wenn es sich bei das umzubenennenden Objekt um einen Index, muss *Object_name* muss im Format *table.index* oder *schema.table.index*. Wenn es sich bei das umzubenennenden Objekt um eine Einschränkung ist *Object_name* muss im Format *schema.constraint*.  
+ Der aktuelle qualifizierte oder nicht qualifizierte Name des Benutzerobjekts oder Datentyps. Wenn es sich bei das umzubenennenden Objekt um eine Spalte in einer Tabelle ist *Object_name* muss im Format *table.column* oder *schema.table.column*. Wenn es sich bei das umzubenennenden Objekt um einen Index, muss *Object_name* muss im Format *table.index* oder *schema.table.index*. Wenn das Objekt, das umbenannt werden soll, eine Einschränkung ist *Object_name* muss im Format *schema.constraint*.  
   
  Anführungszeichen sind nur dann notwendig, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Object_name* ist **nvarchar(776)**, hat keinen Standardwert.  
   
@@ -66,14 +66,14 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*Object_type*"  
  Der Typ des Objekts, das umbenannt wird. *Object_type* ist **varchar(13)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |COLUMN|Eine umzubenennende Spalte.|  
 |DATABASE|Eine benutzerdefinierte Datenbank. Dieser Objekttyp ist erforderlich, wenn Sie eine Datenbank umbenennen.|  
 |INDEX|Ein benutzerdefinierter Index. Beim Umbenennen eines Indizes mit Statistiken werden die Statistiken auch automatisch umbenannt.|  
-|OBJECT|Ein Element eines Typs in nachverfolgte [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Beispielsweise könnte OBJECT zum Umbenennen von Objekten mit Einschränkungen (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), Benutzertabellen und Regeln verwendet werden.|  
+|OBJECT|Ein Element eines Typs in nachverfolgt [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Beispielsweise könnte OBJECT zum Umbenennen von Objekten mit Einschränkungen (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), Benutzertabellen und Regeln verwendet werden.|  
 |STATISTICS|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Explizit von einem Benutzer erstellte Statistiken oder implizit mit einem Index erstellt Beim Umbenennen der Statistiken eines Indizes wird der Index auch automatisch umbenannt.|  
-|USERDATATYPE|Ein [CLR-benutzerdefinierte Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) dazu hinzugefügt [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) oder [Sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
+|USERDATATYPE|Ein [CLR-benutzerdefinierte Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) hinzugefügt, indem Sie Ausführung [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) oder [Sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
@@ -85,7 +85,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename kann zum Umbenennen von primären und sekundären XML-Indizes verwendet werden.  
   
- Umbenennen einer gespeicherten Prozedur, Funktion, Sicht oder Trigger ändert nicht dem Namen des entsprechenden Objekts in der definitionsspalte der der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht oder erhalten hat, mithilfe der [OBJECT_ DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion. Daher ist es empfehlenswert, sp_rename nicht zum Umbenennen dieser Objekttypen zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
+ Umbenennen einer gespeicherten Prozedur, Funktion, Sicht oder Trigger ändert nicht dem Namen des entsprechenden Objekts in der definitionsspalte der [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht oder abgerufen, mit der [OBJECT_ DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion. Daher ist es empfehlenswert, sp_rename nicht zum Umbenennen dieser Objekttypen zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
   
  Beim Umbenennen eines Objekts, wie z. B. einer Tabelle oder Spalte, werden Verweise auf das Objekt nicht automatisch umbenannt. Sie müssen Objekte, die auf das umbenannte Objekt verweisen, manuell ändern. Wenn Sie z. B. eine Tabellenspalte umbenennen und in einem Trigger auf diese Spalte verwiesen wird, müssen Sie den Trigger ändern, sodass er den neuen Spaltennamen wiedergibt. Verwenden Sie [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , um Abhängigkeiten vom Objekt aufzulisten, bevor Sie es umbenennen.  
   
@@ -94,7 +94,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-renaming-a-table"></a>A. Umbenennen einer Tabelle  
+### <a name="a-renaming-a-table"></a>A. Das Umbenennen einer Tabelle  
  Im folgenden Beispiel wird die `SalesTerritory` -Tabelle im Schema `SalesTerr` in `Sales` umbenannt.  
   
 ```  
@@ -104,8 +104,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B. Das Umbenennen einer Spalte  
- Im folgenden Beispiel wird die `TerritoryID` Spalte in der `SalesTerritory` Tabelle `TerrID`.  
+### <a name="b-renaming-a-column"></a>B. Umbenennen einer Spalte  
+ Das folgende Beispiel benennt die `TerritoryID` -Spalte in der `SalesTerritory` Tabelle `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -197,7 +197,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. Umbenennen von Statistiken  
- Im folgenden Beispiel erstellt eine Statistik-Objekt, das mit dem Namen contactMail1 und klicken Sie dann die Statistik zu NewContact mithilfe von "Sp_rename" umbenannt. Bei der Umbenennung von Statistiken muss das Objekt im Format schema.table.statistics_name angegeben werden.  
+ Im folgenden Beispiel wird ein Statistikobjekt namens contactMail1 erstellt, und klicken Sie dann die Statistik zu NewContact mithilfe von Sp_rename umbenannt. Bei der Umbenennung von Statistiken muss das Objekt im Format schema.table.statistics_name angegeben werden.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -212,6 +212,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

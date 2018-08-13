@@ -1,5 +1,5 @@
 ---
-title: Check_constraints (Transact-SQL) | Microsoft Docs
+title: Check_constraints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6674911d07f087989d08654f548635508663e155
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bdaff0d468acf89b5ec429ad36244484a4804564
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230803"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564794"
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Zeile für jede CHECK-Einschränkung in der aktuellen Datenbank zurück. Diese Informationsschemasicht gibt Informationen zu den Objekten zurück, für die der aktuelle Benutzer Berechtigungen besitzt.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA. *** View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen der **INFORMATION_SCHEMA. *** View_name*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Einschränkungsqualifizierer|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, zu dem die Einschränkung gehört.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, zu dem die Einschränkung gehört.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**sysname**|Einschränkungsname|  
 |**CHECK_CLAUSE**|**Nvarchar (** 4000 **)**|Tatsächlicher Text der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Definitionsanweisung.|  
   

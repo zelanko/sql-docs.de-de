@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Tabellenwertparameter-Typ-Unterstützung (Eigenschaften) | Microsoft-Dokumentation
+title: OLE DB-Unterstützung für Tabellenwertparameter-Typen (Eigenschaften) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a9fcc417d490838f322a884bb5c414d44625088
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b56c59bd6a12c01cb16101b42d7b5a51ea8ad4da
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431249"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556430"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB-Unterstützung von Tabellenwertparameter-Typen (Eigenschaften)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37431249"
   Dieses Thema stellt Informationen zu OLE DB-Eigenschaften und -Eigenschaftensätzen bereit, die Tabellenwertparameter-Rowsetobjekten zugeordnet werden.  
   
 ## <a name="properties"></a>Eigenschaften  
- Folgendes ist die Liste der Eigenschaften, die über die Methode IRowsetInfo::GetPropeties für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Aus diesem Grund versucht, Festlegen der Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints::CreateTableWithConstraints Methoden auf die Standardwerte, führt zu einem Fehler und kein Objekt erstellt werden.  
+ Im Folgenden werden die Eigenschaften aufgelistet, die durch die IRowsetInfo::GetPropeties-Methode für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Aus diesem Grund versucht, Festlegen der Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints::CreateTableWithConstraints Methoden auf die Standardwerte, führt zu einem Fehler und kein Objekt erstellt werden.  
   
  Im Tabellenwertparameter-Rowsetobjekt nicht implementierte Eigenschaften werden hier nicht aufgelistet. Eine vollständige Liste von Eigenschaften finden Sie in der OLE DB-Dokumentation in den Windows Data Access Components.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "37431249"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w: schreibgeschützt<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Lesezeichen sind für Tabellenwertparameter-Rowsetobjekte nicht zulässig.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: Schreibgeschützt<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Lesezeichen sind für Tabellenwertparameter-Rowsetobjekte nicht zulässig.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -52,7 +52,7 @@ ms.locfileid: "37431249"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Hinweis: Das Tabellenwertparameter-Rowsetobjekt unterstützt die IRowsetChange-Schnittstellen.<br /><br /> Ein mit DBPROP_IRowsetChange gleich VARIANT_TRUE erstelltes Rowset zeigt Verhaltensweisen des Sofortupdatemodus.<br /><br /> Wenn BLOB-Spalten als ISequentialStream-Objekte gebunden sind, wird jedoch der Consumer erwartet, für die Lebensdauer des Tabellenwertparameter-Rowsetobjekts behalten möchten.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Hinweis: Das Tabellenwertparameter-Rowsetobjekt unterstützt die IRowsetChange-Schnittstellen.<br /><br /> Ein mit DBPROP_IRowsetChange gleich VARIANT_TRUE erstelltes Rowset zeigt Verhaltensweisen des Sofortupdatemodus.<br /><br /> Wenn BLOB-Spalten allerdings als ISequentialStream-Objekte gebunden werden, wird vom Consumer erwartet, dass er sie für die Lebenszeit des Tabellenwertparameter-Rowsetobjekts beibehält.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -103,6 +103,6 @@ ms.locfileid: "37431249"
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Unterstützung für Tabellenwertparameter-Typen](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Verwenden von Tabellenwertparametern &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   
