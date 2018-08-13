@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c8036ef72c9397a9f89c5536bdd598c6f560d78f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4c064b421de59e435522de1f08fa6ed01d3ba901
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543420"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008952"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -234,7 +234,7 @@ JOIN sys.database_principals AS dRole
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
 -   
-  [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[Erstellen einer Datenbank &amp;#40;Tutorial&amp;#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+  [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[Erstellen einer Datenbank &amp;#40;Tutorial&amp;#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

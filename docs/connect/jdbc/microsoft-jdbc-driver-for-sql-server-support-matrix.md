@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: cf3dece5bf18661e6f6bfa42e81c3038dd44b0c8
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456404"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661882"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,18 +33,18 @@ ms.locfileid: "39456404"
     
  Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unterstützt.  
   
-|Treibername|Version des Treiberpakets|Zutreffend JAR(s)|Grundlegender Support|
+|Treibername|Version des Treiberpakets|Zutreffend JAR(s)|Ende des Mainstream-Support|
 |-|-|-|-|  
-|Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|Juli 31, 2023|  
-|Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|Februar 27, 2023|    
-|Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|MSSQL-Jdbc-6.2.2.jre8.jar<br> MSSQL-Jdbc-6.2.2.jre7.jar|Juni 30, 2022|    
-|Microsoft JDBC-Treiber 6.0 für SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|Juli 14, 2021|    
+|Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 Juli 2023|  
+|Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 Februar 2023|    
+|Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|MSSQL-Jdbc-6.2.2.jre8.jar<br> MSSQL-Jdbc-6.2.2.jre7.jar|30 Juni 2022|    
+|Microsoft JDBC-Treiber 6.0 für SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 Juli 2021|    
 |Der Microsoft JDBC-Treiber 4.2 für SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24. August 2020|  
 |Microsoft JDBC-Treiber 4.1 für SQL Server|4.1|sqljdbc41.jar|12. Dezember 2019|  
   
  Die folgenden Microsoft JDBC-Treiber werden nicht länger unterstützt.  
  
-|Treibername|Version des Treiberpakets|Grundlegender Support|  
+|Treibername|Version des Treiberpakets|Ende des Mainstream-Support|  
 |-|-|-|
 |Microsoft JDBC-Treiber 4.0 für SQL Server|4.0|6. März 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23. April 2015|  
@@ -58,6 +58,7 @@ ms.locfileid: "39456404"
   
 |Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW 2008R2 AU3<sup>4</sup>|SQLServer 2014|SQL Server 2016|SQL Server 2017|Verwaltete Azure SQL-Instanz (Erweiterte Private Vorschau)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.0|N|J|J|J|J|J|J|J|J|  
 |6.4|N|J|J|J|J|J|J|J|J|  
 |6.2|J|J|J|J|J|J|J|J|N|
 |6.1|J|J|J|J|J|J|J|N|N|

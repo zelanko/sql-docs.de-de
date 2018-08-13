@@ -14,99 +14,120 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f758dfbed0a33885a1cc24cef6d39ab522fa5809
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279111"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662382"
 ---
 # <a name="working-with-a-connection"></a>Arbeiten mit einer Verbindung
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Die folgenden Abschnitte enthalten Beispiele für die verschiedenen Möglichkeiten, um mit der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank herzustellen.  
-  
+Die folgenden Abschnitte enthalten Beispiele für die verschiedenen Möglichkeiten, um mit der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank herzustellen.
+
 > [!NOTE]  
->  Wenn beim Herstellen von Verbindungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mit dem JDBC-Treiber Probleme auftreten, finden Sie unter [Behandlung von Verbindungsproblemen](../../connect/jdbc/troubleshooting-connectivity.md) Vorschläge zum Beheben der Probleme.  
-  
-## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Erstellen einer Verbindung mit der DriverManager-Klasse  
- Die einfachste Vorgehensweise zum Erstellen einer Verbindung zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank besteht darin, den JDBC-Treiber zu laden und wie im Folgenden dargestellt die getConnection-Methode der DriverManager-Klasse aufzurufen:  
-  
+> Wenn beim Herstellen von Verbindungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mit dem JDBC-Treiber Probleme auftreten, finden Sie unter [Behandlung von Verbindungsproblemen](../../connect/jdbc/troubleshooting-connectivity.md) Vorschläge zum Beheben der Probleme.
+
+## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Erstellen einer Verbindung mit der DriverManager-Klasse
+
+Die einfachste Vorgehensweise zum Erstellen einer Verbindung zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank besteht darin, den JDBC-Treiber zu laden und wie im Folgenden dargestellt die getConnection-Methode der DriverManager-Klasse aufzurufen:
+
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = DriverManager.getConnection(connectionUrl);  
-```  
-  
- Bei diesem Verfahren wird eine Datenbankverbindung mit dem ersten verfügbaren Treiber in der Liste der Treiber erstellt, der erfolgreich eine Verbindung mit der angegebenen URL herstellen kann.  
-  
+```
+
+Bei diesem Verfahren wird eine Datenbankverbindung mit dem ersten verfügbaren Treiber in der Liste der Treiber erstellt, der erfolgreich eine Verbindung mit der angegebenen URL herstellen kann.
+
 > [!NOTE]  
->  Bei Verwendung der sqljdbc4.jar-Klassenbibliothek müssen Anwendungen den Treiber nicht mit der Class.forName-Methode explizit registrieren oder laden. Wenn die GetConnection-Methode der DriverManager-Klasse aufgerufen wird, ist ein geeigneter Treiber aus der Gruppe der registrierten JDBC-Treiber. Weitere Informationen finden Sie unter "Verwenden des JDBC-Treibers".  
-  
-## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Erstellen einer Verbindung mit der SQLServerDriver-Klasse  
- Wenn Sie in der Liste der Treiber für DriverManager einen bestimmten Treiber angeben müssen, können Sie wie im Folgenden dargestellt eine Datenbankverbindung mit der [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md)-Methode der [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md)-Klasse erstellen:  
-  
+> Bei Verwendung der sqljdbc4.jar-Klassenbibliothek müssen Anwendungen den Treiber nicht mit der Class.forName-Methode explizit registrieren oder laden. Wenn die GetConnection-Methode der DriverManager-Klasse aufgerufen wird, ist ein geeigneter Treiber aus der Gruppe der registrierten JDBC-Treiber. Weitere Informationen finden Sie unter "Verwenden des JDBC-Treibers".
+
+## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Erstellen einer Verbindung mit der SQLServerDriver-Klasse
+
+Wenn Sie in der Liste der Treiber für DriverManager einen bestimmten Treiber angeben müssen, können Sie wie im Folgenden dargestellt eine Datenbankverbindung mit der [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md)-Methode der [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md)-Klasse erstellen:
+
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = d.connect(connectionUrl, new Properties());  
-```  
-  
-## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Erstellen einer Verbindung mit der SQLServerDataSource-Klasse  
- Wenn Sie eine Verbindung mit der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse erstellen müssen, können Sie verschiedene Festlegungsmethoden der Klasse verwenden, bevor Sie die [getConnection](../../connect/jdbc/reference/getconnection-method.md)-Methode aufrufen, z.B.:  
-  
-```java 
+```
+
+## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Erstellen einer Verbindung mit der SQLServerDataSource-Klasse
+
+Wenn Sie eine Verbindung mit der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse erstellen müssen, können Sie verschiedene Festlegungsmethoden der Klasse verwenden, bevor Sie die [getConnection](../../connect/jdbc/reference/getconnection-method.md)-Methode aufrufen, z.B.:
+
+```java
 SQLServerDataSource ds = new SQLServerDataSource();  
 ds.setUser("MyUserName");  
 ds.setPassword("*****");  
 ds.setServerName("localhost");  
-ds.setPortNumber(1433);   
+ds.setPortNumber(1433);
 ds.setDatabaseName("AdventureWorks");  
 Connection con = ds.getConnection();  
-```  
-  
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Erstellen einer Verbindung mit eine sehr speziellen Datenquelle als Ziel  
- Wenn Sie eine Datenbankverbindung mit einer sehr speziellen Datenquelle herstellen müssen, können Sie mehrere Verfahren verwenden. Das jeweilige Verfahren hängt von den Eigenschaften ab, die Sie mit der Verbindungs-URL festlegen.  
-  
- Um eine Verbindung zur Standardinstanz auf einem Remoteserver herzustellen, verwenden Sie die folgende URL:  
-  
- `String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"`  
-  
- Um eine Verbindung zu einem bestimmten Port eines Servers herzustellen, verwenden Sie die folgende URL:  
-  
- `String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"`  
-  
- Um eine Verbindung zu einer benannten Instanz eines Servers herzustellen, verwenden Sie die folgende URL:  
-  
- `String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"`  
-  
- Um eine Verbindung zu einer bestimmten Datenbank eines Servers herzustellen, verwenden Sie die folgende URL:  
-  
- `String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"`  
-  
- Weitere Beispiele für Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
-  
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Erstellen einer Verbindung mit einem benutzerdefinierten Anmeldetimeout  
- Wenn Sie Serverlast oder Netzwerkverkehr berücksichtigen müssen, können Sie eine Verbindung mit einem bestimmten Timeoutwert für die Anmeldung in Sekunden erstellen, wie z. B.:  
-  
- `String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"`  
-  
-## <a name="create-a-connection-with-application-level-identity"></a>Erstellen einer Verbindung mit Identität auf Anwendungsebene  
- Wenn Sie Protokollierung und Profilerstellung verwenden, müssen Sie die Verbindung mit einer bestimmten Anwendung als Ursprung kennzeichnen, wie z. B.:  
-  
- `String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"`  
-  
-## <a name="closing-a-connection"></a>Trennen einer Verbindung  
- Sie können durch Aufrufen der [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md)-Methode der SQLServerConnection-Klasse eine Datenbankverbindung wie im Folgenden dargestellt explizit schließen:  
-  
- `con.close();`  
-  
- Dadurch werden die vom SQLServerConnection-Objekt verwendeten Datenbankressourcen freigegeben, bzw. die Verbindung in Poolszenarios werden an den Verbindungspool zurückgegeben.  
-  
+```
+
+## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Erstellen einer Verbindung mit eine sehr speziellen Datenquelle als Ziel
+
+Wenn Sie eine Datenbankverbindung mit einer sehr speziellen Datenquelle herstellen müssen, können Sie mehrere Verfahren verwenden. Das jeweilige Verfahren hängt von den Eigenschaften ab, die Sie mit der Verbindungs-URL festlegen.
+
+Um eine Verbindung zur Standardinstanz auf einem Remoteserver herzustellen, verwenden Sie die folgende URL:
+
+```java
+String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"
+```
+
+Um eine Verbindung zu einem bestimmten Port eines Servers herzustellen, verwenden Sie die folgende URL:
+
+```java
+String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"
+```
+
+Um eine Verbindung zu einer benannten Instanz eines Servers herzustellen, verwenden Sie die folgende URL:
+
+```java
+String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"
+```
+
+Um eine Verbindung zu einer bestimmten Datenbank eines Servers herzustellen, verwenden Sie die folgende URL:
+
+```java
+String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
+```
+
+Weitere Beispiele für Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
+
+## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Erstellen einer Verbindung mit einem benutzerdefinierten Anmeldetimeout
+
+Wenn Sie Serverlast oder Netzwerkverkehr berücksichtigen müssen, können Sie eine Verbindung mit einem bestimmten Timeoutwert für die Anmeldung in Sekunden erstellen, wie z. B.:
+
+```java
+String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
+```
+
+## <a name="create-a-connection-with-application-level-identity"></a>Erstellen einer Verbindung mit Identität auf Anwendungsebene
+
+Wenn Sie Protokollierung und Profilerstellung verwenden, müssen Sie die Verbindung mit einer bestimmten Anwendung als Ursprung kennzeichnen, wie z. B.:
+
+```java
+String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
+```
+
+## <a name="closing-a-connection"></a>Trennen einer Verbindung
+
+Sie können durch Aufrufen der [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md)-Methode der SQLServerConnection-Klasse eine Datenbankverbindung wie im Folgenden dargestellt explizit schließen:
+
+```java
+con.close();
+```
+
+Dadurch werden die vom SQLServerConnection-Objekt verwendeten Datenbankressourcen freigegeben, bzw. die Verbindung in Poolszenarios werden an den Verbindungspool zurückgegeben.
+
 > [!NOTE]  
->  Durch den Aufruf der close-Methode wird auch ein Rollback aller anstehenden Transaktionen ausgeführt.  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
-  
-  
+> Durch den Aufruf der close-Methode wird auch ein Rollback aller anstehenden Transaktionen ausgeführt.
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+
+[Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

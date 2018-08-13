@@ -1,7 +1,7 @@
 ---
 title: RESTORE-Argumente (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,17 +19,17 @@ caps.latest.revision: 154
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9dc5fcb6f7cb550d890d621f36fc79714c34edf
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037208"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008882"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema werden die Argumente, die in den Abschnitten über die Syntax der RESTORE {DATABASE|LOG}-Anweisung und der zugeordneten Gruppe der folgenden Hilfsanweisungen beschrieben werden, dokumentiert: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.  
+In diesem Thema werden die Argumente, die in den Abschnitten über die Syntax der RESTORE {DATABASE|LOG}-Anweisung und der zugeordneten Gruppe der folgenden Hilfsanweisungen beschrieben werden, dokumentiert: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

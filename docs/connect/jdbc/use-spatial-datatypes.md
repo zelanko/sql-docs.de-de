@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11d8ae48709f99f466fb0b0c6e387ad38336da5f
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: cc330f8d5dbc2a0f6c09adac0f61d4f603b4c02f
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467688"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662302"
 ---
 # <a name="using-spatial-datatypes"></a>Verwendung von räumlichen Datentypen
 
@@ -69,7 +69,7 @@ Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
 SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement) connection.prepareStatement("insert into sampleTable values (?)");
 pstmt.setGeometry(1, geomWKT);  
 pstmt.execute();
-``` 
+```
 
 Dasselbe für die Geography-Entsprechung, die mit einer Geografiespalte möglich und **setGeography()** Methode.
 
@@ -100,8 +100,8 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 
 |Methode|und Beschreibung|
 |:------|:----------|
-|Geometry GetGeometry (ColunIndex Int)| Ruft den Wert der angegebenen Spalte in der aktuellen Zeile dieses SQLServerResultSet-Objekts als java.sql.Date-Objekt in der Programmiersprache Java ab.
-|Geometry GetGeometry (Zeichenfolge Spaltenname)| Ruft den Wert der angegebenen Spalte in der aktuellen Zeile dieses SQLServerResultSet-Objekts als java.sql.Date-Objekt in der Programmiersprache Java ab.
+|Geometry GetGeometry (ColunIndex Int)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als Objekt in der Programmiersprache Java com.microsoft.sqlserver.jdbc.Geometry zurück.
+|Geometry GetGeometry (Zeichenfolge Spaltenname)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als Objekt in der Programmiersprache Java com.microsoft.sqlserver.jdbc.Geometry zurück.
 |Geography GetGeography (ColunIndex Int)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als Objekt in der Programmiersprache Java com.microsoft.sqlserver.jdbc.Geography zurück.
 |Geography GetGeography (Zeichenfolge Spaltenname)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als Objekt in der Programmiersprache Java com.microsoft.sqlserver.jdbc.Geography zurück.
 
@@ -121,11 +121,11 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 |Boolesche hasZ()| Gibt zurück, wenn das Objekt einen Z (Höhe)-Wert enthält.
 |Doppelte getX()| Gibt die X-Koordinatenwert zurück.
 |Doppelte getY()| Gibt die Y-Koordinatenwert zurück.
-|Doppelte getM()| Ruft den M (Measure)-Wert der -Instanz ab.
-|Doppelte getZ()| Ruft den Z-Wert (Höhe) der Instanz ab.
+|Doppelte getM()| Gibt den Wert M (Measure) des Objekts.
+|Doppelte getZ()| Gibt die Z-(Höhe)-Wert des Objekts zurück.
 |Int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
 |Boolesche isNull()| Gibt zurück, wenn das Geometry-Objekt auf null festgelegt ist.
-|STNumPoints| Gibt die Anzahl der Punkte in der Geometry-Objekt zurück.
+|Int STNumPoints()| Gibt die Anzahl der Punkte in der Geometry-Objekt zurück.
 |Zeichenfolge STGeometryType()| Gibt den durch eine geometry-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
 |Zeichenfolge asTextZM()| Gibt die Well-Known Text (WKT)-Darstellung der Geometry-Objekt zurück.
 |Zeichenfolge toString()| Gibt die Zeichenfolgendarstellung des Geometry-Objekts zurück.
@@ -146,11 +146,11 @@ Hierbei handelt es sich um den neuen öffentlichen APIs, die mit folgender Ergä
 |Boolesche hasZ()| Gibt zurück, wenn das Objekt einen Z (Höhe)-Wert enthält.
 |Doppelte getLatitude()| Der Breitengradwert zurückgegeben.
 |Doppelte getLongitude()| Gibt den Wert der geografische Länge zurück.
-|Doppelte getM()| Ruft den M (Measure)-Wert der -Instanz ab.
-|Doppelte getZ()| Ruft den Z-Wert (Höhe) der Instanz ab.
+|Doppelte getM()| Gibt den Wert M (Measure) des Objekts.
+|Doppelte getZ()| Gibt die Z-(Höhe)-Wert des Objekts zurück.
 |Int getSrid()| Gibt den Wert (SRID, Spatial Reference Identifier).
 |Boolesche isNull()| Gibt zurück, wenn der Geography-Objekt auf null festgelegt ist.
-|STNumPoints| Gibt die Anzahl der Punkte in der Geography-Objekt zurück.
+|Int STNumPoints()| Gibt die Anzahl der Punkte in der Geography-Objekt zurück.
 |Zeichenfolge STGeographyType()| Gibt den durch eine geography-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
 |Zeichenfolge asTextZM()| Gibt die Well-Known Text (WKT)-Darstellung der Geography-Objekt zurück.
 |Zeichenfolge toString()| Gibt die Zeichenfolgendarstellung des Geography-Objekts zurück.

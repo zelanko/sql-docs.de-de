@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553100"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008962"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553100"
   
 ## <a name="sql-server-level-principals"></a>Prinzipale auf SQL Server-Ebene  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmelde-ID für die Authentifizierung   
--  Anmeldung mit Windows-Authentifizierung für Windows-Benutzer  
--  Anmeldung mit Windows-Authentifizierung für Windows-Gruppe   
--  Anmeldung mit Azure Active Directory-Authentifizierung für AD-Benutzer
--  Anmeldung mit Azure Active Directory-Authentifizierung für AD-Gruppe
--  Serverrolle  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmelde-ID für die Authentifizierung   
+- Anmeldung mit Windows-Authentifizierung für Windows-Benutzer  
+- Anmeldung mit Windows-Authentifizierung für Windows-Gruppe   
+- Anmeldung mit Azure Active Directory-Authentifizierung für AD-Benutzer
+- Anmeldung mit Azure Active Directory-Authentifizierung für AD-Gruppe
+- Serverrolle  
   
- ## <a name="database-level-principals"></a>Prinzipale auf Datenbankebene  
+## <a name="database-level-principals"></a>Prinzipale auf Datenbankebene
   
--   Datenbankbenutzer (Es gibt 11 Benutzertypen. Weitere Informationen finden Sie unter [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
--   Datenbankrolle  
--   Anwendungsrolle  
+- Datenbankbenutzer (Es gibt 11 Benutzertypen. Weitere Informationen finden Sie unter [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Datenbankrolle
+- Anwendungsrolle
   
 ## <a name="sa-login"></a>Anmeldename „sa“  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Prinzipal auf Serverebene. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der `sa`-Anmeldename ist ein Mitglied der festen Datenbankrolle `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
