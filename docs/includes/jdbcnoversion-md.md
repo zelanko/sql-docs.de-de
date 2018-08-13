@@ -1,1 +1,0 @@
- Microsoft JDBC-Treiber für SQL Server 

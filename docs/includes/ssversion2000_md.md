@@ -1,1 +1,0 @@
- SQLServer 2000 (8.x) 

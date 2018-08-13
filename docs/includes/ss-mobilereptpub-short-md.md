@@ -1,1 +1,0 @@
-Publisher für mobile Berichte 
