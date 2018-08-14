@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
 ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/08/2018
 ms.locfileid: "39662382"
@@ -97,7 +97,7 @@ Um eine Verbindung zu einer bestimmten Datenbank eines Servers herzustellen, ver
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Weitere Beispiele für Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
+Weitere Beispiele für Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Erstellen einer Verbindung mit einem benutzerdefinierten Anmeldetimeout
 

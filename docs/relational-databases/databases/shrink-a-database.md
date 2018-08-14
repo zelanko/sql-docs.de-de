@@ -68,7 +68,7 @@ ms.locfileid: "39551680"
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank. Weitere Informationen finden Sie unter [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank. Weitere Informationen finden Sie unter [Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Datenbank verkleinern möchten:  
   

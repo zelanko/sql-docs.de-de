@@ -22,7 +22,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054078"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Thema wird veranschaulicht, wie der SQLSRV-Treiber verwendet wird, um eine gespeicherte Prozedur aufzurufen, in der ein Parameter als Eingabe-/Ausgabeparameter definiert wurde, und wie die Ergebnisse abgerufen werden. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameters müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse verarbeitet werden, bevor auf den Wert des zurückgegebenen Parameters zugegriffen werden kann.  
