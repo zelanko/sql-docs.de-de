@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0e99381224c03bf185044d57cc4b415fcfaedd3b
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024226"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661872"
 ---
 # <a name="release-notes"></a>Versionsanmerkungen
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39024226"
 
 **Funktionen, die hinzugefügt**:
 
-Datenklassifizierung für Azure SQL-Datenbank und SQLServer
+Datenklassifizierung für Azure SQL-Datenbank und SQL Server, Weitere Informationen finden Sie unter [Klassifizierung von Daten](../data-classification.md)
 
 [Behebung von Programmfehlern](../bug-fixes.md)
 
@@ -62,7 +62,7 @@ Unterstützung für verwaltete Azure SQL-Instanz (Erweiterte Private Vorschau).
 > -   FILESTREAM wird nicht unterstützt. 
 > -   Lokalen Dateisystem Zugriff wird nicht unterstützt, aber für Dinge wie Tracefiles erforderlich 
 > -   Erstellen von UDTS aus lokalen Pfad wird nicht unterstützt. 
-> -   Die integrierte Windows-Authentifizierung wird verwendet. 
+> -   Integrierte Windows-Authentifizierung wird nicht unterstützt. 
 > -   DTC wird nicht unterstützt. 
 > -   Konto "sa" ist nicht vorhanden (Standardkonto wird als "CloudSA" bezeichnet)
 > -   TDS-token-Fehler (0xAA) gibt falsche Server-Namen zurück.

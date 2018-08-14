@@ -26,7 +26,7 @@ ms.locfileid: "39535120"
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**Gilt für:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 CASE-Ausdrücke werden in nativ kompilierten gespeicherten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt, wie Sie den CASE-Ausdruck in einer Abfrage verwenden können. 
 
@@ -49,7 +49,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   CASE-Ausdrücke werden *nicht* in nativ kompilierten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
   

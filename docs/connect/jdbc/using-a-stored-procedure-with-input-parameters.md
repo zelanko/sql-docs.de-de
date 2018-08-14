@@ -14,31 +14,32 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c408fc703a3f6d9831cae226ce858b1a20a80c7
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: MTE75
+ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278771"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661762"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Verwenden von gespeicherten Prozeduren mit Eingabeparametern
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozedur enthält mindestens einen IN-Parameter, über den Daten an die gespeicherte Prozedur übergeben werden können. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und zum Verarbeiten der Daten, die zurückgegeben.  
-  
- Wenn Sie eine gespeicherte Prozedur mit IN-Parametern mit dem JDBC-Treiber aufrufen, müssen Sie die `call`-SQL-Escapesequenz zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Die Syntax für die `call`-Escapesequenz mit IN-Parameter lautet wie folgt:  
-  
- `{call procedure-name[([parameter][,[parameter]]...)]}`  
-  
+Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozedur enthält mindestens einen IN-Parameter, über den Daten an die gespeicherte Prozedur übergeben werden können. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und zum Verarbeiten der Daten, die zurückgegeben.
+
+Wenn Sie eine gespeicherte Prozedur mit IN-Parametern mit dem JDBC-Treiber aufrufen, müssen Sie die `call`-SQL-Escapesequenz zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Die Syntax für die `call`-Escapesequenz mit IN-Parameter lautet wie folgt:
+
+`{call procedure-name[([parameter][,[parameter]]...)]}`
+
 > [!NOTE]  
->  Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).  
-  
- Geben Sie die IN-Parameter beim Erstellen der `call`-Escapesequenz mit dem Fragezeichen (?) an. das als Platzhalter für die Parameterwerte fungiert, die an die gespeicherte Prozedur übergeben werden. Um einen Wert für einen Parameter angeben, können Sie eine der Setter-Methoden der SQLServerPreparedStatement-Klasse. Die verwendbare Festlegungsmethode hängt vom Datentyp des IN-Parameters ab.  
-  
- Wenn Sie einen Wert an die Festlegungsmethode übergeben, müssen Sie nicht nur den Wert angeben, der im Parameter verwendet wird, sondern auch die ordinale Position des Parameters in der gespeicherten Prozedur. Wenn die gespeicherte Prozedur beispielsweise einen einzigen IN-Parameter enthält, ist der Ordinalwert "1". Wenn die gespeicherte Prozedur zwei Parameter enthält, ist der erste Ordinalwert "1" und der zweite Ordinalwert "2".  
-  
- Ein Beispiel für den Aufruf einer gespeicherten Prozedur mit einem IN-Parameter enthält die gespeicherte Prozedur „uspGetEmployeeManagers“ in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Diese gespeicherte Prozedur übernimmt einen einzelnen Eingabeparameter mit dem Namen "EmployeeID" (integer-Wert) und gibt abhängig von der angegebenen "EmployeeID" eine rekursive Liste der Mitarbeiter und deren Vorgesetzten zurück. Der Java-Code für den Aufruf dieser gespeicherten Prozedur sieht folgendermaßen aus:  
-  
+> Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).
+
+Geben Sie die IN-Parameter beim Erstellen der `call`-Escapesequenz mit dem Fragezeichen (?) an. das als Platzhalter für die Parameterwerte fungiert, die an die gespeicherte Prozedur übergeben werden. Um einen Wert für einen Parameter angeben, können Sie eine der Setter-Methoden der SQLServerPreparedStatement-Klasse. Die verwendbare Festlegungsmethode hängt vom Datentyp des IN-Parameters ab.
+
+Wenn Sie einen Wert an die Festlegungsmethode übergeben, müssen Sie nicht nur den Wert angeben, der im Parameter verwendet wird, sondern auch die ordinale Position des Parameters in der gespeicherten Prozedur. Wenn die gespeicherte Prozedur beispielsweise einen einzigen IN-Parameter enthält, ist der Ordinalwert "1". Wenn die gespeicherte Prozedur zwei Parameter enthält, ist der erste Ordinalwert "1" und der zweite Ordinalwert "2".
+
+Ein Beispiel für den Aufruf einer gespeicherten Prozedur mit einem IN-Parameter enthält die gespeicherte Prozedur „uspGetEmployeeManagers“ in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Diese gespeicherte Prozedur übernimmt einen einzelnen Eingabeparameter mit dem Namen "EmployeeID" (integer-Wert) und gibt abhängig von der angegebenen "EmployeeID" eine rekursive Liste der Mitarbeiter und deren Vorgesetzten zurück. Der Java-Code für den Aufruf dieser gespeicherten Prozedur sieht folgendermaßen aus:
+
 ```java
 public static void executeSprocInParams(Connection con) throws SQLException {  
     try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
@@ -55,9 +56,8 @@ public static void executeSprocInParams(Connection con) throws SQLException {
         }  
     }
 }
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+
+[Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)
