@@ -47,7 +47,7 @@ ms.locfileid: "38035542"
   
  ![Logischer Datensatz mit Werten für drei Tabellen](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
   
- Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Vorteile logischer Datensätze  
  Logische Datensätze bieten zwei entscheidende Vorteile:  

@@ -26,7 +26,7 @@ ms.locfileid: "37988262"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Clientprotokolle - Shared Memory-Eigenschaften (Registerkarte Protokoll)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Dialogfeld **Shared Memory-Eigenschaften** die Registerkarte **Protokoll** , um die Shared Memory-Eigenschaften anzuzeigen oder zu ändern. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+  Verwenden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Dialogfeld **Shared Memory-Eigenschaften** die Registerkarte **Protokoll** , um die Shared Memory-Eigenschaften anzuzeigen oder zu ändern. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Tastatur  
  **Enabled**  

@@ -40,7 +40,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindung zwischen dem [!INCLUDE[
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **Festlegen der SQL Server-Verbindung für den SQL Server-Agent mit:**  
   
@@ -54,7 +54,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindung zwischen dem [!INCLUDE[
   
 -   Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]unterstützt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung. Diese Option ist nur beim Verwalten früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]verfügbar.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicherheit  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent muss zur Verwendung der Anmeldeinformationen eines Kontos konfiguriert werden, das Mitglied der festen Serverrolle **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
