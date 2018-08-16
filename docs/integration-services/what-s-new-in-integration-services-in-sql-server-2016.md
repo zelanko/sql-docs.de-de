@@ -290,8 +290,8 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="SAPBW"></a> Veröffentlichung von Microsoft Connector für SAP BW für SQL Server 2016  
  Der Microsoft® Connector für SAP BW für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht. Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.
  
-#### <a name="oracleteradata"></a> Connectors, Version&4;.0, für Oracle und Teradata veröffentlicht
-Die Microsoft-Connectors, Version&4;.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
+#### <a name="oracleteradata"></a> Connectors, Version 4.0, für Oracle und Teradata veröffentlicht
+Die Microsoft-Connectors, Version 4.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
 
 ### <a name="pdwau5"></a> Connectors für Analytics Platform System (PDW) Appliance Update 5 veröffentlicht
 Die Zieladapter zum Laden von Daten in PDW mit AU5 wurden veröffentlicht. Die Adapter können unter [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)heruntergeladen werden.
@@ -346,7 +346,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
  Die Data Feed Publishing-Komponenten, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]einen separaten Download erforderten, werden jetzt bei der Installation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]automatisch mitgeliefert. Weitere Informationen finden Sie unter [Data Streaming Destination](../integration-services/data-flow/data-streaming-destination.md).  
 
 ####  <a name="AzureBlob"></a> Unterstützung für Azure Blob Storage im SQL Server-Import/Export-Assistenten  
- Der SQL Server-Import/Export-Assistent kann neuerdings Daten aus Azure Blob Storage importieren und auch dort speichern. Weitere Informationen finden Sie unter [Datenquelle wählen &#40;SQL Server-Import/Export-Assistent& #41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) und [Ziel wählen &#40;SQL Server-Import/Export-Assistent& #41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
+ Der SQL Server-Import/Export-Assistent kann neuerdings Daten aus Azure Blob Storage importieren und auch dort speichern. Weitere Informationen finden Sie unter [Datenquelle wählen &#40;SQL Server-Import/Export-Assistent&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) und [Ziel wählen &#40;SQL Server-Import/Export-Assistent&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Veröffentlichung des Change Data Capture Designers für Oracle von Attunity und des dazugehörigen Diensts für SQL Server 2016  
  Microsoft® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht.  Diese Komponenten unterstützen jetzt Oracle 12c in der klassischen Installation. (Eine mehrinstanzenfähige Installation wird nicht unterstützt.) Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.  

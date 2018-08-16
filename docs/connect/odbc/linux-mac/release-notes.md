@@ -1,5 +1,5 @@
 ---
-title: Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS | Microsoft-Dokumentation
+title: Anmerkungen zu dieser Version – Microsoft ODBC Driver for SQL Server unter Linux und macOS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 658cfd6ea66be82e243131eec9699c65708c2e5f
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024236"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662272"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "39024236"
 
 **Funktionen, die hinzugefügt**:
 
-Datenklassifizierung für Azure SQL-Datenbank und SQLServer
+Datenklassifizierung für Azure SQL-Datenbank und SQL Server, Weitere Informationen finden Sie unter [Klassifizierung von Daten](../data-classification.md)
 
 SQLBrowseConnect
 
@@ -79,7 +79,7 @@ Unterstützung für verwaltete Azure SQL-Instanz (Erweiterte Private Vorschau).
 > -   FILESTREAM wird nicht unterstützt. 
 > -   Lokalen Dateisystem Zugriff wird nicht unterstützt, aber für Dinge wie Tracefiles erforderlich 
 > -   Erstellen von UDTS aus lokalen Pfad wird nicht unterstützt. 
-> -   Die integrierte Windows-Authentifizierung wird verwendet. 
+> -   Integrierte Windows-Authentifizierung wird nicht unterstützt. 
 > -   DTC wird nicht unterstützt. 
 > -   Konto "sa" ist nicht vorhanden (Standardkonto wird als "CloudSA" bezeichnet)
 > -   TDS-token-Fehler (0xAA) gibt falsche Server-Namen zurück.
@@ -97,8 +97,8 @@ ODBC-Treiber 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.m
 
 **BCP-API-Unterstützung**: die Linux und MacOS-ODBC-Treiber unterstützt jetzt die Verwendung von der [BCP-API-Funktionen (**Bcp_init**usw..)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Neuigkeiten bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC Driver 13.0 for  on Linux  
-Mit dem Microsoft ODBC Driver 13.0 (Preview) für SQL Server werden jetzt auch SQL Server 2014 und SQL Server 2016 (Preview) unterstützt.  
+## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Neuigkeiten in Microsoft ODBC Driver 13.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux  
+Microsoft ODBC Driver 13.0 für SQL Server werden SQL Server 2014 und SQL Server 2016 jetzt ebenfalls unterstützt.  
 
 **Neue unterstützte Distributionen**:
 

@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454054"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662282"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454054"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Erfordert die Java-Laufzeitumgebung (JRE), Version 9.0. Verwenden JRE 8.0- oder niedrigere löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Erfordert die Java-Laufzeitumgebung (JRE), Version 9.0. Verwenden JRE 8.0- oder niedrigere löst eine Ausnahme.<br /><br /> Neue Funktionen in 6.4 schließen: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |
 
+Der JDBC-Treiber 6.4 steht auch auf das zentrale Maven-Repository und kann durch Hinzufügen des folgenden Codes in die POM, ein Maven-Projekt hinzugefügt werden. XML 
 
-  Der JDBC-Treiber 6.4 steht auch auf das zentrale Maven-Repository und kann durch Hinzufügen des folgenden Codes in die POM, ein Maven-Projekt hinzugefügt werden. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC-Treiber 6.2 für SQL Server:**  
   
-  Der JDBC-Treiber 6.2 enthält zwei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.2.1.jre7.jar**, und **Mssql-Jdbc-6.2.1.jre8.jar**. 
+  Der Microsoft JDBC-Treiber 6.2 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-6.2.2.jre7.jar** und **mssql-jdbc-6.2.2.jre8.jar**. 
   
- Der JDBC-Treiber 6.2 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet. 
+ Der JDBC-Treiber 6.2 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun JRE 5.0, 6.0, 7.0 und 8.0 getestet.
   
  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden in den Microsoft JDBC-Treibern 6.0 und 4.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
 |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|und Beschreibung|  
-|---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-Jdbc-6.2.1.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |  
-|MSSQL-Jdbc-6.2.1.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisung Handle erneut verwenden|    
+|---------|-----------------------------|----------------------|-----------------|
+|MSSQL-Jdbc-6.2.2.jre7.jar|4.1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Verwendung von JRE 6.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisungshandle erneut verwenden. |  
+|MSSQL-Jdbc-6.2.3.jre8.jar|4.2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Mithilfe von JRE 7.0 oder niedriger löst eine Ausnahme.<br /><br /> Neue Features in 6.2 sind: Azure AD-Authentifizierung für Linux, Prinzipal und Kennwort-Methode für die automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, Kerberos Constrained Delegation, Abfragetimeouts, Sockettimeout, Kerberos und vorbereitete Anweisung Handle erneut verwenden|    
 
   Der JDBC-Treiber 6.2 finden Sie auch auf das zentrale Maven-Repository und kann durch Hinzufügen des folgenden Codes in die POM, ein Maven-Projekt hinzugefügt werden. XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454054"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

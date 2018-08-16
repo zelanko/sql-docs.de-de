@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454374"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662462"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Versionshinweise für den JDBC-Treiber
 
@@ -27,11 +27,11 @@ ms.locfileid: "39454374"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Updates im Microsoft JDBC-Treiber 7.0 für SQL Server
 
-Microsoft JDBC-Treiber 7.0 für SQL Server ist JDBC-API-Spezifikation 4.2 vollständig kompatibel. Die JAR-Dateien im Paket 7.0 werden nach Java-Versionskompatibilität benannt. Beispielsweise sollte die Mssql-Jdbc-7.0.0.jre8.jar-Datei aus dem Paket 7.0 mit Java 8 verwendet werden.
+Microsoft JDBC-Treiber 7.0 für SQL Server ist JDBC-API-Spezifikation 4.2 vollständig kompatibel. Die JAR-Dateien im Paket 7.0 werden nach Java-Versionskompatibilität benannt. Beispielsweise sollte die Mssql-Jdbc-7.0.0.jre10.jar-Datei aus dem Paket 7.0 mit Java 10 verwendet werden.
 
 ### <a name="support-for-jdk-10"></a>Unterstützung für JDK 10
 
-Der Microsoft JDBC-Treiber 7.0 für SQL Server unterstützt jetzt Java Development Kit (JDK) Version 10.0 zusätzlich zu JDK 1.8 und 6.0. Dieses Update stellt auch die des Treibers "Automatische-Module-Name" als `com.microsoft.sqlserver.jdbc` durch die Manifestdatei.
+Microsoft JDBC-Treiber 7.0 für SQL Server ist jetzt mit Java Development Kit (JDK) Version 10.0, zusätzlich zu JDK 1.8 kompatibel. Dieses Update stellt auch die des Treibers "Automatische-Module-Name" als `com.microsoft.sqlserver.jdbc` durch die Manifestdatei.
 
 ### <a name="support-for-spatial-datatypes"></a>Unterstützung für räumliche Daten
 
@@ -59,7 +59,7 @@ Microsoft JDBC-Treiber 7.0 für SQL Server führt neue Verbindungseigenschaft `c
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>Zusätzliche Azure Key Vault-Anbieter-Konstruktoren
 
-Microsoft JDBC-Treiber 7.0 für SQL Server führt einen Konstruktor zuvor entfernten erneut für `SQLServerColumnEncryptionAzureKeyVaultProvider`, welche zulässigen Authentifizierung mithilfe einer benutzerdefinierten Methode, die über implementiert `SQLServerKeyVaultAuthenticationCallback` um ein Zugriffstoken abzurufen.
+Microsoft JDBC-Treiber 7.0 für SQL Server ergeben sich einen zuvor entfernten Konstruktor für `SQLServerColumnEncryptionAzureKeyVaultProvider`, welche zulässigen Authentifizierung mithilfe einer benutzerdefinierten Methode, die über implementiert `SQLServerKeyVaultAuthenticationCallback` um ein Zugriffstoken abzurufen.
 
 Die neuen Konstruktoren verfügen über die folgenden Definition:
 
@@ -84,7 +84,7 @@ Microsoft JDBC-Treiber 7.0 für SQL Server wurde der Maven-Abhängigkeit von Azu
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Updates im Microsoft JDBC-Treiber 6.4 für SQL Server
 
-Der Microsoft JDBC-Treiber 6.4 für SQL Server ist vollständig kompatibel mit den JDBC-Spezifikationen 4.1 und 4.2. Die JAR-Dateien im Paket 6,4 werden nach Java-Versionskompatibilität benannt. Beispielsweise empfiehlt sich die Mssql-Jdbc-6.4.0.jre8.jar-Datei aus dem Paket 6.4 mit Java 8 verwendet werden.
+Der Microsoft JDBC-Treiber 6.4 für SQL Server ist vollständig kompatibel mit den JDBC-Spezifikationen 4.1 und 4.2. Die JAR-Dateien im Paket 6,4 werden nach Java-Versionskompatibilität benannt. Beispielsweise muss die Mssql-Jdbc-6.4.0.jre8.jar-Datei aus dem Paket 6.4 mit Java 8 verwendet werden.
 
 ### <a name="support-for-jdk-9"></a>Unterstützung für JDK 9
 
@@ -104,7 +104,7 @@ Die Verbindungseigenschaft "FipsProvider" wird aus der Liste der Eigenschaften, 
 
 ### <a name="added-connection-properties-for-specifying-custom-trustmanager"></a>Zusätzliche Verbindungseigenschaften für das Angeben eines benutzerdefinierten
 
-– Driver unterstützt jetzt das Angeben eines benutzerdefinierten Trust-Managers mit den Verbindungseigenschaften „trustManagerClass“ und „trustManagerConstructorArg“ Dies ermöglicht dynamische Angabe eines Satzes von Zertifikaten, die pro-Verbindung als vertrauenswürdig eingestuft werden ohne Änderung der globalen Einstellungen für die JVM-Umgebung.
+Driver unterstützt jetzt das Angeben eines benutzerdefinierten mit hinzugefügten "TrustManagerClass" und "TrustManagerConstructorArg"-Verbindungseigenschaften. Dies ermöglicht dynamische Angabe eines Satzes von Zertifikaten, die pro-Verbindung als vertrauenswürdig eingestuft werden ohne Änderung der globalen Einstellungen für die JVM-Umgebung.
 
 ### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters-tvp"></a>Unterstützung für die Datetime/SmallDatetime in Tabellenwertparametern (TVP)
 
@@ -134,10 +134,14 @@ Der JDBC-Treiber wurde die Maven-Abhängigkeit von Azure-Activedirectory-Library
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Updates im Microsoft JDBC-Treiber 6.2 für SQL Server
 
-Der Microsoft JDBC-Treiber 6.2 für SQL Server ist vollständig kompatibel mit den JDBC-Spezifikationen 4.1 und 4.2. Die JAR-Dateien im 6.0-Paket werden nach Java-Versionskompatibilität benannt. Beispielsweise empfiehlt sich die Mssql-Jdbc-6.2.1.jre8.jar-Datei aus dem Paket 6.2 mit Java 8 verwendet werden.
+Der Microsoft JDBC-Treiber 6.2 für SQL Server ist vollständig kompatibel mit den JDBC-Spezifikationen 4.1 und 4.2. Die JAR-Dateien im Paket 6.2 werden nach Java-Versionskompatibilität benannt. Beispielsweise empfiehlt sich die Mssql-Jdbc-6.2.2.jre8.jar-Datei aus dem Paket 6.2 mit Java 8 verwendet werden.
 
 > [!NOTE]  
-> In der JDBC-6.2 RTW am 29. Juni 2017 veröffentlicht wurde ein Problem mit der Verbesserung für die Zwischenspeicherung der Metadaten gefunden. Wurde ein Rollback für die Verbesserung und neue JAR-Dateien (Standard ist 6.2.1-Version) auf dem 17. Juli 2017 veröffentlicht wurden, auf die [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), und [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Aktualisieren Sie auf der Projekte zur Verwendung der Standard ist 6.2.1 JAR-Dateien freigeben. Lesen Sie [Anmerkungen zu dieser Version](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) Weitere Details.
+> In der JDBC-6.2 RTW am 29. Juni 2017 veröffentlicht wurde ein Problem mit der Verbesserung für die Zwischenspeicherung der Metadaten gefunden. Wurde ein Rollback für die Verbesserung und neue JAR-Dateien (Standard ist 6.2.1-Version) auf dem 17. Juli 2017 veröffentlicht wurden. 
+>
+> Eine weitere Verbesserung abhängige Library-Version von Azure Key Vault auf 1.0.0 Upgrade vorgenommen wurde, und neue JAR-Dateien (Version 6.2.2) am 19. Oktober 2017 veröffentlicht wurden.
+>
+> Laden Sie die neuesten Updates in der JDBC-Treiber 6.2 für [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), und [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Aktualisieren Sie auf der Projekte zur Verwendung der 6.2.2 JAR-Dateien freigeben. Lesen Sie die Anmerkungen zu dieser Version [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) und [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) Weitere Details.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Azure Active Directory (AAD) Unterstützung für Linux
 
@@ -191,11 +195,11 @@ Jetzt wird das Abrufen von Parametermetadaten mit vorbereiteten Anweisungen für
 
 ### <a name="azure-active-directory-aad"></a>Azure Active Directory (AAD)
 
-Neues Feature: Azure Active Directory (AAD) – AAD-Authentifizierung ist ein Mechanismus zum Herstellen der Verbindung zur Azure SQL-Datenbank v12 mithilfe von Identitäten in AAD. Verwenden Sie AAD-Authentifizierung zur zentralen Verwaltung von Identitäten von Datenbankbenutzern und als Alternative zur SQL Server-Authentifizierung. Mit JDBC Driver 6.0 können Sie Ihre AAD-Anmeldeinformationen in der JDBC-Verbindungszeichenfolge angeben, um die Verbindung zur Azure SQL-Datenbank herzustellen. Weitere Details finden Sie unter der Authentifizierungseigenschaft auf die [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) Seite.
+AAD-Authentifizierung ist ein Mechanismus zum Herstellen einer Verbindung mit Azure SQL-Datenbank v12 mithilfe von Identitäten in AAD. Verwenden Sie AAD-Authentifizierung zur zentralen Verwaltung von Identitäten von Datenbankbenutzern und als Alternative zur SQL Server-Authentifizierung. Mit JDBC Driver 6.0 können Sie Ihre AAD-Anmeldeinformationen in der JDBC-Verbindungszeichenfolge angeben, um die Verbindung zur Azure SQL-Datenbank herzustellen. Weitere Details finden Sie unter der Authentifizierungseigenschaft auf die [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) Seite.
 
 ### <a name="table-valued-parameters"></a>Tabellenwertparameter
 
-Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die dann verarbeitet werden können mithilfe von Transact-SQL. Weitere Informationen finden Sie unter [Verwenden von Tabellenwertparametern](../../connect/jdbc/using-table-valued-parameters.md).
+Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die dann verarbeitet werden können mithilfe von Transact-SQL. Weitere Informationen finden Sie unter [Using Table-Valued Parameter](../../connect/jdbc/using-table-valued-parameters.md).
 
 ### <a name="alwayson-availability-groups-ag"></a>Always On-Verfügbarkeitsgruppen (Availability Groups, AG)
 

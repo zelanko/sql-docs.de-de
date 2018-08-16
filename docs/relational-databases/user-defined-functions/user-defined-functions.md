@@ -133,8 +133,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |||  
 |-|-|  
 |**Taskbeschreibung**|**Thema**|  
-|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|
-  [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Beschreibt, wie eine CLR-Funktion erstellt wird.|[Erstellen von CLR-Funktionen](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Beschreibt, wie eine benutzerdefinierte Aggregatfunktion erstellt wird.|[Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion geändert wird.|[Ändern benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
