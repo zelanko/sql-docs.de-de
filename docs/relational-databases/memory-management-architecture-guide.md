@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541720"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008892"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Weitere Informationen zur von anderen Betriebssystemen unterstützten Größe de
   
 Mit virtuellen Speichersystemen kann mehr physischer Arbeitsspeicher zugesichert werden, als tatsächlich vorhanden ist, sodass das Verhältnis von virtuellem zu physischem Arbeitsspeicher das Verhältnis 1:1 überschreiten kann. Auf diese Weise können größere Programme auf Computern mit verschiedenen Konfigurationen des physischen Arbeitsspeichers ausgeführt werden. Wenn jedoch deutlich mehr virtueller Arbeitsspeicher verwendet wird, als die kombinierten durchschnittlichen Workingsets aller Prozesse verwenden, kann dies zu einem ungünstigen Leistungsverhalten führen. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherarchitektur
+## <a name="sql-server-memory-architecture"></a>SQL Server-Arbeitsspeicherarchitektur
 
 In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird Arbeitsspeicher nach Bedarf dynamisch reserviert und freigegeben. Die Angabe des Arbeitsspeicherumfangs durch den Administrator, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zugeordnet werden soll, ist in der Regel nicht erforderlich, obwohl die Möglichkeit weiterhin besteht und in einigen Umgebungen erforderlich ist.
 

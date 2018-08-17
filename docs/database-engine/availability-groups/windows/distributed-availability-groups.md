@@ -1,7 +1,7 @@
 ---
 title: Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
+ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400713"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39616088"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ Bei einer verteilten Verfügbarkeitsgruppe ist erforderlich, dass die zugrunde l
 
 In der folgenden Abbildung finden Sie eine Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe, die zwei Verfügbarkeitsgruppen (AG 1 und AG 2) umfasst, von der jede in ihrem eigenen WSFC-Cluster konfiguriert wurde. Die verteilte Verfügbarkeitsgruppe besitzt zwei Replikate in jeder Verfügbarkeitsgruppe, also insgesamt vier Replikate. Jede Verfügbarkeitsgruppe kann die maximale Anzahl von Replikaten unterstützen. Eine verteilte Verfügbarkeitsgruppe kann also insgesamt bis zu 18 Replikate einschließen.
 
-<a name="fig1"></a>
-![Ansicht auf höchster Ebene für eine verteilte Verfügbarkeitsgruppe][1]
+
+![Allgemeine Ansicht einer verteilten Verfügbarkeitsgruppe](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
 Sie können die Datenverschiebung in verteilten Verfügbarkeitsgruppen als „synchron“ oder „asynchron“ konfigurieren. Die Datenverschiebung innerhalb von verteilten Verfügbarkeitsgruppen weicht jedoch geringfügig von der in einer herkömmlichen Verfügbarkeitsgruppe ab. Obwohl jede Verfügbarkeitsgruppe über ein primäres Replikat verfügt, kann nur eine Kopie der Datenbanken, die Teil einer verteilten Verfügbarkeitsgruppe sind, Einfügungen, Updates und Löschungen akzeptieren. AG 1 ist die primäre Verfügbarkeitsgruppe, wie in der folgenden Abbildung dargestellt. Das primäre Replikat sendet Transaktionen an das sekundäre Replikat von AG 1 und an das primäre Replikat von AG 2. Das primäre Replikat von AG 2 ist auch als *Weiterleitung* bekannt. Eine Weiterleitung ist ein primäres Replikat in einer sekundären Verfügbarkeitsgruppe in einer verteilten Verfügbarkeitsgruppe. Die Weiterleitung empfängt Transaktionen vom primären Replikat in der primären Verfügbarkeitsgruppe und leitet diese an die sekundären Replikaten in der eigenen Verfügbarkeitsgruppe weiter.  Die Weiterleitung hält dann die sekundären Replikate von AG 2 auf dem neuesten Stand. 
 
-![Datenverschiebung in verteilten Verfügbarkeitsgruppen][2]
+![Datenverschiebung in verteilten Verfügbarkeitsgruppen](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
 Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von Einfügungen, Updates und Löschungen zu ermöglichen, ist das Auslösen eines manuellen Failovers der verteilten Verfügbarkeitsgruppe von AG 1. In der obigen Abbildung enthält AG 1 die beschreibbare Kopie der Datenbank, deshalb macht das Auslösen eines Failovers AG 2 zu der Verfügbarkeitsgruppe, die Einfügungen, Updates und Löschungen verarbeiten kann. Weitere Informationen dazu, wie eine verteilte Verfügbarkeitsgruppe ein Failover auf eine andere auslösen kann, finden Sie unter [Failover to a secondary availability group (Failover auf eine sekundäre Verfügbarkeitsgruppe)]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
@@ -79,7 +79,7 @@ Da zwei separate Verfügbarkeitsgruppen vorliegen, weicht der Installationsproze
 Eine verteilte Verfügbarkeitsgruppe umfasst mehrere Verfügbarkeitsgruppen, von denen jede ihren eigenen zugrunde liegenden WSFC-Cluster besitzt. Eine verteilte Verfügbarkeitsgruppe ist ein nur in SQL Server verfügbares Konstrukt.  Das bedeutet, dass die WSFC-Cluster, auf denen sich die einzelnen Verfügbarkeitsgruppen befinden, verschiedene Hauptversionen von Windows Server verwenden können. Die Hauptversionen von SQL müssen, wie im vorherigen Abschnitt erläutert wurde, identisch sein. Ähnlich wie bei [the initial figure (der ersten Abbildung)](#fig1) zeigt die folgende Abbildung AG 1 und AG 2 als Teil einer verteilten Verfügbarkeitsgruppe, aber jeder der WSFC-Cluster verwendet eine unterschiedliche Version von Windows Server.
 
 
-![Verteilte Verfügbarkeitsgruppen mit WSFC-Clustern, die unterschiedliche Versionen von Windows Server verwenden][3]
+![Verteilte Verfügbarkeitsgruppen mit WSFC-Clustern, die unterschiedliche Versionen von Windows Server verwenden](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
 
 Für die einzelnen WSFC-Cluster und ihre entsprechenden Verfügbarkeitsgruppen gelten die herkömmlichen Regeln. Das bedeutet, dass sie mit einer Domäne verknüpft werden können oder nicht (Windows Server 2016 und höher). Wenn zwei verschiedene Verfügbarkeitsgruppen in einer einzigen verteilten Verfügbarkeitsgruppe vereint werden, gibt es vier Szenarios:
 
@@ -104,7 +104,7 @@ Im Folgenden finden Sie die drei Hauptverwendungsszenarios für eine verteilte V
 
 Bei einer herkömmlichen Verfügbarkeitsgruppe ist erforderlich, dass alle Server Teil desselben WSFC-Clusters sind, wodurch das Umfassen mehrerer Rechenzentren eine Herausforderung darstellen kann. Die folgende Abbildung zeigt eine herkömmliche Architektur für eine Verfügbarkeitsgruppe mit mehreren Standorten, einschließlich des Datenflusses. Es gibt ein primäres Replikat, das Transaktionen an alle sekundären Replikate sendet. Diese Konfiguration umfasst weniger Aspekte als eine verteilte Verfügbarkeitsgruppe. Sie müssen beispielsweise Elemente wie Active Directory (sofern vorhanden) und den Zeugen für ein Quorum in den WSFC-Cluster implementieren. Sie müssen gegebenenfalls auch andere Aspekte eines WSFC-Clusters berücksichtigen, zum Beispiel das Ändern von Knotenvoten.
 
-![Herkömmliche Verfügbarkeitsgruppe mit mehreren Standorten][4]
+![Herkömmliche Verfügbarkeitsgruppe mit mehreren Standorten](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
 Verteilte Verfügbarkeitsgruppen bieten ein flexibleres Bereitstellungsszenario für Verfügbarkeitsgruppen, die mehrere Rechenzentren umfassen. Sie können verteilte Verfügbarkeitsgruppen sogar statt früheren Funktionen, z. B. [Protokollversand]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server), für Szenarien wie die Notfallwiederherstellung verwenden. Im Gegensatz zum Protokollversand ist bei verteilten Verfügbarkeitsgruppen die verzögerte Anwendung von Transaktionen jedoch nicht verzögern. Das bedeutet, dass weder Verfügbarkeitsgruppen noch verteilte Verfügbarkeitsgruppen Sie im Fall eines menschlichen Fehlers unterstützen können, wenn beispielsweise Daten falsch aktualisiert oder gelöscht werden.
 
@@ -139,12 +139,12 @@ Verteilte Verfügbarkeitsgruppen bieten Ihnen ein besseres horizontales Hochskal
 
 Das heißt, ein primäres Replikat kann Teil von zwei unterschiedlichen verteilten Verfügbarkeitsgruppen sein. Die folgende Abbildung zeigt AG 1 und AG 2, die beide Teil der verteilten AG 1 sind, während AG 2 und AG 3 Teil der verteilten AG 2 sind. Das primäre Replikat (oder die Weiterleitung) von AG 2 ist sowohl ein sekundäres Replikat für die verteilte AG 1 als auch ein primäres Replikat der verteilten AG 2.
 
-![Horizontales Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen][5]
+![Horizontales Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
 Die folgende Abbildung zeigt AG 1 als das primäre Replikat von zwei unterschiedliche verteilte Verfügbarkeitsgruppen: von der verteilten AG 1 (bestehend aus AG 1 und AG 2) und der verteilten AG 2 (bestehend aus AG 1 und AG 3).
 
 
-![Beispiel: eine weitere Möglichkeit zum horizontalen Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen][6]
+![Beispiel: eine weitere Möglichkeit zum horizontalen Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
 
 
 In den beiden obigen Beispielen können insgesamt bis zu 27 Replikate in den drei Verfügbarkeitsgruppen vorhanden sein, von denen jedes für schreibgeschützte Abfragen verwendet werden kann. 
@@ -157,7 +157,7 @@ Das [schreibgeschützte Routing]( https://docs.microsoft.com/sql/database-engine
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Initialisieren von sekundären Verfügbarkeitsgruppen in eine verteilte Verfügbarkeitsgruppe
 
-Verteilte Verfügbarkeitsgruppen wurden mit [automatischem Seeding]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) als Hauptmethode zum Initialisieren des primären Replikats auf die sekundäre Verfügbarkeitsgruppe entwickelt. Eine vollständige Wiederherstellung einer Datenbank auf dem primären Replikat der sekundären Verfügbarkeitsgruppe ist möglich, wenn Sie folgende Aktionen durchführen:
+Verteilte Verfügbarkeitsgruppen wurden mit [automatischem Seeding](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) als Hauptmethode zum Initialisieren des primären Replikats auf die sekundäre Verfügbarkeitsgruppe entwickelt. Eine vollständige Wiederherstellung einer Datenbank auf dem primären Replikat der sekundären Verfügbarkeitsgruppe ist möglich, wenn Sie folgende Aktionen durchführen:
 
 1. Stellen Sie die Datenbanksicherung mit „WITH NORECOVERY“ wieder her.
 2. Falls nötig, stellen Sie die richtigen Sicherungen der Transaktionsprotokolle mit „WITH NORECOVERY“ wieder her.
@@ -168,18 +168,18 @@ Wenn Sie das primäre Replikat der sekundären Verfügbarkeitsgruppe zu der vert
 
 * Die Ausgabe in `sys.dm_hadr_automatic_seeding` auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird als `current_state` „FAILED“ mit dem Hinweis „Nachrichtentimeout bei der Seedingüberprüfung“ angezeigt.
 
-* Das aktuelle SQL Server-Protokoll auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird anzeigen, dass das Seeding erfolgreich war und dass die [LSNs]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) synchronisiert wurden.
+* Das aktuelle SQL Server-Protokoll auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird anzeigen, dass das Seeding erfolgreich war und dass die [LSNs](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) synchronisiert wurden.
 
 * Die Ausgabe, die in `sys.dm_hadr_automatic_seeding` auf dem primären Replikat der primären Verfügbarkeitsgruppe angezeigt wird, zeigt „COMPLETED“ als „current_state“ an. 
 
 * Das Seeding weist bei verteilten Verfügbarkeitsgruppen ebenfalls ein unterschiedliches Verhalten auf. Damit das Seeding auf dem sekundären Replikat beginnt, müssen Sie den Befehl `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` auf dem Replikat ausführen. Obwohl diese Bedingung immer noch auf jedes sekundäre Replikat zutrifft, das Teil der zugrunde liegenden Verfügbarkeitsgruppe ist, verfügt das primäre Replikat der sekundären Verfügbarkeitsgruppe schon über die erforderlichen Berechtigungen, um mit dem Seeding zu beginnen, nachdem es zu der verteilten Verfügbarkeitsgruppe hinzugefügt wurde. 
 
-### <a name="view-distributed-availability-group-information"></a>Anzeigen von Informationen zu verteilten Verfügbarkeitsgruppen 
-    
-Wie bereits erwähnt, ist eine verteilte Verfügbarkeitsgruppe ein nur in SQL Server verfügbares Konstrukt und wird nicht im zugrunde liegenden WSFC-Cluster angezeigt. Die folgende Abbildung zeigt zwei unterschiedliche WSFC-Cluster („CLUSTER_A“ und „CLUSTER_B“), von denen jedes seine eigenen Verfügbarkeitsgruppen besitzt. Im Folgenden werden nur AG 1 in „CLUSTER_A“ und AG 2 in „CLUSTER_B“ erläutert. 
+## <a name="monitor-distributed-availability-group-health"></a>Überwachen der Integrität einer verteilten Verfügbarkeitsgruppe
 
-<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
-<a name="fig7"></a>
+Eine verteilte Verfügbarkeitsgruppe ist ein nur in SQL Server verfügbares Konstrukt und wird nicht im zugrunde liegenden WSFC-Cluster angezeigt. Die folgende Abbildung zeigt zwei unterschiedliche WSFC-Cluster („CLUSTER_A“ und „CLUSTER_B“), von denen jedes seine eigenen Verfügbarkeitsgruppen besitzt. Im Folgenden werden nur AG 1 in „CLUSTER_A“ und AG 2 in „CLUSTER_B“ erläutert. 
+
+[Zwei WSFC-Cluster mit mehreren Verfügbarkeitsgruppen über den PowerShell-Befehl „Get-ClusterGroup“](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+
 
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -205,65 +205,203 @@ Cluster Group                   JC                    Online
 
 Die detaillierten Informationen über eine verteilte Verfügbarkeitsgruppe befindet sich in SQL Server, insbesondere in den dynamischen Verwaltungsansichten für Verfügbarkeitsgruppen. Derzeit werden Informationen über verteilte Verfügbarkeitsgruppen in SQL Server Management Studio nur auf dem primären Replikat der Verfügbarkeitsgruppe angezeigt. Wie in der folgenden Abbildung dargestellt zeigt SQL Server Management Studio unter dem Ordner „Verfügbarkeitsgruppen“ an, dass es eine verteilte Verfügbarkeitsgruppe gibt. Die Abbildung zeigt AG1 als das primäre Replikat einer einzelnen lokalen Verfügbarkeitsgruppe dieser Instanz, nicht aber als das einer verteilten Verfügbarkeitsgruppe.
 
-![Ansicht des primären Replikats des ersten WSFC-Clusters einer verteilten Verfügbarkeitsgruppe in SQL Server Management Studio][8]
+![Ansicht des primären Replikats des ersten WSFC-Clusters einer verteilten Verfügbarkeitsgruppe in SQL Server Management Studio](./media/distributed-availability-group/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png)
 
 
 Wenn Sie jedoch mit der rechten Maustaste auf die verteilte Verfügbarkeitsgruppe klicken, sind keine Optionen verfügbar (siehe folgende Abbildung) und die erweiterten Verfügbarkeitsdatenbanken, Verfügbarkeitsgruppenlistener und Verfügbarkeitsreplikatordner sind alle leer. SQL Server Management Studio 16 zeigt dieses Ergebnis an, das sich jedoch in einer zukünftigen Version von SQL Server Management Studio ändern könnte.
 
-![Keine Optionen für eine Aktion verfügbar][9]
+![Keine Optionen für eine Aktion verfügbar](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
 Wie in der folgenden Abbildung dargestellt zeigen sekundäre Replikate in SQL Server Management Studio nichts an, das sich auf die verteilte Verfügbarkeitsgruppe bezieht. Die Namen dieser Verfügbarkeitsgruppen können den Rollen zugeordnet werden, die im vorherigen Bild ([CLUSTER_A – WSFC-Cluster)](#fig7) angezeigt wurden.
 
-![Ansicht eines sekundären Replikats in SQL Server Management Studio][10]
+![Ansicht eines sekundären Replikats in SQL Server Management Studio](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
+
+### <a name="dmv-to-list-all-availability-replica-names"></a>DMV für die Auflistung aller Verfügbarkeitsreplikatnamen
 
 Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verwenden. Indem Sie die folgende Abfrage verwenden, können Sie alle Verfügbarkeitsgruppen (reguläre und verteilte) und die enthaltenen Knoten anzeigen lassen. Dieses Ergebnis wird nur angezeigt, wenn Sie das primäre Replikat in einem der WSFC-Cluster abfragen, die in der verteilten Verfügbarkeitsgruppe enthalten sind. Es gibt eine neue Spalte namens `is_distributed` in der dynamischen Verwaltungsansicht `sys.availability_groups`, die den Wert „1“ enthält, wenn es sich bei der Verfügbarkeitsgruppe um eine verteilte Verfügbarkeitsgruppe handelt. Zum Anzeigen dieser Spalte ist Folgendes nötig:
 
 ```sql
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON  ag.group_id = ar.group_id
+-- shows replicas associated with availability groups
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+   ON ag.group_id = ar.group_id
+GO
 ```
 
 In der folgenden Abbildung wird ein Beispiel für eine Ausgabe des zweiten WSFC-Clusters gezeigt, das in der verteilten Verfügbarkeitsgruppe enthalten ist. SPAG1 besteht aus zwei Replikaten: DENNIS und JY. Die verteilte Verfügbarkeitsgruppe namens „SPDistAG“ verfügt jedoch über die Namen der zwei enthaltenen Verfügbarkeitsgruppen (SPAG1 und SPAG2) statt den Namen der Instanzen, wie es bei herkömmlichen Verfügbarkeitsgruppen der Fall ist. 
 
-![Beispielausgabe der vorangegangenen Abfrage][11]
+![Beispielausgabe der vorangegangenen Abfrage](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
+
+### <a name="dmv-to-list-distribtued-ag-health"></a>DMV für die Auflistung der Integrität der verteilten Verfügbarkeitsgruppe
 
 Jeder Status, der in SQL Server Management Studio auf dem Dashboard und in anderen Bereichen angezeigt wird, ist nur für die lokale Synchronisierung innerhalb dieser Verfügbarkeitsgruppe bestimmt. Führen Sie eine Abfrage der dynamischen Verwaltungsansicht durch, um die Integrität einer verteilten Verfügbarkeitsgruppe anzuzeigen. Die folgende Beispielabfrage erweitert und präzisiert die vorherige Abfrage:
 
 ```sql
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
+-- shows sync status of distributed AG
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.is_distributed, 
+   ar.replica_server_name AS [Underlying AG], 
+   ars.role_desc AS [Role], 
+   ars.synchronization_health_desc AS [Sync Status]
+FROM  sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+   ON  ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+   ON  ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
        
        
-![Status der verteilten Verfügbarkeitsgruppe][12]
+![Status der verteilten Verfügbarkeitsgruppe](./media/distributed-availability-group/dag-12-distributed-ag-status.png)
 
+### <a name="dmv-to-view-underlying-performance"></a>DMV zum Anzeigen der zugrunde liegenden Leistung
 
 Sie können die vorherige Abfrage weiter erweitern, indem Sie `sys.dm_hadr_database_replicas_states` hinzufügen, um die zugrunde liegende Leistung in der dynamischen Verwaltungsansicht anzuzeigen. Die dynamische Verwaltungsansicht speichert derzeit nur Informationen über die zweite Verfügbarkeitsgruppe. Die folgende Beispielabfrage, die auf der primären Verfügbarkeitsgruppe ausgeführt wird, erzeugt die unten dargestellte Beispielausgabe:
 
-```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
+```sql
+-- shows underlying performance of distributed AG
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+   drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+   ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+   ON drs.group_id = ag.group_id
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars
+   ON ars.replica_id = drs.replica_id
+INNER JOIN sys.availability_replicas AS ar
+   ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
 
-![Leistungsinformationen einer verteilten Verfügbarkeitsgruppe][13]
+
+![Leistungsinformationen einer verteilten Verfügbarkeitsgruppe](./media/distributed-availability-group/dag-13-performance-information-distributed-ag.png)
+
+### <a name="dmv-to-view-performance-counters-for-distributed-ag"></a>DMV zum Anzeigen der Leistungsindikatoren für die verteilte Verfügbarkeitsgruppe
+Die unten dargestellte Abfrage zeigt die Leistungsindikatoren an, die explizit mit der verteilten Verfügbarkeitsgruppe verknüpft sind. 
+
+
+ ```sql
+ -- displays OS performance counters related to the distributed ag named 'distributedag'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
+ ```
+
+ ![DMV, die die Leistungsindikatoren des Betriebssystems für den gerichteten azyklischen Graph anzeigt](./media/distributed-availability-group/dmv-os-performance-counters.png)
+
+
+ >[!NOTE]
+ >Der Filter `LIKE` muss den Namen der verteilten Verfügbarkeitsgruppe besitzen. In diesem Beispiel lautet der Name der verteilten Verfügbarkeitsgruppe „distributedag“. Ändern Sie den `LIKE`-Modifizierer, um den Namen Ihrer verteilten Verfügbarkeitsgruppe widerzuspiegeln.  
+
+### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>DMV zum Anzeigen der Integrität der Verfügbarkeitsgruppe und der verteilten Verfügbarkeitsgruppe
+Die folgende Abfrage zeigt umfangreiche Informationen über die Integrität der Verfügbarkeitsgruppe und der verteilten Verfügbarkeitsgruppe an. [Vielen Dank an Tracy Boggiano!](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT 
+    ag.name AS 'Distributed AG', 
+    ar.replica_server_name AS 'AG', 
+    dbs.name AS 'Database', 
+    ars.role_desc, 
+    drs.synchronization_health_desc, 
+    drs.log_send_queue_size, 
+    drs.log_send_rate, 
+    drs.redo_queue_size, 
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
+ FROM sys.databases dbs 
+ INNER JOIN sys.dm_hadr_database_replica_states drs 
+    ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag 
+    ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars 
+    ON ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar 
+    ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ GO
+ ```
+
+![Integrität der Verfügbarkeitsgruppe und der verteilen Verfügbarkeitsgruppe](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
+
+### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>DMVs zum Anzeigen von Metadaten der verteilten Verfügbarkeitsgruppe
+Die folgende Abfragen zeigt Informationen über Endpunkt-URLs an, die von den Verfügbarkeitsgruppen verwendet werden, einschließlich der verteilten Verfügbarkeitsgruppe.  [Vielen Dank an David Barbarin!](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+
+
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
+ SELECT
+    ag.name AS group_name,
+    ag.is_distributed,
+    ar.replica_server_name AS replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc AS allow_connections_primary,
+    ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+    ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+    ON ar.group_id = ag.group_id
+ GO
+ ```
+
+
+![Metadaten der DMV für die verteilte Verfügbarkeitsgruppe](./media/distributed-availability-group/dmv-metadata-dag2.png)
+
+
+
+### <a name="dmv-to-show-current-state-of-seeding"></a>DMV zum Anzeigen des aktuellen Seedingstatus
+Die folgende Abfrage zeigt Informationen zum aktuellen Seedingstatus an. Dies ist nützlich für die Problembehandlung von Synchronisierungsfehlern zwischen Replikaten. [Nochmals vielen Dank an David Barbarin!](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+ ```sql
+ -- shows current_state of seeding 
+ SELECT
+    ag.name AS aag_name,
+    ar.replica_server_name,
+    d.name AS database_name,
+    has.current_state,
+    has.failure_state_desc AS failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+    ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+    ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+    ON d.group_database_id = has.ag_db_id
+ GO
+ ```
+
+
+![Aktueller Seedingstatus](./media/distributed-availability-group/dmv-seeding.png)
+
+
 
 
 ### <a name="next-steps"></a>Nächste Schritte 
@@ -273,20 +411,5 @@ WHERE ag.is_distributed = 1
 * [Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Erstellen einer Verfügbarkeitsgruppe mit Transact-SQL](create-an-availability-group-transact-sql.md)
-
-<!--Image references-->
-[1]: ./media/dag-01-high-level-view-distributed-ag.png
-[2]: ./media/dag-02-distributed-ag-data-movement.png
-[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
-[4]: ./media/dag-04-traditional-multi-site-ag.png
-[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
-[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
-[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
-[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
-[9]: ./media/dag-09-no-options-available-action.png
-[10]: ./media/dag-10-view-ssms-secondary-replica.png
-[11]: ./media/dag-11-example-output-of-query-above.png
-[12]: ./media/dag-12-distributed-ag-status.png
-[13]: ./media/dag-13-performance-information-distributed-ag.png
 
  

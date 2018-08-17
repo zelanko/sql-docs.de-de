@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324434"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008902"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324434"
 >  Wenn Sie beim Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Sortierung ausgewählt haben, die zwischen Groß- und Kleinschreibung unterscheidet, wird bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung auch zwischen Groß- und Kleinschreibung unterschieden.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>Format zum Angeben des Namens von SQL Server  
- Beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] müssen sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angeben. Wenn es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um die Standardinstanz (eine unbenannte Instanz) handelt, geben Sie den Namen des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, oder die IP-Adresse des Computers an. Wenn es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine benannte Instanz (z. B. SQLEXPRESS) handelt, geben Sie den Namen des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, oder die IP-Adresse des Computers an, und fügen Sie einen Schrägstrich und den Instanznamen hinzu.  
+ Beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben. Wenn es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um die Standardinstanz (eine unbenannte Instanz) handelt, geben Sie den Namen des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, oder die IP-Adresse des Computers an. Wenn es sich bei der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine benannte Instanz (z. B. SQLEXPRESS) handelt, geben Sie den Namen des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, oder die IP-Adresse des Computers an, und fügen Sie einen Schrägstrich und den Instanznamen hinzu.  
   
  In den folgenden Beispielen wird eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt, die auf dem Computer APPHOST ausgeführt wird. Beim Angeben einer benannten Instanz wird im Beispiel der Instanzname SQLEXPRESS verwendet.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324434"
   
 |Typ der Instanz|Eintrag für den Servernamen|  
 |----------------------|-------------------------------|  
-|Verbindung mit einer Standardinstanz unter Verwendung des Standardprotokolls. (Dies ist der empfohlene Eintrag für eine Standardinstanz.)|APPHOST|  
-|Verbindung mit einer benannten Instanz unter Verwendung des Standardprotokolls. (Dies ist der empfohlene Eintrag für eine benannte Instanz.)|APPHOST\SQLEXPRESS|  
+|Verbindung mit einer Standardinstanz unter Verwendung des Standardprotokolls.|APPHOST|  
+|Verbindung mit einer benannten Instanz unter Verwendung des Standardprotokolls. |APPHOST\SQLEXPRESS|  
 |Verbindung mit einer Standardinstanz auf dem gleichen Computer unter Verwendung eines Punkts, der angibt, dass die Instanz auf dem lokalen Computer ausgeführt wird.|zugreifen.|  
 |Verbindung mit einer benannten Instanz auf dem gleichen Computer unter Verwendung eines Punkts, der angibt, dass die Instanz auf dem lokalen Computer ausgeführt wird.|.\SQLEXPRESS|  
 |Verbindung mit einer Standardinstanz auf dem gleichen Computer unter Verwendung von "localhost", um anzugeben, dass die Instanz auf dem lokalen Computer ausgeführt wird.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324434"
 |Verbindung mit einer benannten Instanz auf dem gleichen Computer unter Erzwingung einer Shared Memory-Verbindung.|lpc:APPHOST\SQLEXPRESS|  
 |Verbindung mit einer Standardinstanz, die an TCP-Adresse 192.168.17.28 lauscht, unter Verwendung einer IP-Adresse.|192.168.17.28|  
 |Verbindung mit einer benannten Instanz, die an TCP-Adresse 192.168.17.28 lauscht, unter Verwendung einer IP-Adresse.|192.168.17.28\SQLEXPRESS|  
-|Verbindung mit einer Standardinstanz, die nicht am Standard-TCP-Port lauscht, unter Angabe des verwendeten Ports (in diesem Fall 2828). (Dies ist nicht notwendig, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] am Standardport 1433 lauscht.)|APPHOST,2828|  
-|Verbindung mit einer benannten Instanz auf einem festgelegten TCP-Port, in diesem Fall 2828. (Dies ist oft notwendig, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst nicht auf dem Hostcomputer ausgeführt wird.)|APPHOST,2828|  
+|Verbindung mit einer Standardinstanz, die nicht am Standard-TCP-Port lauscht, unter Angabe des verwendeten Ports (in diesem Fall 2828). (Die Angabe einer Portnummer ist nicht notwendig, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] am Standardport 1433 lauscht.)|APPHOST,2828|  
+|Verbindung mit einer benannten Instanz auf einem festgelegten TCP-Port, in diesem Fall 2828. (Die Angabe einer Portnummer ist oft notwendig, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst nicht auf dem Hostcomputer ausgeführt wird.)|APPHOST,2828|  
 |Verbindung mit einer Standardinstanz, die nicht am Standard-TCP-Port lauscht, unter Angabe der IP-Adresse und des verwendeten TCP-Ports (in diesem Fall 2828).|192.168.17.28,2828|  
 |Verbindung mit einer benannten Instanz durch Angabe der IP-Adresse und des verwendeten TCP-Ports (in diesem Fall 2828).|192.168.17.28\SQLEXPRESS,2828|  
 |Verbindung mit einer Standardinstanz nach Name unter Erzwingung einer TCP-Verbindung.|tcp:APPHOST|  
@@ -97,6 +97,6 @@ WHERE session_id = @@SPID;
   
  [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Erstellen einer Anmeldung](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [Erstellen einer Anmeldung](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

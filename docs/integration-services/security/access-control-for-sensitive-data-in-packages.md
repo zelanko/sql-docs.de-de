@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401492"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020644"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
   Sie können die Daten in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket schützen, indem Sie eine Schutzebene festlegen, mit der nur vertrauliche Daten oder alle Daten im Paket geschützt werden. Darüber hinaus können Sie diese Daten mit einem Kennwort oder Benutzerschlüssel verschlüsseln oder die Daten von der Datenbank verschlüsseln lassen. Die für ein Paket verwendete Schutzebene ist außerdem nicht unbedingt statisch, sondern ändert sich im Lebenszyklus eines Pakets. Häufig wird eine Schutzebene während der Entwicklung und eine andere Schutzebene beim Bereitstellen des Pakets festgelegt.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401492"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>So legen Sie die Schutzebene eines Pakets in SQL Server-Datentools fest oder ändern sie  
   
-1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel** -Eigenschaft im Thema [Festlegen der Paketschutzebene](#set_protection), und bestimmen Sie den richtigen Wert für das Paket.  
+1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel**-Eigenschaft im Abschnitt [Schutzebenen](#protection-levels), und bestimmen Sie den richtigen Wert für das Paket.  
   
 2.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem Paket.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401492"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>So legen Sie die Schutzebene von Paketen an der Eingabeaufforderung fest oder ändern sie  
   
-1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel**-Eigenschaft im Abschnitt [Festlegen der Paketschutzebene](#set_protection), und bestimmen Sie den richtigen Wert für das Paket.  
+1.  Überprüfen Sie die verfügbaren Werte für die **ProtectionLevel**-Eigenschaft im Abschnitt [Schutzebenen](#protection-levels), und bestimmen Sie den richtigen Wert für das Paket.  
   
 2.  Überprüfen Sie die Zuordnungen für die **Encrypt** -Option im Thema [dtutil Utility](../../integration-services/dtutil-utility.md), und bestimmen Sie die richtige ganze Zahl, die als Wert für die ausgewählte **ProtectionLevel** -Eigenschaft verwendet werden soll.  
   

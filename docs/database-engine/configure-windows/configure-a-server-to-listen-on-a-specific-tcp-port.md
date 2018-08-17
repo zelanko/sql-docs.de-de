@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865365"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609669"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,11 @@ Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ss
   
      ![TCP_Ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Geben Sie im Dialogfeld **IP***n* **Eigenschaften** im Feld **TCP-Port** die Portnummer ein, die diese IP-Adresse überwachen soll, und klicken Sie auf **OK**.  
+4.  Geben Sie im Dialogfeld **IP***n* **Eigenschaften** im Feld **TCP-Port** die Portnummer ein, die diese IP-Adresse überwachen soll, und klicken Sie auf **OK**. Sie können mehrere Ports angegeben, indem Sie sie durch ein Komma trennen.
+
+    > [!NOTE] 
+    > Wenn die Einstellung **Alle überwachen** auf der Registerkarte **Protokoll** auf „Ja“ festgelegt ist, werden nur die Werte **TCP Port** (TCP-Port) und **TCP Dynamic Port** (Dynamischer TCP-Port) unter **IPAll** verwendet, und individuelle **IP***n*-Abschnitte werden ignoriert. Wenn die Einstellung **Alle überwachen** auf „Nein“ festgelegt ist, werden die Werte**TCP Port** und **TCP Dynamic Port** unter **IPAll** ignoriert, und die Einstellungen **TCP Port**, **TCP Dynamic Port** und **Enabled** (Aktiviert) werden stattdessen für die jeweiligen **IP***n*-Abschnitte verwendet.
+    > Jeder **IP***n*-Abschnitt verfügt über die Einstellung **Aktiviert** mit dem Standardwert „Nein“, wodurch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese IP-Adresse ignoriert, auch wenn dafür ein Port definiert ist.  
   
 5.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
   

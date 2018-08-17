@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228456"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020674"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -189,7 +189,7 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
     ![Fehlerprotokoll durch Abfrage suchen](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn keine Verbindung mit SQL Server möglich ist
-Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurationseinstellungen variieren. Der Pfad für das Fehlerprotokoll ist in den Startparametern im SQL Server-Konfigurations-Manager enthalten. Führen Sie die folgenden Schritte aus, um die relevanten Startparameter mit dem Speicherort Ihres SQL Server-Fehlerprotokolls zu identifizieren. *Ihr Pfad weicht möglicherweise vom unten angegebenen Pfad ab.* 
+Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurationseinstellungen variieren. Der Pfad für das Fehlerprotokoll ist in den Startparametern im SQL Server-Konfigurations-Manager enthalten. Führen Sie die folgenden Schritte aus, um den relevanten Startparameter zu finden, der den Speicherort Ihres SQL Server-Fehlerprotokolls angibt. *Ihr Pfad weicht möglicherweise vom unten angegebenen Pfad ab.* 
 
 1. Öffnen Sie den SQL Server-Konfigurations-Manager. 
 2. Erweitern Sie **Dienste**.
@@ -210,7 +210,7 @@ Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurat
 Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Vor dem Herstellen einer Verbindung mit SQL Server
-1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#finding-your-error-log-if-you-cannot-connect-to-sql) aus. 
+1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#finding-your-error-log-if-you-cannot-connect-to-sql) aus. Ihr Pfad weicht möglicherweise vom Pfad im unten dargestellten Bild ab.
 2. Öffnen Sie die Datei „errorlog.log“ in Notepad.  
 3. Suchen Sie nach dem Text *Server name is* (Der Servername lautet).
     

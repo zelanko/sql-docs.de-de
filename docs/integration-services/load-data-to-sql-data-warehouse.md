@@ -1,58 +1,62 @@
 ---
-title: Laden von Daten aus SQL Server in Azure SQL Data Warehouse (SSIS) | Microsoft-Dokumentation
-description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in SQL Data Warehouse zu verschieben.
+title: Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
+description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in Azure SQL Data Warehouse zu verschieben.
 documentationcenter: NA
-ms.service: sql-data-warehouse
-ms.component: data-movement
+ms.prod: sql
+ms.prod_service: integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 04/04/2018
+ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087582"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020654"
 ---
-# <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten aus SQL Server in Azure SQL Data Warehouse mit SQL Server Integration Services (SSIS)
+# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services
 
-Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten von SQL Server in [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index) zu verschieben. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
+Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index) zu verschieben. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
 
-In diesem Tutorial lernen Sie Folgendes:
+Dieser Artikel enthält Anleitungen für folgende Aktionen:
 
 * Erstellen Sie ein neues Integration Services-Projekt in Visual Studio.
-* Stellen Sie eine Verbindung mit Datenquellen wie SQL Server (als Quelle) und SQL Data Warehouse (als Ziel) her.
 * Entwerfen Sie ein SSIS-Paket, das Daten aus der Quelle in das Ziel lädt.
 * Führen Sie das SSIS-Paket aus, um die Daten zu laden.
 
-In diesem Tutorial wird SQL Server als Datenquelle verwendet. SQL Server kann auf lokalen Computern oder auf einem virtuellen Azure-Computer ausgeführt werden.
-
 ## <a name="basic-concepts"></a>Grundlegende Konzepte
-Das Paket ist die Bereitstellungseinheit in SSIS. Zugehörige Pakete werden in Projekten gruppiert. Sie erstellen Projekte und entwerfen Pakete in Visual Studio mit SQL Server Data Tools. Der Entwurfsprozess ist ein visueller Prozess, bei dem Sie Komponenten per Drag & Drop aus der Toolbox auf die Entwurfsoberfläche ziehen, diese verbinden und ihre Eigenschaften festlegen. Wenn Sie das Paket fertiggestellt haben, können Sie es zur umfassenden Verwaltung, Überwachung und Sicherheit optional in SQL Server bereitstellen.
 
-## <a name="options-for-loading-data-with-ssis"></a>Optionen zum Laden von Daten mit SSIS
+Ein Paket ist die grundlegende Bereitstellungseinheit in SSIS. Zugehörige Pakete werden in Projekten gruppiert. Sie erstellen Projekte und entwerfen Pakete in Visual Studio mit SQL Server Data Tools. Der Entwurfsprozess ist ein visueller Prozess, bei dem Sie Komponenten per Drag & Drop aus der Toolbox auf die Entwurfsoberfläche ziehen, diese verbinden und ihre Eigenschaften festlegen. Wenn Sie ein Paket fertiggestellt haben, können Sie es ausführen und zur umfassenden Verwaltung, Überwachung und Sicherheit optional in SQL Server bereitstellen.
+
+Eine ausführliche Einführung in SSIS würde den Rahmen dieses Artikels sprengen. Weitere Informationen erhalten Sie in den folgenden Artikeln:
+
+- [SQL Server Integration Services](sql-server-integration-services.md)
+
+- [Erstellen eines einfachen ETL-Pakets](ssis-how-to-create-an-etl-package.md)
+
+## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Optionen zum Laden von Daten in SQL Data Warehouse mithilfe von SSIS
 SQL Server Integration Services (SSIS) ist eine vielseitige Gruppe von Tools, die eine große Bandbreite an Optionen bereitstellen, um eine Verbindung mit SQL Data Warehouse herzustellen und Daten zu laden.
 
-1. Verwenden Sie ein ADO NET-Ziel, um eine Verbindung mit SQL Data Warehouse herzustellen. Dieses Tutorial verwendet ein ADO NET-Ziel, da es die wenigsten Konfigurationsoptionen enthält.
-2. Verwenden Sie ein OLE DB-Ziel, um eine Verbindung mit SQL Data Warehouse herzustellen. Diese Option stellt möglicherweise eine etwas bessere Leistung bereit als das ADO NET-Ziel.
-3. Verwenden Sie den Task „Azure-Blob hochladen“ zum Bereitstellen von Eingabedaten in den Azure Blob Storage. Starten Sie dann mithilfe des SSIS-Tasks „SQL ausführen“ ein PolyBase-Skript, das die Daten in SQL Data Warehouse lädt. Diese Option bietet unter den drei hier aufgeführten Optionen die beste Leistung. Um den Task „Azure-Blob hochladen“ abzurufen, laden Sie das [Microsoft SQL Server 2016 Integration Services Feature Pack für Azure][Microsoft SQL Server 2016 Integration Services Feature Pack for Azure] herunter. Weitere Informationen zu PolyBase finden Sie unter [PolyBase-Leitfaden][PolyBase Guide].
+1. Die bevorzugte Methode, die die beste Leistung bietet, ist das Erstellen eines Pakets, das den [Azure SQL DW Upload-Task](control-flow/azure-sql-dw-upload-task.md) zum Laden der Daten verwendet. Dieser Task beinhaltet die Informationen von Quelle und Ziel. Es wird davon ausgegangen, dass Ihre Quelldaten lokal in durch Trennzeichen getrennten Textdateien gespeichert sind.
 
-## <a name="before-you-start"></a>Vorbereitungen
-Zum Durchlaufen dieses Tutorials benötigen Sie Folgendes:
+2. Alternativ können Sie ein Paket erstellen, das einen Datenflusstask verwendet, der jeweils eine Quelle und ein Ziel enthält. Durch diesen Ansatz werden eine Vielzahl von Datenquellen unterstützt, einschließlich SQL Server und Azure SQL Data Warehouse.
 
-1. **SQL Server Integration Services (SSIS)**. SSIS ist eine Komponente von SQL Server und erfordert eine Evaluierungsversion oder eine lizenzierte Version von SQL Server. Um eine Evaluierungsversion der Vorschauversion von SQL Server 2016 zu erhalten, lesen Sie [SQL Server-Evaluierungsversionen][SQL Server Evaluations].
-2. **Visual Studio**. Die kostenlose Visual Studio Community Edition können Sie unter [Visual Studio Community][Visual Studio Community] abrufen.
+## <a name="prerequisites"></a>Voraussetzungen
+Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
+
+1. **SQL Server Integration Services (SSIS)**. SSIS ist eine Komponente von SQL Server und erfordert eine lizenzierte Version oder die Entwickler- oder Evaluierungsversion von SQL Server. Informationen darüber, wie Sie eine Evaluierungsversion von SQL Server erhalten, finden Sie im [Evaluation Center für SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+2. **Visual Studio** (optional). Die kostenlose Visual Studio Community Edition können Sie unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. Informationen zum Installieren von SQL Server Data Tools for Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks 2014-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
-5. **Eine SQL Data Warehouse-Datenbank und Berechtigungen**. In diesem Tutorial stellen Sie eine Verbindung mit einer SQL Data Warehouse-Instanz her und laden Daten in diese. Sie benötigen Berechtigungen zum Erstellen einer Tabelle und zum Laden von Daten.
-6. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL Data Warehouse mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL Data Warehouse hochladen können.
+4. **Eine Azure SQL Data Warehouse-Datenbank und Berechtigungen**. In diesem Tutorial stellen Sie eine Verbindung mit einer SQL Data Warehouse-Instanz her und laden Daten in diese. Sie benötigen Berechtigungen für eine Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten.
 
-## <a name="step-1-create-a-new-integration-services-project"></a>Schritt 1: Erstellen eines neuen Integration Services-Projekts
+## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
 1. Starten Sie Visual Studio.
 2. Wählen Sie im Menü **Datei** die Option **Neu | Projekt** aus.
 3. Navigieren Sie zu den Projekttypen **Installiert | Vorlagen | Business Intelligence | Integration Services**.
@@ -66,7 +70,55 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
   
     ![][01]
 
-## <a name="step-2-create-the-basic-data-flow"></a>Schritt 2: Erstellen des grundlegenden Datenflusses
+## <a name="option-1---use-the-sql-dw-upload-task"></a>Option 1: Verwenden des SQL DW Upload-Tasks
+
+Die erste Methode ist ein Paket, das den SQL DW Upload-Task verwendet. Dieser Task beinhaltet die Informationen von Quelle und Ziel. Es wird davon ausgegangen, dass Ihre Quelldaten in durch Trennzeichen getrennten Textdateien gespeichert sind, entweder lokal oder in Azure Blob Storage.
+
+### <a name="prerequisites-for-option-1"></a>Erforderliche Komponenten für Option 1
+
+Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
+
+- Das [Microsoft SQL Server Integration Services-Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. Der SQL DW Upload-Task ist eine Komponente des Feature Packs.
+
+- Ein [Azure Blob Storage](https://docs.microsoft.com/azure/storage/)-Konto. Der SQL DW Upload-Task lädt Daten von Azure Blob Storage in Azure SQL Data Warehouse. Sie können Dateien laden, die sich bereits in Blob Storage befinden, oder Sie können Dateien von Ihrem Computer laden. Wenn Sie Dateien von Ihrem Computer auswählen, lädt der SQL DW Upload-Task diese zunächst für den Stagingprozess in Blob Storage und erst anschließend in SQL Data Warehouse.
+
+### <a name="add-and-configure-the-sql-dw-upload-task"></a>Hinzufügen und Konfigurieren des SQL DW Upload-Tasks
+
+1. Ziehen Sie einen SQL DW Upload-Task aus der Toolbox in die Mitte der Entwurfsoberfläche (auf der Registerkarte **Ablaufsteuerung**).
+
+2. Doppelklicken Sie auf den Task, um den **Editor für den SQL DW Upload-Task** zu öffnen.
+
+    ![Seite „Allgemein“ des SQL DW Upload-Task-Editors](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
+
+3. Konfigurieren Sie den Task mithilfe der Anleitungen im Artikel [Azure SQL DW Upload-Task](control-flow/azure-sql-dw-upload-task.md). Da in diesem Task jeweils die Quell- und Zielinformationen sowie die Zuordnungen zwischen den Quell- und Zieltabellen enthalten sind, verfügt der Task-Editor über mehrere Seiten mit Einstellungen, die konfiguriert werden müssen.
+
+### <a name="create-a-similar-solution-manually"></a>Manuelles Erstellen einer ähnlichen Lösung
+
+Sie können für eine präzisere Steuerung ein Paket, das die vom SQL DW Upload-Task durchgeführte Arbeit emuliert, manuell erstellen. 
+
+1. Verwenden Sie den Task „Azure-Blob hochladen“ zum Bereitstellen von Eingabedaten in den Azure Blob Storage. Um den Task „Azure Blob Upload“ zu erhalten, laden Sie das [Microsoft SQL Server Integration Services Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] herunter.
+
+2. Starten Sie dann mithilfe des SSIS-Tasks „SQL ausführen“ ein PolyBase-Skript, das die Daten in SQL Data Warehouse lädt. Ein Beispiel, mit dem Daten von Azure Blob Storage in SQL Data Warehouse geladen werden (jedoch ohne SSIS), finden Sie unter [Tutorial: Laden von Daten in Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+
+## <a name="option-2---use-a-source-and-destination"></a>Option 2: Verwenden einer Quelle und eines Ziels
+
+Die zweite Möglichkeit besteht aus einem normalen Paket, das einen Datenflusstask verwendet, der eine Quelle und ein Ziel enthält. Durch diesen Ansatz werden eine Vielzahl von Datenquellen unterstützt, einschließlich SQL Server und Azure SQL Data Warehouse.
+
+In diesem Tutorial wird SQL Server als Datenquelle verwendet. SQL Server wird auf einem lokalen Computer oder auf einem virtuellen Azure-Computer ausgeführt.
+
+Um eine Verbindung zu SQL Server und SQL Data Warehouse herzustellen, können Sie den ADO.NET-Verbindungs-Manager und dazu Quelle und Ziel verwenden. Alternativ können Sie den OLE DB-Verbindungs-Manager mit Quelle und Ziel verwenden. Dieses Tutorial verwendet ADO NET, da darin die wenigsten Konfigurationsoptionen enthalten sind. OLE DB stellt möglicherweise eine geringfügig bessere Leistung als ADO .NET bereit.
+
+Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistenten verwenden, um das einfache Paket zu erstellen. Speichern Sie das Paket anschließend, und öffnen Sie es in Visual Studio oder SSDT, um es anzuzeigen und anzupassen. Weitere Informationen finden Sie unter [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+
+### <a name="prerequisites-for-option-2"></a>Erforderliche Komponenten für Option 2
+
+Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
+
+1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
+
+2. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL Data Warehouse mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL Data Warehouse hochladen können.
+
+### <a name="create-the-basic-data-flow"></a>Erstellen des grundlegenden Datenflusses
 1. Ziehen Sie einen Datenflusstask aus der Toolbox in die Mitte der Entwurfsoberfläche (auf der Registerkarte **Ablaufsteuerung**).
    
     ![][02]
@@ -76,7 +128,7 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
    
     ![][09]
 
-## <a name="step-3-configure-the-source-adapter"></a>Schritt 3: Konfigurieren des Quelladapters
+### <a name="configure-the-source-adapter"></a>Konfigurieren des Quelladapters
 1. Doppelklicken Sie auf den Quelladapter, um den **ADO.NET-Quellen-Editor** zu öffnen.
    
     ![][03]
@@ -107,7 +159,7 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
 8. Klicken Sie im Dialogfeld **Vorschau der Abfrageergebnisse anzeigen** auf **Schließen**, um zum **ADO.NET-Quellen-Editor** zurückzukehren.
 9. Klicken Sie im **ADO.NET-Quellen-Editor** auf **OK**, um die Konfiguration der Datenquelle abzuschließen.
 
-## <a name="step-4-connect-the-source-adapter-to-the-destination-adapter"></a>Schritt 4: Herstellen einer Verbindung zwischen dem Quell- und Zieladapter
+### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Herstellen einer Verbindung zwischen dem Quell- und Zieladapter
 1. Wählen Sie den Quelladapter auf der Entwurfsoberfläche aus.
 2. Wählen Sie den blauen Pfeil aus, der vom Quelladapter ausgeht, und ziehen Sie ihn zum Ziel-Editor, bis dieser fest positioniert ist.
    
@@ -115,7 +167,7 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
    
     Bei einem typischen SSIS-Paket verwenden Sie eine Reihe von anderen Komponenten von der SSIS-Toolbox zwischen Quelle und Ziel, um Ihre Daten beim Durchlaufen durch den SSIS-Datenfluss umzustrukturieren, zu transformieren und zu bereinigen. Um dieses Beispiel so einfach wie möglich zu halten, stellen wir eine direkte Verbindung zwischen Quelle und Ziel her.
 
-## <a name="step-5-configure-the-destination-adapter"></a>Schritt 5: Konfigurieren des Zieladapters
+### <a name="configure-the-destination-adapter"></a>Konfigurieren des Zieladapters
 1. Doppelklicken Sie auf den Zieladapter, um den **ADO.NET-Ziel-Editor** zu öffnen.
    
     ![][11]
@@ -146,8 +198,10 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
     ![][13]
 9. Klicken Sie auf **OK**, um die Konfiguration der Datenquelle abzuschließen.
 
-## <a name="step-6-run-the-package-to-load-the-data"></a>Schritt 6: Ausführen des Pakets zum Laden der Daten
+## <a name="run-the-package-to-load-the-data"></a>Ausführen des Pakets zum Laden der Daten
 Führen Sie das Paket aus, indem Sie auf der Symbolleiste auf die Schaltfläche **Starten** klicken oder im Menü **Debuggen** eine der Optionen **Ausführen** auswählen.
+
+In den folgenden Abschnitten wird beschrieben, was Sie sehen, wenn Sie das Paket mit der zweiten Option, die in diesem Artikel dargestellt ist, erstellt haben, also mit dem Datenfluss, der eine Quelle und ein Ziel enthält.
 
 Wenn die Paketausführung beginnt, sehen Sie gelbe sich drehende Räder, die auf laufende Aktivität hinweisen, sowie die Anzahl der bisher verarbeiteten Zeilen.
 
@@ -160,9 +214,10 @@ Wenn die Ausführung des Pakets abgeschlossen ist, sehen Sie grüne Häkchen, di
 Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in Azure SQL Data Warehouse geladen.
 
 ## <a name="next-steps"></a>Nächste Schritte
-* Erfahren Sie mehr über den SSIS-Datenfluss. Beginnen Sie hier: [Datenfluss][Data Flow].
-* Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Legen Sie hiermit los: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
-* Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Legen Sie hiermit los: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
+
+- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Legen Sie hiermit los: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
+
+- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Legen Sie hiermit los: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
@@ -193,7 +248,7 @@ Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in 
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
-[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967
-[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2016
+[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
+[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
 [AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

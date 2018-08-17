@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451584"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609719"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Eine Zeichenfolge von Unicode-Zeichendaten. *character_string* ist vom Datentyp **sysname** und auf 128 Zeichen beschränkt. Eingaben, die größer als 128 Zeichen sind, geben NULL zurück.  
   
  '*quote_character*'  
- Eine Zeichenfolge mit einem Zeichen, das als Trennzeichen verwendet wird. Hierbei kann es sich um ein einfaches Anführungszeichen ( **'** ), eine linke oder rechte Klammer ( **[]** ) oder ein doppeltes Anführungszeichen ( **"** ) handeln. Wenn *quote_character* nicht angegeben wird, werden eckige Klammern verwendet.  
+ Eine Zeichenfolge mit einem Zeichen, das als Trennzeichen verwendet wird. Dies kann ein einfaches Anführungszeichen (**'**) sein, eine linke oder recht eckige Klammer (**[]**), ein doppeltes Anführungszeichen (**"**), eine linke oder recht runde Klammer (**()**), ein größer als- oder kleiner als-Zeichen (**><**), eine linke oder rechte geschweifte Klammer (**{}**) oder ein Hochkomma/Backtick (**\`**). NULL wird zurückgegeben, wenn ein unzulässiges Zeichen angegeben wird. Wenn *quote_character* nicht angegeben wird, werden eckige Klammern verwendet.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(258)**  

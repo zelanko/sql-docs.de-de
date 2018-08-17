@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771116"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609679"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771116"
     |**Endpunkte**|Verwenden Sie diese Registerkarte, um den vorhandenen Datenbankspiegelungs-Endpunkt ggf. für jedes neue sekundäre Replikat zu überprüfen. Falls dieser Endpunkt auf einer Serverinstanz fehlt, deren Dienstkonten die Windows-Authentifizierung verwenden, wird vom Assistenten versucht, den Endpunkt automatisch zu erstellen.<br /><br /> <br /><br /> Hinweis: Wenn eine Serverinstanz unter einem Nicht-Domänenbenutzerkonto ausgeführt wird, müssen Sie eine manuelle Änderung an der Serverinstanz vornehmen, bevor Sie den Assistenten fortsetzen können. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen](#Prerequisites).|  
     |**Sicherungseinstellungen**|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes, wenn Sie die aktuelle Einstellung ändern möchten, und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
   
-6.  Wenn die ausgewählten Replikate Datenbanken enthalten, die über einen Datenbank-Hauptschlüssel verfügen, geben Sie die Kennwörter für die Datenbank-Hauptschlüssel auf der Seite **Kennwörter eingeben** ein. Die Spalte **Status** gibt **Kennwort erforderlich** für Datenbanken an, die über einen Datenbank-Hauptschlüssel verfügen. Nachdem Sie die Kennwörter eingegeben haben, klicken Sie auf **Aktualisieren**. Wenn Sie die Kennwörter richtig eingegeben haben, wird in der Statusspalte **Kennwort eingegeben**angezeigt.  
+6.  Wenn die ausgewählten Replikate Datenbanken enthalten, die über einen Datenbank-Hauptschlüssel verfügen, geben Sie die Kennwörter für die Datenbank-Hauptschlüssel in der Spalte **Kennwort** ein. Die Spalte **Status** gibt **Kennwort erforderlich** für Datenbanken an, die über einen Datenbank-Hauptschlüssel verfügen. **Weiter** ist so lange ausgegraut, bis das Kennwort in die Spalte **Kennwort** eingegeben wird. Nachdem Sie die Kennwörter eingegeben haben, klicken Sie auf **Aktualisieren**. Wenn Sie die Kennwörter richtig eingegeben haben, wird in der Status-Spalte **Kennwort eingegeben** angezeigt, und die Schaltfläche **Weiter** wird verfügbar.  
   
 7.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen aus:  
   

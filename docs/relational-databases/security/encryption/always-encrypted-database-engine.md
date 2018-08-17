@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558880"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662482"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ Der Server berechnet das Resultset, und für jede verschlüsselte Spalte im Resu
 
 Weitere Informationen zur Entwicklung von Anwendungen mit Always Encrypted mit bestimmten Clienttreibern finden Sie unter [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (Cliententwicklung)).
 
+## <a name="remarks"></a>Remarks
+
+Die Entschlüsselung findet über den Client statt. Das bedeutet, dass einige Aktionen, die nur serverseitig auftreten, nicht funktionieren, wenn Always Encrypted verwendet wird. 
+
+Hier sehen Sie ein Beispiel eines Updates, das versucht, Daten von einer verschlüsselten Spalte in eine nicht verschlüsselte Spalte ohne die Rückgabe eines Resultsets an den Client zu verschieben: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Wenn die US-Sozialversicherungsnummer (SSN) eine Spalte darstellt, die über Always Encrypted verschlüsselt wird, schlägt die oben dargestellte Updateanweisung mit einem Fehler wie dem folgenden fehl:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Führen Sie folgende Schritte durch, um die Spalte erfolgreich zu aktualisieren:
+
+1. Wählen Sie über die Anweisung SELECT die Datei aus der SSN-Spalte aus, und speichern Sie diese in einem Resultset in der Anwendung. Dadurch kann die Anwendung (*Clienttreiber*) die Spalte entschlüsseln.
+2. Fügen Sie über INSERT die Daten aus dem Resultset in SQL Server ein. 
+
+ >[!IMPORTANT]
+ > In diesem Szenario werden die Daten entschlüsselt, sobald sie zurück an den Server gesendet werden, da die Zielspalte einen regulären Varchar-Typ darstellt, der verschlüsselte Daten nicht akzeptiert. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Auswählen der deterministischen oder zufälligen Verschlüsselung  
  Die Datenbank-Engine wird nie auf Grundlage von Klartextdaten ausgeführt, die in verschlüsselten Spalten gespeichert sind, doch es unterstützt einige Abfragen für verschlüsselte Daten je nach Verschlüsselungstyp für die Spalte. Always Encrypted unterstützt zwei Arten von Verschlüsselung: die zufällige und die deterministische Verschlüsselung.  
