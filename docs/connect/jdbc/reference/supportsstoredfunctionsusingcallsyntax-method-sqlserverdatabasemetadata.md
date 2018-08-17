@@ -34,7 +34,7 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- ** (sofern unterstützt): Andernfalls lautet der Wert **false**.  
+ **"true"** unterstützt. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
