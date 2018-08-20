@@ -124,7 +124,7 @@ JSON
   
 1.  Erstellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Datenbank mit der Bezeichnung SampleDB.  
   
-2.  Erstellen Sie in der SampleDB-Datenbank eine Tabelle tlinks und eine Tabelle trechts, die beide eine einzelne Spalte mit der Bezeichnung c1 enthalten. Definieren Sie für die c1-Spalte in der Tabelle tlinks einen eindeutigen Index, und legen Sie fest, dass die Spalte NULL-Werte annehmen kann. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem entsprechenden Abfragefenster aus:  
+2.  Erstellen Sie in der SampleDB-Datenbank eine Tabelle tleft und eine Tabelle tright, die beide eine einzelne Spalte mit der Bezeichnung c1 enthalten. Definieren Sie für die c1-Spalte in der Tabelle tleft einen eindeutigen Index, und legen Sie fest, dass die Spalte NULL-Werte annehmen kann. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem entsprechenden Abfragefenster aus:  
   
     ```  
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
@@ -151,7 +151,7 @@ JSON
     GO  
     ```  
   
-5.  Greifen Sie mit einem äußeren Join in der SELECT-Abfrage auf die Daten in der Tabelle tlinks und der Tabelle trechts zu. Stellen Sie sicher, dass sich die Tabelle tlinks innerhalb der äußeren Joinanweisung befindet. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
+5.  Greifen Sie mit einem äußeren Join in der SELECT-Abfrage auf die Daten in der Tabelle tleft und der Tabelle tright zu. Stellen Sie sicher, dass sich die Tabelle tleft innerhalb der äußeren Joinanweisung befindet. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
     ```  
     SELECT tleft.c1   
@@ -172,14 +172,14 @@ JSON
   
      NULL  
   
- Nach dem Ausführen der SELECT-Abfrage zum Zugreifen auf die Tabellen im Durchsuchenmodus, enthält das Resultset der SELECT-Abfrage aufgrund der Definition der rechten äußeren Joinanweisung zwei Nullwerte für die Spalte c1 in der Tabelle tlinks. Daher können Sie im Resultset nicht zwischen den Nullwerten, die aus der Tabelle stammen, und den Nullwerten, die durch die rechte äußere Joinanweisung eingebracht wurden, unterscheiden. Sie könnten falsche Ergebnisse erhalten, wenn Sie die Nullwerte aus dem Resultset ignorieren müssen.  
+ Nach dem Ausführen der SELECT-Abfrage zum Zugreifen auf die Tabellen im Durchsuchenmodus, enthält das Resultset der SELECT-Abfrage aufgrund der Definition der rechten äußeren Joinanweisung zwei Nullwerte für die Spalte c1 in der Tabelle tleft. Daher können Sie im Resultset nicht zwischen den Nullwerten, die aus der Tabelle stammen, und den Nullwerten, die durch die rechte äußere Joinanweisung eingebracht wurden, unterscheiden. Sie könnten falsche Ergebnisse erhalten, wenn Sie die Nullwerte aus dem Resultset ignorieren müssen.  
   
 > [!NOTE]  
 >  Wenn die Spalten, die in dem eindeutigen Index enthalten sind, keine Nullwerte annehmen können, wurden alle Nullwerte im Ergebnis durch die rechte äußere Joinanweisung eingebracht.  
   
 ## <a name="for-xml"></a>FOR XML  
  XML  
- Gibt an, dass die Ergebnisse einer Abfrage als XLM-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
+ Gibt an, dass die Ergebnisse einer Abfrage als XML-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  RAW [ **('***ElementName***')** ]  
  Verwendet das Abfrageergebnis und transformiert jede Zeile des Resultsets in ein XML-Element mit dem generischen Bezeichner \<row /> als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
@@ -247,7 +247,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  PATH  
  Gewinnen Sie vollständige Kontrolle über das Format der JSON-Ausgabe durch Angabe von   
-            **FOR JSON PATH**. Im**PATH** -Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Weitere Informationen und Beispiele finden Sie unter [Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
+            **FOR JSON PATH**. Im **PATH**-Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Weitere Informationen und Beispiele finden Sie unter [Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
   
  INCLUDE_NULL_VALUES  
  Schließen Sie NULL-Werte in die JSON-Ausgabe ein, indem Sie die Option **INCLUDE_NULL_VALUES** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, enthält die Ausgabe in den Abfrageergebnissen keine JSON-Eigenschaften für NULL-Werte. Weitere Informationen und Beispiele finden Sie unter[Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md) (Einschließen von NULL-Werten in die JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES (SQL Server)).  
