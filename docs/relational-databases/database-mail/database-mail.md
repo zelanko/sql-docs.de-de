@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931015"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175236"
 ---
 # <a name="database-mail"></a>Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931015"
   
  Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent so konfigurieren, dass E-Mail-Nachrichten in folgenden Fällen an vordefinierte Operatoren gesendet werden:  
   
--   Eine Warnung wird ausgelöst. Warnungen können so konfiguriert werden, dass Benachrichtigungen über bestimmte Ereignisse per E-Mail gesendet werden. Warnungen können beispielsweise so konfiguriert werden, dass ein Operator über bestimmte Datenbankereignisse oder Betriebssystemzustände benachrichtigt wird, die umgehende Maßnahmen erfordern. Weitere Informationen zum Konfigurieren von Warnungen finden Sie unter [Warnungen](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+-   Eine Warnung wird ausgelöst. Warnungen können so konfiguriert werden, dass Benachrichtigungen über bestimmte Ereignisse per E-Mail gesendet werden. Warnungen können beispielsweise so konfiguriert werden, dass ein Operator über bestimmte Datenbankereignisse oder Betriebssystemzustände benachrichtigt wird, die umgehende Maßnahmen erfordern. Weitere Informationen zum Konfigurieren von Warnungen finden Sie unter [Warnungen](../../ssms/agent/alerts.md).  
   
 -   Ein geplanter Task, z. B. eine Datenbanksicherung oder ein Replikationsereignis, wird erfolgreich durchgeführt oder erzeugt einen Fehler. Sie können mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Mail beispielsweise Operatoren benachrichtigen, wenn ein Fehler bei der Verarbeitung am Monatsende auftritt.  
   

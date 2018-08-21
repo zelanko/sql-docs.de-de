@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543070"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175181"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Alw
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Ausführen von DAC-Upgradevorgängen, wenn die Datenbank oder die DACPAC-Datei Always Encrypted verwendet
 
-[DAC-Vorgänge](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) werden für DACPAC-Dateien und Datenbanken mit Schemas unterstützt, die verschlüsselte Spalten enthalten. Bei den Upgradevorgängen von DACs gibt es Besonderheiten zu beachten: Weitere Informationen zu DAC-Upgrades in verschiedenen Tools, einschließlich SSMS, finden Sie unter [Upgrade einer Datenebenenanwendung](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) . 
+[DAC-Vorgänge](../../data-tier-applications/data-tier-applications.md) werden für DACPAC-Dateien und Datenbanken mit Schemas unterstützt, die verschlüsselte Spalten enthalten. Bei den Upgradevorgängen von DACs gibt es Besonderheiten zu beachten: Weitere Informationen zu DAC-Upgrades in verschiedenen Tools, einschließlich SSMS, finden Sie unter [Upgrade einer Datenebenenanwendung](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) . 
 
 Beim Upgrade einer Datenbank mithilfe einer DACPAC-Datei, wobei entweder die DACPAC-Datei oder die Zieldatenbank über verschlüsselte Spalten verfügt, wird ein Datenverschlüsselungsvorgang ausgelöst, wenn alle der folgenden Bedingungen zutreffen:
 - Die Datenbank enthält eine Datenspalte.
@@ -418,7 +418,7 @@ Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Alw
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>Migrieren von Datenbanken mit verschlüsselten Spalten mithilfe von BACPAC-Dateien
 
-Beim Exportieren einer Datenbank werden alle in verschlüsselten Spalten gespeicherten Daten abgerufen und (verschlüsselt) in der resultierenden [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) -Datei abgelegt. Die resultierende BACPAC-Datei enthält außerdem die Metadaten der Always Encrypted-Schlüssel.
+Beim Exportieren einer Datenbank werden alle in verschlüsselten Spalten gespeicherten Daten abgerufen und (verschlüsselt) in der resultierenden [BACPAC](../../data-tier-applications/data-tier-applications.md) -Datei abgelegt. Die resultierende BACPAC-Datei enthält außerdem die Metadaten der Always Encrypted-Schlüssel.
 
 Wenn Sie eine BACPAC-Datei in eine Datenbank importieren, werden die verschlüsselten Daten der BACPAC-Datei ebenso in die Datenbank geladen, und die Metadaten der Always Encrypted-Schlüssel werden neu erstellt.
 

@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175229"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
   Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank.  
@@ -130,7 +130,7 @@ ms.locfileid: "35407952"
   
         1.  Geben Sie das Datenbankschema an, in dem die Sicht (Feld „Schema“) erstellt werden soll.  
   
-        2.  Geben Sie an, ob die Daten vor dem Senden über das Netzwerk verschlüsselt werden sollen (Feld „Verschlüsselung“). Weitere Informationen zu dieser Einstellung und der „TrustServerCertificate“-Einstellung finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](http://msdn.microsoft.com/library/ms131691.aspx) .  
+        2.  Geben Sie an, ob die Daten vor dem Senden über das Netzwerk verschlüsselt werden sollen (Feld „Verschlüsselung“). Weitere Informationen zu dieser Einstellung und der „TrustServerCertificate“-Einstellung finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](../../relational-databases/native-client/features/using-encryption-without-validation.md).  
   
         3.  Geben Sie an, ob ein selbstsigniertes Serverzertifikat verwendet werden kann, wenn die Verschlüsselungseinstellung aktiviert ist (Feld**TrustServerCertificate** ).  
   
@@ -213,7 +213,7 @@ GO
   
  Zur Laufzeit, wenn die Sicht ausgeführt wird, startet die Verbindungsserverabfrage, die in der Sicht definiert ist, das in der Abfrage angegebene SSIS-Paket und empfängt die Paketausgabe als tabellarisches Resultset.  
   
-1.  Geben Sie vor der Erstellung der Sicht die folgende Abfrage in das neue Abfragefenster ein, und führen Sie diese anschließend aus. OPENQUERY ist eine von SQL Server unterstützte Rowsetfunktion. Sie führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver mit dem OLE DB-Anbieter aus, der dem Verbindungsserver zugeordnet ist. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Weitere Informationen finden Sie in der [OPENQUERY-Dokumentation in der MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) .  
+1.  Geben Sie vor der Erstellung der Sicht die folgende Abfrage in das neue Abfragefenster ein, und führen Sie diese anschließend aus. OPENQUERY ist eine von SQL Server unterstützte Rowsetfunktion. Sie führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver mit dem OLE DB-Anbieter aus, der dem Verbindungsserver zugeordnet ist. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Weitere Informationen finden Sie in der [OPENQUERY-Dokumentation in der MSDN Library](../../t-sql/functions/openquery-transact-sql.md).  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

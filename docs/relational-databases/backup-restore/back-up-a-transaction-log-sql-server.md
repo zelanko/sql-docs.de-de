@@ -18,12 +18,12 @@ caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ec58d3ab88003d1b0ff3fefae3196557043db0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51e618a3b81243883276193260b68848d8b2f9fe
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175212"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Sichern eines Transaktionsprotokolls (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "32922307"
 
 Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über die erforderlichen BACKUP DATABASE- und BACKUP LOG-Berechtigungen.  
   
- Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Berechtigungsprobleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst zutage, wenn auf die [physische Ressource](https://msdn.microsoft.com/library/ms179313.aspx) zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen. Daher gilt erneut: Überprüfen Sie, ob die richtigen Berechtigungen vorliegen, bevor Sie beginnen!
+ Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Berechtigungsprobleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst zutage, wenn auf die [physische Ressource](backup-devices-sql-server.md) zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen. Daher gilt erneut: Überprüfen Sie, ob die richtigen Berechtigungen vorliegen, bevor Sie beginnen!
   
   
 ## <a name="back-up-using-ssms"></a>Sichern von SSMS  

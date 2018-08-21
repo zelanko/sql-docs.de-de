@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950495"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175204"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server-Agent, Aufträge-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950495"
   
  Die nachfolgende Tabelle enthält die **SQLAgent:Jobs** -Leistungsindikatoren.  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |**Aktive Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der gerade ausgeführten Aufträge.|  
 |**Fehlerhafte Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der Aufträge, die mit einem Fehler beendet wurden.|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950495"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|Description|  
+|Instanz|und Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen zu allen Aufträgen.|  
 |**Warnungen**|Informationen zu durch Warnungen gestarteten Aufträgen.|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950495"
 |**Zeitpläne**|Informationen zu durch Zeitpläne gestarteten Aufträgen.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Implementieren von Aufträgen](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Verwenden von Leistungsobjekten](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)   
+ [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

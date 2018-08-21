@@ -23,16 +23,16 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909860"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175252"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx).
+ > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [SQL Server Integration Services](sql-server-integration-services.md).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform zum Erstellen von Datenintegrations- und Datentransformationslösungen auf Unternehmensebene. Verwenden Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], um komplexe Unternehmensprobleme durch Kopieren oder Herunterladen von Dateien, Laden von Data Warehouses, Bereinigen von Daten und Data Mining sowie Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten und -Daten zu lösen.
 
