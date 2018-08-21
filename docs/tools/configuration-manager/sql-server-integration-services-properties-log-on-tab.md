@@ -16,14 +16,14 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 418d447027448619a9f795f789cf0679bc5b9bfa
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38026911"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie im Dialogfeld **** Eigenschaften [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** dialog box to specify the account used by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, and to start and stop the service.  
+  Verwenden Sie im Dialogfeld **Eigenschaften** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Anmelden** , um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
 ## <a name="options"></a>Tastatur  
  **Lokales System**  
