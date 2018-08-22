@@ -4,4 +4,4 @@
  [Erstellen Sie in wenigen Minuten eine SQL-Datenbank über das Azure-Portal](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [Microsoft SQL Server-Datenbankproduktbeispiele auf CodePlex](http://msftdbprodsamples.codeplex.com/)
+ [Microsoft SQL Server-Beispiele auf GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
