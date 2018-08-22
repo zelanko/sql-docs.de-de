@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1988ea03795dd8eee6d86844560935ed44b30d3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251212"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392293"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Erforderliche Domänenkonten für SharePoint-Farmen (Upgrade Advisor)
   SharePoint-Produkte, die für eine Farmumgebung konfiguriert werden, erfordern die Verwendung von Domänenkonten.  
@@ -29,7 +29,7 @@ ms.locfileid: "37251212"
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus.|  
   
 ## <a name="component"></a>Komponente  
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
 ### <a name="description"></a>Description  
  SharePoint-Produkte, die für eine Farmumgebung konfiguriert werden, erfordern die Verwendung von Domänenkonten für Dienste und Datenbankverbindungen. Dies schließt das Konto ein, das Sie für das Reporting Services-Dienstkonto angegeben haben.  

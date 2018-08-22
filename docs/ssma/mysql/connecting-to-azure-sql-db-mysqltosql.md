@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL) | Microsoft Docs
+title: Eine Verbindung mit Azure Sqldb (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,58 +19,58 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2092062d5409db561ba6b3f9055d180c8d10db48
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 63d3bb997d7ad9fc32d541202bf07ab66676259d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775686"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392956"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL)
-Um MySQL-Datenbanken zu SQL Azure zu migrieren, müssen Sie mit der Zielinstanz von SQL Azure verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Azure ab und Datenbank-Metadaten in der SQL Azure-Metadaten-Explorer zeigt. SSMA speichert Informationen der Instanz von SQL Azure Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  
+# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Herstellen einer Verbindung mit der Azure SQL-DB (MySqlToSql)
+Um MySQL-Datenbanken zu SQL Azure zu migrieren, müssen Sie mit der Zielinstanz von SQL Azure verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Azure-und Datenbank-Metadaten in der SQL Azure-Metadaten-Explorer angezeigt. SSMA speichert Informationen von der Instanz von SQL Azure Sie verbunden sind, jedoch werden keine Kennwörter gespeichert werden.  
   
-Die Verbindung mit SQL Azure bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie in SQL Azure erneut, wenn Sie möchten, dass eine aktive Verbindung mit dem Server verbinden. Sie können offline arbeiten, bis Sie Datenbankobjekte in SQL Azure laden und Migrieren von Daten.  
+Die Verbindung mit SQL Azure bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie auf SQL Azure erneut, wenn Sie möchten, dass eine aktive Verbindung mit dem Server verbinden. Sie können offline arbeiten, bis Sie die Datenbankobjekte in SQL Azure laden und Migrieren von Daten.  
   
-Metadaten zur Instanz von SQL Azure werden nicht automatisch synchronisiert. Um die Metadaten in SQL Azure-Metadaten-Explorer zu aktualisieren, müssen Sie stattdessen manuell die SQL Azure-Metadaten aktualisieren. Weitere Informationen finden Sie im Abschnitt "Synchronisieren von SQL Azure-Metadaten" weiter unten in diesem Thema.  
+Metadaten zu der Instanz von SQL Azure wird nicht automatisch synchronisiert. Um die Metadaten in SQL Azure-Metadaten-Explorer zu aktualisieren, müssen Sie stattdessen manuell die SQL Azure-Metadaten aktualisieren. Weitere Informationen finden Sie unter "Synchronisieren von SQL Azure-Metadaten" im Abschnitt weiter unten in diesem Thema.  
   
-## <a name="required-sql-azure-permissions"></a>Erforderliche SQL Azure-Berechtigungen  
-Das Konto, das verwendet wird, für die Verbindung zu SQL Azure erfordert unterschiedliche Berechtigungen abhängig von den Aktionen, die das Konto ausführt:  
+## <a name="required-sql-azure-permissions"></a>SQL Azure erforderliche Berechtigungen  
+Das Konto, das verwendet wird, zur Verbindung mit SQL Azure erfordert unterschiedliche Berechtigungen abhängig von den Aktionen, die das Konto ausführt:  
   
--   MySQL-Objekte zu konvertieren [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, um Metadaten von SQL Azure zu aktualisieren oder konvertierte Syntax zum Speichern von Skripts, das Konto muss über die Berechtigung zum Anmelden bei der Instanz von SQL Azure.  
+-   So konvertieren Sie Objekte von MySQL auf [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax so aktualisieren Sie Metadaten aus SQL Azure oder Speichern der konvertierten Syntax, um Skripts, das Konto muss die Berechtigung zum Anmelden mit der Instanz von SQL Azure verfügen.  
   
--   Zum Laden von Datenbankobjekten in SQL Azure ist die Mindestberechtigung Anforderung die Mitgliedschaft in der **Db_owner** Datenbankrolle in der Zieldatenbank.  
+-   Um Datenbankobjekte in SQL Azure zu laden, ist die Anforderung mindestens die Mitgliedschaft in der **Db_owner** Datenbankrolle in der Zieldatenbank.  
   
 ## <a name="establishing-a-sql-azure-connection"></a>Einrichten einer SQL Azure-Verbindung  
-Bevor Sie MySQL-Datenbankobjekte auf Azure SQL-Syntax konvertieren, müssen Sie eine Verbindung mit der Instanz von SQL Azure einrichten, wo Sie die MySQL-Datenbank bzw. sekundären Datenbanken migrieren möchten.  
+Bevor Sie Objekte des MySQL-Datenbank in SQL Azure-Syntax konvertieren, müssen Sie eine Verbindung mit der Instanz von SQL Azure einrichten, die MySQL-Datenbank oder Datenbanken migriert werden sollen.  
   
-Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in denen Objekte und Daten migriert werden sollen. Sie können diese Zuordnung auf Schemaebene MySQL anpassen, nach dem Herstellen einer Verbindung mit SQL Azure. Weitere Informationen finden Sie unter [MySQL-Datenbanken in SQL Server-Schemas zuordnen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in dem Objekte und Daten migriert werden. Sie können diese Zuordnung auf der Schemaebene MySQL anpassen, nach dem Herstellen einer Verbindung mit SQL Azure. Weitere Informationen finden Sie unter [Zuordnen von MySQL-Datenbanken in SQL Server-Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
-> Bevor Sie versuchen, eine Verbindung zu SQL Azure herstellen, stellen Sie sicher, dass die Instanz von SQL Azure ausgeführt wird und Verbindungen akzeptieren kann.  
+> Bevor Sie versuchen, eine Verbindung mit SQL Azure, stellen Sie sicher, dass die Instanz von SQL Azure ausgeführt wird und Verbindungen akzeptieren.  
   
 **Verbindung mit SQL Azure**  
   
-1.  Auf der **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit SQL Azure** (diese Option ist nach der Erstellung eines Projekts).  
+1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit SQL Azure** (diese Option ist aktiviert, nach der Erstellung eines Projekts).  
   
-    Wenn Sie zuvor eine Verbindung zu SQL Azure hergestellt haben, wird der Befehlsname sein **eine erneute Verbindung mit SQL Azure**.  
+    Wenn Sie zuvor mit SQL Azure verbunden haben, gibt der Namen des Befehls werden **Wiederherstellen der Verbindung zu SQL Azure**.  
   
 2.  Klicken Sie im Dialogfeld Verbindung geben Sie ein, oder wählen Sie den Namen des SQL Azure.  
   
-3.  Geben Sie ein, wählen oder **Durchsuchen** den Datenbanknamen.  
+3.  Geben Sie ein, wählen oder **Durchsuchen** der Name der Datenbank.  
   
 4.  Geben Sie ein oder wählen Sie **Benutzername**.  
   
 5.  Geben Sie die **Kennwort**.  
   
-6.  SSMA empfiehlt verschlüsselte Verbindung zu SQL Azure.  
+6.  SSMA empfiehlt verschlüsselte Verbindung für SQL Azure.  
   
 7.  Klicken Sie auf **Verbinden**.  
   
 > [!IMPORTANT]  
-> SSMA für die MySQL unterstützt keine Verbindung mit **master** Datenbank in SQL Azure.  
+> SSMA für MySQL unterstützt keine Verbindung mit **master** Datenbank in SQL Azure.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Synchronisieren von SQL Azure-Metadaten  
-Metadaten zu SQL Azure-Datenbanken wird nicht automatisch aktualisiert. Die Metadaten im Metadaten-Explorer von SQL Azure ist eine Momentaufnahme der Metadaten, wenn Sie zunächst mit SQL Azure verbunden, oder der letzten Ausführung, die Sie manuell die Metadaten aktualisiert. Sie können die Metadaten für alle Datenbanken oder für jede einzelne Datenbank oder ein Datenbankobjekt manuell aktualisieren.  
+Metadaten zu SQL Azure-Datenbanken wird nicht automatisch aktualisiert. Die Metadaten in SQL Azure-Metadaten-Explorer ist, dass eine Momentaufnahme der Metadaten, wenn Sie zunächst mit SQL Azure verbunden ist, oder der letzten Ausführung, die Sie manuell die Metadaten aktualisiert werden. Sie können die Metadaten für alle Datenbanken oder für jede einzelne Datenbank oder Datenbankobjekt, das manuell aktualisieren.  
   
 **Zum Synchronisieren von Metadaten**  
   
@@ -78,20 +78,20 @@ Metadaten zu SQL Azure-Datenbanken wird nicht automatisch aktualisiert. Die Meta
   
 2.  Wählen Sie in SQL Azure-Metadaten-Explorer das Kontrollkästchen neben der Datenbank oder das Datenbankschema, die Sie aktualisieren möchten.  
   
-    Angenommen, um die Metadaten für alle Datenbanken zu aktualisieren, wählen Sie das Kontrollkästchen neben den Datenbanken an.  
+    Z. B. um die Metadaten für alle Datenbanken zu aktualisieren, wählen Sie das Kontrollkästchen neben den Datenbanken an.  
   
-3.  Mit der rechten Maustaste Datenbanken, oder die einzelne Datenbank oder das Datenbankschema, und wählen Sie dann **mit Datenbank synchronisieren**.  
+3.  Mit der rechten Maustaste, Datenbanken, oder die einzelne Datenbank oder das Datenbankschema, und wählen Sie dann **synchronisieren mit der Datenbank**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
+Der nächste Schritt bei der Migration hängt von den Anforderungen Ihrer Projekte:  
   
--   Wenn Sie die Zuordnung zwischen Schemas MySQL und SQL Azure-Datenbanken und Schemas anpassen zu können, finden Sie unter [Zuordnung MySQL-Datenbanken in SQL Server-Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Informationen zum Anpassen der Zuordnung zwischen Schemas von MySQL und SQL Azure-Datenbanken und Schemas finden Sie unter [Mapping MySQL-Datenbanken in SQL Server-Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   Konfigurationsoptionen für die Projekte anpassen können, finden Sie unter [Einstellung Projektoptionen &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   Informationen zum Anpassen der Konfigurationsoptionen für die Projekte finden Sie unter [Setting Project Options Projektoptionen &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung MySQL und SQL Server-Datentypen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Wenn die Zuordnung von Datentypen für Quell- und zieleinstellungen anpassen möchten, finden Sie unter [Mapping MySQL und SQL Server-Datentypen &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Wenn Sie nicht verfügen, um diese Aufgaben auszuführen, können Sie die Objektdefinitionen für MySQL-Datenbank in SQL Azure-Objektdefinitionen konvertieren. Weitere Informationen finden Sie unter [MySQL-Datenbanken konvertieren &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Wenn Sie nicht zum Ausführen dieser Aufgaben verfügen, können Sie die Objektdefinitionen für MySQL-Datenbank in SQL Azure-Objektdefinitionen konvertieren. Weitere Informationen finden Sie unter [MySQL-Datenbanken konvertieren &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

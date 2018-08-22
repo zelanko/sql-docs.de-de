@@ -1,5 +1,5 @@
 ---
-title: Projekteinstellungen (Zuordnung) (SybaseToSQL) | Microsoft Docs
+title: Projekteinstellungen (Typzuordnung) (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,30 +16,30 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0c4e2743c4169bd7626ca66c9d9dba609facdaa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779446"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392974"
 ---
-# <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Zuordnung) (SybaseToSQL)
-Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
+# <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Typzuordnung) (SybaseToSQL)
+Die Seite Type Mapping der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
   
-Die Seite "Type Mapping" steht in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Seite "Datentypzuordnung" steht in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
   
--   Angeben der Einstellungen für die Zuordnung für alle zukünftigen SSMA-Projekte, auf die **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, angezeigt oder geändert werden **Migration Zielversion** Dropdown-Liste, und wählen Sie dann **Typzuordnung** unten im linken Bereich.  
+-   Angeben der Einstellungen für die Zuordnung für alle zukünftigen SSMA-Projekten, auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, um die angezeigt werden oder geändert von **Migration Zielversion** Dropdownliste aus, und wählen Sie dann **Type Mapping** am unteren Rand im linken Bereich.  
   
--   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, und wählen Sie dann **Type Mapping** unten im linken Bereich.  
+-   Die Einstellungen für das aktuelle Projekt, auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, und wählen Sie dann **Type Mapping** am unteren Rand im linken Bereich.  
   
 ## <a name="options"></a>Tastatur  
 **Quelltyp**  
 Der zugeordnete ASE-Datentyp.  
   
 **Zieltyp**  
-Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp für den angegebenen ASE-Datentyp.  
+Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp für den angegebenen Typ der ASE-Daten.  
   
-Siehe die Tabelle im folgenden Abschnitt für den standardmäßigen SSMA für Sybase-Typzuordnung.  
+Finden Sie in der Tabelle im folgenden Abschnitt für den standardmäßigen SSMA für Sybase-Typzuordnung.  
   
 **Hinzufügen**  
 Klicken Sie auf diese Option, um einen Datentyp der Zuordnungsliste hinzuzufügen.  
@@ -48,13 +48,13 @@ Klicken Sie auf diese Option, um einen Datentyp der Zuordnungsliste hinzuzufüge
 Klicken Sie auf diese Option, um den ausgewählten Datentyp in der Zuordnungsliste zu bearbeiten.  
   
 **Entfernen**  
-Klicken Sie auf diese Option, um die ausgewählte Zuordnung aus der Zuordnungsliste zu entfernen.  
+Klicken Sie auf diese Option, um die ausgewählte Zuordnung von Datentypen aus der Zuordnungsliste zu entfernen.  
   
 **Standard wiederherstellen**  
-Klicken Sie auf diese Option, um die Liste ' datentypzuordnung ' auf die SSMA-Standardwerte zurückzusetzen.  
+Klicken Sie auf diese Option, um die Liste ' datentypzuordnung ' der SSMA-Standardwerte zurückzusetzen.  
   
 ## <a name="default-type-mapping"></a>Standardtypmapping  
-Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentypen.  
+Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
   
 |ASE-Datentyp|SQL Server-Datentyp|  
 |-----------------|------------------------|  
@@ -101,16 +101,16 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**nationale Zeichensätze**|**nchar**|  
 |**nationale Zeichensätze [\*... 4000]**|**nchar[\*]**|  
 |**nationale Zeichensätze [4001..\*]**|**nvarchar(max)**|  
-|**nationale Zeichensätze varying**|**nvarchar**|  
-|**nationale Zeichensätze varying [\*... 4000]**|**Nvarchar [\*]**|  
-|**nationale Zeichensätze varying [4001..\*]**|**nvarchar(max)**|  
+|**nationale Zeichensätze variieren.**|**nvarchar**|  
+|**nationale Zeichensätze zu unterschiedlichen [\*... 4000]**|**Nvarchar [\*]**|  
+|**nationale Zeichensätze zu unterschiedlichen [4001..\*]**|**nvarchar(max)**|  
 |**National varchar**|**nvarchar**|  
 |**National Varchar [\*... 4000]**|**Nvarchar [\*]**|  
 |**National Varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**NCHAR varying**|**nvarchar**|  
-|**NCHAR varying [\*... 4000]**|**Nvarchar [\*]**|  
-|**NCHAR varying [4001..\*]**|**nvarchar(max)**|  
+|**NCHAR variieren.**|**nvarchar**|  
+|**NCHAR unterschiedliche [\*... 4000]**|**Nvarchar [\*]**|  
+|**NCHAR unterschiedliche [4001..\*]**|**nvarchar(max)**|  
 |**NCHAR [\*... 4000]**|**nchar[\*]**|  
 |**NCHAR [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -130,19 +130,19 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**UNICHAR-varying**|**nvarchar**|  
-|**UNICHAR-varying [\*... 4000]**|**Nvarchar [\*]**|  
-|**UNICHAR-varying [4001..\*]**|**nvarchar(max)**|  
+|**UNICHAR-variieren.**|**nvarchar**|  
+|**unterschiedliche UNICHAR-[\*... 4000]**|**Nvarchar [\*]**|  
+|**unterschiedliche UNICHAR-[4001..\*]**|**nvarchar(max)**|  
 |**UNICHAR [\*... 4000]**|**nchar[\*]**|  
 |**UNICHAR [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
 |**Univarchar [\*... 4000]**|**Nvarchar [\*]**|  
 |**Univarchar [4001..\*]**|**nvarchar(max)**|  
-|**ohne Vorzeichen "bigint"**|**numeric[20][0]**|  
-|**Int ohne Vorzeichen**|**bigint**|  
-|**ohne Vorzeichen "smallint"**|**int**|  
-|**ohne Vorzeichen "tinyint"**|**tinyint**|  
+|**nicht signierte bigint**|**numeric[20][0]**|  
+|**ganze Zahl ohne Vorzeichen**|**bigint**|  
+|**nicht signierte smallint**|**int**|  
+|**nicht signierte tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**Varbinary [\*... 8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  

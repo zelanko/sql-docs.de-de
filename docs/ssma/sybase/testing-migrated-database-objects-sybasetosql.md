@@ -1,5 +1,5 @@
 ---
-title: Testen von Datenbankobjekten (SybaseToSQL) migriert | Microsoft Docs
+title: Testen von migrierten Datenbankobjekten (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f95ab1a14679d919a11fcc5a0c26554ac6120f2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac7654f43f2d453ad0e55a0a7ebcfee79ac2c91c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779406"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393629"
 ---
-# <a name="testing-migrated-database-objects-sybasetosql"></a>Testen von Datenbankobjekten (SybaseToSQL) migriert
-Microsoft SQL Server Migration Assistant für Sybase Tester (SSMA Tester) automatisch die Konvertierung der Datenbank-Objekt und überprüft die Datenmigration von SSMA vorgenommen werden. Nachdem Sie alle Schritte der SSMA-Migration abgeschlossen wurden, verwenden Sie SSMA Tester, stellen Sie sicher, dass die konvertierte Objekte die gleiche Weise funktioniert und alle Daten ordnungsgemäß übertragen wurde.  
+# <a name="testing-migrated-database-objects-sybasetosql"></a>Testen von migrierten Datenbankobjekten (SybaseToSQL)
+Microsoft SQL Server Migration Assistant für Sybase-Tester (SSMA Tester) überprüft automatisch die Konvertierung der Datenbank-Objekt und die Datenmigration von SSMA vorgenommen. Können Sie SSMA-Tester, nachdem alle Schritte zur Datenmigration SSMA abgeschlossen sind, stellen Sie sicher, dass die konvertierten Objekte die gleiche Weise funktioniert und alle Daten ordnungsgemäß übertragen wurde.  
   
 > [!NOTE]  
-> Tester Komponente ist im Fall von Azure-Verbindung deaktiviert.  
+> Tester-Komponente ist im Fall von Azure-Verbindung deaktiviert.  
   
-Sie können die folgenden Objekttypen mit SSMA Tester testen:  
+Sie können die folgenden Objekttypen mit SSMA-Tester testen:  
   
 -   Tabellen  
   
@@ -39,34 +39,34 @@ Sie können die folgenden Objekttypen mit SSMA Tester testen:
   
 -   Eigenständige Anweisungen.  
   
-SSMA-Tester führt zum Testen auf Sybase und ihren äquivalenten in SQL Server ausgewählten Objekte. Anschließend vergleicht er die Ergebnisse entsprechend den folgenden Kriterien:  
+SSMA-Tester führt Tests auf Sybase und ihren äquivalenten in SQL Server für den ausgewählten Objekte. Danach werden sie die Ergebnisse nach folgenden Kriterien verglichen:  
   
--   Unterscheiden sich die Änderungen in Tabellendaten?  
+-   Befinden sich die Änderungen in Tabelle identisch?  
   
--   Unterscheiden sich die Werte von Ausgabeparametern für Prozeduren und Funktionen?  
+-   Sind die Werte von Ausgabeparametern für Prozeduren und Funktionen identisch?  
   
 -   Führen Sie Funktionen, die die gleichen Ergebnisse zurück?  
   
--   Sind die Resultsets identisch?  
+-   Sind Sie, dass die Resultsets identisch?  
   
 > [!NOTE]  
-> Achtung! Verwenden Sie niemals SSMA Tester in Produktionssystemen. Während der Tester Ausführung werden dem Quellschema und Daten geändert. In der Zwischenzeit kann die vollständige Wiederherstellen des ursprünglichen Zustands für einige Typen von getesteten Code nicht möglich.  
+> Achtung! Verwenden Sie niemals SSMA Tester auf die Produktionssysteme statt. Während der Ausführung der Tester werden dem Quellschema und die Daten geändert. In der Zwischenzeit kann das vollständige Wiederherstellen des ursprünglichen Zustands für einige Typen von getesteten Codes unmöglich sein.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA Sybase Erweiterung Pack mit der **installieren Tester Datenbank** aktiviert.  
+Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA Sybase-Erweiterungspaket mit der **Tester-Datenbank installieren** Option auf ON festgelegt.  
   
-Überprüfen Sie außerdem Folgendes:  
+Darüber hinaus überprüfen Sie Folgendes aus:  
   
--   Sybase OLE DB-Anbieter auf dem Computer installiert ist, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeführt wird.  
+-   Sybase-OLE DB-Anbieter auf dem Computer installiert ist, in denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
--   Common Language Runtime (CLR)-Integration aktiviert wurde, auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankmoduls.  
+-   Integration der Common Language Runtime (CLR) aktiviert wurde die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine.  
   
-Beachten Sie, dass die aktuelle Version von SSMA Tester die parallele Ausführung von verschiedenen Benutzern auf demselben Server Quelle oder Ziel nicht unterstützt.  
+Beachten Sie, dass die aktuelle Version der SSMA-Tester die parallelen Ausführung von verschiedenen Benutzern auf der gleichen Quelle oder Ziel-Server nicht unterstützt.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 [Erstellen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren SSMA-Komponenten in SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[Installieren von SSMA-Komponenten auf SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Projekteinstellungen &#40;Konvertierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216590"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392742"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Ausführen des Upgrade Advisors (Benutzeroberfläche)
   Sie können den Upgrade Advisor ausführen, um lokale oder Remotekomponenten während der Upgradeplanung zu analysieren. Der Upgrade Advisor erzeugt einen Bericht für jede Komponente und die Instanz, die analysiert wird.  
   
 > [!IMPORTANT]  
->  Der Upgrade Advisor analysiert keine Remoteinstanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Um eine Instanz von [!INCLUDE[ssRS](../../includes/ssrs-md.md)] zu analysieren, muss der Upgrade Advisor auf dem Computer installiert sein, auf dem [!INCLUDE[ssRS](../../includes/ssrs-md.md)] installiert ist.  
+>  Der Upgrade Advisor analysiert keine Remoteinstanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Um eine Instanz von [!INCLUDE[ssRS](../../includes/ssrs.md)] zu analysieren, muss der Upgrade Advisor auf dem Computer installiert sein, auf dem [!INCLUDE[ssRS](../../includes/ssrs.md)] installiert ist.  
 >   
 >  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, muss Ihnen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf demselben Computer installiert.  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282186"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40392738"
 ---
 # <a name="cube-space"></a>Cuberaum
   Der Cuberaum ist das Produkt aus den Elementen der Attributhierarchien eines Cubes und den Measures des Cubes. Daher wird der Cuberaum durch das Kombinationsprodukt aller Attributhierarchieelemente im Cube und den Measures des Cubes bestimmt und definiert die maximale Größe des Cubes. Beachten Sie, dass dieser Raum alle potenziellen Kombinationen von Attributhierarchieelementen umfasst, einschließlich Kombinationen, die in der wirklichen Welt unmöglich sind, z. B. Kombinationen aus der Stadt Paris und den Ländern England, Spanien, Japan oder Indien.  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Beachten Sie, dass 0 hier für die Spaltenachse steht (als Kurzform für axis(0)).  
   
- Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen *-Variante der [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) -Funktion formuliert werden.  
+ Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch geschrieben werden mithilfe der neuen *-Variante der der [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) Funktion.  
   
 ```  
 SELECT   

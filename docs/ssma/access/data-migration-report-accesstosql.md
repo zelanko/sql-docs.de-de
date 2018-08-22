@@ -1,5 +1,5 @@
 ---
-title: Migration Datenbericht (AccessToSQL) | Microsoft Docs
+title: Data Migration Report (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d030ca48bee67e322d27365a80c97d9b02071e7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774986"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392072"
 ---
-# <a name="data-migration-report-accesstosql"></a>Migration Datenbericht (AccessToSQL)
-Die **Daten Migrationsbericht** Dialogfeld wird angezeigt, nach dem Migrieren von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+# <a name="data-migration-report-accesstosql"></a>Data Migration Report (AccessToSQL)
+Die **Data Migration Report** Dialogfeld wird angezeigt, nach dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Tastatur  
 **Status**  
-Zeigt den Status der Datenmigration von der Quell-in die Zieldatenbank.  
+Zeigt den Status der Datenmigration aus der Quelldatenbank in die Zieldatenbank.  
   
 **From**  
 Die Quelltabelle.  
@@ -40,14 +40,14 @@ Die Zieltabelle.
 Die Anzahl von Zeilen mit Daten in der Quelltabelle.  
   
 **Anzahl der erfolgreich migrierte Zeilen**  
-Die Anzahl der Datenzeilen migriert wurde erfolgreich in die Zieltabelle.  
+Die Anzahl von Zeilen mit Daten wurden erfolgreich in die Zieltabelle migriert.  
   
 **Verhältnis**  
-Der Prozentsatz der Zeilen migriert erfolgreich.  
+Der Prozentsatz der Zeilen wurden erfolgreich migriert.  
   
 **Details**  
-Wenn Fehler bei der Migration von Daten, klicken Sie auf, um Details zur Migration für die ausgewählte Zeile im Bericht angezeigt. SSMA wird die Ursache des Fehlers angezeigt.  
+Wenn Fehler bei der Datenmigration, klicken Sie auf, um Details zur Migration für die ausgewählte Zeile im Bericht angezeigt. SSMA wird die Ursache des Fehlers angezeigt.  
   
 **Bericht speichern**  
-Speichert den Bericht ein. CSV (durch Trennzeichen getrennte Werte)-Datei, die Verwendung von Microsoft Excel überprüft werden kann.  
+Speichert den Bericht ein. CSV (durch Trennzeichen getrennte Werte)-Datei, die Verwendung von Microsoft Excel untersucht werden kann.  
   

@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556470"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392294"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md
 
 ## <a name="why-automatic-tuning"></a>Warum die automatische Optimierung?
 
-Eine der Hauptaufgaben bei der Verwaltung von klassischen Datenbanken ist das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql_md.md)] abfragt, Indizes, die hinzugefügt werden sollen, zur Verbesserung der Leistung und Indizes selten verwendet. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
+Eine der Hauptaufgaben bei der Verwaltung von klassischen Datenbanken ist das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql-md.md)] abfragt, Indizes, die hinzugefügt werden sollen, zur Verbesserung der Leistung und Indizes selten verwendet. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
 
 ### <a name="how-does-automatic-tuning-works"></a>Wie funktioniert die automatische Optimierung?
 
@@ -58,7 +58,7 @@ Automatische plankorrektur ist ein Feature der automatischen Optimierung, die id
 
 ### <a name="what-is-sql-plan-choice-regression"></a>Was ist SQL-planauswahlen?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] können Sie verschiedene SQL-Pläne zum Ausführen der [!INCLUDE[tsql_md](../../includes/tsql_md.md)] Abfragen. Abfragepläne, abhängig von der Statistik, Indizes und anderen Faktoren ab. Der optimale Plan, die verwendet werden soll, um einige auszuführen [!INCLUDE[tsql_md](../../includes/tsql_md.md)] Abfrage im Laufe der Zeit ändern kann. In einigen Fällen der neue Plan besser als die vorherige Version möglicherweise nicht, und der neue Plan kann einem Leistungsverlust führen.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] können Sie verschiedene SQL-Pläne zum Ausführen der [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfragen. Abfragepläne, abhängig von der Statistik, Indizes und anderen Faktoren ab. Der optimale Plan, die verwendet werden soll, um einige auszuführen [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Abfrage im Laufe der Zeit ändern kann. In einigen Fällen der neue Plan besser als die vorherige Version möglicherweise nicht, und der neue Plan kann einem Leistungsverlust führen.
 
  ![SQL-planauswahlen](media/plan-choice-regression.png "planauswahlen SQL") 
 
@@ -94,7 +94,7 @@ Manuell erzwungene Plänen sollte nicht dauerhaft, erzwungen werden, da die [!IN
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfasst alle erforderlichen Sichten und Prozeduren zum Überwachen der Leistung und Beheben von Problemen in Query Store erforderlich sind.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], finden Sie Plan planauswahlregression Systemsichten Query Store verwenden. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt potenzielle planregressionen Wahl und die empfohlenen Aktionen, die in angewendet werden sollen die [dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) anzeigen. Die Ansicht zeigt Informationen über das Problem, das die Wichtigkeit des Problems und Details wie den identifizierten Abfragen, die von der zurückgestellte Plan-ID, die ID des Plans, der als Baseline zum Vergleich verwendet wurde und die [!INCLUDE[tsql_md](../../includes/tsql_md.md)] -Anweisung, die ausgeführt werden kann, lösen Sie die Problem.
+In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], finden Sie Plan planauswahlregression Systemsichten Query Store verwenden. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt potenzielle planregressionen Wahl und die empfohlenen Aktionen, die in angewendet werden sollen die [dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) anzeigen. Die Ansicht zeigt Informationen über das Problem, das die Wichtigkeit des Problems und Details wie den identifizierten Abfragen, die von der zurückgestellte Plan-ID, die ID des Plans, der als Baseline zum Vergleich verwendet wurde und die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] -Anweisung, die ausgeführt werden kann, lösen Sie die Problem.
 
 | Typ | description | DATETIME | score | Details | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ Einige Spalten in dieser Ansicht werden in der folgenden Liste beschrieben:
  - Beschreibung, die Informationen, warum enthält [!INCLUDE[ssde_md](../../includes/ssde_md.md)] davon ausgeht, dass diese Änderung des Plans ein potenzieller Leistungsverlust ist.
  - "DateTime", wenn die mögliche Regression erkannt wird.
  - Dieser Empfehlung zu bewerten. 
- - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben [!INCLUDE[tsql_md](../../includes/tsql_md.md)] Skripts, die zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md).
+ - Details zu den Problemen wie z. B. die ID des erkannten Plan-ID des der zurückgestellte Plan mit der ID des Plans, die erzwungen werden soll, um das Problem zu beheben [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skripts, die zum Beheben des Problems usw. angewendet werden kann. Details werden gespeichert, [JSON-Format](../../relational-databases/json/index.md).
 
 Verwenden Sie die folgende Abfrage aus, um ein Skript zu erhalten, die das Problem und zusätzliche Informationen zu den geschätzten Korrekturen erhalten:
 

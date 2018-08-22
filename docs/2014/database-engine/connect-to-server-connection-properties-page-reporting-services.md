@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308030"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392959"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Verbinden mit SQL Server Reporting Services (Seite 'Verbindungseigenschaften')
-  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] herstellen oder [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssRS](../includes/ssrs-md.md)]in diesem Dialogfeld angezeigt.  
+  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] herstellen oder [!INCLUDE[ssRS](../includes/ssrs.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssRS](../includes/ssrs.md)]in diesem Dialogfeld angezeigt.  
   
 ## <a name="options"></a>Tastatur  
  **Verbindungstimeout (in Millisekunden)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308030"
  Klicken Sie hier, um die Anzeige des Dialogfelds zu ändern und die zusätzlichen Serververbindungsoptionen, z. B. Speichern des Kennworts, auszublenden.  
   
  **Testenen**  
- Klicken Sie hier, um beim Registrieren von [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Registrierte Server**die Verbindung zu testen.  
+ Klicken Sie hier, um beim Registrieren von [!INCLUDE[ssRS](../includes/ssrs.md)] in **Registrierte Server**die Verbindung zu testen.  
   
  **Speichern**  
  Speichert die Einstellungen in **Registrierte Server**.  

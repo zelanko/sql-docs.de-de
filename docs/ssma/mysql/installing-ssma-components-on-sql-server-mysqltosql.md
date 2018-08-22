@@ -1,5 +1,5 @@
 ---
-title: Installieren SSMA-Komponenten auf SQLServer (MySQLToSql) | Microsoft Docs
+title: Installieren von SSMA-Komponenten auf SQLServer (MySQLToSql)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,70 +18,70 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc0a4555d41d4848fdbbe8a3b3244275dae1aaa2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5a5e64aca2b46e60a1fda93a9bde2f5b62c981fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776326"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392066"
 ---
-# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installieren SSMA-Komponenten auf SQLServer (MySQLToSql)
-Neben der Installation von SSMA, müssen Sie auch Komponenten installieren, auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Zu diesen Komponenten gehören das Pack der SSMA-Erweiterung, das Datenmigration und MySQL-Anbieter auf Server-zu-Server-Verbindung aktivieren unterstützt.  
+# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installieren von SSMA-Komponenten für SQL Server (MySqlToSql)
+Zusätzlich zum Installieren von SSMA, müssen Sie auch den Komponenten installieren, auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Zu diesen Komponenten gehören der SSMA-Erweiterungspaket, unterstützt die Datenmigration und Anbieter von MySQL Server-zu-Server-Konnektivität zu aktivieren.  
   
-## <a name="ssma-for-mysql-extension-pack"></a>SSMA für die MySQL-Erweiterung Pack  
-Das SSMA-Erweiterung Pack Fügt eine Datenbank, **Sysdb**, mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Diese Datenbank enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten erforderlich sind.  
+## <a name="ssma-for-mysql-extension-pack"></a>SSMA für MySQL-Erweiterungspaket  
+Der SSMA-Erweiterungspaket Fügt eine Datenbank, **Sysdb**, mit der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Datenbank enthält die Tabellen und gespeicherte Prozeduren, die zum Migrieren von Daten erforderlich sind.  
   
-Darüber hinaus beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Aufträge, wenn Server-Seite-Migration Datenmodul zum Migrieren Ihrer Daten verwendet wird.  
+Darüber hinaus beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Aufträge, wenn Server Side Data Migration-Engine für die Migration der das verwendet wird.  
   
 ### <a name="prerequisites"></a>Erforderliche Komponenten  
-Vor der Installation von SSMA für MySQL Server-Komponenten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
+Vor der Installation von SSMA für MySQL Server-Komponenten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
   
--   Die MySQL-Client-Anbieter, und die Konnektivität mit der MySQL-Datenbank, die Sie migrieren möchten. Sie können den Anbieter aus der MySQL-Produktmedien oder MySQL-Website installieren.  
+-   Die MySQL-Client-Anbieter, und eine Verbindung mit der MySQL-Datenbank, die Sie migrieren möchten. Sie können den Anbieter aus der MySQL-Produktdatenträger oder MySQL-Website installieren.  
   
--   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst muss ausgeführt werden, während der Installation. Wird verwendet, um eine Liste der Instanzen des Auffüllen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] im Setup-Assistenten. Sie können Deaktivieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst nach der Installation.  
+-   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst muss ausgeführt werden, während der Installation. Wird verwendet, um eine Liste der Instanzen des Auffüllen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Setup-Assistenten. Sie können die Deaktivieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst nach der Installation.  
   
     > [!NOTE]  
-    > Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst ausgeführt wird, aber Sie noch nicht sehen, dass eine Liste von Instanzen im Setup, müssen Sie die Blockierung aufheben UDP-Port 1434. Können Sie Windows-Firewall vorübergehend Entsperren des Ports ein, oder Sie können die Windows-Firewall vorübergehend deaktivieren. Möglicherweise müssen auch die Antivirensoftware vorübergehend deaktivieren. Stellen Sie sicher, dass Firewalls und antivirus-Software nach der Installation aktivieren.  
+    > Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst wird ausgeführt, aber Sie noch nicht sehe, dass eine Liste von Instanzen im Setup, müssen Sie UDP-Port 1434 zulassen. Sie können Windows-Firewall verwenden, um vorübergehend den Port zulassen, oder Sie können Windows-Firewall vorübergehend deaktivieren. Möglicherweise müssen auch vorübergehend deaktivieren, antivirus-Software. Stellen Sie sicher, dass Firewalls und antivirus-Software nach der Installation zu ermöglichen.  
   
-### <a name="installing-the-extension-pack"></a>Installieren der Erweiterung-Pakets  
-Sie können einem beliebigen Zeitpunkt vor dem Migrieren von Daten an, das Erweiterung Pack installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+### <a name="installing-the-extension-pack"></a>Das Erweiterungspaket installieren  
+Sie können vor dem Migrieren von Daten auf, das Erweiterungspaket installieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
-> Um die Erweiterung Pack zu installieren, muss ein Mitglied der **Sysadmin** -Serverrolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Um das Erweiterungspaket installieren zu können, muss Sie Mitglied der **Sysadmin** -Serverrolle auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-**So installieren Sie die Erweiterung pack**  
+**Das Erweiterungspaket installieren**  
   
-1.  Kopieren Sie SSMA für MySQL-Erweiterung Pack. *n*. Install.exe, wobei *n* ist, auf dem Computer, auf denen ausgeführt wird, die Nummer des Builds [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Kopieren Sie SSMA für MySQL-Erweiterungspaket aus. *n*. Install.exe, wobei *n* ist, auf dem Computer, auf denen ausgeführt wird, die Nummer des Builds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Doppelklicken Sie SSMA für MySQL-Erweiterung Pack ein. *n*. Install.exe.  
   
 3.  Klicken Sie im Dialogfeld "Willkommen" auf **Weiter**.  
   
-4.  Lesen Sie den Lizenzvertrag, klicken Sie im Dialogfeld Endbenutzer-Lizenzvertrag. Wenn Sie zustimmen, Aktivieren der **ich stimme den Bedingungen des Lizenzvertrags** Kontrollkästchen, und klicken Sie dann auf **Weiter**.  
+4.  Lesen Sie im Dialogfeld Software-Lizenzbedingungen den Lizenzvertrag. Wenn Sie zustimmen, wählen Sie die **ich stimme den Bedingungen des Lizenzvertrags** , und klicken Sie dann auf **Weiter**.  
   
-5.  Klicken Sie auf die Installationsart auswählen-Dialogfeld auf **typisch**.  
+5.  Klicken Sie auf das Dialogfeld Installationsart auswählen, auf **Standard**.  
   
-6.  Klicken Sie auf der kann jetzt zu installieren (Dialogfeld), auf **installieren**.  
+6.  Klicken Sie auf die "bereit zur Installation-Dialogfeld" **installieren**.  
   
-7.  Klicken Sie auf die im Dialogfeld erste Schritt der Installation abgeschlossen auf **Weiter**.  
+7.  Klicken Sie auf die im Dialogfeld erste Schritt der Installation abgeschlossen, **Weiter**.  
   
-    Ein neues Dialogfeld wird angezeigt, in dem Sie die Instanz von auswählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] für die Erweiterung Paketinstallation.  
+    Ein neues Dialogfeld wird angezeigt, in dem Sie die Instanz von auswählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Erweiterung-Paketinstallation.  
   
-8.  Wählen Sie die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , in dem Sie migrieren von MySQL-Schemas, und klicken Sie dann auf **Weiter**.  
+8.  Wählen Sie die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in dem Sie Migrieren der MySQL-Schemas, und klicken Sie dann auf **Weiter**.  
   
     Die Standardinstanz hat den gleichen Namen wie der Computer an. Benannte Instanzen werden ein umgekehrter Schrägstrich und der Instanzname folgt.  
   
-9. Klicken Sie im Dialogfeld Verbindung wählen Sie die Authentifizierungsmethode aus, und klicken Sie dann auf **Weiter**.  
+9. Klicken Sie auf das Dialogfeld "Verbindung", wählen Sie die Authentifizierungsmethode aus, und klicken Sie dann auf **Weiter**.  
   
-    Windows-Authentifizierung wird Windows-Anmeldeinformationen verwenden, um zu versuchen, melden Sie sich mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Bei Auswahl des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung, geben Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldename und Kennwort.  
+    Windows-Authentifizierung wird Ihre Windows-Anmeldeinformationen verwenden, um zu versuchen, melden Sie sich mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Bei Auswahl von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung, geben Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename und Kennwort.  
   
-10. Wählen Sie im nächsten Dialogfeld **Utilities-Datenbank installieren** *n*, wobei *n* ist die Versionsnummer, und klicken Sie dann auf **Weiter**.  
+10. Wählen Sie im nächsten Dialogfeld **installieren Dienstprogramme Datenbank** *n*, wobei *n* ist die Versionsnummer, und klicken Sie dann auf **Weiter**.  
   
-    Die **Sysdb** Datenbank mit den Tabellen und gespeicherte Prozeduren, die für die Datenmigration (mit Server-Seite-Migration Datenmodul) erforderlich sind in dieser Datenbank erstellt.  
+    Die **Sysdb** Datenbank wird erstellt, mit den Tabellen und gespeicherte Prozeduren, die erforderlich sind, für die Datenmigration (mit Server-Seite-Migration Datenmodul) werden in dieser Datenbank erstellt.  
   
-11. So installieren Sie die Dienstprogramme in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Option **Ja**, und klicken Sie dann auf **Weiter**. Um den Assistenten zu beenden, klicken Sie auf **keine**.  
+11. So installieren Sie die Hilfsprogramme in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Option **Ja**, und klicken Sie dann auf **Weiter**. Um den Assistenten zu beenden, klicken Sie auf **keine**.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Installieren von SSMA für MySQL-Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
