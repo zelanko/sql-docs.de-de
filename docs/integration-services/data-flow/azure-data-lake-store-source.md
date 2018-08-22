@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store Source | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409302"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175197"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
   Die Komponente **Azure Data Lake Store Source** ermöglicht einem SSIS-Paket das Lesen von Daten aus Azure Data Lake Store. Die unterstützten Dateiformate sind: Text und Avro.
@@ -44,3 +44,7 @@ ms.locfileid: "35409302"
         Wenn es sich um Textformat handelt, geben Sie den Wert für das **Spaltentrennzeichen** ein. Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.  
   
 3.  Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite **Spalten** , um Quellspalten zu den Zielspalten für den SSIS-Datenfluss zuzuordnen.   
+
+## <a name="text-qualifier"></a>Textqualifizierer
+
+Die **Azure Data Lake Store Source** unterstützt keine Textqualifizierer. Wenn Sie einen Textqualifizierer angeben müssen, damit Ihre Dateien ordnungsgemäß verarbeitet werden, laden Sie am besten die Dateien auf Ihren lokalen Computer herunter, und verarbeiten Sie die Dateien mit der **Flatfilequelle**. Mit der Flatfilequelle können Sie einen Textqualifizierer angeben. Weitere Informationen finden Sie unter [Flat File Source (Flatfilequelle)](flat-file-source.md).

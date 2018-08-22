@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022687"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175173"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -70,7 +70,7 @@ Erfahren Sie mehr über [freigegebene Datenquellen in Reporting Services](../rep
    
 ## <a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
   
-Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]verwendet. [Installieren Sie Berichts-Generator](https://msdn.microsoft.com/library/ff519551.aspx), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.     
+Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]verwendet. [Installieren Sie Berichts-Generator](../install-windows/install-report-builder.md), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.     
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Paginierter Bericht** , um [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]zu starten.  
   
