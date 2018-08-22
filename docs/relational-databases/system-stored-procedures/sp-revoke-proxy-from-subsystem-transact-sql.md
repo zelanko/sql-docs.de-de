@@ -1,5 +1,5 @@
 ---
-title: Sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
+title: Sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c80739e4a888316837b22838b92f6d5919c998d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c19e54fe6f9d9280d19ab6861cf27ffa20df636
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261859"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394694"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_revoke_proxy_from_subsystem
   
 ## <a name="arguments"></a>Argumente  
  [ **@proxy_id** = ] *id*  
- Die Proxy-ID des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+ Die Proxy-ID des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@proxy_name** =] **"***Proxy_name***"**  
- Der Name des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+ Der Name des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@subsystem_id** = ] *id*  
- Die ID des Subsystems, für das der Zugriff aufgehoben werden soll. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide können nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+ Die ID des Subsystems, für das der Zugriff aufgehoben werden soll. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
-|**2**|ActiveX-Skript<br /><br /> **\*\* Wichtige \* \***  das ActiveX Scripting-Subsystem daraus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
+|**2**|ActiveX-Skript<br /><br /> **\*\* Wichtige \* \***  das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (CmdExec)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
 |**5**|Replikationsprotokolllese-Agent|  
@@ -72,9 +72,9 @@ sp_revoke_proxy_from_subsystem
 |**12**|PowerShell-Skript|  
   
  [ **@subsystem_name**=] **"***Subsystem_name***"**  
- Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Die *Subsystem_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide können nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+ Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Die *Subsystem_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
@@ -92,10 +92,10 @@ sp_revoke_proxy_from_subsystem
  Mit dem Aufheben des Zugriffs auf ein Subsystem werden nicht die Berechtigungen für den im Proxy angegebenen Prinzipal geändert.  
   
 > [!NOTE]  
->  Um zu bestimmen, welche Auftragsschritte auf einen Proxy verweisen, Maustaste die **Proxys** Knoten unter **SQL Server-Agent** in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und klicken Sie dann auf **Eigenschaften**. In der **Proxyeigenschaften** wählen Sie im Dialogfeld die **Verweise** Seite, um alle Auftragsschritte anzuzeigen, die diesen Proxy verweisen.  
+>  Um zu bestimmen, welche Auftragsschritte auf einen Proxy verweisen, Informationen zu diesem mit der rechten Maustaste die **Proxys** Knoten unter **SQL Server-Agent** in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und klicken Sie dann auf **Eigenschaften**. In der **Proxyeigenschaften** wählen Sie im Dialogfeld die **Verweise** Seite, um alle Auftragsschritte anzuzeigen, die auf diesen Proxy verweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_revoke_proxy_from_subsystem**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Subsystem für den Proxy `Catalog application proxy` aufgehoben.  
@@ -110,8 +110,8 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementieren von Sicherheit für SQL Server-Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Implementieren von SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

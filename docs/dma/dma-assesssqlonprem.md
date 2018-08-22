@@ -1,8 +1,8 @@
 ---
-title: Führen Sie eine SQL Server-migrationsbewertung (Data Migration Assistant) | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie Data Migration Assistant mit um einer lokalen SQL Server zu bewerten, bevor Sie eine Migration auf einen anderen SQL Server oder Azure SQL-Datenbank
+title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,96 +18,228 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: 9f8deae9dc7f31eaa41c5e4261a2848648f60090
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934952"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40395136"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Führen Sie eine SQL Server-migrationsbewertung mit Data Migration Assistant
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
-Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung durchführen, für die Migration zu einem lokalen SQL Server, SQL Server auf einer Azure-VM oder Azure SQL-Datenbank mithilfe von Data Migration Assistant.
+Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assistant verwenden, um eine erfolgreiche skalierte Bewertung für ein Upgrade auf einen lokalen SQL Server oder die Ausführung von SQL Server auf virtuellen Azure-Computern oder für die Migration zu Azure SQL-Datenbank auszuführen.
 
-## <a name="create-an-assessment"></a>Erstellen einer Bewertung
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-1.  Wählen Sie die **neu** (+)-Symbol, und wählen Sie dann die **Bewertung** Projekttyp.
+- Geben Sie einen Tools-Computer in Ihrem Netzwerk aus dem DMA initiiert wird. Stellen Sie sicher, dass es sich bei diesem Computer Verbindungen mit Ihrem SQL Server-Ziele vorhanden sind.
+- Herunterladen und installieren:
+    - [Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595) Version 3.6 oder höher.
+    - [PowerShell](http://aka.ms/wmf5download) V5. 0 oder höher.
+    - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4. 5 oder höher.
+    - [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) 17.0 oder höher.
+    - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+- Herunterladen und extrahieren:
+    - Die [DMA Berichte Power BI-Vorlage](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
+    - Die [LoadWarehouse Skript](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
 
-2.  Der Typ der Quelle und Ziel-Server festgelegt.
+## <a name="loading-the-powershell-modules"></a>Laden die PowerShell-Module
+Die PowerShell-Module in der PowerShell-Module-Verzeichnis zu speichern, können Sie rufen die Module, ohne dass sie vor der Verwendung explizit zu laden.
 
-    Wenn Sie Ihre lokalen SQL Server-Instanz auf einer modernen lokalen SQL Server-Instanz oder auf einer Azure-VM gehostete SQL Server aktualisieren, auf den Quell- und Ziel-Server-Datentyp festgelegt **SQL Server**. Wenn Sie zu Azure SQL-Datenbank migrieren, müssen Sie der Typ des Zielservers stattdessen festlegen, um **Azure SQL-Datenbank**.
+Führen Sie die folgenden Schritte aus, um die Module zu laden:
+1. Navigieren Sie zu c:\Programme\Microsoft Files\WindowsPowerShell\Modules, und erstellen Sie einen Ordner mit dem Namen **DataMigrationAssistant**.
+2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
 
-3.  Klicken Sie auf **Erstellen**.
+      ![PowerShell-Module](../dma/media//dma-assesssqlonprem/dma-powershell-modules.png)
 
-    ![Erstellen einer Bewertung](../dma/media/NewAssessment.png)
+    Jeder Ordner enthält die zugeordneten psm1-Datei, wie in der folgenden Abbildung gezeigt:
 
-## <a name="choose-assessment-options"></a>Wählen Sie Bewertungsoptionen für die
+   ![PowerShell-Module psm1-Dateien](../dma/media//dma-assesssqlonprem/dma-powershell-modules-psm1-files.png)
 
-1. Wählen Sie die SQL Server-Zielversion, der Sie zum migrieren möchten.
+   > [!NOTE]
+   > Die Ordner und die darin enthaltenen psm1-Datei müssen den gleichen Namen verfügen.
 
-2. Wählen Sie den Bericht.
+   > [!IMPORTANT]
+   > Sie müssen die PowerShell-Dateien zu entsperren, nach dem Speichern in das Verzeichnis "WindowsPowerShell", um sicherzustellen, dass die Module, die ordnungsgemäß geladen. Um eine PowerShell-Datei zu entsperren, Öffnen der Datei, die Option **Eigenschaften**, wählen die **Unblock** Textfeld ein, und wählen Sie dann **Ok**.
 
-   Wenn Sie Ihre SQL Server-Quellinstanz für die Migration einer lokalen SQL Server oder SQL Server auf virtuellen Azure-Computer-Ziele gehostet bewerten sind, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
+   ![Eigenschaften der psm1-Datei](../dma/media//dma-assesssqlonprem/dma-psm1-file-properties.png)
 
-    -   **Probleme mit der Anwendungskompatibilität**
+    PowerShell sollte diese Module jetzt automatisch geladen, wenn eine neue PowerShell-Sitzung gestartet wird.
 
-    -   **Empfehlung zu neuen features**
+## <a name="create-an-inventory-of-sql-servers"></a>Erstellen Sie eine Inventur der SQL-Server
+Vor dem Ausführen des PowerShell-Skripts, um Ihre SQL Server zu bewerten, müssen Sie eine Inventur der SQL Server zu erstellen, die Sie bewerten möchten.
 
-    ![Wählen Sie eine Assessment-Berichtstyp für SQL Server-Ziel](../dma/media/AssessmentTypes.png)
+Diese Inventur kann eine von zwei Formen aufweisen:
+- Excel-CSV-Datei
+- SQL Server-Tabelle
 
-   Wenn Sie Ihre SQL Server-Quellinstanz für die Migration zu Azure SQL-Datenbank bewertet werden, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
+### <a name="if-using-a-csv-file"></a>Wenn Sie eine CSV-Datei verwenden.
+Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwei Spalten mit Daten – **Instanzname** und **Datenbanknamen**, und dass die Spalten keine Kopfzeilen enthalten.
+ 
+ ![Inhalt der CSV-Datei](../dma/media//dma-assesssqlonprem/dma-csv-file-contents.png)
 
-    -   **Überprüfen Sie die Datenbankkompatibilität**
+### <a name="if-using-sql-server-table"></a>Bei Verwendung von SQL Server-Tabelle
+Erstellen Sie eine Datenbank namens **EstateInventory** und eine Tabelle namens **DatabaseInventory**. Die Tabelle mit den Inventurdaten kann eine beliebige Anzahl von Spalten aufweisen, solange die folgende vier Spalten vorhanden sind:
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+ 
+ ![Inhalt der SQL Server-Tabelle](../dma/media//dma-assesssqlonprem/dma-sql-server-table-contents.png)
 
-    -   **Featureparität überprüfen**
+Ist diese Datenbank nicht auf dem Computer des Tools, stellen Sie sicher, dass die Tools-Computer über eine Netzwerkverbindung mit SQL Server-Instanz verfügt.
 
-    ![Bewertung der Berichttyp für Ziel-SQL-Datenbank auswählen](../dma/media/AssessmentTypes_Azure.png)
+Der Vorteil der Verwendung einer SQL Server-Tabelle über eine CSV-Datei ist, dass Sie die Spalte zur Kennzeichnung Bewertung verwenden können, steuern die Instanz oder Datenbank, ruft für die Bewertung,, erleichtern übernommen, Bewertungen in kleinere Blöcke zu trennen.  Sie können dann mehrere Bewertungen umfassen (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), dies ist einfacher als mehrere CSV-Dateien zu verwalten.
 
-## <a name="add-databases-to-assess"></a>Hinzufügen von Datenbanken, um zu bewerten
+Bedenken Sie, dass abhängig von der Anzahl von Objekten und ihrer Komplexität, eine Bewertung kann ein außergewöhnlich lange (Stunden +), dauern daher ist es ratsam, um die Bewertung in verwaltbare Teile zu trennen.
 
-1.  Wählen Sie **Quellen hinzufügen** um die Verbindung Flyout-Menü zu öffnen.
+## <a name="running-a-scaled-assessment"></a>Eine skalierte Bewertung wird ausgeführt
+Nach dem Laden die PowerShell-Module in das Modulverzeichnis, und erstellen eine Inventur, müssen Sie eine skalierte Bewertung ausgeführt wird, öffnen PowerShell, und die DmaDataCollector-Funktion ausführt.
+ 
+  ![Angebote für DmaDataCollector-Funktion](../dma/media//dma-assesssqlonprem/dma-dmaDataCollector-function-listing.png)
 
-2.  Geben Sie den SQL Server-Instanznamen, wählen Sie den Authentifizierungstyp, legen Sie die Eigenschaften für die richtige Verbindung und wählen Sie dann **Connect**.
+Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden Tabelle beschrieben.
 
-3.  Wählen Sie die Datenbanken zu bewerten, und wählen Sie dann **hinzufügen**.
+|Parameter  |Description
+|---------|---------|
+|**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**. |
+|**ServerName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
+|**DatabaseName** | Die Datenbank, die die Bestandstabelle hosten. |
+|**%Assessmentname** | Der Name des der DMA-Bewertung. |
+|**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, und **SQLServerWindows2017**. |
+|**AuthenticationMethod** | Die Authentifizierungsmethode für die Verbindung mit der SQL Server-Ziele, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **WindowsAuth**. |
+|**OutputLocation** | Das Verzeichnis, in dem die JSON-Speicherung Bewertung der Ausgabedatei. Abhängig von der Anzahl der Datenbanken, die bewertet wird und die Anzahl der Objekte in Datenbanken können die Bewertungen außergewöhnlich lange dauern. Nachdem alle Bewertungen abgeschlossen haben, wird die Datei geschrieben werden. |
 
-    > [!NOTE] 
-    > Sie können mehrere Datenbanken entfernen, indem sie gleichzeitig die UMSCHALTTASTE oder STRG-Taste gedrückt halten, und klicken Sie dann auf Auswahl **Quellen entfernen**. Sie können auch Datenbanken von mehreren SQL Server-Instanzen hinzufügen, mit der **Quellen hinzufügen** Schaltfläche.
+Ist ein unerwarteter Fehler, wird das Befehlsfenster, das von diesem Prozess initiiert hat, ruft beendet.  Überprüfen Sie das Fehlerprotokoll, um zu bestimmen, warum ein Fehler aus.
+ 
+  ![Speicherort des Fehlerprotokolls](../dma/media//dma-assesssqlonprem/dma-error-log-file-location.png)
 
-4.  Klicken Sie auf **Weiter** auf die Bewertung zu starten.
+## <a name="consuming-the-assessment-json-file"></a>Nutzen die Bewertung der JSON-Datei
 
-    ![Hinzufügen von Datenquellen und Bewertung starten](../dma/media/SelectDatabase.png)
+Nach Abschluss der Bewertung können Sie jetzt zum Importieren der Daten in SQL Server für die Analyse. Um die Bewertung der JSON-Datei nutzen zu können, öffnen Sie PowerShell, und führen Sie die DmaProcessor-Funktion.
+ 
+  ![Liste der DmaProcessor-Funktion](../dma/media//dma-assesssqlonprem/dma-dmaProcessor-function-listing.png)
 
-## <a name="view-results"></a>Anzeigen der Ergebnisse
+Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabelle beschrieben.
 
-Die Dauer der Bewertung der hängt davon ab, die Anzahl der Datenbanken, die hinzugefügt und die Schemagröße der einzelnen Datenbanken. Ergebnisse werden für jede Datenbank angezeigt, sobald sie verfügbar sind.
+|Parameter  |Description
+|---------|---------|
+|**processTo**  | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
+|**ServerName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (verwenden Sie keine. database.windows.net). Für zwei Anmeldungen werden Sie aufgefordert, wenn Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
+|**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, werden klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
+|**CreateDataWarehouse** | Erstellt die Datawarehouse, das von Power BI-Bericht verwendet wird. |
+|**DatabaseName** | Der Name der Datenbank DMAReporting. |
+|**warehouseName** | Der Name des Datawarehouse-Datenbank. |
+|**jsonDirectory** | Das Verzeichnis, das JSON-Bewertung-Dateien enthält.  Wenn mehrere JSON-Dateien in das Verzeichnis vorhanden sind, sind sie nacheinander verarbeitet. |
 
-1.  Wählen Sie die Datenbank, die die Bewertung abgeschlossen wurde, und wechseln Sie zwischen **Kompatibilitätsprobleme** und **Featureempfehlungen** mithilfe der Switcher.
+Die Funktion DmaProcessor dauert nur einige Sekunden, um eine einzelne Datei zu verarbeiten.
 
-2.  Überprüfen Sie die Kompatibilitätsprobleme für alle von der Ziel-SQL Server-Version unterstützt Kompatibilitätsgrade, die Sie ausgewählt haben, auf die **Optionen** Seite.
+## <a name="loading-the-data-warehouse"></a>Laden das Datawarehouse
+Nachdem die DmaProcessor Abschluss der Verarbeitung der Assessment-Dateien hat, werden die Daten in die Datenbank DMAReporting in der Tabelle ReportData geladen werden. An diesem Punkt müssen Sie das Datawarehouse zu laden.
 
-Sie können Kompatibilitätsprobleme prüfen, indem Sie analysieren, das betroffene Objekt, dessen Details und möglicherweise eine Lösung für jedes Problem identifiziert, die unter **wichtige Änderungen**, **verhaltensänderungen**, und  **Als veraltet markierte Funktionen**.
+1. Verwenden Sie das Skript LoadWarehouse, alle fehlenden Werte in den Dimensionen aufgefüllt.
 
-![Die Bewertung der Ergebnisse anzeigen](../dma/media/ReviewResults.png)
+    Das Skript übernimmt die Daten aus der ReportData-Tabelle in der Datenbank DMAReporting und in das Warehouse zu laden.  Wenn während dieses Ladevorgangs Fehler vorhanden sind, sind sie wahrscheinlich ein Ergebnis der fehlenden Einträge in den Dimensionstabellen.
 
-Auf ähnliche Weise können Sie überprüfen, Feature-Empfehlung für **Leistung**, **Storage**, und **Sicherheit** Bereiche.
+2. Laden Sie das Datawarehouse.
+ 
+      ![LoadWarehouse Inhalt geladen](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-loaded.png)
 
-Featureempfehlungen decken eine Vielzahl von Features wie z. B. In-Memory-OLTP und Columnstore, Stretch Database, Always Encrypted, dynamische Datenmaskierung und Transparent Data Encryption.
+## <a name="set-your-database-owners"></a>Legen Sie Ihre Besitzer von Datenbanken
+Während es nicht erforderlich ist, um den größtmöglichen Nutzen, die von Berichten, es wird empfohlen, Sie die Datenbankbesitzer, in legen der **DimDBOwner** dimension, und aktualisieren Sie dann **DBOwnerKey** in die  **FactAssessment** Tabelle.  Durch dieses Verfahren ermöglicht die Aufteilen in Slices und Filtern des Power BI-Berichts basierend auf bestimmten Datenbankbesitzer.
 
-![Die Funktion Empfehlungen anzeigen](../dma/media/FeatureRecommendations.png)
+Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-Anweisungen für die Sie festlegen, die Datenbankbesitzer bereitzustellen.
 
-Geben für Azure SQL-Datenbank Bewertungen, blockierende Probleme bei der Paketmigration und featureparitätsprobleme. Überprüfen Sie die Ergebnisse für beide Kategorien, die bestimmten Optionen auszuwählen.
+  ![Besitzer der LoadWarehouse-Einstellung](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-set-owners.png)
 
-- Die **SQL Server-Featureparität** Kategorie bietet eine umfassende Reihe von Empfehlungen, alternativen Ansätzen, die in Azure und Schritten zur Verfügung. Damit können Sie diesen Aufwand in Ihren Migrationsprojekten einplanen.
+## <a name="dma-reports"></a>DMA-Berichte
 
-  ![Anzeigen von Informationen für SQL Server-Featureparität](../dma/media/SQLFeatureParity.png)
+1. Öffnen Sie die DMA-Berichte Power BI-Vorlage in Power BI Desktop.
+2. Geben Sie die Serverdetails, die auf Ihre **DMAWarehouse** Datenbank, und wählen Sie dann **Load**.
 
-- Die **Kompatibilitätsprobleme** Kategorie bietet teilweise unterstützte oder nicht unterstützte Features, die Migration von lokalen SQL Server-Datenbanken zu Azure SQL-Datenbanken zu blockieren. Es bietet dann Empfehlungen können Sie diese Probleme zu beheben.
+    > [!IMPORTANT]
+    > Drücken Sie EINGABETASTE, um akzeptiert die Werte nicht.
 
-  ![Anzeigen von Kompatibilitätsproblemen](../dma/media/CompatibilityIssues.png)
+      ![Geladene DMA Berichte Power BI-Vorlage](../dma/media//dma-assesssqlonprem/dma-reports-powerbi-template-loaded.png)
 
-## <a name="export-results"></a>Exportieren von Ergebnissen
+   Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** -Datenbank werden Ihnen einen Bericht, der dem folgenden ähnelt.
 
-Nachdem alle Datenbanken auf die Bewertung abgeschlossen haben, wählen Sie **Exportbericht** die Ergebnisse in eine JSON-Datei oder eine CSV-Datei exportieren. Sie können die Daten dann analysieren, Ihrem eigenen Ermessen.
+   ![Ansicht "Bericht" DMAWarehouse](../dma/media//dma-assesssqlonprem/dma-DMAWarehouse-report.png)
 
-Sie können mehrere Bewertungen gleichzeitig durchführen und den Zustand der Bewertungen anzeigen, öffnen die **alle Bewertungen** Seite.
+   > [!TIP]
+   > Wenn Sie die Daten, die Sie erwartet, nicht angezeigt werden, versuchen Sie, die aktive Lesezeichen zu ändern.  Weitere Informationen finden Sie im Abschnitt Funktionalität.
+
+## <a name="working-with-dma-reports"></a>Arbeiten mit DMA-Berichten
+Um einen Bericht über DMA zu arbeiten, verwenden Sie Slicer zum Filtern nach:
+- Der Instanzname.
+- Datenbankname
+- Teamname
+
+Sie können Lesezeichen auch verwenden, den reporting Kontext zwischen wechseln:
+- Cloud-Bewertungen
+- Lokale Bewertungen
+
+  ![DMA Bericht Lesezeichen](../dma/media//dma-assesssqlonprem/dma-report-bookmarks.png)
+
+> [!NOTE]
+> Wenn Sie nur eine Bewertung der Azure SQL-Datenbank ausführen, werden nur Cloud Berichte gefüllt. Wenn Sie nur eine lokale Bewertung durchführen, werden dagegen nur für lokale Berichte aufgefüllt. Aber wenn Sie sowohl Azure als auch eine lokale Bewertung führen und dann beide Bewertungen in das Warehouse laden, können Sie zwischen Cloud und lokale Berichte gedrückter STRG-Taste das entsprechende Symbol wechseln.
+
+## <a name="reports-visuals"></a>Visualisierungen für Berichte
+Die Details in den Power BI-Berichten angezeigt wird in den folgenden Abschnitten angezeigt.
+
+### <a name="readiness-"></a>Bereitschaft %
+
+  ![Prozentsatz der DMA-Bereitschaft](../dma/media//dma-assesssqlonprem/dma-readiness-percentage.png)
+
+Dieses visuelle Element wird aktualisiert, die basierend auf den Auswahlkontext (alles, Instanz, die Datenbank [ein Vielfaches von]).
+
+### <a name="readiness-count"></a>Anzahl der Bereitschaft
+
+  ![Anzahl der DMA-Bereitschaft](../dma/media//dma-assesssqlonprem/dma-readiness-count.png)
+
+Dieses visuelle Element zeigt die Anzahl der Datenbanken, die sind bereit, die Anzahl der Datenbanken zu migrieren, die noch nicht zur Migration bereit sind.
+
+### <a name="readiness-bucket"></a>Bereitschaft bucket
+
+  ![DMA-Bereitschaft bucket](../dma/media//dma-assesssqlonprem/dma-readiness-bucket.png)
+
+Dieses visuelle Element zeigt eine Aufschlüsselung der Datenbanken, indem die folgenden Bereitschaft Buckets:
+- 100 % BEREIT
+- 75 BIS 99 % BEREIT
+- 50 – 75 % BEREIT
+- NICHT BEREIT
+
+### <a name="issues-word-cloud"></a>Wortwolke Probleme
+ 
+  ![DMA-Probleme WordCloud](../dma/media//dma-assesssqlonprem/dma-issues-word-cloud.png)
+
+Dieses visuelle Element zeigt die Probleme, die derzeit in auftreten, in den Auswahlkontext (alles, Instanz, die Datenbank [ein Vielfaches von]). Je größer wird das Wort auf dem Bildschirm größer die Anzahl der Probleme in dieser Kategorie. Wenn der Mauszeiger über ein Wort bewegen, zeigt die Anzahl der Probleme in dieser Kategorie.
+
+### <a name="database-readiness"></a>Datenbank-Bereitschaft
+
+  ![Bereitschaftsbericht für die DMA-Datenbank](../dma/media//dma-assesssqlonprem/dma-database-readiness-report.png)
+
+Dieser Abschnitt ist der primäre Teil des Berichts, der die Bereitschaft einer Datenbank-Instanz angezeigt wird. Dieser Bericht enthält eine Hierarchie Drilldown von:
+- InstanceDatabase
+- ChangeCategory
+- Titel
+- ObjectType
+- ImpactedObjectName
+
+ ![Drilldown des Berichts DMA-Datenbank-Bereitschaft](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
+
+Dieser Bericht dient auch als Filter Punkt für die Erstellung des Berichts für die Wiederherstellung-planen.
+
+Um einen Drilldown in den Bericht für die Wiederherstellung-Plan durchzuführen, mit der rechten Maustaste auf einen Datenpunkt in diesem Diagramm, zeigen Sie auf **Drillthrough**, und wählen Sie dann **Wiederherstellung Pläne**.
+
+Dieser Task filtert den Wiederherstellung Plan Bericht der aktuellen Hierarchieebene basierend auf den Punkt, an dem Sie die Drillthrough-Option auswählen.
+
+  ![DMA-Datenbank-Bereitschaft Drilldown des Berichts gefiltert](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown-filtered.png)
+
+  ![Planen der Wiederherstellung DMA-Bericht](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report.png)
+
+Sie können auch den Aktionsplans-Bericht auf einem eigenen, erstellen Sie eine benutzerdefinierte Wartung Plan verwenden, mithilfe der Filter in der **Visualisierungen Filter** Blatt.
+ 
+  ![Bericht-Filteroptionen DMA Wartung planen](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report-filter-options.png)
+
+### <a name="script-disclaimer"></a>Haftungsausschluss für Skripts
+*In diesem Artikel angegebenen Beispielskripts werden nicht unter keinem Microsoft-standardsupportprogramm oder-Dienst unterstützt. Alle Skripts werden wie besehen und ohne Garantien jeglicher Art bereitgestellt. Microsoft schließt darüber hinaus aller konkludente GEWÄHRLEISTUNGEN, einschließlich, aber nicht beschränkt auf konkludente GEWÄHRLEISTUNGEN der Handelsüblichkeit oder Eignung für einen bestimmten Zweck. Das gesamte Risiko aus der Verwendung oder Leistung der Beispielskripts und Dokumentationen, liegt bei Ihnen. In keinem Fall sollte Microsoft, seinen Autoren oder Benutzer, die andernfalls in die Erstellung, Produktion oder Bereitstellung der Skripts für Schäden haftbar gemacht werden keinerlei (einschließlich, aber nicht beschränkt auf Schäden durch Datenverlust Gewinn, Unterbrechung des Geschäftsbetriebs, Verlust von Geschäftsdaten, Folge- oder) aus aus der Verwendung von oder keine der Beispielskripts oder der Dokumentation verwendet werden können, auch wenn Microsoft die Möglichkeit solcher Schäden hingewiesen wurde.  Suchen Sie die Berechtigung, bevor Sie diese Skripts auf anderen Websites/Repositories/Blogs Berichtsdaten.*

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc91460599df7fff2bed9c7a7a20991b8bae3b57
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7b63f0690a0126a091879ee934f377a7c62e5036
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425669"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395123"
 ---
 # <a name="transactions-in-odbc"></a>Transaktionen in ODBC
   Transaktionen in ODBC werden auf der Verbindungsebene verwaltet. Wenn eine Anwendung eine Transaktion abschließt, führt sie für alle abgeschlossenen Arbeiten einen Commit oder Rollback über alle Anweisungshandles dieser Verbindung aus. Anwendungen müssen zum Ausführen eines Commits oder eines Rollbacks für eine Transaktion keine COMMIT- oder ROLLBACK-Anweisung übermitteln, sondern [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) aufrufen.  

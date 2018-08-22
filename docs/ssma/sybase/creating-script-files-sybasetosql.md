@@ -21,12 +21,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979892"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394693"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Erstellen von Skriptdateien (SybaseToSQL)
 Der erste Schritt vor dem Starten der Anwendung der SSMA-Konsole die Skriptdatei erstellt werden, und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindungsdatei erstellen.  
@@ -73,7 +73,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -110,7 +110,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <migrate-data>  
@@ -143,7 +143,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -176,7 +176,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--synchronization-->  
@@ -187,7 +187,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </synchronize-target>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--data migration-->  
@@ -222,7 +222,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -275,7 +275,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -317,7 +317,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -357,7 +357,7 @@ Die Skriptdatei enthält eine Sequenz von Workflow-migrationsbefehle in das XML-
   
 Zum Beispiel folgt eine typische Datenmigration von einer bestimmten Tabelle in einer Sybase-Datenbank die Hierarchie der: Datenbank -&gt;Schema -&gt;Tabelle.  
   
-Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Console-Anwendung beendet, und das Steuerelement an den Benutzer zurückgibt. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variablen Informationen enthalten, entweder in einem [Variable Value Files](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
+Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Console-Anwendung beendet, und das Steuerelement an den Benutzer zurückgibt. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variablen Informationen enthalten, entweder in einem [Variable Value Files](creating-variable-value-files-sybasetosql.md) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variable Werte.  
   
 **Beispiel:**  
   

@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982332"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394067"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrieren von Sybase ASE-Daten in SQLServer – Azure Sqldb (SybaseToSQL)
-Nachdem die Sybase Adaptive Server Enterprise (ASE) Datenbankobjekte in erfolgreich geladen wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank können Sie Daten aus der App Service-Umgebung migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.  
+Nachdem die Sybase Adaptive Server Enterprise (ASE) Datenbankobjekte in erfolgreich geladen wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank können Sie Daten aus der App Service-Umgebung migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
   
 > [!IMPORTANT]  
 > Wenn die Engine verwendeten Server Side Data Migration-Engine ist, müssen klicken Sie dann vor dem Migrieren von Daten, Sie installieren SSMA für Sybase ASE-Erweiterungspaket und die Sybase ASE-Anbieter auf dem Computer, der SSMA ausgeführt wird. Der SQL Server-Agent-Dienst muss auch ausgeführt werden. Weitere Informationen dazu, wie Sie das Pack für die Erweiterung installieren, finden Sie unter [Installieren von SSMA-Komponenten auf SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrationsoptionen für die  
-Vor der Migration von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, überprüfen die Projektoptionen für die Migration in die **Projekteinstellungen** Dialogfeld.  
+Vor der Migration von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, überprüfen die Projektoptionen für die Migration in die **Projekteinstellungen** Dialogfeld.  
   
 -   Mithilfe dieses Dialogfelds können Sie Optionen wie z. B. die Batchgröße für die Migration, Tabellensperre, Überprüfung von Einschränkungen, null-Wert-Behandlung und Behandlung der Wert festlegen. Weitere Informationen zu den Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
-    Weitere Informationen zu **erweiterte Data Migration Settings**, finden Sie unter [Data Migration Settings](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    Weitere Informationen zu **erweiterte Data Migration Settings**, finden Sie unter [Data Migration Settings](data-migration-settings-sybasetosql.md)  
   
 -   Die **Migrationsmodul** in die **Projekteinstellungen** Dialogfeld ermöglicht es dem Benutzer zum Ausführen des Migrationsprozesses mithilfe von zwei Typen von Data Migration-Engines, viz.:  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180947"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394078"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lektion 4: Speichern von Lieferantendaten in MDS
   Master Data Services (MDS) sind die SQL Server-Lösung für die Masterdatenverwaltung. Master Data Management (MDM) beschreibt die Anstrengungen einer Organisation, nicht transaktionale Listen mit Daten zu ermitteln und zu definieren.  
@@ -30,9 +30,9 @@ ms.locfileid: "37180947"
   
  Ein Modell kann eine oder mehrere Entitäten enthalten. Jede Entität hat Attribute (Spalten) und Elemente (Zeilen). Die Zeilen enthalten die Masterdaten. In dieser Lektion erstellen Sie ein Lieferantenmodell (Suppliers) mit zwei Entitäten namens "Supplier" und "State". Die Entität "Supplier" verfügt über die folgenden Attribute: Code, Name, Kontakt-Vorname, Kontakt-Nachname, Kontakt-E-Mail-Adresse, Adresszeile, Ort, Bundesland, PLZ und Land. Finden Sie unter [Attribute (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx) Weitere Informationen zu Attributen in der Regel. Die Attribute "Code" und "Name" entsprechen den Spalten "SupplierID" und "Supplier Name" in der Excel-Datei "Cleansed and Matched Suppliers".  
   
- Ein domänenbasiertes Attribut weist Werte auf, die mit Elementen einer anderen Entität aufgefüllt werden. Domänenbasierte Attribute verhindern, dass Benutzer ungültige Attributwerte eingeben. Ein Attributwert kann nur aus der Dropdownliste ausgewählt werden, die von einer anderen Entität aufgefüllt wird. In diesem Lernprogramm ist das Attribut "State" der Entität "Supplier" ein domänenbasiertes Attribut mit Werten aus der Entität "State". Sie können den Wert des Attributs "State" der Entität "Supplier" nur in einen der Werte in der Entität "State" ändern. Finden Sie unter [domänenbasierte Attribute](http://msdn.microsoft.com/library/ff487058.aspx) Weitere Details.  
+ Ein domänenbasiertes Attribut weist Werte auf, die mit Elementen einer anderen Entität aufgefüllt werden. Domänenbasierte Attribute verhindern, dass Benutzer ungültige Attributwerte eingeben. Ein Attributwert kann nur aus der Dropdownliste ausgewählt werden, die von einer anderen Entität aufgefüllt wird. In diesem Lernprogramm ist das Attribut "State" der Entität "Supplier" ein domänenbasiertes Attribut mit Werten aus der Entität "State". Sie können den Wert des Attributs "State" der Entität "Supplier" nur in einen der Werte in der Entität "State" ändern. Finden Sie unter [domänenbasierte Attribute](../master-data-services/domain-based-attributes-master-data-services.md) Weitere Details.  
   
- Eine abgeleitete Hierarchie in MDS wird von der domänenbasierten Attributbeziehung im Modell abgeleitet. In diesem Lernprogramm erstellen Sie eine abgeleitete Hierarchie zwischen der Entität "Supplier" und der Entität "State". Nachdem Sie die abgeleitete Hierarchie erstellt habe, wird eine Liste von Bundesstaaten im Browser von Master Data Manager angezeigt. Wenn Sie in der Liste auf einen Bundesstaat klicken, werden die Lieferanten in diesem Bundesstaat im rechten Bereich angezeigt. Sie werden später eine abgeleitete Hierarchie auf Grundlage dieser Beziehung erstellen. Finden Sie unter [abgeleitete Hierarchien](http://msdn.microsoft.com/library/ee633747.aspx) Weitere Details.  
+ Eine abgeleitete Hierarchie in MDS wird von der domänenbasierten Attributbeziehung im Modell abgeleitet. In diesem Lernprogramm erstellen Sie eine abgeleitete Hierarchie zwischen der Entität "Supplier" und der Entität "State". Nachdem Sie die abgeleitete Hierarchie erstellt habe, wird eine Liste von Bundesstaaten im Browser von Master Data Manager angezeigt. Wenn Sie in der Liste auf einen Bundesstaat klicken, werden die Lieferanten in diesem Bundesstaat im rechten Bereich angezeigt. Sie werden später eine abgeleitete Hierarchie auf Grundlage dieser Beziehung erstellen. Finden Sie unter [abgeleitete Hierarchien](../master-data-services/derived-hierarchies-master-data-services.md) Weitere Details.  
   
  Sie haben eine Wissensdatenbank in DQS erstellt und verwendet, um Lieferantendaten zu bereinigen und abzugleichen; die Ergebnisse haben Sie in der Datei "Cleansed and Matched Supplier Data.xls" gespeichert. In dieser Lektion laden Sie die bereinigten und abgeglichenen Daten in MDS hoch. DQS enthält nur Informationen zu den Daten (Metadaten), während MDS die Daten selbst speichert (Mastersatz). Beispiel: DQS enthält Informationen über mehrere Lieferanten, aber MDS verwaltet nur die Lieferanten, die ein Unternehmen verwendet.  
   

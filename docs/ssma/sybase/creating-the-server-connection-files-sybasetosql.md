@@ -1,5 +1,5 @@
 ---
-title: Erstellen die Server-Connection-Dateien (SybaseToSQL) | Microsoft Docs
+title: Erstellen den Server Connection Files (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779296"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392321"
 ---
-# <a name="creating-the-server-connection-files-sybasetosql"></a>Erstellen die Server-Connection-Dateien (SybaseToSQL)
-Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder in einem separaten Server Verbindungsdatei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in der Skriptdatei und die Verbindungsdatei Server vorhanden ist, wird die Definition des Servers in der Skriptdatei angesehen.  
+# <a name="creating-the-server-connection-files-sybasetosql"></a>Erstellen der Serververbindungsdateien (SybaseToSQL)
+Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
   
 **Beispiel:**  
   
@@ -108,12 +108,12 @@ Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder 
 </sql-server>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Server-Verbindung Dateiüberprüfung  
-Benutzer kann problemlos überprüfen Benutzervoreinstellung Verbindung Serverdatei anhand der Schemadefinitionsdatei **S2SSConsoleScriptServersSchema.xsd** in den Ordner "Schemas" verfügbar.  
+## <a name="server-connection-file-validation"></a>Datei-Überprüfung von Server-Verbindung  
+Benutzer kann ganz einfach überprüfen, seine Verbindung-Serverdatei anhand der Schemadefinitionsdatei **S2SSConsoleScriptServersSchema.xsd** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [Ausführen der Konsole SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executing the SSMA Console (Ausführen der SSMA-Konsole)](executing-the-ssma-console-sybasetosql.md)  
   

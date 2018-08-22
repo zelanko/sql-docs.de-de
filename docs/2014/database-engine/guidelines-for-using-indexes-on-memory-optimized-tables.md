@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263386"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396511"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
   Indizes werden für den effizienten Datenzugriff in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tabellen verwendet. Die Auswahl der richtigen Indizes kann die Abfrageleistung deutlich verbessern. Stellen Sie sich beispielsweise die folgende Abfrage vor:  
@@ -73,11 +72,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |Vorgang|Speicheroptimierter, nicht gruppierter Hashindex|Speicheroptimierter, nicht gruppierter Index|Datenträgerbasierter Index|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|Indexscan, alle Tabellenzeilen abrufen.|ja|ja|ja|  
-|Indexsuche auf Gleichheitsprädikaten (=).|ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|ja|  
-|Indexsuche auf ungleichheitsprädikaten (>, <, \<=, > =, BETWEEN).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|ja|  
-|Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|nein|ja|ja|  
-|Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|nein|nein|ja|  
+|Indexscan, alle Tabellenzeilen abrufen.|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Indexsuche auf Gleichheitsprädikaten (=).|Benutzerkontensteuerung<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|Benutzerkontensteuerung|  
+|Indexsuche auf ungleichheitsprädikaten (>, <, \<=, > =, BETWEEN).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|Benutzerkontensteuerung|  
+|Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|nein|nein|Benutzerkontensteuerung|  
   
  In dieser Tabelle bedeutet "Ja", dass der Index die Anforderung adäquat bedienen kann, und "Nein" bedeutet, dass der Index nicht erfolgreich zum Erfüllen der Anforderung verwendet werden kann.  
   

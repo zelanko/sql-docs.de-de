@@ -1,5 +1,5 @@
 ---
-title: Sp_start_job (Transact-SQL) | Microsoft Docs
+title: Sp_start_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fb415b74bf26880c1000e1f3122b5f6b86f2e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9f640f88382653b5de1c70d1d9a22a8dbacbc283
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260796"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394285"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_start_job
   
 ## <a name="arguments"></a>Argumente  
  [  **@job_name=** ] **"***Job_name***"**  
- Der Name des Auftrags, der gestartet werden soll. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
+ Der Name des Auftrags, der gestartet werden soll. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, der gestartet werden soll. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, der gestartet werden soll. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@server_name=** ] **"***Server_name***"**  
- Der Zielserver, auf dem der Auftrag gestartet werden soll. *Server_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. *Server_name* muss eines der Zielserver, dem der Auftrag derzeit gerichtet, sein.  
+ Der Zielserver, auf dem der Auftrag gestartet werden soll. *Server_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. *Server_name* muss einer der Zielserver, der der Auftrag derzeit gerichtet, sein.  
   
  [  **@step_name=** ] **"***Step_name***"**  
  Der Name des Schritts, mit dem die Ausführung des Auftrags beginnen soll. Gilt nur für lokale Aufträge. *Step_name* ist **Sysname**, hat den Standardwert NULL  
@@ -72,7 +72,7 @@ sp_start_job
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Diese gespeicherte Prozedur wird in der **msdb** -Datenbank gespeichert.  
@@ -86,7 +86,7 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Mitglieder der **SQLAgentUserRole** und **SQLAgentReaderRole** können nur Aufträge, deren Besitzer sie, starten. Mitglieder der **SQLAgentOperatorRole** können alle lokalen Aufträge einschließlich derjenigen, die von anderen Benutzern gehören starten. Mitglieder der **Sysadmin** können Aufträge für alle lokalen und Multiserveraufträge starten.  
   

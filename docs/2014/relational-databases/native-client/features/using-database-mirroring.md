@@ -5,7 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425709"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395900"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425709"
   
  Die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführte Datenbankspiegelung ist eine Lösung zum Erhöhen der Datenbankverfügbarkeit und Datenredundanz. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client stellt implizite Unterstützung für die datenbankspiegelung bereit, sodass der Entwickler nicht notwendigerweise Code schreiben oder andere Aktionen ausführen, nachdem es für die Datenbank konfiguriert wurde.  
   
- Datenbankspiegelung, die für eine Datenbanken einzeln implementiert wird, befindet sich eine Kopie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Produktionsdatenbank auf einem Standbyserver. Bei dem Server handelt es sich je nach Konfiguration und Status der Datenbankspiegelungs-Sitzung um einen unmittelbar betriebsbereiten oder einfach betriebsbereiten Standbyserver. Ein unmittelbar betriebsbereiter Standbyserver unterstützt schnelles Failover ohne Verlust von Transaktionen mit ausgeführtem Commit, und ein betriebsbereiter Standbyserver unterstützt das Erzwingen eines Diensts (bei möglichem Datenverlust).  
+ Bei einer Datenbankspiegelung, die für Datenbanken einzeln implementiert wird, befindet sich eine Kopie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Produktionsdatenbank auf einem Standbyserver. Bei dem Server handelt es sich je nach Konfiguration und Status der Datenbankspiegelungs-Sitzung um einen unmittelbar betriebsbereiten oder einfach betriebsbereiten Standbyserver. Ein unmittelbar betriebsbereiter Standbyserver unterstützt schnelles Failover ohne Verlust von Transaktionen mit ausgeführtem Commit, und ein betriebsbereiter Standbyserver unterstützt das Erzwingen eines Diensts (bei möglichem Datenverlust).  
   
- Die Produktionsdatenbank wird aufgerufen, die *Prinzipaldatenbank*, und die Standbykopie wird aufgerufen, die *Spiegeldatenbank*. Die Prinzipaldatenbank und Spiegeldatenbank müssen sich in separaten Instanzen von befinden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanzen), und sie sollten auf unterschiedlichen Computern befinden, wenn möglich.  
+ Die Produktionsdatenbank wird *Prinzipaldatenbank* genannt. Die Standbykopie wird *Spiegeldatenbank* genannt. Die Prinzipaldatenbank und die Spiegeldatenbank müssen sich auf unterschiedlichen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanzen) befinden und sollten sich nach Möglichkeit auch auf unterschiedlichen Computern befinden.  
   
- Die produktionsserverinstanz, bezeichnet die *Prinzipalserver*, kommuniziert mit der standbyserverinstanz, dem Namen der *Spiegelserver*. Der Prinzipal- und Spiegelserver als Partner in einer datenbankspiegelungs-agieren *Sitzung*. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank vornehmen, in der Prinzipaldatenbank ein so genanntes *Failover*. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.  
+ Die Produktionsserverinstanz, die als *Prinzipalserver* bezeichnet wird, kommuniziert mit der Standbyserverinstanz, dem so genannten *Spiegelserver*. Der Prinzipal- und der Spiegelserver agieren in einer Datenbankspiegelungs-*Sitzung* als Partner. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank über einen so genannten *Failover* als Prinzipaldatenbank bestimmen. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.  
   
  Alternative Konfigurationen für die Datenbankspiegelung bieten unterschiedliche Leistungs- und Datensicherheitsstufen und unterstützen unterschiedliche Formen des Failover. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

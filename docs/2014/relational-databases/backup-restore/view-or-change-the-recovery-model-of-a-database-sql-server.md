@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156261"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393875"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
   In diesem Thema wird die Vorgehensweise zum Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]beschrieben. Ein *Wiederherstellungsmodell* ist eine Datenbankeigenschaft, die steuert, wie Transaktionen protokolliert werden, ob das Transaktionsprotokoll gesichert werden muss (und kann) und welche Arten von Wiederherstellungsvorgängen verfügbar sind. Es stehen drei Wiederherstellungsmodelle zur Verfügung: einfach, vollständig und massenprotokolliert. Für eine Datenbank wird im Allgemeinen das vollständige oder das einfache Wiederherstellungsmodell verwendet. Eine Datenbank kann jederzeit auf ein anderes Wiederherstellungsmodell umgestellt werden. Die **model** -Datenbank legt das Standardwiederherstellungsmodell der neuen Datenbanken fest.  
@@ -161,7 +161,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Datenbankwartungspläne](http://msdn.microsoft.com/library/ms187658.aspx) (in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation)  
+-   [Datenbankwartungspläne](../maintenance-plans/maintenance-plans.md) (in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   

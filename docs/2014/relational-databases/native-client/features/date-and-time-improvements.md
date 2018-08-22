@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -13,14 +13,14 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 350ad710f2ff9e00d82be7fe565521becf522eb8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428849"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394893"
 ---
-# <a name="date-and-time-improvements"></a>Datums- / Uhrzeitverbesserungen
+# <a name="date-and-time-improvements"></a>Verbesserungen bei Datum und Uhrzeit
   Dieses Thema beschreibt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung der neuen Datums- und Uhrzeitdatentypen, die in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] hinzugefügt wurden.  
   
  Weitere Informationen zu Datum/Uhrzeit-Verbesserungen, finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) und [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
@@ -36,13 +36,13 @@ ms.locfileid: "37428849"
 ### <a name="use-time-as-a-distinct-data-type"></a>Verwenden von 'Time' als eindeutigen Datentyp  
  OLE DB verfügt bereits über einen Datentyp, der nur die Zeit enthält: DBTYPE_DBTIME, der die Zeit mit einer Genauigkeit von 1 Sekunde angibt. In ODBC ist der entsprechende Typ SQL_TYPE_TIME (SQL_TIME für ODBC 2.0-Anwendungen).  
   
- Die neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Zeitdatentyp verfügt über Bruchteilen Genauigkeit von bis zu 100 Nanosekunden. Dies erfordert neue Typen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) und SQL_SS_TIME2 (ODBC). Vorhandene Anwendungen, in denen Zeitdaten nicht in Sekundenbruchteilen angegeben werden, können time(0)-Spalten verwenden. Die vorhandenen OLE DB DBTYPE_TIME- und ODBC SQL_TYPE_TIME-Typen und ihre entsprechenden Strukturen sollten richtig funktionieren, es sei denn, die Anwendungen verlassen sich auf den in den Metadaten zurückgegebenen Typ.  
+ Der neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zeitdatentyp verfügt über eine Genauigkeit in Sekundenbruchteilen von bis zu 100 Nanosekunden. Dies erfordert neue Typen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) und SQL_SS_TIME2 (ODBC). Vorhandene Anwendungen, in denen Zeitdaten nicht in Sekundenbruchteilen angegeben werden, können time(0)-Spalten verwenden. Die vorhandenen OLE DB DBTYPE_TIME- und ODBC SQL_TYPE_TIME-Typen und ihre entsprechenden Strukturen sollten richtig funktionieren, es sei denn, die Anwendungen verlassen sich auf den in den Metadaten zurückgegebenen Typ.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Verwenden von 'Time' als eindeutigen Datentyp mit einer Genauigkeit in Sekundenbruchteilen  
  Einige Anwendungen, z. B. in der Fertigung und Prozesssteuerung, erfordern die Fähigkeit, Zeitdaten mit einer Genauigkeit von bis zu 100 Nanosekunden zu verarbeiten. Neue Typen für diesen Zweck sind DBTYPE_DBTIME2 (OLE DB) und SQL_SS_TIME2 (ODBC).  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Verwenden von 'Datetime' mit einer Genauigkeit in Sekundenbruchteilen  
- OLE DB definiert bereits einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits verwendet, von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und diese Anwendungen erwarten von nur 1/300 einer Sekunde Genauigkeit. Der neue `datetime2(3)`-Typ ist nicht direkt kompatibel mit dem vorhandenen datetime-Typ. Wenn das Risiko besteht, dass sich dies auf das Verhalten der Anwendung auswirkt, müssen Anwendungen das neue DBCOLUMN-Flag zur Bestimmung des tatsächlichen Servertyps verwenden.  
+ OLE DB definiert bereits einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anwendungen verwendet, die eine Genauigkeit von lediglich 1/300 Sekunde erwarten. Der neue `datetime2(3)`-Typ ist nicht direkt kompatibel mit dem vorhandenen datetime-Typ. Wenn das Risiko besteht, dass sich dies auf das Verhalten der Anwendung auswirkt, müssen Anwendungen das neue DBCOLUMN-Flag zur Bestimmung des tatsächlichen Servertyps verwenden.  
   
  ODBC definiert auch einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits verwendet, von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Anwendungen diese Anwendungen erwarten eine Genauigkeit in nur 3 Millisekunden. Der neue `datetime2(3)`-Typ ist nicht direkt kompatibel mit dem vorhandenen `datetime`-Typ. `datetime2(3)` hat eine Genauigkeit von einer Millisekunde, und `datetime` hat eine Genauigkeit von 1/300 Sekunde. In ODBC können Anwendungen bestimmen, welcher Servertyp mit dem Deskriptorfeld SQL_DESC_TYPE_NAME verwendet wird. Deshalb kann der vorhandene SQL_TYPE_TIMESTAMP-Typ (SQL_TIMESTAMP für ODBC 2.0-Anwendungen) für beide Typen verwendet werden.  
   

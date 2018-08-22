@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
+title: Sp_help_jobsteplog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261685"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394073"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Metadaten zu einem bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftragsschrittprotokoll-Agents. **Sp_help_jobsteplog** gibt nicht das eigentliche Protokoll zurück.  
+  Gibt Metadaten zu einem bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftragsschrittprotokoll Agent. **Sp_help_jobsteplog** ist nicht das eigentliche Protokoll zurück.  
 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@step_id =**] *step_id*  
  Die ID des Auftragsschritts. Wenn diese nicht angegeben wird, sind alle Schritte im Auftrag eingeschlossen. *Step_id* ist **Int**, hat den Standardwert NULL.  
@@ -71,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Eindeutiger Bezeichner des Auftrags.|  
 |**job_name**|**sysname**|Name des Auftrags.|  
-|**step_id**|**int**|Bezeichner des Schritts innerhalb des Auftrags. Angenommen, wenn der Schritt im Auftrag, der erste Schritt ist die *Step_id* ist 1.|  
+|**step_id**|**int**|Bezeichner des Schritts innerhalb des Auftrags. Wenn der Schritt der erste Schritt im Auftrag ist z. B. die *Step_id* ist 1.|  
 |**step_name**|**sysname**|Name des Auftragsschritts.|  
 |**step_uid**|**uniqueidentifier**|Eindeutiger Bezeichner des Schritts (systemgeneriert) im Auftrag.|  
 |**date_created**|**datetime**|Datum, an dem der Schritt erstellt wurde.|  
@@ -91,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** können die Metadaten des auftragsschrittprotokolls für Auftragsschritte, die sie besitzen nur anzeigen.  
+ Mitglieder der **SQLAgentUserRole** Metadaten des auftragsschrittprotokolls für Auftragsschritte, deren Besitzer, können nur anzeigen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -128,6 +128,6 @@ GO
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

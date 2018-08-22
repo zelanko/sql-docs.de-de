@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
@@ -14,12 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c99792fbb660cb6e1bdff70fcfd60cfba2119dfb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283836"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395719"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
   Speicheroptimierte Tabellen besitzen keinen Speicher außerhalb von Zeilen und keinen Speicher für große Objekte (LOB-Speicher). Die Zeilengröße ist auf 8060 Bytes begrenzt. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  

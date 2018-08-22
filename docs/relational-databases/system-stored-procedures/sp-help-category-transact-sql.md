@@ -1,5 +1,5 @@
 ---
-title: Sp_help_category (Transact-SQL) | Microsoft Docs
+title: Sp_help_category (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254882"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394688"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_category [ [ @class = ] 'class' ]
  [ **@class=**] **'***class***'**  
  Die Klasse, zu der Informationen angefordert werden. *Klasse* ist **varchar(8)**, hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
 |**WARNUNG**|Stellt Informationen zu einer Warnungskategorie bereit.|  
@@ -59,7 +59,7 @@ sp_help_category [ [ @class = ] 'class' ]
  [ **@type=** ] **'***type***'**  
  Der Typ der Kategorie, für die Informationen angefordert werden. *Typ* ist **varchar(12)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Lokale Auftragskategorie|  
 |**MULTI-SERVER**|Multiserver-Auftragskategorie|  
@@ -69,7 +69,7 @@ sp_help_category [ [ @class = ] 'class' ]
  Der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [ **@suffix=** ] *suffix*  
- Gibt an, ob die **Category_type** Spalte im Resultset wird eine ID oder einen Namen. *Suffix* ist **Bit**, hat den Standardwert **0**. **1** zeigt die **Category_type** als einen Namen und **0** angezeigt wird, eine ID ein.  
+ Gibt an, ob die **Category_type** Spalte im Resultset ist eine ID oder einen Namen. *Suffix* ist **Bit**, hat den Standardwert **0**. **1** zeigt die **Category_type** als einen Namen ein, und **0** deckt das Diagramm als ID  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -88,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
-|**category_type**|**sysname**|Art der Kategorie: Einer der **lokale**, **mit mehreren Servern**, oder **NONE**|  
+|**category_type**|**sysname**|Art der Kategorie: Einer der **lokalen**, **mit mehreren Servern**, oder **NONE**|  
 |**name**|**sysname**|Kategoriename|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cc5f2caba4f82a34c64fdaafdfef137739bc19e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313800"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395307"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
   Der Transaktionsleistungssammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] hilft Ihnen zu bewerten, ob In-Memory OLTP die Leistung der Datenbankanwendung verbessern kann. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  

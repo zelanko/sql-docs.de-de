@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
@@ -14,14 +13,14 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263362"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394882"
 ---
-# <a name="migrating-check-and-foreign-key-constraints"></a>Migrieren von Check- und Foreign Key-Einschränkungen
+# <a name="migrating-check-and-foreign-key-constraints"></a>Migrieren von Überprüfungs- und Fremdschlüsseleinschränkungen
   Check- und foreign Key-Einschränkungen werden nicht unterstützt, [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Diese Konstrukte werden in der Regel verwendet werden, um die Integrität der logischen Daten in das Schema zu erzwingen und können für die Verwaltung des ordnungsgemäße Funktionieren von Anwendungen wichtig sein.  
   
  Logische integritätsprüfungen für eine Tabelle z. B. Check und foreign Key-Einschränkungen erfordern zusätzliche Verarbeitung, zu Transaktionen und sollte im Allgemeinen für leistungsabhängigen Anwendungen vermieden werden. Wenn solchen Überprüfungen aus Ihrer Anwendung von entscheidender Bedeutung sind, gibt es jedoch zwei problemumgehungen.  

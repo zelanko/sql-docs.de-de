@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_schedule (Transact-SQL) | Microsoft Docs
+title: Sp_delete_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396114"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [  **@schedule_id=** ] *Schedule_id*  
  Die Zeitplan-ID des zu löschenden Zeitplans. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [  **@schedule_name=** ] **"***Schedule_name***"**  
  Der Name des zu löschenden Zeitplan. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@force_delete** = ] *force_delete*  
  Gibt an, ob die Prozedur einen Fehler verursachen soll, wenn der Zeitplan an einen Auftrag angefügt wird. *Force_delete* bit und hat den Standardwert **0**. Wenn *Force_delete* ist **0**, die gespeicherte Prozedur fehlschlägt, wenn der Zeitplan einem Auftrag angefügt ist. Wenn *Force_delete* ist **1**, der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan einem Auftrag angefügt ist.  
@@ -62,7 +62,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Standardmäßig kann ein Zeitplan nicht gelöscht werden, wenn der Zeitplan einem Auftrag angefügt ist. Um einen Zeitplan zu löschen, die einem Auftrag angefügt ist, geben Sie den Wert **1** für *Force_delete*. Durch das Löschen eines Zeitplans werden derzeit ausgeführte Aufträge nicht beendet.  
@@ -76,9 +76,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Allerdings kann kein Zeitplan gelöscht werden, wenn das Trennen keine Aufträge lassen würde, wenn der Aufrufer der Zeitplanbesitzer ist.  
+ Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Allerdings kann kein Zeitplans gelöscht werden, wenn das Trennen keine Aufträge, lassen würden, wenn der Aufrufer der Zeitplanbesitzer ist.  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Nur Mitglieder der **Sysadmin** Rolle kann einen Zeitplan für Aufträge, die von einem anderen Benutzer gehört zu löschen.  
   
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Implementieren von Aufträgen](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

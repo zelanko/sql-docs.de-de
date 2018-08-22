@@ -1,7 +1,7 @@
 ---
 title: Sp_rxPredict | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -17,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036048"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434860"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Generiert einen vorhergesagten Wert auf Grundlage eines gespeicherten Modells.
+Generiert einen vorhergesagten Wert für eine angegebene Eingabe, die basierend auf ein Machine learning-Modell in einem binären Format in einer SQL Server-Datenbank gespeichert.
 
-Stellt die Bewertung auf Machine Learning-Modelle in nahezu in Echtzeit. `sp_rxPredict` ist eine gespeicherte Prozedur bereitgestellt, die als Wrapper für die `rxPredict` -Funktion in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Es ist in C++ geschrieben und ist speziell für die Bewertung der Vorgänge optimiert wird. Es unterstützt sowohl R oder Python-machine Learning-Modellen.
+Stellt die Bewertung auf R und Python Machine Learning-Modelle in nahezu in Echtzeit. `sp_rxPredict` ist eine gespeicherte Prozedur bereitgestellt, die als Wrapper für die `rxPredict` R-Funktion im [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), und die [Rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python-Funktion in [Revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Es ist in C++ geschrieben und ist speziell für die Bewertung der Vorgänge optimiert wird.
 
-**Dieses Thema gilt für**:  
+**Dieser Artikel gilt für**:  
 - SQL Server 2017  
-- SQL Server 2016 R Services mit Upgrade auf Microsoft R Server  
+- SQL Server 2016 R Services mit [aktualisiert R-Komponenten](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,11 +69,10 @@ Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss die SQLCLR für
 Die benutzeranforderungen `EXECUTE` Berechtigung für die Datenbank.
 
 ### <a name="supported-platforms"></a>Unterstützte Plattformen
-
-Erfordert eine der folgenden Editionen:  
-- SQL Server 2017 Machine Learning Services (einschließlich Microsoft R Server 9.1.0)  
-- Microsoft Machine Learning-Server  
-- SQL Server R Services 2016 ein Upgrade der R-Services-Instanz für Microsoft R Server 9.1.0 oder höher  
+ 
+- SQL Server 2017 Machine Learning Services (einschließlich R Server 9.2)  
+- SQL Server 2017-Machine-Learning-Server (eigenständig) 
+- SQL Server R Services 2016 ein Upgrade der R-Services-Instanz mit R Server 9.1.0 oder höher  
 
 ### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
@@ -101,5 +100,5 @@ Abgesehen davon, dass eine gültige SQL-Abfrage, die Eingabedaten in *@inputData
 
 `sp_rxPredict` unterstützt nur die folgenden .NET Spaltentypen: double, Float, Short, Ushort, long, Ulong und Zeichenfolge. Sie müssen möglicherweise nicht unterstützten Typen in Ihre Daten herausfiltern, bevor Sie ihn für die echtzeitbewertung verwenden. 
 
-  Weitere Informationen zu den entsprechenden SQL-Datentypen, finden Sie unter [SQL-CLR-Typzuordnung](https://msdn.microsoft.com/library/bb386947.aspx) oder [Zuordnen von CLR-Parameterdaten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  Weitere Informationen zu den entsprechenden SQL-Datentypen, finden Sie unter [SQL-CLR-Typzuordnung](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) oder [Zuordnen von CLR-Parameterdaten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

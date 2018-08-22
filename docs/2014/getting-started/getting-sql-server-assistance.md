@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171161"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394272"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -68,7 +68,7 @@ ms.locfileid: "37171161"
   
  Es gibt folgende Möglichkeiten, um auf die Onlinedokumentation zuzugreifen:  
   
--   Eine Kopie der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Onlinedokumentation ist in der MSDN Library sowie in der TechNet Library im Internet veröffentlicht. Die Themen in diesen Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten Kommentare aus der Community, z. B. zusätzliche Informationen und Codebeispiele von anderen Kunden. Sie finden die MSDN Library-Version auf die [SQL Server 2014-Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Eine Kopie der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Onlinedokumentation ist in der MSDN Library sowie in der TechNet Library im Internet veröffentlicht. Die Themen in diesen Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten Kommentare aus der Community, z. B. zusätzliche Informationen und Codebeispiele von anderen Kunden. Sie finden die MSDN Library-Version auf die [SQL Server 2014-Books Online](../2014-toc/index.md).  
   
 -   Sie können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation auf einem lokalen Computer mithilfe des Hilfebibliotheks-Managers installieren. Weitere Informationen finden Sie unter [hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   

@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979602"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394692"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnen von Quell- und Ziel-Datentypen (AccessToSQL)
-Access-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Wenn Sie den Zugriff auf Datenbankobjekte zu konvertieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, wie Sie Datentypen aus den Zugriff auf zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Verfahren dargestellt.  
+Access-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Datentypen. Wenn Sie den Zugriff auf Datenbankobjekte zu konvertieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte aufweist, müssen Sie angeben, wie Sie Datentypen aus den Zugriff auf zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Verfahren dargestellt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -70,7 +70,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Dat
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   
         Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
@@ -84,7 +84,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Dat
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   
         Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
@@ -95,8 +95,8 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Dat
     2.  Klicken Sie auf **Entfernen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Im nächsten Schritt des Migrationsvorgangs [konvertieren Sie den Zugriff auf Datenbankobjekte in SQL Server-Objekte](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Im nächsten Schritt des Migrationsvorgangs [konvertieren Sie den Zugriff auf Datenbankobjekte in SQL Server-Objekte](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

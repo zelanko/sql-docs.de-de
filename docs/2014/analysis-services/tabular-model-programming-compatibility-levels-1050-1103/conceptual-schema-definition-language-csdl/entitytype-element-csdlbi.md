@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277596"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393663"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType-Element (CSDLBI)
-  Das `EntityType`-Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die `bi:EntityType` Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) in verwendet die [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  Das `EntityType`-Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die `bi:EntityType` Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) in verwendet die [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview).  
   
  Ein EntityType-Element muss für jede der Entitäten angegeben werden, die im Datenmodell enthalten sind. Die Unterelemente von EntityType beschreiben die Spalten und Measures in der Tabelle. Beziehungen zwischen Tabellen befinden sich der `EntityContainer`.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "37277596"
 |DefaultMeasure|nein|Ein Verweis auf ein Measure in der Entität, das als Standardwert für Berechnungen bezüglich der Entität verwendet werden soll. Fehlt die Angabe, ist SUM der Standardwert.<br /><br /> Finden Sie unter [MemberRef-Element &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
 |DisplayKey|nein|Eine Liste mit Verweisen auf Spalten oder Rollenenden, die einen starken Bezeichner bilden, der eine Entitätsinstanz eindeutig identifizieren kann.<br /><br /> Finden Sie unter [DisplayKey-Element &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
 |Hierarchy|nein|Eine Liste der Hierarchien im Modell.<br /><br /> Finden Sie unter [Hierarchy-Element &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
-|ReferenceName|ja|Ein Bezeichner, der verwendet werden kann, um in einer DAX (Data Analysis Expressions)-Abfrage auf diese Entität zu verweisen.<br /><br /> Wenn dieses Attribut nicht angegeben wird, wird der vollqualifizierte Feldname der Entität verwendet.|  
+|ReferenceName|Benutzerkontensteuerung|Ein Bezeichner, der verwendet werden kann, um in einer DAX (Data Analysis Expressions)-Abfrage auf diese Entität zu verweisen.<br /><br /> Wenn dieses Attribut nicht angegeben wird, wird der vollqualifizierte Feldname der Entität verwendet.|  
 |SortMembers|nein|Eine Liste von Eigenschaften, nach denen sortiert werden kann. Das SortDirections-Attribut gibt an, ob die Sortierreihenfolge aufsteigend oder absteigend ist.|  
   
 ## <a name="contents-element"></a>Contents-Element  

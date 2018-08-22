@@ -14,18 +14,18 @@ caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69e0fe6394d2690b3694cd212bf4b475eda3128d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200340"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396129"
 ---
-# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine Konfiguration mit Mindestberechtigungen für PowerPivot für SharePoint 2013
+# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen
   In diesem Thema wird eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen anhand eines Beispiels veranschaulicht. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   

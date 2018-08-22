@@ -18,17 +18,17 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982243"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394281"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>Command Line Options in SSMA Console (OracleToSQL)
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (OracleToSQL)
 Microsoft bietet Ihnen eine stabile Set-Optionen über die Befehlszeile auszuführen und zu steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  
   
-## <a name="command-line-options-in-ssma-console"></a>Command Line Options in SSMA-Konsole  
+## <a name="command-line-options-in-ssma-console"></a>Befehlszeilenoptionen in der SSMA-Konsole  
 Hierin beschriebenen sind die Konsole die Befehlsoptionen an.  
   
 In diesem Abschnitt wird der Begriff "Option" auch als "Switch" bezeichnet.  
@@ -128,7 +128,7 @@ Dies bedeutet der Projektordner für die Einstellungen von Umgebung für das akt
 ### <a name="secure-password-option-psecurepassword"></a>Secure Password-Option: – p/securepassword  
 Diese Option gibt an, das verschlüsselte Kennwort für Server-Verbindungen. Es unterscheidet sich von allen anderen Optionen: die Option weder führt alle Skripts noch Migrationsaktivitäten erleichtert jedoch kennwortverschlüsselung für das Server-Verbindungen im Migrationsprojekt verwendet bei der Verwaltung hilft.  
   
-Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) Abschnitt.  
+Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](managing-passwords-oracletosql.md) Abschnitt.  
   
 Die folgenden untergeordneten Optionen werden unterstützt, für die `–p/securepassword`:  
   

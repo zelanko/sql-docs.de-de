@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155421"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393669"
 ---
 # Handbuch zum SQL Server Indexentwurf
   Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
   
 **Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] über [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
   
- In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](http://msdn.microsoft.com/library/ms175049.aspx).  
+ In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="Top"></a> In diesem Handbuch  
  [Indexentwurfs](#Basics)  
@@ -171,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Der folgende Ausführungsplan für diese Abfrage zeigt, dass der Abfrageoptimierer einen SORT-Operator verwendet hat, um das Resultset in der durch die ORDER BY-Klausel angegebenen Reihenfolge zurückzugeben.  
   
- ![Ausführungsplan zeigt einer SORTIERUNG, dass der Operator verwendet wird. ] (media/indexsort1.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird verwendet.")  
+ ![Ausführungsplan zeigt einer SORTIERUNG, dass der Operator verwendet wird. ](media/indexsort1.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird verwendet.")  
   
  Falls ein Index mit Schlüsselspalten erstellt wird, die mit jenen in der ORDER BY-Klausel in der Abfrage übereinstimmen, kann der SORT-Operator im Abfrageplan gelöscht werden, wodurch der Abfrageplan effizienter wird.  
   

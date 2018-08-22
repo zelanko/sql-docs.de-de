@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164211"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394471"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Gibt eine einzelne Zeile, beschreibt die Konfiguration des Auftragsobjekts, die SQL Server-Prozess als auch bestimmte Ressourcenstatistiken für die Nutzung auf Objektebene Auftrag verwaltet. Gibt ein leeres Resultset zurück, wenn SQL Server nicht in ein Job-Objekt ausgeführt wird. 
 
-Ein Job-Objekt ist ein Windows-Konstrukt, die CPU, Arbeitsspeicher und e/a-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftragsobjekte, finden Sie unter [Auftragsobjekte](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Ein Job-Objekt ist ein Windows-Konstrukt, die CPU, Arbeitsspeicher und e/a-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftragsobjekte, finden Sie unter [Auftragsobjekte](/windows/desktop/ProcThread/job-objects). 
   
 |Spalte|Datentyp|Description|  
 |-------------|---------------|-----------------|  

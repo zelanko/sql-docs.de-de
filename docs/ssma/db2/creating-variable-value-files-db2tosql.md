@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Variablenwert-Dateien (DB2ToSQL) | Microsoft Docs
+title: Erstellen die Variable Value Files (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 87cd293fcfa801499c7ef3cad583b05ff2ecf2a1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 73afb63d53be87baaaf1e969ae06c803100aa4f7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774586"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393881"
 ---
-# <a name="creating-variable-value-files-db2tosql"></a>Erstellen von Variablenwert-Dateien (DB2ToSQL)
-Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie die Quelle oder Ziel-Servernamen, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von Datenbank-Migrationen auftreten, mehrere Dateien zum Speichern des Wert der einzelnen Quellserver werden erstellt und in master Skriptdatei mit verwiesen die **– V** zur Befehlszeile wechseln. Dadurch erhalten Sie statische Werte in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
+# <a name="creating-variable-value-files-db2tosql"></a>Erstellen die Variable Value Files (DB2ToSQL)
+Variablendatei Wert ist eine XML-Datei mit die Werte der Parameter der Befehle wie die Quelle oder Ziel-Servername, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von datenbankmigrationen auftreten, mehrere Dateien zum Speichern von den Wert der einzelnen Quellserver werden erstellt und auf die verwiesen wird in einer master-Skript-Datei mit den **– V** -Schalter an der Befehlszeile. Dies hilft beim Verwalten von statischer Werten in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
   
 > [!NOTE]  
-> 1.  Variablennamen sind mit dem Präfix und Suffix ein Symbol, das $ (Dollar). Wenn einen Wert in der Datei Variablenwert in der Variablen nicht zugewiesen sind, treten einen Fehler während der Analyse der Skriptdatei an, was in der Konsole Ausführungsprozess führte.  
-> 2.  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält **$** Symbol (Dollar), klicken Sie dann **$$** muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
-> 3.  Aus Gründen der Verwaltbarkeit können Variablen deklariert werden in `‘variable-group’` Elemente logische Trennung von Benutzer definierte Variablen.  Verwendung dieses Elements ist nicht obligatorisch.  
+> 1.  Namen von Variablen sind mit dem Präfix und Suffix mit einem Symbol $ (Dollarzeichen). Wenn die Variablen einen Wert in der Datei der Wert der Variablen nicht zugewiesen sind, werden Sie ein Fehler auftritt, während der Analyse der Skriptdatei an, was in der Konsole Ausführungsprozess treten.  
+> 2.  Das Escapezeichen für **$** ist **$$**. Wenn der Wert einer Variable oder ein statischer Wert eines Parameters enthält **$** (Dollar)-Symbol, klicken Sie dann **$$** muss angegeben werden, um diese als Zeichen und keiner Variablen zu behandeln.  
+> 3.  Aus Gründen der Verwaltbarkeit können in Variablen deklariert werden `‘variable-group’` Elemente für die logische Trennung von Benutzer definierten Variablen.  Verwendung dieses Elements ist nicht erforderlich.  
   
 **Beispiele:**  
   
@@ -91,8 +91,8 @@ Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie 
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole funktioniert [erstellen die Server-Verbindungsdateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+Der nächste Schritt in der Konsole ausgeführt wird [erstellen den Server Connection Files &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Creating the Server Connection Files (Erstellen der Serververbindungsdateien)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[Creating the Server Connection Files (Erstellen der Serververbindungsdateien)](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

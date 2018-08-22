@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985742"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394679"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (AccessToSQL)
-Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch die replikationsdatentyp-Zuordnungen für einzelne Objekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Ziel-Datentypen](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch die replikationsdatentyp-Zuordnungen für einzelne Objekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Ziel-Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
   
 Zuordnung eines Typs finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder:  
   
@@ -44,7 +44,7 @@ Zuordnung eines Typs finden Sie in der **Projekteinstellungen** und **Projekt St
 Der Access-Datentyp zugeordnet werden soll.  
   
 **Zieltyp**  
-Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datentyp für den angegebenen Datentyp für den Zugriff.  
+Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datentyp für den angegebenen Datentyp für den Zugriff.  
   
 Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.  
   
@@ -76,10 +76,10 @@ Klicken Sie auf diese Option, um einen Datentyp aus der Zuordnung zu bearbeiten.
 **Entfernen**  
 Klicken Sie auf diese Option, um die ausgewählte Zuordnung von Datentypen aus der Zuordnungsliste zu entfernen.  
   
-**Auf Standard zurücksetzen**  
+**Standard wiederherstellen**  
 Klicken Sie auf diese Option, um alle datentypzuordnungen der SSMA-Standardwerte zurückzusetzen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Mapping Source and Target Data Types (Zuordnen von Quell- und Zieldatentypen)](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mapping Source and Target Data Types (Zuordnen von Quell- und Zieldatentypen)](mapping-source-and-target-data-types-accesstosql.md)  
 [Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

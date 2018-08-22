@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
@@ -14,12 +13,12 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d46187b7f92fb9bb02bb693b51bd13bcd12da1f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205380"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393662"
 ---
 # <a name="supported-sql-server-features"></a>Unterstützte SQL Server-Funktionen
   In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekte unterstützt bzw. nicht unterstützt wird.  
@@ -43,7 +42,7 @@ ms.locfileid: "37205380"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. Weitere Informationen finden Sie unter [SQL Server Management Objects-Unterstützung für In-Memory OLTP](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]installiert haben. Weitere Informationen finden Sie unter [SQL Server Management Studio-Unterstützung für In-Memory OLTP](sql-server-management-studio-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. installiert haben. Weitere Informationen finden Sie unter [SQL Server Management Studio-Unterstützung für In-Memory OLTP](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Weitere Informationen finden Sie unter [Übersicht über SQL Server PowerShell](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
@@ -112,7 +111,7 @@ ms.locfileid: "37205380"
 |Datenbanken|Zulässig|Description|  
 |---------------|-------------|-----------------|  
 |Benutzerdatenbanken, Modell- und msdb-Datenbank|nein|Datenbankübergreifende Abfragen und Transaktionen werden nicht unterstützt.<br /><br /> Abfragen und Transaktionen, die auf speicheroptimierte Tabellen oder systemintern kompilierte gespeicherte Prozeduren zugreifen, können nicht auf andere Datenbanken zugreifen. Eine Ausnahme bilden der Systemdatenbankmaster (schreibgeschützter Zugriff) und "tempdb".|  
-|Ressourcendatenbank und tempdb|ja|Es gibt keine Einschränkungen für datenbankübergreifende Transaktionen, die, außer bei einer einzelnen Benutzerdatenbank, nur die Ressourcendatenbank und tempdb verwenden.|  
+|Ressourcendatenbank und tempdb|Benutzerkontensteuerung|Es gibt keine Einschränkungen für datenbankübergreifende Transaktionen, die, außer bei einer einzelnen Benutzerdatenbank, nur die Ressourcendatenbank und tempdb verwenden.|  
 |master|Schreibgeschützt|Für datenbankübergreifende Transaktionen, die In-Memory OLTP und die Masterdatenbank betreffen, wird kein Commit ausgeführt, wenn Schreibvorgänge in die Masterdatenbank enthalten sind. Datenbankübergreifende Transaktionen, die nur vom Master lesen und nur eine Benutzerdatenbank verwenden, sind zulässig.|  
   
 ## <a name="see-also"></a>Siehe auch  

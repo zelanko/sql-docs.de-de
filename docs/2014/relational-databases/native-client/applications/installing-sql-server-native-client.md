@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb3f153ad1fdbb3d7dc907d7c2cee7a2678080f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a4023294d52724e5cd132ab4a47b8b8e7f910e3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417569"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394690"
 ---
 # <a name="installing-sql-server-native-client"></a>Installieren von SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 wird bei der Installation installiert [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Es gibt keinen [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Weitere Informationen finden Sie unter [Neuigkeiten in SQL Server Native Client](../sql-server-native-client.md). Sie können sqlncli.msi auch von der SQL Server 2012 Feature Pack-Webseite herunterladen. Um die neueste Version von SQL Server Native Client herunterzuladen, wechseln Sie zu [Microsoft® SQL Server® 2012 SP2 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=43339). Wenn eine frühere Version von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als auch SQL Server 2012 auf dem Computer installiert ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 werden installierte Seite-an-Seite mit der früheren Version.  
@@ -47,7 +47,7 @@ ms.locfileid: "37417569"
   
  Neben der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als Teil der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation besteht auch die verteilbaren Installationsprogramms SQLNCLI.msi, das sich auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installations-CD an folgendem Speicherort: `%CD%\Setup\`.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client können Sie über sqlncli.msi verteilen. Möglicherweise müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client bei der Bereitstellung einer Anwendung installieren. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites](http://go.microsoft.com/fwlink/?LinkId=115668).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client können Sie über sqlncli.msi verteilen. Möglicherweise müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client bei der Bereitstellung einer Anwendung installieren. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005 (Erstellen eines benutzerdefinierten Bootstrapper-Pakets für Visual Studio 2005)](http://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites (Hinzufügen benutzerdefinierter Voraussetzungen)](http://go.microsoft.com/fwlink/?LinkId=115668).  
   
  Mit der x64-Version und der Itanium-Version von sqlncli.msi wird auch die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client installiert. Wenn Ihre Anwendung für eine andere Plattform als für diejenige vorgesehen ist, auf der sie entwickelt wurde, können Sie Versionen von sqlncli.msi für x64, Itanium und x86 vom Microsoft Download Center herunterladen.  
   

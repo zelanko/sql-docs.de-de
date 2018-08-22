@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7398cf89c650921df8189ac5b597340ec315461c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6362294a62989f3674df37bc1fa61c347d05eeae
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184252"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393872"
 ---
 # <a name="implementing-a-case-statement"></a>Implementieren einer CASE-Anweisung
   CASE-Anweisungen werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität einer CASE-Anweisung in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  

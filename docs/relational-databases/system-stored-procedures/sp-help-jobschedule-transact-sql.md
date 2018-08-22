@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobschedule (Transact-SQL) | Microsoft Docs
+title: Sp_help_jobschedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261559"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395730"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die Auftrags-ID *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die Auftrags-ID *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [  **@schedule_name=** ] **"***Schedule_name***"**  
  Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
@@ -74,11 +74,11 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**Aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
+|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den einzelnen Ausführungen des Auftrags auftreten. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den Ausführungsinstanzen des Auftrags. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_relative_interval**|**int**|Auftreten des geplanten Auftrags von der **Freq_interval** in jedem Monat. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Anzahl der Monate zwischen der geplanten Ausführung des Auftrags|  
 |**active_start_date**|**int**|Datum, an dem der Zeitplan aktiviert wird.|  
@@ -86,13 +86,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Uhrzeit, zu der der Zeitplan gestartet wird.|  
 |**active_end_time**|**int**|Uhrzeit, zu der der Zeitplan beendet wird.|  
 |**date_created**|**datetime**|Datum, an dem der Zeitplan erstellt wird|  
-|**schedule_description**|**nvarchar(4000)**|Eine Beschreibung des Zeitplans, der Werte in abgeleitet ist **msdb.dbo.sysschedules**. Wenn *Include_description* ist **0**, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
+|**schedule_description**|**nvarchar(4000)**|Eine Beschreibung des Zeitplans, der Werte in abgeleitet wird **msdb.dbo.sysschedules**. Wenn *Include_description* ist **0**, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
 |**next_run_date**|**int**|Datum, an dem der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**next_run_time**|**int**|Uhrzeit, zu der der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**job_count**|**int**|Die Anzahl der zurückgegebenen Aufträge.|  
   
-> **Hinweis:****Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb** . **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
+> **Hinweis:****Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb** .   **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Parameter der **Sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *Schedule_id* angegeben ist, weder *Job_id* noch *Job_name* kann angegeben werden. Andernfalls die *Job_id* oder *Job_name* Parameter können verwendet werden, mit *Schedule_name*.  
@@ -106,7 +106,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Mitglieder der **SQLAgentUserRole** können nur Eigenschaften von Auftragszeitplänen, deren Besitzer, anzeigen.  
   

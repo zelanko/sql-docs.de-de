@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit SSMA für die MySQL-Konsole (MySQLToSQL) | Microsoft Docs
+title: Arbeiten mit SSMA für MySQL Console (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -16,34 +16,34 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 871dd3bd3ea440ff0430d37b8d476c99cb07c0a2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a3802661ea919083c1e058a186810719d80a38a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776796"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395725"
 ---
-# <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Arbeiten mit SSMA für die MySQL-Konsole (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
+# <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Arbeiten mit der SSMA-Konsole für MySQL (MySqlToSql)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
   
-Dieser Abschnitt erläutert das Verfahren zum Migrieren von MySQL-Datenbank, die die SSMA-Konsolenanwendung.  
+Dieser Abschnitt erläutert das Verfahren zum Migrieren der MySQL-Datenbank mit der SSMA-Console-Anwendung.  
   
-In diesem Abschnitt behandelten Themen gehören:  
+In diesem Abschnitt behandelten Themen umfassen:  
   
 |||  
 |-|-|  
 |**Themen**|**Beschreibung**|  
 |[Erste Schritte mit SSMA für MySQL-Konsole &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
-|[Befehlszeilenoptionen in SSMA-Konsole &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die SSMA-Konsolenanwendung ausgeführt werden.|  
+|[Command Line Options in SSMA-Konsole &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die Anwendung der SSMA-Konsole ausgeführt werden.|  
 |[Erstellen von Skriptdateien &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
-|[Erstellen von Dateien Variablenwert &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|Erläutert, wie eine Variablenwert-Datei erstellt.|  
+|[Erstellen die Variable Value Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|Erläutert, wie zum Erstellen einer Datei Variablenwert.|  
 |[Erstellen die Server-Verbindungsdateien &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|Erläutert, wie eine Server-Verbindungsdatei zu erstellen.|  
-|[Ausführen der Konsole SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Beschreibt die Datei Skriptbefehle SSMA-Konsolenanwendung ausgeführt werden.|  
-|[Arbeiten mit der Beispiel-Konsole Skriptdateien &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in die Beispieldateien zusammen mit dem Produkt angegeben wurden|  
-|[Verwalten von Kennwörtern &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Kennwortverschlüsselung und Entschlüsselung und Importieren / Exportieren von Kennwortinformationen werden beschrieben.|  
+|[Executing the SSMA Console ausführen &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Beschreibt die Befehle der Skript-Datei die Anwendung der SSMA-Konsole ausgeführt werden.|  
+|[Arbeiten mit den Beispielskriptdateien der Konsole &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden|  
+|[Verwalten von Kennwörtern &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
 |[Generieren von Berichten &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Problembehandlung bei &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Enthält Informationen zum Beheben von Migrationsproblemen.|  
+|[Problembehandlung bei &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erste Schritte mit SSMA für MySQL-Konsole](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
+[Erste Schritte mit SSMA für MySQL-Konsole](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Installieren von SQL Server 2016 R Services (Datenbankintern) | Microsoft Docs
+title: Installieren von SQL Server 2016 R Services (Datenbankintern) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,39 +7,39 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585592"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437619"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Installieren von SQL Server 2016 R Services (datenbankintern) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL Server 2016 R Services (Datenbankintern)**. Wenn Sie SQL Server 2016 haben, installieren Sie dieses Feature, um die Ausführung von R-Code in SQL Server zu ermöglichen.
+In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL Server 2016 R Services (Datenbankintern)**. Wenn Sie SQL Server 2016 verfügen, installieren Sie dieses Feature, um die Ausführung von R-Code in SQL Server zu ermöglichen.
 
-## <a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
+## <a name="bkmk_prereqs"> </a> Checkliste für die vor der Installation
 
-+ SQL Server 2016-Setup ist erforderlich, wenn Sie R Services installieren möchten. Wenn Sie stattdessen die 2017 von SQL Server-Installationsmedien verfügen, müssen Sie installieren [SQL Server 2017 Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) R-Integration für die jeweilige Version von SQL Server abgerufen.
++ SQL Server 2016-Setup ist erforderlich, wenn Sie R Services installieren möchten. Wenn Sie SQL Server 2017-Installationsmedien installiert haben, müssen Sie installieren [SQL Server 2017-Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) um R-Integration für diese Version von SQL Server zu erhalten.
 
-+ Eine Datenbank-Modulinstanz ist erforderlich. Installation kann nicht nur R, Athough Sie ihn inkrementell zu einer vorhandenen Instanz hinzufügen können.
++ Eine Instanz der Datenbank-Engine ist erforderlich. Sie können nicht nur R installieren, obwohl Sie es schrittweise zu einer vorhandenen Instanz hinzufügen können.
 
-+ Installieren Sie R Services nicht auf einem Failovercluster. Zum Isolieren von R-Prozesse Sicherheitsmechanismus ist nicht kompatibel mit einer Windows Server Failover Cluster-Umgebung.
++ Installieren Sie R Services nicht auf einem Failovercluster. Der Sicherheitsmechanismus, der zum Isolieren von R-Prozessen verwendet, ist nicht mit einer Windows Server-Failoverclusterumgebung kompatibel.
 
-+ Installieren Sie R Services nicht auf einem Domänencontroller installiert. Der R-Services-Teil der Installation schlägt fehl.
++ Installieren Sie R Services nicht auf einem Domänencontroller. Der R Services-Teil der Installation schlägt fehl.
 
-+ Installieren Sie nicht **gemeinsam genutzte Funktionen** > **R Server (eigenständig)** auf demselben Computer Ausführen einer Instanz in der Datenbank. 
++ Installieren Sie nicht **gemeinsam genutzte Funktionen** > **R Server (eigenständig)** auf demselben Computer eine in der Datenbank-Instanz ausführen. 
 
-+ Seite-an-Seite-Installation mit anderen Versionen von R und Python sind möglich, da SQL Server-Instanz eigenen Kopien der Open Source-R und Anaconda Verteilungen verwendet. Ausführen von Code, der auf dem SQL Server-Computer außerhalb von SQL Server R und Python verwendet kann jedoch zu verschiedenen Problemen führen:
++ Seite-an-Seite-Installation mit anderen Versionen von R und Python sind möglich, da SQL Server-Instanz eine eigene Kopien der Open-Source-R "und" Anaconda Verteilungen verwendet. Ausführen von Code, die R- und Python auf dem SQL Server-Computer außerhalb von SQL Server verwendet, kann jedoch zu verschiedenen Problemen führen:
     
-  + Sie verwenden eine andere Bibliothek und andere ausführbare Datei, und unterschiedliche Ergebnisse erhalten, als Sie ausführen, wenn Sie in SQL Server ausgeführt werden.
-  + R und Python-Skripts, die auf externen Bibliotheken können von SQL Server, um Ressourcenkonflikte führende verwaltet werden.
+  + Sie verwenden eine andere Bibliothek und andere ausführbare Datei, und unterschiedliche Ergebnisse zu erhalten, als Sie tun, wenn Sie in SQL Server ausgeführt werden.
+  + R und Python-Skripts in externen Bibliotheken können nicht von SQL Server, vorangestellte zu Ressourcenkonflikten verwaltet werden.
   
-Wenn Sie alle vorherigen Versionen von Revolution Analytics-Entwicklungsumgebung oder dem "revoscaler"-Pakete verwendet oder wenn Sie alle Vorabversionen von SQL Server 2016 installiert haben, müssen Sie sie deinstallieren. Ältere und neuere Versionen von "revoscaler" und anderen proprietären Pakete ausführen, wird nicht unterstützt. Hilfe zum Entfernen früherer Versionen finden Sie [Upgrade und Installation – häufig gestellte Fragen für SQL Server-Machine Learning-Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Wenn Sie alle vorherigen Versionen der Revolution Analytics Development Environment oder der RevoScaleR-Pakete verwendet, oder wenn Sie alle Vorabversionen von SQL Server 2016 installiert haben, müssen Sie sie deinstallieren. Mit älteren und neueren Versionen von RevoScaleR und anderen proprietären Pakete wird nicht unterstützt. Hilfe zum Entfernen früherer Versionen finden Sie [Upgrade und Installation – häufig gestellte Fragen für SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 > [!IMPORTANT]
-> Nachdem Setup abgeschlossen ist, achten Sie darauf, dass Sie zusätzliche nach der Konfiguration in diesem Artikel beschriebenen Schritte. Diese Schritte umfassen das Aktivieren von SQL Server, um externe Skripts zu verwenden und das Hinzufügen von Konten für SQL Server zum Ausführen von R-Aufträgen in Ihrem Namen erforderlich sind. Konfigurationsänderungen muss in der Regel ein Neustart der Instanz oder einen Neustart des Launchpad-Diensts.
+> Nachdem Setup abgeschlossen ist, achten Sie darauf, dass Sie für die zusätzliche Aufgaben nach der Konfiguration in diesem Artikel beschriebenen Schritte. Diese Schritte umfassen SQL Server zur Verwendung externer Skripts aktivieren und Hinzufügen von Konten, die für SQL Server zum Ausführen von R-Aufträge in Ihrem Namen erforderlich sind. Konfigurationsänderungen erfordern in der Regel ein Neustart der Instanz oder einen Neustart des Launchpad-Diensts.
 
 ## <a name="get-the-installation-media"></a>Abrufen der Installationsmedien
 
@@ -57,50 +57,51 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
 
 2. Auf der **Installation** Registerkarte **eigenständige neue SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.
     
-   ![Installieren von R Services (Datenbankintern)](media/2016-setup-installation-rsvcs.png "starten Sie die Installation des Datenbankmoduls mit R-Services")
+   ![Installieren von R Services (Datenbankintern)](media/2016-setup-installation-rsvcs.png "Starten der Installation der Datenbank-Engine mit R Services")
    
 3. Auf der **Funktionsauswahl** Seite, wählen Sie die folgenden Optionen:
 
-   - Wählen Sie **Datenbankmoduldienste**. Das Datenbankmodul ist in jeder Instanz erforderlich, die Machine Learning verwendet.
-   - Wählen Sie **R Services (Datenbankintern)**. Installiert die Unterstützung für in der Datenbank mithilfe von r
+   - Wählen Sie **Datenbankmoduldienste**. Die Datenbank-Engine ist in den einzelnen Instanzen erforderlich, das Machine Learning verwendet.
+   - Wählen Sie **R Services (Datenbankintern)**. Installiert die Unterstützung für in der Datenbank mithilfe von R.
     
      ![R Services Funktionsauswahl](media/2016setup-rsvcs-features.png "wählen Sie diese Funktionen für R Services In der Datenbank")
 
     > [!IMPORTANT]
-    > Installieren Sie R-Server und R Services nicht zur selben Zeit. Sie würden normalerweise R Server (eigenständig) zum Erstellen einer Umgebung, die ein datenanalyst oder Entwickler verwendet werden, die Verbindung mit SQL Server installieren und Bereitstellen von R-Lösungen. Daher besteht keine Notwendigkeit beide auf demselben Computer zu installieren.
+    > Installieren Sie R-Server und R Services nicht zur gleichen Zeit. Sie würden normalerweise installieren R Server (eigenständig) zum Erstellen einer Umgebung, die ein Data Scientist oder Entwickler verwendet werden, die Verbindung mit SQL Server und R-Lösungen bereitzustellen. Daher besteht keine Notwendigkeit beide auf demselben Computer zu installieren.
 
-4.  Auf der **stimmen Sie installiert Microsoft R Open** auf **Accept**.
+4.  Auf der **zustimmen, installieren Sie Microsoft R Open** auf **Accept**.
   
-    Die Lizenzbedingungen ist erforderlich, um Microsoft R Open, die eine Verteilung der open Source-R-Basispakete und Tools, zusammen mit erweiterten R-Paketen und Konnektivitätsanbietern von Microsoft R-Entwicklungsteam umfasst herunterladen.
+    Die Lizenzbedingungen ist erforderlich, um Microsoft R Open, enthält eine Verteilung der Open-Source-R-Basispakete und zusammen mit verbesserten R-Pakete und konnektivitätsanbieter von den Entwicklungsteams von Microsoft R-Tools herunterzuladen.
   
-5. Nachdem Sie den Lizenzvertrag akzeptiert haben, besteht eine kurze Pause während der Installer vorbereitet wird. Klicken Sie auf **Weiter** Wenn die Schaltfläche wird verfügbar.
+5. Nachdem Sie die Lizenzbedingungen akzeptiert haben, ist eine kurze Pause, während der Installer vorbereitet wird. Klicken Sie auf **Weiter** Wenn die Schaltfläche verfügbar wird.
 
-6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten sind, und Sie dann wählen **installieren**.
+6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten, und Sie dann wählen **installieren**.
 
    + -Datenbank-Engine-Dienste
    + R Services (In-Database)
 
-    Notieren Sie sich den Speicherort des Ordners, unter dem Pfad `..\Setup Bootstrap\Log` , in dem die Konfigurationsdateien gespeichert werden. Wenn Setup abgeschlossen ist, können Sie die installierten Komponenten in der Statusdatei überprüfen.
+    Notieren Sie sich den Speicherort des Ordners, unter dem Pfad `..\Setup Bootstrap\Log` , in dem die Konfigurationsdateien gespeichert werden. Wenn Setup abgeschlossen ist, können Sie in der Datei für die Zusammenfassung der installierten Komponenten überprüfen.
 
-7. Wenn die Installation abgeschlossen ist, starten Sie den Computer neu.
+7. Nachdem Setup abgeschlossen ist, wenn Sie aufgefordert werden, den Computer neu starten, tun Sie dies jetzt. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-##  <a name="bkmk_enableFeature"></a>Ausführen des externen Skripts aktivieren
+
+##  <a name="bkmk_enableFeature"></a>Aktivieren der externen skriptausführung
 
 1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
     > Sie können auch herunterladen und installieren Sie die entsprechende Version von dieser Seite: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > Sie können auch versuchen, die Preview-Version von [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), das Verwaltungsaufgaben und Abfragen von SQL Server unterstützt.
+    > Sie können auch versuchen, sich die Preview-Version von [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), administrative Aufgaben und Abfragen für SQL Server unterstützt.
   
-2. Eine Verbindung mit der Instanz, auf dem Sie Machine Learning Services installiert, und auf **neue Abfrage** , öffnen ein Abfragefenster, und führen den folgenden Befehl aus:
+2. Verbinden mit der Instanz, in denen Sie Machine Learning-Dienste installiert haben, klicken Sie auf **neue Abfrage** , öffnen ein Abfragefenster, und führen den folgenden Befehl aus:
 
    ```SQL
    sp_configure
    ```
-    Der Wert für die Eigenschaft `external scripts enabled` sollte an diesem Punkt **0** betragen. Grund hierfür ist die Funktion standardmäßig deaktiviert ist. Die Funktion muss explizit von einem Administrator aktiviert werden, bevor R oder Python-Skripts ausgeführt werden können.
+    Der Wert für die Eigenschaft `external scripts enabled` sollte an diesem Punkt **0** betragen. Der Grund ist die Funktion standardmäßig deaktiviert ist. Die Funktion muss explizit von einem Administrator aktiviert werden, bevor Sie R- oder Python-Skripts ausführen können.
      
-3. Um die externe Skriptingfunktion zu aktivieren, führen Sie die folgende Anweisung aus:
+3. Um die Skripterstellung Feature "external" zu aktivieren, führen Sie die folgende Anweisung aus:
   
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1
@@ -109,17 +110,17 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
 ## <a name="restart-the-service"></a>Starten Sie den Dienst neu.
 
-Wenn die Installation abgeschlossen ist, starten Sie das Datenbankmodul vor dem Fortfahren mit der nächsten Ausführung des Skripts zu aktivieren.
+Wenn die Installation abgeschlossen ist, die Datenbank-Engine neu starten, vor dem Fortfahren mit der nächsten Ausführung des Skripts zu aktivieren.
 
-Die lo auch automatisch Neustart neu gestartet wird den zugehörigen [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Dienst.
+Neustarten des Diensts auch automatisch neu gestartet wird das zugehörige [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Service.
 
-Können Sie mit der rechten Maustaste den Dienst neu starten **starten** Befehl für die Instanz in SSMS oder mithilfe der **Services** Bereich in der Systemsteuerung oder mithilfe von [SQL Server-Konfigurations-Manager ](../../relational-databases/sql-server-configuration-manager.md).
+Können Sie den Dienst, mit der rechten Maustaste neu starten **neu starten** Befehl für die Instanz in SSMS oder mithilfe der **Services** Bereich in der Systemsteuerung oder mithilfe von [SQL Server-Konfigurations-Manager ](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Überprüfen der Installation
 
-Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponenten, die mit dem externes Skript gestartet ausgeführt werden.
+Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponenten, die zum Starten von externen Skripts ausgeführt werden.
 
-1. Öffnen Sie in SQL Server Management Studio ein neues Abfragefenster, und führen Sie den folgenden Befehl:
+1. Öffnen Sie in SQL Server Management Studio ein neues Abfragefenster, und führen Sie den folgenden Befehl aus:
     
     ```SQL
     EXEC sp_configure  'external scripts enabled'
@@ -127,11 +128,11 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
 
     Der Wert **Run_value** sollte jetzt auf 1 festgelegt werden.
 
-2. Öffnen der **Services** Systemsteuerung oder mithilfe von SQL Server-Konfigurations-Manager, und vergewissern Sie sich **SQL Server Launchpad-Dienst** ausgeführt wird. Sie sollten einen Dienst für jede Datenbankmodulinstanz, die R verfügt oder Python installiert sein. Starten Sie den Dienst aus, wenn nicht ausgeführt wird. Weitere Informationen finden Sie unter [Komponenten zur Unterstützung der Integration von Python](../python/new-components-in-sql-server-to-support-python-integration.md).
+2. Öffnen der **Services** Panel oder SQL Server-Konfigurations-Manager, und vergewissern Sie sich **SQL Server Launchpad-Dienst** ausgeführt wird. Sie sollten einen Dienst für jede Datenbank-Engine-Instanz, die R oder Python installiert sein. Weitere Informationen finden Sie unter [Komponenten zur Unterstützung der Integration von Python](../python/new-components-in-sql-server-to-support-python-integration.md).
 
-7. Wenn Launchpad ausgeführt wird, sollten Sie möglicherweise Ausführen einfacher R, um sicherzustellen, dass externe Skripts Laufzeiten mit SQL Server kommunizieren können. 
+7. Wenn Launchpad ausgeführt wird, sollten Sie in der Lage, führen Sie einfache R, um sicherzustellen, dass externe Laufzeiten, die Skripts mit SQL Server kommunizieren können. 
 
-    Öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie ein Skript z. B. Folgendes:
+    Öffnen Sie ein neues **Abfrage** -Fensters im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und klicken Sie dann ein Skript wie dem folgenden ausführen:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -143,7 +144,7 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
     GO
     ```
 
-    Das Skript kann etwas dauern, während zum ersten Mal ausführen die externes Skript-Laufzeit geladen wird. Die Ergebnisse sollten etwa wie folgt aussehen:
+    Das Skript kann etwas dauern, während der erstmaligen Ausführung der externen Skript-Laufzeit geladen wird. Die Ergebnisse sollten in etwa wie folgt aussehen:
 
     | Hello |
     |----|
@@ -151,50 +152,50 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
 
 ## <a name="bkmk_FollowUp"></a> Zusätzliche Konfiguration
 
-Wenn die externen Skript Überprüfungsschritt erfolgreich war, können Sie Python-Befehle ausführen, von SQL Server Management Studio, Visual Studio-Code oder einem anderen Client, der T-SQL-Anweisungen an den Server gesendet werden kann.
+Wenn im externen Skript-Überprüfungsschritt erfolgreich war, können Sie die Python-Befehle ausführen, von SQL Server Management Studio, Visual Studio Code oder einem anderen Client, der T-SQL-Anweisungen an den Server senden kann.
 
-Wenn Sie einen Fehler beim Ausführen des Befehls erhalten haben, überprüfen Sie die zusätzlichen Konfigurationsschritte in diesem Abschnitt. Sie müssen möglicherweise zusätzliche entsprechende Konfigurationen an den Dienst oder einer Datenbank vornehmen.
+Wenn Sie einen Fehler beim Ausführen des Befehls erhalten haben, überprüfen Sie die zusätzlichen Konfigurationsschritte in diesem Abschnitt. Möglicherweise müssen Sie zusätzliche geeignete Konfigurationen an den Dienst oder die Datenbank.
 
-Allgemeine Szenarien, die zusätzliche Änderungen erfordern:
+Allgemeine Szenarien, für die zusätzliche Änderungen erforderlich:
 
-* [Konfigurieren der Windows-Firewall für eingehende Verbindungen](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Konfigurieren Sie Windows-Firewall für eingehende Verbindungen](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [Zusätzliche Netzwerkprotokolle aktivieren](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
-* [Aktivieren Sie Remoteverbindungen](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Aktivieren von Remoteverbindungen](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Integrierte Berechtigungen für Remotebenutzer erweitern](#bkmk_configureAccounts)
 * [Erteilen der Berechtigung zum Ausführen externer Skripts.](#bkmk_AllowLogon)
-* [Gewähren von Zugriff auf einzelne Datenbanken](#permissions-db)
+* [Gewähren des Zugriffs auf einzelne Datenbanken](#permissions-db)
 
 > [!NOTE]
-> Nicht alle aufgelisteten Änderungen erforderlich sind, und keine u. u. notwendig sein. Anforderungen richten sich nach Ihrem Sicherheitsschema, in dem Sie installiert SQL Server, und wie Sie erwarten, dass Benutzer eine Verbindung mit der Datenbank und externe Skripts ausführen. Weitere Tipps zur Problembehandlung finden Sie hier: [häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Nicht alle aufgeführten Änderungen sind erforderlich, und keine kann erforderlich sein. Anforderungen basieren auf Ihre Sicherheitsschema, auf dem SQL Server, und wie Sie erwarten, dass Benutzer eine Verbindung mit der Datenbank herstellen und Ausführen externer Skripts installiert. Weitere Tipps zur Problembehandlung finden Sie hier: [häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### <a name="bkmk_configureAccounts"></a>Aktivieren Sie die implizite Authentifizierung für die Kontogruppe Launchpad
+### <a name="bkmk_configureAccounts"></a>Aktivieren der impliziten Authentifizierung für die Gruppe der Launchpad-Konto
 
-Während des Setups werden einige neue Windows-Benutzerkonten zum Ausführen von Aufgaben unter des Sicherheitstokens des erstellt die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst. Wenn ein Benutzer ein R-Skript von einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein Konto Arbeitsthreads verfügbar, wird es auf die Identität des aufrufenden Benutzers zugeordnet und führt das R-Skript im Namen des Benutzers. Dieser neue Dienst des Datenbankmoduls unterstützt die sichere Ausführung externer Skripts, die aufgerufen *implizite Authentifizierung*.
+Während des Setups werden einige neuen Windows-Benutzerkonten zum Ausführen von Aufgaben unter dem Sicherheitstoken des erstellt die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Service. Wenn ein Benutzer ein R-Skript aus einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein verfügbares workerkonto, ordnet er die Identität des aufrufenden Benutzers und führt das R-Skript im Auftrag des Benutzers. Dieser neue Dienst der Datenbank-Engine unterstützt die sichere Ausführung externer Skripts aufgerufen *implizite Authentifizierung*.
 
-Sie können diese Konten anzeigen, in der Windows-Benutzergruppe **SQLRUserGroup**. Standardmäßig werden 20 Konten erstellt, ist in der Regel mehr als ausreichend, für die Ausführung von R-Aufträge.
+Sie können diese Konten anzeigen, in der Windows-Benutzergruppe **SQLRUserGroup**. Standardmäßig werden 20 workerkonten erstellt, ist in der Regel mehr als ausreichend für die Ausführung von R-Aufträge.
 
-Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client möchten und Windows-Authentifizierung verwenden, Sie müssen erteilen diese Konten über die Berechtigung zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in Ihrem Namen.
+Jedoch wenn Sie R-Skripts von einem Data Science-Remoteclient ausführen müssen und die Windows-Authentifizierung verwenden, Sie müssen gewähren diesen workerkonten die Berechtigung zur Anmeldung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in Ihrem Namen.
 
 1. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**.
-2. In der **Anmeldung - neu** wählen Sie im Dialogfeld **Suche**.
+2. In der **Anmeldung – neu** wählen Sie im Dialogfeld **Suche**.
 3. Wählen Sie die **Objekttypen** und **Gruppen** Kontrollkästchen, und deaktivieren Sie alle anderen Kontrollkästchen.
-4. Klicken Sie auf **erweitert**, überprüfen Sie, ob die zu suchende Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
-5. Führen Sie einen Bildlauf durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnen mit gefunden `SQLRUserGroup`.
+4. Klicken Sie auf **erweitert**, stellen Sie sicher, dass zu suchenden Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
+5. Scrollen Sie durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnt mit gefunden `SQLRUserGroup`.
     
     + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer nur **SQLRUserGroup**. Wählen Sie dieses Konto nur für die Standardinstanz.
-    + Bei Verwendung einer _benannte Instanz_, wird der Instanzname dem Standardnamen angefügt `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" benannt wird, der Standardbenutzernamen Gruppe für diese Instanz wäre **SQLRUserGroupMLTest**.
-5. Klicken Sie auf **OK** , schließen Sie das Dialogfeld "Erweiterte Suche" aus, und stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz können eigenen Launchpad-Dienst und die Gruppe für diesen Dienst erstellt haben.
-6. Klicken Sie auf **OK** einmal zum Schließen der **Benutzer oder Gruppe auswählen** (Dialogfeld).
-7. In der **Anmeldung - neu** (Dialogfeld), klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
+    + Bei Verwendung einer _benannte Instanz_, den Namen der Instanz wird angefügt, um den Standardnamen `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" heißt, der Standardnamen für die Gruppe von Benutzer für diese Instanz wäre **SQLRUserGroupMLTest**.
+5. Klicken Sie auf **OK** , schließen Sie das Dialogfeld "Erweiterte Suche", und stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz kann nur einen eigenen Launchpad-Dienst und die Gruppe erstellt, die für diesen Dienst verwenden.
+6. Klicken Sie auf **OK** um schließen die **Benutzer oder Gruppe auswählen** Dialogfeld.
+7. In der **Anmeldung – neu** Dialogfeld klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
 
-### <a name="bkmk_AllowLogon"></a>Vergabe von Benutzerberechtigungen für das Ausführen externer Skripts.
+### <a name="bkmk_AllowLogon"></a>Vergabe von Benutzerberechtigungen zum Ausführen externer Skripts.
 
 > [!NOTE]
-> Wenn Sie eine SQL-Anmeldung für die Ausführung von R-Skripts in einer SQL Server-computekontext verwenden, ist dieser Schritt nicht erforderlich.
+> Wenn Sie eine SQL-Anmeldung für die Ausführung von R-Skripts in einem SQL Server-computekontext verwenden, ist dieser Schritt nicht erforderlich.
 
-Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Ihrer eigenen Instanz sind Sie in der Regel Skripts als Administrator ausführen oder zumindest ein Datenbankbesitzer und daher verfügen über implizite Berechtigungen für verschiedene Vorgänge, werden alle Daten in der Datenbank und die Möglichkeit zum Installieren der neuen Pakete nach Bedarf.
+Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Ihrer eigenen Instanz, Sie sind in der Regel Ausführen von Skripts als Administrator, oder zumindest als Datenbankbesitzer, und daher über impliziten Berechtigungen für verschiedene Vorgänge, werden alle Daten in der Datenbank und die Möglichkeit, neue Pakete zu installieren Je nach Bedarf.
 
-Allerdings müssen in einem Enterprise-Szenario können die meisten Benutzer, einschließlich Benutzer, die Zugriff auf die Datenbank mithilfe von SQL-Anmeldungen, diese erhöhten Berechtigungen keine. Aus diesem Grund müssen für jeden Benutzer, die R-Skripts ausgeführt werden, Sie erteilen die Benutzerberechtigungen zum Ausführen von Skripts in jeder Datenbank, in der externen Skripts verwendet werden.
+Allerdings müssen in einem Unternehmensszenario die meisten Benutzer, einschließlich Benutzer, die Zugriff auf die Datenbank mithilfe von SQL-Anmeldungen, diese erhöhten Berechtigungen keinen. Aus diesem Grund müssen für jeden Benutzer, die R-Skripts ausgeführt werden, Sie gewähren die Benutzerberechtigungen zum Ausführen von Skripts in jeder Datenbank, in der externen Skripts verwendet werden.
 
 ```SQL
 USE <database_name>
@@ -203,13 +204,13 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 ```
 
 > [!TIP]
-> Benötigen Sie Hilfe beim Setup? Sind Sie unsicher, ob Sie alle Schritte ausgeführt haben? Verwenden Sie diese benutzerdefinierten Berichte, um Installationsstatus überprüfen und zusätzliche Schritte ausführen. 
+> Benötigen Sie Hilfe beim Setup? Sind Sie unsicher, ob Sie alle Schritte ausgeführt haben? Verwenden Sie diese benutzerdefinierten Berichte zu überprüfen und zusätzliche Schritte ausführen. 
 > 
-> [Verwenden von benutzerdefinierten Berichten Machine Learning-Dienste überwachen,](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> [Überwachen von Machine Learning Services mithilfe von benutzerdefinierten Berichten](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ### <a name="permissions-db"></a> Geben Sie Ihre Benutzer zu lesen, schreiben oder DDL-Berechtigungen für die Datenbank
 
-Das Benutzerkonto, das zum Ausführen von R verwendet wird möglicherweise müssen zum Lesen von Daten von anderen Datenbanken, Erstellen von neuen Tabellen zum Speichern von Ergebnissen, und Schreiben von Daten in Tabellen. Daher müssen Sie für jeden Benutzer, das Ausführen von R-Skripts, sicherstellen, dass der Benutzer die entsprechenden Berechtigungen für die Datenbank verfügt: *"db_datareader"*, *Db_datawriter*, oder *Db_ddladmin*.
+Das Benutzerkonto, das zum Ausführen von R verwendet wird möglicherweise muss zum Lesen von Daten aus anderen Datenbanken neue Tabellen zum Speichern von Ergebnissen erstellen und Daten in Tabellen schreiben. Daher müssen Sie für jeden Benutzer, die R-Skripts ausführen, sicherstellen, dass der Benutzer die entsprechenden Berechtigungen für die Datenbank verfügt: *"db_datareader"*, *Db_datawriter*, oder *Db_ddladmin*.
 
 Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erteilt beispielsweise der SQL-Anmeldung *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *RSamples* -Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
 
@@ -219,65 +220,65 @@ GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 ```
 
-Weitere Informationen zu den Berechtigungen, die in den einzelnen Rollen enthalten, finden Sie unter [Datenbankrollen](../../relational-databases/security/authentication-access/database-level-roles.md).
+Weitere Informationen zu den Berechtigungen in den einzelnen Rollen finden Sie unter [Datenbankrollen](../../relational-databases/security/authentication-access/database-level-roles.md).
 
 
 ### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>Erstellen einer ODBC-Datenquelle für die Instanz auf Ihrem Data Science-Client
 
-Wenn Sie R-Lösungen auf einer Data Science-Clientcomputer erstellen und Code mithilfe von SQL Server-Computers als computekontext ausführen müssen, können Sie eine SQL-Anmeldung oder die integrierte Windows-Authentifizierung verwenden.
+Wenn Sie eine R-Lösung auf einem Data Science-Clientcomputer erstellen und Code, die mit dem SQL Server-Computer als Compute Context ausführen müssen, können Sie eine SQL-Anmeldung oder eine integrierte Windows-Authentifizierung verwenden.
 
-* Wenn Sie eine SQL-Anmeldung verwenden, müssen Sie sicherstellen, dass sie über die erforderlichen Berechtigungen für die Datenbank verfügt, in der Sie Daten lesen werden. Können Sie dies tun, indem hinzufügen *Herstellen einer Verbindung mit* und *wählen* Berechtigungen, oder indem Sie den Anmeldenamen für die *"db_datareader"* Rolle. Bei Anmeldungen, die zum Erstellen von Objekten müssen hinzufügen *DDL_admin* Rechte. Für Anmeldungen, die Daten speichern müssen, um Tabellen, fügen Sie den Anmeldenamen für die *Db_datawriter* Rolle.
+* Wenn Sie eine SQL-Anmeldung verwenden, müssen Sie sicherstellen, dass sie über die erforderlichen Berechtigungen für die Datenbank verfügt, in der Sie Daten lesen werden. Sie können dies vornehmen, sofern *Herstellen einer Verbindung mit* und *wählen* Berechtigungen, oder durch Hinzufügen der Anmeldung bei der *"db_datareader"* Rolle. Für Anmeldungen, die zum Erstellen von Objekten benötigen, fügen *DDL_admin* Rechte. Für Anmeldungen, die Daten in Tabellen speichern müssen hinzufügen die Anmeldung bei der *Db_datawriter* Rolle.
 
-* Für Windows-Authentifizierung: müssen Sie möglicherweise eine ODBC-Datenquelle auf dem Data Science-Client zu konfigurieren, der den Namen der Instanz und andere Verbindungsinformationen angibt. Weitere Informationen finden Sie unter [ODBC-Datenquellenadministrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+* Für die Windows-Authentifizierung: Sie müssen möglicherweise eine ODBC-Datenquelle auf dem Data Science-Client zu konfigurieren, der den Namen der Instanz und andere Verbindungsinformationen angibt. Weitere Informationen finden Sie unter [ODBC-Datenquellenadministrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
-## <a name="suggested-optimizations"></a>Vorgeschlagene Optimierungen
+## <a name="suggested-optimizations"></a>Vorgeschlagenen Optimierungen
 
-Nun, da Sie alles haben, Sie können auch den Server zur Unterstützung von Machine Learning optimieren möchten, oder installieren pretrained Modelle.
+Nun, da Sie alles funktioniert haben, Sie können auch den Server zur Unterstützung von Machine Learning optimieren möchten, oder installieren pretrained Modelle.
 
-### <a name="add-more-worker-accounts"></a>Weitere Konten hinzufügen
+### <a name="add-more-worker-accounts"></a>Fügen Sie weitere Konten hinzu.
 
-Wenn Sie glauben, dass R intensivsten verwendet werden kann oder wenn Sie davon ausgehen, dass viele Benutzer gleichzeitig ausgeführte Skripts werden, können Sie die Anzahl der Worker Konten erhöhen, die mit dem Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning-Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Wenn Sie glauben, dass Sie R intensiv verwenden können, oder Sie erwarten, dass viele Benutzer gleichzeitig Skripts ausführen werden, können Sie die Anzahl der workerkonten erhöhen, die den Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-### <a name="bkmk_optimize"></a>Optimieren des Servers für den externen skriptausführung
+### <a name="bkmk_optimize"></a>Optimieren des Servers für die Ausführung des externen Skripts
 
-Die Standardeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup das Gleichgewicht des Servers für eine Vielzahl von Diensten zu verbessern, die vom Datenbankmodul, extrahieren, Transformieren und laden (ETL) Prozesse, Berichts-, Überwachung, enthalten möglicherweise unterstützt werden sollen und Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten. In den Standardeinstellungen finden Sie möglicherweise daher, dass Ressourcen für Machine Learning sind manchmal eingeschränkt oder, insbesondere in arbeitsspeicherintensive Vorgänge gedrosselt.
+Die Standardeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup dienen, den Saldo des Servers für eine Vielzahl von Diensten zu optimieren, die von der Datenbank-Engine unterstützt werden, einschließlich extrahieren, Transformieren und laden (ETL)-Prozesse, reporting, Überwachung, und Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten. Aus diesem Grund können die Standardeinstellungen finden Sie unter, dass Ressourcen für Machine Learning eingeschränkt oder, insbesondere für speicherintensive Vorgänge gedrosselt.
 
-Um sicherzustellen, dass die Machine Learning Aufträge priorisiert und Ressourcen entsprechend zugewiesen sind, wird empfohlen, dass Sie SQL Server-Ressourcenkontrolle verwenden, um einen externen Ressourcenpool zu konfigurieren. Sie möchten möglicherweise auch die Größe des Arbeitsspeichers zu ändern, die zugeordnet ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul, oder erhöhen Sie die Anzahl der Konten, die unter ausgeführt der [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Dienst.
+Um sicherzustellen, dass Machine Learning-Aufträge priorisiert und Ressourcen entsprechend zugewiesen sind, empfehlen wir, dass Sie SQL Server-Ressourcenkontrolle verwenden, um einen externen Ressourcenpool zu konfigurieren. Sie sollten auch die Menge an Arbeitsspeicher zu ändern, die zugeordnet wird, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine, oder erhöhen Sie die Anzahl der Konten, die unter ausgeführt werden soll. die [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Service.
 
-- Um einen Ressourcenpool für die Verwaltung von externen Ressourcen zu konfigurieren, finden Sie unter [erstellen Sie einen externen Ressourcenpool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
+- Um einen Ressourcenpool für die Verwaltung von externen Ressourcen konfigurieren zu können, finden Sie unter [erstellen Sie einen externen Ressourcenpool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
   
-- Um die reservierten Umfang an Arbeitsspeicher für die Datenbank zu ändern, finden Sie unter [Server Speicherkonfigurationsoptionen](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+- Um den reservierten Umfang an Arbeitsspeicher für die Datenbank zu ändern, finden Sie unter [Serverkonfigurationsoptionen für den Arbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- So ändern Sie die Anzahl der R-Konten, die durch gestartet werden können [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], finden Sie unter [Ändern des benutzerkontenpools für Machine Learning](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+- So ändern Sie die Anzahl der R-Konten, die durch gestartet werden kann [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], finden Sie unter [Ändern des benutzerkontenpools für Machine Learning](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-Wenn Sie verfügen nicht über die Ressourcenkontrolle und Standard Edition verwenden, können Sie dynamische Verwaltungssichten (DMVs) und erweiterte Ereignisse als auch Windows-Ereignis überwachen, um die Verwaltung von Serverressourcen, die von r verwendet werden Weitere Informationen finden Sie unter [überwachen und Verwalten von R Services](../r/managing-and-monitoring-r-solutions.md).
+Wenn Sie Standard Edition verwenden und nicht über Ressourcenkontrolle verfügen, können Sie dynamische Verwaltungssichten (DMVs) und erweiterte Ereignisse, als auch Windows-Ereignis überwachen, um die Server-Ressourcen zu verwalten, die von r verwendet werden Weitere Informationen finden Sie unter [überwachen und Verwalten von R Services](../r/managing-and-monitoring-r-solutions.md).
 
-### <a name="install-additional-r-packages"></a>Installieren Sie zusätzliche R-Pakete
+### <a name="install-additional-r-packages"></a>Installieren zusätzlicher R-Pakete
 
-R-Lösungen, die Sie für SQL Server erstellen, können grundlegende R-Funktionen, Funktionen aus der Properietary Packes mit SQL Server und Drittanbieter-R-Paketen kompatibel mit der Version der Open-Source-R durch SQL Server installierte installiert aufrufen.
+Die R-Lösungen, die Sie für SQL Server zu erstellen, können grundlegende R-Funktionen, Funktionen aus der proprietären Pakete, die mit SQL Server installiert, und R-Pakete von Drittanbietern kompatibel mit der Version von Open-Source-R-Installation von SQL Server aufrufen.
 
-Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie eine separate Installation von R auf dem Computer oder bei Installation von Paketen in benutzerbibliotheken nicht auf diese Pakete von T-SQL verwenden kann.
+Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie eine separate Installation von R auf dem Computer, oder wenn Sie Pakete in benutzerbibliotheken installiert haben, nicht möglich, diese Pakete von T-SQL verwenden.
 
-In SQL Server 2016 und SQL Server-2017 unterscheidet sich die Verfahren zum Installieren und Verwalten von R-Pakete. In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die Benutzer benötigen. In SQL Server 2017 können Sie Benutzergruppen einrichten, Pakete auf einer pro-Datenbankebene freigeben oder Konfigurieren von Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [neue R-Pakete installieren](../r/install-additional-r-packages-on-sql-server.md).
+Der Prozess zum Installieren und Verwalten von R-Pakete ist in SQL Server 2016 und SQL Server 2017 anders. In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die Benutzer benötigen. In SQL Server 2017 können Sie Benutzergruppen zum Freigeben von Paketen auf einer Ebene pro Datenbank einrichten oder konfigurieren Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Installieren neuer R-Pakete](../r/install-additional-r-packages-on-sql-server.md).
 
 
 ## <a name="get-help"></a>Hilfe
 
-Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
+Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Finden Sie Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 
-* [Upgrade und Installation häufig gestellte Fragen – Machine Learning-Dienste](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+* [Upgrade und Installation – häufig gestellte Fragen – Machine Learning-Dienste](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Überprüfen Sie den Installationsstatus der Instanz, und beheben Probleme, wiederholen Sie dann diese benutzerdefinierten Berichte.
+Versuchen Sie diese benutzerdefinierten Berichte, um den Installationsstatus der Instanz zu überprüfen und Behandeln häufig auftretender Probleme.
 
 * [Benutzerdefinierte Berichte für SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-R-Entwickler können mit einigen einfachen Beispielen beginnen und die Grundlagen der Funktionsweise von R mit SQL Server. Im nächsten Schritt finden Sie unter den folgenden Links:
+R-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von R mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
 
-+ [Lernprogramm: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Lernprogramm: In-Database-Analyse für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Beispiele für Machine Learning, reale Szenarien basieren, finden Sie unter [Machine learning-Lernprogramme](../tutorials/machine-learning-services-tutorials.md).
+Beispiele für Machine Learning, die auf realen Szenarien basieren, finden Sie unter [Machine learning-Tutorials](../tutorials/machine-learning-services-tutorials.md).
 
 

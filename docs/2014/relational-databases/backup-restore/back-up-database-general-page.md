@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290956"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394684"
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
   Verwenden Sie im Dialogfeld **Datenbank sichern** die Seite **Allgemein** , um die Einstellungen für einen Sicherungsvorgang der Datenbank anzuzeigen und zu ändern.  
@@ -37,7 +37,7 @@ ms.locfileid: "37290956"
 -   [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Sie können einen Datenbank-Wartungsplan definieren, um Datenbanksicherungen zu erstellen. Weitere Informationen über [Datenbank-Wartungspläne](http://msdn.microsoft.com/library/ms187658.aspx) finden Sie in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation.  
+    >  Sie können einen Datenbank-Wartungsplan definieren, um Datenbanksicherungen zu erstellen. Weitere Informationen über [Datenbank-Wartungspläne](../maintenance-plans/maintenance-plans.md) finden Sie in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation.  
   
  **So erstellen Sie eine Teilsicherung**  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050601"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395116"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -274,9 +274,9 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
 >  Anweisungen zum Festlegen von Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Mehrere Prozessoren](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Prozessorgruppen](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Informationen zu Prozessen und Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Mehrere Prozessoren](/windows/desktop/ProcThread/multiple-processors)   
+ [Prozessorgruppen](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services-Threadpooländerungen in SQLServer 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Unterstützungssysteme mit mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

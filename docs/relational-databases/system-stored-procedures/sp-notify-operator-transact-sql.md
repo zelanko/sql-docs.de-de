@@ -1,5 +1,5 @@
 ---
-title: Sp_notify_operator (Transact-SQL) | Microsoft Docs
+title: Sp_notify_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261586"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394068"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_notify_operator
   
 ## <a name="arguments"></a>Argumente  
  [  **@profile_name=** ] **"***Profilename***"**  
- Der Name des Datenbank-E-Mail-Profils, das zum Senden der Nachricht verwendet wird. *ProfileName* ist **vom Datentyp nvarchar(128)**. Wenn *Profilename* nicht angegeben ist, wird das Standardprofil für den Datenbank-Mail verwendet.  
+ Der Name des Datenbank-E-Mail-Profils, das zum Senden der Nachricht verwendet wird. *ProfileName* ist **vom Datentyp nvarchar(128)**. Wenn *Profilename* nicht angegeben ist, wird das Standardprofil für die Database Mail verwendet wird.  
   
  [ **@id=** ] *id*  
  Die ID des Operators, an den die Nachricht gesendet wird. *ID* ist **Int**, hat den Standardwert NULL. Einer der *Id* oder *Namen* muss angegeben werden.  
@@ -70,7 +70,7 @@ sp_notify_operator
  Der Text der E-Mail-Nachricht. *Nachricht* ist **nvarchar(max)** hat keinen Standardwert.  
   
  [  **@file_attachments=** ] **"***Anlage***"**  
- Der Name einer Datei, die an die E-Mail angehängt werden soll. *Anlage* ist **vom Datentyp nvarchar(512)**, hat keinen Standardwert.  
+ Der Name einer Datei, die an die E-Mail angehängt werden soll. *Anlage* ist **nvarchar(512)**, hat keinen Standardwert.  
   
  [  **@mail_database=** ] **"***Mail_host_database***"**  
  Gibt den Namen der Mailhostdatenbank an. *Mail_host_database* ist **vom Datentyp nvarchar(128)**. Wenn kein *Mail_host_database* angegeben wird, die **Msdb** Datenbank wird standardmäßig verwendet.  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Benachrichtigungs-E-Mail an den Operator `François Ajenstat` mit dem Datenbank-E-Mail-Profil `AdventureWorks Administrator` gesendet. Der Betreff der E-Mail lautet `Test Notification`. Die E-Mail-Nachricht enthält den Satz "This is a test of notification via e-mail".  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

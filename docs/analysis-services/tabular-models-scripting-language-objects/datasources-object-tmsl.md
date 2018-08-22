@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981332"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394071"
 ---
 # <a name="datasources-object-tmsl"></a>DataSources-Objekt (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38981332"
  Der DataSource-Typ. Derzeit ist der einzige gültige Wert Provider (1) - normale Verbindungszeichenfolge.  
   
  connectionString  
- Die Verbindungszeichenfolge, die minimal gibt den Server und die Datenbank, jedoch kann auch andere Eigenschaften, die von der externen RDBMS, z. B. eine Daten-Anbieter oder ein Benutzerkonto unterstützt werden. Dieser Wert ist erforderlich. Finden Sie unter [SqlConnectionStringBuilder-Klasse](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) ausführliche Informationen zu SQL Server-Datenbank-Verbindungszeichenfolgen-Eigenschaften.  
+ Die Verbindungszeichenfolge, die minimal gibt den Server und die Datenbank, jedoch kann auch andere Eigenschaften, die von der externen RDBMS, z. B. eine Daten-Anbieter oder ein Benutzerkonto unterstützt werden. Dieser Wert ist erforderlich. Finden Sie unter [SqlConnectionStringBuilder-Klasse](/dotnet/framework/data/adonet/connection-string-syntax) ausführliche Informationen zu SQL Server-Datenbank-Verbindungszeichenfolgen-Eigenschaften.  
   
  impersonationMode  
  Gibt an, ob Analysis Services die Identität des Benutzers, der die Abfrage anfordert Identitätswechsel verwenden soll. Diese Eigenschaft ist ein numerischer Wert, der angibt, die Anmeldeinformationen für den Identitätswechsel verwenden. Folgende Enumerationswerte sind möglich:  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3218596e2f627eb8f330dbb161e178ffbac16648
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256369"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394477"
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
   Berichtstool für transaktionsleistung (siehe [bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur portiert werden soll, In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche interpretierte gespeicherte Prozeduren in der Datenbank Wenn profitieren portiert, um native verwenden Kompilierung. Nachdem Sie eine gespeicherte Prozedur identifiziert haben, die Sie zur Verwendung der systeminternen Kompilierung portieren möchten, können Sie den Ratgeber für die systeminterne Kompilierung verwenden, um die Migration der interpretierten gespeicherten Prozedur zur systeminternen Kompilierung zu vereinfachen. Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

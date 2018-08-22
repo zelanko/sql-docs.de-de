@@ -5,8 +5,7 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
@@ -14,12 +13,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef26babe0f79bf3343c26748c560b6a7a41ba164
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231092"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394064"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
   Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. In einer speicheroptimierten Tabelle dürfen Zeilen eine maximale Länge von 8.060 Bytes aufweisen. Wenn Sie eine Vorstellung von der Größe einer speicheroptimierten Tabelle haben, können Sie besser einschätzen, ob Ihr Computer über genügend Arbeitsspeicher verfügt.  

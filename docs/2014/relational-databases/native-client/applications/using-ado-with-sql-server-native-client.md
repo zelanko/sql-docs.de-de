@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62c8430e36fe0982d4dc8e9ec56e14d124ccd106
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6fb21b7859b3666ef4d62743cb8f641745c33daf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431819"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393870"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Verwenden von ADO mit SQL Server Native Client
   Um die Vorteile der neuen Funktionen in nutzen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wie z. B. mehrere aktive Resultsets (MARS), abfragebenachrichtigungen, benutzerdefinierte Typen (UDTs) oder das neue **Xml** -Datentyp, vorhandene Anwendungen, verwenden von ActiveX, Data Objects (ADO) verwenden, sollten die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als Datenzugriffsanbieter.  
@@ -33,10 +33,10 @@ ms.locfileid: "37431819"
 > [!NOTE]  
 >  Wenn Sie eine neue Anwendung entwickeln, wird empfohlen, über ADO.NET und den .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] statt über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client auf die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. Weitere Informationen zum .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie in der .NET Framework-SDK-Dokumentation für ADO.NET.  
   
- Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen kann, wurde der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktionen und zwei nutzen Typen in eingeführte [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **Xml** und **Udt**. Diese Verbesserungen nutzen auch Verbesserungen an der **Varchar**, **Nvarchar**, und **Varbinary** -Datentypen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT Eigenschaftensatz für die Verwendung von ADO-Anwendungen, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Darüber hinaus die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert auch ein neues Schlüsselwort für Verbindungszeichenfolgen mit dem Namen `DataTypeCompatibility` , die in der Verbindungszeichenfolge festgelegt ist.  
+ Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen kann, wurde der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT Eigenschaftensatz für die Verwendung von ADO-Anwendungen, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Darüber hinaus die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert auch ein neues Schlüsselwort für Verbindungszeichenfolgen mit dem Namen `DataTypeCompatibility` , die in der Verbindungszeichenfolge festgelegt ist.  
   
 > [!NOTE]  
->  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neue größere **varchar(max)**, **nvarchar(max)**, und **'varbinary(max)'** Datentypen werden als die ADO-Datentypen zurückgegeben **AdLongVarChar**, **AdLongVarWChar** und **AdLongVarBinary** bzw. XML-Spalten werden zurückgegeben, als **AdLongVarChar**, UDT-Spalten werden als zurückgegeben **AdVarBinary**. Wenn Sie jedoch den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) statt des SQLOLEDB-Anbieters verwenden, müssen Sie sicherstellen, dass das Schlüsselwort `DataTypeCompatibility` mit dem Wert "80" angegeben wird, damit die neuen Datentypen richtig den entsprechenden ADO-Datentypen zugeordnet werden.  
+>  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Wenn Sie jedoch den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) statt des SQLOLEDB-Anbieters verwenden, müssen Sie sicherstellen, dass das Schlüsselwort `DataTypeCompatibility` mit dem Wert "80" angegeben wird, damit die neuen Datentypen richtig den entsprechenden ADO-Datentypen zugeordnet werden.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Aktivieren von SQL Server Native Client über ADO  
  So aktivieren Sie die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ADO-Anwendungen müssen die folgenden Schlüsselwörter in den Verbindungszeichenfolgen zu implementieren:  
@@ -65,7 +65,7 @@ con.Open
  Die folgenden Abschnitte enthalten Beispiele für die Verwendung von ADO mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
 ### <a name="retrieving-xml-column-data"></a>Abrufen von XML-Spaltendaten  
- In diesem Beispiel wird ein Recordset verwendet, abrufen und Anzeigen von Daten aus einer XML-Spalte in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** -Beispieldatenbank.  
+ In diesem Beispiel wird ein Recordset verwendet, um die Daten aus einer XML-Spalte der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Beispieldatenbank **AdventureWorks** abzurufen und anzuzeigen.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -101,7 +101,7 @@ Set con = Nothing
 >  Recordset-Filter werden bei XML-Spalten nicht unterstützt. Wenn sie verwendet werden, wird ein Fehler zurückgegeben.  
   
 ### <a name="retrieving-udt-column-data"></a>Abrufen von UDT-Spaltendaten  
- In diesem Beispiel eine **Befehl** Objekt wird verwendet, um eine SQL-Abfrage ausführen, die einen UDT zurückgibt, die UDT-Daten werden aktualisiert, und klicken Sie dann die neuen Daten wieder in die Datenbank eingefügt werden. In diesem Beispiel wird vorausgesetzt, dass die **Punkt** UDT bereits in der Datenbank registriert wurde.  
+ In diesem Beispiel wird ein **Command**-Objekt verwendet, um eine SQL-Abfrage auszuführen, die einen UDT zurückgibt. Der UDT wird aktualisiert, und neue Daten werden anschließend wieder in die Datenbank eingefügt. In diesem Beispiel wird davon ausgegangen, dass der UDT **Point** bereits in der Datenbank registriert wurde.  
   
 ```  
 Dim con As New ADODB.Connection  

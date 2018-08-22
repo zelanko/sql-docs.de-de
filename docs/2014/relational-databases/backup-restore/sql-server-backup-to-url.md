@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264876"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394265"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
   In diesem Thema werden die Konzepte, die Anforderungen und die Komponenten eingeführt, die notwendig sind, um den Windows Azure-BLOB-Speicherdienst als Sicherungsziel zu verwenden. Die Sicherungs- und Wiederherstellungsfunktion sind gleich oder ähnlich wie beim Verwenden von DISK oder TAPE, mit wenigen Unterschieden. Die Unterschiede und alle wichtigen Ausnahmen sowie einige Codebeispiele werden in diesem Thema erörtert.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264876"
   
  Schritt-für-Schritt-Anweisungen zum Erstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldeinformationen finden Sie unter [Erstellen von Anmeldeinformationen](#credential) Beispiel weiter unten in diesem Thema.  
   
- Weitere allgemeine Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](http://msdn.microsoft.com/en-us/library/ms161950.aspx).  
+ Weitere allgemeine Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](../security/authentication-access/credentials-database-engine.md).  
   
- Informationen mit weiteren Beispielen zur Verwendung von Anmeldeinformationen finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Informationen für andere Beispiele, wo Anmeldeinformationen verwendet werden, finden Sie unter [Erstellen eines SQL Server-Agent-Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Einschränkungen  
   

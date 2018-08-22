@@ -1,5 +1,5 @@
 ---
-title: Sp_update_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_update_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 072c36097eb465fa43a785c59d4b0ef73d6d351f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 31154f48d9d13e6ebb67b25919a45ff7a1f7db8b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259810"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396535"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ sp_update_proxy
  Die ID der neuen Anmeldeinformationen für den Proxy. Die *Credential_id* ist **Int**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* kann angegeben werden.  
   
  [ **@new_name**=] **"***New_name***"**  
- Der neue Name des Proxys. Die *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn angegeben, wird die Prozedur ändert den Namen des Proxys, für *New_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
+ Der neue Name des Proxys. Die *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn angegeben, ändert die Prozedur den Namen des Proxys, *New_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
   
  [ **@enabled** =] *Is_enabled*  
- Gibt an, ob der Proxy aktiviert ist: Die *Is_enabled* Flag **"tinyint"**, hat den Standardwert NULL. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
+ Gibt an, ob der Proxy aktiviert ist: Die *Is_enabled* Flag **Tinyint**, hat den Standardwert NULL. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
   
  [ **@description**=] **"***Beschreibung***"**  
- Die neue Beschreibung des Proxys. Die *Beschreibung* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
+ Die neue Beschreibung des Proxys. Die *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -81,10 +81,10 @@ sp_update_proxy
   
  Entweder **@credential_name** oder **@credential_id** muss angegeben werden, um die Anmeldeinformationen für den Proxy zu ändern. Wenn beide Argumente angegeben werden, müssen sich beide auf dieselben Anmeldeinformationen beziehen, andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
- Mit dieser Prozedur wird der Proxy geändert, jedoch nicht der Zugriff auf den Proxy. Um den Zugriff auf einen Proxy zu ändern, verwenden Sie **Sp_grant_login_to_proxy** und **Sp_revoke_login_from_proxy**.  
+ Mit dieser Prozedur wird der Proxy geändert, jedoch nicht der Zugriff auf den Proxy. Um den Zugriff auf einen Proxy zu ändern, verwenden **Sp_grant_login_to_proxy** und **Sp_revoke_login_from_proxy**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** festen Sicherheitsrolle kann diese Prozedur ausführen.  
+ Nur Mitglieder der **Sysadmin** festen Sicherheitsrolle diese Prozedur ausführen kann.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der aktivierte Wert für den Proxy `Catalog application proxy` auf `0` festgelegt.  
@@ -100,8 +100,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementieren von Sicherheit für SQL Server-Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Implementieren von SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

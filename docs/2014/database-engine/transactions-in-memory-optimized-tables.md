@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
@@ -14,12 +13,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158871"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396122"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transaktionen in speicheroptimierten Tabellen
   Die Zeilenversionsverwaltung für datenträgerbasierte Tabellen (mit SNAPSHOT-Isolation oder READ_COMMITTED_SNAPSHOT) bietet eine Form der optimistischen Nebenläufigkeitssteuerung. Lese- und Schreibvorgänge blockieren sich nicht. Bei speicheroptimierten Tabellen blockieren sich Schreibvorgänge nicht gegenseitig. Bei der Zeilenversionsverwaltung für datenträgerbasierte Tabellen wird die Zeile durch eine Transaktion gesperrt, während gleichzeitige Transaktionen, die die Zeile zu aktualisieren versuchen, blockiert werden. Bei speicheroptimierten Tabellen werden keine Sperren festgelegt. Stattdessen führt der Versuch von zwei Transaktionen, dieselbe Zeile zu aktualisieren, zu einem Schreibkonflikt (Fehler 41302).  
@@ -74,7 +73,7 @@ ms.locfileid: "37158871"
 ### <a name="transaction-lifetime"></a>Lebensdauer von Transaktionen  
  Die in der vorherigen Tabelle beschriebenen Fehler können zu unterschiedlichen Zeitpunkten während einer Transaktion auftreten. In der folgenden Abbildung werden die Phasen einer Transaktion dargestellt, die auf speicheroptimierte Tabellen zugreift.  
   
- ![Lebensdauer einer Transaktion. ] (../../2014/database-engine/media/hekaton-transactions.gif "Lebensdauer einer Transaktion.")  
+ ![Lebensdauer einer Transaktion. ](../../2014/database-engine/media/hekaton-transactions.gif "Lebensdauer einer Transaktion.")  
 Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.  
   
 #### <a name="regular-processing"></a>Reguläre Verarbeitung  

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c1ef9667e024e15aa2d7792617637a9029f61b81
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 707213c05dcbb1ea7df4224312a331103f0c924d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552560"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396121"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -272,7 +272,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
- [Implementieren von Aufträgen](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+ [SQL Server-Agent](../../../ssms/agent/sql-server-agent.md)   
+ [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)  
   
   

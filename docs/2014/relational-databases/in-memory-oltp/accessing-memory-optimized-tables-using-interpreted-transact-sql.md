@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
@@ -14,12 +13,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51a462b29365153aea43deb626f6905375aeafc1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170761"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396536"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
   Mit nur wenigen Ausnahmen, erreichen Sie Speicheroptimierte Tabellen mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage- oder DML-Vorgang (SELECT, INSERT, UPDATE oder DELETE), ad-hoc-Batches und SQL-Module wie gespeicherte Prozeduren, Tabellenwertfunktionen, Trigger und Sichten.  

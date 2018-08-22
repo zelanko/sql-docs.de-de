@@ -1,5 +1,5 @@
 ---
-title: Sp_help_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_help_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259800"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396311"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_help_proxy
   
  In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
@@ -86,21 +86,21 @@ sp_help_proxy
 |**proxy_id**|**int**|ID des Proxys.|  
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
-|**Aktiviert**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
+|**aktiviert**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
 |**description**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
 |**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**credential_identity_exists**|**int**|Gibt an, ob credential_identity vorhanden ist. { 0 = ist nicht vorhanden, 1 = ist vorhanden }|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn keine Parameter angegeben sind, **Sp_help_proxy** werden Informationen zu allen Proxys in der Instanz aufgelistet.  
+ Wenn keine Parameter angegeben werden, **Sp_help_proxy** listet Informationen zu allen Proxys in der Instanz.  
   
- Um zu bestimmen, welche Proxys eine Anmeldung für ein bestimmtes Subsystem verwenden können, geben Sie *Namen* und *Subsystem_name*. Wenn diese Argumente angegeben werden, **Sp_help_proxy** Proxys, die die Anmeldung angegeben möglicherweise den Zugriff und kann verwendet werden für das angegebene Subsystem aufgelistet.  
+ Um zu bestimmen, welche Proxys eine Anmeldung für ein bestimmtes Subsystem verwenden können, geben Sie *Namen* und *Subsystem_name*. Wenn diese Argumente angegeben werden, **Sp_help_proxy** Proxys, die die Anmeldung angegeben, kann den Zugriff und können verwendet werden für das angegebene Subsystem aufgelistet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
- Weitere Informationen zu **SQLAgentOperatorRole**, finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu **SQLAgentOperatorRole**, finden Sie unter [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
 >  Die **Credential_identity** und **User_sid** Spalten werden nur zurückgegeben, das Ergebnis festgelegt, wenn Mitglieder der **Sysadmin** diese gespeicherte Prozedur ausführen.  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   

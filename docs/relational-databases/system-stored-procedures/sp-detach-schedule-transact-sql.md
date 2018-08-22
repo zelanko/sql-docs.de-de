@@ -1,5 +1,5 @@
 ---
-title: Sp_detach_schedule (Transact-SQL) | Microsoft Docs
+title: Sp_detach_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245131"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395495"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_detach_schedule
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [  **@schedule_id=** ] *Schedule_id*  
  Die ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
@@ -63,16 +63,16 @@ sp_detach_schedule
  Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
- Gibt an, ob nicht verwendete Auftragszeitpläne gelöscht werden sollen. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **0**, was bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf sie verweist. Wenn auf festgelegt **1**, werden nicht verwendete Auftragszeitpläne gelöscht, wenn keine Aufträge auf sie verweist.  
+ Gibt an, ob nicht verwendete Auftragszeitpläne gelöscht werden sollen. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **0**, d. h. alle Zeitpläne beibehalten werden, auch wenn keine Aufträge, die darauf verweisen. Wenn auf festgelegt **1**, nicht verwendete Auftragszeitpläne gelöscht, wenn keine Aufträge auf sie verweist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -85,7 +85,7 @@ sp_detach_schedule
   
  Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Ein Zeitplan kann jedoch nicht gelöscht werden, wenn durch das Trennen keine Aufträge mehr vorhanden wären, außer der Aufrufer ist der Zeitplanbesitzer.  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob der Benutzer der Besitzer des Zeitplans ist. Nur Mitglieder der **Sysadmin** -Serverrolle kann Zeitpläne von Aufträgen, die im Besitz eines anderen Benutzers trennen.  
   

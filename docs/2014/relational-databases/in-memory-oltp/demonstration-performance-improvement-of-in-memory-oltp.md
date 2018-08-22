@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
@@ -14,12 +13,12 @@ caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2922d77122bdf87616e8869e6e03b29eb9a4cbf0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248500"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395715"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
   Dieses Beispiel zeigt Leistungsverbesserungen bei Verwendung von In-Memory OLTP, indem die Unterschiede bei der Antwortzeit bei Ausführung einer identischen Transact-SQL-Abfrage für speicheroptimierte und herkömmliche datenträgerbasierte Tabellen verglichen werden. Darüber hinaus wird eine systemintern kompilierte gespeicherte Prozedur erstellt (basierend auf der gleichen Abfrage) und dann ausgeführt, um zu veranschaulichen, dass die besten Antwortzeiten in der Regel beim Abfragen einer speicheroptimierten Tabelle mit einer systemintern kompilierten gespeicherten Prozedur erzielt werden. Dieses Beispiel zeigt nur einen Aspekt der Leistungsverbesserungen beim Zugriff auf Daten in speicheroptimierten Tabellen; Effizienz beim Datenzugriff bei der Durchführung von Einfügungen. Dieses Beispiel verwendet nur einen einzelnen Thread und nutzt nicht die Parallelitätsvorteile von In-Memory OLTP. Eine Arbeitsauslastung, die Parallelität verwendet, bietet noch größere Leistungsvorteile.  

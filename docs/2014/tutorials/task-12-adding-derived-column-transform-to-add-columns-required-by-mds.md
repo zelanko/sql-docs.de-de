@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165711"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395314"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Aufgabe 12: Hinzufügen der Transformation 'Abgeleitete Spalten', um für MDS erforderliche Spalten hinzuzufügen
-  In dieser Aufgabe fügen Sie die Transformation "Abgeleitete Spalte" zum Datenfluss hinzu. Sie fügen zwei abgeleitete Spalten, **ImportType** und **BatchTag**, auf die Datensätze, die mit dieser Transformation an. Sie sollten diese Spalten hinzufügen, bevor Sie die Daten in Stagingtabellen in MDS hochladen. Diese beiden Spalten sind für die Stagingtabellen in MDS erforderliche Spalten. Finden Sie unter [Stagingtabellen für Blattelemente](http://msdn.microsoft.com/library/ee633854.aspx) Weitere Details.  
+  In dieser Aufgabe fügen Sie die Transformation "Abgeleitete Spalte" zum Datenfluss hinzu. Sie fügen zwei abgeleitete Spalten, **ImportType** und **BatchTag**, auf die Datensätze, die mit dieser Transformation an. Sie sollten diese Spalten hinzufügen, bevor Sie die Daten in Stagingtabellen in MDS hochladen. Diese beiden Spalten sind für die Stagingtabellen in MDS erforderliche Spalten. Finden Sie unter [Stagingtabellen für Blattelemente](../master-data-services/leaf-member-staging-table-master-data-services.md) Weitere Details.  
   
 1.  Drag & Drop **Transformation für abgeleitete Spalten** aus **allgemeine** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165711"
   
      ![SSIS-Variablen (Fenster)](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS-Variablen (Fenster)")  
   
-7.  Typ **ImportType** für die **Namen** und **2** für die **Wert**. Sie geben den Wert 2 an, da Sie einer Entität in MDS neue Elemente hinzufügen möchten. Weitere Informationen zu diesem Parameter finden Sie unter [Stagingtabelle für Blattelemente](http://msdn.microsoft.com/library/ee633854.aspx).  
+7.  Typ **ImportType** für die **Namen** und **2** für die **Wert**. Sie geben den Wert 2 an, da Sie einer Entität in MDS neue Elemente hinzufügen möchten. Weitere Informationen zu diesem Parameter finden Sie unter [Stagingtabelle für Blattelemente](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
 8.  Klicken Sie auf **Variable hinzufügen** erneut die Symbolleisten-Schaltfläche.  
   

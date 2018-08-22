@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,23 +24,23 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf89d0013d95a4fc27937e854eb7a5af28017ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424789"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396328"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
-  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, sodass Sie zum Speichern von Objekten und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual C#-<sup>®</sup> und Visual Basic<sup>®</sup> .NET. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, indem sie es ermöglichen, Objekte und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu speichern. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual C#<sup>®</sup> und Visual Basic<sup>®</sup> .NET ein. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
   
- Ein UDT als Spaltendefinition einer Tabelle, als Variable in verwendet werden kann eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Batch oder als Argument ein [!INCLUDE[tsql](../../../includes/tsql-md.md)] Funktion oder gespeicherten Prozedur.  
+ Ein UDT kann als Spaltendefinition einer Tabelle, als Variable in einem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batch oder als Argument einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktion oder gespeicherten Prozedur verwendet werden.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt UDTs als Binärtypen mit Metadateninformationen, mit dem Sie UDTs als Objekte verwalten können. UDT-Spalten werden als DBTYPE_UDT verfügbar gemacht, und ihre Metadaten werden über die OLE DB-Kernschnittstelle **IColumnRowset**, und die neue [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) Schnittstelle.  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt UDTs als Binärtypen mit Metadateninformationen, mit dem Sie UDTs als Objekte verwalten können. UDT-Spalten werden als DBTYPE_UDT verfügbar gemacht, und ihre Metadaten werden über die OLE DB-Kernschnittstelle **IColumnRowset** und die neue [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)-Schnittstelle bereitgestellt.  
   
 > [!NOTE]  
->  Die **irowsetfind:: FindNextRow** Methode funktioniert nicht mit dem UDT-Datentyp. DB_E_BADCOMPAREOP wird zurückgegeben, wenn der UDT als Suchspaltentyp verwendet wird.  
+>  Die **IRowsetFind::FindNextRow**-Methode funktioniert nicht mit dem UDT-Datentyp. DB_E_BADCOMPAREOP wird zurückgegeben, wenn der UDT als Suchspaltentyp verwendet wird.  
   
 ### <a name="data-bindings-and-coercions"></a>Datenbindungen und -umwandlungen  
  Die folgende Tabelle veranschaulicht die Bindung und Umwandlung bei Verwendung der aufgeführten Datentypen mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-UDT. UDT-Spalten werden verfügbar gemacht, über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als DBTYPE_UDT. Die Metadaten können Sie über die entsprechenden Schemarowsets abrufen und so Ihre benutzerdefinierten Typen als Objekte verwalten.  
@@ -48,34 +48,34 @@ ms.locfileid: "37424789"
 |Datentyp|Zu Server<br /><br /> **UDT**|Zu Server<br /><br /> **non-UDT**|Von Server<br /><br /> **UDT**|Von Server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Unterstützt<sup>6</sup>|Fehler<sup>1</sup>|Unterstützt<sup>6</sup>|Fehler<sup>5</sup>|  
-|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
-|DBTYPE_STR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Nicht unterstützt|N/V<sup>2</sup>|Nicht unterstützt|N/V<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|–|N/V<sup>2</sup>|  
+|DBTYPE_BYTES|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4,6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_STR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4,6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
   
- <sup>1</sup>, wenn ein anderer Servertyp als DBTYPE_UDT mit angegeben wird **ICommandWithParameters:: SetParameterInfo** und ist der Accessortyp DBTYPE_UDT, ein Fehler auftritt, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED; der Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
+ <sup>1</sup>Wird ein anderer Servertyp als DBTYPE_UDT mit **ICommandWithParameters::SetParameterInfo** angegeben, und ist der Accessortyp DBTYPE_UDT, tritt bei Ausführung der Anweisung ein Fehler auf (DB_E_ERRORSOCCURRED; der Parameterstatus lautet DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
   
  <sup>2</sup>über den Rahmen dieses Themas hinaus.  
   
- <sup>3</sup> Datenkonvertierung einer hexadezimalen Zeichenfolge in binäre Daten auftritt.  
+ <sup>3</sup>Es erfolgt eine Datenkonvertierung einer hexadezimalen Zeichenfolge in Binärdaten.  
   
- <sup>4</sup> Datenkonvertierung von Binärdaten in eine hexadezimale Zeichenfolge.  
+ <sup>4</sup>Es erfolgt eine Datenkonvertierung von Binärdaten in eine hexadezimale Zeichenfolge.  
   
- <sup>5</sup>Validierung in auftreten kann, Erstellen des Accessors oder zum Zeitpunkt abrufen, der Fehler ist DB_E_ERRORSOCCURRED, Bindungsstatus auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
+ <sup>5</sup>Die Überprüfung kann zum Zeitpunkt der Accessorerstellung oder zum Zeitpunkt des Abrufens vorgenommen werden. Der Fehler ist DB_E_ERRORSOCCURRED, der Bindungsstatus ist auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
   
- <sup>6</sup>BY_REF kann verwendet werden.  
+ <sup>6</sup>BY_REF wird möglicherweise verwendet.  
   
- DBTYPE_NULL und DBTYPE_EMPTY können für Eingabeparameter gebunden werden, aber nicht für Ausgabeparameter oder Ergebnisse. Wenn für Eingabeparameter gebunden ist, muss der Status auf DBSTATUS_S_ISNULL oder DBSTATUS_S_DEFAULT festgelegt werden.  
+ DBTYPE_NULL und DBTYPE_EMPTY können für Eingabeparameter gebunden werden, aber nicht für Ausgabeparameter oder Ergebnisse. Ist der Status für Eingabeparameter gebunden, muss er auf DBSTATUS_S_ISNULL oder DBSTATUS_S_DEFAULT festgelegt werden.  
   
  DBTYPE_UDT kann auch in DBTYPE_EMPTY und DBTYPE_NULL umgewandelt werden, DBTYPE_NULL und DBTYPE_EMPTY können jedoch nicht in DBTYPE_UDT umgewandelt werden. Dies stimmt mit DBTYPE_BYTES überein.  
   
 > [!NOTE]  
->  Eine neue Schnittstelle wird verwendet, für den Umgang mit UDTs als Parameter **ISSCommandWithParameters**, erbt von **ICommandWithParameters**. Anwendungen müssen diese Schnittstelle verwenden, um mindestens SSPROP_PARAM_UDT_NAME der DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe für UDT-Parameter festzulegen. Wenn dies nicht erfolgt, **ICommand:: Execute** DB_E_ERRORSOCCURRED zurück. Diese Schnittstelle und Eigenschaftengruppe werden im weiteren Verlauf dieses Themas erläutert.  
+>  Für den Umgang mit UDTs als Parametern wird eine neue Schnittstelle, **ISSCommandWithParameters**, verwendet, die von **ICommandWithParameters** erbt. Anwendungen müssen diese Schnittstelle verwenden, um mindestens SSPROP_PARAM_UDT_NAME der DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe für UDT-Parameter festzulegen. Andernfalls gibt **ICommand::Execute** DB_E_ERRORSOCCURRED zurück. Diese Schnittstelle und Eigenschaftengruppe werden im weiteren Verlauf dieses Themas erläutert.  
   
- Wenn Sie ein benutzerdefinierten Typ in eine Spalte eingefügt wird, die nicht groß genug für alle Daten ist **ICommand:: Execute** S_OK mit dem Status DB_E_ERRORSOCCURRED zurück.  
+ Wird ein UDT in eine Spalte eingefügt, die nicht groß genug für alle Daten ist, gibt **ICommand::Execute** S_OK mit dem Status DB_E_ERRORSOCCURRED zurück.  
   
  Datenkonvertierungen durch OLE DB-Basisdienste (**IDataConvert**) sind nicht auf DBTYPE_UDT anwendbar. Es werden keine weiteren Bindungen unterstützt.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "37424789"
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
 |SS_UDT_NAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
-|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Der qualifizierte Assemblyname, einschließlich des Typnamens, und alle assemblykennung erforderlich, die von der CLR verwiesen werden.|  
+|SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Der qualifizierte Name der Assembly mit dem Typnamen und allen zur CLR-Referenzierung erforderlichen Angaben zur Assembly-ID.|  
   
 #### <a name="the-sqlassemblies-schema-rowset"></a>Das SQL_ASSEMBLIES-Schemarowset  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt ein neues anbieterspezifisches Schemarowset, die die registrierten UDTs beschreibt. Der ASSEMBLY-Server wird möglicherweise als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLIES-Schemarowset wird in der folgenden Tabelle definiert.  
@@ -110,7 +110,7 @@ ms.locfileid: "37424789"
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Der Katalogname der Assembly, die den Typ enthält.|  
-|ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl Assemblys durch die Datenbank und nicht durch ein Schema begrenzten Gültigkeitsbereich haben, müssen sie einen Besitzer, die hier angegeben wird.|  
+|ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl der Bereich einer Assembly durch die Datenbank und nicht durch ein Schema definiert wird, hat sie einen Eigentümer, der hier angegeben wird.|  
 |ASSEMBLY_ID|DBTYPE_UI4|Die Objekt-ID der Assembly.|  
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|Die Objekt-ID der referenzierten Assembly.|  
   
@@ -155,7 +155,7 @@ ms.locfileid: "37424789"
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
-|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den einteiligen Namen des UDT angibt. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge.|  
+|SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den einteiligen Namen des UDT angibt. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
   
 > [!NOTE]  
 >  UDTs werden nicht im PROVIDER_TYPES-Schemarowset angezeigt. Alle Spalten haben Lese- und Schreibzugriff.  
@@ -177,7 +177,7 @@ ms.locfileid: "37424789"
  Um UDTs durch OLE DB unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementiert eine Reihe von Änderungen, einschließlich der Hinzufügung von der **ISSCommandWithParameters** Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von geerbten Methoden **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, und **SetParameterInfo**; **ISSCommandWithParameters** bietet die **GetParameterProperties** und **SetParameterProperties** Methoden, die verwendet werden, um Server spezifische behandeln Datentypen.  
   
 > [!NOTE]  
->  Die **ISSCommandWithParameters** -Schnittstelle nutzt auch verwenden, die neue ssparamprops Struktur.  
+>  Die **ISSCommandWithParameters**-Schnittstelle nutzt auch die neue SSPARAMPROPS-Struktur.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  Zusätzlich zu den **ISSCommandWithParameters** -Schnittstelle, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte auch das vom Aufruf zurückgegebene Rowset die **IColumnsRowset** Methode einschließlich der folgenden.  

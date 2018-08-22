@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobstep (Transact-SQL) | Microsoft Docs
+title: Sp_help_jobstep (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a614a40001e21fadf708cb2079dbe45171cafe62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e610198b2a7c26ad11811157b52a066639592a8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261769"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393876"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id =**] **'***job_id***'**  
- Die ID des Auftrags, zu dem Auftragsinformationen zurückgegeben werden sollen. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, zu dem Auftragsinformationen zurückgegeben werden sollen. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@step_id =**] *step_id*  
  Die ID des Auftragsschritts. Wenn diese nicht angegeben wird, sind alle Schritte im Auftrag eingeschlossen. *Step_id* ist **Int**, hat den Standardwert NULL.  
@@ -63,7 +63,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Der Name des Schritts im Auftrag. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@suffix =**] *suffix*  
- Ein Flag, das angibt, ob eine textbeschreibung, um angefügt wird die **Flags** Spalte in der Ausgabe. *Suffix*ist **Bit**, hat den Standardwert **0**. Wenn *Suffix* ist **1**, eine Beschreibung angefügt.  
+ Ein Flag, der angibt, ob eine textbeschreibung, um angefügt wird die **Flags** Spalte in der Ausgabe. *Suffix*ist **Bit**, mit dem Standardwert **0**. Wenn *Suffix* ist **1**, eine Beschreibung angefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,10 +77,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**subsystem**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
 |**Befehl**|**nvarchar(max)**|Befehl, der in dem Schritt ausgeführt wird.|  
 |**flags**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
-|**cmdexec_success_code**|**int**|Für eine **CmdExec** Schritt, dies ist der Prozessexitcode eines erfolgreichen Befehls.|  
-|**on_success_action**|**tinyint**|Auszuführende Aktion, wenn der Schritt erfolgreich ist:<br /><br /> **1** = Auftrag mit Erfolgsmeldung beenden.<br /><br /> **2** = Auftrag mit Fehlermeldung beenden.<br /><br /> **3** = weiter mit dem nächsten Schritt fort.<br /><br /> **4** = Gehe zu Schritt.|  
+|**cmdexec_success_code**|**int**|Für eine **CmdExec** Schritt sieht der Prozessexitcode eines erfolgreichen Befehls.|  
+|**on_success_action**|**tinyint**|Auszuführende Aktion, wenn der Schritt erfolgreich ist:<br /><br /> **1** = Auftrag mit Erfolgsmeldung beenden.<br /><br /> **2** = Auftrag mit Fehlermeldung beenden.<br /><br /> **3** = weiter mit dem nächsten Schritt.<br /><br /> **4** = Gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **On_success_action** 4 ist, wird hiermit der nächste auszuführende Schritt.|  
-|**on_fail_action**|**tinyint**|Was tun, wenn der Schritt fehlschlägt. Werte sind identisch mit **On_success_action**.|  
+|**on_fail_action**|**tinyint**|Vorgehensweise, wenn der Schritt fehlschlägt. Werte sind identisch mit **On_success_action**.|  
 |**on_fail_step_id**|**int**|Wenn **On_fail_action** 4 ist, wird hiermit der nächste auszuführende Schritt.|  
 |**server**|**sysname**|Reserviert.|  
 |**database_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ist dies die Datenbank, in der der Befehl ausgeführt wird.|  
@@ -88,7 +88,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist).|  
 |**retry_interval**|**int**|Das Intervall (in Minuten) zwischen den Wiederholungsversuchen.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**output_file_name**|**nvarchar(200)**|Datei in die Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, und **PowerShell** nur Schritte).|  
+|**output_file_name**|**nvarchar(200)**|Datei, die in der Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, und **PowerShell** nur Schritte).|  
 |**last_run_outcome**|**int**|Ergebnis der letzten Ausführung des Schritts:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Die Ausführungsdauer (in Sekunden) des Schritts bei der letzten Ausführung.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche für den Befehl bei der letzten Ausführung des Schritts|  
@@ -108,7 +108,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Mitglieder der **SQLAgentUserRole** Auftragsschritte für Aufträge, deren Besitzer, können nur anzeigen.  
   

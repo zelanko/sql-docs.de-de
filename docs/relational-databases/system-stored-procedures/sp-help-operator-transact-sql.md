@@ -1,5 +1,5 @@
 ---
-title: Sp_help_operator (Transact-SQL) | Microsoft Docs
+title: Sp_help_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258794"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396321"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_help_operator
   
 ## <a name="arguments"></a>Argumente  
  [  **@operator_name=** ] **"***Operatorname***"**  
- Der Name des Operators. *Operatorname* ist **Sysname**. Wenn *Operatorname* ist nicht angegeben wird, werden Informationen zu allen Operatoren zurückgegeben.  
+ Der Name des Operators. *Operatorname* ist **Sysname**. Wenn *Operatorname* ist nicht angegeben ist, werden Informationen zu allen Operatoren zurückgegeben.  
   
  [ **@operator_id=** ] *operator_id*  
  Die ID des Operators, für den Informationen angefordert werden. *Operator_id*ist **Int**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Operator_id* oder *Operatorname* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Operator_id* oder *Operatorname* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,13 +63,13 @@ sp_help_operator
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Operator-ID zurück.|  
+|**id**|**int**|Operator-ID.|  
 |**name**|**sysname**|Name des Operators.|  
-|**Aktiviert**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
-|**email_address**|**Nvarchar(100)**|E-Mail-Adresse des Operators.|  
+|**aktiviert**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**email_address**|**nvarchar(100)**|E-Mail-Adresse des Operators.|  
 |**last_email_date**|**int**|Datum, an dem der Operator zuletzt per E-Mail benachrichtigt wurde.|  
 |**last_email_time**|**int**|Uhrzeit, zu der der Operator zuletzt per E-Mail benachrichtigt wurde.|  
-|**pager_address**|**Nvarchar(100)**|Pageradresse des Operators.|  
+|**pager_address**|**nvarchar(100)**|Pageradresse des Operators.|  
 |**last_pager_date**|**int**|Datum, an dem der Operator zuletzt per Pager benachrichtigt wurde.|  
 |**last_pager_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Pager benachrichtigt wurde.|  
 |**weekday_pager_start_time**|**int**|Der Beginn des Zeitraums, während dessen der Operator an Arbeitstagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
@@ -78,8 +78,8 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|Das Ende des Zeitraums, während dessen der Operator an Samstagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
 |**sunday_pager_start_time**|**int**|Der Beginn des Zeitraums, während dessen der Operator an Sonntagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
 |**sunday_pager_end_time**|**int**|Das Ende des Zeitraums, während dessen der Operator an Sonntagen zur Verfügung steht, um Pagerbenachrichtigungen zu empfangen.|  
-|**pager_days**|**tinyint**|Eine Bitmaske (**1** = Sonntag, **64** = Samstag) Tage die Woche, der angibt, wann der Operator für den Empfang von Pagerbenachrichtigungen verfügbar ist.|  
-|**netsend_address**|**Nvarchar(100)**|Operatoradresse für Benachrichtigungen per Netzwerk-Popupnachricht.|  
+|**pager_days**|**tinyint**|Eine Bitmaske (**1** = Sonntag, **64** = Samstag) Tage der Woche, der angibt, wenn der Operator Pagerbenachrichtigungen empfangen kann.|  
+|**netsend_address**|**nvarchar(100)**|Operatoradresse für Benachrichtigungen per Netzwerk-Popupnachricht.|  
 |**last_netsend_date**|**int**|Datum, an dem der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**last_netsend_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**category_name**|**sysname**|Name der Operatorkategorie, zu der dieser Operator gehört.|  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zum `François Ajenstat`-Operator ausgegeben.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobcount (Transact-SQL) | Microsoft Docs
+title: Sp_help_jobcount (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6165d86e2a086ef52e627451e613b021296082d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ff9c148455fd1e917b63ecae69a9bf977d69a280
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252948"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394907"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ sp_help_jobcount
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** kann die Anzahl von Aufträgen, die von anderen Benutzern gehören anzeigen.  
+ Nur Mitglieder der **Sysadmin** sehen die Anzahl von Aufträgen, die von anderen Benutzern gehören.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Anzahl der dem Zeitplan `NightlyJobs` angefügten Aufträge aufgelistet.  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
