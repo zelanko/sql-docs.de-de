@@ -35,24 +35,24 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b624a8375f0726dc73b8b71af7a75d0756e52e60
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983362"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392567"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL)
-Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken in der SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Zugriff haben, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Hierzu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
+Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken in der SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Zugriff haben, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Hierzu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Was geschieht, wenn Sie die Access-Datenbankdateien hinzufügen?  
-Wenn Sie eine Access-Datenbank zu einem SSMA-Projekt hinzufügen, SSMA liest Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten beschreiben die Datenbank und die Objekte an. SSMA verwendet die Metadaten aus, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können diese Metadaten in der Access-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
+Wenn Sie eine Access-Datenbank zu einem SSMA-Projekt hinzufügen, SSMA liest Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten beschreiben die Datenbank und die Objekte an. SSMA verwendet die Metadaten aus, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können diese Metadaten in der Access-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
   
 > [!NOTE]  
-> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, Tabellen enthält, und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Front-End-Datenbank SSMA hinzuzufügen.  
+> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, Tabellen enthält, und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die Front-End-Datenbank SSMA hinzuzufügen.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>Berechtigungen, die von SSMA erforderlich sind  
-Migrieren eine Access-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die Benutzergruppe und der Administratorbenutzer müssen über Verwaltungsberechtigungen verfügen. Weitere Informationen zum Migrieren von Datenbanken mit Arbeitsgruppe Schutz, finden Sie unter [Access-Datenbanken für die Migration vorbereiten](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+Migrieren eine Access-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die Benutzergruppe und der Administratorbenutzer müssen über Verwaltungsberechtigungen verfügen. Weitere Informationen zum Migrieren von Datenbanken mit Arbeitsgruppe Schutz, finden Sie unter [Access-Datenbanken für die Migration vorbereiten](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## <a name="selecting-databases-to-add"></a>Auswählen Hinzuzufügender Datenbanken  
 Wenn Sie eine oder mehrere Datenbanken zu einem SSMA-Projekt hinzufügen möchten, und die Dateien, die an einem bekannten Ort sind, können Sie die Dateien mithilfe des folgenden Verfahrens hinzufügen.  
@@ -138,6 +138,6 @@ Sie können eine Access-Datenbank aus einem Projekt entfernen, indem Sie diese S
 Der nächste Schritt des Migrationsvorgangs besteht darin [Verbinden mit SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Erstellen und Verwalten von Projekten](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Erstellen und Verwalten von Projekten](creating-and-managing-projects-accesstosql.md)  
   

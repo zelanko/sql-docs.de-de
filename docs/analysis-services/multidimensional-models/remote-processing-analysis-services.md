@@ -1,5 +1,5 @@
 ---
-title: Remote verarbeiten (Analysis Services) | Microsoft Docs
+title: Remote verarbeiten (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392562"
 ---
 # <a name="remote-processing-analysis-services"></a>Remoteverarbeitung (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "34022307"
   
 -   Auf dem Remoteserver muss die Option **Remoteverbindungen mit diesem Computer zulassen** aktiviert sein, und das Konto, von dem die Verarbeitungsanforderung ausgegeben wird, muss als zulässiger Benutzer aufgeführt sein.  
   
--   Windows-Firewallregeln müssen so konfiguriert sein, dass eingehende Verbindungen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässig sind. Überprüfen Sie, dass Sie eine Verbindung mit der Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen können. Siehe [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Windows-Firewallregeln müssen so konfiguriert sein, dass eingehende Verbindungen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässig sind. Überprüfen Sie, dass Sie eine Verbindung mit der Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen können. Siehe [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Beheben Sie alle bestehenden lokalen Verarbeitungsprobleme, bevor Sie eine Remoteverarbeitung anwenden. Stellen Sie sicher, dass bei einer lokalen Verarbeitungsanforderung die Daten erfolgreich aus der externen relationalen Datenquelle abgerufen werden können. Anweisungen zum Angeben der Anmeldeinformationen für das Abrufen der Daten finden Sie unter [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Bedarfsgesteuerte Remoteverarbeitung  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]akzeptiert verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] akzeptiert Verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
   
 1.  Starten Sie auf dem Computer, der zum Planen der Verarbeitung verwendet wird, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zur Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] her.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "34022307"
 ## <a name="schedule-remote-processing-using-sql-server-agent-service"></a>Planen der Remoteverarbeitung mit dem SQL Server-Agent-Dienst  
  Standardmäßig wird der SQL Server-Agent-Dienst unter einem virtuellen Konto ausgeführt, wobei Netzwerkverbindungen über das Computerkonto hergestellt werden. Um zu vermeiden, dass einem Computerkonto Administratorrechte für die Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zugewiesen werden müssen, sollten Sie das SQL Server-Agent-Dienstkonto so ändern, dass es als ein Domänenbenutzerkonto mit geringsten Rechten ausgeführt wird.  
   
- Achten Sie darauf, dass Sie alle notwendigen Berechtigungen erteilen, einschließlich **sysadmin** -Rechte für die Datenbankmodulinstanz, die den Dienst bereitgestellt.  
+ Achten Sie darauf, dass Sie alle notwendigen Berechtigungen erteilen, einschließlich **sysadmin** -Rechte für die Datenbank-Engine-Instanz, die den Dienst bereitgestellt.  
   
  Verwenden Sie zum Festlegen von Berechtigungen die folgenden Links:  
   
--   [Konfigurieren des SQL Server-Agents](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) schlägt alternative feste Serverrollen vor, wenn das Gewähren von **sysadmin** -Berechtigungen nicht möglich ist.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) schlägt alternative feste Serverrollen vor, wenn das Gewähren von **sysadmin** -Berechtigungen nicht möglich ist.  
   
  Fahren Sie nach dem Konfigurieren der Kontoberechtigungen mit den folgenden Schritten fort.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34022307"
   
 #### <a name="create-the-job"></a>Erstellen des Auftrags  
   
-1.  Stellen Sie in Management Studio eine Verbindung zur lokalen Datenbankmodulinstanz her. Der SQL Server-Agent ist das letzte Element im Objekt-Explorer. Starten Sie den Dienst, falls erforderlich.  
+1.  Stellen Sie in Management Studio eine Verbindung zur lokalen Datenbank-Engine-Instanz her. Der SQL Server-Agent ist das letzte Element im Objekt-Explorer. Starten Sie den Dienst, falls erforderlich.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **Auftrag**, klicken Sie auf **Neuer Auftrag** , und geben Sie dann einen Namen ein.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022307"
 2.  Ändern Sie als letzten Schritt den Auftrag so, dass er nach einem von Ihnen definierten Zeitplan ausgeführt wird. Fügen Sie dabei alle notwendigen Warnungen oder Benachrichtigungen hinzu, die zum Verwalten des Auftrags erforderlich sind. Sie können das Verarbeitungsskript außerdem noch genauer konfigurieren oder mehrere Schritte im Auftrag erstellen, um Objekte einzeln zu verarbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Komponenten](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
- [Schedule SSAS Administrative Tasks mit SQL Server-Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Batchverarbeitung & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [SQL Server-Agent-Komponenten](../../ssms/agent/sql-server-agent.md)   
+ [Schedule SSAS Administrative Tasks in SQL Server-Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Verarbeitung von Objekten & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Verarbeiten von Objekten &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

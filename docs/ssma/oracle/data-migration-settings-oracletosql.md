@@ -13,16 +13,16 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 15a0727397346451e07f85556bd183df35d13796
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9dd11d93fe40e65836f778191c025daba5a76d0d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983332"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393888"
 ---
-# <a name="data-migration-settings-oracletosql"></a>Data Migration Settings (OracleToSQL)
+# <a name="data-migration-settings-oracletosql"></a>Einstellungen für die Datenmigration (OracleToSQL)
   
-## <a name="data-migration-settings"></a>Einstellungen für die Migration von Daten  
+## <a name="data-migration-settings"></a>Einstellungen für die Datenmigration  
 **Data Migration Settings** ermöglicht dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
   
 -   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** nastaven NA hodnotu **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
@@ -56,5 +56,5 @@ Es befinden sich zwei Schaltflächen, die vorhanden viz.:
 -   **Abbrechen:** klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle-Daten in SQLServer](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[Migrieren von Oracle-Daten in SQLServer](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

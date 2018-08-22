@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102418"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392989"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server unter Linux
 
@@ -31,7 +31,7 @@ Die **Mssql-Conf** Tool konfiguriert die SQL Server unter Linux. Weitere Informa
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Fast alles, was in einem Clienttool Maßnahme kann auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server bietet [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) Abfrage den Status und die Konfiguration von SQL Server. Es gibt auch [Transact-SQL-Befehle](https://msdn.microsoft.com/library/bb510741.aspx) für Aufgaben der datenbankverwaltung. Sie können diese Befehle ausführen, in jedem Clienttool, die eine Verbindung mit SQL Server herstellen und Ausführen von Transact-SQL-Abfragen, z. B. unterstützt [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Fast alles, was in einem Clienttool Maßnahme kann auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server bietet [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) Abfrage den Status und die Konfiguration von SQL Server. Es gibt auch [Transact-SQL-Befehle](../t-sql/language-reference.md) für Aufgaben der datenbankverwaltung. Sie können diese Befehle ausführen, in jedem Clienttool, die eine Verbindung mit SQL Server herstellen und Ausführen von Transact-SQL-Abfragen, z. B. unterstützt [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (Vorschau)
 

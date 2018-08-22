@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Beispiele | Microsoft Docs
+title: Analysis Services-Beispiele | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79e74eb601f3b583a68a1a8280fbb3a9d069f0d7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5d4ee07588e296fc9ce5a797c03eb174c586e7e9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014267"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392753"
 ---
 # <a name="analysis-services-samples"></a>Analysis Services-Beispiele
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-  Verwenden Sie die Informationen hier finden Sie Beispieldatenbanken und Projekte helfen Ihnen beim Lernen und Testen Sie Ihre Analysis Services-Lösungen.
+  Verwenden Sie die Informationen hier finden Sie Beispieldatenbanken und können Sie lernen und Testen Sie Ihre Lösungen für die Analysis Services-Projekte.
   
 
 ## <a name="samples-on-github"></a>Beispiele bei GitHub
 
-[Git-Repository für Analysis Services](https://github.com/Microsoft/Analysis-Services) enthält Codebeispiele und Communityprojekte.
+[Für Analysis Services-Git-Repository](https://github.com/Microsoft/Analysis-Services) enthält Codebeispiele und -Communityprojekte.
 
-## <a name="sample-solutions-and-databases"></a>Beispielprojektmappen und Datenbanken  
+## <a name="sample-solutions-and-databases"></a>Vollständige, gepackte Anwendungen und Datenbanken  
 
-Während offiziell nicht mehr unterstützt oder aktualisiert wird, bleibt die Adventure Works eins der beispieldatasets am besten inklusive und stabilste für zu lernen und Testen von Analysis Services. Analysis Services-Projekten und Datenbanken sowie Beispiele in der Dokumentation, Blogbeiträge und Präsentationen Beispiel verwenden Sie die Adventure Works 2014 Sample-Daten.
+Während offiziell nicht mehr unterstützt oder aktualisiert werden, bleibt die Adventure Works eines der am besten inklusive und stabilste beispieldatasets zum Kennenlernen und Testen von Analysis Services. In Analysis Services-Projekten und Datenbanken sowie Beispiele in der Dokumentation, Blogbeiträge und Präsentationen Beispiel verwenden Sie die Adventure Works 2014-Beispieldaten.
 
-[Herunterladen der Adventure Works-Beispielprojekte und Datenbanken auf Codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+[Herunterladen der Adventure Works-Beispiel-Projekten und-Datenbanken auf Codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
 
-Eine neue Auflistung von Beispieldaten, Wide World Importers wurde für SQL Server 2016 eingeführt. Wide World Importers Beispieldaten können Sie lernen und Testen von Analysis Services. Allerdings werden keine Lernprogramme, Beispiele und Dokumentation bereitgestellt. Die Wide World Importers Dataset und das Schema unterstützen nicht viele Funktionen in Analysis Services. Weitere Informationen finden Sie unter [Wide World Importers](https://msdn.microsoft.com/library/mt734199).
+Eine neue Auflistung von Beispieldaten, Wide World Importers, wurde für SQL Server 2016 eingeführt. Wide World Importers-Beispieldaten können Sie lernen und Testen von Analysis Services; jedoch werden keine Tutorials, Beispiele und Dokumentation bereitgestellt. Die Wide World Importers-Dataset und das Schema unterstützen nicht viele der Features in Analysis Services. Weitere Informationen finden Sie unter [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md).
 
 
   

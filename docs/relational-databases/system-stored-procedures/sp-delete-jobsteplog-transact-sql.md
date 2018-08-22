@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
+title: Sp_delete_jobsteplog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2d4284f32030339a5c60e211b911c5e7cd783b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3875cb5805478013ec5ddd6944174a522028b02d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257327"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392088"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +54,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@step_id =**] *step_id*  
- Die ID des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. Wenn nicht angegeben ist, werden alle Auftragsschrittprotokolle im Auftrag gelöscht, es sei denn, **@older_than** oder **@larger_than** angegeben werden. *Step_id* ist **Int**, hat den Standardwert NULL.  
+ Die ID des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. Wenn keine Angabe erfolgt, werden alle Auftragsschrittprotokolle im Auftrag gelöscht, es sei denn, **@older_than** oder **@larger_than** angegeben sind. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
  [ **@step_name =**] **'***step_name***'**  
  Der Name des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Step_id* oder *Step_name* kann angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Step_id* oder *Step_name* kann angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@older_than =**] **'***date***'**  
  Das Datum und die Uhrzeit des ältesten Auftragsschrittprotokolls, das beibehalten werden soll. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"**, hat den Standardwert NULL. Beide **@older_than** und **@larger_than** kann angegeben werden.  
@@ -74,12 +74,12 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_delete_jobsteplog** befindet sich in der **Msdb** Datenbank.  
   
- Wenn keine Argumente, außer **@job_id** oder **@job_name** angegeben ist, werden alle Auftragsschrittprotokolle für den angegebenen Auftrag gelöscht.  
+ Wenn keine Argumente außer **@job_id** oder **@job_name** angegeben sind, werden alle Auftragsschrittprotokolle für den angegebenen Auftrag gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -90,7 +90,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Nur Mitglieder der **Sysadmin** können löschen ein auftragsschrittprotokolls, das von einem anderen Benutzer gehört.  
   
@@ -137,6 +137,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

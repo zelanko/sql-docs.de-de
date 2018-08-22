@@ -1,32 +1,30 @@
 ---
-title: Wie in Echtzeit bewerten oder nativen Bewertung in SQL Server-Machine Learning | Microsoft-Dokumentation
+title: Wie echtzeitbewertung oder nativen Bewertung in SQL Server-Machine Learning | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085852"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40393233"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Wie Sie in Echtzeit bewerten oder nativen Bewertung in SQL Server durchführen
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>Echtzeitbewertung oder nativen Bewertung in SQL Server ausführen.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel enthält Anleitungen und Beispielcode für die Echtzeit-Bewertung ausführen und nativen Bewertung Features in SQL Server 2017 und SQL Server 2016. Das Ziel in Echtzeit bewerten und nativen Bewertung ist zur Verbesserung der Leistung der Bewertung Vorgänge in kleinen Batches.
+In diesem Artikel wird veranschaulicht, dass es sich bei beiden Ansätzen ist in SQL Server für die Vorhersage von Ergebnissen in Echtzeit mithilfe von vorab trainierte Modelle, die in r geschrieben in der Nähe Sowohl echtzeitbewertung nativen Bewertung sind darauf ausgelegt, können Sie ein Machine learning-Modell ohne Installation von r verwenden. Erhalten ein vorab trainiertes Modell in einem kompatiblen Format - gespeichert, die mit einer SQL Server-Datenbank - können standard Datenzugriffsverfahren Sie zum schnellen Generieren von vorhersagebewertungen für neue Eingaben.
 
-Sowohl in Echtzeit bewerten nativen Bewertung sind darauf ausgelegt, können Sie ein Machine learning-Modell ohne Installation von r verwenden. Müssen Sie lediglich ein vortrainiertes Modell in einem kompatiblen Format zu erhalten, und speichern sie in einer SQL Server-Datenbank.
-
-## <a name="choosing-a-scoring-method"></a>Wählen eine Bewertungsmethode
+## <a name="choose-a-scoring-method"></a>Wählen Sie eine Bewertungsmethode
 
 Die folgenden Optionen sind für schnelle batchvorhersage unterstützt:
 
-+ **Native Bewertung**: T-SQL PREDICT-Funktion in SQL Server 2017
-+ **Bewertung in Echtzeit**: mithilfe der gespeicherten Prozedur\_RxPredict gespeicherte Prozedur in SQL Server 2016 oder SQL Server 2017.
++ **Native Bewertung**: T-SQL PREDICT-Funktion in SQL Server 2017-Windows, SQL Server 2017 unter Linux und Azure SQL-Datenbank.
++ **Echtzeitbewertung**: mithilfe der gespeicherten Prozedur\_RxPredict gespeicherte Prozedur in SQL Server 2016 oder SQL Server 2017 (nur Windows).
 
 > [!NOTE]
 > Die PREDICT-Funktion wird in SQL Server 2017 empfohlen.
@@ -43,9 +41,9 @@ Der allgemeine Prozess Vorbereiten des Modells, und klicken Sie dann Generieren 
 
 + Die PREDICT-Funktion ist in allen Editionen von SQL Server 2017 verfügbar und ist standardmäßig aktiviert. Sie müssen sich nicht zum Installieren von R oder zusätzliche Funktionen aktivieren.
 
-+ Bei Verwendung von sp\_RxPredict, sind einige zusätzliche Schritte erforderlich. Finden Sie unter [aktivieren in Echtzeit bewerten](#bkmk_enableRtScoring).
++ Bei Verwendung von sp\_RxPredict, sind einige zusätzliche Schritte erforderlich. Finden Sie unter [aktivieren echtzeitbewertung](#bkmk_enableRtScoring).
 
-+ Zu diesem Zeitpunkt können nur RevoScaleR und MicrosoftML kompatiblen Modelle erstellen. Zusätzliche Modelltypen können in Zukunft verfügbar sein. Die Liste der derzeit unterstützten Algorithmen, finden Sie unter [in Echtzeit bewerten](../real-time-scoring.md).
++ Zu diesem Zeitpunkt können nur RevoScaleR und MicrosoftML kompatiblen Modelle erstellen. Zusätzliche Modelltypen können in Zukunft verfügbar sein. Die Liste der derzeit unterstützten Algorithmen, finden Sie unter [echtzeitbewertung](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Serialisierung und Speicherung
 
@@ -76,7 +74,7 @@ Von R-Code gibt es zwei Möglichkeiten, die das Modell in einer Tabelle speicher
 
 ## <a name="native-scoring-with-predict"></a>Native Bewertung mit VORHERSAGEN
 
-In diesem Beispiel stellen Sie ein Modell erstellen, und rufen dann die Vorhersagefunktion in Echtzeit von T-SQL.
+In diesem Beispiel stellen Sie ein Modell erstellen, und rufen dann die echtzeitvorhersage-Funktion von T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Schritt 1: Bereiten Sie vor und Speichern des Modells
 
@@ -168,16 +166,16 @@ Wenn Sie eine Fehlermeldung erhalten, Fehler"bei der Ausführung der PREDICT-Fun
 > [!NOTE]
 > Da die Spalten und Werte von zurückgegeben **PREDICT** je nach Modelltyp variieren kann, definieren Sie das Schema der zurückgegebenen Daten mithilfe einer **WITH** Klausel.
 
-## <a name="realtime-scoring-with-sprxpredict"></a>Zur echtzeitbewertung mit sp_rxPredict
+## <a name="real-time-scoring-with-sprxpredict"></a>Echtzeitbewertung mit sp_rxPredict
 
-In diesem Abschnitt wird beschrieben, die erforderlichen Schritte zum Einrichten von **Realtime** Vorhersage und ein Beispiel dafür, wie die Funktion von T-SQL aufgerufen.
+In diesem Abschnitt wird beschrieben, die erforderlichen Schritte zum Einrichten von **in Echtzeit** Vorhersage und ein Beispiel dafür, wie die Funktion von T-SQL aufgerufen.
 
-### <a name ="bkmk_enableRtScoring"></a> Schritt 1. Aktivieren Sie die Echtzeit-Prozedur Bewertung
+### <a name ="bkmk_enableRtScoring"></a> Schritt 1. Aktivieren Sie das Real-Time scoring Verfahren
 
 Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewertung verwenden möchten. Der Server-Administrator sollten die Befehlszeile-Hilfsprogramm RegisterRExt.exe, ausführen und die in das RevoScaleR-Paket enthalten ist.
 
 > [!NOTE]
-> Damit zur echtzeitbewertung funktioniert muss SQL CLR-Funktionalität in der Instanz aktiviert werden; Darüber hinaus muss die Datenbank als vertrauenswürdig gekennzeichnet werden. Wenn Sie das Skript ausführen, werden diese Aktionen für Sie durchgeführt. Jedoch sollten Sie Auswirkungen auf die zusätzliche Sicherheit ein, bevor Sie dies tun!
+> In der Reihenfolge für die echtzeitbewertung funktioniert muss SQL CLR-Funktionalität in der Instanz aktiviert werden; Darüber hinaus muss die Datenbank als vertrauenswürdig gekennzeichnet werden. Wenn Sie das Skript ausführen, werden diese Aktionen für Sie durchgeführt. Jedoch sollten Sie Auswirkungen auf die zusätzliche Sicherheit ein, bevor Sie dies tun!
 
 1. Öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und navigieren Sie zu dem Ordner, in denen RegisterRExt.exe befindet. Der folgende Pfad kann in einer Standardinstallation verwendet werden:
     
@@ -197,7 +195,7 @@ Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewe
 
     + Vertrauenswürdige Assemblys
     + Die gespeicherte Prozedur `sp_rxPredict`
-    + Eine neue Datenbankrolle `rxpredict_users`. Der Datenbankadministrator kann diese Rolle verwenden, Benutzern Berechtigungen gewähren, die die Echtzeit-Bewertung-Funktionalität verwenden.
+    + Eine neue Datenbankrolle `rxpredict_users`. Der Datenbankadministrator kann diese Rolle verwenden, Benutzern Berechtigungen gewähren, die die Funktionalität des Real-Time scoring verwenden.
 
 4. Fügen Sie alle Benutzer, die auszuführenden `sp_rxPredict` der neuen Rolle.
 
@@ -234,17 +232,19 @@ EXEC sp_rxPredict
 > 
 > Der Aufruf von sp\_RxPredict schlägt fehl, wenn die Eingabedaten für die Bewertung keine Spalten enthalten sind, die die Anforderungen des Modells entsprechen. Derzeit werden nur die folgenden .NET Datentypen unterstützt: double, Float, Short, Ushort, long, Ulong und Zeichenfolge.
 > 
-> Aus diesem Grund müssen Sie nicht unterstützten Typen in Ihre Daten herausfiltern, bevor Sie ihn für die Bewertung in Echtzeit verwenden.
+> Aus diesem Grund müssen Sie nicht unterstützte Typen in Ihre Daten herausfiltern, bevor Sie ihn für die echtzeitbewertung verwenden.
 > 
-> Weitere Informationen zu den entsprechenden SQL-Datentypen, finden Sie unter [SQL-CLR-Typzuordnung](https://msdn.microsoft.com/library/bb386947.aspx) oder [Zuordnen von CLR-Parameterdaten](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Weitere Informationen zu den entsprechenden SQL-Datentypen, finden Sie unter [SQL-CLR-Typzuordnung](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) oder [Zuordnen von CLR-Parameterdaten](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## <a name="disable-realtime-scoring"></a>Deaktivieren Sie in Echtzeit bewerten
+## <a name="disable-real-time-scoring"></a>Deaktivieren Sie die echtzeitbewertung
 
 Um in Echtzeit Bewertung Funktionalität deaktivieren, öffnen Sie eine Eingabeaufforderung mit erhöhten Rechten, und führen Sie den folgenden Befehl: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Zur echtzeitbewertung in Microsoft R Server oder Machine Learning Server
+## <a name="real-time-scoring-in-other-microsoft-product"></a>Echtzeitbewertung in andere Microsoft-Produkt
 
-Machine Learning-Server unterstützt, verteiltes Echtzeit Bewerten von Modellen als Webdienst veröffentlicht wird. Weitere Informationen dazu finden Sie in diesen Artikeln:
+Wenn Sie anstelle von SQL Server in-Database-Analyse des eigenständigen Servers oder einer Microsoft Machine Learning-Server verwenden, müssen Sie die anderen Optionen außer gespeicherte Prozeduren und T-SQL-Funktionen zum Generieren von Vorhersagen.
+
+Dem eigenständigen Server und dem Machine Learning Server unterstützen das Konzept einer *Webdienst* für die codebereitstellung. Können Sie eine R bündeln oder Python von vortrainierten Modell als Webdienst, zur Laufzeit zum Auswerten von neuen Dateneingaben aufgerufen wird. Weitere Informationen dazu finden Sie in diesen Artikeln:
 
 + [Was sind Webdienste im Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Was ist die operationalisierung?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

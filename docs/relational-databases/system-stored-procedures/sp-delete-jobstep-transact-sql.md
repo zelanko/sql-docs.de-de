@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_jobstep (Transact-SQL) | Microsoft Docs
+title: Sp_delete_jobstep (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248135"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392086"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Der ID des Auftrags, aus dem der Schritt entfernt wird. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Der ID des Auftrags, aus dem der Schritt entfernt wird. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, aus dem der Schritt entfernt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden; können nicht gleichzeitig angegeben werden.  
   
  [  **@step_id=** ] *Step_id*  
  Die ID des Schritts, der entfernt wird. *Step_id*ist **Int**, hat keinen Standardwert.  
@@ -61,14 +61,14 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Durch das Entfernen eines Auftragsschritts werden die anderen Auftragsschritte, die auf den gelöschten Schritt verweisen, automatisch aktualisiert.  
   
- Führen Sie für Weitere Informationen zu den Schritten, die mit einem bestimmten Auftrag verknüpften **Sp_help_jobstep**.  
+ Führen Sie für Weitere Informationen zu den Schritten, die einem bestimmten Auftrag zugeordneten **Sp_help_jobstep**.  
   
-> **Hinweis:** Aufrufen **Sp_delete_jobstep** mit einem *Step_id* Wert von NULL werden alle Auftragsschritte für den Auftrag gelöscht.  
+> **Hinweis:** Aufrufen **Sp_delete_jobstep** mit einem *Step_id* Wert 0 (null) werden alle Auftragsschritte für den Auftrag gelöscht.  
   
  Mit Microsoft SQL Server Management Studio lassen sich Aufträge auf einfache Weise über eine grafische Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um die Auftragsinfrastruktur zu erstellen und zu verwalten.  
   
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** können löschen ein Auftragsschritts ausgeführt, die von einem anderen Benutzer gehört.  
+ Nur Mitglieder der **Sysadmin** können löschen ein Auftragsschritts, der von einem anderen Benutzer gehört.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird Auftragsschritt `1` aus dem Auftrag `Weekly Sales Data Backup` entfernt.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Ändern von Aufträgen](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Anzeigen oder Ändern von Aufträgen](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

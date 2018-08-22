@@ -1,5 +1,5 @@
 ---
-title: Sp_add_job (Transact-SQL) | Microsoft Docs
+title: Sp_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4851db832cd587d486d3094eb23e8d64ba4b4cc2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b195a9ffc18fc01d8498d981bcaaaf835446888f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240220"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392119"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_add_job [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumente  
  [  **@job_name =** ] **"***Job_name***"**  
- Der Name des Auftrags. Der Name muss eindeutig sein und dürfen nicht den Prozentsatz (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+ Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
  [ **@enabled =** ] *enabled*  
- Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **"tinyint"**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt; allerdings er manuell ausgeführt werden kann.  
+ Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **Tinyint**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt, aber es kann manuell ausgeführt werden.  
   
  [ **@description =** ] **'***description***'**  
- Die Beschreibung des Auftrags. *Beschreibung* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
+ Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
   
  [ **@start_step_id =** ] *step_id*  
  Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**, hat den Standardwert 1.  
@@ -78,12 +78,12 @@ sp_add_job [ @job_name = ] 'job_name'
  Ein sprachenunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
   
  [ **@owner_login_name =** ] **'***login***'**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, die als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  Ein Wert, der angibt, wann im Microsoft Windows-Anwendungsprotokoll ein Eintrag für diesen Auftrag hinzugefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Bei Erfolg|  
@@ -91,16 +91,16 @@ sp_add_job [ @job_name = ] 'job_name'
 |**3**|Always|  
   
  [ **@notify_level_email =** ] *email_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *Email_level*ist **Int**, hat den Standardwert **0**, die "nie" bedeutet. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
+ Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *Email_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@notify_level_netsend =** ] *netsend_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Netzwerknachricht gesendet werden soll. *Netsend_level*ist **Int**, hat den Standardwert **0**, die "nie" bedeutet. *Netsend_level* verwendet die gleichen Werte wie *ist NULL*.  
+ Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Netzwerknachricht gesendet werden soll. *Netsend_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Netsend_level* verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@notify_level_page =** ] *page_level*  
- Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Pagernachricht gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die "nie" bedeutet. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+ Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Pagernachricht gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [  **@notify_email_operator_name =** ] **"***e-Mail-Name***"**  
- Der e-Mail-Name der Person, die für das Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
+ Der e-Mail-Name der Person zum Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  Der Name des Operators, an den nach dem Abschluss dieses Auftrags die Netzwerknachricht gesendet wird. *Netsend_name*ist **Sysname**, hat den Standardwert NULL.  
@@ -112,28 +112,28 @@ sp_add_job [ @job_name = ] 'job_name'
  Ein Wert, der angibt, wann der Auftrag gelöscht werden soll. *delete_level*ist **Int**, hat den Standardwert 0, womit nie. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
   
 > [!NOTE]  
->  Wenn *Auftrag nie gelöscht* ist **3**, dem der Auftrag nur einmal ausgeführt wird, unabhängig von Zeitplänen für den Auftrag definierten. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
+>  Wenn *Auftrag nie gelöscht* ist **3**, dem der Auftrag nur einmal ausgeführt wird, unabhängig davon, alle Zeitpläne für den Auftrag definierten. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
   
  [ **@job_id =** ] *job_id***OUTPUT**  
- Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *Job_id*ist eine Ausgabevariable vom Typ **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *Job_id*ist eine Ausgabevariable vom Typ **Uniqueidentifier**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **@originating_server** vorhanden ist, **Sp_add_job** jedoch nicht unter den Argumenten aufgeführt. **@originating_server** ist für die interne Verwendung reserviert.  
+ **@originating_server** vorhanden **Sp_add_job** jedoch nicht unter den Argumenten aufgeführt. **@originating_server** ist für die interne Verwendung reserviert.  
   
- Nach dem **Sp_add_job** wurde ausgeführt, um einen Auftrag hinzuzufügen **Sp_add_jobstep** zum Hinzufügen von Schritten, mit denen die Aktivitäten für den Auftrag verwendet werden können. **Sp_add_jobschedule** können den Zeitplan zu erstellen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendet wird, um den Auftrag ausführt. Verwendung **Sp_add_jobserver** festzulegende der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, in dem der Auftrag ausgeführt wird, und **Sp_delete_jobserver** So entfernen Sie den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
+ Nach dem **Sp_add_job** wurde ausgeführt, um einen Auftrag hinzuzufügen **Sp_add_jobstep** kann verwendet werden, zum Hinzufügen von Schritten, die die Aktivitäten für den Auftrag ausführen. **Sp_add_jobschedule** können den Zeitplan zu erstellen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendet wird, um den Auftrag auszuführen. Verwendung **Sp_add_jobserver** Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, in dem der Auftrag ausgeführt wird, und **Sp_delete_jobserver** So entfernen Sie den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
- Wenn der Auftrag auf mindestens einem Zielserver in einer Umgebung mit mehreren Servern ausgeführt wird, verwenden Sie **Sp_apply_job_to_targets** legen Sie die ausgewählten Zielservern oder Zielservergruppen für den Auftrag. Verwenden Sie zum Entfernen von Aufträgen von Zielservern oder Zielservergruppen **Sp_remove_job_from_targets**.  
+ Wenn der Auftrag auf einem oder mehreren Zielservern in einer multiserverumgebung ausgeführt wird, verwenden Sie **Sp_apply_job_to_targets** die Zielserver oder Zielservergruppen für den Auftrag. Verwenden Sie zum Entfernen von Aufträgen von Zielservern oder Zielservergruppen **Sp_remove_job_from_targets**.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer Mitglied sein der **Sysadmin** festen Serverrolle oder über eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen, die sich im befinden der **Msdb** Datenbank:  
+ Um diese gespeicherte Prozedur auszuführen, müssen Benutzer Mitglied werden die **Sysadmin** festen Serverrolle oder über eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen, die sich im befinden die **Msdb** Datenbank:  
   
 -   **SQLAgentUserRole**  
   
@@ -141,9 +141,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Informationen über die spezifischen Berechtigungen, die mit jeder dieser festen einhergehen-Datenbankrollen, finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Informationen zu den einzelnen Berechtigungen, die mit jeder dieser festen verknüpft sind, Datenbankrollen, finden Sie unter [SQL Server Agent Fixed-Datenbankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

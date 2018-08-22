@@ -18,17 +18,17 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982342"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394086"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Command Line Options in SSMA Console (SybaseToSQL)
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (SybaseToSQL)
 Microsoft bietet Ihnen einen stabilen Satz von Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  
   
-## <a name="command-line-options-in-ssma-console"></a>Command Line Options in SSMA-Konsole  
+## <a name="command-line-options-in-ssma-console"></a>Befehlszeilenoptionen in der SSMA-Konsole  
 Hierin beschriebenen sind die Konsole die Befehlsoptionen an.  
   
 In diesem Abschnitt wird der Begriff "Option" auch als "Switch" bezeichnet.  
@@ -128,7 +128,7 @@ Dies bedeutet der Projektordner für die Einstellungen von Umgebung für das akt
 ### <a name="secure-password-option-psecurepassword"></a>Secure Password-Option: – p/securepassword  
 Diese Option gibt an, das verschlüsselte Kennwort für Server-Verbindungen. Es unterscheidet sich von allen anderen Optionen: die Option weder führt alle Skripts noch Migrationsaktivitäten erleichtert jedoch kennwortverschlüsselung für das Server-Verbindungen im Migrationsprojekt verwendet bei der Verwaltung hilft.  
   
-Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) Abschnitt.  
+Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](managing-passwords-sybasetosql.md) Abschnitt.  
   
 Die folgenden untergeordneten Optionen werden unterstützt, für die `–p/securepassword`:  
   

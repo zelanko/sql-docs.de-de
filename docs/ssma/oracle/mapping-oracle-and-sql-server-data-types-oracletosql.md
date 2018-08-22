@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979323"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395737"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Zuordnen von Oracle- und SQL Server-Datentypen (OracleToSQL)
-Oracle-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Bei der Konvertierung zu Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, das Zuordnen von Datentypen aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
+Oracle-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Datentypen. Bei der Konvertierung zu Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte aufweist, müssen Sie angeben, das Zuordnen von Datentypen aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Projekteinstellungen &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -62,11 +62,11 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   
         Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Um eine datentypzuordnung zu ändern, führen Sie folgende Schritte aus:  
   
@@ -78,9 +78,9 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   
-        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Um eine benutzerdefinierte datentypzuordnung zu entfernen, führen Sie folgende Schritte aus:  
   
@@ -91,7 +91,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
         Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen in einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) oder [konvertieren Sie Objekte des Oracle-Datenbank in SQL Server-Syntax](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Wenn Sie ein Bewertungsbericht erstellen, werden die Oracle-Objekte während der Bewertung automatisch konvertiert.  
+Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](assessing-oracle-schemas-for-conversion-oracletosql.md) oder [konvertieren Sie Objekte des Oracle-Datenbank in SQL Server-Syntax](converting-oracle-schemas-oracletosql.md). Wenn Sie ein Bewertungsbericht erstellen, werden die Oracle-Objekte während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

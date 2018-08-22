@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Mindestberechtigungen Beispiel – SharePoint 2016 | Microsoft Docs
+title: Power Pivot-Mindestberechtigungen-Beispiel – SharePoint 2016 | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d57322b1aa0b0fa949bed2dcb093bbb6bea8e2e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016197"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394090"
 ---
-# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot Mindestberechtigungen Beispiel – SharePoint 2016
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot-Mindestberechtigungen-Beispiel – SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   In diesem Thema wird beispielhaft eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016-Konfiguration mit Mindestberechtigungen beschrieben. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   
-|Scope|Name|  
+|Bereich|Name|  
 |-----------|----------|  
 |SharePoint-Administratorkonto|**SPAdmin**|  
 |SharePoint-Farmkonto|**SPFarm**|  

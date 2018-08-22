@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,19 +13,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295230"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393446"
 ---
 # <a name="hash-indexes"></a>Hashindizes
   Indizes werden als Einstiegspunkte für speicheroptimierte Tabellen verwendet. Das Lesen von Zeilen aus einer Tabelle erfordert einen Index, um Daten im Arbeitsspeicher zu suchen.  
   
  Ein Hashindex besteht aus einer Sammlung von Buckets, die in einem Array organisiert sind. Eine Hashfunktion ordnet Indexschlüssel den entsprechenden Buckets im Hashindex zu. Die folgende Abbildung zeigt drei Indexschlüssel, die drei verschiedenen Buckets im Hashindex zugeordnet sind. Zur Veranschaulichung lautet der Hashfunktionsname f(x).  
   
- ![Der Indexschlüssel, die verschiedenen Buckets zugeordnet. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Indexschlüssel, die verschiedenen Buckets zugeordnet.")  
+ ![Der Indexschlüssel, die verschiedenen Buckets zugeordnet. ](../../2014/database-engine/media/hekaton-tables-2.gif "Indexschlüssel, die verschiedenen Buckets zugeordnet.")  
   
  Die Hashfunktion, die für Hashindizes verwendet wird, weist die folgenden Merkmale auf:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "37295230"
   
  Die Hashindexstruktur im Arbeitsspeicher besteht aus einem Array von Speicherzeigern. Jedes Bucket ist einem Offset in diesem Array zugeordnet. Jeder Bucket im Array zeigt auf die erste Zeile in diesem Hashbucket. Jede Zeile im Bucket zeigt auf die nächste Zeile, was eine Kette von Zeilen für jeden Hashbucket ergibt, wie in der folgenden Abbildung veranschaulicht.  
   
- ![Die Struktur des in-Memory-Hash-Index. ] (../../2014/database-engine/media/hekaton-tables-3.gif "Die hashindexstruktur im Arbeitsspeicher.")  
+ ![Die Struktur des in-Memory-Hash-Index. ](../../2014/database-engine/media/hekaton-tables-3.gif "Die hashindexstruktur im Arbeitsspeicher.")  
   
  Die Abbildung weist drei Buckets mit Zeilen auf. Der zweite Bucket von oben enthält die drei roten Zeilen. Der vierte Bucket enthält die einzelne blaue Zeile. Der untere Bucket enthält die zwei grünen Zeilen. Diese können unterschiedliche Versionen derselben Zeile sein.  
   

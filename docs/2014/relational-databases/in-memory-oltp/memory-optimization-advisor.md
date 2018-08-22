@@ -5,8 +5,7 @@ ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86a6da5314bb8b4c956910d58f5d511e93e92742
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f5f45037ec9c988a2c7b95df37fd338d98ce7db
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164978"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393009"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
   Das Berichtstool für Transaktionsleistung (siehe [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche Tabellen in der Datenbank von einer Portierung zu In-Memory OLTP profitieren. Nachdem Sie eine Tabelle identifiziert haben, die Sie zur Verwendung In-Memory OLTP portieren möchten, können Sie den Ratgeber für die Speicheroptimierung verwenden, der Sie bei der Migration der datenträgerbasierten Datenbanktabelle zu In-Memory OLTP unterstützt.  

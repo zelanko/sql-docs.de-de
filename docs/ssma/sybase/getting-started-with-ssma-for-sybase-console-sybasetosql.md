@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980642"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392563"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Erste Schritte mit SSMA für Sybase-Konsole (SybaseToSQL)
 Dieser Abschnitt beschreibt das Verfahren zum Starten und erste Schritte mit SSMA für Sybase-Konsolenanwendung. Auch hier aufgeführt werden die Konventionen in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
@@ -52,9 +52,9 @@ Nachdem Sie die Konsole wurde erfolgreich auf Ihrem Windows-System gestartet wir
   
 Zusätzliche Funktionen:  
   
-1.  [Geben Sie ein Kennwort](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) und Import-/es auf anderen Computern im Fenster.  
+1.  [Geben Sie ein Kennwort](managing-passwords-sybasetosql.md) und Import-/es auf anderen Computern im Fenster.  
   
-2.  [Generieren von Berichten](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e) Ausgabe Berichte für die Bewertung/Konvertierung und Datenmigration detaillierte Xml anzeigen. Sie können auch ausführliche Fehlerberichte für Aktualisierung und Synchronisierung-Befehle generieren.  
+2.  [Generieren von Berichten](generating-reports-sybasetosql.md) Ausgabe Berichte für die Bewertung/Konvertierung und Datenmigration detaillierte Xml anzeigen. Sie können auch ausführliche Fehlerberichte für Aktualisierung und Synchronisierung-Befehle generieren.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA-Konsole Ausgabe Konventionen  
 Beim Ausführen der SSMA-Skript-Befehle und Optionen an, das Konsolenprogramm zeigt die Ergebnisse und Meldungen (Informationen, Fehler usw.) für den Benutzer in der Konsole oder bei Bedarf leitet in eine XML-Ausgabedatei. Jede Art von Nachricht in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in Weiß Skriptbefehle für die Datei an; in Grün stellt dar, eine Eingabeaufforderung für Benutzereingaben und So weiter.  

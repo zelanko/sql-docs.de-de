@@ -1,5 +1,5 @@
 ---
-title: Sp_update_jobschedule (Transact-SQL) | Microsoft Docs
+title: Sp_update_jobschedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253034"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393422"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Zeitplaneinstellungen für den angegebenen Auftrag.  
   
- **Sp_update_jobschedule** wird nur für Abwärtskompatibilität bereitgestellt.  
+ **Sp_update_jobschedule** wird nur zur Abwärtskompatibilität bereitgestellt.  
   
 > [!IMPORTANT]  
->  Weitere Informationen zur Syntax in früheren Versionen von Microsoft SQL Server finden Sie unter der Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
+>  Weitere Informationen zu Syntax, die in früheren Versionen von Microsoft SQL Server verwendet, finden Sie unter der Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
   
 ## <a name="remarks"></a>Hinweise  
  Auftragszeitpläne können jetzt unabhängig von Aufträgen verwaltet werden. Verwenden Sie zum Aktualisieren eines Zeitplans **Sp_update_schedule**.  
@@ -51,12 +51,12 @@ ms.locfileid: "33253034"
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** können diese gespeicherte Prozedur Auftragszeitpläne aktualisieren, die von anderen Benutzern gehören.  
+ Nur Mitglieder der **Sysadmin** können mithilfe dieser gespeicherten Prozedur zum Aktualisieren von Auftragszeitplänen, die von anderen Benutzern gehören.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

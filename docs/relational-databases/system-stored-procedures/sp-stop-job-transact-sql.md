@@ -1,5 +1,5 @@
 ---
-title: Sp_stop_job (Transact-SQL) | Microsoft Docs
+title: Sp_stop_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1476e8f0612796e3f31644aca192c2c25a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258695"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393449"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_stop_job
  Der Name des Auftrags, der beendet werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@job_id =**] *job_id*  
- Die ID des Auftrags, der beendet werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, der beendet werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [ **@originating_server =**] **'***master_server***'**  
  Der Name des Masterservers. Wenn angegeben, werden alle Multiserveraufträge beendet. *Master_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Geben Sie diesen Parameter nur, wenn aufgerufen **Sp_stop_job** an einen Zielserver.  
@@ -68,12 +68,12 @@ sp_stop_job
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_stop_job** sendet ein stoppsignal an die Datenbank. Einige Prozesse können sofort beendet werden und einige muss einen stabilen Punkt (oder einen Einstiegspunkt zum Codepfad) erreichen, bevor sie beenden können. Bei einigen zeitaufwändigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, etwa BACKUP, RESTORE oder einigen DBCC-Befehlen, kann es längere Zeit dauern, bis sie abgeschlossen sind. Wenn diese ausgeführt werden, kann es eine Weile dauern, bis der Auftrag abgebrochen wird. Der Abbruch eines Auftrags führt dazu, dass ein entsprechender Eintrag im Auftragsverlauf aufgezeichnet wird.  
+ **Sp_stop_job** sendet ein stoppsignal an die Datenbank. Einige Prozesse können sofort beendet werden, und einige muss einen stabilen Punkt (oder einen Einstiegspunkt für den Codepfad) erreichen, bevor sie unterbrochen werden können. Bei einigen zeitaufwändigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, etwa BACKUP, RESTORE oder einigen DBCC-Befehlen, kann es längere Zeit dauern, bis sie abgeschlossen sind. Wenn diese ausgeführt werden, kann es eine Weile dauern, bis der Auftrag abgebrochen wird. Der Abbruch eines Auftrags führt dazu, dass ein entsprechender Eintrag im Auftragsverlauf aufgezeichnet wird.  
   
- Wenn ein Auftrag einen Schritt des Typs derzeit ausgeführten **CmdExec** oder **PowerShell**, der ausgeführte Prozess (z. B. MyProgram.exe) vorzeitig beendet erzwungen wird. Ein vorzeitiger Abbruch kann unvorhersehbare Folgen haben, z. B. dass Dateien, die von dem Prozess verwendet wurden, geöffnet bleiben. Folglich **Sp_stop_job** sollte nur in Ausnahmesituationen verwendet werden, wenn der Auftrag Schritte des Typs enthält **CmdExec** oder **PowerShell**.  
+ Wenn ein Auftrag derzeit, einen Schritt des Typs ausgeführt wird **CmdExec** oder **PowerShell**, wird der Prozess ausgeführt wird (z. B. MyProgram.exe) vorzeitig beendet erzwungen. Ein vorzeitiger Abbruch kann unvorhersehbare Folgen haben, z. B. dass Dateien, die von dem Prozess verwendet wurden, geöffnet bleiben. Folglich **Sp_stop_job** sollte nur in Ausnahmesituationen verwendet werden, wenn der Auftrag Schritte des Typs enthält **CmdExec** oder **PowerShell**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -84,9 +84,9 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** und **SQLAgentReaderRole** können nur Aufträge, deren Besitzer er, beendet. Mitglieder der **SQLAgentOperatorRole** können alle lokalen Aufträge einschließlich derjenigen, die von anderen Benutzern gehören beenden. Mitglieder der **Sysadmin** können Aufträge für alle lokalen und Multiserveraufträge beenden.  
+ Mitglieder der **SQLAgentUserRole** und **SQLAgentReaderRole** können nur die Aufträge, deren Besitzer sie, beenden. Mitglieder der **SQLAgentOperatorRole** können alle lokalen Aufträge einschließlich derjenigen, die von anderen Benutzern gehören beenden. Mitglieder der **Sysadmin** können alle Aufträge von lokalen und Multiserveraufträge beenden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Auftrag `Weekly Sales Data Backup` beendet.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_add_jobserver (Transact-SQL) | Microsoft Docs
+title: Sp_add_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262314"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392551"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id =** ] *job_id*  
- Die ID des Auftrags. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name =** ] **"***Job_name***"**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@server_name =** ] **'***server***'**  
  Der Name des Servers für das Ziel des Auftrags. *Server* ist **nvarchar(30)**, hat den Standardwert ist N'(Local)' ". *Server* kann es sich um **(LOCAL)** für einen lokalen Server oder den Namen eines vorhandenen Zielservers.  
@@ -61,10 +61,10 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **@automatic_post** vorhanden ist, **Sp_add_jobserver**, jedoch nicht unter den Argumenten aufgeführt. **@automatic_post** ist für die interne Verwendung reserviert.  
+ **@automatic_post** vorhanden **Sp_add_jobserver**, jedoch nicht unter den Argumenten aufgeführt. **@automatic_post** ist für die interne Verwendung reserviert.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der der **Sysadmin** -Serverrolle kann ausführen **Sp_add_jobserver** für Aufträge, die mehrere Server einbeziehen.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_jobserver** für Aufträge, die mehrere Server einbeziehen.  
   
 ## <a name="examples"></a>Beispiele  
   

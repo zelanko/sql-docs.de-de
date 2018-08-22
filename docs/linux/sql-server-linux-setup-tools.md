@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: ac69b80773b1554c6f0b920aaff146871beb40ab
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086412"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392350"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren von Sqlcmd und Bcp die SQL Server-Befehlszeilenprogramme unter Linux
 
@@ -63,7 +63,7 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
 1. Wenn Sie eine frühere Version von hatten **Mssql-Tools** installiert haben, entfernen Sie alle älteren UnixODBC-Pakete.
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. Führen Sie die folgenden Befehle zum Installieren **Mssql-Tools** mit dem UnixODBC-Developer-Paket.

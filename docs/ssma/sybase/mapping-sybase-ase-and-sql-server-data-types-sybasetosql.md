@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985322"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393433"
 ---
-# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Zuordnen von Sybase ASE und SQL Server-Datentypen (SybaseToSQL)
-Datenbank-Datentypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung der ASE-Datenbankobjekten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, müssen Sie angeben, wie Sie Datentypen aus der App Service-Umgebung zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
+# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Zuordnen von Sybase ASE- und SQL Server-Datentypen (SybaseToSQL)
+Datenbank-Datentypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung der ASE-Datenbankobjekten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte, müssen Sie angeben, wie Sie Datentypen aus der App Service-Umgebung zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA ist einen Standardsatz von datentypzuordnungen. Die Liste der standardzuordnungen, finden Sie unter [Projekteinstellungen &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -66,7 +66,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datentyp.  
   
         Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** Feld.  
   
@@ -82,7 +82,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
   
         Dadurch können Sie das Anpassen der datenzuordnung für kleinere und größere Werte den gleichen Datentyp.  
   
-    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datentyp.  
+    4.  Klicken Sie unter **Zieltyp**, wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datentyp.  
   
         Einige Datentypen erfordern eine Ziel-Datentyplänge. Wenn dies erforderlich ist, geben Sie die neue Datenlänge in die **ersetzen Sie dies durch** ein, und klicken Sie dann auf **OK**.  
   
@@ -95,7 +95,7 @@ Das folgende Verfahren zeigt, wie Datentypen auf das Projekt, Datenbank oder Obj
         Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen in einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) oder [Konvertieren von Sybase ASE-Datenbankobjekten in SQL Server oder SQL Azure-Syntax](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Wenn Sie ein Bewertungsbericht erstellen, werden die Sybase ASE-Objekte während der Bewertung automatisch konvertiert.  
+Der nächste Schritt des Migrationsvorgangs besteht entweder [erstellen Sie ein Bewertungsbericht](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) oder [Konvertieren von Sybase ASE-Datenbankobjekten in SQL Server oder SQL Azure-Syntax](converting-sybase-ase-database-objects-sybasetosql.md). Wenn Sie ein Bewertungsbericht erstellen, werden die Sybase ASE-Objekte während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen die Server-Connection-Dateien (OracleToSQL) | Microsoft Docs
+title: Erstellen den Server Connection Files (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776956"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395525"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>Erstellen die Server-Connection-Dateien (OracleToSQL)
-Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder in einem separaten Server Verbindungsdatei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in der Skriptdatei und die Verbindungsdatei Server vorhanden ist, wird die Definition des Servers in der Skriptdatei angesehen.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>Erstellen der Serververbindungsdateien (OracleToSQL)
+Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
   
 **Beispiel 1:**  
   
@@ -106,8 +106,8 @@ Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder 
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [Ausführen der Konsole SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executing the SSMA Console (Ausführen der SSMA-Konsole)](executing-the-ssma-console-oracletosql.md)  
   

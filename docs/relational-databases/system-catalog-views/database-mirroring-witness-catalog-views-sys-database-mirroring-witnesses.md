@@ -1,5 +1,5 @@
 ---
-title: Sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
+title: Sys. database_mirroring_witnesses (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,19 +26,19 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8af11f0dd540cfa9b796dd94ab34f595b76dc71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b421af3d513e68ff715581b5eed7e27d5e8dc52
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180906"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394293"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Database Mirroring Witness-Katalogsichten - Sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Zeugenrolle, die ein Server in einer Datenbankspiegelungspartnerschaft spielt. 
   
-  Bei einer Sitzung zur Datenbankspiegelung ist ein Zeugenserver für das automatische Failover erforderlich. Im Idealfall befindet sich der Zeuge auf einem anderen Computer als die Prinzipal- und Spiegelserver. Der Zeuge dient nicht der Datenbank. Stattdessen überwacht er den Status der Prinzipal- und Spiegelserver. Wenn der Prinzipalserver ausfällt, kann der Zeuge das automatische Failover auf den Zeugenserver einleiten. 
+  Bei einer Sitzung zur Datenbankspiegelung ist ein Zeugenserver für das automatische Failover erforderlich. Im Idealfall befindet sich der Zeuge auf einem anderen Computer als die Prinzipal- und Spiegelserver. Der Zeuge dient nicht der Datenbank. Stattdessen überwacht er den Status der Prinzipal- und Spiegelserver. Wenn der Prinzipalserver ausfällt, kann der Zeuge Automatisches Failover zu dem gespiegelten Server initiieren. 
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "33180906"
 |**mirroring_guid**|**uniqueidentifier**|Bezeichner der Spiegelungspartnerschaft.|  
 |**family_guid**|**uniqueidentifier**|Bezeichner der Sicherungsfamilie für die Datenbank. Wird zur Erkennung übereinstimmender Wiederherstellungsstatus verwendet.|  
 |**is_suspended**|**bit**|Die datenbankspiegelung wird angehalten.|  
-|**is_suspended_sequence_number**|**int**|Die Sequenznummer für die Einstellung **Is_suspended**.|  
+|**is_suspended_sequence_number**|**int**|Sequenznummer zum Festlegen **Is_suspended**.|  
 |**partner_sync_state**|**tinyint**|Synchronisierungsstatus der Spiegelungssitzung:<br /><br /> 5 = die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failovercluster finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.|  
 |**partner_sync_state_desc**|**nvarchar(60)**|Beschreibung des Synchronisierungsstatus der Spiegelungssitzung:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   

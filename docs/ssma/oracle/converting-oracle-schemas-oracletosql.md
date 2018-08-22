@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982442"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396136"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Konvertieren von Oracle-Schemas (OracleToSQL)
-Nachdem Sie mit Oracle verbunden haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie Oracle-Datenbank-Objekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankobjekten.  
+Nachdem Sie mit Oracle verbunden haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie Oracle-Datenbank-Objekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten.  
   
 ## <a name="the-conversion-process"></a>Konvertierungsprozess  
-Nimmt die Objektdefinitionen von Oracle, konvertiert diese in ähnlichen konvertieren Datenbankobjekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objekte und lädt dann diese Informationen in der SSMA-Metadaten. Er lädt nicht die Informationen in die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können dann die Objekte und deren Eigenschaften anzeigen, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer.  
+Nimmt die Objektdefinitionen von Oracle, konvertiert diese in ähnlichen konvertieren Datenbankobjekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte und lädt dann diese Informationen in der SSMA-Metadaten. Er lädt nicht die Informationen in die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können dann die Objekte und deren Eigenschaften anzeigen, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer.  
   
 Bei der Konvertierung gibt SSMA Ausgabe in den Bereich Ausgabe und Fehlermeldungen in den Bereich Fehlerliste angezeigt. Verwenden Sie die Ausgabe- und Informationen, um festzustellen, ob Sie so ändern Sie Ihre Oracle-Datenbanken oder den Konvertierungsprozess Ihrer, um die gewünschte Konvertierungsergebnisse erhalten haben.  
   
@@ -34,13 +34,13 @@ Bei der Konvertierung gibt SSMA Ausgabe in den Bereich Ausgabe und Fehlermeldung
 Lesen Sie vor dem Konvertieren von Objekten, die die Projektoptionen für die Konvertierung in den **Projekteinstellungen** Dialogfeld. Verwenden Sie das Dialogfeld zu öffnen, können Sie festlegen, wie der SSMA-Funktionen und globale Variablen konvertiert. Weitere Informationen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Konvertierungsergebnisse  
-Die folgende Tabelle zeigt, welche Oracle Objekte konvertiert werden, und der daraus resultierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte:  
+Die folgende Tabelle zeigt, welche Oracle Objekte konvertiert werden, und der daraus resultierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte:  
   
 |||  
 |-|-|  
 |Oracle-Objekte|Resultierende SQL Server-Objekte|  
-|Funktionen|Wenn die Funktion direkt kann, um konvertiert werden [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA wird eine Funktion erstellt.<br /><br />In einigen Fällen muss die Funktion an eine gespeicherte Prozedur konvertiert werden. In diesem Fall erstellt SSMA an eine gespeicherte Prozedur und eine Funktion, die gespeicherte Prozedur aufruft.|  
-|Vorgehensweisen|Wenn die Prozedur direkt kann, um konvertiert werden [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA erstellt eine gespeicherte Prozedur.<br /><br />In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall SSMA zwei gespeicherte Prozeduren erstellt: eine, die implementiert werden, die Prozedur, und eine andere, die zum Aufrufen der Implementierung verwendet wird, gespeicherte Prozedur.|  
+|Funktionen|Wenn die Funktion direkt kann, um konvertiert werden [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA wird eine Funktion erstellt.<br /><br />In einigen Fällen muss die Funktion an eine gespeicherte Prozedur konvertiert werden. In diesem Fall erstellt SSMA an eine gespeicherte Prozedur und eine Funktion, die gespeicherte Prozedur aufruft.|  
+|Vorgehensweisen|Wenn die Prozedur direkt kann, um konvertiert werden [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA erstellt eine gespeicherte Prozedur.<br /><br />In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall SSMA zwei gespeicherte Prozeduren erstellt: eine, die implementiert werden, die Prozedur, und eine andere, die zum Aufrufen der Implementierung verwendet wird, gespeicherte Prozedur.|  
 |Pakete|SSMA erstellt einen Satz von gespeicherten Prozeduren und Funktionen, die von ähnlichen Objektnamen vereinheitlicht sind.|  
 |Sequenzen|SSMA erstellt Sequenzobjekte (SQL Server 2012 oder SQL Server 2014) oder Oracle-Sequenzen emuliert.|  
 |Tabellen mit abhängigen Objekten wie Indizes und Trigger|SSMA erstellt Tabellen mit abhängigen Objekten.|  
@@ -114,10 +114,10 @@ Für jedes Element, das nicht konvertiert werden konnten, müssen Sie bestimmen,
   
 -   Sie können ändern, dass das Objekt in der Oracle-Datenbank zu entfernen oder die problematischen Code zu überarbeiten. Um den aktualisierten Code in SSMA laden zu können, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle-Datenbank &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer und Oracle-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Migrieren von Daten von Oracle.  
+-   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer und Oracle-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Migrieren von Daten von Oracle.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht darin [Laden Sie die konvertierte Objekte in SQL Server](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
+Der nächste Schritt des Migrationsvorgangs besteht darin [Laden Sie die konvertierte Objekte in SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

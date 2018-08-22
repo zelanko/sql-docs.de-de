@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299970"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393206"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
   In diesem Thema wird beschrieben, wie zum Erstellen eines Datenbankbenutzers, der diesen einem Anmeldenamen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bereits eine Anmeldung vorhanden ist. Informationen dazu, wie Sie eine Anmeldung zu erstellen, finden Sie unter [erstellen Sie eine Anmeldung](create-a-login.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "37299970"
      Zeigt bzw. gibt die erweiterten Eigenschaften für das Objekt an. Jede erweiterte Eigenschaft besteht aus einem aus Name und Wert bestehenden Paar von Metadaten, das dem Objekt zugeordnet ist.  
   
      **Auslassungspunkte (…)**  
-     Klicken Sie auf die Auslassungszeichen **(…)** hinter **Wert** , um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Klicken Sie auf die Auslassungszeichen **(…)** hinter **Wert** , um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
@@ -139,7 +139,6 @@ ms.locfileid: "37299970"
  Weitere Informationen finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](principals-database-engine.md)  
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](principals-database-engine.md)  
   
   

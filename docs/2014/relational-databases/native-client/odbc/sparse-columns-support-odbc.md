@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
@@ -13,12 +13,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a832a05d977cebfae8742ac75b7c88516919172d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d50666d333a77f4a1e2188ac911d0866395b4cc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420219"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393420"
 ---
 # <a name="sparse-columns-support-odbc"></a>Unterstützung für Spalten mit geringer Dichte (ODBC)
   In diesem Thema wird beschrieben, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Unterstützung für Spalten mit geringer Dichte. Ein Beispiel, ODBC-Unterstützung für sparsespalten veranschaulicht, finden Sie unter [Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  

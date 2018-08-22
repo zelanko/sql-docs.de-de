@@ -14,12 +14,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353092"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395523"
 ---
 # <a name="assemblies---implementing"></a>Assemblys: Implementierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "37353092"
   
  **So löschen Sie eine Assembly mit SQL Server Management Studio**  
   
--   [Objekte löschen](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [Objekte löschen](../../ssms/object/delete-objects.md)  
   
  Standardmäßig ist die Ausführung aller in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Assemblys deaktiviert. Können Sie die **Clr-fähig** Möglichkeit, die **Sp_configure** gespeicherte Systemprozedur deaktivieren oder aktivieren die Ausführung aller Assemblys, die in hochgeladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Deaktivierung der Assemblyausführung verhindert die Ausführung von CLR-Funktionen (Common Language Runtime), gespeicherter Prozeduren, Trigger, Aggregate und benutzerdefinierter Typen – gerade ausgeführte werden beendet. Die Deaktivierung der Assemblyausführung deaktiviert nicht die Möglichkeit, Assemblys zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Server Configuration Option Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   

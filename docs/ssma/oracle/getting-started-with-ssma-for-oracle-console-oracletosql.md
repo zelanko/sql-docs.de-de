@@ -16,14 +16,14 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 86b8adc8841e06d91d164c2c35e2329511ac0e28
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b15f982d6da89d669fbf80507459e0c419afbe73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985752"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392766"
 ---
-# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit SSMA für Oracle-Konsole (OracleToSQL)
+# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der Oracle-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
   
 ## <a name="launching-ssma-console"></a>Starten SSMA-Konsole  
@@ -31,7 +31,7 @@ Verwenden Sie die folgenden Schritte aus, um die SSMA-Console-Anwendung zu start
   
 1.  Wechseln Sie zu **starten** und zeigen Sie auf **Programme**.  
   
-2.  Klicken Sie auf die  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant für Oracle-Eingabeaufforderung** Verknüpfung.  
+2.  Klicken Sie auf die  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle-Eingabeaufforderung** Verknüpfung.  
   
     Klicken Sie im Menü der SSMA-Konsole Nutzung angezeigt und `(/? Help)`, damit Sie mit der Konsolenanwendung zu beginnen.  
   
@@ -48,9 +48,9 @@ Nach dem die Konsole wurde erfolgreich auf Ihrem Windows-System gestartet wird, 
   
 Zusätzliche Funktionen:  
   
-1.  [Geben Sie ein Kennwort](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) und exportieren / importieren Sie es auf anderen Computern im Fenster  
+1.  [Geben Sie ein Kennwort](managing-passwords-oracletosql.md) und exportieren / importieren Sie es auf anderen Computern im Fenster  
   
-2.  [Generieren von Berichten](http://msdn.microsoft.com/ccad6262-01e1-447a-bd2b-c105154c80ce) Ausgabe Berichte für die Bewertung /conversion und Datenmigration detaillierte Xml anzeigen. Ausführliche Berichte können auch für Aktualisierung und Synchronisierung Befehle generiert werden.  
+2.  [Generieren von Berichten](generating-reports-oracletosql.md) Ausgabe Berichte für die Bewertung /conversion und Datenmigration detaillierte Xml anzeigen. Ausführliche Berichte können auch für Aktualisierung und Synchronisierung Befehle generiert werden.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA-Konsole Ausgabe Konventionen  
 Beim Ausführen der SSMA-Skript-Befehle und Optionen an, das Konsolenprogramm zeigt die Ergebnisse und Meldungen (Informationen, Fehler usw.) für den Benutzer in der Konsole oder ggf. umgeleitet werden, um eine XML-Ausgabedatei. Jede Art von Nachricht in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in Weiß Skriptbefehle für die Datei an; in Grün stellt dar, eine Eingabeaufforderung für Benutzereingaben und So weiter.  
@@ -69,5 +69,5 @@ Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |Cyan|Start, Ende und das Ergebnis eines Vorgangs|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren von SSMA für Oracle](http://msdn.microsoft.com/9211013a-ab24-4c52-9b26-87994b35e502)  
+[Installieren von SSMA für Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

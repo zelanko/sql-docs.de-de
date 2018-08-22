@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cc4fd733c4a2d791c9b1332825cc91068554b36
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279996"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392752"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss
-  In dieser Aufgabe fügen Sie dem Datenfluss eine Excel-Quelle hinzu, um Lieferantendaten aus der Excel-Quelldatei zu lesen. Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in Microsoft Excel-Arbeitsmappen. Finden Sie unter [Excel-Quelle](http://msdn.microsoft.com/library/ms141683.aspx) Weitere Informationen.  
+  In dieser Aufgabe fügen Sie dem Datenfluss eine Excel-Quelle hinzu, um Lieferantendaten aus der Excel-Quelldatei zu lesen. Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in Microsoft Excel-Arbeitsmappen. Finden Sie unter [Excel-Quelle](../integration-services/data-flow/excel-source.md) Weitere Informationen.  
   
 1.  Drag & Drop **Excel-Quelle** aus **anderen Quellen** in **SSIS-Toolbox** auf die **Datenfluss** Registerkarte.  
   

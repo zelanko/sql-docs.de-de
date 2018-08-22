@@ -1,5 +1,5 @@
 ---
-title: Sp_help_schedule (Transact-SQL) | Microsoft Docs
+title: Sp_help_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a77859fd5c113d9b40832c81472e62aaef05fcda
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261739"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392796"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_help_schedule
  Der Name des Zeitplans, der aufgelistet werden soll. *Schedule_name* ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
   
  [ **@attached_schedules_only** =] *Attached_schedules_only* ]  
- Gibt an, ob nur Zeitpläne angezeigt werden sollen, denen ein Auftrag angefügt ist. *Attached_schedules_only* ist **Bit**, hat den Standardwert **0**. Wenn *Attached_schedules_only* ist **0**, alle Zeitpläne angezeigt. Wenn *Attached_schedules_only* ist **1**, das Resultset enthält nur Zeitpläne, die einem Auftrag angefügt sind.  
+ Gibt an, ob nur Zeitpläne angezeigt werden sollen, denen ein Auftrag angefügt ist. *Attached_schedules_only* ist **Bit**, hat den Standardwert **0**. Wenn *Attached_schedules_only* ist **0**, alle Zeitpläne angezeigt. Wenn *Attached_schedules_only* ist **1**, das Resultset enthält nur Zeitpläne, die mit einem Auftrag angefügt sind.  
   
  [ **@include_description** =] *Include_description*  
- Gibt an, ob das Resultset Beschreibungen enthalten soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, *Schedule_description* Spalte des Resultsets enthält einen Platzhalter. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
+ Gibt an, ob das Resultset Beschreibungen enthalten soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, *Schedule_description* enthält einen Platzhalter für die Spalte des Resultsets. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -71,11 +71,11 @@ sp_help_schedule
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**Aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
-|**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = Ausführung, wenn der SQLServerAgent-Dienst gestartet wird.|  
+|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
+|**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausführen, wenn der SQLServerAgent-Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den einzelnen Ausführungen des Auftrags auftreten. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den Ausführungsinstanzen des Auftrags. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_relative_interval**|**int**|Auftreten des geplanten Auftrags von der **Freq_interval** in jedem Monat. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Anzahl der Monate zwischen der geplanten Ausführung des Auftrags|  
 |**active_start_date**|**int**|Datum, an dem der Zeitplan aktiviert wird.|  
@@ -87,7 +87,7 @@ sp_help_schedule
 |**job_count**|**int**|Gibt die Anzahl von Aufträgen zurück, die auf diesen Zeitplan verweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn keine Parameter angegeben sind, **Sp_help_schedule** listet Informationen für alle Zeitpläne in der Instanz.  
+ Wenn keine Parameter angegeben werden, **Sp_help_schedule** werden Informationen für alle Zeitpläne in der Instanz aufgelistet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -98,9 +98,9 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** sehen nur die Zeitpläne, die sie besitzen.  
+ Mitglieder der **SQLAgentUserRole** können nur die Zeitpläne, deren Besitzer, anzeigen.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983872"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393201"
 ---
 # <a name="roles-object-tmsl"></a>Roles-Objekt (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38983872"
                   und Administrator. Finden Sie unter [Rollen und Berechtigungen &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) Informationen zu Berechtigungen für die Datenbank.  
   
  Mitglieder  
- Mitglieder bestehen sowohl ein Benutzername und die ID, in dem Membernamen wird der Alias oder den Anzeigenamen einer Sicherheitsstandardrichtlinie Windows, und die ID ist die Sicherheits-ID ab. Beide werden in der Rollendefinition angegeben. Finden Sie unter [SID Komponenten](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) ausführliche Informationen zu Bezeichnern.  
+ Mitglieder bestehen sowohl ein Benutzername und die ID, in dem Membernamen wird der Alias oder den Anzeigenamen einer Sicherheitsstandardrichtlinie Windows, und die ID ist die Sicherheits-ID ab. Beide werden in der Rollendefinition angegeben. Finden Sie unter [SID Komponenten](/windows/desktop/SecAuthZ/sid-components) ausführliche Informationen zu Bezeichnern.  
   
  tablePermissions  
  Berechtigung für eine Tabelle ist ein benanntes Objekt mit den Berechtigungen, die über einen DAX-Ausdruck definiert. Diese Eigenschaft ist optional, verwendet, um einen Sicherheitsfilter anwenden.  

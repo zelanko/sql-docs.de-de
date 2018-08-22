@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082432"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393186"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>Tutorial: Erfahren Sie mehr in-Database-Analyse, die mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ Der Prozess zum Erstellen einer End-to-End-Lösung in der Regel besteht aus abru
 
 Nachdem die Lösung erstellt wurde, können Sie sie jedoch problemlos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -gespeicherten Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]bereitstellen.
 
-- [Lektion 1: Herunterladen der Beispieldaten und Skripts](../tutorials/sqldev-download-the-sample-data.md)
+- [Lektion 1: Einrichten von NYC Taxi-Demo-Daten](../tutorials/sqldev-download-the-sample-data.md)
 
-- [Lektion 2: Richten Sie das Tutorial-Umgebung](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lektion 2: Untersuchen und Visualisieren von Daten-Shapes und die Verteilung durch den Aufruf von R-Funktionen in gespeicherten Prozeduren](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lektion 3: Untersuchen und Visualisieren von Daten-Shapes und die Verteilung durch den Aufruf von R-Funktionen in gespeicherten Prozeduren](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [Lektion 4: Erstellen von Datenfunktionen mit R in T-SQL-Funktionen](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Lektion 3: Erstellen von Datenfunktionen mit R in T-SQL-Funktionen](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [Lektion 5: Trainieren Sie und speichern Sie eine R-Modells mithilfe von Funktionen und gespeicherten Prozeduren](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lektion 4: Trainieren Sie und speichern Sie eine R-Modells mithilfe von Funktionen und gespeicherten Prozeduren](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Lektion 6: Wrap R-Code in einer gespeicherten Prozedur für die operationalisierung](../tutorials/sqldev-operationalize-the-model.md). 
+- [Lektion 5: Wrap R-Code in einer gespeicherten Prozedur für die operationalisierung](../tutorials/sqldev-operationalize-the-model.md). 
   Nachdem das Modell in der Datenbank gespeichert wurde, rufen Sie das Modell für die Vorhersage von [!INCLUDE[tsql](../../includes/tsql-md.md)] mit gespeicherten Prozeduren auf.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
