@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_job (Transact-SQL) | Microsoft Docs
+title: Sp_delete_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d213daa9d5a17a6630142e06e5b7ef441a9e9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b4f55f1c4dd0d83f7db9f92027f95bcfeea7ad7c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262913"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395706"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,21 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, der gelöscht werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, der gelöscht werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, der gelöscht werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name*muss angegeben werden, beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name*muss angegeben werden; können nicht gleichzeitig angegeben werden.  
   
  [  **@originating_server=** ] **"***Server***"**  
  Für die interne Verwendung.  
   
  [ **@delete_history=** ] *delete_history*  
- Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *Delete_history* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_history* ist **1**, wird der Auftragsverlauf für den Auftrag gelöscht. Wenn *Delete_history* ist **0**, wird der Auftragsverlauf nicht gelöscht.  
+ Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *Delete_history* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_history* ist **1**, wird der Auftragsverlauf für den Auftrag gelöscht. Wenn *Delete_history* ist **0**, der Auftragsverlauf nicht gelöscht.  
   
- Beachten Sie, dass wenn ein Auftrag wird gelöscht, und der Verlauf wird nicht gelöscht, die Verlaufsinformationen für den Auftrag nicht in angezeigt werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Schnittstelle im Auftragsverlauf-Agents, aber die Informationen noch befindet sich in der **Sysjobhistory**-Tabelle in der **Msdb** Datenbank.  
+ Beachten Sie, dass wenn ein Auftrag gelöscht, und der Verlauf wird nicht gelöscht, die Verlaufsinformationen für den Auftrag nicht in angezeigt wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auftragsverlauf der Agents grafische Benutzeroberfläche, aber die Informationen noch befindet sich in der **Sysjobhistory**-Tabelle in der **Msdb** Datenbank.  
   
  [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
  Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, falls sie nicht an einen anderen Auftrag angefügt sind. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_unused_schedule* ist **1**, diesen Auftrag angefügten Zeitpläne werden gelöscht, wenn keine anderen Aufträge mit Verweisen auf den Zeitplan. Wenn *Delete_unused_schedule* ist **0**, die Zeitpläne werden nicht gelöscht.  
@@ -71,12 +71,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Die **@originating_server** Argument ist für die interne Verwendung reserviert.  
   
- Die **@delete_unused_schedule** Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server, indem Sie Zeitpläne, die nicht an einen beliebigen Auftrag angefügt sind, automatisch entfernt werden. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Zum Beibehalten der Zeitpläne, die nicht mit einem Auftrag angefügt sind, geben Sie den Wert **0** als die **@delete_unused_schedule** Argument.  
+ Die **@delete_unused_schedule** Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server von Zeitplänen, die nicht an einen beliebigen Auftrag angefügt sind, automatisch entfernt werden. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Zum Beibehalten der Zeitpläne, die nicht mit einem Auftrag angefügt sind, geben Sie den Wert **0** als die **@delete_unused_schedule** Argument.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
@@ -91,7 +91,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Nur Mitglieder der festen Serverrolle **sysadmin** können **sp_delete_job** ausführen, um einen beliebigen Auftrag zu löschen. Ein Benutzer, der kein Mitglied der festen Serverrolle **sysadmin** ist, kann nur Aufträge löschen, deren Besitzer er ist.  
   

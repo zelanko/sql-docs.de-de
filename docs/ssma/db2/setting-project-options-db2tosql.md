@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Optionen für Projekt (DB2ToSQL) | Microsoft Docs
+title: Festlegen von Projektoptionen (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,24 +16,24 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 48c434d30623d7b293fc4fef0cb3d42a737b5a5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e3974057f6b975a5c8abc7cc99f886360be15aa8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775986"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394652"
 ---
-# <a name="setting-project-options-db2tosql"></a>Einstellungsoptionen für Projekt (DB2ToSQL)
-Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, Benutzeroberflächen- und Migration benutzereinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
+# <a name="setting-project-options-db2tosql"></a>Festlegen von Projektoptionen (DB2ToSQL)
+Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben objektkonvertierung, Objekt laden, Benutzer-Schnittstelle und migrationseinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
   
 SSMA können Sie die Standardoptionen für alle Projekte zu konfigurieren. Diese Optionen werden auf jedem neuen Projekt angewendet, die Sie erstellen. Sie können dann die Optionen für jedes Projekt anpassen.  
   
-## <a name="configuration-options-and-modes"></a>Modi "und"-Konfigurationsoptionen  
-SSMA verfügt über fünf Mengen von projekteinstellungen:  
+## <a name="configuration-options-and-modes"></a>Optionen für die Konfiguration und -Modi  
+SSMA verfügt über fünf verschiedene projekteinstellungen:  
   
 -   Projektinformationen  
   
--   Allgemein (Konvertierung, Migration, Laden von Objekten)  
+-   Allgemein (Konvertierung, Migration, und Laden von Objekten)  
   
 -   Synchronization  
   
@@ -41,7 +41,7 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 -   Typzuordnung  
   
-Es sind auch vier Modi für diese Einstellungen konfigurieren:  
+Es verfügt auch über vier Modi zum Konfigurieren dieser Einstellungen:  
   
 -   Default  
   
@@ -51,9 +51,9 @@ Es sind auch vier Modi für diese Einstellungen konfigurieren:
   
 -   Benutzerdefiniert  
   
-Der Standardmodus ist für die meisten Benutzer empfohlen. Der optimistische hält mehrere der Syntax für die aktuelle DB2 und einfacher zu lesen. Jedoch behalten die aktuelle Syntax genau möglicherweise nicht. Wenn die DB2-Syntax muss, in entsprechende konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax, die der Vollmodus die beste Konvertierung durchgeführt, aber möglicherweise ist des resultierenden Codes schwieriger zu lesen. In den benutzerdefinierten Modus legen Sie die Optionen an.  
+Der Standardmodus ist für die meisten Benutzer empfohlen. Der vollständige Modus speichert mehrere der Syntax für die aktuelle DB2, und es ist einfacher zu lesen. Allerdings bleiben die Syntax für aktuelle genau möglicherweise nicht. Wenn die DB2-Syntax muss, in entsprechende konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, die den vollständigen Modus für die umfassendste Konvertierung durchgeführt, aber der resultierende Code ist möglicherweise schwieriger zu lesen. In den benutzerdefinierten Modus legen Sie die Optionen an.  
   
-Weitere Informationen zu den Einstellungen und wie die Einstellungen in jedem Modus angewendet werden finden Sie unter den folgenden Themen:  
+Weitere Informationen über die Einstellungen und wie die Einstellungen in den einzelnen Modi angewendet werden finden Sie unter den folgenden Themen:  
   
 -   [Projekteinstellungen &#40;Konvertierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
@@ -65,44 +65,44 @@ Weitere Informationen zu den Einstellungen und wie die Einstellungen in jedem Mo
   
 -   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
-## <a name="setting-project-options"></a>Einstellung Projektoptionen  
-In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind der SSMA-Konfigurationsdatei gespeichert und angewendet wird, zu einem neuen Projekt, das Sie erstellen.  
+## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
+In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  
   
-**Zum Festlegen von standardmäßigen Projektoptionen**  
+**Projektoptionen festlegen**  
   
 1.  Auf der **Tools** Menü klicken Sie auf **Projekt Standardeinstellungen**.  
   
 2.  In der **Projekt Standardeinstellungen** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
   
-    -   Wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, angezeigt oder geändert werden **Migration Zielversion** Dropdown-Liste auf **allgemeine** am unteren Rand der Links, und wählen Sie dann Konvertierung oder Migration.  
+    -   Wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, um angezeigt oder geändert werden, von **Zielversion für die Migration** öffnen Sie auf die Dropdownliste **allgemeine** am unteren Rand der linken Bereich, und wählen Sie dann-Konvertierung oder Die Migration.  
   
-    -   Wählen Sie einen vordefinierten Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
+    -   Auswählen einen vordefinierten-Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
   
     -   Um benutzerdefinierte Einstellungen festzulegen, wählen Sie aus, oder geben Sie den neuen Einstellungen oder Werten.  
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
+Sie können auch Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
   
-**Einstellungen für das aktuelle Projekt anpassen**  
+**Anpassen der Einstellungen für das aktuelle Projekt**  
   
 1.  Auf der **Tools** Menü klicken Sie auf **Projekteinstellungen**.  
   
 2.  In der **Projekteinstellungen** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
   
-    -   Wählen Sie einen vordefinierten Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
+    -   Auswählen einen vordefinierten-Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
   
-    -   Angeben einen benutzerdefinierten Modus, in der **Modus** wählen Sie im **benutzerdefinierte**, und wählen Sie dann die richtigen projekteinstellungen.  
+    -   An einen benutzerdefinierten Modus, in der **Modus** Kontrollkästchen **benutzerdefinierte**, und wählen Sie dann die geeignete projekteinstellungen.  
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
+Der nächste Schritt bei der Migration hängt von den Anforderungen Ihrer Projekte:  
   
--   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung DB2 und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+-   Wenn die Zuordnung von Datentypen für Quell- und zieleinstellungen anpassen möchten, finden Sie unter [Mapping DB2- und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   Konvertieren Sie Sie andernfalls die DB2-Datenbank-Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [DB2-Schemas konvertieren &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Andernfalls können Sie die DB2-Datenbank-Objektdefinitionen in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [Konvertieren von DB2 Schemas &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Zuordnen von DB2 und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+[Zuordnen von DB2- und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

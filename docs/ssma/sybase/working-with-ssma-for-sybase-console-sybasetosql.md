@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit SSMA für Sybase-Konsole (SybaseToSQL) | Microsoft Docs
+title: Arbeiten mit SSMA für Sybase-Konsole (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1b498ad1e10815caa39b9c613e188015d48a7a4a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 028fa397959b62b1adba3d83448acb5ddde05d1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779616"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394452"
 ---
-# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Arbeiten mit SSMA für Sybase-Konsole (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA), Version für Sybase Adaptive Server Enterprise (ASE), ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
+# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Arbeiten mit SSMA für die Sybase-Konsole (SybaseToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), Version für Sybase Adaptive Server Enterprise (ASE) ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
   
-Dieser Abschnitt erläutert das Verfahren zum Migrieren der ASE-Datenbank mithilfe der Konsole SSMA-Anwendung.  
+Dieser Abschnitt erläutert das Verfahren zum Migrieren der ASE-Datenbank, die mit der SSMA-Console-Anwendung.  
   
-In diesem Abschnitt behandelten Themen gehören:  
+In diesem Abschnitt behandelten Themen umfassen:  
   
 |||  
 |-|-|  
 |**Themen**|**Beschreibung**|  
 |[Erste Schritte mit SSMA für Sybase-Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
-|[Befehlszeilenoptionen in SSMA-Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die SSMA-Konsolenanwendung ausgeführt werden.|  
+|[Command Line Options in SSMA-Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die Anwendung der SSMA-Konsole ausgeführt werden.|  
 |[Erstellen von Skriptdateien &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
-|[Erstellen von Dateien Variablenwert &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|Erläutert, wie eine Variablenwert-Datei erstellt.|  
+|[Erstellen die Variable Value Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|Erläutert, wie zum Erstellen einer Datei Variablenwert.|  
 |[Erstellen die Server-Verbindungsdateien &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|Erläutert, wie eine Server-Verbindungsdatei zu erstellen.|  
-|[Ausführen der Konsole SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Beschreibt die Datei Skriptbefehle SSMA-Konsolenanwendung ausgeführt werden.|  
-|[Arbeiten mit der Beispiel-Konsole Skriptdateien &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in die Beispieldateien zusammen mit dem Produkt angegeben wurden|  
-|[Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Kennwortverschlüsselung und Entschlüsselung und Importieren / Exportieren von Kennwortinformationen werden beschrieben.|  
+|[Executing the SSMA Console ausführen &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Beschreibt die Befehle der Skript-Datei die Anwendung der SSMA-Konsole ausgeführt werden.|  
+|[Arbeiten mit den Beispielskriptdateien der Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden|  
+|[Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
 |[Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Problembehandlung bei &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Enthält Informationen zum Beheben von Migrationsproblemen.|  
+|[Problembehandlung bei &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  

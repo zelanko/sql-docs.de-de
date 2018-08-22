@@ -1,5 +1,5 @@
 ---
-title: Installieren von SSMA für DB2-Client (DB2ToSQL) | Microsoft Docs
+title: Installieren von SSMA für DB2-Client (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,72 +16,72 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 636719d269d17dda6df84358a3a7029b1d72e095
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c0c356d54dd74ae75962d9893968ff302e7e5f98
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775186"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396087"
 ---
-# <a name="installing-ssma-for-db2-client-db2tosql"></a>Installieren von SSMA für die DB2-Client (DB2ToSQL)
-Die SSMA-Client besteht aus der Programmdateien an, die die folgenden Aufgaben ausführen:  
+# <a name="installing-ssma-for-db2-client-db2tosql"></a>Installieren von SSMA für DB2-Client (DB2ToSQL)
+Der SSMA-Client besteht aus den Programmdateien, die die folgenden Aufgaben ausführen:  
   
 -   Verbinden Sie mit einer DB2-Datenbank.  
   
--   Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Konvertieren von DB2-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax.  
+-   Konvertieren von DB2-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax.  
   
--   Laden Sie die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Laden Sie die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Dieses Thema enthält die Installationsvoraussetzungen und Anweisungen zum Installieren von SSMA.  
+Dieses Thema enthält die Voraussetzungen und Anweisungen zum Installieren von SSMA.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
-SSMA ist dienen zum Arbeiten mit DB2 für Z/OS, Version 9.0 und 10.0 oder DB2 für LUW Version 9,8 und 10.1 oder höheren Versionen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014.  
+SSMA für die Arbeit mit DB2 für Z/OS, Version 9.0 und 10.0 oder DB2 für LUW, Version 9,8 und 10.1 oder höher Versionen dient und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
-Bevor Sie SSMA installiert haben, stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
+Vor der Installation von SSMA stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
   
--   Windows 7 oder höher oder Windows Server 2008 oder höher.  
+-   Windows 7 oder höher oder Windows Server 2008 oder höhere Versionen.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
   
--   Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4.0 oder höher. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4.0 steht auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Produktmedien. Sie können auch erhalten sie über die [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4.0 oder höher. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Version 4.0 steht auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produktmedien. Sie können auch erhalten sie über die [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
   
--   Microsoft OLE DB-Anbieter für DB2, Version 5 oder eine höhere Version und eine Verbindung mit der DB2-Datenbanken, die Sie migrieren möchten.  
+-   Microsoft OLE DB-Anbieter für DB2, Version 5 oder eine höhere Version und eine Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.  
   
--   Zugriff auf sowie ausreichende Berechtigungen auf dem Computer, der die Zielinstanz des hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, in dem Sie Datenbankobjekte und Daten migrieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+-   Zugriff auf und über ausreichende Berechtigungen auf dem Computer, der die Zielinstanz des hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, in dem Sie Datenbankobjekte und Daten migrieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 -   4 GB RAM empfohlen.  
   
 ## <a name="microsoft-oledb-provider-for-db2"></a>Microsoft OLE DB-Anbieter für DB2  
-Informationen zum Herunterladen der OLE DB-Anbieter für DB2, Version 5.0 wechseln Sie zu [Microsoft® SQL Server® 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295).  
+Wechseln Sie zum Herunterladen der OLE DB-Anbieter für DB2, Version 5.0 zu [Microsoft® SQL Server® 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295).  
   
-SSMA ist ein Webdownload. Informationen zum Herunterladen der neuesten Version finden Sie unter der [Downloadseite für SQL Server Migration Assistant](http://aka.ms/ssmafordb2).  
+SSMA ist ein Webdownload. Informationen zum Herunterladen der neuesten Version finden Sie unter den [SQL Server Migration Assistant-Downloadseite](http://aka.ms/ssmafordb2).  
   
-Nachdem Sie die neueste Version heruntergeladen haben, müssen Sie die Installationsdateien aus dem Extrahieren, vor der Installation von SSMA.  
+Nachdem Sie die neueste Version herunterladen, müssen Sie die Installationsdateien extrahieren, bevor SSMA installiert werden kann.  
   
 **Zum Installieren des SSMA-Clients**  
   
-1.  Doppelklicken Sie auf SSMA für DB2 *n*. Install.exe, wobei *n* Nummer des Builds.  
+1.  Doppelklicken Sie auf SSMA für DB2 *n*. Install.exe, wobei *n* ist die Nummer des Builds.  
   
-2.  Klicken Sie auf der Seite "Willkommen" auf **Weiter**.  
+2.  Klicken Sie auf der Seite Willkommen auf **Weiter**.  
   
-    Wenn Sie nicht die erforderlichen Komponenten installiert haben, wird eine Meldung angezeigt, der angibt, dass Sie zuerst die erforderlichen Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle erforderlichen Komponenten installiert haben, und führen Sie das Installationsprogramm erneut aus.  
+    Wenn Sie nicht die erforderlichen Komponenten installiert haben, wird eine Meldung angezeigt, der angibt, dass Sie zunächst die erforderliche Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle erforderlichen Komponenten installiert haben, und führen Sie das Installationsprogramm erneut aus.  
   
-3.  Lesen Sie den Endbenutzer-Lizenzvertrag. Wenn Sie zustimmen, aktivieren **ich stimme den Bedingungen des Lizenzvertrags**, und klicken Sie dann auf **Weiter**.  
+3.  Lesen Sie den Endbenutzer-Lizenzvertrag. Wenn Sie zustimmen, wählen Sie **ich stimme den Bedingungen des Lizenzvertrags**, und klicken Sie dann auf **Weiter**.  
   
-4.  Klicken Sie auf der Seite "Installationstyp auswählen" auf **typisch**.  
+4.  Klicken Sie auf der Seite Installationstyp auswählen auf **Standard**.  
   
 5.  Klicken Sie auf **Installieren**.  
   
 > [!IMPORTANT]  
-> 1.  Deinstallieren Sie alle vorherige Versionen von SSMA für DB2, bevor die neue Version installiert.  
+> 1.  Deinstallieren Sie alle frühere Versionen von SSMA für DB2, bevor die neue Version installieren.  
   
 Der Standardinstallationspfad lautet c:\Programme\Microsoft c:\Programme\Microsoft SQL Server Migration Assistant für DB2.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren SSMA-Komponenten in SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[Installieren von SSMA-Komponenten auf SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [Migrieren von DB2-Datenbanken zu SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

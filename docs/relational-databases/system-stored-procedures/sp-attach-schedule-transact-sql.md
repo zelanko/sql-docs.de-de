@@ -1,5 +1,5 @@
 ---
-title: Sp_attach_schedule (Transact-SQL) | Microsoft Docs
+title: Sp_attach_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238357"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393850"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_attach_schedule
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die Auftrags-ID des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die Auftrags-ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name =** ] **"***Job_name***"**  
- Der Name des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+ Der Name des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@schedule_id =** ] *schedule_id*  
  Die Zeitplan-ID des für den Auftrag festgelegten Zeitplans. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
@@ -63,7 +63,7 @@ sp_attach_schedule
  Der Name des für den Auftrag festzulegenden Zeitplans. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Zeitplan und der Auftrag müssen denselben Besitzer aufweisen.  
@@ -81,9 +81,9 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Allerdings kann kein Zeitplan gelöscht werden, wenn das Trennen keine Aufträge lassen würde, wenn der Aufrufer der Zeitplanbesitzer ist.  
+ Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Allerdings kann kein Zeitplans gelöscht werden, wenn das Trennen keine Aufträge, lassen würden, wenn der Aufrufer der Zeitplanbesitzer ist.  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prüft, ob der Benutzer Besitzer sowohl des Auftrags als auch des Zeitplans ist.  
   

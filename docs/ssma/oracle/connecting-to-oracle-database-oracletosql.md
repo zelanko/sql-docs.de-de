@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4779f29c90256809c6dfc364365571e28aea7af6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c127ef44f10723a74b2f03fed46ea42b9bbdfff5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394461"
 ---
-# <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL)
-Migrieren von Oracle-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen eine Verbindung, mit der Oracle-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Oracle-Schemas ab, und anschließend in der Oracle-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
+# <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle Database (OracleToSQL)
+Migrieren von Oracle-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen eine Verbindung, mit der Oracle-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Oracle-Schemas ab, und anschließend in der Oracle-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
   
 Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank.  
   
@@ -47,7 +47,7 @@ Das Konto, das verwendet wird, für die Verbindung zur Oracle-Datenbank muss zum
 -   WÄHLEN SIE ALLE WÖRTERBUCH  
   
 ## <a name="establishing-a-connection-to-oracle"></a>Herstellen einer Verbindung mit Oracle  
-Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten werden vom SSMA verwendet, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können diese Metadaten im Oracle-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
+Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten werden vom SSMA verwendet, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diese Metadaten im Oracle-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
   
 > [!IMPORTANT]  
 > Bevor Sie versuchen, eine Verbindung herstellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren.  
@@ -97,7 +97,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
     Weitere Informationen finden Sie unter [auf Oracle Verbinden &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Wiederherstellen der Verbindung mit Oracle  
-Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank. Sie können offline arbeiten, bis Sie die Metadaten aktualisieren, laden Sie die Datenbankobjekte in möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und Daten migrieren.  
+Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank. Sie können offline arbeiten, bis Sie die Metadaten aktualisieren, laden Sie die Datenbankobjekte in möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Daten migrieren.  
   
 ## <a name="refreshing-oracle-metadata"></a>Aktualisieren von Metadaten für Oracle  
 Metadaten für die Oracle-Datenbank wird nicht automatisch aktualisiert. Die Metadaten in Oracle-Metadaten-Explorer ist eine Momentaufnahme der Metadaten, wenn Sie zuerst eine Verbindung hergestellt oder der letzten, dass Sie manuell die Metadaten aktualisiert werden. Sie können die Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
@@ -122,11 +122,11 @@ Metadaten für die Oracle-Datenbank wird nicht automatisch aktualisiert. Die Met
   
     Um die Definitionen der farbcodierung anzuzeigen, klicken Sie auf die **Legende** Schaltfläche.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Nächster Schritt  
   
--   Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit einer Instanz von SQL Server](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f).  
+-   Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit einer Instanz von SQL Server](connecting-to-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

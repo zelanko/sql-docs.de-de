@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_create_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261609"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392310"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,42 +60,42 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name =** ] "*Namen*"  
+ [  **@name =** ] '*Namen*"  
  Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und darf nicht NULL oder eine leere Zeichenfolge sein.  
   
  *Namen* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- [  **@target =** ] "*Ziel*"  
+ [  **@target =** ] '*Ziel*"  
  Zur künftigen Verwendung reserviert. *Namen* ist **vom Datentyp nvarchar(128)** hat den Standardwert NULL.  
   
  [ **@collection_mode =** ] *collection_mode*  
- Gibt die Art und Weise an, in der die Daten gesammelt und gespeichert werden. *Collection_mode* ist **"smallint"** und kann einen der folgenden Werte aufweisen:  
+ Gibt die Art und Weise an, in der die Daten gesammelt und gespeichert werden. *Collection_mode* ist **Smallint** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
   
  1 - Modus ohne Zwischenspeicherung. Für Datensammlung und -upload wird der gleiche Zeitplan verwendet. Geben Sie den Modus ohne Zwischenspeicherung für eine Ad-hoc-Sammlung oder eine Momentaufnahmesammlung an.  
   
- Der Standardwert für *Collection_mode* ist 0. Wenn *Collection_mode* ist 0, *Schedule_uid* oder *Schedule_name* muss angegeben werden.  
+ Der Standardwert für *Collection_mode* ist 0. Wenn *Collection_mode* ist 0 (null) *Schedule_uid* oder *Schedule_name* muss angegeben werden.  
   
  [  **@days_until_expiration =** ] *Days_until_expiration*  
- Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **"smallint"** hat den Standardwert 730 (zwei Jahre). *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
+ Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **Smallint** hat den Standardwert 730 (zwei Jahre). *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
  [ **@proxy_id =** ] *proxy_id*  
- Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int** hat den Standardwert NULL. Wenn angegeben, *Proxy_name* muss NULL sein. Zum Abrufen *Proxy_id*, Fragen Sie die Sysproxies-Systemtabelle. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent-Proxys](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int** hat den Standardwert NULL. Wenn angegeben, *Proxy_name* muss NULL sein. Zum Abrufen *Proxy_id*, Fragen Sie die Sysproxies-Systemtabelle. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent-Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [  **@proxy_name =** ] "*Proxy_name*"  
+ [  **@proxy_name =** ] '*Proxy_name*"  
  Der Name des Proxykontos. *Proxy_name* ist **Sysname** hat den Standardwert NULL. Wenn angegeben, *Proxy_id* muss NULL sein. Zum Abrufen *Proxy_name*, Fragen Sie die Sysproxies-Systemtabelle.  
   
- [  **@schedule_uid =** ] "*Schedule_uid*"  
- Entspricht dem GUID, der auf einen Zeitplan zeigt. *Schedule_uid* ist **"uniqueidentifier"** hat den Standardwert NULL. Wenn angegeben, *Schedule_name* muss NULL sein. Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
+ [  **@schedule_uid =** ] '*Schedule_uid*"  
+ Entspricht dem GUID, der auf einen Zeitplan zeigt. *Wert für schedule_uid an* ist **Uniqueidentifier** hat den Standardwert NULL. Wenn angegeben, *Schedule_name* muss NULL sein. Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  Wenn *Collection_mode* ist auf 0 festgelegt, *Schedule_uid* oder *Schedule_name* muss angegeben werden. Wenn *Collection_mode* ist auf 1 festgelegt, *Schedule_uid* oder *Schedule_name* wird ignoriert, wenn angegeben.  
   
- [  **@schedule_name =** ] "*Schedule_name*"  
+ [  **@schedule_name =** ] '*Schedule_name*"  
  Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** hat den Standardwert NULL. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  [  **@logging_level =** ] *Logging_level*  
- Entspricht dem Protokolliergrad. *Logging_level* ist **"smallint"** mit einem der folgenden Werte:  
+ Entspricht dem Protokolliergrad. *Logging_level* ist **Smallint** mit einem der folgenden Werte:  
   
  0 – Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
   
@@ -117,14 +117,14 @@ sp_syscollector_create_collection_set
   
  Der Standardwert für *Logging_level* ist 1.  
   
- [  **@description =** ] "*Beschreibung*"  
+ [  **@description =** ] '*Beschreibung*"  
  Die Beschreibung für den Sammlungssatz. *Beschreibung* ist **nvarchar(4000)** hat den Standardwert NULL.  
   
  [  **@collection_set_id =** ] *Collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** mit OUTPUT und ist erforderlich.  
   
- [  **@collection_set_uid =** ] "*Collection_set_uid*"  
- GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"** mit Ausgabe hat den Standardwert NULL.  
+ [  **@collection_set_uid =** ] '*Collection_set_uid*"  
+ GUID für den Sammlungssatz. *Collection_set_uid* ist **Uniqueidentifier** mit Ausgabe hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

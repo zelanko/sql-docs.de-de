@@ -1,5 +1,5 @@
 ---
-title: Projekteinstellungen (Konvertierung) (AccessToSQL) | Microsoft Docs
+title: Projekteinstellungen (Konvertierung) (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,103 +19,103 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8afec0f77dcb47a4b201ddf86dfbde5d58ec1d20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774566"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396090"
 ---
-# <a name="project-settings-conversion-accesstosql"></a>Projekteinstellungen (Konvertierung) (AccessToSQL)
-Die Konvertierung projekteinstellungen können Sie konfigurieren, wie Objekte aus den Zugriff auf Datenbankobjekte zu umgewandelt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbankobjekte.  
+# <a name="project-settings-conversion-accesstosql"></a>Project Settings (Conversion) (AccessToSQL)
+Die projekteinstellungen für die Konvertierung können Sie konfigurieren, wie die Objekte aus den Zugriff auf Datenbankobjekte, konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte.  
   
-Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
   
--   Verwenden der **Projekteinstellungen** (Dialogfeld), Konfigurationsoptionen für das aktuelle Projekt festzulegen. Die Konvertierungseinstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Konvertierung**.  
+-   Verwenden der **Projekteinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für das aktuelle Projekt. Die Konvertierungseinstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann  **Konvertierung**.  
   
--   Verwenden der **Projekt Standardeinstellungen** (Dialogfeld), Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf den Konvertierungseinstellungen für die in den **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, Migrationstyp-Projekt für die Einstellungen erforderlich sind, angezeigt oder geändert werden, wählen **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Konvertierung**.  
+-   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Die Konvertierungseinstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden,  **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **Konvertierung**.  
   
 ## <a name="options"></a>Tastatur  
-**Primärschlüssel hinzufügen**  
-Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabelle, wenn eine Access-Tabelle ohne Primärschlüssel oder eindeutigen Index verfügt.  
+**Fügen Sie Primärschlüssel**  
+Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle, wenn eine Access-Tabelle ohne Primärschlüssel oder eindeutigen Index verfügt.  
   
--   **Standardmodus**: "false"  
+-   **Im Modus Standard**: False  
   
--   **Vollständige**: "false"  
+-   **Vollständige**: False  
   
--   **Vollständige Modus**: "true"  
+-   **Vollständiger Modus**: "true"  
   
-Wenn in SQL Azure verbunden ist, ist es standardmäßig "Wahr". **Timestamp-Spalten hinzufügen**  
-Gibt an, ob es sich bei SSMA einen Zeitstempelwert erstellen soll, wenn es erforderlich ist.  
+Beim Verbinden mit SQL Azure, ist es standardmäßig "true". **Timestamp-Spalten hinzufügen**  
+Gibt an, ob es sich bei SSMA einen Timestamp-Wert erstellen soll, wenn dies erforderlich ist.  
   
--   **Standardmodus**: entscheiden Sie SSMA ermöglichen  
+-   **Im Modus Standard**: lassen Sie SSMA entscheiden  
   
 -   **Vollständige**: nie  
   
--   **Vollständige Modus**: entscheiden Sie SSMA ermöglichen  
+-   **Vollständiger Modus**: lassen Sie SSMA entscheiden  
   
-**Enthalten Sie eine Bewertung Datenbericht mit Konvertierung Bewertungsberichte**  
-Enthält eine Bewertung von Daten in den Bewertungsbericht an.  
+**Ein Daten-Bewertungsbericht mit Konvertierung Bewertungsberichte einschließen**  
+Enthält eine Bewertung von Daten in den Bewertungsbericht.  
   
--   **Standardmodus**: "true"  
+-   **Im Modus Standard**: "true"  
   
--   **Vollständige**: "false"  
+-   **Vollständige**: False  
   
--   **Vollständige Modus**: "true"  
+-   **Vollständiger Modus**: "true"  
   
-**Nachrichtentyp, wenn ein Primärschlüssel, Spalten NULL-Werte zulässt enthält**  
-Gibt den Typ der Nachricht (Warnung, Fehler oder nichts), in der SSMA im Ausgabebereich angezeigt, wenn Primärschlüssel mit Spalten NULL-Werte zulässt gefundenen.  
+**Nachrichtentyp, wenn ein Primärschlüssel auf NULL festlegbare Spalten enthalten**  
+Gibt den Typ der Nachricht (Warnung, Fehler oder "Nothing"), die im Ausgabebereich SSMA anzeigt, wenn Primärschlüssel mit auf NULL festlegbare Spalten gefunden.  
   
--   **Standardmodus**: Warnung  
+-   **Im Modus Standard**: Warnung  
   
--   **Vollständige**: keine Nachricht  
+-   **Vollständige**: keine Meldung  
   
--   **Vollständige Modus**: Fehler  
+-   **Vollständiger Modus**: Fehler  
   
-**Nachrichtentyp, wenn die Fremdschlüsselspalten unterschiedlich lang sind**  
-Gibt den Typ der Nachricht (Warnung, Fehler oder nichts), in der SSMA im Ausgabebereich angezeigt, wenn ein Fremdschlüssel mit falscher TEXT gefunden wird.  
+**Nachrichtentyp, wenn die foreign Key-Spalten mit verschiedenen Größen sind**  
+Gibt den Typ der Nachricht (Warnung, Fehler oder "Nothing"), die im Ausgabebereich SSMA anzeigt, wenn ein Fremdschlüssel mit falscher TEXT gefunden.  
   
--   **Standardmodus**: Warnung  
+-   **Im Modus Standard**: Warnung  
   
--   **Vollständige**: keine Nachricht  
+-   **Vollständige**: keine Meldung  
   
--   **Vollständige Modus**: Fehler  
+-   **Vollständiger Modus**: Fehler  
   
 **Nachrichtentyp beim Memospalten indiziert werden**  
-Gibt den Typ der Nachricht (Warnung, Fehler oder nichts), in der SSMA im Ausgabebereich angezeigt, wenn einen Index gefunden wird, der enthält einem **Memo** Spalte.  
+Gibt den Typ der Meldung (Warnung, Fehler oder nichts) aus mit SSMA im Ausgabebereich angezeigt wird, wenn einen Index gefunden wird, die enthält eine **Memo** Spalte.  
   
--   **Standardmodus**: Warnung  
+-   **Im Modus Standard**: Warnung  
   
--   **Vollständige**: keine Nachricht  
+-   **Vollständige**: keine Meldung  
   
--   **Vollständige Modus**: Fehler  
+-   **Vollständiger Modus**: Fehler  
   
-**Warnhinweis anzeigen, wenn eine komplexe Abfrage einen Platzhalter verwendet (\&#42;)**  
-Wenn ein Spaltenname in einer SELECT-Anweisung ein Platzhalterzeichen (*) ist, wird eine Warnung in den Bereich Ausgabe und Fehlerliste angezeigt.  
+**Warnen, wenn eine komplexe Abfrage einen Platzhalter verwendet (\&#42;)**  
+Wenn Sie ein Spaltennamen in einer SELECT-Anweisung ein Platzhalter (*) ist, wird eine Warnung im Bereich der Ausgabe und Fehlerliste angezeigt.  
   
--   **Standardmodus**: "true"  
+-   **Im Modus Standard**: "true"  
   
--   **Vollständige**: "false"  
+-   **Vollständige**: False  
   
--   **Vollständige Modus**: "true"  
+-   **Vollständiger Modus**: "true"  
   
-**Warnhinweis anzeigen Sie, wenn Bezeichnername geändert wird**  
-Zeigt eine Meldung in den Bewertungsbericht, und klicken Sie im Bereich "Ausgabe" ein, wenn ein Objektname für die Bezeichner von SSMA geändert wird.  
+**Warnen Sie, wenn Bezeichnername geändert wird.**  
+Zeigt eine Meldung in den Bewertungsbericht und dem Ausgabebereich angezeigt, wenn ein Bezeichner von SSMA geändert wird.  
   
--   **Standardmodus**: "true"  
+-   **Im Modus Standard**: "true"  
   
--   **Vollständige**: "false"  
+-   **Vollständige**: False  
   
--   **Vollständige Modus**: "true"  
+-   **Vollständiger Modus**: "true"  
   
-**Warnhinweis anzeigen Sie, wenn Bezeichner in Anführungszeichen eingeschlossen**  
-Zeigt eine Meldung in den Bewertungsbericht, und klicken Sie im Bereich "Ausgabe" ein, wenn ein Bezeichner von SSMA zitiert wird. Bezeichner ist erforderlich, wenn der Name ein Schlüsselwort ist oder Sonderzeichen enthält.  
+**Warnen Sie, wenn Bezeichner in Anführungszeichen eingeschlossen**  
+Zeigt eine Meldung in den Bewertungsbericht und dem Ausgabebereich angezeigt, wenn ein Bezeichner von SSMA zitiert wird. Bezeichner ist erforderlich, wenn der Name ein Schlüsselwort ist oder Sonderzeichen enthält.  
   
--   **Standardmodus**: "true"  
+-   **Im Modus Standard**: "true"  
   
--   **Vollständige**: "false"  
+-   **Vollständige**: False  
   
--   **Vollständige Modus**: "true"  
+-   **Vollständiger Modus**: "true"  
   
 ## <a name="see-also"></a>Siehe auch  
 [Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  

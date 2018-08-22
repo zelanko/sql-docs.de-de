@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085842"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396506"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Installieren Sie die folgenden Schritte aus [SQL Server-Volltextsuche](https://msdn.microsoft.com/library/ms142571.aspx) (**Mssql-Server-Volltextsuche**) unter Linux. Volltextsuche können Sie sämtliche Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt werden. Bekannte Probleme in dieser Version finden Sie unter den [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+Installieren Sie die folgenden Schritte aus [SQL Server-Volltextsuche](../relational-databases/search/full-text-search.md) (**Mssql-Server-Volltextsuche**) unter Linux. Volltextsuche können Sie sämtliche Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt werden. Bekannte Probleme in dieser Version finden Sie unter den [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Vor der Installation von SQL Server-Volltext-Suchdienst, zuerst [Installieren von SQL Server](sql-server-linux-setup.md#platforms). Dadurch wird konfiguriert, die Schlüssel und Repositorys, mit denen Sie bei der Installation der **Mssql-Server-Volltextsuche** Paket.

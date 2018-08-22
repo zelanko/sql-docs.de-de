@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Optionen für Projekt (OracleToSQL) | Microsoft Docs
+title: Festlegen von Projektoptionen (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,24 +15,24 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5c606de3c03038f7e2fbb9f974ba96dd64bef779
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: adb90f3de86471a9aa09199c4b97d8d44199437e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394244"
 ---
-# <a name="setting-project-options-oracletosql"></a>Einstellungsoptionen für Projekt (OracleToSQL)
-Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, Benutzeroberflächen- und Migration benutzereinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
+# <a name="setting-project-options-oracletosql"></a>Festlegen von Projektoptionen (OracleToSQL)
+Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben objektkonvertierung, Objekt laden, Benutzer-Schnittstelle und migrationseinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
   
 SSMA können Sie die Standardoptionen für alle Projekte zu konfigurieren. Diese Optionen werden auf jedem neuen Projekt angewendet, die Sie erstellen. Sie können dann die Optionen für jedes Projekt anpassen.  
   
-## <a name="configuration-options-and-modes"></a>Modi "und"-Konfigurationsoptionen  
-SSMA verfügt über fünf Mengen von projekteinstellungen:  
+## <a name="configuration-options-and-modes"></a>Optionen für die Konfiguration und -Modi  
+SSMA verfügt über fünf verschiedene projekteinstellungen:  
   
 -   Projektinformationen  
   
--   Allgemein (Konvertierung, Migration, Laden von Objekten)  
+-   Allgemein (Konvertierung, Migration, und Laden von Objekten)  
   
 -   Synchronization  
   
@@ -40,7 +40,7 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 -   Typzuordnung  
   
-Es sind auch vier Modi für diese Einstellungen konfigurieren:  
+Es verfügt auch über vier Modi zum Konfigurieren dieser Einstellungen:  
   
 -   Default  
   
@@ -50,9 +50,9 @@ Es sind auch vier Modi für diese Einstellungen konfigurieren:
   
 -   Benutzerdefiniert  
   
-Der Standardmodus ist für die meisten Benutzer empfohlen. Der optimistische hält mehrere der Syntax für die aktuelle Oracle und einfacher zu lesen. Jedoch behalten die aktuelle Syntax genau möglicherweise nicht. Wenn die Oracle-Syntax muss, in entsprechende konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax, die der Vollmodus die beste Konvertierung durchgeführt, aber möglicherweise ist des resultierenden Codes schwieriger zu lesen. In den benutzerdefinierten Modus legen Sie die Optionen an.  
+Der Standardmodus ist für die meisten Benutzer empfohlen. Der vollständige Modus speichert mehrere der Syntax für die aktuelle Oracle und ist einfacher zu lesen. Allerdings bleiben die Syntax für aktuelle genau möglicherweise nicht. Wenn die Oracle-Syntax muss, in entsprechende konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, die den vollständigen Modus für die umfassendste Konvertierung durchgeführt, aber der resultierende Code ist möglicherweise schwieriger zu lesen. In den benutzerdefinierten Modus legen Sie die Optionen an.  
   
-Weitere Informationen zu den Einstellungen und wie die Einstellungen in jedem Modus angewendet werden finden Sie unter den folgenden Themen:  
+Weitere Informationen über die Einstellungen und wie die Einstellungen in den einzelnen Modi angewendet werden finden Sie unter den folgenden Themen:  
   
 -   [Projekteinstellungen &#40;Konvertierung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
@@ -64,44 +64,44 @@ Weitere Informationen zu den Einstellungen und wie die Einstellungen in jedem Mo
   
 -   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   
-## <a name="setting-project-options"></a>Einstellung Projektoptionen  
-In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind der SSMA-Konfigurationsdatei gespeichert und angewendet wird, zu einem neuen Projekt, das Sie erstellen.  
+## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
+In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  
   
-**Zum Festlegen von standardmäßigen Projektoptionen**  
+**Projektoptionen festlegen**  
   
 1.  Auf der **Tools** Menü klicken Sie auf **Projekt Standardeinstellungen**.  
   
 2.  In der **Projekt Standardeinstellungen** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
   
-    -   Wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, angezeigt oder geändert werden **Migration Zielversion** Dropdown-Liste auf **allgemeine** am unteren Rand der Links, und wählen Sie dann Konvertierung oder Migration.  
+    -   Wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, um angezeigt oder geändert werden, von **Zielversion für die Migration** öffnen Sie auf die Dropdownliste **allgemeine** am unteren Rand der linken Bereich, und wählen Sie dann-Konvertierung oder Die Migration.  
   
-    -   Wählen Sie einen vordefinierten Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
+    -   Auswählen einen vordefinierten-Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
   
     -   Um benutzerdefinierte Einstellungen festzulegen, wählen Sie aus, oder geben Sie den neuen Einstellungen oder Werten.  
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
+Sie können auch Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
   
-**Einstellungen für das aktuelle Projekt anpassen**  
+**Anpassen der Einstellungen für das aktuelle Projekt**  
   
 1.  Auf der **Tools** Menü klicken Sie auf **Projekteinstellungen**.  
   
 2.  In der **Projekteinstellungen** (Dialogfeld), verwenden Sie eine der folgenden Verfahren:  
   
-    -   Wählen Sie einen vordefinierten Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
+    -   Auswählen einen vordefinierten-Modus in den **Modus** wählen Sie im Dropdown- **Standard**, **Optimistic**, oder **vollständige**.  
   
-    -   Angeben einen benutzerdefinierten Modus, in der **Modus** wählen Sie im **benutzerdefinierte**, und wählen Sie dann die richtigen projekteinstellungen.  
+    -   An einen benutzerdefinierten Modus, in der **Modus** Kontrollkästchen **benutzerdefinierte**, und wählen Sie dann die geeignete projekteinstellungen.  
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
+Der nächste Schritt bei der Migration hängt von den Anforderungen Ihrer Projekte:  
   
--   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung Oracle und SQL Server-Datentypen &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+-   Wenn die Zuordnung von Datentypen für Quell- und zieleinstellungen anpassen möchten, finden Sie unter [Mapping Oracle und SQL Server-Datentypen &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   Konvertieren Sie Sie andernfalls die Oracle-Datenbank-Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [Oracle-Schemas konvertieren &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Andernfalls können Sie die Oracle-Datenbank-Objektdefinitionen in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [Konvertieren von Oracle Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Zuordnen von Oracle und SQL Server-Datentypen &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
+[Zuordnen von Oracle- und SQL Server-Datentypen &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303030"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395287"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303030"
 >  Anweisungen zum Festlegen von Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zu Prozessen und Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Mehrere Prozessoren](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Prozessorgruppen](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Informationen zu Prozessen und Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Mehrere Prozessoren](/windows/desktop/ProcThread/multiple-processors)   
+ [Prozessorgruppen](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services-Threadpooländerungen in SQLServer 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Unterstützungssysteme mit mehr als 64 Prozessoren](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

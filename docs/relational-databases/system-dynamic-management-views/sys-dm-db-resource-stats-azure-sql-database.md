@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 08/14/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d34b4a21b96554860a4e54abe0f274e7fb95aeda
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005693"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394868"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38005693"
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Decimal (5,2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
 |avg_data_io_percent|**Decimal (5,2)**|Durchschnittliche Daten-e/a-Auslastung in Prozent des Grenzwerts der Dienstebene.|  
-|avg_log_write_percent|**Decimal (5,2)**|Die durchschnittliche Nutzung von Schreibressourcen als Prozentwert der maximalen Kapazität für die Dienstebene.|  
+|avg_log_write_percent|**Decimal (5,2)**|Durchschnittliche Schreib-e/a-Durchsatz Auslastung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
 |avg_memory_usage_percent|**Decimal (5,2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt die Speicher für die Speicherung von In-Memory-OLTP-Objekten verwendet.|  
 |xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichtsintervalls). Dies umfasst auch Arbeitsspeicher, die für die Speicherung der folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher für die Verarbeitung von ALTER TABLE-Vorgänge verwendet.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
 |max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Worker (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
@@ -95,8 +95,8 @@ SELECT
     MAX(avg_cpu_percent) AS 'Maximum CPU Utilization In Percent',   
     AVG(avg_data_io_percent) AS 'Average Data IO In Percent',   
     MAX(avg_data_io_percent) AS 'Maximum Data IO In Percent',   
-    AVG(avg_log_write_percent) AS 'Average Log Write Utilization In Percent',   
-    MAX(avg_log_write_percent) AS 'Maximum Log Write Utilization In Percent',   
+    AVG(avg_log_write_percent) AS 'Average Log Write I/O Throughput Utilization In Percent',   
+    MAX(avg_log_write_percent) AS 'Maximum Log Write I/O Throughput Utilization In Percent',   
     AVG(avg_memory_usage_percent) AS 'Average Memory Usage In Percent',   
     MAX(avg_memory_usage_percent) AS 'Maximum Memory Usage In Percent'   
 FROM sys.dm_db_resource_stats;  

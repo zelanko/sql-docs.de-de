@@ -29,12 +29,12 @@ caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152681"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394637"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Die folgenden Abschnitte enthalten Informationen zur Abwärtskompatibilität der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten. Darüber hinaus enthalten die Informationen Hinweise zu als veraltetet markierten und nicht mehr eingesetzten Funktionen, aktuellen Änderungen sowie Änderungen im Programmverhalten.  
@@ -47,7 +47,7 @@ ms.locfileid: "37152681"
 |[Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  
 |[Analysis Services-Abwärtskompatibilität](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  
 |[Integration Services – Abwärtskompatibilität](../integration-services/integration-services-backward-compatibility.md)|Beschreibt die Änderungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Anwendungen von Data Transformation Services erfordern.|  
-|[Reporting Services-Abwärtskompatibilität](../reporting-services/reporting-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssRS](../includes/ssrs-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] erfordern.|  
+|[Reporting Services-Abwärtskompatibilität](../reporting-services/reporting-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssRS](../includes/ssrs.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] erfordern.|  
 |[Abwärtskompatibilität &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] erfordern.|  
 |[Abwärtskompatibilität von Replikationen](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Replikationslösungen erfordern.|  
   

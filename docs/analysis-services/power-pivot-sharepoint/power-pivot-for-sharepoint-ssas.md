@@ -1,5 +1,5 @@
 ---
-title: PowerPivot für SharePoint (SSAS) | Microsoft Docs
+title: Power Pivot für SharePoint (SSAS) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc21ce644416c93367552e6ba19ac8aca9e0f48e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023637"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395874"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>PowerPivot für SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34023637"
  Für das Serverhosting dieser Daten sind SharePoint, Excel Services und eine Installation von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint erforderlich. Die Daten werden auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Instanzen geladen, wo sie mit der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungsfunktion nach einem Zeitplan aktualisiert werden können. Diese Funktion stellt der Server für Excel 2010-Arbeitsmappen bzw. die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel 2013- und Excel 2016-Arbeitsmappen bereit.  
   
 ## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot für SharePoint 2016  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] unterstützt die Verwendung von Excel-Arbeitsmappen mit Datenmodellen und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power View-Berichten durch [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] SharePoint 2016 und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] unterstützt [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 und Office Online Server-Nutzung von Excel-Arbeitsmappen mit Datenmodellen und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View-Berichten.  
   
- Excel Services in [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] umfasst Funktionen für Datenmodelle, die die Interaktion mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe im Browser ermöglichen. Sie müssen kein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2016-Add-In für die Farm bereitstellen. Sie müssen nur einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Modus installieren und den Server bei [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]registrieren.  
+ Excel in Office Online Server umfasst Funktionen zum Aktivieren von Interaktion mit Datenmodelle eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Workbook im Browser. Sie müssen kein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2016-Add-In für die Farm bereitstellen. Sie müssen nur Installieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Modus und die Registrierung des Servers bei Office Online Server.  
   
  Die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2016-Add-Ins macht einen zusätzlichen Funktionsumfang in der SharePoint-Farm verfügbar. Zu diesen Funktionen gehören der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog und die planmäßige Datenaktualisierung.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34023637"
   
  Die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Add-Ins macht einen zusätzlichen Funktionsumfang in der SharePoint-Farm verfügbar. Zu diesen Funktionen gehören der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog, die planmäßige Datenaktualisierung und das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard.  
   
- ![SSAS PowerPivot-Modus-2-Serverbereitstellung](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot-Modus-2-Serverbereitstellung")  
+ ![SSAS PowerPivot-Modus-2-Serverbereitstellung](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-2server-deployment.gif "SSAS, PowerPivot-Modus 2 Server-Bereitstellung")  
   
 ##  <a name="bkmk_RelatedContent"></a> In diesem Abschnitt  
  [Power Pivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  

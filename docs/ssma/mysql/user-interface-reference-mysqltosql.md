@@ -16,14 +16,14 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395488"
 ---
-# <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySQLToSQL))
+# <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySqlToSql)
 Dieser Abschnitt enthält Hilfethemen für SQL Server Migration Assistant (SSMA) for MySQL.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -39,7 +39,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |[Herstellen einer Verbindung von Azure SQL-Datenbank mit &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Azure** im Dialogfeld Verbindung mit der Instanz von SQL Azure, in dem Sie migrieren möchten.|  
 |[Konvertierungseinstellungen (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Verwenden der **Einstellungen** Tab, um den knoteneinstellungen festgelegt.|  
 |[Data Migration Report Bericht &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Zeigt die Ergebnisse der Daten aus MySQL nach SQL Server oder SQL Azure migrieren.|  
-|[Data Migration Settings (Einstellungen für die Datenmigration)](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Verwenden der **erweiterte Data Migration Settings** Tab, um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
+|[Data Migration Settings (Einstellungen für die Datenmigration)](data-migration-settings-mysqltosql.md)|Verwenden der **erweiterte Data Migration Settings** Tab, um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Bearbeiten der Typzuordnung &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Verwenden der **Bearbeiten der Typzuordnung** Dialogfeld zum Erstellen oder ändern die Zuordnung von Datentypen zwischen den Quell- und Ziel-Datenbanken und Datenbankobjekte.|  
 |[Globale Einstellungen &#40;Editor&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
 |[Globale Einstellungen &#40;Dialogfelder&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Standard-Dialogfeld "und" Warnung Einstellungen zu konfigurieren.|  

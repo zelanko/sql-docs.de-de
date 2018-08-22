@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509219"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396281"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Typzuordnung) (DB2ToSQL)
-Die Seite Type Mapping der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentypen.  
+Die Seite Type Mapping der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
   
 Der Seite "Datentypzuordnung" steht in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
   
@@ -41,7 +41,7 @@ Die folgende Tabelle zeigt die **Type Mapping** Registerkarte Optionen:
 Der zugeordnete DB2-Datentyp.  
   
 **Zieltyp**  
-Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp für die angegebene DB2-Datentyps.  
+Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp für die angegebene DB2-Datentyps.  
   
 Finden Sie in den Tabellen im nächsten Abschnitt für den standardmäßigen SSMA für DB2-datentypzuordnungen.  
   
@@ -63,7 +63,7 @@ In SSMA für DB2 können Sie benutzerdefinierte datentypzuordnungen für Argumen
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Standard Argumenttyp und Typzuordnung Wert zurückgeben  
 Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argumente und Rückgabewerte.  
   
-|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp|  
+|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|"float" [53]|  
@@ -119,7 +119,7 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 ### <a name="default-column-type-mapping"></a>Standardzuordnung für Spalten  
 Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.  
   
-|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp|  
+|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|"float" [53]|  
@@ -187,7 +187,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 ### <a name="default-local-variable-type-mapping"></a>Typ der lokalen Variablen der Standardzuordnung  
 Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.  
   
-|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp|  
+|DB2-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|"float" [53]|  

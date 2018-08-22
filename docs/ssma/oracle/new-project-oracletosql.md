@@ -1,5 +1,5 @@
 ---
-title: Neues Projekt (OracleToSQL) | Microsoft Docs
+title: Neues Projekt (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +13,15 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4505c11d20c826b9c2b879d7b9c17bd690efaed9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6715f4690cd0c935a1e6753ef18f0413167cedc4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777586"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395885"
 ---
 # <a name="new-project-oracletosql"></a>Neues Projekt (OracleToSQL)
-Verwenden der **neues Projekt** (Dialogfeld), um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
+Verwenden der **neues Projekt** um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
   
 ## <a name="options"></a>Tastatur  
 **Name**  
@@ -31,17 +31,17 @@ Geben Sie den Namen des Projekts ein. SSMA wird die Erweiterung angefügt.
 Geben Sie an, oder navigieren Sie zum Ordner oder Netzwerkpfad zum Speichern des Projekts.  
   
 **Migrieren zu**  
-Wählen Sie eine Version der Zieldatenbank über den folgenden Liste:  
+Wählen Sie eine von der Version der Zieldatenbank über den folgenden Liste:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   Azure SQL-Datenbank  
   

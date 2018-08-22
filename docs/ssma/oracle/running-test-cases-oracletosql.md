@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982372"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395103"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
-Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
+Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
   
 Eine unerlässliche Anforderung für der Test erfolgreich ist, dass alle Oracle-Objekte konvertiert und in die Zieldatenbank geladen werden. Darüber hinaus sollten die Daten der migriert werden, damit der Inhalt der Tabellen auf beiden Plattformen synchronisiert werden.  
   
@@ -32,7 +32,7 @@ So führen Sie die vorbereiteten Testfall aus:
   
 2.  In der **Herstellen einer Verbindung mit Oracle** Dialogfeld Geben Sie die Verbindungsinformationen, und klicken Sie dann auf **Connect**.  
   
-Wenn der Test abgeschlossen ist, wird der Testfall-Bericht erstellt. Klicken Sie auf die **Bericht** Schaltfläche zum Anzeigen der [Testfall Bericht](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). Das Ergebnis des Tests (Bericht "Testfall") wird automatisch gespeichert, der [Ergebnisrepository](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) für die spätere Verwendung.  
+Wenn der Test abgeschlossen ist, wird der Testfall-Bericht erstellt. Klicken Sie auf die **Bericht** Schaltfläche zum Anzeigen der [Testfall Bericht](viewing-test-case-reports-oracletosql.md). Das Ergebnis des Tests (Bericht "Testfall") wird automatisch gespeichert, der [Ergebnisrepository](using-test-repositories-oracletosql.md) für die spätere Verwendung.  
   
 ## <a name="test-case-execution-steps"></a>Testfall-Ausführungsschritte  
   
@@ -55,14 +55,14 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Fü
 |USER_TABLE$ NEW_ID|Ansicht|ID des eingefügten und geänderter Zeilen.|  
 |USER_TABLE$ ALTE|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
   
-Das folgende Objekt wird erstellt, in das Schema der überprüften Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Das folgende Objekt wird erstellt, in das Schema der überprüften Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
 |USER_TABLE$ "TRG"|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
   
-Und die folgenden Objekte werden erstellt, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]in der Datenbank Ssmatesterdb.  
+Und die folgenden Objekte werden erstellt, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Datenbank Ssmatesterdb.  
   
 ||||  
 |-|-|-|  

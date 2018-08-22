@@ -2,7 +2,7 @@
 title: Neuerungen in SSMA für die Access(AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/05/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,32 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556590"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394463"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neuerungen in SSMA für Access (AccessToSQL)
-Dieses Thema listet SSMA für Access-Änderungen in jeder Version.  
+In diesem Artikel werden SSMA für Access-Änderungen in jeder Version aufgelistet.  
+
+## <a name="ssma-v79"></a>SSMA v7.9
+Die v7.9-Version von SSMA für Access umfasst die folgenden Änderungen:
+- Gezielte Fixes, die die Qualität und Konvertierung von Metriken zu verbessern.
+- Unterstützt die in der SSMA-Befehlszeile, Data Type Mapping und Projekt-Einstellungen zu ändern.
+- Die Azure SQL-Datenbank-Verbindungsdialogfeld in SSMA wurde auch geändert, um den vollqualifizierten Servernamen angeben. In früheren Versionen von SSMA musste das Präfix für die Azure SQL-Datenbank innerhalb von Projekten Einstellungen angegeben werden.
+
+> [!IMPORTANT]
+> SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
+
+## <a name="ssma-v78"></a>SSMA V7. 8
+Die V7. 8-Version von SSMA für Access umfasst die folgenden Änderungen:
+- Hervorgehobene Änderung Typzuordnung in den Projekteinstellungen.
+- Die Möglichkeit für Benutzer zum Deaktivieren der Telemetrie wird bereitgestellt.
+
+> [!IMPORTANT]
+> SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 Die v7.7-Version von SSMA für Access umfasst die folgenden Änderungen:
@@ -143,8 +160,8 @@ Die vom Juli 2011-Version von SSMA für Access umfasst die folgenden Änderungen
 ## <a name="april-2011"></a>April 2011  
 Die April 2011-Version von SSMA für Access umfasst die folgenden Änderungen:  
   
--   Hinzugefügt von einem einzelnen installierbaren "SSMA für Access", die unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali" und Azure SQL.  
--   Die Fähigkeit zum Verbinden hinzugefügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali".  
+-   Hinzugefügt von einem einzelnen installierbaren "SSMA für Access", die unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" und Azure SQL.  
+-   Die Fähigkeit zum Verbinden hinzugefügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali".  
 -   Hinzugefügte SSMA für Access-Konsole Version für die Abwärtskompatibilität unterstützen. Sie können die von früher in SSMA V5. 0-Versionen erstellte Projekte öffnen.
 -   Die Möglichkeit zum Installieren von SSMA V5. 0-Produkt parallele (SxS) mit älteren Versionen von SSMA-Produkt hinzugefügt.  
   
@@ -173,10 +190,10 @@ Veröffentlichung von Mai 2007 von SSMA für Access umfasst die folgenden Änder
 ## <a name="november-2006"></a>November 2006  
 Die Version vom November 2006 von SSMA für Access umfasst die folgenden Änderungen:  
   
--   Hinzugefügt von einer neuen Datenbank-Migrations-Assistenten, die Sie aus den Zugriff auf die Migration von einer einzelnen Datenbank führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
--   Eine neue Convert, Load, hinzugefügt und Migrate-Befehl ab, der Zugriff auf Datenbanken, konvertiert lädt die konvertierten Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in einem Schritt.  
--   Verbesserte-Migration. Fragen Sie die Migration nun konvertiert mehr Abfragen mit Ansichten auswählen. Weitere Informationen finden Sie unter [den Zugriff auf Datenbankobjekte konvertieren](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
--   Die Fähigkeit zum Bearbeiten der Eigenschaften von Tabellen und Indizes auf hinzugefügt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Tabelle** Registerkarte.  
+-   Hinzugefügt von einer neuen Datenbank-Migrations-Assistenten, die Sie aus den Zugriff auf die Migration von einer einzelnen Datenbank führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Eine neue Convert, Load, hinzugefügt und Migrate-Befehl ab, der Zugriff auf Datenbanken, konvertiert lädt die konvertierten Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Schritt.  
+-   Verbesserte-Migration. Fragen Sie die Migration nun konvertiert mehr Abfragen mit Ansichten auswählen. Weitere Informationen finden Sie unter [den Zugriff auf Datenbankobjekte konvertieren](converting-access-database-objects-accesstosql.md).  
+-   Die Fähigkeit zum Bearbeiten der Eigenschaften von Tabellen und Indizes auf hinzugefügt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tabelle** Registerkarte.  
 -   Neue globale Einstellungen wird hinzugefügt:  
     -   Wahlweise können Sie zum Anzeigen von Zeilennummern im Editor-Fenstern.  
     -   Sie können konfigurieren SSMA aufgefordert werden, um doppelte Objekte zu ersetzen, oder Sie können immer oder niemals, ersetzen doppelte Objekte während der schemakonvertierung.  

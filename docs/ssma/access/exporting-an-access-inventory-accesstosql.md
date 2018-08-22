@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980672"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393849"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eines Access-Inventars (AccessToSQL)
-Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann überprüfen und Abfragen der Inventur-Metadaten, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Dieser Hardwareinventur können Sie schnell finden Sie Antworten auf Fragen, wie z. B. die folgenden:  
+Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann überprüfen und Abfragen der Inventur-Metadaten, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Dieser Hardwareinventur können Sie schnell finden Sie Antworten auf Fragen, wie z. B. die folgenden:  
   
 -   Was sind die größten Datenbanken?  
   
@@ -48,15 +48,15 @@ Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind 
 Beispiele für die Abfrage, die verwendet werden, zum Beantworten dieser Fragen werden am Ende dieses Themas bereitgestellt.  
   
 ## <a name="exported-metadata"></a>Exportierten Metadaten  
-SSMA exportiert Metadaten über die Access-Datenbanken, Tabellen, Spalten, Indizes, Fremdschlüssel, Abfragen, Berichte, Forms, Makros und Module. Metadaten zu jeder dieser Kategorien der Elemente wird in einer separaten Tabelle exportiert. Schemas für diese Tabellen finden Sie unter [Access Inventory Schemas](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524).  
+SSMA exportiert Metadaten über die Access-Datenbanken, Tabellen, Spalten, Indizes, Fremdschlüssel, Abfragen, Berichte, Forms, Makros und Module. Metadaten zu jeder dieser Kategorien der Elemente wird in einer separaten Tabelle exportiert. Schemas für diese Tabellen finden Sie unter [Access Inventory Schemas](access-inventory-schemas-accesstosql.md).  
   
 ## <a name="exporting-inventory-data"></a>Exportieren von Daten der Softwareinventur  
-Zum Exportieren eines Access-Inventars müssen Sie zum ersten Mal öffnen oder erstellen Sie ein SSMA-Projekt, und klicken Sie dann hinzufügen die Access-Datenbank, die Sie analysieren möchten. Nachdem Sie Datenbanken zu einem SSMA-Projekt hinzugefügt haben, exportieren Sie Metadaten zu diesen Datenbanken mit einem angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank und Schema. Bei Bedarf erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt dann die Metadaten über die Access-Datenbanken die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.  
+Zum Exportieren eines Access-Inventars müssen Sie zum ersten Mal öffnen oder erstellen Sie ein SSMA-Projekt, und klicken Sie dann hinzufügen die Access-Datenbank, die Sie analysieren möchten. Nachdem Sie Datenbanken zu einem SSMA-Projekt hinzugefügt haben, exportieren Sie Metadaten zu diesen Datenbanken mit einem angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und Schema. Bei Bedarf erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt dann die Metadaten über die Access-Datenbanken die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
   
 > [!NOTE]  
-> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: ein Back-End-Datenbank mit Tabellen und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA die Front-End-Datenbank hinzufügen.  
+> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: ein Back-End-Datenbank mit Tabellen und Front-End-Datenbanken, die Abfragen, Formulare, Berichte, Makros, Modulen und Verknüpfungen enthalten. Sollten Sie Teilen zum Migrieren einer Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA die Front-End-Datenbank hinzufügen.  
   
-Die folgenden Anweisungen beschreiben, wie Sie ein Projekt erstellen, Hinzufügen von Datenbanken zum Projekt, Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann Inventardaten.  
+Die folgenden Anweisungen beschreiben, wie Sie ein Projekt erstellen, Hinzufügen von Datenbanken zum Projekt, Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann Inventardaten.  
   
 **Zum Erstellen eines Projekts**  
   
@@ -72,7 +72,7 @@ Die folgenden Anweisungen beschreiben, wie Sie ein Projekt erstellen, Hinzufüge
   
 5.  In der **Migrieren zu** Kombinationsfeld wählen die Zielversion, die auf die Sie migrieren möchten, und klicken Sie dann auf **OK**.  
   
-Weitere Informationen zum Erstellen von Projekten finden Sie unter [erstellen und Verwalten von Projekten](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7).  
+Weitere Informationen zum Erstellen von Projekten finden Sie unter [erstellen und Verwalten von Projekten](creating-and-managing-projects-accesstosql.md).  
   
 **Suchen und Hinzufügen von Datenbanken**  
   
@@ -101,13 +101,13 @@ Weitere Informationen zum Erstellen von Projekten finden Sie unter [erstellen un
   
 8.  Klicken Sie auf der Seite "Überprüfen" auf **Fertig stellen**.  
   
-Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md).  
   
 **Verbindung mit SQL Server**  
   
 1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit SQL Server**.  
   
-2.  Klicken Sie im Dialogfeld "Verbindung" eingeben, oder wählen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  Klicken Sie im Dialogfeld "Verbindung" eingeben, oder wählen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Wenn Sie mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt (**.**).  
   
@@ -117,11 +117,11 @@ Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie un
   
 3.  In der **Datenbank** Geben Sie den Namen der Zieldatenbank für die exportierten Metadaten.  
   
-4.  Wenn Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] konfiguriert ist annehmen von Verbindungen über einen nicht-Standardport, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Browser-Dienst.  
+4.  Wenn Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert ist annehmen von Verbindungen über einen nicht-Standardport, geben die Portnummer für die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungen in der **Serverport** Feld. Für die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Standardportnummer ist 1433. Für benannte Instanzen SSMA versucht, erhalten die Portnummer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst.  
   
-5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie im Menü, Authentifizierungstyp, der für die Verbindung verwendet. Um das aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie einen Benutzernamen und Kennwort.  
+5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie im Menü, Authentifizierungstyp, der für die Verbindung verwendet. Um das aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie einen Benutzernamen und Kennwort.  
   
-Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **So exportieren Sie die Inventarinformationen**  
   
@@ -138,11 +138,11 @@ Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ss
 Jedes Mal, die Sie exportieren Sie Metadaten, die Daten mit dem Bestand SSMA angefügt. Vorhandene Daten bei der Inventur nicht aktualisiert oder gelöscht.  
   
 ## <a name="querying-the-exported-metadata"></a>Abfragen der exportierten Metadaten  
-Nachdem Sie Metadaten für den Zugriff auf Datenbanken exportiert haben, können Sie die Metadaten Abfragen. Die folgenden Anweisungen beschreiben das Abfrage-Editor-Fenster in Verwendung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] zum Ausführen von Abfragen.  
+Nachdem Sie Metadaten für den Zugriff auf Datenbanken exportiert haben, können Sie die Metadaten Abfragen. Die folgenden Anweisungen beschreiben das Abfrage-Editor-Fenster in Verwendung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Ausführen von Abfragen.  
   
 **Zum Abfragen von Metadaten**  
   
-1.  Von der **starten** Startmenü **Programme**, zeigen Sie auf **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005** oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  
+1.  Von der **starten** Startmenü **Programme**, zeigen Sie auf **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**oder **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  
   
 2.  In der **Herstellen einer Verbindung mit Server** (Dialogfeld), überprüfen Sie die Einstellungen, und klicken Sie dann auf **Connect**.  
   
@@ -153,7 +153,7 @@ Nachdem Sie Metadaten für den Zugriff auf Datenbanken exportiert haben, können
 5.  Drücken Sie F5, um die Abfrage auszuführen.  
   
 ## <a name="query-examples"></a>Beispiele für Abfragen  
-Bevor Sie einen der folgenden Abfragen ausführen, führen Sie eine Verwendung *Database_name* Abfrage, um sicherzustellen, dass die Abfragen ausgeführt werden, für die Datenbank, die die exportierte Metadaten enthält. Sie z. B., wenn Sie Metadaten in einer Datenbank mit dem Namen MyAccessMetadata exportiert haben, würden hinzufügen Folgendes am Anfang der [!INCLUDE[tsql](../../includes/tsql_md.md)] Code:  
+Bevor Sie einen der folgenden Abfragen ausführen, führen Sie eine Verwendung *Database_name* Abfrage, um sicherzustellen, dass die Abfragen ausgeführt werden, für die Datenbank, die die exportierte Metadaten enthält. Sie z. B., wenn Sie Metadaten in einer Datenbank mit dem Namen MyAccessMetadata exportiert haben, würden hinzufügen Folgendes am Anfang der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code:  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>Welche Datenbanken private Informationen enthalten?  
-Die Access-Datenbanken möglicherweise vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie dieser Datenbanken zu verschieben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Nutzen der Sicherheitsfunktionen zu nutzen. Wenn Sie wissen, dass Spalten mit sensiblen Daten einen bestimmten Namen haben, oder bestimmte Zeichen enthalten, können Sie eine Abfrage, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise finden Sie alle Spalten, die die Zeichenfolge "Salary".  Die Abfrage gibt dann zurück, der Datenbankname, Tabellenname und Spaltenname.  
+Die Access-Datenbanken möglicherweise vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie dieser Datenbanken zu verschieben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen der Sicherheitsfunktionen zu nutzen. Wenn Sie wissen, dass Spalten mit sensiblen Daten einen bestimmten Namen haben, oder bestimmte Zeichen enthalten, können Sie eine Abfrage, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise finden Sie alle Spalten, die die Zeichenfolge "Salary".  Die Abfrage gibt dann zurück, der Datenbankname, Tabellenname und Spaltenname.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 Wenn Sie den Namen der Spalte nicht kennen, können Sie eine Abfrage zum Zurückgeben aller Spalten schreiben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Access-Datenbanken vorbereitet für die Migration.](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Access-Datenbanken vorbereitet für die Migration.](preparing-access-databases-for-migration-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Installieren von SSMA für DB2 (DB2ToSQL) | Microsoft Docs
+title: Installieren von SSMA für DB2 (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,28 +16,28 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c824eb17cb95b59923012054f9d64ca4d7699aee
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a54f274bb6823044bb0f82169e05fdc157c245d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395882"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>Installieren von SSMA für DB2 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 besteht aus einer Clientanwendung, die Sie verwenden zum Durchführen einer Migration von DB2 nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Azure SQL-Datenbank. Es enthält auch einen Erweiterung Pack, der die Datenmigration sowie die Verwendung von DB2-Systemfunktionen in die migrierten Datenbanken unterstützt.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 besteht aus einer Clientanwendung, die Sie zum Durchführen einer Migration aus DB2 in verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Azure SQL-Datenbank. Sie enthält auch ein Erweiterungspaket, das die Datenmigration und die Verwendung von DB2-System-Funktionen in Ihren migrierten Datenbanken unterstützt.  
   
-Installieren Sie die Clientanwendung auf dem Computer, von dem aus Sie die Migrationsschritte ausführen werden. Die Erweiterung Pack vom Client bereitgestellt wird und eine separate Installation ist nicht erforderlich.  
+Sie installieren die Clientanwendung auf dem Computer aus dem Sie die Migrationsschritte ausgeführt werden. Das Erweiterungspaket vom Client bereitgestellt wird und eine separate Installation ist nicht erforderlich.  
   
 ## <a name="upgrading-ssma-for-db2"></a>Aktualisieren von SSMA für DB2  
-Wenn Sie auf eine höhere Version von SSMA für DB2 aktualisieren möchten, müssen Sie deinstalliert werden, den Client und Server Erweiterung Pack und dann die neuere Version installieren.  
+Wenn Sie auf eine neuere Version von SSMA für DB2 aktualisieren möchten, müssen Sie zuerst deinstallieren des Clients und Server-Erweiterung Pack und klicken Sie dann die neue Version installieren.  
   
 ## <a name="contents"></a>Inhalt  
   
 |Thema|Description|  
 |---------|---------------|  
-|[Installieren von SSMA für DB2-Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Enthält Informationen und Anweisungen zur Installation des SSMA-Clients.|  
-|[Installieren SSMA-Komponenten in SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Enthält Informationen und Anweisungen für die Installation der Erweiterung Pack auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Entfernen von SSMA für die DB2-Komponenten &#40;DB2ToSQL&#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|Stellt Anweisungen zum Deinstallieren des Clients Programm und die Erweiterung Pack bereit.|  
+|[Installieren von SSMA für DB2-Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Bietet Informationen und Anweisungen zum Installieren von SSMA-Client.|  
+|[Installieren von SSMA-Komponenten auf SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Enthält Informationen und Anweisungen zur Installation der-Erweiterungspaket auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Removing SSMA for DB2-Komponenten entfernen &#40;DB2ToSQL&#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|Stellt Anweisungen zum Deinstallieren des Clients Programm und die Erweiterung Pack bereit.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Datenbanken zu SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobserver (Transact-SQL) | Microsoft Docs
+title: Sp_help_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e1efcd128c2c77bcac729c7a529f9dc909457cc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdaa9481c51188767834679031b6cdc9084f969d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256085"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393657"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_help_jobserver
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, zu dem Informationen zurückgegeben werden sollen. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, zu dem Informationen zurückgegeben werden sollen. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, für den Informationen zurückgegeben werden sollen. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [  **@show_last_run_details=** ] *Show_last_run_details*  
- Gibt an, ob die Informationen der letzten Ausführung Teil des Resultsets sind. *Show_last_run_details* ist **"tinyint"**, hat den Standardwert **0**. **0** enthält keine Informationen zur letzten Ausführung und **1** verfügt.  
+ Gibt an, ob die Informationen der letzten Ausführung Teil des Resultsets sind. *Show_last_run_details* ist **Tinyint**, hat den Standardwert **0**. **0** enthält keine Informationen zur letzten Ausführung, und **1** ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -71,7 +71,7 @@ sp_help_jobserver
 |**enlist_date**|**datetime**|Datum, an dem der Zielserver auf dem Masterserver eingetragen wurde|  
 |**last_poll_date**|**datetime**|Datum, an dem der Zielserver den Masterserver zuletzt abgerufen hat|  
   
- Wenn **Sp_help_jobserver** ausgeführt wird, mit *Show_last_run_details* festgelegt **1**, das Resultset enthält die folgenden zusätzlichen Spalten.  
+ Wenn **Sp_help_jobserver** ausgeführt wird, mit *Show_last_run_details* festgelegt **1**, das Resultset verfügt über diese zusätzlichen Spalten.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -90,7 +90,7 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Mitglieder der **SQLAgentUserRole** können nur Informationen für ihren eigenen Aufträgen anzeigen.  
   
