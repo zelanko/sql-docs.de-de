@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 10f8427f5cc5124afc0f6c3b7845993af099e6e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034968"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395482"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Analysis Services-Skriptprojekt in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "38034968"
 4.  Klicken Sie mit der rechten Maustaste auf das Projekt, zeigen Sie auf **Hinzufügen**, und wählen Sie dann **Vorhandenes Element** aus, um sonstige Dateien, beispielsweise Textdateien mit Hinweisen zum Projekt, in den Ordner **Sonstiges** des Skriptprojekts von Analysis-Server im Projektmappen-Explorer hinzuzufügen. Diese Dateien werden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ignoriert.  
   
 ## <a name="file-types"></a>Dateitypen  
- Je nachdem, welche Projekte in die Projektmappe und welche Elemente in die einzelnen Projekte für die betreffende Projektmappe eingefügt wurden, kann eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektmappe mehrere Dateitypen enthalten. Weitere Informationen zu den Dateitypen für Projektmappen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], finden Sie unter [Dateien zum Verwalten von Projektmappen und Projekten](http://msdn.microsoft.com/library/e19d2859-0b97-4727-ac27-c4c226d86b2f). Normalerweise werden die Dateien aller Projekte in einer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektmappe im Projektmappenordner gespeichert, wobei für jedes Projekt ein eigener Ordner angelegt wird.  
+ Je nachdem, welche Projekte in die Projektmappe und welche Elemente in die einzelnen Projekte für die betreffende Projektmappe eingefügt wurden, kann eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektmappe mehrere Dateitypen enthalten. Weitere Informationen zu den Dateitypen für Projektmappen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], finden Sie unter [Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md). Normalerweise werden die Dateien aller Projekte in einer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektmappe im Projektmappenordner gespeichert, wobei für jedes Projekt ein eigener Ordner angelegt wird.  
   
  Der Projektordner für ein Skriptprojekt von Analysis-Server kann die in der folgenden Tabelle aufgeführten Dateitypen enthalten:  
   
