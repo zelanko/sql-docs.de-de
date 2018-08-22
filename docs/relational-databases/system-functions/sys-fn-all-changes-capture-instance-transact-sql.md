@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_all_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: Sys.fn_all_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -27,12 +27,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad305781c542be9bee59eb0dce6328df8a6f603a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e6be682816d4a7572414d9e91d0840cc6417aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238810"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392538"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,16 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="arguments"></a>Argumente  
  *start_time*  
- Die **"DateTime"** Wert, der den unteren Endpunkt des Bereichs der Einträge aus der Änderungstabelle in das Resultset eingeschlossen werden sollen.  
+ Die **"DateTime"** -Wert, der den unteren Endpunkt des Bereichs der Einträge aus der Änderungstabelle, die im Resultset enthalten darstellt.  
   
- Nur Zeilen in der cdc. < Aufzeichnungsinstanz > _CT Änderungstabelle, die eine zugeordnete Commitzeit größer als *Start_time* im Resultset enthalten sind.  
+ Nur Zeilen in der cdc. < Aufzeichnungsinstanz > _CT Änderungstabelle, die eine zugeordnete Commitzeit größer als *Start_time* in das Resultset enthalten sind.  
   
  Wenn für dieses Argument ein Wert von NULL übergeben wird, entspricht der untere Endpunkt des Abfragebereichs dem unteren Endpunkt des gültigen Bereichs der Aufzeichnungsinstanz.  
   
  *end_time*  
- Die **"DateTime"** Wert, der den oberen Endpunkt des Bereichs der Einträge aus der Änderungstabelle in das Resultset eingeschlossen werden sollen.  
+ Die **"DateTime"** -Wert, der den oberen Endpunkt des Bereichs der Einträge aus der Änderungstabelle, die im Resultset enthalten darstellt.  
   
- Dieser Parameter kann eine oder zwei Bedeutungen je nach dem Wert für die ausgewählten annehmen @closed_high_end_point Wenn Sys. sp_cdc_generate_wrapper_function aufgerufen wird, um das Skript für die Wrapperfunktion zu generieren:  
+ Dieser Parameter kann eine oder zwei Bedeutungen, abhängig vom Wert für ausgewählte annehmen @closed_high_end_point Wenn Sys. sp_cdc_generate_wrapper_function aufgerufen wird, um das Skript für die Wrapperfunktion zu generieren:  
   
 -   @closed_high_end_point = 1  
   
@@ -92,11 +92,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 |Spaltenname|Spaltentyp|Description|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binary(10)**|Die Commit-LSN der Transaktion, die der Änderung zugeordnet ist. Alle Änderungen, die in der gleichen Transaktion ein Commit ausgeführt werden, verwenden dieselbe Commit-LSN.|  
+|__CDC_STARTLSN|**binary(10)**|Die Commit-LSN der Transaktion, die der Änderung zugeordnet ist. Alle Änderungen, die ein Commit, in der gleichen Transaktion ausgeführt werden verwenden dieselbe Commit-LSN.|  
 |__CDC_SEQVAL|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
-|\<Spalten aus @column_list>|**Variiert**|Die Spalten, die im identifiziert werden die *Column_list* Argument für sp_cdc_generate_wrapper_function angegebenen, wenn sie aufgerufen wird, um das Skript zu generieren, die Wrapperfunktion erstellt.|  
-|__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Sie richten sich nach dem Wert des Arguments *Row_filter_option* im Aufruf angegebenen:<br /><br /> *Row_filter_option* = 'all'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *Row_filter_option* = 'all update old'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
-|\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag ist immer auf NULL, wenn festgelegt \__CDC_OPERATION d ', 'I' oder 'uo'. Wenn \__CDC_OPERATION ist un ', es wird auf 1 festgelegt, wenn das Update eine Änderung an der entsprechenden Spalte erzeugt. Andernfalls ist es 0.|  
+|\<Spalten aus @column_list>|**variiert nach**|Die Spalten, die im angegebenen die *Column_list* Argument für sp_cdc_generate_wrapper_function angegebenen, wenn sie aufgerufen wird, um das Skript zu generieren, die die Wrapperfunktion erstellt.|  
+|__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Sie richten sich nach dem Wert des Arguments *Row_filter_option* im Aufruf angegeben:<br /><br /> *Row_filter_option* = 'all'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *Row_filter_option* = 'all update old'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
+|\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag ist immer festgelegt, wenn NULL \__CDC_OPERATION d ', 'I' oder 'uo'. Wenn \__CDC_OPERATION ist un ', es auf 1 festgelegt ist, wenn das Update eine Änderung an der entsprechenden Spalte erstellt. Andernfalls ist es 0.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion fn_all_changes_<Aufzeichnungsinstanz> wird als Wrapper für die Abfragefunktion cdc.fn_cdc_get_all_changes_<Aufzeichnungsinstanz> verwendet. Die gespeicherte Prozedur sys.sp_cdc_generate_wrapper wird zum Generieren des Skripts zum Erstellen des Wrappers verwendet.  
@@ -107,15 +107,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 2.  Führen Sie das Skript aus, das die Wrapperfunktion tatsächlich erstellt.  
   
- Wrapperfunktionen ermöglichen es Benutzern, systematisch Änderungen abzufragen, die innerhalb einer begrenzten Intervalls aufgetreten **"DateTime"** Werte anstelle von LSN-Werte. Die Wrapperfunktionen führen alle erforderlichen Konvertierungen zwischen den bereitgestellten **"DateTime"** Werte und die LSN-Werte, die intern als Argumente für die Abfragefunktionen benötigt. Wenn die Wrapperfunktionen seriell zum Verarbeiten eines Datenstroms von Änderungsdaten verwendet werden, wird sichergestellt, dass keine Daten verloren gehen oder wiederholt werden, vorausgesetzt, dass die folgende Konvention eingehalten wird: der @end_time Wert des einem Aufruf zugeordneten Intervalls wird als die angegeben@start_time Wert für die nachfolgenden Aufruf zugeordneten Intervalls.  
+ Wrapperfunktionen ermöglichen es Benutzern, systematisch Änderungen abzufragen, die innerhalb einer begrenzten Intervalls aufgetreten **"DateTime"** Werte anstelle der von LSN-Werten. Die Wrapperfunktionen führen alle erforderlichen Konvertierungen zwischen den bereitgestellten **"DateTime"** Werte und die LSN-Werte, die intern als Argumente für die Abfragefunktionen benötigt. Wenn die Wrapperfunktionen seriellen zum Verarbeiten eines Datenstroms von Änderungsdaten verwendet werden, wird sichergestellt, dass keine Daten verloren gehen oder wiederholt werden, vorausgesetzt, dass die folgende Konvention eingehalten wird: die @end_time Wert des einem Aufruf zugeordneten Intervalls wird als die angegeben@start_time Wert für die nachfolgenden Aufruf zugeordneten Intervalls.  
   
  Wenn Sie den Parameter @closed_high_end_point bei Erstellung des Skripts verwenden, können Sie Wrapper generieren, die im angegebenen Abfragefenster eine geschlossene obere Grenze oder eine offene untere Grenze unterstützen. Sie können also entscheiden, ob Einträge mit einer Commitzeit in das Intervall aufgenommen werden sollen, die der oberen Grenze des Extrahierungsintervalls entspricht. Standardmäßig wird die Obergrenze aufgenommen.  
   
- Das Resultset zurückgegeben, durch die **alle Änderungen** Wrapperfunktion gibt die __ $Start_lsn und \_ \_$seqval-Spalte der Änderungstabelle als Spalte \__CDC_STARTLSN und \__ CDC_SEQVAL, bzw. Es folgen nur die verfolgten Spalten, die in angezeigt wurden die *@column_list* -Parameter, wenn der Wrapper generiert wurde. Wenn *@column_list* NULL ist, alle verfolgten Quellspalten zurückgegeben. Die Quellspalten gefolgt von einer vorgangspalte \__CDC_OPERATION, also eine Spalte mit einem oder zwei Zeichen, die den Vorgang identifiziert.  
+ Das Resultset zurückgegeben wird, durch die **alle Änderungen** Wrapper-Funktion gibt den __ $Start_lsn und \_ \_$seqval Spalten der Änderungstabelle, wie Spalten \__CDC_STARTLSN und \__ CDC_SEQVAL, bzw. Es folgen nur die verfolgten Spalten, die in angezeigt wurden die *@column_list* Parameter an, wenn der Wrapper generiert wurde. Wenn *@column_list* NULL ist, alle verfolgten Quellspalten zurückgegeben. Die Quellspalten gefolgt von einer vorgangspalte, der \__CDC_OPERATION, die eine Spalte von einem oder zwei Zeichen ist, der den Vorgang identifiziert.  
   
- Bitflags werden dann dem Resultset für die einzelnen Spalten angehängt, die im Parameter @update_flag_list identifiziert sind. Für die **alle Änderungen** Wrapper sind die Bitflags werden immer NULL sein, wenn __cdc_operation hatte ', 'I' oder 'UO'. Wenn \__CDC_OPERATION ist un ", das Flag wird festgelegt auf 1 oder 0 gesetzt, je nachdem, ob der Updatevorgang eine Änderung der Spalte geführt hat.  
+ Bitflags werden dann dem Resultset für die einzelnen Spalten angehängt, die im Parameter @update_flag_list identifiziert sind. Für die **alle Änderungen** Wrapper sind die Bitflags werden immer NULL sein, wenn __cdc_operation hatte ', 'I' oder 'UO'. Wenn \__CDC_OPERATION ist un ', wird das Flag festgelegt werden, auf 1 oder 0, je nachdem, ob der Updatevorgang auf eine Änderung der Spalte geführt hat.  
   
- Die Change Data Capture-Konfigurationsvorlage 'Instantiate CDC Wrapper TVFs for Schema' veranschaulicht die Verwendung der gespeicherten Prozedur sp_cdc_generate_wrapper_function zum Abrufen von CREATE-Skripts für alle Wrapperfunktionen für die definierten Abfragefunktionen eines Schemas. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+ Die Change Data Capture-Konfigurationsvorlage 'Instantiate CDC Wrapper TVFs for Schema' veranschaulicht die Verwendung der gespeicherten Prozedur sp_cdc_generate_wrapper_function zum Abrufen von CREATE-Skripts für alle Wrapperfunktionen für die definierten Abfragefunktionen eines Schemas. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

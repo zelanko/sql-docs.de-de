@@ -1,5 +1,5 @@
 ---
-title: Sp_update_job (Transact-SQL) | Microsoft Docs
+title: Sp_update_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394664"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,21 +62,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id =**] *job_id*  
- Die ID des Auftrags, der aktualisiert werden soll. *Job_id*ist **"uniqueidentifier"**.  
+ Die ID des Auftrags, der aktualisiert werden soll. *Job_id*ist **Uniqueidentifier**.  
   
  [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name*ist **vom Datentyp nvarchar(128)**.  
   
-> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+> **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@new_name =**] **'***new_name***'**  
  Der neue Name des Auftrags. *New_name*ist **vom Datentyp nvarchar(128)**.  
   
  [ **@enabled =**] *enabled*  
- Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert (**0**). *aktiviert*ist **"tinyint"**.  
+ Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert*ist **Tinyint**.  
   
  [ **@description =**] **'***description***'**  
- Die Beschreibung des Auftrags. *Beschreibung* ist **vom Datentyp nvarchar(512)**.  
+ Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**.  
   
  [ **@start_step_id =**] *step_id*  
  Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**.  
@@ -85,12 +85,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Die Auftragskategorie. *Kategorie*ist **vom Datentyp nvarchar(128)**.  
   
  [ **@owner_login_name =**] **'***login***'**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** festen Serverrolle kann den Auftragsbesitz ändern.  
+ Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Gibt an, wann für diesen Auftrag ein Eintrag im Microsoft Windows-Anwendungsprotokoll eingefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung (Aktion)|  
+|value|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|Bei Erfolg|  
@@ -127,7 +127,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="remarks"></a>Hinweise  
  **Sp_update_job** muss ausgeführt werden, aus der **Msdb** Datenbank.  
   
- **Sp_update_job** ändert nur die Einstellungen für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
+ **Sp_update_job** ändert nur die Einstellungen, die für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -138,7 +138,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Nur Mitglieder der **Sysadmin** können diese gespeicherte Prozedur verwenden, um Attribute von Aufträgen zu bearbeiten, die von anderen Benutzern gehören.  
   

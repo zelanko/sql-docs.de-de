@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254752"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396115"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] und den früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -266,7 +266,7 @@ ms.locfileid: "37254752"
 ||Für den Kurznamen muss ein Zertifikat ausgestellt werden.<br /><br /> – Diese Option funktioniert für alle Anwendungen.|  
   
 ##  <a name="Yukon"></a> Wichtige Änderungen in SQLServer 2005  
- Eine Liste mit wichtigen Änderungen in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ Eine Liste mit wichtigen Änderungen in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veraltete Datenbankmodulfeatures in SQLServer 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

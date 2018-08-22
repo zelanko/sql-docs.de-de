@@ -1,140 +1,109 @@
 ---
-title: Einrichten von Python-Clienttools für die Verwendung mit SQL Server-Machine Learning | Microsoft Docs
+title: Einrichten von Python-Client-Tools für die Verwendung mit SQL Server-Machine Learning | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/21/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ace5ea536c020d2713f1aa07bd1b26c41065a587
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6f6823870060992586756dffa93aac6937d27d65
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203802"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40401300"
 ---
 # <a name="set-up-python-client-tools-for-use-with-sql-server-machine-learning"></a>Einrichten von Python-Clienttools für die Verwendung mit SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie eine Python-Umgebung auf einem Windows-Computer zur Unterstützung von ausgeführten Python-Code in SQL Server konfiguriert wird. Dazu gehören die folgenden Szenarien:
+Integration von Python ist verfügbar in SQL Server 2017 oder höher, wenn Sie Python, Machine Learning Services (Datenbankintern)-Unterstützung hinzufügen. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
-+ Sie testen und Entwickeln von Lösungen auf einer Remotearbeitsstation Python und Senden von Code mit SQL Server für die Ausführung in einer SQL Server-computekontext. 
+Erfahren Sie in diesem Artikel, wie Entwicklungsarbeitsstationen so konfigurieren, dass Sie mit einem SQL-Remoteserver aktiviert für Python eine Verbindung herstellen können.
 
-    Im Allgemeinen eine voll ausgestattete Python-Entwicklungsumgebung installieren möchten. 
-    
-    Ihrer lokalen Python-Umgebung sollte mit der Python-Umgebung auf die SQL Server-Instanz kompatibel sein, und Sie müssen Bibliotheken, die remote rechenkontexte unterstützen installieren.
+### <a name="evaluation-and-independent-development"></a>Evaluierungs- und unabhängige Entwicklung
+ 
+Wenn Sie haben die Developer Edition und den Plan auf Python-Skript lokal arbeiten Sie mit SQL Server verschieben möchten, fahren Sie zum [Installieren einer IDE](#install-ide) und zeigen Sie das Tool auf lokalen Python-Bibliotheken, die von SQL Server verwendet.
 
-+ Sie entwickeln und Testen Sie den Code mithilfe von dedizierten Python-Tools und migrieren Sie den Code zu SQL Server in einer gespeicherten Prozedur ausgeführt werden.
+> [!Tip]
+> Eine Demonstration und video zur exemplarischen Vorgehensweise finden Sie [Ausführen von R als auch Remote in SQL Server von Jupyter-Notebooks oder eine beliebige IDE Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) oder [YouTube-Video](https://youtu.be/D5erljpJDjE).
 
-    Sie verwenden eine voll ausgestattete Python-IDE für die Entwicklung, vom Server an. Bevor Sie Code bereitstellen, testen Sie es jedoch in einer Umgebung, die SQL Server-Umgebung emuliert.
+## <a name="1---install-python-packages"></a>1: Installieren von Python-Pakete
 
-+ Sie wird in erster Linie Python-Code in einer gespeicherten Prozedur in SQL Server ausführen, und Sie Python-Code nicht entwickeln. Sie erwarten, dass der Code wurde getestet und debuggt werden, bevor Sie es in einer gespeicherten Prozedur umschließen. Allerdings müssen Sie gelegentlich Ausführen des Codes außerhalb von SQL Server, um die Ursache eines Problems zu ermitteln.
+Lokale Arbeitsstationen müssen die gleichen Versionen der Python-Paket wie die auf SQL Server: Revoscalepy und Microsftml. Zusätzliche Python-Pakete sind verfügbar, aber häufiger mit anderen Szenarien, in einem eigenständigen (nicht-Instanz) Machine Learning Server-Kontext verwendet werden. 
 
-    Sie beliebige Python-Tools auf dem Server installieren möchten, und verwenden nur die Standardtools, die mit der Verteilung installiert. Sie können ggf. eine Python-Umgebung zu konfigurieren, die die Instanz-Bibliothek verwendet, um sicherzustellen, dass Code außerhalb einer gespeicherten Prozedur.
+1. Laden Sie das Shellskript aus [ https://aka.ms/mls93-py ](https://aka.ms/mls93-py) (oder verwenden Sie [ https://aka.ms/mls-py ](https://aka.ms/mls-py) für die 9.2. die Version). Das Skript installiert, Anaconda 4.2.0, einschließlich Python 3.5.2, zusammen mit allen Paketen, die zuvor aufgeführten.
 
-## <a name="requirements"></a>Anforderungen
+  Python-Komponenten werden bereitgestellt, über [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). Wenn Sie eine andere Version benötigen, finden Sie unter [CAB-Downloads](../install/sql-ml-cab-downloads.md)
 
-Unabhängig davon, welche Tools Sie verwenden, um Ihrem Python-Code zu entwickeln, gelten die folgenden Anforderungen auf, wenn Sie Python-Code in SQL Server ausführen, oder verwenden SQL Server-Daten:
+2. Öffnen der PowerShell-Fenster mit Administratorberechtigungen (mit der rechten Maustaste **als Administrator ausführen**).
 
-+ Um Python zu verwenden, ist SQLServer 2017 oder höher erforderlich. Sie müssen auch installieren die Funktion, die Machine Learning-Services (Datenbankintern) unterstützt und die Funktion explizit aktivieren. Weitere Informationen finden Sie unter [Einrichten von SQL Server-2017](../r/set-up-sql-server-r-services-in-database.md).
+3. Wechseln Sie zu dem Ordner, in dem Sie das Installationsprogramm heruntergeladen haben, und führen Sie das Skript. Hinzufügen der `-InstallFolder` Befehlszeilenargument an einen Ordner als Speicherort für die Bibliotheken. Zum Beispiel: 
 
-    Wenn Sie eine frühe Version von SQL Server-2017 installiert haben, erhalten Sie möglicherweise Fehler, wenn Sie versuchen, die Ausführung von Python-Befehlen an dieses Befehlszeilen-Hilfsprogramm. Es wird empfohlen, die Sie [ein Upgrade auf die neueste Version](#bkmk_update) Wenn möglich. 
+   ```python
+   cd {{download-directory}}
+   .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls")
+   ```
 
-+ Sie müssen sicherstellen, dass das Konto, das Sie verwenden, um das Ausführen des Codes über die Berechtigung für die Verbindung mit der Datenbank sowie zum Ausführen von Python-Code verfügt. Die spezielle Berechtigung `EXECUTE ANY EXTERNAL SCRIPT` ist erforderlich für alle Konten, die R oder Python-Skript verwenden. 
+   Die Installation dauert einige Zeit in Anspruch. Sie können den Fortschritt im PowerShell-Fenster überwachen. Wenn Setup abgeschlossen ist, müssen Sie einen vollständigen Satz von Paketen. Wenn Sie angegeben haben z. B. `C:\mspythonlibs` als Ordnername, sehen Sie, dass die Pakete auf `C:\mspythonlibs\Lib\site-packages`. Andernfalls ist der Standardordner `C:\Program Files\Microsoft\PyForMLS1`.
 
-+ Sie müssen sicherstellen, dass das Konto keine Datenbankberechtigungen, die möglicherweise erforderlich, um die Daten lesen oder neue Objekte erstellen. 
+Das Installationsskript ändert nicht die PATH-Umgebungsvariablen auf dem Computer, damit die neuen Python-Interpreter und die Module, die Sie soeben installiert haben, nicht automatisch für Ihre Tools verfügbar sind. Hilfe zum Verknüpfen der Python-Interpreter und Bibliotheken, Tools, finden Sie unter [5 – Installieren einer IDE](#install-ide).
 
-+ Wenn Ihr Code Pakete, die nicht standardmäßig mit SQL Server installiert sind erfordert, ordnen Sie den Datenbankadministrator, um die Pakete installiert, die in der Python-Umgebung, die von der Instanz verwendet wird. SQL Server ist eine sichere Umgebung, und es gibt Einschränkungen auf, in dem Pakete installiert werden kann. 
+<a name="python-tool"></a>
+ 
+## <a name="2---open-a-python-prompt"></a>2: Öffnen Sie eine Python-Eingabeaufforderung
 
-    Ad-hoc-Installation von Paketen als Teil des Codes wird nicht empfohlen, auch wenn Sie Administratorrechte verfügen. Darüber hinaus immer sorgfältig prüfen Auswirkungen auf die Sicherheit vor der Installation der neuen Pakete in der Serverbibliothek.
-
-> [!NOTE]
-> Wenn Sie beabsichtigen, verwenden von Python mit Machine Learning-Server, die zusätzliche rechenkontexte, z. B. Linux oder Spark-Cluster unterstützt, finden in diesen Artikeln:
-> 
-> + [Wie Sie benutzerdefinierte Python-Pakete und Interpreter lokal auf Windows installieren](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)
-> + [Verknüpfen Sie Python-Tools und IDEs, mit der Python-Interpreter mit Machine Learning-Server installiert](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)
-
-## <a name="default-tools-included-with-standard-install"></a>Standardtools, die mit der Standardinstallation enthalten
-
-Eine Standardinstallation von SQL Server-2017 mit Machine Learning-Services (datenbankintern) und Python fügt die folgenden standardmäßigen Python-Tools und Ressourcen:
+Integration von Python in Microsoft enthält integrierte Tools und Daten, zusätzlich zu den produktspezifische-Bibliotheken wie Revoscalepy und Microsoftml. Die folgenden Elemente sind in Client- und Server-Instanzen verfügbar, wenn Setup abgeschlossen wurde:
 
 + Python-Beispieldaten
-+ 4.2-Anaconda-Verteilung 
-+ Die ausführbaren Dateien python.exe Python und pythonw.exe
++ 4.2 zur Anaconda-distribution 
++ Python ausführbare Dateien python.exe "und" pythonw.exe
 
-Standardmäßig ist Installation in diesen Ordner: `~\Program Files\Microsoft SQL Server\<instance_name>\PYTHON_SERVICES`. 
+> [!Tip] 
+> Wir empfehlen die [Python für Windows – häufig gestellte Fragen](https://docs.python.org/3/faq/windows.html) allgemeine Purppose Informationen zum Ausführen von Python-Programmen für Windows.
 
-## <a name="open-python-from-the-command-line"></a>Öffnen Sie in der Befehlszeile Python 
+### <a name="on-client-workstations"></a>Auf Clientarbeitsstationen
 
-Um die Python-Laufzeit zu verwenden, die mit der Instanz installiert ist, können Sie die ausführbare Python im Installationspfad aus starten. Grundlegende Anweisungen befinden sich die [Python für Windows – häufig gestellte Fragen](https://docs.python.org/3/faq/windows.html).
+So verwenden Sie die Python-ausführbare-Datei installiert, indem Sie das Setupskript aus:
 
-> [!IMPORTANT]
-> Im Allgemeinen um Ressourcenkonflikte zu vermeiden, sollten Sie **nicht** Python aus der Bibliothek für die Instanz auf dem Server ausgeführt, wenn Sie vermuten, dass es ist möglich, SQL Server-Instanz ausgeführt wird Python-Code. Allerdings mit den Tools in der Bibliothek Instanz möglicherweise nützlich, wenn Sie versuchen, Debuggen ein Problem, das erfolgt nur, wenn in SQL Server ausgeführt und weitere ausführliche Fehlermeldungen anzuzeigen, oder stellen Sie sicher, dass alle erforderlichen Pakete installiert werden soll.
+1. Wechseln Sie zu `C:\Program Files\Microsoft\PyForMLS\python.exe` oder welcher Position-Installationspfad.
 
-1. Navigieren Sie zu dem Ordner, in dem die Instanz-Bibliothek installiert ist. In einer Standardinstallation ist der Ordner beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
+2. Mit der rechten Maustaste **Python.exe** , und wählen Sie **als Administrator ausführen** ein interaktives Befehlszeilentools-Fenster zu öffnen.
 
-2. Suchen Sie nach Python.exe. 
+### <a name="on-sql-server"></a>In SQLServer
 
-3. Mit der rechten Maustaste, und wählen Sie **als Administrator ausführen** ein interaktives Befehlszeilentools-Fenster zu öffnen.
+SQL Server-Setup fügt die standard-Python-Tools und Ressourcen auf einer Serverinstanz. Wenn Sie die Developer Edition verwenden, und überprüfen Sie die Python-Version oder ad-hoc-Befehle ausführen möchten:
 
-## <a name="bkmk_update"></a> Aktualisieren von Python-Komponenten
+1. Wechseln Sie zu `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
 
-Sie können die Python-Komponenten aktualisieren, indem Sie herunterladen und installieren eine neuere Version mit den hier beschriebenen Skripts: [installieren Sie Python-Client unter Windows](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter#install-on-windows)
-> 
-> Das Installationsprogramm heruntergeladen haben, indem Sie das Skript [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). Wenn Sie eine andere Version benötigen, finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](http://bing.com)
+2. Mit der rechten Maustaste **Python.exe** , und wählen Sie **als Administrator ausführen** ein interaktives Befehlszeilentools-Fenster zu öffnen.
 
-## <a name="set-up-a-python-development-environment"></a>Einrichten einer Umgebung der Python-Entwicklung
+> [!Note]
+> In der Regel, um Ressourcenkonflikte zu vermeiden, sollten Sie **nicht** Python aus der Bibliothek für die Instanz auf dem Server ausführen, wenn Sie vermuten, ist es möglich ist SQL Server-Instanz Python-Code ausführen. Mit den Tools in der Bibliothek für die Instanz möglicherweise jedoch nützlich, wenn Sie versuchen, ein Problem, das auftritt, nur bei der Ausführung in SQL Server zu debuggen und ausführlichere Fehlermeldungen anzuzeigen, oder stellen Sie sicher, dass alle erforderlichen Pakete installiert werden soll.
 
-Wenn Sie Skripts über die Befehlszeile einfach Debuggen, können Sie abrufen, indem in der standardmäßigen Python-Tools mit Machine Learning-Diensten installiert oder mithilfe eines Text-Editors. Wenn Sie neue Lösungen entwickeln, oder von einem Remoteclient aus arbeiten, empfehlen wir jedoch verwenden, der eine voll ausgestattete Python-IDE. Beliebte Optionen sind verfügbar:
+## <a name="3---permissions"></a>3 - Berechtigungen
 
-+ [Community-Edition von Visual Studio 2017](https://www.visualstudio.com/vs/features/python/) mit Python
-+ [AI-Tools für Visual Studio](https://docs.microsoft.com/visualstudio/ai/installation)
-+ [Python in Visual Studio-Code](https://code.visualstudio.com/docs/languages/python)
-+ Beliebte Drittanbietertools wie PyCharm, Spyder und Eclipse
+Herstellen der Verbindung mit einer Instanz von SQL Server zum Ausführen von Skripts und Daten hochzuladen, müssen Sie eine gültige Anmeldung auf dem Datenbankserver verfügen. Sie können entweder einen SQL-Anmeldenamen oder die integrierte Windows-Authentifizierung verwenden. Im Allgemeinen wird empfohlen, dass Sie die integrierte Windows-Authentifizierung verwenden, mit der SQL-Anmeldung ist jedoch einfacher für einige Szenarien.
 
-Visual Studio wird empfohlen, da es sich um Datenbankprojekte als auch für Machine Learning-Projekte unterstützt. Hilfestellung bei der Konfiguration einer Python-Umgebung finden Sie unter [Verwalten von Python-Umgebungen in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)
+Mindestens muss das Konto zum Ausführen von Code verwendet die Berechtigung zum Lesen aus den Datenbanken, mit dem Sie arbeiten, sowie die speziellen Berechtigungen ausgeführt, ANY EXTERNAL SCRIPT haben. Die meisten Entwickler auch benötigen Berechtigungen zum Erstellen neuer Objekte in Form von gespeicherten Prozeduren, die mit Ihrem Skript, und Schreiben von Daten in Tabellen mit den Trainingsdaten oder Daten bewertet. 
 
-## <a name="install-revoscalepy"></a>Installieren von revoscalepy
+Bitten Sie den Datenbankadministrator, konfigurieren Sie die folgenden Berechtigungen für das Konto in der Datenbank, in dem Sie Python verwenden:
 
-Auch wenn Sie Machine Learning-Dienste erfolgreich installiert haben, möglicherweise eine Fehlermeldung erhalten, wenn versucht wird, laden **Revoscalepy** Funktionen über die Befehlszeile Python. Diese Schritte beschrieben, wie Sie ein Update aus, um die Verwendung von installieren können **Revoscalepy**.
++ **EXECUTE ANY EXTERNAL SCRIPT** zum Ausführen von Python auf dem Server.
++ **Db_datareader** Privilegien zum Ausführen von Abfragen zum Trainieren des Modells verwendet.
++ **Db_datawriter** Trainings- oder ausgewerteten Daten schreiben.
++ **Db_owner** zum Erstellen von Objekten, z. B. gespeicherte Prozeduren, Tabellen, Funktionen. 
+  Sie müssen auch **Db_owner** Beispiel und Test-Datenbanken erstellen. 
 
-1. Herunterladen der Shell-Skript für die Installation von https://aka.ms/mls93-py (oder verwenden Sie https://aka.ms/mls-py für die 9.2. Release). Das Skript wird Anaconda 4.2.0 müssen, darunter Python 3.5.2, sowie alle Pakete, die zuvor genannten installiert.
+Wenn Ihr Code Pakete, die nicht standardmäßig mit SQL Server installiert sind erfordert, ordnen Sie den Datenbankadministrator, um die mit der Instanz installierten Pakete zu erhalten. SQL Server ist eine sichere Umgebung, und es gibt Einschränkungen für die Pakete installiert werden können. Ad-hoc-Installation von Paketen als Teil des Codes wird nicht empfohlen, auch wenn Sie über Zugriffsrechte verfügen. Darüber hinaus immer sorgfältig Auswirkungen auf die Sicherheit vor der Installation neuer Pakete in der Serverbibliothek.
 
-2. Öffnen Sie ein neues PowerShell-Fenster mit erhöhten Berechtigungen (als Administrator).
+## <a name="4---test-connections"></a>4: Testen von Verbindungen
 
-3. Öffnen Sie den Ordner, in dem Sie das Installationsprogramm heruntergeladen haben, und führen Sie das Skript aus:
+Nach der Installation alle Tools und Bibliotheken können Sie eine Verbindung mit dem Server herstellen, und stellen Sie sicher, dass Sie einen computekontext erstellen können, oder Python mit SQL Server kommunizieren kann.
 
-```ps1
-cd {{download-directory}}
-.\Install-PyForMLS.ps1
-```
+### <a name="verify-that-revoscalepy-works-from-the-python-command-line"></a>Überprüfen Sie, ob diese Revoscalepy von der Python-Befehlszeile aus funktioniert.
 
-Sie können auch Ausführen der `-InstallFolder` Befehlszeilenargument und den neuen Pfad als Teil des Befehls angeben. Beispiel: 
-
-```ps1
-.\Install-PyForMLS.ps1 -InstallFolder "<installation_path>")
-```
-
-Wenn Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise die Ausführungsrichtlinien für eine bestimmte Datei, die Dauer der Sitzung, anhalten, die wie folgt: 
-
-```ps1
-powershell -ExecutionPolicy Bypass -File "C:\<installation_path>\Install-PyForMLS.ps1"
-```
-
-Sie können auch Ausführungsrichtlinien für die Dauer der Sitzung anzuhalten. Mit dieser Anweisung wird Festlegen der Ausführungsrichtlinie zu `Unrestricted` für die Dauer der Sitzung, und nicht die Konfiguration ändern oder die Änderung auf dem Datenträger festgeschrieben.
-
-```ps1
-Set-ExecutionPolicy Bypass -Scope Process
-```
-
-## <a name="verify-that-python-and-revoscalepy-are-working"></a>Stellen Sie sicher, dass Python und Revoscalepy arbeiten
-
-Nach der Installation von allen Tools und Bibliotheken, sollten Sie eine Verbindung mit dem Server herstellen und stellen Sie sicher, dass Sie einen computekontext erstellen können, oder dass Python mit SQL Server kommunizieren kann.
-
-### <a name="verify-that-revoscalepy-works-from-the-python-command-line"></a>Überprüfen Sie, ob diese Revoscalepy über die Befehlszeile Python funktioniert
-
-Zum Überprüfen, ob die **Revoscalepy** Modul kann geladen werden, den folgende Beispielcode über eine Eingabeaufforderung der Python interactive ausführen. Der Code generiert eine Zusammenfassung der mithilfe der Python-Beispieldaten und [Rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). 
+Zum Überprüfen, ob die **Revoscalepy** Modul kann geladen werden, den folgende Code über eine interaktive Python-Eingabeaufforderung ausführen. Der Code generiert eine datenzusammenfassung unter Verwendung der Python-Beispieldaten und [Rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). 
 
 ```Python
 import os
@@ -148,18 +117,18 @@ summary = rx_summary("ArrDelay+DayOfWeek", ds)
 print(summary)
 ```
 
-Der Pfad zum Beispiel wird gedruckt, damit Sie bestimmen können, welche Instanz des Python aufgerufen wird.
+Beispielpfad Daten wird ausgegeben, sodass Sie bestimmen können, welche Instanz von Python aufgerufen wird.
 
-### <a name="verify-that-python-can-be-called-from-sql-server"></a>Stellen Sie sicher, dass Python von SQL Server aufgerufen werden kann
+### <a name="verify-that-python-can-be-called-from-a-local-sql-server"></a>Stellen Sie sicher, dass von einem lokalen SQL Server Python aufgerufen werden kann
 
-Um sicherzustellen, dass Python mit SQL Server kommuniziert wird, öffnen Sie SQL Server Management Studio. (Sie können z. B. ein vergleichbares Tool verwenden [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is).) Öffnen Sie ein neues **Abfrage** Fenster, und führen Sie eine einfache Python-im Rahmen einer gespeicherten Prozedur-Befehl:
+Für eine lokale Entwicklungsumgebung, stellen Sie sicher, dass Python mit lokalen kommuniziert [SQL Server-Instanz, die für die externe Skripts konfiguriert](../install/sql-machine-learning-services-windows-install.md). Verwenden Sie zum Öffnen eines neuen SQL Server Management Studio **Abfrage** Fenster, und führen Sie alle einfachen Python-im Kontext einer gespeicherten Prozedur Befehl:
 
 ```SQL
 EXEC sp_execute_external_script @language = N'Python', 
 @script = N'print(3+4)'
 ```
 
-Es kann dauern, bis die Python-Laufzeit zum ersten Mal starten, aber keine Fehler vorliegen, Sie wissen, dass der SQL Server Launchpad funktioniert und Python von SQL Server gestartet werden kann.
+Es dauert eine Weile, um die Python-Laufzeit zum ersten Mal starten, aber wenn keine Fehler vorliegen, Sie wissen, dass der SQL Server Launchpad funktioniert und Python in SQL Server gestartet werden kann.
 
 Zum Überprüfen, ob **Revoscalepy** finden Sie in der SQL Server-Instanz-Bibliothek, führen Sie das Skript basierend auf [Rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), mit einigen geringfügigen Änderungen zum Generieren von Ergebnissen, die mit SQL Server kompatibel. 
 
@@ -184,19 +153,20 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
-Da Rx_summary ein Objekt des Typs zurückgibt `class revoscalepy.functions.RxSummary.RxSummaryResults`, die mehrere Elemente enthält, um die Ergebnisse in SQL Server zu behandeln, können Sie nur die Datenrahmen in einem tabellarischen Format extrahieren.
+Da Rx_summary ein Objekt des Typs zurückgibt `class revoscalepy.functions.RxSummary.RxSummaryResults`, enthält mehrere Elemente, um die Ergebnisse in SQL Server zu behandeln, können Sie nur den Datenrahmen in einem tabellarischen Format extrahieren.
 
-### <a name="verify-python-execution-in-sql-server-as-remote-compute-context"></a>Überprüfen Sie die Python-Ausführung in SQL Server als remote-computekontext.
+### <a name="verify-python-execution-in-sql-server-as-remote-compute-context"></a>Überprüfen Sie die Ausführung von Python in SQL Server als dem entfernten computekontext
 
-Wenn Sie installiert haben **Revoscalepy** in Ihrer lokalen Umgebung der Python-Entwicklung, sollten Sie möglicherweise mit einer Instanz von SQL Server-2017 herstellen, auf dem Python aktiviert wurde, und führen Sie eine ähnliche Codebeispiel mithilfe des Servers als die Compute Kontext. 
+Wenn Sie installiert haben **Revoscalepy** in Ihrer lokalen Python-Entwicklungsumgebung, sollten Sie zu einer Remoteinstanz von SQL Server 2017 eine Verbindung herstellen können, Python aktiviert wurde, und führen Sie ein ähnliches Codebeispiel, das mit dem Server als die Compute Context verwenden. 
 
+Geben Sie für dieses Skript ausführen einen gültigen Servernamen ein, und eine vorhandene Datenbank aus. Dieses Skript verwendet nicht die Datenbank, aber die Verbindungszeichenfolge ist erforderlich.
 
 ```Python
 import os
 from revoscalepy import rx_summary, RxOptions, RxXdfData, RxSqlServerData, RxInSqlServer
 
 # define connection string and compute context
-sql_conn_string="Driver=SQL Server;Server=;Database=TestDB;Trusted_Connection=True"
+sql_conn_string="Driver=SQL Server;Server=<server-name>;Database=TestDB;Trusted_Connection=True"
 sqlcc = RxInSqlServer(
     connection_string = sql_conn_string,
     num_tasks = 1,
@@ -217,6 +187,31 @@ summary = rx_summary("ArrDelay+DayOfWeek", ds)
 print(summary)
 ```
 
-In diesem Beispiel wird Zusammenfassung Objekt an die Konsole, anstatt zurückgebenden wohlgeformt tabellarischen Daten in SQL Server zurückgegeben. 
+In diesem Beispiel wird die Zusammenfassung Objekt auf der Konsole statt zurückgeben wohlgeformte Tabellendaten zu SQL Server zurückgegeben. 
 
-Darüber hinaus da [Rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) wurde aufgerufen, werden die Beispieldaten aus dem Ordner "Samples" auf dem SQL Server-Computer, und nicht aus Ihrem lokalen Beispielordner geladen.
+Darüber hinaus da [Rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) war aufgerufen wird, werden die Beispieldaten aus dem Ordner "Samples" auf dem SQL Server-Computer und nicht von diesem lokalen Ordner geladen.
+
+
+<a name="install-ide"></a>
+
+## <a name="5---install-an-ide"></a>5: Installieren einer IDE
+
+Wenn Sie Skripts über die Befehlszeile einfach Debuggen, können Sie mit der standardmäßigen Python-Tools abrufen, indem. Wenn Sie neue Lösungen entwickeln, oder von einem Remoteclient aus arbeitet, empfehlen wir jedoch mit einem Python-IDE mit vollem Funktionsumfang. Beliebte Optionen sind:
+
++ [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/) mit Python
++ [KI-Tools für Visual Studio](https://docs.microsoft.com/visualstudio/ai/installation)
++ [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
++ Beliebten Drittanbieter-Tools wie Eclipse, PyCharm und Spyder
+
+Visual Studio wird empfohlen, da es sich um Datenbankprojekte als auch für Machine Learning-Projekten unterstützt. Hilfe zum Konfigurieren einer Python-Umgebung finden Sie [Verwalten von Python-Umgebungen in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
+
+Da Entwickler häufig mit mehreren Versionen von Python arbeiten, wird Python von Setup nicht zu Ihrem Pfad hinzufügen. Um die Python-ausführbare-Datei und die Bibliotheken, die von Setup installiert zu verwenden, verknüpfen Sie Ihre IDE **Python.exe** unter dem Pfad, der auch Revoscalepy und Microsoftml bereitstellt. Z. B. für ein Python-Projekt in Visual Studio Ihrer benutzerdefinierten Umgebung würde angeben `C:\Program Files\Microsoft\PyForMLS`, `C:\Program Files\Microsoft\PyForMLS\python.exe` und `C:\Program Files\Microsoft\PyForMLS\pythonw.exe` für **Pfadpräfix**, **cesta k interpretu**, und  **Fenstermodus-Interpreter**bzw.
+
+Weitere Anleitungen finden Sie unter [Link-Python-Tools und IDEs](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). Der Artikel ist für die Microsoft Machine Learning Server geschrieben, damit die Python-Pfade unterscheiden, aber es zeigt, wie Sie mit Python-Bibliotheken aus verschiedenen Tools zu verknüpfen.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Nun, da Sie über Tools und eine funktionierende Verbindung mit SQL Server verfügen, durchlaufen Sie ein Tutorial, um eine genauere Betrachtung Revoscalepy-Funktionen und zwischen computekontexten wechseln zu erhalten.
+
+> [!div class="nextstepaction"]
+> [Erstellen eines Modells mithilfe von Revoscalepy und einem remotecomputekontext](../tutorials/use-python-revoscalepy-to-create-model.md)
