@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047122"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40411771"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services-Problembehandlung, Probleme beim Rendern von Berichten
 Nach dem Kombinieren der Berichtsdaten und der Layoutinformationen wird der kompilierte Bericht an einen Berichtsrenderer gesendet. Wenn Sie z. B. lokal eine Vorschau eines Berichts anzeigen, verwenden Sie den HTML-Renderer zum Anzeigen des kompilierten Berichts. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Rendern von Berichten helfen.   
@@ -78,5 +78,5 @@ Wenn die Datenquelle für einen Microsoft SharePoint-Listenverbindungstyp konfig
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
