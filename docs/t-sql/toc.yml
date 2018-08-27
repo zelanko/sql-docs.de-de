@@ -1,7 +1,6 @@
+items:
 - name: Übersicht
   href: language-reference.md
-- name: Neue und aktualisierte Artikel
-  href: new-updated-t-sql.md
 - name: Datentypen
   href: ../t-sql/data-types/data-types-transact-sql.md
 - name: Database Console Commands (Datenbankkonsolenbefehle)
@@ -17,9 +16,15 @@
 - name: 'Lernprogramm: Schreiben von Transact-SQL-Anweisungen'
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: 'Lektion 1: Erstellen und Abfragen von Datenbankobjekten'
-      href: lesson-1-creating-database-objects.md
-    - name: 'Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte'
-      href: lesson-2-configuring-permissions-on-database-objects.md
-    - name: 'Lektion 3: Löschen von Datenbankobjekten'
-      href: lesson-3-deleting-database-objects.md
+  - name: 'Lektion 1: Erstellen und Abfragen von Datenbankobjekten'
+    href: lesson-1-creating-database-objects.md
+  - name: 'Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte'
+    href: lesson-2-configuring-permissions-on-database-objects.md
+  - name: 'Lektion 3: Löschen von Datenbankobjekten'
+    href: lesson-3-deleting-database-objects.md
+ms.openlocfilehash: fb01b88cf3a43481d18c932755520fcda2ac48b2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899650"

@@ -1,67 +1,66 @@
+items:
 - name: Übersicht
   href: xquery-language-reference-sql-server.md
-- name: Neue und aktualisierte Artikel
-  href: new-updated-xquery.md
 - name: Module und Prologe – XQuery-Prolog
   href: modules-and-prologs-xquery-prolog.md
 - name: XQuery-Grundlagen
   href: xquery-basics.md
   items:
-    - name: Typensystem – Zuordnen des Sequenztyps
-      href: type-system-sequence-type-matching.md
-    - name: Sequenz und QNames (XQuery)
-      href: sequence-and-qnames-xquery.md
-    - name: Ausdruckskontext und Ausdrucksauswertung (XQuery)
-      href: expression-context-and-query-evaluation-xquery.md
-    - name: Atomisierung (XQuery)
-      href: atomization-xquery.md
-    - name: Effektiver boolescher Wert (XQuery)
-      href: effective-boolean-value-xquery.md
-    - name: Typensystem (XQuery)
-      href: type-system-xquery.md
-    - name: Fehlerbehandlung (XQuery)
-      href: error-handling-xquery.md
-    - name: Kommentare in XQuery
-      href: comments-in-xquery.md
-    - name: XQuery und statische Typisierung
-      href: xquery-and-static-typing.md
+  - name: Typensystem – Zuordnen des Sequenztyps
+    href: type-system-sequence-type-matching.md
+  - name: Sequenz und QNames (XQuery)
+    href: sequence-and-qnames-xquery.md
+  - name: Ausdruckskontext und Ausdrucksauswertung (XQuery)
+    href: expression-context-and-query-evaluation-xquery.md
+  - name: Atomisierung (XQuery)
+    href: atomization-xquery.md
+  - name: Effektiver boolescher Wert (XQuery)
+    href: effective-boolean-value-xquery.md
+  - name: Typensystem (XQuery)
+    href: type-system-xquery.md
+  - name: Fehlerbehandlung (XQuery)
+    href: error-handling-xquery.md
+  - name: Kommentare in XQuery
+    href: comments-in-xquery.md
+  - name: XQuery und statische Typisierung
+    href: xquery-and-static-typing.md
 - name: XQuery-Ausdrücke
   href: xquery-expressions.md
   items:
-    - name: Pfadausdrücke – Angeben der Achse
-      href: path-expressions-specifying-axis.md
-    - name: Pfadausdrücke – Angeben eines Knotentests
-      href: path-expressions-specifying-node-test.md
-    - name: Pfadausdrücke – Angeben von Prädikaten
-      href: path-expressions-specifying-predicates.md
-    - name: Pfadausdrücke – Verwenden abgekürzter Syntax
-      href: path-expressions-using-abbreviated-syntax.md
-    - name: Primärausdrücke (XQuery)
-      href: primary-expressions-xquery.md
-    - name: Pfadausdrücke (XQuery)
-      href: path-expressions-xquery.md
-    - name: Sequenzausdrücke (XQuery)
-      href: sequence-expressions-xquery.md
-    - name: Arithmetische Ausdrücke (XQuery)
-      href: arithmetic-expressions-xquery.md
-    - name: Vergleichsausdrücke (XQuery)
-      href: comparison-expressions-xquery.md
-    - name: Logische Ausdrücke (XQuery)
-      href: logical-expressions-xquery.md
-    - name: XML-Konstruktion (XQuery)
-      href: xml-construction-xquery.md
-    - name: FLWOR-Anweisung und -Iteration (XQuery)
-      href: flwor-statement-and-iteration-xquery.md
-    - name: Geordnete und nicht geordnete Ausdrücke (XQuery)
-      href: ordered-and-unordered-expressions-xquery.md
-    - name: Bedingte Ausdrücke (XQuery)
-      href: conditional-expressions-xquery.md
-    - name: Quantifizierte Ausdrücke (XQuery)
-      href: quantified-expressions-xquery.md
-    - name: SequenceType-Ausdrücke (XQuery)
-      href: sequencetype-expressions-xquery.md
-    - name: Überprüfen von Ausdrücken (XQuery)
-      href: validate-expressions-xquery.md
+  - name: Pfadausdrücke – Angeben der Achse
+    href: path-expressions-specifying-axis.md
+  - name: Pfadausdrücke – Angeben eines Knotentests
+    href: path-expressions-specifying-node-test.md
+  - name: Pfadausdrücke – Angeben von Prädikaten
+    href: path-expressions-specifying-predicates.md
+  - name: Pfadausdrücke – Verwenden abgekürzter Syntax
+    href: path-expressions-using-abbreviated-syntax.md
+  - name: Primärausdrücke (XQuery)
+    href: primary-expressions-xquery.md
+  - name: Pfadausdrücke (XQuery)
+    href: path-expressions-xquery.md
+  - name: Sequenzausdrücke (XQuery)
+    href: sequence-expressions-xquery.md
+  - name: Arithmetische Ausdrücke (XQuery)
+    href: arithmetic-expressions-xquery.md
+  - name: Vergleichsausdrücke (XQuery)
+    href: comparison-expressions-xquery.md
+  - name: Logische Ausdrücke (XQuery)
+    href: logical-expressions-xquery.md
+  - name: XML-Konstruktion (XQuery)
+    href: xml-construction-xquery.md
+  - name: FLWOR-Anweisung und -Iteration (XQuery)
+    href: flwor-statement-and-iteration-xquery.md
+  - name: Geordnete und nicht geordnete Ausdrücke (XQuery)
+    href: ordered-and-unordered-expressions-xquery.md
+  - name: Bedingte Ausdrücke (XQuery)
+    href: conditional-expressions-xquery.md
+  - name: Quantifizierte Ausdrücke (XQuery)
+    href: quantified-expressions-xquery.md
+  - name: SequenceType-Ausdrücke (XQuery)
+    href: sequencetype-expressions-xquery.md
+  - name: Überprüfen von Ausdrücken (XQuery)
+    href: validate-expressions-xquery.md
 - name: Module und Prologe (XQuery)
   href: modules-and-prologs-xquery.md
 - name: Typumwandlungsregeln in XQuery
@@ -69,88 +68,94 @@
 - name: XQuery-Funktionen für den xml-Datentyp
   href: xquery-functions-against-the-xml-data-type.md
   items:
-    - name: 'Funktionen, die sich auf QNames beziehen – expanded-QName'
-      href: functions-related-to-qnames-expanded-qname.md
-    - name: 'Funktionen, die sich auf QNames beziehen – local-name-from-QName'
-      href: functions-related-to-qnames-local-name-from-qname.md
-    - name: 'Funktionen, die sich auf QNames beziehen – namespace-uri-from-QName'
-      href: functions-related-to-qnames-namespace-uri-from-qname.md
-    - name: Aggregatfunktionen – count
-      href: aggregate-functions-count.md
-    - name: Aggregatfunktionen – min
-      href: aggregate-functions-min.md
-    - name: Aggregatfunktionen – max
-      href: aggregate-functions-max.md
-    - name: Aggregatfunktionen – avg
-      href: aggregate-functions-avg.md
-    - name: Aggregatfunktionen – sum
-      href: aggregate-functions-sum.md
-    - name: Funktionen für Sequenzen – empty
-      href: functions-on-sequences-empty.md
-    - name: Funktionen für Sequenzen – distinct-values
-      href: functions-on-sequences-distinct-values.md
-    - name: Funktionen für Sequenzen – id
-      href: functions-on-sequences-id.md
-    - name: Funktionen für Knoten – number
-      href: functions-on-nodes-number.md
-    - name: Funktionen für Knoten – local-name
-      href: functions-on-nodes-local-name.md
-    - name: Funktionen für Knoten – namespace-uri
-      href: functions-on-nodes-namespace-uri.md
-    - name: Funktionen für Zeichenfolgenwerte – concat
-      href: functions-on-string-values-concat.md
-    - name: Funktionen für Zeichenfolgenwerte – contains
-      href: functions-on-string-values-contains.md
-    - name: Funktionen für Zeichenfolgenwerte – substring
-      href: functions-on-string-values-substring.md
-    - name: Funktionen für Zeichenfolgenwerte – string-length
-      href: functions-on-string-values-string-length.md
-    - name: Funktionen für Zeichenfolgenwerte – lower-case
-      href: functions-on-string-values-lower-case.md
-    - name: Funktionen für Zeichenfolgenwerte – upper-case
-      href: functions-on-string-values-upper-case.md
-    - name: Funktionen für numerische Werte – ceiling
-      href: numeric-values-functions-ceiling.md
-    - name: Funktionen für numerische Werte – floor
-      href: numeric-values-functions-floor.md
-    - name: Funktionen für numerische Werte – round
-      href: numeric-values-functions-round.md
-    - name: 'XQuery-Erweiterungsfunktionen – sql:column()'
-      href: xquery-extension-functions-sql-column.md
-    - name: 'XQuery-Erweiterungsfunktionen – sql:variable()'
-      href: xquery-extension-functions-sql-variable.md
-    - name: Data Accessor-Funktionen – string (XQuery)
-      href: data-accessor-functions-string-xquery.md
-    - name: Data Accessor-Funktionen – data (XQuery)
-      href: data-accessor-functions-data-xquery.md
-    - name: Kontextfunktionen – last (XQuery)
-      href: context-functions-last-xquery.md
-    - name: Kontextfunktionen – position (XQuery)
-      href: context-functions-position-xquery.md
-    - name: Boolesche Konstruktorfunktionen – true (XQuery)
-      href: boolean-constructor-functions-true-xquery.md
-    - name: Boolesche Konstruktorfunktionen – false (XQuery)
-      href: boolean-constructor-functions-false-xquery.md
-    - name: Funktionen für boolesche Werte – not Function
-      href: functions-on-boolean-values-not-function.md
-    - name: Data Accessor-Funktionen
-      href: data-accessor-functions.md
-    - name: Konstruktorfunktionen (XQuery)
-      href: constructor-functions-xquery.md
+  - name: Funktionen, die sich auf QNames beziehen – expanded-QName
+    href: functions-related-to-qnames-expanded-qname.md
+  - name: Funktionen, die sich auf QNames beziehen – local-name-from-QName
+    href: functions-related-to-qnames-local-name-from-qname.md
+  - name: Funktionen, die sich auf QNames beziehen – namespace-uri-from-QName
+    href: functions-related-to-qnames-namespace-uri-from-qname.md
+  - name: Aggregatfunktionen – count
+    href: aggregate-functions-count.md
+  - name: Aggregatfunktionen – min
+    href: aggregate-functions-min.md
+  - name: Aggregatfunktionen – max
+    href: aggregate-functions-max.md
+  - name: Aggregatfunktionen – avg
+    href: aggregate-functions-avg.md
+  - name: Aggregatfunktionen – sum
+    href: aggregate-functions-sum.md
+  - name: Funktionen für Sequenzen – empty
+    href: functions-on-sequences-empty.md
+  - name: Funktionen für Sequenzen – distinct-values
+    href: functions-on-sequences-distinct-values.md
+  - name: Funktionen für Sequenzen – id
+    href: functions-on-sequences-id.md
+  - name: Funktionen für Knoten – number
+    href: functions-on-nodes-number.md
+  - name: Funktionen für Knoten – local-name
+    href: functions-on-nodes-local-name.md
+  - name: Funktionen für Knoten – namespace-uri
+    href: functions-on-nodes-namespace-uri.md
+  - name: Funktionen für Zeichenfolgenwerte – concat
+    href: functions-on-string-values-concat.md
+  - name: Funktionen für Zeichenfolgenwerte – contains
+    href: functions-on-string-values-contains.md
+  - name: Funktionen für Zeichenfolgenwerte – substring
+    href: functions-on-string-values-substring.md
+  - name: Funktionen für Zeichenfolgenwerte – string-length
+    href: functions-on-string-values-string-length.md
+  - name: Funktionen für Zeichenfolgenwerte – lower-case
+    href: functions-on-string-values-lower-case.md
+  - name: Funktionen für Zeichenfolgenwerte – upper-case
+    href: functions-on-string-values-upper-case.md
+  - name: Funktionen für numerische Werte – ceiling
+    href: numeric-values-functions-ceiling.md
+  - name: Funktionen für numerische Werte – floor
+    href: numeric-values-functions-floor.md
+  - name: Funktionen für numerische Werte – round
+    href: numeric-values-functions-round.md
+  - name: XQuery-Erweiterungsfunktionen – sql:column()
+    href: xquery-extension-functions-sql-column.md
+  - name: XQuery-Erweiterungsfunktionen – sql:variable()
+    href: xquery-extension-functions-sql-variable.md
+  - name: Data Accessor-Funktionen – string (XQuery)
+    href: data-accessor-functions-string-xquery.md
+  - name: Data Accessor-Funktionen – data (XQuery)
+    href: data-accessor-functions-data-xquery.md
+  - name: Kontextfunktionen – last (XQuery)
+    href: context-functions-last-xquery.md
+  - name: Kontextfunktionen – position (XQuery)
+    href: context-functions-position-xquery.md
+  - name: Boolesche Konstruktorfunktionen – true (XQuery)
+    href: boolean-constructor-functions-true-xquery.md
+  - name: Boolesche Konstruktorfunktionen – false (XQuery)
+    href: boolean-constructor-functions-false-xquery.md
+  - name: Funktionen für boolesche Werte – not Function
+    href: functions-on-boolean-values-not-function.md
+  - name: Data Accessor-Funktionen
+    href: data-accessor-functions.md
+  - name: Konstruktorfunktionen (XQuery)
+    href: constructor-functions-xquery.md
 - name: XQuery-Operatoren für den xml-Datentyp
   href: xquery-operators-against-the-xml-data-type.md
 - name: Zusätzliches Beispiel für XQuery-Abfragen für den XML-Datentyp
   href: additional-sample-xqueries-against-the-xml-data-type.md
   items:
-    - name: Allgemeine Einsatzgebiete für XQuery
-      href: general-xquery-use-cases.md
-    - name: XQuery-Abfragen unter Einbeziehung von Hierarchien
-      href: xqueries-involving-hierarchy.md
-    - name: 'XQuery-Abfragen, die die Reihenfolge berücksichtigen'
-      href: xqueries-involving-order.md
-    - name: Behandlung relationaler Daten mit XQuery-Abfragen
-      href: xqueries-handling-relational-data.md
-    - name: Zeichenfolgensuche in XQuery
-      href: string-search-in-xquery.md
-    - name: Handhabung von Namespaces in XQuery
-      href: handling-namespaces-in-xquery.md
+  - name: Allgemeine Einsatzgebiete für XQuery
+    href: general-xquery-use-cases.md
+  - name: XQuery-Abfragen unter Einbeziehung von Hierarchien
+    href: xqueries-involving-hierarchy.md
+  - name: XQuery-Abfragen, die die Reihenfolge berücksichtigen
+    href: xqueries-involving-order.md
+  - name: Behandlung relationaler Daten mit XQuery-Abfragen
+    href: xqueries-handling-relational-data.md
+  - name: Zeichenfolgensuche in XQuery
+    href: string-search-in-xquery.md
+  - name: Handhabung von Namespaces in XQuery
+    href: handling-namespaces-in-xquery.md
+ms.openlocfilehash: 309cf4404c149701b3ab2f271f16a229b39c02c2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899448"

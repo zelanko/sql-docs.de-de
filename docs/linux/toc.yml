@@ -1,221 +1,226 @@
+items:
 - name: Informationen zu SQL Server unter Linux
   href: sql-server-linux-overview.md
 - name: Übersicht
   items:
-    - name: Versionshinweise
-      href: sql-server-linux-release-notes.md
-    - name: Neuigkeiten
-      href: sql-server-linux-whats-new.md
-    - name: Neue und aktualisierte Artikel
-      href: new-updated-linux.md
-    - name: Editionen und unterstützte Funktionen
-      href: sql-server-linux-editions-and-components-2017.md
-    - name: HÄUFIG GESTELLTE FRAGEN
-      href: sql-server-linux-faq.md
+  - name: Versionshinweise
+    href: sql-server-linux-release-notes.md
+  - name: Neuigkeiten
+    href: sql-server-linux-whats-new.md
+  - name: Editionen und unterstützte Funktionen
+    href: sql-server-linux-editions-and-components-2017.md
+  - name: HÄUFIG GESTELLTE FRAGEN
+    href: sql-server-linux-faq.md
 - name: Schnellstarts
   items:
-    - name: Installieren und Verbinden – Red Hat
-      href: quickstart-install-connect-red-hat.md
-    - name: Installieren und Verbinden – SUSE
-      href: quickstart-install-connect-suse.md
-    - name: Installieren und Verbinden – Ubuntu
-      href: quickstart-install-connect-ubuntu.md
-    - name: Ausführen und Verbinden – Docker
-      href: quickstart-install-connect-docker.md
-    - name: Bereitstellen einer SQL-VM in Azure
-      href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json
-    - name: Ausführen und Verbinden – Cloud
-      href: quickstart-install-connect-clouds.md
-- name: Tutorials
+  - name: Installieren und Verbinden – Red Hat
+    href: quickstart-install-connect-red-hat.md
+  - name: Installieren und Verbinden – SUSE
+    href: quickstart-install-connect-suse.md
+  - name: Installieren und Verbinden – Ubuntu
+    href: quickstart-install-connect-ubuntu.md
+  - name: Ausführen und Verbinden – Docker
+    href: quickstart-install-connect-docker.md
+  - name: Bereitstellen einer SQL-VM in Azure
+    href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json
+  - name: Ausführen und Verbinden – Cloud
+    href: quickstart-install-connect-clouds.md
+- name: Lernprogramme
   items:
-    - name: '1: Migrieren von Windows'
-      href: sql-server-linux-migrate-restore-database.md
-    - name: '2: Migrieren von Oracle'
-      href: ../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json
-    - name: '3: Migrieren zu Docker'
-      href: tutorial-restore-backup-in-sql-server-container.md
-    - name: '4: Erstellen eines Auftrags'
-      href: sql-server-linux-run-sql-server-agent-job.md
-    - name: 5 Einrichten der AD-Authentifizierung
-      href: sql-server-linux-active-directory-authentication.md
-    - name: '6: Erstellen einer Failoverclusterinstanz'
-      href: sql-server-linux-shared-disk-cluster-configure.md
-      items:
-        - name: iSCSI
-          href: sql-server-linux-shared-disk-cluster-configure-iscsi.md
-        - name: NFS
-          href: sql-server-linux-shared-disk-cluster-configure-nfs.md
-        - name: SMB
-          href: sql-server-linux-shared-disk-cluster-configure-smb.md
-    - name: '7: Bereitstellen eines Pacemaker-Clusters'
-      href: sql-server-linux-deploy-pacemaker-cluster.md
-    - name: '8: Erstellen und Konfigurieren von Verfügbarkeitsgruppen'
-      href: sql-server-linux-create-availability-group.md
-    - name: '9: Konfigurieren in Kubernetes für Hochverfügbarkeit'
-      href: tutorial-sql-server-containers-kubernetes.md
+  - name: '1: Migrieren von Windows'
+    href: sql-server-linux-migrate-restore-database.md
+  - name: '2: Migrieren von Oracle'
+    href: ../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json
+  - name: '3: Migrieren zu Docker'
+    href: tutorial-restore-backup-in-sql-server-container.md
+  - name: '4: Erstellen eines Auftrags'
+    href: sql-server-linux-run-sql-server-agent-job.md
+  - name: 5 Einrichten der AD-Authentifizierung
+    href: sql-server-linux-active-directory-authentication.md
+  - name: '6: Erstellen einer Failoverclusterinstanz'
+    href: sql-server-linux-shared-disk-cluster-configure.md
+    items:
+    - name: iSCSI
+      href: sql-server-linux-shared-disk-cluster-configure-iscsi.md
+    - name: NFS
+      href: sql-server-linux-shared-disk-cluster-configure-nfs.md
+    - name: SMB
+      href: sql-server-linux-shared-disk-cluster-configure-smb.md
+  - name: '7: Bereitstellen eines Pacemaker-Clusters'
+    href: sql-server-linux-deploy-pacemaker-cluster.md
+  - name: '8: Erstellen und Konfigurieren von Verfügbarkeitsgruppen'
+    href: sql-server-linux-create-availability-group.md
+  - name: '9: Konfigurieren in Kubernetes für Hochverfügbarkeit'
+    href: tutorial-sql-server-containers-kubernetes.md
 - name: Konzepte
   items:
-    - name: Installieren
+  - name: Install
+    items:
+    - name: Installieren von SQL Server
+      href: sql-server-linux-setup.md
+    - name: Installieren von SQL Server-Tools
+      href: sql-server-linux-setup-tools.md
+    - name: Installieren des SQL Server-Agents
+      href: sql-server-linux-setup-sql-agent.md
+    - name: Installieren der SQL Server-Volltextsuche
+      href: sql-server-linux-setup-full-text-search.md
+    - name: Installieren von SQL Server Integration Services
+      href: sql-server-linux-setup-ssis.md
+    - name: Konfigurieren von Repositorys
+      href: sql-server-linux-change-repo.md
+  - name: Konfigurieren
+    items:
+    - name: Konfigurieren mit mssql-conf
+      href: sql-server-linux-configure-mssql-conf.md
+    - name: Umgebungsvariablen
+      href: sql-server-linux-configure-environment-variables.md
+    - name: Konfigurieren von Docker-Containern
+      href: sql-server-linux-configure-docker.md
+    - name: Kundenfeedback
+      href: sql-server-linux-customer-feedback.md
+  - name: Entwickeln
+    href: sql-server-linux-develop-overview.md
+    items:
+    - name: Konnektivitätsbibliotheken
+      href: sql-server-linux-develop-connectivity-libraries.md
+    - name: Verwenden von Visual Studio Code
+      href: sql-server-linux-develop-use-vscode.md
+    - name: Verwenden von SSDT
+      href: sql-server-linux-develop-use-ssdt.md
+  - name: Verwalten
+    href: sql-server-linux-management-overview.md
+    items:
+    - name: Verwenden von SSMS zum Verwalten
+      href: sql-server-linux-manage-ssms.md
+    - name: Verwenden von PowerShell zum Verwalten
+      href: sql-server-linux-manage-powershell.md
+    - name: Verwenden des Protokollversands
+      href: sql-server-linux-use-log-shipping.md
+    - name: Verwenden von DB-Mails und E-Mail-Warnungen
+      href: sql-server-linux-db-mail-sql-agent.md
+  - name: Migrieren
+    href: sql-server-linux-migrate-overview.md
+    items:
+    - name: Exportieren und Importieren einer BACPAC-Datei von Windows
+      href: sql-server-linux-migrate-ssms.md
+    - name: Migrieren mit SQL Server Migration Assistant
+      href: sql-server-linux-migrate-ssma.md
+    - name: Massenkopieren mit bcp
+      href: sql-server-linux-migrate-bcp.md
+  - name: Extrahieren, Transformieren, Laden
+    href: sql-server-linux-migrate-ssis.md
+    items:
+    - name: Einschränkungen und bekannte Probleme
+      href: sql-server-linux-ssis-known-issues.md
+    - name: Konfigurieren von SSIS
+      href: sql-server-linux-configure-ssis.md
+    - name: Zeitliches Planen von SSIS-Paketen
+      href: sql-server-linux-schedule-ssis-packages.md
+  - name: Konfigurieren der Geschäftskontinuität
+    href: sql-server-linux-business-continuity-dr.md
+    items:
+    - name: Verfügbarkeitsgrundlagen
+      href: sql-server-linux-ha-basics.md
+    - name: Sichern und Wiederherstellen
+      href: sql-server-linux-backup-and-restore-database.md
       items:
-        - name: Installieren von SQL Server
-          href: sql-server-linux-setup.md
-        - name: Installieren von SQL Server-Tools
-          href: sql-server-linux-setup-tools.md
-        - name: Installieren des SQL Server-Agents
-          href: sql-server-linux-setup-sql-agent.md
-        - name: Installieren der SQL Server-Volltextsuche
-          href: sql-server-linux-setup-full-text-search.md
-        - name: Installieren von SQL Server Integration Services
-          href: sql-server-linux-setup-ssis.md
-        - name: Konfigurieren von Repositorys
-          href: sql-server-linux-change-repo.md
-    - name: Konfigurieren
+      - name: Virtuelle Geräteschnittstelle – Linux
+        href: sql-server-linux-backup-vdi-specification.md
+    - name: Failoverclusterinstanz
+      href: sql-server-linux-shared-disk-cluster-concepts.md
       items:
-        - name: Konfigurieren mit mssql-conf
-          href: sql-server-linux-configure-mssql-conf.md
-        - name: Umgebungsvariablen
-          href: sql-server-linux-configure-environment-variables.md
-        - name: Konfigurieren von Docker-Containern
-          href: sql-server-linux-configure-docker.md
-        - name: Kundenfeedback
-          href: sql-server-linux-customer-feedback.md
-    - name: Entwickeln
-      href: sql-server-linux-develop-overview.md
+      - name: Red Hat Enterprise Linux (RHEL)
+        items:
+        - name: Konfigurieren (Add-On für Hochverfügbarkeit)
+          href: sql-server-linux-shared-disk-cluster-red-hat-7-configure.md
+        - name: Betreiben (Add-On für Hochverfügbarkeit)
+          href: sql-server-linux-shared-disk-cluster-red-hat-7-operate.md
+      - name: SUSE Linux Enterprise Server (SLES)
+        items:
+        - name: Konfigurieren (Add-On für Hochverfügbarkeit)
+          href: sql-server-linux-shared-disk-cluster-sles-configure.md
+    - name: Verfügbarkeitsgruppen
+      href: sql-server-linux-availability-group-overview.md
       items:
-        - name: Konnektivitätsbibliotheken
-          href: sql-server-linux-develop-connectivity-libraries.md
-        - name: Verwenden von Visual Studio Code
-          href: sql-server-linux-develop-use-vscode.md
-        - name: Verwenden von SSDT
-          href: sql-server-linux-develop-use-ssdt.md
-    - name: Verwalten
-      href: sql-server-linux-management-overview.md
-      items:
-        - name: Verwenden von SSMS zum Verwalten
-          href: sql-server-linux-manage-ssms.md
-        - name: Verwenden von PowerShell zum Verwalten
-          href: sql-server-linux-manage-powershell.md
-        - name: Verwenden des Protokollversands
-          href: sql-server-linux-use-log-shipping.md
-        - name: Verwenden von DB-Mails und E-Mail-Warnungen
-          href: sql-server-linux-db-mail-sql-agent.md
-    - name: Migrieren
-      href: sql-server-linux-migrate-overview.md
-      items:
-        - name: Exportieren und Importieren einer BACPAC-Datei von Windows
-          href: sql-server-linux-migrate-ssms.md
-        - name: Migrieren mit SQL Server Migration Assistant
-          href: sql-server-linux-migrate-ssma.md
-        - name: Massenkopieren mit bcp
-          href: sql-server-linux-migrate-bcp.md
-    - name: 'Extrahieren, Transformieren, Laden'
-      href: sql-server-linux-migrate-ssis.md
-      items:
-        - name: Einschränkungen und bekannte Probleme
-          href: sql-server-linux-ssis-known-issues.md
-        - name: Konfigurieren von SSIS
-          href: sql-server-linux-configure-ssis.md
-        - name: Zeitliches Planen von SSIS-Paketen
-          href: sql-server-linux-schedule-ssis-packages.md
-    - name: Konfigurieren der Geschäftskontinuität
-      href: sql-server-linux-business-continuity-dr.md
-      items:
-        - name: Verfügbarkeitsgrundlagen
-          href: sql-server-linux-ha-basics.md
-        - name: Sichern und Wiederherstellen
-          href: sql-server-linux-backup-and-restore-database.md
-          items:
-            - name: Virtuelle Geräteschnittstelle – Linux
-              href: sql-server-linux-backup-vdi-specification.md
-        - name: Failoverclusterinstanz
-          href: sql-server-linux-shared-disk-cluster-concepts.md
-          items:
-            - name: Red Hat Enterprise Linux (RHEL)
-              items:
-                - name: Konfigurieren (Add-On für Hochverfügbarkeit)
-                  href: sql-server-linux-shared-disk-cluster-red-hat-7-configure.md
-                - name: Betreiben (Add-On für Hochverfügbarkeit)
-                  href: sql-server-linux-shared-disk-cluster-red-hat-7-operate.md
-            - name: SUSE Linux Enterprise Server (SLES)
-              items:
-                - name: Konfigurieren (Add-On für Hochverfügbarkeit)
-                  href: sql-server-linux-shared-disk-cluster-sles-configure.md
-        - name: Verfügbarkeitsgruppen
-          href: sql-server-linux-availability-group-overview.md
-          items:
-            - name: Erstellen für Hochverfügbarkeit
-              href: sql-server-linux-availability-group-ha.md
-              items:
-                - name: Konfigurieren von AG
-                  href: sql-server-linux-availability-group-configure-ha.md
-                - name: Konfigurieren unter RHEL
-                  href: sql-server-linux-availability-group-cluster-rhel.md
-                - name: Konfigurieren unter SLES
-                  href: sql-server-linux-availability-group-cluster-sles.md
-                - name: Konfigurieren unter Ubuntu
-                  href: sql-server-linux-availability-group-cluster-ubuntu.md
-                - name: Failover
-                  href: sql-server-linux-availability-group-failover-ha.md
-                - name: Betreiben
-                  href: sql-server-linux-availability-group-operate-ha.md
-                - name: Konfigurieren mehrerer Subnetze für die Verfügbarkeit
-                  href: sql-server-linux-configure-multiple-subnet.md
-            - name: Erstellen nur für Leseskalierung
-              items:
-                - name: Konfigurieren von AG
-                  href: sql-server-linux-availability-group-configure-rs.md
-            - name: Plattformübergreifendes Konfigurieren (Windows und Linux)
-              href: sql-server-linux-availability-group-cross-platform.md
-    - name: Security
-      href: sql-server-linux-security-overview.md
-      items:
-        - name: Erste Schritte mit Sicherheitsfeatures
-          href: sql-server-linux-security-get-started.md
-        - name: Active Directory-Authentifizierung
-          href: sql-server-linux-active-directory-auth-overview.md
-        - name: Verschlüsseln von Verbindungen
-          href: sql-server-linux-encrypted-connections.md
-    - name: Leistung
-      items:
-        - name: Bewährte Methoden
-          href: sql-server-linux-performance-best-practices.md
-        - name: Erste Schritte mit Leistungsfeatures
-          href: sql-server-linux-performance-get-started.md
+      - name: Erstellen für Hochverfügbarkeit
+        href: sql-server-linux-availability-group-ha.md
+        items:
+        - name: Konfigurieren von AG
+          href: sql-server-linux-availability-group-configure-ha.md
+        - name: Konfigurieren unter RHEL
+          href: sql-server-linux-availability-group-cluster-rhel.md
+        - name: Konfigurieren unter SLES
+          href: sql-server-linux-availability-group-cluster-sles.md
+        - name: Konfigurieren unter Ubuntu
+          href: sql-server-linux-availability-group-cluster-ubuntu.md
+        - name: Failover
+          href: sql-server-linux-availability-group-failover-ha.md
+        - name: Betreiben
+          href: sql-server-linux-availability-group-operate-ha.md
+        - name: Konfigurieren mehrerer Subnetze für die Verfügbarkeit
+          href: sql-server-linux-configure-multiple-subnet.md
+      - name: Erstellen nur für Leseskalierung
+        items:
+        - name: Konfigurieren von AG
+          href: sql-server-linux-availability-group-configure-rs.md
+      - name: Plattformübergreifendes Konfigurieren (Windows und Linux)
+        href: sql-server-linux-availability-group-cross-platform.md
+  - name: Security
+    href: sql-server-linux-security-overview.md
+    items:
+    - name: Erste Schritte mit Sicherheitsfeatures
+      href: sql-server-linux-security-get-started.md
+    - name: Active Directory-Authentifizierung
+      href: sql-server-linux-active-directory-auth-overview.md
+    - name: Verschlüsseln von Verbindungen
+      href: sql-server-linux-encrypted-connections.md
+  - name: Leistung
+    items:
+    - name: Bewährte Methoden
+      href: sql-server-linux-performance-best-practices.md
+    - name: Erste Schritte mit Leistungsfeatures
+      href: sql-server-linux-performance-get-started.md
 - name: Beispiele
   items:
-    - name: Unbeaufsichtigtes Installieren
-      items:
-        - name: Red Hat Enterprise Linux (RHEL)
-          href: sample-unattended-install-redhat.md
-        - name: SUSE Linux Enterprise Server (SLES)
-          href: sample-unattended-install-suse.md
-        - name: Ubuntu
-          href: sample-unattended-install-ubuntu.md
+  - name: Unbeaufsichtigtes Installieren
+    items:
+    - name: Red Hat Enterprise Linux (RHEL)
+      href: sample-unattended-install-redhat.md
+    - name: SUSE Linux Enterprise Server (SLES)
+      href: sample-unattended-install-suse.md
+    - name: Ubuntu
+      href: sample-unattended-install-ubuntu.md
 - name: Ressourcen
   items:
-    - name: Problembehandlung
-      href: sql-server-linux-troubleshooting-guide.md
-    - name: Lizenzierung
-      href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-    - name: SQL Server-Dokumentation
-      href: ../sql-server/sql-server-technical-documentation.md
-    - name: Partner
-      items:
-        - name: Überwachung
-          href: ../sql-server/partner-monitor-sql-server.md
-        - name: Hochverfügbarkeit und Notfallwiederherstellung
-          href: ../sql-server/partner-hadr-sql-server.md
-        - name: Verwaltung
-          href: ../sql-server/partner-management-sql-server.md
-        - name: Entwicklung
-          href: ../sql-server/partner-dev-sql-server.md
-    - name: DBA-Stapelaustausch
-      href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-    - name: Stapelüberlauf
-      href: 'http://stackoverflow.com/questions/tagged/sql-server'
-    - name: MSDN-Foren
-      href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
-    - name: Übermitteln von Feedback
-      href: 'https://feedback.azure.com/forums/908035-sql-server'
-    - name: Reddit
-      href: 'https://www.reddit.com/r/SQLServer'
+  - name: Problembehandlung
+    href: sql-server-linux-troubleshooting-guide.md
+  - name: Lizenzierung
+    href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
+  - name: SQL Server-Dokumentation
+    href: ../sql-server/sql-server-technical-documentation.md
+  - name: Partner
+    items:
+    - name: Überwachung
+      href: ../sql-server/partner-monitor-sql-server.md
+    - name: Hochverfügbarkeit und Notfallwiederherstellung
+      href: ../sql-server/partner-hadr-sql-server.md
+    - name: Verwaltung
+      href: ../sql-server/partner-management-sql-server.md
+    - name: Entwicklung
+      href: ../sql-server/partner-dev-sql-server.md
+  - name: DBA-Stapelaustausch
+    href: https://dba.stackexchange.com/questions/tagged/sql-server
+  - name: Stapelüberlauf
+    href: http://stackoverflow.com/questions/tagged/sql-server
+  - name: MSDN-Foren
+    href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
+  - name: Übermitteln von Feedback
+    href: https://feedback.azure.com/forums/908035-sql-server
+  - name: Reddit
+    href: https://www.reddit.com/r/SQLServer
+ms.openlocfilehash: f0d58fc27079040969a9a2c681363e6ef2e11325
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899317"

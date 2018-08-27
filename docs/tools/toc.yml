@@ -1,7 +1,6 @@
+items:
 - name: Übersicht über SQL Server-Tools und -Dienstprogramme
   href: ../tools/overview-sql-tools.md
-- name: Neue und aktualisierte Artikel
-  href: new-updated-tools.md
 - name: SQL Operations Studio (Vorschau)
   href: ../sql-operations-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
@@ -25,35 +24,41 @@
 - name: Befehlszeilen-Hilfsprogramme
   href: command-prompt-utility-reference-database-engine.md
   items:
-    - name: Massenkopier-Hilfsprogramm (BCP)
-      href: bcp-utility.md
-    - name: SqlLocalDB-Hilfsprogramm
-      href: sqllocaldb-utility.md
-    - name: osql (Hilfsprogramm)
-      href: osql-utility.md
-    - name: Profiler-Hilfsprogramm
-      href: profiler-utility.md
-    - name: sqlagent90 (Anwendung)
-      href: sqlagent90-application.md
-    - name: sqlcmd Utility
-      href: sqlcmd-utility.md
-    - name: SQLdiag (Hilfsprogramm)
-      href: sqldiag-utility.md
-    - name: sqlmaint (Hilfsprogramm)
-      href: sqlmaint-utility.md
-    - name: Anwendung sqllogship
-      href: sqllogship-application.md
-    - name: sqlps (Hilfsprogramm)
-      href: sqlps-utility.md
-    - name: sqlservr (Anwendung)
-      href: sqlservr-application.md
-    - name: tablediff (Hilfsprogramm)
-      href: tablediff-utility.md
+  - name: Massenkopier-Hilfsprogramm (BCP)
+    href: bcp-utility.md
+  - name: SqlLocalDB-Hilfsprogramm
+    href: sqllocaldb-utility.md
+  - name: osql (Hilfsprogramm)
+    href: osql-utility.md
+  - name: Profiler-Hilfsprogramm
+    href: profiler-utility.md
+  - name: sqlagent90 (Anwendung)
+    href: sqlagent90-application.md
+  - name: sqlcmd Utility
+    href: sqlcmd-utility.md
+  - name: SQLdiag (Hilfsprogramm)
+    href: sqldiag-utility.md
+  - name: sqlmaint (Hilfsprogramm)
+    href: sqlmaint-utility.md
+  - name: Anwendung sqllogship
+    href: sqllogship-application.md
+  - name: sqlps (Hilfsprogramm)
+    href: sqlps-utility.md
+  - name: sqlservr (Anwendung)
+    href: sqlservr-application.md
+  - name: tablediff (Hilfsprogramm)
+    href: tablediff-utility.md
 - name: sqlpackage
   items:
-    - name: Installieren von sqlpackage
-      href: sqlpackage-download.md
-    - name: Versionshinweise
-      href: sqlpackage-release-notes.md
-    - name: Referenz zu sqlpackage
-      href: sqlpackage.md
+  - name: Installieren von sqlpackage
+    href: sqlpackage-download.md
+  - name: Versionshinweise
+    href: sqlpackage-release-notes.md
+  - name: Referenz zu sqlpackage
+    href: sqlpackage.md
+ms.openlocfilehash: 9d141d9c690b017185f7cfd790fbf9b009ecf1e5
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899550"
