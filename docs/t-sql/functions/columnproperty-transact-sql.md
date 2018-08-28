@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782591"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412717"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Das *property*-Argument gibt für das *id*-Argument den Informationstyp an, den 
 |**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe Keine berechnete Spalte oder Sichtspalte.|  
 |**IsFulltextIndexed**|Die Spalte wird für die Volltextindizierung registriert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
-|**IsHidden**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht ausgeblendet<br /><br /> 1 = Ausgeblendet|  
+|**IsHidden**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht ausgeblendet<br /><br /> 1 = Ausgeblendet|  
 |**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**IsIndexable**|Diese Spalte kann indiziert werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  

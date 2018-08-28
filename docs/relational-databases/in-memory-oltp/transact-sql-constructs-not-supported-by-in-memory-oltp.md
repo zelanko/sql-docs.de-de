@@ -15,13 +15,13 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7299a533797a7dae9622d049b6b5548af0c9808e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f2a22884910fc6686a957a43af53cd40dcf3ada
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554441"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063892"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "39554441"
 |Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **FILESTREAM** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie das **SPARSE** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|ROWGUIDCOL|Die ROWGUIDCOL-Option wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **ROWGUIDCOL** -Schlüsselwort aus der Spaltendefinition.|  
-|Funktion|FOREIGN KEY|**Gilt für:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Für speicheroptimierte Tabellen werden FOREIGN KEY-Einschränkungen nur für die Fremdschlüssel unterstützt, die auf Primärschlüssel von anderen speicheroptimierten Tabellen verweisen. Entfernen Sie die Einschränkung aus der Tabellendefinition, wenn der Fremdschlüssel auf eine eindeutige Einschränkung verweist.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] werden FOREIGN KEY-Einschränkungen nicht für speicheroptimierte Tabellen unterstützt.|  
+|Funktion|FOREIGN KEY|**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Für speicheroptimierte Tabellen werden FOREIGN KEY-Einschränkungen nur für die Fremdschlüssel unterstützt, die auf Primärschlüssel von anderen speicheroptimierten Tabellen verweisen. Entfernen Sie die Einschränkung aus der Tabellendefinition, wenn der Fremdschlüssel auf eine eindeutige Einschränkung verweist.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] werden FOREIGN KEY-Einschränkungen nicht für speicheroptimierte Tabellen unterstützt.|  
 |Funktion|Gruppierter Index|Geben Sie einen nicht gruppierten Index an. Bei einem Primärschlüsselindex müssen Sie **PRIMARY KEY NONCLUSTERED** angeben.|  
 |Funktion|DDL innerhalb von Transaktionen|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren können nicht im Rahmen einer Benutzertransaktion erstellt oder gelöscht werden. Starten Sie keine Transaktion, und vergewissern Sie sich, dass die Sitzungseinstellung IMPLICIT_TRANSACTIONS auf OFF festgelegt ist, bevor Sie die CREATE-Anweisung oder die DROP-Anweisung ausführen.|  
 |Funktion|DDL-Trigger|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren können nicht erstellt oder gelöscht werden, wenn ein Server- oder Datenbanktrigger für den betreffenden DDL-Vorgang vorhanden ist. Entfernen Sie die Server- und Datenbanktrigger für CREATE/DROP TABLE und CREATE/DROP PROCEDURE.|  
@@ -115,7 +115,7 @@ ms.locfileid: "39554441"
 |Funktion|SELECT INTO|Die **INTO** -Klausel wird mit der **SELECT** -Anweisung nicht unterstützt. Schreiben Sie die Abfrage als **INSERT INTO** *Tabelle* **SELECT** neu.|  
 |Funktion|Unvollständige Einfügespaltenliste|Generell müssen Werte in INSERT-Anweisungen für alle Spalten in der Tabelle angegeben werden.<br /><br /> Allerdings unterstützen wir DEFAULT-Einschränkungen und IDENTITY(1,1)-Spalten in speicheroptimierten Tabellen. Diese Spalten können in der INSERT-Spaltenliste ausgelassen werden. IDENTITY-Spalten müssen sogar ausgelassen werden.|  
 |Funktion|*Funktion*|Einige integrierte Funktionen werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die abgelehnte Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter<br />[Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)oder<br />[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
-|Funktion|CASE|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
+|Funktion|CASE|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
 |Funktion|INSERT EXECUTE|Entfernt den Verweis.|  
 |Funktion|Führen Sie|Nur unterstützt, um nativ kompilierte gespeicherte Prozeduren und benutzerdefinierte Funktionen auszuführen|  
 |Funktion|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
@@ -143,7 +143,7 @@ ms.locfileid: "39554441"
 |Operator|OFFSET|Dieser Operator wird nicht unterstützt. Entfernen Sie **OFFSET** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie **INTERSECT** aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
 |Operator|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie **EXCEPT** aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|APPLY|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen den APPLY-Operator in nativ kompilierten Modulen.|  
+|Operator|APPLY|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen den APPLY-Operator in nativ kompilierten Modulen.|  
 |Operator|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **PIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **UNPIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|CONTAINS|Dieser Operator wird nicht unterstützt. Entfernen Sie **CONTAINS** aus der systemintern kompilierten gespeicherten Prozedur.|  

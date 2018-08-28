@@ -21,21 +21,21 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 584087ad10018a0ba6f020c55256a8cb2d7486fe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016347"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412713"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
   Das **Connection**-Objekt stellt eine Datenbankverbindung oder eine ähnliche Ressource dar und bildet den Ausgangspunkt für Benutzer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung. Es stellt Verbindungen zum Datenbankserver dar, obwohl auch jede Entität mit ähnlichem Verhalten als **Connection** zur Verfügung gestellt werden kann.  
   
  Erstellen Sie eine Klasse, die <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> und optional <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> implementiert, um ein **Connection**-Objekt zu implementieren.  
   
- Sie müssen in Ihrer Implementierung sicherstellen, dass eine Verbindung erstellt und geöffnet wird, bevor die Befehle ausgeführt werden können. Stellen Sie in Ihrer Implementierung sicher, dass Clients die Verbindungen ausdrücklich (und nicht implizit) öffnen und schließen. Führen Sie die Sicherheitsprüfungen aus, wenn die Verbindung hergestellt wird. Dadurch, dass eine Verbindung für die anderen Klassen in der [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]-Datenverarbeitungserweiterung vorhanden sein muss, wird sichergestellt, dass bei der Arbeit mit Ihrer Datenquelle stets Sicherheitsprüfungen durchgeführt werden.  
+ Sie müssen in Ihrer Implementierung sicherstellen, dass eine Verbindung erstellt und geöffnet wird, bevor die Befehle ausgeführt werden können. Stellen Sie in Ihrer Implementierung sicher, dass Clients die Verbindungen ausdrücklich (und nicht implizit) öffnen und schließen. Führen Sie die Sicherheitsprüfungen aus, wenn die Verbindung hergestellt wird. Dadurch, dass eine Verbindung für die anderen Klassen in der [!INCLUDE[ssRS](../../../includes/ssrs.md)]-Datenverarbeitungserweiterung vorhanden sein muss, wird sichergestellt, dass bei der Arbeit mit Ihrer Datenquelle stets Sicherheitsprüfungen durchgeführt werden.  
   
- Die Eigenschaften der gewünschten Verbindung werden als Verbindungszeichenfolge dargestellt. Die [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]-Datenverarbeitungserweiterungen sollten unbedingt die Eigenschaft <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> unterstützen und das bekannte Name/Wert-Paar verwenden, das von der OLE DB definiert ist.  
+ Die Eigenschaften der gewünschten Verbindung werden als Verbindungszeichenfolge dargestellt. Die [!INCLUDE[ssRS](../../../includes/ssrs.md)]-Datenverarbeitungserweiterungen sollten unbedingt die Eigenschaft <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> unterstützen und das bekannte Name/Wert-Paar verwenden, das von der OLE DB definiert ist.  
   
 > [!NOTE]  
 >  **Connection**-Objekte können häufig nur mit großem Ressourcenaufwand abgerufen werden. Daher sollten Sie zur Reduzierung dieses Effekts ein Pooling der Verbindungen oder andere Techniken in Erwägung ziehen.  

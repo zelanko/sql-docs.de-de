@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969282"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405301"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ REVOKE
  Eine implizite Berechtigung kann auch von einer abdeckenden oder übergeordneten Berechtigung geerbt werden. Beispielsweise kann die Berechtigung **UPDATE** von einer Tabelle geerbt werden, wenn die Berechtigung **UPDATE** für das Schema, das die Tabelle enthält, oder die Berechtigung **CONTROL** für die Tabelle vorhanden ist.  
   
 ### <a name="ownership-chaining"></a>Besitzverkettung  
- Wenn mehrere Datenbankobjekte aufeinander sequenziell zugreifen, wird diese Sequenz als *Kette* bezeichnet. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzketten haben erhebliche Auswirkungen auf die Sicherheitsverwaltung. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) und [Tutorial: Besitzketten und Kontextwechsel](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
+ Wenn mehrere Datenbankobjekte aufeinander sequenziell zugreifen, wird diese Sequenz als *Kette* bezeichnet. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzketten haben erhebliche Auswirkungen auf die Sicherheitsverwaltung. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) und [Tutorial: Besitzketten und Kontextwechsel](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Berechtigungsliste  
   

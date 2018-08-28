@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041938"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410335"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit 
   
 **DacFx**  
   
- Da ALTER DATABASE SCOPED CONFIGURATION in Azure SQL-Datenbank und SQL Server ab SQL Server 2016 ein neues Feature ist, das Auswirkungen auf das Datenbankschema hat, können Exporte des Schemas (mit oder ohne Daten) nicht in eine ältere Version von SQL Server wie z.B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] importiert werden. Ein Export in ein [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.  
+ Da ALTER DATABASE SCOPED CONFIGURATION in Azure SQL-Datenbank und SQL Server ab SQL Server 2016 ein neues Feature ist, das Auswirkungen auf das Datenbankschema hat, können Exporte des Schemas (mit oder ohne Daten) nicht in eine ältere Version von SQL Server wie z.B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] importiert werden. Ein Export in ein [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) oder ein [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.  
 
 **ELEVATE_ONLINE** 
 

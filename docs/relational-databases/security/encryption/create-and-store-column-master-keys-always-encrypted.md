@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073741"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Ein Spaltenhauptschlüssel für Always Encrypted kann in einem Schlüsselspeiche
 
 Um ein HSM für Anwendungen auf einem bestimmten Computer verfügbar zu machen, muss ein Schlüsselspeicheranbieter (Key Storage Provider, KSP), der CNG implementiert, auf dem Computer installiert und konfiguriert werden. Ein Always Encrypted-Clienttreiber (ein Speicheranbieter für einen Spaltenhauptschlüssel innerhalb des Treibers) verwendet den KSP, um Spaltenverschlüsselungsschlüssel zu ver- und entschlüsseln, die mit dem im Schlüsselspeicher gespeicherten Spaltenhauptschlüssel geschützt sind.
 
-Windows enthält den Softwareschlüsselspeicher-Anbieter von Microsoft – einen softwarebasierten KSP, den Sie zu Testzwecken verwenden können. Weitere Informationen finden Sie unter [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)(CNG-Schlüsselspeicheranbieter).
+Windows enthält den Softwareschlüsselspeicher-Anbieter von Microsoft – einen softwarebasierten KSP, den Sie zu Testzwecken verwenden können. Weitere Informationen finden Sie unter [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers)(CNG-Schlüsselspeicheranbieter).
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Erstellen von Spaltenhauptschlüsseln in einem Schlüsselspeicher mithilfe von CNG/KSP
 

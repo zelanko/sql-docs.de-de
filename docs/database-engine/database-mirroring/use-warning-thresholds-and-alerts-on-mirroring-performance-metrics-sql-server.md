@@ -21,12 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 157842419692f2fbb70f7fc3d28c4cf920e8f228
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312449"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412732"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,9 +118,9 @@ ms.locfileid: "35312449"
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine Warnung mit SQL Server Management Studio**  
   
--   [Erstellen einer Warnung mithilfe einer Fehlernummer](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Erstellen einer Warnung mithilfe einer Fehlernummer](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Erstellen einer WMI-Ereigniswarnung](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Erstellen einer WMI-Ereigniswarnung](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **So überwachen Sie die Datenbankspiegelung**  
   

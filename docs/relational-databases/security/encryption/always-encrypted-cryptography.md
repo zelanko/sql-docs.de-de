@@ -14,13 +14,13 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 628d33d835012cb7264dbd63ddf536874223fb31
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546640"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066201"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546640"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Schlüssel, Schlüsselspeicher und Algorithmen für die Schlüsselverschlüsselung  
  Always Encrypted verwendet zwei Schlüsseltypen: Spaltenhauptschlüssel und Spaltenverschlüsselungsschlüssel.  
   
- Ein Spaltenhauptschlüssel (column master key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d.h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der immer vom Client gesteuert wird und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](https://msdn.microsoft.com/library/windows/desktop/aa388160) und Hardwaresicherheitsmodule (HSMs).  Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
+ Ein Spaltenhauptschlüssel (column master key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d.h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der immer vom Client gesteuert wird und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](/windows/desktop/SecCrypto/using-certificate-stores) und Hardwaresicherheitsmodule (HSMs).  Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
   
  Ein Spaltenverschlüsselungsschlüssel (column encryption key; CEK) ist ein Inhaltsverschlüsselungsschlüssel (d.h. ein Schlüssel zum Schützen von Daten), der durch einen CMK geschützt ist.  
   

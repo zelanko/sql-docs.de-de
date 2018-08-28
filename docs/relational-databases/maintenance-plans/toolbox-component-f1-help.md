@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f888ef097c3377d61dbac91a0d448e08b77baa1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942475"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412573"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32942475"
  Das Azure Feature Pack für Integration Service enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Installieren Sie das Feature Pack, um diese Elemente der Toolbox hinzufügen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwenden der Toolbox](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
+ [Verwenden der Toolbox](../../ssms/use-the-toolbox.md)   
  [Auswählen von Toolboxelementen &#40;Seite „Wartungstasks“&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

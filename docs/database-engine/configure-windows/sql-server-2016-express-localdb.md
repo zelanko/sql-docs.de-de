@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984502"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405531"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
-Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
+Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
 
  **Die LocalDB** -Installation kopiert einen minimalen Satz von Dateien, der für den Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]erforderlich ist. Sobald LocalDB installiert ist, können Sie mithilfe einer speziellen Verbindungszeichenfolge eine Verbindung herstellen. Wenn eine Verbindung hergestellt wird, wird die erforderliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur automatisch erstellt und gestartet. Sie ermöglicht der Anwendung, die Datenbank zu verwenden, und zwar ohne komplexe Konfigurationstasks. Mit Developer Tools können Entwickler [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bereitstellen, womit sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schreiben und testen können, und zwar ohne dabei eine vollständige Serverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten zu müssen. 
  

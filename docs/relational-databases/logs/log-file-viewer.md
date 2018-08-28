@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44f5ed33bef9ff57e6bc0c4262a950069ec5b480
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e67df0aaf68041d0eb8bb5a12e1054e432a48557
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942145"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405981"
 ---
 # <a name="log-file-viewer"></a>Protokolldatei-Viewer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "32942145"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  
   [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server-Agent-Fehlerprotokoll](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
+ [SQL Server-Agent-Fehlerprotokoll](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

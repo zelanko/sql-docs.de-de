@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769026"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40410014"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ Um verteilte Transaktionen gewährleisten zu können, muss die Verfügbarkeitsgr
 
 Bei einer verteilten Transaktion arbeiten Clientanwendungen mit dem Microsoft Distributed Transaction Coordinator (MS DTC oder auch DTC) zusammen, um Transaktionskonsistenz über mehrere Datenquellen hinweg zu gewährleisten. Der DTC ist ein Dienst für Betriebssysteme, die auf Windows Server basieren. Bei einer verteilten Transaktion agiert der DTC als *Transaktionskoordinator*. Normalerweise agiert eine SQL Server-Instanz als *Ressourcenmanager*. Wenn sich eine Datenbank in einer Verfügbarkeitsgruppe befindet, benötigt sie ihren eigenen Ressourcenmanager. 
 
-In [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] werden verteilte Transaktionen für Datenbanken in einer Verfügbarkeitsgruppe nicht verhindert – selbst wenn die Verfügbarkeitsgruppe nicht für verteilte Transaktionen konfiguriert ist. Wenn eine Verfügbarkeitsgruppe jedoch nicht für verteilte Transaktionen konfiguriert ist, kann es vorkommen, dass das Failover in manchen Situationen fehlschlägt. Insbesondere neue [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz des primären Replikats ist möglicherweise nicht in der Lage, Transaktionsergebnisse vom DTC abzurufen. Um der [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz nach einem Failover das Abrufen der Ergebnisse unsicherer Transaktionen vom DTC zu ermöglichen, konfigurieren Sie die Verfügbarkeitsgruppe für verteilte Transaktionen. 
+In [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] werden verteilte Transaktionen für Datenbanken in einer Verfügbarkeitsgruppe nicht verhindert – selbst wenn die Verfügbarkeitsgruppe nicht für verteilte Transaktionen konfiguriert ist. Wenn eine Verfügbarkeitsgruppe jedoch nicht für verteilte Transaktionen konfiguriert ist, kann es vorkommen, dass das Failover in manchen Situationen fehlschlägt. Insbesondere neue [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz des primären Replikats ist möglicherweise nicht in der Lage, Transaktionsergebnisse vom DTC abzurufen. Um der [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz nach einem Failover das Abrufen der Ergebnisse unsicherer Transaktionen vom DTC zu ermöglichen, konfigurieren Sie die Verfügbarkeitsgruppe für verteilte Transaktionen. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktionen unterstützt werden, müssen die folgenden Voraussetzungen erfüllt sein:
 
-* Alle Instanzen von [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], die an verteilten Transaktionen teilnehmen, müssen unter [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] oder höher laufen.
+* Alle Instanzen von [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], die an verteilten Transaktionen teilnehmen, müssen unter [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] oder höher laufen.
 
 * Verfügbarkeitsgruppen müssen auf Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) verfügbar ist.  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Verteilte Transaktionen – Technisches Prinzip
 
-Bei einer verteilten Transaktion sind mindestens zwei Datenbanken beteiligt. Der DTC als Transaktionsmanager koordiniert die Transaktion zwischen SQL Server-Instanzen und anderen Datenquellen. Jeder Instanz der [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Datenbank-Engine kann als Ressourcenmanager operieren. Wenn bei einer Verfügbarkeitsgruppe die Einstellung `DTC_SUPPORT = PER_DB` verwendet wird, können die Datenbanken als Ressourcenmanager operieren. Weitere Informationen finden Sie in der MS DTC-Dokumentation.
+Bei einer verteilten Transaktion sind mindestens zwei Datenbanken beteiligt. Der DTC als Transaktionsmanager koordiniert die Transaktion zwischen SQL Server-Instanzen und anderen Datenquellen. Jeder Instanz der [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Datenbank-Engine kann als Ressourcenmanager operieren. Wenn bei einer Verfügbarkeitsgruppe die Einstellung `DTC_SUPPORT = PER_DB` verwendet wird, können die Datenbanken als Ressourcenmanager operieren. Weitere Informationen finden Sie in der MS DTC-Dokumentation.
 
 Bei einer Transaktion mit zwei oder mehr Datenbanken in einer einzelnen Instanz der Datenbank-Engine handelt es sich eigentlich um eine verteilte Transaktion. Die Instanz verwaltet die verteilte Transaktion jedoch intern; für den Benutzer entsteht der Eindruck, es handele sich um eine lokale Transaktion. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] leitet alle datenbankübergreifenden Transaktionen an den DTC weiter, wenn die Datenbanken sich in einer Verfügbarkeitsgruppe mit der Einstellung `DTC_SUPPORT = PER_DB` befinden. Dies gilt auch, innerhalb einer einzelnen SQL Server-Instanz. 
 
@@ -123,16 +123,16 @@ In den nachfolgenden Schritten wird erläutert, wie die Anwendung mit dem DTC zu
 
 Jede an einer verteilten Transaktion teilnehmende Entität wird als Ressourcenmanager bezeichnet. Beispiele für Ressourcen-Manager:
 
-* Eine [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz. 
+* Eine [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz. 
 * Eine Datenbank in einer Verfügbarkeitsgruppe, die für verteilte Transaktionen konfiguriert wurde.
 * Der DTC-Dienst – auch dieser kann ein Transaktionsmanager sein.
 * Andere Datenquellen 
 
-Um an einer verteilten Transaktion teilzunehmen, trägt sich eine [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz beim DTC ein. Normalerweise trägt sich die [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz beim DTC auf dem lokalen Server ein. Jede [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz erstellt einen Ressourcenmanager mit einer eindeutigen Ressourcenmanager-ID (RMID) und registriert sie beim DTC. Standardmäßig verwenden alle Datenbanken in einer [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz dieselbe RMID. 
+Um an einer verteilten Transaktion teilzunehmen, trägt sich eine [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz beim DTC ein. Normalerweise trägt sich die [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz beim DTC auf dem lokalen Server ein. Jede [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz erstellt einen Ressourcenmanager mit einer eindeutigen Ressourcenmanager-ID (RMID) und registriert sie beim DTC. Standardmäßig verwenden alle Datenbanken in einer [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz dieselbe RMID. 
 
-Wenn sich eine Datenbank in einer Verfügbarkeitsgruppe befindet, wird die Lese-/Schreibkopie einer Verfügbarkeitsdatenbank, auch als primäres Replikat bezeichnet, möglicherweise in eine andere [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz verschoben. Damit während dieses Verschiebevorgangs verteilte Transaktionen unterstützt werden, sollte jede Datenbank als separater Ressourcenmanager agieren und benötigt eine einmalige RMID. Wenn für eine Verfügbarkeitsgruppe die Einstellung `DTC_SUPPORT = PER_DB` gewählt wurde, erstellt [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] einen Ressourcenmanager für jede Datenbank und führt die DTC-Registrierung mit der eindeutigen RMID durch. In dieser Konfiguration fungiert die Datenbank als Ressourcenmanager für DTC-Transaktionen.
+Wenn sich eine Datenbank in einer Verfügbarkeitsgruppe befindet, wird die Lese-/Schreibkopie einer Verfügbarkeitsdatenbank, auch als primäres Replikat bezeichnet, möglicherweise in eine andere [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz verschoben. Damit während dieses Verschiebevorgangs verteilte Transaktionen unterstützt werden, sollte jede Datenbank als separater Ressourcenmanager agieren und benötigt eine einmalige RMID. Wenn für eine Verfügbarkeitsgruppe die Einstellung `DTC_SUPPORT = PER_DB` gewählt wurde, erstellt [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] einen Ressourcenmanager für jede Datenbank und führt die DTC-Registrierung mit der eindeutigen RMID durch. In dieser Konfiguration fungiert die Datenbank als Ressourcenmanager für DTC-Transaktionen.
 
-Weitere Informationen zu verteilten Transaktionen in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], finden Sie unter [verteilte Transaktionen](#distTran)
+Weitere Informationen zu verteilten Transaktionen in [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], finden Sie unter [verteilte Transaktionen](#distTran)
 
 ## <a name="manage-unresolved-transactions"></a>Verwalten nicht aufgelöster Transaktionen
 
@@ -142,9 +142,9 @@ Das Ergebnis aktiver Transaktion, das während eines RMID-Wechsels besteht, kann
 * Hinzufügen oder Entfernen einer Datenbank aus einer Verfügbarkeitsgruppe 
 * Verwerfen einer Verfügbarkeitsgruppe
 
-In diesen Fällen versucht die Instanz, den DTC zu kontaktieren und das Transaktionsergebnis zu identifizieren, wenn ein Failover vom primären Replikat auf eine neue [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz ausgeführt wird. Der DTC kann das Ergebnis nicht zurückgeben, da die RMID, die die Datenbank während der Wiederherstellung bei unsicheren Transaktionen für den Ergebnisabruf verwendet, bisher nicht in der Liste eingetragen war. Deshalb gilt für die Datenbank der Status SUSPECT.
+In diesen Fällen versucht die Instanz, den DTC zu kontaktieren und das Transaktionsergebnis zu identifizieren, wenn ein Failover vom primären Replikat auf eine neue [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz ausgeführt wird. Der DTC kann das Ergebnis nicht zurückgeben, da die RMID, die die Datenbank während der Wiederherstellung bei unsicheren Transaktionen für den Ergebnisabruf verwendet, bisher nicht in der Liste eingetragen war. Deshalb gilt für die Datenbank der Status SUSPECT.
 
-Im neuen [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Fehlerprotokoll wird ein Eintrag ähnlich diesem Beispiel angezeigt:
+Im neuen [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Fehlerprotokoll wird ein Eintrag ähnlich diesem Beispiel angezeigt:
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-Das vorstehende Beispiel zeigt, dass der DTC die Datenbank aus dem neuen primären Replikat nicht wieder in die Transaktion aufnehmen konnte, die nach dem Failover erstellt worden war. Da die [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz das Ergebnis der verteilten Transaktion nicht mehr bestimmten kann, wird die Datenbank als verdächtig markiert. Die Transaktion wird als eine Arbeitseinheit (Unit of Work – UOW) markiert und erhält einen GUI. Um die Datenbank wiederherzustellen, müssen Sie entweder einen Commit oder einen manuellen Rollback ausführen. 
+Das vorstehende Beispiel zeigt, dass der DTC die Datenbank aus dem neuen primären Replikat nicht wieder in die Transaktion aufnehmen konnte, die nach dem Failover erstellt worden war. Da die [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Instanz das Ergebnis der verteilten Transaktion nicht mehr bestimmten kann, wird die Datenbank als verdächtig markiert. Die Transaktion wird als eine Arbeitseinheit (Unit of Work – UOW) markiert und erhält einen GUI. Um die Datenbank wiederherzustellen, müssen Sie entweder einen Commit oder einen manuellen Rollback ausführen. 
 
 >[!WARNING]
 >Dies kann sich auf eine Anwendung auswirken. Vergewissern Sie sich, dass der Commit oder Rollback den Anforderungen Ihrer Anwendung entspricht. 

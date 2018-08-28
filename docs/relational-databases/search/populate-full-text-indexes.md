@@ -29,13 +29,13 @@ caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5d1c1d149f89cbbd34365531b56885a84a5d89ae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39bf03a7fb7244e357c156798ae78e927dab12f4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533420"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066923"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu
          Das Dialogfeld **Neuer Zeitplan für Tabellen-Volltextindizierung** wird geöffnet und erlaubt das Bearbeiten des Zeitplans.  
   
         > [!NOTE]  
-        >  Informationen zum Ändern eines Auftrags des SQL Server-Agents finden Sie unter [Ändern eines Auftrags](http://msdn.microsoft.com/library/dd5e5f20-20c4-4ab9-a19a-db87577dcd43).  
+        >  Informationen zum Ändern eines Auftrags des SQL Server-Agents finden Sie unter [Ändern eines Auftrags](../../ssms/agent/modify-a-job.md).  
   
     -   Um einen vorhandenen Zeitplan zu **entfernen**, wählen Sie den vorhandenen Zeitplan aus, und klicken Sie auf **Löschen**.  
   

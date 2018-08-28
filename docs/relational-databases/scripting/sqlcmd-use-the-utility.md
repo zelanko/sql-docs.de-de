@@ -20,13 +20,13 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b5704d8ceee75ee6943f331ee532902901e9f4f2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 548d95e3e2cc34981284e68aa7d836bc0a6eca1d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548650"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43060409"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -562,7 +562,7 @@ SQLCMD –E –N –C
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
  [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
- [Verwalten von Auftragsschritten](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Erstellen eines CmdExec-Auftragsschritts](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
+ [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)   
+ [Erstellen eines CmdExec-Auftragsschritts](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

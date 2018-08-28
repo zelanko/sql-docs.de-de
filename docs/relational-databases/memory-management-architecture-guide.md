@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008892"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073059"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008892"
 ## <a name="windows-virtual-memory-manager"></a>Windows-Manager für virtuellen Arbeitsspeicher  
 Die zugesicherten Bereiche des Adressraums werden vom Windows-Manager für virtuellen Arbeitsspeicher (VMM, Virtual Memory Manager) dem verfügbaren physischen Arbeitsspeicher zugeordnet.  
   
-Weitere Informationen zur von anderen Betriebssystemen unterstützten Größe des physischen Speichers finden Sie in der Windows-Dokumentation [Arbeitsspeichergrenzwerte für Windows-Versionen](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx) (möglicherweise in englischer Sprache).  
+Weitere Informationen zur von anderen Betriebssystemen unterstützten Größe des physischen Speichers finden Sie in der Windows-Dokumentation [Arbeitsspeichergrenzwerte für Windows-Versionen](/windows/desktop/Memory/memory-limits-for-windows-releases) (möglicherweise in englischer Sprache).  
   
 Mit virtuellen Speichersystemen kann mehr physischer Arbeitsspeicher zugesichert werden, als tatsächlich vorhanden ist, sodass das Verhältnis von virtuellem zu physischem Arbeitsspeicher das Verhältnis 1:1 überschreiten kann. Auf diese Weise können größere Programme auf Computern mit verschiedenen Konfigurationen des physischen Arbeitsspeichers ausgeführt werden. Wenn jedoch deutlich mehr virtueller Arbeitsspeicher verwendet wird, als die kombinierten durchschnittlichen Workingsets aller Prozesse verwenden, kann dies zu einem ungünstigen Leistungsverhalten führen. 
 

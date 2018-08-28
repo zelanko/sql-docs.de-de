@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405195"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "37993952"
   
  **So erstellen Sie mithilfe von SQL Server Management Studio eine WMI-Warnung**  
   
--   [Erstellen einer WMI-Ereigniswarnung](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Erstellen einer WMI-Ereigniswarnung](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>So funktionieren Ereignisbenachrichtigungen für eine gespiegelte Datenbank  
  Die datenbankübergreifende Übermittlung von Ereignisbenachrichtigungen, an der eine gespiegelte Datenbank beteiligt ist, erfolgt grundsätzlich remote, da für die gespiegelte Datenbank ein Failover auftreten kann. [!INCLUDE[ssSB](../../includes/sssb-md.md)] wird eine besondere Unterstützung für gespiegelte Datenbanken in Form von *gespiegelten Routen*. Eine gespiegelte Route weist zwei Adressen auf: eine für die Prinzipalserverinstanz und eine für die Spiegelserverinstanz.  
@@ -215,11 +215,11 @@ ms.locfileid: "37993952"
   
 -   Der vom Auftrag verwendete Anmeldename  
   
-     Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge erstellen oder ausführen möchten, müssen Sie der Zielserverinstanz zuerst alle für den Auftrag erforderlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen hinzufügen. Weitere Informationen finden Sie unter [Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge erstellen oder ausführen möchten, müssen Sie der Zielserverinstanz zuerst alle für den Auftrag erforderlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen hinzufügen. Weitere Informationen finden Sie unter [Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst  
   
-     Das Dienststartkonto definiert das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, in dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, und legt dessen Netzwerkberechtigungen fest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird als angegebenes Benutzerkonto ausgeführt. Der Kontext des Agent-Diensts hat eine Auswirkung auf die Einstellungen für den Auftrag und dessen Ausführungsumgebung. Das Konto muss Zugriff auf die vom Auftrag benötigten Ressourcen haben, z. B. auf Netzwerkfreigaben. Informationen zum Auswählen und Ändern des Dienststartkontos finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     Das Dienststartkonto definiert das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, in dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, und legt dessen Netzwerkberechtigungen fest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird als angegebenes Benutzerkonto ausgeführt. Der Kontext des Agent-Diensts hat eine Auswirkung auf die Einstellungen für den Auftrag und dessen Ausführungsumgebung. Das Konto muss Zugriff auf die vom Auftrag benötigten Ressourcen haben, z. B. auf Netzwerkfreigaben. Informationen zum Auswählen und Ändern des Dienststartkontos finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Damit eine ordnungsgemäße Funktionsweise sichergestellt ist, muss das Dienststartkonto mit den richtigen Domänen-, Dateisystem- und Registrierungsberechtigungen konfiguriert sein. Ein Auftrag benötigt u. U. auch eine freigegebene Netzwerkressource, die für das Dienstkonto konfiguriert werden muss. Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -230,35 +230,35 @@ ms.locfileid: "37993952"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys  
   
-     Von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy wird der Sicherheitskontext für einen angegebenen Auftragsschritt definiert. Damit ein Auftrag auf der Zielserverinstanz ausgeführt werden kann, müssen alle dafür erforderlichen Proxys auf dieser Instanz manuell neu erstellt werden. Weitere Informationen finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) und [Problembehandlung von proxybasierten Multiserveraufträgen](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy wird der Sicherheitskontext für einen angegebenen Auftragsschritt definiert. Damit ein Auftrag auf der Zielserverinstanz ausgeführt werden kann, müssen alle dafür erforderlichen Proxys auf dieser Instanz manuell neu erstellt werden. Weitere Informationen finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md) und [Problembehandlung von proxybasierten Multiserveraufträgen](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Weitere Informationen finden Sie auch unter:  
   
--   [Implementieren von Aufträgen](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
   
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (zur Datenbankspiegelung)  
   
 -   [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (beim Installieren einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Konfigurieren des SQL Server-Agents](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (beim Installieren einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md) (beim Installieren einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implementieren der SQL Server-Agent-Sicherheit](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **So zeigen Sie vorhandene Aufträge und deren Eigenschaften an**  
   
--   [Überwachen der Auftragsaktivität](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Überwachen der Auftragsaktivität](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Anzeigen von Auftragsschrittinformationen](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Anzeigen von Auftragsschrittinformationen](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **So erstellen Sie einen Auftrag**  
   
--   [Erstellen eines Auftrags](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
--   [Erstellen eines Auftrags](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Bewährte Methoden zum erneuten Erstellen eines Auftrags mithilfe eines Skripts  
  Es wird empfohlen, zunächst ein Skript für einen einfachen Auftrag zu erstellen, den Auftrag für einen anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst neu zu erstellen und dann den Auftrag auszuführen, um zu sehen, ob er sich wie gewünscht verhält. Auf diese Weise können Sie Inkompatibilitäten feststellen und versuchen, diese zu lösen. Wenn ein durch Skript erstellter Auftrag in der neuen Umgebung nicht wie beabsichtigt ausgeführt wird, sollten Sie einen äquivalenten Auftrag erstellen, der in der betreffenden Umgebung ordnungsgemäß ausgeführt wird.  

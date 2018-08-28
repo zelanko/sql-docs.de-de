@@ -33,12 +33,12 @@ caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8af2acc0708f595a77b2ca4859df4aaaa3f5d7f5
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: af328924116f1409fa6507c30353c74dca93504f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854302"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410035"
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Affinity64 Mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A, RR), nur verfügbar in der 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Wird zu 1 geändert, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent gestartet wird. Der Standardwert ist 0, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beim Setup auf automatischen Start festgelegt wurde.)|  
     |[Allow Updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (Veraltet. Darf nicht verwendet werden. Führt beim Neukonfigurieren zu einem Fehler.)|0|1|0|  
-    |[automatic soft-NUMA disabled](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  
+    |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
     |[Standardeinstellung der Sicherungsprüfsumme](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
     |[Schwellenwert für blockierte Prozesse](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  

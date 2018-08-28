@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980322"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406151"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ermöglicht es Benutzern, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtselemente aus der Berichts-Viewer-Symbolleiste als neue Kachel an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard anzuheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  
@@ -41,7 +41,7 @@ ms.locfileid: "38980322"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Das Anheften erfolgt über den Berichts-Viewer für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], z.B. `http://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  lediglich aus `http://myserver/ReportServer`.  
+-   Das Anheften erfolgt über den Berichts-Viewer für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], z.B. `http://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  lediglich aus `http://myserver/ReportServer`.  
   
 -   Ihr Browser muss Popups von der Berichtsserversite zulassen.  
   

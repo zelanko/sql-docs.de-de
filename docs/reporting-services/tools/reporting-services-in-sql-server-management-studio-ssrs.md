@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031467"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406506"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
   Berichtsserveradministratoren können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für folgende Aufgaben verwenden:  
   
 -   Aktivieren Sie Funktionen, legen Sie Serverstandards fest, und verwalten Sie ausgeführte Aufträge.  
   
--   Zeigen Sie benutzerdefinierte Berichte an, oder erstellen Sie diese. im Objekt-Explorer wird für viele Knoten ein Satz von Standardberichten angezeigt, die mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]installiert werden. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Zeigen Sie benutzerdefinierte Berichte an, oder erstellen Sie diese. im Objekt-Explorer wird für viele Knoten ein Satz von Standardberichten angezeigt, die mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]installiert werden. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Berichtsautoren können [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für folgende Aufgaben verwenden:  
   
