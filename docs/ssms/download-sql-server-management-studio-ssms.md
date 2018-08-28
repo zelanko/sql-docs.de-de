@@ -47,7 +47,7 @@ SSMS 17.X ist die größte Generation von *SQL Server Management Studio* und ste
 
 **[![Herunterladen](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875802) (es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
-**[![Herunterladen](../ssdt/media/download.png)Upgradepaket für SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875804) (aktualisiert 17.x auf 17.8.1; es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
+**[![Herunterladen](../ssdt/media/download.png)Upgradepaket für SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875804) (aktualisiert 17.x auf 17.8.1; es ist eine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
 
 **Versionsinformationen**
