@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980432"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776153"
 ---
 # <a name="operators"></a>Operatoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980432"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Operatoren sind Aliasnamen für Personen oder Gruppen, die elektronische Benachrichtigungen erhalten können, sobald ein Auftrag abgeschlossen oder eine Warnung ausgelöst wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst unterstützt die Benachrichtigung der Administratoren durch Operatoren. Durch Operatoren werden Benachrichtigungs- und Überwachungsfunktionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents aktiviert.  
+Operatoren sind Aliasnamen für Personen oder Gruppen, die elektronische Benachrichtigungen erhalten können, sobald ein Auftrag abgeschlossen oder eine Warnung ausgelöst wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unterstützt die Benachrichtigung der Administratoren durch Operatoren. Durch Operatoren werden Benachrichtigungs- und Überwachungsfunktionen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents aktiviert.  
   
 ## <a name="operator-attributes-and-concepts"></a>Operatorattribute und -konzepte  
 Für Operatoren gelten die folgenden Hauptattribute:  
@@ -52,13 +52,13 @@ Für Operatoren gelten die folgenden Hauptattribute:
 -   Kontaktinformationen  
   
 ### <a name="naming-an-operator"></a>Benennen eines Operators  
-Jeder Operator muss einen Namen aufweisen. Operatornamen müssen innerhalb der jeweiligen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eindeutig sein und dürfen nicht länger als **128** Zeichen lang sein.  
+Jeder Operator muss einen Namen aufweisen. Operatornamen müssen innerhalb der jeweiligen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und dürfen nicht länger als **128** Zeichen lang sein.  
   
 ### <a name="contact-information"></a>Kontaktinformationen  
 Die Kontaktinformationen eines Operators definieren, wie der Operator benachrichtigt wird. Operatoren können per E-Mail, per Pager oder über den Befehl **net send** benachrichtigt werden:  
   
 > [!IMPORTANT]  
-> Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+> Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
 -   **E-Mail-Benachrichtigung**  
   
@@ -80,7 +80,7 @@ Die Kontaktinformationen eines Operators definieren, wie der Operator benachrich
   
         Diese Software wird vom Pagerdienstanbieter bereitgestellt. Die Software agiert als Mailclient, der den Inhalt des Posteingangs in regelmäßigen Abständen verarbeitet, indem entweder alle oder Teile der E-Mail-Adressinformationen als Pagernummern interpretiert werden oder indem E-Mail-Namen einer Pagernummer in einer Übersetzungstabelle zugeordnet werden.  
   
-        Wenn der gleiche Pageranbieter für alle Operatoren freigegeben wird, können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] spezielle E-Mail-Formatierungen angeben, die das Umwandlungssystem vom E-Mail-Format zum Pagerformat benötigt. Die spezielle Formatierung kann dabei aus einem Präfix oder einem Suffix bestehen und in die folgenden Zeilen der E-Mail eingefügt werden:  
+        Wenn der gleiche Pageranbieter für alle Operatoren freigegeben wird, können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] spezielle E-Mail-Formatierungen angeben, die das Umwandlungssystem vom E-Mail-Format zum Pagerformat benötigt. Die spezielle Formatierung kann dabei aus einem Präfix oder einem Suffix bestehen und in die folgenden Zeilen der E-Mail eingefügt werden:  
   
         **Betreff:**  
   
@@ -96,7 +96,7 @@ Die Kontaktinformationen eines Operators definieren, wie der Operator benachrich
     Hiermit senden Sie dem Operator eine Nachricht über den Befehl **NET SEND** . Bei **NET SEND**geben Sie den Empfänger (Computer oder Benutzer) einer Netzwerknachricht an.  
   
     > [!NOTE]  
-    > Der Befehl **NET SEND** greift auf Microsoft Windows Messenger zurück. Um Warnungen fehlerfrei senden zu können, muss dieser Service sowohl auf dem Computer ausgeführt werden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeführt wird, als auch auf dem Computer, den der Operator verwendet.  
+    > Der Befehl **NET SEND** greift auf Microsoft Windows Messenger zurück. Um Warnungen fehlerfrei senden zu können, muss dieser Service sowohl auf dem Computer ausgeführt werden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, als auch auf dem Computer, den der Operator verwendet.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>Warn- und Ausfallsicherheitsoperatoren  
 Sie können die Operatoren auswählen, die als Reaktion auf eine Warnung benachrichtigt werden sollen. So können Sie beispielsweise die Zuständigkeiten bei der Operatorbenachrichtigung abwechselnd zuweisen, indem Sie Zeitpläne für Warnungen verwenden. Auf diese Weise wird z. B. Person A über Warnungen benachrichtigt, die am Montag, Mittwoch oder Freitag auftreten, und Person B ist für Warnungen am Dienstag, Donnerstag oder Samstag zuständig.  
@@ -109,7 +109,7 @@ Der Ausfallsicherheitsoperator wird in den folgenden Fällen benachrichtigt:
   
     Die primären Operatoren sind nicht erreichbar, weil beispielsweise die Pageradresse fehlerhaft ist oder die betreffenden Operatoren möglicherweise gerade außer Dienst sind.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann nicht auf Systemtabellen in der **msdb** -Datenbank zugreifen.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann nicht auf Systemtabellen in der **msdb** -Datenbank zugreifen.  
   
     In der **sysnotifications** -Systemtabelle werden die Aufgaben der Operatoren bei Warnungen angegeben.  
   
@@ -133,5 +133,5 @@ Sie müssen mindestens eines der folgenden Elemente einrichten, um einen Operato
 |Tasks beim Zuordnen von Warnungen|[Zuweisen von Warnungen zu einem Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definieren der Antwort auf eine Warnung &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Zuweisen von Warnungen zu einem Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Datenbank-E-Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)  
   

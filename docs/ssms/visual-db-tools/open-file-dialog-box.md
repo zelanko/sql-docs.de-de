@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997922"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775951"
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von ei
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei**aus. Dieses Dialogfeld wird auch angezeigt, wenn Sie Dateien von anderen Elementen aus öffnen, z. B. dem Dialogfeld **Externe Tools** . Um das ähnliche Dialogfeld **Projekt öffnen** zu öffnen, wählen Sie im Menü **Datei**den Befehl **Öffnen** und dann **Projekt/Projektmappe** aus.  
   
 > [!NOTE]  
-> Überprüfen Sie vor dem Öffnen eines Projekts oder einer Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]die Vertrauenswürdigkeit des zugehörigen Codes. Durch das Öffnen des Projekts oder der Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] wird möglicherweise der Code des Projekts bzw. der Komponente in einem vertrauenswürdigen Prozess auf dem lokalen Computer ausgeführt.  
+> Überprüfen Sie vor dem Öffnen eines Projekts oder einer Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]die Vertrauenswürdigkeit des zugehörigen Codes. Durch das Öffnen des Projekts oder der Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird möglicherweise der Code des Projekts bzw. der Komponente in einem vertrauenswürdigen Prozess auf dem lokalen Computer ausgeführt.  
   
 ## <a name="option"></a>Option  
 **Look in**  

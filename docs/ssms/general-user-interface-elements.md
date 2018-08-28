@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040357"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775953"
 ---
 # <a name="general-user-interface-elements"></a>Allgemeine Benutzeroberflächenelemente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Der **Editor**, das **Eigenschaftenfenster** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+Der **Editor**, das **Eigenschaftenfenster** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Info (Dialogfeld)](../ssms/about-dialog-box.md)  
-Beschreibt das Dialogfeld mit Informationen zu [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] und zu dem Computer, auf dem das Programm ausgeführt wird.  
+Beschreibt das Dialogfeld mit Informationen zu [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und zu dem Computer, auf dem das Programm ausgeführt wird.  
   
 [SQL Server Management Studio-Webbrowser](../ssms/sql-server-management-studio-web-browser.md)  
-Beschreibt, wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] einen Webbrowser in einem Dokumentfenster hostet.  
+Beschreibt, wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] einen Webbrowser in einem Dokumentfenster hostet.  
   
 [Externe Tools (Dialogfeld)](../ssms/external-tools-dialog-box.md)  
-Ermöglicht das Hinzufügen von Tools zum Menü **Extras** , die nicht Teil von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]sind.  
+Ermöglicht das Hinzufügen von Tools zum Menü **Extras** , die nicht Teil von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sind.  
   
 [Eigenschaftenfenster &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Ermöglicht das Anzeigen von Eigenschaften und Ereignissen ausgewählter Objekte, die in Editoren und Designern gespeichert sind. Zudem können Sie die Eigenschaften von Dateien, Projekten und Projektmappen bearbeiten und anzeigen. Einige Eigenschaften lassen sich im Eigenschaftenfenster bearbeiten.  

@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979868"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776507"
 ---
 # <a name="external-tools-dialog-box"></a>Externe Tools (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Mit dem Dialogfeld **Externe Tools** können Sie dem Menü **Extras** externe Tools hinzufügen, z. B. SQLCMD oder den Editor. Durch das Hinzufügen von externen Tools können Sie auf einfache Weise andere Anwendungen starten, während Sie in der [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung arbeiten. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Darüber hinaus kann im **Ausgabefenster** die Ausgabe einiger Tools angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
+Mit dem Dialogfeld **Externe Tools** können Sie dem Menü **Extras** externe Tools hinzufügen, z. B. SQLCMD oder den Editor. Durch das Hinzufügen von externen Tools können Sie auf einfache Weise andere Anwendungen starten, während Sie in der [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung arbeiten. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Darüber hinaus kann im **Ausgabefenster** die Ausgabe einiger Tools angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
   
 ## <a name="options"></a>Tastatur  
 **Inhalt des Menüs**  
@@ -56,7 +56,7 @@ Gibt den Pfad zu der Datei an, die gestartet werden soll.
 Gibt die Variablen an, die an das Tool übergeben werden, wenn es im Menü aufgerufen wird. Argumente können Werte festlegen, die beim Starten an das Tool oder den Befehl übergeben werden. Ein Wert kann beispielsweise einen Dateinamen oder ein Verzeichnis angeben. Mit der Schaltfläche mit dem Pfeil können Sie aus einer Liste mit vordefinierten Argumenten auswählen. Sie können mehrere Argumente hinzufügen. Eine vollständige Liste vordefinierter Argumente und ihrer Definitionen finden Sie unter [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). Abhängig vom verwendeten Befehl oder Tool können Sie auch benutzerdefinierte Argumente eingeben, (wie z. B. Befehlszeilenoptionen).  
   
 **Ausgabefenster verwenden**  
-Öffnet das Ausgabefenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] , in dem die Ausgabe des derzeit ausgeführten Befehls angezeigt wird. Nicht alle Tools zeigen ihre Ausgabe in einem Format an, das im Ausgabefenster dargestellt werden kann. Weitere Informationen finden Sie unter [Ausgabefenster](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Öffnet das Ausgabefenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , in dem die Ausgabe des derzeit ausgeführten Befehls angezeigt wird. Nicht alle Tools zeigen ihre Ausgabe in einem Format an, das im Ausgabefenster dargestellt werden kann. Weitere Informationen finden Sie unter [Ausgabefenster](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
 **Ausgabe als Unicode behandeln**  
 Interpretiert die Ausgabe als Unicode.  
@@ -76,7 +76,7 @@ Durch die Eingabe der folgenden Werte im Dialogfeld **Externe Tools** wird ein M
 |Feld|value|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Befehl**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Befehl**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumente**|-A|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

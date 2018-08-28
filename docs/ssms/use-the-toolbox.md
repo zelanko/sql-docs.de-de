@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050097"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774165"
 ---
 # <a name="use-the-toolbox"></a>Verwenden der Toolbox
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  
+Sie können Elemente, Text und Steuerelemente aus der Toolbox markieren und auf Formulare, Seiten und Designer ziehen sowie Elemente von diesen Quellen zur späteren Wiederverwendung zurück in die Toolbox ziehen. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie z. B. einen Task auf einen Wartungsplan ziehen.  
   
 Die Elemente in der Toolbox sind in Abschnitte unterteilt, die als Registerkarten bezeichnet werden. Im Folgenden finden Sie eine Liste der häufigsten Toolboxtasks und wie sie ausgeführt werden.  
   

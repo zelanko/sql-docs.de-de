@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023328"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775047"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Die Service Packs sind ausschließlich online und nicht auf dem Installationsmed
 - **Neue DMF zum Ersetzen des DBCC INPUTBUFFER:** Eine neue dynamische Verwaltungsfunktion, sys.dm_input_buffer, die session_id als Parameter verwendet, wird eingeführt, um den DBCC INPUTBUFFER zu ersetzen.
 - **Erweiterung für XEvents zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe:** Derzeit wird read_only_rout_fail XEvent nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf dieser Liste eine Verbindung hergestellt werden kann. Diese Verbesserung beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen XEvent ausgelöst wird. 
 - **Verbesserte Handhabung von Service Broker mit Failover einer Verfügbarkeitsgruppe:** Wenn Service Broker für Datenbanken der Verfügbarkeitsgruppe derzeit aktiviert ist, bleiben bei einem Failover der Verfügbarkeitsgruppe alle Service Broker-Verbindungen, die dem primären Replikat entstammen, geöffnet. Mit dieser Verbesserung werden all diese offenen Verbindungen während eines Failover der Verfügbarkeitsgruppe geschlossen.
-- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
+- **Partitionierung mit der automatischen Soft-NUMA**: Mit der Version SQL 2014 SP2 wird die Partitionierung mit der automatischen [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) eingeführt, wenn das Ablaufverfolgungsflag 8079 auf Serverebene aktiviert ist. Wenn das Ablaufverfolgungsflag 8079 beim Starten aktiviert ist, fragt SQL Server 2014 SP2 das Hardwarelayout ab und konfiguriert soft-NUMA automatisch auf Systemen, die mindestens acht CPU pro NUMA-Knoten vermelden. Die automatische soft-NUMA ist Hyperthread-fähig (HT/logischer Prozessor). Durch die Partitionierung und Erstellung von weiteren Knoten wird die Hintergrundverarbeitung skaliert, indem die Anzahl von Listenern, Skalierungen sowie Netzwerk- und Verschlüsselungsfunktionen erhöht wird. Wir empfehlen Ihnen, die Leistung der Arbeitsauslastung mit der automatischen soft-NUMA vor der Aktivierung im Rahmen der Produktion zunächst zu testen.
 
 ## <a name="service-pack-3-release-notes"></a>Versionsanmerkungen zu Service Pack 3
 
@@ -133,7 +133,7 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Die Neuinstallation von SQL Server-Failoverclusterinstanzen verursacht einen Fehler, wenn dieselbe IP-Adresse verwendet wird  
 **Problem:** Wenn Sie während der Installation einer SQL Server-Failoverclusterinstanz eine falsche IP-Adresse angeben, tritt ein Fehler auf. Wenn Sie nach der Deinstallation der fehlerhaften Instanz versuchen, die SQL Server-Failoverclusterinstanz mit demselben Instanznamen und der richtigen IP-Adresse erneut zu installieren, schlägt die Installation fehl. Dies liegt daran, dass noch die doppelte Ressourcengruppe aus der vorherigen Installation vorhanden ist.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen oder löschen die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](http://msdn.microsoft.com/library/ms191545). 
+**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen oder löschen die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services und PowerPivot  
   

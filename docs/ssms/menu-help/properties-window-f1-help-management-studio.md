@@ -28,12 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044587"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774077"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,5 +58,5 @@ Zeigt die Eigenschaften für ein Objekt an.
 Der Beschreibungsbereich befindet sich unten im Fenster **Eigenschaften** und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Eigenschaftenfenster in SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[Eigenschaftenfenster in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

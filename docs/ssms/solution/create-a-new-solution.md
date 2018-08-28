@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043167"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775820"
 ---
 # <a name="create-a-new-solution"></a>Erstellen einer neuen Projektmappe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
+Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
   
 Klicken Sie zum Öffnen des Projektmappen-Explorers im Menü **Ansicht** auf **Projektmappen-Explorer** .  
   

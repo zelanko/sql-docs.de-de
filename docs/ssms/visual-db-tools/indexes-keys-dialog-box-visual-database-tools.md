@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984992"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774903"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schlüssel erstellen oder ändern. Um auf das Dialogfeld zuzugreifen, öffnen Sie die Tabellendefinition für die Tabelle mit dem Index oder Schlüssel. Klicken Sie mit der rechten Maustaste auf das Tabellendefinitions-Datenblatt, und klicken Sie dann auf **Indizes/Schlüssel**.  
   
 > [!NOTE]  
-> Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
+> Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
 ## <a name="options"></a>Tastatur  
 **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
@@ -67,7 +67,7 @@ Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken S
 Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erstellen**angezeigt.  
   
 **Als CLUSTERED erstellen**  
-Erstellen Sie den Schlüssel oder Index als CLUSTERED. Pro Tabelle ist nur ein gruppierter Index zulässig. Die Daten in der Tabelle werden in der Reihenfolge des gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Erstellen gruppierter Indizes](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) und [Erstellen nicht gruppierter Indizes](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Erstellen Sie den Schlüssel oder Index als CLUSTERED. Pro Tabelle ist nur ein gruppierter Index zulässig. Die Daten in der Tabelle werden in der Reihenfolge des gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md) und [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Datenbereichsspezifikation**  
 Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
@@ -97,9 +97,9 @@ Geben Sie an, ob für größer werdende Zwischenseiten in diesem Index der gleic
 **Doppelte Schlüssel ignorieren**  
 Geben Sie an, was geschieht, wenn eine Zeile, deren Schlüsselwert mit einem vorhandenen Schlüsselwert identisch ist, im Rahmen eines Masseneinfügevorgangs eingefügt wird. Wenn Sie Folgendes auswählen:  
   
--   **Ja** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gibt eine Warnung aus, ignoriert die eingehende Zeile, die eine Beschädigung verursachen, und versucht, die übrigen Zeilen einzufügen.  
+-   **Ja** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Warnung aus, ignoriert die eingehende Zeile, die eine Beschädigung verursachen, und versucht, die übrigen Zeilen einzufügen.  
   
--   **Nein** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] gibt eine Fehlermeldung aus und führt für den gesamten Masseneinfügevorgang einen Rollback aus.  
+-   **Nein** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung aus und führt für den gesamten Masseneinfügevorgang einen Rollback aus.  
   
 **Eingeschlossene Spalten**  
 Zeigt eine durch Trennzeichen getrennte Liste der Namen aller Spalten an, die den Indexschlüssel bilden. Unterschlüsselspalten können nur für nicht gruppierte Indizes angegeben werden. Diese Eigenschaft ist bei XML-Indizes ausgeblendet.  

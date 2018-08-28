@@ -19,21 +19,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054967"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774905"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:  
   
--   Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] -Beispieldatenbank  
+-   Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank  
   
 -   Ein Konto mit Rechten als Datenbankbesitzer ( **dbo** )  
   
@@ -46,7 +46,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 1.  Klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
-2.  Öffnen Sie den Knoten Datenbanken und dann den Knoten [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
+2.  Öffnen Sie den Knoten Datenbanken und dann den Knoten [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
@@ -201,7 +201,7 @@ Sämtliche von Ihnen an einem Diagramm vorgenommenen Änderungen werden erst nac
   
 3.  Wenn Fehler aufgetreten sind, wird das Dialogfeld **Benachrichtigung nach dem Speichervorgang** angezeigt, das die Fehler und deren Ursachen enthält. Beheben Sie die Fehler, und speichern Sie das Diagramm anschließend erneut.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Hierbei handelt es sich um ein einfaches Diagramm, das nur zwei vorhandene und zwei neue Tabellen enthält. Damit wird jedoch das Potenzial zur Diagrammdarstellung einer vorhandenen Datenbank oder zur visuellen Erstellung eines neuen Schemas veranschaulicht. Mit folgenden Funktionen können Sie Ihre Fähigkeiten vertiefen:  
   
 -   Erstellen neuer Diagramme mit Gruppen verbundener Tabellen  
@@ -217,7 +217,7 @@ Hierbei handelt es sich um ein einfaches Diagramm, das nur zwei vorhandene und z
 [Einrichten im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Hinzufügen von Tabellen zu Diagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Erstellen von Beziehungen zwischen Tabellen in einem Diagramm &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[Erstellen von XML-Indizes](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Erstellen von XML-Indizes](../../relational-databases/xml/create-xml-indexes.md)  
 [Kopieren eines Datenbankdiagrammimages in die Zwischenablage &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Verwenden von Diagrammlayout &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

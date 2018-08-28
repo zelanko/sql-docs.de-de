@@ -13,38 +13,38 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98875ca77fcc6b0f49f33d79d552c658b61daa3e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f8464293ae32ff8635afcc9525c88381d5d031b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772996"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775606"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] und [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] verhindern, dass Windows Server-Failovercluster direkte Upgrades des Betriebssystems durchführen, sodass die zulässige Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] für einen Cluster eingeschränkt wird. Sobald der Cluster auf mindestens [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] aktualisiert wurde, kann der Cluster immer aktuell bleiben.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] und [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] verhindern, dass Windows Server-Failovercluster direkte Upgrades des Betriebssystems durchführen, sodass die zulässige Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für einen Cluster eingeschränkt wird. Sobald der Cluster auf mindestens [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] aktualisiert wurde, kann der Cluster immer aktuell bleiben.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
--   Bevor Sie eine der Migrationsstrategien durchführen, muss ein paralleler Windows Server-Failovercluster mit Windows Server 2016/2012 R2 vorbereitet werden. Alle Knoten, aus denen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Failoverclusterinstanzen (FCIs) bestehen, müssen zum Windows-Cluster mit den parallelen FCIs hinzugefügt werden. Eigenständige Computer dürfen **nicht** vor der Migration zum Windows-Failovercluster hinzugefügt werden. Benutzerdatenbanken sollten vor der Migration in der neuen Umgebung synchronisiert werden.
--   Auf allen Zielinstanzen muss die gleiche Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] als parallele Instanz in der ursprünglichen Umgebung mit gleichem Instanznamen und -ID ausgeführt werden. Zudem müssen die gleichen Features auf diesen Instanzen installiert sein. Installationspfade und Verzeichnisstrukturen sollten auf den Zielcomputern identisch sein. Dies gilt nicht für Namen von virtuellen Netzwerken von FCIs, die vor der Migration anders sein müssen. Alle Features, die auf der ursprünglichen Instanz aktiviert sind (Always On, FILESTREAM usw.), sollten auch auf der Zielinstanz aktiviert sein.
+-   Bevor Sie eine der Migrationsstrategien durchführen, muss ein paralleler Windows Server-Failovercluster mit Windows Server 2016/2012 R2 vorbereitet werden. Alle Knoten, aus denen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanzen (FCIs) bestehen, müssen zum Windows-Cluster mit den parallelen FCIs hinzugefügt werden. Eigenständige Computer dürfen **nicht** vor der Migration zum Windows-Failovercluster hinzugefügt werden. Benutzerdatenbanken sollten vor der Migration in der neuen Umgebung synchronisiert werden.
+-   Auf allen Zielinstanzen muss die gleiche Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als parallele Instanz in der ursprünglichen Umgebung mit gleichem Instanznamen und -ID ausgeführt werden. Zudem müssen die gleichen Features auf diesen Instanzen installiert sein. Installationspfade und Verzeichnisstrukturen sollten auf den Zielcomputern identisch sein. Dies gilt nicht für Namen von virtuellen Netzwerken von FCIs, die vor der Migration anders sein müssen. Alle Features, die auf der ursprünglichen Instanz aktiviert sind (Always On, FILESTREAM usw.), sollten auch auf der Zielinstanz aktiviert sein.
 
 -   [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] darf vor der Migration nicht auf dem parallelen Cluster installiert sein.
 
 -   Die Downtime beim Migrieren eines Clusters, der nur Verfügbarkeitsgruppen verwendet (mit oder ohne SQL FCIs) kann durch verteilte Verfügbarkeitsgruppen deutlich gesenkt werden. Dafür ist allerdings erforderlich, dass auf allen Instanzen [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM-Versionen (oder höher) ausgeführt wird.
 
--   Für alle Migrationsstrategien ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Systemadministratorrolle erforderlich. Alle Windows-Benutzer, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Diensten (z.B. Windows-Konten, auf denen Replikations-Agents ausgeführt werden) verwendet werden, benötigen Berechtigungen auf Betriebssystemebene auf jedem Computer in der neuen Umgebung.
+-   Für alle Migrationsstrategien ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemadministratorrolle erforderlich. Alle Windows-Benutzer, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensten (z.B. Windows-Konten, auf denen Replikations-Agents ausgeführt werden) verwendet werden, benötigen Berechtigungen auf Betriebssystemebene auf jedem Computer in der neuen Umgebung.
 
--   Alle Netzwerkdateifreigaben und dem Netzwerk zugeordnete Laufwerke, die in der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clusterumgebung verwendet werden, müssen noch vorhanden sein. Außerdem müssen sie für Zielcluster mit den gleichen Berechtigungen wie für die ursprünglichen Instanzen zugänglich sein.
+-   Alle Netzwerkdateifreigaben und dem Netzwerk zugeordnete Laufwerke, die in der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clusterumgebung verwendet werden, müssen noch vorhanden sein. Außerdem müssen sie für Zielcluster mit den gleichen Berechtigungen wie für die ursprünglichen Instanzen zugänglich sein.
 
--   Alle TCP/IP-Ports, die von der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanz aufgelistet werden, dürfen nicht verwendet werden und müssen eingehenden Datenverkehr auf dem Zielcomputer erlauben.
+-   Alle TCP/IP-Ports, die von der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz aufgelistet werden, dürfen nicht verwendet werden und müssen eingehenden Datenverkehr auf dem Zielcomputer erlauben.
 -   Alle Dienste, die mit SQL in Verbindung stehen, müssen vom gleichen Windows-Benutzer installiert und ausgeführt werden.
 
 -   Die Zielinstanzen müssen mit dem gleichen Gebietsschema wie die ursprünglichen Instanzen installiert werden.
 
 ## <a name="migration-scenarios"></a>Migrationsszenarios
 
-Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clustertopologie ab, nämlich dem Gebrauch von [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] und SQL-Failoverclusterinstanzen. Die gewählte Strategie hängt auch von den Anforderungen der Zielumgebung ab. Wenn die neue Umgebung erfordert, dass jeder Computer oder jede SQL-FCI den ursprünglichen Namen des virtuellen Netzwerks (VNN) beibehält oder wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Topologie davon anhängig ist, dass die neuen Instanzen alle Systemobjekte der ursprünglichen Instanzen erben, müssen Sie sich für eine Strategie entscheiden, in der diese migriert werden.
+Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clustertopologie ab, nämlich dem Gebrauch von [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] und SQL-Failoverclusterinstanzen. Die gewählte Strategie hängt auch von den Anforderungen der Zielumgebung ab. Wenn die neue Umgebung erfordert, dass jeder Computer oder jede SQL-FCI den ursprünglichen Namen des virtuellen Netzwerks (VNN) beibehält oder wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Topologie davon anhängig ist, dass die neuen Instanzen alle Systemobjekte der ursprünglichen Instanzen erben, müssen Sie sich für eine Strategie entscheiden, in der diese migriert werden.
 
 |                                   | Alle Serverobjekte und VNNs erforderlich | Alle Serverobjekte und VNNs erforderlich | Keine Serverobjekte und VNNs erforderlich\* | Keine Serverobjekte und VNNs erforderlich\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
@@ -54,11 +54,11 @@ Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprüngl
 \* Dies schließt nicht den Listenernamen der Verfügbarkeitsgruppe ein.
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Szenario 1: Windows-Cluster mit SQL Server-Verfügbarkeitsgruppen und keinen FCIs (Failoverclusterinstanzen)
-Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das Verfügbarkeitsgruppen und keine FCIs verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Bereitstellung auf einem anderen Cluster mit Windows Server 2016/2012 R2 durchführen. Anschließend können Sie eine verteilte Verfügbarkeitsgruppe erstellen, wo der Zielcluster der sekundäre Cluster des Produktionsclusters ist. Dafür ist es erforderlich, dass der Benutzer ein Upgrade auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher durchführt.
+Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingerichtet haben, das Verfügbarkeitsgruppen und keine FCIs verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Bereitstellung auf einem anderen Cluster mit Windows Server 2016/2012 R2 durchführen. Anschließend können Sie eine verteilte Verfügbarkeitsgruppe erstellen, wo der Zielcluster der sekundäre Cluster des Produktionsclusters ist. Dafür ist es erforderlich, dass der Benutzer ein Upgrade auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher durchführt.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
-1.  Aktualisieren Sie bei Bedarf alle Instanzen auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher. Auf parallelen Instanzen müssen die gleichen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] ausgeführt werden.
+1.  Aktualisieren Sie bei Bedarf alle Instanzen auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher. Auf parallelen Instanzen müssen die gleichen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden.
 
 2.  Erstellen Sie eine Verfügbarkeitsgruppe für den Zielcluster. Wenn der primäre Knoten des Zielclusters keine FCI ist, erstellen Sie einen Listener.
 
@@ -91,11 +91,11 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 ## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Szenario 2: Windows-Cluster mit SQL Server-FCIs (Failoverclusterinstanzen)
 
-Wenn Sie über eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Umgebung mit nur SQL-FCI-Instanzen verfügen, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Umgebung auf einem anderen Windows-Cluster mit Windows Server 2016/2012 R2 erstellen. Die Migration zum Zielcluster führen Sie durch, indem Sie die VNNs der alten SQL-FCIs „stehlen“ und sie auf dem neuen Cluster laden. Dabei kann es zu zusätzlicher Downtime kommen, die davon abhängig ist, wie viel Zeit die DNS-Verteilung in Anspruch nimmt.
+Wenn Sie über eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Umgebung mit nur SQL-FCI-Instanzen verfügen, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Umgebung auf einem anderen Windows-Cluster mit Windows Server 2016/2012 R2 erstellen. Die Migration zum Zielcluster führen Sie durch, indem Sie die VNNs der alten SQL-FCIs „stehlen“ und sie auf dem neuen Cluster laden. Dabei kann es zu zusätzlicher Downtime kommen, die davon abhängig ist, wie viel Zeit die DNS-Verteilung in Anspruch nimmt.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
-1.  Nutzen Sie eine vollständige Sicherung, und unterbrechen Sie den Datenverkehr in Richtung des ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clusters.
+1.  Nutzen Sie eine vollständige Sicherung, und unterbrechen Sie den Datenverkehr in Richtung des ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clusters.
 
 2.  Nutzen Sie eine Sicherung des Protokollfragments der Benutzerdatenbanken, und führen Sie eine Wiederherstellung in der neuen Umgebung durch.
 
@@ -109,26 +109,26 @@ Wenn Sie über eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Um
 
 7.  Kopieren Sie die Systemdatenbanken von dem ursprünglichen Computer auf den parallelen Zielcomputer.
 
-8.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager den Namen der Ressource „Server Name“ jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle.
+8.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager den Namen der Ressource „Server Name“ jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle.
 
 9.  Schalten Sie dann nur die umbenannte „Server Name“-Ressource wieder für jede SQL-FCI-Rolle online.
 
-10. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
+10. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
 
     >[!NOTE]
     >Fehler, die auftreten, weil der Name bereits von einem anderen Computer verwendet wird, treten nicht mehr auf, sobald die DNS-Einträge für diesen Namen gelöscht wurden.
 
 11. Sobald alle FCIs umbenannt wurden, starten Sie jeden Computer im neuen Cluster neu.
 
-12. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
+12. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Szenario 3: Windows-Cluster mit SQL-FCIs und SQL Server-Verfügbarkeitsgruppen
 
-Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das keine eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanzen sondern nur SQL-FCIs verwendet, die in mindestens einer Verfügbarkeitsgruppe enthalten sind, können Sie eine Migration zu einem neuen Cluster mit ähnlichen Methoden wie unter „no Availability Group, no standalone instance“ (keine Verfügbarkeitsgruppe, keine eigenständige Instanz) beschrieben durchführen. Vor dem Kopieren von Systemtabellen auf freigegebene FCI-Datenträger müssen Sie alle Verfügbarkeitsgruppen in der ursprünglichen Umgebung löschen. Erstellen Sie die Verfügbarkeitsgruppen mit den gleichen Schema- und Listenernamen erneut, nachdem alle Datenbanken zum Zielcomputer migriert wurden. Dadurch werden die Windows Server-Failoverclusterressourcen ordnungsgemäß auf den Zielclustern erstellt und verwaltet. **Die Option „Always On“ muss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager auf jedem Computer in der Zielumgebung vor der Migration aktiviert werden.**
+Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingerichtet haben, das keine eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen sondern nur SQL-FCIs verwendet, die in mindestens einer Verfügbarkeitsgruppe enthalten sind, können Sie eine Migration zu einem neuen Cluster mit ähnlichen Methoden wie unter „no Availability Group, no standalone instance“ (keine Verfügbarkeitsgruppe, keine eigenständige Instanz) beschrieben durchführen. Vor dem Kopieren von Systemtabellen auf freigegebene FCI-Datenträger müssen Sie alle Verfügbarkeitsgruppen in der ursprünglichen Umgebung löschen. Erstellen Sie die Verfügbarkeitsgruppen mit den gleichen Schema- und Listenernamen erneut, nachdem alle Datenbanken zum Zielcomputer migriert wurden. Dadurch werden die Windows Server-Failoverclusterressourcen ordnungsgemäß auf den Zielclustern erstellt und verwaltet. **Die Option „Always On“ muss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager auf jedem Computer in der Zielumgebung vor der Migration aktiviert werden.**
 
 ### <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
-1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Nutzen Sie eine Sicherung des Protokollfragments der Benutzerdatenbank, und führen Sie eine Wiederherstellung auf dem vorhergesehenen primären Cluster der neuen Umgebung durch, und nutzen Sie NORECOVERY für alle vorhergesehenen sekundären Cluster.
 
@@ -144,15 +144,15 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 8.  Kopieren Sie die Systemdatenbanken von dem ursprünglichen Computer auf den parallelen Zielcomputer.
 
-9.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager den Namen der Ressource „Server Name“ jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle.
+9.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager den Namen der Ressource „Server Name“ jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle.
 
 10. Schalten Sie dann nur die umbenannte „Server Name“-Ressource wieder für jede SQL-FCI-Rolle online.
 
-11. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
+11. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
 
 12. Sobald alle FCIs umbenannt wurden, starten Sie jeden Computer im neuen Cluster neu.
 
-13. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
+13. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
 14. Erstellen Sie, sobald alle Instanzen wieder online sind, die Verfügbarkeitsgruppe im Replikat, in dem die Datenbanken wiederhergestellt wurden.
 
@@ -162,11 +162,11 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Szenario 4: Windows-Cluster mit eigenständigen SQL Server-Instanzen und ohne Verfügbarkeitsgruppen
 
-Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clusters, der nur FCIs aufweist. Statt jedoch den VNN der Netzwerknamenclusterressource der FCI zu ändern, ändern Sie den Computernamen des ursprünglichen eigenständigen Computers und „stehlen“ den Namen des alten Computers auf dem Zielcomputer. Dadurch kommt es zu zusätzlicher Downtime abhängig von nicht eigenständigen Szenarios, da Sie den eigenständigen Zielcomputer nicht zum Windows Server-Failovercluster hinzufügen können, bis Sie den Netzwerknamen des alten Computers kennen.
+Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clusters, der nur FCIs aufweist. Statt jedoch den VNN der Netzwerknamenclusterressource der FCI zu ändern, ändern Sie den Computernamen des ursprünglichen eigenständigen Computers und „stehlen“ den Namen des alten Computers auf dem Zielcomputer. Dadurch kommt es zu zusätzlicher Downtime abhängig von nicht eigenständigen Szenarios, da Sie den eigenständigen Zielcomputer nicht zum Windows Server-Failovercluster hinzufügen können, bis Sie den Netzwerknamen des alten Computers kennen.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
-1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Nehmen Sie eine Sicherung des Protokollfragments der Benutzerdatenbanken, und führen Sie eine Wiederherstellung auf jedem Computer in der neuen Umgebung durch.
 
@@ -174,7 +174,7 @@ Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration
 
 4.  Schalten Sie an der gleichen Stelle die gruppierten Datenträger wieder online, die von jeder SQL-FCI verwendet werden.
 
-5.  Schalten Sie im ursprünglichen Cluster in Failovercluster-Manager jede gruppierte Rolle der SQL-FCIs offline, und unterbrechen Sie die eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager.
+5.  Schalten Sie im ursprünglichen Cluster in Failovercluster-Manager jede gruppierte Rolle der SQL-FCIs offline, und unterbrechen Sie die eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
 
 6.  Geben Sie jedem eigenständigen Computer im ursprünglichen Cluster einen neuen eindeutigen Computernamen. Starten Sie jeden dieser Computer wie angegeben neu.
 
@@ -182,7 +182,7 @@ Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration
 
 8.  Kopieren Sie die Systemdatenbanken auf die Zielcomputer.
 
-9.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in einen neuen, eindeutigen Namen.
+9.  Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in einen neuen, eindeutigen Namen.
 
 10. Schalten Sie dann nur die umbenannte „Server Name“-Ressource wieder für jede SQL-FCI-Rolle online.
 
@@ -190,11 +190,11 @@ Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration
 
 12. Verknüpfen Sie nach dem Neustart jeden eigenständigen Computer mit dem Windows Server-Zielfailovercluster.
 
-13. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
+13. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
 
 14. Sobald alle FCIs umbenannt wurden, starten Sie jeden Computer im neuen Cluster neu.
 
-15. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
+15. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
 ## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Szenario 5: Windows-Cluster mit eigenständigen SQL Server-Instanzen und Verfügbarkeitsgruppen
 
@@ -202,7 +202,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
-1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Unterbrechen Sie den Datenverkehr zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Nutzen Sie eine Sicherung des Protokollfragments der Benutzerdatenbank, und führen Sie eine Wiederherstellung auf dem vorhergesehenen primären Cluster der neuen Umgebung durch, und nutzen Sie NORECOVERY für jeden vorhergesehenen sekundären Cluster.
 
@@ -212,7 +212,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 5.  Schalten Sie an der gleichen Stelle die gruppierten Datenträger wieder online, die von jeder SQL-FCI verwendet werden.
 
-6.  Schalten Sie im ursprünglichen Cluster in Failovercluster-Manager jede gruppierte Rolle der SQL-FCIs offline, und unterbrechen Sie die eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager.
+6.  Schalten Sie im ursprünglichen Cluster in Failovercluster-Manager jede gruppierte Rolle der SQL-FCIs offline, und unterbrechen Sie die eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
 
 7.  Geben Sie jedem eigenständigen Computer im ursprünglichen Cluster einen neuen eindeutigen Computernamen. Starten Sie jeden dieser Computer wie angegeben neu.
 
@@ -220,7 +220,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 9.  Kopieren Sie die Systemdatenbanken auf die Zielcomputer.
 
-10. Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in einen neuen, eindeutigen Namen.
+10. Ändern Sie in der ursprünglichen Umgebung in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in einen neuen, eindeutigen Namen.
 
 11. Schalten Sie dann nur die umbenannte „Server Name“-Ressource wieder für jede SQL-FCI-Rolle online.
 
@@ -228,11 +228,11 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 13. Verknüpfen Sie nach dem Neustart jeden eigenständigen Computer mit dem Windows Server-Zielfailovercluster.
 
-14. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
+14. Benennen Sie dann im Zielcluster in Failovercluster-Manager die „Server Name“-Ressource jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rolle in den Namen des ursprünglichen Clusters um.
 
 15. Sobald alle FCIs umbenannt wurden, starten Sie jeden Computer im neuen Cluster neu.
 
-16. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
+16. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
 17. Sobald alle Instanzen wieder online sind, erstellen Sie die Verfügbarkeitsgruppen auf dem intendierten primären Cluster neu.
 
@@ -246,7 +246,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 -   **Datenbank-Spiegelungsendpunkt**
 
-    Aus SQL-Sicht migriert der Datenbankspiegelungsendpunkt mit den Systemtabellen zur neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanz. Stellen Sie vor der Migration sicher, dass die entsprechenden Regeln auf die Firewalls angewendet wurden und dass kein anderer Prozess auf dem gleichen Port lauscht.
+    Aus SQL-Sicht migriert der Datenbankspiegelungsendpunkt mit den Systemtabellen zur neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Stellen Sie vor der Migration sicher, dass die entsprechenden Regeln auf die Firewalls angewendet wurden und dass kein anderer Prozess auf dem gleichen Port lauscht.
 
 -   **Availability Groups (Verfügbarkeitsgruppen)**
 
@@ -260,17 +260,17 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
 -   **Remote Verteiler, Herausgeber und Abonnenten**
 
-    Das Verhältnis zwischen einem Verteiler und einem Herausgeber hängt nur vom VNN der Computer ab, die diese hosten, der ordnungsgemäß zum neuen Computer aufgelöst werden kann. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Agent-Aufträge werden auch ordnungsgemäß mit den Systemtabellen migriert, sodass die verschiedenen Replikations-Agents weiterhin ausgeführt werden können. Vor der Migration ist es erforderlich, dass Windows-Konten, auf denen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Agent selbst oder ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Agent-Auftrag ausgeführt wird, die gleichen Berechtigungen in der Zielumgebung haben. Die Kommunikation mit dem Herausgeber und den Abonnenten verläuft normal.
+    Das Verhältnis zwischen einem Verteiler und einem Herausgeber hängt nur vom VNN der Computer ab, die diese hosten, der ordnungsgemäß zum neuen Computer aufgelöst werden kann. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Aufträge werden auch ordnungsgemäß mit den Systemtabellen migriert, sodass die verschiedenen Replikations-Agents weiterhin ausgeführt werden können. Vor der Migration ist es erforderlich, dass Windows-Konten, auf denen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent selbst oder ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Auftrag ausgeführt wird, die gleichen Berechtigungen in der Zielumgebung haben. Die Kommunikation mit dem Herausgeber und den Abonnenten verläuft normal.
 
 -   **Momentaufnahmeordner**
 
-    Vor der Migration ist es erforderlich, dass Netzwerkfreigaben, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Features verwendet werden, für Computer in der Zielumgebung mit den gleichen Berechtigungen wie in der ursprünglichen Umgebung zugänglich sind. Stellen Sie vor der Migration sicher, dass dies zutrifft.
+    Vor der Migration ist es erforderlich, dass Netzwerkfreigaben, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features verwendet werden, für Computer in der Zielumgebung mit den gleichen Berechtigungen wie in der ursprünglichen Umgebung zugänglich sind. Stellen Sie vor der Migration sicher, dass dies zutrifft.
 
 ### <a name="service-broker"></a>Service Broker
 
 -   **Service Broker-Endpunkt**
 
-    Aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Sicht bestehen keine Bedenken bezüglich des Endpunkts. Sie müssen vor der Migration sicherstellen, dass kein Prozess auf dem gleichen Port lauscht und dass keine Firewallregel diesen Port blockiert bzw. explizit zulässt.
+    Aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sicht bestehen keine Bedenken bezüglich des Endpunkts. Sie müssen vor der Migration sicherstellen, dass kein Prozess auf dem gleichen Port lauscht und dass keine Firewallregel diesen Port blockiert bzw. explizit zulässt.
 
 -   **Zertifikate**
 
@@ -284,7 +284,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
     Remotedienstbindungen funktionieren nach der Migration ordnungsgemäß, da jeder Benutzer, der die Remotedienstbindung verwendet, ordnungsgemäß migriert wird.
 
-### <a name="includessnoversionincludesssnoversionmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] -Agent
+### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent
 
 -   **Jobs**
 

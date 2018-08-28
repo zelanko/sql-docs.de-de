@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042637"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776501"
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
+Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
   
 > [!NOTE]  
 > Änderungen an den Optionen auf dieser Seite werden erst wirksam, wenn die Umgebung neu gestartet wurde.  
   
 ## <a name="settings"></a>Einstellungen  
 **Hilfe anzeigen mit**  
-Gibt an, wie die Hilfe angezeigt wird. Wählen Sie in der Dropdownliste den Eintrag **Externer Help Viewer** aus, wenn die Themen in einem externen unverankerten Fenster angezeigt werden sollen. Wählen Sie **Integrierter Hilfeviewer** aus, wenn Hilfethemen in einem Webbrowserfenster angezeigt werden sollen, das in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]verankert ist.  
+Gibt an, wie die Hilfe angezeigt wird. Wählen Sie in der Dropdownliste den Eintrag **Externer Help Viewer** aus, wenn die Themen in einem externen unverankerten Fenster angezeigt werden sollen. Wählen Sie **Integrierter Hilfeviewer** aus, wenn Hilfethemen in einem Webbrowserfenster angezeigt werden sollen, das in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verankert ist.  
   
 **Suchergebnisse pro Seite**  
 Gibt an, wie viele Themen auf einer Seite mit **Suchergebnissen** angezeigt werden sollen.  

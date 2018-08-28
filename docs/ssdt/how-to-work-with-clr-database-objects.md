@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083812"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776666"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Vorgehensweise: Arbeiten mit CLR-Datenbankobjekten
-Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
+Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
   
 Zum Erstellen eines CLR-Datenbankobjekts in SQL Server Data Tools erstellen Sie ein Datenbankprojekt und fügen ihm dann ein CLR-Datenbankobjekt hinzu. Im Unterschied zu früheren Versionen von Visual Studio müssen Sie kein eigenes CLR-Projekt erstellen und dann einen Verweis vom Datenbankprojekt auf dieses CLR-Projekt hinzufügen. Wenn Sie das Datenbankprojekt erstellen und veröffentlichen, werden die CLR-Objekte zur selben Zeit automatisch im Projekt veröffentlicht. Nachdem Sie die CLR-Objekte veröffentlicht haben, können sie wie jedes andere Datenbankobjekt aufgerufen und ausgeführt werden.  
   
@@ -86,7 +86,7 @@ Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobj
   
 1.  Navigieren Sie im **SQL Server-Objekt-Explorer** zu der lokalen Datenbank, in der Sie das Projekt bereitstellen.  
   
-2.  Standardmäßig ist die CLR-Integration in SQL Server deaktiviert. Um CLR-Datenbankobjekte verwenden zu können, müssen Sie die CLR-Integration aktivieren. Verwenden Sie zu diesem Zweck die Option "CLR-fähig" der gespeicherten Prozedur "sp_configure". Weitere Informationen finden Sie im Thema [Aktivieren der CLR-Integration](http://msdn.microsoft.com/en-us/library/ms131048.aspx).  
+2.  Standardmäßig ist die CLR-Integration in SQL Server deaktiviert. Um CLR-Datenbankobjekte verwenden zu können, müssen Sie die CLR-Integration aktivieren. Verwenden Sie zu diesem Zweck die Option "CLR-fähig" der gespeicherten Prozedur "sp_configure". Weitere Informationen finden Sie im Thema [Aktivieren der CLR-Integration](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Neue Abfrage** aus. Fügen Sie im Abfragebereich den folgenden Code ein, und klicken Sie auf die Schaltfläche **Abfrage ausführen**.  
   
@@ -105,7 +105,7 @@ Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobj
 5.  Ändern Sie die Eingabe in **425 312 1222**, und verlassen Sie das Feld mit der TAB-TASTE. Beachten Sie, dass die Eingabe jetzt akzeptiert wird.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Vorteile der CLR-Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Vorteile der Verwendung von verwaltetem Code beim Erstellen von Datenbankobjekten](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046427"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774899"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstel
   
 ### <a name="general-scripting-options"></a>Allgemeine Skripterstellungsoptionen  
 **Einzelne Anweisungen begrenzen**  
-Trennt die einzelnen [!INCLUDE[tsql](../../includes/tsql_md.md)] -Anweisungen mithilfe eines Batchtrennzeichens voneinander ab. Wenn Sie das Standardbatchtrennzeichen für **Abfrage-Editor**ändern möchten, wählen Sie **Extras**/**Optionen**/**Abfrageausführung**/**SQL Server**/**Allgemein**/**Batchtrennzeichen**aus. Der Standardwert lautet False. Weitere Informationen finden Sie unter [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Trennt die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen mithilfe eines Batchtrennzeichens voneinander ab. Wenn Sie das Standardbatchtrennzeichen für **Abfrage-Editor**ändern möchten, wählen Sie **Extras**/**Optionen**/**Abfrageausführung**/**SQL Server**/**Allgemein**/**Batchtrennzeichen**aus. Der Standardwert lautet False. Weitere Informationen finden Sie unter [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Beschreibende Header einschließen**  
 Fügt dem Skript beschreibende Kommentare hinzu, indem das Skript in Abschnitte für die einzelnen Objekte aufgeteilt wird. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [/*...*/ (Kommentar) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -70,7 +70,7 @@ Fügt die USE DATABASE-Anweisung dem Skript hinzu, mit dem Datenbankobjekte im K
 Generiert ein Skript für zusätzliche Objekte, die erforderlich sind, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert lautet False.  
   
 **Schema für Objektnamen qualifizieren**  
-Qualifiziert Objektnamen mit dem Objektschema. Der Standardwert lautet False. Weitere Informationen finden Sie unter [Erstellen eines Datenbankschemas](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Qualifiziert Objektnamen mit dem Objektschema. Der Standardwert lautet False. Weitere Informationen finden Sie unter [Erstellen eines Datenbankschemas](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Optionen für die Skriptdatenkomprimierung** Schließt Datenkomprimierungsoptionen in das Skript ein. Der Standardwert lautet False.
 
@@ -81,7 +81,7 @@ Enthält erweiterte Eigenschaften im Skript, wenn das Objekt über erweiterte Ei
 Schließt den Besitzer im generierten Skript ein. Der Standardwert lautet False.  
   
 **Skripterstellung für Berechtigungen**  
-Schließt Berechtigungen für Datenbankobjekte im Skript ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [Berechtigungen](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Schließt Berechtigungen für Datenbankobjekte im Skript ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [Berechtigungen](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Tabellen-/Sichtoptionen  
 Die folgenden Optionen gelten nur für Skripts für Tabellen oder Sichten.  
@@ -93,7 +93,7 @@ Konvertiert benutzerdefinierte Datentypen in die Basistypen, aus denen sie erste
 Fügt die SET ANSI_PADDING-Anweisung vor und hinter jeder CREATE TABLE-Anweisung hinzu. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Sortierung einschließen**  
-Schließt eine Sortierung in die Spaltendefinition ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Schließt eine Sortierung in die Spaltendefinition ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **IDENTITY-Eigenschaft einschließen**  
 Schließt Definitionen für den IDENTITY-Ausgangswert und das IDENTITY-Inkrement ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [IDENTITY (Eigenschaft) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -105,7 +105,7 @@ Fügt Tabellenverweisen für FOREIGN KEY-Einschränkungen den Schemanamen hinzu.
 Schließt die Aufrufe für die bindenden gespeicherten Prozeduren **sp_bindefault** und **sp_bindrule** ein. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) und [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Skripterstellung für CHECK-Einschränkungen**  
-Fügt dem Skript [CHECK-Einschränkungen](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) hinzu. Der Standardwert lautet "True".  
+Fügt dem Skript [CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) hinzu. Der Standardwert lautet "True".  
   
 **Skripterstellung für Standard**  
 Schließt Spaltenstandardwerte in das Skript ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE DEFAULT (Transact-SQL&amp;)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -114,7 +114,7 @@ Schließt Spaltenstandardwerte in das Skript ein. Der Standardwert lautet False.
 Gibt die Dateigruppe in der ON -Klausel für Tabellendefinitionen an. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE TABLE (Transact-SQL&amp;)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Skripterstellung für Fremdschlüssel**  
-Schließt [FOREIGN KEY-Einschränkungen](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) in das Skript ein. Der Standardwert lautet False.  
+Schließt [FOREIGN KEY-Einschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in das Skript ein. Der Standardwert lautet False.  
   
 **Skripterstellung für Volltextindizes**  
 Schließt Volltextindizes in das Skript ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -126,7 +126,7 @@ Schließt gruppierte Indizes, nicht gruppierte Indizes und XML-Indizes in das Sk
 Schließt Tabellenpartitionierungsschemas in das Skript ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Skripterstellung für Primärschlüssel**  
-Schließt [PRIMARY KEY- und FOREIGN KEY-Einschränkungen](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) in das Skript ein. Der Standardwert lautet "True".  
+Schließt [PRIMARY KEY- und FOREIGN KEY-Einschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in das Skript ein. Der Standardwert lautet "True".  
   
 **Skripterstellung für Statistiken**  
 Schließt benutzerdefinierte Statistiken in das Skript ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -135,7 +135,7 @@ Schließt benutzerdefinierte Statistiken in das Skript ein. Der Standardwert lau
 Schließt Trigger in das Skript ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Skripterstellung für eindeutige Schlüssel**  
-Schließt [UNIQUE-Einschränkungen und CHECK-Einschränkungen](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) in das Skript ein. Der Standardwert lautet False.  
+Schließt [UNIQUE-Einschränkungen und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) in das Skript ein. Der Standardwert lautet False.  
   
 **Skripterstellung für Sichtspalten**  
 Deklariert Sichtspalten in Sichtheadern. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -153,7 +153,7 @@ Schließt vom System generierte Einschränkungsnamen ein, damit die deklarative 
 **Skript für den Datenbankmodultyp** Generierte Skripts werden auf den angegebenen [Database Engine Type (Datenbankmodultyp)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx) ausgerichtet.
 
 **Skripterstellung für Serverversion**  
-Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgerichtet. Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] neu sind, können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Einige für [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] erstellte Skripts können weder auf Servern, auf denen eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ausgeführt wird, noch in einer Datenbank mit einer früheren [Einstellung des Datenbankkompatibilitätsgrades](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)ausgeführt werden.  
+Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgerichtet. Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neu sind, können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Einige für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellte Skripts können weder auf Servern, auf denen eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, noch in einer Datenbank mit einer früheren [Einstellung des Datenbankkompatibilitätsgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausgeführt werden.  
 
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen von Skripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

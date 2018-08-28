@@ -26,18 +26,18 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0bad4aef18b77c53f850cbcfe2dafd5d8181ac4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060178"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776036"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- > Inhalte, die im Zusammenhang mit früheren Versionen von SQL Server stehen, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+ > Inhalte, die im Zusammenhang mit früheren Versionen von SQL Server stehen, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](configure-the-windows-firewall-to-allow-sql-server-access.md).
 
 Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
   

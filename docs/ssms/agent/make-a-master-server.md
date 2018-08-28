@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b89207e6a532b7e9583da0c571857663a885d6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5939da9370b1ac155697b740e7f957d1b25c17f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985482"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774407"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "38985482"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] einen [!INCLUDE[tsql](../../includes/tsql_md.md)]-Masterserver einrichten.  
+In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Masterserver einrichten.  
   
 **In diesem Thema**  
   
@@ -56,7 +56,7 @@ In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../.
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicherheit  
 Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden im Kontext des Proxykontos auf dem Zielserver ausgeführt. Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, da andernfalls einem Proxy zugeordnete Auftragsschritte nicht vom Masterserver auf den Zielserver heruntergeladen werden:  
   
 -   Der Registrierungsunterschlüssel des Masterservers **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<&#42;instance_name&#42;>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) wird auf 1 (true) festgelegt. Dieser Unterschlüssel ist standardmäßig auf 0 (false) festgelegt.  
@@ -84,7 +84,7 @@ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglied
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserveradministration**, und klicken Sie dann auf **Als Masterserver einrichten**. Der **Masterserver-Assistent** führt Sie durch die Schritte zum Einrichten eines Masterservers und Hinzufügen eines Zielservers.  
   
-3.  Konfigurieren Sie auf der Seite **Masterserveroperator** einen Operator, damit der Masterserver Benachrichtigungen per E-Mail oder mittels Pager an Operatoren sendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent muss zum Senden von E-Mails konfiguriert werden. Um Operatoren die Benachrichtigungen mithilfe von **NET SEND**zu senden, muss auf dem Server mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent der Messenger-Dienst ausgeführt werden.  
+3.  Konfigurieren Sie auf der Seite **Masterserveroperator** einen Operator, damit der Masterserver Benachrichtigungen per E-Mail oder mittels Pager an Operatoren sendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent muss zum Senden von E-Mails konfiguriert werden. Um Operatoren die Benachrichtigungen mithilfe von **NET SEND**zu senden, muss auf dem Server mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent der Messenger-Dienst ausgeführt werden.  
   
     **E-Mail-Adresse**  
     Legt die E-Mail-Adresse des Operators fest.  
@@ -98,7 +98,7 @@ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglied
 4.  Wählen Sie auf der Seite **Zielserver** Zielserver für den Masterserver aus.  
   
     **Registrierte Server**  
-    Listet die in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] registrierten Server auf, die noch nicht als Zielserver festgelegt wurden.  
+    Listet die in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] registrierten Server auf, die noch nicht als Zielserver festgelegt wurden.  
   
     **Zielserver**  
     Listet die Server auf, die Zielserver sind.  

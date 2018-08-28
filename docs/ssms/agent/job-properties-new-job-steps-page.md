@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987822"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776092"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Auftragseigenschaften – Neuer Auftrag (Schrittseite)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987822"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agentauftrag anzeigen und planen.  
+Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und planen.  
   
 ## <a name="options"></a>Tastatur  
 **Auftragsschrittliste**  
@@ -41,7 +41,7 @@ Führt die Auftragsschritte für diesen Auftrag auf.
 Verschiebt den Auftrag um einen Schritt nach oben oder unten in der Liste.  
   
 **Startschritt**  
-Wählt den Schritt aus, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent bei Beginn des Auftrags startet.  
+Wählt den Schritt aus, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bei Beginn des Auftrags startet.  
   
 **Neu**  
 Erstellt einen neuen Auftragsschritt unter dem ausgewählten Auftragsschritt.  

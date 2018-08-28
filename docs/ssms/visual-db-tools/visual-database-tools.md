@@ -15,16 +15,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06d284ea40dfb2650edbe78f8aa8090d00dde55d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 16ed6f9161251027440d1d22db087ca83169b9a8
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052968"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774522"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält visuelle Designer zum Erstellen von [!INCLUDE[tsql](../../includes/tsql_md.md)] -Abfragen, Tabellen und Datenbankdiagrammen.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält visuelle Designer zum Erstellen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, Tabellen und Datenbankdiagrammen.  
   
 ## <a name="related-tasks"></a>Related Tasks  
 Verwenden Sie für die ersten Schritte mit Visual Database Tools die folgenden Aufgaben:  

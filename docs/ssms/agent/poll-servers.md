@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2e7ded81d62f01ec739cd02358410bbae299451
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 428b2e0c4dd2ac3657f209fbdc2e1bcacbc69f48
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981852"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773934"
 ---
 # <a name="poll-servers"></a>Abfragen von Servern
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Durch die Ausgabe dieses Befehls bleiben die Zielserver mit der aktuellen Auftra
   
 Es ist nicht notwendig, Vorgänge explizit bereitzustellen, wenn Sie folgende Elemente verwenden:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] zum Steuern von Multiserveraufträgen.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Steuern von Multiserveraufträgen.  
   
 -   Gespeicherte Auftragsprozeduren, die weder Auftragszeitpläne noch Auftragsschritte ändern.  
   

@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988886"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775958"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Löschen von Abfrageergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Nachdem Sie im **Abfrage- und Sicht-Designer**eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
+Nachdem Sie im **Abfrage- und Sicht-Designer**eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
   
 > [!NOTE]  
 > Damit werden keine Änderungen rückgängig gemacht, die Sie an der Datenbank vorgenommen haben. Weitere Informationen zur Funktionsweise des Ergebnisbereichs finden Sie unter [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

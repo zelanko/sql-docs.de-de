@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774422"
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ Klicken Sie auf diese Schaltfläche, um ein Programm zur Liste unter **Wählen S
 Um ein Programm zu entfernen, markieren Sie das Programm, und klicken Sie dann auf **Entfernen**.  
   
 **Als Standard festlegen**  
-Um einen Standardeditor (und ggf. eine Sprachcodierungsoption) für den ausgewählten Dateityp anzugeben, wählen Sie aus der Liste unter **Wählen Sie das zu öffnende Programm aus** ein Programm aus, und klicken Sie dann auf **Als Standard festlegen**. Wenn Sie das nächste Mal eine Datei dieses Typs in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]öffnen, wird das Dokument im neuen Standardeditor geöffnet.  
+Um einen Standardeditor (und ggf. eine Sprachcodierungsoption) für den ausgewählten Dateityp anzugeben, wählen Sie aus der Liste unter **Wählen Sie das zu öffnende Programm aus** ein Programm aus, und klicken Sie dann auf **Als Standard festlegen**. Wenn Sie das nächste Mal eine Datei dieses Typs in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen, wird das Dokument im neuen Standardeditor geöffnet.  
   
 > [!NOTE]  
 > In der Programmliste unter **Wählen Sie das zu öffnende Programm aus**ist an den Namen des Standardeditors für den ausgewählten Dateityp der Vermerk **(Standard)** angehängt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Zuordnen von Dateierweiterungen zu einem Code-Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Zuordnen von Dateierweiterungen zu einem Code-Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

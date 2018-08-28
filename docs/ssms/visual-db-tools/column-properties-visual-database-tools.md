@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981802"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775598"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
+Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
@@ -42,7 +42,7 @@ Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, d
 Die folgenden Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im Server-Explorer eine Spalte auswählen.  
   
 > [!NOTE]  
-> Wenn Sie mit dem Server-Explorer auf diese Eigenschaften zugreifen, sind diese schreibgeschützt. Um die Spalteneigenschaften für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbanken zu bearbeiten, müssen Sie die Spalte im Tabellen-Designer auswählen. Diese Eigenschaften werden später in diesem Thema beschrieben.  
+> Wenn Sie mit dem Server-Explorer auf diese Eigenschaften zugreifen, sind diese schreibgeschützt. Um die Spalteneigenschaften für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken zu bearbeiten, müssen Sie die Spalte im Tabellen-Designer auswählen. Diese Eigenschaften werden später in diesem Thema beschrieben.  
   
 **Kategorie Identität**  
 Wird erweitert, um die Eigenschaften **Name** und **Datenbank** anzuzeigen.  
@@ -60,13 +60,13 @@ Wird erweitert, um die restlichen Eigenschaften anzuzeigen.
 Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **ID-Schrittweite**  
-Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile der Identitätsspalte erhöht wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile der Identitätsspalte erhöht wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **ID-Startwert**  
-Zeigt den der ersten Tabellenzeile der Identitätsspalte zugeordneten Startwert an. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Zeigt den der ersten Tabellenzeile der Identitätsspalte zugeordneten Startwert an. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Ist Identity**  
-Zeigt, ob die ausgewählte Spalte die Identity-Spalte der Tabelle ist. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Zeigt, ob die ausgewählte Spalte die Identity-Spalte der Tabelle ist. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Länge**  
 Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an.  
@@ -84,7 +84,7 @@ Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts 
 Um auf diese Eigenschaften zuzugreifen, klicken Sie im Server-Explorer mit der rechten Maustaste auf die Tabelle, in der sich die Spalte befindet, wählen Sie **Tabellendefinition öffnen**aus, und wählen Sie anschließend im Tabellenraster des Tabellen-Designers die Zeile aus.  
   
 > [!NOTE]  
-> Diese Eigenschaften gelten nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Diese Eigenschaften gelten nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Kategorie Allgemein**  
 Wird erweitert, um **Name**, **NULL-Werte zulassen**, **Datentyp**, **Standardwert oder -bindung**, **Länge**, **Genauigkeit**und **Dezimalstellen**anzuzeigen.  
@@ -185,11 +185,11 @@ Gibt an, ob die ursprünglichen Identitätswerte bei der Replikation erhalten bl
 Zeigt, ob diese Spalte an einem anderen Speicherort repliziert wird.  
   
 **Ist RowGuid**  
-Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] die Spalte als ROWGUID verwendet. Diesen Wert können Sie nur für eine Spalte mit dem Datentyp **uniqueidentifier** auf **Ja**festlegen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Spalte als ROWGUID verwendet. Diesen Wert können Sie nur für eine Spalte mit dem Datentyp **uniqueidentifier** auf **Ja**festlegen. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
 **Größe**  
 Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: Ein **nchar** -Datentyp kann eine Länge von 10 haben (die Anzahl von Zeichen), würde aber wegen der Unicode-Zeichensätze aber eine Größe von 20 Byte haben.  
   
 > [!NOTE]  
-> Die Länge eines **varchar(max)** -Datentyps variiert für jede Zeile. „sp_help“ gibt (-1) als Länge von **varchar(max)** -Spalten zurück. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] zeigt -1 als Spaltengröße an.  
+> Die Länge eines **varchar(max)** -Datentyps variiert für jede Zeile. „sp_help“ gibt (-1) als Länge von **varchar(max)** -Spalten zurück. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
   

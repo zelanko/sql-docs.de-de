@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 101dad288e673a597a1e3bb5110bf8870b289135
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 44d895479d0de91a6a721ef1d41b2df60386533c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980252"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774196"
 ---
 # <a name="create-a-job"></a>Erstellen eines Auftrags
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38980252"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Thema wird beschrieben, wie Sie eine SQL Server-Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] oder SQL Server Management Objects (SMO) erstellen können.  
+In diesem Thema wird beschrieben, wie Sie eine SQL Server-Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects (SMO) erstellen können.  
   
 Informationen zum Hinzufügen von Auftragsschritten, Zeitplänen, Warnungen und Benachrichtigungen, die an Benutzer gesendet werden können, finden Sie in den Links im Abschnitt "Siehe auch".  
   
@@ -54,13 +54,13 @@ Informationen zum Hinzufügen von Auftragsschritten, Zeitplänen, Warnungen und 
   
 ### <a name="Restrictions"></a>Einschränkungen  
   
--   Um einen Auftrag erstellen zu können, muss ein Benutzer Mitglied einer der festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents oder Mitglied der festen Serverrolle **sysadmin** sein. Ein Auftrag kann nur von seinem Besitzer bzw. Mitgliedern der **sysadmin** -Rolle bearbeitet werden. Weitere Informationen zu den festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+-   Um einen Auftrag erstellen zu können, muss ein Benutzer Mitglied einer der festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents oder Mitglied der festen Serverrolle **sysadmin** sein. Ein Auftrag kann nur von seinem Besitzer bzw. Mitgliedern der **sysadmin** -Rolle bearbeitet werden. Weitere Informationen zu den festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 -   Wenn Sie einen Auftrag einem anderen Anmeldenamen zuweisen, ist nicht sichergestellt, dass die Berechtigungen des neuen Besitzers zum erfolgreichen Ausführen des Auftrags ausreichen.  
   
--   Lokale Aufträge werden vom lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent zwischengespeichert. Aus diesem Grund erzwingen alle Änderungen implizit das erneute Zwischenspeichern des Auftrags durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent. Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent den Auftrag erst zwischenspeichert, wenn **sp_add_jobserver** aufgerufen wird, ist es effizienter, **sp_add_jobserver** zuletzt aufzurufen.  
+-   Lokale Aufträge werden vom lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zwischengespeichert. Aus diesem Grund erzwingen alle Änderungen implizit das erneute Zwischenspeichern des Auftrags durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent. Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent den Auftrag erst zwischenspeichert, wenn **sp_add_jobserver** aufgerufen wird, ist es effizienter, **sp_add_jobserver** zuletzt aufzurufen.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicherheit  
   
 -   Den Besitzer eines Auftrags können Sie nur ändern, wenn Sie als Systemadministrator angemeldet sind.  
   
@@ -90,7 +90,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 7.  Organisieren Sie auf der Seite **Warnungen** die Warnungen für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Warnungen“&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md).  
   
-8.  Legen Sie auf der Seite **Benachrichtigungen** die Aktionen für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent fest, die bei Abschluss des Auftrags auszuführen sind. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Benachrichtigungen“&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
+8.  Legen Sie auf der Seite **Benachrichtigungen** die Aktionen für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent fest, die bei Abschluss des Auftrags auszuführen sind. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Benachrichtigungen“&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
   
 9. Verwalten Sie auf der Seite **Ziele** die Zielserver für den Auftrag. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Ziele“&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
@@ -150,5 +150,5 @@ Weitere Informationen finden Sie in den folgenden Themen:
 ## <a name="SMOProcedure"></a>Verwendung von SQL Server Management Objects  
 **So erstellen Sie einen Auftrag für den SQL Server-Agent**  
   
-Rufen Sie die **Create** -Methode der **Job** -Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
+Rufen Sie die **Create** -Methode der **Job** -Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
   

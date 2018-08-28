@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041797"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774662"
 ---
 # <a name="open-and-configure-object-explorer"></a>Öffnen und Konfigurieren des Objekt-Explorers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Öffnen Sie den Objekt-Explorer, indem Sie das Menü **Ansicht** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]verwenden. Konfigurieren Sie Objekt-Explorer-Optionen mit der Option **Optionen** im Menü **Extras** .  
+Öffnen Sie den Objekt-Explorer, indem Sie das Menü **Ansicht** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden. Konfigurieren Sie Objekt-Explorer-Optionen mit der Option **Optionen** im Menü **Extras** .  
   
 ## <a name="viewing-object-explorer"></a>Anzeigen des Objekt-Explorers  
-Der Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
+Der Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
 ## <a name="configuring-object-explorer-options"></a>Konfigurieren der Optionen für Objekt-Explorer  
 Um die Einstellungen für den Objekt-Explorer zu konfigurieren, klicken Sie im Menü **Extras** auf **Optionen**, und klicken Sie dann auf **Objekt-Explorer von SQL Server**.  

@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806975"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774902"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806975"
  Um Abfragen für alle Server auszuführen, die bei einem zentralen Verwaltungsserver registriert sind, erweitern Sie den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Servergruppe, zeigen Sie auf **Verbinden**, und klicken Sie dann auf **Neue Abfrage**. Wenn Abfragen im neuen Abfrage-Editorfenster ausgeführt werden, werden sie anhand der gespeicherten Verbindungsinformationen und des Kontexts für die Windows-Authentifizierung, für alle Server in der Servergruppe ausgeführt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Ausblenden von Systemobjekten im Objekt-Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [Ausblenden von Systemobjekten im Objekt-Explorer](../object/hide-system-objects-in-object-explorer.md)   
  [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

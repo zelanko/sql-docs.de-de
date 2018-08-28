@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984022"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774548"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
+Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
   
-Der Bereich Details zum Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer** , oder drücken Sie **F7**.  
+Der Bereich Details zum Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer** , oder drücken Sie **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] zeigt Datumsangaben gemäß der Einstellung in den Regions- und Sprachoptionen von Microsoft Windows beim Starten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] an. Starten Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] neu, um die neuen Einstellungen wiederzugeben.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt Datumsangaben gemäß der Einstellung in den Regions- und Sprachoptionen von Microsoft Windows beim Starten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] an. Starten Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] neu, um die neuen Einstellungen wiederzugeben.  
   
 ## <a name="object-explorer-details"></a>Details zum Objekt-Explorer  
-Mithilfe von Details zum Objekt-Explorer können Sie in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Instanz durch Ordner und Objekte navigieren. Bei 32-Bit-Betriebssystemen kann der Objekt-Explorer nur 64.000 Objekte anzeigen. Um auf zusätzliche Objekte zuzugreifen, muss ein Symbol ausgewählt werden.  
+Mithilfe von Details zum Objekt-Explorer können Sie in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz durch Ordner und Objekte navigieren. Bei 32-Bit-Betriebssystemen kann der Objekt-Explorer nur 64.000 Objekte anzeigen. Um auf zusätzliche Objekte zuzugreifen, muss ein Symbol ausgewählt werden.  
   
 Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der folgenden Tabelle beschriebenen Symbole enthält. Die Symbole sind nur verfügbar, wenn die entsprechenden Aktionen anwendbar sind.  
   
@@ -55,13 +55,13 @@ Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der fol
 |**Suchen**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
   
 ### <a name="column-header-selections"></a>Spaltenheaderauswahl  
-Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in jedem Spaltenheader mit der rechten Maustaste klicken und die Elemente aktivieren, die Sie anzeigen möchten. Ihre Auswahl wird für alle Objekte, durch die Sie navigieren, beibehalten. Die Auswahl wird für jeden Benutzer individuell beibehalten, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]beendet und neu gestartet wird.  
+Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in jedem Spaltenheader mit der rechten Maustaste klicken und die Elemente aktivieren, die Sie anzeigen möchten. Ihre Auswahl wird für alle Objekte, durch die Sie navigieren, beibehalten. Die Auswahl wird für jeden Benutzer individuell beibehalten, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beendet und neu gestartet wird.  
   
 > [!CAUTION]  
 > Wenn bei einigen Objekttypen (wie z. B. Datenbanken) alle Spalten angezeigt werden, kann das Rendering der Anzeige bei großen Objektsätzen geringfügig verlangsamt werden.  
   
 ### <a name="sorting"></a>Sortierung  
-Wenn Sie auf einen Spaltenheader einmal klicken, erfolgt eine Sortierung nach dieser Spalte. Wenn Sie auf denselben Header erneut klicken, erfolgt eine umgekehrte Sortierung nach dieser Spalte. Die Sortierauswahl wird für jeden Benutzer für alle Objekte und Ordner sowie für den Neustart von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] beibehalten.  
+Wenn Sie auf einen Spaltenheader einmal klicken, erfolgt eine Sortierung nach dieser Spalte. Wenn Sie auf denselben Header erneut klicken, erfolgt eine umgekehrte Sortierung nach dieser Spalte. Die Sortierauswahl wird für jeden Benutzer für alle Objekte und Ordner sowie für den Neustart von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] beibehalten.  
   
 ### <a name="filtering"></a>Filterung  
 Bestimmte Listen von Objekten, die in Details zum Objekt-Explorer angezeigt werden, können mithilfe des **Filter** -Symbols auf der Symbolleiste „Details“ zum Objekt-Explorer gefiltert werden. Das Symbol wird aktiviert, wenn eine Filterung möglich ist.  
@@ -93,7 +93,7 @@ Details zum Objekt-Explorer unterstützt die Mehrfachauswahl von Objekten. Wenn 
 ## <a name="sql-server-object-search"></a>SQL Server-Objektsuche  
 Platzhalter  
   
--   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Suchbereich  
   

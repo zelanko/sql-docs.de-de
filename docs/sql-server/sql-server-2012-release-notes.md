@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926201"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774540"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ oder
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Problemumgehung:** Dieser Fehler kann auftreten, wenn SQL Server Engine oder Analysis Services nicht installiert werden können. Informieren Sie sich in den Setupprotokollen von SQL Server, um Probleme mit SQL Server Engine und Analysis Services zu behandeln und den Fehler zu beheben. Weitere Informationen finden Sie unter "Lesen und Anzeigen der Setupprotokolldateien von SQL Server". Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Problemumgehung:** Dieser Fehler kann auftreten, wenn SQL Server Engine oder Analysis Services nicht installiert werden können. Informieren Sie sich in den Setupprotokollen von SQL Server, um Probleme mit SQL Server Engine und Analysis Services zu behandeln und den Fehler zu beheben. Weitere Informationen finden Sie unter "Lesen und Anzeigen der Setupprotokolldateien von SQL Server". Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Ein Failoverclusterupgrade von SQL Server 2008 oder 2008 R2 Analysis Services auf SQL Server 2012 verursacht nach der Umbenennung des Netzwerks u. U. einen Fehler  
 **Problem:** Nachdem der Netzwerkname einer Microsoft SQL Server 2008- oder 2008 R2 Analysis Services-Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, verursacht der Upgradevorgang u. U. einen Fehler.  
@@ -225,7 +225,7 @@ SQL Server 2012 wird unter den Betriebssystemen Windows Vista SP2, Windows Serve
   
 8.  Auf der Seite **Reparaturstatus** wird der Status des Reparaturvorgangs angezeigt. Wenn die Seite **Abgeschlossen** angezeigt wird, wurde der Vorgang abgeschlossen.  
   
-Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [Reparieren von Fehlern bei einer SQL Server 2012-Installation](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [Reparieren von Fehlern bei einer SQL Server 2012-Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 Nach einem Betriebssystemupgrade können in einer SQL Server 2012-Instanz Fehler auftreten  
 **Problem:** Nachdem das Betriebssystem von Windows Vista auf Windows 7 SP1 aktualisiert wurde, kann in einer SQL Server 2012-Instanz ein Fehler mit etwa folgendem Wortlaut auftreten.  
@@ -237,7 +237,7 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server-Editionsupgrade erfordert einen Neustart  
 **Problem:** Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
   
-**Problemumgehung:** Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Problemumgehung:** Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 Datenbanken mit schreibgeschützten Dateigruppen bzw. Dateien können nicht aktualisiert werden  
 **Problem:** Sie können eine Datenbank nicht aktualisieren, indem Sie die Datenbank entweder anfügen oder von einer Sicherung wiederherstellen, wenn die Datenbank bzw. die darin enthaltenen Dateien/Dateigruppen schreibgeschützt sind.  Fehler 3415 wird zurückgegeben.  Dieses Problem tritt auch bei einem direkten Upgrade einer SQL Server-Instanz auf. Das heißt, Sie versuchen, eine vorhandene SQL Server-Instanz zu ersetzen, indem Sie SQL Server 2012 installieren, und mindestens eine der vorhandenen Datenbanken ist auf schreibgeschützt festgelegt.  
@@ -247,7 +247,7 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 Die Neuinstallation einer SQL Server-Failoverclusterinstanz verursacht einen Fehler, wenn dieselbe IP-Adresse verwendet wird  
 **Problem:** Wenn Sie während der Installation einer SQL Server-Failoverclusterinstanz eine falsche IP-Adresse angeben, tritt ein Fehler auf. Wenn Sie nach der Deinstallation der fehlerhaften Instanz versuchen, die SQL Server-Failoverclusterinstanz mit demselben Instanznamen und der richtigen IP-Adresse erneut zu installieren, schlägt die Installation fehl. Dies liegt daran, dass noch die doppelte Ressourcengruppe aus der vorherigen Installation vorhanden ist.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen oder löschen die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](http://msdn.microsoft.com/library/ms191545).  
+**Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen oder löschen die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
@@ -503,11 +503,11 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
   
 |Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
-|SQL Native Client 11.0 OLEDB|nein|ja|ja|nein|nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|ja|ja|ja|ja|Benutzerkontensteuerung|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|ja|ja|ja|ja|ja|  
-|Microsoft JDBC-Treiber 4.0 für SQL Server|ja|ja|ja|ja|ja|  
+|SQL Native Client 11.0 ODBC|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|SQL Native Client 11.0 OLEDB|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 **\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   

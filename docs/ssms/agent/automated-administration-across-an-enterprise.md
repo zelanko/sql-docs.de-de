@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0245dbc2322c5a0e19fcd18eb5b213422403094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13403b3941f1d5c14779b0230ede0d1d85a02f11
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044387"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776151"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33044387"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] hinweg wird *Multiserververwaltung*genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
+Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
   
 -   Verwalten von zwei oder mehr Servern.  
   
@@ -69,10 +69,10 @@ Richten Sie diesen Sicherungsauftrag einmal auf dem Masterserver ein, und tragen
 Enthält Informationen zum Erstellen und Verwalten von Master- und Zielservern.  
   
 [Auswählen des richtigen SQL Server-Agent-Dienstkontos für Multiserverumgebungen](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
-Enthält Informationen dazu, wie sich die Verwendung von Windows-Konten ohne Administratorberechtigungen oder des Kontos LocalSystem für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst auf Multiserverumgebungen auswirken kann.  
+Enthält Informationen dazu, wie sich die Verwendung von Windows-Konten ohne Administratorberechtigungen oder des Kontos LocalSystem für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf Multiserverumgebungen auswirken kann.  
   
 [Festlegen von Verschlüsselungsoptionen auf Zielservern](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Enthält Informationen zum Festlegen des[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Registrierungsunterschlüssels „MsxEncryptChannelOptions“ auf Zielservern.  
+Enthält Informationen zum Festlegen des[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Registrierungsunterschlüssels „MsxEncryptChannelOptions“ auf Zielservern.  
   
 [Verwalten von Aufträgen über ein gesamtes Unternehmen](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Enthält Informationen zum Überprüfen des Auftragsstatus, Ändern der Zielserver für Aufträge, Synchronisieren von Zielserveruhren, Abrufen des aktuellen Auftragsstatus von Masterservern.  
@@ -87,21 +87,21 @@ Enthält Informationen zum impliziten und expliziten Abfragen des Masterservers 
 Enthält Informationen zur Weiterleitung von Ereignissen von den Zielservern auf die Masterserver.  
   
 [Optimieren der automatischen Verwaltung in einem Unternehmen](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
-Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiserverumgebung die Selbstoptimierungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nutzt.  
+Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiserverumgebung die Selbstoptimierungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nutzt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
-  [Themen zur Abwärtskompatibilität zum Installieren der SQL Server-Datenbank-Engine](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
-[Registrieren von Servern](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
-[sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  
-[sp_delete_targetserver](http://msdn.microsoft.com/en-us/cc438701-ad91-419d-9f23-ebc4c548c700)  
-[sp_delete_targetservergroup](http://msdn.microsoft.com/en-us/d8dd838e-64aa-419f-9ccb-ff04908cf3e4)  
-[sp_help_downloadlist](http://msdn.microsoft.com/en-us/745b265b-86e8-4399-b928-c6969ca1a2c8)  
-[sp_help_jobserver](http://msdn.microsoft.com/en-us/57971787-f9f5-4199-9f64-c2b61a308906)  
-[sp_help_targetservergroup](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)  
-[sp_resync_targetserver](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f)  
-[sp_update_targetservergroup](http://msdn.microsoft.com/en-us/4ac65ed6-e07e-40e4-a282-13bfd92dfa41)  
-[sysjobservers](http://msdn.microsoft.com/en-us/9abcc20f-a421-4591-affb-62674d04575e)  
-[syslogins](http://msdn.microsoft.com/en-us/4cb34f17-a4bb-469f-a218-71f074e6308f)  
-[systargetservers](http://msdn.microsoft.com/en-us/479d1314-be37-4d19-ac9c-419fc9110e53)  
+  [Themen zur Abwärtskompatibilität zum Installieren der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[Registrieren von Servern](../register-servers/register-servers.md)  
+[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
+[sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
+[sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)  
+[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
+[sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)  
+[sp_help_targetservergroup](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)  
+[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)  
+[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
+[sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
+[syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+[systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 307253f2bf44c24872a4ba90e6b6132819071250
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984772"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775707"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatisierte Administrationstasks (SQL Server-Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37984772"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] können administrative Tasks automatisiert werden. Zum Automatisieren der Administration definieren Sie voraussichtliche administrative Tasks und geben die Bedingungen an, unter denen die einzelnen Tasks ausgeführt werden. Durch die Verwendung der automatischen Administration für Routineaufgaben und -ereignisse haben Sie mehr Zeit für andere administrative Funktionen.  
+In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können administrative Tasks automatisiert werden. Zum Automatisieren der Administration definieren Sie voraussichtliche administrative Tasks und geben die Bedingungen an, unter denen die einzelnen Tasks ausgeführt werden. Durch die Verwendung der automatischen Administration für Routineaufgaben und -ereignisse haben Sie mehr Zeit für andere administrative Funktionen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  

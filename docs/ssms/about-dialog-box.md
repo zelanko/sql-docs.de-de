@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774187"
 ---
 # <a name="about-dialog-box"></a>Info (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
+Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
   
 ## <a name="options"></a>Tastatur  
 **Komponentenname**  
-Listet die Namen der einzelnen installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Elemente auf.  
+Listet die Namen der einzelnen installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Elemente auf.  
   
 **Version**  
 Listet die Version der einzelnen installierten Komponenten auf.  

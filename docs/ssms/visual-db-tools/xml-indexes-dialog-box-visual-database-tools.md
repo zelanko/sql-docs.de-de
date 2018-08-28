@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 977188f99e56c67afca657fd881555c896c6ae03
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988642"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774802"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,5 +94,5 @@ Berechnen Sie beim Erstellen des Indexes neue Statistiken. Durch das Neuberechne
 Geben Sie an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Erstellen von XML-Indizes](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Erstellen von XML-Indizes](../../relational-databases/xml/create-xml-indexes.md)  
   

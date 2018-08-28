@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275fb31571f9f57df40eb146b80b76e0c7dfd95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041357"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776479"
 ---
 # <a name="change-the-default-location-for-projects"></a>Ändern des Standardspeicherorts für Projekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Der Standardspeicherort für Dateien und Projekte ist der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]-Projektordner im Ordner Meine Dateien.  
+Der Standardspeicherort für Dateien und Projekte ist der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Projektordner im Ordner Meine Dateien.  
   
 ### <a name="to-change-the-default-location-for-projects"></a>So ändern Sie den Standardspeicherort für Projekte  
   
-1.  Ändern Sie den Standardspeicherort durch Öffnen oder Speichern einer Datei oder eines Projekts an einem anderen Speicherort. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] speichert den Speicherort des zuvor geöffneten Projekts und verwendet ihn beim nächsten Öffnen oder Speichern eines Projekts.  
+1.  Ändern Sie den Standardspeicherort durch Öffnen oder Speichern einer Datei oder eines Projekts an einem anderen Speicherort. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] speichert den Speicherort des zuvor geöffneten Projekts und verwendet ihn beim nächsten Öffnen oder Speichern eines Projekts.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  

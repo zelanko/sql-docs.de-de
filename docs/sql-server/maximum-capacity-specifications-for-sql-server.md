@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833378"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775621"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Inhalte, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Maximum Capacity Specifications for SQL Server (Spezifikationen für maximale Kapazität für SQL Server)](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Inhalte, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Maximum Capacity Specifications for SQL Server (Spezifikationen für maximale Kapazität für SQL Server)](maximum-capacity-specifications-for-sql-server.md).
 
   Die folgenden Tabellen geben die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36833378"
 |Protokolldateien pro Datenbank||1|  
 |Volumes pro Computer||3|  
   
- * Die maximale Anzahl verwalteter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm unterstützt werden, ist von der Hardwarekonfiguration des Servers abhängig. Informationen zu ersten Schritten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ein Steuerungspunkt für das Hilfsprogramm ist nicht in jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx).    
+ * Die maximale Anzahl verwalteter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm unterstützt werden, ist von der Hardwarekonfiguration des Servers abhängig. Informationen zu ersten Schritten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ein Steuerungspunkt für das Hilfsprogramm ist nicht in jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenebenenanwendungs-Objekte  
  Die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenebenenanwendungen (DAC) getesteter Objekte.  

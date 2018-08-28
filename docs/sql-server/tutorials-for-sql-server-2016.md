@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063628"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776150"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063628"
      
 -   Wenn ein Tutorial eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, sollten Sie die neueste Version von CodePlex herunterladen und verwenden. Weitere Informationen finden Sie unter [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3 (AdventureWorks-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Sie können eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte für die Verwendung mit den [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Tutorials unter [Power View-Beispiele für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734)herunterladen.  
-- Schauen Sie sich das neue Beispiel [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) auf dem GitHub-Repository [SQL Server samples](https://github.com/Microsoft/sql-server-samples) an. 
+- Schauen Sie sich das neue Beispiel [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) auf dem GitHub-Repository [SQL Server samples](https://github.com/Microsoft/sql-server-samples) an. 
 
  
 ## <a name="current-tutorials"></a>Aktuelle Tutorials  

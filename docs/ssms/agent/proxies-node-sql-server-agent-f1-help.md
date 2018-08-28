@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6ccdfa2a2592fab6157231823d321358120955f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79edc3ecdc1af47ffbdb9f263de30f29817961c3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039767"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775021"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Proxys (Knoten der F1-Hilfe des SQL Server-Agents)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,5 +29,5 @@ ms.locfileid: "33039767"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Proxys** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Proxys** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

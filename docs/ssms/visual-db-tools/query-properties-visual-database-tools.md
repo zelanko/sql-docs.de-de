@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053597"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774799"
 ---
 # <a name="query-properties-visual-database-tools"></a>Abfrageeigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn im Abfrage- u
 > [!NOTE]  
 > Die Eigenschaften in diesem Thema sind nicht alphabetisch, sondern nach Kategorie sortiert.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Kategorie Identität**  
 Erweitern Sie das Element, um die **Name** -Eigenschaft anzuzeigen.  
   
 **Name**  
-Zeigt den Namen der aktuellen Abfrage an. Kann in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]nicht geändert werden.  
+Zeigt den Namen der aktuellen Abfrage an. Kann in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nicht geändert werden.  
   
 **Database Name**  
 Zeigt den Namen der Datenquelle für die ausgewählte Tabelle an.  
@@ -60,7 +60,7 @@ Für eine MAKE TABLE-Abfrage geben Sie den Namen der neuen Tabelle ein. Geben Si
 Geben Sie an, dass die Abfrage alle Duplikate im Resultset herausfiltert. Diese Option ist hilfreich, wenn Sie nur einige Spalten aus der Tabelle bzw. den Tabellen verwenden und diese möglicherweise doppelte Werte enthalten, oder wenn die Verknüpfung von mehreren Tabellen eine Verdopplung von Zeilen im Resultset zur Folge hat. Das Aktivieren dieser Option ist gleichbedeutend mit dem Einfügen des Worts DISTINCT in die Anweisung im SQL-Bereich.  
   
 **GROUP BY-Erweiterung**  
-Geben Sie an, dass zusätzliche Optionen für Abfragen verfügbar sind, die auf Aggregatabfragen basieren. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Geben Sie an, dass zusätzliche Optionen für Abfragen verfügbar sind, die auf Aggregatabfragen basieren. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Alle Spalten ausgeben**  
 Geben Sie an, dass sämtliche Spalten aller Tabellen in der aktuellen Abfrage in das Resultset aufgenommen werden. Das Aktivieren dieser Option ist gleichbedeutend mit der Angabe eines Sternchens (*) anstelle einzelner Spaltennamen nach dem Schlüsselwort SELECT in der SQL-Anweisung.  
@@ -69,7 +69,7 @@ Geben Sie an, dass sämtliche Spalten aller Tabellen in der aktuellen Abfrage in
 Zeigt Abfrageparameter an. Um die Parameter zu bearbeiten, klicken Sie auf die Eigenschaft und dann auf die Ellipsen **(...)** rechts neben der Eigenschaft. (Gilt nur für generische OLE DB-Datenquellen.)  
   
 **SQL-Kommentar**  
-Zeigt eine Beschreibung der SQL-Anweisungen an. Klicken Sie auf die Beschreibung, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben der Eigenschaft, um die ganze Beschreibung anzuzeigen oder sie zu bearbeiten. Kommentare können Informationen darüber enthalten, wer die Abfrage verwendet und wann sie verwendet wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0-Datenbanken oder höher.)  
+Zeigt eine Beschreibung der SQL-Anweisungen an. Klicken Sie auf die Beschreibung, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben der Eigenschaft, um die ganze Beschreibung anzuzeigen oder sie zu bearbeiten. Kommentare können Informationen darüber enthalten, wer die Abfrage verwendet und wann sie verwendet wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-Datenbanken oder höher.)  
   
 **Kategorie Oberste Angabe**  
 Erweitern Sie das Element, um die Eigenschaften für **Oben**, **Prozent**, **Ausdruck**und **WITH TIES** anzuzeigen.  
@@ -77,16 +77,16 @@ Erweitern Sie das Element, um die Eigenschaften für **Oben**, **Prozent**, **Au
 **(Nach oben)**  
 Geben Sie an, dass die Abfrage eine TOP-Klausel enthält, die bewirkt, dass nur die ersten *n* Zeilen oder ersten *n* Prozent der Zeilen im Resultset zurückgegeben werden. In der Standardeinstellung gibt die Abfrage die ersten 10 Zeilen im Resultset zurück.  
   
-Verwenden Sie dieses Feld, um die Anzahl der zurückzugebenden Zeilen zu ändern oder einen anderen Prozentwert anzugeben. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder höher.)  
+Verwenden Sie dieses Feld, um die Anzahl der zurückzugebenden Zeilen zu ändern oder einen anderen Prozentwert anzugeben. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder höher.)  
   
 **Ausdruck**  
-Geben Sie die Anzahl oder den Prozentsatz der Zeilen an, die bzw. der von der Abfrage zurückgeben wird. Wenn Sie für **Prozent** Ja festlegen, wird mit dieser Zahl der Prozentsatz der Zeilen festgelegt, der von der Abfrage zurückgegeben wird. Wenn Sie für **Prozent** Nein festlegen, steht diese Zahl für die Anzahl der zurückzugebenden Zeilen. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 oder höher.)  
+Geben Sie die Anzahl oder den Prozentsatz der Zeilen an, die bzw. der von der Abfrage zurückgeben wird. Wenn Sie für **Prozent** Ja festlegen, wird mit dieser Zahl der Prozentsatz der Zeilen festgelegt, der von der Abfrage zurückgegeben wird. Wenn Sie für **Prozent** Nein festlegen, steht diese Zahl für die Anzahl der zurückzugebenden Zeilen. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder höher.)  
   
 **Prozent**  
-Geben Sie an, dass die Abfrage nur die ersten *n* Prozent der Zeilen im Resultset zurückgibt. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 oder höher.)  
+Geben Sie an, dass die Abfrage nur die ersten *n* Prozent der Zeilen im Resultset zurückgibt. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder höher.)  
   
 **WITH TIES**  
-Geben Sie an, dass die Sicht eine WITH TIES-Klausel enthält. Diese Klausel ist hilfreich, wenn eine Sicht sowohl eine ORDER BY-Klausel als auch eine TOP-Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der ORDER BY-Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 oder höher.)  
+Geben Sie an, dass die Sicht eine WITH TIES-Klausel enthält. Diese Klausel ist hilfreich, wenn eine Sicht sowohl eine ORDER BY-Klausel als auch eine TOP-Klausel mit Prozentangabe enthält. Wenn diese Option festgelegt ist und der Prozentbereich in der Mitte einer Zeilenfolge mit identischen Werten in der ORDER BY-Klausel endet, wird die Sicht bis ans Ende der betreffenden Zeilenfolge erweitert. (Gilt nur für Datenbanken von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder höher.)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen von Abfragen mit Parametern &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

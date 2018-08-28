@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043467"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775956"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
+Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
   
 ## <a name="solution-overview"></a>Übersicht über die Lösungen  
-Sie können [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] als Plattform für die Skriptentwicklung für [!INCLUDE[ssDE](../../includes/ssde_md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]verwenden. Entwickeln Sie Skripts und Abfragen für relationale und mehrdimensionale Datenbanken mithilfe der [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Code-Editoren, und sammeln Sie verwandte Skripts und Abfragen in Projekten.  
+Sie können [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] als Plattform für die Skriptentwicklung für [!INCLUDE[ssDE](../../includes/ssde_md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]verwenden. Entwickeln Sie Skripts und Abfragen für relationale und mehrdimensionale Datenbanken mithilfe der [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Code-Editoren, und sammeln Sie verwandte Skripts und Abfragen in Projekten.  
   
 Projekte können Folgendes enthalten:  
   
@@ -41,7 +41,7 @@ Projekte können Folgendes enthalten:
   
 -   Verbindungsinformationen und Dateien, die von den Abfragen und Skripts verwendet wurden.  
   
-Ein oder mehrere verwandte Projekte können in einer Projektmappe kombiniert werden. Projektmappen und Projekte können mit dem Bereich Projektmappen-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]verwaltet werden.  
+Ein oder mehrere verwandte Projekte können in einer Projektmappe kombiniert werden. Projektmappen und Projekte können mit dem Bereich Projektmappen-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet werden.  
   
 Projektmappen und Projekte können in eine [!INCLUDE[msCoName](../../includes/msconame_md.md)] VSS-Datenbank (Visual SourceSafe)-Datenbank oder in anderen Anbietern der Quellcodeverwaltung von Drittanbietern zum Entwickeln der Änderungsnachverfolgung und Lebensdauerverwaltung integriert werden.  
   

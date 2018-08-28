@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 107b6f5fb2605a8c8091006abad976cceea24392
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029358"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774284"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Problembehandlung von proxybasierten Multiserveraufträgen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden unter
     Zum Beheben dieses Fehlers stellen Sie sicher, dass auf dem Zielserver ein Proxykonto vorhanden ist, das den gleichen Namen wie das Proxykonto des Masterservers hat, unter dem der Auftragsschritt ausgeführt wird.  
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md)  

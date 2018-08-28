@@ -22,21 +22,21 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c5f45b7445b3ef0d35869a10e291cbc5f6a8678
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045958"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774879"
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
+Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
   
 Eine Projektmappe enthält ein oder mehrere Projekte sowie Dateien und Metadaten, die zur Definition der Projektmappe als Ganzes dienen. Ein Projekt ist eine Gruppe von Dateien und zugehörigen Metadaten, wie Verbindungsinformationen. Projektmappen und Projekte enthalten Elemente, die die Skripts, Abfragen, Verbindungsinformationen und Dateien repräsentieren, die Sie zum Erstellen der Datenbankprojektmappe benötigen.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid_md.md)]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="benefits-of-using-solutions"></a>Vorteile der Verwendung von Projektmappen  
 Verwenden Sie diese Container zu folgenden Zwecken:  
@@ -51,7 +51,7 @@ Verwenden Sie diese Container zu folgenden Zwecken:
   
 -   Arbeiten an verschiedenen, von Projektmappen oder Projekten unabhängigen Dateien.  
   
-Die Elemente in Projekten hängen vom Projekttyp ab und davon, ob Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]verwenden.  
+Die Elemente in Projekten hängen vom Projekttyp ab und davon, ob Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
 Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:  
@@ -61,5 +61,5 @@ Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:
 |**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
-|Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
+|Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

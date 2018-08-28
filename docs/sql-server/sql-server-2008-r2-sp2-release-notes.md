@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926251"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775616"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Die dynamische Verwaltungsansicht (DMV) **sys.dm_db_stats_properties**wurde hinz
 ## <a name="20-before-you-install"></a>2.0 Vor der Installation  
 Informationen zum Installieren von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Updates finden Sie in der [SQL Server 2008 R2-Wartungsdokumentation](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](http://msdn.microsoft.com/library/ms130214.aspx) und in den [SQL Server-Foren](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](sql-server-technical-documentation.md) und in den [SQL Server-Foren](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Auswählen der richtigen Download- und Installationsdatei  
 Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und installiert werden muss. Stellen Sie sicher, dass die Systemanforderungen erfüllt sind, bevor Sie das Service Pack installieren. Die Systemanforderungen sind auf den Downloadseiten angegeben, die mit den Links in der Tabelle verknüpft sind.  

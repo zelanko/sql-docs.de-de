@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d661cde875e4bbec00f503c86d623279fa97622d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980132"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775999"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38980132"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritte in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] erstellt und definiert werden, mit denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services-Befehle und -Abfragen durch die Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] oder SQL Server Management Objects ausgeführt werden.  
+In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellt und definiert werden, mit denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services-Befehle und -Abfragen durch die Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects ausgeführt werden.  
   
 -   **Vorbereitungen:**  
   
@@ -51,17 +51,17 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 ### <a name="Restrictions"></a>Einschränkungen  
   
--   Wenn beim Auftragsschritt ein Analysis Services-Befehl verwendet wird, muss die Befehlsanweisung eine **Execute** -Methode von XML for Analysis Services sein. Die Anweisung enthält möglicherweise keinen vollständigen SOAP-Umschlag (Simple Object Access Protocol) oder eine **Discover** -Methode von XML for Analysis. Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritten nicht der Fall. Weitere Informationen zu XML for Analysis Services finden Sie unter [Übersicht über XMLA for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   Wenn beim Auftragsschritt ein Analysis Services-Befehl verwendet wird, muss die Befehlsanweisung eine **Execute** -Methode von XML for Analysis Services sein. Die Anweisung enthält möglicherweise keinen vollständigen SOAP-Umschlag (Simple Object Access Protocol) oder eine **Discover** -Methode von XML for Analysis. Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten nicht der Fall. Weitere Informationen zu XML for Analysis Services finden Sie unter [Übersicht über XMLA for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Wenn beim Auftragsschritt ein Analysis Services-Abfrage verwendet wird, muss die Abfrageanweisung eine MDX-Abfrage (Multidimensional Expressions, mehrdimensionale Ausdrücke) sein. Weitere Informationen zu MDX finden Sie unter [Grundlegendes zur MDX-Anweisung (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicherheit  
   
 #### <a name="Permissions"></a>Berechtigungen  
   
--   Um einen Auftragsschritt auszuführen, der das Analysis Services-Subsystem verwendet, muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** sein oder Zugriff auf ein gültiges Proxykonto haben, das für die Verwendung dieses Subsystems definiert ist. Darüber hinaus muss es sich bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienstkonto oder Proxy um einen Analysis Services-Administrator und ein gültiges Windows-Domänenkonto handeln.  
+-   Um einen Auftragsschritt auszuführen, der das Analysis Services-Subsystem verwendet, muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** sein oder Zugriff auf ein gültiges Proxykonto haben, das für die Verwendung dieses Subsystems definiert ist. Darüber hinaus muss es sich bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto oder Proxy um einen Analysis Services-Administrator und ein gültiges Windows-Domänenkonto handeln.  
   
--   Nur Mitglieder der festen Serverrolle **sysadmin** sind berechtigt, die Ausgabe eines Auftragsschritts in eine Datei zu schreiben. Wenn der Auftragsschritt von Benutzern ausgeführt wird, die in der **msdb** -Datenbank Mitglied der **SQLAgentUserRole** -Datenbankrolle sind, können die Ausgabedaten nur in eine Tabelle geschrieben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent schreibt die Ausgabedaten des Auftragsschritts in der **SQLAgentUserRole** -Datenbank in die **SQLAgentUserRole** -Tabelle.  
+-   Nur Mitglieder der festen Serverrolle **sysadmin** sind berechtigt, die Ausgabe eines Auftragsschritts in eine Datei zu schreiben. Wenn der Auftragsschritt von Benutzern ausgeführt wird, die in der **msdb** -Datenbank Mitglied der **SQLAgentUserRole** -Datenbankrolle sind, können die Ausgabedaten nur in eine Tabelle geschrieben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent schreibt die Ausgabedaten des Auftragsschritts in der **SQLAgentUserRole** -Datenbank in die **SQLAgentUserRole** -Tabelle.  
   
 -   Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
@@ -85,7 +85,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 8.  Geben Sie im Feld **Befehl** die auszuführende Anweisung ein, oder klicken Sie auf **Öffnen** , um eine Anweisung auszuwählen.  
   
-9. Klicken Sie auf die Seite **Erweitert** , um die Optionen für diesen Auftragsschritt zu definieren. Legen Sie beispielsweise fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent ausführen soll, wenn der Auftragsschritt erfolgreich ausgeführt wird oder fehlschlägt, wie viele Versuche zur Ausführung des Auftragsschritts unternommen werden sollen und wohin die Ausgabe des Auftragsschritts geschrieben werden soll.  
+9. Klicken Sie auf die Seite **Erweitert** , um die Optionen für diesen Auftragsschritt zu definieren. Legen Sie beispielsweise fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführen soll, wenn der Auftragsschritt erfolgreich ausgeführt wird oder fehlschlägt, wie viele Versuche zur Ausführung des Auftragsschritts unternommen werden sollen und wohin die Ausgabe des Auftragsschritts geschrieben werden soll.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>So erstellen Sie einen Auftragsschritt für die Analysis Services-Abfrage  
   
@@ -105,7 +105,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssno
   
 8.  Geben Sie im Feld **Befehl** die auszuführende Anweisung ein, oder klicken Sie auf **Öffnen** , um eine Anweisung auszuwählen.  
   
-9. Klicken Sie auf die Seite **Erweitert** , um die Optionen für diesen Auftragsschritt zu definieren. Legen Sie beispielsweise fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent ausführen soll, wenn der Auftragsschritt erfolgreich ausgeführt wird oder fehlschlägt, wie viele Versuche zur Ausführung des Auftragsschritts unternommen werden sollen und wohin die Ausgabe des Auftragsschritts geschrieben werden soll.  
+9. Klicken Sie auf die Seite **Erweitert** , um die Optionen für diesen Auftragsschritt zu definieren. Legen Sie beispielsweise fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführen soll, wenn der Auftragsschritt erfolgreich ausgeführt wird oder fehlschlägt, wie viele Versuche zur Ausführung des Auftragsschritts unternommen werden sollen und wohin die Ausgabe des Auftragsschritts geschrieben werden soll.  
   
 ## <a name="TSQL"></a>Verwenden von Transact-SQL  
   

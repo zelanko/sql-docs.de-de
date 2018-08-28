@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042597"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774289"
 ---
 # <a name="options-environment---help---online-page"></a>Optionen (Umgebung – Hilfe – Seite „Online“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Im Dialogfeld **Optionen** können Sie die bei Suchvorgängen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] zu verwendenden Hilfequellen angeben, einschließlich der F1-Hilfe. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  
+Im Dialogfeld **Optionen** können Sie die bei Suchvorgängen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu verwendenden Hilfequellen angeben, einschließlich der F1-Hilfe. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  
   
 **Beim Laden von Hilfeinhalten**  
 Legt die Reihenfolge fest, in der Hilfequellen für die F1-Hilfe verwendet werden, und gibt an, welche Hilfequellen verwendet werden.  

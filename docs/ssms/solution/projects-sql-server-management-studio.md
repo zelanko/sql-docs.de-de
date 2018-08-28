@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045027"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775250"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projekte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Ein [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Projekt ist eine Sammlung logisch verbundener Skripts und Dateien, die zusammen zur Verwaltung und Entwicklung von Datenbanken gespeichert werden können.  
+Ein [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Projekt ist eine Sammlung logisch verbundener Skripts und Dateien, die zusammen zur Verwaltung und Entwicklung von Datenbanken gespeichert werden können.  
   
 ## <a name="script-project-overview"></a>Übersicht über das Skriptprojekt  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Skriptprojekte werden in der Projektmappen-Explorer-Komponente von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]angezeigt. Ein Skriptprojekt kann null oder mehr Projektdateien enthalten. Sie können einer Projektmappe ein Projekt hinzufügen oder mehrere Projekte innerhalb einer Projektmappe kombinieren.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Skriptprojekte werden in der Projektmappen-Explorer-Komponente von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt. Ein Skriptprojekt kann null oder mehr Projektdateien enthalten. Sie können einer Projektmappe ein Projekt hinzufügen oder mehrere Projekte innerhalb einer Projektmappe kombinieren.  
   
 Projekte können Folgendes umfassen:  
   
@@ -42,11 +42,11 @@ Projekte können Folgendes umfassen:
 Projekte können auch in ein Quellcodeverwaltungs-System integriert werden.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>Herstellen einer Verbindung mit einer SQL Server-Instanz aus einem Skriptprojekt  
-Ein Skriptprojekt kann Verbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]enthalten. Sie können eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in einem Projekt durch Klicken auf die Verbindung herstellen. Daraufhin wird ein SQL-Skriptfenster geöffnet, das mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verbunden ist, die in der ausgewählten Verbindung definiert ist. Beim Öffnen eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] - oder MDX-Skripts mit einer Verbindung, von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung verwendet wird, werden Sie zum Angeben des Kennworts aufgefordert. Dabei wird nach dem Öffnen des Editors und Laden des Skripts das Dialogfeld **Verbindung mit SQL Server herstellen** angezeigt.  
+Ein Skriptprojekt kann Verbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Sie können eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Projekt durch Klicken auf die Verbindung herstellen. Daraufhin wird ein SQL-Skriptfenster geöffnet, das mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden ist, die in der ausgewählten Verbindung definiert ist. Beim Öffnen eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - oder MDX-Skripts mit einer Verbindung, von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird, werden Sie zum Angeben des Kennworts aufgefordert. Dabei wird nach dem Öffnen des Editors und Laden des Skripts das Dialogfeld **Verbindung mit SQL Server herstellen** angezeigt.  
   
 Die Verbindung wird geschlossen, sobald das entsprechende Fenster geschlossen wird.  
   
-Mit dem Eigenschaftenfenster in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]können Sie Informationen zu einer Verbindung ändern.  
+Mit dem Eigenschaftenfenster in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Informationen zu einer Verbindung ändern.  
   
 ## <a name="project-tasks"></a>Projekttasks  
   

@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - new stored procedures
 - stored procedures [SQL Server], creating
@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8a15d46e25641849f7cc3aab8e9b5353a0e7a526
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: efd57b0609387bcc9453f91e7da10c119c9de2f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552260"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021508"
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer gespeicherten Prozedur](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer gespeicherten Prozedur](create-a-stored-procedure.md).
 
   In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung CREATE PROCEDURE beschrieben.  
   

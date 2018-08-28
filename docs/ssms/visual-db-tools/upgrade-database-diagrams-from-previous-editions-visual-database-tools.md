@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775257"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]eingerichtet ist. Weitere Informationen zum Einrichten der Diagrammerstellung finden Sie unter [Einrichten des Datenbankdiagramm-Designers (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eingerichtet ist. Weitere Informationen zum Einrichten der Diagrammerstellung finden Sie unter [Einrichten des Datenbankdiagramm-Designers (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>So aktualisieren Sie Datenbankdiagramme aus früheren Versionen  
   

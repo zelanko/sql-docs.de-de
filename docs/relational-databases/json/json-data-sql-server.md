@@ -7,7 +7,7 @@ ms.reviewer: douglasl
 ms.suite: sql
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
@@ -16,12 +16,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d81ef259adcb2bfa0d83c63370d274c8cec48907
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 802b0d143964065a1717321c0426bebd757eb939
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541800"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023008"
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

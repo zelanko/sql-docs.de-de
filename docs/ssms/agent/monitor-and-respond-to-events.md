@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21c40862e43cd7f5c4e883c6482d83faa4175ede
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ace865623d23cc7081ac162b33821ee7757a47df
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030868"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774683"
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,26 +40,26 @@ ms.locfileid: "38030868"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Warnungen](../../ssms/agent/alerts.md)  
 Enthält Informationen zum Benennen von Warnungen und Auswählen von Ereignissen oder Leistungsbedingungen, für die Warnungen ausgegeben werden.  
   
 [Erstellen eines benutzerdefinierten Ereignisses](../../ssms/agent/create-a-user-defined-event.md)  
-Enthält Informationen zum Erstellen von Ereignissen, die nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]vordefiniert sind.  
+Enthält Informationen zum Erstellen von Ereignissen, die nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vordefiniert sind.  
   
 [Operatoren](../../ssms/agent/operators.md)  
-Enthält Informationen zum Erstellen von Aliasen für Administratoren, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent zum Versenden von Benachrichtigungen verwendet werden können, wenn Aufträge einen Fehler erzeugen oder erfolgreich ausgeführt werden.  
+Enthält Informationen zum Erstellen von Aliasen für Administratoren, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Versenden von Benachrichtigungen verwendet werden können, wenn Aufträge einen Fehler erzeugen oder erfolgreich ausgeführt werden.  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>Informationen zum Überwachen von und Reagieren auf Ereignisse  
-Automatische Reaktionen auf Ereignisse werden als *Warnungen*bezeichnet. Sie können Warnungen für Ereignisse definieren um anzugeben, wie vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent auf das Auftreten dieser Ereignisse reagiert werden soll. Von einer Warnung kann auf ein Ereignis reagiert werden, indem ein Administrator benachrichtigt oder ein Auftrag ausgeführt wird, oder indem beide Aktionen ausgeführt werden. Von einer Warnung kann ein Ereignis auch an das Microsoft Windows-Anwendungsprotokoll auf einem anderen Computer weitergeleitet werden. Sie können beispielsweise angeben, dass bei einem Ereignis mit dem Schweregrad 19 sofort ein Operator benachrichtigt wird. Durch das Definieren von Warnungen können Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]effektiver überwachen und verwalten.  
+Automatische Reaktionen auf Ereignisse werden als *Warnungen*bezeichnet. Sie können Warnungen für Ereignisse definieren um anzugeben, wie vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent auf das Auftreten dieser Ereignisse reagiert werden soll. Von einer Warnung kann auf ein Ereignis reagiert werden, indem ein Administrator benachrichtigt oder ein Auftrag ausgeführt wird, oder indem beide Aktionen ausgeführt werden. Von einer Warnung kann ein Ereignis auch an das Microsoft Windows-Anwendungsprotokoll auf einem anderen Computer weitergeleitet werden. Sie können beispielsweise angeben, dass bei einem Ereignis mit dem Schweregrad 19 sofort ein Operator benachrichtigt wird. Durch das Definieren von Warnungen können Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]effektiver überwachen und verwalten.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent reagiert nur auf Ereignisse, für die eine Warnung definiert ist. Die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent zum Überwachen von Ereignissen verwendete Methode hängt vom Typ des Ereignisses ab.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent reagiert nur auf Ereignisse, für die eine Warnung definiert ist. Die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Überwachen von Ereignissen verwendete Methode hängt vom Typ des Ereignisses ab.  
   
-Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Warnung für einen Leistungsindikator definiert ist, wird der Leistungsindikator direkt vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent überwacht. Bei einem WMI-Ereignis wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent eine Ereignisabfrage für das WMI-Ereignis registriert.  
+Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung für einen Leistungsindikator definiert ist, wird der Leistungsindikator direkt vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent überwacht. Bei einem WMI-Ereignis wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent eine Ereignisabfrage für das WMI-Ereignis registriert.  
   
-Um auf Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]zu reagieren, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent das Windows-Anwendungsprotokoll überwacht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann nur auf Meldungen reagieren, die in diesem Protokoll aufgeführt sind. Standardmäßig protokolliert SQL Server die folgenden Meldungen im Windows-Anwendungsprotokoll:  
+Um auf Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu reagieren, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent das Windows-Anwendungsprotokoll überwacht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann nur auf Meldungen reagieren, die in diesem Protokoll aufgeführt sind. Standardmäßig protokolliert SQL Server die folgenden Meldungen im Windows-Anwendungsprotokoll:  
   
 -   sysmessages-Fehler des Schweregrades 19 oder höher.  
   
@@ -74,10 +74,10 @@ Um auf Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]zu
     > [!NOTE]  
     > Das Protokollieren von Anwendungsereignissen belegt Protokollspeicher und kann dazu führen, dass das Windows-Anwendungsprotokoll die Maximalgröße überschreitet. Stellen Sie sicher, dass das Windows-Anwendungsprotokoll über eine ausreichende Größe verfügt, damit es nicht zu einem Verlust von SQL Server-Ereignisinformationen kommt.  
   
-Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eine Meldung protokolliert wird, vergleicht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst die Meldung mit den Warnungen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Administrator definiert worden sind.  
+Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Meldung protokolliert wird, vergleicht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst die Meldung mit den Warnungen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator definiert worden sind.  
   
-Unabhängig von der Ereignisquelle reagiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienst auf das Ereignis, indem die Tasks ausgeführt werden, die in der Warnung für das Ereignis angegeben worden sind.  
+Unabhängig von der Ereignisquelle reagiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf das Ereignis, indem die Tasks ausgeführt werden, die in der Warnung für das Ereignis angegeben worden sind.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

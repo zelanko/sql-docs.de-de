@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041877"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775605"
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem ande
   
 ## <a name="options"></a>Tastatur  
 **Wählen Sie Objekttypen aus**  
-Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
+Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   
 **Geben Sie die Namen der auszuwählenden Objekte ein**  
 Geben Sie eine durch Semikolons getrennte Liste der auszuwählenden Objekte ein. Auszuwählende Objekte müssen zu einem Typ gehören, der im Feld **Wählen Sie Objekttypen aus** aufgeführt ist. Die Objekte können aus einer Liste ausgewählt werden, auf die per Mausklick auf die Schaltfläche **Durchsuchen** zugegriffen wird.  

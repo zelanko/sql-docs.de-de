@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997322"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773956"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
      Das Wiederherstellen nach einem Betriebssystemfehler auf diese Art kann Zeit kosten. Falls die Wiederherstellung nach dem Betriebssystemfehler problemlos möglich ist, sollten Sie dieses Verfahren vermeiden.  
   
-     Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) und [Vorgehensweise: Wiederherstellen nach einem Failoverclusterfehler in Szenario 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) und [Vorgehensweise: Wiederherstellen nach einem Failoverclusterfehler in Szenario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Lösen häufig auftretender Probleme  
  In der folgenden Liste werden häufig auftretende Probleme bei der Verwendung sowie deren Behebung beschrieben.  

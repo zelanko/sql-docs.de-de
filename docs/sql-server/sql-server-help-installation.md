@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036018"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776288"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
@@ -105,7 +105,7 @@ SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterst�
 |XQuery-Sprachreferenz (SQL Server) | XQuery-Sprachreferenz (SQL Server)|
 
 > [!NOTE]
-> Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/en-us/library/dd831853.aspx).
+> Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
 
 **Anzeigen von offline verfügbarem Hilfeinhalt in SSMS mit Help Viewer v2.x**
 

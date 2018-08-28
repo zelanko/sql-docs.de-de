@@ -18,17 +18,16 @@ helpviewer_keywords:
 - hierarchies [SQL Server], securables
 - server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: 41
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b0c947c8cedd6b4969e451e9ab19666234faeac4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 51d6221a57cfcb309b3b3ef262c7e4a4df5dd439
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555950"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023348"
 ---
 # <a name="securables"></a>Sicherungsfähige Elemente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

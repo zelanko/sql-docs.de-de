@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b168a0164ac2acc212344e898d04c07913ae29
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041837"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775706"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Toolboxelemente auswählen (Seite Wartungstasks)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Auf dieser Registerkarte des Dialogfelds **Toolbox anpassen** wird eine Liste al
 Die Registerkarte **Wartungstasks** enthält die folgenden Spalten mit Informationen.  
   
 **Name**  
-Zeigt die Namen der verfügbaren Komponenten an. Vor jedem Namen befindet sich ein Kontrollkästchen. Wenn aktiviert, gibt ein Kontrollkästchen an, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] einen Eintrag für die Komponente in der Registrierung Ihres Computers gefunden hat. Die Komponente wird entweder bereits auf der aktiven Registerkarte **Toolbox** angezeigt oder wird hinzugefügt, wenn Sie auf **OK**klicken. Wenn deaktiviert, gibt ein Kontrollkästchen an, dass die Komponente zurzeit nicht auf der Registerkarte **Toolbox**angezeigt wird, oder dass sie von der Registerkarte **Toolbox** entfernt wird, wenn Sie auf **OK**klicken.  
+Zeigt die Namen der verfügbaren Komponenten an. Vor jedem Namen befindet sich ein Kontrollkästchen. Wenn aktiviert, gibt ein Kontrollkästchen an, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Eintrag für die Komponente in der Registrierung Ihres Computers gefunden hat. Die Komponente wird entweder bereits auf der aktiven Registerkarte **Toolbox** angezeigt oder wird hinzugefügt, wenn Sie auf **OK**klicken. Wenn deaktiviert, gibt ein Kontrollkästchen an, dass die Komponente zurzeit nicht auf der Registerkarte **Toolbox**angezeigt wird, oder dass sie von der Registerkarte **Toolbox** entfernt wird, wenn Sie auf **OK**klicken.  
   
 **Pfad**  
 Zeigt den vollständigen Pfad zu der Komponente an. Zum Identifizieren der mit dem Produkt gelieferten Standardkomponenten sortieren Sie diese Spalte, und suchen Sie nach den Komponenten die im Installationspfad von [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio gespeichert sind.  
