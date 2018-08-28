@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558270"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098556"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558270"
   
 2.  Um die Vorlagenparameter zu ersetzen, klicken Sie auf **Werte für Vorlagenparameter angeben** im Menü **Abfrage** .  
   
-     Weitere Informationen zur Verwendung von Vorlagen finden Sie unter [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Weitere Informationen zur Verwendung von Vorlagen finden Sie unter [Template Explorer](../../ssms/template/template-explorer.md).  
   
 3.  Im **Objekt-Explorer**werden Tabellen zuerst nach datenträgerbasierten Tabellen und dann nach speicheroptimierten Tabellen angeordnet. Verwenden Sie **Details zum Objekt-Explorer** , um alle Tabellen nach dem Namen geordnet anzuzeigen.  
   

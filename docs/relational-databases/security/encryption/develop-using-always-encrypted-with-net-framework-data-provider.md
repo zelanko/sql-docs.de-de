@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538140"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094119"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 In diesem Beispiel wird eine Zeile in die Tabelle „Patients“ eingefügt. Beachten Sie Folgendes:
 - Es erfolgt keine spezielle Verschlüsselung im Beispielcode. Der .NET Framework-Datenanbieter für SQL Server erkennt und verschlüsselt die Parameter *paramSSN* und *paramBirthdate* automatisch, die auf verschlüsselte Spalten ausgerichtet sind. Dadurch wird die Verschlüsselung für die Anwendung transparent. 
 - Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden als [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) -Objekte übergeben. Während die Verwendung von **SqlParameter** optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine SQL-Einschleusung zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Wenn die in die Spalten „SSN“ oder „BirthDate“ eingefügten Werte als Literale übergeben werden, die in die Abfrageanweisung eingebettet sind, würde bei der Abfrage ein Fehler auftreten, da der .NET Framework-Datenanbieter für SQL Server die Werte in den verschlüsselten Zielspalten nicht ermittelt könnte, daher würde er die Werte nicht verschlüsseln. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
-- Der auf die Spalte „SSN“ ausgerichtete Datentyp des Parameters wird auf eine ANSI-Zeichenfolge (Nicht-Unicode) festgelegt, der dem SQL Server-Datentyp „char/varchar“ zuordnet wird. Wenn der Typ des Parameters eine Unicode-Zeichenfolge (String) ist, die „nchar/nvarchar“ zugeordnet wird, würde bei der Abfrage ein Fehler auftreten, da Always Encrypted keine Konvertierungen von verschlüsselten „nchar/nvarchar“-Werten in verschlüsselte „char/narchar“-Werte unterstützt. Weitere Informationen zu den Datentypzuordnungen finden Sie unter [SQL Server-Datentypzuordnungen](https://msdn.microsoft.com/library/cc716729.aspx) .
+- Der auf die Spalte „SSN“ ausgerichtete Datentyp des Parameters wird auf eine ANSI-Zeichenfolge (Nicht-Unicode) festgelegt, der dem SQL Server-Datentyp „char/varchar“ zuordnet wird. Wenn der Typ des Parameters eine Unicode-Zeichenfolge (String) ist, die „nchar/nvarchar“ zugeordnet wird, würde bei der Abfrage ein Fehler auftreten, da Always Encrypted keine Konvertierungen von verschlüsselten „nchar/nvarchar“-Werten in verschlüsselte „char/narchar“-Werte unterstützt. Weitere Informationen zu den Datentypzuordnungen finden Sie unter [SQL Server-Datentypzuordnungen](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
 - Der Datentyp des in die Spalte „BirthDate“ eingefügten Parameters wird mithilfe der [SqlParameter.SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)-Eigenschaft explizit auf den SQL Server-Datentyp festgelegt, anstatt auf die implizite Zuordnung von .NET-Typen zu vertrauen, die bei der Verwendung der [SqlParameter.DbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)-Eigenschaft angewendet werden. Standardmäßig wird [DateTime Structure](https://msdn.microsoft.com/library/system.datetime.aspx) dem SQL Server-Datentyp „datetime“ zugeordnet. Da der Datentyp der Spalte „BirthDate“ dem Wert „date“ entspricht und Always Encrypted keine Konvertierung von verschlüsselten „datetime“-Werten in verschlüsselte „date“-Werte unterstützt, würde die Verwendung der Standardzuordnung zu einem Fehler führen. 
 
 ```

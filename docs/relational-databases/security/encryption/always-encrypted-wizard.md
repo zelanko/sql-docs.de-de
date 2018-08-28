@@ -18,13 +18,13 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549700"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094639"
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted-Assistent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die
  
  - Wählen Sie den Speicherort für den Spaltenhauptschlüssel.  
  
-   - **Einen Hauptschlüssel im Windows-Zertifikatspeicher speichern** Weitere Informationen finden Sie unter [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Einen Hauptschlüssel im Windows-Zertifikatspeicher speichern** Weitere Informationen finden Sie unter [Using Certificate Stores](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **Einen Hauptschlüssel in AKV speichern** Weitere Informationen finden Sie unter [Erste Schritte mit dem Azure-Schlüsseltresor](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
