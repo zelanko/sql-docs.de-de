@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57481eaee3ee6de5816e69edda2936d4ee30fc49
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: e1586f94e21304ce994e5e14bf1b4a57ee796a83
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152531"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-downloads für kumulative Updates Analysefunktionen von SQL Server in der Datenbank-Instanzen
 
@@ -38,44 +38,44 @@ CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgeführt. Wenn 
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CAB-Dateien
 
-Release  |Downloadlink  | Problembehebungen | 
+Release  |Downloadlink  | Die Probleme | 
 ---------|---------------|-------|
-**[CU10](https://support.microsoft.com/help/4342123)** |  |  |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| |
+**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderungen. Dies ist eine frühere Version. |
 R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Einige kleinere Korrekturen.|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| |
-Python-Server    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python-Rx_data_step verliert Reihenfolge der Zeilen an, wenn Duplikate entfernt werden. <br/>Python-SPEE schlägt fehl, das Abrufen des Datentyps von gruppierten columnstore-Index unter bestimmten Bedingungen. <br/>Python wird eine leere Tabelle zurückgibt, wenn Spalten alle null-Werte enthalten. |
-**[CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
+Python-Server    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python-Rx_data_step verliert Reihenfolge der Zeilen an, wenn Duplikate entfernt werden. <br/>SPEE schlägt fehl, Erkennung von Datatype für gruppierte columnstore-Index. <br/>Gibt eine leere Tabelle zurück, wenn Spalten alle null-Werte enthalten. |
+**[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderungen. Dies ist eine frühere Version. |
 R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Python-Server    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)]|
-**[CU6](https://support.microsoft.com/help/4101464)-[CU7](https://support.microsoft.com/help/4229789)** |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
+Python-Server    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)|
+**[SQL Server 2017 CU6](https://support.microsoft.com/help/4101464)-[CU7](https://support.microsoft.com/help/4229789)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderungen. Dies ist eine frühere Version. |
 R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
-**[CU5](https://support.microsoft.com/help/4092643)** |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Python-Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
-**[CU4](https://support.microsoft.com/help/4056498)** |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
+Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)| DateTime-Datentypen in SPEES Abfrage.<br/>Fehlermeldungen in Microsoftml verbessert, wenn vorab trainierte Modelle fehlen.<br/> Korrekturen für von Revoscalepy transformieren, Funktionen und Variablen.|
+**[SQL Server 2017 CU5](https://support.microsoft.com/help/4092643)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderungen. Dies ist eine frühere Version. |
+R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| Lange pfadbezogene Fehler im RxInstallPackages.<br/>Verbindungen in einen Loopback für RxExec.
+Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
+Python-Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>Verbindungen in einen Loopback für Rx_exec.
+**[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Keine Änderungen. Dies ist eine frühere Version. |
 R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
+Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
  Python-Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**[CU3](https://support.microsoft.com/help/4052987)** |
+**[SQL Server 2017 CU3](https://support.microsoft.com/help/4052987)** |  |  |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Python-Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
-**[CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
+Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. |
+Python-Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Serialisierung in Revoscalepy, Python-Modell mithilfe der [Rx_serialize_model Funktion](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>[Native Bewertung](../sql-native-scoring.md) zudem die Verwendung von Erweiterungen zu [in Echtzeit bewerten](../real-time-scoring.md). 
+**SQLServer 2017 [CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| Keine Änderungen. Dies ist eine frühere Version. |
 R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**Erste Version** |
+Öffnen Sie Microsoft-Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Keine Änderungen. Dies ist eine frühere Version. 
+Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Fügt Rx_create_col_info für die Rückgabe von Schemainformationen an. <br/>Verbesserungen bei der [Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) zur Unterstützung der paralleler Szenarien für die Verwendung der `RxLocalParallel` compute Context verwenden.|
+**Erste Version** |  |  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
@@ -94,14 +94,14 @@ Release  |Downloadlink  |
 Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
 Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 **SQL Server 2016 SP1 CU4-CU10**     |
-Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
+Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
 **SQL Server 2016 SP1 CU1-CU3**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 SP1**     |
 Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)=
+Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
 **SQL Server 2016 CU4-CU9**     |
 Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
 Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
