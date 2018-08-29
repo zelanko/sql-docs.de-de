@@ -24,12 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: bc398c3ab6675234fd48987e2f3fd45cb1a1a4c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329354"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409381"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
   Bevor Sie benutzerdefinierten Code in der Skriptkomponente schreiben, müssen Sie sich für eine Datenflusskomponente entscheiden (Quelle, Transformation oder Ziel) und anschließend die Metadaten und Eigenschaften der Komponente im **Transformations-Editor für Skripterstellung** konfigurieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "35329354"
 ## <a name="selecting-the-type-of-component-to-create"></a>Auswählen der zu erstellenden Komponentenart  
  Wenn Sie zum Bereich Datenfluss des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers eine Skriptkomponente hinzufügen, wird das Dialogfeld **Skriptkomponententyp auswählen** geöffnet. Sie konfigurieren die Komponente vorab als Quelle, Transformation oder Ziel. Nachdem Sie diese erste Auswahl getroffen haben, können Sie die Komponente im **Transformations-Editor für Skripterstellung** weiter konfigurieren.  
   
- Verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache**, um die Standardskriptsprache für die Skriptkomponente festzulegen. Weitere Informationen finden Sie unter [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+ Verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache**, um die Standardskriptsprache für die Skriptkomponente festzulegen. Weitere Informationen finden Sie unter [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ## <a name="understanding-the-two-design-time-modes"></a>Grundlegendes zu den beiden Entwurfszeitmodi  
  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus.  

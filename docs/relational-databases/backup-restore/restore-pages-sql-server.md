@@ -23,12 +23,12 @@ caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad3206ff6ccec7db89dcf745b4dd03066e076589
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d62309de45f34f341857c806051df372145e1e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922465"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406609"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "32922465"
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Fehlerprotokoll|[Anzeigen des SQL Server-Fehlerprotokolls &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Ereignisverfolgungen|[Überwachen und Reagieren auf Ereignisse](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
+    |Ereignisverfolgungen|[Überwachen und Reagieren auf Ereignisse](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI-Anbieter|[Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952531"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405970"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "32952531"
   
  Wie Sie eine Warnung einrichten können, um auf Fehlermeldungen der richtlinienbasierten Verwaltung zu reagieren, wird in den folgenden Themen erläutert:  
   
--   [Erstellen eines Operators](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [Erstellen eines Operators](../../ssms/agent/create-an-operator.md)  
   
--   [Erstellen einer Warnung mithilfe einer Fehlernummer](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Erstellen einer Warnung mithilfe einer Fehlernummer](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Zuweisen von Warnungen zu einem Operator](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [Zuweisen von Warnungen zu einem Operator](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
 ## <a name="permissions"></a>Berechtigungen  
  Bei Bedarf ausgewertete Richtlinien werden im Sicherheitskontext des Benutzers ausgeführt. Um in das Fehlerprotokoll schreiben zu können, muss der Benutzer über die ALTER TRACE-Berechtigung verfügen oder Mitglied der festen Serverrolle sysadmin sein. Bei Auswertung einer Richtlinie durch einen Benutzer mit niedrigeren Berechtigungen werden eventuell erkannte Fehler nicht in das Ereignisprotokoll geschrieben und lösen keine Warnung aus.  

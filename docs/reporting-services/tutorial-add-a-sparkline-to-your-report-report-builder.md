@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036397"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405401"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
   
 Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln, häufig in Form von Tabellen und Matrizen in paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   

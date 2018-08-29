@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a277172819f3ff1dd7be1128e12b7274fbf59265
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452164"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102879"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452164"
 
 Lädt R-Pakete vom angegebenen Bytedatenstrom oder Dateipfad in eine Datenbank hoch.
 
-Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen (R, Python, Java usw.) und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] unterstützt werden. 
+Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen (R, Python, Java usw.) und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] unterstützt werden. 
 
 Derzeit werden nur die R-Sprache und die Windows-Plattform unterstützt. Die Unterstützung für Python und Linux ist für ein späteres Release eingeplant.
 

@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145471"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406218"
 ---
 # <a name="data-collector-security"></a>Datensammlersicherheit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Der Datensammler verwendet das von dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent implementierte rollenbasierte Sicherheitsmodell. Mit diesem Modell kann der Datenbankadministrator die verschiedenen Datensammlertasks in einem Sicherheitskontext ausführen, der nur über die zum Ausführen dieses Tasks erforderlichen Berechtigungen verfügt. Dieser Ansatz wird auch für Vorgänge mit internen Tabellen verwendet, auf die nur unter Verwendung einer gespeicherten Prozedur oder Sicht zugegriffen werden kann. Internen Tabellen werden keine Berechtigungen erteilt. Stattdessen werden Berechtigungen für den Benutzer der gespeicherten Prozedur oder Sicht überprüft, die zum Zugreifen auf eine Tabelle verwendet wird.  
   
 > [!IMPORTANT]  
->  Ein anderer Hauptaspekt dieses Sicherheitsmodells sind konzentrische Berechtigungen. Mit konzentrischen Berechtigungen erben Rollen mit höheren Berechtigungen die Berechtigungen von Rollen mit niedrigeren Berechtigungen für Objekte (einschließlich Warnungen, Operatoren, Aufträgen, Zeitplänen und Proxys). Weitere Informationen finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Ein anderer Hauptaspekt dieses Sicherheitsmodells sind konzentrische Berechtigungen. Mit konzentrischen Berechtigungen erben Rollen mit höheren Berechtigungen die Berechtigungen von Rollen mit niedrigeren Berechtigungen für Objekte (einschließlich Warnungen, Operatoren, Aufträgen, Zeitplänen und Proxys). Weitere Informationen finden Sie unter [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  In den folgenden Abschnitten werden die Datensammlungssicherheit im Allgemeinen sowie die Rollen beschrieben, die Sie Benutzern erteilen müssen, damit diese den Datensammler konfigurieren und verwenden und mit dem Management Data Warehouse verbundene Tasks ausführen können.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145471"
  Mitglieder der **mdw_reader** -Rolle verfügen über Lesezugriff auf das Verwaltungs-Data Warehouse. Da diese Rolle zur Unterstützung bei der Problembehandlung dient, indem sie Zugriff auf Verlaufsdaten bietet, können Mitglieder dieser Rolle andere Elemente des Verwaltungs-Data Warehouse-Schemas nicht anzeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Implementieren der SQL Server-Agent-Sicherheit](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

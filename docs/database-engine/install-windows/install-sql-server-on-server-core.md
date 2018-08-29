@@ -12,13 +12,14 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7535f5b73859b59848e08bce9c74b0670bc3a867
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770916"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415828"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -44,15 +45,15 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 |Funktion|Supported|Zusätzliche Informationen|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|ja||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|ja||  
-|Volltextsuche|ja||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|ja||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|ja||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Benutzerkontensteuerung||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Benutzerkontensteuerung||  
+|Volltextsuche|Benutzerkontensteuerung||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Benutzerkontensteuerung||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Benutzerkontensteuerung||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|nein||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|nein||  
-|Konnektivität der Clienttools|ja||  
-|Integration Services-Server|ja||  
+|Konnektivität der Clienttools|Benutzerkontensteuerung||  
+|Integration Services-Server|Benutzerkontensteuerung||  
 |Clienttools-Abwärtskompatibilität|nein||  
 |Clienttools SDK|nein||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|nein||  
@@ -60,8 +61,8 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 |Verwaltungstools - Vollständig|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |Distributed Replay Controller|nein||  
 |Distributed Replay Client|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
-|SQL Client Connectivity SDK|ja||  
-|Microsoft Sync Framework|ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788)) herunterladen und auf einem Computer mit Server Core installieren.|  
+|SQL Client Connectivity SDK|Benutzerkontensteuerung||  
+|Microsoft Sync Framework|Benutzerkontensteuerung|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788)) herunterladen und auf einem Computer mit Server Core installieren.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|nein||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|nein||  
   

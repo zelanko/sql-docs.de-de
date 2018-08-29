@@ -29,19 +29,19 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32fbe22707d4704b29195fd88098b94a4ee2d968
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54b456761b7a2055f7eb52e95abf7e6dacba182f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350342"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406516"
 ---
 # <a name="replication-agents-overview"></a>Replikations-Agents (Übersicht)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Von der Replikation werden eine Reihe eigenständiger Programme verwendet, die Agents genannt werden. Diese Agents führen die mit dem Nachverfolgen von Änderungen und Verteilen von Daten verbundenen Aufgaben aus. Standardmäßig werden Replikations-Agents als Aufträge ausgeführt, die unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent geplant werden. Zum Ausführen dieser Aufträge muss der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt werden. Replikations-Agents können auch in der Befehlszeile und von Anwendungen ausgeführt werden, die Replikationsverwaltungsobjekte (RMO) verwenden. Replikations-Agents können im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor und in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwaltet werden.  
   
 ## <a name="sql-server-agent"></a>SQL Server-Agent  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent beinhaltet und plant die Agents, die bei der Replikation verwendet werden, und bietet so eine einfache Möglichkeit, die Replikations-Agents auszuführen. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent steuert und überwacht auch Vorgänge, die nicht im Rahmen der Replikation erfolgen. Weitere Informationen finden Sie unter [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent beinhaltet und plant die Agents, die bei der Replikation verwendet werden, und bietet so eine einfache Möglichkeit, die Replikations-Agents auszuführen. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent steuert und überwacht auch Vorgänge, die nicht im Rahmen der Replikation erfolgen. Weitere Informationen finden Sie unter [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
 >  Standardmäßig ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktiviert, es sei denn, Sie haben den automatischen Start des Diensts während der Installation explizit ausgewählt. Weitere Informationen zum Starten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienstes finden Sie unter [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)verwaltet werden.  

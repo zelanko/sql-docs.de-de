@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951815"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415837"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server-Agent, Auftragsschritte-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951815"
   
  Die folgende Tabelle enthält die Leistungsindikatoren von **SQLAgent:Auftragsschritte** .  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |**Aktive Schritte**|Dieser Indikator gibt die Anzahl der aktuell ausgeführten Auftragsschritte an.|  
 |**Schritte in Warteschlange**|Dieser Indikator gibt die Anzahl der Auftragsschritte an, die für das Ausführen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereitstehen, deren Ausführung jedoch noch nicht gestartet wurde.|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951815"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|Description|  
+|Instanz|und Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen für alle Auftragsschritte.|  
 |**ActiveScripting**|Informationen für Auftragsschritte, die das **ActiveScripting** -Subsystem verwenden.|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951815"
 |**TSQL**|Informationen für Auftragsschritte, die [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwalten von Auftragsschritten](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Verwenden von Leistungsobjekten](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)   
+ [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

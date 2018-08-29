@@ -36,12 +36,12 @@ caps.latest.revision: 56
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbc182e6fc9298a262fe4efb9560fb5c0cc67109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61c911806f15dd6472299ff0f1f2531bddf3b0c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957435"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406236"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32957435"
 ##  <a name="SQLServerAgentPOs"></a> Leistungsobjekte für den SQL Server-Agent  
  In der folgenden Tabelle sind die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent aufgeführt:  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|und Beschreibung|  
 |------------------------|-----------------|  
 |[SQLAgent:Warnungen](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
 |[SQLAgent:Aufträge](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
@@ -87,7 +87,7 @@ ms.locfileid: "32957435"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker-Leistungsobjekte  
  In der folgenden Tabelle sind die Leistungsobjekte für [!INCLUDE[ssSB](../../includes/sssb-md.md)]aufgeführt.  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|und Beschreibung|  
 |------------------------|-----------------|  
 |[SQLServer:Broker-Aktivierung](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
 |[SQLServer:Broker-Statistik](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  
@@ -96,7 +96,7 @@ ms.locfileid: "32957435"
 ##  <a name="SQLServerPOs"></a> SQL Server-Leistungsobjekte  
  In der folgenden Tabelle werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte beschrieben.  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|und Beschreibung|  
 |------------------------|-----------------|  
 |[SQLServer:Zugriffsmethoden](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Durchsucht und misst die Anzahl der Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten (z.B. die Anzahl von Indexsuchläufen oder die Anzahl von Seiten, die Indizes und Daten zugeordnet sind).|  
 |[SQLServer:Sicherungsmedium](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Stellt Informationen über Sicherungsmedien bereit, die von Sicherungs- und Wiederherstellungsvorgängen verwendet werden, z. B. über den Durchsatz des Sicherungsmediums.|  
@@ -135,7 +135,7 @@ ms.locfileid: "32957435"
 ##  <a name="SQLServerReplicationPOs"></a> Leistungsobjekte für die SQL Server-Replikation  
  In der folgenden Tabelle sind die Leistungsobjekte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufgeführt:  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|und Beschreibung|  
 |------------------------|-----------------|  
 |**SQLServer:Replikations-Agents**<br /><br /> **SQLServer:Replikationsmomentaufnahme**<br /><br /> **SQLServer:Replikationsprotokollleser**<br /><br /> **SQLServer:Replikationsverteilung**<br /><br /> **SQLServer:Replikationsmerge**<br /><br /> Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Stellt Informationen zur Aktivität des Replikations-Agents bereit.|  
   
@@ -146,7 +146,7 @@ ms.locfileid: "32957435"
  Die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekten hängt von Windows-Berechtigungen ab, außer für **SQLAgent:Warnungen**. Die Benutzer müssen Mitglied der festen Serverrolle **sysadmin** sein, um **SQLAgent:Warnungen**zu verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verwenden von Leistungsobjekten](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   
   

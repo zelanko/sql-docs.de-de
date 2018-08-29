@@ -17,12 +17,12 @@ caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9728613d59d3ae060d247431184d270ea759cbd6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c455f1e8925bc1e61c2786e3fc01290104a5555
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771706"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406217"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Entfernen des Protokollversands (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "34771706"
   
 3.  Führen Sie auf dem primären Server für den Protokollversand **sp_delete_log_shipping_primary_database** aus, um die Informationen zur Protokollversandkonfiguration vom primären Server zu löschen. Dadurch wird auch der Sicherungsauftrag gelöscht.  
   
-4.  Deaktivieren Sie auf dem primären Server für den Protokollversand den Sicherungsauftrag. Weitere Informationen finden Sie unter [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+4.  Deaktivieren Sie auf dem primären Server für den Protokollversand den Sicherungsauftrag. Weitere Informationen finden sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
 5.  Deaktivieren Sie auf dem sekundären Server für den Protokollversand den Kopier- und Wiederherstellungsauftrag.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34771706"
   
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770186"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409380"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Bereich **Details zum Objekt-Explorer** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verwendet wird, um vorhandene Always On-Verfügbarkeitsgruppen, -Verfügbarkeitsreplikate und -Verfügbarkeitsdatenbanken zu überwachen und zu verwalten.  
   
 > [!NOTE]  
->  Informationen zum Verwenden des Bereichs mit Details zum Objekt-Explorer finden Sie unter [Detailbereich des Objekt-Explorers](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
+>  Informationen zum Verwenden des Bereichs mit Details zum Objekt-Explorer finden Sie unter [Detailbereich des Objekt-Explorers](../../../ssms/object/object-explorer-details-pane.md).  
   
 -   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   

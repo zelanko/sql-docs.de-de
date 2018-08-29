@@ -133,7 +133,7 @@ JSON
     GO  
     ```  
   
-3.  Fügen Sie mehrere Werte in die Tabelle tlinks und die Tabelle trechts ein. Stellen Sie sicher, dass Sie einen NULL-Wert in die Tabelle tlinks einfügen. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
+3.  Fügen Sie mehrere Werte in die Tabelle tleft und die Tabelle tright ein. Stellen Sie sicher, dass Sie einen NULL-Wert in die Tabelle tleft einfügen. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
     ```  
     INSERT INTO tleft VALUES(2) ;  
@@ -250,7 +250,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
             **FOR JSON PATH**. Im **PATH**-Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Weitere Informationen und Beispiele finden Sie unter [Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
   
  INCLUDE_NULL_VALUES  
- Schließen Sie NULL-Werte in die JSON-Ausgabe ein, indem Sie die Option **INCLUDE_NULL_VALUES** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, enthält die Ausgabe in den Abfrageergebnissen keine JSON-Eigenschaften für NULL-Werte. Weitere Informationen und Beispiele finden Sie unter[Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md) (Einschließen von NULL-Werten in die JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES (SQL Server)).  
+ Schließen Sie NULL-Werte in die JSON-Ausgabe ein, indem Sie die Option **INCLUDE_NULL_VALUES** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, enthält die Ausgabe in den Abfrageergebnissen keine JSON-Eigenschaften für NULL-Werte. Weitere Informationen und Beispiele finden Sie unter [Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md) (Einschließen von NULL-Werten in die JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES (SQL Server)).  
   
  ROOT [ **('***RootName***')** ]  
  Fügen Sie ein einzelnes Element der obersten Ebene zur JSON-Ausgabe hinzu, indem Sie die Option **ROOT** mit der **FOR JSON**-Klausel angeben. Wenn Sie die Option **ROOT** nicht angeben, besitzt die JSON-Ausgabe kein Stammelement. Weitere Informationen und Beispiele finden Sie unter [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md) (Hinzufügen eines Stammknotens zur JSON-Ausgabe mithilfe der ROOT-Option (SQL Server)).  

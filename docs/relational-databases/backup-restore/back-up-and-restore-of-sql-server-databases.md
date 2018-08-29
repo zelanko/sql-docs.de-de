@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324484"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405538"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -189,9 +189,9 @@ GO
 ## <a name="more-about-backup-tasks"></a>Weitere Informationen zu Sicherungstasks  
 -   [Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
--   [Erstellen eines Auftrags](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
--   [Planen eines Auftrags](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)  
+-   [Planen eines Auftrags](../../ssms/agent/schedule-a-job.md)  
   
 ## <a name="working-with-backup-devices-and-backup-media"></a>Arbeiten mit Sicherungsgeräten und Sicherungsmedien  
 -   [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

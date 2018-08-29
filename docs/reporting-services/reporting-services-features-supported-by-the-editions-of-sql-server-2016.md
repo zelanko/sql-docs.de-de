@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983122"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406741"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen
 
@@ -96,13 +96,13 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
   
 |Name des Tools|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (RDL und RDS)|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (RSMOBILE)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (RDL und RDS)|Benutzerkontensteuerung|Benutzerkontensteuerung|||||Benutzerkontensteuerung|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (RSMOBILE)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
 |Power BI-Apps für mobile Geräte (iOS, Windows 10, Android) (RSMOBILE)|Benutzerkontensteuerung||||||Benutzerkontensteuerung|  
   
 > [!NOTE]  
 > 1.  In der oben aufgeführten Tabelle sind die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen angegeben, die zur Aktivierung dieser Clienttools erforderlich sind. Über diese Tools kann jedoch auf Daten zugegriffen werden, die von beliebigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen gehostet werden.  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] ist der einzige Punkt für die Erstellung von mobilen Berichten. Stellen Sie eine Verbindung mit einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Server her, um auf Datenquellen zuzugreifen und Berichte zu erstellen. Anschließend veröffentlichen Sie sie auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Server für den Zugriff durch andere Benutzer in der Organisation auf dem Server oder auf mobilen Geräten. Sie können auch das eigenständige [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] mit lokalen Datenquellen verwenden.  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] ist der einzige Punkt für die Erstellung von mobilen Berichten. Stellen Sie eine Verbindung mit einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Server her, um auf Datenquellen zuzugreifen und Berichte zu erstellen. Anschließend veröffentlichen Sie sie auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Server für den Zugriff durch andere Benutzer in der Organisation auf dem Server oder auf mobilen Geräten. Sie können auch das eigenständige [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] mit lokalen Datenquellen verwenden.  
 > 3.  Unabhängig davon, ob Sie ein lokales  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in der Cloud oder beides als Lösung für die Bereitstellung von Berichten verwenden, benötigen Sie nur eine mobile App für den Zugriff auf Dashboards und mobile Berichte auf mobilen Geräten. Die [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Apps stehen zum Download in den App-Stores für Windows, iOS oder Android bereit.  
 
 ## <a name="next-steps"></a>Nächste Schritte

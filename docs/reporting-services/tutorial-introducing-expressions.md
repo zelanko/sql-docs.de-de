@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77179704548ef164d61dae18bb311704247768c
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036957"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406055"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
 
 Sie werden Ausdrücke schreiben, die Namenswerte verketten, Werte in separaten Datasets suchen, auf Grundlage der Feldwerte verschiedene Farben anzeigen usw.  
   

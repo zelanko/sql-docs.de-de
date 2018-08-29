@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9d24a053e325bda0be8ca5e9f2797922e4d85b2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22790e8572c9a14812946df7454cb9674f9980f9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299070"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406498"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Problembehandlung bei der Verarbeitung von Reporting Services-Berichten
 Nachdem die Berichtsdaten abgerufen wurden, kombiniert der Berichtsprozessor die Daten mit den Layoutinformationen. Jede Berichtselementeigenschaft, die über einen Ausdruck verfügt, wird im Kontext der mit dem Layout kombinierten Daten ausgewertet. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   
@@ -56,5 +56,5 @@ Zeigen Sie in der Vorschau in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbide
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
