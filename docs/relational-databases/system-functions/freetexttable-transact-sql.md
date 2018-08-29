@@ -26,18 +26,18 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4a7b4b30de62c47460a6877daadd4c803508526d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540560"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102366"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ist eine Funktion der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung Ausführen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche Volltext-indizierte Spalten mit zeichenbasierten Datentypen. Diese Funktion gibt eine Tabelle mit 0 (null) oder mehr Zeilen für alle Spalten mit Werten, die die Bedeutung und nicht nur den genauen Wortlaut des Textes in der angegebenen *Freetext_string*. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
+  Ist eine Funktion der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung Ausführen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche Volltext-indizierte Spalten mit zeichenbasierten Datentypen. Diese Funktion gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen für alle Spalten mit Werten, die die Bedeutung und nicht nur dem genauen Wortlaut des Texts in der angegebenen entsprechen *Freetext_string*. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
   
  FREETEXTTABLE eignet sich für unterschiedliche Arten von Spielen als das [FREETEXT &#40;Transact-SQL-&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
@@ -73,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern stehen. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
   
  \*  
- Gibt an, dass alle für die Volltextsuche registrierten Spalten nach dem angegebenen *freetext_string*-Wert durchsucht werden. Wenn *Language_term* angegeben ist, wird die Sprache aller Volltext-indizierte Spalten in der Tabelle muss identisch sein.  
+ Gibt an, dass alle für die Volltextsuche registrierten Spalten nach dem angegebenen *freetext_string*-Wert durchsucht werden. Es sei denn, *Language_term* angegeben ist, wird die Sprache aller Volltext-indizierte Spalten in der Tabelle muss identisch sein.  
   
  *freetext_string*  
  Der Text, nach dem in *column_name* gesucht werden soll. Es kann hierbei ein beliebiger Text aus Wörtern, Ausdrücken und Sätzen eingegeben werden. Übereinstimmungen werden dann generiert, wenn ein Begriff oder Formen eines Begriffs im Volltextindex gefunden werden.  
   
- Im Gegensatz zu den enthält suchen Where-Bedingung und ist ein Schlüsselwort in *Freetext_string* das Wort "und" gilt ein Füllwort oder [Wortsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), und verworfen.  
+ Im Gegensatz zu suchen, in der CONTAINS Suchbedingung, in und ein Schlüsselwort ist, bei der Verwendung in *Freetext_string* das Wort 'und' gilt als Füllwort oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), und werden verworfen.  
   
  Die Verwendung von WEIGHT, FORMSOF, Platzhaltern, NEAR und anderer Syntax ist nicht zulässig. Für *freetext_string* wird eine Worttrennung durchgeführt, und die Wörter werden auf den Stamm zurückgeführt und durchlaufen den Thesaurus.  
   
@@ -94,7 +94,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
  *top_n_by_rank*  
- Gibt an, dass nur die *n*höchsten Rang entspricht in absteigender Reihenfolge zurückgegeben. Gilt nur, wenn ein Ganzzahlwert *n*, angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* Abfrageperformance steigern Sie mit den wichtigsten Punkten.  
+ Gibt an, dass nur die *n*höchsten Rang entspricht in absteigender Reihenfolge zurückgegeben. Gilt nur, wenn ein Ganzzahlwert *n*, angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. *Top_n_by_rank* lässt sich die abfrageleistung zu erhöhen, indem Sie nur die relevantesten Treffer erneut aufrufen.  
   
 ## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. Angeben der Sprache und der höchsten Übereinstimmungen  
- Im folgenden Beispiel entspricht und veranschaulicht die Verwendung der `LANGUAGE` *Language_term* und *Top_n_by_rank* Parameter.  
+ Im folgenden Beispiel ist identisch, und zeigt die Verwendung von der `LANGUAGE` *Language_term* und *Top_n_by_rank* Parameter.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Die Sprache *Language_term* erfüllten*r* muss nicht mit der *Top_n_by_rank* Parameter *.*  
+>  Die Sprache *Language_term* Paramete*r* ist nicht erforderlich, verwenden die *Top_n_by_rank* Parameter *.*  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   

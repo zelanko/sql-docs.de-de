@@ -2,7 +2,7 @@
 title: Übersicht über Data Migration Assistant (SQLServer) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit Data Migration Assistant zum Migrieren von SQL Server-Datenbanken zu anderen SQL Server oder Azure-Datenbanken
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781521"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152691"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data Migration Assistant
 
@@ -44,7 +44,7 @@ Die Data Migration Assistant (DMA) können Sie ein upgrade auf eine moderne Date
 
   - Wichtige Änderungen
   - Verhaltensänderungen
-  - Als veraltet markierte Funktionen
+  - Veraltete Features
 
 - Entdecken Sie neue Features in der SQL Server-Zielplattform, die die Datenbank nach einem Upgrade von profitieren kann. Diese werden als Vorschläge zu Features beschrieben und sind in folgenden Kategorien unterteilt:
 

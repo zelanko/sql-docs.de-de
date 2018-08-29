@@ -1,105 +1,138 @@
 ---
-title: Was ist SQL Server-Machine Learning-Services? | Microsoft-Dokumentation
+title: Machine Learning-Dienste in SQLServer | Microsoft-Dokumentation
+description: Übersicht über die Einführung in SQL Server 2017-Machine Learning Services, R und Python-Unterstützung für in-Database-Analyse
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/27/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585452"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118348"
 ---
-# <a name="what-is-sql-server-machine-learning-services"></a>Was ist SQL Server-Machine Learning-Services?
+# <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning-Dienste in SQLServer 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server-Machine Learning-Services ist eine eingebettete predictive Analyse- und Data Science-Engine, die R und Python-Code in einer SQL Server-Datenbank als gespeicherte Prozeduren, als T-SQL-Skript, die mit R oder Python-Anweisungen oder R oder Python enthält Code ausgeführt werden kann T-SQL. 
+SQL Server 2017-Machine Learning Services ist ein Add-on für eine Datenbank-Engine-Instanz, die zur Ausführung von R und Python-Code in SQL Server verwendet. Code wird in einem Erweiterbarkeitsframework,, ausgeführt, von der Kern-Engine-Prozesse isoliert, jedoch vollständig auf relationale Daten als gespeicherte Prozeduren, wie T-SQL-Skript, R oder Python-Anweisungen enthält, oder wie R oder Python-Code mit T-SQL verfügbar. 
 
-Der Schlüssel des wertbeitrags von Machine Learning Services ist die Leistungsfähigkeit des zugehörigen proprietären Pakete zum Übermitteln von erweiterter Analysen mit Skalierung und die Möglichkeit, schalten Sie Berechnungen und Verarbeitung an, in dem sich die Daten befinden, Hierdurch entfällt die Notwendigkeit zum Abruf von Daten über die Netzwerk.
+Wenn Sie bereits über SQL Server 2016 R Services verwendet, ist Machine Learning Services in SQL Server 2017 die nächste Generation von Unterstützung für R, mit aktualisierten Versionen von Basis-R, RevoScaleR, MicrosoftML und andere Bibliotheken in 2016 eingeführt wurde.
 
-Es gibt zwei Optionen für die Verwendung von Machine Learning-Funktionen in SQL Server: 
+Der entscheidenden Wertbeiträge von Machine Learning Services ist die Potenz Enterprise R und Python-Pakete, um erweiterte Analysen und Berechnungen und Verarbeitung an, in denen die Daten befinden, bieten die Möglichkeit zu übermitteln und Sie müssen Daten in das Netzwerk.
 
-+ [**SQL Server Machine Learning-Services (Datenbankintern)** ](r/sql-server-r-services.md) innerhalb der Datenbankmodulinstanz, in dem das Berechnungsmodul vollständig in das Datenbankmodul integriert ist. Die meisten Installationen werden diese Option.
-+ [**SQL Server Machine Learning-Server (eigenständig)** ](r/r-server-standalone.md) wird Machine Learning-Server für Windows, die unabhängig von das Datenbankmodul ausgeführt wird. Obwohl Sie SQL Server-Setup verwenden, um den Server zu installieren, ist die Funktion nicht instanzabhängig. Ist funktionell äquivalent zu nicht-SQL-Server [Microsoft Machine Learning-Server für Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
+## <a name="components"></a>Components
 
-## <a name="r-and-python-packages"></a>R und Python-Pakete
+SQL Server-2017 unterstützt R und Python. Die folgende Tabelle beschreibt die Komponenten an.
 
-Unterstützung für jede Sprache ist durch proprietäre Microsoft-Pakete, die zum Erstellen und Trainieren von Modellen verschiedener Typen, Bewerten von Daten und parallele Verarbeitung, die mit der zugrunde liegenden Systemressourcen verwendet.
+| Komponente | Description |
+|-----------|-------------|
+| SQL Server Launchpad-Dienst | Ein Dienst, der Kommunikation zwischen der externen R und Python-Laufzeiten und die Instanz der Datenbank-Engine verwaltet. |
+| R-Pakete | [**RevoScaleR** ](r/revoscaler-overview.md) ist die primäre Bibliothek für skalierbare r-Funktionen in dieser Bibliothek auf die am häufigsten verwendeten sind. Datentransformationen und Manipulation, statistische Zusammenfassung, Visualisierung und viele Formen der Modellierung und Analysen werden in diesen Bibliotheken gefunden. Darüber hinaus verteilen Funktionen in diesen Bibliotheken automatisch Workloads auf verfügbaren Kerne für die parallele Verarbeitung, mit der Möglichkeit, die für Segmente der Daten zu arbeiten, die koordiniert und verwaltet werden, indem die berechnungs-Engine.  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) fügt Machine Learning-Algorithmen, um benutzerdefinierte Modelle für die Textanalyse, Bildanalyse und stimmungsanalysen zu erstellen. <br/>[**SqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) Stellt Hilfsfunktionen für das Einfügen von R-Skripts in einer gespeicherten T-SQL-Prozedur, eine gespeicherte Prozedur mit einer Datenbank registrieren und Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung.<br/>[**OlapR** ](r/how-to-create-mdx-queries-using-olapr.md) zum Erstellen oder eine MDX-Abfrage in R-Skript ausgeführt wird.|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) ist die Open-Source-Distribution von R. Das Paket und ein Interpreter sind enthalten. Verwenden Sie immer die Version der MRO, die von Setup installiert. |
+| R-tools | R-Konsole Windows und eingabeaufforderungen werden zu einer Verteilung von R-Standardtools.  |
+| R-Beispiele und Skripts |  Open-Source-R und RevoScaleR-Pakete enthalten die integrierten Datasets, damit Sie erstellen und Ausführen von Skripts mit vorinstallierten Daten können. |
+| Python-Pakete | [**die Revoscalepy** ](python/what-is-revoscalepy.md) ist die primäre Bibliothek für skalierbare Python mit Funktionen zur datenbearbeitung, Transformation, Visualisierung und Analyse. <br/>[**Microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) fügt Machine Learning-Algorithmen, um benutzerdefinierte Modelle für die Textanalyse, Bildanalyse und stimmungsanalysen zu erstellen.  |
+| Python-tools | Das integrierte Tool der Python-Befehlszeile eignet sich für ad-hoc-Tests und Aufgaben.  |
+| Anaconda | Anaconda ist ein Open-Source-Distribution von Python und essential-Pakete. |
+| Python-Beispiele und Skripts | Enthält wie bei R, Python, integrierten Datasets und Skripts.  |
+| Vortrainierte Modelle in R und Python | Vortrainierte Modelle sind für spezielle Anwendungsfälle von erstellt und verwaltet die Data Science engineering-Team bei Microsoft. Können Sie die vorab trainierte Modelle wie-besteht darin, eine Bewertung positiv Negative Stimmung im Text-Format oder Erkennen von Funktionen in Images können neue Dateneingaben, die Sie bereitstellen. Die Modelle in Machine Learning-Dienste ausgeführt, jedoch nicht über SQL Server-Setup installiert werden. Weitere Informationen finden Sie unter [installieren vorab trainierten Machine learning-Modelle in SQL Server](install/sql-pretrained-models-install.md). |
 
-Da die proprietäre Pakete auf Open Source-R und Python-Verteilungen erstellt werden, Skript oder Code, die Sie in SQL Server ausführen kann auch Basis Funktionen aufrufen und Drittanbieterpakete, die kompatibel mit der Sprachversion, die in SQL Server bereitgestellten (Python 3.5 und aktuelle Versionen von R, derzeit 3.3.3).
+## <a name="using-in-database-analytics"></a>Verwenden von in-Database-Analyse
 
-| R  | Python | Description |
-|-----------|----------------|-------------|
-| [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Funktionen in diesen Bibliotheken gehören zu den am häufigsten verwendeten werden. Datentransformationen und Manipulation, statistische Zusammenfassung, Visualisierung und viele Formen der Modellierung und Analysen sind in diesen Bibliotheken gefunden. Darüber hinaus verteilt Funktionen in diesen Bibliotheken automatisch Workloads auf verfügbaren Kerne für die parallele Verarbeitung, die Möglichkeit, Teile dieser Daten zu arbeiten, die koordiniert und vom Berechnungsmodul verwaltet werden. |
-| [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Führende Algorithmen für maschinelles lernen für Image-merkmalbereitstellung, klassifizierungsprobleme und vieles mehr. |
-| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Erstellen oder eine MDX-Abfrage in R-Skript ausführen.
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Funktionen für das zusammensetzen von R-Skripts in einer T-SQL-Prozedur, eine gespeicherte Prozedur mit einer Datenbank registrieren und Ausführen der gespeicherten Prozedur aus einem R-Entwicklungsumgebung.
-| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Verwendet in erster Linie in einer nicht-SQL-Installation von Machine Learning-Server, z. B. die [(eigenständig) Version](r/r-server-standalone.md). Verwenden Sie dieses Paket bereitstellen und Webdienste hosten, erstellen mit horizontaler Skalierung Topologien mit dedizierten Web und Serverknoten, Umschalten zwischen lokalen und Remotesitzungen, Diagnose und vieles mehr ausführen. Für die Installation (In-Database), verwenden Sie dieses Paket in eine Client-Kapazität: z. B. auf einen Webdienst auf einem Remoteserver zugreifen dedizierte nur Machine Learning-Services-arbeitsauslastungen ausgeführt. |
+Entwickler und Wirtschaftsanalytiker verfügen häufig über Code, die auf einer lokalen SQL Server-Instanz ausgeführt wird. Die am häufigsten verwendete Ansatz für in-Database-Analyse ist die Verwendung [Sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), R oder Python-Skript als Eingabeparameter übergeben.
 
-Portabilität von Ihrem benutzerdefinierten R und Python-Code adressiert ist, über die paketverteilung und Interpreter, die in mehrere Produkte integriert werden. Die gleichen Pakete, die in SQL Server ausgeliefert sind auch verfügbar in verschiedene andere Microsoft-Produkte und Dienste, einschließlich einer nicht-SQL-Version aufgerufen [Microsoft Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/). Kostenlose Clients, die unsere R und Python-Interpreter enthalten gehören [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) und [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
+Klassischen Client / Server-Interaktionen sind eine andere Modalität. Von einer beliebigen Clientarbeitsstation, die über eine IDE verfügt, können Sie installieren [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) oder [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), und klicken Sie dann Code schreiben, der Ausführung überträgt (genannt eine *remote-Compute Kontext*) auf Daten und Vorgänge mit einem SQL-Remoteserver. 
 
-Pakete und Interpreter stehen auch auf mehreren [virtuellen Azure-Computern](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning und Azure-Diensten wie [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). 
+Schließlich bei Verwendung einer [eigenständiger Server](r/r-server-standalone.md) und Developer Edition können Sie Lösungen auf einer Clientarbeitsstation, die mit demselben Interpreter und Bibliotheken erstellen und anschließend bereitstellen Produktionscode in SQL Server Machine Learning Dienste (Datenbankintern). 
 
+## <a name="how-to-get-started"></a>Erste Schritte
 
-## <a name="use-cases"></a>Einsatzgebiete
+### <a name="step-1-install-the-software"></a>Schritt 1: Installieren der Softwareupdates
 
-**In der Datenbank analytics**
++ [SQL Server Machine Learning-Dienste (Datenbankintern)](install/sql-machine-learning-services-windows-install.md)
+ 
+### <a name="step-2-configure-a-development-tool"></a>Schritt 2: Konfigurieren Sie ein Entwicklungstool
 
-Entwickler und Wirtschaftsanalytiker haben häufig Code über eine lokale SQL Server-Instanz ausgeführt wird. Wenn Sie z. B. SQL Server und einer IDE haben [Visual Studio mit R](https://docs.microsoft.com/visualstudio/rtvs/) oder [Visual Studio mit Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio) auf demselben Computer erstellen, Trainieren und lokal Testen von Modellen in beiden Sprachen. Lokaler Zugriff vereinfacht paketverwaltung: als Administrator können Sie zusätzliche Drittanbieter-Pakete, die mithilfe der integrierten Berechtigungen für diese Rolle laden.
+Datenanalysten verwenden R oder Python in der Regel auf ihre eigenen Arbeitsstation Laptop oder Entwicklungscomputer zum Durchsuchen von Daten, und erstellen und optimieren prädiktive Modelle aus, bis ein geeignetes Vorhersagemodell erreicht ist. Mit in-Database-Analyse in SQL Server ist es nicht erforderlich, diesen Prozess zu ändern. Nachdem die Installation abgeschlossen ist, können Sie R oder Python-Code in SQL Server lokal und Remote ausführen.
 
-Die am häufigsten verwendete Ansatz für die Analyse in der Datenbank ist die Verwendung [Sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) , R oder Python-Skript auszuführen. Die Lernprogramme in aufgeführten [nächste Schritte](#next-steps) beginnen.
+![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-**Client / Server-Konfigurationen**
++ **Verwenden Sie die IDE, die Sie bevorzugen**. Sie können die R- und Python-Bibliotheken zu Ihrem Entwicklungstool Ihrer Wahl verknüpfen. Weitere Informationen finden Sie unter [Einrichten von R-Tools](r/set-up-a-data-science-client.md) und [Python-Tools einrichten](python/setup-python-client-tools-sql.md).  
 
-Über jede Clientarbeitsstation, die eine IDE aufweist, installieren [Microsoft R-Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) oder die [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), und klicken Sie dann Code schreiben, der die Ausführung wird (als bezeichnet eine *remote computekontext*) um Daten und Vorgänge mit einem SQL-Remoteserver. 
++ **Arbeiten Sie Remote oder lokal**. Datenanalysten können eine Verbindung mit SQL Server herstellen und bringen die Daten an dem Client zur lokalen Analyse wie gewohnt. Jedoch eine bessere Lösung ist die Verwendung der **RevoScaleR** oder **Revoscalepy** APIs Push Berechnungen auf dem SQL Server-Computer, um kostenintensive und unsichere datenbewegungen zu vermeiden.
 
-Auf ähnliche Weise, wenn Sie die Developer Edition verwenden, Sie erstellen Lösungen auf einer Clientarbeitsstation unter Verwendung des gleichen Bibliotheken und Interpreter, und klicken Sie dann bereitstellen können Produktionscode auf SQL Server Machine Learning-Services (Datenbankintern). 
++ **Einbetten von R oder Python-Skripts in SQL Server gespeicherte Prozeduren**. Wenn Ihr Code vollständig optimiert ist, binden Sie diese in einer gespeicherten Prozedur zum vermeiden unnötige datenbewegungen und Aufgaben der Datenverarbeitung zu optimieren.
 
-## <a name="version-history"></a>Verlauf-Version
+### <a name="step-3-write-your-first-script"></a>Schritt 3: Schreiben Sie das erste Skript.
 
-SQL Server 2017 Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services verbessert, um Python einzuschließen. In der folgenden Tabelle wird eine vollständige Liste aller Versionen, vom Beginn bis auf die aktuelle Version. 
+Rufen Sie R- oder Python-Funktionen in T-SQL-Skript:
 
-| Produktname | Modulversion | Veröffentlichungsdatum |
++ [R: erfahren Sie, datenbankinterne Analysen mit R](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R: End-to-End Walkthrough mit R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Python: Ausführen von Python mit T-SQL](tutorials/run-python-using-t-sql.md)
++ [Python: Erfahren Sie, datenbankinterne Analysen mit Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+Wählen Sie die beste Sprache für den Task. R ist am besten für statistische Berechnungen, die mit SQL schwierig sind. Nutzen Sie für setbasierte Vorgänge für Daten die Leistungsfähigkeit von SQL Server, um maximale Leistung zu erzielen. Verwenden Sie die in-Memory-Datenbank-Engine für sehr schnelle Berechnungen über Spalten hinweg.
+
+### <a name="step-4-optimize-your-solution"></a>Schritt 4: Optimieren Sie Ihre Lösung
+
+Wenn das Modell für die Skalierung auf Enterprise-Daten ist, funktioniert der Data Scientist häufig mit dem Datenbankadministrator oder SQL-Entwickler, um Prozesse zu optimieren, wie z. B.:
+
++ Featureentwicklung
++ Datenerfassung und Transformation von Daten
++ Bewertung
+
+In der Vergangenheit mussten Datenanalysten, die mithilfe von R Probleme mit der Leistung und Skalierung, insbesondere bei Verwendung von großen Datasets. Der Grund ist die Implementierung des allgemeinen Laufzeitmoduls einen einzelnen Thread und nur die Datasets, die in den verfügbaren Arbeitsspeicher auf dem lokalen Computer entsprechen aufnehmen kann. Integration in SQL Server Machine Learning Services bietet mehrere Features zur Verbesserung der Leistung mit größeren Datenmengen:
+
++ **RevoScaleR**: Diese R-Paket enthält die Implementierung einiger der beliebtesten R-Funktionen, die neu gestaltet, um die Parallelität und Skalierung bereitzustellen. Das Paket enthält auch Funktionen, die weiter erhöhen, Leistung und Skalierbarkeit durch pushen von Berechnungen auf dem SQL Server-Computer, der in der Regel wesentlich mehr Arbeitsspeicher und rechenleistung verfügt.
+
++ **die Revoscalepy**. Diese Python-Bibliothek implementiert der beliebtesten Funktionen in RevoScaleR, z. B. remotecomputekontexte und viele Algorithmen, die Unterstützung verteilter Verarbeitung.
+
+Weitere Informationen zur Leistung finden Sie in diesem [Fallstudie zur Leistung](r/performance-case-study-r-services.md) und [R und Data-Optimierung](r/r-and-data-optimization-r-services.md).
+
+### <a name="step-5-deploy-and-consume"></a>Schritt 5: Bereitstellen und nutzen
+
+Wenn das Skript oder das Modell für die Produktion bereit ist, kann ein Datenbankentwickler den Code oder das Modell in einer gespeicherten Prozedur einbetten, damit diese der gespeicherte R oder Python-Code aus einer Anwendung aufgerufen werden kann. Speichern und Ausführen von R-Code in SQL Server hat viele Vorteile: Sie können die geeignete SQL Server-Benutzeroberfläche verwenden, und alle Berechnungen erfolgen in der Datenbank, wodurch unnötige datenbewegungen vermieden.
+
+![rsql_keyscenario1](r/media/rsql-keyscenario1.png)
+
++ **Sicheres und erweiterbares**. SQL Server verwendet eine neue erweiterbarkeitsarchitektur, die gewährleistet die Sicherheit Ihrer Datenbank-Engine und R und Python-Sitzungen isoliert. Sie haben auch die Kontrolle über die Benutzer, die Skripts ausgeführt werden kann, und Sie können angeben, welche Datenbanken, die vom Code zugegriffen werden können. Sie können die Menge an Ressourcen, die die Runtime zugeordnet werden, um zu verhindern, dass umfangreiche Berechnungen die gesamtleistung des Servers gefährden steuern.
+
++ **Planung und Überwachung**. Wenn externe Skripts für Aufträge in SQL Server ausgeführt werden, können Sie steuern und überwachen die von Datenanalysten verwendeten Daten. Sie können auch planen, Aufträge und Workflows erstellen, die externe R oder Python-Skripts, wie Sie jede andere T-SQL-Auftrag oder die gespeicherte Prozedur planen, würde.
+
+Um die ressourcenverwaltung und Sicherheitsfunktionen in SQL Server nutzen, kann während des Bereitstellungsvorgangs diesen Aufgaben gehören:
+
++ Konvertieren von Code an eine Funktion, die optimal in einer gespeicherten Prozedur ausgeführt werden können
++ Einrichten der Sicherheit und Sperren Pakete, die von einer bestimmten Aufgabe verwendet werden.
++ Aktivieren der Ressourcenkontrolle (erfordert die Enterprise Edition)
+
+Weitere Informationen finden Sie unter [Ressourcenkontrolle für R](r/resource-governance-for-r-services.md) und [R-Paketverwaltung für SQL Server](r/install-additional-r-packages-on-sql-server.md).
+
+## <a name="version-history"></a>Versionsverlauf
+
+SQL Server 2017-Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services, erweitert und Python. In der folgende Tabelle ist eine vollständige Liste aller Produkt-Versionen, von Anfang an auf die aktuelle Version. 
+
+| Produktname | Engine-version | Veröffentlichungsdatum |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (Datenbankintern) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
-| SQL Server 2017 Machine Learning-Server (eigenständig) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
+| SQL Server 2017-Machine-Learning-Services (Datenbankintern) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
+| SQL Server 2017-Machine-Learning-Server (eigenständig) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
 | SQL Server 2016 R Services (Datenbankintern) | R Server 9.1  | Juli 2017  |
-| SQL Server 2016-R-Server (eigenständig)  |  R Server 9.1 | Juli 2017 |
+| SQL Server 2016 R Server (eigenständig)  |  R Server 9.1 | Juli 2017 |
 
+Versionen des Pakets von Version, finden Sie unter der Version in Zuordnung [ein Upgrade von R und Python-Komponenten](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map).
 
+## <a name="portability-and-related-products"></a>Portabilität und verwandte Produkte
 
-## <a name="documentation-for-each-version"></a>Dokumentation für die einzelnen Versionen
+Portabilität von Ihrem benutzerdefinierten R- und Python-Code wird behoben, durch Package-Distribution und Interpreter, die in mehrere Produkte integriert sind. Die gleichen Pakete der SQL Server sind auch verfügbar in verschiedene andere Microsoft-Produkte und Dienste, einschließlich einer nicht-SQL-Version wird aufgerufen, [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). 
 
-Neueren Versionen von SQL Server-Dokumentation werden die Unabhängigkeit von der Version. Für SQL Server Machine Learning-Dienste ist Python nur verfügbar in 2017 und höher, während der R-Unterstützung in allen Versionen ist. Sofern nicht anders angegeben, können Sie davon ausgehen, dass R-Dokumentation 2016 und 2017 Versionen angewendet.
+Kostenlose Clients, die unsere R- und Python-Interpretern sind [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) und [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
+In Azure, Microsoft R und Python-Paketen und -Interpretern sind auch verfügbar in Azure Machine Learning und Azure-Dienste wie [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight), und [virtuellen Azure-Computern](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux). Die [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) enthält eine vollständig ausgestatteten Entwicklungsarbeitsstation mit Tools von mehreren Anbietern als auch die Bibliotheken und Interpreter von Microsoft.
 
-## <a name="related-machine-learning-products"></a>Verwandte Machine learning-Produkte
+## <a name="see-also"></a>Siehe auch
 
- +  [Bereitstellen von virtuellen Azure-Computer](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  Azure Marketplace enthält mehrere Images für virtuelle Computer, die Machine Learning-Server oder R Server einschließen. Erstellen einer virtuellen Maschine in Microsoft Azure ist die schnellste Möglichkeit, um Entwicklung und Bereitstellung von Vorhersagemodellen zu erhalten. Bilder verfügen über Funktionen für die Skalierung und Freigabe bereits konfiguriert ist, dem leichter Analytics in Anwendungen eingebettet und Back-End-Systeme integriert werden kann.
-
-+ [Data Science Virtual Machines](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
-
-  Die neueste Version der Data Science Virtual Machine enthält Machine Learning-Server, SQL Server, und ein Array der beliebtesten Tools für maschinelles lernen, alle vorinstalliert und getestet. Jupyter Notizbüchern erstellen, Entwickeln von Projektmappen in Julia und GPU-aktivierte umfassenden lernen Bibliotheken wie MXNet, CNTK und TensorFlow verwenden.
-
-<a name="next-steps"></a>
-
-## <a name="next-steps"></a>Nächste Schritte
-
-**Schritt 1:** installieren und konfigurieren Sie die Software. 
-
-+ [Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern)](install/sql-machine-learning-services-windows-install.md)
-
-**Schritt 2:** erste Schritte mit Code mit einer der folgenden Lernprogramme:
-
-+ [Lernprogramm: Ausführen von Python in T-SQL](tutorials/run-python-using-t-sql.md)
-+ [Lernprogramm: Ausführen von R in T-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-
-**Schritt 3:** Ihrer bevorzugten R und Python-Pakete hinzufügen und verwenden sie zusammen mit Paketen, die von Microsoft bereitgestellten
-
-+ [Verwaltung von R-Paket für SQL Server](r/install-additional-r-packages-on-sql-server.md)
+[Installieren von SQL Server Machine Learning-Dienste](install/sql-machine-learning-services-windows-install.md)
