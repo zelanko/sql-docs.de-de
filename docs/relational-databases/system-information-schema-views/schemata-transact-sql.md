@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SCHEMATA view
 - SCHEMATA view
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c8892f5fb2a584368567793f5bc52b23b810b52
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 06b4cb93e86a872d1b8d3c0542097dd091d0c0cd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558290"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070819"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "39558290"
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Name der aktuellen Datenbank|  
 |**SCHEMA_NAME**|**Nvarchar (** 128 **)**|Gibt den Namen des Schemas zurück.|  
-|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|Name des Schemabesitzers.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit, das Schema eines Objekts zu finden, besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|Gibt immer NULL zurück.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Gibt den Namen des Standardzeichensatzes zurück.|  
