@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662122"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786283"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Verwenden von gespeicherten Prozeduren mit einer Updatezählung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Zum Ändern von Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank mit einer gespeicherten Prozedur stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die Klasse [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) bereit. Mithilfe der Klasse „SQLServerCallableStatement“ können Sie gespeicherte Prozeduren aufrufen, die Daten in der Datenbank ändern und die Anzahl der betroffenen Zeilen zurückgeben (die so genannte Updatezählung).
+Zum Ändern von Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit einer gespeicherten Prozedur stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die Klasse [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) bereit. Mithilfe der Klasse „SQLServerCallableStatement“ können Sie gespeicherte Prozeduren aufrufen, die Daten in der Datenbank ändern und die Anzahl der betroffenen Zeilen zurückgeben (die so genannte Updatezählung).
 
 Nachdem der Aufruf der gespeicherten Prozedur mit der Klasse „SQLServerCallableStatement“ eingerichtet wurde, können Sie die gespeicherte Prozedur mit der Methode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) oder der Methode [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) aufrufen. Anders als die Methode „execute“ gibt die Methode „executeUpdate“ einen **int**-Wert zurück, der die von der gespeicherten Prozedur betroffene Anzahl von Zeilen enthält. Wenn Sie die Methode „execute“ verwenden und die Anzahl der betroffenen Zeilen ermitteln möchten, können Sie nach dem Ausführen der gespeicherten Prozedur die Methode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) aufrufen.
 

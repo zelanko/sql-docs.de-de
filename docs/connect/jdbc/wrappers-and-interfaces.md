@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457784"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785745"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper und Schnittstellen
 
@@ -61,7 +61,7 @@ Die java.sql.Wrapper-Schnittstelle definiert zwei Methoden: **IsWrapperFor** und
 
 ## <a name="interfaces"></a>Schnittstellen
 
-Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC-Treiber 3.0 stehen einem Anwendungsserver Schnittstellen für den Zugriff auf eine treiberspezifische Methode über die zugehörige Klasse zur Verfügung. Der Anwendungsserver kann die Klasse durch Erstellen eines Proxy umschließen, wodurch die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Funktionen über eine Schnittstelle verfügbar gemacht werden. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt Schnittstellen, die über die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Methoden und Konstanten verfügen, sodass ein Anwendungsserver einen Proxy der Klasse erstellen kann.
+Ab [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC-Treiber 3.0 stehen einem Anwendungsserver Schnittstellen für den Zugriff auf eine treiberspezifische Methode über die zugehörige Klasse zur Verfügung. Der Anwendungsserver kann die Klasse durch Erstellen eines Proxy umschließen, wodurch die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Funktionen über eine Schnittstelle verfügbar gemacht werden. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt Schnittstellen, die über die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Methoden und Konstanten verfügen, sodass ein Anwendungsserver einen Proxy der Klasse erstellen kann.
 
 Die Schnittstellen sind von Java-Standardschnittstellen abgeleitet, damit Sie nach dem Entpacken dasselbe Objekt für den Zugriff auf die treiberspezifischen Funktionen oder die generischen [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Funktionen verwenden können.
 

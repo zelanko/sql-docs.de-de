@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946904"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784003"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
-Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, beginnend mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, beginnend mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Korrigiert eine Fehlermeldung über Azure Active Directory-Authentifizierung
 - Feste Codierung erkennen, die Gebietsschema-Umgebungsvariablen sind anders festgelegt
@@ -40,7 +40,7 @@ Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, be
 - Ein Cache-Problem wurde behoben, bei Verwendung von ADAL-Authentifizierung für Windows
 - Das Sperren wurde das Problem wurde behoben, und überschreiben die Ablaufverfolgung auf Windows-Protokolle
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.1 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.1 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 1-Sekunden Verzögerung behoben, Aufrufen von SQLFreeHandle bei aktivierter MARS- und -Verbindungsattribut "Encrypt = Yes"
 - Korrektur einer Fehler 22003 Absturzes in SQLGetData, wenn die Größe des übergebenen Puffers kleiner ist und die Daten abgerufen werden (Windows)
@@ -50,7 +50,7 @@ Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, be
 - "Fixed" eine Warnung auf MacOS-installer
 - Feste senden falschen Status auf SQL Server während der Sitzung Wiederherstellungsversuch ein, wenn die Resilienz von Verbindungen und Verbindungspooling beide aktiviert sind und verursacht die Sitzung vom Server gelöscht werden soll,
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Korrektur eines Fehlers, bei Verwendung der Kerberos-Authentifizierung masseneinfügung mit "Zugriff verweigert"-Fehler ausfallen
 - Entfernte behelfslösung für einen UnixODBC-Fehler, die in die ältere Version 2.3.1 vorhanden (verdoppelt, die Größe der bestimmten Puffer übergeben, um den UnixODBC Treiber)

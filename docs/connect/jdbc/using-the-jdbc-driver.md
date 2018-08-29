@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787856"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine einfache Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
+Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine einfache Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
   
 ## <a name="choosing-the-right-jar-file"></a>Auswählen der richtigen JAR-Datei
 

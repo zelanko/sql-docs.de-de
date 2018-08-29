@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785668"
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278821"
 > [!NOTE]  
 >  Obwohl im vorherigen Beispiel in der Verbindungszeichenfolge ein Benutzername und ein Kennwort verwendet wurden, sollten Sie aufgrund der höheren Sicherheit die integrierte Sicherheit verwenden. Weitere Informationen finden Sie im Abschnitt [Herstellen einer Verbindung mit integrierter Authentifizierung](#Connectingintegrated) weiter unten in diesem Artikel.  
   
- Anhand der folgenden Verbindungszeichenfolge wird veranschaulicht, wie Sie eine Verbindung zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank mithilfe der integrierten Authentifizierung und Kerberos über eine Anwendung herstellen, die auf einem beliebigen Betriebssystem ausgeführt wird, das vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt wird:  
+ Anhand der folgenden Verbindungszeichenfolge wird veranschaulicht, wie Sie eine Verbindung zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe der integrierten Authentifizierung und Kerberos über eine Anwendung herstellen, die auf einem beliebigen Betriebssystem ausgeführt wird, das vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt wird:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Benannte und mehrere SQL Server-Instanzen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lässt die Installation mehrerer Datenbankinstanzen auf einem Server zu. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Um eine Verbindung zu einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] herzustellen, können Sie entweder die Portnummer der benannten Instanz angeben (bevorzugte Vorgehensweise) oder den Instanznamen als JDBC-URL-Eigenschaft oder **datasource**-Eigenschaft angeben. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Vergleichen Sie die folgenden Beispiele:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt die Installation mehrerer Datenbankinstanzen auf einem Server zu. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Um eine Verbindung zu einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, können Sie entweder die Portnummer der benannten Instanz angeben (bevorzugte Vorgehensweise) oder den Instanznamen als JDBC-URL-Eigenschaft oder **datasource**-Eigenschaft angeben. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Vergleichen Sie die folgenden Beispiele:  
   
  Gehen Sie folgendermaßen vor, wenn eine Portnummer verwendet werden soll:  
   

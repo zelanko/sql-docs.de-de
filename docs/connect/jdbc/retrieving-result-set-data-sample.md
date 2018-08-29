@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95c7157850f212893361e26927152c43af7b9a32
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5cff468c8306631a03e7567f86cc5f5fd57137f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784235"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Abrufen von Resultsetdaten - Beispiel
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank abgerufen und anschließend angezeigt werden.
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank abgerufen und anschließend angezeigt werden.
 
 Die Codedatei für dieses Beispiel heißt „RetrieveResultSet.java“ und befindet sich im folgenden Pfad:
 

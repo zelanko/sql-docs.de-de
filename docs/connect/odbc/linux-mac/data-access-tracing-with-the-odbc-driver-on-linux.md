@@ -17,17 +17,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5a22a5f4eb06e983f2bc4d81eeb786f32b78751
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982185"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784425"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Ablaufverfolgung des Datenzugriffs mit dem ODBC-Treiber unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Der UnixODBC-Treiber-Manager unter MacOS und Linux unterstützt die Ablaufverfolgung von ODBC-API-Aufruf-Eintrag, und Beenden des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Der UnixODBC-Treiber-Manager unter MacOS und Linux unterstützt die Ablaufverfolgung von ODBC-API-Aufruf-Eintrag, und Beenden des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Um das Verhalten Ihrer Anwendung ODBC zu verfolgen, bearbeiten Sie die `odbcinst.ini` Datei `[ODBC]` Abschnitt zum Festlegen der Werte `Trace=Yes` und `TraceFile` auf den Pfad der Datei, die in der Ablaufverfolgungsausgabe; enthalten z. B.:
 
@@ -66,7 +66,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Die [UnixODBC-Dokumentation](http://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Ausführungszusammenfassung  
+Die [UnixODBC-Dokumentation](http://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Zusammenfassung:  
 
 - Benutzer-DSNs---Hierbei handelt es sich um DSNs, die nur für einen bestimmten Benutzer verfügbar sind. Benutzer können Herstellen einer Verbindung mit hinzufügen, ändern und eigene Benutzer-DSNs entfernen. Benutzer-DSNs werden in einer Datei im Basisverzeichnis des Benutzers oder davon ein Unterverzeichnis gespeichert.
   

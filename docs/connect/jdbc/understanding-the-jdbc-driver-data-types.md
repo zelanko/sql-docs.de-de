@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661662"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786149"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen in JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung von einfachen und erweiterten JDBC-Datentypen in einer Java-Anwendung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als Datenbank verwendet.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung von einfachen und erweiterten JDBC-Datentypen in einer Java-Anwendung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenbank verwendet.  
   
-Das JDBC-Typsystem vermittelt die Konvertierung zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen und Java-Typen und -Objekten. Die JDBC-Typen beruhen auf den SQL-92- und SQL-99-Typen. Der JDBC-Treiber befolgt die JDBC-Spezifikation und stellt eine optimale Balance zwischen Vorhersehbarkeit und Flexibilität bereit.  
+Das JDBC-Typsystem vermittelt die Konvertierung zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen und Java-Typen und -Objekten. Die JDBC-Typen beruhen auf den SQL-92- und SQL-99-Typen. Der JDBC-Treiber befolgt die JDBC-Spezifikation und stellt eine optimale Balance zwischen Vorhersehbarkeit und Flexibilität bereit.  
   
 Die Themen in diesem Abschnitt beschreiben die Verwendung der grundlegenden und erweiterten Datentypen sowie das Konvertieren der Datentypen in andere Datentypen.  
   

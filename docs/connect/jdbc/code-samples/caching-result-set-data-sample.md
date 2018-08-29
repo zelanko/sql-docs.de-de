@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5e8a0435a606152852c39450801497cd100fe90d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455209"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785517"
 ---
 # <a name="caching-result-set-data-sample"></a>Zwischenspeichern von Resultsetdaten - Beispiel
 
@@ -30,7 +30,7 @@ Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnove
 > [!NOTE]  
 > Die Einschränkung der im Client zwischengespeicherten Zeilen ist nicht mit der Einschränkung der Gesamtanzahl von Zeilen identisch, die ein Resultset enthalten kann. Verwenden Sie zum Steuern der Gesamtanzahl der in einem Resultset enthaltenen Zeilen die Methode [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) des Objekts [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), das von den Objekten [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) geerbt wird.  
   
-Zum Einschränken der Anzahl von Zeilen, die im Client zwischengespeichert werden, müssen Sie zunächst einen serverseitigen Cursor verwenden, wenn Sie eines der Statement-Objekte erstellen. Geben Sie hierzu den spezifischen Cursortyp an, der bei der Erstellung des Statement-Objekts verwendet werden soll. Der JDBC-Treiber enthält beispielsweise den Cursortyp TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (ein schneller schreibgeschützter serverseitiger Vorwärtscursor für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbanken).  
+Zum Einschränken der Anzahl von Zeilen, die im Client zwischengespeichert werden, müssen Sie zunächst einen serverseitigen Cursor verwenden, wenn Sie eines der Statement-Objekte erstellen. Geben Sie hierzu den spezifischen Cursortyp an, der bei der Erstellung des Statement-Objekts verwendet werden soll. Der JDBC-Treiber enthält beispielsweise den Cursortyp TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (ein schneller schreibgeschützter serverseitiger Vorwärtscursor für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken).  
   
 > [!NOTE]  
 > Alternativ zum SQL Server-spezifischen Cursortyp kann die selectMethod-Verbindungszeichenfolgeneigenschaft verwendet werden, indem deren Wert auf "cursor" festgelegt wird. Weitere Informationen zu den vom JDBC-Treiber unterstützten Cursortypen finden Sie unter [Grundlegendes zu Cursortypen](../../../connect/jdbc/understanding-cursor-types.md).  

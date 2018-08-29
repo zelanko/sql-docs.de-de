@@ -14,19 +14,19 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: ff40299845ab92822d223f177cc9674ce9fd67f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661872"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786831"
 ---
 # <a name="release-notes"></a>Versionsanmerkungen
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Versionsanmerkungen für Microsoft ODBC Driver for SQL Server on Windows.  
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows
 
 **Funktionen, die hinzugefügt**:
 
@@ -34,7 +34,7 @@ Datenklassifizierung für Azure SQL-Datenbank und SQL Server, Weitere Informatio
 
 [Behebung von Programmfehlern](../bug-fixes.md)
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows
 
 **Funktionen, die hinzugefügt**:
 
@@ -48,7 +48,7 @@ Unterstützung der interaktiven Azure Active Directory-Authentifizierung
 [Behebung von Programmfehlern](../bug-fixes.md)
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows
 
 **Funktionen, die hinzugefügt**:
 
@@ -71,11 +71,11 @@ Unterstützung für verwaltete Azure SQL-Instanz (Erweiterte Private Vorschau).
 > -   Die Fehlermeldungen werden immer in englischer Sprache angezeigt, unabhängig von der Sprache Einstellungen (identisch mit Azure) 
   
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows  
- ODBC-Treiber 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] bietet Unterstützung für [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) bei Verwendung in Verbindung mit Microsoft SQL Server 2016.  Entsprechende Connection pooling Schlüsselwörter bzw. Attribute finden Sie unter [Treiber Aware Connection Pooling in der ODBC-Treiber für SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows  
+ ODBC-Treiber 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet Unterstützung für [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) bei Verwendung in Verbindung mit Microsoft SQL Server 2016.  Entsprechende Connection pooling Schlüsselwörter bzw. Attribute finden Sie unter [Treiber Aware Connection Pooling in der ODBC-Treiber für SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 
- ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows  
- ODBC Driver 13 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] vorherige Funktionalität von ODBC Driver 11 für SQL Server enthält, und bietet Unterstützung für Microsoft SQL Server 2016.
+ ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows  
+ ODBC Driver 13 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vorherige Funktionalität von ODBC Driver 11 für SQL Server enthält, und bietet Unterstützung für Microsoft SQL Server 2016.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Neuigkeiten in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows  
  ODBC Driver 11 for SQL Server enthält einerseits neue [Features](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md) sowie andererseits sämtliche Features, die im Lieferumfang von ODBC in SQL Server 2012 Native Client enthalten sind.  

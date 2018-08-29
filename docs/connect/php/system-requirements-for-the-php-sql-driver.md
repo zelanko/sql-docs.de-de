@@ -1,5 +1,5 @@
 ---
-title: Systemanforderungen für Microsoft-Treiber für PHP für SQLServer | Microsoft-Dokumentation
+title: Systemanforderungen für Microsoft-Treiber für PHP für SQL Server
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174947"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787396"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Systemanforderungen für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Dieses Dokument Listet die Komponenten, die auf Ihrem System für den Datenzugri
 
 Weitere Informationen zum Herunterladen und Installieren von stabilen PHP-Binärdateien finden Sie [auf der PHP-Website](http://php.net).  Microsoft Drivers for PHP for SQL Server erfordern die folgenden Versionen von PHP:
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; PHP-Version|und<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; PHP-Version|5.3 und 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
 |7.2|7.2.1 und höher unter Windows<br/>7.2.0+ auf anderen Plattformen | | | | |
 |7.1|7.1.0+ |7.1.0+ |       |        |        |
@@ -60,18 +60,18 @@ Die richtige Version des Microsoft ODBC-Treibers für SQL Server muss auf dem Co
 
 Wenn Sie die Windows-Version des Treibers auf einer 64-Bit-Version von Windows heruntergeladen haben, installiert der ODBC-64-Bit-Installer sowohl 32-Bit- und 64-Bit-ODBC-Treiber. Wenn Sie eine 32-Bit-Version von Windows verwenden, verwenden Sie die ODBC-X86 Installer. Auf nicht-Windows-Plattformen sind nur 64-Bit-Versionen des Treibers verfügbar.
 
-|PHP für SQL Server-Treiberversion&#8594;<br />Treiberversion|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595;ODBC-Treiberversion|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|
 |ODBC-Treiber 17 und höher |J|J| | | | |
 |ODBC-Treiber 13.1|J|J|J|J| | |
 |ODBC-Treiber 13  | | | |J| | |
 |ODBC-Treiber 11  |J|J|J|J|J|J|
 
-Wenn Sie den SQLSRV-Treiber verwenden [Sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) sieht in Bezug auf die Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] wird von Microsoft ODBC-Treiber für SQL Server verwendet die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Fall Sie den PDO_SQLSRV-Treiber verwenden, können Sie die Version mithilfe von [PDO::getAttribute](../../connect/php/pdo-getattribute.md) abrufen.  
+Wenn Sie den SQLSRV-Treiber verwenden [Sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) sieht in Bezug auf die Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird von Microsoft ODBC-Treiber für SQL Server verwendet die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Fall Sie den PDO_SQLSRV-Treiber verwenden, können Sie die Version mithilfe von [PDO::getAttribute](../../connect/php/pdo-getattribute.md) abrufen.  
 
 ## <a name="sql-server"></a>SQL Server
 
-SQL Azure-Datenbanken werden unterstützt. Weitere Informationen finden Sie unter [Connecting to Microsoft Azure SQL Database (Herstellen einer Verbindung mit Microsoft Azure SQL-Datenbank)](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
+Azure SQL-Datenbanken werden unterstützt. Weitere Informationen finden Sie unter [Connecting to Microsoft Azure SQL Database (Herstellen einer Verbindung mit Microsoft Azure SQL-Datenbank)](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
 
 |PHP für SQL Server-Treiberversion&#8594;<br />&#8595; SQL Server-Version|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|

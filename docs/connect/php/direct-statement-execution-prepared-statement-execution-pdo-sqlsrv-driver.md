@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1c721a32936bf39d91042d6b7ac89a03a5fd85d6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042219"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42783848"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "38042219"
 In diesem Artikel wird erläutert, wie das PDO::SQLSRV_ATTR_DIRECT_QUERY-Attribut verwendet wird, um die direkte Anweisungsausführung anstelle des Standardwerts, der die Ausführung der vorbereiteten Anweisung darstellt, anzugeben. Mit einer vorbereiteten Anweisung kann in eine bessere Leistung führen, wenn die Anweisung ausgeführt wird, mehr als einmal mit der parameterbindung.  
   
 ## <a name="remarks"></a>Remarks  
-Wenn Sie senden möchten eine [!INCLUDE[tsql](../../includes/tsql_md.md)] Anweisung direkt an den Server ohne anweisungsvorbereitung vom Treiber, Sie können das PDO:: sqlsrv_attr_direct_query-Attribut mit festlegen [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (oder eine Treiberoption übergebenen [PDO:: __construct](../../connect/php/pdo-construct.md)) oder beim Aufruf [PDO:: Prepare](../../connect/php/pdo-prepare.md). Der Wert des PDO:: sqlsrv_attr_direct_query wird standardmäßig "false" (verwenden Sie vorbereitete anweisungsausführung).  
+Wenn Sie senden möchten eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung direkt an den Server ohne anweisungsvorbereitung vom Treiber, Sie können das PDO:: sqlsrv_attr_direct_query-Attribut mit festlegen [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (oder eine Treiberoption übergebenen [PDO:: __construct](../../connect/php/pdo-construct.md)) oder beim Aufruf [PDO:: Prepare](../../connect/php/pdo-prepare.md). Der Wert des PDO:: sqlsrv_attr_direct_query wird standardmäßig "false" (verwenden Sie vorbereitete anweisungsausführung).  
   
 Bei Verwendung von [PDO:: Query](../../connect/php/pdo-query.md), sollten Sie die direkte Ausführung. Vor dem Aufruf [PDO:: Query](../../connect/php/pdo-query.md), rufen Sie [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) und PDO:: sqlsrv_attr_direct_query auf "true" festgelegt.  Jeder Aufruf von [PDO:: Query](../../connect/php/pdo-query.md) mit einer anderen Einstellung für PDO:: sqlsrv_attr_direct_query ausgeführt werden kann.  
   

@@ -13,20 +13,20 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467778"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784231"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Dies [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie Ergebnis Abrufmethoden abzurufenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 'SQL Datenermittlung und-Klassifizierung Dateninformationen"aus den Tabellen, die solche Informationen enthält.
+Dies [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie Ergebnis Abrufmethoden abzurufenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL Datenermittlung und-Klassifizierung Dateninformationen"aus den Tabellen, die solche Informationen enthält.
   
-Die Codedatei für dieses Beispiel heißt „SqlXmlDataType.java“ und befindet sich im folgenden Pfad:  
+Die Codedatei für dieses Beispiel heißt DataDiscoveryAndClassification.java, und sie befinden sich am folgenden Speicherort:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

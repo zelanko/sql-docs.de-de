@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041401"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785325"
 ---
 # <a name="connecting-with-bcp"></a>Herstellen einer Verbindung mit bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Das Hilfsprogramm [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux und macOS verfügbar. Diese Seite beschreibt die Unterschiede aus der Windows-Version von `bcp`.
+Das Hilfsprogramm [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar. Diese Seite beschreibt die Unterschiede aus der Windows-Version von `bcp`.
   
 - Das Feldabschlusszeichen ist ein Tabulator („\t“).  
   
@@ -82,7 +82,7 @@ Gibt die Nummer der ersten Zeile an, die aus einer Tabelle exportiert oder von e
 Gibt an, dass während des Vorgangs keine Standardwerte in leere Spalten eingefügt werden, sondern ein NULL-Wert für diese Spalten beibehalten werden soll.  
   
 - -l  
-Gibt einen Anmeldungstimeout an. Die Option -I gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ein Timeout eintritt. Das Standardtimeout für die Anmeldung ist 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an.
+Gibt einen Anmeldungstimeout an. Die Option -I gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das Standardtimeout für die Anmeldung ist 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an.
   
 - -L *last_row*  
 Gibt die Nummer der letzten Zeile an, die aus einer Tabelle exportiert oder von einer Datendatei importiert werden soll.  
@@ -97,25 +97,25 @@ Verwendet die systemeigenen (Datenbank-) Datentypen, um den Massenkopiervorgang 
 Gibt das Kennwort für die Anmelde-ID an.  
   
 - -Q  
-Führt die SET QUOTED_IDENTIFIERS ON-Anweisung in der Verbindung zwischen dem Hilfsprogramm `bcp` und einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Instanz aus.  
+Führt die SET QUOTED_IDENTIFIERS ON-Anweisung in der Verbindung zwischen dem Hilfsprogramm `bcp` und einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz aus.  
   
 - -r *row_terminator*  
 Gibt das Zeilenabschlusszeichen an.  
   
 - -r  
-Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird.  
+Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird.  
   
 - -S *server*  
-Gibt den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Instanz herstellen oder wenn – D verwendet wird, einen DSN.  
+Gibt den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz herstellen oder wenn – D verwendet wird, einen DSN.  
   
 - -t *field_terminator*  
 Gibt das Feldabschlusszeichen an.  
   
 - -T  
-Gibt an, dass das Hilfsprogramm `bcp` die Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mithilfe einer vertrauenswürdigen Verbindung (integrierte Sicherheit) herstellt.  
+Gibt an, dass das Hilfsprogramm `bcp` die Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe einer vertrauenswürdigen Verbindung (integrierte Sicherheit) herstellt.  
   
 - -U *login_id*  
-Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] verwendet wird.  
+Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird.  
   
 - -V  
 Meldet die Versionsnummer und das Copyright für das Hilfsprogramm `bcp`.  
@@ -144,7 +144,7 @@ Verwendet die systemeigenen (Datenbank-) Datentypen für Daten, die keinen Zeich
 Gibt den Namen einer Datei an, in die die Ausgabe geschrieben wird, die von der Eingabeaufforderung umgeleitet wurde.  
   
 - -V (80 | 90 | 100)  
-Verwendet Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Verwendet Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 Bei Verwendung mit den Optionen Format und -f format_file wird anstelle der standardmäßigen Nicht-XML-Formatdatei eine XML-basierte Formatdatei generiert.  

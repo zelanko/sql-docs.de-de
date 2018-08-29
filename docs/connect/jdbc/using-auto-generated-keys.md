@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661632"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785485"
 ---
 # <a name="using-auto-generated-keys"></a>Verwenden von automatisch generierten Schlüsseln
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661632"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die optionalen JDBC 3.0-APIs für das Abrufen automatisch generierter Zeilen-IDs. Der Hauptwert dieser Funktion besteht darin, eine Möglichkeit zu bieten, IDENTITY-Werte einer Anwendung zur Verfügung zu stellen, die eine Datenbanktabelle aktualisiert, ohne dass eine Abfrage und ein zweiter Roundtrip zum Server notwendig sind.
 
-Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] keine Pseudospalten für IDs unterstützt, müssen Updates, die das Feature für die automatische Generierung von Schlüsseln verwenden müssen, eine Tabelle verwenden, die eine IDENTITY-Spalte enthält. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lässt nur eine einzelne IDENTITY-Spalte pro Tabelle zu. Das von der [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse zurückgegebene Resultset enthält nur eine Spalte namens GENERATED_KEYS. Wenn generierte Schlüssel für eine Tabelle ohne IDENTITY-Spalte angefordert werden, gibt der JDBC-Treiber ein leeres Resultset zurück.
+Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Pseudospalten für IDs unterstützt, müssen Updates, die das Feature für die automatische Generierung von Schlüsseln verwenden müssen, eine Tabelle verwenden, die eine IDENTITY-Spalte enthält. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nur eine einzelne IDENTITY-Spalte pro Tabelle zu. Das von der [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse zurückgegebene Resultset enthält nur eine Spalte namens GENERATED_KEYS. Wenn generierte Schlüssel für eine Tabelle ohne IDENTITY-Spalte angefordert werden, gibt der JDBC-Treiber ein leeres Resultset zurück.
 
 Erstellen Sie als Beispiel die folgende Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank:
 

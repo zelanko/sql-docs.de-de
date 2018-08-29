@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047515"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786152"
 ---
 # <a name="custom-keystore-providers"></a>Benutzerdefinierte Keystore-Anbieter
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ Platzhaltername für eine Funktion der Anbieter definierte ECEK-Entschlüsselung
 |`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
 |`ecek`|[Eingabe] Zeiger auf die ECEK entschlüsselt werden.|
 |`ecekLen`|[Eingabe] Die Länge von ECEK.|
-|`cekOut`|[Ausgabe] Der Anbieter sollte entschlüsselter ECEK Arbeitsspeicher zuweisen und die Adresse in der Zeiger verweist CekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * CekOut auf einen null-Zeiger.|
+|`cekOut`|[Ausgabe] Der Anbieter sollte entschlüsselter ECEK Arbeitsspeicher zuweisen und die Adresse in der Zeiger verweist CekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * CekOut auf einen null-Zeiger.|
 |`cekLen`|[Ausgabe] Der Anbieter sollte an die Adresse, die auf CekLen zeigt die Länge des entschlüsselter ECEK, die in der es geschrieben hat schreiben ** CekOut.|
 |`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
 
@@ -164,7 +164,7 @@ Platzhaltername für eine Funktion der Anbieter definierte CEK-Verschlüsselung.
 |`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
 |`cek`|[Eingabe] Zeiger auf den CEK verschlüsselt werden.|
 |`cekLen`|[Eingabe] Die Länge des CEK.|
-|`ecekOut`|[Ausgabe] Der Anbieter muss von Arbeitsspeicher für den verschlüsselten CEK und seine Adresse in der Zeiger verweist EcekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * EcekOut auf einen null-Zeiger.|
+|`ecekOut`|[Ausgabe] Der Anbieter muss von Arbeitsspeicher für den verschlüsselten CEK und seine Adresse in der Zeiger verweist EcekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * EcekOut auf einen null-Zeiger.|
 |`ecekLen`|[Ausgabe] Der Anbieter sollte an die Adresse, die auf EcekLen zeigt die Länge des verschlüsselten CEK, die in der es geschrieben hat schreiben ** EcekOut.|
 |`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
 
@@ -190,7 +190,7 @@ Die **OnError** Parameter verweist auf eine fehlerberichterstattungs-Funktion, m
 |Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Kontext, der auf den Fehler zu melden.|
-|`msg`|[Eingabe] Der zu meldende Fehlermeldung. NULL-terminierte Breitzeichen-Zeichenfolge. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
+|`msg`|[Eingabe] Der zu meldende Fehlermeldung. NULL-terminierte Breitzeichen-Zeichenfolge. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
 |...|[Eingabe] Zusätzliche Variadic-Parameter, die Formatbezeichner in der Meldung, nach Bedarf anpassen.|
 
 Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die es formatiert werden der Anbieter ruft OnError, Angeben des Context-Parameters an die anbieterfunktion übergeben. Der Anbieter kann diese Funktion mehrmals aufrufen, mehrere Fehler innerhalb einer Anbieter-Funktionsaufruf fortlaufend zu übermitteln. Zum Beispiel:

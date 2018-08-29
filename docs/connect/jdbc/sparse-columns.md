@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459554"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786692"
 ---
 # <a name="sparse-columns"></a>Spalten mit geringer Dichte
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459554"
 
 Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden.
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 werden bei der Herstellung einer Verbindung mit einem Server von [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (oder höher) Sparsespalten unterstützt. Sie können [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) oder [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) verwenden, um zu ermitteln, welche Spalte die Sparsespalte und welche die Spaltensatz-Spalte ist.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 werden bei der Herstellung einer Verbindung mit einem Server von [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (oder höher) Sparsespalten unterstützt. Sie können [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) oder [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) verwenden, um zu ermitteln, welche Spalte die Sparsespalte und welche die Spaltensatz-Spalte ist.
 
 Die Codedatei für dieses Beispiel heißt „SparseColumns.java“ und befindet sich im folgenden Pfad:  
 
@@ -43,7 +43,7 @@ Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisiert
 
 Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.
 
-Die Codeauflistung ist der Java-Quellcode. Bevor Sie die Anwendung kompilieren, ändern Sie den Servernamen in der Verbindungszeichenfolge.
+Die Codeauflistung ist der Java-Quellcode. Bevor Sie die Anwendung kompilieren, ändern Sie die Verbindungszeichenfolge an.
 
 ### <a name="code"></a>Code
 

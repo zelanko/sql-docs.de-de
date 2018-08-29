@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662352"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785133"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC 4.0-API, einschließlich der **SQLXML** -Datentyp und nationale (Unicode-) Datentypen, z. B. **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, und **NCLOB**.  
+Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC 4.0-API, einschließlich der **SQLXML** -Datentyp und nationale (Unicode-) Datentypen, z. B. **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, und **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Datentypzuordnungen
 
-Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Standarddatentypen, den JDBC-Datentypen und den von der Programmiersprache Java verwendeten Datentypen:  
+Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standarddatentypen, den JDBC-Datentypen und den von der Programmiersprache Java verwendeten Datentypen:  
   
 | SQL Server-Typen   | JDBC-Typen (java.sql.Types)                        | Java-Typen          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | Geometrie           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
+(1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
 (2) Sie können die Werte programmgesteuert zugreifen **Datetimeoffset** mit [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md).  
   

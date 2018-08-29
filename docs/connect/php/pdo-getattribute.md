@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979723"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785658"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Die nachfolgende Tabelle enthält die Liste mit den unterstützten Attributen:
 |attribute|Verarbeitet von|Unterstützte Werte|und Beschreibung|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Dies gibt an, ob die Spaltennamen entweder groß oder klein geschrieben sein sollen. PDO::CASE_LOWER erzwingt die Schreibung der Spaltennamen in Kleinbuchstaben, PDO::CASE_NATURAL belässt die Spaltennamen so wie sie aus der Datenbank zurückgegeben wurden und PDO::CASE_UPPER erzwingt die Schreibung der Spaltennamen in Großbuchstaben.<br /><br />Die Standardeinstellung ist PDO::CASE_NATURAL.<br /><br />Dieses Attribut kann auch mit PDO::setAttribute eingerichtet werden.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Ein Array von Zeichenfolgen|Beschreibt die Version des Treibers und der verbundenen Bibliotheken Gibt ein Array mit den folgenden Elementen zurück: ODBC-Version (*Hauptversion*.*Nebenversion*), Name und Version der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Client-DLL, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Version (*Hauptversion*.*Nebenversion*.*Buildnummer*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Ein Array von Zeichenfolgen|Beschreibt die Version des Treibers und der verbundenen Bibliotheken Gibt ein Array mit den folgenden Elementen zurück: ODBC-Version (*Hauptversion*.*Nebenversion*), Name und Version der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client-DLL, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Version (*Hauptversion*.*Nebenversion*.*Buildnummer*.*Revision*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|Zeichenfolge|Gibt immer „sqlsrv“ zurück.|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Zeichenfolge|Gibt die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Version (*Hauptversion*.*Nebenversion*.*Buildnummer*.*Revision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Gibt an, wie Fehler vom Treiber behandelt werden sollen.<br /><br />PDO::ERRMODE_SILENT (der Standard) legt die Fehlercodes und -informationen fest.<br /><br />PDO::ERRMODE_WARNING veranlasst E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION löst eine Ausnahme aus.<br /><br />Dieses Attribut kann auch mit PDO::setAttribute eingerichtet werden.|  

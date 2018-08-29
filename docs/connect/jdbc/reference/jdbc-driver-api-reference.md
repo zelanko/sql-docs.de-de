@@ -14,18 +14,18 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1a6949c49dc019e1dc7b9d875fb3ee7f38363a46
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174907"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786489"
 ---
 # <a name="jdbc-driver-api-reference"></a>API-Referenz für den JDBC-Treiber
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Die von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] bereitgestellte API kann innerhalb von Java-Programmiercode zum Herstellen einer Verbindung und zum Kommunizieren mit einer [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank verwendet werden.
+Die von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] bereitgestellte API kann innerhalb von Java-Programmiercode zum Herstellen einer Verbindung und zum Kommunizieren mit einer [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet werden.
 
 
 
@@ -61,7 +61,7 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 >   
 >  API-Details für das Feature „Always Encrypted“, das ab dem Microsoft JDBC-Treiber 6.0 für SQL Server verfügbar ist, werden in diesem Abschnitt nicht erläutert. Weitere Informationen finden Sie unter [Always Encrypted – API-Referenz für den JDBC-Treiber](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  
 >   
->  API-Details zur Massenkopierfunktion, die im Microsoft JDBC-Treiber 6.0 für SQL Server zur Verfügung steht, werden in diesem Abschnitt nicht erörtert. Weitere Informationen finden Sie unter [Verwenden von Tabellenwertparametern](../../../connect/jdbc/using-table-valued-parameters.md).  
+>  API-Details zur Using Table-Valued-Parameter, die ab Microsoft JDBC-Treiber 6.0 für SQL Server verfügbar ist, werden in diesem Abschnitt nicht gefunden. Weitere Informationen finden Sie unter [Verwenden von Tabellenwertparametern](../../../connect/jdbc/using-table-valued-parameters.md).  
 >   
 >  Der Microsoft JDBC-Treiber 6.4 unterstützt die Kompilierung mit JDK 7.0, 8.0 und 9.0.  
 >   
@@ -78,8 +78,8 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 |Schnittstellenname|und Beschreibung|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement-Schnittstelle](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Mit dieser Klasse kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird.|  
-|[ISQLServerConnection-Schnittstelle](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Stellt eine JDBC-Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank dar.|  
-|[SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Stellt eine Liste mit spezifischen Eigenschaften für das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank (unter Verwendung eines [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts) dar.|  
+|[ISQLServerConnection-Schnittstelle](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Stellt eine JDBC-Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar.|  
+|[SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Stellt eine Liste mit spezifischen Eigenschaften für das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank (unter Verwendung eines [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts) dar.|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|Stellt die grundlegende Implementierung der JDBC-Funktion für vorbereitete Anweisungen dar.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|Stellt ein JDBC-Resultset dar.|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Stellt die grundlegende Implementierung der JDBC-Anweisungsfunktion dar.|
@@ -98,9 +98,9 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|Implementiert ISQLServerConnectopn.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|Stellt die physischen Datenbankverbindungen für Verbindungspool-Manager dar.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|Stellt die Metadaten für die Datenbank dar.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Stellt eine Liste mit spezifischen Eigenschaften für das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank (unter Verwendung eines [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts) dar.|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Stellt eine Liste mit spezifischen Eigenschaften für das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank (unter Verwendung eines [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts) dar.|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|Stellt ein Objektfactory zum Materialisieren von Datenquellen aus der JNDI (Java Naming and Directory Interface) dar.|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Stellt den JDBC-Treiber dar. Diese Klasse enthält Methoden zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank sowie zum Abrufen von Informationen zum JDBC-Treiber.|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Stellt den JDBC-Treiber dar. Diese Klasse enthält Methoden zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank sowie zum Abrufen von Informationen zum JDBC-Treiber.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|Stell die fehlerhafte oder unvollständige Ausführung einer SQL-Anweisung dar.|  
 |[SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)|Stellt ein CLOB (Character Large Binary Object) mit nationalem Zeichensatz dar.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|Stellt die Metadaten für die Parameter vorbereiteter Anweisungen dar.|  

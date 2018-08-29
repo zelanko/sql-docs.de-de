@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Senden und Abrufen von ASCII-Daten in Linux und macOS'
+title: 'Gewusst wie: Senden und Abrufen von ASCII-Daten in Linux und MacOS (SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979822"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787424"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Vorgehensweise: Senden und Abrufen von ASCII-Daten in Linux und macOS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Gewusst wie: Senden und Abrufen von ASCII-Daten unter Linux und macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Artikel wird davon ausgegangen werden, die ASCII-(nicht UTF-8) Gebietsschemas generiert oder in Ihren virtuellen Linux- oder MacOS-Systemen installiert wurden. 
@@ -43,7 +43,7 @@ Die standardcodierung für den PDO_SQLSRV-Treiber ist UTF-8 (PDO:: sqlsrv_encodi
 ## <a name="example"></a>Beispiel  
 Die folgenden Beispiele veranschaulichen das Senden und Abrufen von ASCII-Daten mit den PHP-Treibern für SQL Server durch Angabe einer bestimmten Region vor dem Herstellen der Verbindung. Die Gebietsschemata in verschiedenen Linux-Plattformen können von Gebietsschemata in MacOS anders benannt werden. Das Gebietsschema uns ISO-8859-1 (Latin 1) ist z. B. `en_US.ISO-8859-1` unter Linux, während im MacOS heißt `en_US.ISO8859-1`.
   
-In den Beispielen wird angenommen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] auf einem Server installiert ist. Wenn die Beispiele über den Browser ausgeführt werden, werden alle Ausgaben im Browser geschrieben.  
+In den Beispielen wird angenommen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Server installiert ist. Wenn die Beispiele über den Browser ausgeführt werden, werden alle Ausgaben im Browser geschrieben.  
   
 ```  
 <?php  

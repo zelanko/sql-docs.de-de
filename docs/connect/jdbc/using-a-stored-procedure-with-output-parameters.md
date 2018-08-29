@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662172"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786471"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Verwenden von gespeicherten Prozeduren mit Ausgabeparametern
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Prozedur gibt mindestens einen OUT-Parameter zurück, mit dem die gespeicherte Prozedur Daten an die aufrufende Anwendung zurückgibt. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufrufen und Verarbeiten der Daten, die zurückgegeben.
+Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur gibt mindestens einen OUT-Parameter zurück, mit dem die gespeicherte Prozedur Daten an die aufrufende Anwendung zurückgibt. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufrufen und Verarbeiten der Daten, die zurückgegeben.
 
 Wenn Sie diese Art von gespeicherter Prozedur mit dem JDBC-Treiber aufrufen, müssen Sie die SQL-Escapesequenz `call` zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Die Syntax für die Escapesequenz `call` mit OUT-Parameter lautet wie folgt:
 
@@ -36,12 +36,12 @@ Wenn Sie diese Art von gespeicherter Prozedur mit dem JDBC-Treiber aufrufen, mü
 
 Geben Sie die OUT-Parameter beim Erstellen der Escapesequenz `call` mit dem Fragezeichen (?) an. das als Platzhalter für die Parameterwerte fungiert, die von der gespeicherten Prozedur zurückgegeben werden. Sie müssen den Datentyp für jeden Parameter angeben, um einen Wert für einen OUT-Parameter festzulegen, indem Sie die Methode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) der Klasse „SQLServerCallableStatement“ verwenden, bevor Sie die gespeicherte Prozedur ausführen.
 
-Bei dem Wert, den Sie für den OUT-Parameter in der Methode „registerOutParameter“ angeben, muss es sich um einen der in java.sql.Types enthaltenen JDBC-Datentypen handeln, der wiederum einem der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen zugeordnet wird. Weitere Informationen zu JDBC und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentypen finden Sie unter [Grundlegendes zu den Datentypen des JDBC-Treiber](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Bei dem Wert, den Sie für den OUT-Parameter in der Methode „registerOutParameter“ angeben, muss es sich um einen der in java.sql.Types enthaltenen JDBC-Datentypen handeln, der wiederum einem der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen zugeordnet wird. Weitere Informationen zu JDBC und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Grundlegendes zu den Datentypen des JDBC-Treiber](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Wenn Sie einen Wert an die Methode „registerOutParameter“ für einen OUT-Parameter übergeben, müssen Sie nicht nur den für den Parameter zu verwendenden Datentyp angeben, sondern auch die ordinale Position des Parameters oder den Namen des Parameters der gespeicherten Prozedur. Wenn die gespeicherte Prozedur beispielsweise einen einzigen OUT-Parameter enthält, ist der Ordinalwert 1. Wenn die gespeicherte Prozedur zwei Parameter enthält, ist der erste Ordinalwert 1 und der zweite Ordinalwert 2.
 
 > [!NOTE]  
-> Die Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen CURSOR, SQLVARIANT, TABLE und TIMESTAMP für OUT-Parameter wird vom JDBC-Treiber nicht unterstützt.
+> Die Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen CURSOR, SQLVARIANT, TABLE und TIMESTAMP für OUT-Parameter wird vom JDBC-Treiber nicht unterstützt.
 
 Erstellen Sie als Beispiel die folgende Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank:
 

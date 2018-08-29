@@ -14,38 +14,38 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5dd38c3fa9be49e4781a23f82d8ef0a007e9f43a
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 7a5d7e44945fdb435b7dcadbdd7c67033f8d4f8c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279221"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785298"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Verbinden von SQL Server mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Eine der grundlegenden Aufgaben, die mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ausgeführt werden, ist das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank. Die gesamte Interaktion mit der Datenbank erfolgt über das [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt. Da der JDBC-Treiber eine extrem flache Architektur aufweist, beziehen sich nahezu alle wesentlichen Verhalten auf das SQLServerConnection-Objekt.  
+  Eine der grundlegenden Aufgaben, die mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ausgeführt werden, ist das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank. Die gesamte Interaktion mit der Datenbank erfolgt über das [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt. Da der JDBC-Treiber eine extrem flache Architektur aufweist, beziehen sich nahezu alle wesentlichen Verhalten auf das SQLServerConnection-Objekt.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nur einen IPv6-Port überwacht, legen Sie die Systemeigenschaft „java.net.preferIPv6Addresses“ fest, um sicherzustellen, dass für die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] IPv6 statt IPv4 verwendet wird:  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur einen IPv6-Port überwacht, legen Sie die Systemeigenschaft „java.net.preferIPv6Addresses“ fest, um sicherzustellen, dass für die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] IPv6 statt IPv4 verwendet wird:  
   
 ```java
 System.setProperty("java.net.preferIPv6Addresses", "true");  
 ```  
   
- Die Themen in diesem Abschnitt beschreiben, wie Sie Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank herstellen und verwalten.  
+ Die Themen in diesem Abschnitt beschreiben, wie Sie Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herstellen und verwalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|und Beschreibung|  
 |-----------|-----------------|  
-|[Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md)|Beschreibt das Erstellen einer Verbindungs-URL für Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank. Darüber hinaus wird das Herstellen einer Verbindung zu benannten Instanzen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank beschrieben.|  
-|[Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md)|Beschreibt die verschiedenen Verbindungseigenschaften und deren Verwendung für Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank.|  
+|[Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md)|Beschreibt das Erstellen einer Verbindungs-URL für Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank. Darüber hinaus wird das Herstellen einer Verbindung zu benannten Instanzen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank beschrieben.|  
+|[Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md)|Beschreibt die verschiedenen Verbindungseigenschaften und deren Verwendung für Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |[Festlegen der Datenquelleneigenschaften](../../connect/jdbc/setting-the-data-source-properties.md)|Beschreibt die Verwendung von Datenquellen auf einer Java-Plattform, Enterprise Edition (Java EE).|  
-|[Arbeiten mit einer Verbindung](../../connect/jdbc/working-with-a-connection.md)|Beschreibt die verschiedenen Möglichkeiten, um die Instanz einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank zu erstellen.|  
+|[Arbeiten mit einer Verbindung](../../connect/jdbc/working-with-a-connection.md)|Beschreibt die verschiedenen Möglichkeiten, um die Instanz einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu erstellen.|  
 |[Verwenden von Verbindungspools](../../connect/jdbc/using-connection-pooling.md)|Beschreibt die Unterstützung von Verbindungspools durch den JDBC-Treiber.|  
 |[Verwenden der Datenbankspiegelung &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Beschreibt die Unterstützung der Datenbankspiegelung durch den JDBC-Treiber.|  
 |[JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Beschreibt das Entwickeln einer Anwendung, die eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe herstellt.|  
-|[Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Erläutert eine Java-Implementierung für Anwendungen zum Herstellen von Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbank mit integrierter Kerberos-Authentifizierung.|  
+|[Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Erläutert eine Java-Implementierung für Anwendungen zum Herstellen von Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit integrierter Kerberos-Authentifizierung.|  
 |[Herstellen einer Verbindung mit einer Azure SQL-Datenbank](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Erläutert Verbindungsprobleme für Datenbanken in SQL Azure.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

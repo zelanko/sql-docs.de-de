@@ -14,25 +14,25 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1ea9d74a413af299808155a3b8c8083360031db6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785511"
 ---
 # <a name="converting-data-types"></a>Konvertieren von Datentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] erlaubt Ihnen, Datentypen festzulegen wenn Sie Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]übermitteln oder von dort abrufen. Das Festlegen von Datentypen ist optional. Wenn keine Datentypen festgelegt wurden, werden die Standardtypen verwendet. Die Themen in diesem Abschnitt beschreiben, wie Datentypen festgelegt werden und bieten Detailinformationen zu den Standarddatentypen.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] erlaubt Ihnen, Datentypen festzulegen wenn Sie Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übermitteln oder von dort abrufen. Das Festlegen von Datentypen ist optional. Wenn keine Datentypen festgelegt wurden, werden die Standardtypen verwendet. Die Themen in diesem Abschnitt beschreiben, wie Datentypen festgelegt werden und bieten Detailinformationen zu den Standarddatentypen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Thema|und Beschreibung|  
 |---------|---------------|  
-|[SQL Server-Standarddatentypen](../../connect/php/default-sql-server-data-types.md)|Bietet Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Standarddatentypen beim Übermitteln von Daten an den Server.|  
+|[SQL Server-Standarddatentypen](../../connect/php/default-sql-server-data-types.md)|Bietet Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standarddatentypen beim Übermitteln von Daten an den Server.|  
 |[PHP-Standarddatentypen](../../connect/php/default-php-data-types.md)|Bietet Informationen zu den PHP-Standarddatentypen beim Abrufen von Daten vom Server.|  
-|[Vorgehensweise: SQL Server-Datentypen festlegen](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Demonstriert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen festgelegt werden wenn Daten an den Server übermittelt werden.|  
+|[Vorgehensweise: SQL Server-Datentypen festlegen](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Demonstriert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen festgelegt werden wenn Daten an den Server übermittelt werden.|  
 |[Gewusst wie: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md)|Demonstriert, wie PHP-Datentypen festgelegt werden wenn Daten vom Server abgerufen werden.|  
 |[Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Demonstriert, wie Sie die eingebaute Unterstützung von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] für UTF-8-Daten verwenden können.<br /><br />Unterstützung für die UTF-8-Zeichen wurden in Version 1.1 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] hinzugefügt.|  
 |[Vorgehensweise: Senden und Abrufen von ASCII-Daten in Linux und macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Veranschaulicht, wie [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]Unterstützung für ASCII-Daten unter Linux oder MacOS.<br /><br />Unterstützung für ASCII-Zeichen in nicht-Windows-Umgebungen wurde hinzugefügt, in Version 5.2 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|

@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: bec8d747e193f54b1f706a911f3a78a3442e81b4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662412"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787010"
 ---
 # <a name="basic-data-types-sample"></a>Standarddatentypen - Beispiel
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie Werte von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Standarddatentypen mithilfe von Getter-Methoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.  
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie Werte von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standarddatentypen mithilfe von Getter-Methoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.  
   
 Die Codedatei für dieses Beispiel heißt „BasicDataTypes.java“ und befindet sich im folgenden Pfad:  
 

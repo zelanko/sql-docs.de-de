@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662212"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783868"
 ---
 # <a name="understanding-isolation-levels"></a>Grundlegendes zu Isolationsstufen
 
@@ -65,7 +65,7 @@ Zum Festlegen der Isolationsstufe für eine Transaktion können Sie die [setTran
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-Zum Verwenden der neuen Snapshotisolationsstufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] können Sie eine der `SQLServerConnection`-Konstanten verwenden:  
+Zum Verwenden der neuen Snapshotisolationsstufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie eine der `SQLServerConnection`-Konstanten verwenden:  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ oder Sie verwenden können:
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Isolationsstufen finden Sie unter „Isolationsstufen in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Onlinedokumentation.  
+Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Isolationsstufen finden Sie unter „Isolationsstufen in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 

@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279261"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784909"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279261"
 |TDS.Channel|Diese Kategorie verfolgt Aktionen der TCP-Kommunikationskanäle mit SQL Server. Die protokollierten Meldungen umfassen das Öffnen und Schließen von Sockets sowie Lese- und Schreibvorgänge. Außerdem werden Meldungen zum Herstellen einer SSL (Secure Sockets Layer)-Verbindung mit SQL Server verfolgt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINE, FINER oder FINEST festgelegt wird.|  
 |TDS.Writer|Diese Kategorie verfolgt Schreibvorgänge für den TDS-Kanal. Beachten Sie, dass nur die Länge der Schreibvorgänge verfolgt wird, nicht deren Inhalt. Diese Kategorie verfolgt außerdem Probleme, wenn zum Abbrechen der Ausführung einer Anweisung ein Achtungssignal gesendet wird.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.Reader|Diese Kategorie verfolgt bestimmte Lesevorgänge für den TDS-Kanal mit dem Grad FINEST. Die Nachverfolgung mit dem Grad FINEST kann ausführlich ausfallen. Mit den Graden WARNING und SEVERE wird in dieser Kategorie verfolgt, wenn der Treiber ein ungültiges TDS-Protokoll von SQL Server empfängt, bevor der Treiber die Verbindung trennt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINER und FINEST festgelegt wird.|  
-|TDS.Command|Diese Kategorie verfolgt Zustandsübergänge auf niedriger Ebene und sonstige Informationen zur Ausführung von TDS-Befehlen wie der Ausführung von [!INCLUDE[tsql](../../includes/tsql_md.md)]-Anweisungen, Abrufvorgängen von ResultSet-Cursorn, Commits usw.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
+|TDS.Command|Diese Kategorie verfolgt Zustandsübergänge auf niedriger Ebene und sonstige Informationen zur Ausführung von TDS-Befehlen wie der Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Abrufvorgängen von ResultSet-Cursorn, Commits usw.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.TOKEN|Diese Kategorie protokolliert nur die Token im TDS-Paket und ist weniger ausführlich als die TDS.DATA-Kategorie. Sie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.<br /><br /> Mit dem Grad FINEST verfolgt diese Kategorie TDS-Token bei der Verarbeitung in der Antwort. Mit dem Grad SEVERE verfolgt diese Kategorie das Auftreten ungültiger TDS-Token.|  
 |SQLServerDatabaseMetaData|Protokolliert Meldungen in der Klasse [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Die Anwendungen können den Protokolliergrad auf FINE festlegen.|  
 |SQLServerResultSetMetaData|Protokolliert Meldungen in der Klasse [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Die Anwendungen können den Protokolliergrad auf FINE festlegen.|  

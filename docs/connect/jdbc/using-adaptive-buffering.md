@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661772"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787020"
 ---
 # <a name="using-adaptive-buffering"></a>Verwenden der adaptiven Pufferung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Mit der adaptiven Pufferung können Daten mit großen Werten ohne den Aufwand von Servercursorn abgerufen werden. In Anwendungen kann die Funktion der adaptiven Pufferung mit allen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verwendet werden, die vom Treiber unterstützt werden.
+Mit der adaptiven Pufferung können Daten mit großen Werten ohne den Aufwand von Servercursorn abgerufen werden. In Anwendungen kann die Funktion der adaptiven Pufferung mit allen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, die vom Treiber unterstützt werden.
 
-Wenn [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Abfrage ausführt, ruft der Treiber normalerweise alle Ergebnisse vom Server in einen Anwendungsspeicher ab. Obwohl bei diesem Ansatz die Ressourcenauslastung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] reduziert wird, kann ein OutOfMemoryError in der JDBC-Anwendung für die Abfragen ausgelöst werden, bei denen sehr große Ergebnisse zurückgegeben werden.
+Wenn [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Abfrage ausführt, ruft der Treiber normalerweise alle Ergebnisse vom Server in einen Anwendungsspeicher ab. Obwohl bei diesem Ansatz die Ressourcenauslastung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reduziert wird, kann ein OutOfMemoryError in der JDBC-Anwendung für die Abfragen ausgelöst werden, bei denen sehr große Ergebnisse zurückgegeben werden.
 
-Damit Anwendungen sehr große Ergebnisse behandeln können, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die adaptive Pufferung bereit. Mithilfe der adaptiven Pufferung ruft der Treiber Ergebnisse der Anweisungsausführung erst dann von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ab, wenn sie in der Anwendung benötigt werden, statt alle Ergebnisse auf einmal abzurufen. Der Treiber verwirft außerdem die Ergebnisse, sobald die Anwendung nicht mehr auf sie zugreifen kann. Im Folgenden werden einige Szenarien beschrieben, in denen die Verwendung der adaptiven Pufferung sinnvoll sein kann:
+Damit Anwendungen sehr große Ergebnisse behandeln können, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die adaptive Pufferung bereit. Mithilfe der adaptiven Pufferung ruft der Treiber Ergebnisse der Anweisungsausführung erst dann von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, wenn sie in der Anwendung benötigt werden, statt alle Ergebnisse auf einmal abzurufen. Der Treiber verwirft außerdem die Ergebnisse, sobald die Anwendung nicht mehr auf sie zugreifen kann. Im Folgenden werden einige Szenarien beschrieben, in denen die Verwendung der adaptiven Pufferung sinnvoll sein kann:
 
 - **Die Abfrage erzeugt ein sehr umfangreiches Resultset:** die Anwendung kann eine SELECT-Anweisung, die mehr Zeilen als die Anwendung im Arbeitsspeicher speichern kann erzeugt ausführen. In vorherigen Releases musste die Anwendung einen Servercursor verwenden, um einen OutOfMemoryError zu vermeiden. Die adaptive Pufferung stellt die Möglichkeit bereit, ein beliebig großes Resultset mit Vorwärtscursor und schreibgeschützt zu übergeben, ohne dass ein Servercursor erforderlich ist.
 
-- **Die Abfrage erzeugt sehr umfangreiche** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **Spalten oder** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT-Parameterwerte:** Die Anwendung kann einen einzelnen Wert abrufen (Spalte oder OUT-Parameter) ist zu groß, um vollständig im Anwendungsspeicher gespeichert. Adaptive Pufferung kann die Clientanwendung solche Werte als Datenstrom abrufen, indem Sie mit der GetAsciiStream, die GetBinaryStream- oder die GetCharacterStream-Methoden. Die Anwendung ruft den Wert beim Lesen des Datenstroms von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ab.
+- **Die Abfrage erzeugt sehr umfangreiche** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **Spalten oder** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT-Parameterwerte:** Die Anwendung kann einen einzelnen Wert abrufen (Spalte oder OUT-Parameter) ist zu groß, um vollständig im Anwendungsspeicher gespeichert. Adaptive Pufferung kann die Clientanwendung solche Werte als Datenstrom abrufen, indem Sie mit der GetAsciiStream, die GetBinaryStream- oder die GetCharacterStream-Methoden. Die Anwendung ruft den Wert beim Lesen des Datenstroms von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.
 
 > [!NOTE]  
 > Mit adaptiver Pufferung puffert der JDBC-Treiber nur die benötigte Datenmenge. Der Treiber stellt keine öffentliche Methode zum Steuern oder Beschränken der Puffergröße bereit.
@@ -56,7 +56,7 @@ Mit Version 2.0 des JDBC-Treibers können Anwendungen jedoch die [isWrapperFor](
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Abrufen umfangreicher Daten mit adaptiver Pufferung
 
-Wenn große Werte einmal mithilfe der get\<Typ>Stream-Methoden gelesen werden und auf die ResultSet-Spalten und die CallableStatement-OUT-Parameter in der Reihenfolge zugegriffen wird, in der sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] zurückgegeben werden, minimiert die adaptive Pufferung die Anwendungsspeicherauslastung beim Verarbeiten der Ergebnisse. Beim Verwenden der adaptiven Pufferung:
+Wenn große Werte einmal mithilfe der get\<Typ>Stream-Methoden gelesen werden und auf die ResultSet-Spalten und die CallableStatement-OUT-Parameter in der Reihenfolge zugegriffen wird, in der sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden, minimiert die adaptive Pufferung die Anwendungsspeicherauslastung beim Verarbeiten der Ergebnisse. Beim Verwenden der adaptiven Pufferung:
 
 - Die in der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse definierten get\<Type>Stream-Methoden geben schreibgeschützte Datenströme zurück, die zurückgesetzt werden können, wenn sie von der Anwendung gekennzeichnet werden. Wenn in der Anwendung `reset` für den Datenstrom ausgeführt werden soll, muss zunächst die `mark`-Methode für diesen Datenstrom aufgerufen werden.
 
@@ -83,7 +83,7 @@ Entwickler sollten sich an diese wichtigen Richtlinien halten, um die Speicherau
 
 - Es gibt einige Fälle, das bei Verwendung **SelectMethod = Cursor** anstelle von **ResponseBuffering = adaptive** Vorteile, z. B.:
 
-  - Wenn Ihre Anwendung eine vorwärts gerichtete verarbeitet, nur-Lese Resultset langsam, z. B. beim Lesen jeder Zeile nach einer Benutzereingabe, mithilfe von **SelectMethod = Cursor** anstelle von **ResponseBuffering = adaptive** möglicherweise Verringern der Nutzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+  - Wenn Ihre Anwendung eine vorwärts gerichtete verarbeitet, nur-Lese Resultset langsam, z. B. beim Lesen jeder Zeile nach einer Benutzereingabe, mithilfe von **SelectMethod = Cursor** anstelle von **ResponseBuffering = adaptive** möglicherweise Verringern der Nutzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Wenn die Anwendung zwei oder mehr schreibgeschützte Resultsets mit Vorwärtscursor gleichzeitig für die gleiche Verbindung verarbeitet, lässt sich der vom Treiber bei der Verarbeitung dieser Resultsets benötigte Speicher durch **selectMethod=cursor** anstelle von **responseBuffering=adaptive** möglicherweise verringern.
 

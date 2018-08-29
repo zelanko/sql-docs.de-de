@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0be9716b5b1f48d4d38a374069ba66b5f5d8b37c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454344"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784605"
 ---
 # <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten - Beispiel
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein aktualisierbarer Datensatz aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank abgerufen wird. Anschließend wird mit den Methoden der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse eine Datenzeile in das Datenset eingefügt, geändert und schließlich wieder gelöscht.
+Diese Beispielanwendung für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] veranschaulicht, wie ein aktualisierbarer Datensatz aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abgerufen wird. Anschließend wird mit den Methoden der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse eine Datenzeile in das Datenset eingefügt, geändert und schließlich wieder gelöscht.
 
 Die Codedatei für dieses Beispiel heißt „UpdateResultSet.java“ und befindet sich im folgenden Pfad:
 

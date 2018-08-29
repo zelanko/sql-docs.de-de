@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982312"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786295"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Datenbank herstellen können.  
+In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank herstellen können.  
   
 ## <a name="connection-properties"></a>Verbindungseigenschaften  
 
@@ -67,7 +67,7 @@ Sie können überprüfen, ob Ihr Treiber funktioniert mit `isql` zum Testen der 
  - **Bcp-master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) verwenden  
-Sie können Secure Sockets Layer (SSL) verwenden, um Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] zu verschlüsseln. SSL schützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Benutzernamen und -Kennwörter über das Netzwerk. SSL überprüft auch die Identität des Servers, um Schutz vor „man-in-the-middle“-Attacken (MITM) zu bieten.  
+Sie können Secure Sockets Layer (SSL) verwenden, um Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verschlüsseln. SSL schützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Benutzernamen und -Kennwörter über das Netzwerk. SSL überprüft auch die Identität des Servers, um Schutz vor „man-in-the-middle“-Attacken (MITM) zu bieten.  
 
 Das Aktivieren der Verschlüsselung erhöht die Sicherheit auf Kosten der Leistung.
 
@@ -78,7 +78,7 @@ Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate*
 ||**TrustServerCertificate = Nein**|**TrustServerCertificate = Yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|  
-|**Encrypt=yes**|Serverzertifikat wird überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.<br /><br />Der Name (oder die IP-Adresse) in einem allgemeinen Namen (Common Name (CN)) oder alternativen Antragsstellernamen (Subject Alternative Name (SAN)) in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-SSL-Zertifikat sollte genau mit dem Servernamen (oder der IP-Adresse), der in der Verbindungszeichenfolge angegeben wurde, übereinstimmen.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.|  
+|**Encrypt=yes**|Serverzertifikat wird überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.<br /><br />Der Name (oder die IP-Adresse) in einem allgemeinen Namen (Common Name (CN)) oder alternativen Antragsstellernamen (Subject Alternative Name (SAN)) in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-SSL-Zertifikat sollte genau mit dem Servernamen (oder der IP-Adresse), der in der Verbindungszeichenfolge angegeben wurde, übereinstimmen.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.|  
 
 Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Jedoch auch hinzufügen, wenn Sie eine Verbindung mit einem Server, die über ein selbst signiertes Zertifikat verfügt herstellen, die `TrustServerCertificate` Option aus, um die Überprüfung des Zertifikats mit der Liste der vertrauenswürdigen Zertifizierungsstelle herausgegebenes Zertifikat:  
 
